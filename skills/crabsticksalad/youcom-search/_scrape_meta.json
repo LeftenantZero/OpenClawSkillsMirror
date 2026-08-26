@@ -1,0 +1,38 @@
+{
+  "changelog": "v0.1.5 - Complete audit remediation (no functional changes)\n\nRemoved ALL policy-violating language:\n- README.md: reworded 'Bypasses/clean bypass' to 'Robust on protected sites / handles Cloudflare-protected pages via browser-fetched results'\n- README.md: reworded 'fail to bypass GitHub/Medium paywalls' to 'fail on login-walled sites'\n- _meta.json: removed 'bypass' tag, updated description to drop bypass language\n- _meta.json: added explicit data-transmission warning\n\nTrigger narrowing (kills 'Vague Triggers' finding):\n- Removed broad triggers: 'search the web', 'look up', 'web search', 'read this page'\n- Kept specific: 'you.com', 'youcom', 'youcom search', 'youcom web search', 'youcom research', 'youcom extract'\n\nData-transmission warning (kills 'Missing User Warnings' findings):\n- Added explicit warning block at top of SKILL.md about sending queries/URLs to you.com\n- Added same warning to README.md and _meta.json description",
+  "created_at": 1774867913245,
+  "display_name": "Youcom Search",
+  "fetched_at": 1787783098261,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/api.md",
+    "scripts/youcom_extract.py",
+    "scripts/youcom_research.py",
+    "scripts/youcom_search.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Crabstick",
+    "handle": "crabsticksalad",
+    "user_id": "s17572r03ywk8ctcnx8amnqrhd83f232"
+  },
+  "slug": "youcom-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/youcom-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=youcom-search&ownerHandle=crabsticksalad",
+    "page_url": "https://clawhub.ai/crabsticksalad/skills/youcom-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 875,
+    "installs": 22,
+    "stars": 1,
+    "versions": 5
+  },
+  "summary": "you.com web search, deep research, and content extraction for OpenClaw. Free tier for basic search; research and extract require paid API key. Sends queries...",
+  "updated_at": 1780509535815,
+  "version": "0.1.5"
+}
