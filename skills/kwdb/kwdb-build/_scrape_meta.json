@@ -1,0 +1,51 @@
+{
+  "changelog": "- Major documentation update: added detailed SKILL.md.\n- Expanded skill description, trigger keywords, and strict user confirmation rules.\n- Clearly outlined supported actions: build, C++ and Go unit tests, and the required order for CMake operations.\n- Enforced use of only officially listed CMake options; user-provided or undefined options are forbidden.\n- Added handling instructions for build failures\u2014only analyze and report, never auto-fix.\n- Included comprehensive references for build, test, and configuration processes.",
+  "created_at": 1784786095064,
+  "display_name": "KWDB Build",
+  "fetched_at": 1787775523364,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/build-questions.md",
+    "references/cmake-options.md",
+    "references/cpp-unittest.md",
+    "references/dependencies.md",
+    "references/golang-unittest.md",
+    "references/project-structure.md",
+    "scripts/run_golang_test.sh",
+    "scripts/run_unittest.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784788718914,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "KWDB",
+    "handle": "kwdb",
+    "user_id": "s17e2f9k2hwm2p7q50y9wz03fs8445dh"
+  },
+  "slug": "kwdb-build",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kwdb-build",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kwdb-build&ownerHandle=kwdb",
+    "page_url": "https://clawhub.ai/kwdb/skills/kwdb-build"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 242,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "KaiwuDB \u6570\u636e\u5e93\u6e90\u7801\u7f16\u8bd1\u548c\u6784\u5efa\u6280\u80fd\u3002\u7528\u4e8e\u4ece\u6e90\u7801\u6784\u5efa\u3001\u7f16\u8bd1\u6216\u6d4b\u8bd5 KaiwuDB (KWDB)\u3002\u4f7f\u7528 CMake \u6784\u5efa\u7cfb\u7edf\u5904\u7406\u6784\u5efa\u914d\u7f6e\u3001\u5355\u5143\u6d4b\u8bd5\u3001\u4ee3\u7801\u68c0\u67e5\u548c\u5b89\u88c5\u3002\u89e6\u53d1\u6761\u4ef6\uff1a(1) \u7f16\u8bd1\u8be2\u95ee\uff1a\"\u7f16\u8bd1 KaiwuDB\"\u3001\"\u6784\u5efa kwdbts2\"\u3001\"cmake \u6784\u5efa\"\u3001\"\u6e05\u7406\u6784\u5efa\"\uff1b(2) C++ \u5355\u5143\u6d4b\u8bd5\u8be2\u95ee\uff1a\"...",
+  "updated_at": 1784787844867,
+  "version": "1.2.0"
+}
