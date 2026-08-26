@@ -1,0 +1,51 @@
+{
+  "changelog": "**Major update: Skill now uses Coinbase CDP wallets for fully autonomous and secure agent operations.**\n\n- Wallet operations (signing, on-chain transfers) now use Coinbase CDP, with credentials in a configurable env file.\n- New Node.js CLI scripts: check address, request/sign loan, pay/repay.\n- Payment skill dependency removed; now requires Node.js and @coinbase/cdp-sdk.\n- Usage guides and workflow updated for CDP wallet setup and commands.\n- Security improvements: never exposes private keys; recommends agent-dedicated credentials.\n- Old skill-card documentation removed; tooling and commands modernized for autonomous agent workflows.",
+  "created_at": 1770911540614,
+  "display_name": "RSoft Agentic Bank",
+  "fetched_at": 1787771663956,
+  "files": [
+    ".gitignore",
+    "_meta.json",
+    "bin/address.js",
+    "bin/pay.js",
+    "bin/repay.js",
+    "bin/request-loan.js",
+    "bin/sign-loan.js",
+    "bin/wallet-config.js",
+    "package.json",
+    "skill-card.md",
+    "skill.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786936417115,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Ricardo Pari",
+    "handle": "rsoft-latam",
+    "user_id": "s170b68w3kt3kqb0tv380n4v4x884pgz"
+  },
+  "slug": "rsoft-agentic-bank",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/rsoft-agentic-bank",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=rsoft-agentic-bank&ownerHandle=rsoft-latam",
+    "page_url": "https://clawhub.ai/rsoft-latam/skills/rsoft-agentic-bank"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1765,
+    "installs": 49,
+    "stars": 0,
+    "versions": 11
+  },
+  "summary": "AI-native lending on Base MAINNET for autonomous agents. Check credit, request USDC loans (EIP-712 signed via Coinbase CDP), and repay autonomously. Real money.",
+  "updated_at": 1786935682305,
+  "version": "2.2.0"
+}
