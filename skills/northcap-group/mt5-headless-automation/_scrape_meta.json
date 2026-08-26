@@ -1,0 +1,46 @@
+{
+  "changelog": "Fix: screenshots deklareret som f\u00f8lsomme artefakter (mktemp + auto-removal) \u2014 Missing User Warnings",
+  "created_at": 1787163978249,
+  "display_name": "MT5 Headless Automation",
+  "fetched_at": 1787770333043,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/attach_ea.sh",
+    "scripts/deploy_ea.sh",
+    "scripts/watchdog.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787244176315,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Northcap Group",
+    "handle": "northcap-group",
+    "user_id": "s17bvcqx4dxz1k2fe936rwdhs58ctnxf"
+  },
+  "slug": "mt5-headless-automation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mt5-headless-automation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mt5-headless-automation&ownerHandle=northcap-group",
+    "page_url": "https://clawhub.ai/northcap-group/skills/mt5-headless-automation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 205,
+    "installs": 1,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Run MetaTrader 5 (MT5) fully headless on Linux/VPS: Wine + Xvfb + xdotool + OCR. Install, log in, attach EAs, deploy experts, monitor heartbeat and auto-restart. Built from real production experience (Vantage, 17 symbols, DRT-Axe EA). Perfect for traders who want to run EAs 24/7 without a screen. \u26a0\ufe0f WARNING: runs system-level commands (wine, Xvfb, sudo apt), can restart MT5/terminate processes, and handles broker login credentials.",
+  "updated_at": 1787243903697,
+  "version": "1.0.4"
+}
