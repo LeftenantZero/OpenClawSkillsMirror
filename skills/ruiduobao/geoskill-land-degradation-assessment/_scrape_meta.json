@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release for land degradation assessment skill.\n\n- Implements SDG 15.3.1 land degradation evaluation using three indicators: productivity trends, land use/land cover change, and soil organic carbon.\n- Provides command-line usage examples, including synthetic (offline) and real data modes.\n- Outputs results as GeoTIFF and processing manifest as JSON.\n- Works fully offline; no user data is uploaded.\n- Includes instructions in both English and Chinese.",
+  "created_at": 1785846791934,
+  "display_name": "geoskill-land-degradation-assessment",
+  "fetched_at": 1787773469250,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-land-degradation-assessment.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785847770936,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-land-degradation-assessment",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-land-degradation-assessment",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-land-degradation-assessment&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-land-degradation-assessment"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 182,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "SDG 15.3.1 \u4e09\u6307\u6807\u571f\u5730\u9000\u5316\u8bc4\u4f30\uff1a\u751f\u4ea7\u529b\u8d8b\u52bf\u3001LULC \u53d8\u5316\u3001\u571f\u58e4\u6709\u673a\u78b3\uff0c\u7efc\u5408\u5206\u7ea7\u9000\u5316/\u7a33\u5b9a/\u6539\u5584",
+  "updated_at": 1785846939064,
+  "version": "1.0.0"
+}
