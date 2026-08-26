@@ -1,0 +1,49 @@
+{
+  "changelog": "DinzeeAgent 1.0.3\n\n- Major update: switches to a pure \"gateway+bundled skills\" agent\u2014removes direct business skill workflow logic; now only syncs and executes official Dinzee skills locally.\n- Adds comprehensive references for key data sources and skill workflows.\n- Updates environment variable and persistent path conventions (now uses DINZEE_USER_TOKEN, DINZEE_CREDENTIALS_PATH, DINZEE_DATA_DIR).\n- CLI commands improved: result saving, directory permissions, and token management clarified.\n- Removed hardcoded server skill workflow and all legacy skill manifest code.\n- Documentation fully revised to reflect agent\u2019s new sync-and-trigger local skill execution model.",
+  "created_at": 1780989509441,
+  "display_name": "DinzeeAgent",
+  "fetched_at": 1787772895886,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/keepa.md",
+    "references/seller-sprite.md",
+    "references/server-skill-workflows.md",
+    "references/sif.md",
+    "references/sorftime.md",
+    "scripts/dinzee.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786355147604,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "YeFeng311",
+    "handle": "yefeng311",
+    "user_id": "s174vyxn7j2ks09w3hrxqc6f9s883mvv"
+  },
+  "slug": "dinzee-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dinzee-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dinzee-agent&ownerHandle=yefeng311",
+    "page_url": "https://clawhub.ai/yefeng311/skills/dinzee-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 580,
+    "installs": 5,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Cross-border e-commerce data agent. The user triggers a data source with an at-source marker such as @sif, or triggers a bundled local business skill with @<task-name> plus a natural-language task instruction. The agent syncs official Dinzee skills into the local Hermes/OpenClaw runtime, extracts bu",
+  "updated_at": 1786354347722,
+  "version": "1.0.3"
+}
