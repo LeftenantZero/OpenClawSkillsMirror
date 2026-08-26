@@ -1,0 +1,56 @@
+{
+  "changelog": "novel2voice v2.19.1 is a new skill for converting novels or subtitles into multi-character audiobooks with advanced TTS features.\n\n- Converts novel text or subtitle files (.srt/.ass) into multi-character, emotionally nuanced audiobooks.\n- Supports Edge TTS (500+ voices, default, free) and MiMo TTS (requires API key) backends.\n- Automatically detects roles, assigns voices/styles, and handles emotions and dialects.\n- Includes step-by-step onboarding for first-time users, with environment checks and voice selection guides.\n- Robust error handling, environment preflight checks, and safety guardrails in processing.\n- Input can be pasted text or files; supports large projects via batching and resume functions.",
+  "created_at": 1784584583840,
+  "display_name": "Novel2voice-\u628a\u5c0f\u8bf4\u53d1\u7ed9skill\uff0cskill\u81ea\u52a8\u8c03\u7528MIMO TTS/EDGE TTS\u5904\u7406\u5c0f\u8bf4\u6587\u672c\u6216\u89c6\u9891\u5b57\u5e55\u2192 \u8f6c\u5316\u6210\u591a\u89d2\u8272\u6709\u58f0\u4e66\u3001\u5b57\u5e55\u97f3\u9891\u3002 \u81ea\u52a8\u8bc6\u522b\u89d2\u8272\u3001\u5206\u914d\u97f3\u8272\u3001\u60c5\u611f\u6807\u6ce8\uff0c\u652f\u6301 Edge TTS\uff08500+\u97f3\u8272\uff09\u548c MiMo TTS\u3002 Use when user provides novel/story text or video subtitle file (.srt/.ass) and asks for audiobook, voice narration, or TTS generation. \u89e6\u53d1\u8bcd\uff1a\u6709\u58f0\u4e66\u3001\u5c0f\u8bf4\u8f6c\u8bed\u97f3\u3001\u5b57\u5e55\u8f6c\u8bed\u97f3\u3001\u6717\u8bfb\u3001\u914d\u97f3\u3001TTS\u3001\u591a\u89d2\u8272\u8bed\u97f3\u3001\u89c6\u9891\u914d\u97f3\u3002",
+  "fetched_at": 1787775844639,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/edge-tts-annotation-guide.md",
+    "references/generated-long-body.md",
+    "references/mimo-tts-api.md",
+    "references/voice-catalog.md",
+    "scripts/generate_audiobook.py",
+    "scripts/generate_voice_samples.py",
+    "scripts/param_calculator.py",
+    "scripts/subtitle_parser.py",
+    "scripts/text_parser.py",
+    "scripts/tts_voice.py",
+    "scripts/tts_voice.sh",
+    "scripts/voice_samples/index.html",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784586593881,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jangviktor-web",
+    "handle": "jangviktor-web",
+    "user_id": "s17a5sd931rwbdpz4wckjtgde9864feg"
+  },
+  "slug": "novel2voice",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/novel2voice",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=novel2voice&ownerHandle=jangviktor-web",
+    "page_url": "https://clawhub.ai/jangviktor-web/skills/novel2voice"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 305,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c0f\u8bf4\u6587\u672c\u6216\u5b57\u5e55\u6587\u4ef6 \u2192 \u591a\u89d2\u8272\u6709\u58f0\u4e66\u97f3\u9891\u3002 \u9ed8\u8ba4 Edge TTS\uff08500+ \u97f3\u8272\uff09\uff0c\u53ef\u9009 MiMo TTS\u3002 \u81ea\u52a8\u89d2\u8272\u8bc6\u522b\u3001\u60c5\u611f\u6807\u6ce8\u3001\u97f3\u8272\u5206\u914d\u3001\u5f02\u6b65\u5e76\u53d1\u751f\u6210\u3002 Use when user provides novel/story text or subtitle file (.srt/.ass) and ask...",
+  "updated_at": 1784585855837,
+  "version": "0.1.0"
+}
