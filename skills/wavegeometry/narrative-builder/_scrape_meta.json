@@ -1,0 +1,52 @@
+{
+  "changelog": "narrative-builder 1.0.0 \u2013 Initial Release\n\n- Introduces a composition-focused narrative builder skill, designed to orchestrate complete stories by consuming World Builder and Character Builder outputs.\n- Implements a four-layer pipeline model (input, structure, composition, output) for causal, sequential story construction.\n- Supports two modes: direct narrative construction (Mode A) and character-driven orchestration (Mode B), with input routing based on presence of character/world skill files.\n- Provides comprehensive capabilities: plot structure selection, perspective, pacing, conflict, event orchestration, scene building, theme weaving, dialogue, and multi-level narrative validation.\n- Relies on external world/character files for full operation; does not generate worlds or characters, only arranges them narratively.",
+  "created_at": 1783874211995,
+  "display_name": "Narrative Builder",
+  "fetched_at": 1787777021793,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/exemplars.md",
+    "references/exemplars/N0-\u53d9\u4e8b\u9700\u6c42\u89e3\u6790\u57df\u8303\u672c.md",
+    "references/exemplars/N1-\u8f93\u5165\u6574\u5408\u57df\u8303\u672c.md",
+    "references/exemplars/N2-\u7ed3\u6784\u8bbe\u8ba1\u57df\u8303\u672c.md",
+    "references/exemplars/N3-\u7f16\u6392\u6267\u884c\u57df\u8303\u672c.md",
+    "references/exemplars/N4-\u6821\u9a8c\u57df\u8303\u672c.md",
+    "references/exemplars/N5-\u8f93\u51fa\u57df\u8303\u672c.md",
+    "references/narrative-catalog.md",
+    "references/narrative-requirements.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783874579796,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u6548\u4eab\u79d1\u6280",
+    "handle": "wavegeometry",
+    "user_id": "s17baj2a1xf1z1wva1rnmjk6fh88rbk8"
+  },
+  "slug": "narrative-builder",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/narrative-builder",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=narrative-builder&ownerHandle=wavegeometry",
+    "page_url": "https://clawhub.ai/wavegeometry/skills/narrative-builder"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 336,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u53d9\u4e8b\u5efa\u9020\u5668\u2014\u2014\u5143\u6280\u80fd\u7cfb\u7edf\u7684\u4e0b\u7ea7\u9886\u57df\u6280\u80fd\uff0c\u7f16\u6392\u578b\u7ec4\u5408\u751f\u6210\u5668\uff0c\u6d88\u8d39\u4e16\u754c\u5efa\u9020\u5668\uff08World Builder\uff09\u548c\u89d2\u8272\u5efa\u9020\u5668\uff08Character Builder\uff09\u7684\u8f93\u51fa\uff0c\u5c06\"\u6709\u4ec0\u4e48\"\uff08\u4e16\u754c+\u89d2\u8272\uff09\u7f16\u6392\u4e3a\"\u53d1\u751f\u4ec0\u4e48\"\uff08\u60c5\u8282+\u4e8b\u4ef6\uff09\u3002\u4ee5\u7ba1\u7ebf\u6a21\u578b\uff08\u8f93\u5165\u5c42\u2192\u7ed3\u6784\u5c42\u2192\u7f16\u6392\u5c42\u2192\u8f93\u51fa\u5c42\uff09\u9a71\u52a8\uff0c\u63d0\u4f9b\u60c5\u8282\u7ed3\u6784\u8bbe\u8ba1\u3001\u89c6\u89d2\u9009\u62e9\u3001\u8282\u594f\u4e0e\u51b2\u7a81\u8bbe\u8ba1\u3001\u4e8b\u4ef6\u7f16\u6392\u3001\u573a\u666f\u6784\u5efa\u3001\u4e3b\u9898\u7f16\u7ec7\u3001\u5bf9\u767d\u4e0e\u53d9\u8ff0\u8bbe\u8ba1\u3001\u53d9\u4e8b\u6821\u9a8c\u7b49\u5b8c\u6574\u53d9\u4e8b\u6784\u5efa\u80fd\u529b\u30026\u57df21\u4efb\u52a1\uff0c\u652f\u6301\u53cc\u6a21\u5f0f\u2014\u2014\u76f4\u63a5\u53d9\u4e8b\u6784\u5efa\uff08\u72ec\u7acb\u521b\u4f5c\uff09\u548c\u89d2\u8272\u9a71\u52a8\u7f16\u6392\uff08\u6d88\u8d39Character Builder\u8f93\u51fa\uff09\u3002\u89e6\u53d1\u8bcd\uff1a\u53d9\u4e8b\u5efa\u9020\u3001\u53d9\u4e8b\u751f\u6210\u3001\u6545\u4e8b\u6784\u5efa\u3001\u60c5\u8282\u8bbe\u8ba1\u3001\u573a\u666f\u7f16\u6392\u3001\u53d9\u4e8b\u7ed3\u6784\u3001\u6545\u4e8b\u521b\u4f5c\u3001narrative",
+  "updated_at": 1783874211995,
+  "version": "1.0.0"
+}
