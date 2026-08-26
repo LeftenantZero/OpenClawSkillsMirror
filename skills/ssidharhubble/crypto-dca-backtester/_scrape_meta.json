@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release\u2014backtest crypto dollar-cost averaging (DCA) vs lump-sum investing:\n\n- Compare weekly DCA strategy to lump-sum investment using real CoinGecko daily price data (up to 365 days).\n- Supports any CoinGecko-listed coin\u2014just specify the coin id, lookback period, and weekly contribution.\n- Outputs total invested, end portfolio value, percent return, and identifies the better-performing approach.\n- No API key required; leverages CoinGecko's free market_chart endpoint.\n- Designed for crypto traders and investors evaluating entry timing strategies.",
+  "created_at": 1785038418971,
+  "display_name": "Crypto DCA Backtester",
+  "fetched_at": 1787774993287,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/dca_backtest.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ssyopro",
+    "handle": "ssidharhubble",
+    "user_id": "s1751xfhp40q8vjjqd22y5vaw584gpke"
+  },
+  "slug": "crypto-dca-backtester",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/crypto-dca-backtester",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=crypto-dca-backtester&ownerHandle=ssidharhubble",
+    "page_url": "https://clawhub.ai/ssidharhubble/skills/crypto-dca-backtester"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 259,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Backtest dollar-cost averaging (DCA) against lump-sum investing on any coin's real historical price data, using the free CoinGecko market_chart API (no API key required, up to 365 days of daily history). Built for crypto traders and passive-income investors deciding between DCA and lump-sum entry strategies before committing capital. Simulates weekly contributions and compares final portfolio value, invested capital, and percent return against a lump-sum baseline of the same total capital deployed on day one. Complements trading, whale-tracking, and DeFi yield skills by covering the entry-strategy decision, which is distinct from picking what to buy or where to farm yield.",
+  "updated_at": 1785042048081,
+  "version": "1.0.0"
+}
