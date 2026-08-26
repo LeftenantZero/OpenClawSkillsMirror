@@ -1,0 +1,33 @@
+{
+  "changelog": "- Clarified strict requirements for obtaining the current date using `session_status` before answering any query involving \"today,\" \"now,\" or relative time.\n- Defined a mandatory two-step process: always call `session_status` first, alone, and wait for the result before constructing time-sensitive queries.\n- Added a table specifying exactly when `session_status` is required versus when to use provided user dates directly.\n- Introduced a \"Year Self-Check\" to ensure that all current-year references come from `session_status`, not prior knowledge or defaults.\n- Emphasized reply integrity: output must strictly reflect tool results from the session\u2014never supplement or fill gaps with prior or estimated information.\n- Provided clear fallback guidance if current date or real-time data cannot be retrieved.",
+  "created_at": 1779235748126,
+  "display_name": "Time Awareness",
+  "fetched_at": 1787785733393,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "dbottrader",
+    "handle": "dbottrader",
+    "user_id": "s17b02mkbpqc4jysfffmey7rbh8730mw"
+  },
+  "slug": "cp8-time-awareness",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cp8-time-awareness",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cp8-time-awareness&ownerHandle=dbottrader",
+    "page_url": "https://clawhub.ai/dbottrader/skills/cp8-time-awareness"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 595,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Ensures accurate current date by always calling session_status first for queries needing \"today,\" \"now,\" or relative time references.",
+  "updated_at": 1779235760809,
+  "version": "1.0.1"
+}
