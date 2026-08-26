@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of git-manager skill.\n\n- Safely execute common Git operations: status, commit, push, pull, branch, checkout, merge, stash, log, diff.\n- Safety features: prevents force push by default, protects main/master/production branches, supports dry-run, logs all actions.\n- Structured JSON output for all actions, useful for automation and integration.\n- Commit message quality checks and suggestions included.\n- Configurable via environment variables.\n- Easily integrates with OpenClaw developer sessions, supports chained operations and auto-suggested commit messages.\n- Limitations: no automatic merge conflict resolution or interactive rebase; SSH setup required for push/pull.",
+  "created_at": 1774550816575,
+  "display_name": "Git Manager",
+  "fetched_at": 1787787208273,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "index.ts",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090134427,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "liyico",
+    "handle": "liyico",
+    "user_id": "s17fyxxpe9v43npymfc8ywdcah83m93q"
+  },
+  "slug": "git-manager",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/git-manager",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=git-manager&ownerHandle=liyico",
+    "page_url": "https://clawhub.ai/liyico/skills/git-manager"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 813,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Perform common Git operations like status, commit, push, pull, branch management, and merge with safety checks and dry-run support.",
+  "updated_at": 1779079010894,
+  "version": "1.0.0"
+}
