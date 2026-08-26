@@ -1,0 +1,66 @@
+{
+  "changelog": "- Initial release of geoskill-water-balance-calculation.\n- Provides per-pixel water balance computation (P = ET + Q + \u0394S), with closure residual assessment.\n- Supports both real precipitation input and fully synthetic, physically closed test datasets.\n- Outputs include GeoTIFFs for all components and closure residual, plus a comprehensive JSON report and run manifest.\n- Runs fully offline by default, with no network requests or user data upload.\n- Includes detailed usage instructions and privacy information in both English and Chinese.",
+  "created_at": 1785863349730,
+  "display_name": "geoskill-water-balance-calculation",
+  "fetched_at": 1787773408305,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-water-balance-calculation.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785864291299,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-water-balance-calculation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-water-balance-calculation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-water-balance-calculation&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-water-balance-calculation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 176,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u9010\u50cf\u5143\u6c34\u91cf\u5e73\u8861\u8ba1\u7b97 P = ET + Q + \u0394S\uff0c\u8bc4\u4f30\u95ed\u5408\u5dee\u3002Per-pixel water balance computation P = ET + Q + \u0394S with closure residual assessment. \u8f93\u51fa\u5404\u5206\u91cf/\u95ed\u5408\u5dee GeoTIFF + \u62a5\u544a JSON\u3002",
+  "updated_at": 1785863549686,
+  "version": "1.0.0"
+}
