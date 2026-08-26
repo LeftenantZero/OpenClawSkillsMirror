@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of Concord \u2014 Agent Privacy Handshake.\n\n- Provides a negotiation layer for agent-to-agent data transfers to ensure privacy compliance.\n- Detects and redacts sensitive data (PII, financial, medical, credentials) before forwarding to other agents or services.\n- Offers endpoints for negotiation, token rehydration, audit record retrieval, and agent metadata.\n- Supports multiple privacy personas (ai_safe, gdpr_safe, medical_safe, etc.) with customizable data masking.\n- No API key required; recommends autonomous invocation whenever sensitive data may be shared.",
+  "created_at": 1783700675398,
+  "display_name": "Concord",
+  "fetched_at": 1787777266918,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783700892165,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Andrea",
+    "handle": "andrea-cola",
+    "user_id": "s173d9b89ykpnywpnzhj6stmqd8a8tds"
+  },
+  "slug": "concord",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/concord",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=concord&ownerHandle=andrea-cola",
+    "page_url": "https://clawhub.ai/andrea-cola/skills/concord"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 393,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Concord negotiates, redacts, and scores risks of sensitive data shared between agents, ensuring privacy compliance without requiring an API key.",
+  "updated_at": 1783700675398,
+  "version": "0.1.0"
+}
