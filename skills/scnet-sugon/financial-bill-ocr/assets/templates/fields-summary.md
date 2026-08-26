@@ -1,0 +1,378 @@
+# 各识别类型的字段说明（elements 内容）
+
+根据 ocrType 不同，返回的 `elements` 对象包含以下字段：
+
+## BANK_DRAFT (银行汇票)
+- `title`: 标题
+- `billCode`: 票据代码
+- `billNo`: 票据号码
+- `issueDate`: 出票日期
+- `agentPayingBank`: 代理付款行
+- `agentPayingBankNo`: 代理付款行行号
+- `payeeName`: 收款人名称
+- `issueAmountUpper`: 出票金额(大写)
+- `issueAmountLower`: 出票金额(小写)
+- `settleAmountUpper`: 实际结算金额(大写)
+- `settleAmountLower`: 实际结算金额(小写)
+- `applicantName`: 申请人名称
+- `applicantAccount`: 申请人账号
+- `issueBank`: 出票行
+- `issueBankNo`: 出票行行号
+- `remark`: 备注
+- `cipherCode`: 密押
+- `surplusAmount`: 多余金额
+
+## BANK_ACCEPTANCE_BILL (银行承兑汇票)
+- `title`: 标题
+- `billCode`: 票据代码
+- `billNo`: 票据号码
+- `issueDate`: 出票日期
+- `drawerName`: 出票人全称
+- `drawerAccount`: 出票人账号
+- `payingBankName`: 付款行全称
+- `payingBankNo`: 付款行行号
+- `payingBankAddress`: 付款行地址
+- `payeeName`: 收款人全称
+- `payeeAccount`: 收款人账号
+- `payeeBank`: 收款人开户行
+- `issueAmountUpper`: 出票金额(大写)
+- `issueAmountLower`: 出票金额(小写)
+- `dueDate`: 汇票到期日
+- `acceptanceAgreementNo`: 承兑协议编号
+- `cipherCode`: 密押
+
+## ELECTRONIC_BANK_ACCEPTANCE_BILL (电子银行承兑汇票)
+- `title`: 标题
+- `billStatus`: 票据状态
+- `billNo`: 票据号码
+- `subBillRange`: 子票区间
+- `issueDate`: 出票日期
+- `dueDate`: 到期日期
+- `drawerName`: 出票人全称
+- `drawerAccount`: 出票人账号
+- `drawerBank`: 出票人开户行
+- `payeeName`: 收款人全称
+- `payeeAccount`: 收款人账号
+- `payeeBank`: 收款人开户行
+- `issueAmountUpper`: 出票金额(大写)
+- `issueAmountLower`: 出票金额(小写)
+- `acceptorName`: 承兑人名称
+- `acceptorAccount`: 承兑人账号
+- `acceptorBankNo`: 承兑人开户行行号
+- `acceptorBankName`: 承兑人开户行名称
+- `transContractNo`: 交易合同号
+- `transferableStatus`: 能否转让
+- `acceptanceDate`: 承兑日期
+
+## COMMERCIAL_ACCEPTANCE_BILL (商业承兑汇票)
+- `title`: 标题
+- `billCode`: 票据代码
+- `billNo`: 票据号码
+- `issueDate`: 出票日期
+- `payerName`: 付款人全称
+- `payerAccount`: 付款人账号
+- `payerOpeningBankName`: 付款人开户行
+- `payerOpeningBankNo`: 付款人开户行行号
+- `payerOpeningBankAddress`: 付款人开户行地址
+- `payeeName`: 收款人全称
+- `payeeAccount`: 收款人账号
+- `payeeBank`: 收款人开户行
+- `issueAmountUpper`: 出票金额(大写)
+- `issueAmountLower`: 出票金额(小写)
+- `dueDate`: 汇票到期日
+- `transactionContractNo`: 交易合同号码
+
+## ELECTRONIC_COMMERCIAL_ACCEPTANCE (电子商业承兑汇票)
+- `title`: 标题
+- `billStatus`: 票据状态
+- `billNo`: 票据号码
+- `subBillRange`: 子票区间
+- `issueDate`: 出票日期
+- `dueDate`: 到期日期
+- `drawerName`: 出票人全称
+- `drawerAccount`: 出票人账号
+- `drawerBank`: 出票人开户行
+- `payeeName`: 收款人全称
+- `payeeAccount`: 收款人账号
+- `payeeBank`: 收款人开户行
+- `issueAmountUpper`: 出票金额(大写)
+- `issueAmountLower`: 出票金额(小写)
+- `acceptorName`: 承兑人名称
+- `acceptorAccount`: 承兑人账号
+- `acceptorBankNo`: 承兑人开户行行号
+- `acceptorBankName`: 承兑人开户行名称
+- `transContractNo`: 交易合同号
+- `transferableStatus`: 能否转让
+- `acceptanceDate`: 承兑日期
+
+## BANK_CHECK (银行支票)
+- `title`: 标题
+- `bankName`: 银行名称
+- `billNo`: 票据号码
+- `issueDate`: 出票日期
+- `payingBankName`: 付款行名称
+- `payeeName`: 收款人
+- `drawerAccount`: 出票人账号
+- `amountUpper`: 大写金额
+- `amountLower`: 小写金额
+- `usage`: 用途
+- `password`: 密码
+- `bankCode`: 行号
+
+## BANK_RECEIPT (银行回单)
+- `title`: 标题
+- `bankName`: 银行名称
+- `payingName`: 付款人名称
+- `payingAccount`: 付款人账号
+- `payingBank`: 付款人开户行
+- `payeeName`: 收款人名称
+- `payeeAccount`: 收款人账号
+- `payeeBank`: 收款人开户行
+- `adviceNo`: 回单编号
+- `amountUpper`: 大写金额
+- `amountLower`: 小写金额
+- `abstract`: 摘要
+- `businessType`: 业务种类
+- `usage`: 用途
+- `serialNo`: 流水号
+- `remarks`: 备注
+- `printDate`: 打印日期
+- `transDate`: 交易日期
+
+## DEPOSIT_SLIP (进账单)
+- `title`: 标题
+- `fillDate`: 填单日期
+- `drawerName`: 出票人全称
+- `drawerAccount`: 出票人账号
+- `drawerBank`: 出票人开户银行
+- `payeeName`: 收款人全称
+- `payeeAccount`: 收款人账号
+- `payeeBank`: 收款人开户银行
+- `amountUpper`: 大写金额
+- `amountLower`: 小写金额
+- `billType`: 票据种类
+- `billNum`: 票据张数
+- `billNo`: 票据号码
+- `remarks`: 备注
+
+## TELEGRAPHIC_TRANSFER_VOUCHER (电汇凭证)
+- `title`: 标题
+- `currency`: 币别
+- `fillDate`: 填单日期
+- `voucherNo`: 凭证编号
+- `remitterName`: 汇款人名称
+- `remitterAccount`: 汇款人账号
+- `remitterBank`: 汇款人汇出行名称
+- `payeeName`: 收款人名称
+- `payeeAccount`: 收款人账号
+- `payeeBank`: 收款人汇入行名称
+- `amountUpper`: 大写金额
+- `amountLower`: 小写金额
+- `password`: 支付密码
+- `usage`: 附加信息及用途
+
+## WITHDRAWAL_VOUCHER (支款凭证)
+- `title`: 标题
+- `currency`: 账别
+- `fillDate`: 填单日期
+- `voucherNo`: 凭证编号
+- `payerName`: 支款人全称
+- `payerAccount`: 支款人账号
+- `payerBank`: 支款人开户行
+- `payeeName`: 收款人全称
+- `payeeAccount`: 收款人账号
+- `payeeBank`: 收款人开户行
+- `amountUpper`: 大写金额
+- `amountLower`: 小写金额
+- `usage`: 用途
+
+## MOBILE_PAYMENT_BILL (移动支付账单)
+- `title`: 标题
+- `transAmount`: 交易金额
+- `transStatus`: 交易状态
+- `transDate`: 交易时间
+- `goods`: 商品
+- `merchantName`: 商户全称
+- `acquiringInstitution`: 收单机构
+- `transType`: 交易方式
+- `transNo`: 交易单号
+- `merchantNo`: 商户单号
+- `remarks`: 备注
+- `refundNo`: 退款单号
+
+## FISCAL_AUTH_PAYMENT_VOUCHER (财政授权支付凭证)
+- `title`: 标题
+- `voucherNo`: 凭证号码
+- `payDate`: 付款日期
+- `payerName`: 付款人全称
+- `payerAccount`: 付款人账号
+- `payerBank`: 付款人开户银行
+- `payeeName`: 收款人全称
+- `payeeAccount`: 收款人账号
+- `payeeBank`: 收款人开户银行
+- `payAmountUpper`: 支付金额(大写)
+- `payAmountLower`: 支付金额(小写)
+- `agencyCode`: 单位编码
+- `settleMethod`: 结算方式
+- `budgetAgency`: 预算单位
+- `fundType`: 资金性质
+- `fundUsage`: 资金用途
+- `functionalType`: 功能分类
+- `economicType`: 经济分类
+
+## CUSTOMS_PAYMENT_RECEIPT (海关专用缴款书)
+- `title`: 标题
+- `revenueSystem`: 收入系统
+- `issueDate`: 填发日期
+- `customsReceiptNumber`: 缴款书号码
+- `revenueAuthority`: 收入机关
+- `budgetSubject`: 科目
+- `budgetLevel`: 预算级次
+- `receivingTreasury`: 收款国库
+- `payerName`: 缴款单位名称
+- `payerAccount`: 缴款单位账号
+- `payerBank`: 缴款单位开户银行
+- `totalAmountUpper`: 合计金额(大写)
+- `totalAmountLower`: 合计金额(小写)
+- `applicantCode`: 申请单位编号
+- `customsDeclarationNumber`: 报关单编号
+- `contractNumber`: 合同号
+- `conveyanceNumber`: 运输工具号
+- `paymentDeadline`: 缴款期限
+- `deliveryOrderNumber`: 提货单号
+- `nationalStandardCode`: 国标代码
+- `transactionSerialNumber`: 交易流水号
+- `goodsDetails`: 货物明细
+  - `taxCode`: 税号
+  - `goodsName`: 货物名称
+  - `quantity`: 数量
+  - `unit`: 单位
+  - `customsValue`: 完税价格
+  - `taxRate`: 税率
+  - `taxAmount`: 税款金额
+
+## CUSTOMS_DECLARATION (海关进/出口货物报关单)
+- `title`: 标题
+- `preEntryNumber`: 预录入编号
+- `customsNumber`: 海关编号
+- `pageNumber`: 页码/页数
+- `consignor`: 境内发货人/境内收货人
+- `customsOffice`: 出境关别/进境关别
+- `exportDate`: 出口日期/进口日期
+- `declareDate`: 申报日期
+- `recordNumber`: 备案号
+- `consignee`: 境外收货人/境外发货人
+- `transportMode`: 运输方式
+- `transportation`: 运输工具名称及航次号
+- `blNumber`: 提运单号
+- `storageLocation`: 货物存放地点
+- `manufacturer`: 生产销售单位/消费使用单位
+- `supervisionMode`: 监管方式
+- `supervisionModeCode`: 监管方式代码
+- `exemptionNature`: 征免性质
+- `licenseNumber`: 许可证号
+- `departurePort`: 启运港
+- `contractNumber`: 合同协议号
+- `tradeCountry`: 贸易国
+- `destinationCountry`: 运抵国/启运国
+- `destinationPort`: 指运港/经停港
+- `exitPort`: 离境口岸/入境口岸
+- `packageType`: 包装种类
+- `packageQuantity`: 件数
+- `grossWeight`: 毛重
+- `netWeight`: 净重
+- `tradeTerms`: 成交方式
+- `freightCharges`: 运费
+- `insurancePremiums`: 保费
+- `miscellaneousCharges`: 杂费
+- `attachmentAndNumber`: 随附单证及编号
+- `remarks`: 标记唛码及备注
+- `goodsDetails`: 商品明细
+  - `itemNumber`: 项号
+  - `commodityCode`: 商品编号
+  - `commodityName`: 商品名称及规格型号
+  - `quantityAndUnit1`: 数量及单位
+  - `quantityAndUnit2`: 数量及单位2
+  - `quantityAndUnit3`: 数量及单位3
+  - `unitPrice`: 单价
+  - `totalPrice`: 总价
+  - `currency`: 币制
+  - `originCountry`: 原产国
+  - `finalDestinationCountry`: 最终目的地
+  - `domesticSourceArea`: 境内货源地
+  - `taxExemptionIndicator`: 征免
+
+## INTERNATIONAL_BILL (国际汇票)
+- `draftNumber`: 汇票号码
+- `draftDate`: 出票日期
+- `amount`: 汇票金额
+- `amountInWords`: 汇票金额大写
+- `payeeName`: 收款人名称
+- `draweeName`: 付款行/受票人
+- `draftTenor`: 汇票期限
+- `lcNumber`: 信用证号码
+- `issueDate`: 信用证开证日期
+- `issueBank`: 信用证开证行
+- `drawer`: 出票人
+
+## COMMERCIAL_INVOICE (商业发票)
+- `invoiceNo`: 发票号码
+- `invoiceDate`: 发票日期
+- `totalAmount`: 发票金额
+- `issuerName`: 发票开具方名称
+- `issuerAddress`: 发票开具方地址
+- `lcNumber`: 信用证编号
+- `lcDate`: 信用证开证日期
+- `contractNumber`: 合同号
+- `priceTerm`: 成交方式
+
+## CERTIFICATE_OF_ORIGIN (原产地证明)
+- `exporter`: 出口商
+- `consignee`: 收货人
+- `transportAndRoute`: 运输方式及路线
+- `lcNumber`: 信用证编号
+- `issueDate`: 开具日期
+- `issuer`: 开具方名称
+
+## CARGO_TRANSPORT_INSURANCE (货物运输保险单)
+- `issueDate`: 签单日期
+- `lcNumber`: 信用证编号
+- `totalAmountLower`: 保险金额(小写)
+- `totalAmountUpper`: 保险金额(大写)
+- `insured`: 被保险人
+- `claimPayableAt`: 赔款偿付地点
+- `perConverance`: 装载运输工具
+- `sigOn`: 启运日期
+- `routeFrom`: 启运地
+- `routeTo`: 目的地
+
+## PACKING_LIST (装箱单)
+- `packingListNo`: 装箱单号
+- `invoiceNo`: 发票号
+- `issueDate`: 签单日期
+- `exporterName`: 出单方
+- `exporterAddress`: 出单方地址
+- `consigneeName`: 收货人
+- `consigneeAddress`: 收货人地址
+- `notifyParty`: 通知方
+- `loadingPort`: 起运港
+- `dischargePort`: 卸货港
+- `vesselNo`: 航次号
+- `containerNo`: 箱号
+- `totalNetWeight`: 总净重
+- `totalGrossWeight`: 总毛重
+- `totalMeasurement`: 总体积
+- `priceTerm`: 成交方式
+- `contractNumber`: 合同号
+- `lcNumber`: 信用证编号
+
+## BILL_OF_LADING (提单)
+- `blNumber`: 提单号
+- `issueDate`: 签单日期
+- `loadingPort`: 装运港
+- `dischargePort`: 卸货港
+- `exporterName`: 发货人
+- `consigneeName`: 收货人
+- `notifyParty`: 通知方
+- `vessel`: 航次号
+- `issuePlace`: 签发地点
