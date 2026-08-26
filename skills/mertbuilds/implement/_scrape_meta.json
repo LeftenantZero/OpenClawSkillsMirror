@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of the implement skill: a streamlined, isolated flow for building features or fixes in a new worktrunk worktree.\n\n- Automatically scopes, implements, commits, and opens a draft PR for code changes based on user requests.\n- Skips for questions, explanations, research, or trivial one-line doc/config edits.\n- Detects and uses repo conventions for branch names and commit style.\n- Starts dev server if available and reports live preview URL.\n- Stays in the new worktree to support iterative review and further edits.\n- Includes clear guidelines for cleanup and when not to use the skill.",
+  "created_at": 1786375202776,
+  "display_name": "implement",
+  "fetched_at": 1787772803027,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786376692186,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mert duzgun",
+    "handle": "mertbuilds",
+    "user_id": "s1797e8sqbv86ztgap64pfahvs8c6a5m"
+  },
+  "slug": "implement",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/implement",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=implement&ownerHandle=mertbuilds",
+    "page_url": "https://clawhub.ai/mertbuilds/skills/implement"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 191,
+    "installs": 2,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Build a feature in an isolated worktrunk worktree, commit, and open a draft PR. Use whenever the user asks to implement, build, add, or fix something that touches code \u2014 e.g. '/implement', 'implement X', 'build X', 'add X', 'fix X', 'let's build it', 'ship it', 'drop this in', 'go code it up'. Skip for questions, explanations, research, and trivial one-line docs/config edits. Skip if already inside a worktrunk worktree (just implement directly).",
+  "updated_at": 1786376030234,
+  "version": "0.1.0"
+}
