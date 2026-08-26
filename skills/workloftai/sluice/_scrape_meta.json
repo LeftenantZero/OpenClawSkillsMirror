@@ -1,0 +1,45 @@
+{
+  "changelog": "sluice 1.0.0 \u2014 Initial public release\n\n- Scans outbound messages for leaked secrets and private identifiers before sending.\n- Blocks or redacts detected credentials including API keys, tokens, JWTs, and private keys.\n- Supports gating and redacting modes with machine-readable output and customizable thresholds.\n- Pure Python standard library: no dependencies, no external network calls.\n- Designed for high precision, minimizing false positives.\n- Easy integration as a pre-send guard for agents publishing to email, social, or public sites.",
+  "created_at": 1782913369615,
+  "display_name": "sluice",
+  "fetched_at": 1787778497797,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "bench.py",
+    "bin/sluice",
+    "clawhub.json",
+    "skill-card.md",
+    "sluice/__init__.py",
+    "sluice/cli.py",
+    "sluice/core.py",
+    "sluice/detectors.py",
+    "tests/__init__.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_detectors.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Workloft",
+    "handle": "workloftai",
+    "user_id": "s17b4msacv23kywbf6ssbhm5jd89qe0t"
+  },
+  "slug": "sluice",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sluice",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sluice&ownerHandle=workloftai",
+    "page_url": "https://clawhub.ai/workloftai/skills/sluice"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 190,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "An outbound egress guard for agents \u2014 scan any message (email, social draft, Telegram reply, a write to a public site) for leaked secrets and private identif...",
+  "updated_at": 1782913369615,
+  "version": "1.0.0"
+}
