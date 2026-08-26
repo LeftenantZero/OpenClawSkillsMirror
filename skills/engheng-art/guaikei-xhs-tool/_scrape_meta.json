@@ -1,0 +1,55 @@
+{
+  "changelog": "Initial release: Efficient tool for retrieving structured public data from Xiaohongshu.\n\n- Provides keyword search, note details, note comments, and creator post list as JSON (up to 10,000 items per request)\n- Requires GUAIKEI_API_TOKEN for use; works only with public, non-private data\n- Node.js CLI, no login or deployment required\n- Includes routing, input prompts, anti-patterns, and robust error/edge case handling\n- Well-documented scenarios, environment setup, and usage best practices",
+  "created_at": 1786330330917,
+  "display_name": "guaikei-xhs-tool",
+  "fetched_at": 1787772999782,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "readme.md",
+    "references/changelog.md",
+    "references/options.md",
+    "skill-card.md",
+    "src/api/comment.js",
+    "src/api/detail.js",
+    "src/api/post.js",
+    "src/api/search.js",
+    "src/config/constants.js",
+    "src/utils/args.js",
+    "src/utils/key.js",
+    "src/utils/log.js",
+    "src/utils/name.js",
+    "src/utils/request.js",
+    "src/utils/retry.js",
+    "src/utils/utils.js",
+    "src/validate/keyword.js",
+    "src/validate/url.js",
+    "src/xiaohongshu/comment-cli.js",
+    "src/xiaohongshu/detail-cli.js",
+    "src/xiaohongshu/post-cli.js",
+    "src/xiaohongshu/search-cli.js"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "engheng-art",
+    "handle": "engheng-art",
+    "user_id": "s17av7fakvdwpsbhaddxp8e7mh89wsrx"
+  },
+  "slug": "guaikei-xhs-tool",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/guaikei-xhs-tool",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=guaikei-xhs-tool&ownerHandle=engheng-art",
+    "page_url": "https://clawhub.ai/engheng-art/skills/guaikei-xhs-tool"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 153,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c0f\u7ea2\u4e66\u516c\u5f00\u6570\u636e\u83b7\u53d6\u6280\u80fd\uff5c\u6838\u5fc3\uff1a\u628a\u5c0f\u7ea2\u4e66\u5173\u952e\u8bcd\u641c\u7d22\u3001\u7b14\u8bb0\u8be6\u60c5\u3001\u7b14\u8bb0\u8bc4\u8bba\u3001\u535a\u4e3b\u4f5c\u54c1\u5217\u8868\u6293\u53d6\u4e3a\u7ed3\u6784\u5316 JSON\uff1b\u4e00\u6b21\u6700\u591a 1W \u6761\uff1b\u9700 GUAIKEI_API_TOKEN\uff1b\u4ec5\u516c\u5f00\u6570\u636e\uff0c\u4e0d\u542b\u767b\u5f55\u6001/\u79c1\u5bc6\u5185\u5bb9",
+  "updated_at": 1786330437722,
+  "version": "1.0.0"
+}
