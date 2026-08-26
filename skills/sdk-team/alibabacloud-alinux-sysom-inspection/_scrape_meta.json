@@ -1,0 +1,56 @@
+{
+  "changelog": "alibabacloud-alinux-sysom-inspection 0.2.0 introduces enhanced CLI workflows and report handling.\n\n- Switched to `sysom-osops` CLI for all inspection tasks, replacing direct script/API usage.\n- Added support for intent-driven inspections via `--query` and new batch/region-wide modes.\n- Integrated automatic root-cause diagnosis on Top-3 anomalies and LLM-generated summary reports.\n- Improved error handling with clear guidance for permissions, throttling, argument errors, and empty regions.\n- Provides new quickstart commands and detailed invocation examples in documentation.\n- Deprecated legacy local Python CLI except as a fallback.",
+  "created_at": 1779270946062,
+  "display_name": "alibabacloud-alinux-sysom-inspection",
+  "fetched_at": 1787770445680,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ram-policies.md",
+    "references/report-template.md",
+    "scripts/init.sh",
+    "scripts/osops.sh",
+    "scripts/pyproject.toml",
+    "scripts/requirements.txt",
+    "scripts/sysom_cli/__init__.py",
+    "scripts/sysom_cli/__main__.py",
+    "scripts/sysom_cli/inspection/__init__.py",
+    "scripts/sysom_cli/inspection/command.py",
+    "scripts/sysom_cli/lib/__init__.py",
+    "scripts/sysom_cli/lib/auth.py",
+    "scripts/sysom_cli/lib/openapi.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787209474526,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-alinux-sysom-inspection",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-alinux-sysom-inspection",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-alinux-sysom-inspection&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-alinux-sysom-inspection"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 877,
+    "installs": 15,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Inspect ECS instance health, detect anomalies in memory, disk, CPU, load, and resource leaks, and automatically trigger deep diagnosis when critical memory issues are detected. Suitable for routine inspections, troubleshooting, and risk warning scenarios. Trigger keywords: SysOM, inspection, instance diagnosis, memory_usage_rate, memory usage.",
+  "updated_at": 1787208803357,
+  "version": "0.0.4"
+}
