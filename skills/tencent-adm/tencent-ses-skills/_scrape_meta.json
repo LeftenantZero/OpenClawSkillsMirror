@@ -1,0 +1,48 @@
+{
+  "changelog": "This Skill wraps the core APIs of Tencent Cloud SES and provides the following capabilities:\n \u2981Domain management: query, create, and verify sender domains.\n \u2981Address management: query and create sender addresses.\n \u2981Email sending: supports both template-based sending and custom content sending, with advanced options such as CC, BCC, attachments, and unsubscribe links.\n \u2981Status query: query email delivery and receipt status.\n \u2981Template management: create, update, and delete email templates.\n \u2981DNS diagnostics: check SPF, DKIM, DMARC, and MX records, detect CNAME conflicts, and verify global DNS propagation.",
+  "created_at": 1779414337102,
+  "display_name": "tencent-ses-skills",
+  "fetched_at": 1787785309110,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api_reference.md",
+    "references/dns_guide.md",
+    "references/security_setup_guide.md",
+    "scripts/dns_checker.py",
+    "scripts/ses_tool.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779960464011,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u817e\u8baf\u5f00\u6e90",
+    "handle": "tencent-adm",
+    "user_id": "s171cxjdnjyqjxa91pj2bfmr6x83gyg1"
+  },
+  "slug": "tencent-ses-skills",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tencent-ses-skills",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tencent-ses-skills&ownerHandle=tencent-adm",
+    "page_url": "https://clawhub.ai/tencent-adm/skills/tencent-ses-skills"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 555,
+    "installs": 11,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u817e\u8baf\u4e91\u90ae\u4ef6\u63a8\u9001(SES)\u670d\u52a1\u6280\u80fd\uff0c\u7528\u4e8e\u901a\u8fc7\u817e\u8baf\u4e91 API \u53d1\u9001\u90ae\u4ef6\u3002\u5f53\u7528\u6237\u63d0\u5230\"\u53d1\u9001\u90ae\u4ef6\"\u3001\"\u90ae\u4ef6\u63a8\u9001\"\u3001\"\u53d1\u90ae\u4ef6\u7ed9\"\u3001 \"\u7528\u67d0\u4e2a\u5730\u5740\u7ed9\u67d0\u4eba\u53d1\u9001\u6a21\u677f/\u90ae\u4ef6\u5185\u5bb9\"\u65f6\u89e6\u53d1\u3002\u652f\u6301\u5b8c\u6574\u7684\u90ae\u4ef6\u53d1\u9001\u5de5\u4f5c\u6d41\uff1a (0) \u68c0\u67e5 API \u5bc6\u94a5\u914d\u7f6e\u5e76\u6309\u5b89\u5168\u914d\u7f6e\u6307\u5357\u5f15\u5bfc\u7528\u6237\u5b8c\u6210\u5b50\u8d26\u53f7\u521b\u5efa\u548c\u5bc6\u94a5\u83b7\u53d6\uff0c (1) \u89e3\u6790\u7528\u6237\u6307\u4ee4\u5e76\u5728\u4fe1\u606f\u7f3a\u5931\u65f6\u5f15...",
+  "updated_at": 1779414337102,
+  "version": "1.0.1"
+}
