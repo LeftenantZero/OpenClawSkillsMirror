@@ -1,0 +1,51 @@
+{
+  "changelog": "Huawei Cloud SWR image automation skill 1.0.3 focuses on secure and user-confirmed management of image sync and triggers.\n\n- Adds comprehensive documentation for configuring cross-region image sync and auto-deploy triggers, using the hcloud CLI.\n- Explicitly lists all operations requiring confirmation, with step-by-step prompts ensuring users approve any create, update, or delete action before execution.\n- Details prerequisites, credential setup (AK/SK and temporary token), and security best practices for safe operations.\n- Clarifies required IAM permissions for each supported operation, plus error handling and user guidance for permission issues.\n- Outlines main use cases, supported commands, and common workflows for SWR automation across multiple Huawei Cloud regions.",
+  "created_at": 1783382722687,
+  "display_name": "huawei-cloud-swr-image-automation",
+  "fetched_at": 1787770795132,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/common-pitfalls.md",
+    "references/iam-policies.md",
+    "references/swr-automation-api-guide.md",
+    "references/task-image-sync.md",
+    "references/task-trigger-management.md",
+    "references/verification-method.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787737839477,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweicloud-skills-team",
+    "handle": "huaweiclouddev",
+    "user_id": "s17axk041vxeamxj39r4dwvyts87wtza"
+  },
+  "slug": "huawei-cloud-swr-image-automation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-swr-image-automation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-swr-image-automation&ownerHandle=huaweiclouddev",
+    "page_url": "https://clawhub.ai/huaweiclouddev/skills/huawei-cloud-swr-image-automation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 225,
+    "installs": 1,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Huawei Cloud SWR (Software Repository for Container) image automation and operations skill using hcloud CLI. Use this skill when the user wants to: (1) configure cross-region image sync (auto or manual), (2) manage SWR triggers for auto-deploy to CCE/CCI, (3) query available sync target regions, (4) check sync job status, (5) create/update/delete trigger configurations. Trigger: user mentions \"SWR automation\", \"SWR \u81ea\u52a8\u5316\", \"\u955c\u50cf\u540c\u6b65\", \"SWR sync\", \"\u8de8\u533a\u57df\u540c\u6b65\", \"cross-region sync\", \"\u89e6\u53d1\u5668\", \"SWR trigger\", \"\u81ea\u52a8\u90e8\u7f72\", \"auto deploy\", \"\u955c\u50cf\u590d\u5236\", \"image replication\", \"SWR \u89e6\u53d1\u5668\"",
+  "updated_at": 1787737313479,
+  "version": "1.0.3"
+}
