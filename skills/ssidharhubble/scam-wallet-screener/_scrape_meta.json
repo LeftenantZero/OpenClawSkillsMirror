@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of scam-wallet-screener.\n\n- Screens Ethereum and other EVM addresses against the ScamSniffer blocklist of known scam, phishing, and wallet drainer addresses \u2014 no API key needed.\n- Supports Base, Polygon, BSC, Arbitrum, and more EVM chains; non-EVM addresses are not covered.\n- Uses a public, community-maintained JSON feed of 2,500+ addresses, caching results locally for 6 hours to improve speed.\n- Reports each screened address as either \"FLAGGED\" (if found on the blocklist) or \"not found in blocklist\".\n- Intended as a quick, keyless safety check; not a substitute for deeper forensics \u2014 a clean result does not guarantee an address is safe.",
+  "created_at": 1786248055300,
+  "display_name": "scam-wallet-screener",
+  "fetched_at": 1787773075237,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/screen_address.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ssyopro",
+    "handle": "ssidharhubble",
+    "user_id": "s1751xfhp40q8vjjqd22y5vaw584gpke"
+  },
+  "slug": "scam-wallet-screener",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/scam-wallet-screener",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=scam-wallet-screener&ownerHandle=ssidharhubble",
+    "page_url": "https://clawhub.ai/ssidharhubble/skills/scam-wallet-screener"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 161,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Screens Ethereum and other EVM wallet addresses (Base, Polygon, BSC, Arbitrum, etc.) against the ScamSniffer community-maintained blocklist of known phishing, wallet drainer, and scam addresses, with no API key required. Use this when the user asks to check if a crypto address is a scam, verify a wallet before sending funds or signing a transaction, screen for wallet drainer addresses, check if an address is blacklisted or flagged for phishing, do a quick on-chain safety check before an airdrop claim or NFT mint, or wants a fast keyless scam address lookup tool. Pulls a public, actively updated JSON feed (~2,500+ known bad addresses) and caches it locally for 6 hours. Complements, but does not replace, deeper on-chain forensics or paid threat-intel services \u2014 a clean result means the address is not on this particular list, not that it is verified safe.",
+  "updated_at": 1786248110205,
+  "version": "1.0.0"
+}
