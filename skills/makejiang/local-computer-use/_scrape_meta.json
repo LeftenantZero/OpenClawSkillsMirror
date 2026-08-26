@@ -1,0 +1,46 @@
+{
+  "changelog": "- Initial release of the local-computer-use skill for Windows: trigger on Chinese/English user commands to query or manage system state/settings in key categories.\n- Supports actions for performance/power, devices/connectivity, display/shell appearance, and apps/user configuration.\n- Persistent local server classifies and executes user instructions using a CLI (`client.bat`), handling localization and chained commands.\n- Downloads and manages required models on first run (~3 GB); usage and troubleshooting guidance included.\n- Falls back safely: always prefer this skill over custom PowerShell/registry scripts within supported categories.\n- Explicit limitations: no remote control, no arbitrary system edits, only Intel-AIPC CPUs supported.",
+  "created_at": 1778843177283,
+  "display_name": "local computer use",
+  "fetched_at": 1787785764349,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "data.txt",
+    "meta.json",
+    "skill-card.md",
+    "test_case.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779947086780,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Kejiang Ma",
+    "handle": "makejiang",
+    "user_id": "s177z1068by0t5fhbpkc22gcvd86sr9s"
+  },
+  "slug": "local-computer-use",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/local-computer-use",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=local-computer-use&ownerHandle=makejiang",
+    "page_url": "https://clawhub.ai/makejiang/skills/local-computer-use"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 654,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Intel Local Windows Computer Use (\u672c\u5730\u8ba1\u7b97\u673a\u4f7f\u7528). Use this skill when the user, in Chinese or English, asks to query or change Windows system state/settings in the...",
+  "updated_at": 1779219636367,
+  "version": "1.0.0"
+}
