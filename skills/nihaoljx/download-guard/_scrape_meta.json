@@ -1,0 +1,42 @@
+{
+  "changelog": "- Initial release of download-guard for Windows: protects disk space and download locations during typical install and download commands.\n- Automatically monitors downloads, installs, and pulls (e.g., pip, conda, npm, git clone, docker, huggingface-cli, etc.) to prevent accidental C-drive fill-up.\n- Checks and enforces download location, validates path and available disk space before starting, and blocks operations if paths are missing or unsafe (never silently falls back to C:).\n- Keeps clear logs for every download and provides user-friendly status outputs and prompts on space or path problems.\n- Disables itself for non-download operations, already-installed software management, and file writes below 1MB.",
+  "created_at": 1779784330595,
+  "display_name": "download-guard",
+  "fetched_at": 1787784622213,
+  "files": [
+    "CHANGELOG.md",
+    "PROMO.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.md",
+    "reference.md",
+    "scripts/check-space.ps1",
+    "scripts/log-download.ps1",
+    "scripts/migrate-cache.ps1",
+    "scripts/scan-tool-cache.ps1",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "nihaoljx",
+    "handle": "nihaoljx",
+    "user_id": "s173c2t7tewsjjdm3tkr5cpxz987eny9"
+  },
+  "slug": "download-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/download-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=download-guard&ownerHandle=nihaoljx",
+    "page_url": "https://clawhub.ai/nihaoljx/skills/download-guard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 514,
+    "installs": 10,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "AI Agent download guard (Windows only). Auto-activates on: download, install, git clone, pip install, npm install -g, pnpm add -g, bun install -g, conda inst...",
+  "updated_at": 1779784330595,
+  "version": "5.4.0"
+}
