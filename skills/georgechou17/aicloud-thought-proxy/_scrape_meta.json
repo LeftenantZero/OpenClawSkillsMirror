@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release \u2013 enables browser-based AI collaboration to save token usage.\n\n- Controls the browser to let web-based AI handle planning/thinking, while the local Agent executes actions.\n- Auto-detects browser engine (Chromium/Gecko) and guides tool setup for remote control.\n- Supports multiple AI platforms (DeepSeek, Kimi, ChatGPT, Claude, etc.) with user-friendly mode/model selection.\n- Ensures security by requiring manual user login and CAPTCHA verification.\n- Outlines a step-by-step workflow for AI\u2013Agent collaboration, with clear user confirmations and fallback instructions.",
+  "created_at": 1786441234335,
+  "display_name": "aicloud-thought-proxy",
+  "fetched_at": 1787772715930,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/ai-models.md",
+    "references/browser-detection.md",
+    "references/chromium-automation.md",
+    "references/gecko-automation.md",
+    "references/tool-installation.md",
+    "scripts/detect_browser.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786442147109,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "GeorgeChou17",
+    "handle": "georgechou17",
+    "user_id": "s176y064ps888173yfc6zmjp498b0fqn"
+  },
+  "slug": "aicloud-thought-proxy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aicloud-thought-proxy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aicloud-thought-proxy&ownerHandle=georgechou17",
+    "page_url": "https://clawhub.ai/georgechou17/skills/aicloud-thought-proxy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 905,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4e91\u601d\u5ba2\uff08AIcloud-thought-proxy\uff09\u2014\u2014\u901a\u8fc7\u64cd\u63a7\u6d4f\u89c8\u5668\u8bbf\u95ee\u7f51\u9875\u7248 AI\uff08DeepSeek\u3001Kimi\u3001\u8c46\u5305\u3001\u901a\u4e49\u5343\u95ee\u3001ChatGPT\u3001Claude\u3001Gemini\u3001Grok \u7b49\uff09\u4e0e\u672c\u5730 Agent \u534f\u540c\u5de5\u4f5c\u4ee5\u8282\u7701 tokens\u3002\u89e6\u53d1\u573a\u666f\uff1a\u7528\u6237\u8981\u6c42\"\u7528\u6d4f\u89c8\u5668\u6253\u5f00\u67d0 AI \u5b98\u7f51\u5bf9\u8bdd\u5e76\u534f\u4f5c\"\u3001\"\u8ba9\u7f51\u9875\u7248 AI \u89c4\u5212\u6b65\u9aa4/\u7f16\u5199\u4ee3\u7801/\u903b\u8f91\u63a8\u7406\u3001\u672c\u5730 Agent \u6267\u884c\"\u3001\"\u8282\u7701 tokens\"\u3001\u63d0\u5230\"\u4e91\u601d\u5ba2\"\u7b49\u3002\u81ea\u52a8\u68c0\u6d4b\u6d4f\u89c8\u5668\u5185\u6838\uff08Chromium \u2192 chrome-mcp/BrowserSkill\uff1bGecko \u2192 GeckoDriver + Marionette\uff09\uff0c\u5f15\u5bfc\u7528\u6237\u9009\u62e9\u6a21\u578b/\u601d\u8003\u6a21\u5f0f/\u8054\u7f51\u641c\u7d22\uff08\u542b\"\u6700\u65b0/\u6700\u5f3a\u6a21\u578b\"\u7b49\u6a21\u7cca\u8bed\u8a00\u89e3\u6790\uff09\uff0c\u63d0\u793a\u7528\u6237\u624b\u52a8\u767b\u5f55\u4e0e\u4eba\u673a\u9a8c\u8bc1\uff0c\u5efa\u7acb\"\u7f51\u9875 AI \u51fa\u65b9\u6848\u3001\u672c\u5730 Agent \u6267\u884c\"\u7684\u534f\u4f5c\u5faa\u73af\u3002",
+  "updated_at": 1786441441819,
+  "version": "0.1.0"
+}
