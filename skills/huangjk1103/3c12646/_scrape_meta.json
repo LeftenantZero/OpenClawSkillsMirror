@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial public release of \"mission-control\" \u2014 a single-Agent task tracking and solution approval system for Moss.\n\n- Implements mandatory proposal confirmation with Boss before executing any code, file operation, agent delegation, or online research.\n- Features three-step iterative analysis (\"\u6c42\u662f-3\u6b21\u8fed\u4ee3\") enforcing thorough solution refinement before action.\n- Defines a complete workflow: auto task type judgment, requirement intake, plan drafting, three iterations, Boss approval, execution tracking, and report generation.\n- Provides standardized templates for project intake, task requirements, solution plan, execution log, and final report.\n- Establishes strict rules: no skipping of any required step, with clear forbidden behaviors and pitfalls.\n- Includes a conversion guide for transforming static specs into dynamic task cards, with comprehensive field mapping and risk countermeasures.",
+  "created_at": 1779257803609,
+  "display_name": "Mission Control",
+  "fetched_at": 1787785655994,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/2026-05-19-static-spec-conversion.md",
+    "references/project-intake-case-studies.md",
+    "scripts/generate_report.py",
+    "scripts/next_number.py",
+    "scripts/save_plan.py",
+    "scripts/update_progress.py",
+    "skill-card.md",
+    "templates/project-intake.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779957573836,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "JK_Huang",
+    "handle": "huangjk1103",
+    "user_id": "s170ymfbex38vbap0yxgkbj8jn84h759"
+  },
+  "slug": "3c12646",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/3c12646",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=3c12646&ownerHandle=huangjk1103",
+    "page_url": "https://clawhub.ai/huangjk1103/skills/3c12646"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 614,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4efb\u52a1\u8ffd\u8e2a\u4e0e\u65b9\u6848\u786e\u8ba4\u7cfb\u7edf\uff08Moss\u5355Agent\u6267\u884c\u7248\uff09\u3002\u5f53\u6536\u5230\u6d89\u53ca\u4ee3\u7801\u7f16\u5199\u3001\u6587\u4ef6\u64cd\u4f5c\u3001SubAgent\u4efb\u52a1\u59d4\u6d3e\u3001\u8054\u7f51\u68c0\u7d22\u7684\u4efb\u52a1\u65f6\uff0c\u5fc5\u987b\u8c03\u7528\u6b64Skill\u8fdb\u884c\u65b9\u6848\u5206\u6790\u548cBoss\u786e\u8ba4\u3002\u89e6\u53d1\u573a\u666f\uff1a(1)\u6536\u5230\u65b0\u4efb\u52a1\u9700\u6267\u884c\uff0c(2)\u4efb\u52a1\u786e\u8ba4\uff0c(3)\u8fdb\u5ea6\u66f4\u65b0\uff0c(4)\u4efb\u52a1\u5b8c\u6210\u3002\u6838\u5fc3\u529f\u80fd\uff1a(1)\u81ea\u52a8\u5224\u65ad\u662f\u5426\u9700\u8981\u8d70\u6d41\u7a0b\uff0c(2)\u6c42\u662f\u5206\u6790\uff08...",
+  "updated_at": 1779257803609,
+  "version": "1.0.0"
+}
