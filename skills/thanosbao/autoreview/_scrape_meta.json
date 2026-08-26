@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of the autoreview skill.\n\n- Provides a structured code review helper for local or PR branches before commit or ship.\n- Defaults to Codex engine, with optional use of Claude.\n- Enforces a strict contract for interpreting, verifying, and acting on review findings.\n- Supports review modes for local (dirty), commit-based, and branch/PR-based workflows.\n- Allows parallel execution of tests and review, and supports reviewer panels for multi-model feedback.\n- Includes robust operational guidance for troubleshooting, provenance tracing, and reviewer role separation.",
+  "created_at": 1781269367449,
+  "display_name": "Autoreview",
+  "fetched_at": 1787781022826,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/autoreview",
+    "scripts/test-review-harness",
+    "scripts/test-review-harness.ps1",
+    "scripts/test-review-harness.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "thanos",
+    "handle": "thanosbao",
+    "user_id": "s176k0jxab2fkqf06a4v53ef8d87p0bd"
+  },
+  "slug": "autoreview",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/autoreview",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=autoreview&ownerHandle=thanosbao",
+    "page_url": "https://clawhub.ai/thanosbao/skills/autoreview"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 453,
+    "installs": 7,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Run a structured code review (Codex default, Claude optional) as a closeout check on a local or PR branch before commit or ship.",
+  "updated_at": 1781269367449,
+  "version": "1.0.0"
+}
