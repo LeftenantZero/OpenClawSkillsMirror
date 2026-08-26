@@ -1,0 +1,46 @@
+{
+  "changelog": "Version 1.0.0\n\n- Initial release of mx-zixuan skill for precise Eastmoney self-selected stock watchlist management.\n- Supports query, add, and delete actions only when the user explicitly requests these operations.\n- Strictly scoped: does not handle quotes, news, screening, or simulated trading.\n- Requires explicit stock information for add/delete; prompts user when ambiguous.\n- Outputs clear confirmation and file path for actions, and summarizes results on query.\n- Handles common errors (missing API key, ambiguous requests, API/network issues) with user guidance.",
+  "created_at": 1785146137015,
+  "display_name": "A\u80a1\u81ea\u9009\u80a1",
+  "fetched_at": 1787774710246,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "mx_zixuan.py",
+    "references/result-fields.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785151832331,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "LULI",
+    "handle": "zoeluli7459-dev",
+    "user_id": "s170ybr90x4fag61dg1z85svr9885tzc"
+  },
+  "slug": "mx-zixuan",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mx-zixuan",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mx-zixuan&ownerHandle=zoeluli7459-dev",
+    "page_url": "https://clawhub.ai/zoeluli7459-dev/skills/mx-zixuan"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 255,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5f53\u7528\u6237\u660e\u786e\u8bf7\u6c42\u67e5\u8be2\u3001\u6dfb\u52a0\u6216\u5220\u9664\u4e2a\u4eba\u89c2\u5bdf\u6e05\u5355/\u81ea\u9009\u5217\u8868\u4e2d\u7684\u80a1\u7968\u65f6\uff0c\u53ef\u4ee5\u4f7f\u7528\u6b64\u6280\u80fd\u6765\u8fdb\u884c\u64cd\u4f5c\u3002\u4f8b\u5982\uff0c\u53ef\u4ee5\u4f7f\u7528\u8bf8\u5982\u201c\u6211\u7684\u81ea\u9009\u201d\u3001\u201c\u67e5\u8be2\u81ea\u9009\u201d\u3001\u201c\u52a0\u5165\u81ea\u9009\u201d\u3001\u201c\u6dfb\u52a0\u5230\u81ea\u9009\u201d\u3001\u201c\u5220\u9664\u81ea\u9009\u201d\u6216\u201c\u4ece\u81ea\u9009\u79fb\u9664\u201d\u7b49\u6307\u4ee4\u6765\u5b9e\u73b0\u8fd9\u4e9b\u64cd\u4f5c\u3002\u8bf7\u52ff\u5c06\u6b64\u6280\u80fd\u7528\u4e8e\u62a5\u4ef7/\u91d1\u878d\u6570\u636e\u67e5\u8be2\uff08\u8bf7\u4f7f\u7528 mx-data\uff09\u3001\u65b0\u95fb\u7814\u7a76\uff08\u8bf7\u4f7f\u7528 mx-search\uff09\u3001\u7b5b\u9009\u5019\u9009\u80a1\u7968\uff08\u8bf7\u4f7f\u7528 mx-xuangu\uff09\u6216\u6a21\u62df\u4ea4\u6613\uff08\u8bf7\u4f7f\u7528 mx-moni\uff09\u7b49\u573a\u666f\u3002",
+  "updated_at": 1785150605757,
+  "version": "1.0.0"
+}
