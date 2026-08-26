@@ -1,0 +1,38 @@
+{
+  "changelog": "bid-dup-check v1.1.0 introduces improved risk detection and user workflow for Chinese tender document duplication checks.\n\n- Enhanced detection logic for semantic similarity, key information collisions, and document attribute parity, based on structured, rule-driven schema.\n- Added multi-step workflow: confirms file collection, progresses through extraction, OCR (if vision enabled), risk analysis, and report rendering.\n- Now outputs fully structured findings reports with risk grading (\"\u9ad8/\u4e2d/\u4f4e\"), limitations, and conclusions, using a unified JSON schema.\n- Supports baseline exclusion using tender documents to reduce false positives; clearly reports when baseline is not used.\n- Output reports in both Markdown and DOCX, with detailed summaries, structured sections, and mandatory signature/feedback footer.\n- Improves error handling, clear user notifications, and support for file/path resolution and dependency checking throughout.\n- Only supports Chinese-language bidding documents; for other languages and formal legal assessment, usage is not recommended.",
+  "created_at": 1784856042854,
+  "display_name": "Bid Dup Check 1.1.0",
+  "fetched_at": 1787775355710,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "manifest.yaml",
+    "references/detection_rules.md",
+    "scripts/build_report.py",
+    "scripts/extract_documents.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u4e00\u7ebf\u8bc4\u6807\u4e13\u5bb6",
+    "handle": "chesaram",
+    "user_id": "s175r198wyvg79mr4bnkm9t28d8ajtkk"
+  },
+  "slug": "bid-dup-check-1-1-0",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bid-dup-check-1-1-0",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bid-dup-check-1-1-0&ownerHandle=chesaram",
+    "page_url": "https://clawhub.ai/chesaram/skills/bid-dup-check-1-1-0"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 225,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6807\u4e66\u67e5\u91cd\u4e0e\u56f4\u4e32\u6807\u98ce\u9669\u521d\u7b5b\u52a9\u624b\u3002\u5f53\u7528\u6237\u4e0a\u4f20\u591a\u4efd\u6295\u6807\u6216\u62db\u6807\u6587\u4ef6\u9700\u8981\u68c0\u6d4b\u6587\u672c\u96f7\u540c\u3001\u5173\u952e\u4fe1\u606f\uff08\u516c\u53f8/\u7535\u8bdd/\u9879\u76ee\u7ecf\u7406/\u9020\u4ef7\u5e08\u7b49\uff09\u78b0\u649e\u3001\u6587\u6863\u5c5e\u6027\u4e00\u81f4\u3001\u8868\u683c\u76f8\u4f3c\u6216\u4e24\u4efd\u6587\u6863\u5dee\u5f02\u6bd4\u5bf9\u65f6\u4f7f\u7528\u3002\u57fa\u4e8e\u5927\u6a21\u578b\u8bed\u4e49\u6bd4\u5bf9\uff0c\u8f93\u51fa\u542b\u98ce\u9669\u7b49\u7ea7\u4e0e\u5b9a\u4f4d\u7684\u7ed3\u6784\u5316\u68c0\u6d4b\u62a5\u544a\uff0c\u5e76\u652f\u6301\u5bfc\u51fa Word\u3002\u9002\u7528\u4e8e\u6295\u6807\u4eba\u81ea\u68c0\u4e0e\u62db\u6807\u4eba\u521d\u6b65\u7b5b\u67e5\uff0c\u4e0d\u9002\u7528\u4e8e\u8bc4\u6807\u59d4\u5458\u4f1a\u6b63\u5f0f\u5224\u5b9a\u3002",
+  "updated_at": 1784856379872,
+  "version": "1.0.0"
+}
