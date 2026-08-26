@@ -1,0 +1,45 @@
+{
+  "changelog": "v1.4.0 \u2014 adds a new post-install step suggesting 'memex web --open' (added in memex-mvp v0.10.8/0.10.9). Opt-in read-only local dashboard at http://127.0.0.1:8765 with 5 pages: corpus stats, FTS5-searchable conversations list, verbatim chat-bubble transcripts, pending-Telegram review with checkboxes, and read-only settings. Localhost-only by default; --public + --token for remote access. ~30KB client bundle (Node raw http + htmx, no React build) vs claude-mem's ~10MB viewer. Great demo moment after install \u2014 user sees their actual messages verbatim, not an AI summary. Same v1.3.1 safety baseline preserved: Safety & Transparency block at the top of SKILL.md, agent shows every shell command before running, sudo never without explicit user OK, MCP configs merged not overwritten, memex itself emits zero outbound network traffic at runtime. v1.3 setup flow unchanged: curl one-liner / npm install -g + LaunchAgent + Brian Chesky SessionStart hook + Telegram per-chat consent. 18 MCP tools after install. Cross-client coverage: Claude Code CLI native hook; Cursor/Cline/Continue/Zed/Claude Desktop via SERVER_INSTRUCTIONS.",
+  "created_at": 1778951307257,
+  "display_name": "Install memex \u2014 cross-AI memory",
+  "fetched_at": 1787786466703,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090840070,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "sedelev",
+    "handle": "sedelev",
+    "user_id": "s171srkkzs7tq0b2sb81x0ahk985wd1y"
+  },
+  "slug": "install-memex",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/install-memex",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=install-memex&ownerHandle=sedelev",
+    "page_url": "https://clawhub.ai/sedelev/skills/install-memex"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 972,
+    "installs": 25,
+    "stars": 1,
+    "versions": 5
+  },
+  "summary": "Make Claude, Cursor, Cline, Continue, and Zed remember every AI conversation forever \u2014 one local SQLite corpus shared across all of them. Installs memex (loc...",
+  "updated_at": 1779194412274,
+  "version": "1.5.1"
+}
