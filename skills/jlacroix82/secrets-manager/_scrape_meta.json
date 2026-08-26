@@ -1,0 +1,52 @@
+{
+  "changelog": "- Updated internal documentation and tests.\n- Removed the unused skill-card.md file.\n- No user-visible functional changes.",
+  "created_at": 1784410858454,
+  "display_name": "secrets-manager",
+  "fetched_at": 1787771764005,
+  "files": [
+    "CHANGELOG.txt",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.yaml",
+    "secrets-manager.js",
+    "skill-card.md",
+    "test-final.js",
+    "test.txt",
+    "test/run-tests.js",
+    "test/test-secrets.js",
+    "tests/run-self-tests.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786885239781,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jlacroix82",
+    "handle": "jlacroix82",
+    "user_id": "s175p518b8g47fx6r9zyvs95ks876t4t"
+  },
+  "slug": "secrets-manager",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/secrets-manager",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=secrets-manager&ownerHandle=jlacroix82",
+    "page_url": "https://clawhub.ai/jlacroix82/skills/secrets-manager"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1132,
+    "installs": 2,
+    "stars": 0,
+    "versions": 20
+  },
+  "summary": "Encrypted local secret store for OpenClaw agents. AES-256-GCM authenticated encryption with per-secret random IVs, master key in chmod 0600 .master-key file. A PURE STORE: it encrypts, retrieves, lists, rotates, audits, and deletes secrets \u2014 it never writes plaintext secrets to disk or generates executable command scripts. Modes: --store (encrypt+write), --get (masked; --raw --confirm-expose prints plaintext to stdout), --list (names+metadata only), --delete (irreversible), --rotate and --rotate --all (generate new random values, archive old as retired), --audit / --audit --expired / --audit --stale (exposure/rotation checks), --status. Supports SECRETS_DIR and SECRETS_MASTER_KEY env overrides. For injecting secrets into shell commands, use the separate `secrets-inject` skill (high-privilege). Master key is recoverable from .master-key file; losing it makes stored secrets unrecoverable.",
+  "updated_at": 1786885239781,
+  "version": "1.1.15"
+}
