@@ -1,0 +1,46 @@
+{
+  "changelog": "- Initial release of group-deduplicate skill for automatic discovery and deduplication of WeChat, QQ, and industry groups.\n- Uses memory-cache with an MD5-based key system and a 30-day TTL to prevent duplicate group entries.\n- Integrates with multi-search-engine to find new groups across multiple platforms and only returns groups not previously discovered.\n- Provides command-line tools for searching, cache inspection, and manual management.\n- Requires memory-cache and multi-search-engine skills, with Redis configuration via REDIS_URL.\n- Ensures efficient tracking of unique community groups and administrative cache controls.",
+  "created_at": 1783577527250,
+  "display_name": "Group Deduplicate",
+  "fetched_at": 1787777433290,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/cache_manager.py",
+    "scripts/search_groups.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783578231287,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mao",
+    "handle": "xiiang0529",
+    "user_id": "s177g2yecjnx0t9t4kqg9krpcn8a4f38"
+  },
+  "slug": "group-deduplicate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/group-deduplicate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=group-deduplicate&ownerHandle=xiiang0529",
+    "page_url": "https://clawhub.ai/xiiang0529/skills/group-deduplicate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 535,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Search for WeChat/QQ/industry groups with automatic deduplication using memory-cache. Finds new groups only, avoids pushing duplicates, and caches discovered...",
+  "updated_at": 1783577527250,
+  "version": "1.0.0"
+}
