@@ -1,0 +1,59 @@
+{
+  "changelog": "v1.0.12 (2026-06-09) \u2014 Filtering Rules Expansion & Sync Fix\n\nAdded 3 new exclusion categories to rules_config.py: cultural events/propaganda sessions (\u8bf5\u8bfb\u4f1a, \u5ba3\u8bb2\u4f1a, scientist spirit readings), credit-knowledge Q&A/encyclopedia content, and news briefings/morning digest formats (e.g. \"8\u70b91\u6c2a\") \u2014 8 new keywords total\nFixed sync_to_skill.py: restored cross_day_dedup.py to the sync file list (was accidentally removed by cleanup logic)\nManually cleaned residual duplicate entries in digest_output table\nv1.0.11 (2026-06-08) \u2014 People's Daily Primary Site & Cross-Day Dedup Improvement\n\nAdded People's Daily primary site (paper.people.com.cn/rmrb/) as a new monitored source (id=47, priority=1)\nEnhanced cross_day_dedup.py with Hard Rule 4: mutual-title-inclusion detection (catches same-event reports from different outlets with completely different titles)\nTuned Jaccard weight from 0.5 \u2192 0.6 for better title-similarity scoring\nRestored header format: \"Sources: X | Articles: Y items\" in formatter.py\nSimplified SQL queries and optimized logging in stage2_5_llm_summary.py\nv1.0.10 (2026-06-05) \u2014 Header Count Fix & 5 New Filter Categories\n\nFixed formatter.py article count in header: changed from pre-filter count (filtered_news length) to actual output count via placeholder + post-replacement\nAdded title truncation protection: titles ending with commas/enumeration commas now get ellipsis appended to avoid misleading DB-truncated titles\nAdded 5 new exclusion categories: Party-building/historical commemoration articles (17 keywords), solar-term/astronomical science popularization, official dismissal/prosecution notices (12 keywords, also added to corporate_scandal)\nv1.0.8 (2026-06-05) \u2014 Cross-Day Dedup & GBK Decoding\n\nNew cross_day_dedup.py: compares today's candidates against the last 3 days of historical digests using a weighted scoring model \u2014 Title Jaccard(0.5) + Number match(0.25) + Content-word overlap(0.25)\nHard rule: articles sharing no significant numbers \u2192 similarity forced to 0 (auto-passes recurring reports like PMI/CPI without whitelist)\nThree-tier verdict: \u22650.75 block / 0.60\u20130.75 warn-keep / <0.60 pass\nTitle rewrite rule 9: exhibition/attendance titles \u2192 event subject focus; IPO/financing/earnings \u2192 retain company name\nAnti-hallucination rule 10: summaries must derive exclusively from source text, no external knowledge injection\nstage1_fetch.py: source count changed from hardcoded 42 to dynamic len(WEBSITES)\nGBK decoding: decode_response() merged into main fetch flow, supports all known GBK-encoded sources\nv1.0.7 (2026-06-01) \u2014 GBK Encoding Fix & Content-Type Blacklist\n\nfetcher.py: new decode_response() function forces GBK decoding for known GBK sources (People's Daily Overseas Edition), fixing Cyrillic mojibake at the root\nstage2_5_llm_summary.py: mojibake title detection \u2014 prompts LLM to generate accurate title from article body when garbled text is detected\nformatter.py: fallback filter to discard garbled titles\nNew TITLE_EXCLUDE_KEYWORDS: excludes opinion pieces (\u8bc4\u8bba\u4e28, \u65f6\u8bc4, \u793e\u8bc4), investigative reports (\u6df1\u5ea6\u89c2\u5bdf, \u8bb0\u8005\u89c2\u5bdf), HR/recruitment (\u62db\u8058, \u9762\u8bd5, \u4eba\u4e8b\u4efb\u514d), obituaries (\u8ba3\u544a), exclusive interviews (\u4e13\u8bbf)\nNew URL_EXCLUDE_PATTERNS: blocks People's Daily opinion channel and newspaper commentary pages\nTimeout recommendation: 900s \u2192 1200s (\u5b9e\u6d4b total runtime ~1150s for 50-article LLM batch + fetch)",
+  "created_at": 1777963665258,
+  "display_name": "\u6bcf\u65e5\u65b0\u95fb\u641c\u7d22\u4e0e\u667a\u80fd\u6458\u8981",
+  "fetched_at": 1787781988592,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/news_digest_v2/__init__.py",
+    "scripts/news_digest_v2/config.py",
+    "scripts/news_digest_v2/cross_day_dedup.py",
+    "scripts/news_digest_v2/database.py",
+    "scripts/news_digest_v2/fetcher.py",
+    "scripts/news_digest_v2/filters.py",
+    "scripts/news_digest_v2/formatter.py",
+    "scripts/news_digest_v2/init_db.py",
+    "scripts/news_digest_v2/quick_start.py",
+    "scripts/news_digest_v2/rules_config.py",
+    "scripts/news_digest_v2/run_all_stages.py",
+    "scripts/news_digest_v2/similarity.py",
+    "scripts/news_digest_v2/stage1_fetch.py",
+    "scripts/news_digest_v2/stage2_5_llm_summary.py",
+    "scripts/news_digest_v2/stage2_process.py",
+    "scripts/news_digest_v2/stage3_output.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780975948681,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zigu-creator",
+    "handle": "zigu-creator",
+    "user_id": "s174gcx5nz7epm7zrz1qwamqt184w949"
+  },
+  "slug": "news-digest-v1",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/news-digest-v1",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=news-digest-v1&ownerHandle=zigu-creator",
+    "page_url": "https://clawhub.ai/zigu-creator/skills/news-digest-v1"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 968,
+    "installs": 26,
+    "stars": 1,
+    "versions": 7
+  },
+  "summary": "Automatically scrape, process, and generate daily news digests from Chinese news sources. Covers industry dynamics, policy updates, economy, tech, energy, an...",
+  "updated_at": 1780972826589,
+  "version": "1.0.12"
+}
