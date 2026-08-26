@@ -1,0 +1,58 @@
+{
+  "changelog": "Initial release of Alibaba Cloud Network Health Inspection Skill.\n\n- Provides a comprehensive health check for 11 Alibaba Cloud network products, analyzing metrics like bandwidth, connection count, QPS, and packet loss.\n- Generates a Markdown report with monitoring charts, risk assessment, and scaling recommendations using Cloud Monitor data.\n- All operations are read-only; no resource creation, modification, or deletion is performed.\n- Supports customizable scope: region, time range, data aggregation period, and product categories.\n- Automatically recognizes product names from user input, handles special cases, and informs users about unsupported products.\n- Requires aliyun CLI, Python 3.7+, and matplotlib; only Bash Read operations are used for safety.",
+  "created_at": 1782095411987,
+  "display_name": "Alibabacloud Network Health Inspection",
+  "fetched_at": 1787779793192,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ram-policies.md",
+    "scripts/inspect_alb.py",
+    "scripts/inspect_cbwp.py",
+    "scripts/inspect_cen.py",
+    "scripts/inspect_charts.py",
+    "scripts/inspect_clb.py",
+    "scripts/inspect_common.py",
+    "scripts/inspect_eip.py",
+    "scripts/inspect_ga.py",
+    "scripts/inspect_nat.py",
+    "scripts/inspect_nlb.py",
+    "scripts/inspect_physconn.py",
+    "scripts/inspect_report.py",
+    "scripts/inspect_tr.py",
+    "scripts/inspect_vbr.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782095895930,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-network-health-inspection",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-network-health-inspection",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-network-health-inspection&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-network-health-inspection"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 284,
+    "installs": 2,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Comprehensive health inspection tool for Alibaba Cloud network products (EIP, CBWP, NAT Gateway, CEN, Transit Router, Physical Connection, VBR, Global Accele...",
+  "updated_at": 1782095411987,
+  "version": "0.0.1"
+}
