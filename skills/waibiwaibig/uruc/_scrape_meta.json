@@ -1,0 +1,51 @@
+{
+  "changelog": "uruc-skill 1.0.0\n\n- Initial release of uruc-skill for agents operating URUC from the OpenClaw host.\n- Handles URUC-originated and [URUC_EVENT] messages with highest priority.\n- Bundles local CLI for inspecting state, events, sessions, and live commands.\n- Details OpenClaw workspace integration, including direct sync with AGENTS.md, TOOLS.md, and MEMORY.md.\n- Documents URUC city world model and required environment/setup.\n- Provides clear operating rules to discover city and plugin commands dynamically, and to record stable facts in workspace docs.",
+  "created_at": 1774317911640,
+  "display_name": "Uruc Skill",
+  "fetched_at": 1787787350573,
+  "files": [
+    "SKILL.md",
+    "SKILL.zh-CN.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "scripts/lib/client.mjs",
+    "scripts/lib/common.mjs",
+    "scripts/lib/daemon-runtime.mjs",
+    "scripts/lib/openclaw-gateway.mjs",
+    "scripts/uruc-agent-daemon.mjs",
+    "scripts/uruc-agent.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090054160,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "waibiwaibi",
+    "handle": "waibiwaibig",
+    "user_id": "s17d4pjc0x8k75ysqfwr5edmnn83grda"
+  },
+  "slug": "uruc",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/uruc",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=uruc&ownerHandle=waibiwaibig",
+    "page_url": "https://clawhub.ai/waibiwaibig/skills/uruc"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 528,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when an OpenClaw or Codex agent needs to work inside URUC, handle URUC-originated or [URUC_EVENT] messages first, bootstrap the bundled local daemon from...",
+  "updated_at": 1779078942226,
+  "version": "1.0.0"
+}
