@@ -1,0 +1,48 @@
+{
+  "changelog": "- Initial release of cs-conversation-qc-tracked skill for automated quality inspection of customer service conversations in Chinese.\n- Supports batch analysis of chat/export files from major platforms (WeCom, Qianniu, Meiqia, Udesk, Zhichi), both line-by-line and segment formats.\n- Applies configurable quality inspection rules to rate each message, auto-masks sensitive data, and generates detailed deduction and manual review lists in the report.\n- Robust error handling, mandatory evidence for deductions, and strict privacy masking enforced throughout.\n- Provides fallback inline rules if main rule set is missing; guides users for rule customization and installation issues.",
+  "created_at": 1787126493979,
+  "display_name": "cs-conversation-qc-tracked",
+  "fetched_at": 1787770600804,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/sample-conversations.csv",
+    "examples/sample-report.md",
+    "references/rules-default.md",
+    "references/rules-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787127234460,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zenobiazizi",
+    "handle": "zenobiazizi",
+    "user_id": "s1778m43nw7z5wmd98jsgazb558afjf6"
+  },
+  "slug": "cs-conversation-qc-tracked",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cs-conversation-qc-tracked",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cs-conversation-qc-tracked&ownerHandle=zenobiazizi",
+    "page_url": "https://clawhub.ai/zenobiazizi/skills/cs-conversation-qc-tracked"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 100,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5ba2\u670d\u4f1a\u8bdd\u8d28\u68c0\u6280\u80fd\u3002\u6279\u91cf\u5206\u6790\u5ba2\u670d\u804a\u5929\u8bb0\u5f55/\u4f1a\u8bdd\u5bfc\u51fa\u6587\u4ef6\uff08\u652f\u6301\u4f01\u4e1a\u5fae\u4fe1\u3001\u5343\u725b\u3001\u7f8e\u6d3d\u3001Udesk\u3001\u667a\u9f7f\u7b49\u7cfb\u7edf\u7684\u9010\u6761\u5f0f\u4e0e\u6574\u6bb5\u5f0f\u5bfc\u51fa\uff09\uff0c\u6309\u53ef\u914d\u7f6e\u7684\u8d28\u68c0\u89c4\u5219\u9010\u6761\u8bc4\u5206\uff0c\u81ea\u52a8\u8131\u654f\uff0c\u751f\u6210\u5e26\u6263\u5206\u660e\u7ec6\u548c\u5f85\u4eba\u5de5\u590d\u6838\u6e05\u5355\u7684\u8d28\u68c0\u62a5\u544a\u8868\u683c\u3002\u9002\u7528\u573a\u666f\uff1a\u5ba2\u670d\u8d28\u68c0\u3001\u4f1a\u8bdd\u8d28\u68c0\u3001\u804a\u5929\u8bb0\u5f55\u68c0\u67e5\u3001\u5ba2\u670d\u8003\u6838\u3001\u670d\u52a1\u8d28\u91cf\u68c0\u67e5\u3001\u670d\u52a1\u8d28\u91cf\u8bc4\u4f30\u3001\u62bd\u68c0\u5ba2\u670d\u8bb0\u5f55\uff0c\u4ee5\u53ca\u7528\u6237\u63d0\u4f9b\u5ba2\u670d\u4f1a\u8bdd/\u804a\u5929\u8bb0\u5f55\u5e76\u5e0c\u671b\u8bc4\u4f30\u5750\u5e2d\u670d\u52a1\u8d28\u91cf\u7684\u4efb\u52a1\uff08\u6b64\u7c7b\u4efb\u52a1\u5373\u4f7f\u672a\u51fa\u73b0\"\u8d28\u68c0\"\u5b57\u6837\u4e5f\u5c5e\u4e8e\u672c\u6280\u80fd\u7684\u9002\u7528\u8303\u56f4\uff09\u3002\u672c\u89c4\u5219\u5305\u9762\u5411\u4e2d\u6587\u4f1a\u8bdd\u8bbe\u8ba1\u3002\u53cd\u9988\u4e0e\u5b9a\u5236\u8054\u7cfb\uff1azenobiazizi.skills@foxmail.com",
+  "updated_at": 1787126574919,
+  "version": "1.0.0"
+}
