@@ -1,0 +1,41 @@
+{
+  "changelog": "- Initial release of the huawei-cloud-ecs-eip-query skill.\n- Enables querying the EIP (Elastic IP) bound to a single Huawei Cloud ECS instance by ECS ID or name.\n- Returns associated public IP address, EIP ID, status, bandwidth, and binding details.\n- Uses KooCLI `hcloud EIP ListPublicips` command as primary method; falls back to huaweicloudsdkeip Python SDK if needed.\n- Supports scenarios such as network troubleshooting, cost review, and resource discovery.\n- Read-only: does not create, modify, or delete any resources.",
+  "created_at": 1785661885150,
+  "display_name": "huawei-cloud-ecs-eip-query",
+  "fetched_at": 1787773882523,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/eip-policies.md",
+    "references/verification-method.md",
+    "scripts/test-cli-commands.sh",
+    "scripts/validate-skill.sh",
+    "skill-card.md",
+    "templates/test-vars.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-ecs-eip-query",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-ecs-eip-query",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-ecs-eip-query&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-ecs-eip-query"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 192,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Queries the EIP (Elastic IP, \u5f39\u6027\u516c\u7f51IP) bound to a single Huawei Cloud ECS instance \u2014 given an ECS ID or ECS name, returns the associated public IP address, EIP ID, status, bandwidth and binding details, using the KooCLI `hcloud EIP ListPublicips` command (primary, filtered by `vnic.device_id`) or the huaweicloudsdkeip Python SDK (fallback). Provides a read-only per-instance EIP lookup for network troubleshooting, cost review and resource discovery. Use this skill whenever the user wants the EIP of a specific ECS. Triggers include: ECS EIP query, EIP of ECS, find ECS public IP, ECS \u7684EIP, \u67e5\u8be2ECS\u7684\u5f39\u6027\u516c\u7f51IP, ECS\u516c\u7f51IP, ECS\u7ed1\u5b9a\u7684EIP, \u5355\u4e2aECS\u7684eip, \u67e5\u8be2ECS\u7684eip, \u67e5\u770bECS\u7684\u5f39\u6027IP, ECS\u5916\u7f51IP, \u83b7\u53d6ECS\u516c\u7f51\u5730\u5740.",
+  "updated_at": 1785661965445,
+  "version": "1.0.0"
+}
