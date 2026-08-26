@@ -1,0 +1,35 @@
+{
+  "changelog": "**Major update: Migrated from script-based API wrappers to direct DataForSEO MCP server integration with cost guardrails and 1-line user commands.**\n\n- Integrated with DataForSEO MCP server; switched to using extension tools for all SEO data (live SERP, keyword research, backlinks, on-page, business listings, AI visibility).\n- Introduced standardized user command syntax (\"/seo dataforseo [tool] [query]\") for 20+ common SEO research operations.\n- Added automated cost estimation and approval workflow\u2014checks and confirms API call costs before running, ensures user stays within daily budget.\n- Updated user instructions and prerequisites\u2014skill now requires DataForSEO extension rather than custom Python scripts.\n- Replaced granular function references with a quick reference command table and moved detailed reference to new markdown files.\n- Removed all local API scripts and internal result storage logic; all research now runs live through the MCP server.",
+  "created_at": 1786545206870,
+  "display_name": "seo-dataforseo",
+  "fetched_at": 1787772507552,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cost-tiers.md",
+    "references/tool-catalog.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "asale ai",
+    "handle": "asale-ai",
+    "user_id": "s174gk7xybh4a76hneea7qjmz18c9ndj"
+  },
+  "slug": "seo-dataforseo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/seo-dataforseo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=seo-dataforseo&ownerHandle=asale-ai",
+    "page_url": "https://clawhub.ai/asale-ai/skills/seo-dataforseo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 42,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Live SEO data via DataForSEO MCP server: SERP analysis, keyword research (volume, difficulty, intent, trends), backlink profiles, on-page analysis, competitor and content analysis, business listings, AI visibility (LLM mention tracking), and domain analytics. Requires DataForSEO extension installed. Use when user says \"dataforseo\", \"live SERP\", \"keyword volume\", \"backlink data\", \"AI visibility check\", or \"real search data\".",
+  "updated_at": 1786545291898,
+  "version": "1.0.0"
+}
