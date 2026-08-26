@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of alibabacloud-cas-ssl-cert-deploy.\n\n- Enables one-click or batch SSL certificate deployment to Alibaba Cloud products (CDN, SLB, WAF, ALB, NLB, OSS, ESA) using the CAS DeploymentJob API.\n- Includes strict human-in-the-loop (HITL) checkpoints, requiring explicit user confirmation at each step.\n- Enforces mandatory deployment workflow: only the CAS DeploymentJob path is permitted for certificate deployment, with no exceptions.\n- Provides progress tracking, failure diagnosis, rollback, and HTTPS verification features.\n- Triggers on multiple natural language phrases in both English and Chinese related to certificate deployment.\n- Implements strict guardrails against use of direct product APIs and skipping required HITL or workflow steps.",
+  "created_at": 1785467060994,
+  "display_name": "alibabacloud-cas-ssl-cert-deploy",
+  "fetched_at": 1787774110607,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/api-commands.md",
+    "references/cli-installation-guide.md",
+    "references/error-handling.md",
+    "references/helper-flows.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785470370320,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-cas-ssl-cert-deploy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-cas-ssl-cert-deploy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-cas-ssl-cert-deploy&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-cas-ssl-cert-deploy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 236,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Deploy SSL certificates to Alibaba Cloud products (CDN/SLB/WAF/ALB/NLB/OSS/ESA, etc.). One-click or batch deployment via CAS DeploymentJob API, with progress tracking, failure diagnosis, rollback, and HTTPS verification. Activate when user says \"deploy certificate to CDN\", \"deploy to SLB\", \"one-click deploy certificate\", \"push certificate to cloud\", \"\u90e8\u7f72\u8bc1\u4e66\u5230 CDN\", \"\u90e8\u7f72\u5230 SLB\", \"\u4e00\u952e\u90e8\u7f72\u8bc1\u4e66\", \"\u8bc1\u4e66\u63a8\u9001\u5230\u4e91\u4ea7\u54c1\".",
+  "updated_at": 1785469558542,
+  "version": "0.0.1"
+}
