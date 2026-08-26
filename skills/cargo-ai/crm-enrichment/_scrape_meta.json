@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of crm-enrichment standalone skill:\n\n- Enriches empty fields on CRM records to improve routing, scoring, and territory assignment, powered by Cargo.\n- Supports person, company, and funding enrichment, plus email finding, through batch CLI actions.\n- Provides clear setup instructions; requires @cargo-ai/cli and Cargo account.\n- Pricing is per enriched record with guidance on sampling before large runs.\n- Includes best practices for cost management and data quality.\n- Recommends using the full Cargo GTM pack for multi-step flows and additional GTM automation.",
+  "created_at": 1786862191470,
+  "display_name": "crm-enrichment",
+  "fetched_at": 1787768400015,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787763083552,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Cargo",
+    "handle": "cargo-ai",
+    "user_id": "s178dcd9wkfn0a2fqrygmt3jzn87j9e1"
+  },
+  "slug": "crm-enrichment",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/crm-enrichment",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=crm-enrichment&ownerHandle=cargo-ai",
+    "page_url": "https://clawhub.ai/cargo-ai/skills/crm-enrichment"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 126,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Backfill the empty fields on CRM records so routing, scoring and territory assignment stop failing on blanks, powered by Cargo. Triggers: \"CRM enrichment\", \"enrich my CRM\", \"my CRM records are half empty\", \"fill in missing fields in HubSpot\", \"clean up the CRM data\", \"our Salesforce contacts have no titles\", \"CRM data quality\", \"CRM hygiene\", \"backfill blank fields\". Providers: enrichCrm. Skip when: you hold a spreadsheet of domains rather than records synced from a CRM \u2014 use enrich-company-data; or you want new contacts rather than better records \u2014 use find-b2b-leads.",
+  "updated_at": 1787762445298,
+  "version": "1.0.0"
+}
