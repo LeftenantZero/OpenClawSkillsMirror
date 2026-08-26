@@ -1,0 +1,50 @@
+{
+  "changelog": "**Major update: Lyrics timestamp alignment is now performed by pure Python V2 scripts, removing the espeak-ng dependency and improving precision.**\n\n- Added new scripts (`calibrate_lyrics_v2.py`, `lyric_aligner.py`) for high-precision, pure Python lyrics-to-audio alignment.\n- No longer requires `espeak-ng` for timestamp calibration.\n- Updated documentation to reflect the new workflow and changed dependencies.\n- Internal meta/config files added for streamlined setup.\n- Old documentation file removed.",
+  "created_at": 1777756020910,
+  "display_name": "Music Creator",
+  "fetched_at": 1787771564938,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "scripts/align_lyrics.py",
+    "scripts/build_song_json.py",
+    "scripts/calibrate_lyrics.py",
+    "scripts/calibrate_lyrics_v2.py",
+    "scripts/lyric_aligner.py",
+    "scripts/make_cover.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781179066455,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u987e\u96ea\u9633",
+    "handle": "tomtrije",
+    "user_id": "s170bmxmqhkswxpyq2v8fya84d83q6vw"
+  },
+  "slug": "music-creator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/music-creator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=music-creator&ownerHandle=tomtrije",
+    "page_url": "https://clawhub.ai/tomtrije/skills/music-creator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 870,
+    "installs": 19,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "AI \u97f3\u4e50\u521b\u4f5c\u5168\u6d41\u7a0b\u6280\u80fd\u3002\u6839\u636e\u4e3b\u9898\u548c\u98ce\u683c\u521b\u4f5c\u6b4c\u8bcd\uff0c\u901a\u8fc7 MiniMax AI \u751f\u6210\u97f3\u4e50\u548c\u5c01\u9762\u56fe\uff0cWhisper ASR + V2 \u9ad8\u7cbe\u5ea6\u5bf9\u9f50\uff08\u7eaf Python\uff0c\u65e0\u9700 espeak-ng\uff09\u7cbe\u51c6\u6821\u51c6\u6b4c\u8bcd\u65f6\u5e8f\uff0c\u751f\u6210\u6807\u51c6 LRC \u6b4c\u8bcd\u6587\u4ef6\u548c\u5e26\u6b4c\u8bcd\u540c\u6b65\u7684\u64ad\u653e\u9875\u9762\u5e76\u90e8\u7f72\u3002\u89e6\u53d1\u8bcd\uff1a\u521b\u4f5c\u6b4c\u66f2\u3001\u5199\u9996\u6b4c\u3001\u751f\u6210\u97f3\u4e50\u3001AI \u97f3\u4e50\u3001mus...",
+  "updated_at": 1781175192316,
+  "version": "2.1.0"
+}
