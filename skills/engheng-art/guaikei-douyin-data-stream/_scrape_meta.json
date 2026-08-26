@@ -1,0 +1,75 @@
+{
+  "changelog": "- Initial release of guaikei-douyin-data-stream skill.\n- Provides unified JSON API for Douyin: keyword search, creator content, video comments, and real-time hot topics.\n- Automatic intent recognition for short video, Douyin, and trending topic queries (even if \"Douyin\" not mentioned).\n- Clear command structure and parameter inference; up to 10,000 public data records per request.\n- Token required via `GUAIKEI_API_TOKEN` with strict error handling; no sensitive or marketing info output on errors.\n- All output in plain JSON; includes workflow, error handling, and extensive scenario guidance.",
+  "created_at": 1787106950730,
+  "display_name": "guaikei-douyin-data-stream",
+  "fetched_at": 1787770705201,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/comment_cli_req.schema.json",
+    "assets/comment_cli_resp.schema.json",
+    "assets/hot_cli_resp.schema.json",
+    "assets/post_cli_req.schema.json",
+    "assets/post_cli_resp.schema.json",
+    "assets/search_cli_req.schema.json",
+    "assets/search_cli_resp.schema.json",
+    "package.json",
+    "readme.md",
+    "references/changelog.md",
+    "references/options.md",
+    "skill-card.md",
+    "src/api/comment.js",
+    "src/api/hot.js",
+    "src/api/post.js",
+    "src/api/search.js",
+    "src/config/constants.js",
+    "src/douyin/comment-cli.js",
+    "src/douyin/hot-cli.js",
+    "src/douyin/post-cli.js",
+    "src/douyin/search-cli.js",
+    "src/utils/args.js",
+    "src/utils/errors.js",
+    "src/utils/log.js",
+    "src/utils/name.js",
+    "src/utils/request.js",
+    "src/utils/retry.js",
+    "src/utils/token.js",
+    "src/utils/utils.js",
+    "src/validate/comment.js",
+    "src/validate/hot.js",
+    "src/validate/keyword.js",
+    "src/validate/post.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787107829660,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "engheng-art",
+    "handle": "engheng-art",
+    "user_id": "s17av7fakvdwpsbhaddxp8e7mh89wsrx"
+  },
+  "slug": "guaikei-douyin-data-stream",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/guaikei-douyin-data-stream",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=guaikei-douyin-data-stream&ownerHandle=engheng-art",
+    "page_url": "https://clawhub.ai/engheng-art/skills/guaikei-douyin-data-stream"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 91,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5f53\u7528\u6237\u8bf4\"\u67e5\u4e00\u4e0b\"\"\u5e2e\u6211\u770b\u770b\"\u800c\u5bf9\u8c61\u662f\u77ed\u89c6\u9891\u5185\u5bb9\u3001\u535a\u4e3b\u3001\u8bc4\u8bba\u6216\u70ed\u70b9\u65f6\uff0c\u4f7f\u7528\u672c\u6280\u80fd\uff1a\u6296\u97f3\u641c\u7d22\u3001\u535a\u4e3b\u4f5c\u54c1\u3001\u8bc4\u8bba\u3001\u70ed\u699c\u56db\u5408\u4e00\u3002\u6ca1\u70b9\u540d\u6296\u97f3\u4e5f\u80fd\u89e6\u53d1\u3002\u4e0d\u8d1f\u8d23\u53d1\u5e03\u89c6\u9891\u4e0e\u6da8\u7c89\u54a8\u8be2\u3002",
+  "updated_at": 1787107090280,
+  "version": "1.0.0"
+}
