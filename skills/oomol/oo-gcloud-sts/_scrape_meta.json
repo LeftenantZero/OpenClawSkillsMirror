@@ -1,0 +1,43 @@
+{
+  "changelog": "- Operates Google Cloud STS through an OOMOL-connected `gcloud_sts` connector account.\n- Exchanges an OOMOL OIDC token via Google Cloud Workload Identity Federation to return a Google Cloud access token.\n- Uses `oo connector schema` before calls so payloads match the live action contract.\n- Runs actions with `oo connector run ... --json`, with credentials injected server-side so raw tokens are not handled locally.\n- Includes setup and recovery guidance for CLI install, OOMOL auth, expired or missing connections, and billing errors.\n\nSource: `oomol-lab/skills@146ef20`",
+  "created_at": 1780502436493,
+  "display_name": "Google Cloud STS",
+  "fetched_at": 1787781682012,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781002187403,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-gcloud-sts",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-gcloud-sts",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-gcloud-sts&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-gcloud-sts"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 499,
+    "installs": 7,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Google Cloud STS (cloud.google.com). Use this skill for ANY Google Cloud STS request \u2014 searching and reading data. Whenever a task involves Google Cloud STS,...",
+  "updated_at": 1780999586175,
+  "version": "1.0.1"
+}
