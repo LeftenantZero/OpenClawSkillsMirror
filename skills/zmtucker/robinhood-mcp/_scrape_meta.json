@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of Robinhood MCP skill.\n\n- Connects to Robinhood\u2019s Agentic Trading MCP server for reading positions, analyzing portfolios, and placing trades.\n- Handles OAuth 2.0 authentication with token persistence; allows seamless re-authentication across sessions.\n- Credentials are securely stored to persistent storage; re-login is only required if tokens are revoked or deleted.\n- Provides CLI scripts for login, status check, tool discovery, and tool invocation.\n- Emphasizes security: user confirmation required before trades, and credentials are never logged or exposed.",
+  "created_at": 1781715815355,
+  "display_name": "Robinhood Mcp",
+  "fetched_at": 1787780359531,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/oauth_and_persistence.md",
+    "scripts/robinhood_mcp.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781749972314,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zmtucker",
+    "handle": "zmtucker",
+    "user_id": "s17fq291581evd78xzn1930b0n87bfny"
+  },
+  "slug": "robinhood-mcp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/robinhood-mcp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=robinhood-mcp&ownerHandle=zmtucker",
+    "page_url": "https://clawhub.ai/zmtucker/skills/robinhood-mcp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 324,
+    "installs": 4,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Connect to Robinhood's Agentic Trading MCP server and act on the user's behalf \u2014 list account/positions tools, analyze a portfolio, and place trades via the...",
+  "updated_at": 1781715815355,
+  "version": "0.1.0"
+}
