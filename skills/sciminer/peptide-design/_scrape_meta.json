@@ -1,0 +1,33 @@
+{
+  "changelog": "**Summary:** \nThe skill now uses authoritative tool documentation from `sciminer.tech` for API payloads and invocation details, instead of a local registry.\n\n- Removed internal registry files and the local payload construction method.\n- Switched to reading tool parameters and invocation steps directly from each tool's Markdown doc at `https://sciminer.tech/tool_api_files/`.\n- Updated SKILL.md to enforce using tool doc sections as the only payload and workflow source.\n- Clarified file upload, invocation, authentication, and result handling using the official tool docs.\n- Strengthened instructions to never print or store credentials and always cite the relevant tool Markdown doc in summaries.",
+  "created_at": 1774871624967,
+  "display_name": "Peptide Design",
+  "fetched_at": 1787783767707,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SciMiner",
+    "handle": "sciminer",
+    "user_id": "s170qp1q4twz35wa85ppa8894h83w461"
+  },
+  "slug": "peptide-design",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/peptide-design",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=peptide-design&ownerHandle=sciminer",
+    "page_url": "https://clawhub.ai/sciminer/skills/peptide-design"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1074,
+    "installs": 27,
+    "stars": 6,
+    "versions": 8
+  },
+  "summary": "Peptide design, docking, and peptide property analysis tools exposed through SciMiner.",
+  "updated_at": 1780221972979,
+  "version": "1.0.7"
+}
