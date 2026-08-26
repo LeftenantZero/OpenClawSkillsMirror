@@ -1,0 +1,46 @@
+{
+  "changelog": "**Improved cross-platform compatibility and simplified environment variable handling.**\n\n- Updated documentation to provide separate setup instructions for Windows and macOS/Linux, improving clarity for all users.\n- Voice API key and options are now read from environment variables instead of requiring a `.env` file.\n- Removed the unused `.env` template file.\n- Clarified that shell scripts are recommended for macOS/Linux and not for Windows; Windows users should follow manual steps.\n- General documentation cleanup for conciseness and easier onboarding.",
+  "created_at": 1773825441743,
+  "display_name": "media-cluster",
+  "fetched_at": 1787788231638,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/ensure_mediacrawler.sh",
+    "scripts/setup_env.sh",
+    "scripts/summarize_and_voice.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090017110,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "q1lin570",
+    "handle": "q1lin570",
+    "user_id": "s1716ph5jvrp7zf8ve3b4y7fen884e1j"
+  },
+  "slug": "media-cluster",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/media-cluster",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=media-cluster&ownerHandle=q1lin570",
+    "page_url": "https://clawhub.ai/q1lin570/skills/media-cluster"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 946,
+    "installs": 27,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Automatically crawls Chinese social media by keyword, summarizes content, generates a markdown report, and produces a short voice summary using TTS.",
+  "updated_at": 1779078442780,
+  "version": "1.0.1"
+}
