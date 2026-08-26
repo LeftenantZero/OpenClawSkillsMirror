@@ -1,0 +1,45 @@
+{
+  "changelog": "- Initial release with automated conversion of email templates from popular providers (SendGrid, Mailgun, Mandrill, Postmark, Brevo, Amazon SES) to Mailtrap-compatible Handlebars syntax.\n- Supports single file, directory, and inline HTML conversion modes.\n- Utilizes a Python script for fast, deterministic conversions; switches to deep (LLM) mode for complex cases or inline HTML.\n- Flags unsupported or ambiguous template patterns and clearly communicates required user or app-level actions.\n- Presents categorized conversion reports and reminders of API-side field changes needed post-conversion.",
+  "created_at": 1785949610241,
+  "display_name": "converting-email-templates",
+  "fetched_at": 1787773334700,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "content/how-to-migrate-email-templates.md",
+    "references/conversion-rules.md",
+    "scripts/converter.py",
+    "skill-card.md",
+    "tests/expected/brevo-test.html",
+    "tests/expected/mandrill-mergetags-test.html",
+    "tests/expected/postmark-test.html",
+    "tests/expected/sendgrid-test.html",
+    "tests/input/brevo-test.html",
+    "tests/input/mandrill-mergetags-test.html",
+    "tests/input/postmark-test.html",
+    "tests/input/sendgrid-test.html",
+    "tests/output/.gitkeep"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "@mailtrap",
+    "handle": "mailtrap",
+    "user_id": "s175rfw70rym4nyaptqnk77y1d8bwkx3"
+  },
+  "slug": "converting-email-templates",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/converting-email-templates",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=converting-email-templates&ownerHandle=mailtrap",
+    "page_url": "https://clawhub.ai/mailtrap/skills/converting-email-templates"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 170,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when converting or migrating email templates from another provider (SendGrid, Mailgun, Mandrill, Postmark, Brevo, Amazon SES) to Mailtrap-compatible Handlebars syntax. Supports single file, bulk directory, and inline HTML conversion.",
+  "updated_at": 1785949719635,
+  "version": "1.0.0"
+}
