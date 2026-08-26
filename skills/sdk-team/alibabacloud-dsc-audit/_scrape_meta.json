@@ -1,0 +1,40 @@
+{
+  "changelog": "alibabacloud-dsc-audit 0.0.3\n\n- Introduced explicit, session-scoped User-Agent requirements for all Alibaba Cloud business API requests with SKILL_SESSION_ID tracking and enforcement.\n- Added strict pre-checks for Python, pip3, SDK package presence, and Aliyun CLI version and plugin status.\n- Clarified usage of bundled scripts; scripts/query_risk.py is now the exclusive supported method for all risk query operations, with hard requirements on pagination and result summarization language.\n- Improved documentation structure for prerequisites, observability, and command usage to reduce configuration errors and promote consistent agent behavior.\n- Removed skill-card.md; updated RAM permission guidance and references.\n- Enhanced and clarified parameter confirmation and security best practice wording throughout the documentation.",
+  "created_at": 1775634361241,
+  "display_name": "alibabacloud-dsc-audit",
+  "fetched_at": 1787769693462,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/ram-policies.md",
+    "references/related-apis.md",
+    "scripts/handle_risk.py",
+    "scripts/query_risk.py",
+    "scripts/requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-dsc-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-dsc-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-dsc-audit&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-dsc-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 672,
+    "installs": 15,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Query and handle security risk events from Alibaba Cloud Data Security Center. Supports viewing the list of unprocessed risk events and performing manual handling operations on risk events. Trigger words: \"Data Security Center\", \"security risk events\", \"DSC\", \"risk handling\", \"DescribeRiskRules\", \"PreHandleAuditRisk\"",
+  "updated_at": 1787542902317,
+  "version": "0.0.3"
+}
