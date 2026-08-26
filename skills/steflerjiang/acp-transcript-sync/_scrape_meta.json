@@ -1,0 +1,44 @@
+{
+  "changelog": "acp-transcript-sync 1.0.0\n\n- Initial release of acp-transcript-sync.\n- Enables automatic syncing of ACP sub-session transcripts back to the main session after task completion.\n- Ensures that platforms like AIMA can capture the complete reasoning process of spawned sub-agents by consolidating transcripts.\n- Provides a command-line script to manually or automatically sync child session content to the main session, with support for various agents (cfuse, claude code, codex, gemini cli, etc.).\n- Includes troubleshooting guide and standard operating procedures for reliable session management and transcript merging.",
+  "created_at": 1780556424177,
+  "display_name": "ACP Transcript Sync",
+  "fetched_at": 1787783042260,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/sync-acp-to-main.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780557304818,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jiang Shizheng",
+    "handle": "steflerjiang",
+    "user_id": "s17ffbhqpd2byt4j3f19vpmb5583md17"
+  },
+  "slug": "acp-transcript-sync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/acp-transcript-sync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=acp-transcript-sync&ownerHandle=steflerjiang",
+    "page_url": "https://clawhub.ai/steflerjiang/skills/acp-transcript-sync"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 394,
+    "installs": 6,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "ACP \u5b50\u4f1a\u8bdd\u5185\u5bb9\u81ea\u52a8\u56de\u5199\u4e3b\u4f1a\u8bdd\u3002\u5f53 spawn ACP \u5b50 agent\uff08cfuse/claude code/codex/gemini cli \u7b49\uff09\u5b8c\u6210\u4efb\u52a1\u540e\uff0c\u5c06\u5b50\u4f1a\u8bdd\u7684 transcript \u56de\u5199\u5230\u4e3b\u4f1a\u8bdd transcript \u6587\u4ef6\uff0c\u4f7f AIMA \u7b49\u5e73\u53f0\u80fd\u901a\u8fc7\u91c7\u96c6\u4e3b\u4f1a\u8bdd\u770b\u5230\u5b50 agent \u7684\u5b8c\u6574\u63a8\u7406\u8fc7\u7a0b\u3002\u89e6\u53d1\u573a...",
+  "updated_at": 1780556424177,
+  "version": "1.0.0"
+}
