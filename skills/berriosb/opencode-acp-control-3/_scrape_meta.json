@@ -1,0 +1,50 @@
+{
+  "changelog": "v0.3.1 (promote): same source as v0.3.0 (SKILL.md rewritten per issue #1, tool-agnostic, operationally reliable). Republishing to fix the 'latest' tag \u2014 v0.3.0 was published but did not promote to latest, leaving 0.1.1 visible. No code changes vs 0.3.0.",
+  "created_at": 1771531099495,
+  "display_name": "OpenCode ACP Control",
+  "fetched_at": 1787773219885,
+  "files": [
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/acp_demo.py",
+    "pytest.ini",
+    "skill-card.md",
+    "tests/test_acp_demo.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786071446642,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Bastian Nicolas Berrios Alarcon",
+    "handle": "berriosb",
+    "user_id": "s17dpgs07bn589qttnh5p4geds83n5mn"
+  },
+  "slug": "opencode-acp-control-3",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/opencode-acp-control-3",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=opencode-acp-control-3&ownerHandle=berriosb",
+    "page_url": "https://clawhub.ai/berriosb/skills/opencode-acp-control-3"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1509,
+    "installs": 41,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Use when an AI agent needs to start, drive, or monitor an OpenCode CLI session programmatically over the Agent Client Protocol (ACP). Triggers include requests to \"spawn OpenCode\", \"control OpenCode from another agent\", \"automate OpenCode over JSON-RPC\", \"resume an OpenCode session\", or any task that requires the agent to act as an ACP client rather than an interactive user. Provides the JSON-RPC 2.0 framing, session lifecycle, polling strategy, permission-request handling, and update detection needed to wrap OpenCode from inside another AI agent.",
+  "updated_at": 1786070783499,
+  "version": "0.3.1"
+}
