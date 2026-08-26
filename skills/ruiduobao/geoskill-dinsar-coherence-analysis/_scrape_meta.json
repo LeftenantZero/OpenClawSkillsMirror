@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release of D-InSAR coherence and phase analysis skill.\n\n- Estimates complex coherence and interferometric phase from registered master/slave SLC input, supporting both real and synthetic data.\n- Supports flexible multi-looking window size via `--looks-r` and `--looks-a`.\n- Outputs GeoTIFF files for coherence and phase, with statistics and run manifest in JSON.\n- Offers command line interface with examples for various scenarios (real data, synthetic, polarization selection, low-coherence threshold).\n- Fully offline processing; all data stays local.\n- Includes documentation in both English and Chinese.",
+  "created_at": 1785843577921,
+  "display_name": "geoskill-dinsar-coherence-analysis",
+  "fetched_at": 1787773496530,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-dinsar-coherence-analysis.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785844435330,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-dinsar-coherence-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-dinsar-coherence-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-dinsar-coherence-analysis&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-dinsar-coherence-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 178,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4ece\u914d\u51c6\u4e3b/\u4ece\u590dSLC\u4f30\u8ba1\u591a\u89c6\u590d\u76f8\u5e72\u7cfb\u6570\u03b3\u4e0e\u5e72\u6d89\u76f8\u4f4d\uff0c\u8bc6\u522b\u7a33\u5b9a\u6563\u5c04\u4f53\u4e0e\u53bb\u76f8\u5173\u53d8\u5316\u533a\uff08\u5efa\u7b51\u53d8\u5316/\u6ed1\u5761/\u690d\u88ab\uff09\uff0c\u8f93\u51fa\u76f8\u5e72\u6027\u4e0e\u76f8\u4f4dGeoTIFF\u53ca\u7edf\u8ba1JSON\u3002D-InSAR complex coherence and interferometric phase estimation with multi-looking.",
+  "updated_at": 1785843714807,
+  "version": "1.0.0"
+}
