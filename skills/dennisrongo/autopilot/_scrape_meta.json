@@ -1,0 +1,33 @@
+{
+  "changelog": "- Major rewrite: full transition from a tmux/Codex CLI orchestrator to a hands-off, autonomous task runner for end-to-end code execution.\n- Now pulls task definitions directly (from Azure DevOps/GitHub if available), plans, executes, tests, and reviews tasks without human intervention\u2014delivering a full evidence-backed report, not code commits/PRs.\n- Human gates and interactive prompts removed; all questions become logged, justified assumptions, each with documented rationale and blast radius.\n- Workflow enforces strict verification and self-correction after errors; execution halts only for destructive, irreversible, or infeasible actions.\n- No code is ever committed or pushed\u2014handoff stops before any repository changes, with actionable reporting for the human user.\n- Old CLI/tmux management code fully removed; skill is now purpose-built for fully autonomous, report-driven development runs.",
+  "created_at": 1786913262466,
+  "display_name": "autopilot",
+  "fetched_at": 1787771712248,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "autopilot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/autopilot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=autopilot&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/autopilot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 18,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fully autonomous end-to-end task run with NO human gates \u2014 pulls the work item (via the azure-devops or github skill if installed, or takes an inline task description), plans against the real codebase, executes incrementally with per-increment verification, writes and runs tests, code-reviews and fixes blocking findings, then STOPS before any commit/push/PR and delivers an evidence-backed report with every assumption logged. Replaces interactive questions with a documented-assumption protocol; halts only for destructive actions, missing access, or unimplementable specs. Use this skill whenever the user says \"autopilot\", \"/autopilot\", \"run task <id> autonomously\", \"work this task end to end without asking\", \"full autonomy on this\", \"do the whole task, skip commits and PR\", or launches a headless run with a task id \u2014 even if they don't explicitly say \"autopilot skill\". Do not use when the user wants interactive planning gates (use task-executor) or wants commits/PRs created.",
+  "updated_at": 1786913326478,
+  "version": "1.0.0"
+}
