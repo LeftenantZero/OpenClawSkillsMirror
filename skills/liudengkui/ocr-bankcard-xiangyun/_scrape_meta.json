@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of Xiangyun Bank Card OCR Skill:\n\n- Recognizes and extracts key details from bank card images via the Xiangyun API (typeId=17).\n- Supports input as local file path, Base64 string, or downloadable URL.\n- Guides users through API key/secret setup on first use, storing credentials securely in config.json.\n- Outputs structured results (card number, type, name, issuing bank, bank code) in a table; results auto-saved per image.\n- Exports data to Excel/CSV on explicit user request using cached results to avoid redundant API calls.\n- Comprehensive error handling and user prompts for API/authentication issues.",
+  "created_at": 1779361470368,
+  "display_name": "ocr-bankcard-xiangyun",
+  "fetched_at": 1787785439270,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "references/api_docs.md",
+    "scripts/config_manager.py",
+    "scripts/export.py",
+    "scripts/recognize.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779958956181,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "liudengkui",
+    "handle": "liudengkui",
+    "user_id": "s1741bfyzp3b0en85c71e500e584v20a"
+  },
+  "slug": "ocr-bankcard-xiangyun",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ocr-bankcard-xiangyun",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ocr-bankcard-xiangyun&ownerHandle=liudengkui",
+    "page_url": "https://clawhub.ai/liudengkui/skills/ocr-bankcard-xiangyun"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 535,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Xiangyun Platform Bank Card OCR Skill. Calls the Xiangyun API (typeId=17) to perform structured recognition on bank card images, extracting card number, card...",
+  "updated_at": 1779361470368,
+  "version": "1.0.0"
+}
