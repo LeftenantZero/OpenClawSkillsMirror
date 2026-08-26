@@ -1,0 +1,58 @@
+{
+  "changelog": "mu-self-evolve v3.0.0 \u2013 Major system upgrade with deterministic scoring, decay-based pruning, and proactive Skill synthesis.\n\n- Added deterministic VFM validation, scoring, and cross-task verification for promoting learnings/errors.\n- Introduced decay-based pruning: entries now scored by value and frequency, with auto-archiving of stale/low-impact items.\n- Implemented WHERE\u00d7WHY error classification and structured pathological archiving.\n- Automated Skill synthesis: system detects knowledge clusters and drafts new Skills from recurrent patterns.\n- Enhanced weekly review: now features multi-step reflection, bias audits, and improved summary/notification processes.",
+  "created_at": 1785214977703,
+  "display_name": "Agent\u81ea\u6211\u53cd\u601d\u4e0e\u8fdb\u5316\u5668",
+  "fetched_at": 1787774533751,
+  "files": [
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "README_CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "index.html",
+    "references/claude-code-compat.md",
+    "references/file-structure.md",
+    "references/record-templates.md",
+    "references/weekly-reflection.md",
+    "scripts/bias_audit.py",
+    "scripts/env_detect.py",
+    "scripts/eviction_score.py",
+    "scripts/vfm_verify.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785218997148,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u6728\u5148\u751fiPPT",
+    "handle": "muippt",
+    "user_id": "s172ye8cdtbt41pqwnjhzarfj18bbhpn"
+  },
+  "slug": "mu-self-evolve",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mu-self-evolve",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mu-self-evolve&ownerHandle=muippt",
+    "page_url": "https://clawhub.ai/muippt/skills/mu-self-evolve"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 246,
+    "installs": 0,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "AI Agent \u6301\u7eed\u8fdb\u5316\u7cfb\u7edf\uff1a\u6bcf\u65e5\u7ecf\u9a8c\u6c89\u6dc0+\u6bcf\u5468\u9519\u8bef\u53cd\u601d\uff0c\u6b63\u5411\u63d0\u70bc\u4e0e\u8d1f\u5411\u7ea0\u504f\u5408\u4e00\u3002v3.0 \u65b0\u589e VFM \u786e\u5b9a\u6027\u9a8c\u7b97\u3001\u8bc4\u5206+\u8870\u51cf\u6dd8\u6c70\u3001WHERE\u00d7WHY \u75c5\u7406\u5f52\u6863\u3001\u4e3b\u52a8 Skill \u5408\u6210\u3002\u89e6\u53d1\u8bcd\uff1a\u8bb0\u5f55\u9519\u8bef\u3001\u8fdb\u5316\u7cfb\u7edf\u3001\u81ea\u6211\u53cd\u601d\u3001\u8e29\u5751\u8bb0\u5f55\u3001self-evolve\u3001self-improve\u3002",
+  "updated_at": 1785225124321,
+  "version": "3.0.0"
+}
