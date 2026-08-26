@@ -1,0 +1,34 @@
+{
+  "changelog": "- Initial release of ci-cadastre-vertices: find or verify parcel vertex coordinates on the Cote d'Ivoire Mining Cadastre Map Portal.\n- Supports searching by official parcel/license code and extracting boundary vertices using portal data.\n- Prefers portal\u2019s official Esri geometry; falls back to visual/manual reconstruction only if necessary.\n- Converts and reports coordinates in both decimal degrees and DMS (if requested).\n- Details all lookup steps and evidence for each result, specifying the source of geometry data.",
+  "created_at": 1782655785786,
+  "display_name": "CI Cadastre Vertices",
+  "fetched_at": 1787778806584,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "J\u00e9r\u00f4me Xinglin QIAN",
+    "handle": "jeromeex",
+    "user_id": "s17fqp1p7fy20kfj7hwd6ax4z1885ne8"
+  },
+  "slug": "ci-cadastre-vertices",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ci-cadastre-vertices",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ci-cadastre-vertices&ownerHandle=jeromeex",
+    "page_url": "https://clawhub.ai/jeromeex/skills/ci-cadastre-vertices"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 322,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Find or verify parcel vertex coordinates on the Cote d'Ivoire Mining Cadastre Map Portal/Landfolio site. Use when a user gives an official parcel or license code and asks for vertices, boundary coordinates, WGS84/DMS coordinates, decimal latitude/longitude, Esri geometry, or a repeatable workflow.",
+  "updated_at": 1782655823498,
+  "version": "1.0.0"
+}
