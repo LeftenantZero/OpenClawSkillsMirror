@@ -1,0 +1,53 @@
+{
+  "changelog": "## [1.0.0] - 2026-03-19\n\n### Added\n- SKILL.md \u2014 Complete skill with Pipeline + Tool Wrapper design patterns\n- \u6807\u51c6\u76ee\u5f55\u7ed3\u6784 \u2014 \u53cc workspace \u67b6\u6784\uff1a\n  - Workspace_Human/ \u2014 \u4eba\u7c7b\u6587\u4ef6\uff08input, output, backup, temp\uff09\n  - Workspace_Agent/ \u2014 Agent \u6587\u4ef6\uff08memory, skills, subagents, shared_context, artifacts, cache, logs, skills_custom, prompts, kb\uff09\n- Pipeline \u603b\u63a7 (pipeline.sh) \u2014 5 \u6b65\u6d41\u6c34\u7ebf\uff1aAudit \u2192 Organize \u2192 Clean \u2192 Archive \u2192 Sync\uff0c\u652f\u6301 --all / --dry-run / \u5355\u6b65\u9009\u62e9\n- \u5065\u5eb7\u5ba1\u8ba1 (health-check.sh) \u2014 0-100 \u5065\u5eb7\u8bc4\u5206\uff1a\u65ad\u94fe\u3001\u7a7a\u76ee\u5f55\u3001\u5927\u6587\u4ef6\u3001\u7578\u5f62\u547d\u540d\u68c0\u6d4b\n- \u89c4\u8303\u5316 (standardize.sh) \u2014 \u786e\u4fdd\u6807\u51c6\u76ee\u5f55\u5b8c\u6574\uff0c\u68c0\u6d4b\u6839\u76ee\u5f55\u6563\u843d\u6587\u4ef6\n- \u6574\u7406 (organize.sh) \u2014 \u5c06 artifacts/ \u6587\u4ef6\u81ea\u52a8\u5206\u7c7b\u5230 Workspace_Human/output/\n- \u6e05\u7406 (cleanup.py) \u2014 \u5b89\u5168\u6e05\u7406\uff0c\u9ed8\u8ba4 dry-run\uff0c\u7528 trash-put \u4ee3\u66ff rm\n- \u5f52\u6863 (archive.sh) \u2014 \u4ea4\u4e92\u5f0f\u5f52\u6863\uff0c\u6309 YYYY-MM/ \u7ec4\u7ec7\n- \u540c\u6b65 (sync.sh) \u2014 \u53ef\u9009\u6269\u5c55\uff0c\u901a\u8fc7 gog CLI \u540c\u6b65\u5230 Google Drive\uff0c\u672a\u5b89\u88c5\u5219\u81ea\u52a8\u8df3\u8fc7\n- \u914d\u7f6e\u6587\u4ef6 (patterns.json, sync-config.json)\n\n### \u5b89\u5168\u7279\u6027\n- \u6240\u6709\u5220\u9664\u64cd\u4f5c\u901a\u8fc7 trash-put \u5b8c\u6210\uff08\u53ef\u6062\u590d\uff09\n- \u9ed8\u8ba4 dry-run \u6a21\u5f0f\n- \u6838\u5fc3\u914d\u7f6e\u6587\u4ef6\u548c Workspace_Human/ \u53d7\u4fdd\u62a4\u6c38\u4e0d\u5220\u9664",
+  "created_at": 1773937075698,
+  "display_name": "workspace-manager",
+  "fetched_at": 1787787892890,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/patterns.json",
+    "config/sync-config.json",
+    "scripts/archive.sh",
+    "scripts/cleanup.py",
+    "scripts/health-check.sh",
+    "scripts/organize.sh",
+    "scripts/pipeline.sh",
+    "scripts/standardize.sh",
+    "scripts/sync.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089986503,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "musenlinc",
+    "handle": "mslchy",
+    "user_id": "s177rsdcxj54dabd4f6v8ne2j583jjjy"
+  },
+  "slug": "workspace-manage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/workspace-manage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=workspace-manage&ownerHandle=mslchy",
+    "page_url": "https://clawhub.ai/mslchy/skills/workspace-manage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 863,
+    "installs": 24,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u7528\u4e8e\u7ba1\u7406\u548c\u7ef4\u62a4 OpenClaw \u5de5\u4f5c\u533a\u7684\u7ed3\u6784\u3002\u5f53\u7528\u6237\u63d0\u5230\u5de5\u4f5c\u533a\u6df7\u4e71\u3001\u9700\u8981\u6574\u7406\u6587\u4ef6\u5939\u3001\u6216\u8005\u5e0c\u671b\u5efa\u7acb\u6807\u51c6\u76ee\u5f55\u7ed3\u6784\u65f6\u4f7f\u7528\u3002\u63d0\u4f9b\u81ea\u52a8\u5f52\u6863\u3001\u5206\u7c7b\u3001\u6e05\u7406\u548c\u5065\u5eb7\u5ba1\u8ba1\u529f\u80fd\u3002",
+  "updated_at": 1779078613095,
+  "version": "1.0.0"
+}
