@@ -1,0 +1,64 @@
+{
+  "changelog": "**Summary: Privacy, consent, and security improvements based on audit.**\n\n- Added prominent PRIVACY & CONSENT NOTICE to documentation, requiring explicit user opt-in before enabling auto-extraction, and outlining administrator responsibilities.\n- Provided clear guidance on user notification, opt-in, deletion, data review, and retention configuration.\n- Added dedicated rollback script (`rollback_user.sql`) to support user-requested data deletion.\n- No database schema changes; update consists of new documentation and guidance (upgrade script placeholder only).\n- Version bump to 5.0.1.",
+  "created_at": 1777924819126,
+  "display_name": "VectorClaw",
+  "fetched_at": 1787784374572,
+  "files": [
+    ".clawhub/origin.json",
+    "CAPABILITIES.md",
+    "RELEASE_POST.md",
+    "RELEASE_POST_v5.md",
+    "SETUP_GUIDE.md",
+    "SKILL.md",
+    "_meta.json",
+    "changelog.md",
+    "cleanup_snapshots.sql",
+    "create_user_tables.sql",
+    "populate_templates.sql",
+    "rollback_user.sql",
+    "sanitize_snapshot.sh",
+    "skill-card.md",
+    "sql_safe_exec.sh",
+    "update_page.sql",
+    "update_page_v5.sql",
+    "updated_SKILL.md",
+    "upgrade_v1_to_v2.sql",
+    "upgrade_v3_to_v4.sql",
+    "upgrade_v4_to_v5.sql",
+    "upgrade_v5.0.0_to_v5.0.1.sql",
+    "vector_claw.sh",
+    "vector_claw_setup.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779973852432,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "NoodlyPandaStories",
+    "handle": "paradoxfuzzle",
+    "user_id": "s17cger457jwgfzqgbpjb2ydrh8632mt"
+  },
+  "slug": "custom-mysql",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/custom-mysql",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=custom-mysql&ownerHandle=paradoxfuzzle",
+    "page_url": "https://clawhub.ai/paradoxfuzzle/skills/custom-mysql"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1241,
+    "installs": 35,
+    "stars": 0,
+    "versions": 20
+  },
+  "summary": "Provides a secure, least-privilege interface for managing user data, personas, and config snapshots in MySQL with input validation and secret redaction.",
+  "updated_at": 1779899541100,
+  "version": "5.0.1"
+}
