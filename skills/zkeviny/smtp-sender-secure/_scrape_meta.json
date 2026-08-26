@@ -1,0 +1,46 @@
+{
+  "changelog": "Zero-Exposure SMTP Mail Sender (Script-Based) v2.1.1\n\n- Upgraded for MGC Blackbox 1.4.10 compatibility\n- Replaced `mgc_get(action=run)` with `mgc_run` and updated all execution examples accordingly\n- Corrected `ext02` to use JSON array string for better arg parsing\n- Added `diff_1` key to all `mgc_run` examples for result tracking\n- Updated installation instructions and requirements (`mgc-blackbox>=1.4.10`)\n- Rewrote example script to use argparse, parse_known_args, and result file output for secure/traceable runs\n- Added instructions and examples for advanced ops: `mgc_find`, `update_if_exists`, sandbox usage, and WebUI integration",
+  "created_at": 1782114521679,
+  "display_name": "Zero\u2011Exposure SMTP Mail Sender (MGC Secure Edition)",
+  "fetched_at": 1787770507052,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "example.py",
+    "manifest.json",
+    "readme.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787193634894,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zkeviny",
+    "handle": "zkeviny",
+    "user_id": "s173fckt3bzxxvt9dfp0rrdeg1894z72"
+  },
+  "slug": "smtp-sender-secure",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/smtp-sender-secure",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=smtp-sender-secure&ownerHandle=zkeviny",
+    "page_url": "https://clawhub.ai/zkeviny/skills/smtp-sender-secure"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 578,
+    "installs": 0,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "Send emails securely without exposing SMTP passwords. Users store SMTP credentials and email scripts in MGC; AI executes scripts via mgc_run blackbox. AI never sees credentials, script content, or email body (when stored in MGC). Adapted to MGC 1.4.10.",
+  "updated_at": 1787192916701,
+  "version": "2.1.1"
+}
