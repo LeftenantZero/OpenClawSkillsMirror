@@ -1,0 +1,41 @@
+{
+  "changelog": "- Initial release: Provides read-only listing of all Huawei Cloud IAM projects for an authenticated account.\n- Uses KooCLI `hcloud IAM KeystoneListProjects` as the primary method, with fallback to huaweicloudsdkiam Python SDK.\n- Supports filtering by project name, domain ID, status, parent project, and pagination.\n- No credential prompting; works with existing authenticated CLI or environment variables.\n- Clear documentation of prerequisites, command examples, and use cases for inventory, resource discovery, and permission review.",
+  "created_at": 1785621855915,
+  "display_name": "huawei-cloud-project-list",
+  "fetched_at": 1787773929757,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/test-cli-commands.sh",
+    "scripts/validate-skill.sh",
+    "skill-card.md",
+    "templates/test-vars.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-project-list",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-project-list",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-project-list&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-project-list"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 231,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Lists Huawei Cloud IAM (Identity and Access Management) projects \u2014 enumerates all projects under the authenticated account with project ID, name, domain ID, parent ID, enabled status and description, using the KooCLI `hcloud IAM KeystoneListProjects` command (primary) or the huaweicloudsdkiam Python SDK (fallback). Provides read-only project inventory for account management, resource discovery, permission review and multi-region operations planning. Use this skill whenever the user mentions project list query. Triggers include: list projects, project list, query projects, enumerate projects, show projects, project inventory, \u67e5\u8be2\u9879\u76ee, \u9879\u76ee\u5217\u8868, \u67e5\u770b\u9879\u76ee, \u5217\u51fa\u9879\u76ee, \u83b7\u53d6\u9879\u76ee\u5217\u8868, \u534e\u4e3a\u4e91\u9879\u76ee, \u67e5\u8be2\u534e\u4e3a\u4e91\u9879\u76ee\u5217\u8868.",
+  "updated_at": 1785621927975,
+  "version": "1.0.0"
+}
