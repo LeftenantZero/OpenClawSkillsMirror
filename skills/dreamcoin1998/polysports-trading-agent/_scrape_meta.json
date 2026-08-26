@@ -1,0 +1,49 @@
+{
+  "changelog": "Polysports-trading-agent 1.0.0 initial release:\n\n- Enables conversational PolySports trading and automation using structured `/skills/v1` endpoints.\n- Supports discovery, balance/auth checks, trading, monitoring, and workflow automation for PolySports markets only.\n- Enforces strict guardrails: always require explicit order size, user confirmation (unless delegated authority), and valid API key before trading.\n- Provides automated pregame scan, in-game monitoring, and postgame review with OpenClaw cron integration.\n- Keeps PolySports and Polymarket workflows fully separated for compliance and clarity.\n- Directs users to obtain API access via polysports.vip if missing; never infers critical parameters or executes ambiguous trades.",
+  "created_at": 1774185291145,
+  "display_name": "polymarket-sports-trade",
+  "fetched_at": 1787787711443,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/cron/jobs.template.json",
+    "assets/templates/monitor-launcher.prompt.md",
+    "references/monitoring-rules.md",
+    "references/skills-api.md",
+    "references/trading-playbook.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090032553,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jerry",
+    "handle": "dreamcoin1998",
+    "user_id": "s17cqt5t0zh19sdck8pyp8vfzh845rtd"
+  },
+  "slug": "polysports-trading-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polysports-trading-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polysports-trading-agent&ownerHandle=dreamcoin1998",
+    "page_url": "https://clawhub.ai/dreamcoin1998/skills/polysports-trading-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 645,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Conversational PolySports trading and OpenClaw automation through structured `/skills/v1` endpoints. Use when user needs to look up PolySports markets, inspe...",
+  "updated_at": 1779078723330,
+  "version": "1.0.0"
+}
