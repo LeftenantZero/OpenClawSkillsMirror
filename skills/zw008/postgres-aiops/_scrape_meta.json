@@ -1,0 +1,37 @@
+{
+  "changelog": "- Removed the sample file skill-card.md.\n- No user-facing or functional changes to the Postgres AIops skill.",
+  "created_at": 1783923872893,
+  "display_name": "postgres-aiops",
+  "fetched_at": 1787772962285,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agent-guardrails.md",
+    "references/capabilities.md",
+    "references/cli-reference.md",
+    "references/setup-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "wei zhou",
+    "handle": "zw008",
+    "user_id": "s171xgnmqse0nqvgqvqnaq5f9183kyre"
+  },
+  "slug": "postgres-aiops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/postgres-aiops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=postgres-aiops&ownerHandle=zw008",
+    "page_url": "https://clawhub.ai/zw008/skills/postgres-aiops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 927,
+    "installs": 2,
+    "stars": 0,
+    "versions": 9
+  },
+  "summary": "Use this skill whenever the user needs to operate or troubleshoot a PostgreSQL server/cluster as a DBA \u2014 a one-shot cluster health overview; server reads (version/uptime, settings, extensions, databases, roles); activity (sessions, idle-in-transaction, long-running queries, locks); query stats (pg_stat_statements top-N, EXPLAIN a statement); index health (unused indexes, missing-index hints, bloat, invalid/duplicate); table health (sizes, dead-tuple bloat, autovacuum status); replication (standby lag, replication slots, WAL); three flagship analyses \u2014 slow-query RCA (worst pg_stat_statements entry + EXPLAIN \u2192 cause/action), bloat & vacuum analysis (dead tuples + autovacuum lag \u2192 recommendation), and blocking lock-chain RCA (build the wait-for tree, name the root blocker); and guarded writes (terminate a backend, cancel a query, VACUUM/ANALYZE, create/drop an index, REINDEX, ALTER SYSTEM SET a parameter, reset query stats). Always use this skill for \"postgres health check\", \"why is this query slow\", \"pg_stat_statements top queries\", \"EXPLAIN this\", \"table/index bloat\", \"which indexes are unused\", \"missing index\", \"autovacuum status\", \"who is blocking whom\", \"kill the backend holding the lock\", \"replication lag\", \"replication slots\", \"VACUUM this table\", \"create/drop an index\", or \"ALTER SYSTEM SET work_mem\" when the context is a PostgreSQL database. Do NOT use when the target is OT / industrial equipment (Modbus, OPC-UA, PLCs \u2014 use industrial-aiops), a hypervisor, a storage appliance, a backup product, a container/cluster orchestrator, or a non-PostgreSQL database (negative routing hints only). Covers common PostgreSQL DBA operations with a built-in governance harness (audit, token budget, undo, risk-tiers). Beyond the mock suite, the reads plus a governed write and its undo have been exercised against a live PostgreSQL 16.14 instance (see docs/VERIFICATION.md).",
+  "updated_at": 1786344879448,
+  "version": "0.9.0"
+}
