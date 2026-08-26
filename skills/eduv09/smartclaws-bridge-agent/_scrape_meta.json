@@ -1,0 +1,33 @@
+{
+  "changelog": "**Expanded support for encrypted SmartClaws device channels.**\n\n- Added detailed instructions for handling encrypted channels, including when to use `smartclaws_read` vs `smartclaws_disclose`.\n- Clarified message status outcomes during publishing and provided guidance for error conditions.\n- Updated required context to include `goal` from `SMARTCLAWS.md`.\n- Removed references to the obsolete skill-card file.\n- Improved guardrails and failure handling to accommodate encrypted operations.",
+  "created_at": 1782816192475,
+  "display_name": "smartclaws-bridge-agent",
+  "fetched_at": 1787770588880,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Eduardo Vasques",
+    "handle": "eduv09",
+    "user_id": "s177rmwgpyt1bg88bh71kj16d1895edh"
+  },
+  "slug": "smartclaws-bridge-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/smartclaws-bridge-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=smartclaws-bridge-agent&ownerHandle=eduv09",
+    "page_url": "https://clawhub.ai/eduv09/skills/smartclaws-bridge-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 398,
+    "installs": 0,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Run one SmartClaws bridge cycle for a single device: read the local hardware/API, validate against the device contract, and publish telemetry on-chain \u2014 and, in a command-enabled mode, apply on-chain commands. Trigger when asked to read the sensor and publish, run a telemetry/bridge cycle, or apply incoming device commands. Needs the SmartClaws plugin and one device contract skill.",
+  "updated_at": 1787132276645,
+  "version": "1.0.2"
+}
