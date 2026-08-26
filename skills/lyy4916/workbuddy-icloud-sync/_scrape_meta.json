@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release: Easily sync WorkBuddy config across Macs using iCloud Drive.\n\n- Enables WorkBuddy configuration sync with a bare git repo in iCloud Drive; no GitHub account or keys needed.\n- Includes setup instructions for primary and additional Macs, with auto-sync via a background daemon every 5 minutes.\n- Provides detailed comparison between iCloud and GitHub sync options.\n- Specifies which files are synced and which remain machine-specific or server-side.\n- Offers terminal aliases and scripts for manual and automated sync.\n- Adds troubleshooting tips and architecture references.",
+  "created_at": 1785566316427,
+  "display_name": "workbuddy-icloud-sync",
+  "fetched_at": 1787773990346,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/gitignore-template",
+    "references/sync-architecture-icloud.md",
+    "scripts/auto-sync-icloud.sh",
+    "scripts/setup-mac-b-icloud.sh",
+    "scripts/start-sync-daemon.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785567147101,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "lyy4916",
+    "handle": "lyy4916",
+    "user_id": "s177t5gz1g9bqr9wzdn3k301nh8bn7wz"
+  },
+  "slug": "workbuddy-icloud-sync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/workbuddy-icloud-sync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=workbuddy-icloud-sync&ownerHandle=lyy4916",
+    "page_url": "https://clawhub.ai/lyy4916/skills/workbuddy-icloud-sync"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1681,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Set up automatic WorkBuddy config sync across multiple Macs using iCloud Drive. No GitHub account, no token, no SSH key needed \u2014 just log into the same iCloud account on all machines. Triggers: iCloud \u540c\u6b65, iCloud \u7248\u540c\u6b65, \u4e0d\u7528 GitHub \u540c\u6b65, \u82f9\u679c\u4e91\u540c\u6b65 WorkBuddy, iCloud sync WorkBuddy, sync without GitHub. Uses a bare git repo inside iCloud Drive with a background daemon syncing every 5 minutes.",
+  "updated_at": 1785566414734,
+  "version": "0.1.0"
+}
