@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of the ingest skill.\n\n- Builds or refreshes the CGIS semantic graph for the current repository to support `cgis_*` tools.\n- Automatically detects the appropriate source path when not specified, with sensible defaults and exclusions to avoid unnecessary files.\n- Reports concise ingestion results, including file, node, and edge counts, as well as share of unresolved edges, with context.\n- Warns about repository languages not supported by CGIS (non-Python/TypeScript).\n- Reminds users to add `graph.db` to `.gitignore` and to re-run ingestion after major changes.",
+  "created_at": 1786964464805,
+  "display_name": "ingest",
+  "fetched_at": 1787771583466,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Andrey Gromov",
+    "handle": "zaebee",
+    "user_id": "s170q1c0k12akb0vj8hxh7g4658cnv27"
+  },
+  "slug": "ingest",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ingest",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ingest&ownerHandle=zaebee",
+    "page_url": "https://clawhub.ai/zaebee/skills/ingest"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 109,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Build or refresh the CGIS code graph for this repository",
+  "updated_at": 1786964525489,
+  "version": "0.1.0"
+}
