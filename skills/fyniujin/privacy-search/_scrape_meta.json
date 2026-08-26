@@ -1,0 +1,77 @@
+{
+  "changelog": "privacy-search 1.7.0 brings MCP Server stdio bridge for agent integration\n\n- \u65b0\u589e MCP Server \u5f62\u6001\uff08stdio JSON-RPC 2.0\uff09\uff0c\u66b4\u9732 search/synthesize/fetch \u4e09\u5927\u5de5\u5177\n- \u901a\u8fc7 MCP Server \u53ef\u88ab Claude Code\u3001Cursor\u3001n8n \u7b49\u76f4\u63a5\u6302\u8f7d\uff0c\u6865\u63a5 Agent \u751f\u6001\n- \u589e\u52a0 references/mcp_schema.md \u63d0\u4f9b\u5de5\u5177 schema \u6587\u6863\n- \u65b0\u589e scripts/mcp_server.py MCP \u670d\u52a1\u4e3b\u7a0b\u5e8f\u53ca tests/test_mcp_server.py\n- skill-card.md \u79fb\u9664\uff0cSKILL.md/\u6587\u6863\u5185\u5bb9\u540c\u6b65 MCP \u63a5\u53e3\u8bf4\u660e",
+  "created_at": 1784380131040,
+  "display_name": "privacy-search",
+  "fetched_at": 1787769263194,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/QUICK_START.md",
+    "references/engines.md",
+    "references/engines_zh.md",
+    "references/mcp_schema.md",
+    "requirements.txt",
+    "scripts/__init__.py",
+    "scripts/cache.py",
+    "scripts/engine_selectors.py",
+    "scripts/engines_registry.py",
+    "scripts/exporters.py",
+    "scripts/http_client.py",
+    "scripts/logging_util.py",
+    "scripts/mcp_server.py",
+    "scripts/page_fetcher.py",
+    "scripts/privacy.py",
+    "scripts/quick_setup.py",
+    "scripts/ranking.py",
+    "scripts/search.py",
+    "scripts/searxng_manager.py",
+    "scripts/selftest_scheduler.py",
+    "scripts/summarizer.py",
+    "scripts/synthesiser.py",
+    "scripts/update_checker.py",
+    "scripts/version_util.py",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/test_mcp_server.py",
+    "tests/test_privacy.py",
+    "tests/test_search.py",
+    "tests/test_search_v11.py",
+    "tests/test_search_v12.py",
+    "tests/test_search_v15.py",
+    "tests/test_search_v16.py",
+    "tests/test_searxng.py",
+    "tests/test_update_checker.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787581479184,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fyniujin",
+    "handle": "fyniujin",
+    "user_id": "s177r8w7p1d7cpbys9bn33kwhs89d0xw"
+  },
+  "slug": "privacy-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/privacy-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=privacy-search&ownerHandle=fyniujin",
+    "page_url": "https://clawhub.ai/fyniujin/skills/privacy-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 631,
+    "installs": 0,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "\u9690\u79c1\u4f18\u5148\u7684\u591a\u5f15\u64ce\u5e76\u884c\u641c\u7d22 Skill\uff0c\u63d0\u4f9b\u5341\u5927\u641c\u7d22\u5f15\u64ce\uff08\u767e\u5ea6/\u5fc5\u5e94/\u641c\u72d7/360/DuckDuckGo/Yandex/Startpage/Qwant/Brave/\u672c\u5730SearXNG\uff09\u5e76\u884c\u68c0\u7d22\u3002V1.7 \u65b0\u589e MCP Server \u5f62\u6001\uff08stdio JSON-RPC 2.0 \u66b4\u9732 search/synthesize/fetch \u4e09\u5de5\u5177\uff09\uff0c\u53ef\u88ab Claude Code/Cursor/n8n \u76f4\u63a5\u6302\u8f7d\uff0c\u8ba9\u641c\u7d22\u80fd\u529b\u6210\u4e3a\u4efb\u4f55 Agent \u7684\u5373\u63d2\u7ec4\u4ef6\u3002V1.6 \u65b0\u589e Perplexity \u5f0f\u7b54\u6848\u5408\u6210\uff08\u5f15\u7528+\u6b63\u6587\u6293\u53d6+citation\uff09\u548c\u5b9a\u65f6\u5f15\u64ce\u5931\u6548\u544a\u8b66\uff0cjieba \u9ed8\u8ba4\u5b89\u88c5\u63d0\u5347\u4e2d\u6587\u7cbe\u5ea6\u3002\u652f\u6301\u7ed3\u679c\u7f13\u5b58\u4e0e\u641c\u7d22\u5386\u53f2\u3001\u7edf\u4e00 HTTP \u51fa\u53e3\uff08\u9690\u79c1\u5934/UA\u6c60/\u4ee3\u7406/\u81ea\u52a8\u91cd\u8bd5\u771f\u6b63\u751f\u6548\uff09\u3001\u6807\u51c6 SimHash \u53bb\u91cd\u3001\u591a\u56e0\u5b50\u52a0\u6743\u6392\u5e8f\uff08\u5171\u8bc6\u5ea6/\u4f4d\u6b21/\u76f8\u5173\u5ea6/\u6743\u5a01\u5ea6/\u57df\u540d\u8d28\u91cf\uff09\u3001\u591a\u5957\u5907\u9009\u9009\u62e9\u5668\u4e0e\u89e3\u6790\u8bca\u65ad\u3001bangs \u8bed\u6cd5\u900f\u4f20\u3001\u7f51\u9875\u6b63\u6587\u6293\u53d6\u3001\u641c\u7d22\u7ed3\u679c\u5bfc\u51fa\uff08Markdown/HTML/PDF\uff09\u3001LLM \u6458\u8981\uff08\u667a\u8c31 GLM-4-Flash + \u62bd\u53d6\u5f0f\u964d\u7ea7\uff09\u3001\u5b9a\u65f6 selftest + \u544a\u8b66\u3001MCP Server \u751f\u6001\u6865\u63a5\u3002SearXNG \u672c\u5730\u5b9e\u4f8b\u53cc\u8def\u5f84\u90e8\u7f72\uff0c\u9690\u79c1\u6a21\u5f0f normal/strict \u4e00\u952e\u5207\u6362\uff0c\u4e0d\u6c61\u67d3\u7cfb\u7edf Python \u73af\u5883\u3002",
+  "updated_at": 1787581083130,
+  "version": "1.7.0"
+}
