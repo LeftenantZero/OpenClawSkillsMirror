@@ -1,0 +1,36 @@
+{
+	"type": "function",
+	"function": {
+		"name": "_query_app_user_list",
+		"description": "Query basic account information. Including account ID, email, direct superior, department information, etc.",
+		"parameters": {
+			"type": "object",
+			"properties": {
+				"idList": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"description": "Account ID"
+					},
+					"description": "Account ID list"
+				},
+				"nameList": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"description": "Account name"
+					},
+					"description": "Account name list"
+				},
+				"pageIndex": {
+					"type": "integer",
+					"description": "Page number, starting from 1, default 1"
+				},
+				"pageSize": {
+					"type": "integer",
+					"description": "Number of items per page"
+				}
+			}
+		}
+	}
+}
