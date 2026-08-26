@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of the etcd-manager skill:\n\n- Provides clean and safe management for etcd key-value store operations: list, get, put, and delete.\n- Enforces safety rules with read-first preference, backups before modification, and explicit confirmation for destructive actions.\n- Distinguishes between dev, test, and prod environments, applying extra caution in production.\n- Standardizes command conventions and output formats to ensure clear, auditable interactions.\n- Supports TLS connections and logging for added security and traceability.",
+  "created_at": 1774352646399,
+  "display_name": "etcd-manager",
+  "fetched_at": 1787787659612,
+  "files": [
+    "INSTALL.md",
+    "README.md",
+    "RELEASE_NOTES.md",
+    "SKILL.md",
+    "_meta.json",
+    "etcd_helper.sh",
+    "package.json",
+    "references/etcd_commands.md",
+    "references/safety_guidelines.md",
+    "scripts/test_connection.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090072383,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "FPbear",
+    "handle": "fpbear",
+    "user_id": "s174q2182dscg46xsx6c4qv8x583gr48"
+  },
+  "slug": "etcd-manager",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/etcd-manager",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=etcd-manager&ownerHandle=fpbear",
+    "page_url": "https://clawhub.ai/fpbear/skills/etcd-manager"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 703,
+    "installs": 18,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Manage etcd key-value store operations (list, get, put, delete) with safety checks and backup mechanisms. Use when: reading/writing configuration, managing d...",
+  "updated_at": 1779078765889,
+  "version": "1.0.0"
+}
