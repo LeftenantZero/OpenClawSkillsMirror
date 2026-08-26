@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of the review-plan skill for pre-execution plan reviews.\n\n- Reviews implementation plans for parallelization, TDD, types, library usage, and security.\n- Enforces strict source quoting and anti-confabulation to ensure only plan artifacts are judged.\n- Uses a hard-gate sequence\u2014no review proceeds unless prior checks (file access, skill loads, captured outputs) pass.\n- Runs five distinct review lenses in parallel or sequentially: Parallelization, TDD, Type/API, Library Best Practices, Security.\n- Loads relevant code review skills dynamically based on detected tech stack.\n- Synthesizes a consolidated report with summary and critical issues table.",
+  "created_at": 1780280596372,
+  "display_name": "Review Plan",
+  "fetched_at": 1787783680072,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Kevin Anderson",
+    "handle": "anderskev",
+    "user_id": "s17b1fzefm8nj8j1sdkzrze7gn83pfrg"
+  },
+  "slug": "review-plan",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/review-plan",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=review-plan&ownerHandle=anderskev",
+    "page_url": "https://clawhub.ai/anderskev/skills/review-plan"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 480,
+    "installs": 8,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Review implementation plans for parallelization, TDD, types, libraries, and security before execution",
+  "updated_at": 1780280596372,
+  "version": "1.0.0"
+}
