@@ -1,0 +1,44 @@
+{
+  "changelog": "alibabacloud-pai-node-management v0.0.1\n\n- Overhauled skill initialization: now requires generating a unique session ID and passing a strict `--user-agent` flag for every cloud API CLI call.\n- Refined out-of-scope/forbidden operation wording: all node power/reboot/migration escalation language is now strictly in English and must reference the platform Ops team/Lingjun ops ticket/account manager, with prescribed forbidden strings.\n- Updated core workflow and refusal handling per stricter compliance guidelines in internal references.\n- Major documentation rewrite: clarified boundaries, lifecycle requirements, and filtered out previously mixed language/wording rules.\n- Removed legacy `skill-card.md` and reorganized references for parameter handling and confirmation/rejection protocols.\n- No functional API changes; primary impact is on compliance, user interaction, and agent execution hygiene.",
+  "created_at": 1780279439539,
+  "display_name": "Alibabacloud Pai Node Management",
+  "fetched_at": 1787781271754,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/confirmation-protocol.md",
+    "references/list-nodes-parameters.md",
+    "references/name-resolution.md",
+    "references/not-implementable.md",
+    "references/operate-node-parameters.md",
+    "references/ram-policies.md",
+    "references/refusal-patterns.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-pai-node-management",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-pai-node-management",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-pai-node-management&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-pai-node-management"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 715,
+    "installs": 10,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Manage Alibaba Cloud PAI compute Nodes \u2014 list nodes within a ResourceGroup or Quota, inspect a node's status, hardware spec (GPU / CPU / memory) and resource...",
+  "updated_at": 1781096664540,
+  "version": "0.0.1"
+}
