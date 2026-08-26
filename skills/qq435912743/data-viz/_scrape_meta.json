@@ -1,0 +1,46 @@
+{
+  "changelog": "**Major update: data-viz now generates standalone SVG/HTML charts from CSV/JSON data with zero third-party dependencies.**\n\n- Rewritten to use pure Python (no matplotlib/pandas), enabling visualization in sandboxed or restricted environments.\n- Accepts CSV/JSON input; auto-detects column types and renders histograms, scatter plots, and bar charts as SVG.\n- Produces a full HTML dashboard (`index.html`) and a data summary (`summary.json`).\n- Adds an internal learning mechanism to track usage and improve chart recommendations over time.\n- Command-line script interface: `python scripts/viz.py --data <input> --out <dir> [--topn N]`.\n- Dropped legacy command-line and external tool instructions; now focused on offline, standalone charting.",
+  "created_at": 1786624885494,
+  "display_name": "data-viz",
+  "fetched_at": 1787772294255,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "learned_patterns.json",
+    "scripts/learner.py",
+    "scripts/viz.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786671885543,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "qq435912743",
+    "handle": "qq435912743",
+    "user_id": "s171ndzm69p9g2ee5kcw6t7smh8azd5h"
+  },
+  "slug": "data-viz",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/data-viz",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=data-viz&ownerHandle=qq435912743",
+    "page_url": "https://clawhub.ai/qq435912743/skills/data-viz"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 24,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6570\u636e\u53ef\u89c6\u5316\u3002\u8bfb CSV/JSON \u6570\u636e\u96c6\uff0c\u81ea\u52a8\u63a8\u65ad\u5217\u7c7b\u578b\uff0c\u7eaf Python \u751f\u6210 SVG \u56fe\u8868\uff08\u76f4\u65b9\u56fe/\u6563\u70b9/\u67f1\u72b6/\u6298\u7ebf\uff09\u4e0e HTML \u770b\u677f\uff0c\u65e0 matplotlib/pandas \u4f9d\u8d56\u3002\u5f53\u7528\u6237\u9700\u8981\"\u753b\u4e2a\u56fe\"\"\u6570\u636e\u53ef\u89c6\u5316\"\"\u505a\u4e2a\u56fe\u8868\"\"\u770b\u5206\u5e03\"\"dashboard\"\u65f6\u4f7f\u7528\u3002",
+  "updated_at": 1786670947297,
+  "version": "1.0.0"
+}
