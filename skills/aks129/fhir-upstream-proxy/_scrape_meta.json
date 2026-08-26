@@ -1,0 +1,33 @@
+{
+  "changelog": "- Added support for connecting to real FHIR servers via MCP guardrail proxy, including HAPI FHIR, SMART Health IT, and Epic sandbox.\n- Ensures upstream server URLs are shielded from clients via recursive URL rewriting.\n- Applies automatic PHI redaction, audit trails, and step-up authentication for upstream data access.\n- Exposes configurable environment variables for upstream FHIR URL and request timeout.\n- Implements graceful error handling, FHIR health checks, and no caching by default.\n- Clarifies limitations: no SMART-on-FHIR auth forwarding, cross-version translation, or upstream tenant isolation.",
+  "created_at": 1783291113440,
+  "display_name": "Fhir Upstream Proxy",
+  "fetched_at": 1787778051539,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Eugene Vestel",
+    "handle": "aks129",
+    "user_id": "s178qdzg8rcnr4k0m29ecb5k0x884hea"
+  },
+  "slug": "fhir-upstream-proxy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fhir-upstream-proxy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fhir-upstream-proxy&ownerHandle=aks129",
+    "page_url": "https://clawhub.ai/aks129/skills/fhir-upstream-proxy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 258,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Connect to real FHIR servers through the MCP guardrail proxy. Use when: (1) Connecting to HAPI FHIR, SMART Health IT, or Epic sandbox servers, (2) Proxying A...",
+  "updated_at": 1783291113440,
+  "version": "1.6.0"
+}
