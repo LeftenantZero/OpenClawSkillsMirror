@@ -1,0 +1,46 @@
+{
+  "changelog": "- Adds concise documentation and setup guide for detecting SESSION-STATE.md changes from background tasks and notifying the main session.\n- Introduces a lightweight file mtime tracking system using a tracker file and a shell script for change detection.\n- Provides integration instructions for AGENTS.md to ensure automated detection before substantive agent responses.\n- Includes real-time watch option using inotify for instant file-change detection.\n- Offers Q&A troubleshooting, comparisons with alternative solutions, and publishing instructions for ClawHub.",
+  "created_at": 1779504816375,
+  "display_name": "Session State Watch",
+  "fetched_at": 1787784976365,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "examples/SESSION-STATE-update.py",
+    "scripts/README-event-driven.md",
+    "scripts/check_session_state.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779962018584,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Tyzh09",
+    "handle": "tyzh09",
+    "user_id": "s178aahg49k6rr4t5q9trd09wn84rkfc"
+  },
+  "slug": "session-state-watch",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/session-state-watch",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=session-state-watch&ownerHandle=tyzh09",
+    "page_url": "https://clawhub.ai/tyzh09/skills/session-state-watch"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 672,
+    "installs": 15,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Detect SESSION-STATE.md changes from cron/background tasks and notify main session. Solves the 'cron writes, main session forgets' problem in OpenClaw.",
+  "updated_at": 1779608831806,
+  "version": "1.0.2"
+}
