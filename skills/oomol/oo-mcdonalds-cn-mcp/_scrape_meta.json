@@ -1,0 +1,43 @@
+{
+  "changelog": "- Adds an OOMOL-backed skill for operating McDonald's China MCP via the `oo` CLI.\n- Supports live discovery of McDonald's China ordering, coupon, campaign, and points-mall tools.\n- Provides a generic `call_tool` action path for invoking current MCP tools with JSON arguments.\n- Requires schema inspection before payload construction to match live connector contracts.\n- Includes safety guidance for confirming state-changing actions such as creating addresses, claiming coupons, redeeming points, or creating orders.\n\nSource: `oomol-lab/skills@3e4b3ff`",
+  "created_at": 1787633639309,
+  "display_name": "McDonald's China MCP",
+  "fetched_at": 1787768999499,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787635540678,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-mcdonalds-cn-mcp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-mcdonalds-cn-mcp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-mcdonalds-cn-mcp&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-mcdonalds-cn-mcp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 63,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "McDonald's China MCP (open.mcd.cn). Use this skill for ANY McDonald's China MCP request \u2014 searching and reading data. Whenever a task involves McDonald's China MCP, use this skill instead of calling the API directly.",
+  "updated_at": 1787633706462,
+  "version": "1.0.0"
+}
