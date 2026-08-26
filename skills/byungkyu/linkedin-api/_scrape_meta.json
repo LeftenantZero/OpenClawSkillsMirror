@@ -1,0 +1,43 @@
+{
+  "changelog": "CLI-first rewrite: the maton CLI with OAuth login is the documented path, every example is a maton command, SDK examples added, and the raw HTTP fallback feeds the key on stdin instead of reading it from the environment",
+  "created_at": 1770462910278,
+  "display_name": "LinkedIn",
+  "fetched_at": 1787768646682,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787730119475,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "byungkyu",
+    "handle": "byungkyu",
+    "user_id": "s174c3s2kc1ehqj1ytzntezj2983e2aj"
+  },
+  "slug": "linkedin-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/linkedin-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=linkedin-api&ownerHandle=byungkyu",
+    "page_url": "https://clawhub.ai/byungkyu/skills/linkedin-api"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 12785,
+    "installs": 412,
+    "stars": 45,
+    "versions": 12
+  },
+  "summary": "LinkedIn API integration with managed OAuth. Share posts, manage profile, and access LinkedIn features. Use this skill when users want to share content on LinkedIn, get profile/organization information, or interact with LinkedIn's platform. Advertising features (campaigns, ad accounts) require additional OAuth scopes \u2014 verify granted scopes before use. For other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway). Requires network access and valid Maton API key. Calls run through the `maton` CLI with OAuth login; default to read and list calls, and confirm every write or new connection with the user.",
+  "updated_at": 1787729434273,
+  "version": "1.1.0"
+}
