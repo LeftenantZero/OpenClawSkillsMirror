@@ -1,0 +1,35 @@
+{
+  "changelog": "- Initial release of the Bayesian Reasoning skill with multi-turn interactive dialogue.\n- Guides users in defining hypotheses and evidence, identifies logical fallacies before computation, and confirms mapping from verbal to numeric probabilities.\n- Integrates Bayesian posterior and Bayes factor calculation via external Python script (no manual calculations).\n- Provides stepwise workflow: prior, likelihood, false positive rate collection (with bias reminders), computes results, and visualizes with ASCII progress bars.\n- Includes options for sensitivity analysis and chaining of multiple evidence updates.\n- Supports JSON-based result saving and loading for iterative Bayesian analysis.",
+  "created_at": 1777738264981,
+  "display_name": "Bayesian reasoning",
+  "fetched_at": 1787776367354,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/data_schema.md",
+    "scripts/bayes_calc.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "erelief",
+    "handle": "erelief",
+    "user_id": "s17e71hwc1pgsq5hr18512c3bh85z65x"
+  },
+  "slug": "bayesian-reasoning",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bayesian-reasoning",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bayesian-reasoning&ownerHandle=erelief",
+    "page_url": "https://clawhub.ai/erelief/skills/bayesian-reasoning"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 512,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Guide users through Bayesian reasoning via multi-turn dialogue. Computes posterior probabilities P(H|E), Bayes factors, sensitivity analyses, and visualizes...",
+  "updated_at": 1778492830283,
+  "version": "0.1.0"
+}
