@@ -1,0 +1,42 @@
+{
+  "changelog": "v0.2.1 bug-fix release. patch.py: RFC 6902 compliance fix. The 'remove' op now correctly returns exit 1 when the target path does not exist (previously silently returned 0). This matches the RFC and lets agents detect failed removals in CI pipelines. Also catches out-of-bounds array indices for /items/N where N >= len(items). No CLI changes. Regression tested: existing-key remove + array-index remove still work.",
+  "created_at": 1779941310849,
+  "display_name": "Clean JSON Toolkit",
+  "fetched_at": 1787780155552,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/_common.py",
+    "scripts/check_deps.sh",
+    "scripts/flatten.py",
+    "scripts/inspect.py",
+    "scripts/merge.py",
+    "scripts/patch.py",
+    "scripts/query.py",
+    "scripts/validate.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Gopendra Sharma",
+    "handle": "gopendrasharma89-tech",
+    "user_id": "s17cp87fy279ggwne1mqcb6675843tdy"
+  },
+  "slug": "clean-json-toolkit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clean-json-toolkit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clean-json-toolkit&ownerHandle=gopendrasharma89-tech",
+    "page_url": "https://clawhub.ai/gopendrasharma89-tech/skills/clean-json-toolkit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 789,
+    "installs": 14,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Local JSON / JSONL inspection and manipulation toolkit. Inspect deeply nested structures (path tree, types, sample values per path), query with a jq-style pa...",
+  "updated_at": 1781846136741,
+  "version": "0.2.1"
+}
