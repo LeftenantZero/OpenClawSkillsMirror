@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of pr-quality-gate \u2014 a structured PR quality gate integrating code review, AI-powered fixes, and GitHub Issue tracking.\n\n- Automates PR quality control workflow: review \u2192 fix \u2192 issue tracking, before code merge.\n- Triggers on key review-related commands during discussions.\n- Performs structured code reviews, summarizes issues by severity, and links GitHub Issues.\n- High-priority issues prompt AI coding agent suggestions.\n- Provides clear merge recommendations and reports based on systematic quality dimensions.\n- Does not auto-merge; blocks merge recommendation if High severity issues remain unresolved.",
+  "created_at": 1780429317127,
+  "display_name": "PR Quality Gate",
+  "fetched_at": 1787783298804,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md",
+    "workflow.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780431415424,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zlszhonglongshen",
+    "handle": "zlszhonglongshen",
+    "user_id": "s178jr2zywr30fqk79fnqadhks83gpp0"
+  },
+  "slug": "pr-quality-gate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pr-quality-gate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pr-quality-gate&ownerHandle=zlszhonglongshen",
+    "page_url": "https://clawhub.ai/zlszhonglongshen/skills/pr-quality-gate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 428,
+    "installs": 8,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Code Review + AI \u4fee\u590d + GitHub Issue \u8ffd\u8e2a\u7684 PR \u8d28\u91cf\u95e8\u7981\u5de5\u4f5c\u6d41\uff0c\u786e\u4fdd\u4ee3\u7801\u5408\u5165\u524d\u7ecf\u8fc7\u7cfb\u7edf\u6027 Review\u3002",
+  "updated_at": 1780429317127,
+  "version": "1.0.0"
+}
