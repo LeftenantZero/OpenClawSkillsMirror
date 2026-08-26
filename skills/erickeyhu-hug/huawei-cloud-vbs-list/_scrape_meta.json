@@ -1,0 +1,41 @@
+{
+  "changelog": "- Initial release of the huawei-cloud-vbs-list skill.\n- Provides listing and filtering of Huawei Cloud backups (Volume Backup Service, now managed under CBR).\n- Supports filtering by status, name, resource type, vault, and time range.\n- Utilizes both the CLI (`hcloud CBR ListBackups`) and SDK script tools for executing queries.\n- Includes parameter confirmation rules, IAM policy requirements, and usage instructions for both CLI and script interfaces.",
+  "created_at": 1785746685623,
+  "display_name": "huawei-cloud-vbs-list",
+  "fetched_at": 1787773666529,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/list_vbs_backups.py",
+    "skill-card.md",
+    "skill-gate-report-20260731.txt",
+    "templates/test-vars.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-vbs-list",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-vbs-list",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-vbs-list&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-vbs-list"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 186,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query the current Huawei Cloud backup (VBS/Volume Backup Service) list. Lists all backups in the user's project, with optional filtering by status, name, resource type, vault, and time range. The legacy VBS service has been superseded by CBR (Cloud Backup and Recovery), so this skill queries backups through the CBR ListBackups API/CLI. Use when the user wants to: (1) list all backups / VBS backup list, (2) check backup status and details, (3) filter backups by name, status, resource type, vault, or time range, (4) inspect backup inventory for daily inspection or troubleshooting. Triggers include: \"VBS\", \"\u5907\u4efd\u5217\u8868\", \"\u5907\u4efd\", \"\u4e91\u786c\u76d8\u5907\u4efd\", \"backup list\", \"list backups\", \"\u5907\u4efd\u72b6\u6001\", \"CBR\", \"Cloud Backup\", \"vbs list\"",
+  "updated_at": 1785746770198,
+  "version": "1.0.0"
+}
