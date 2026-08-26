@@ -1,0 +1,70 @@
+{
+  "changelog": "Initial release of geoskill-vector-simplification.\n\n- Simplifies vector geometries using Douglas-Peucker or Visvalingam-Whyatt algorithms.\n- Supports LineString, Polygon (with holes), Multi* and GeometryCollection types, recursively.\n- Reports vertex reduction ratio and area retention rate.\n- Offers offline processing; all user data handled locally.\n- Includes `--synthetic` mode for generating high-density test features.\n- Output includes simplified GeoJSON, stats JSON, and a run manifest.",
+  "created_at": 1785863191286,
+  "display_name": "geoskill-vector-simplification",
+  "fetched_at": 1787773409864,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_dp/output-manifest.json",
+    "_test_cli_dp/simplification_stats.json",
+    "_test_cli_visv/output-manifest.json",
+    "_test_cli_visv/simplification_stats.json",
+    "e2e_test.py",
+    "geoskill-vector-simplification.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785864180297,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-vector-simplification",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-vector-simplification",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-vector-simplification&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-vector-simplification"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 176,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7528 Douglas-Peucker / Visvalingam \u7b97\u6cd5\u7b80\u5316\u77e2\u91cf\u51e0\u4f55\uff0c\u7edf\u8ba1\u9876\u70b9\u51cf\u5c11\u4e0e\u9762\u79ef\u4fdd\u6301\u3002Simplify vector geometries with Douglas-Peucker / Visvalingam and report vertex reduction and area retention.",
+  "updated_at": 1785863382259,
+  "version": "1.0.0"
+}
