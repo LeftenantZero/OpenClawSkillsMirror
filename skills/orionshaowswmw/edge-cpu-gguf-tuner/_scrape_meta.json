@@ -1,0 +1,34 @@
+{
+  "changelog": "README-only documentation: complete functionality, usage, permissions, security/privacy, related emojis, and corrected TREE-SHA256-v1 verification excluding registry-generated metadata; no functional files changed",
+  "created_at": 1784748622926,
+  "display_name": "edge-cpu-gguf-tuner",
+  "fetched_at": 1787773239329,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "orionshaowswmw",
+    "handle": "orionshaowswmw",
+    "user_id": "s17d6323ed1jjxgp339202e6c98b1qq5"
+  },
+  "slug": "edge-cpu-gguf-tuner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/edge-cpu-gguf-tuner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=edge-cpu-gguf-tuner&ownerHandle=orionshaowswmw",
+    "page_url": "https://clawhub.ai/orionshaowswmw/skills/edge-cpu-gguf-tuner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 831,
+    "installs": 2,
+    "stars": 0,
+    "versions": 14
+  },
+  "summary": "Tune llama.cpp GGUF inference on CPU-only / edge boxes (1-4 cores, low RAM) for maximum tokens/sec. Complements GPU-oriented tuners. Contains measured, counterintuitive CPU-specific findings \u2014 flash attention helps even at short contexts, KV-cache quantization HURTS on CPU, batch size is a no-op, newer-arch Q4 beats older smaller Q5. Use when a model runs without a GPU, on a VPS, container, SBC, or sandbox.",
+  "updated_at": 1786030694758,
+  "version": "1.1.9"
+}
