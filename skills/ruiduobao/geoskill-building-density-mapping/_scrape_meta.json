@@ -1,0 +1,68 @@
+{
+  "changelog": "Initial release of geoskill-building-density-mapping.\n\n- Estimates building density (coverage ratio) and floor area ratio (FAR) from raster building footprints and heights using kernel density estimation.\n- Provides both command line usage for local TIFF data and an offline synthetic data mode.\n- Outputs GeoTIFF with two bands (building density, FAR), along with JSON statistics and a run manifest.\n- All processing is performed locally with no network or data upload; suitable for privacy-sensitive scenarios.\n- Open source under the MIT license.",
+  "created_at": 1785842786811,
+  "display_name": "geoskill-building-density-mapping",
+  "fetched_at": 1787773514063,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_synth/density_stats.json",
+    "_test_cli_synth/output-manifest.json",
+    "e2e_test.py",
+    "geoskill-building-density-mapping.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785843720197,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-building-density-mapping",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-building-density-mapping",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-building-density-mapping&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-building-density-mapping"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 174,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Estimate building footprint density and floor area ratio (FAR) from building footprints and heights using kernel density estimation.",
+  "updated_at": 1785842937611,
+  "version": "1.0.0"
+}
