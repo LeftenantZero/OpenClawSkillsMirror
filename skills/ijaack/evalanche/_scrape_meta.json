@@ -1,0 +1,43 @@
+{
+  "changelog": "## Highlights\n\n- Adds first-class Robinhood Chain mainnet support through the named `robinhood` network alias and chain ID `4663`, with official ETH, RPC, explorer, and LI.FI metadata.\n- Extends wallet boot, network switching, MCP chain discovery and switching, and native holdings scans to Robinhood Chain through Evalanche's central EVM registry.\n- Preserves the Robinhood network with RPC overrides supplied through `ROBINHOOD_RPC_URLS`, `EVALANCHE_ROBINHOOD_RPC_URLS`, and MCP `AVALANCHE_RPC_URL`, keeping the selected network alias authoritative.\n- Tests certify Robinhood bridge capabilities through LI.FI native ETH quote construction and prevent non-Gas.zip routes from being mislabeled as Gas.zip.\n- Rejects Gas.zip requests involving Robinhood Chain before network access while LI.FI's live `gasZipBridge` capability matrix excludes chain `4663`.\n- Scopes MCP RPC overrides to their selected network so switching chains cannot retain a stale wrong-chain provider.\n- Pins patched `form-data` and `ws` transitive releases, clearing the newly disclosed advisories without increasing the accepted production-audit baseline.\n- Pin the release workflow npm version to `11.12.1`, the supported npm line for its Node.js 20 runtime.\n\n## Validation\n\n- `npm run test -- test/chains.test.ts test/utils/robinhood-network.test.ts test/agent.test.ts test/holdings/client.test.ts test/mcp/cli.test.ts test/mcp/server.test.ts`\n- `npm run test -- test/bridge/lifi.test.ts test/bridge/gaszip.test.ts`\n- `npm test`\n- `npm run typecheck`\n- `npm run build`\n- Read-only `eth_chainId` check against the official Robinhood Chain RPC returned `0x1237` (`4663`).\n- Read-only LI.FI quote from Ethereum to Robinhood Chain returned an Across route with destination chain `4663`.\n- Read-only LI.FI tool discovery reported zero Gas.zip pairs involving chain `4663`.\n\n## Notes\n\n- This release supports Robinhood Chain mainnet only. Robinhood Chain Testnet (`46630`) is intentionally not registered.\n- Robinhood's public RPC is rate-limited; production deployments should configure provider endpoints through the documented override variables.\n- LI.FI bridge liquidity and route availability remain live vendor state rather than a permanent SDK guarantee.\n- Gas.zip remains unavailable for Robinhood Chain until its advertised capability matrix includes chain `4663`; Evalanche fails safely and explicitly in the meantime.\n- All live verification for this release was read-only and quote-only. No bridge, gas-funding, transfer, or contract transaction was broadcast.",
+  "created_at": 1772129263514,
+  "display_name": "Skill",
+  "fetched_at": 1787777265306,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783721568905,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Giacomo Barbieri",
+    "handle": "ijaack",
+    "user_id": "s17e3gjpsxfdsgxv67gc3hm3tx83g435"
+  },
+  "slug": "evalanche",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/evalanche",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=evalanche&ownerHandle=ijaack",
+    "page_url": "https://clawhub.ai/ijaack/skills/evalanche"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2095,
+    "installs": 51,
+    "stars": 1,
+    "versions": 34
+  },
+  "summary": "Multi-EVM agent wallet SDK with onchain identity (ERC-8004), payment rails (x402), cross-chain liquidity (Li.Fi bridging + DEX aggregation + DeFi Composer),...",
+  "updated_at": 1783721446117,
+  "version": "1.12.0"
+}
