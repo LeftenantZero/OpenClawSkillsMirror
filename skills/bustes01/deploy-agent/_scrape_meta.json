@@ -1,0 +1,49 @@
+{
+  "changelog": "**Deploy-Agent v1.1.0**\n\n- Adds auto-detection of a wider range of project types, including Node.js, Python, Go, Rust, Java, static HTML, Docker Compose, and basic support for Ruby, PHP, and Deno.\n- Generates Dockerfiles dynamically for detected project types if none are provided.\n- Provides robust CLI commands (install-docker, detect, deploy, status, stop, logs) for an end-to-end deployment workflow.\n- Auto-detects and manages application ports, handles port conflicts, embeds health checks, and applies restart policies to deployed containers.\n- Labels and manages containers for easy tracking and cleanup.\n- Improved handling of project uploads, archives, ambiguous types, and edge cases including permissions and large directories.",
+  "created_at": 1785242725266,
+  "display_name": "Deploy Agent",
+  "fetched_at": 1787774476410,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/bootstrap-docker.sh",
+    "scripts/deploy-agent.sh",
+    "scripts/detect-project.sh",
+    "scripts/generate-dockerfile.sh",
+    "scripts/templates/Dockerfile.java",
+    "scripts/templates/entrypoint.django.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785248403686,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "shake27",
+    "handle": "bustes01",
+    "user_id": "s179k2f5a78brwssac6hqw3e3586yns2"
+  },
+  "slug": "deploy-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/deploy-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=deploy-agent&ownerHandle=bustes01",
+    "page_url": "https://clawhub.ai/bustes01/skills/deploy-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 79,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Automatically detects project type, generates Dockerfile if needed, builds and deploys the app in Docker with smart port selection and health checks.",
+  "updated_at": 1785247191421,
+  "version": "1.1.0"
+}
