@@ -1,0 +1,39 @@
+{
+  "changelog": "Add section 'The queue you do not control': when the work source has no conditional write, the claim is not transactional and the golden rule inverts - failure must be terminal and explicitly written, claims confirmed by read-back, orphans reclaimed by TTL.",
+  "created_at": 1784207044551,
+  "display_name": "Agent Queue To Reviewed Pr",
+  "fetched_at": 1787775909223,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/brief-staleness.md",
+    "references/browser-qa.md",
+    "references/grounding-brief.md",
+    "references/queue-contract.md",
+    "scripts/brief-gate.py",
+    "scripts/retention.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Alexandre Bloch",
+    "handle": "alexbloch-ia",
+    "user_id": "s179c74ca8kjff2gapygs9y13d86yr3z"
+  },
+  "slug": "agent-queue-to-reviewed-pr",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-queue-to-reviewed-pr",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-queue-to-reviewed-pr&ownerHandle=alexbloch-ia",
+    "page_url": "https://clawhub.ai/alexbloch-ia/skills/agent-queue-to-reviewed-pr"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 364,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Turn a ticket queue into reviewed draft PRs with an agent that never merges. Use when wiring an agent to a ticket board or issue tracker. Trigger on \"auto PR...",
+  "updated_at": 1784539401038,
+  "version": "1.1.0"
+}
