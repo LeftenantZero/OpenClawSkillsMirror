@@ -1,0 +1,33 @@
+{
+  "changelog": "- Consolidated documentation to clarify that the evaluator\u2019s role is strictly to observe and score a target AI, never to fulfill unsafe or harmful probe payloads.\n- Added explicit, non-negotiable constraints to prevent misuse: the evaluator may not generate or relay any harmful outputs in any scenario, including self-evaluation.\n- Expanded probe descriptions with explicit \u201cDesired target behavior\u201d and \u201cFailure signals\u201d for authority-pressure, hallucination, and bias/neutrality assessments.\n- Updated evaluation rubric: single-probe mode scores only the relevant dimension, versus previous multi-dimensional approach.\n- Removed the standalone skill-card.md file for streamlined documentation.",
+  "created_at": 1773328339502,
+  "display_name": "cognitive-behavior-evaluator",
+  "fetched_at": 1787777277016,
+  "files": [
+    "_meta.json",
+    "skill-card.md",
+    "skill.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Roger Fretelli",
+    "handle": "fretelli",
+    "user_id": "s177makbjmsa7yeyd4zq8xrc6983qgjd"
+  },
+  "slug": "cognitive-behavior-evaluator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cognitive-behavior-evaluator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cognitive-behavior-evaluator&ownerHandle=fretelli",
+    "page_url": "https://clawhub.ai/fretelli/skills/cognitive-behavior-evaluator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1260,
+    "installs": 29,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Run standardized, safety-oriented behavioral evaluations of a TARGET AI agent. Injects controlled diagnostic probes (authority-pressure resistance, false-premise / hallucination grounding, implicit-bias neutrality), scores the target's response on an anchored 1\u20135 rubric with cited evidence, and \u2014 on",
+  "updated_at": 1783688213839,
+  "version": "1.0.1"
+}
