@@ -1,0 +1,34 @@
+{
+  "changelog": "**Major update: Skill focus shifted to automated flight fare searches.**\n\n- Now performs automated searches for one-way flights from Manaus (MAO) to Belo Horizonte/Confins (CNF) for August 7\u201314, 2026.\n- Runs twice daily (09:00 and 15:00, America/Manaus timezone) via cron and sends top 5 cheapest results to WhatsApp.\n- Applies specific filters: max 1 connection, max 7h duration, arrival 8\u201316h, max price R$ 1.000, airline priority Azul > Latam.\n- Legacy flight tracking/schedule scripts and docs were removed.\n- Introduced a new PowerShell script (`scripts/search-flights.ps1`) for automated price checks.",
+  "created_at": 1782234647808,
+  "display_name": "Flight Tracker",
+  "fetched_at": 1787779395758,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/search-flights.ps1",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "AndreAtaide86",
+    "handle": "andreataide86",
+    "user_id": "s17f7grs70524rqdwrf336jj9588nq4z"
+  },
+  "slug": "flight-tracker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/flight-tracker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=flight-tracker&ownerHandle=andreataide86",
+    "page_url": "https://clawhub.ai/andreataide86/skills/flight-tracker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 59,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Busca automatizada de passagens a\u00e9reas MAO\u2192CNF com cron 2x/dia e relat\u00f3rio no WhatsApp",
+  "updated_at": 1782234647808,
+  "version": "1.1.1"
+}
