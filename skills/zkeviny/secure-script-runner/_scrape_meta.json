@@ -1,0 +1,45 @@
+{
+  "changelog": "Version 1.1.1 introduces important scripting guidelines and MGC usage notes:\n\n- Added a section on temporary MGC 1.4.9 script execution workarounds, including required use of `parse_known_args`, manual quote stripping, and writing output to files.\n- Provided ext02 parameter formatting recommendations (e.g., forward-slash paths, use of \"T\" separator for spaces).\n- Supplied a complete script template illustrating correct parameter handling.\n- Noted that script execution issues in MGC 1.4.9 will be addressed in a future release.",
+  "created_at": 1782789767880,
+  "display_name": "Secure Script Runner (Zero\u2011Exposure Sandbox)",
+  "fetched_at": 1787773173814,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786095036338,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zkeviny",
+    "handle": "zkeviny",
+    "user_id": "s173fckt3bzxxvt9dfp0rrdeg1894z72"
+  },
+  "slug": "secure-script-runner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/secure-script-runner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=secure-script-runner&ownerHandle=zkeviny",
+    "page_url": "https://clawhub.ai/zkeviny/skills/secure-script-runner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 558,
+    "installs": 0,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Zero\u2011exposure script execution using MGC Blackbox. Store scripts encrypted, execute in blackbox, AI sees no plaintext. Supports MCP (mgc_run) / API / WebUI execution, internal credential calls, and script sealing. Includes MGC 1.4.9 temporary workaround guidelines. This skill only executes scripts w",
+  "updated_at": 1786094378301,
+  "version": "1.1.1"
+}
