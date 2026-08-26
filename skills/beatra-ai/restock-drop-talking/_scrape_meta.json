@@ -1,0 +1,55 @@
+{
+  "changelog": "Initial release of restock-drop-talking skill.\n\n- Automates creation of 2\u20138 short talking clips announcing restocks, using seller-supplied stills and spoken lines.\n- Separates workflow into distinct clone, speech, and video paid stages, each requiring explicit confirmation and balance check before proceeding.\n- Ensures all assets are inspected for rights and technical details before any upload or transformation.\n- Guides free planning and preview of labeled talking clip list before any paid operations.\n- Includes recovery steps for lost responses and requires approval before retries.\n- Uses only the bundled `mcp_client.py` for all Beatra operations, prohibiting direct connector or REST access.",
+  "created_at": 1787581047373,
+  "display_name": "restock-drop-talking",
+  "fetched_at": 1787769261191,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "references/automatic-updates-and-safety.md",
+    "references/billing-errors-and-recovery.md",
+    "references/installation-and-auth.md",
+    "references/installation-registration.md",
+    "references/mcp-connection.md",
+    "references/tasks-and-results.md",
+    "references/uninstall-and-disconnect.md",
+    "references/workflow.md",
+    "scripts/authorize.py",
+    "scripts/mcp_client.py",
+    "scripts/uninstall.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787581908240,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "beatra-ai",
+    "handle": "beatra-ai",
+    "user_id": "s176vcp4w7b7tt3j7a62gdnfys8cntp4"
+  },
+  "slug": "restock-drop-talking",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/restock-drop-talking",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=restock-drop-talking&ownerHandle=beatra-ai",
+    "page_url": "https://clawhub.ai/beatra-ai/skills/restock-drop-talking"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 61,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Turn seller-supplied restock facts and an already-written restock script into one talking clip per still. This restock talking studio turns each authorized still into a 2 to 15s restock talking clip from the written line. Use it for restock talking videos, restock announcement talks, and restock drop talking clips.",
+  "updated_at": 1787581190532,
+  "version": "0.1.1"
+}
