@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release: Orchestrated multi-agent collaboration engine.\n- New skill \"multi-agent-collab\" to solve complex problems via parallel proposal, critique filtering, and integrative selection among multiple agents.\n- Implements workflow: decompose by roles \u2192 parallel propose \u2192 critic scoring/filtering \u2192 integrator selects or fuses top candidates.\n- Out-of-the-box self-test (`--selftest`) for reliable automated verification.\n- Modular: roles, critic, and scorer are injected by caller; coordination logic handled by the skill.\n- Supports meta-evolution and large-scale integration as part of a super-agent system.\n- Streamlined codebase: removed legacy docs/scripts; added core script and pattern learner.",
+  "created_at": 1786625088827,
+  "display_name": "multi-agent-collab",
+  "fetched_at": 1787772290732,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "learned_patterns.json",
+    "scripts/collab.py",
+    "scripts/learner.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "qq435912743",
+    "handle": "qq435912743",
+    "user_id": "s171ndzm69p9g2ee5kcw6t7smh8azd5h"
+  },
+  "slug": "multi-agent-collab",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/multi-agent-collab",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=multi-agent-collab&ownerHandle=qq435912743",
+    "page_url": "https://clawhub.ai/qq435912743/skills/multi-agent-collab"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 23,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u591a\u667a\u80fd\u4f53\u534f\u4f5c\u7f16\u6392\u5f15\u64ce\u3002\u628a\u95ee\u9898\u5206\u89e3\u4e3a\u89d2\u8272(Analyst/Critic/Integrator \u7b49)\uff0c \u591a agent \u5e76\u884c\u63d0\u6848\u2192Critic \u8fc7\u6ee4\u4f4e\u8d28\u2192Integrator \u6309 scorer \u62e9\u4f18/\u7efc\u5408\u3002 \u5b9e\u4f53\u5316\"\u8d85\u7ea7\u667a\u80fd\u4f53(\u7ec8\u5c40)\u00b7\u591a\u667a\u80fd\u4f53\u534f\u4f5c\u7f16\u6392\"\uff0c\u652f\u6491\u89c4\u6a21\u5316\u534f\u4f5c\u8d85\u8d8a\u5355 agent\u3002",
+  "updated_at": 1786671020984,
+  "version": "1.0.0"
+}
