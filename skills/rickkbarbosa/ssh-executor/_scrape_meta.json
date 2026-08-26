@@ -1,0 +1,60 @@
+{
+  "changelog": "- Removed unused file: skill-card.md\n- Clarified and expanded credential source descriptions, including support for password-based login with explicit `SSH_EXECUTOR_ALLOW_DANGEROUS=1`\n- Updated security rules: password and sudo operations require explicit user approval, even if credentials already exist\n- Declared new required capability: access to environment variables for password and agent support\n- Documented the use of `sshpass` for password-based authentication as an optional dependency\n- Enhanced documentation for usage, security, and platform setup across multiple environments",
+  "created_at": 1776232693168,
+  "display_name": "ssh-executor",
+  "fetched_at": 1787775354331,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "references/docker-diagnostics-without-cli.md",
+    "references/multiplexing-verification.md",
+    "references/remote-backup-cleanup.md",
+    "references/safety.md",
+    "references/security-audit-2026-07-clawhub.md",
+    "references/server-to-server-rsync.md",
+    "references/testing-pitfalls-2026-07-23.md",
+    "references/troubleshooting-field-notes.md",
+    "references/vault-backends.md",
+    "references/vault-key-format.md",
+    "references/vault-ssh-integration.md",
+    "release.json",
+    "scripts/ssh-client.py",
+    "scripts/ssh-keys.sh",
+    "scripts/ssh-run-native.sh",
+    "scripts/ssh-run.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784899109095,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Rickk Barbosa",
+    "handle": "rickkbarbosa",
+    "user_id": "s171q3s6m4gq09dzjg1yep0g1n84x3a1"
+  },
+  "slug": "ssh-executor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ssh-executor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ssh-executor&ownerHandle=rickkbarbosa",
+    "page_url": "https://clawhub.ai/rickkbarbosa/skills/ssh-executor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1471,
+    "installs": 21,
+    "stars": 2,
+    "versions": 21
+  },
+  "summary": "Execute commands on remote hosts over SSH with structured discovery protocol, vault-integrated auth, and safety guardrails for remote server administration. Use when the user asks to access remote servers, inspect state, map runtime/containers/network/data, or run single commands. Supports SSH keys",
+  "updated_at": 1784867849879,
+  "version": "2.4.2"
+}
