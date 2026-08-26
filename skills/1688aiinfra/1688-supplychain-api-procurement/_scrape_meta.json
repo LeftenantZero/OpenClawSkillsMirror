@@ -1,0 +1,60 @@
+{
+  "changelog": "- Clarified skill scope: Only supports initiating a procurement inquiry and querying instance data by instanceId.\n- Enforced strict raw JSON passthrough output format\u2014no summaries, Markdown, or additional wrapping allowed.\n- Mandatory use of file mode and stream_output tool when querying instance data to prevent large JSON output in the model context.\n- Updated detailed command parameters and prohibited unsupported actions like automatic status polling, table outputs, or extra user guidance.",
+  "created_at": 1780639613735,
+  "display_name": "1688 Supplychain Api Procurement",
+  "fetched_at": 1787782883409,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "cli.py",
+    "requirements.txt",
+    "scripts/__init__.py",
+    "scripts/_auth.py",
+    "scripts/_digital_human.py",
+    "scripts/_errors.py",
+    "scripts/_http.py",
+    "scripts/_img_upload.py",
+    "scripts/_output.py",
+    "scripts/_tracker.py",
+    "scripts/capabilities/__init__.py",
+    "scripts/capabilities/inquiry/__init__.py",
+    "scripts/capabilities/inquiry/cmd.py",
+    "scripts/capabilities/inquiry/service.py",
+    "scripts/capabilities/inquiry_data/__init__.py",
+    "scripts/capabilities/inquiry_data/service.py",
+    "scripts/settings.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780642524091,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "1688AiInfra",
+    "handle": "1688aiinfra",
+    "user_id": "s177df9srv6z2y0gd1kw90rern83hzxb"
+  },
+  "slug": "1688-supplychain-api-procurement",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/1688-supplychain-api-procurement",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=1688-supplychain-api-procurement&ownerHandle=1688aiinfra",
+    "page_url": "https://clawhub.ai/1688aiinfra/skills/1688-supplychain-api-procurement"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 437,
+    "installs": 6,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "1688 \u4f9b\u5e94\u94fe\u91c7\u8d2d API Skill\u3002\u9762\u5411\u4e91\u7aef API \u8c03\u7528\uff0c\u4e0d\u63d0\u4f9b\u4ea4\u4e92\u5f0f\u627e\u54c1\u3001\u590d\u6742\u8868\u683c\u6216\u4e0b\u5355\u6d41\u7a0b\u3002\u652f\u6301\u4e24\u4e2a\u529f\u80fd\uff1a\u53d1\u8d77\u627e\u6311\u8be2\u5e76\u8fd4\u56de instanceId\uff1b\u6309 instanceId \u67e5\u8be2\u5b9e\u4f8b\u6570\u636e\uff0c\u5e76\u7531\u811a\u672c\u6309\u8f93\u51fa\u6a21\u5f0f\u8fd4\u56de instanceId\u3001fieldDesc \u548c result\u3002\u6b64 Skill \u7684\u6700\u7ec8\u56de\u590d\u683c\u5f0f\u9ed8...",
+  "updated_at": 1780639613735,
+  "version": "0.0.6"
+}
