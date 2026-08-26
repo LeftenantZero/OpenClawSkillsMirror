@@ -1,0 +1,66 @@
+{
+  "changelog": "volcengine-cli 1.1.2\n\n- Updated authentication flow in SKILL.md, clarifying use of start-wait/start subcommands in scripts/ve_login_remote.sh for device login.\n- Added runtime-specific guidance for background process handling during remote login.\n- Aligned instructions and terminology in SKILL.md for improved reliability and compliance with environment constraints.\n- Removed deprecated skill-card.md file.\n- Minor consistency and documentation improvements in references/common-errors.md and shell scripts.",
+  "created_at": 1773383746530,
+  "display_name": "volcengine-cli",
+  "fetched_at": 1787774115739,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/alb.md",
+    "references/clb.md",
+    "references/common-errors.md",
+    "references/cr.md",
+    "references/dns-edge.md",
+    "references/ebs.md",
+    "references/ecs.md",
+    "references/extend-apis.md",
+    "references/iam.md",
+    "references/kms.md",
+    "references/mq.md",
+    "references/natgateway.md",
+    "references/observability.md",
+    "references/rds.md",
+    "references/redis.md",
+    "references/storage.md",
+    "references/vefaas.md",
+    "references/vke.md",
+    "references/vpc.md",
+    "scripts/call_extend_api.py",
+    "scripts/fetch_swagger.py",
+    "scripts/find_api.py",
+    "scripts/ve_login_remote.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785465819419,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "sdk-team",
+    "handle": "volc-sdk-team",
+    "user_id": "s170xk93g8hnx1cthp5609en2s844kwe"
+  },
+  "slug": "volcengine-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/volcengine-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=volcengine-cli&ownerHandle=volc-sdk-team",
+    "page_url": "https://clawhub.ai/volc-sdk-team/skills/volcengine-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1661,
+    "installs": 38,
+    "stars": 2,
+    "versions": 9
+  },
+  "summary": "Create and manage Volcengine cloud resources using the Volcengine CLI (`ve` command). Supports all Volcengine services including ECS, VPC, CLB, RDS, Redis, and more. Trigger this skill whenever the user asks to create, query, modify, or delete cloud resources on Volcengine, mentions the `ve` command, says \"volcengine CLI\", or describes infrastructure tasks such as \"create an ECS instance\", \"set up a VPC\", \"list security groups\", \"allocate an EIP\". Also trigger on Chinese prompts mentioning \"\u706b\u5c71\u5f15\u64ce\" or \"\u706b\u5c71\" (e.g., \"\u706b\u5c71\u5f15\u64ce\u4e0a\u6709\u54ea\u4e9b ECS\"\u3001\"\u67e5\u4e00\u4e0b\u6211\u706b\u5c71\u7684\u4e91\u670d\u52a1\u5668\"\u3001 \"\u706b\u5c71\u5f15\u64ce\u521b\u5efa\u4e00\u4e2a VPC\"\u3001\"\u706b\u5c71\u7684 Redis \u5b9e\u4f8b\u5217\u4e00\u4e0b\"). Also trigger when the user encounters errors from `ve` commands and needs troubleshooting help.",
+  "updated_at": 1785465047236,
+  "version": "1.1.2"
+}
