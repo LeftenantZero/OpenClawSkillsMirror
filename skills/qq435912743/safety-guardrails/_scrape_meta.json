@@ -1,0 +1,46 @@
+{
+  "changelog": "- Initial release of Safety Guardrails for autonomous agents.\n- Provides pre-execution risk classification (low/medium/high/critical) for actions, enforcing ALLOW, CONFIRM, or DENY decisions.\n- Built-in strict deny rules for destructive or irreversible actions; high-risk actions require explicit user confirmation.\n- Designed for unattended automation scenarios to prevent irreversible damage from agents.\n- Integrated audit logging and review capabilities for all gate decisions.\n- Includes self-learning module: automatically reviews usage, accumulates insights, and adapts to user preferences over time.",
+  "created_at": 1786625578101,
+  "display_name": "safety-guardrails",
+  "fetched_at": 1787772268782,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "learned_patterns.json",
+    "scripts/guardrails.py",
+    "scripts/learner.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786671987541,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "qq435912743",
+    "handle": "qq435912743",
+    "user_id": "s171ndzm69p9g2ee5kcw6t7smh8azd5h"
+  },
+  "slug": "safety-guardrails",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/safety-guardrails",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=safety-guardrails&ownerHandle=qq435912743",
+    "page_url": "https://clawhub.ai/qq435912743/skills/safety-guardrails"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 121,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7ed9\u81ea\u4e3b\u667a\u80fd\u4f53/\u81ea\u52a8\u5316\u6d41\u6c34\u7ebf\u88c5\u4e0a\u4e00\u9053\u300c\u9884\u6267\u884c\u5b89\u5168\u62a4\u680f\u300d\uff1a\u5bf9\u4efb\u4f55\u5f85\u6267\u884c\u52a8\u4f5c\u505a\u98ce\u9669\u5206\u7ea7 \uff08low/medium/high/critical\uff09\u5e76\u7ed9\u51fa ALLOW / CONFIRM / DENY \u51b3\u7b56\u3002\u5185\u7f6e\u7834\u574f\u6027\u5f3a\u3001\u4e0d\u53ef\u9006\u3001 \u8d8a\u6743\u3001\u5916\u53d1\u9690\u79c1\u7684 deny \u89c4\u5219\u4e0e\u9ad8\u5f71\u54cd confirm \u89c4\u5219\uff0c\u5f3a\u5236\u62e6\u622a rm -rf\u3001\u5f3a\u63a8\u3001\u4e0b\u8f7d\u5373\u6267\u884c\u3001 \u5220\u8868\u3001\u5173\u673a\u7b49\u9ad8\u5371\u52a8\u4f5c\uff0c\u5e76\u8981\u6c42\u7528\u6237\u663e\u5f0f\u786e\u8ba4\u4e2d\u9ad8\u5371\u64cd\u4f5c\u3002\u9002\u914d\u81ea\u52a8\u5316\u6bcf\u5c0f\u65f6\u89e6\u53d1\u7684\u65e0\u4eba\u503c\u5b88\u573a\u666f\uff0c \u9632\u6b62\u81ea\u4e3b agent \u5728\u6ca1\u6709\u62a4\u680f\u65f6\u9020\u6210\u4e0d\u53ef\u9006\u635f\u5bb3\u3002\u89e6\u53d1\u8bcd\uff1a\u5b89\u5168\u62a4\u680f\u3001\u5371\u9669\u52a8\u4f5c\u62e6\u622a\u3001\u64cd\u4f5c\u786e\u8ba4\u3001 safety guardrails\u3001agent \u5b89\u5168\u3001\u9884\u6267\u884c\u6821\u9a8c\u3001destructive \u62e6\u622a\u3002",
+  "updated_at": 1786671080675,
+  "version": "1.0.0"
+}
