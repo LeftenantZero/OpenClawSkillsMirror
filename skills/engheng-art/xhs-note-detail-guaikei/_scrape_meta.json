@@ -1,0 +1,55 @@
+{
+  "changelog": "xhs-note-detail-guaikei v1.0.0\n\n- Initial release of skill for retrieving and analyzing public Xiaohongshu (\u5c0f\u7ea2\u4e66) content.\n- Supports four major scenarios: note search, note detail, comment analysis, and author works monitoring.\n- Command-line operations based on clear user tasks and link/keyword recognition.\n- Provides structured error handling, clear parameter documentation, and platform-specific guidance.\n- Requires Node.js 16.14.0+ and GUAIKEI_API_TOKEN environment variable for API access.",
+  "created_at": 1786680201368,
+  "display_name": "guaikei\u00b7\u5c0f\u7ea2\u4e66\u7b14\u8bb0\u8be6\u60c5",
+  "fetched_at": 1787772155658,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "readme.md",
+    "references/changelog.md",
+    "references/options.md",
+    "skill-card.md",
+    "src/api/comment.js",
+    "src/api/detail.js",
+    "src/api/post.js",
+    "src/api/search.js",
+    "src/config/constants.js",
+    "src/utils/args.js",
+    "src/utils/key.js",
+    "src/utils/log.js",
+    "src/utils/name.js",
+    "src/utils/request.js",
+    "src/utils/retry.js",
+    "src/utils/utils.js",
+    "src/validate/keyword.js",
+    "src/validate/url.js",
+    "src/xiaohongshu/comment-cli.js",
+    "src/xiaohongshu/detail-cli.js",
+    "src/xiaohongshu/post-cli.js",
+    "src/xiaohongshu/search-cli.js"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "engheng-art",
+    "handle": "engheng-art",
+    "user_id": "s17av7fakvdwpsbhaddxp8e7mh89wsrx"
+  },
+  "slug": "xhs-note-detail-guaikei",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/xhs-note-detail-guaikei",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=xhs-note-detail-guaikei&ownerHandle=engheng-art",
+    "page_url": "https://clawhub.ai/engheng-art/skills/xhs-note-detail-guaikei"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 125,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4ec5\u5904\u7406\u5c0f\u7ea2\u4e66\uff08xiaohongshu / xhs / \u7ea2\u7b14\u8bb0\uff09\u5e73\u53f0\u7684\u516c\u5f00\u6570\u636e\uff1a\u7b14\u8bb0\u641c\u7d22\u3001\u8be6\u60c5\u3001\u8bc4\u8bba\u3001\u535a\u4e3b\u4f5c\u54c1\u3002\u5f53\u7528\u6237\u7684\u4efb\u52a1\u660e\u786e\u6d89\u53ca\u5c0f\u7ea2\u4e66\u5185\u5bb9\u65f6\u4f7f\u7528\u672c\u6280\u80fd\uff1b\u6296\u97f3\u3001B\u7ad9\u3001\u5fae\u535a\u3001\u516c\u4f17\u53f7\u4e0d\u9002\u7528\u3002\u5373\u4f7f\u7528\u6237\u6ca1\u8bf4\"\u5c0f\u7ea2\u4e66\"\uff0c\u53ea\u8981\u94fe\u63a5\u662f xiaohongshu.com \u6216\u8bed\u5883\u662f\u7ea2\u7b14\u8bb0\u4e5f\u9002\u7528\u3002\u4e0d\u7528\u4e8e\u8de8\u5e73\u53f0\u6216\u767b\u5f55\u6001\u6570\u636e\u3002",
+  "updated_at": 1786680322235,
+  "version": "1.0.0"
+}
