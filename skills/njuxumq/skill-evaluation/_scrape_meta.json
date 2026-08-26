@@ -1,0 +1,75 @@
+{
+  "changelog": "Version 1.0.1 \u2013 Major redesign and simplification\n\n- Streamlined evaluation process, focusing on automation and user simplicity.\n- Rewrote user guide in Chinese for clarity and consistency.\n- Added support for single skill validation, skill comparison, multi-model and multi-framework benchmarking.\n- Strict separation of user-facing and internal/technical information; all outputs now in Chinese with clear interaction rules.\n- New documentation and modular process files introduced; legacy agent and reference files removed.\n- Revised entry/trigger and interaction logic for smoother, checkpoint-driven user flow.",
+  "created_at": 1782119291741,
+  "display_name": "Skill Evaluation",
+  "fetched_at": 1787779272026,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "eval-build.md",
+    "eval-execute.md",
+    "eval-init.md",
+    "eval-set.md",
+    "processes/dataset-prepare.md",
+    "processes/dataset-preview.md",
+    "processes/model-selection.md",
+    "processes/scene-detection.md",
+    "processes/skill-selection.md",
+    "references/\u4e2d\u95f4\u4ea7\u7269\u8bf4\u660e.md",
+    "references/\u811a\u672c\u5b9a\u4e49.md",
+    "references/\u8bc4\u6d4b\u573a\u666f\u8bf4\u660e.md",
+    "references/\u8f93\u51fa\u884c\u4e3a\u89c4\u8303.md",
+    "references/\u8fdb\u5ea6\u5c55\u793a\u89c4\u8303.md",
+    "scripts/cfg/eval-auth.cfg",
+    "scripts/cfg/eval-server.cfg",
+    "scripts/clients/__init__.py",
+    "scripts/clients/api_client.py",
+    "scripts/clients/auth_client.py",
+    "scripts/clients/http_client.py",
+    "scripts/clients/oauth_callback.py",
+    "scripts/clients/token_manager.py",
+    "scripts/eval_auth.py",
+    "scripts/eval_skill.py",
+    "scripts/files/__init__.py",
+    "scripts/files/file_utils.py",
+    "scripts/files/streaming.py",
+    "scripts/utils/__init__.py",
+    "scripts/utils/constants.py",
+    "scripts/utils/datetime_utils.py",
+    "scripts/utils/errors.py",
+    "scripts/utils/keypoint_prompts.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782298491357,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "njuxumq",
+    "handle": "njuxumq",
+    "user_id": "s1737jvkh2dmrrv11xt1qta35x8851f2"
+  },
+  "slug": "skill-evaluation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-evaluation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-evaluation&ownerHandle=njuxumq",
+    "page_url": "https://clawhub.ai/njuxumq/skills/skill-evaluation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 92,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Perform automated evaluation of Skills and output evaluation reports. Support single-Skill validation, cross-Skill comparative evaluation, multi-model comparison, and runtime framework comparison. Trigger when users mention \"evaluate skill,\" \"run evaluation,\" \"test this skill,\" \"compare skill performance,\" \"cross-evaluate,\" or \"validate skill performance.\"",
+  "updated_at": 1782294230246,
+  "version": "1.0.1"
+}
