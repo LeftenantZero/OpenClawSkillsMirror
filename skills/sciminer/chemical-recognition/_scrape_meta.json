@@ -1,0 +1,33 @@
+{
+  "changelog": "- Switches authoritative payload and parameter source from a local Python registry to the published SciMiner Markdown API docs.\n- Removes all local registry, tool metadata, and code-based invocation patterns; now requires consulting and following the latest Markdown docs directly for each tool.\n- Deletes the internal tool registry and boilerplate invocation scripts.\n- Tightens file upload and result handling: agents must read Markdown doc details for file parameter names, upload procedure, and formats.\n- Clarifies result summary, always including the share_url, and adjusts polling timeout behavior.\n- Adds a credential_files manifest property for clearer agent integration.",
+  "created_at": 1776528348328,
+  "display_name": "\u03b1Extractor",
+  "fetched_at": 1787783779761,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SciMiner",
+    "handle": "sciminer",
+    "user_id": "s170qp1q4twz35wa85ppa8894h83w461"
+  },
+  "slug": "chemical-recognition",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/chemical-recognition",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=chemical-recognition&ownerHandle=sciminer",
+    "page_url": "https://clawhub.ai/sciminer/skills/chemical-recognition"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 882,
+    "installs": 22,
+    "stars": 3,
+    "versions": 4
+  },
+  "summary": "Optical chemical structure recognition workflow for extracting molecule structures and names from images through SciMiner.",
+  "updated_at": 1780221594145,
+  "version": "1.0.3"
+}
