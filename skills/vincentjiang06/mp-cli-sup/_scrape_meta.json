@@ -1,0 +1,51 @@
+{
+  "changelog": "Hardening-loop stop condition upgraded from single terminal state to a four-way disjunction: converged / cap (limits live in the condition) / no-progress / RESTART-ESCALATE (a defect whose regression points at the previous round's added check stops the loop and reports). R17 audit; no script changes.",
+  "created_at": 1782269153913,
+  "display_name": "Vince MP CLI Support",
+  "fetched_at": 1787773948120,
+  "files": [
+    "CHANGELOG.md",
+    "README.en.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/eval-cases.json",
+    "assets/metric-plan.json",
+    "assets/release-manifest.json",
+    "assets/skill-design-record.json",
+    "references/cli-contract.md",
+    "references/evidence-and-failures.md",
+    "references/skyline-media.md",
+    "rules/runtime-protocol.md",
+    "rules/ui-element-workflow.md",
+    "scripts/check_battery_clean.mjs",
+    "scripts/check_release_gate.mjs",
+    "scripts/live-smoke-existing.mjs",
+    "scripts/run_all.mjs",
+    "scripts/validate-skill.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "VincentJiang06",
+    "handle": "vincentjiang06",
+    "user_id": "s1784t4rkmx28018kynwsymwvn83hk4s"
+  },
+  "slug": "mp-cli-sup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mp-cli-sup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mp-cli-sup&ownerHandle=vincentjiang06",
+    "page_url": "https://clawhub.ai/vincentjiang06/skills/mp-cli-sup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 465,
+    "installs": 1,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Drive Mini Program CLI debugging",
+  "updated_at": 1785593686167,
+  "version": "0.2.2"
+}
