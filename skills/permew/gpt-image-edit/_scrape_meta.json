@@ -1,0 +1,33 @@
+{
+  "changelog": "- Initial release of GPT Image Edit skill for RunComfy.\n- Supports advanced image editing via OpenAI GPT Image 2 `/edit` endpoint.\n- Documented best prompts for preservation, multilingual text rewriting, multi-reference (up to 10 images), and typography/layout precision.\n- Provides schema, sample prompts, and clear guidance on model strengths and when to use alternatives like Nano Banana Edit or Flux Kontext.\n- CLI workflow via RunComfy with support for authentication and multiple output formats.\n- Covers limitations and error code references for troubleshooting.",
+  "created_at": 1785124856866,
+  "display_name": "GPT Image Edit \u2014 Pro Pack on RunComfy",
+  "fetched_at": 1787774789289,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mew",
+    "handle": "permew",
+    "user_id": "s17af27kmxn6ac8n1m0wdx0drh8bb4gd"
+  },
+  "slug": "gpt-image-edit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gpt-image-edit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gpt-image-edit&ownerHandle=permew",
+    "page_url": "https://clawhub.ai/permew/skills/gpt-image-edit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 274,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Edit images with OpenAI GPT Image 2 (the `/edit` endpoint of ChatGPT Images 2.0) on RunComfy \u2014 bundled with the model's documented prompting patterns so the skill gets sharper output than naive prompting against the same model. Documents GPT Image Edit's strengths (preservation language, multilingual in-image text editing, multi-reference up to 10 images, layout / typography precision), the schema, and when to route to Nano Banana Edit / Flux Kontext / GPT Image 2 t2i instead. Calls `runcomfy run openai/gpt-image-2/edit` through the local RunComfy CLI. Triggers on \"gpt image edit\", \"gpt-image-edit\", \"chatgpt image edit\", \"edit with gpt image 2\", or any explicit ask to edit with this model.",
+  "updated_at": 1785127191258,
+  "version": "1.0.0"
+}
