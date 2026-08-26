@@ -1,0 +1,74 @@
+{
+  "changelog": "- Removed skill-card.md (retired file).\n- Updated internal documentation in multiple guides: clone.md, to-bare.md, to-ghq.md, and worktree.md.\n- Minor corrections and refinements made to guide content and topic descriptions.\n- No new user-facing features or major functionality changes.",
+  "created_at": 1774932196769,
+  "display_name": "git-repo",
+  "fetched_at": 1787768385182,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "clone.md",
+    "conflict-dry-run.md",
+    "credential-helper.md",
+    "fix-worktree.md",
+    "githooks.md",
+    "isolate-hunk.md",
+    "merge-duplicate.md",
+    "migrate.md",
+    "move-worktree.md",
+    "patrol.md",
+    "rebase-audit.md",
+    "rename-worktree.md",
+    "safe-relocate.md",
+    "scripts/check-worktree-canonical.sh",
+    "scripts/git-fix-worktree.sh",
+    "scripts/local-to-staging-pr.sh",
+    "scripts/rename-worktree.sh",
+    "scripts/repo-to-bare-worktree.sh",
+    "scripts/repo-to-ghq.sh",
+    "scripts/stage-isolated-content.sh",
+    "skill-card.md",
+    "sourcegit.md",
+    "ssh-key.md",
+    "tests/test-check-worktree-canonical.sh",
+    "to-bare.md",
+    "to-ghq.md",
+    "worktree-drift-sync.md",
+    "worktree-register.md",
+    "worktree.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787766573253,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "es6kr",
+    "handle": "drumrobot",
+    "user_id": "s17ay1v6v88r2m102pvvc44gz183qcrm"
+  },
+  "slug": "git-repo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/git-repo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=git-repo&ownerHandle=drumrobot",
+    "page_url": "https://clawhub.ai/drumrobot/skills/git-repo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1949,
+    "installs": 26,
+    "stars": 0,
+    "versions": 20
+  },
+  "summary": "Git repository and SourceGit integration. Topics \u2014 clone (ghq), conflict-dry-run (isolated merge test), credential-helper (multi-account HTTPS token), fix-worktree (bare repo recovery), githooks (hook silently never runs \u2014 hooksPath precedence, passthrough chain, install trade-off), isolate-hunk (stage own edit amid unrelated content), merge-duplicate, rebase-audit (accidental-revert detection during an active rebase), to-ghq (formerly migrate), to-bare, worktree-register (metadata register/relink), patrol (batch inspect), move-worktree (register/reclaim merged PR), rename-worktree, sourcegit, ssh-key (multi-account SSH map), worktree (inventory + reuse + create), worktree-drift-sync (mirror fix across worktrees safely). Use when: \"reuse worktree\", \"multi-account clone\", \"Repository not found\", \"wrong account\", \"concurrent uncommitted edit\", \"accidental revert\", \"githooks ignored\", \"hook not running\", \"core.hooksPath\", \"hook not firing\" triggers.",
+  "updated_at": 1787765830239,
+  "version": "0.9.1"
+}
