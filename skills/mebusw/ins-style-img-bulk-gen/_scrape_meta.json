@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of ins-style-img-bulk-gen.\n\n- Generate batches of INS-style (Instagram/Xiaohongshu/lifestyle flat-lay) images using randomized prompts from an 80+ element library.\n- Automatically composes 5 prompts (unless specified) with 12 unique elements each; ensures no element duplicates within a prompt.\n- Sends prompts in parallel to available image generation skills and saves results to a timestamped local folder.\n- Handles failed image generations gracefully by skipping failed prompts without aborting the batch.\n- Designed for bulk requests including lifestyle, scene-based marketing, and cover art, even if \"Instagram\" isn't mentioned.",
+  "created_at": 1787645520876,
+  "display_name": "ins-style-img-bulk-gen",
+  "fetched_at": 1787770905219,
+  "files": [
+    ".gitignore",
+    "README.md",
+    "README.zh-cn.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/ins-style-elements.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jacky Shen",
+    "handle": "mebusw",
+    "user_id": "s17fqnnawywqwp37410y5w9r1h83pwab"
+  },
+  "slug": "ins-style-img-bulk-gen",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ins-style-img-bulk-gen",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ins-style-img-bulk-gen&ownerHandle=mebusw",
+    "page_url": "https://clawhub.ai/mebusw/skills/ins-style-img-bulk-gen"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 86,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate batches of Instagram-aesthetic photos (INS-style / Xiaohongshu / lifestyle flat-lay) by randomly composing prompts from an 80+ element library, then dispatching them in parallel to image generation skills and archiving to ~/Download/ins-image-{timestamp}/. Use when the user wants bulk INS-style images, lifestyle flat-lays, Xiaohongshu or WeChat cover art, or scene-based marketing visuals \u2014 even if they don't say 'Instagram' explicitly.",
+  "updated_at": 1787645594704,
+  "version": "0.1.0"
+}
