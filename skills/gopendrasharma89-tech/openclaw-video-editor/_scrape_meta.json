@@ -1,0 +1,42 @@
+{
+  "changelog": "v6.1.0: Add scripts/extract_clip.py - cut a sub-clip by --start + (--end or --duration). Fast stream-copy default (no re-encode, lossless, snaps to nearest keyframe before --start); --accurate switches to libx264 CRF re-encode for frame-accurate cuts; --no-audio drops audio track. Timestamps accept seconds, MM:SS[.mmm], HH:MM:SS[.mmm]. Pre-flights with ffprobe to reject sources with no video stream, validates end>start, clamps over-long ranges. Exit codes: 0 success, 1 ffmpeg failure, 2 argument/path errors. No changes to existing 7 scripts.",
+  "created_at": 1775815080450,
+  "display_name": "Openclaw Video Editor",
+  "fetched_at": 1787786765130,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/apply_lut.py",
+    "scripts/check_deps.sh",
+    "scripts/extract_audio.py",
+    "scripts/extract_clip.py",
+    "scripts/generate_srt.py",
+    "scripts/highlight_reel.py",
+    "scripts/loudnorm_two_pass.py",
+    "scripts/make_vertical.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Gopendra Sharma",
+    "handle": "gopendrasharma89-tech",
+    "user_id": "s17cp87fy279ggwne1mqcb6675843tdy"
+  },
+  "slug": "openclaw-video-editor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-video-editor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-video-editor&ownerHandle=gopendrasharma89-tech",
+    "page_url": "https://clawhub.ai/gopendrasharma89-tech/skills/openclaw-video-editor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1453,
+    "installs": 42,
+    "stars": 1,
+    "versions": 15
+  },
+  "summary": "Pro-Studio v4.0.0. AI-powered background removal, smart subtitle placement, and cinematic LUT presets. The ultimate production suite for high-end video content.",
+  "updated_at": 1779104962636,
+  "version": "6.1.0"
+}
