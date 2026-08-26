@@ -1,0 +1,80 @@
+{
+  "changelog": "**Core refactor: All main modules are now moved into the new _core/ directory, improving structure and maintainability.**\n\n- Major refactor: Scripts and adapters relocated from scripts/ to _core/ and _core/adapters/.\n- Added new internal modules for config, cache, cost tracking, health checks, version management, and simple YAML parsing in _core/.\n- Updated internal imports and references to accommodate the new file structure.\n- Removed legacy/duplicate documentation file (skill-card.md).",
+  "created_at": 1783584331288,
+  "display_name": "cn-llm-router",
+  "fetched_at": 1787769201893,
+  "files": [
+    "SKILL.md",
+    "_core/adapters/__init__.py",
+    "_core/adapters/base.py",
+    "_core/adapters/ernie.py",
+    "_core/adapters/openai_compat.py",
+    "_core/adapters/spark.py",
+    "_core/cache.py",
+    "_core/calibrate.py",
+    "_core/config.py",
+    "_core/cost_tracker.py",
+    "_core/health_check.py",
+    "_core/version.json",
+    "_core/yaml_simple.py",
+    "_core_lock.json",
+    "_meta.json",
+    "config.example.json",
+    "references/mock_data.json",
+    "references/models.yaml",
+    "references/routing-rules.md",
+    "scripts/__init__.py",
+    "scripts/adapters/__init__.py",
+    "scripts/adapters/base.py",
+    "scripts/adapters/ernie.py",
+    "scripts/adapters/openai_compat.py",
+    "scripts/adapters/spark.py",
+    "scripts/cache.py",
+    "scripts/classifier.py",
+    "scripts/config.py",
+    "scripts/cost_tracker.py",
+    "scripts/hardware.py",
+    "scripts/health_check.py",
+    "scripts/meta.py",
+    "scripts/mock_engine.py",
+    "scripts/report.py",
+    "scripts/router.py",
+    "scripts/update_check.py",
+    "scripts/yaml_simple.py",
+    "skill-card.md",
+    "tests/test_router.py",
+    "version.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787589361457,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fyniujin",
+    "handle": "fyniujin",
+    "user_id": "s177r8w7p1d7cpbys9bn33kwhs89d0xw"
+  },
+  "slug": "cn-llm-router",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cn-llm-router",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cn-llm-router&ownerHandle=fyniujin",
+    "page_url": "https://clawhub.ai/fyniujin/skills/cn-llm-router"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1183,
+    "installs": 0,
+    "stars": 0,
+    "versions": 9
+  },
+  "summary": "\u56fd\u4ea7\u5927\u6a21\u578b\u7edf\u4e00\u8def\u7531\u3002\u628a DeepSeek\u3001\u901a\u4e49\u5343\u95ee\u3001\u667a\u8c31 GLM\u3001Kimi\u3001\u817e\u8baf\u6df7\u5143\u3001\u5b57\u8282\u8c46\u5305\u3001\u767e\u5ea6\u6587\u5fc3\u3001\u8baf\u98de\u661f\u706b\u3001MiniMax\u3001\u96f6\u4e00\u4e07\u7269 Yi\u3001\u767e\u5ddd\u3001\u9636\u8dc3 Step \u7b49 12 \u5bb6\u56fd\u4ea7\u5927\u6a21\u578b + Qwen-VL/GLM-4V/\u8c46\u5305\u89c6\u89c9 3 \u5bb6\u89c6\u89c9\u6a21\u578b\u6536\u655b\u6210\u4e00\u4e2a\u547d\u4ee4\u5165\u53e3\uff1b\u652f\u6301\u6587\u672c + \u56fe\u7247\u591a\u6a21\u6001\u4efb\u52a1\u8def\u7531\uff1b\u6309\u4efb\u52a1\u7c7b\u578b\uff08\u4ee3\u7801/\u63a8\u7406/\u957f\u6587/\u7ffb\u8bd1/\u6458\u8981/\u62bd\u53d6/\u56fe\u50cf\u8bc6\u522b\uff09\u7ed3\u5408\u80fd\u529b\u753b\u50cf\u81ea\u52a8\u6216\u624b\u52a8\u9009\u62e9\u6700\u5408\u9002\u3001\u6700\u7701\u94b1\u7684\u6a21\u578b\uff1b\u652f\u6301\u6d41\u5f0f\u8f93\u51fa\u3001\u81ea\u52a8\u7edf\u8ba1\u8de8\u5382\u5546 token \u6210\u672c\u3001\u786c\u4ef6\u81ea\u9002\u5e94\u9650\u6d41\uff08\u4e0d\u62d6\u7d2f\u7535\u8111\uff09\u3001\u672c\u5730\u8bed\u4e49\u7f13\u5b58\u7701 token\u3001\u5168\u94fe\u8def\u79bb\u7ebf Mock \u8c03\u8bd5\u3001\u6280\u80fd\u66f4\u65b0\u63d0\u9192\u3002\u5f53\u7528\u6237\u9700\u8981\u300c\u8c03\u7528\u56fd\u4ea7\u5927\u6a21\u578b\u300d\u300c\u591a\u6a21\u578b\u6bd4\u4ef7/\u964d\u672c\u300d\u300c\u7edf\u4e00\u7ba1\u7406\u591a\u4e2a\u6a21\u578b Key\u300d\u300c\u672c\u5730\u8dd1\u5927\u6a21\u578b\u8def\u7531\u300d\u300c\u4e0d\u60f3\u88ab\u67d0\u4e00\u5bb6\u5382\u5546\u7ed1\u5b9a\u300d\u300c\u8bc6\u522b\u56fe\u7247/\u97f3\u9891\u5185\u5bb9\u300d\u65f6\u4f7f\u7528\u3002",
+  "updated_at": 1787587641606,
+  "version": "2.5.0"
+}
