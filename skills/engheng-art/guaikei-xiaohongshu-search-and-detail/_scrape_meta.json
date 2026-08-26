@@ -1,0 +1,65 @@
+{
+  "changelog": "Initial public release:\n\n- Provides structured access to Xiaohongshu search, note details, comments, and creator posts via command line scripts.\n- Enables keyword-based content search and retrieval of note comments for sentiment and opinion analysis.\n- Supports collection of public creator posts with simple input routing based on provided keyword or link.\n- Outputs results as unified JSON for easy integration with downstream analysis and reporting.\n- Requires a GUAIKEI_API_TOKEN for API access; no Xiaohongshu login necessary.\n- Comprehensive error handling and usage documentation included for smooth operation.",
+  "created_at": 1786846571368,
+  "display_name": "guaikei\u00b7\u5c0f\u7ea2\u4e66\u641c\u7d22\u4e0e\u8be6\u60c5\u83b7\u53d6",
+  "fetched_at": 1787771786757,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "readme.md",
+    "references/changelog.md",
+    "references/options.md",
+    "skill-card.md",
+    "src/api/comment.js",
+    "src/api/detail.js",
+    "src/api/post.js",
+    "src/api/search.js",
+    "src/config/constants.js",
+    "src/utils/args.js",
+    "src/utils/key.js",
+    "src/utils/log.js",
+    "src/utils/name.js",
+    "src/utils/request.js",
+    "src/utils/retry.js",
+    "src/utils/utils.js",
+    "src/validate/keyword.js",
+    "src/validate/url.js",
+    "src/xiaohongshu/comment-cli.js",
+    "src/xiaohongshu/detail-cli.js",
+    "src/xiaohongshu/post-cli.js",
+    "src/xiaohongshu/search-cli.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786847394049,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "engheng-art",
+    "handle": "engheng-art",
+    "user_id": "s17av7fakvdwpsbhaddxp8e7mh89wsrx"
+  },
+  "slug": "guaikei-xiaohongshu-search-and-detail",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/guaikei-xiaohongshu-search-and-detail",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=guaikei-xiaohongshu-search-and-detail&ownerHandle=engheng-art",
+    "page_url": "https://clawhub.ai/engheng-art/skills/guaikei-xiaohongshu-search-and-detail"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 123,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5355\u72ec\u83b7\u53d6\u5c0f\u7ea2\u4e66\u7b14\u8bb0\u7684\u8bc4\u8bba\u5185\u5bb9\u3001\u8bc4\u8bba\u8005\u4fe1\u606f\u4e0e\u4e92\u52a8\u6570\u636e\uff0c\u4fbf\u4e8e\u89c2\u70b9\u805a\u7c7b\u4e0e\u60c5\u7eea\u5206\u6790\u3002\u5f53\u7528\u6237\u60f3\u5206\u6790\u67d0\u6761\u5c0f\u7ea2\u4e66\u7b14\u8bb0\u8bc4\u8bba\u533a\u5728\u8ba8\u8bba\u4ec0\u4e48\u3001\u8bc6\u522b\u9ad8\u9891\u53cd\u9988\u6216\u8d1f\u9762\u58f0\u97f3\u65f6\u4f7f\u7528\u672c\u6280\u80fd\uff1b\u5373\u4f7f\u7528\u6237\u6ca1\u8bf4\"\u8bc4\u8bba\u5206\u6790\"\uff0c\u53ea\u8981\u7ed9\u4e86\u7b14\u8bb0\u94fe\u63a5\u5e76\u5173\u5fc3\u53d7\u4f17\u53cd\u9988\u4e5f\u9002\u7528\u3002\u4e0e\u7b14\u8bb0\u8be6\u60c5\u7684\u533a\u522b\uff1a\u53ea\u53d6\u8bc4\u8bba\u4e0d\u53d6\u6b63\u6587\u3002\u4e0d\u7528\u4e8e\u53d1\u8bc4\u8bba\u6216\u4e92\u52a8\u3002",
+  "updated_at": 1786846670722,
+  "version": "1.0.0"
+}
