@@ -1,0 +1,54 @@
+{
+  "changelog": "sn-ppt-workbench v2026.8.19\n\n- New detailed SKILL.md added, clarifying usage, invocation, rules, and environment setup for the AI PPT editing Workbench.\n- Strictly enforces editing only existing HTML-based decks\u2014no style, outline, or export generation.\n- Automatic detection of the latest usable deck when no path is provided; requests for manual path entry if none found.\n- Documents full command-line invocation patterns, cross-platform handling, and advanced bridge/authentication setups.\n- Outlines clear error reporting, LAN/remote access guidance, and hard usage rules for safety and reliability.",
+  "created_at": 1787108505770,
+  "display_name": "sn-ppt-workbench",
+  "fetched_at": 1787770695249,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/gateway-auth.md",
+    "scripts/open_workbench.py",
+    "skill-card.md",
+    "workbench-runtime/bin/sensenova-ppt-workbench.mjs",
+    "workbench-runtime/dist-server/index.mjs",
+    "workbench-runtime/dist/assets/MarkdownArtifactViewer-0j-iJPy3.js",
+    "workbench-runtime/dist/assets/index-CRfURb1w.css",
+    "workbench-runtime/dist/assets/index-CkM9dGWn.js",
+    "workbench-runtime/dist/favicon.svg",
+    "workbench-runtime/dist/index.html",
+    "workbench-runtime/dist/sensetime-mark.png",
+    "workbench-runtime/package.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787109915527,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "SenseNova-Skills",
+    "handle": "sensenova-skills",
+    "user_id": "s17fzc6fnxkbqzh6z8jr5bcvhh8bw2vm"
+  },
+  "slug": "sn-ppt-workbench",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sn-ppt-workbench",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sn-ppt-workbench&ownerHandle=sensenova-skills",
+    "page_url": "https://clawhub.ai/sensenova-skills/skills/sn-ppt-workbench"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 94,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Open the AI PPT editing WebUI for previously generated SenseNova HTML slides. Use when the user asks to preview, inspect, edit, or open an existing/generated PPT deck in the WebUI/workbench without regenerating slides. Accepts an explicit deck_dir or auto-detects the newest local ppt_decks entry containing HTML pages. Does not run style/outline/page-html/export generation.",
+  "updated_at": 1787109046247,
+  "version": "2026.8.19"
+}
