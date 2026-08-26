@@ -1,0 +1,59 @@
+{
+  "changelog": "- Changes soil sensor averaging to use the last 50 readings (looking back up to 7 days), instead of a 24h average.\n- Updates decision logic and report sections to reflect the new averaging method.\n- Troubleshooting and documentation clarify sensor data handling and new report formats.\n- Data and config file paths are now specified relative to the skill folder, with external overrides supported.",
+  "created_at": 1776013628959,
+  "display_name": "Garden Irrigation",
+  "fetched_at": 1787784757931,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/system.json",
+    "config/zones.json",
+    "requirements.txt",
+    "scripts/run_once.py",
+    "scripts/run_with_confirmation.py",
+    "scripts/run_with_notifications.py",
+    "skill-card.md",
+    "src/garden_irrigation/__init__.py",
+    "src/garden_irrigation/engine/decision.py",
+    "src/garden_irrigation/integrations/notifications.py",
+    "src/garden_irrigation/integrations/tuya.py",
+    "src/garden_irrigation/integrations/weather.py",
+    "src/garden_irrigation/reporting/daily.py",
+    "src/garden_irrigation/storage/files.py",
+    "src/garden_irrigation/utils/config.py",
+    "src/garden_irrigation/utils/language.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779943737646,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "bowlderstudio",
+    "handle": "bowlderstudio",
+    "user_id": "s178axn72cqsznyhvvfqr18ah984qbgm"
+  },
+  "slug": "garden-irrigation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/garden-irrigation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=garden-irrigation&ownerHandle=bowlderstudio",
+    "page_url": "https://clawhub.ai/bowlderstudio/skills/garden-irrigation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 988,
+    "installs": 27,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Smart garden irrigation \u2014 reads soil sensors (avg of last 50 readings), checks weather, and decides when and how long to water each zone. Use when the user a...",
+  "updated_at": 1779721165673,
+  "version": "1.0.6"
+}
