@@ -1,0 +1,69 @@
+{
+  "changelog": "imp-trm-accstmt 1.0.1\n\n- \u65b0\u589e\u5185\u7f6e\u6a21\u677f\u6587\u4ef6\uff1a\u4e3a5\u4e2a\u4e3b\u6d41\u76ee\u6807\u7cfb\u7edf\uff08BIPV5\u3001\u91d1\u8776\u4e91\u661f\u701a\u3001\u4fdd\u878dATS\u3001\u4e5d\u6052\u661f\u53f8\u5e93\u3001\u7528\u53cbNCC\uff09\u5206\u522b\u6dfb\u52a0\u4e86\u672c\u5730\u5bfc\u5165\u6a21\u677f\u6587\u4ef6\uff0c\u4fbf\u4e8e\u76f4\u63a5\u751f\u6210\u6807\u51c6\u6587\u4ef6\u3002\n- \u8c03\u6574\u6a21\u677f\u52a0\u8f7d\u903b\u8f91\uff1a\u6a21\u677f\u6587\u4ef6\u7f3a\u5931\u65f6\uff0c\u5c06\u81ea\u52a8\u4ece\u9884\u8bbe\u4e92\u8054\u7f51\u5730\u5740\u4e0b\u8f7d\u4f7f\u7528\u3002\n- \u63d0\u5347\u8d44\u4ea7\u76ee\u5f55\u7ed3\u6784\uff1a\u5c06\u6240\u6709\u76ee\u6807\u7cfb\u7edf\u6a21\u677f\u7edf\u4e00\u653e\u7f6e\u4e8e assets/template/ \u76ee\u5f55\uff0c\u4fbf\u4e8e\u7ba1\u7406\u548c\u517c\u5bb9\u66f4\u591a\u5e02\u573a\u73af\u5883\u3002\n- \u79fb\u9664 skill-card.md\uff0c\u589e\u52a0 README.md\uff0c\u5b8c\u5584\u7528\u6237\u6587\u6863\u8bf4\u660e\u3002\n- \u5176\u4ed6\u6587\u6863\u4e0e\u8bf4\u660e\u540c\u6b65\u66f4\u65b0\uff0c\u8865\u5145\u4e86\u6a21\u677f\u52a0\u8f7d\u5165\u53e3\u4e0e\u4f7f\u7528\u7ea6\u5b9a\u3002",
+  "created_at": 1780631168671,
+  "display_name": "\u94f6\u884c\u5bf9\u8d26\u5355\u5904\u7406\u548c\u8f6c\u6362(Bank statement processing and conversion)",
+  "fetched_at": 1787781396192,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/currency.md",
+    "scripts/core/__init__.py",
+    "scripts/core/cosine_similarity.py",
+    "scripts/core/currency_map.py",
+    "scripts/core/data_structures.py",
+    "scripts/core/mapper_factory.py",
+    "scripts/core/parser_factory.py",
+    "scripts/core/template_manager.py",
+    "scripts/main.py",
+    "scripts/mappers/__init__.py",
+    "scripts/mappers/_xls_template_helpers.py",
+    "scripts/mappers/base_mapper.py",
+    "scripts/mappers/bipv5_mapper.py",
+    "scripts/mappers/eas_yxh_mapper.py",
+    "scripts/mappers/fingard_mapper.py",
+    "scripts/mappers/nstc_mapper.py",
+    "scripts/mappers/yyncc_mapper.py",
+    "scripts/mappings/__init__.py",
+    "scripts/mappings/mt940_to_bipv5.json",
+    "scripts/parsers/__init__.py",
+    "scripts/parsers/base_parser.py",
+    "scripts/parsers/excel_parser.py",
+    "scripts/parsers/mt940_parser.py",
+    "scripts/parsers/pdf_parser.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781021082782,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jreadstone",
+    "handle": "jreadstone",
+    "user_id": "s177bxh1276mr19dtzpjxjngh5881gzy"
+  },
+  "slug": "imp-trm-accstmt",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/imp-trm-accstmt",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=imp-trm-accstmt&ownerHandle=jreadstone",
+    "page_url": "https://clawhub.ai/jreadstone/skills/imp-trm-accstmt"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 520,
+    "installs": 8,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "\u94f6\u884c\u5bf9\u8d26\u5355\u8f6c\u6362\u4e3a\u5404\u7cfb\u7edf\u6807\u51c6\u94f6\u884c\u8d26\u6237\u6d41\u6c34\u5bfc\u5165\u6a21\u677f\u7684\u6280\u80fd\u3002\u5f53\u7528\u6237\u9700\u8981\u5c06\u94f6\u884c\u5bf9\u8d26\u5355\u6587\u4ef6\uff08MT940\u683c\u5f0f\u7684SWIFT\u94f6\u884c\u5bf9\u8d26\u5355\u3001\u56fd\u5185\u5404\u94f6\u884c\u7684Excel\u683c\u5f0f\u5bf9\u8d26\u5355\u3001\u6216PDF\u683c\u5f0f\u5bf9\u8d26\u5355\uff09\u8f6c\u6362\u4e3aBIPV5\u3001\u91d1\u8776\u4e91\u661f\u701a(EAS_YXH)\u3001\u4fdd\u878dATS(FINGARD)\u3001\u4e5d\u6052\u661f\u53f8\u5e93(NSTC)\u3001\u7528\u53cbNCC(YYNCC)\u7b49\u7cfb\u7edf\u7684\u6807\u51c6\u5bfc...",
+  "updated_at": 1781019805836,
+  "version": "1.0.1"
+}
