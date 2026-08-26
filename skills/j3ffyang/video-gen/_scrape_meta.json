@@ -1,0 +1,33 @@
+{
+  "changelog": "**Major update: video-gen now uses Seedance 2.0 via OpenRouter's video API to render narration scripts plus photo sequences into fully assembled MP4 videos.**\n\n- Migrated pipeline to OpenRouter's async video API using Seedance 2.0 (and variants), allowing fast, robust multi-clip MP4 generation from narration scripts and user photos.\n- Outlined hard gates before submit: automatic face-scan (privacy block), narrative-order clip sequencing, and risk-proof-of-concept (POC) short-run safety tests.\n- Added detailed style guide for prompts: camera moves, factual descriptors, and explicit policy directives (e.g., \"no people, no text, neutral audio\") to ensure predictable outputs.\n- Clarified audio integration: OpenRouter video models provide ambient/natural sound only (no TTS/voiceover), so narration is handled via subtitles or future TTS integration.\n- Provided step-by-step instructions for engine verification, photo preprocessing, per-clip job submission, polling, and ffmpeg-based assembly.\n- Simplified prerequisites and output file conventions; deprecated",
+  "created_at": 1786950343616,
+  "display_name": "video-gen",
+  "fetched_at": 1787771610514,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jeff Yang",
+    "handle": "j3ffyang",
+    "user_id": "s1779e1n6evsf8stg77rena51983qpyd"
+  },
+  "slug": "video-gen",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/video-gen",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=video-gen&ownerHandle=j3ffyang",
+    "page_url": "https://clawhub.ai/j3ffyang/skills/video-gen"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 18,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate a video from a story-telling narration script plus the author's photos, using Seedance 2.0 image-to-video via OpenRouter's asynchronous video API: pre-render gates (face-scan, narrative order, risk-POC), then per-clip submit -> poll -> download, then ffmpeg assembly. Multi-clip projects default to silent clips plus one continuous soundtrack (synthesized or royalty-free/PD); subtitle voiceover is the fallback (no OpenRouter TTS). Verified working 2026-08-15 (POC: 4s 480p clip, $0.28, ~3 min). Use when the user asks to render a narration script into a video, generate a \u89c6\u9891, or run the death-in-Mexico project's video pipeline. Related terms: Seedance, \u89c6\u9891\u751f\u6210, OpenRouter, image-to-video.",
+  "updated_at": 1786950406067,
+  "version": "1.0.0"
+}
