@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of the step-parts skill.\n\n- Search, evaluate, and download CAD models for common purchasable parts using the step.parts API.\n- Supports resolving fuzzy part names, aliases, standards, and dimensions for components like actuators, servos, motors, boards, connectors, and hardware.\n- Handles both search and download of canonical .step files, with checksum verification and provenance reporting.\n- Structured workflow for API interaction, fallback handling, and presenting top candidate parts with key details.\n- Includes a bundled downloader script for deterministic searches and downloads.\n- Automatic CAD Viewer handoff after file creation, when available.",
+  "created_at": 1783452599479,
+  "display_name": "STEP Parts",
+  "fetched_at": 1787777738762,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/step-parts-api.md",
+    "scripts/download_step_part.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "liubuq-sys",
+    "handle": "liubuq-sys",
+    "user_id": "s1752b1n53w0qkf2nm2sypzf3h87c7rf"
+  },
+  "slug": "step-parts",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/step-parts",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=step-parts&ownerHandle=liubuq-sys",
+    "page_url": "https://clawhub.ai/liubuq-sys/skills/step-parts"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 273,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Find, evaluate, and download common purchasable CAD parts from step.parts, including named off-the-shelf actuators, servos, motors, electronics boards, conne...",
+  "updated_at": 1783452599479,
+  "version": "1.0.0"
+}
