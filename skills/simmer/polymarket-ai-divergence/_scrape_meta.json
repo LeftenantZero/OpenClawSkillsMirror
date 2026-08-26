@@ -1,0 +1,47 @@
+{
+  "changelog": "Migrate to Polymarket Gamma keyset pagination (deprecation deadline May 1, 2026). GammaClient.get_markets and get_events now return (list, next_cursor); get_market and get_event use keyset filter form. search() unchanged.",
+  "created_at": 1771081143600,
+  "display_name": "Polymarket Ai Divergence",
+  "fetched_at": 1787785671908,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "ai_divergence.py",
+    "clawhub.json",
+    "gamma_api.py",
+    "scripts/status.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967064319,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Simmer.Markets",
+    "handle": "simmer",
+    "user_id": "s17eez0vajry6hjb97y9mbtv2s85wekv"
+  },
+  "slug": "polymarket-ai-divergence",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polymarket-ai-divergence",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polymarket-ai-divergence&ownerHandle=simmer",
+    "page_url": "https://clawhub.ai/simmer/skills/polymarket-ai-divergence"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3031,
+    "installs": 102,
+    "stars": 3,
+    "versions": 24
+  },
+  "summary": "Find markets where Simmer's AI consensus diverges from the real market price, then trade on the mispriced side using Kelly sizing. Scans for divergence, chec...",
+  "updated_at": 1779256907755,
+  "version": "2.3.0"
+}
