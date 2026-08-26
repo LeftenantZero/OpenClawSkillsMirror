@@ -1,0 +1,57 @@
+{
+  "changelog": "v2.3.0 any-provider-any-agent: pluggable providers.json (any OpenAI-compatible endpoint incl. local Ollama/llama.cpp/vLLM; user routes override builtins), --discover --apply, --json machine contract + exit code 4, provider perms hardening, live-verified groq transport",
+  "created_at": 1785376710735,
+  "display_name": "free-tier-ai-router",
+  "fetched_at": 1787768747043,
+  "files": [
+    "PROBE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "get-ai-router.sh",
+    "health.json",
+    "install.sh",
+    "integrate.sh",
+    "probe.py",
+    "quality.json",
+    "quality.py",
+    "ratelimit.py",
+    "ratelimits.json",
+    "results.json",
+    "router.py",
+    "router_fixed.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787702432991,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "orionshaowswmw",
+    "handle": "orionshaowswmw",
+    "user_id": "s17d6323ed1jjxgp339202e6c98b1qq5"
+  },
+  "slug": "free-tier-ai-router",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/free-tier-ai-router",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=free-tier-ai-router&ownerHandle=orionshaowswmw",
+    "page_url": "https://clawhub.ai/orionshaowswmw/skills/free-tier-ai-router"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 744,
+    "installs": 2,
+    "stars": 0,
+    "versions": 24
+  },
+  "summary": "Quota-aware LLM router that squeezes maximum usable AI out of free-tier API keys across Gemini, Mistral, OpenRouter, Kilo and Cerebras. Probes every model on every key, measures real quality and real published rate limits, then routes each request to the cheapest model that can do the job \u2014 spending abundant capacity first and reserving scarce daily quota for when it is actually needed. Persists cooldowns to disk so a 429 discovered in one process is respected by the next. Use when an agent must make many LLM calls on free keys without hitting rate limits, when \"all models failed\", or when deciding which of several provider keys to use for a task.",
+  "updated_at": 1787701639872,
+  "version": "2.2.9"
+}
