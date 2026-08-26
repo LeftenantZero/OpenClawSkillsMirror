@@ -1,0 +1,66 @@
+{
+  "changelog": "- Improved onboarding: now pauses and instructs the user to install and authenticate the Syft CLI if syft is missing.\n- Updated Shared Rules to include explicit CLI installation and login steps if syft is not available.\n- Clarified that workflows should only proceed after the CLI is available and authenticated.\n- No changes to workflow logic or routing; documentation and user guidance improved.",
+  "created_at": 1779854538102,
+  "display_name": "Syft News Hub",
+  "fetched_at": 1787784495935,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md",
+    "subskills/syft-daily-briefing/SKILL.md",
+    "subskills/syft-daily-briefing/references/editorial-prompt.md",
+    "subskills/syft-daily-briefing/references/output-template.md",
+    "subskills/syft-guidance-rulebook/SKILL.md",
+    "subskills/syft-guidance-rulebook/references/rulebook-template.md",
+    "subskills/syft-news-pipeline/SKILL.md",
+    "subskills/syft-news-pipeline/agents/openai.yaml",
+    "subskills/syft-news-pipeline/references/daily-briefing.md",
+    "subskills/syft-news-pipeline/references/guidance-rulebook.md",
+    "subskills/syft-news-pipeline/references/profile-summary.md",
+    "subskills/syft-news-pipeline/references/storyline-backfill.md",
+    "subskills/syft-news-pipeline/references/storyline-tree.md",
+    "subskills/syft-news-pipeline/references/workflow-map.md",
+    "subskills/syft-profile-summary/SKILL.md",
+    "subskills/syft-profile-summary/agents/openai.yaml",
+    "subskills/syft-profile-summary/references/profile-summary-prompt.md",
+    "subskills/syft-storyline-backfill/SKILL.md",
+    "subskills/syft-storyline-backfill/references/keyword-strategy.md",
+    "subskills/syft-storyline-backfill/references/merge-template.md",
+    "subskills/syft-storyline-tree/SKILL.md",
+    "subskills/syft-storyline-tree/references/keyword-strategy.md",
+    "subskills/syft-storyline-tree/references/render-template.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967504922,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Solatrader",
+    "handle": "solatrader",
+    "user_id": "s17aeh8m29xd84s8gfbhekr5vx87g7cc"
+  },
+  "slug": "syft-news",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/syft-news",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=syft-news&ownerHandle=solatrader",
+    "page_url": "https://clawhub.ai/solatrader/skills/syft-news"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 548,
+    "installs": 10,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Coordinate Syft CLI based news pipelines from one root skill package to create personalized daily new digest, and timeline-tracking of key events.",
+  "updated_at": 1779862067509,
+  "version": "1.0.1"
+}
