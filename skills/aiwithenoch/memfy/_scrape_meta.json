@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of memfy skill: enables secure, user-approved memory capture for future context across chats.\n\n- Explicitly saves durable, user-approved memory only when prompted (\u201cmemfy\u201d).\n- Avoids storing raw secrets or transient/chatter content; clearly excludes sensitive data unless explicitly permitted.\n- Selects a memory file path via environment variable, local config, or user prompt.\n- Formats memories as concise, dated bullet points for easy future retrieval.\n- Confirms to user what memory was saved and alerts if anything, like secrets, was skipped.",
+  "created_at": 1780740305376,
+  "display_name": "Memfy",
+  "fetched_at": 1787782465027,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ai With Enoch",
+    "handle": "aiwithenoch",
+    "user_id": "s17eja4rmeawmhz53h21syhfns86nyjg"
+  },
+  "slug": "memfy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memfy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memfy&ownerHandle=aiwithenoch",
+    "page_url": "https://clawhub.ai/aiwithenoch/skills/memfy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 397,
+    "installs": 6,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Save durable memory without secrets",
+  "updated_at": 1780740305376,
+  "version": "1.0.0"
+}
