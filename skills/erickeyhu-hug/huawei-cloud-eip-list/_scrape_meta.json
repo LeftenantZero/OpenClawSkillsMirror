@@ -1,0 +1,41 @@
+{
+  "changelog": "- Initial release of the Huawei Cloud EIP List skill.\n- Provides read-only inventory of EIP (Elastic IP, \u5f39\u6027\u516c\u7f51IP) resources in a Huawei Cloud region.\n- Uses KooCLI `hcloud EIP ListPublicips` as the primary data source; falls back to the huaweicloudsdkeip Python SDK if needed.\n- Supports filtering by EIP ID, public IP address, IP version, status, and enterprise project.\n- Suitable for inventory, cost review, compliance, or troubleshooting scenarios.",
+  "created_at": 1785640558870,
+  "display_name": "huawei-cloud-eip-list",
+  "fetched_at": 1787773922846,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/eip-policies.md",
+    "references/verification-method.md",
+    "scripts/test-cli-commands.sh",
+    "scripts/validate-skill.sh",
+    "skill-card.md",
+    "templates/test-vars.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-eip-list",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-eip-list",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-eip-list&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-eip-list"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 195,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Lists Huawei Cloud EIP (Elastic IP, \u5f39\u6027\u516c\u7f51IP) resources \u2014 enumerates all EIPs in a region with public IP address, EIP ID, status, bandwidth, associated instance and creation time, using the KooCLI `hcloud EIP ListPublicips` command (primary) or the huaweicloudsdkeip Python SDK (fallback). Provides read-only EIP inventory for network resource auditing, cost review and resource discovery. Use this skill whenever the user mentions EIP list query. Triggers include: list EIPs, EIP list, query EIP, enumerate EIPs, show EIPs, elastic IP list, public IP inventory, \u67e5\u8be2\u5f39\u6027\u516c\u7f51IP, EIP\u5217\u8868, \u5f39\u6027\u516c\u7f51IP\u5217\u8868, \u67e5\u770bEIP, \u5217\u51faEIP, \u83b7\u53d6EIP\u5217\u8868, \u67e5\u8be2EIP, \u67e5\u8be2\u516c\u7f51IP.",
+  "updated_at": 1785640627445,
+  "version": "1.0.0"
+}
