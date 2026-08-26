@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release: risk-per-trade position sizing pre-filled with the ticker's live last price, a 14-session average true range and the SentiSense Score. Share count, dollar risk, percent deployed and R multiple, with refusal rules for stops that carry no risk distance. Artifact renders offline.",
+  "created_at": 1787726949015,
+  "display_name": "Position Size Calculator - SentiSense",
+  "fetched_at": 1787768683833,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/prepare_data.mjs",
+    "scripts/template.html",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Senti",
+    "handle": "thesentitrader",
+    "user_id": "s171aan38r2dn7ew5hddyscf1983x1h9"
+  },
+  "slug": "position-size-calculator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/position-size-calculator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=position-size-calculator&ownerHandle=thesentitrader",
+    "page_url": "https://clawhub.ai/thesentitrader/skills/position-size-calculator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 25,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Position size calculator for stocks and ETFs, pre-filled with the ticker's real last price instead of empty boxes: enter an account size and the percentage of it to put at risk on one trade, and it returns the share count, the position dollar value, the percent of the account deployed, the dollar at risk to the stop and the R multiple to an optional target, with entry, stop and target drawn on one price scale. The live last price, the SentiSense Score and a 14 session average true range are bound in at build time, so a stop distance can be read against how far the stock actually moves in an ordinary day. It divides the numbers you enter and never picks a stock, an entry or an amount. Renders offline, no live call at view time. Use for position size calculator, position sizing calculator, risk per trade calculator, how many shares to buy, stop loss calculator, risk management calculator, 1% rule, R multiple. Read-only. No trading, no purchases, no write operations, no wallet access.",
+  "updated_at": 1787727025675,
+  "version": "1.0.0"
+}
