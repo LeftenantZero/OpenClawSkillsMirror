@@ -1,0 +1,33 @@
+{
+  "changelog": "Skill 1.0.3 introduces a stricter, safer workflow for reviewing and preparing Git commits:\n\n- Adds a hard confirmation gate: Only presents commit plans on first use; requires explicit user approval before making any changes.\n- Replaces shell-dependent commit commands with a plain-text plan and detailed messaging, focusing on atomic business change groups.\n- Significantly strengthens repository state validation, rule discovery, and sensitive file protection.\n- Commit grouping now prioritizes actual business intent over file type or keyword heuristics.\n- Commit messages are fully justified, with grouped files, rationale, and any risks or undecided issues all clearly reported.\n- No commits are executed until the user explicitly confirms the plan after reviewing all details.",
+  "created_at": 1773742390225,
+  "display_name": "git commit skill",
+  "fetched_at": 1787772710263,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Kk_xx",
+    "handle": "wlykan",
+    "user_id": "s179vn10xtqp9gmevtyjghd56983gqy8"
+  },
+  "slug": "gitcommit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gitcommit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gitcommit&ownerHandle=wlykan",
+    "page_url": "https://clawhub.ai/wlykan/skills/gitcommit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1019,
+    "installs": 23,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "Use when the user explicitly asks to prepare, review, or create a Git commit, including \"\u63d0\u4ea4\", \"\u63d0\u4ea4\u4ee3\u7801\", \"\u5e2e\u6211\u63d0\u4ea4\", \"commit\", \"git commit\", \"\u786e\u8ba4\u63d0\u4ea4\", or requests a commit message.",
+  "updated_at": 1786443551313,
+  "version": "1.0.3"
+}
