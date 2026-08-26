@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of wdp-prd-en \u2014 a requirements management skill with parallel implementation and English commands.\n\n- Supports recording, listing, updating, confirming, dispatching, and accepting requirements with dedicated `/wdp-prd-*` subcommands.\n- Decouples requirement discussion (draft) from implementation, with parallel background subagents for confirmed cards.\n- Includes a state machine for requirement workflow and robust scheduling/conflict rules with concurrency cap.\n- All data is managed per project in a global root directory, with automatic execution plan updates.\n- Full support for dependency and conflict resolution, cycle detection, and git worktree isolation for safe parallel development.\n- English-language variant of wdp-prd-zh.",
+  "created_at": 1786292320367,
+  "display_name": "PRD Backlog Conductor",
+  "fetched_at": 1787773017103,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/card-template.md",
+    "references/test-scenarios.md",
+    "scripts/README.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "wdp",
+    "handle": "luckystar513",
+    "user_id": "s1710aw1khahxxvk3yybc4g3y58c1wnd"
+  },
+  "slug": "wdp-prd-en",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wdp-prd-en",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wdp-prd-en&ownerHandle=luckystar513",
+    "page_url": "https://clawhub.ai/luckystar513/skills/wdp-prd-en"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 191,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "A superpowers-based requirements manager: brainstorm and backlog requirements as cards, schedule by\n  \u258e dependency/conflict, and dispatch confirmed ones to background subagents in isolated worktrees (plan \u2192 TDD \u2192 verify\n  \u258e \u2192 accept) without blocking your session.",
+  "updated_at": 1786292407814,
+  "version": "1.0.0"
+}
