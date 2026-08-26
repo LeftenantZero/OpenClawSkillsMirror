@@ -1,0 +1,43 @@
+{
+  "changelog": "- Initial release of yt-mem-ai skill as the unified entry point for all YouTube pipeline CLI operations.\n- Supports ingesting videos, subscription discovery, batch fetch, channel enumeration, search, rating/recommendation, compilation, supercut creation, and status checks.\n- All data operations route through the CLI (`uvx yt-mem-ai <cmd>`); direct LanceDB interaction is not allowed.\n- Includes global configuration management, preference for CLI config commands over `.env` or environment variables.\n- Summarization and analysis are delegated to [[yt-agent]]; skill itself handles storage and orchestration.\n- Provides robust handling and guidance for common YouTube fetch errors and pipeline conventions.",
+  "created_at": 1785762108206,
+  "display_name": "yt-mem-ai",
+  "fetched_at": 1787773625144,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785762876439,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Maksims Gavrilovs",
+    "handle": "dasein108",
+    "user_id": "s171x2k8062ye0r9btb5yb3q4x8bqhtn"
+  },
+  "slug": "yt-mem-ai",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/yt-mem-ai",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=yt-mem-ai&ownerHandle=dasein108",
+    "page_url": "https://clawhub.ai/dasein108/skills/yt-mem-ai"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 184,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when the user wants to run any yt-ai operation from Claude Code \u2014 ingest a video, discover subscription uploads, batch-fetch pending, search the library, rate/recommend, compile highlights, build a supercut, check status, or run a full pipeline (daily routine or single-video). The umbrella entry point for the yt-mem-ai CLI; delegates per-video analysis, digests, and reviews to [[yt-agent]].",
+  "updated_at": 1785762201306,
+  "version": "1.0.0"
+}
