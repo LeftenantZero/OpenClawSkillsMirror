@@ -1,0 +1,46 @@
+{
+  "changelog": "**Summary:** Adds LSP/gopls-powered code navigation, expands config support to more agent files, and improves dependency/tooling integration.\n\n- Adds support for Go code navigation and refactoring using `gopls` and native LSP integration.\n- Expands agent-config file support (`CLAUDE.md`, `AGENTS.md`, `GEMINI.md`, Cursor rules, Copilot instructions) for skill configuration.\n- In Configure mode, user prompts now use the question tool of the editor instead of plain text (when available).\n- Updates dependencies: `gopls` is now required and install instructions are specified.\n- New skill routing for code refactoring and published package lookup via `golang-refactoring`, `golang-gopls`, `golang-pkg-go-dev`.\n- Removes the now-unneeded `skill-card.md` file and updates compatibility details.",
+  "created_at": 1781126520965,
+  "display_name": "golang-how-to",
+  "fetched_at": 1787770122619,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/by-category.md",
+    "references/disambiguation.md",
+    "references/project-config.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787326569106,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Samuel Berthe",
+    "handle": "samber",
+    "user_id": "s173arkhs3131fq5jf769qq75583hdgt"
+  },
+  "slug": "golang-how-to",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/golang-how-to",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=golang-how-to&ownerHandle=samber",
+    "page_url": "https://clawhub.ai/samber/skills/golang-how-to"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 455,
+    "installs": 5,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Golang skills orchestrator \u2014 always active on any Golang coding, review, debug, or setup task. Reads the task context and loads the most relevant skills from samber/cc-skills-golang, often multiple at once: writing a gRPC service loads golang-grpc + golang-testing + golang-error-handling; debugging a panic loads golang-troubleshooting + golang-safety; auditing security loads golang-security + golang-lint + golang-safety. Also: disambiguates competing clusters when two skills seem to overlap (performance vs benchmark vs troubleshooting, samber/lo vs mo vs ro, DI cluster, safety vs security), and configures the project's agent-config file (CLAUDE.md, AGENTS.md, GEMINI.md, Cursor rules, or Copilot instructions) to force-trigger skills in a project (/golang-how-to configure).",
+  "updated_at": 1787325796710,
+  "version": "1.4.0"
+}
