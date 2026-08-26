@@ -1,0 +1,41 @@
+{
+  "changelog": "Huawei Cloud ASM fuzzy mesh list skill \u2014 initial release.\n\n- Lists all ASM (Application Service Mesh) meshes in the current tenant/project via the official Python SDK (`huaweicloudsdkasm`).\n- Supports client-side, case-insensitive name fuzzy matching (substring match) for filtering meshes.\n- Returns mesh name, mesh id, status phase, and creation timestamp for each matching mesh.\n- Read-only access: never creates, modifies, or deletes any mesh or resource.\n- Only supported in the `cn-north-4` region.",
+  "created_at": 1786025637172,
+  "display_name": "huawei-cloud-asm-fuzzy-list",
+  "fetched_at": 1787773241631,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/test-cli-commands.sh",
+    "skill-card.md",
+    "skill-gate-report-20260806.txt",
+    "templates/test-vars.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-asm-fuzzy-list",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-asm-fuzzy-list",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-asm-fuzzy-list&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-asm-fuzzy-list"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 171,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query the list of Huawei Cloud ASM (Application Service Mesh) meshes belonging to the current tenant / project and fuzzy-match them by mesh name. Returns the mesh name (metadata.name), mesh id (metadata.uid), status phase and creation timestamp for every mesh whose name contains the given keyword (case-insensitive substring match, client-side). Uses the huaweicloudsdkasm Python SDK ListMeshes call (GET /v1/{project_id}/meshes). Read-only \u2014 never creates, modifies or deletes any mesh or related resource. Use this skill whenever the user wants to list/inspect the ASM meshes of the tenant or query the ASM name list with fuzzy matching, e.g. for mesh inventory, locating a mesh by name, daily inspection or troubleshooting. Triggers include: \"query ASM list\", \"list ASM\", \"ASM name list\", \"ASM mesh list\", \"\u6a21\u7cca\u67e5\u8be2ASM\", \"\u67e5\u8be2ASM\u5217\u8868\", \"ASM\u540d\u79f0\", \"\u67e5\u8be2ASM\u7f51\u683c\u5217\u8868\", \"list meshes\", \"\u67e5\u8be2\u670d\u52a1\u7f51\u683c\", \"\u670d\u52a1\u7f51\u683c\u5217\u8868\", \"ASM inventory\", \"find ASM mesh by name\".",
+  "updated_at": 1786025742383,
+  "version": "1.0.0"
+}
