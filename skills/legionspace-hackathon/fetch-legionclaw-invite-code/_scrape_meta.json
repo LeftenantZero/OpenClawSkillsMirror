@@ -1,0 +1,43 @@
+{
+  "changelog": "fetch-legionclaw-invite-code 1.0.0\n\n- Initial release: fetches Tongfudun LegionClaw usage-permission invite codes by POSTing agentid-derived userId.\n- Supports single or multiple code requests; returns all codes inline in chat by default.\n- Handles both three- and four-segment session handles; always parses agentid as the second segment.\n- Only uses files for delivery if explicitly requested by the user.\n- Friendly error wording and detailed permission handling built in.\n- Designed for and intended to be run as a LegionClaw-hosted agent.",
+  "created_at": 1783463826046,
+  "display_name": "Fetch Legionclaw Invite Code",
+  "fetched_at": 1787777702436,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783501960495,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "LegionSpace-Hackathon",
+    "handle": "legionspace-hackathon",
+    "user_id": "s17ecqe25y9chvw0dc8skt25qx83h73c"
+  },
+  "slug": "fetch-legionclaw-invite-code",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fetch-legionclaw-invite-code",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fetch-legionclaw-invite-code&ownerHandle=legionspace-hackathon",
+    "page_url": "https://clawhub.ai/legionspace-hackathon/skills/fetch-legionclaw-invite-code"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 262,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fetches Tongfudun LegionClaw usage-permission invite codes by POSTing JSON with userId set to the agentid (second colon-delimited segment) parsed from a Legi...",
+  "updated_at": 1783463826046,
+  "version": "1.0.0"
+}
