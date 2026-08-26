@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of gpt-image-gen: Generate images via ChatGPT's GPT-Image-2 model using browser automation.\n\n- Automates image generation on chatgpt.com by controlling Brave Browser (with remote debugging).\n- Reuses existing `brave-browser-agent` scripts for browser operations and status checks; shares the same browser session.\n- Includes a dedicated script to extract generated images directly from ChatGPT.\n- Provides step-by-step guidance for prompt input, image trigger, waiting for generation, and image extraction.\n- Offers detailed prompt engineering tips and comparison with Gemini Imagen models.\n- Chinese-language support and troubleshooting guidance built-in.",
+  "created_at": 1780674344437,
+  "display_name": "GPT Image Generator",
+  "fetched_at": 1787782781930,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract_image.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780677024589,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mayf3",
+    "handle": "mayf3",
+    "user_id": "s17fv8qs1xk21m0src5wx6qhdh86tz36"
+  },
+  "slug": "gpt-image-gen",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gpt-image-gen",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gpt-image-gen&ownerHandle=mayf3",
+    "page_url": "https://clawhub.ai/mayf3/skills/gpt-image-gen"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 410,
+    "installs": 7,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate images using ChatGPT's GPT-Image-2 model via browser automation (CDP). Shares the user's daily Brave Browser (port 9222) via the brave-browser-agent...",
+  "updated_at": 1780674344437,
+  "version": "1.0.0"
+}
