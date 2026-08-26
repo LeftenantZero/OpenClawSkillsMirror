@@ -1,0 +1,54 @@
+{
+  "changelog": "**Major change: Switched from Python SDK to official UCloud CLI, now focusing on CLI-centric workflows and deployment triggers.**\n\n- Migrated from ucloud-sdk-python3/script-based integration to official ucloud CLI usage.\n- Updated skill description, invocation flows, error handling, and output style to align with CLI best practices.\n- Added detailed rules for CLI profile management, OAuth authorization, installation, and credential protection.\n- Integrated extensive product reference files and product rule documents to guide command selection and resource mapping.\n- Removed Python helper scripts and SDK usage documentation; all execution is now CLI-based.\n- Enhanced missing information handling and added explicit lookup API workflows for Region, Zone, and ProjectId.\n- Output now emphasizes user-friendly Markdown, clear masking of sensitive credentials, and actionable resource summaries.",
+  "created_at": 1773384479765,
+  "display_name": "Ucloud Api Skill",
+  "fetched_at": 1787781027717,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "evals/evals.json",
+    "references/cli-usage.md",
+    "references/common-lookups.md",
+    "references/deployment.md",
+    "references/doc-sources.md",
+    "references/error-handling.md",
+    "references/product-rules.md",
+    "references/products/eip.md",
+    "references/products/security.md",
+    "references/products/uhost.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781268851384,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mingming",
+    "handle": "mingming-cn",
+    "user_id": "s17bgzxj17804taq2a0zf1kphh83jd9k"
+  },
+  "slug": "ucloud",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ucloud",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ucloud&ownerHandle=mingming-cn",
+    "page_url": "https://clawhub.ai/mingming-cn/skills/ucloud"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 879,
+    "installs": 25,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "\u901a\u8fc7 UCloud CLI \u8c03\u7528 UCloud API",
+  "updated_at": 1781268534257,
+  "version": "0.1.2"
+}
