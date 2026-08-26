@@ -1,0 +1,59 @@
+{
+  "changelog": "Initial release with core support for HighGo DB connections.\n\n- Integrates HighGo-modified psycopg2 driver (Python 2.7, SM4 encryption) directly in skill.\n- Enables execution of SQL statements on HighGo DB using a bundled driver\u2014no separate install required.\n- Provides scripts and documentation for usage on Python 2.7, with system & driver requirements clearly listed.\n- Supports DSN options specific to HighGo, with guidance for both typical and advanced usage scenarios.",
+  "created_at": 1773929564270,
+  "display_name": "Highgo Db",
+  "fetched_at": 1787788061282,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/driver/psycopg2/__init__.py",
+    "assets/driver/psycopg2/_ipaddress.py",
+    "assets/driver/psycopg2/_json.py",
+    "assets/driver/psycopg2/_lru_cache.py",
+    "assets/driver/psycopg2/_range.py",
+    "assets/driver/psycopg2/compat.py",
+    "assets/driver/psycopg2/errorcodes.py",
+    "assets/driver/psycopg2/errors.py",
+    "assets/driver/psycopg2/extensions.py",
+    "assets/driver/psycopg2/extras.py",
+    "assets/driver/psycopg2/pool.py",
+    "assets/driver/psycopg2/sql.py",
+    "assets/driver/psycopg2/tz.py",
+    "references/driver_info.md",
+    "scripts/execute_query.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089985156,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ygp987",
+    "handle": "ygp987",
+    "user_id": "s17717fc2vfr408v5nvhbn9p4183y5f5"
+  },
+  "slug": "highgo-db",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/highgo-db",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=highgo-db&ownerHandle=ygp987",
+    "page_url": "https://clawhub.ai/ygp987/skills/highgo-db"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 848,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u901a\u8fc7\u701a\u9ad8\u6570\u636e\u5e93\uff08HighGo DB\uff09\u63d0\u4f9b\u7684\u81ea\u5b9a\u4e49 psycopg2 \u9a71\u52a8\u8fde\u63a5\u6570\u636e\u5e93\u3002\u8be5\u9a71\u52a8\u5df2\u5185\u7f6e\u4e8e\u6280\u80fd\u4e2d\uff0c\u652f\u6301 Python 2.7 \u548c\u56fd\u5bc6 SM4 \u5b89\u5168\u7279\u6027\u3002",
+  "updated_at": 1779078530166,
+  "version": "0.1.0"
+}
