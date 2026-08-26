@@ -1,0 +1,39 @@
+{
+  "changelog": "\u65b0\u589e\u529f\u80fd\n\n  - \u5b9a\u65f6\u81ea\u52a8\u91c7\u96c6\uff1apython bili_trend.py daemon\uff0c\u6309\u95f4\u9694\u81ea\u52a8\u5faa\u73af\u91c7\u96c6\u5168\u90e8\u6216\u6307\u5b9a\u699c\u5355\uff0cCtrl+C \u4f18\u96c5\u9000\u51fa\u3002--interval \u652f\u6301 2h/30m/90s \u683c\u5f0f\uff0c--ranks \u652f\u6301\u9017\u53f7\u5206\u9694\uff0c--no-alert \u5173\u95ed\u5f02\u5e38\u68c0\u6d4b  \n  - \u5f02\u5e38\u68c0\u6d4b\u4e0e\u70ed\u70b9\u9884\u8b66\uff1aalerts.py\uff0c4 \u7c7b\u68c0\u6d4b \u2014\u2014 \u4e92\u52a8\u7387\u98d9\u5347 [HOT]\u3001\u5206\u533a\u70ed\u5ea6\u7a81\u53d8 [WARN]\u3001\u65b0 UP \u4e3b\u4e0a\u699c [INFO]\u3001\u5173\u952e\u8bcd\u7206\u53d1 [INFO]\uff0c\u9884\u8b66\u6301\u4e45\u5316\u5230 alerts.json\n  - --alert / -a \u6807\u5fd7\uff1abilibili_all.py \u65b0\u589e\uff0c\u6293\u53d6\u540e\u81ea\u52a8\u8fd0\u884c\u5168\u7ef4\u5ea6\u5f02\u5e38\u68c0\u6d4b\n  - BILIBILI_WORKSPACE \u73af\u5883\u53d8\u91cf\uff1a\u652f\u6301\u81ea\u5b9a\u4e49\u5de5\u4f5c\u533a\u8def\u5f84\n\n  \u67b6\u6784\u91cd\u6784\n\n  - \u65b0\u589e common.py\uff1a\u96c6\u4e2d\u5171\u4eab\u903b\u8f91\uff08\u8def\u5f84\u914d\u7f6e\u3001\u6570\u636e\u6301\u4e45\u5316\u3001\u5173\u952e\u8bcd\u63d0\u53d6\u3001prompt \u751f\u6210\u3001API \u91cd\u8bd5\u3001\u6570\u636e\u6293\u53d6\uff09\uff0c\u6d88\u9664\u4e24\u4e2a\u811a\u672c\u7ea6 120 \u884c\u91cd\u590d\u4ee3\u7801\n  - \u65b0\u589e alerts.py\uff1a\u72ec\u7acb\u5f02\u5e38\u68c0\u6d4b\u6a21\u5757\uff0cAlert \u6570\u636e\u7c7b + 4 \u79cd\u68c0\u6d4b\u5668 + \u683c\u5f0f\u5316\u8f93\u51fa + \u6301\u4e45\u5316\n  - \u6293\u53d6+\u5904\u7406\u51fd\u6570\u4ece bilibili_all.py \u8fc1\u5165 common.py\uff0c\u4f9b\u4e3b\u811a\u672c\u548c daemon \u6a21\u5f0f\u590d\u7528\n  - bili_trend.py CLI \u91cd\u5199\u4e3a\u6807\u51c6 subparser \u6a21\u5f0f\uff08list / trend / weekly / monthly / workflow / daemon\uff09\n\n  Bug \u4fee\u590d\n\n  - UP \u4e3b\u4fe1\u606f\u7f3a\u5931\uff1aprocess_ranking_v2() \u73b0\u5728\u4fdd\u7559 owner \u548c owner_mid \u5b57\u6bb5\uff0cUP \u4e3b\u751f\u6001\u5206\u6790\u4ece\u4e0d\u53ef\u7528\u53d8\u4e3a\u53ef\u7528\n  - API \u65e0\u91cd\u8bd5\u673a\u5236\uff1aapi_get() \u5185\u7f6e\u6700\u591a 3 \u6b21\u91cd\u8bd5\uff0c\u7f51\u7edc\u9519\u8bef\u6307\u6570\u9000\u907f\uff0c\u9650\u6d41\uff08-352\uff09\u9012\u589e\u7b49\u5f85 30s/60s/90s\n  - \u6587\u4ef6\u547d\u540d\u4e0d\u4e00\u81f4\uff1asave_report() \u7edf\u4e00\u4e3a {\u699c\u5355\u540d\u79f0}_{\u65f6\u95f4}.md\uff0c\u4e0e SKILL.md \u6587\u6863\u4e00\u81f4\n  - load_trend() \u65e7\u6570\u636e\u4e0d\u517c\u5bb9\uff1a\u52a0\u8f7d\u65e7\u7248 trend.json \u65f6\u81ea\u52a8\u8865\u5168\u7f3a\u5931\u7684 rank_stats \u7b49\u5b57\u6bb5\n  - bili_trend.py --no-spawn \u53c2\u6570\u4e0d\u5b58\u5728\uff1a\u66ff\u6362\u4e3a\u6807\u51c6 argparse --manual \u6807\u5fd7",
+  "created_at": 1775139744022,
+  "display_name": "Bilibili \u70ed\u95e8\u8d8b\u52bf\u5206\u6790",
+  "fetched_at": 1787783225689,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/workflow.md",
+    "scripts/alerts.py",
+    "scripts/bili_trend.py",
+    "scripts/bilibili_all.py",
+    "scripts/common.py",
+    "scripts/config.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Rookiecoder-jsjs",
+    "handle": "rookiecoder-jsjs",
+    "user_id": "s177yz0szmgp3za3dkfyd2ddd9842jzt"
+  },
+  "slug": "bilibili-trending",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bilibili-trending",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bilibili-trending&ownerHandle=rookiecoder-jsjs",
+    "page_url": "https://clawhub.ai/rookiecoder-jsjs/skills/bilibili-trending"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 883,
+    "installs": 20,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "\u83b7\u53d6 Bilibili \u5168\u699c\u5355\u70ed\u95e8\u6570\u636e\u5e76\u5206\u6790\u8d8b\u52bf\u3002\u652f\u6301 21 \u4e2a\u699c\u5355\uff0c\u81ea\u52a8\u8c03\u7528\u5b50 Agent \u5206\u6790\u5e76\u751f\u6210 MD \u62a5\u544a\u6301\u4e45\u5316\u50a8\u5b58\u3002\u5b89\u5168\u65e0\u9690\u79c1\u98ce\u9669\uff0c\u4ec5\u8c03\u7528\u516c\u5f00 API\u3002",
+  "updated_at": 1780457536996,
+  "version": "1.0.3"
+}
