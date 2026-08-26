@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of threads-user-posts skill.\n\n- Enables extraction of public posts from any Threads user profile, including post text, engagement metrics, and media information.\n- Uses SSR-embedded JSON for initial post loading; supports scroll-triggered pagination to fetch more posts.\n- Requires a logged-in browser session for reliable access (login wall enforced in most regions as of 2026).\n- Handles profile pages, scroll-based pagination, and error scenarios such as login walls and private or deleted accounts.\n- Provides structured post data including post ID, text, URL, counts (likes, replies, reposts), media info, and author details.",
+  "created_at": 1784550991445,
+  "display_name": "Threads User Posts",
+  "fetched_at": 1787775890621,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-posts.py",
+    "scripts/scroll-load-more.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "threads-user-posts",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/threads-user-posts",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=threads-user-posts&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/threads-user-posts"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 247,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fetches public posts from a Threads user's profile page, extracting post text, engagement metrics, and media info from SSR-embedded JSON. Use when user asks to scrape Threads posts, get someone's Threads feed, pull posts from a Threads account, collect Threads content by username, download Threads u",
+  "updated_at": 1784554153346,
+  "version": "1.0.0"
+}
