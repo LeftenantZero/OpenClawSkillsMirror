@@ -1,0 +1,56 @@
+{
+  "changelog": "Initial release of the knowledge-collector skill.\n\n- Enables automatic and manual collection of equipment institute knowledge from group chats, user entries, or batch file imports.\n- Supports automated classification, metadata extraction, and template-based knowledge documentation.\n- Integrates with domain-kit for storage and reviewer notification.\n- Detects domain-specific keywords for group message triggers and organizes content by direction, type, and knowledge level.\n- Provides easy configuration for keyword lists and reviewer assignments.",
+  "created_at": 1785719777646,
+  "display_name": "Knowledge Collector",
+  "fetched_at": 1787773742132,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/keywords.json",
+    "config/reviewers.json",
+    "examples/sample_knowledge.md",
+    "scripts/batch_import.py",
+    "scripts/collector.py",
+    "scripts/notifier.py",
+    "scripts/test_collector.py",
+    "skill-card.md",
+    "templates/algorithm.md",
+    "templates/design.md",
+    "templates/experience.md",
+    "templates/software.md",
+    "templates/solution.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785720591882,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "paudyyin",
+    "handle": "paudyyin",
+    "user_id": "s172x1s50dh0bgmm3yc9516nr586kk4b"
+  },
+  "slug": "knowledge-collector",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/knowledge-collector",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=knowledge-collector&ownerHandle=paudyyin",
+    "page_url": "https://clawhub.ai/paudyyin/skills/knowledge-collector"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 174,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Automation skill for Knowledge Collector.",
+  "updated_at": 1785719859064,
+  "version": "1.0.0"
+}
