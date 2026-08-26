@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial open-source release. One-click OpenClaw subagent timeout configurator. Three preset profiles (quick/normal/patient) tune the three related fields atomically with TTL constraint validation (ttlMinutes*60 >= runTimeoutSeconds). Auto-backup before write, optional gateway auto-restart, --dry-run preview, --custom values, --config path override. Zero pip dependencies, Python stdlib only.",
+  "created_at": 1781958106107,
+  "display_name": "subagent-timeout-config",
+  "fetched_at": 1787779976346,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/set_timeout.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Evan Song",
+    "handle": "songhonglei",
+    "user_id": "s17dz40vg2v0b4hy1e0jj91ny584egag"
+  },
+  "slug": "subagent-timeout-config",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/subagent-timeout-config",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=subagent-timeout-config&ownerHandle=songhonglei",
+    "page_url": "https://clawhub.ai/songhonglei/skills/subagent-timeout-config"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 303,
+    "installs": 2,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "One-click subagent timeout configurator for OpenClaw. Configures the three related fields (agents.defaults.timeoutSeconds + subagents.runTimeoutSeconds + acp...",
+  "updated_at": 1781958106107,
+  "version": "1.0.0"
+}
