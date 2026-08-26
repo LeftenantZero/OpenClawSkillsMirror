@@ -1,0 +1,36 @@
+{
+  "changelog": "- Major overhaul: Memory review workflow is now precise, script-driven, and prioritizes consolidation over accumulation.\n- Introduced a deterministic multi-step review process using dedicated Python scripts for scanning, candidate search, planning, validation, and committing state.\n- Durable, non-transient knowledge is strictly filtered and merged with existing memory; update to canonical documents is preferred over creating new files.\n- New rules prevent redundant or conflicting documents, disallow auto-edit of core hierarchy files, and eliminate date-based filenames for knowledge.\n- Outputs and directory structure clarified and expanded for consistency and traceability.\n- Technical documentation restructured for clarity and stricter operational requirements.",
+  "created_at": 1773794786666,
+  "display_name": "memory-review",
+  "fetched_at": 1787774056422,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/spec.md",
+    "scripts/memory_review.py",
+    "skill-card.md",
+    "tests/test_memory_review.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "AxelHu",
+    "handle": "axelhu",
+    "user_id": "s172yaxxd2drm0sc92554g9aq983hegj"
+  },
+  "slug": "memory-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memory-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memory-review&ownerHandle=axelhu",
+    "page_url": "https://clawhub.ai/axelhu/skills/memory-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1112,
+    "installs": 26,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Review daily memory logs and consolidate durable knowledge into the existing memory hierarchy. Use for scheduled or manual knowledge review, especially when deciding whether to update an existing canonical document, create a genuinely new document, skip a duplicate, defer an unstable signal, or propose merging overlapping documents.",
+  "updated_at": 1785509334352,
+  "version": "2.0.0"
+}
