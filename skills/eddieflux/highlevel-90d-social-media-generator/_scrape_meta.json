@@ -1,0 +1,52 @@
+{
+  "changelog": "- Improved sitemap filtering to include individual blog post pages as valid link-back targets and post topics, while still excluding blog index and pagination pages.\n- Updated documentation to reflect the new handling of blog pages in the social calendar pipeline.\n- Minor internal code adjustments in sitemap and post generation scripts to support these changes.",
+  "created_at": 1787016852572,
+  "display_name": "90-day-social-generator",
+  "fetched_at": 1787771490213,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/client-example.json",
+    "examples/reference-csv-format.csv",
+    "run.sh",
+    "scripts/common.py",
+    "scripts/fetch_client.py",
+    "scripts/fetch_sitemap.py",
+    "scripts/generate_images.py",
+    "scripts/generate_posts.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787019864142,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "eddieflux",
+    "handle": "eddieflux",
+    "user_id": "s17f1q4a5y7cq61fbadpawj53x8cp1ma"
+  },
+  "slug": "highlevel-90d-social-media-generator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/highlevel-90d-social-media-generator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=highlevel-90d-social-media-generator&ownerHandle=eddieflux",
+    "page_url": "https://clawhub.ai/eddieflux/skills/highlevel-90d-social-media-generator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 185,
+    "installs": 0,
+    "stars": 0,
+    "versions": 8
+  },
+  "summary": "Generate a 90-day social media calendar in High Level CRM, 1 post ever 2 days. (HL Social Planner CSV): pulls the client's sitemap for using link-back URLs and post topics, AI writes posts + images per post, with or without HighLevel connection. Requires HighLevel to import data but optional, will ask for details if needed. Requires AI model for content, image API + SSH/FTP host for image uploads.",
+  "updated_at": 1787020332630,
+  "version": "1.0.7"
+}
