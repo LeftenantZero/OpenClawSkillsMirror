@@ -1,0 +1,38 @@
+{
+  "changelog": "Add 'every does not spread a fleet - it phase-locks it' to the preflight layer: equal intervals preserve creation phase, the every fallback bypasses the dispatcher's mkdir/runningAtMs guards, and the daily restart re-anchors. Prescribes explicit cron minutes over every for heavy-job fallbacks.",
+  "created_at": 1784207186936,
+  "display_name": "Always On Agent Ops",
+  "fetched_at": 1787775910344,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/cron-message.sh",
+    "scripts/event-dispatch.sh",
+    "scripts/oauth-expiry-check.sh",
+    "scripts/preflight-queue.sh",
+    "scripts/purge-retention.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Alexandre Bloch",
+    "handle": "alexbloch-ia",
+    "user_id": "s179c74ca8kjff2gapygs9y13d86yr3z"
+  },
+  "slug": "always-on-agent-ops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/always-on-agent-ops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=always-on-agent-ops&ownerHandle=alexbloch-ia",
+    "page_url": "https://clawhub.ai/alexbloch-ia/skills/always-on-agent-ops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 364,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Keep an OpenClaw agent running 24/7 \u2014 loopback gateway blocks inbound webhooks, OAuth expires silently, strict config. Use when crons stop firing. Trigger on...",
+  "updated_at": 1784539334786,
+  "version": "1.1.0"
+}
