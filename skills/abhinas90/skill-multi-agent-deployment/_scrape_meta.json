@@ -1,0 +1,60 @@
+{
+  "changelog": "v1.4.0 \u2014 HTTP REST API: --listen flag starts zero-dependency REST server exposing shared memory over HTTP. GET /health, /keys, /count, /stats, /schemas, /read/<agent>/<key>. POST /write (with optional --schema validation), /cleanup. CORS headers. Stdlib only, no pip install needed.",
+  "created_at": 1779718029861,
+  "display_name": "Multi-Agent Deployment Skill for OpenClaw",
+  "fetched_at": 1787784402135,
+  "files": [
+    "HEARTBEAT.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/templates/AGENTS.md",
+    "assets/templates/SOUL.md",
+    "deployments/aws/task-definition.json",
+    "deployments/azure/container-instance.yaml",
+    "deployments/digitalocean/app.yaml",
+    "deployments/gcp/cloudrun.yaml",
+    "deployments/k8s/deployment.yaml",
+    "references/architecture.md",
+    "references/memory-schemas.md",
+    "references/troubleshooting.md",
+    "references/workflows.md",
+    "scripts/agent_setup.py",
+    "scripts/deploy_script.sh",
+    "scripts/fleet_validate.py",
+    "scripts/memory_sync.py",
+    "scripts/routing_config.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779965373519,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "abhinas90",
+    "handle": "abhinas90",
+    "user_id": "s174azs5nksq9sp64tzargsaph84203h"
+  },
+  "slug": "skill-multi-agent-deployment",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-multi-agent-deployment",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-multi-agent-deployment&ownerHandle=abhinas90",
+    "page_url": "https://clawhub.ai/abhinas90/skills/skill-multi-agent-deployment"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 636,
+    "installs": 13,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Deploy production-grade multi-agent fleets in OpenClaw with battle-tested scripts, cloud deployment templates, and shared memory infrastructure. Use when: (1...",
+  "updated_at": 1779891439951,
+  "version": "1.4.0"
+}
