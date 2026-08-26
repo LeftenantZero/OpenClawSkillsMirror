@@ -1,0 +1,43 @@
+{
+  "changelog": "Payment path fixed. Automatic x402 payments now settle against spec-compliant servers: amounts are sent as strings on the wire, validAfter is back-dated instead of zero, the payment header is read whatever case the server used, and a network named \"base\" is understood as the same chain as \"eip155:8453\". Tested against forty live third-party endpoints \u2014 forty of forty payable.\n\nEvery automatic payment now records its settlement transaction in the local ledger, so a spend can be tied back to a chain record.\n\nDocumentation updated to 0.46.1 and a section added on where an agent can get listed and discovered.",
+  "created_at": 1786677010941,
+  "display_name": "stipend",
+  "fetched_at": 1787771583327,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786965247400,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Graphiker-Australia",
+    "handle": "graphiker-australia",
+    "user_id": "s17abtpmz6tavtfbkktgh34v4s8cf941"
+  },
+  "slug": "stipend",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/stipend",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=stipend&ownerHandle=graphiker-australia",
+    "page_url": "https://clawhub.ai/graphiker-australia/skills/stipend"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 194,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "A non-custodial USDC wallet on Base that an AI agent installs by itself, with spending limits enforced in the signing path rather than in a prompt. Receive payments, pay HTTP 402 / x402 charges automatically, and answer whether you are worth running. No account, no API key, no human needed to instal",
+  "updated_at": 1786964574693,
+  "version": "1.0.1"
+}
