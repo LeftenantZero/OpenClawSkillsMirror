@@ -1,0 +1,41 @@
+{
+  "changelog": "enterprise-carbon-credit-rating v1.0.0\n\n- Initial release of the enterprise carbon credit rating skill.\n- Supports extraction and confirmation of enterprise identity and rating fields from a variety of customer materials (Word, Excel, PDF, images/OCR, etc.).\n- Implements a step-by-step workflow: automated field extraction, missing data identification, confirmation checkpoints, and strict requirements for essential data before scoring.\n- Integrates reference materials and internal tools for scoring and report generation, with Word and Excel templates and Python scripts.\n- Outputs clear status summaries, formal Word rating reports, and detailed feedback on non-gradable cases, adhering to data confirmation and disclosure rules.",
+  "created_at": 1786608631949,
+  "display_name": "\u4f01\u4e1a\u78b3\u8d44\u4fe1\u8bc4\u7ea7\u62a5\u544a",
+  "fetched_at": 1787772379114,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/\u4f01\u4e1a\u78b3\u8d44\u4fe1\u8bc4\u5206\u89c4\u5219\u914d\u7f6e\u8868_v0.1.xlsx",
+    "assets/\u4f01\u4e1a\u78b3\u8d44\u4fe1\u8bc4\u7ea7\u62a5\u544a\u6a21\u677f_v0.1.docx",
+    "references/extraction_dictionary.md",
+    "references/model_rules.md",
+    "references/report_generation.md",
+    "scripts/build_report.py",
+    "scripts/score_company.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "yuanzhian-patsnap",
+    "handle": "yuanzhian-patsnap",
+    "user_id": "s17bvft5kywc2rr8r8df1ra0x589g677"
+  },
+  "slug": "enterprise-carbon-credit-rating",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/enterprise-carbon-credit-rating",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=enterprise-carbon-credit-rating&ownerHandle=yuanzhian-patsnap",
+    "page_url": "https://clawhub.ai/yuanzhian-patsnap/skills/enterprise-carbon-credit-rating"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 127,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4ece\u5ba2\u6237\u6750\u6599\u81ea\u52a8\u62bd\u53d6\u5b57\u6bb5\u3001\u786e\u8ba4\u884c\u4e1a\u53c2\u6570\u3001\u8ba1\u7b97\u4f01\u4e1a\u78b3\u8d44\u4fe1\u8bc4\u5206\u5e76\u751f\u6210\u6b63\u5f0f Word \u62a5\u544a\u3002",
+  "updated_at": 1786608739284,
+  "version": "1.0.0"
+}
