@@ -1,0 +1,77 @@
+{
+  "changelog": "Initial release of adversarial-code-review v0.1.0.\n\n- Introduces a multi-perspective adversarial review workflow using two independent personas (Architect + Inspector) with cross-review and synthesis steps.\n- Supports reviewing diffs, files, directories, or entire projects with flexible command overrides for each reviewer phase.\n- Provides comprehensive configuration via CLI options and environment variables, allowing custom model commands per role.\n- Outputs findings and consolidated reports in both JSON and Markdown/HTML formats for easy consumption by humans and automation.\n- Enforces model diversity between Architect and Inspector reviewers and explains preferred model pairing strategies.",
+  "created_at": 1785780677731,
+  "display_name": "Adversarial Code Review",
+  "fetched_at": 1787773591471,
+  "files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "conftest.py",
+    "references/ai-quota-apis.md",
+    "references/api-input-limits.md",
+    "references/codex-claude-hardware-review.md",
+    "references/cross-model-diversity.md",
+    "references/cross-review-flags.md",
+    "references/debugging-review-pipeline.md",
+    "references/gemini-quota-research.md",
+    "references/github-push-protection-bypass.md",
+    "references/glm5-adversarial-perf.md",
+    "references/manual-recovery-procedure.md",
+    "references/model-pairing-diversity.md",
+    "references/monitoring-background-reviews.md",
+    "references/multi-model-review-strategy.md",
+    "references/persona-hardware-bias.md",
+    "references/phase-challenge-prompt-reduction.md",
+    "references/post-review-fix-planning.md",
+    "references/pre-publication-cleanup.md",
+    "references/pre-publication-review-checklist.md",
+    "references/pre-publication-review.md",
+    "references/role-swap-complementarity.md",
+    "references/role-swapped-reviews.md",
+    "references/tokio-mutex-guard-lifetime.md",
+    "scripts/adversarial_review.py",
+    "scripts/check-ai-quota.py",
+    "scripts/install.sh",
+    "tests/test_contract_gate.py",
+    "tests/test_diff_git.py",
+    "tests/test_optional_modes.py",
+    "tests/test_quota_cli.py",
+    "tests/test_review.py",
+    "tests/test_review_flags.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785781659345,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "chpomob",
+    "handle": "chpomob",
+    "user_id": "s17435m3chty5jmw4jhpkyhnb58brn8g"
+  },
+  "slug": "adversarial-code-review-2",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/adversarial-code-review-2",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=adversarial-code-review-2&ownerHandle=chpomob",
+    "page_url": "https://clawhub.ai/chpomob/skills/adversarial-code-review-2"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1809,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Multi-perspective adversarial code review with git-isolated worktrees. Two reviewers (Architect + Inspector), cross-validation, and synthesis report. The synthesis is the final arbiter \u2014 its verdict takes priority over individual reviewer outputs.",
+  "updated_at": 1785780863487,
+  "version": "0.1.0"
+}
