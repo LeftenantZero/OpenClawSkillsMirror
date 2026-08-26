@@ -1,0 +1,47 @@
+{
+  "changelog": "ovitalmap-parcel-csv v2.1.2\n\n- Major workflow revision: all data extraction, conversion, code assignment, and archiving now flow through explicit Python scripts using JSON input/output, prohibiting any in-conversation \"LLM reasoning\" for these tasks.\n- New scripts added for coordinate conversion, batch rule checking, archive actions, and response protocols.\n- References covering CSV contract, user interaction, and edge cases added for clarity and compatibility.\n- Archive and provider handling: now enforce strict blocking on errors and ambiguous provider/country/ID assignments\u2014never proceed or guess; always request explicit confirmation where required by pipeline output.\n- Batch and archive deduplication made idempotent and conflict-resilient: parcel code reuse and per-parcel resolution are strictly script-driven.\n- All file delivery instructions, CSV labeling (\u9876\u70b9\u8868/\u8fb9\u754c\u8868), and language rules codified and enforced.\n- Removed obsolete skill-card documentation; see reference files for contributor guidelines.",
+  "created_at": 1781015548666,
+  "display_name": "Ovitalmap Parcel CSV",
+  "fetched_at": 1787775483555,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/csv-contract.md",
+    "references/interaction-and-edge-cases.md",
+    "references/reply-contract.md",
+    "scripts/__init__.py",
+    "scripts/archive_manager.py",
+    "scripts/archive_store.py",
+    "scripts/batch_rules.py",
+    "scripts/coordinate_converter.py",
+    "scripts/country_locator.py",
+    "scripts/csv_builder.py",
+    "scripts/parcel_pipeline.py",
+    "scripts/provider_matcher.py",
+    "scripts/response_protocol.py",
+    "scripts/utils.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "J\u00e9r\u00f4me Xinglin QIAN",
+    "handle": "jeromeex",
+    "user_id": "s17fqp1p7fy20kfj7hwd6ax4z1885ne8"
+  },
+  "slug": "ovitalmap-parcel-csv",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ovitalmap-parcel-csv",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ovitalmap-parcel-csv&ownerHandle=jeromeex",
+    "page_url": "https://clawhub.ai/jeromeex/skills/ovitalmap-parcel-csv"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 828,
+    "installs": 7,
+    "stars": 0,
+    "versions": 9
+  },
+  "summary": "Generate and archive Ovitalmap parcel vertex/boundary CSVs. Use when users provide parcel coordinates or images and request \u5965\u7ef4\u5730\u56fe CSV export, archive re-export, or coordinate correction.",
+  "updated_at": 1784806086785,
+  "version": "3.0.0"
+}
