@@ -1,0 +1,53 @@
+{
+  "changelog": "alibabacloud-aes-sysom-lingjun-diagnosis v0.0.1 \u2014 Initial release\n\n- Enables deep OS-level diagnosis for Alibaba Cloud lingjun nodes to detect performance issues (CPU spikes, memory leaks, IO latency, etc.).\n- Observes strict credential security: never display or request AccessKey info in chat, and only check credential status via `aliyun configure list`.\n- Requires explicit `region` and `instance_id` inputs directly from the user; does not assume or infer missing parameters.\n- Adds per-session user-agent for all OpenAPI CLI/SDK calls to enable auditing and traceability.\n- Provides guidance for RAM permission issues; integrates with a dedicated skill for permissions troubleshooting.\n- Not intended for instance enrollment or agent installation; skill strictly limited to diagnosis actions.",
+  "created_at": 1787194361940,
+  "display_name": "alibabacloud-aes-sysom-lingjun-diagnosis",
+  "fetched_at": 1787770502685,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/alert-workflow.md",
+    "references/cli-installation-guide.md",
+    "references/diagnose-workflow.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "scripts/create-alert-destination.py",
+    "scripts/create-alert-strategy.py",
+    "scripts/setup-sdk.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787195215178,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-aes-sysom-lingjun-diagnosis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-aes-sysom-lingjun-diagnosis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-aes-sysom-lingjun-diagnosis&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-aes-sysom-lingjun-diagnosis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 93,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Perform SysOM deep OS-level diagnosis on Alibaba Cloud lingjun node to identify root causes of performance issues (CPU spikes, memory leaks, IO latency, etc.). Use when users report lingjun node performance problems, need kernel-level troubleshooting, or want to configure DingTalk alert notifications for SysOM diagnosis reports.",
+  "updated_at": 1787194473138,
+  "version": "0.0.1"
+}
