@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release \u2014 scrape full product details from any Amazon product detail page.\n\n- Extracts over 100 product fields, including title, brand, price, ratings, reviews, attributes, images, variants, seller, bestseller ranks, delivery, stock, and more.\n- Supports all Amazon regional domains (/dp/{asin}, /gp/product/{asin}, etc.).\n- Output matches what is visible on the active Amazon page \u2014 does not require login or bypass access controls.\n- Handles error cases (\u201cnot found\u201d pages, non-product URLs) with clear messages.\n- Designed for both individual URLs and bulk ASIN enrichment use cases.",
+  "created_at": 1783675098140,
+  "display_name": "Amazon Product Detail",
+  "fetched_at": 1787777298421,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-product-detail.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783675376849,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "amazon-product-detail",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/amazon-product-detail",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=amazon-product-detail&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/amazon-product-detail"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 350,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Amazon product detail page scraper: extract full product data from any open Amazon product detail URL (any /dp/{asin} or /gp/product/{asin} page across all Amazon regional TLDs) \u2014 returns asin, url, title, brand, price, listPrice, stars, reviewsCount, starsBreakdown (5/4/3/2/1 star percentages), ans",
+  "updated_at": 1783675098140,
+  "version": "1.0.0"
+}
