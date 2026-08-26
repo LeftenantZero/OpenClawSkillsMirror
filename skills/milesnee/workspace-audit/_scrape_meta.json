@@ -1,0 +1,51 @@
+{
+  "changelog": "Added: session checkpoint dump compression (session_*.json 246MB\u219243MB), log rotation cleanup, ghost session analysis (parent_chain safe deletion criteria). Real-run validated on Hermes 502MB state.db.",
+  "created_at": 1784893553704,
+  "display_name": "Workspace Audit",
+  "fetched_at": 1787775084769,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/audit-report-template.md",
+    "references/audit-checklist.md",
+    "references/ddia-ddd-mapping.md",
+    "references/hermes-audit-procedure.md",
+    "references/openclaw-workspace-audit-2026-07.md",
+    "scripts/audit_baseline.py",
+    "scripts/audit_diagnose.py",
+    "scripts/audit_validate.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784936191636,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Miles",
+    "handle": "milesnee",
+    "user_id": "s1737g1pwf6nbk861jryvx4sh183trr6"
+  },
+  "slug": "workspace-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/workspace-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=workspace-audit&ownerHandle=milesnee",
+    "page_url": "https://clawhub.ai/milesnee/skills/workspace-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 62,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Software-engineering system audit for Agent workspaces. Uses DDIA reliability + DDD bounded-context analysis to diagnose schema drift, consistency gaps, quer...",
+  "updated_at": 1784935460317,
+  "version": "1.2.0"
+}
