@@ -1,0 +1,65 @@
+{
+  "changelog": "- Initial release of guaikei\u00b7\u5c0f\u7ea2\u4e66\u516c\u5f00\u5185\u5bb9\u60c5\u62a5 skill.\n- Supports searching Xiaohongshu public notes by keyword, with filtering and sorting options (likes/comments/collections, time range).\n- Provides note lists with engagement data; enables research on trending topics, high-engagement posts, and keyword comparisons.\n- Routes requests based on user intent: keyword search, note details, comment extraction, creator monitoring.\n- Clear input requirements, error messages, and handling of invalid or ambiguous cases.\n- All output is structured as JSON; logs each execution for later reference.",
+  "created_at": 1786845130797,
+  "display_name": "guaikei\u00b7\u5c0f\u7ea2\u4e66\u516c\u5f00\u5185\u5bb9\u60c5\u62a5",
+  "fetched_at": 1787771789416,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "readme.md",
+    "references/changelog.md",
+    "references/options.md",
+    "skill-card.md",
+    "src/api/comment.js",
+    "src/api/detail.js",
+    "src/api/post.js",
+    "src/api/search.js",
+    "src/config/constants.js",
+    "src/utils/args.js",
+    "src/utils/key.js",
+    "src/utils/log.js",
+    "src/utils/name.js",
+    "src/utils/request.js",
+    "src/utils/retry.js",
+    "src/utils/utils.js",
+    "src/validate/keyword.js",
+    "src/validate/url.js",
+    "src/xiaohongshu/comment-cli.js",
+    "src/xiaohongshu/detail-cli.js",
+    "src/xiaohongshu/post-cli.js",
+    "src/xiaohongshu/search-cli.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786845509758,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "engheng-art",
+    "handle": "engheng-art",
+    "user_id": "s17av7fakvdwpsbhaddxp8e7mh89wsrx"
+  },
+  "slug": "guaikei-xhs-public-content-intel",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/guaikei-xhs-public-content-intel",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=guaikei-xhs-public-content-intel&ownerHandle=engheng-art",
+    "page_url": "https://clawhub.ai/engheng-art/skills/guaikei-xhs-public-content-intel"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 124,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6309\u5173\u952e\u8bcd\u641c\u7d22\u5c0f\u7ea2\u4e66\u516c\u5f00\u7b14\u8bb0\uff0c\u652f\u6301\u6309\u70b9\u8d5e/\u8bc4\u8bba/\u6536\u85cf\u6392\u5e8f\u4e0e\u65f6\u95f4\u7b5b\u9009\uff0c\u8fd4\u56de\u7b14\u8bb0\u5217\u8868\u4e0e\u4e92\u52a8\u6570\u636e\u3002\u5f53\u7528\u6237\u60f3\u505a\u5c0f\u7ea2\u4e66\u9009\u9898\u8c03\u7814\u3001\u627e\u9ad8\u8d5e\u7206\u6b3e\u3001\u770b\u67d0\u5173\u952e\u8bcd\u6700\u8fd1\u70ed\u5ea6\u3001\u6216\u5bf9\u6bd4\u591a\u4e2a\u5173\u952e\u8bcd\u8868\u73b0\u65f6\u4f7f\u7528\u672c\u6280\u80fd\uff1b\u5373\u4f7f\u7528\u6237\u53ea\u8bf4\"\u6700\u8fd1\u4ec0\u4e48\u706b\"\"\u5e2e\u6211\u627e\u70ed\u95e8\u5185\u5bb9\"\u800c\u6ca1\u70b9\u540d\u5c0f\u7ea2\u4e66\uff0c\u53ea\u8981\u8bed\u5883\u662f\u793e\u5a92\u5185\u5bb9\u6316\u6398\u4e5f\u9002\u7528\u3002\u4e0d\u7528\u4e8e\u5176\u4ed6\u5e73\u53f0\u6216\u9700\u767b\u5f55\u7684\u5185\u5bb9\u3002",
+  "updated_at": 1786845237259,
+  "version": "1.0.0"
+}
