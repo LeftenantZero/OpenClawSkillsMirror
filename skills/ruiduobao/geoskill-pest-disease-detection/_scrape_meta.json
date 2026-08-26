@@ -1,0 +1,66 @@
+{
+  "changelog": "geoskill-pest-disease-detection 1.0.0\n\n- Initial release for detecting suspected pest and disease areas using remote sensing data.\n- Supports identification based on red-edge anomaly, thermal infrared, texture analysis, and multi-temporal early stress signals.\n- Provides command line interface with options for bounding box, synthetic data, and output directory.\n- Outputs results as GeoTIFF and a JSON manifest.\n- Runs fully offline and processes all data locally to ensure user privacy.\n- Includes documentation in both English and Chinese.",
+  "created_at": 1785848945663,
+  "display_name": "geoskill-pest-disease-detection",
+  "fetched_at": 1787773453069,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-pest-disease-detection.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785850278631,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-pest-disease-detection",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-pest-disease-detection",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-pest-disease-detection&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-pest-disease-detection"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 182,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u57fa\u4e8e\u7ea2\u8fb9\u5f02\u5e38\u3001\u70ed\u7ea2\u5916\u6e29\u5ea6\u3001\u7eb9\u7406\u53d8\u5316\u4e0e\u591a\u65f6\u76f8\u65e9\u671f\u80c1\u8feb\u68c0\u6d4b\uff0c\u8bc6\u522b\u7591\u4f3c\u75c5\u866b\u5bb3\u533a\u57df\u3002Detects suspected pest/disease areas from red-edge anomaly, thermal, texture and multi-temporal early stress.",
+  "updated_at": 1785849110058,
+  "version": "1.0.0"
+}
