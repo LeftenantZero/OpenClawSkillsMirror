@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release: Extracts comprehensive detail data from a single Goofish (\u95f2\u9c7c) item page given a URL or item ID.\n- Outputs: title, price, seller info (name, labels), description, image gallery, item tags/attributes, and want-count.\n- Includes pre-execution checks for browser tool readiness and authenticated Goofish login.\n- Captures all detail fields displayed on the page and handles common errors including CAPTCHA and unavailable/removed items.\n- Suitable for both single item lookups and bulk enrichment with batch-execution recommendations.",
+  "created_at": 1781766702865,
+  "display_name": "Goofish Item Detail",
+  "fetched_at": 1787780278256,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-item-detail.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781769751043,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "goofish-item-detail",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/goofish-item-detail",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=goofish-item-detail&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/goofish-item-detail"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 319,
+    "installs": 3,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Extracts full detail data from a single Goofish (\u95f2\u9c7c/xianyu, goofish.com) second-hand item page. Input: item URL or item ID. Output: title, price, seller info...",
+  "updated_at": 1781766702865,
+  "version": "1.0.0"
+}
