@@ -1,0 +1,72 @@
+{
+  "changelog": "Initial release of geoskill-super-resolution-dl.\n\n- Super-resolves remote sensing imagery by 2x/3x/4x using an SRCNN deep learning model (Dong et al. 2014), running fully on CUDA GPU.\n- Outputs high-resolution rasters and evaluates restoration quality with PSNR/SSIM metrics; includes comparison to bicubic baseline.\n- Ships with pre-trained weights; auto-trains weights from scratch if missing.\n- Supports both real image and synthetic experiment modes with clear usage documentation.\n- All processing is performed locally; no user data is uploaded.",
+  "created_at": 1785862381098,
+  "display_name": "geoskill-super-resolution-dl",
+  "fetched_at": 1787773427970,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_review_out/agent-B/super-resolution-dl/s01/output-manifest.json",
+    "_review_out/agent-B/super-resolution-dl/s01/quality_metrics.json",
+    "_review_out/agent-B/super-resolution-dl/s02/output-manifest.json",
+    "_review_out/agent-B/super-resolution-dl/s02/quality_metrics.json",
+    "_review_out/agent-B/super-resolution-dl/s03/output-manifest.json",
+    "_review_out/agent-B/super-resolution-dl/s03/quality_metrics.json",
+    "e2e_test.py",
+    "geoskill-super-resolution-dl.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785863336773,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-super-resolution-dl",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-super-resolution-dl",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-super-resolution-dl&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-super-resolution-dl"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 172,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u57fa\u4e8e SRCNN\uff08Dong 2014\uff09\u5377\u79ef\u795e\u7ecf\u7f51\u7edc\u7684 2x/3x/4x \u5f71\u50cf\u8d85\u5206\u8fa8\u7387\uff0c\u5728 CUDA GPU \u4e0a\u8bad\u7ec3\u4e0e\u63a8\u7406\uff0c\u8f93\u51fa\u9ad8\u5206\u8fa8\u7387\u6805\u683c\u4e0e PSNR/SSIM \u8bc4\u4f30",
+  "updated_at": 1785862579227,
+  "version": "1.0.0"
+}
