@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release: Introduces a universal self-improving agent framework with multi-level memory and automatic learning from mistakes.\n\n- Implements three-level memory: short-term (L1 session), mid-term (L2 task digest), and long-term (L3 permanent knowledge).\n- Adds automatic failure review: root cause analysis, solution recording, and future prevention for repeated mistakes.\n- Enables historical experience retrieval before task execution to avoid past errors and re-use solutions.\n- Provides memory compression, archiving, and periodic cleanup to manage token usage efficiently.\n- Detects high-frequency patterns and auto-generates reusable sub-skills based on user and task behaviors.\n- Supports Pro and Free modes, automatically adapting features based on platform memory capabilities.",
+  "created_at": 1782961055483,
+  "display_name": "Self-Improving Agent",
+  "fetched_at": 1787773281909,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "memory-schema.md",
+    "review-templates.md",
+    "skill-card.md",
+    "skill-extraction.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783575516708,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Eric Jiang",
+    "handle": "jianghg01",
+    "user_id": "s177rwprsn3jn4yeja7b6k4s3s89pf0w"
+  },
+  "slug": "self-improving-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/self-improving-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=self-improving-agent&ownerHandle=jianghg01",
+    "page_url": "https://clawhub.ai/jianghg01/skills/self-improving-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 437,
+    "installs": 0,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u4e09\u5c42\u8bb0\u5fc6\u81ea\u4f18\u5316Agent\u6846\u67b6\uff1a\u77ed\u671f\u4f1a\u8bdd\u8bb0\u5fc6\u3001\u4e2d\u671f\u4efb\u52a1\u6458\u8981\u3001\u957f\u671f\u6c38\u4e45\u77e5\u8bc6\u5e93\u3002\u4efb\u52a1\u5931\u8d25\u81ea\u52a8\u590d\u76d8\u8bb0\u5f55\u6839\u56e0\u4e0e\u4fee\u6b63\u65b9\u6848\uff0c\u91cd\u590d\u95ee\u9898\u81ea\u52a8\u8c03\u53d6\u5386\u53f2\u7ecf\u9a8c\u907f\u514d\u8e29\u5751\uff0c\u5b9a\u671f\u538b\u7f29\u8fc7\u671f\u8bb0\u5fc6\u8282\u7701Token\uff0c\u81ea\u52a8\u63d0\u53d6\u9ad8\u9891\u6d41\u7a0b\u751f\u6210\u5b50Skill\u3002\u5f53\u7528\u6237\u63d0\u5230\u8bb0\u5fc6\u3001\u8bb0\u4f4f\u3001\u590d\u76d8\u3001\u4f18\u5316\u3001\u4e4b\u524d\u7684\u7ecf\u9a8c\u3001\u4e0a\u6b21\u51fa\u9519\u3001\u957f\u671f\u8bb0\u5f55\u3001\u81ea\u6211\u6539\u8fdb\u3001self-improving...",
+  "updated_at": 1782995200174,
+  "version": "1.0.0"
+}
