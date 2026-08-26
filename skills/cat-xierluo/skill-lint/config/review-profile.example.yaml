@@ -1,0 +1,206 @@
+# Skill Lint 审查配置示例。
+# 复制为 config/review-profile.local.yaml 后，再填入个人或项目本地规则。
+# local 文件不要提交到 Git。本 example 只能使用占位符，不得出现真实个人、
+# 客户、案件、项目、账号、地址、手机号或邮箱信息。
+
+schema_version: 1
+
+profile:
+  name: example-review-profile
+  mode: personal_or_project
+  description: "用于审查个人或项目 Skill 的示例配置；复制后替换占位符。"
+
+frontmatter:
+  # 普通 Skill 的通用必需字段。审查他人 Skill 时，只把这两个字段作为硬性要求。
+  minimal_required:
+    - name
+    - description
+
+  # 发布字段只在项目发布、Marketplace、ClawHub 或用户明确要求时检查。
+  # 不要把这些默认值写进通用 Skill 模板。
+  publishing_fields:
+    enabled: true
+    required_when: project_publish
+    fields:
+      version:
+        required: true
+        source: changelog_latest
+        default: "<x.y.z>"
+      license:
+        required: true
+        default: "<MIT|CC-BY-NC|other-project-license>"
+      author:
+        required: true
+        default: "<author-or-organization>"
+      homepage:
+        required: true
+        default: "<project-homepage-url>"
+      source:
+        required: false
+        default: "<optional-source-path-or-url>"
+
+  # 审查第三方普通 Skill 时，缺少发布字段不判错；若误用了本地默认值则提示。
+  third_party_review:
+    missing_publishing_fields: ignore
+    warn_if_profile_defaults_appear: true
+
+privacy:
+  public_files_must_be_generic: true
+  placeholder_style: angle_brackets
+  public_file_scope:
+    - SKILL.md
+    - references/
+    - CHANGELOG.md
+    - TASKS.md
+    - DECISIONS.md
+    - config/*.example.*
+  forbidden_real_values:
+    - real_person_name
+    - real_client_name
+    - real_case_name
+    - real_project_code
+    - real_case_number
+    - real_phone
+    - real_email
+    - real_address
+    - real_account
+  suspicious_combinations:
+    - court_plus_case_type_plus_date
+    - company_plus_project_plus_date
+    - client_alias_plus_case_stage
+
+security:
+  enabled: true
+  strictness: standard
+  apply_to:
+    - third_party_skill
+    - github_repository
+    - skill_with_scripts
+    - skill_with_mcp
+    - skill_with_network_access
+  report_overall_risk: true
+  checks:
+    credentials_and_secrets: true
+    dangerous_execution: true
+    sensitive_file_access: true
+    network_exfiltration: true
+    dependency_and_install_hooks: true
+    mcp_permission_boundary: true
+    prompt_security: true
+    git_history_sensitive_leak: true
+  allowed_capabilities_require_explanation:
+    - subprocess_or_external_tool
+    - user_file_read_write
+    - network_request
+    - api_key_required_feature
+    - mcp_server_or_external_agent
+  hard_fail_categories:
+    - hardcoded_real_secret
+    - download_and_execute
+    - privilege_escalation
+    - persistence_without_user_consent
+    - data_exfiltration_without_user_consent
+    - destructive_file_operation_without_boundary
+    - prompt_instruction_to_bypass_higher_priority_rules
+
+harness_reliability:
+  enabled: true
+  # quick_review 只给质量意见；formal_acceptance 必须生成候选绑定证据。
+  mode: formal_acceptance
+  objective_hard_fail: true
+  semantic_findings_default: warning
+  require_layers:
+    - contract
+    - producer
+    - verifier
+    - evidence_binding
+    - fault_injection
+    - closure
+    - composition
+  allow_not_applicable_with_rationale:
+    - closure
+    - composition
+  require_candidate_manifest: true
+  require_policy_manifest: true
+  require_live_checker_execution: true
+  dynamic_execution_requires_trusted_candidate_confirmation: true
+  third_party_default: NOT_VERIFIED
+  inherit_full_environment: false
+  supported_runtimes:
+    - python3
+    - bash
+    - sh
+    - node
+  require_fault_case: true
+  instruction_stability:
+    enabled_for:
+      - legacy_skill_review
+      - repeated_omission
+      - multi_dimension_review
+      - visual_or_rendered_output
+      - stable_completion_claim
+    contract_path: config/instruction-stability-contract.json
+    minimum_runs: 3
+    require_constraint_ids: true
+    require_explicit_source_markers: true
+    require_discovered_requirement_sources_and_signed_exclusions: true
+    require_external_requirements_baseline: true
+    require_evaluator_ed25519_signature: true
+    require_offline_private_key_boundary: true
+    require_current_harness_review_evidence: true
+    require_evaluator_held_out_positive_and_negative_cases: true
+    require_modality_match: true
+    require_artifact_stage_match: true
+    require_positive_and_negative_cases: true
+    negative_case_isolates_one_constraint: true
+    historical_failure_requires_regression_case: true
+    active_checker_reports_all_mapped_constraints: true
+    active_checker_binds_artifact_sha256: true
+    active_checker_reports_constraint_measurements: true
+    measurement_requires_type_condition_and_expected: true
+    each_hard_constraint_requires_observable: true
+    require_same_input_and_config_hashes: true
+    require_unique_execution_nonce_and_run_paths: true
+    require_bound_producer_log: true
+    producer_log_binds_candidate_producer_and_evaluation: true
+    require_uniform_random_staging_paths: true
+    require_signed_final_receipt: true
+    final_marker_requires_verify_receipt: true
+    compare_declared_observables_only: true
+    missing_contract: NOT_VERIFIED
+    missing_run_evidence: NOT_VERIFIED
+  stale_evidence: error
+  unknown_checker: error
+  empty_scope: error
+  verifier_error: error
+  checker_mutates_candidate: error
+  untrusted_dynamic_execution: error
+  completion_claim_requires:
+    - HARNESS_REVIEW_VERIFIED
+    - domain_specific_verification_when_claimed
+
+severity:
+  missing_minimal_frontmatter: error
+  invalid_description_boundary: warning
+  missing_project_publish_field: warning
+  real_entity_in_public_file: error
+  suspicious_entity_in_public_file: warning
+  critical_security_risk: error
+  high_security_risk: error
+  medium_security_risk: warning
+  low_security_risk: info
+  missing_independent_verifier: error
+  stale_or_unbound_harness_evidence: error
+  missing_fault_injection: error
+  missing_constraint_traceability: error
+  verification_modality_mismatch: error
+  artifact_stage_mismatch: error
+  repeated_run_constraint_omission: error
+  declared_observable_drift: error
+  invalid_or_unsigned_stability_receipt: error
+  broad_semantic_exception: warning
+
+report:
+  include_profile_name: true
+  include_profile_values: false
+  redact_profile_values: true
