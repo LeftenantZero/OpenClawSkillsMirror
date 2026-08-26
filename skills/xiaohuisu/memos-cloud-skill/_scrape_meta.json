@@ -1,0 +1,52 @@
+{
+  "changelog": "**Major update: Split monolithic script into modular package, added advanced memory and knowledge base management.**\n\n- Refactored codebase into multiple modules for better maintainability and extensibility.\n- Replaced single `memos_cloud.py` script with a structured package and CLI (`memos_cloud/cli.py`, etc.).\n- Added new capabilities: knowledge base management and file operations.\n- Updated environment variable handling; clarified multi-agent and application isolation workflows.\n- Enhanced SKILL.md with detailed usage, workflows, and strict invocation rules for all core operations and multi-turn user scenarios.\n- Removed deprecated/legacy files (`memos_cloud.py`, skill-card.md, _meta.json`).",
+  "created_at": 1772608118315,
+  "display_name": "Memos Cloud Server",
+  "fetched_at": 1787782992937,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/memos_cloud.py",
+    "scripts/memos_cloud/__init__.py",
+    "scripts/memos_cloud/cli.py",
+    "scripts/memos_cloud/client.py",
+    "scripts/memos_cloud/config.py",
+    "scripts/memos_cloud/errors.py",
+    "scripts/memos_cloud/files.py",
+    "scripts/memos_cloud/operations.py",
+    "scripts/memos_cloud/payloads.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780572462726,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Dawn",
+    "handle": "xiaohuisu",
+    "user_id": "s174xqrarpggyf751anzykqpsn83gc76"
+  },
+  "slug": "memos-cloud-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memos-cloud-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memos-cloud-skill&ownerHandle=xiaohuisu",
+    "page_url": "https://clawhub.ai/xiaohuisu/skills/memos-cloud-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2093,
+    "installs": 63,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "External long-term memory and knowledge base backed by the MemOS Cloud API. Capabilities \u2014 search prior memory, add conversation messages, delete or correct...",
+  "updated_at": 1780571765032,
+  "version": "1.0.2"
+}
