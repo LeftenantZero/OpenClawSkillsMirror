@@ -1,0 +1,56 @@
+{
+  "changelog": "**Summary: This update streamlines documentation and usage, clarifies workflow requirements, and removes the skill-card.md file.**\n\n- Removed the redundant file skill-card.md for clarity and maintainability.\n- Simplified and condensed the SKILL.md, focusing on essential operation steps and stricter output requirements.\n- Emphasized that reports must always be output directly in dialogue (no .md generation), and that HTML reports are a mandatory deliverable after every analysis.\n- Improved and unified instructions for authentication, workflow, scoring logic, empty-field handling, and error messages.\n- Added explicit warnings on data sources, output order, scoring, and dynamic content requirements to prevent misuse or misunderstanding.\n- Clearly stated that gmtCreate is not the XHS account registration time and cannot be used for that purpose.",
+  "created_at": 1779798044500,
+  "display_name": "\u5c0f\u7ea2\u4e66\u8d26\u53f7\u8bca\u65ad",
+  "fetched_at": 1787772764170,
+  "files": [
+    "README.en.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/multi_report_data_template.json",
+    "assets/multi_report_template.html",
+    "assets/report_data_template.json",
+    "assets/report_template.html",
+    "references/api_guide.md",
+    "references/benchmark_data.md",
+    "references/report_template.md",
+    "references/workflow_guide.md",
+    "scripts/html_checker.py",
+    "scripts/html_generator.py",
+    "scripts/xiaohongshu_analyzer.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786419641565,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "to the moon",
+    "handle": "yuanyi-github",
+    "user_id": "s178m9shhypj2frsz7r1pz67kh84rb1r"
+  },
+  "slug": "xiaohongshu-account-analyzer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/xiaohongshu-account-analyzer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=xiaohongshu-account-analyzer&ownerHandle=yuanyi-github",
+    "page_url": "https://clawhub.ai/yuanyi-github/skills/xiaohongshu-account-analyzer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1166,
+    "installs": 19,
+    "stars": 0,
+    "versions": 9
+  },
+  "summary": "\u6df1\u5ea6\u62c6\u89e3\u5c0f\u7ea2\u4e66\u8d26\u53f7\uff0c\u8f93\u51fa\u4e03\u7ef4\u5ea6\u91cf\u5316\u8bc4\u5206\u8bca\u65ad\u62a5\u544a\u4e0e\u53ef\u5bfc\u51faHTML\uff1b\u5f53\u7528\u6237\u63d0\u4f9b\u5c0f\u7ea2\u4e66\u53f7\u8fdb\u884c\u8d26\u53f7\u8bca\u65ad\u3001rednote\u5206\u6790\u3001\u8d26\u53f7\u5065\u5eb7\u5ea6\u8bc4\u4f30\u3001\u5546\u4e1a\u4ef7\u503c\u8bc4\u4f30\u3001\u591a\u8d26\u53f7\u5bf9\u6bd4\u6216\u5236\u5b9a\u4f18\u5316\u7b56\u7565\u65f6\u4f7f\u7528",
+  "updated_at": 1786418886877,
+  "version": "1.0.8"
+}
