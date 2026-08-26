@@ -1,0 +1,33 @@
+{
+  "changelog": "Version 1.0.0 \u2014 Initial Release\n\n- Adds a skill for capturing project hand-off sessions, producing a canonical markdown hand-off doc and a lightweight memory pointer.\n- Organizes hand-off files at `.claude/handoffs/<YYYY-MM-DD>-<slug>.md` with a fixed section structure (objective, progress, decisions, files, open issues, next session prompt).\n- Creates accompanying project memory entries referencing the hand-off doc for auto-discovery on future sessions.\n- Guides when and how to trigger a hand-off based on explicit user cues.\n- Outlines a verification and workflow process to ensure all context, file changes, and actionable next steps are recorded.\n- Removes legacy file (`skill-card.md`) and prior shared vault subcommands; now focused solely on snapshotting session state for future continuity.",
+  "created_at": 1786913459953,
+  "display_name": "handoff",
+  "fetched_at": 1787771702848,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "handoff",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/handoff",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=handoff&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/handoff"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 20,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Capture a session hand-off so work can resume cleanly in a new Claude session before context runs out. Writes a canonical dated Markdown file (objective, progress, decisions, files, open issues, and a ready-to-paste \"Next Session Prompt\") AND a lightweight project-memory pointer to it. Use this skill whenever the user says \"/handoff\", \"hand off\", \"handoff\", \"save context\", \"preserve context\", \"running out of context\", \"wrap up for next session\", \"before we lose context\", or otherwise asks to snapshot the current state for a fresh session \u2014 even if they don't say \"skill\".",
+  "updated_at": 1786913522417,
+  "version": "1.0.0"
+}
