@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of world-builder (v1.0.0):\n\n- Adds a comprehensive world-building skill supporting two modes: independent generation (from concepts) and character extraction (from Character Builder skills).\n- Implements a 12-dimensional, three-layer orthogonal model (\u5b9e\u4f53\u5c42, \u793e\u4f1a\u5c42, \u62bd\u8c61\u5c42) to structure and fill all aspects of a fictional world.\n- Integrates with meta-skill-system pipeline, including three-axis evaluation, domain calibration, workflow orchestration, and fallback modes.\n- Provides robust input parsing, task routing, and strict fact/modeling rules to ensure consistency and logical coherence.\n- Supports partial/worldwide generation, prompt export, and downgrade modes for offline or limited-interaction scenarios.",
+  "created_at": 1783874079546,
+  "display_name": "World Builder",
+  "fetched_at": 1787777025449,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/exemplars.md",
+    "references/exemplars/W0-\u4e16\u754c\u9700\u6c42\u89e3\u6790\u57df\u8303\u672c.md",
+    "references/exemplars/W1-\u7a7a\u95f4\u4e0e\u65f6\u95f4\u57df\u8303\u672c.md",
+    "references/exemplars/W2-\u6cd5\u5219\u4e0e\u751f\u547d\u57df\u8303\u672c.md",
+    "references/exemplars/W3-\u7269\u8d28\u4e0e\u6280\u672f\u57df\u8303\u672c.md",
+    "references/exemplars/W4-\u793e\u4f1a\u5c42\u57df\u8303\u672c.md",
+    "references/exemplars/W5-\u8ba4\u77e5\u57df\u8303\u672c.md",
+    "references/exemplars/W6-\u62bd\u8c61\u5c42\u57df\u8303\u672c.md",
+    "references/exemplars/W7-\u6574\u5408\u6821\u9a8c\u57df\u8303\u672c.md",
+    "references/exemplars/W8-\u89d2\u8272\u63d0\u53d6\u57df\u8303\u672c.md",
+    "references/world-catalog.md",
+    "references/world-requirements.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u6548\u4eab\u79d1\u6280",
+    "handle": "wavegeometry",
+    "user_id": "s17baj2a1xf1z1wva1rnmjk6fh88rbk8"
+  },
+  "slug": "world-builder",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/world-builder",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=world-builder&ownerHandle=wavegeometry",
+    "page_url": "https://clawhub.ai/wavegeometry/skills/world-builder"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 352,
+    "installs": 2,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4e16\u754c\u5efa\u9020\u5668\u2014\u2014\u5143\u6280\u80fd\u7cfb\u7edf\u7684\u4e0b\u7ea7\u6bcd\u6280\u80fd\uff0c\u652f\u6301\u53cc\u6a21\u5f0f\u2014\u2014\u72ec\u7acb\u751f\u6210\uff08\u4ece\u65e0\u5230\u6709\u6784\u5efa\u5b8c\u6574\u4e16\u754c\uff09\u548c\u89d2\u8272\u63d0\u53d6\uff08\u4ece\u591a\u4e2aCharacter Builder\u89d2\u8272\u4e2d\u63d0\u53d6\u5171\u4eab\u4e16\u754c\u5c42\uff09\u2014\u2014\u4ece\u4efb\u610f\u4e16\u754c\u6982\u5ff5\u6216\u89d2\u8272\u7fa4\u751f\u6210\u5b8c\u6574\u4e16\u754cSkill\u3002\u4ee5\u4e16\u754c=\u5b9e\u4f53\u5c42\u00d7\u793e\u4f1a\u5c42\u00d7\u62bd\u8c61\u5c42\u7684\u4e09\u5c4212\u7ef4\u6b63\u4ea4\u6a21\u578b\uff08\u5b9e\u4f53\u5c42\uff1a\u7a7a\u95f4/\u65f6\u95f4/\u6cd5\u5219/\u751f\u547d/\u7269\u8d28/\u6280\u672f\uff1b\u793e\u4f1a\u5c42\uff1a\u6587\u5316/\u653f\u6cbb/\u7ecf\u6d4e\uff1b\u62bd\u8c61\u5c42\uff1a\u8ba4\u77e5/\u5ba1\u7f8e/\u52a8\u6001\uff09\u7cfb\u7edf\u586b\u5145\uff0c\u8f93\u51fa\u5185\u5d4c\u7ba1\u7ebf\u7f16\u6392\u3001\u4e09\u8f74\u5224\u5b9a\u3001\u9886\u57df\u6821\u51c6\u3001\u964d\u7ea7\u6a21\u5f0f\u7b49\u53ef\u6267\u884c\u80fd\u529b\u7684\u4e16\u754cSkill\u6587\u4ef6\u3002\u89e6\u53d1\u8bcd\uff1a\u751f\u6210\u4e16\u754c\u3001\u521b\u5efa\u4e16\u754c\u3001\u4e16\u754c\u6784\u5efa\u3001\u4e16\u754c\u89c2\u3001world building\u3001\u4e16\u754c\u8bbe\u8ba1\u3001\u67b6\u7a7a\u4e16\u754c\u3001\u865a\u6784\u4e16\u754c\u3001meta-skill-system",
+  "updated_at": 1783874079546,
+  "version": "1.0.0"
+}
