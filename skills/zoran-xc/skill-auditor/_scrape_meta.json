@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of skill-auditor: automated skill security auditing tool.\n\n- Automates security audits for AI agent skills using 30+ red-flag code patterns\n- Computes a quantitative 0-100 risk score and outputs structured Markdown and JSON reports\n- Includes batch scanning, permission mismatch detection, and CI integration (pre-commit hooks, GitHub Actions)\n- Superset of skill-vetter with more rules, numeric scoring, and broader automation\n- Provides offline trust database support for known-skill reputation tracking",
+  "created_at": 1783155955481,
+  "display_name": "Skill Auditor",
+  "fetched_at": 1787771315608,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/github-action.yml",
+    "examples/report-example.md",
+    "references/ci-integration.md",
+    "references/rules.md",
+    "references/scoring.md",
+    "references/trust-database.md",
+    "scripts/batch_vet.py",
+    "scripts/score.py",
+    "scripts/vet.py",
+    "skill-card.md",
+    "tests/test_skill_good/SKILL.md",
+    "tests/test_skill_malicious/SKILL.md",
+    "tests/test_vet.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Zoran",
+    "handle": "zoran-xc",
+    "user_id": "s17ahh18mbhe671taer3f7zzsn885qkh"
+  },
+  "slug": "skill-auditor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-auditor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-auditor&ownerHandle=zoran-xc",
+    "page_url": "https://clawhub.ai/zoran-xc/skills/skill-auditor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 430,
+    "installs": 2,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Automated security audit for AI agent skills. Use BEFORE installing any skill from ClawHub, GitHub, or other sources. Scans SKILL.md + all files for 30+ red...",
+  "updated_at": 1783155955481,
+  "version": "1.0.0"
+}
