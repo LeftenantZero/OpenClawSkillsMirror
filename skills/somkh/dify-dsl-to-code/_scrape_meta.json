@@ -1,0 +1,72 @@
+{
+  "changelog": "Initial release of dify-dsl-to-code.\n\n- Converts exported Dify workflow/chatflow DSL (YAML) into standalone deployable code projects (Python+FastAPI by default, Node.js+Express optional).\n- Interactively requests any missing information not present in the DSL, ensuring no details are fabricated.\n- Supports large and small DSL files, splitting and coordinating code generation for complex workflows.\n- Provides a clear step-by-step process from DSL file validation, analysis, user input, tech stack selection, code generation, verification, to delivery.\n- Includes templates, scripts, and references to guarantee structure and standard compliance.\n- Explicitly documents any fallback or downgraded features in project delivery.",
+  "created_at": 1786934960094,
+  "display_name": "dify-dsl-to-code",
+  "fetched_at": 1787771664979,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/examples/example-chatflow-qa.yml",
+    "assets/examples/example-workflow-review.yml",
+    "assets/templates/node-express/.env.example",
+    "assets/templates/node-express/Dockerfile",
+    "assets/templates/node-express/package.json",
+    "assets/templates/node-express/src/main.js",
+    "assets/templates/node-express/src/workflow/blocks/example.js",
+    "assets/templates/node-express/src/workflow/context.js",
+    "assets/templates/node-express/src/workflow/definition.js",
+    "assets/templates/node-express/src/workflow/runner.js",
+    "assets/templates/node-express/tests/smoke.test.js",
+    "assets/templates/python-fastapi/.env.example",
+    "assets/templates/python-fastapi/Dockerfile",
+    "assets/templates/python-fastapi/app/__init__.py",
+    "assets/templates/python-fastapi/app/main.py",
+    "assets/templates/python-fastapi/app/workflow/__init__.py",
+    "assets/templates/python-fastapi/app/workflow/blocks/__init__.py",
+    "assets/templates/python-fastapi/app/workflow/blocks/example.py",
+    "assets/templates/python-fastapi/app/workflow/context.py",
+    "assets/templates/python-fastapi/app/workflow/definition.py",
+    "assets/templates/python-fastapi/app/workflow/runner.py",
+    "assets/templates/python-fastapi/requirements.txt",
+    "assets/templates/python-fastapi/tests/test_smoke.py",
+    "references/codegen-patterns.md",
+    "references/dsl-components.md",
+    "references/dsl-node-types.md",
+    "references/interaction-playbook.md",
+    "scripts/analyze_dsl.py",
+    "scripts/verify_project.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786935812484,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "miemie_le",
+    "handle": "somkh",
+    "user_id": "s171wqzmea7vnwx3kq09std68n86mqwa"
+  },
+  "slug": "dify-dsl-to-code",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dify-dsl-to-code",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dify-dsl-to-code&ownerHandle=somkh",
+    "page_url": "https://clawhub.ai/somkh/skills/dify-dsl-to-code"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 105,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06 Dify \u5bfc\u51fa\u7684\u5de5\u4f5c\u6d41/Chatflow DSL \u6587\u4ef6\uff08YAML\uff09\u8f6c\u5316\u4e3a\u53ef\u90e8\u7f72\u3001\u53ef\u8fd0\u884c\u7684\u72ec\u7acb\u4ee3\u7801\u9879\u76ee\uff08\u9ed8\u8ba4 Python+FastAPI\uff0c\u53ef\u9009 Node.js+Express\uff09\u3002\u5f53\u7528\u6237\u8981\u6c42\"Dify \u5de5\u4f5c\u6d41\u8f6c\u4ee3\u7801\"\u3001\"DSL \u5bfc\u51fa\u8f6c\u9879\u76ee\"\u3001\"\u628a Dify \u5e94\u7528\u4ee3\u7801\u5316\"\u3001\"\u8131\u79bb Dify \u90e8\u7f72\u5de5\u4f5c\u6d41\"\u65f6\u4f7f\u7528\u3002",
+  "updated_at": 1786935078751,
+  "version": "1.0.0"
+}
