@@ -1,0 +1,43 @@
+{
+  "changelog": "**Major update: security-hardener now targets ZK-Bankir banking deployments instead of OpenClaw.**\n\n- Focus shifted from OpenClaw agent hardening to ZK-Bankir banking platform security.\n- Adds in-depth procedures for threat model audit, hash-chain integrity, dependency and access control review, and runbook validation, following \"De 10 Gebuden.\"\n- Replaces all OpenClaw-specific checks, options, and terminology with ZK-Bankir-specific security controls.\n- Requires `curl`, `jq`, `ruby`, and `bundle` on Linux/Darwin with a local ZK-Bankir project.\n- Removes previous CVE checker scripts, auto-fix functions, and OpenClaw-specific reference content.",
+  "created_at": 1783193203100,
+  "display_name": "Security Hardener",
+  "fetched_at": 1787778153835,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783194064846,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "1Bee",
+    "handle": "1beekeeper",
+    "user_id": "s17dtf0hpwbca51jsey02wwgmd89wd7w"
+  },
+  "slug": "security-hardener",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/security-hardener",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=security-hardener&ownerHandle=1beekeeper",
+    "page_url": "https://clawhub.ai/1beekeeper/skills/security-hardener"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 77,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Harden a ZK-Bankir sovereign banking deployment \u2014 threat model audit, hash-chain integrity, dependency scanning, access control review, and runbook validatio...",
+  "updated_at": 1783193203100,
+  "version": "1.0.0"
+}
