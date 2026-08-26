@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release: Batch PDF compression tool with dual-engine strategy for optimal quality and high compatibility.\n\n- Compresses all PDF files in a directory exceeding a set size threshold (default 50MB), replacing originals with compressed versions.\n- Utilizes Ghostscript as the primary engine for fast, multi-level compression while preserving searchable text.\n- Falls back to PyMuPDF rendering for files incompatible with Ghostscript, ensuring a near-100% success rate.\n- Offers easy one-click batch processing and flexible CLI options for parallel execution and custom thresholds.\n- Includes detailed logs and reporting, practical performance metrics, and troubleshooting guidance.\n- Supports both macOS and Linux environments, with specific compatibility notes and dependency requirements.",
+  "created_at": 1784623500707,
+  "display_name": "Pdf Batch Compress Skill",
+  "fetched_at": 1787775810342,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/batch_compress.sh",
+    "scripts/compress_fast.py",
+    "scripts/compress_single.py",
+    "scripts/compress_single_gs.py",
+    "scripts/report.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784624043870,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u6caa\u4e0a\u732b\u89c1\u95fb",
+    "handle": "sereinone",
+    "user_id": "s17es8bvrh17ztjy0h68danj798aynm9"
+  },
+  "slug": "pdf-batch-compress",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pdf-batch-compress",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pdf-batch-compress&ownerHandle=sereinone",
+    "page_url": "https://clawhub.ai/sereinone/skills/pdf-batch-compress"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 225,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6279\u91cf\u538b\u7f29\u8d85\u8fc7\u6307\u5b9a\u5927\u5c0f\u7684PDF\u6587\u4ef6\uff0cGhostscript + PyMuPDF\u53cc\u5f15\u64ce\u964d\u7ea7\u538b\u7f29\uff0c\u4fdd\u7559\u6700\u4f73\u753b\u8d28",
+  "updated_at": 1784623767391,
+  "version": "1.0.0"
+}
