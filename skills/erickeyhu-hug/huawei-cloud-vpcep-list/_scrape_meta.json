@@ -1,0 +1,53 @@
+{
+  "changelog": "- Initial release: Query and list Huawei Cloud VPCEP (VPC Endpoint / VPC Endpoint Service) names along with key attributes (id, status, service type) under the current tenant/project.\n- Supports filtering by endpoint service name, pagination (limit/offset) and both endpoint and endpoint service resource types.\n- Uses KooCLI (`hcloud`) commands as primary, with fallback to the huaweicloudsdkvpcep Python SDK.\n- Read-only: does not create, modify, or delete any VPCEP resource.\n- Triggers include various VPCEP list wordings in both English and Chinese.",
+  "created_at": 1786694234300,
+  "display_name": "huawei-cloud-vpcep-list",
+  "fetched_at": 1787772125264,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/list_vpcep.py",
+    "scripts/skill_quality_sdk.py",
+    "scripts/test-cli-commands.sh",
+    "skill-card.md",
+    "skill-gate-report-20260814.txt",
+    "templates/test-vars.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786695021469,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-vpcep-list",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-vpcep-list",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-vpcep-list&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-vpcep-list"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 125,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query the list of Huawei Cloud VPCEP (VPC Endpoint / VPC Endpoint Service) resources under the current tenant / project, focused on the VPCEP NAME list. Returns each VPC endpoint's name (endpoint_service_name), id, status and service type, and each endpoint service's name (service_name), id and status. Supports filtering by endpoint service name and pagination (limit/offset). Uses the KooCLI commands `hcloud VPCEP ListEndpoints` and `hcloud VPCEP ListEndpointService --cli-region={region}` (primary) against the v1 API, or the huaweicloudsdkvpcep Python SDK (fallback). Read-only \u2014 never creates, modifies or deletes any endpoint or service. Use this skill whenever the user wants to list/inspect the VPCEP endpoints or endpoint services of the tenant or query the VPCEP name list, e.g. for endpoint inventory, daily inspection, or connectivity review. Triggers include: \"list VPCEP\", \"VPCEP list\", \"query VPCEP names\", \"VPCEP name list\", \"\u7ec8\u7aef\u8282\u70b9\u5217\u8868\", \"\u67e5\u8be2\u7ec8\u7aef\u8282\u70b9\", \"VPCEP\u540d\u79f0\", \"\u7ec8\u7aef\u8282\u70b9\u540d\u79f0\", \"list endpoints\", \"list endpoint services\", \"how many VPCEP endpoints\".",
+  "updated_at": 1786694339145,
+  "version": "1.0.0"
+}
