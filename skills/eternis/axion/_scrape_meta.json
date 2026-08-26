@@ -1,0 +1,35 @@
+{
+  "changelog": "- Clarified that the forecast ID is an opaque token rather than a prefixed string, and adjusted example output accordingly.\n- Added a new pitfall: handle occasional 5xx responses with plain text bodies by checking HTTP status before attempting to parse as JSON, and retry if needed.\n- Removed file: skill-card.md.",
+  "created_at": 1782470108263,
+  "display_name": "Axion",
+  "fetched_at": 1787778944271,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "references/axion-api.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Eternis",
+    "handle": "eternis",
+    "user_id": "s170f63g942eemd0pmtn9fp1an89agak"
+  },
+  "slug": "axion",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/axion",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=axion&ownerHandle=eternis",
+    "page_url": "https://clawhub.ai/eternis/skills/axion"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 295,
+    "installs": 1,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Forecast the probability of a future event with the Axion API. Use when asked the odds, likelihood, or a prediction for an uncertain or future event.",
+  "updated_at": 1782474383419,
+  "version": "1.0.2"
+}
