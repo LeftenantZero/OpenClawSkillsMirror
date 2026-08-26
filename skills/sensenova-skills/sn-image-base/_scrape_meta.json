@@ -1,0 +1,70 @@
+{
+  "changelog": "- Introduced sn-image-base as the foundational skill layer for the SenseNova-Skills project, providing low-level APIs for image generation, image recognition (VLM), and text optimization (LLM).\n- All tools delegate directly to backend services without preprocessing inputs; intended solely for use by upper-layer skills\u2014not user-facing.\n- Added three core tools: sn-image-generate (text-to-image), sn-image-recognize (VLM-based analysis), and sn-text-optimize (LLM-based text enhancement), each with detailed parameter and default handling.\n- Comprehensive environment variable and CLI argument prioritization for authentication and runtime configuration.\n- Unified tool invocations via scripts/sn_agent_runner.py, supporting flexible backend, model, and protocol selection.",
+  "created_at": 1787108277510,
+  "display_name": "sn-image-base",
+  "fetched_at": 1787770699609,
+  "files": [
+    "README.md",
+    "README_CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/api_spec.md",
+    "requirements.txt",
+    "scripts/extract_json.py",
+    "scripts/pyproject.toml",
+    "scripts/ruff.toml",
+    "scripts/sn_agent_runner.py",
+    "scripts/sn_image_base/__init__.py",
+    "scripts/sn_image_base/configs.py",
+    "scripts/sn_image_base/exceptions.py",
+    "scripts/sn_image_base/generation/__init__.py",
+    "scripts/sn_image_base/generation/core/__init__.py",
+    "scripts/sn_image_base/generation/core/client_base.py",
+    "scripts/sn_image_base/generation/nano_banana.py",
+    "scripts/sn_image_base/generation/openai_image.py",
+    "scripts/sn_image_base/generation/sensenova.py",
+    "scripts/sn_image_base/llm/__init__.py",
+    "scripts/sn_image_base/llm/anthropic_adapter.py",
+    "scripts/sn_image_base/llm/chat_completions_adapter.py",
+    "scripts/sn_image_base/llm/llm_adapter.py",
+    "scripts/sn_image_base/utils/__init__.py",
+    "scripts/sn_image_base/utils/error_utils.py",
+    "scripts/sn_image_base/utils/httpx_client.py",
+    "scripts/sn_image_base/vlm/__init__.py",
+    "scripts/sn_image_base/vlm/utils.py",
+    "scripts/sn_image_base/vlm/vlm_adapter.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787109026465,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "SenseNova-Skills",
+    "handle": "sensenova-skills",
+    "user_id": "s17fzc6fnxkbqzh6z8jr5bcvhh8bw2vm"
+  },
+  "slug": "sn-image-base",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sn-image-base",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sn-image-base&ownerHandle=sensenova-skills",
+    "page_url": "https://clawhub.ai/sensenova-skills/skills/sn-image-base"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 103,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Base-layer skill for the SenseNova-Skills project, providing low-level APIs for image generation, recognition (VLM), and text optimization (LLM). This skill does not preprocess inputs; it only calls backend services and returns results. This skill is not user-facing and is intended for upper-layer skills only.",
+  "updated_at": 1787108518861,
+  "version": "2026.8.19"
+}
