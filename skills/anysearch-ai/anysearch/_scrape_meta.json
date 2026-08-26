@@ -1,0 +1,60 @@
+{
+  "changelog": "AnySearch 3.0.1 (from 2.1.1): Major upgrade with a new vertical search approach and enhanced CLI usage.\n\n- Adds strict vertical domain search routing, requiring use of get_sub_domains for best results in most cases.\n- Batch search and hybrid mode now explicitly recommended for multi-intent or ambiguous-domain queries.\n- CLI usage guide expanded with exact command formats and error-handling procedures.\n- Anonymous access enabled by default, API key optional for increased rate limits.\n- New sub_domain_params handling rules for required parameters in vertical searches.\n- Enhanced security and privacy notes for sensitive usage and CLI validation.",
+  "created_at": 1777522400052,
+  "display_name": "AnySearch",
+  "fetched_at": 1787774723770,
+  "files": [
+    ".env.example",
+    ".gitignore",
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "README_zh.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "TEST_PLAN.md",
+    "_meta.json",
+    "requirements.txt",
+    "runtime.conf.example",
+    "scripts/anysearch_cli.js",
+    "scripts/anysearch_cli.ps1",
+    "scripts/anysearch_cli.py",
+    "scripts/anysearch_cli.sh",
+    "scripts/generate.py",
+    "scripts/shared/constants.json",
+    "scripts/shared/doc_spec.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785151090246,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "AnySearch",
+    "handle": "anysearch-ai",
+    "user_id": "s17fwvttsevjge5srdr96cmx3x85vp9s"
+  },
+  "slug": "anysearch",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/anysearch",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=anysearch&ownerHandle=anysearch-ai",
+    "page_url": "https://clawhub.ai/anysearch-ai/skills/anysearch"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 37001,
+    "installs": 826,
+    "stars": 50,
+    "versions": 6
+  },
+  "summary": "Unified real-time search engine skill for AI agents. Supports general web search, vertical domain search, parallel batch search, and full-page content extraction.",
+  "updated_at": 1785150395302,
+  "version": "3.0.1"
+}
