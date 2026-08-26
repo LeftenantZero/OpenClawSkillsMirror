@@ -1,0 +1,45 @@
+{
+  "changelog": "**Summary: Enhanced SDK flexibility, clearer workspace boundaries, and support for multiple backends.**\n\n- Added support for multiple agent backends (Claude SDK, Codex CLI, DeepSeek) with backend/model selection now configurable per agent in `config.yaml`.\n- Clarified workspace hygiene: all harness state, logs, and evaluation artifacts must be confined to dedicated directories (e.g., `harness-state/`, `harness-logs/`), never mixed with app code.\n- Updated harness structure and setup steps to enforce clean project directory boundaries by default.\n- Introduced stricter rules and setup for operating on existing codebases, including the need for write allowlists and git safety checks.\n- Added or linked detailed documentation for workspace hygiene, git safety, mode selection, and evaluator evidence handling.\n- Removed outdated or redundant documentation (`skill-card.md`).",
+  "created_at": 1777768593480,
+  "display_name": "long-run-harness",
+  "fetched_at": 1787783937939,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "instructions/agent-patterns.md",
+    "instructions/config.md",
+    "instructions/context-handoff.md",
+    "instructions/evaluation-rubrics.md",
+    "instructions/evaluator-evidence.md",
+    "instructions/git-safety.md",
+    "instructions/iteration-loop.md",
+    "instructions/logging.md",
+    "instructions/mode-selection.md",
+    "instructions/planner-questions.md",
+    "instructions/sprint-contracts.md",
+    "instructions/workspace-hygiene.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u5c0f\u767d",
+    "handle": "is-xins-xiaobai",
+    "user_id": "s172tp4s5nf8cg185rj65rkxe984bht0"
+  },
+  "slug": "long-run-harness",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/long-run-harness",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=long-run-harness&ownerHandle=is-xins-xiaobai",
+    "page_url": "https://clawhub.ai/is-xins-xiaobai/skills/long-run-harness"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 809,
+    "installs": 20,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Use when building a Planner\u2192Generator\u2192Evaluator multi-agent harness or long-running orchestrator. Triggers: \"build a harness\", \"multi-agent pipeline\", \"agent...",
+  "updated_at": 1780058814934,
+  "version": "1.1.0"
+}
