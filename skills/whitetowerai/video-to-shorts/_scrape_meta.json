@@ -1,0 +1,54 @@
+{
+  "changelog": "video-to-shorts 1.0.4\n\n- Adds explicit support for project phases: plan (before render) and finalize (after render), allowing candidate creation before main video output.\n- Planning now uses the project original/source video instead of the final render, for accurate pre-delivery candidate mapping and review.\n- All scripts and documentation updated to clarify required inputs and clarify transcript/timeline mapping at each phase.\n- Updated output structure and validation to bind review evidence to project source for consistent integrity checks.\n- Removed skill-card.md; documentation now more clearly separates phase tasks and outputs.\n- Improved dependency and program flow documentation for improved user guidance.",
+  "created_at": 1784714050190,
+  "display_name": "video-to-shorts",
+  "fetched_at": 1787772987881,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/shorts-candidates-review.html",
+    "assets/shorts-vertical-review.html",
+    "examples/example_shorts_candidates_text_visual.json",
+    "examples/example_shorts_plan.json",
+    "examples/example_transcript.json",
+    "scripts/boundary_refine.py",
+    "scripts/build_candidate_review.py",
+    "scripts/candidates.py",
+    "scripts/check_project_protocol.py",
+    "scripts/check_review_ui.py",
+    "scripts/extract_shorts.py",
+    "scripts/interaction.py",
+    "scripts/plan.py",
+    "scripts/prepare_transcript.py",
+    "scripts/prepare_visual_context.py",
+    "scripts/preview.py",
+    "scripts/render_vertical.py",
+    "scripts/review_gate.py",
+    "scripts/transcript_utils.py",
+    "scripts/vertical_plan.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "WhiteTowerAI",
+    "handle": "whitetowerai",
+    "user_id": "s178pg569r7j3dkw6ekc9bn7258b0eme"
+  },
+  "slug": "video-to-shorts",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/video-to-shorts",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=video-to-shorts&ownerHandle=whitetowerai",
+    "page_url": "https://clawhub.ai/whitetowerai/skills/video-to-shorts"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 514,
+    "installs": 0,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Use when a Project Protocol video needs short-form candidate planning, approval, horizontal extraction, or reviewed 9:16 delivery before or after the shared main render.",
+  "updated_at": 1786341377841,
+  "version": "1.0.4"
+}
