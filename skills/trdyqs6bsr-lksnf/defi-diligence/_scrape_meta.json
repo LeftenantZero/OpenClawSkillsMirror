@@ -1,0 +1,43 @@
+{
+  "changelog": "clawdbot metadata (category, emoji, tags, requires), user-invocable, free discovery block",
+  "created_at": 1785925292942,
+  "display_name": "defi-diligence",
+  "fetched_at": 1787772988519,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786342451117,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "trdyqs6bsr-lksnf",
+    "handle": "trdyqs6bsr-lksnf",
+    "user_id": "s177xnf2c3515enrqage102rg18bx6fx"
+  },
+  "slug": "defi-diligence",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/defi-diligence",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=defi-diligence&ownerHandle=trdyqs6bsr-lksnf",
+    "page_url": "https://clawhub.ai/trdyqs6bsr-lksnf/skills/defi-diligence"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 359,
+    "installs": 1,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Verify a crypto token before buying. Input a symbol or contract address (Base or Solana). Returns PASS/WATCH/FLAG verdict with kill switches (honeypot, mint/freeze authority, buy/sell tax >50%), auto-scored checkpoints (liquidity, volume, holder concentration, age, price change), and a $2 USDC x402 payment path to unlock the full scored report. Triggers \u2014 \"verify this token\", \"is X legit\", \"should I buy X\", \"rug check\", \"token due diligence\", \"honeypot check\", \"check if this coin is a scam\". Exposes MCP tool `defi_score` at `/mcp` and HTTP POST `/v1/products/defi-diligence/score`. Full schema at `/openapi.json`.",
+  "updated_at": 1786340921944,
+  "version": "1.1.0"
+}
