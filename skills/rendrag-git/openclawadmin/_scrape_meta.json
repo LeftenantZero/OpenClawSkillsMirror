@@ -1,0 +1,38 @@
+{
+  "changelog": "Three new failure patterns from real gateway incidents: (1) clean-exit supervisor restart treated as final by Restart=on-failure service units \u2014 use Restart=always plus StartLimitBurst; (2) impostor gateway \u2014 a stale superseded unit serving the port with passing health checks while dispatching nothing; (3) native module bindings missing after plugin install/update, including the ignore-scripts=true trap that makes npm rebuild a silent no-op. Also documents the 2026.6.x npm/projects managed plugin layout. SKILL.md pitfalls and update-failure-patterns.md (patterns 24-26) updated.",
+  "created_at": 1776106855989,
+  "display_name": "Openclaw Admin Skill",
+  "fetched_at": 1787781244846,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config-map.md",
+    "local-install.md",
+    "scripts/refresh-openclaw-docs.sh",
+    "skill-card.md",
+    "update-failure-patterns.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "rendrag-git",
+    "handle": "rendrag-git",
+    "user_id": "s17ee5v857pyc3gckbfdzqh4f184hyrm"
+  },
+  "slug": "openclawadmin",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclawadmin",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclawadmin&ownerHandle=rendrag-git",
+    "page_url": "https://clawhub.ai/rendrag-git/skills/openclawadmin"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1075,
+    "installs": 28,
+    "stars": 3,
+    "versions": 8
+  },
+  "summary": "Use when installing, updating, diagnosing, configuring, fixing, tuning, or setting up anything in OpenClaw \u2014 gateway not responding, channel silent, model fa...",
+  "updated_at": 1781108422941,
+  "version": "1.2.0"
+}
