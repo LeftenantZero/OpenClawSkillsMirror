@@ -1,0 +1,33 @@
+{
+  "changelog": "**Lifecycle hooks are now fully mapped for OpenClaw, clarifying which events are natively supported and which must be simulated.**\n\n- Mapped all possible lifecycle hooks to OpenClaw's internal capabilities and session mechanisms.\n- Documented three key hooks (`subagent-start/stop`, `session-end`, `task-completed`) as available and practical with current kernel capabilities.\n- Clarified limitations: tool-level hooks (pre/post-tool-use) can't be automatically intercepted; must use agreed agent behaviors instead.\n- Provided detailed examples for implementing each available hook using heartbeat, cron, and agent behavior patterns.\n- Expanded documentation to cover coordination with related skills, event priorities, and real-world implementation status.",
+  "created_at": 1779977141948,
+  "display_name": "Lifecycle Hooks",
+  "fetched_at": 1787784127451,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Sipoon",
+    "handle": "sipoon",
+    "user_id": "s170fe5rvfygs36q9es357x2ph87kga6"
+  },
+  "slug": "sipoon-lifecycle-hooks",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sipoon-lifecycle-hooks",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sipoon-lifecycle-hooks&ownerHandle=sipoon",
+    "page_url": "https://clawhub.ai/sipoon/skills/sipoon-lifecycle-hooks"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 491,
+    "installs": 9,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Agent lifecycle hook \u7cfb\u7edf \u2014 \u57fa\u4e8e OpenClaw \u5185\u6838\u80fd\u529b\u8bbe\u8ba1\uff0c\u7528 heartbeat + subagent \u673a\u5236\u6a21\u62df\u5173\u952e\u4e8b\u4ef6\u89e6\u53d1\u3002\u501f\u9274 rohitg00/agentmemory \u7684 13 hook \u8bbe\u8ba1\u3002",
+  "updated_at": 1779977141948,
+  "version": "0.1.0"
+}
