@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release supporting end-to-end deployment of the NewAPI LLM Gateway on Huawei Cloud via Terraform.\n- Provides unified LLM API gateway for multi-model management, load balancing, key rotation, and usage statistics.\n- Secure handling of sensitive credentials (AK/SK)\u2014never exposed in chat or output; user must edit configuration files manually if needed.\n- Step-by-step workflow guidance, including extraction of solution info, template normalization, variable confirmation, deployment, verification, and cleanup.\n- Explicit user confirmation required before deploying or destroying resources.\n- Outputs and verification processes are standardized in JSON format for clarity and automation.",
+  "created_at": 1781087774146,
+  "display_name": "huawei-cloud-sac-new-api",
+  "fetched_at": 1787771150012,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "demo/example-input.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/iam-policies.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "scripts/download_tf_template_file.py",
+    "scripts/extract_sac_deploy_info.py",
+    "scripts/list_tf_variables.py",
+    "scripts/normalize_tf_providers.py",
+    "scripts/playwright_utils.py",
+    "scripts/sensitive_mask.py",
+    "scripts/templates/extract_sac_deploy_info.js",
+    "skill-card.md",
+    "templates/terraform.tfvars.template"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "huaweicloud-skills-team",
+    "handle": "huaweiclouddev",
+    "user_id": "s17axk041vxeamxj39r4dwvyts87wtza"
+  },
+  "slug": "huawei-cloud-sac-new-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-sac-new-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-sac-new-api&ownerHandle=huaweiclouddev",
+    "page_url": "https://clawhub.ai/huaweiclouddev/skills/huawei-cloud-sac-new-api"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 649,
+    "installs": 6,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Deploy NewAPI LLM Gateway on Huawei Cloud via Terraform. Use when deploying a unified LLM API gateway for multi-model management, load balancing, and key rotation. Trigger: deploy NewAPI, NewAPI gateway, LLM gateway, \u90e8\u7f72NewAPI, NewAPI\u7f51\u5173, LLM\u7f51\u5173",
+  "updated_at": 1787408512528,
+  "version": "1.0.1"
+}
