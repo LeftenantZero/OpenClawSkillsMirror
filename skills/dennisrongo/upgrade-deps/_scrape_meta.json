@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of upgrade-deps skill.\n\n- Enables safe, evidence-based dependency upgrades for multiple ecosystems by reading real changelogs and searching for breaking APIs in the codebase.\n- Inventories outdated packages using the appropriate ecosystem tool, and distinguishes between patch/minor (batched) and major (one at a time) upgrades.\n- For major upgrades, reads changelogs for breaking changes, greps the repo for affected APIs, and explicitly names runtime risks and untested changes.\n- Runs full test builds between each upgrade batch, reporting results and only declaring upgrades safe if all checks pass.\n- Handles lockfile and peer dependency updates per ecosystem best practices.\n- Produces a per-package report table highlighting what changed, what was verified, and any blocked, held-back, or risky upgrades.\n- Covers a broad set of use cases from routine updates to security-driven dependency upgrades, and flags when safety cannot be verified due to missing tests.",
+  "created_at": 1786913853612,
+  "display_name": "upgrade-deps",
+  "fetched_at": 1787771693342,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "upgrade-deps",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/upgrade-deps",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=upgrade-deps&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/upgrade-deps"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 123,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Upgrade project dependencies safely \u2014 inventories current\u2192target versions from the actual manifest/lockfile, reads the real changelog/release notes for every major bump (a breaking-change claim without a changelog citation is a hypothesis), greps the codebase for each breaking API before declaring it safe, upgrades one major at a time with tests+build quoted green between batches, and reports a per-package table of what changed and what evidence backs \"safe\". Use this skill whenever the user says \"upgrade dependencies\", \"update packages\", \"bump <package>\", \"is it safe to upgrade\", \"update to the latest\", \"fix the npm audit\", \"dependabot PR review\", or \"/upgrade-deps\" \u2014 even if they don't explicitly say \"dependency skill\". Do not use for adding a NEW dependency (that's a design decision) or diagnosing a breakage after an upgrade already happened (use diagnose).",
+  "updated_at": 1786913909718,
+  "version": "1.0.0"
+}
