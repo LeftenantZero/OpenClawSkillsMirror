@@ -1,0 +1,33 @@
+{
+  "changelog": "- Adds the `oo-vbout` skill for operating VBOUT through an OOMOL-connected account using the `oo` CLI.\n- Supports account and list inspection with `get_account`, `list_lists`, and `get_list`.\n- Supports contact workflows: create, retrieve, list, update, and delete contacts in VBOUT email marketing lists.\n- Requires live action schema inspection before running connector calls, keeping payloads aligned with VBOUT\u2019s current contract.\n- Defines safety rules for read, write, and destructive actions, including explicit confirmation before modifying or deleting VBOUT data.\n\nSource: `oomol-lab/skills@00cf041`",
+  "created_at": 1787656652754,
+  "display_name": "VBOUT",
+  "fetched_at": 1787768914514,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-vbout",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-vbout",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-vbout&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-vbout"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 41,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "VBOUT (vbout.com). Use this skill for ANY VBOUT request \u2014 reading, creating, updating, and deleting data. Whenever a task involves VBOUT, use this skill instead of calling the API directly.",
+  "updated_at": 1787656707377,
+  "version": "1.0.0"
+}
