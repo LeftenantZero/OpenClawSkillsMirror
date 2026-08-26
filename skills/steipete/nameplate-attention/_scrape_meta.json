@@ -1,0 +1,33 @@
+{
+  "changelog": "- Initial release of nameplate-attention.\n- Displays a topmost message card with pulsating colored borders on every Mac display to grab user attention.\n- Always requires a reason for activation; prevents contextless alerts.\n- Includes CLI command: `nameplate attention \"<reason>\" --title \"<agent> \u2192 <system>\"` with optional duration and color.\n- Launches Nameplate.app if needed and auto-dismisses alerts after a configurable time (default 10s, max 120s).\n- Includes extra commands: `nameplate splash` to replay identity splash, `nameplate settings` to open settings.\n- Alerts are timestamped and stale requests (older than 2 minutes) are ignored.",
+  "created_at": 1783447522966,
+  "display_name": "Nameplate Attention",
+  "fetched_at": 1787777792291,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Peter Steinberger",
+    "handle": "steipete",
+    "user_id": "s179zksw999xz8ms4cy7pb2fr183m5jq"
+  },
+  "slug": "nameplate-attention",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nameplate-attention",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nameplate-attention&ownerHandle=steipete",
+    "page_url": "https://clawhub.ai/steipete/skills/nameplate-attention"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 276,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "On-screen agent alert: topmost message card + pulsating screen borders via Nameplate. Use before password-manager auth prompts or whenever blocked on the human.",
+  "updated_at": 1783447522966,
+  "version": "1.0.0"
+}
