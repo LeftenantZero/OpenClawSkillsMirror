@@ -1,0 +1,33 @@
+{
+  "changelog": "- Major update: transitions \"task-executor\" from a generic multi-task orchestration tool to a disciplined, single-task execution framework with strict per-turn output formatting.\n- Introduces a standardized six-section output format (Goal / Current understanding / Files to inspect / Plan / Progress / Risks / Assumptions) enforced for every turn, ensuring legibility and resumability.\n- Implements a phased workflow: Understand \u2192 Inspect (with optional inspection council for large/multi-layer tasks) \u2192 Plan \u2192 Incremental Execution \u2192 Validate after every change.\n- Clarifies strict criteria for when to invoke the skill, emphasizing that it is only for concrete, well-defined tasks\u2014not for design, diagnosis, or fuzzy specs.\n- File housekeeping: updates SKILL.md with new description, structure, and usage discipline; removes the legacy skill-card.md.",
+  "created_at": 1786913737878,
+  "display_name": "Task Executor",
+  "fetched_at": 1787771699378,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "task-executor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/task-executor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=task-executor&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/task-executor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 17,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Disciplined execution of a single defined task with iterative understand, inspect, plan, execute, and validate phases, ensuring clear progress tracking and c...",
+  "updated_at": 1786913789879,
+  "version": "1.0.0"
+}
