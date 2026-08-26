@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of Jenkins Skills CLI for command-line Jenkins CI management.\n\n- Enables listing jobs, inspecting jobs, triggering builds (with or without parameters), checking build status, streaming console logs, and enabling/disabling jobs via CLI.\n- Reads Jenkins server connection info from environment variables or a config file.\n- Verifies server compatibility (requires Jenkins 2.60+); provides clear messages for unsupported versions.\n- Handles CSRF security, folder-nested jobs, and prints all outputs as JSON by default (except console logs).\n- Requires Python 3.8+ and the `requests` library.",
+  "created_at": 1785907406056,
+  "display_name": "Jenkins Skills",
+  "fetched_at": 1787773359564,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "requirements.txt",
+    "scripts/jenkins_cli.py",
+    "skill-card.md",
+    "\u4f7f\u7528\u624b\u518c.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785908148623,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "weiguang1017",
+    "handle": "weiguang1017",
+    "user_id": "s178r18ph3sn297gb4d96zefvx88583r"
+  },
+  "slug": "jenkins-ci-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/jenkins-ci-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=jenkins-ci-skill&ownerHandle=weiguang1017",
+    "page_url": "https://clawhub.ai/weiguang1017/skills/jenkins-ci-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1543,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Jenkins job and build operations",
+  "updated_at": 1785907497233,
+  "version": "0.1.0"
+}
