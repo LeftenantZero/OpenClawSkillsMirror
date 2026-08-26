@@ -1,0 +1,50 @@
+{
+  "changelog": "Fail closed when the order book cannot be fetched. Previously printed 'book unavailable (proceeding with caution)' and traded anyway, bypassing the MIN_BOOK_DEPTH_USD thin-book gate at exactly the moment it mattered most. Now skips the market.",
+  "created_at": 1771079338832,
+  "display_name": "Mert Sniper",
+  "fetched_at": 1787773052984,
+  "files": [
+    "DISCLAIMER.md",
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "config.json",
+    "mert_sniper.py",
+    "scripts/status.py",
+    "skill-card.md",
+    "tests/test_mertsniper_orderbook_summary.py",
+    "tests/test_mertsniper_preflight_gate.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786257372642,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Simmer.Markets",
+    "handle": "simmer",
+    "user_id": "s17eez0vajry6hjb97y9mbtv2s85wekv"
+  },
+  "slug": "polymarket-mert-sniper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polymarket-mert-sniper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polymarket-mert-sniper&ownerHandle=simmer",
+    "page_url": "https://clawhub.ai/simmer/skills/polymarket-mert-sniper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3284,
+    "installs": 92,
+    "stars": 0,
+    "versions": 24
+  },
+  "summary": "Near-expiry conviction trading on Polymarket. The skill scans markets in their final minutes, filters for strongly-skewed splits (60/40+), and places bounded trades against the under-priced side. Defaults \u2014 $10 max per trade, 5 trades/run, 8-minute expiry window, dry-run unless `--live`.",
+  "updated_at": 1786256681074,
+  "version": "1.3.5"
+}
