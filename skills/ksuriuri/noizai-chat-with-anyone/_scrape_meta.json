@@ -1,0 +1,45 @@
+{
+  "changelog": "- Added support for generating a matching voice from an uploaded image when the person is not recognizable from their name alone.\n- Introduced two workflows: A) Voice cloning from online video (name-based), and B) Voice design using an image and description (image-based).\n- Included new automation scripts `extract_ref_segment.py` (to select/extract clean audio samples) and `voice_design.py` (to generate voice profiles from photos).\n- Updated usage instructions, dependencies, and expanded ethical guidelines (only use public figures, inform users of synthetic speech, decline harmful requests).\n- Added `yt-dlp` as a required dependency and improved clarity of prerequisites and setup steps.",
+  "created_at": 1773142819927,
+  "display_name": "Chat With Anyone",
+  "fetched_at": 1787775397247,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract_ref_segment.py",
+    "scripts/voice_design.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089960074,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "kusuriuri",
+    "handle": "ksuriuri",
+    "user_id": "s1719g0mvztp2d4twmzqsw636d876jkk"
+  },
+  "slug": "noizai-chat-with-anyone",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/noizai-chat-with-anyone",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=noizai-chat-with-anyone&ownerHandle=ksuriuri",
+    "page_url": "https://clawhub.ai/ksuriuri/skills/noizai-chat-with-anyone"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1244,
+    "installs": 27,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Chat with any real person or fictional character in their own voice by automatically finding their speech online, extracting a clean reference sample, and ge...",
+  "updated_at": 1784845103257,
+  "version": "0.1.1"
+}
