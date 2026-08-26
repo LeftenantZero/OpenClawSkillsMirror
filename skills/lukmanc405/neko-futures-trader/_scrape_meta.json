@@ -1,0 +1,55 @@
+{
+  "changelog": "Major update with automation, risk controls, and new features:\n\n- Added config.py for all settings and 14-indicator strategy logic (incl. ATR, MACD, VWAP, Bollinger, etc).\n- Introduced price monitor with 1-second interval, auto SL/TP, breakeven, trailing, and delisting monitor.\n- Implemented error_handling.py for self-healing and safety automation.\n- New advanced_analysis.py for indicator scoring; scanner and monitor use dynamic ATR logic.\n- Removed scripts/check_balance.py, scripts/check_positions.py, and deprecated single-file position-monitor.py in favor of modular, robust commands and cache.\n- Documentation and SKILL.md overhauled: describes new features (auto-entry, cache, safety), risk configs, and enhanced file structure.",
+  "created_at": 1773685562461,
+  "display_name": "Neko Futures Trader",
+  "fetched_at": 1787786242394,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "advanced_analysis.py",
+    "config.py",
+    "dashboard_api.py",
+    "delisting_monitor.py",
+    "error_handling.py",
+    "neko-light.html",
+    "position_command.py",
+    "price-monitor.py",
+    "scanner-v8.py",
+    "signal_filter.py",
+    "skill-card.md",
+    "whale_tracker.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779963405644,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "luke",
+    "handle": "lukmanc405",
+    "user_id": "s174g0aar8ev5p5q4yvxgypkt5884vs0"
+  },
+  "slug": "neko-futures-trader",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/neko-futures-trader",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=neko-futures-trader&ownerHandle=lukmanc405",
+    "page_url": "https://clawhub.ai/lukmanc405/skills/neko-futures-trader"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 607,
+    "installs": 13,
+    "stars": 0,
+    "versions": 28
+  },
+  "summary": "Professional Binance Futures automated trading system with AI-powered signal detection. \ud83c\udfaf CORE FEATURES: - Auto Entry: Scanner finds signals every 5 minutes...",
+  "updated_at": 1779219111890,
+  "version": "1.0.27"
+}
