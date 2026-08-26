@@ -1,0 +1,33 @@
+{
+  "changelog": "- Added the `oo-supabase` skill for operating Supabase through an OOMOL-connected account.\n- Uses the `oo` CLI to inspect each action\u2019s live schema before sending a payload, keeping requests aligned with the connector contract.\n- Supports core Supabase read workflows: listing and fetching organizations, projects, Edge Functions, storage buckets, API keys, secrets, and project health.\n- Includes read-only SQL execution and TypeScript database type generation for inspection and integration work.\n- Covers controlled write paths for API keys and secrets, with destructive actions clearly separated and gated by confirmation.\n- Provides first-time setup guidance for CLI, auth, connection, and billing issues when the connector is not ready.\n\nSource: `oomol-lab/skills@3e4b3ff`",
+  "created_at": 1780497116123,
+  "display_name": "Supabase",
+  "fetched_at": 1787769025919,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-supabase",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-supabase",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-supabase&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-supabase"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 624,
+    "installs": 9,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Supabase (supabase.com). Use this skill for ANY Supabase request \u2014 reading, creating, updating, and deleting data. Whenever a task involves Supabase, use this skill instead of calling the API directly.",
+  "updated_at": 1787633366729,
+  "version": "1.0.3"
+}
