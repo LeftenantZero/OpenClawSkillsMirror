@@ -1,0 +1,51 @@
+{
+  "changelog": "v1.0.0 \u2014 ingestion Factur-X/UBL/CII + tickets LLM + CAMT/OFX/CSV ; depend de rapprochement-paiements",
+  "created_at": 1780574413044,
+  "display_name": "E-facture rapprochement",
+  "fetched_at": 1787782988410,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "fixtures/demo-corse-plomberie/bank/releve-avril.csv",
+    "fixtures/demo-corse-plomberie/bank/releve-mars.camt053.xml",
+    "fixtures/demo-corse-plomberie/company.json",
+    "fixtures/demo-corse-plomberie/invoices/purchase-aquatech.cii.xml",
+    "fixtures/demo-corse-plomberie/invoices/sale-hotel-alba.ubl.xml",
+    "fixtures/demo-corse-plomberie/invoices/ticket-brico.png.invoice.json",
+    "references/bank-formats.md",
+    "references/invoice-extraction.md",
+    "references/matching-rules.md",
+    "references/output-contract.md",
+    "scripts/bank_parsers.py",
+    "scripts/invoice_parsers.py",
+    "scripts/main.py",
+    "scripts/normalize.py",
+    "scripts/reconcile.py",
+    "scripts/test_e2e.py",
+    "scripts/test_reconcile.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "trendex",
+    "handle": "trendex",
+    "user_id": "s171rnymrzgb46f7qxnxd5034586ma2f"
+  },
+  "slug": "e-facture-rapprochement",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/e-facture-rapprochement",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=e-facture-rapprochement&ownerHandle=trendex",
+    "page_url": "https://clawhub.ai/trendex/skills/e-facture-rapprochement"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 415,
+    "installs": 7,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Ing\u00e8re les FACTURES (Factur-X / UBL / CII en fast-path, et surtout les PHOTOS DE TICKETS DE CAISSE et PDF par extraction LLM avec score de confiance) ET les...",
+  "updated_at": 1780574413044,
+  "version": "1.0.0"
+}
