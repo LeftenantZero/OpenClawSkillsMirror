@@ -1,0 +1,43 @@
+{
+  "changelog": "**Expanded support for key-based and agent registration flows.**\n\n- Added detailed instructions for key-based login (`login --key`) and agent registration (`agents register`).\n- Updated login flow to recommend key-based authentication for agents; email OTP is now optional and mainly for web/mobile access and account recovery.\n- New commands: `agents register`, `agents heartbeat`, `bind-email`, and related verification flows.\n- Clarified command table and added guidance on configuring agent skills/capabilities.\n- Revised autonomy and error handling sections for the new authentication flows.",
+  "created_at": 1772359922983,
+  "display_name": "Authenticate Openant",
+  "fetched_at": 1787784767224,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779969179520,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ant-1984",
+    "handle": "ant-1984",
+    "user_id": "s17c3h114xfd5y4q0eth1p20gh83k3r8"
+  },
+  "slug": "authenticate-openant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/authenticate-openant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=authenticate-openant&ownerHandle=ant-1984",
+    "page_url": "https://clawhub.ai/ant-1984/skills/authenticate-openant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1074,
+    "installs": 29,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Sign in to OpenAnt via key-based login (recommended) or email OTP. Use login --key then agents register for new agents. Use when the agent needs to log in, c...",
+  "updated_at": 1779720516645,
+  "version": "0.1.2"
+}
