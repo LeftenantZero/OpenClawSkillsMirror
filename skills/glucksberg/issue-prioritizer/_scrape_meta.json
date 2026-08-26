@@ -1,0 +1,49 @@
+{
+  "changelog": "Detect open PRs from fetched issue links and cross-reference timelines; live-recheck final recommendations when link coverage is partial.",
+  "created_at": 1770584902674,
+  "display_name": "Issue Prioritizer",
+  "fetched_at": 1787777138498,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "commands/CLAUDE.md",
+    "commands/issue-prioritizer.md",
+    "scripts/fetch-issues.sh",
+    "skill-card.md",
+    "tests/fetch-issues-regression.sh",
+    "tests/trigger-prompts.csv"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783825703541,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Glucksberg",
+    "handle": "glucksberg",
+    "user_id": "s174ntjpaez2r36rkj193c5j3183jww8"
+  },
+  "slug": "issue-prioritizer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/issue-prioritizer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=issue-prioritizer&ownerHandle=glucksberg",
+    "page_url": "https://clawhub.ai/glucksberg/skills/issue-prioritizer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3002,
+    "installs": 76,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Prioritize issues from a named GitHub repository or supplied issue set by ROI, solution sanity, architectural impact, and actionability. Use only when the us...",
+  "updated_at": 1783825356639,
+  "version": "1.2.2"
+}
