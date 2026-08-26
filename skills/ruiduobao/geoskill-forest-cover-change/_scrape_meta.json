@@ -1,0 +1,66 @@
+{
+  "changelog": "- Initial release of skill for forest cover change detection using multi-temporal NDVI.\n- Supports offline and synthetic NDVI data modes for deforestation and afforestation analysis.\n- Outputs change classification (loss/gain/stable), change vector magnitude (CVA), and annual area statistics as GeoTIFF and JSON files.\n- Includes flexible threshold settings, multi-year input support, and privacy-friendly offline operation.\n- Documentation provided in both English and Chinese.",
+  "created_at": 1785845277717,
+  "display_name": "geoskill-forest-cover-change",
+  "fetched_at": 1787773485014,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-forest-cover-change.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785846283767,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-forest-cover-change",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-forest-cover-change",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-forest-cover-change&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-forest-cover-change"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 174,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u591a\u671f NDVI \u9608\u503c\u4e0e\u53d8\u5316\u77e2\u91cf\u5e45\u5ea6\u68c0\u6d4b\u68ee\u6797\u635f\u5931/\u589e\u76ca/\u7a33\u5b9a\uff0c\u8f93\u51fa\u53d8\u5316\u6805\u683c\u4e0e\u5e74\u5ea6\u9762\u79ef\u7edf\u8ba1",
+  "updated_at": 1785845458604,
+  "version": "1.0.0"
+}
