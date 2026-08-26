@@ -1,0 +1,36 @@
+{
+  "changelog": "Major update with new security mitigations, workflows, and MCP server support.\n\n- Version bumped to 3.0 with updated binary installation instructions.\n- Enhanced security & privacy rules: domain allowlist, local password gates for production, agent zero-knowledge enforcement, and cryptographically chained audit log.\n- Agent commands clarified: agents cannot retrieve plaintext secrets, only list/operate.\n- Added support and usage instructions for Model Context Protocol (MCP) server (API tool registration and serving).\n- Improved outbound call protections: DNS rebinding/SSRF defense, session token in CLI requests.\n- New audit and forensic verification commands (`log`, `log verify`, `log replay`).\n- Added explicit environment injection warnings and documentation search/download instructions.\n- Removed the file skill-card.md.",
+  "created_at": 1772084640103,
+  "display_name": "agentsecrets",
+  "fetched_at": 1787782078024,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/check-health.sh",
+    "scripts/secure-call.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ademijuwon Wisdom",
+    "handle": "steppacodes",
+    "user_id": "s17d1wypthbdc59jvrpnnx8x5983g7wv"
+  },
+  "slug": "agentsecrets",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agentsecrets",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agentsecrets&ownerHandle=steppacodes",
+    "page_url": "https://clawhub.ai/steppacodes/skills/agentsecrets"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1520,
+    "installs": 43,
+    "stars": 1,
+    "versions": 8
+  },
+  "summary": "Zero-knowledge secrets infrastructure \u2014 AI agents manage the complete credential lifecycle without ever seeing values",
+  "updated_at": 1780921319549,
+  "version": "1.1.4"
+}
