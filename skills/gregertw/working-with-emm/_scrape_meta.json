@@ -1,0 +1,55 @@
+{
+  "changelog": "Catch-up release covering everything from 2.1 through 2.5.\n\n- output_move: relocate a wiki document without sending its body \u2014 one document or up to 25 per call, with the ID guarantee stated per move and links in other documents repaired (2.5.0).\n- A troubleshooting section for missing tools, structured tool errors and client-side approval denials, plus a split-out per-tool parameter reference so the always-loaded guide stays a behavioural guide rather than a schema dump (2.4.0).\n- agent_run returns its standing-orders bundle again: tools now declare whether their answer is prose or structured data instead of the server guessing (2.3.0).\n- Breaking: status().runs.open is now a list with an accompanying open_count. Overlapping runs are supported and expected \u2014 proceed with your own run and close only the one you started; agent_run_complete(last_open=true) acts only when exactly one run is open account-wide (2.2.0).\n- Native self-improvement lifecycle: the self-review to standing-instruction loop completes without hand-holding. Every instruction is yours to edit; maintained_by says who ships baseline updates, and Emm-maintained docs merge your edits on apply rather than overwrite them (2.1.6).\n- The out-of-date nudge is channel-neutral: reinstall however you originally added the skill (2.1.4).\n\nFull detail is in the CHANGELOG shipped in this bundle.",
+  "created_at": 1772447062233,
+  "display_name": "Working with Emm AI",
+  "fetched_at": 1787769814862,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/emm-small.svg",
+    "references/custom-categories.md",
+    "references/memory-best-practices.md",
+    "references/mission-control.md",
+    "references/remote-actions.md",
+    "references/setup.md",
+    "references/shared-memories.md",
+    "references/task-builder.md",
+    "references/tool-surface.md",
+    "scripts/manual-oauth.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787501903344,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Greger Teigre Wedel",
+    "handle": "gregertw",
+    "user_id": "s177ghscqd69cwqbehx5wzr0jd8746zq"
+  },
+  "slug": "working-with-emm",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/working-with-emm",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=working-with-emm&ownerHandle=gregertw",
+    "page_url": "https://clawhub.ai/gregertw/skills/working-with-emm"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1199,
+    "installs": 32,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Emm AI mission control \u2014 recalls preferences, runs the recurring task cycle, manages outputs and instructions",
+  "updated_at": 1787501123343,
+  "version": "2.5.0"
+}
