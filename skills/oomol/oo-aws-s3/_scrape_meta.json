@@ -1,0 +1,43 @@
+{
+  "changelog": "- Operates AWS S3 through the OOMOL `aws_s3` connector using the `oo` CLI, with credentials handled server-side.\n- Provides read actions for listing buckets, listing objects, fetching object metadata, downloading objects, and generating pre-signed URLs.\n- Supports uploading objects from public URLs, plain text, or base64 content via `put_object`.\n- Includes guarded destructive support for deleting individual S3 objects.\n- Documents schema-first execution, JSON payload usage, response shape, and first-time setup troubleshooting.\n\nSource: `oomol-lab/skills@3e4b3ff`",
+  "created_at": 1780485203025,
+  "display_name": "AWS S3",
+  "fetched_at": 1787769034724,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787633740363,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-aws-s3",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-aws-s3",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-aws-s3&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-aws-s3"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 588,
+    "installs": 8,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "AWS S3 (aws.amazon.com). Use this skill for ANY AWS S3 request \u2014 reading, creating, updating, and deleting data. Whenever a task involves AWS S3, use this skill instead of calling the API directly.",
+  "updated_at": 1787633222084,
+  "version": "1.0.2"
+}
