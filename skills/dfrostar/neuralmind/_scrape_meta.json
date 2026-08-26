@@ -1,0 +1,33 @@
+{
+  "changelog": "- Initial release of NeuralMind skill.\n- Provides fast, compressed codebase Q&A: answer how something works, locate definitions, trace callers, explore unfamiliar files, and more.\n- Implements progressive context disclosure (identity \u2192 architecture \u2192 clusters \u2192 semantic search) and a usage-based synapse graph for better recall.\n- Offers efficient tools for project onboarding and code navigation (wakeup, query, search, skeleton).\n- Strict prerequisite check: verifies code index exists before answering; instructs how to build if missing.\n- Designed for low-complexity developer workflow integration and compatible with Hermes-Agent, OpenClaw, and Agent Zero.",
+  "created_at": 1787715021828,
+  "display_name": "NeuralMind",
+  "fetched_at": 1787768711662,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "dfrost",
+    "handle": "dfrostar",
+    "user_id": "s17e14nf1sr56t6ys6f9yhresn84427v"
+  },
+  "slug": "neuralmind",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/neuralmind",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=neuralmind&ownerHandle=dfrostar",
+    "page_url": "https://clawhub.ai/dfrostar/skills/neuralmind"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 22,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Answer questions about a code repository in ~800 tokens instead of loading 50,000+ tokens of raw source. Use whenever the user asks how something works, where something is defined, who calls what, or to explore an unfamiliar file. Provides progressive context disclosure (L0 identity \u2192 L1 architecture \u2192 L2 relevant clusters \u2192 L3 semantic search) and a learned synapse graph for usage-based recall.",
+  "updated_at": 1787715094099,
+  "version": "1.0.0"
+}
