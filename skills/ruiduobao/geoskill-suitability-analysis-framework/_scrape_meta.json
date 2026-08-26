@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release of geoskill-suitability-analysis-framework:\n\n- Provides a full multi-criteria suitability analysis pipeline: factor standardization, weight calculation (AHP with consistency check or entropy method), weighted overlay, and suitability classification.\n- Supports both synthetic (offline, simulated) and real-data processing.\n- Outputs include suitability scores, classes, and statistical summaries in GeoTIFF/GeoJSON/JSON formats.\n- Fully offline by default; no network requests; all user data processing is local.\n- Easy setup with dependencies: numpy, rasterio, and scipy.",
+  "created_at": 1785862310996,
+  "display_name": "geoskill-suitability-analysis-framework",
+  "fetched_at": 1787773427681,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-suitability-analysis-framework.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785863217794,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-suitability-analysis-framework",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-suitability-analysis-framework",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-suitability-analysis-framework&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-suitability-analysis-framework"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 171,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u56e0\u5b50\u6807\u51c6\u5316+AHP/\u71b5\u6743\u6cd5\u8d4b\u6743+\u52a0\u6743\u53e0\u52a0+\u9002\u5b9c\u6027\u5206\u7ea7",
+  "updated_at": 1785862473114,
+  "version": "1.0.0"
+}
