@@ -1,0 +1,37 @@
+{
+  "changelog": "v1.0.1 perf patch \u2014 35x faster default search. Skip .bak/.reset rotated backups and 64MB+ files (a 1GB OpenClaw session.bak.jsonl was being scanned every query, dominating wall time). Aggregate oversized-file report at end of scan with path/size/mtime/agent details + JSON skipped_oversized[] field. No behavior change for normal sessions; existing CLI compatible.",
+  "created_at": 1781946960411,
+  "display_name": "session-recovery",
+  "fetched_at": 1787774310915,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/_common.py",
+    "scripts/extract.py",
+    "scripts/search.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Evan Song",
+    "handle": "songhonglei",
+    "user_id": "s17dz40vg2v0b4hy1e0jj91ny584egag"
+  },
+  "slug": "session-recovery",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/session-recovery",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=session-recovery&ownerHandle=songhonglei",
+    "page_url": "https://clawhub.ai/songhonglei/skills/session-recovery"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 70,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Recover lost agent session content and file changes from on-disk conversation logs. Streaming and OOM-safe on 700MB+ daily JSONL. Two commands: search.py for...",
+  "updated_at": 1785324194210,
+  "version": "1.0.1"
+}
