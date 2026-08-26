@@ -1,0 +1,46 @@
+{
+  "changelog": "youtube-transcript-skill 1.0.0\n\n- Initial release providing transcript extraction and content reformatting for YouTube videos.\n- Extracts full timestamped transcripts from the built-in YouTube transcript panel.\n- Supports multiple output formats: summary, chapters, Twitter/X thread, blog post, and notable quotes.\n- Handles errors for transcripts disabled, unavailable videos, and missing transcript panels.\n- Designed to process requests in the user's language and structured for efficient batch operations.",
+  "created_at": 1781680731036,
+  "display_name": "Youtube Transcript",
+  "fetched_at": 1787780414996,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-transcript-segments.py",
+    "scripts/get-languages.py",
+    "scripts/open-transcript-panel.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781731242840,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "youtube-transcript-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/youtube-transcript-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=youtube-transcript-skill&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/youtube-transcript-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 309,
+    "installs": 3,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "YouTube transcript extraction and content reformatting: given a YouTube video URL, opens the video's transcript panel, extracts all timestamped segments, and...",
+  "updated_at": 1781680731036,
+  "version": "1.0.0"
+}
