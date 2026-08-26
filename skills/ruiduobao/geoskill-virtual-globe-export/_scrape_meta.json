@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release \u2014 export spatiotemporal data to KML/CZML for virtual globes.\n\n- Supports export to KML (with TimeStamp, ExtendedData, and popup info) and CZML (with time intervals), usable in Google Earth and Cesium.\n- Includes synthetic mode to generate sample flight track data with timestamps for demo purposes.\n- Accepts input from GeoJSON, CSV, and local raster/vector files.\n- Outputs KML, CZML, JSON, and optional GeoTIFF (track density raster); each run produces a manifest.\n- Runs locally and offline by default; synthetic mode requires no network and ensures privacy.\n- Provided with MIT license.",
+  "created_at": 1785863271658,
+  "display_name": "geoskill-virtual-globe-export",
+  "fetched_at": 1787773408058,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-virtual-globe-export.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785864271534,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-virtual-globe-export",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-virtual-globe-export",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-virtual-globe-export&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-virtual-globe-export"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 182,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Export data to KML or CZML with time attributes and popup info for virtual globes",
+  "updated_at": 1785863428078,
+  "version": "1.0.0"
+}
