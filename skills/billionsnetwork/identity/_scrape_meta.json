@@ -1,0 +1,72 @@
+{
+  "changelog": "Identity Skill 2.0.4\n\n- Clarified the identity setup workflow: after creating a new Ethereum identity, you must run `linkHumanToAgent.js` before proceeding.\n- Updated guardrails to require both identity creation and explicit human owner linking before continuing with any operation.\n- Improved documentation for the identity existence check and the next steps in SKILL.md.\n- No changes were made to security model or environment variable options.",
+  "created_at": 1778526554765,
+  "display_name": "Verified Agent Identity",
+  "fetched_at": 1787786782834,
+  "files": [
+    "README.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "reference/identity/SKILL.md",
+    "reference/x402/SKILL.md",
+    "scripts/buildX402Payment.js",
+    "scripts/createNewEthereumIdentity.js",
+    "scripts/generateChallenge.js",
+    "scripts/getDidDocument.js",
+    "scripts/getIdentities.js",
+    "scripts/linkHumanToAgent.js",
+    "scripts/manualLinkHumanToAgent.js",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "scripts/shared/attestation.js",
+    "scripts/shared/bootstrap.js",
+    "scripts/shared/constants.js",
+    "scripts/shared/scopes.js",
+    "scripts/shared/storage/base.js",
+    "scripts/shared/storage/challenge.js",
+    "scripts/shared/storage/crypto.js",
+    "scripts/shared/storage/did.js",
+    "scripts/shared/storage/identities.js",
+    "scripts/shared/storage/keys.js",
+    "scripts/shared/utils/auth.js",
+    "scripts/shared/utils/cli.js",
+    "scripts/shared/utils/did.js",
+    "scripts/shared/utils/index.js",
+    "scripts/signChallenge.js",
+    "scripts/verifySignature.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090831817,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Billions Network",
+    "handle": "billionsnetwork",
+    "user_id": "s17bfxbf7jb6sh7f174z5vmrws85y08c"
+  },
+  "slug": "identity",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/identity",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=identity&ownerHandle=billionsnetwork",
+    "page_url": "https://clawhub.ai/billionsnetwork/skills/identity"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1019,
+    "installs": 26,
+    "stars": 8,
+    "versions": 6
+  },
+  "summary": "Know Your Agent (KYA). Billions decentralized identity for agents. Link agents to human identities using Billions ERC-8004 and Attestation Registries. Verify...",
+  "updated_at": 1779096915779,
+  "version": "2.0.4"
+}
