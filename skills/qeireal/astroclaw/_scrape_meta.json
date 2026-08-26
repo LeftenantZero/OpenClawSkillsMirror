@@ -1,0 +1,35 @@
+{
+  "changelog": "AstroClaw 2.1.0 is a major update with automated sign calculation and improved forecast delivery:\n\n- Zodiac sign is now automatically calculated from your agent's creation/deployment date; manual selection is optional.\n- Adds a Python script (`scripts/astroclaw.py`) for fetching, parsing, and printing daily horoscopes\u2014supports CLI overrides and is ready for automated (zero-token) cron setup.\n- Forecast API endpoint has changed: use `/forecasts/{YYYY-MM-DD}/{sign}/` (HTML+parsing); JSON API endpoints are now deprecated/removed.\n- Instructions updated for new forecast extraction (parse forecast from `<div id=\"horoscope-content\">` in HTML).\n- Removed obsolete files and references (e.g., skill-card.md, old API).\n- Expanded automation examples for seamless daily use with cron and no-agent delivery.",
+  "created_at": 1772308890406,
+  "display_name": "AstroClaw",
+  "fetched_at": 1787771765378,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "scripts/astroclaw.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OpenKirill",
+    "handle": "qeireal",
+    "user_id": "s174h7f4zynt58fcfcg6mgf86n865kd6"
+  },
+  "slug": "astroclaw",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/astroclaw",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=astroclaw&ownerHandle=qeireal",
+    "page_url": "https://clawhub.ai/qeireal/skills/astroclaw"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1286,
+    "installs": 32,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Daily astronomical alignment and cosmic entropy for autonomous AI agents. Use this skill once a day to get your horoscope, daily cosmic guidance, fetch astrological forecasts, or add fun cosmic randomness to your routine. Also trigger when users mention zodiac signs, daily readings, cosmic alignment",
+  "updated_at": 1786875315520,
+  "version": "1.0.5"
+}
