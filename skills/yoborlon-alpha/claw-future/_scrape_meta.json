@@ -1,0 +1,74 @@
+{
+  "changelog": "## v1.0.0-beta \u00b7 2026-03-17\n\n### \u9996\u6b21\u53d1\u5e03\n\n\u57fa\u4e8e\u4e0a\u671f\u6280\u672f\uff08CTP\uff09\u6807\u51c6\u63a5\u53e3\u7684\u804a\u5929\u5f0f\u671f\u8d27\u4ea4\u6613\u52a9\u7406\uff0c\u652f\u6301 Windows x64 / macOS / Linux x64\u3002\n\n#### \u6838\u5fc3\u529f\u80fd\n\n- \u8d26\u6237\u767b\u5f55\u3001\u7ed3\u7b97\u786e\u8ba4\u5168\u81ea\u52a8\u5b8c\u6210\n- \u5b9e\u65f6\u67e5\u8be2\u8d44\u91d1\u3001\u6301\u4ed3\u3001\u59d4\u6258\u3001\u6210\u4ea4\uff08\u76f4\u63a5\u6765\u81ea CTP \u56de\u8c03\uff0c\u975e\u672c\u5730\u7f13\u5b58\uff09\n- \u9650\u4ef7\u5355 / \u5e02\u4ef7\u5355\uff0c\u652f\u6301\u5f00\u4ed3 / \u5e73\u4ed3 / \u5e73\u4eca / \u5e73\u6628\n- \u884c\u60c5\u8ba2\u9605\u4e0e\u5b9e\u65f6\u4ef7\u683c\u67e5\u8be2\n- \u672c\u5730\u6761\u4ef6\u5355\uff1a\u4ef7\u683c\u89e6\u53ca\u9608\u503c\u81ea\u52a8\u5411 CTP \u53d1\u5355\n- \u5b9a\u65f6\u59d4\u6258\uff1a\u6307\u5b9a\u65f6\u95f4\u81ea\u52a8\u4e0b\u5355\uff08\u6bcf\u65e5 / \u5de5\u4f5c\u65e5 / \u4ec5\u4e00\u6b21\uff09\n- \u5b9a\u65f6\u767b\u5f55\uff1a\u6307\u5b9a\u65f6\u95f4\u81ea\u52a8\u91cd\u8fde\n- \u6bcf\u65e5 15:20 \u81ea\u52a8\u63a8\u9001\u6536\u76d8\u65e5\u62a5\n- \u9996\u6b21\u8fd0\u884c\u81ea\u52a8\u7f16\u8bd1\u63a5\u53e3\u5c42\u3001\u81ea\u52a8\u8d26\u6237\u914d\u7f6e\u5411\u5bfc\n\n#### \u4fee\u590d\uff08\u6d4b\u8bd5\u671f\u95f4\uff09\n\n- **\u9650\u4ef7\u5355\u88ab\u62d2**\uff1a`OrderPriceType` \u5e38\u91cf `PRICE_LIMIT` / `PRICE_MARKET` \u503c\u5bf9\u8c03\uff0c\u5bfc\u81f4\u9650\u4ef7\u5355\u5b9e\u9645\u4ee5\u5e02\u4ef7\u7c7b\u578b\u53d1\u51fa\uff0c\u4ea4\u6613\u6240\u62d2\u7edd\n- **macOS \u7f16\u8bd1\u5931\u8d25**\uff1a\u7f16\u8bd1\u811a\u672c\u542b Windows CRLF \u6362\u884c\u7b26\uff0c`set -euo pipefail` \u89e3\u6790\u5f02\u5e38\uff1b\u8865\u5145 `-liconv` \u94fe\u63a5\u9009\u9879\n- **macOS SDK \u517c\u5bb9**\uff1aSimNow macOS SDK \u4e3a 6.7.7 \u7248\u672c\uff0c`ReqUserLogin` \u4e3a 4 \u53c2\u6570\u7b7e\u540d\uff0c\u4e0e Windows 6.7.11 \u4e0d\u540c\uff0c\u5df2\u589e\u52a0\u6761\u4ef6\u7f16\u8bd1\u517c\u5bb9\n- **\u5b89\u88c5\u5305 macOS \u6846\u67b6\u635f\u574f**\uff1aWindows \u6253\u5305\u65f6 `.framework` \u5185\u7b26\u53f7\u94fe\u63a5\u88ab\u5b58\u4e3a\u666e\u901a\u6587\u4ef6\uff0cmacOS \u89e3\u538b\u540e\u6846\u67b6\u7ed3\u6784\u7f3a\u5931\uff1b\u6539\u4e3a\u4ee5 Unix \u7b26\u53f7\u94fe\u63a5\u683c\u5f0f\uff08`external_attr = 0o120755 << 16`\uff09\u5199\u5165 zip\n- **\u67e5\u8be2\u6570\u636e\u4e0d\u5b9e\u65f6**\uff1a\u539f `account` / `position` / `trades` / `orders` \u56db\u6761\u547d\u4ee4\u4ece\u672c\u5730\u72b6\u6001\u8bfb\u53d6\uff1b\u6539\u4e3a\u5b9e\u65f6\u5411 CTP \u53d1\u8d77\u67e5\u8be2\u5e76\u540c\u6b65\u7b49\u5f85\u56de\u8c03\uff0c\u786e\u4fdd\u6570\u636e\u6765\u81ea\u4ea4\u6613\u6240\n- **\u65e5\u62a5\u6570\u636e\u9648\u65e7**\uff1a\u65e5\u62a5\u751f\u6210\u65f6\u65b0\u589e\u5bf9\u8d44\u91d1\u3001\u6301\u4ed3\u3001\u6210\u4ea4\u7684\u5b9e\u65f6\u5237\u65b0\uff0c\u518d\u6c47\u603b\u8f93\u51fa",
+  "created_at": 1773716257193,
+  "display_name": "Claw Future",
+  "fetched_at": 1787788382485,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "api/VERSIONS.md",
+    "api/linux/ThostFtdcMdApi.h",
+    "api/linux/ThostFtdcTraderApi.h",
+    "api/linux/ThostFtdcUserApiDataType.h",
+    "api/linux/ThostFtdcUserApiStruct.h",
+    "api/macos/thostmduserapi_se.framework/Versions/A/Headers/ThostFtdcMdApi.h",
+    "api/macos/thostmduserapi_se.framework/Versions/A/Headers/ThostFtdcUserApiDataType.h",
+    "api/macos/thostmduserapi_se.framework/Versions/A/Headers/ThostFtdcUserApiStruct.h",
+    "api/macos/thosttraderapi_se.framework/Versions/A/Headers/ThostFtdcTraderApi.h",
+    "api/macos/thosttraderapi_se.framework/Versions/A/Headers/ThostFtdcUserApiDataType.h",
+    "api/macos/thosttraderapi_se.framework/Versions/A/Headers/ThostFtdcUserApiStruct.h",
+    "api/win/ThostFtdcMdApi.h",
+    "api/win/ThostFtdcTraderApi.h",
+    "api/win/ThostFtdcUserApiDataType.h",
+    "api/win/ThostFtdcUserApiStruct.h",
+    "config.example.json",
+    "references/instruments.md",
+    "scripts/bridge/build_linux.sh",
+    "scripts/bridge/build_macos.sh",
+    "scripts/bridge/build_windows.py",
+    "scripts/bridge/ctp_bridge.cpp",
+    "scripts/bridge/ctp_bridge.h",
+    "scripts/clawtrader.py",
+    "scripts/ctp/__init__.py",
+    "scripts/ctp/bridge_loader.py",
+    "scripts/ctp/md_gateway.py",
+    "scripts/ctp/trader_gateway.py",
+    "scripts/daemon.py",
+    "scripts/state.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089923525,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yoborlon-alpha",
+    "handle": "yoborlon-alpha",
+    "user_id": "s17e70xegk92m8tx19x1186gf983gc28"
+  },
+  "slug": "claw-future",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claw-future",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claw-future&ownerHandle=yoborlon-alpha",
+    "page_url": "https://clawhub.ai/yoborlon-alpha/skills/claw-future"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 1095,
+    "installs": 31,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u671f\u8d27\u4ea4\u6613\u52a9\u7406\u3002\u7528\u4e8e\u4e2d\u56fd\u671f\u8d27\u5e02\u573a\uff08CTP\u63a5\u53e3\uff09\u7684\u76ef\u76d8\u3001\u4e0b\u5355\u3001\u9884\u57cb\u6761\u4ef6\u5355\u3001\u5b9a\u65f6\u4efb\u52a1\u548c\u6536\u76d8\u65e5\u62a5\u3002\u5f53\u7528\u6237\u8bf4\"\u4e70\u5165/\u5356\u51fa/\u5e73\u4ed3/\u5f00\u4ed3\"\u67d0\u5408\u7ea6\u3001\u67e5\u8be2\"\u6301\u4ed3/\u8d44\u91d1/\u884c\u60c5/\u4ef7\u683c\"\u3001\u8bbe\u7f6e\"\u4ef7\u683c\u9884\u8b66/\u6761\u4ef6\u5355/\u5b9a\u65f6\u59d4\u6258/\u5b9a\u65f6\u767b\u5f55\"\u3001\u6216\u8981\u6c42\"\u4eca\u65e5\u6210\u4ea4/\u6536\u76d8\u62a5\u544a/\u65e5\u62a5\"\u65f6\uff0c\u8c03\u7528\u672c skill\u3002",
+  "updated_at": 1779078390337,
+  "version": "1.0.0"
+}
