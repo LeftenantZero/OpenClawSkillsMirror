@@ -1,0 +1,39 @@
+{
+  "changelog": "**Major update: New fetch-price skill replaces previous sports simulation functionality.**\n\n- Replaced all sports simulation and betting code/docs with a product price search skill for the UK.\n- Now returns live UK marketplace (eBay UK; Amazon UK coming soon) product prices, condition, and direct buy links via a new API.\n- Usage limited to physical products in the UK. Not for digital goods, services, or non-UK regions.\n- Added Python and JavaScript entry points; removed sports-related TypeScript source and docs.\n- Updated documentation with usage guidelines, API examples, and integration notes.",
+  "created_at": 1785101361178,
+  "display_name": "fetch-price",
+  "fetched_at": 1787774827570,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "js/index.js",
+    "js/package.json",
+    "mcp/fetch_price_mcp.py",
+    "python/fetch_price/__init__.py",
+    "python/pyproject.toml",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "fusionx212",
+    "handle": "fusionx212",
+    "user_id": "s17eqwk1vhgfg8zdnnmd3kkned8b8e0y"
+  },
+  "slug": "sdk",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sdk",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sdk&ownerHandle=fusionx212",
+    "page_url": "https://clawhub.ai/fusionx212/skills/sdk"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 48,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Search live UK marketplace prices and products from any agent. Use this skill whenever a user wants to find, compare, price-check, or buy a physical product in the UK \u2014 e.g. 'find me headphones under \u00a3100', 'cheapest portable air conditioner in stock', 'compare prices for a refurbished ThinkPad', 'is this a good deal'. Sends one API call to fetch-price and returns normalised JSON: product name, live price in GBP, condition, marketplace, and a direct purchase URL to give the user. Covers eBay UK now, Amazon UK rolling out. Do NOT use for digital goods, services, non-UK marketplaces, or historical price research.",
+  "updated_at": 1785101873303,
+  "version": "1.0.0"
+}
