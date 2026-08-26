@@ -1,0 +1,33 @@
+{
+  "changelog": "- Adds a Codex skill for working with Snyk through an OOMOL-connected account, using the `oo` CLI connector instead of direct API calls.\n- Covers the main read flows: fetch the current Snyk principal, list accessible organizations, inspect one organization, list projects, inspect one project, and list organization issues.\n- Requires checking each action\u2019s live schema before running it, so payloads match the connector contract exactly.\n- Keeps usage safe by separating read actions from write or destructive actions, with explicit confirmation required for anything that changes Snyk state.\n- Includes clear first-time setup recovery steps for CLI, authentication, connection, and billing errors.\n\nSource: `oomol-lab/skills@46cfb3e`",
+  "created_at": 1786455480542,
+  "display_name": "Snyk",
+  "fetched_at": 1787772635222,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-snyk",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-snyk",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-snyk&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-snyk"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 163,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Snyk (snyk.io). Use this skill for ANY Snyk request \u2014 searching and reading data. Whenever a task involves Snyk, use this skill instead of calling the API directly.",
+  "updated_at": 1786455557165,
+  "version": "1.0.0"
+}
