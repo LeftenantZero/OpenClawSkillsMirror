@@ -1,0 +1,58 @@
+{
+  "changelog": "alibabacloud-devops 0.0.3\n\n- Expanded and clarified CLI configuration flow, including stricter site type and environment variable handling.\n- Added explicit guidance for distinguishing between central site (org ID required, default API base URL) and region site (custom API base URL, no org ID).\n- Introduced a mandatory step to pre-configure aliyun-cli for auto plugin installation, avoiding interactive prompts and timeouts.\n- Updated fallback channel instructions to better align with site type logic and clarify MCP/mcporter environment requirements.\n- Improved token security and error-handling advice throughout the documentation.\n- Removed redundant and outdated reference file (`skill-card.md`).",
+  "created_at": 1782200273395,
+  "display_name": "alibabacloud-devops",
+  "fetched_at": 1787771610033,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/aliyun-cli-install.md",
+    "references/aliyun-cli-setup.md",
+    "references/common-scenarios.md",
+    "references/intent-classification.md",
+    "references/mcp-setup.md",
+    "references/product-mapping.md",
+    "references/product-reference.md",
+    "references/ram-policies.md",
+    "references/token-scopes.md",
+    "references/tool-catalog.md",
+    "references/verification-method.md",
+    "scripts/check-environment.sh",
+    "scripts/discover-commands.sh",
+    "scripts/mcporter-call.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786947808238,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-devops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-devops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-devops&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-devops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 531,
+    "installs": 0,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Automate Alibaba Cloud Yunxiao DevOps tasks \u2014 create and run pipelines, manage code repositories and merge requests, track work items and sprints, create test cases, manage artifacts, and drive application release workflows across 8 Yunxiao products. Triggers: \"Yunxiao\", \"DevOps\", \"pipeline\", \"code repository\", \"merge request\", \"work item\", \"sprint\", \"test case\", \"application delivery\", \"artifact repository\", \"Codeup\", \"Flow\", \"Projex\", \"AppStack\", \"Packages\", \"Testhub\"",
+  "updated_at": 1786947060711,
+  "version": "0.0.3"
+}
