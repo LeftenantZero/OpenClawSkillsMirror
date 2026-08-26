@@ -1,0 +1,46 @@
+{
+  "changelog": "**Summary**: This update refactors the Hyperliquid agent skill to enforce strict separation between execution logic and secret handling, requiring all authentication and session setup to be handled externally.\n\n- The skill no longer manages, requests, or stores wallet secrets or credentials; authentication must be handled by the host environment.\n- Required input now includes a host-provided authenticated Hyperliquid client/session instead of private keys or secret data.\n- Clarified host and skill responsibilities: secret management and transaction signing are outside the skill scope.\n- Revised risk, position sizing, and execution flows to operate only on authenticated sessions and externally-injected state.\n- Updated documentation and input/output fields for improved composability and security.",
+  "created_at": 1774688139257,
+  "display_name": "hyperliquid-trading-agent",
+  "fetched_at": 1787787137228,
+  "files": [
+    "README.md",
+    "_meta.json",
+    "examples/basic_usage.py",
+    "manifest.json",
+    "skill-card.md",
+    "skill.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090165069,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jurgenw81",
+    "handle": "jurgenw81",
+    "user_id": "s175481d152rdg5dqq5ctjxkzs83kkre"
+  },
+  "slug": "hyperliquid-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hyperliquid-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hyperliquid-agent&ownerHandle=jurgenw81",
+    "page_url": "https://clawhub.ai/jurgenw81/skills/hyperliquid-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 868,
+    "installs": 20,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Connects to Hyperliquid via wallet, fetches market data, enforces risk rules, sizes positions, places and monitors orders for perpetual futures trading.",
+  "updated_at": 1779079048792,
+  "version": "1.0.1"
+}
