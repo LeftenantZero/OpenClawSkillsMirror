@@ -1,0 +1,68 @@
+{
+  "changelog": "Initial release.\n\n- Slices rasters into multi-zoom XYZ Web Mercator PNG tiles with per-tile metadata.\n- Generates tiles using pure Python PNG encoding (no PIL/GDAL dependency, offline-ready).\n- Supports both local GeoTIFF rasters and synthetic gradient raster generation.\n- Outputs organized `{z}/{x}/{y}.png` directories, with accompanying tiles.json and output-manifest.json.\n- Includes command line options for bounding box, zoom range, tile size, and quiet mode.\n- Runs fully offline, preserving user privacy.",
+  "created_at": 1785862680263,
+  "display_name": "geoskill-tile-service-generator",
+  "fetched_at": 1787773417288,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_run/output-manifest.json",
+    "_test_cli_run/tiles.json",
+    "e2e_test.py",
+    "geoskill-tile-service-generator.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785863729775,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-tile-service-generator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-tile-service-generator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-tile-service-generator&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-tile-service-generator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 172,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06\u6805\u683c\u6309 Web Mercator XYZ \u5207\u7247\u65b9\u6848\u5207\u5206\u4e3a\u591a\u7f29\u653e\u7ea7\u522b PNG \u74e6\u7247\u5e76\u751f\u6210\u5143\u6570\u636e\u3002Slice a raster into multi-zoom XYZ Web Mercator PNG tiles with tile metadata.",
+  "updated_at": 1785862856709,
+  "version": "1.0.0"
+}
