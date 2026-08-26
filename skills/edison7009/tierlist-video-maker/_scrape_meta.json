@@ -1,0 +1,48 @@
+{
+  "changelog": "Version 1.0.11\n\n- Improved handling for transparent image cards: preserves PNG/WebP alpha and ensures cutout images display cleanly on black backgrounds.\n- Boards with text-only or detailed image cards now skip unnecessary AI vision steps; labels are derived directly from available data.\n- Clear guidance added for unpublished TierVibe posts and for boards requiring AI vision capabilities that may be unavailable.\n- Enhanced high-resolution board capture: background is generated via an automated, client-side action without additional TierVibe server calls.\n- Updated instructions for workflow steps, including precise criteria for when vision is and isn't needed.",
+  "created_at": 1784991052191,
+  "display_name": "TierList Video Maker",
+  "fetched_at": 1787773954980,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/tiervibe-api.md",
+    "scripts/__pycache__/build_card_manifest.cpython-314.pyc",
+    "scripts/__pycache__/capture_board.cpython-314.pyc",
+    "scripts/__pycache__/fetch_tierlist.cpython-314.pyc",
+    "scripts/__pycache__/generate_video.cpython-314.pyc",
+    "scripts/__pycache__/reconcile_cards.cpython-314.pyc",
+    "scripts/__pycache__/render_board.cpython-314.pyc",
+    "scripts/__pycache__/tts_narration.cpython-314.pyc",
+    "scripts/build_card_manifest.py",
+    "scripts/capture_board.py",
+    "scripts/fetch_tierlist.py",
+    "scripts/generate_video.py",
+    "scripts/reconcile_cards.py",
+    "scripts/render_board.py",
+    "scripts/tts_narration.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Edison",
+    "handle": "edison7009",
+    "user_id": "s174qymstncmvnkxecmq4ftt658ax676"
+  },
+  "slug": "tierlist-video-maker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tierlist-video-maker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tierlist-video-maker&ownerHandle=edison7009",
+    "page_url": "https://clawhub.ai/edison7009/skills/tierlist-video-maker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 159,
+    "installs": 1,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Turn a published TierVibe tier list into a narrated video. Fetches tier list data and card images from a TierVibe URL, captures a HIGH-RESOLUTION board image from the public page (Playwright, no server call \u2014 the whole-image export is a user-side action, automated), uses AI vision to identify each c",
+  "updated_at": 1785581472457,
+  "version": "1.0.11"
+}
