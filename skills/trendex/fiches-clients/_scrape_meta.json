@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of the skill for managing client records.\n\n- Handles full lifecycle of client records, including creation, renaming, merging, archiving, validation, and updates.\n- Sole owner of `clients.json` and all client folders; all mutations must go through this skill.\n- Systematically invoked on any user request to act on a client record (create, update, rename, archive, etc.).\n- Distinguishes explicit user actions from auto-created drafts by `organisation-documents`.\n- Executes all operations inline with clear, concise communication tailored for accounting workflows.",
+  "created_at": 1779884445285,
+  "display_name": "Fiches Clients",
+  "fetched_at": 1787784413198,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "data/fiche-client.example.json",
+    "references/cohabitation.md",
+    "references/schema-fiche-client.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967758118,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "trendex",
+    "handle": "trendex",
+    "user_id": "s171rnymrzgb46f7qxnxd5034586ma2f"
+  },
+  "slug": "fiches-clients",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fiches-clients",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fiches-clients&ownerHandle=trendex",
+    "page_url": "https://clawhub.ai/trendex/skills/fiches-clients"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 485,
+    "installs": 9,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Skill propri\u00e9taire de la gestion des fiches clients du cabinet (lifecycle complet du dossier `clients/<slug>/` et de l'entr\u00e9e `clients.json`). INVOKE SYSTEMA...",
+  "updated_at": 1779884445285,
+  "version": "0.1.0"
+}
