@@ -1,0 +1,68 @@
+{
+  "changelog": "Initial release of the ai-image-prompt skill.\n\n- Translates user needs into precise, high-quality AI image prompts, with robust support for product, model, and e-commerce scenarios.\n- Features strict reference mapping (role assignment), high-fidelity recreation, and detailed task mode routing for compliance, realism, and style matching.\n- Implements customized prompt enhancement layers (detail, texture, quality), safety rewriting for policy compliance, and Chinese/English prompt output packages.\n- Integrates step-by-step guides for spatial layout, brand tone, deliverable formats (main image, gallery, detail page, multi-view), and specific handling for fitted apparel.\n- Outputs complete, actionable prompt bundles and supports structured JSON output for further automation.",
+  "created_at": 1783302719598,
+  "display_name": "ai-image-prompt",
+  "fetched_at": 1787778025153,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/anti-ai-guide.md",
+    "references/brand-tone-map.md",
+    "references/case-advanced.md",
+    "references/case-models.md",
+    "references/case-products.md",
+    "references/case-scenes-design.md",
+    "references/case-studies.md",
+    "references/ecommerce-deliverables.md",
+    "references/ecommerce-product-polish-system.md",
+    "references/fabric-guide.md",
+    "references/lingerie-guide.md",
+    "references/naifu-prompting.md",
+    "references/natural-human-system.md",
+    "references/patterns-design-editing.md",
+    "references/patterns-portraits.md",
+    "references/patterns-products.md",
+    "references/policy-safe-generation.md",
+    "references/portrait-realism-system.md",
+    "references/prompt-detail-expansion-system.md",
+    "references/prompt-output-package.md",
+    "references/prompt-patterns.md",
+    "references/prompt-quality-system.md",
+    "references/reference-fidelity-system.md",
+    "references/reverse-engineering.md",
+    "references/spatial-control.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783633107545,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "aolio516125-spec",
+    "handle": "aolio516125-spec",
+    "user_id": "s17emrnhvqbdqeg72y94say82187zadv"
+  },
+  "slug": "nextory",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nextory",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nextory&ownerHandle=aolio516125-spec",
+    "page_url": "https://clawhub.ai/aolio516125-spec/skills/nextory"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 244,
+    "installs": 1,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "AI \u56fe\u7247\u63d0\u793a\u8bcd\u4f18\u5316\u3001\u9ad8\u8d28\u611f\u63d0\u793a\u8bcd\u5199\u4f5c\u3001\u9ad8\u4fdd\u771f\u53c2\u8003\u56fe\u878d\u5408\u4e0e 1:1 \u8fd8\u539f\u6280\u80fd\u3002\u5f53\u7528\u6237\u8bf4\u201cao\u201d\u3001\u8981\u6c42\u6839\u636e\u4e0a\u4f20\u56fe\u7247\u751f\u6210\u66f4\u7cbe\u51c6/\u66f4\u5168\u9762/\u66f4\u8be6\u7ec6/\u66f4\u6709\u8d28\u611f\u7684\u63d0\u793a\u8bcd\u3001 \u4e25\u683c\u590d\u523b\u6a21\u7279/\u4ea7\u54c1/\u573a\u666f\u3001\u7cbe\u786e\u6a21\u4eff\u53c2\u8003\u56fe\u3001\u5b8c\u5168\u53c2\u8003\u4e0a\u4f20\u6a21\u7279\u98ce\u683c\u3001\u8ba9\u4eba\u7269\u66f4\u81ea\u7136\u771f\u5b9e\u3001\u589e\u5f3a\u4eba\u50cf\u771f\u5b9e\u611f\u3001\u4fee\u590d\u63d0\u793a\u8bcd\u88ab\u5e73\u53f0\u5224\u5b9a\u8fdd\u89c4/\u65e0\u6cd5\u751f\u6210\u7684\u95ee\u9898\u3001\u6307\u5b9a\u4ea7\u54c1\u4f4d\u7f6e\u4e0e\u89d2\u5ea6\u3001\u4f18\u5316\u4ea7\u54c1\u6444\u5f71/\u4eba\u50cf\u6444\u5f71/\u7535\u5546\u89c6\u89c9\u3001 \u751f\u6210\u7535\u5546\u4e3b\u56fe/\u8be6\u60c5\u9875/\u4e5d\u5bab\u683c/\u56db\u89c6\u56fe/\u6a21\u7279\u56fe\u3001\u9700\u8981\u8f7b\u5962/\u6cd5\u5f0f/\u8fd0\u52a8/\u6781\u7b80/\u4e70\u624b\u5e97\u98ce\u54c1\u724c\u8bed\u6c14\u3001 \u4f18\u5316 Flux / Nonbana / Nano Banana / Midjourney \u63d0\u793a\u8bcd\uff0c\u6216\u9700\u8981\u8d34\u8eab\u670d\u9970/\u5bb6\u5c45\u670d/\u7537\u58eb\u8d34\u8eab\u4e0b\u88c5\u7b49\u5546\u4e1a\u62cd\u6444\u63d0\u793a\u8bcd",
+  "updated_at": 1783302719598,
+  "version": "1.0.0"
+}
