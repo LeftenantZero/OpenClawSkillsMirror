@@ -1,0 +1,71 @@
+{
+  "changelog": "- Removed the file: skill-card.md.\n- No other functional or code changes.",
+  "created_at": 1779390501894,
+  "display_name": "Pet Training Command Execution Recognition | \u5ba0\u7269\u8bad\u7ec3\u6307\u4ee4\u6267\u884c\u8bc6\u522b\uff08\u5750/\u5367/\u7b49\uff09",
+  "fetched_at": 1787771391866,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api_doc.md",
+    "scripts/__init__.py",
+    "scripts/config.py",
+    "scripts/config.yaml",
+    "scripts/skill.py",
+    "scripts/smyx_pet_training_command_execution_analysis.py",
+    "skill-card.md",
+    "skills/smyx_analysis/__init__.py",
+    "skills/smyx_analysis/references/api_doc.md",
+    "skills/smyx_analysis/requirements.txt",
+    "skills/smyx_analysis/scripts/__init__.py",
+    "skills/smyx_analysis/scripts/api_service.py",
+    "skills/smyx_analysis/scripts/config.py",
+    "skills/smyx_analysis/scripts/config.yaml",
+    "skills/smyx_analysis/scripts/skill.py",
+    "skills/smyx_analysis/scripts/smyx_analysis.py",
+    "skills/smyx_common/__init__.py",
+    "skills/smyx_common/requirements.txt",
+    "skills/smyx_common/scripts/__init__.py",
+    "skills/smyx_common/scripts/api_service.py",
+    "skills/smyx_common/scripts/base.py",
+    "skills/smyx_common/scripts/config-dev.yaml",
+    "skills/smyx_common/scripts/config-prod.yaml",
+    "skills/smyx_common/scripts/config-test.yaml",
+    "skills/smyx_common/scripts/config.py",
+    "skills/smyx_common/scripts/config.yaml",
+    "skills/smyx_common/scripts/dao.py",
+    "skills/smyx_common/scripts/skill.py",
+    "skills/smyx_common/scripts/util.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787086790843,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "smyx-skills",
+    "handle": "18072937735",
+    "user_id": "s17f8q65zg3y98t86jdg1177g583whq8"
+  },
+  "slug": "smyx-pet-training-command-execution-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/smyx-pet-training-command-execution-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=smyx-pet-training-command-execution-analysis&ownerHandle=18072937735",
+    "page_url": "https://clawhub.ai/18072937735/skills/smyx-pet-training-command-execution-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1408,
+    "installs": 13,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "Triggers when a user provides a training-area video of a pet for analysis; supports local uploads or network URLs to call server-side APIs for command-execution recognition, detecting whether the pet's body posture matches the issued commands (Sit / Down / Stay), comparing posture timing against command timestamps, and judging execution success. When the command is not executed, the result can trigger an external voice repeat-prompt signal (not a medical / behavior-therapy advice). Application scenarios: smart dog-training devices, remote pet training, behavior correction. | \u5f53\u7528\u6237\u63d0\u4f9b\u8bad\u7ec3\u533a\u57df\u89c6\u9891\u65f6\uff0c\u89e6\u53d1\u672c\u6280\u80fd\u8fdb\u884c\u59ff\u6001-\u6307\u4ee4\u5339\u914d\u5206\u6790\uff1b\u652f\u6301\u901a\u8fc7\u4e0a\u4f20\u672c\u5730\u89c6\u9891\u6216\u7f51\u7edc\u89c6\u9891URL\uff0c\u8c03\u7528\u670d\u52a1\u7aefAPI\u68c0\u6d4b\u5ba0\u7269\u8eab\u4f53\u59ff\u6001\u662f\u5426\u7b26\u5408\u201c\u5750/\u5367/\u7b49\u201d\u6307\u4ee4\u6807\u51c6\uff0c\u5bf9\u6bd4\u6307\u4ee4\u53d1\u51fa\u65f6\u95f4\uff0c\u5224\u65ad\u662f\u5426\u6267\u884c\u6210\u529f\uff1b\u672a\u6267\u884c\u65f6\u53ef\u7531\u5916\u90e8\u8bbe\u5907\u89e6\u53d1\u58f0\u63a7\u91cd\u590d\u63d0\u793a\u4fe1\u53f7\uff08\u4e0d\u63d0\u4f9b\u75be\u75c5\u8bca\u65ad\u6216\u884c\u4e3a\u6cbb\u7597\u65b9\u6848\uff09\u3002\u5e94\u7528\u573a\u666f\uff1a\u667a\u80fd\u8bad\u72d7\u8bbe\u5907\u3001\u5ba0\u7269\u8fdc\u7a0b\u8bad\u7ec3\u3001\u884c\u4e3a\u77eb\u6b63\u3002",
+  "updated_at": 1787086011390,
+  "version": "1.0.9"
+}
