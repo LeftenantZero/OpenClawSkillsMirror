@@ -1,0 +1,33 @@
+{
+  "changelog": "ads-brain-planning-create-pipeline v1.0.0\n\n- Initial release defining the core pipeline and business rules for creative campaign planning in the new Agent framework.\n- Focused on content-layer definitions; does not affect existing routes, call external Tools, or manage create_campaign field details.\n- Implements a state machine (S0\u2013S6) to structure new ad campaign creation flows, including scenario recognition, eligibility checks, context normalization, and draft generation.\n- Clearly separates supported and unsupported scenarios, ensuring proper routing for new campaign generation only.\n- Provides structured logic for leveraging existing business information, evidence packs, and guard checks at each step.\n- Details dependencies and output structure for both natural language planning and executable campaign configuration.",
+  "created_at": 1784718983720,
+  "display_name": "Ads Brain Planning Create Pipeline 1.0.0",
+  "fetched_at": 1787775673895,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "lizejia668-code",
+    "handle": "lizejia668-code",
+    "user_id": "s171rc0m2pme0zp5zwgmhvg1ms89mfdn"
+  },
+  "slug": "ads-brain-planning-create-pipeline",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ads-brain-planning-create-pipeline",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ads-brain-planning-create-pipeline&ownerHandle=lizejia668-code",
+    "page_url": "https://clawhub.ai/lizejia668-code/skills/ads-brain-planning-create-pipeline"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 234,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u89c4\u5212 Agent \u65b0\u6846\u67b6\u4e2d\u7684\u521b\u7f16 Pipeline\u3002\u9762\u5411\u65b0\u5efa\u6295\u653e\u65b9\u6848\u751f\u6210\uff0c\u8d1f\u8d23\u4ece\u7ecf\u8425\u8bc9\u6c42\u5f52\u4e00\u5316\u51fa\u53d1\uff0c\u7ecf\u8fc7\u573a\u666f\u95e8\u7981\u3001\u521b\u5efa\u5fc5\u8981\u95e8\u7981\u3001\u751f\u6210 launch_plan_draft\uff0c\u5e76\u59d4\u6258 simple-create \u751f\u6210 create_campaign\u3002",
+  "updated_at": 1784720134415,
+  "version": "1.0.0"
+}
