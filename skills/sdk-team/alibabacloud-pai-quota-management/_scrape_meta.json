@@ -1,0 +1,40 @@
+{
+  "changelog": "alibabacloud-pai-quota-management v0.0.1 \u2013 Initial Release\n\n- Introduces full lifecycle management for Alibaba Cloud PAI Quotas via the aliyun CLI (`paistudio` and `aiworkspace` plugins).\n- Supports creating, scaling, updating, deleting quotas; managing root/child quota trees; binding/detaching quotas to/from workspaces.\n- Enforces strict confirmation workflows: critical operations (create, update, scale, delete, detach) require a two-step process with dry-run and explicit user confirmation.\n- All business API calls must include detailed per-session user-agent flags for observability.\n- Documents required permissions, environment variables, and parameter sourcing rules.\n- No direct handling of secret credentials; follows best-practice Alibaba Cloud CLI and RAM permissions security models.",
+  "created_at": 1781096666849,
+  "display_name": "Alibabacloud Pai Quota Management",
+  "fetched_at": 1787781267926,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/not-implementable.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/validation-rules.md",
+    "references/verification-method.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-pai-quota-management",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-pai-quota-management",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-pai-quota-management&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-pai-quota-management"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 530,
+    "installs": 5,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "End-to-end Alibaba Cloud PAI Quota lifecycle management via `aliyun paistudio` (Quota CRUD, scale, workload inspection) and `aliyun aiworkspace` (binding Quo...",
+  "updated_at": 1781096666849,
+  "version": "0.0.1"
+}
