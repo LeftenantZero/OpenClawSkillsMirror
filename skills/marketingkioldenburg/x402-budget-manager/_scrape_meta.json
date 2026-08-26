@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of x402 Budget Manager.\n\n- Enforces per-endpoint hard/soft caps and pre-authorized override budgets for x402 requests.\n- Supports two enforcement modes: per-request (stateless, default) and cumulative session (stateful).\n- Implements global and per-provider monthly and session spend ceilings.\n- Reads pricing before each call; aborts or escalates requests based on configurable budget.json policy.\n- Tracks cumulative spend in an append-only spend log for auditability and enforcement.\n- Prevents overspend and unapproved payments, making x402 clients production-safe.",
+  "created_at": 1786092811740,
+  "display_name": "x402-budget-manager",
+  "fetched_at": 1787773174875,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "marketingkioldenburg",
+    "handle": "marketingkioldenburg",
+    "user_id": "s177w8b14x2t034z4q9san5h6987rq86"
+  },
+  "slug": "x402-budget-manager",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/x402-budget-manager",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=x402-budget-manager&ownerHandle=marketingkioldenburg",
+    "page_url": "https://clawhub.ai/marketingkioldenburg/skills/x402-budget-manager"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 167,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Track and cap x402 spend across providers \u2014 per-endpoint hard_cap/soft_cap, pre-authorized override budgets, cumulative spend tracking, monthly ceilings. Makes x402 the client production-safe by preventing overspend and aborting costly calls before they happen.",
+  "updated_at": 1786092879008,
+  "version": "1.0.0"
+}
