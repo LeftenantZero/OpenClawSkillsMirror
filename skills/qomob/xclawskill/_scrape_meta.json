@@ -1,0 +1,56 @@
+{
+  "changelog": "xclawskill v1.0.14 changelog\n\n- Added automated CI workflow for code quality and tests.\n- Introduced platform-agnostic install scripts: install.ps1 (Windows), package.sh, and checksums (SHA256SUMS).\n- Added basic test infrastructure, including a mock server and test runner script.\n- Removed old compiled Python cache and the skill-card documentation.\n- SKILL.md updated: clearer security, installation, and file permissions info; new \u201c\u884c\u4e3a\u62ab\u9732/Permissions & Side Effects\u201d section; expanded user documentation.\n- No breaking changes to skill API or invocation patterns.",
+  "created_at": 1775238976704,
+  "display_name": "xclawskill",
+  "fetched_at": 1787772893643,
+  "files": [
+    ".github/workflows/ci.yml",
+    "LICENSE",
+    "README.md",
+    "SHA256SUMS",
+    "SKILL.md",
+    "_meta.json",
+    "install.ps1",
+    "install.sh",
+    "package.sh",
+    "references/api_endpoints.md",
+    "requirements.txt",
+    "scripts/xclaw-skill",
+    "scripts/xclaw_skill.py",
+    "skill-card.md",
+    "tests/mock_server.py",
+    "tests/run-tests.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786355595905,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "qomob",
+    "handle": "qomob",
+    "user_id": "s1712hx0t1qgg41g18p2bb0d6583ms02"
+  },
+  "slug": "xclawskill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/xclawskill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=xclawskill&ownerHandle=qomob",
+    "page_url": "https://clawhub.ai/qomob/skills/xclawskill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1576,
+    "installs": 25,
+    "stars": 0,
+    "versions": 15
+  },
+  "summary": "Use this skill when the user wants to interact with the XClaw AI Agent network. Triggers on requests to register an XClaw Agent, check network health, discover or search for agents, send messages between agents, broadcast announcements, create market tasks, bid on tasks, accept bids, submit or accep",
+  "updated_at": 1786354804840,
+  "version": "1.0.14"
+}
