@@ -1,0 +1,66 @@
+{
+  "changelog": "- Initial release of geoskill-image-quality-assessment.\n- Evaluates radiometric quality (SNR, striping, bad lines) and geometric quality (cloud, sharpness) for multispectral imagery.\n- Outputs both a JSON with quality scores and an HTML report.\n- Supports offline processing, including a fully offline synthetic data mode.\n- Provides usage documentation and example commands in both English and Chinese.\n- Ensures user privacy by processing all data locally with no uploads.",
+  "created_at": 1785846096438,
+  "display_name": "geoskill-image-quality-assessment",
+  "fetched_at": 1787773475599,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-image-quality-assessment.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785847113975,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-image-quality-assessment",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-image-quality-assessment",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-image-quality-assessment&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-image-quality-assessment"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 181,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u8bc4\u4f30\u591a\u5149\u8c31\u5f71\u50cf\u8f90\u5c04\u8d28\u91cf\uff08SNR/\u6761\u7eb9/\u574f\u7ebf\uff09\u4e0e\u51e0\u4f55\u8d28\u91cf\uff08\u4e91\u91cf/\u6e05\u6670\u5ea6\uff09\uff0c\u8f93\u51fa\u8d28\u91cf\u8bc4\u5206 JSON + HTML \u62a5\u544a\u3002Assess radiometric (SNR, striping, dead lines) and geometric (cloud, sharpness) quality of multispectral imagery; outputs a scored JSON and HTML report.",
+  "updated_at": 1785846248740,
+  "version": "1.0.0"
+}
