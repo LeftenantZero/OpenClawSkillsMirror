@@ -1,0 +1,35 @@
+{
+  "changelog": "### Added\n- Initial release of `remotion-video-pipeline`: an orchestration playbook for an audio-driven Remotion short-video workflow (script \u2192 audio \u2192 SRT \u2192 timeline \u2192 render \u2192 CapCut).\n- Two mandatory human STOP gates: script confirmation (before audio) and timeline confirmation (after SRT recalibration, before render); audio approval and a pre-render preview documented as optional checks.\n- The `scenes.json` / timeline data contract (`meta` + `scenes[]`, seconds-based authoring with sec\u2192frames conversion).\n- Governing principle (audio = master timeline \u00b7 SRT = time ruler \u00b7 Remotion = visuals generator \u00b7 CapCut = sound + final edit) and the rule that the script is frozen once audio exists.\n- Remotion audio method A (narration baked in, default) vs. method B (silent render + separate voice, advanced), and a CapCut handoff bundle + checklist.\n- Delegation of Remotion composition code to a Remotion skill such as `remotion-best-practices`; tool-agnostic audio/STT guidance with Whisper as the documented SRT default.\n- English skill body with Chinese-term glosses for the working vocabulary; source uses one-sentence-per-line formatting to match the repo convention.",
+  "created_at": 1781149330642,
+  "display_name": "Remotion Video Pipeline",
+  "fetched_at": 1787781188708,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "devasher",
+    "handle": "archlab-space",
+    "user_id": "s176qz6rwtpzj9gk93r7b3jm6984ty2d"
+  },
+  "slug": "remotion-video-pipeline",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/remotion-video-pipeline",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=remotion-video-pipeline&ownerHandle=archlab-space",
+    "page_url": "https://clawhub.ai/archlab-space/skills/remotion-video-pipeline"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 459,
+    "installs": 5,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use this skill to produce a Remotion short video through an audio-driven pipeline: script \u2192 audio \u2192 SRT \u2192 timeline \u2192 scenes.json \u2192 render \u2192 CapCut handoff, w...",
+  "updated_at": 1781149330642,
+  "version": "0.1.0"
+}
