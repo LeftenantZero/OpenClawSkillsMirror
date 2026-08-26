@@ -1,0 +1,51 @@
+{
+  "changelog": "factor-prune 1.0.0 \u2013 Initial release\n\n- Provides factor selection and de-duplication after stock-factor output, using greedy forward selection and correlation pruning to produce a high-quality, low-redundancy factor list.\n- Supports two main workflows: file-driven six-step method (prune_flow.py, recommended) with unified state management, and matrix cache method (prune.py) suitable for replaying with different thresholds.\n- Includes specialized support for top/bottom 10% window-based selection for nuanced coverage and score optimization.\n- Clear output boundaries: only produces a pruned factor list for downstream use; does not cover factor synthesis, backtesting, or combination.\n- Integrated with QuantAll engine and depends on the output from the stock-factor skill.",
+  "created_at": 1786429599098,
+  "display_name": "factor-prune",
+  "fetched_at": 1787772753077,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/Start_QuantAll.py",
+    "scripts/data/db_translate.json",
+    "scripts/factor_heatmaps.py",
+    "scripts/factor_pairs.py",
+    "scripts/output/facotr-Qlib_alpha158.xlsx",
+    "scripts/output/facotr-Qlib_alpha360.xlsx",
+    "scripts/output/factor-Alpha101.xlsx",
+    "scripts/output/factor-GTJA_Alpha191.xlsx",
+    "scripts/output/factor-TA_Indicators.xlsx",
+    "scripts/output/factor-stock_daily.xlsx",
+    "scripts/output/factor-stock_report.xlsx",
+    "scripts/probe_heatmap.py",
+    "scripts/prune.py",
+    "scripts/prune_flow.py",
+    "scripts/time_potential_baseline.py",
+    "scripts/window_opt.py",
+    "scripts/window_prune.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mifochen",
+    "handle": "mifochen",
+    "user_id": "s17ez9j9adqc2m8d7g786vbkjd86fjsg"
+  },
+  "slug": "factor-prune",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/factor-prune",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=factor-prune&ownerHandle=mifochen",
+    "page_url": "https://clawhub.ai/mifochen/skills/factor-prune"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 153,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u56e0\u5b50\u7b5b\u9009\uff08Factor Prune\uff09\u6280\u80fd \u2014\u2014 \u5728 stock-factor \u6280\u80fd\u4ea7\u51fa\u521d\u59cb\u56e0\u5b50\u6e05\u5355\uff08IC/IR \u8bc4\u4f30\u7ed3\u679c\uff09\u540e\uff0c \u5bf9\u6709\u6548\u56e0\u5b50\u505a\u8d2a\u5fc3\u524d\u5411\u9009\u62e9 + \u53bb\u76f8\u5173\u7b5b\u9009\uff0c\u7cbe\u9009\u51fa\u4e00\u7ec4\u9ad8\u6709\u6548\u6027\u3001\u4f4e\u5197\u4f59\u7684\u56e0\u5b50\u96c6\u5408\u3002 \u7b97\u6cd5\uff1a\u6c47\u603b\u6240\u6709\u56e0\u5b50 \u2192 \u6309 |IR|/IC/time_potential \u7b5b\u9009\u6709\u6548 \u2192 \u6309\u6709\u6548\u6027\u964d\u5e8f \u2192 \u8d2a\u5fc3\u63d0\u53d6\u6700\u4f18\u56e0\u5b50 \u2192 \u4e0e\u5269\u4f59\u56e0\u5b50\u505a\u76f8\u5173\u6027\u8bc4\u4f30 \u2192 \u79fb\u9664\u9ad8\u76f8\u5173\u5197\u4f59 \u2192 \u63d0\u53d6\u4e0b\u4e00\u4e2a \u2192 \u5982\u6b64\u53cd\u590d\u76f4\u5230\u6536\u655b\u6216\u8fbe\u5230\u4e0a\u9650\u3002 \u6280\u80fd\u63d0\u4f9b\u4e24\u5957\u4e3b\u5b9e\u73b0\uff1a (1) \u6587\u4ef6\u9a71\u52a8\u516d\u6b65\u6cd5 `prune_flow.py`\uff08\u63a8\u8350\uff09\u2014\u2014\u811a\u672c\u76f4\u8fde QuantAll \u81ea\u5df1\u8dd1\u5b8c\u6574\u4e2a\u5faa\u73af\uff0c\u4e34\u65f6\u6587\u4ef6\u7edf\u4e00\u5728\u5185\u5b58\u5916\u7684 state",
+  "updated_at": 1786429783862,
+  "version": "1.0.0"
+}
