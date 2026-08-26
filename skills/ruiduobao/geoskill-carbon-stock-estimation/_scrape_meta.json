@@ -1,0 +1,66 @@
+{
+  "changelog": "geoskill-carbon-stock-estimation 1.0.0\n\n- First public release: estimates aboveground, belowground, and soil carbon stocks from NDVI and classified land cover.\n- Generates three GeoTIFF outputs (aboveground, soil, total carbon) plus summary and manifest JSON.\n- Supports both synthetic data generation and real NDVI raster input.\n- Exposes user-tunable parameters for allometric scale/power and root-to-shoot ratio.\n- Fully local/offline processing; no network access or data uploads.\n- Provides detailed limitations and underlying data source explanation (transparently in both Chinese and English).",
+  "created_at": 1785842858775,
+  "display_name": "geoskill-carbon-stock-estimation",
+  "fetched_at": 1787773510245,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-carbon-stock-estimation.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785843904348,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-carbon-stock-estimation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-carbon-stock-estimation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-carbon-stock-estimation&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-carbon-stock-estimation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 174,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7531 NDVI \u5e42\u5f8b\u5f02\u901f\u751f\u957f\u65b9\u7a0b\u4f30\u7b97\u5730\u4e0a\u751f\u7269\u91cf\u78b3\uff0c\u53e0\u52a0\u6839\u830e\u6bd4\u5730\u4e0b\u78b3\u4e0e\u7c7b\u578b\u5316\u571f\u58e4\u78b3\u5bc6\u5ea6\u3002Estimates carbon stocks from biomass allometry and soil carbon density. \u8f93\u51fa\u5730\u4e0a\u78b3/\u571f\u58e4\u78b3/\u603b\u78b3\u4e09\u5f20 GeoTIFF \u4e0e\u6c47\u603b JSON\u3002",
+  "updated_at": 1785843005382,
+  "version": "1.0.0"
+}
