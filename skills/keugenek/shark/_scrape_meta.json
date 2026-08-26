@@ -1,0 +1,57 @@
+{
+  "changelog": "Shark Pattern skill initial release.\n\n- Introduces the Shark Pattern for universal non-blocking execution in AI coding agents.\n- Main agent never blocks on slow tools; instead, spawns \"remora\" subagents for parallel background execution.\n- Outlines lifecycle, key rules, and clear examples for implementation.\n- Defines progress reporting format and output conventions (e.g., Unicode progress bars).\n- Describes \"pilot fish\" sub-pattern for opportunistic time-bounded sub-analysis during blocking waits.\n- Provides guidelines for tool classification, timing budgets, and decision criteria for spawning subagents.",
+  "created_at": 1774360030113,
+  "display_name": "Shark",
+  "fetched_at": 1787787452306,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "commands/shark-autotune.md",
+    "commands/shark-autotune/SKILL.md",
+    "commands/shark-clean.md",
+    "commands/shark-clean/SKILL.md",
+    "commands/shark-loop.md",
+    "commands/shark-loop/SKILL.md",
+    "commands/shark-status.md",
+    "commands/shark-status/SKILL.md",
+    "commands/shark.md",
+    "promo-thread.md",
+    "shark-exec/SKILL.md",
+    "shark-exec/scripts/poll-and-deliver.js",
+    "shark.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090075567,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "keugenek",
+    "handle": "keugenek",
+    "user_id": "s1784q7j0d3fxzn07c1h20xbqd83g2zt"
+  },
+  "slug": "shark",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/shark",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=shark&ownerHandle=keugenek",
+    "page_url": "https://clawhub.ai/keugenek/skills/shark"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 697,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Enables non-blocking AI agent execution by spawning parallel remora subagents for slow tasks, keeping the main agent responsive and efficient.",
+  "updated_at": 1779078884098,
+  "version": "0.1.0"
+}
