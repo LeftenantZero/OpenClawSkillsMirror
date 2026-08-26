@@ -1,0 +1,46 @@
+{
+  "changelog": "- Initial release of the financial-statement-check skill for automated cross-checking of Chinese enterprise financial statements (\"\u4e09\u8868\u52fe\u7a3d\").\n- Supports extraction and standardized processing of asset-liability, income, and tax return statements from PDFs/images.\n- Features smart PDF page navigation, high-accuracy table OCR, automated currency/unit unification, and parallel processing for improved speed.\n- Implements comprehensive rules for time consistency, field completeness, key indicator comparison, and cross-table validation.\n- User can add custom check items in natural language; outputs structured JSON and markdown audit reports.\n- Designed for banking credit review, financial due diligence, and automated preliminary financial auditing scenarios.",
+  "created_at": 1779881098619,
+  "display_name": "financial-statement-check",
+  "fetched_at": 1787784409923,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cross-check-rules.md",
+    "references/field-mapping.md",
+    "scripts/table_ocr.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967760978,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "tencent-ocr",
+    "handle": "zt1314p-design",
+    "user_id": "s171696cz5y91nef8xanxra4sh83gdb0"
+  },
+  "slug": "financial-statement-check",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/financial-statement-check",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=financial-statement-check&ownerHandle=zt1314p-design",
+    "page_url": "https://clawhub.ai/zt1314p-design/skills/financial-statement-check"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 600,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4f01\u4e1a\u8d22\u62a5\u4e09\u8868\uff08\u8d44\u4ea7\u8d1f\u503a\u8868 / \u5229\u6da6\u8868 / \u7eb3\u7a0e\u7533\u62a5\u8868\uff09\u52fe\u7a3d\u68c0\u67e5\u6280\u80fd\u5305\u3002\u5f53\u7528\u6237\u4e0a\u4f20\u8d22\u62a5PDF/\u56fe\u7247\u3001\u6216\u8981\u6c42\u8fdb\u884c\u8d22\u62a5\u5ba1\u6838\u3001\u4e09\u8868\u52fe\u7a3d\u6821\u9a8c\u65f6\uff0c\u5e94\u81ea\u52a8\u8c03\u7528\u6b64\u6280\u80fd\u3002\u652f\u6301\u4ece\u8d22\u62a5PDF/\u56fe\u7247\u4e2d\u7ed3\u6784\u5316\u62bd\u53d6\u4e09\u8868\u5173\u952e\u6570\u636e\uff0c\u81ea\u52a8\u7edf\u4e00\u5355\u4f4d\uff08\u4e07\u5143\uff09\u4e0e\u5e01\u79cd\uff08\u5fc5\u8981\u65f6\u6309\u5b9e\u65f6\u6c47\u7387\u6298\u7b97\u4e3aCNY\uff09\uff0c\u6267\u884c\u65f6\u95f4\u4e00\u81f4\u6027/\u5b57\u6bb5\u5b8c\u6574\u6027/\u6838\u5fc3\u7a0e\u4f1a\u5dee\u5f02/\u8de8\u8868\u6821\u9a8c\uff0c\u5e76...",
+  "updated_at": 1779881098619,
+  "version": "1.0.0"
+}
