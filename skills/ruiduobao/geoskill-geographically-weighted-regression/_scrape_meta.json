@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release of geoskill-geographically-weighted-regression.\n\n- Implements Geographically Weighted Regression (GWR) with bisquare and gaussian kernels, providing spatially varying local coefficients.\n- Selects optimal fixed bandwidth from multiple candidates using AICc cross-validation.\n- Outputs include GeoTIFFs of local coefficients and local R\u00b2, and supporting JSON stats/manifest files.\n- Supports both synthetic data generation and CSV input for real datasets; fully offline operation with no network requests.\n- Documents methodology, usage examples, output structure, limitations, and dependencies.",
+  "created_at": 1785845421171,
+  "display_name": "geoskill-geographically-weighted-regression",
+  "fetched_at": 1787773484194,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-geographically-weighted-regression.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785846432222,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-geographically-weighted-regression",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-geographically-weighted-regression",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-geographically-weighted-regression&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-geographically-weighted-regression"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 176,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "GWR\u5c40\u90e8\u56de\u5f52+\u5e26\u5bbd\u9009\u62e9+\u5c40\u90e8\u7cfb\u6570\u7a7a\u95f4\u56fe+\u5c40\u90e8R2 (Fotheringham/Brunsdon/Charlton \u8303\u5f0f, bisquare/gaussian\u6838, AICc\u5e26\u5bbd\u9009\u62e9)",
+  "updated_at": 1785845579799,
+  "version": "1.0.0"
+}
