@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release focusing on safe Linux privilege elevation practices.\n\n- Requires remaining unprivileged by default; only elevate for specific, necessary operations.\n- Makes all privileged actions and reasons explicitly visible to the user before elevation.\n- Prefers `pkexec` for graphical desktops; only uses `sudo`/`doas` if the prompt is visible to the user.\n- Strictly forbids asking for, capturing, or automating user passwords.\n- Emphasizes visible, user-controlled authentication without silent fallback to broader or hidden root execution.",
+  "created_at": 1787111246402,
+  "display_name": "privileged-operations",
+  "fetched_at": 1787770678943,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "pinguy",
+    "handle": "pinguy",
+    "user_id": "s17btgsbbg6rp8h250xb9x14y58csd5x"
+  },
+  "slug": "privileged-operations",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/privileged-operations",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=privileged-operations&ownerHandle=pinguy",
+    "page_url": "https://clawhub.ai/pinguy/skills/privileged-operations"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 96,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Safely perform Linux tasks that may require root privileges. Keep work unprivileged by default. When root is genuinely required, make the exact privileged action and reason visible to the user, then elevate only that narrow operation through an interactive authentication path the user can see and control. Prefer pkexec on graphical desktops; use sudo or doas only when their prompt is genuinely visible to the user. Never ask for, capture, pipe, cache, or automate a user's password, and never silently fall back to hidden or broad root execution.",
+  "updated_at": 1787111304647,
+  "version": "0.1.0"
+}
