@@ -1,0 +1,46 @@
+{
+  "changelog": "- Initial release of the mirror-download skill.\n- Automatically detects download/access issues with HuggingFace or GitHub and instantly switches to a fast domestic mirror (hf-mirror, ModelScope, GitCode, etc.)\u2014no repeated retries on the original site.\n- Provides quick connectivity testing to select the fastest available mirror source.\n- Includes detailed step-by-step instructions for mirrored downloads of models, datasets, and code repositories.\n- Offers ready-to-use scripts, error diagnostics, and ID conversion tables for smooth operation and troubleshooting.",
+  "created_at": 1780543473415,
+  "display_name": "download_mirror1",
+  "fetched_at": 1787783076354,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/modelscope_id_map.md",
+    "scripts/diagnose.py",
+    "scripts/mirror_download.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780545329074,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yazuibi",
+    "handle": "yazuibi",
+    "user_id": "s173t36c9mcjrsq67e81sbvdkn880ybv"
+  },
+  "slug": "download-mirror",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/download-mirror",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=download-mirror&ownerHandle=yazuibi",
+    "page_url": "https://clawhub.ai/yazuibi/skills/download-mirror"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 379,
+    "installs": 7,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5f53\u7528\u6237\u9700\u8981\u4ece HuggingFace \u6216 GitHub \u4e0b\u8f7d\u6a21\u578b\u3001\u6570\u636e\u96c6\u6216\u4ee3\u7801\u4ed3\u5e93\uff0c\u4e14\u7f51\u7edc\u8fde\u63a5\u5931\u8d25\u3001\u8d85\u65f6\u6216\u901f\u5ea6\u7f13\u6162\u65f6\uff0c**\u7acb\u5373\u542f\u7528\u6b64 skill**\uff0c\u81ea\u52a8\u5207\u6362\u5230\u56fd\u5185\u955c\u50cf\u7ad9\uff08hf-mirror\u3001\u9b54\u642d\u793e\u533a\u3001GitCode \u7b49\uff09\u5b8c\u6210\u4e0b\u8f7d\uff0c\u907f\u514d\u65e0\u610f\u4e49\u91cd\u8bd5\u6d88\u8017\u5927\u91cf token\u3002 \u89e6\u53d1\u573a\u666f\u5305\u62ec\uff1a - \u7528\u6237\u63d0\u5230\"\u4e0b\u8f7d\u6a21\u578b\"\u3001\"...",
+  "updated_at": 1780543473415,
+  "version": "1.0.0"
+}
