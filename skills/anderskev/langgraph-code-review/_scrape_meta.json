@@ -1,0 +1,43 @@
+{
+  "changelog": "- Adds a new mandatory \"Anti-confabulation\" gate to require exact, same-turn code quotation before issuing any review finding.\n- Removes outdated skill-card.md file.\n- Updates SKILL.md with the anti-confabulation section and instructions, ensuring findings are always backed by directly quoted artifacts from the reviewed source. \n- All other review gates, critical issues, and examples remain unchanged.",
+  "created_at": 1773973992879,
+  "display_name": "Langgraph Code Review",
+  "fetched_at": 1787783705385,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780286175178,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Kevin Anderson",
+    "handle": "anderskev",
+    "user_id": "s17b1fzefm8nj8j1sdkzrze7gn83pfrg"
+  },
+  "slug": "langgraph-code-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/langgraph-code-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=langgraph-code-review&ownerHandle=anderskev",
+    "page_url": "https://clawhub.ai/anderskev/skills/langgraph-code-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 918,
+    "installs": 22,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Reviews LangGraph code for bugs, anti-patterns, and improvements. Use when reviewing code that uses StateGraph, nodes, edges, checkpointing, or other LangGra...",
+  "updated_at": 1780280486986,
+  "version": "1.0.2"
+}
