@@ -1,0 +1,53 @@
+{
+  "changelog": "**Summary:** Introduced dedicated session start hook and improved group name mapping.\n\n- Added new `apm_session_start` hook for memory initialization and entry handling.\n- Moved group name mapping file to `memory/groups/group_names.json` (from `memory/group_names.json`).\n- Removed deprecated bootstrap script and related hook files.\n- Updated docs to clarify agent vs. hook responsibilities for memory initialization and first-join flows.\n- Minor refinements to loading rules and file structure explanations.",
+  "created_at": 1778738815387,
+  "display_name": "Apm Agent Progressive Memory",
+  "fetched_at": 1787779941442,
+  "files": [
+    ".clawhub/origin.json",
+    "ADDENDUM.md",
+    "CHANGELOG.md",
+    "HOOKS.md",
+    "SKILL.md",
+    "_meta.json",
+    "hooks/apm_session_start/HOOK.md",
+    "hooks/apm_session_start/handler.js",
+    "hooks/precompact-remem/HOOK.md",
+    "hooks/precompact-remem/handler.js",
+    "hooks/remem-flush/HOOK.md",
+    "hooks/remem-flush/handler.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781985297635,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Fang, Chao",
+    "handle": "biociao",
+    "user_id": "s17dtx203kvnxrae9yp2v5epcn83kj3f"
+  },
+  "slug": "apm-agent-progressive-memory",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/apm-agent-progressive-memory",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=apm-agent-progressive-memory&ownerHandle=biociao",
+    "page_url": "https://clawhub.ai/biociao/skills/apm-agent-progressive-memory"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 987,
+    "installs": 22,
+    "stars": 0,
+    "versions": 11
+  },
+  "summary": "APM Protocol (Agent Progressive Memory): Progressive disclosure protocol for group chat AND DM (main session) memory.",
+  "updated_at": 1781972714508,
+  "version": "1.6.1"
+}
