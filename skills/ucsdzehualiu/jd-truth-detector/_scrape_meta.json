@@ -1,0 +1,48 @@
+{
+  "changelog": "- Initial release of jd-truth-detector.\n- Analyze job descriptions across four dimensions: jargon translation, company culture inference, resume matching, and negotiation signals.\n- Outputs results as Markdown and shareable HTML reports.\n- Supports input via direct text paste, URL scraping (BOSS, \u62c9\u52fe, LinkedIn), and files (.txt, .md, .docx, .pdf).\n- Compatible with any OpenAI-compatible LLM; easily configurable for local or cloud endpoints.\n- Ensures privacy: data sent only to your selected LLM endpoint, with no telemetry.",
+  "created_at": 1782263795083,
+  "display_name": "Jd Truth Detector",
+  "fetched_at": 1787779328878,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.yaml",
+    "requirements.txt",
+    "scripts/__init__.py",
+    "scripts/analyzer.py",
+    "scripts/input_parser.py",
+    "scripts/jd_analyze.py",
+    "scripts/llm_adapter.py",
+    "scripts/pre_scanner.py",
+    "scripts/reporter.py",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_analyzer.py",
+    "tests/test_input_parser.py",
+    "tests/test_pre_scanner.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ucsdzehualiu",
+    "handle": "ucsdzehualiu",
+    "user_id": "s17bk47xgrxy45rkmxpwv5p1z983nsd8"
+  },
+  "slug": "jd-truth-detector",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/jd-truth-detector",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=jd-truth-detector&ownerHandle=ucsdzehualiu",
+    "page_url": "https://clawhub.ai/ucsdzehualiu/skills/jd-truth-detector"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 299,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Reverse-engineer job descriptions: translate jargon (\"5 years\" \u2192 3), infer company culture (red flags, vibes), match to your resume, detect negotiation signa...",
+  "updated_at": 1782263795083,
+  "version": "1.0.0"
+}
