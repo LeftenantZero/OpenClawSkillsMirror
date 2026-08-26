@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of brainblast-fleet: an autonomous agent for sourcing real, proven security footguns in popular SDKs.\n\n- Periodically scans public code via Sourcegraph to discover new, proven security traps (VTIs) and submits them to the open Brainblast corpus.\n- Fully autonomous operation managed via scheduled cron jobs, with disk and environment isolation.\n- Requires no API keys; runs safely, never executes remote code, and only reads public repositories.\n- Supports optional deeper candidate discovery with sub-agent workflows for advanced users.\n- Includes configuration and environment variable support for managed engine checkout and submit-cap adjustment.\n- Contributes direct, reproducible findings to the shared Brainblast security training registry.",
+  "created_at": 1783361158427,
+  "display_name": "Brainblast Fleet",
+  "fetched_at": 1787777875279,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/install-cron.sh",
+    "scripts/run-fleet.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dakota Barnett",
+    "handle": "dsb-117",
+    "user_id": "s17e1mf48n83rx6yybvpf9e1qd8844bb"
+  },
+  "slug": "brainblast-fleet",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/brainblast-fleet",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=brainblast-fleet&ownerHandle=dsb-117",
+    "page_url": "https://clawhub.ai/dsb-117/skills/brainblast-fleet"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 260,
+    "installs": 0,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Autonomous, scheduled agent that finds real, proven security footguns in popular SDKs and submits them to the open Brainblast corpus.",
+  "updated_at": 1783361158427,
+  "version": "0.1.0"
+}
