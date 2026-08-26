@@ -1,0 +1,43 @@
+{
+  "changelog": "v1.0.0: Agent call tracing + golden-case regression loop + cost attribution + error fingerprinting",
+  "created_at": 1786119191515,
+  "display_name": "agent-tracer",
+  "fetched_at": 1787773154149,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786123774400,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wholegale39",
+    "handle": "wholegale39",
+    "user_id": "s173sx5z9s816w9mkpher9z75x8c1mxb"
+  },
+  "slug": "agent-tracer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-tracer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-tracer&ownerHandle=wholegale39",
+    "page_url": "https://clawhub.ai/wholegale39/skills/agent-tracer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 168,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Record every tool call into agent-tracer (self-hosted FastAPI), then run regression testing (golden case \u2192 drift detection), attribute token costs by tool/model/agent, and surface recurring error root causes across sessions. Use when an agent must log its actions, verify behavior hasn't drifted, report spend, or debug repeated failures.",
+  "updated_at": 1786119379325,
+  "version": "1.0.0"
+}
