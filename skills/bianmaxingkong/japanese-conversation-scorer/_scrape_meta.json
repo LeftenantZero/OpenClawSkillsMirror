@@ -1,0 +1,33 @@
+{
+  "changelog": "**Major update: Refactored and modularized skill with stricter platform independence and improved workflow.**\n\n- Migrated from canvas-specific grading to a generic, platform-independent Japanese conversation grading system.\n- Switched ASR engine to faster-whisper with strict model and hardware usage requirements.\n- Standardized workflow: audio processing, ASR, confidence grading, automated CAF scoring, and mandatory manual review for \"low confidence\" cases.\n- Modularized platform adapters; Canvas, Moodle, Feishu, and CSV support now via separate adapter files.\n- Refined scoring and error correction rules; scoring is content-focused and highly transparent.\n- Removed 3 platform-specific/documentation files (_meta.json, references/workflow.md, skill-card.md).",
+  "created_at": 1777978179658,
+  "display_name": "\u65e5\u8bed\u4f1a\u8bdd\u6d4b\u8bd5\u6279\u6539",
+  "fetched_at": 1787770135055,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "bianmaxingkong",
+    "handle": "bianmaxingkong",
+    "user_id": "s17f7de24jwye68xxaykgnjqwn8616wn"
+  },
+  "slug": "japanese-conversation-scorer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/japanese-conversation-scorer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=japanese-conversation-scorer&ownerHandle=bianmaxingkong",
+    "page_url": "https://clawhub.ai/bianmaxingkong/skills/japanese-conversation-scorer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1305,
+    "installs": 28,
+    "stars": 1,
+    "versions": 10
+  },
+  "summary": "\u9762\u5411 A1/A2/B1\uff08\u5bf9\u5e94 JLPT\u2011N5~N3\uff09\u5e08\u751f\u5bf9\u8bdd\u573a\u666f\u7684\u65e5\u8bed\u53e3\u8bed\u6279\u6539 Skill\u3002\u57fa\u4e8e faster\u2011whisper \u5b8c\u6210\u97f3\u9891 ASR \u8f6c\u5199\uff0c\u91c7\u7528 ** \u5185\u5bb9\u5b8c\u6574\u6027 50%\u3001\u51c6\u786e\u6027 20%\u3001\u6d41\u5229\u5ea6 30%** \u4e09\u7ef4\u52a0\u6743\u9884\u8bc4\u5206\uff0c\u79c9\u6301\u9f13\u52b1\u4f18\u5148\u539f\u5219\uff0c\u964d\u4f4e\u8bed\u6cd5\u504f\u5dee\u5bf9\u603b\u5206\u7684\u62d6\u7d2f\u3002\u5185\u7f6e\u4e13\u6709\u540d\u8bcd\u767d\u540d\u5355\uff0c\u9632\u6b62\u4eba\u540d\u3001\u5730\u540d\u88ab AI \u8bef\u5224\u6263\u5206\uff1b\u8bbe\u7f6e ASR \u7f6e\u4fe1\u5ea6\u5206\u7ea7\uff0c\u4f4e\u7f6e\u4fe1\u573a\u666f\u4e0b AI \u5206\u6570\u4ec5\u4f5c\u540e\u53f0\u53c2\u8003\uff0c\u4ea4\u7531\u6559\u5e08\u4eba\u5de5\u6253\u5206\u3002\u751f\u6210\u8001\u5e08\u8be6\u7ec6\u7248\u3001\u5b66\u751f\u7b80\u6d01\u7248\u4e24\u5957\u53cd\u9988\uff0c\u652f\u6301 CSV \u6279\u91cf\u5bfc\u51fa\u3002\u672c\u6280\u80fd\u5e73\u53f0\u65e0\u5173\uff0c\u5bf9\u63a5 LMS \u9700\u81ea\u884c\u5f00\u53d1\u9002\u914d\u5668\uff1bAI \u4ec5\u505a\u9884\u6279\u6539\uff0c\u5168\u90e8\u9519\u8bef\u5fc5\u987b\u7ecf\u8fc7\u6559\u5e08\u590d\u6838\u786e\u8ba4\uff0c\u4e0d\u4f1a\u81ea\u52a8\u5224\u9519\u6263\u5206\u3002",
+  "updated_at": 1787322488788,
+  "version": "1.1.7"
+}
