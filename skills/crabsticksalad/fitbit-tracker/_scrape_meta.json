@@ -1,0 +1,42 @@
+{
+  "changelog": "v0.2.3 - Audit fixes (no functional changes)\n\nAudit compliance:\n- Added 'Fitbit (by Google)' branding to description and intro\n- Added explicit permissions block to frontmatter (network, env, file, one-time setup callback, shell: none)\n- Documented Fitbit OAuth scopes (activity, sleep, heartrate, profile, weight) with per-scope justification\n- No script/code changes \u2014 same fetch \u2192 normalize \u2192 render pipeline",
+  "created_at": 1774294956207,
+  "display_name": "Fitbit Tracker",
+  "fetched_at": 1787783306467,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/fitbit_api.md",
+    "references/output_schema.md",
+    "requirements.txt",
+    "scripts/fitbit_fetch_daily.py",
+    "scripts/fitbit_normalize_daily.py",
+    "scripts/fitbit_oauth_login.py",
+    "scripts/fitbit_render.py",
+    "scripts/fitbit_token.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Crabstick",
+    "handle": "crabsticksalad",
+    "user_id": "s17572r03ywk8ctcnx8amnqrhd83f232"
+  },
+  "slug": "fitbit-tracker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fitbit-tracker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fitbit-tracker&ownerHandle=crabsticksalad",
+    "page_url": "https://clawhub.ai/crabsticksalad/skills/fitbit-tracker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 886,
+    "installs": 22,
+    "stars": 2,
+    "versions": 4
+  },
+  "summary": "Personal Fitbit (by Google) integration for daily health tracking with adaptive sleep and activity reporting",
+  "updated_at": 1780418071816,
+  "version": "0.2.3"
+}
