@@ -1,0 +1,63 @@
+{
+  "changelog": "- Initial release of the \"alibabacloud-mining-attack-diagnosis\" skill for Alibaba Cloud Security Center cryptomining diagnosis.\n- Implements a strict 6-step SOP for mining detection, IOC extraction, asset scoping, attack surface analysis, risk assessment, and remediation reporting.\n- Enforces absolute read-only operation; no deletion, modification, or quarantine actions are allowed.\n- Requires mandatory execution via the provided investigation script; no ad-hoc API or CLI calls permitted.\n- Structured output with a required URGENT banner and remediation workflow when mining is detected.\n- Auto-derives account/region if omitted, and robustly handles API errors with explicit warnings.",
+  "created_at": 1787278212262,
+  "display_name": "alibabacloud-mining-attack-diagnosis",
+  "fetched_at": 1787770285956,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/detection_flow.md",
+    "references/mining_indicators.md",
+    "references/module1_alert_detection.md",
+    "references/module2_alert_detail_ioc.md",
+    "references/module3_affected_assets.md",
+    "references/module4_attack_surface.md",
+    "references/module5_remediation_best_practices.md",
+    "references/module6_corroboration.md",
+    "references/module7_deep_scan.md",
+    "references/ram-policies.md",
+    "scripts/_cli.py",
+    "scripts/_constants.py",
+    "scripts/mining_investigation.py",
+    "scripts/query_alert_detail.py",
+    "scripts/query_attack_surface.py",
+    "scripts/query_cpu_metrics.py",
+    "scripts/query_deep_scan.py",
+    "scripts/query_intrusion_trace.py",
+    "scripts/query_mining_alerts.py",
+    "scripts/requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787279086622,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-mining-attack-diagnosis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-mining-attack-diagnosis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-mining-attack-diagnosis&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-mining-attack-diagnosis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 116,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Alibaba Cloud Security Center cryptomining (cryptojacking) diagnosis skill. Use when the user reports or suspects a mining infection, receives a mining alert, or asks for mining alert detection, IOC extraction (pool IPs, malicious domains, sample hashes, malicious processes), affected-asset scoping, attack-surface analysis, entry-vector analysis, risk assessment, prioritized remediation reporting, cryptomining incident response, or mining risk detection. Triggers: \"mining\", \"cryptomining\", \"cryptojacking\", \"coin mining\", \"coin-mining\", \"miner\", \"mining alert\", \"mining alerts\", \"mining pool\", \"pool IPs\", \"malicious domains\", \"sample hashes\", \"malicious processes\", \"mining IOC\", \"IOC extraction\", \"mining alert detection\", \"affected-asset scoping\", \"attack-surface analysis\", \"entry-vector analysis\", \"risk assessment\", \"prioritized remediation reporting\", \"cryptomining incident response\", \"mining risk detection\", \"xmrig\", \"kdevtmpfsi\", \"kinsing\", \"sysrv\", \"minerd\", \"Security Center\", \"ECS high CPU mining\"",
+  "updated_at": 1787278339702,
+  "version": "0.0.1"
+}
