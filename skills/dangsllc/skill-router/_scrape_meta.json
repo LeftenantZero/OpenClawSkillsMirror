@@ -1,0 +1,33 @@
+{
+  "changelog": "Version 1.0.0 of skill-router introduces a major redesign:\n\n- Replaces simple skill suggestion with a structured Analysis Plan: matches discovered documents to relevant compliance skills using dynamic reasoning.\n- Inputs: accepts one or more document manifests and a live skills directory path, reading skill frontmatter dynamically each run (no static lookup tables).\n- Outputs: generates a detailed markdown table and structured JSON, explicitly reporting matching skills and identifying toolkit-coverage gaps for any unmatched documents.\n- Enforces strict guardrails: only matches grounded in specific document and skill-description phrases are recommended; general-purpose or fallback suggestions are not allowed.\n- Deprecates previous reference-driven routing, focusing now on document-to-skill applicability in compliance workflows.",
+  "created_at": 1784579695710,
+  "display_name": "Skill Router",
+  "fetched_at": 1787773761778,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dangsllc",
+    "handle": "dangsllc",
+    "user_id": "s178ygq44dba9hg2ew2t7hb7zh83n08x"
+  },
+  "slug": "skill-router",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-router",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-router&ownerHandle=dangsllc",
+    "page_url": "https://clawhub.ai/dangsllc/skills/skill-router"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 57,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read one or more document manifests (from legal-page-discovery and/or document-finder) plus the full rote-compliance-toolkit skill catalog, and reason about...",
+  "updated_at": 1784579914038,
+  "version": "1.0.0"
+}
