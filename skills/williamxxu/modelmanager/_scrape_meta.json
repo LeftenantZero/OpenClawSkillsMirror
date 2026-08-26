@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of the model-manager skill for OpenClaw:\n\n- Adds a tool for viewing, setting, and managing large language models in OpenClaw.\n- Provides query commands (list, status, fallback list) that do not require user authorization.\n- Restricts modifying commands (set, fallback add/remove) to explicit user instructions.\n- Includes clear usage instructions and command examples.\n- Integrates with OpenClaw\u2019s model management CLI for seamless operations.",
+  "created_at": 1774553220180,
+  "display_name": "model_manager",
+  "fetched_at": 1787787420690,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/model_manager.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090134419,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "WilliamXXu",
+    "handle": "williamxxu",
+    "user_id": "s17brtj8tpdeg28844wreexved83ng6e"
+  },
+  "slug": "modelmanager",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/modelmanager",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=modelmanager&ownerHandle=williamxxu",
+    "page_url": "https://clawhub.ai/williamxxu/skills/modelmanager"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 602,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "OpenClaw \u6a21\u578b\u7ba1\u7406\u5de5\u5177\u3002\u7528\u4e8e\u67e5\u770b\u3001\u8bbe\u7f6e\u548c\u7ba1\u7406 OpenClaw \u4f7f\u7528\u7684\u5927\u8bed\u8a00\u6a21\u578b\u3002 \u5f53\u7528\u6237\u63d0\u5230\u4ee5\u4e0b\u573a\u666f\u65f6\u4f7f\u7528\uff1a\u5207\u6362\u6a21\u578b\u3001\u67e5\u770b\u53ef\u7528\u6a21\u578b\u3001\u8bbe\u7f6e\u5907\u7528\u6a21\u578b\u3001\u7ba1\u7406\u6a21\u578b\u964d\u7ea7\u3002 \u91cd\u8981\uff1a\u6b64 skill \u5fc5\u987b\u5728\u83b7\u5f97\u7528\u6237\u660e\u786e\u6307\u793a\u540e\u624d\u80fd\u4f7f\u7528\u3002",
+  "updated_at": 1779078898058,
+  "version": "1.0.1"
+}
