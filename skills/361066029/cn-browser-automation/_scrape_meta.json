@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release: Enables browser automation for Chinese domestic sites using the real logged-in state of the local Chrome browser.\n\n- Automates operations and data extraction for sites like Xiaohongshu, Taobao/Tmall, WeChat, Weibo, Bilibili, 12306, Zhihu, and SaaS backends.\n- Reuses the session of the user\u2019s own Chrome via remote debugging (CDP), avoiding redundant logins and bypassing common anti-bot/login barriers.\n- Includes site-specific templates, selectors, and anti-crawling suggestions for major platforms.\n- Provides scripts for direct data extraction and export to JSON/CSV, with verified selectors for key sites.\n- Emphasizes compliance: limits usage to the user\u2019s authorized accounts/data and does not include automated CAPTCHA/verification code solving.",
+  "created_at": 1786005067234,
+  "display_name": "cn-browser-automation",
+  "fetched_at": 1787773262520,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "manifest.yaml",
+    "references/setup.md",
+    "references/sites.md",
+    "scripts/bili_scrape.py",
+    "scripts/cn_browser.py",
+    "scripts/connect_chrome.py",
+    "scripts/tb_scrape.py",
+    "scripts/xhs_scrape.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786005896291,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "361066029",
+    "handle": "361066029",
+    "user_id": "s177mxhgzhrh5qrzd8pc8nx7fx8bz6at"
+  },
+  "slug": "cn-browser-automation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cn-browser-automation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cn-browser-automation&ownerHandle=361066029",
+    "page_url": "https://clawhub.ai/361066029/skills/cn-browser-automation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 174,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u56fd\u5185\u7ad9\u70b9\uff08\u5c0f\u7ea2\u4e66/\u6dd8\u5b9d/\u5929\u732b/\u5fae\u4fe1/\u5fae\u535a/B\u7ad9/12306/\u77e5\u4e4e/\u5404\u7c7b SaaS \u540e\u53f0\uff09\u7684\u767b\u5f55\u6001\u6d4f\u89c8\u5668\u81ea\u52a8\u5316\u3002\u5f53\u7528\u6237\u9700\u8981\u6293\u53d6\u6216\u64cd\u4f5c\u9700\u8981\u767b\u5f55\u7684\u56fd\u5185\u7f51\u7ad9\u3001\u590d\u7528\u672c\u673a\u5df2\u767b\u5f55 Chrome \u7684\u4f1a\u8bdd\u3001\u5e26 cookie \u5bfc\u51fa\u6570\u636e\uff0c\u6216\u63d0\u5230\"\u767b\u5f55\u6001\"\"\u5df2\u767b\u5f55\u6d4f\u89c8\u5668\"\"\u5e26\u8d26\u53f7\u6293\u53d6\"\"\u590d\u7528\u6211\u7684 Chrome\"\"\u4e0d\u60f3\u91cd\u65b0\u767b\u5f55\"\u65f6\u4f7f\u7528\u3002This skill should be used when the user wants to scrape or operate Chinese domestic websites that require authentication, reuse the locally logg",
+  "updated_at": 1786005162512,
+  "version": "1.0.0"
+}
