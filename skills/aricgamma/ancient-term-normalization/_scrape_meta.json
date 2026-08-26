@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release \u2013 converts recognised ancient characters into standardised forms with alias expansion.\n\n- Added scripts to map characters or words from ancient texts to normalized aliases using YAML-based rules.\n- Accepts OCR/recognition results in JSON format and outputs normalized term sets in JSON.\n- Includes input/output schema definitions, sample data, reference documentation, and test cases.\n- Runs locally (no network), Python 3.10+ required, with workspace read/write access.\n- Documentation provided for input specs, mapping logic, and output structure.",
+  "created_at": 1779850161378,
+  "display_name": "ancient-term-normalization",
+  "fetched_at": 1787784511663,
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/ai4s-harness.yaml",
+    "assets/data/historical_aliases.yaml",
+    "assets/schemas/normalized_terms.schema.json",
+    "assets/schemas/recognized_chars.schema.json",
+    "examples/input/recognized_chars.json",
+    "examples/output/normalized_terms.json",
+    "references/REFERENCE.md",
+    "references/WORKFLOW.md",
+    "scripts/normalize_terms.py",
+    "scripts/requirements.txt",
+    "skill-card.md",
+    "tests/test_normalize_terms.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Shan Mu",
+    "handle": "aricgamma",
+    "user_id": "s17bp7c8jv1jr0e77t04a86re583hdzs"
+  },
+  "slug": "ancient-term-normalization",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ancient-term-normalization",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ancient-term-normalization&ownerHandle=aricgamma",
+    "page_url": "https://clawhub.ai/aricgamma/skills/ancient-term-normalization"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 513,
+    "installs": 10,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Normalises recognised characters or words from ancient manuscripts and excavated texts by mapping them to standardised forms. Use this skill after OCR or cha...",
+  "updated_at": 1779850324459,
+  "version": "1.0.4"
+}
