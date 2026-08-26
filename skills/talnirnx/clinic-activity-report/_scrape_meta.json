@@ -1,0 +1,39 @@
+{
+  "changelog": "Initial release of clinic-activity-report \u2014 a local, read-only skill to generate weekly clinic activity reports for veterinary clinic owners using NxVET data.\n\n- Generates a plain-English weekly summary: total recordings, per-device/day/hour breakdown, trend vs last week, and health flags.\n- Highlights silent devices, outdated firmware, and failing webhooks with clear, actionable flags.\n- Outputs a markdown report; optionally a simple HTML dashboard.\n- Never sends, edits, or deletes anything; strictly local and read-only.\n- Requires NxVET API key and at least one active recording device.\n- Efficient API usage via caching and ETag support to minimize server load and cost.",
+  "created_at": 1784907905210,
+  "display_name": "NxVET Clinic Activity Report",
+  "fetched_at": 1787775127273,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "reference/caching-and-state.md",
+    "reference/good-practices.md",
+    "reference/nxvet-api.md",
+    "reference/security.md",
+    "scripts/collect_stats.py",
+    "scripts/write_report.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Tal Nir",
+    "handle": "talnirnx",
+    "user_id": "s179xab9cq54tabgw3yhptrx458b4zg2"
+  },
+  "slug": "clinic-activity-report",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clinic-activity-report",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clinic-activity-report&ownerHandle=talnirnx",
+    "page_url": "https://clawhub.ai/talnirnx/skills/clinic-activity-report"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 299,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate a plain-English weekly CLINIC ACTIVITY REPORT for a veterinary clinic owner from NxVET data \u2014 total recordings, per-device and per-day/hour breakdow...",
+  "updated_at": 1784914647893,
+  "version": "1.0.0"
+}
