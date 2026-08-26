@@ -1,0 +1,39 @@
+{
+  "changelog": "**Summary:** This version removes central mail hub support, shifting to a fully local, per-workspace best-effort mailbox.\n\n- Central mail hub and sync scripts removed; now only per-workspace inbox, keep, and archive folders.\n- All references to a shared/central registry, hub, or catch-up sync deleted.\n- Only local best-effort fanout/delivery is supported; cloud or remote delivery explicitly not implemented.\n- Documentation and AGENTS.md snippet updated for the simplified, local-only flow.\n- File and mailbox structure clarified; security and usage boundaries re-emphasized.",
+  "created_at": 1774151100046,
+  "display_name": "Agent Mailbox Light",
+  "fetched_at": 1787775998367,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/archive-mailbox.sh",
+    "scripts/cleanup-mailbox.sh",
+    "scripts/init-mailbox.sh",
+    "scripts/keep-mailbox.sh",
+    "scripts/list-mailbox.sh",
+    "scripts/send-mailbox.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Meng Yang",
+    "handle": "yangmeng6666",
+    "user_id": "s174nynrh3dhcjsbhjah9txass84jcn0"
+  },
+  "slug": "agent-mailbox-light",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-mailbox-light",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-mailbox-light&ownerHandle=yangmeng6666",
+    "page_url": "https://clawhub.ai/yangmeng6666/skills/agent-mailbox-light"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 979,
+    "installs": 18,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Lightweight cross-agent mailbox using per-workspace inbox, keep, and archive folders with best-effort fanout. Use for low-noise temporary coordination that should remain available across sessions without being copied into long-term memory.",
+  "updated_at": 1784427701385,
+  "version": "1.1.1"
+}
