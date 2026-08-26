@@ -1,0 +1,49 @@
+{
+  "changelog": "- Initial release of adversarial-review skill.\n- Enables structured, multi-agent review loops for significant documents with automated complexity self-assessment.\n- Spawns parallel Opus reviewers with diverse critical lenses, collects structured redlines, and guides agreement/disagreement and v2 document production.\n- Provides clear review process, positioning rules, and quality expectations.\n- Includes comprehensive reviewer type selection and session directory guidelines for workflow transparency.",
+  "created_at": 1774462009420,
+  "display_name": "Adversarial Review",
+  "fetched_at": 1787787172915,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/redline-format.md",
+    "references/review-types.md",
+    "references/reviewer-personas.md",
+    "scripts/cp-output.sh",
+    "scripts/new-review.sh",
+    "scripts/synthesize.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090107526,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Scott Jensen",
+    "handle": "scott3j",
+    "user_id": "s17683mmc9crbg86b5grcw1pq583jjx4"
+  },
+  "slug": "adversarial-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/adversarial-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=adversarial-review&ownerHandle=scott3j",
+    "page_url": "https://clawhub.ai/scott3j/skills/adversarial-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 798,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Run a structured adversarial multi-agent review loop on any significant document. Spawns parallel Opus reviewers with different critical lenses, collects str...",
+  "updated_at": 1779079028419,
+  "version": "1.0.0"
+}
