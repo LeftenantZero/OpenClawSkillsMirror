@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of Matapan agent skill:\n\n- Provides a detailed agent workflow for editing, running, committing, and sealing code inside a disposable Matapan workspace.\n- Enforces strict workspace boundaries: all file operations and container runs are confined to the active workspace; no host or external access.\n- Introduces hardened container execution with locked-down resources and no network by default.\n- Sealing produces immutable, evidence-bearing proposals for human-controlled review and application.\n- Comprehensive error codes and escalation flow\u2014agents defer approval, network grants, and destructive actions to humans.\n- Strong documentation on scope, agent responsibilities, and supported tool surface.",
+  "created_at": 1784833738427,
+  "display_name": "Matapan",
+  "fetched_at": 1787775404628,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "MentholMike",
+    "handle": "mentholmike",
+    "user_id": "s178gq6bv91f0h726dnp4vh32183g86v"
+  },
+  "slug": "matapan",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/matapan",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=matapan&ownerHandle=mentholmike",
+    "page_url": "https://clawhub.ai/mentholmike/skills/matapan"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 254,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Work inside a Matapan workspace: scoped file edits, hardened container runs, commits. Allows a user to extend their dev usage by using 5.6 sol high in Chatgpt Chat.(also works with Claude and any other frontier model that allows MCP) allows additional usage for projects securely.",
+  "updated_at": 1784834421831,
+  "version": "1.0.0"
+}
