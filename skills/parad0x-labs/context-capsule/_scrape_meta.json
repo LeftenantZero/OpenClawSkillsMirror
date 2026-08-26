@@ -1,0 +1,43 @@
+{
+  "changelog": "v1.7.0\n- Value-atom preservation: a lone port (5433), issue ref (#4821), version (v2.13.0), ISO date, or hyphenated code now survives compression as its own atom \u2014 even when its surrounding line is dropped. New regression: test/value-survival.test.mjs.\n- Corrected the documented config defaults (maxCapsuleTokens 700 \u2192 1400, capsuleTokenRatio 0.08 \u2192 0.14) to match the shipped values.\n- Reframed the fidelity figures as measured on your own private sessions via test/fidelity-bench.mjs (reproduce on your data), not a repo fixture.",
+  "created_at": 1780428158079,
+  "display_name": "Openclaw Context Capsule",
+  "fetched_at": 1787777355813,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "dist/compression.d.ts",
+    "dist/compression.js",
+    "dist/index.d.ts",
+    "dist/index.js",
+    "dist/platform.d.ts",
+    "dist/platform.js",
+    "openclaw.plugin.json",
+    "package.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Parad0x Labs",
+    "handle": "parad0x-labs",
+    "user_id": "s17f1wyc9w1zq21b4wj4a63xw187x632"
+  },
+  "slug": "context-capsule",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/context-capsule",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=context-capsule&ownerHandle=parad0x-labs",
+    "page_url": "https://clawhub.ai/parad0x-labs/skills/context-capsule"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1002,
+    "installs": 15,
+    "stars": 3,
+    "versions": 8
+  },
+  "summary": "Compresses older OpenClaw agent session history into a bounded, lane-change-aware context capsule \u2014 keeps recent messages verbatim, flags abandoned directions, quarantines injected instructions, and redacts secrets. Local, deterministic, any model.",
+  "updated_at": 1783630058561,
+  "version": "1.6.1"
+}
