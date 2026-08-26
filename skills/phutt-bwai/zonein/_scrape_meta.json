@@ -1,0 +1,52 @@
+{
+  "changelog": "Update skill docs for backtest fixes\n- DATA_SOURCES.md: Fix SM thresholds 60\u219250/55 based on real market data\n- SKILL.md: Add leverage warning and minimum hold time guidance\n- AGENT_CONFIG.md: Add leverage\u00d7SL caps table and precision_master SL fix\n\nReal market data shows SM long_ratio averages 44-46% and rarely exceeds 55%.\n\nLower thresholds prevent false negatives while maintaining signal quality.",
+  "created_at": 1771082765588,
+  "display_name": "Hyperliquid Trading Agent",
+  "fetched_at": 1787787849542,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/AGENT_CONFIG.md",
+    "references/COMMANDS.md",
+    "references/DATA_SOURCES.md",
+    "references/TRIGGER_CONDITIONS.md",
+    "references/WORKFLOWS.md",
+    "references/schema.md",
+    "references/strategy.md",
+    "scripts/zonein.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967102674,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Phu Trinh",
+    "handle": "phutt-bwai",
+    "user_id": "s172wd6qhkey1r6k9h7hem19e983pwx7"
+  },
+  "slug": "zonein",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/zonein",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=zonein&ownerHandle=phutt-bwai",
+    "page_url": "https://clawhub.ai/phutt-bwai/skills/zonein"
+  },
+  "stats": {
+    "comments": 4,
+    "downloads": 2524,
+    "installs": 79,
+    "stars": 16,
+    "versions": 36
+  },
+  "summary": "Autonomous Hyperliquid trading agent powered by smart money signals. Create, backtest, and deploy AI trading agents that track 500+ whale wallets on Hyperliq...",
+  "updated_at": 1779078643647,
+  "version": "2.3.8"
+}
