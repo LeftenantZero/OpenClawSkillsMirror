@@ -1,0 +1,77 @@
+{
+  "changelog": "Initial release of evolving-agent: an AI programming system coordinator\n\n- Introduces a main process supervisor role to manage the entire task lifecycle.\n- Supports intent recognition and automated module dispatch for programming, knowledge inducting, and learning tasks.\n- Integrates health checks and stepwise monitoring of subtask progress and outputs.\n- Enforces results auditing and experience extraction upon task completion.\n- Provides quick reference commands for managing evolution mode, knowledge base, GitHub integration, and project detection.",
+  "created_at": 1771999040318,
+  "display_name": "Evolving Agent",
+  "fetched_at": 1787787817554,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "command/evolve.md",
+    "modules/github-to-skills/README.md",
+    "modules/knowledge-base/README.md",
+    "modules/knowledge-base/agents/retrieval-agent.md",
+    "modules/knowledge-base/agents/summarize-agent.md",
+    "modules/knowledge-base/schema.json",
+    "modules/programming-assistant/README.md",
+    "modules/programming-assistant/template/feature_list.json",
+    "modules/programming-assistant/template/progress.txt",
+    "modules/programming-assistant/workflows/evolution-check.md",
+    "modules/programming-assistant/workflows/full-mode.md",
+    "modules/programming-assistant/workflows/simple-mode.md",
+    "scripts/__init__.py",
+    "scripts/core/__init__.py",
+    "scripts/core/align_all.py",
+    "scripts/core/merge_evolution.py",
+    "scripts/core/path_resolver.py",
+    "scripts/core/smart_stitch.py",
+    "scripts/core/toggle_mode.py",
+    "scripts/core/trigger_detector.py",
+    "scripts/github/__init__.py",
+    "scripts/github/create_github_skill.py",
+    "scripts/github/extract_patterns.py",
+    "scripts/github/fetch_info.py",
+    "scripts/github/store_to_knowledge.py",
+    "scripts/knowledge/__init__.py",
+    "scripts/knowledge/query.py",
+    "scripts/knowledge/store.py",
+    "scripts/knowledge/summarizer.py",
+    "scripts/knowledge/trigger.py",
+    "scripts/programming/__init__.py",
+    "scripts/programming/detect_project.py",
+    "scripts/programming/query_experience.py",
+    "scripts/programming/store_experience.py",
+    "scripts/run.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089731388,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "richen",
+    "handle": "richenlin",
+    "user_id": "s178p7nrgdnvwbp6zcxy43fg61884bpb"
+  },
+  "slug": "evolving-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/evolving-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=evolving-agent&ownerHandle=richenlin",
+    "page_url": "https://clawhub.ai/richenlin/skills/evolving-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 464,
+    "installs": 9,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "AI \u7f16\u7a0b\u7cfb\u7edf\u534f\u8c03\u5668\u3002\u89e6\u53d1\u8bcd\uff1a\"\u5f00\u53d1\"\u3001\"\u5b9e\u73b0\"\u3001\"\u521b\u5efa\"\u3001\"\u6dfb\u52a0\"\u3001\"\u4fee\u590d\"\u3001\"\u62a5\u9519\"\u3001\"\u91cd\u6784\"\u3001\"\u4f18\u5316\"\u3001\"review\"\u3001\"\u8bc4\u5ba1\"\u3001\"\u7ee7\u7eed\"\u3001\"\u5b9e\u73b0\"\u3001\"\u4e3a\u4ec0\u4e48\"\u3001\"\u8bb0\u4f4f\"\u3001\"\u4fdd\u5b58\u7ecf\u9a8c\"\u3001\"\u590d\u76d8\"\u3001\"\u5206\u6790\"\u3001\"\u5b66\u4e60\"\u3001\"\u53c2\u8003\"\u3001\"\u6a21\u4eff\"\u3001\"/evolve",
+  "updated_at": 1779078667848,
+  "version": "0.1.0"
+}
