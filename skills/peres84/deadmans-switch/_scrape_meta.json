@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of Dead Man's Switch, a self-healing infrastructure guardian:\n\n- Monitors essential services (Tailscale, websites, disk, process health) in a strict diagnostic order.\n- Executes automated recovery playbooks and logs every incident to aid future diagnosis and learning.\n- Detects recurring failures, triggers appropriate alerting and optional cron-based monitoring.\n- Provides clear summary notifications and (if configured) concise voice alerts after each run.\n- Learns from unknown errors by attempting web-sourced solutions and updating playbooks.\n- User-invocable, with support for manual and automated (cron) checks.",
+  "created_at": 1774682206700,
+  "display_name": "Dead Man's Switch",
+  "fetched_at": 1787786933915,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "playbooks/disk.md",
+    "playbooks/nginx.md",
+    "playbooks/process.md",
+    "playbooks/tailscale.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779955021479,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "peres84",
+    "handle": "peres84",
+    "user_id": "s179wj9yfmye4sdhbzk4svv1jh83svd4"
+  },
+  "slug": "deadmans-switch",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/deadmans-switch",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=deadmans-switch&ownerHandle=peres84",
+    "page_url": "https://clawhub.ai/peres84/skills/deadmans-switch"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 611,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Self-healing infrastructure guardian. Monitors services, diagnoses failures, executes recovery playbooks, and learns from incidents.",
+  "updated_at": 1779079166039,
+  "version": "0.1.0"
+}
