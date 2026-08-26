@@ -1,0 +1,33 @@
+{
+  "changelog": "CLI-first rewrite: the maton CLI with OAuth login is the documented path, every example is a maton command, SDK examples added, and the raw HTTP fallback feeds the key on stdin instead of reading it from the environment",
+  "created_at": 1770950330612,
+  "display_name": "Cal.com",
+  "fetched_at": 1787768676928,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "byungkyu",
+    "handle": "byungkyu",
+    "user_id": "s174c3s2kc1ehqj1ytzntezj2983e2aj"
+  },
+  "slug": "cal-com",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cal-com",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cal-com&ownerHandle=byungkyu",
+    "page_url": "https://clawhub.ai/byungkyu/skills/cal-com"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1647,
+    "installs": 49,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Cal.com API integration with managed OAuth. Manage event types, bookings, schedules, availability, calendars, conferencing, webhooks, teams, verified resources, and user profile. All write operations require explicit user approval. Webhooks send booking and event data to external URLs \u2014 confirm the subscriber URL and triggers with the user before creating. Bookings contain attendee identities and email addresses. Use this skill when users want to manage scheduling, create bookings, configure event types, or check availability. For other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway). Requires network access and valid Maton API key. Calls run through the `maton` CLI with OAuth login; default to read and list calls, and confirm every write or new connection with the user.",
+  "updated_at": 1787728261891,
+  "version": "1.1.0"
+}
