@@ -1,0 +1,37 @@
+{
+  "changelog": "sync-debox-docs 1.2.0 introduces improved handling of image analysis failures and clarification of conflict reporting.\n\n- Image analysis now runs in small batches, preserves completed results, and retries failures as described in the workflow.\n- If image analysis fails, it no longer invalidates a successful documentation sync; documentation is preserved and incomplete analysis is clearly reported.\n- Summary/reporting logic clarified: only state \"no conflicts\" when all images were analyzed successfully; otherwise, specify that incomplete analysis prevents a full conclusion.\n- Additional details given on how to handle and report unreadable or incomplete images in both workflow and user summaries.\n- Minor workflow refinements for agent-managed and script-managed files.\n- Removed redundant or outdated documentation references (`skill-card.md` removed).",
+  "created_at": 1781025874027,
+  "display_name": "Sync DeBox Docs",
+  "fetched_at": 1787781247899,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/behavior.md",
+    "references/image-analysis.md",
+    "scripts/sync_debox_docs.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ZanyK4502",
+    "handle": "zanyk4502",
+    "user_id": "s1716hhgnh6gahs0g68aqewvgn83g8rh"
+  },
+  "slug": "sync-debox-docs",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sync-debox-docs",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sync-debox-docs&ownerHandle=zanyk4502",
+    "page_url": "https://clawhub.ai/zanyk4502/skills/sync-debox-docs"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 443,
+    "installs": 7,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Synchronize, update, visually inspect when supported, read, and comprehensively summarize the current public DeBox documentation shown in the navigation at d...",
+  "updated_at": 1781114141662,
+  "version": "1.2.0"
+}
