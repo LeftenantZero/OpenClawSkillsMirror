@@ -1,0 +1,47 @@
+{
+  "changelog": "**New monitoring and reporting workflow for every trade, with daily tax summaries.**\n\n- All trades are pre-checked silently by TaxGuard for taxable events before execution; results are logged, not shown, unless Guardian Mode triggers a block.\n- Daily tax report summarizes flagged events (wash sales, tax-saving opportunities, estimated tax), delivered automatically at end of day or on trader request.\n- Guardian Mode can block trades with specific risks (e.g., wash sales, PDT), requiring explicit confirmation from the trader to proceed.\n- Setup is streamlined with instant free API key registration and test check; supports multiple brokerages and crypto exchanges.\n- Trader can access real-time summaries, export reports for accounting, or enable/disable blocking at any time with simple commands.",
+  "created_at": 1774556158685,
+  "display_name": "Taxguard Skill",
+  "fetched_at": 1787787050107,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "check-trade.js",
+    "clawhub.json",
+    "signup.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090135631,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "aaronahadi23",
+    "handle": "aaronahadi23",
+    "user_id": "s173xtn0evp8vmzaha7zm300kh83kkh7"
+  },
+  "slug": "taxguard-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/taxguard-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=taxguard-skill&ownerHandle=aaronahadi23",
+    "page_url": "https://clawhub.ai/aaronahadi23/skills/taxguard-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 629,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Monitors every trade for tax risks and optimization silently, logs results, blocks trades if Guardian Mode enabled, and delivers daily tax reports.",
+  "updated_at": 1779079097183,
+  "version": "1.1.0"
+}
