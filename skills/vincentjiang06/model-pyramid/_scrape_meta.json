@@ -1,0 +1,39 @@
+{
+  "changelog": "Ground-up rebuild for the Claude 5 effort ladder: two-axis sizing (capability gap -> model; thoroughness gap -> effort), session+subagent+advisor scope, check_plan.mjs validates only the deterministically checkable parts; 26 evals in three groups; two-arm live test 9/9 vs bare 5/9.",
+  "created_at": 1783337351282,
+  "display_name": "model-pyramid",
+  "fetched_at": 1787773947734,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/model-and-effort.md",
+    "references/orchestration.md",
+    "references/runtime-knobs.md",
+    "scripts/check_plan.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "VincentJiang06",
+    "handle": "vincentjiang06",
+    "user_id": "s1784t4rkmx28018kynwsymwvn83hk4s"
+  },
+  "slug": "model-pyramid",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/model-pyramid",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=model-pyramid&ownerHandle=vincentjiang06",
+    "page_url": "https://clawhub.ai/vincentjiang06/skills/model-pyramid"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 389,
+    "installs": 0,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Right-size MODEL + EFFORT for the session and for each subagent at fan-out time, and decide whether to attach an advisor. Two axes: capability gap \u2192 change model; thoroughness gap \u2192 change effort. Use when spawning / fanning out / delegating subagents, or when asked which model or effort something should get: \"$model-pyramid\". NOT API price shopping.",
+  "updated_at": 1785593598911,
+  "version": "1.0.0"
+}
