@@ -1,0 +1,71 @@
+{
+  "changelog": "- Initial release of the geoskill-idw-interpolation tool for spatial interpolation using the Inverse Distance Weighting (IDW) method.\n- Supports power parameter adjustment, search radius limits, and nearest-neighbor search.\n- Provides both synthetic (simulated data) and real data modes.\n- Outputs results as GeoTIFF/GeoJSON/JSON raster files with a run manifest.\n- Fully offline operation with no external data or network requests; local computation only.\n- Includes clear usage instructions, dependencies, and privacy statement (MIT License).",
+  "created_at": 1785845931096,
+  "display_name": "geoskill-idw-interpolation",
+  "fetched_at": 1787773478497,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_review_out/agent-A/idw-interpolation/out_s01/output-manifest.json",
+    "_review_out/agent-A/idw-interpolation/out_s03/output-manifest.json",
+    "_review_out/agent-A/idw-interpolation/out_s04/output-manifest.json",
+    "_review_out/agent-A/idw-interpolation/out_s09/output-manifest.json",
+    "_review_out/agent-A/idw-interpolation/out_s10/output-manifest.json",
+    "e2e_test.py",
+    "geoskill-idw-interpolation.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785846843597,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-idw-interpolation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-idw-interpolation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-idw-interpolation&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-idw-interpolation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 172,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u53cd\u8ddd\u79bb\u6743\u91cd(IDW)\u7a7a\u95f4\u63d2\u503c\uff0c\u652f\u6301\u5e42\u53c2\u6570\u548c\u641c\u7d22\u534a\u5f84\uff0c\u8f93\u51fa\u63d2\u503c\u6805\u683cGeoTIFF",
+  "updated_at": 1785846081873,
+  "version": "1.0.0"
+}
