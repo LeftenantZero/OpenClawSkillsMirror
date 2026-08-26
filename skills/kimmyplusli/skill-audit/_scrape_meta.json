@@ -1,0 +1,36 @@
+{
+  "changelog": "Docs patch: 'Try it \u2014 sample prompts' section added to SKILL.md and README with five concrete trigger examples (pre-publish audit by path, safe-to-publish check, third-party install vetting, discoverability check). No behavioral change.",
+  "created_at": 1785798905034,
+  "display_name": "skill-audit",
+  "fetched_at": 1787773391745,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "checklist.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Yan Li",
+    "handle": "kimmyplusli",
+    "user_id": "s17aed0491jvw9spn4bkqn1hy58bseje"
+  },
+  "slug": "skill-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-audit&ownerHandle=kimmyplusli",
+    "page_url": "https://clawhub.ai/kimmyplusli/skills/skill-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 77,
+    "installs": 0,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Pre-publish security self-audit for OpenClaw skills. Point it at a skill folder and it walks the full ClawHub publishing checklist \u2014 code layer (eval/exec, network calls, sensitive file reads, obfuscation, dependencies), SKILL.md layer (curl|bash tricks, external scripts, trigger clarity, declaration-vs-behavior match), and release metadata (SemVer, changelog, license, slug, file types) \u2014 then emits a scored pass/fail report with concrete fixes. Use before `clawhub skill publish`, when the user asks to \"audit my skill\", \"pre-publish check\", \"is this skill safe to publish\", or wants to vet a third-party skill before installing it.",
+  "updated_at": 1785892202533,
+  "version": "0.2.1"
+}
