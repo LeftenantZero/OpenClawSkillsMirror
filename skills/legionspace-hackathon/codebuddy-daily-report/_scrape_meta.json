@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of the daily-report skill.\n\n- Added support for generating daily work reports by discovering all relevant git repositories and summarizing activity.\n- Collects commit logs across all branches and includes CodeBuddy Agent session overviews.\n- Supports flexible date selection: today, yesterday, specific date, or days ago.\n- Output includes structured stats, per-repo details, and high-level summaries.\n- Reports are automatically generated in the user\u2019s preferred language.\n- Requires only Python 3.6+ and git CLI, with zero additional configuration by default.",
+  "created_at": 1783463860151,
+  "display_name": "Codebuddy Daily Report",
+  "fetched_at": 1787777706355,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/template.md",
+    "references/config.yaml",
+    "scripts/collect.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783504890505,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "LegionSpace-Hackathon",
+    "handle": "legionspace-hackathon",
+    "user_id": "s17ecqe25y9chvw0dc8skt25qx83h73c"
+  },
+  "slug": "codebuddy-daily-report",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/codebuddy-daily-report",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=codebuddy-daily-report&ownerHandle=legionspace-hackathon",
+    "page_url": "https://clawhub.ai/legionspace-hackathon/skills/codebuddy-daily-report"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 49,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate a daily work report by automatically discovering all git repositories the user worked on, collecting commit logs across all branches, and summarizin...",
+  "updated_at": 1783463860151,
+  "version": "1.0.0"
+}
