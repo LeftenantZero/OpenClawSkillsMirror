@@ -1,0 +1,37 @@
+{
+  "changelog": "**web-crawler v1.0.0 \u2013 Unified web crawling tool with fetch and crawl modes:**\n\n- Merged features from original crawler and web-fetch-enhanced skills for unified usage.\n- Added scripts for single-page precision extraction and site-wide BFS crawling with checkpoint resume.\n- Supports Playwright-based JS rendering with automatic fallback to requests + BeautifulSoup.\n- Provided robust content cleaning, auto-removal of common page noise, and CSS selector filtering.\n- Added rich CLI parameters for both fetch and crawl modes (e.g., content extraction, output control, headless mode, domain restriction).\n- Updated documentation to clearly distinguish \"fetch\" vs \"crawl\" use cases and command-line options.",
+  "created_at": 1785720451319,
+  "display_name": "web-crawler",
+  "fetched_at": 1787773715533,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/content_cleaner.py",
+    "scripts/crawler.py",
+    "scripts/web_crawler.py",
+    "scripts/web_fetch_enhanced.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "paudyyin",
+    "handle": "paudyyin",
+    "user_id": "s172x1s50dh0bgmm3yc9516nr586kk4b"
+  },
+  "slug": "web-crawler",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/web-crawler",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=web-crawler&ownerHandle=paudyyin",
+    "page_url": "https://clawhub.ai/paudyyin/skills/web-crawler"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 60,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7f51\u9875\u722c\u53d6\u7edf\u4e00\u5de5\u5177\u3002\u652f\u6301\u5355\u9875\u7cbe\u786e\u6293\u53d6\uff08CSS\u9009\u62e9\u5668/\u81ea\u5b9a\u4e49JS/\u81ea\u52a8\u964d\u7ea7\uff09\u548c\u6574\u7ad9BFS\u722c\u53d6\uff08\u65ad\u70b9\u7eed\u722c/\u5185\u5bb9\u6e05\u6d17\uff09\u3002Playwright\u6e32\u67d3JS + requests\u9759\u6001fallback\u3002",
+  "updated_at": 1785720558963,
+  "version": "1.0.0"
+}
