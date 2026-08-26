@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release: Enforces an end-to-end, standardized workflow for writing and publishing WeChat Official Account articles, including H/K/R checks, self-check templates, strict cover image rules, and server-aware publishing.\n\n- All writing, even for \"test\" or \"try it\" requests, follows strict multi-step process: topic judgment, archetype selection, L1-L4 self-check, and house style enforcement.\n- Cover image workflow uses gpt-image-2 via LuisClaw relay, requires user confirmation of prompt, and applies project custom requirements.\n- Article typesetting performed using gzh-design, passing automated validation and preview checks.\n- Publishing handled with preflight verification, draft existence safety, and post-publish confirmation.\n- Safety rules forbid including sensitive secrets or credentials in deliverables.\n- Includes templates, references, and concrete example files for each workflow step.",
+  "created_at": 1783477712058,
+  "display_name": "Wechat Content Studio",
+  "fetched_at": 1787777613212,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/examples/workflow-discipline-article.md",
+    "assets/examples/workflow-discipline-article_\u6392\u7248_\u6a44\u6984\u624b\u8bb0(olive-journal).html",
+    "assets/examples/workflow-discipline-article_\u6392\u7248_\u6a44\u6984\u624b\u8bb0(olive-journal)_\u9884\u89c8.html",
+    "assets/examples/workflow-discipline-cover.prompt.txt",
+    "assets/examples/workflow-discipline-selfcheck.md",
+    "assets/templates/article-template.md",
+    "assets/templates/selfcheck-template.md",
+    "references/image2-policy.md",
+    "references/workflow.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Luisclaw",
+    "handle": "luis1213899",
+    "user_id": "s17dx8tkck6b2b3d3capmeyfmx84mj9a"
+  },
+  "slug": "wechat-content-studio",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wechat-content-studio",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wechat-content-studio&ownerHandle=luis1213899",
+    "page_url": "https://clawhub.ai/luis1213899/skills/wechat-content-studio"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 81,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "End-to-end WeChat Official Account article studio for Chinese\u516c\u4f17\u53f7\u5185\u5bb9. Use when asked to write, test, package, typeset, generate covers for, publish, or verify...",
+  "updated_at": 1783477712058,
+  "version": "1.0.0"
+}
