@@ -1,0 +1,43 @@
+{
+  "changelog": "- Operates Docker Hub through the OOMOL `docker_hub` connector using the `oo` CLI, with credentials injected server-side.\n- Supports repository and image lookups, including repository metadata, tag metadata, and image variant discovery by digest.\n- Lists repositories, organization members, teams, team members, and organization access tokens with filtering or pagination where supported.\n- Provides write actions for creating repositories and inviting organization members.\n- Includes guarded destructive actions for deleting teams and removing organization or team members, with explicit confirmation required.\n\nSource: `oomol-lab/skills@146ef20`",
+  "created_at": 1780497112613,
+  "display_name": "Docker Hub",
+  "fetched_at": 1787781729507,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781002220885,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-docker-hub",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-docker-hub",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-docker-hub&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-docker-hub"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 488,
+    "installs": 7,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Docker Hub (hub.docker.com). Use this skill for ANY Docker Hub request \u2014 reading, creating, updating, and deleting data. Whenever a task involves Docker Hub,...",
+  "updated_at": 1780999396548,
+  "version": "1.0.1"
+}
