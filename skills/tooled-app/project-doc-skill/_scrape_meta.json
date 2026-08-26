@@ -1,0 +1,35 @@
+{
+  "changelog": "- Now only activates when the user explicitly requests project documentation\u2014won't auto-trigger on ordinary project conversation.\n- Added a consent warning: clarifies that the skill writes/edits only PROJECT.md, never runs shell commands, and prompts for project root confirmation.\n- Removed the ability to use the exec tool; skill now operates with least privilege (read/write/edit only).\n- Expanded rules and usage guidance to emphasize consent, explicit invocation, and safety.\n- Documentation and metadata updated to version 1.1 with clearer descriptions and restrictions.\n- Added .clawhub/origin.json and _meta.json; removed obsolete skill-card.md.",
+  "created_at": 1787645738999,
+  "display_name": "project-doc",
+  "fetched_at": 1787768744793,
+  "files": [
+    ".clawhub/origin.json",
+    "SKILL.md",
+    "_meta.json",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Tooled-app",
+    "handle": "tooled-app",
+    "user_id": "s1732m0wt3pbwh1b2yn4byean986njc4"
+  },
+  "slug": "project-doc-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/project-doc-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=project-doc-skill&ownerHandle=tooled-app",
+    "page_url": "https://clawhub.ai/tooled-app/skills/project-doc-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 61,
+    "installs": 0,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Create or maintain a PROJECT.md source-of-truth doc for any project, quiz-first with project-type branches. Use only when the user explicitly asks for project documentation.",
+  "updated_at": 1787703168593,
+  "version": "1.0.1"
+}
