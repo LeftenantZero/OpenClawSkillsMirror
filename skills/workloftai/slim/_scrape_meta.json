@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release of slim: a pluggable pipe filter for cleaning up verbose CLI output before reaching agents.\n- Strips ANSI color codes, trims whitespace, collapses blank lines, and compresses repeated lines (lossless filters always on).\n- Clamps large outputs to head+tail with a clear elision marker, tuned per command (e.g., YAML/JSON, long diffs, logs).\n- Outputs filtered data to stdout and, with --report, prints a savings summary to stderr.\n- Designed for use in agent pipelines to save context budget; can be extended via plugins.",
+  "created_at": 1782913358484,
+  "display_name": "slim",
+  "fetched_at": 1787778503344,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "bench.py",
+    "bin/slim",
+    "clawhub.json",
+    "skill-card.md",
+    "slim/__init__.py",
+    "slim/cli.py",
+    "slim/core.py",
+    "slim/plugins.py",
+    "slim/report.py",
+    "tests/__init__.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_plugins.py",
+    "tests/test_report.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Workloft",
+    "handle": "workloftai",
+    "user_id": "s17b4msacv23kywbf6ssbhm5jd89qe0t"
+  },
+  "slug": "slim",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/slim",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=slim&ownerHandle=workloftai",
+    "page_url": "https://clawhub.ai/workloftai/skills/slim"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 229,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "A pluggable pipe filter that strips verbose CLI output (huge YAML/JSON dumps, lockfiles, long diffs) before it reaches the LLM, so an agent spends its contex...",
+  "updated_at": 1782913358484,
+  "version": "1.0.0"
+}
