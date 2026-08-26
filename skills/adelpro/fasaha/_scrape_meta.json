@@ -1,0 +1,41 @@
+{
+  "changelog": "- Removed the redundant skill-card.md file.\n- Updated documentation in SKILL.md for clarity and structure.\n- No changes to code; this update is documentation and housekeeping only.",
+  "created_at": 1787233964525,
+  "display_name": "fasaha",
+  "fetched_at": 1787770317400,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/checklist.md",
+    "references/dialect-classification.md",
+    "references/llm-failure-log.md",
+    "references/mt-examples.md",
+    "references/qalb-spelling-rules.md",
+    "references/sources.md",
+    "references/terminology.md",
+    "references/voice-profile.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "adelpro",
+    "handle": "adelpro",
+    "user_id": "s177vajy8ffpjnym8evc1jcxr5877x59"
+  },
+  "slug": "fasaha",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fasaha",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fasaha&ownerHandle=adelpro",
+    "page_url": "https://clawhub.ai/adelpro/skills/fasaha"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 142,
+    "installs": 0,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Review and fix AI-generated or AI-translated Arabic so it reads as fluent, native Modern Standard Arabic (MSA) instead of translated/calqued output. Trigger on translating INTO Arabic, writing in Arabic (\u0627\u0643\u062a\u0628 \u0628\u0627\u0644\u0639\u0631\u0628\u064a\u0629 / \u0627\u0643\u062a\u0628\u0644\u064a \u0628\u0627\u0644\u0639\u0631\u0628\u064a\u0629), writing original Arabic, or reviewing/correcting/proofreading Arabic (\u2018\u0631\u0627\u062c\u0639 \u0644\u064a \u0647\u0630\u0627\u2019, '\u0635\u062d\u062d \u0627\u0644\u0639\u0631\u0628\u064a\u0629', '\u062a\u0631\u062c\u0645 \u0647\u0630\u0627 \u0644\u0644\u0639\u0631\u0628\u064a\u0629', any Arabic quality check), and proactively before outputting Arabic prose longer than 2-3 sentences. Covers: Latin-script leakage, English sentence-structure calque, word choice/terminology, morphology/agreement, punctuation, hamza spelling, dialectal leakage into MSA. Ships a self-maintained register profile (voice-profile.md) for tone and MSA-vs-Darija choice, a runnable checklist, a terminology glossary, and an accumulating failure log. Register-focused; a separate style/voice skill may layer after it.",
+  "updated_at": 1787253848250,
+  "version": "1.1.1"
+}
