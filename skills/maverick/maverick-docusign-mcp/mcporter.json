@@ -1,0 +1,25 @@
+{
+  "imports": [],
+  "mcpServers": {
+    "maverick-docusign": {
+      "baseUrl": "https://mcp-d.docusign.com/mcp",
+      "transport": "http",
+      "auth": "refreshable_bearer",
+      "refresh": {
+        "tokenEndpoint": "https://account-d.docusign.com/oauth/token",
+        "clientIdEnv": "MAVERICK_DOCUSIGN_MCP_CLIENT_ID",
+        "clientSecretEnv": "MAVERICK_DOCUSIGN_MCP_CLIENT_SECRET",
+        "clientAuthMethod": "client_secret_basic",
+        "scope": "signature"
+      },
+      "allowedTools": [
+        "getUserInfo",
+        "getAccount",
+        "getEnvelopes",
+        "getEnvelope",
+        "listRecipients",
+        "getTemplates"
+      ]
+    }
+  }
+}
