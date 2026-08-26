@@ -1,0 +1,46 @@
+{
+  "changelog": "- Introduced a new live flight fare search skill integrating Agoda, Trip.com, and Traveloka, enabling price comparison for one-way and round-trip flights.\n- Requires airports specified as 3-letter IATA codes; does not include airport-lookup functionality.\n- Setup script registers the MCP server and ensures secure, backup-aware configuration with no runtime network calls.\n- Standardized response format: displays top 5\u20137 flights per leg, with detailed pricing, timing, and direct booking links (source attributed from URL host).\n- Emphasizes polling pattern: initial search returns immediately with `sessionId`, results must be polled until completion or user satisfaction.\n- Round-trips handled as two separate one-way searches; fares are not combined quotes.",
+  "created_at": 1785680868922,
+  "display_name": "pricewin-flight-search",
+  "fetched_at": 1787773764707,
+  "files": [
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "install.sh",
+    "reference.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785681801831,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wenlambo",
+    "handle": "cotghw",
+    "user_id": "s172fjj2a78x4zgds5wc81z66188qh8e"
+  },
+  "slug": "pricewin-flight-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pricewin-flight-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pricewin-flight-search&ownerHandle=cotghw",
+    "page_url": "https://clawhub.ai/cotghw/skills/pricewin-flight-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 203,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Search live flight fares for a route and date across Agoda, Trip.com, and Traveloka \u2014 one-way or round-trip, any cabin, with airline, times, stops, duration, and a direct booking link. Use when the user wants flight prices, plane or air tickets, cheap flights or airfare between two cities, comparing airlines for travel dates, or planning the flying leg of a trip.",
+  "updated_at": 1785680946651,
+  "version": "1.0.0"
+}
