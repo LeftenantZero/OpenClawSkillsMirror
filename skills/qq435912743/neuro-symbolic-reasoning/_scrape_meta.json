@@ -1,0 +1,46 @@
+{
+  "changelog": "- Initial release of neuro-symbolic-reasoning skill for unified neural (generalizable) and symbolic (verifiable) reasoning.\n- Supports parallel inference: symbolic (Horn clause, forward chaining, verifiable) and neural (vector similarity, confidence score).\n- Explicit conflict detection and prioritization of verifiable symbolic results, with fallback to neural inferences when needed.\n- Suitable for tasks requiring both generalization and auditability, such as relational reasoning, knowledge completion, and trustworthy Q&A.\n- Includes an auto-evolving learning system: records usage, errors, user preferences, and provides insights and improvement suggestions for continuous optimization.",
+  "created_at": 1786626083844,
+  "display_name": "neuro-symbolic-reasoning",
+  "fetched_at": 1787772240866,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "learned_patterns.json",
+    "scripts/learner.py",
+    "scripts/neuro_symbolic.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786672289944,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "qq435912743",
+    "handle": "qq435912743",
+    "user_id": "s171ndzm69p9g2ee5kcw6t7smh8azd5h"
+  },
+  "slug": "neuro-symbolic-reasoning",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/neuro-symbolic-reasoning",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=neuro-symbolic-reasoning&ownerHandle=qq435912743",
+    "page_url": "https://clawhub.ai/qq435912743/skills/neuro-symbolic-reasoning"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 122,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u795e\u7ecf\u7b26\u53f7\u7edf\u4e00\u63a8\u7406\u2014\u2014\u628a\"\u795e\u7ecf(\u8fde\u7eed\u8868\u5f81+\u76f8\u4f3c\u5ea6=\u53ef\u6cdb\u5316\u4f46\u4e0d\u53ef\u9a8c\u8bc1)\"\u4e0e\"\u7b26\u53f7(Horn\u5b50\u53e5\u524d\u5411\u94fe+\u4e0d\u53d8\u91cf=\u53ef\u8bc1\u4f46\u8106\u5f31)\"\u7194\u4e8e\u4e00\u7089\u3002\u540c\u4e00\u67e5\u8be2\u540c\u65f6\u8d70\u4e24\u4fa7\uff1a\u7b26\u53f7\u53ef\u8bc1\u7ed3\u8bba\u4f18\u5148(verifiable=True)\uff0c\u795e\u7ecf\u8fd1\u90bb\u7ed3\u8bba\u4f5c\u4e3a\u5e26\u7f6e\u4fe1\u5ea6\u7684\u8f6f\u8bc1\u636e\uff0c\u4e24\u4fa7\u51b2\u7a81\u663e\u5f0f\u6807\u6ce8\u4f9b\u4e0a\u5c42\u88c1\u51b3\u3002\u9002\u7528\u4e8e\u9700\u8981\"\u65e2\u80fd\u6cdb\u5316\u5230\u672a\u89c1\u6837\u672c\u3001\u53c8\u80fd\u7ed9\u51fa\u53ef\u5ba1\u8ba1/\u53ef\u53cd\u4f8b\u8bc1\u4f2a\u63a8\u5bfc\"\u7684\u63a8\u7406\u573a\u666f\uff08\u5173\u7cfb\u63a8\u7406\u3001\u77e5\u8bc6\u8865\u5168\u3001\u53ef\u4fe1\u95ee\u7b54\u3001\u53cd\u5e7b\u89c9\uff09\u3002",
+  "updated_at": 1786671219734,
+  "version": "1.0.0"
+}
