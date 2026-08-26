@@ -1,0 +1,44 @@
+{
+  "changelog": "Comment UX release: align comment bubbles and the add-comment panel with their document anchors, prevent comment input from scrolling the page, add click-to-edit comments with Update/Cancel controls, and refresh generated templates/demo artifacts.",
+  "created_at": 1780744492369,
+  "display_name": "html-collab",
+  "fetched_at": 1787772611797,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/template.html",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786472618171,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ljn-hust",
+    "handle": "ljn-hust",
+    "user_id": "s17fpha62y8hdfwvaqngffpjqh88469j"
+  },
+  "slug": "html-collab",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/html-collab",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=html-collab&ownerHandle=ljn-hust",
+    "page_url": "https://clawhub.ai/ljn-hust/skills/html-collab"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 875,
+    "installs": 11,
+    "stars": 0,
+    "versions": 8
+  },
+  "summary": "Use this skill for any HTML document that will go through LLM\u2013human review cycles. Trigger when: the user asks to write, draft, or generate a document for review or feedback; the user provides a .html file containing annotations or a collab-data block; the user types /html-collab, /html-collab on, or /html-collab off; a .html file contains an AI Bootstrap comment pointing to this skill. When the user asks to \"write a doc\" or \"draft something for review\" without specifying a format, default to html-collab format \u2014 don't wait to be asked. /html-collab off triggers this skill too, but outputs clean presentation HTML instead.",
+  "updated_at": 1786471947583,
+  "version": "0.3.0"
+}
