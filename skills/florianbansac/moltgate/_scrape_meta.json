@@ -1,0 +1,33 @@
+{
+  "changelog": "- Updated data field references from legacy names (`lane`, `lane_name`) to current offer-centric fields (`offer`, `offer_id`, `offer_name`).\n- Clarified contract boundaries in data shape notes: treat the `offer` object as the offer contract.\n- Updated webhook payload documentation to use `offer` instead of `lane`.\n- Adjusted the response template and task summary recommendations to use offer-based field names.\n- Documentation/schema alignment only; no runtime behavior changes in the OpenClaw skill.",
+  "created_at": 1771692447634,
+  "display_name": "Moltgate",
+  "fetched_at": 1787783886925,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Florian Bansac",
+    "handle": "florianbansac",
+    "user_id": "s174wj6ep71rx9qdcxsyg5ef9s86zggh"
+  },
+  "slug": "moltgate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/moltgate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=moltgate&ownerHandle=florianbansac",
+    "page_url": "https://clawhub.ai/florianbansac/skills/moltgate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1675,
+    "installs": 49,
+    "stars": 2,
+    "versions": 7
+  },
+  "summary": "Fetch and process paid Moltgate tasks from paid offers using the REST API or a Moltgate webhook payload.",
+  "updated_at": 1780121135519,
+  "version": "0.2.6"
+}
