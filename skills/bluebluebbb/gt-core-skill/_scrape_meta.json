@@ -1,0 +1,69 @@
+{
+  "changelog": "Initial release of gumtree-skills for live browser-based Gumtree automation.\n\n- Enables interacting with Gumtree using a real Chrome session via a local Python CLI and extension bridge.\n- Supports login state checks, login/logout, searching listings, viewing recommendations, managing favourites, reading detail pages, and messaging.\n- Allows starting the post-ad category flow (up to category selection).\n- Requires Python 3.11+, `uv`, and Google Chrome for setup.\n- Enforces strict boundaries for command use, authentication, and feature scope.",
+  "created_at": 1779713490666,
+  "display_name": "gt-core-skill",
+  "fetched_at": 1787784784084,
+  "files": [
+    "CLAUDE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "extension/background.js",
+    "extension/content.js",
+    "extension/manifest.json",
+    "gumtree_skills/__init__.py",
+    "gumtree_skills/__main__.py",
+    "gumtree_skills/cli.py",
+    "pyproject.toml",
+    "scripts/__init__.py",
+    "scripts/bridge_server.py",
+    "scripts/cli.py",
+    "scripts/gumtree/__init__.py",
+    "scripts/gumtree/bridge.py",
+    "scripts/gumtree/browser_auth.py",
+    "scripts/gumtree/browser_detail.py",
+    "scripts/gumtree/browser_detail_favourite.py",
+    "scripts/gumtree/browser_favourites.py",
+    "scripts/gumtree/browser_home.py",
+    "scripts/gumtree/browser_messages.py",
+    "scripts/gumtree/browser_post_ad.py",
+    "scripts/gumtree/browser_search.py",
+    "scripts/gumtree/browser_urls.py",
+    "scripts/gumtree/errors.py",
+    "scripts/gumtree/selectors.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779965369705,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "gumtree-tech",
+    "handle": "bluebluebbb",
+    "user_id": "s17c5y618ey9wx3jedyc3bcgcn84dz1q"
+  },
+  "slug": "gt-core-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gt-core-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gt-core-skill&ownerHandle=bluebluebbb",
+    "page_url": "https://clawhub.ai/bluebluebbb/skills/gt-core-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 575,
+    "installs": 11,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Use this skill when the user needs to work with Gumtree in a real Chrome browser session. It runs the local Python CLI and Chrome extension bridge to: - chec...",
+  "updated_at": 1779713490666,
+  "version": "1.0.0"
+}
