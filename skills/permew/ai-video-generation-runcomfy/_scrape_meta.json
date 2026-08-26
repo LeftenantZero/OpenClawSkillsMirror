@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release: Unified AI video generation across the full RunComfy model catalog.\n\n- Supports text-to-video and image-to-video using top models: HappyHorse 1.0, Seedance, Kling, Wan, Dreamina, Hailuo, Veo, and more.\n- Smart routing by user intent\u2014automatically selects the best model for needs like in-pass audio, lip-sync, cinematic motion, speed, or duration.\n- Offers detailed usage and model-picking guidance, covering features and best use cases.\n- Simple CLI integration: trigger video generation via the runcomfy CLI with minimal command inputs.\n- Activates on a wide range of natural language prompts related to AI video creation.",
+  "created_at": 1785124793009,
+  "display_name": "AI Video Generation \u2014 Pro Pack on RunComfy",
+  "fetched_at": 1787774794498,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mew",
+    "handle": "permew",
+    "user_id": "s17af27kmxn6ac8n1m0wdx0drh8bb4gd"
+  },
+  "slug": "ai-video-generation-runcomfy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-video-generation-runcomfy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-video-generation-runcomfy&ownerHandle=permew",
+    "page_url": "https://clawhub.ai/permew/skills/ai-video-generation-runcomfy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 253,
+    "installs": 2,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "AI video generation on RunComfy. This RunComfy video generation skill is a smart router across the RunComfy video-model catalog \u2014 HappyHorse 1.0 (Arena #1, native in-pass audio), Wan-AI Wan 2-7 (open weights, audio-driven lip-sync), ByteDance Seedance v2 / 1-5 / 1-0 (multi-modal cinematic), Kling 3.0 / 2-6, Google Veo 3-1, MiniMax Hailuo 2-3, ByteDance Dreamina 3-0. RunComfy video generation covers text-to-video (t2v), image-to-video (i2v), and Veo's video-extend endpoint. The RunComfy video generation skill picks the right model for intent (Arena #1 quality, multi-shot character identity, in-pass audio, cinematic motion, fastest path, sub-15s clip, longest duration) and ships each model's documented prompting patterns plus the minimal `runcomfy run` invoke. Calls `runcomfy run <vendor>/<model>/text-to- video` or `/image-to-video` through the local RunComfy CLI. Triggers on \"generate video\", \"make a video\", \"text to video\", \"t2v\", \"image to video\", \"i2v\", \"animate\", \"AI video\", \"make X move\", \"video from prompt\", \"video from image\", or any explicit ask to produce a video clip from prompt or still with RunComfy.",
+  "updated_at": 1785127130901,
+  "version": "1.0.0"
+}
