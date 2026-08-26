@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of Gateway Watchdog for OpenClaw gateways.\n\n- Monitors an OpenClaw gateway via configurable health endpoint checks.\n- Automatically restarts the gateway service on failure, with configurable attempts and cooldown between retries.\n- Writes detailed JSON status and alert files for remote monitoring and integration with nginx HTTP endpoints.\n- Supports remote notification setup via separate OpenClaw cron job.\n- Offers clear troubleshooting steps for common deployment issues.",
+  "created_at": 1783834005492,
+  "display_name": "Community Skill",
+  "fetched_at": 1787777146601,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/nginx-snippet.conf",
+    "scripts/watchdog.conf",
+    "scripts/watchdog.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Hypnotronic3",
+    "handle": "hypnotronic3",
+    "user_id": "s17f6fjezqksn3r9c39xqd9c798adjmt"
+  },
+  "slug": "gateway-watchdog",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gateway-watchdog",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gateway-watchdog&ownerHandle=hypnotronic3",
+    "page_url": "https://clawhub.ai/hypnotronic3/skills/gateway-watchdog"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 206,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Monitor an OpenClaw gateway, auto-restart on failure, and alert when recovery fails.",
+  "updated_at": 1783834040348,
+  "version": "1.0.0"
+}
