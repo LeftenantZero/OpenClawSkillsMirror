@@ -1,0 +1,53 @@
+{
+  "changelog": "Initial release of agent-flight-recorder skill.\n\n- Implements an immutable, cryptographically verifiable audit trail for OpenClaw agent executions using Cryptowerk Verifiable Data.\n- Supports registering file hashes, fetching blockchain seals, and verifying proofs without requiring an SDK.\n- Utilizes local sidecar files for storage of retrieval IDs and seals.\n- Provides Python scripts for registration, seal retrieval, and proof verification.\n- Service credentials are handled securely and used exclusively for proof-related APIs.",
+  "created_at": 1781504395034,
+  "display_name": "Agent Flight Recorder",
+  "fetched_at": 1787780760048,
+  "files": [
+    "DISCLAIMER.md",
+    "LICENSE.txt",
+    "NOTICE.txt",
+    "SKILL.md",
+    "_meta.json",
+    "cwconfig.json",
+    "references/cryptowerk-api-notes.md",
+    "references/storage-and-state.md",
+    "scripts/cwcommon.py",
+    "scripts/getseal.py",
+    "scripts/register.py",
+    "scripts/verify.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781512274552,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "cryptowerk-main",
+    "handle": "cryptowerk-main",
+    "user_id": "s1727aytk6jb73vvgf2j3ma93s86w5tg"
+  },
+  "slug": "agent-flight-recorder",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-flight-recorder",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-flight-recorder&ownerHandle=cryptowerk-main",
+    "page_url": "https://clawhub.ai/cryptowerk-main/skills/agent-flight-recorder"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 340,
+    "installs": 4,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use the Cryptowerk Verifiable Data skill to implement an \"Agent Flight Recorder\" that creates an immutable, cryptographically verifiable audit trail for Open...",
+  "updated_at": 1781504395034,
+  "version": "1.0.0"
+}
