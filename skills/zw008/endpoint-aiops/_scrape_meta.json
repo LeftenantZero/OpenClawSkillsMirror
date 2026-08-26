@@ -1,0 +1,47 @@
+{
+  "changelog": "# endpoint-aiops 0.9.0 Changelog\n\n- Removed the file: `skill-card.md`\n- No changes to core functionality or features\n- Documentation and skill metadata remain as before",
+  "created_at": 1783825581482,
+  "display_name": "endpoint-aiops",
+  "fetched_at": 1787772966960,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agent-guardrails.md",
+    "references/capabilities.md",
+    "references/cli-reference.md",
+    "references/setup-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786345477679,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wei zhou",
+    "handle": "zw008",
+    "user_id": "s171xgnmqse0nqvgqvqnaq5f9183kyre"
+  },
+  "slug": "endpoint-aiops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/endpoint-aiops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=endpoint-aiops&ownerHandle=zw008",
+    "page_url": "https://clawhub.ai/zw008/skills/endpoint-aiops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1002,
+    "installs": 0,
+    "stars": 0,
+    "versions": 9
+  },
+  "summary": "Use this skill whenever the user needs to operate a managed-endpoint fleet (thin clients, VDI endpoints, centrally-managed devices) \u2014 a one-shot fleet health overview, endpoint inventory (list/get), a composite per-endpoint health score (which endpoints are worst?), login & boot sessions, login-storm analysis (detect morning login storms and rank the slowest login/boot contributors), patch/config drift (which endpoints deviate from the fleet baseline), and two guarded writes (assign a config profile, reboot an endpoint). Always use this skill for \"endpoint fleet overview\", \"list managed endpoints\", \"which endpoints are worst\", \"endpoint health score\", \"rank endpoints by risk\", \"why is login slow this morning\", \"login storm\", \"boot time analysis\", \"patch drift\", \"config drift\", \"which endpoints are behind on patches\", \"assign a profile to an endpoint\", or \"reboot a thin client\" when the context is an endpoint-management fleet. Do NOT use when the target is OT / industrial equipment (Modbus, OPC-UA, PLCs \u2014 use industrial-aiops), a hypervisor, a storage appliance, a backup product, a Kubernetes cluster, or a network device (negative routing hints only). Covers common managed-endpoint operations with a built-in governance harness (audit, policy, token budget, undo, risk-tiers). The test suite is mock-based; not yet exercised against a live management server (see docs/VERIFICATION.md).",
+  "updated_at": 1786344703805,
+  "version": "0.9.0"
+}
