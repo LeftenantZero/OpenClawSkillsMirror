@@ -1,0 +1,33 @@
+{
+  "changelog": "**Major update: Skill reworked to generate tailored, non-generic code review checklists based on user inputs.**\n\n- Skill no longer provides a static, comprehensive checklist; now produces custom checklists tailored to the specific PR's language, change type, and risk level.\n- Requires key contextual inputs (language, change type, risk, PR description, etc.) for maximum relevance.\n- Includes language- and change-type-specific checks, risk-scaled review depth, and a detailed review decision framework.\n- New scoring rubric and anti-patterns help ensure quality and discourage generic or overly broad checklists.\n- Fully revised README with structured output format, usage instructions, and clear examples.\n- Removed code and config files (handler.py, skill.json) \u2014 skill now defined by SKILL.md only.",
+  "created_at": 1784211739426,
+  "display_name": "Code Review Checklist",
+  "fetched_at": 1787776528996,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mohitagw15856",
+    "handle": "mohitagw15856",
+    "user_id": "s17fnyjd25g4ww0htrqnwjzv818agy02"
+  },
+  "slug": "code-review-checklist",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/code-review-checklist",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=code-review-checklist&ownerHandle=mohitagw15856",
+    "page_url": "https://clawhub.ai/mohitagw15856/skills/code-review-checklist"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 61,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate a tailored code review checklist for any pull request based on the language, type of change, and risk level. Use when asked to review code, check a...",
+  "updated_at": 1784211739426,
+  "version": "1.0.0"
+}
