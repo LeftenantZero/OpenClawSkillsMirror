@@ -1,0 +1,41 @@
+{
+  "changelog": "v1.1.2: scanner-hygiene patch; assemble test-only credential-shaped redaction fixture at runtime, exclude generated tool caches from artifact hashing, runtime behavior unchanged",
+  "created_at": 1786040333231,
+  "display_name": "Agent DNSTT Rendezvous",
+  "fetched_at": 1787773211046,
+  "files": [
+    "CHANGELOG.md",
+    "DEBUGGING.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/INSPIRATION.md",
+    "scripts/rendezvous.py",
+    "skill-card.md",
+    "tests/test_properties.py",
+    "tests/test_rendezvous.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "orionshaowswmw",
+    "handle": "orionshaowswmw",
+    "user_id": "s17d6323ed1jjxgp339202e6c98b1qq5"
+  },
+  "slug": "agent-dnstt-rendezvous",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-dnstt-rendezvous",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-dnstt-rendezvous&ownerHandle=orionshaowswmw",
+    "page_url": "https://clawhub.ai/orionshaowswmw/skills/agent-dnstt-rendezvous"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 335,
+    "installs": 1,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Authorization-gated coordination skill for agents that need to plan, verify, and troubleshoot a DNSTT client/server link without sharing private keys, scanning resolvers, changing DNS/firewalls, or auto-executing tunnel commands. Uses short-lived rendezvous cards, out-of-band public-key fingerprints, optional HMAC authentication, loopback-by-default services, deterministic argv plans, and secret-free status handoffs. Use only on domains, resolvers, servers, and services the operator owns or is explicitly authorized to administer.",
+  "updated_at": 1786073781113,
+  "version": "1.1.2"
+}
