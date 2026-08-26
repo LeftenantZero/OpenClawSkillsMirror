@@ -1,0 +1,45 @@
+{
+  "changelog": "- Updated confirmation flow: \"\u670d\u52a1\u534f\u8bae\" (agree_terms) after registration now requires no manual user input\u2014sign is triggered by tool call; confirmation phrases for no-refund and disclaimer must still be typed verbatim by the user.\n- Clarified step order: Mandated that after login, the full disclaimer from sign_in response must be shown verbatim before requesting confirmation.\n- Enhanced payment QR code guidance: Agent should attempt to display the QR code image directly (where supported), but must always include the raw URL and related instructions as fallback.\n- Improved instructions on parameter handling: pay_method (trc20/erc20/aptos) must be explicitly chosen by the user, not auto-selected by the agent.\n- Updated tool quick reference and conversation scripts to reflect these process changes and new confirmation behaviors.\n- Removed skill-card.md; consolidated and expanded guidance in other documentation.",
+  "created_at": 1786677325712,
+  "display_name": "purchasing-agent-guide",
+  "fetched_at": 1787772103783,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "examples.md",
+    "mcp-setup.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786699278075,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "hushengpo",
+    "handle": "yohyow",
+    "user_id": "s17e0m80ja2pas7qja68mhw4z58cf8fp"
+  },
+  "slug": "purchasing-agent-guide",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/purchasing-agent-guide",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=purchasing-agent-guide&ownerHandle=yohyow",
+    "page_url": "https://clawhub.ai/yohyow/skills/purchasing-agent-guide"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 167,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Guides users through MCP-based \u4ee3\u8d2d shopping as a friendly consultant: login, browse stores, pick categories, paginate, buy with USDT, check orders, verify payment, leave messages. Maps natural language to MCP tools. Enforces service disclaimer and no-refund agreement; stays within shopping scope only. Use when shopping via the \u4ee3\u8d2d MCP, connecting the MCP, or buying accounts/goods with USDT in Cursor, Claude, Cline, Windsurf, Codex, or other MCP clients.",
+  "updated_at": 1786698602439,
+  "version": "1.0.1"
+}
