@@ -1,0 +1,43 @@
+{
+  "changelog": "Summary: Major skill refocus from auto video maker to tier list board creation, with new import documentation and template assets.\n\n- Renamed and refocused the skill from \"tierlist-video-maker\" (video generation) to \"tierlist-maker\" (interactive board building & import).\n- Removed all video generation and script-related files; skill no longer handles narrated video creation or AI vision for image cards.\n- Added onboarding templates, sample tierlist markdowns, and expanded technical references for data import and config.\n- The skill now guides users step-by-step to create TierVibe tier lists, building the import URL and launching it in the user's browser.\n- Updated description and documentation to match the new creation-focused workflow.",
+  "created_at": 1784524053223,
+  "display_name": "TierList Maker",
+  "fetched_at": 1787773952486,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/logo.svg",
+    "examples/ai-models-tierlist.md",
+    "references/data-schema.md",
+    "references/explanations.md",
+    "references/import-flow.md",
+    "references/text-cards.md",
+    "references/tier-config.md",
+    "skill-card.md",
+    "templates/blank.tiervibe.json",
+    "templates/henz-5tier.tiervibe.json",
+    "templates/text-only.tiervibe.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Edison",
+    "handle": "edison7009",
+    "user_id": "s174qymstncmvnkxecmq4ftt658ax676"
+  },
+  "slug": "tierlist-maker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tierlist-maker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tierlist-maker&ownerHandle=edison7009",
+    "page_url": "https://clawhub.ai/edison7009/skills/tierlist-maker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 619,
+    "installs": 1,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Turn a published TierVibe tier list into a narrated video. Fetches tier list data and card images from a TierVibe URL, captures a HIGH-RESOLUTION board image from the public page (Playwright, no server call \u2014 the whole-image export is a user-side action, automated), uses AI vision to identify each c",
+  "updated_at": 1785581301011,
+  "version": "1.0.11"
+}
