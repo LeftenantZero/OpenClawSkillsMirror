@@ -1,0 +1,41 @@
+{
+  "changelog": "- Initial interface definition for a forge-agnostic git-host driver contract.\n- Establishes a normalized driver method set for PR, issue, merge, auth, visibility, and dependency operations across GitHub, GitLab, and Gitea.\n- Documents capability-matrix and contract for how pipelines should degrade on missing forge features.\n- Introduces explicit `--forge=<github|gitlab|gitea>` driver selection and auto-detection from git remote, with fallback to GitHub.\n- Marks GitLab and Gitea support as adapter boundaries for future development (Phase 2).\n- Declares dependency on `github-flow` as the reference GitHub implementation.",
+  "created_at": 1783520855050,
+  "display_name": "forge",
+  "fetched_at": 1787771483098,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "adapters.md",
+    "capability-matrix.md",
+    "dispatch.md",
+    "driver-interface.md",
+    "resources/forge-driver.sh",
+    "resources/forge-driver.test.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "es6kr",
+    "handle": "drumrobot",
+    "user_id": "s17ay1v6v88r2m102pvvc44gz183qcrm"
+  },
+  "slug": "forge",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/forge",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=forge&ownerHandle=drumrobot",
+    "page_url": "https://clawhub.ai/drumrobot/skills/forge"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 123,
+    "installs": 0,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Forge-agnostic git-host driver contract. Lets code-workflow / github-flow / harness pipelines run independent of the underlying git forge (GitHub, GitLab, Gitea) through a normalized driver interface + a `--forge=<github|gitlab|gitea>` dispatch idiom with git-remote auto-detection (github fallback). Use when: designing or reasoning about forge-portable PR/MR/issue/merge operations, adding a new forge adapter, deciding how a pipeline should degrade when a forge lacks a capability (PR\u2194PR dependency, sub-issues, Copilot review), or normalizing repo visibility (PUBLIC/INTERNAL/PRIVATE) and reference formats (`#N` vs MR `!N`) across hosts. Triggers: \"forge\", \"forge-agnostic\", \"--forge\", \"forge driver\", \"gitlab\", \"gitea\", \"glab\", \"tea\", \"MR\", \"capability flag\", \"adapter\".",
+  "updated_at": 1787031774459,
+  "version": "0.1.2"
+}
