@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release \u2014 production-grade Tauri 2 app scaffolding and extension.\n\n- Scaffold a new Tauri 2 app with a Rust backend and TypeScript/React frontend following modular, secure, and scalable architecture patterns.\n- Three core operations: full project scaffold, add a Tauri command (Rust + typed frontend hook), or add a Rust module (with state/storage/test).\n- Codifies robust patterns (modular Rust, trait-based platform abstractions, encrypted secrets, single-instance enforcement, updater, typed command hooks) and prevents common pitfalls found in Tauri codebases.\n- Version management: auto-detects and resolves latest stable Rust/npm package versions at runtime\u2014never hardcoding versions.\n- Responds to user requests to create, expand, or add features to Tauri 2 apps, enforcing best practices throughout.",
+  "created_at": 1786913819486,
+  "display_name": "tauri-2-app",
+  "fetched_at": 1787771692082,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/anti-patterns.md",
+    "references/folder-layout.md",
+    "references/good-patterns.md",
+    "references/templates/build-rs.md",
+    "references/templates/capabilities.md",
+    "references/templates/cargo-toml.md",
+    "references/templates/ci-workflow.md",
+    "references/templates/encryption-mod.md",
+    "references/templates/error-mod.md",
+    "references/templates/lib-rs.md",
+    "references/templates/macos-plist.md",
+    "references/templates/main-rs.md",
+    "references/templates/platform-traits.md",
+    "references/templates/storage-mod.md",
+    "references/templates/tauri-conf.md",
+    "references/templates/use-tauri-command.md",
+    "references/templates/vite-and-tsconfig.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "tauri-2-app",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tauri-2-app",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tauri-2-app&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/tauri-2-app"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 129,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Scaffold a new Tauri 2 desktop app (Rust backend + TypeScript/React frontend) using a thin-frontend / rich-Rust-backend architecture with modular commands, trait-based platform abstractions, encrypted secrets at rest, single-instance enforcement, an updater wired to a self-hosted manifest, and a cross-platform CI matrix. Use this skill whenever the user asks to \"create a new Tauri app\", \"scaffold a Tauri 2 project\", \"new desktop app with Tauri\", \"Tauri + React project\", \"add a Tauri command end-to-end\", \"add a Rust module to my Tauri app\", or mentions \"the Tauri patterns I like\" / \"my Tauri conventions\" \u2014 even if they don't explicitly say \"tauri-2-app\". Three modes \u2014 (1) full project scaffold, (2) add a Tauri command slice (Rust command + capability + typed frontend hook), (3) add a Rust module slice (state + storage + tests). Codifies the good patterns (modular `src-tauri/src/`, `commands/`, `state/`, `storage/`, `platform/` traits, `error/` macros, single-instance + updater + global-shortcut plugins, capability files, encrypted API keys, `spawn_blocking` for sync work, typed frontend command hooks) and forbids the common pitfalls (committed `.backup`/`.orig`/`.temp` files, secrets in plaintext, `localStorage` for tokens, dev-tools enabled in release, hand-rolled date math instead of `chrono`, raw `std::fs` bypassing capability checks, `'use client'` analog flaws like skipping `isTauriReady` guards, `cfg!(target_os)` in commands instead of trait-based platform code, missing `windows_subsystem = \"windows\"` in `main.rs`, multi-instance apps with no `tauri-plugin-single-instance`, hardcoded company URLs / updater pubkeys / bundle identifiers).",
+  "updated_at": 1786913921782,
+  "version": "1.0.0"
+}
