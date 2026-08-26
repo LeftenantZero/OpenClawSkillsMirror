@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of agentnomos-governance-preflight.\n\n- Provides a fail-closed, read-only preflight check before AI agent actions with potential external consequences.\n- Evaluates requests for actor identity, specific authority, defined scope, risk factors, human approval requirements, and presence of required evidence.\n- Clearly delineates output states: ADVISORY_ALLOW, HOLD_FOR_REVIEW, or BLOCK, each with strict requirements.\n- Ensures no secrets, credentials, or sensitive data are repeated or exposed; marks and blocks upon detection.\n- Outputs structured, justified JSON summaries with clear reasoning and missing requirements for review.\n- Does not execute, authorize, or collect approvals\u2014advisory only.",
+  "created_at": 1782210370087,
+  "display_name": "Agentnomos Governance Preflight",
+  "fetched_at": 1787779412040,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "AgentNomos",
+    "handle": "agentnomos",
+    "user_id": "s1776t83sezxznkv4k4c0amamx8976c0"
+  },
+  "slug": "agentnomos-governance-preflight",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agentnomos-governance-preflight",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agentnomos-governance-preflight&ownerHandle=agentnomos",
+    "page_url": "https://clawhub.ai/agentnomos/skills/agentnomos-governance-preflight"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 360,
+    "installs": 0,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Run a fail-closed governance preflight before consequential AI-agent actions.",
+  "updated_at": 1782210370087,
+  "version": "1.0.0"
+}
