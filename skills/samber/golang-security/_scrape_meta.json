@@ -1,0 +1,46 @@
+{
+  "changelog": "golang-security 1.2.0\n\n- Refined compatibility and orchestration instructions, including explicit support for multi-agent workflows (e.g., via Claude Code's `ultracode`).\n- Expanded orchestration and parallel review guidance for security audits, with clearer mapping to worktree-per-fix best practices.\n- Added new tool capabilities (EnterWorktree, ExitWorktree) and restricted paths to Go source files for more focused operation.\n- Updated compatibility field to list Codex and clarified orchestrator usage.\n- Removed obsolete skill-card.md file.",
+  "created_at": 1774336778519,
+  "display_name": "golang-security",
+  "fetched_at": 1787769907549,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/architecture.md",
+    "references/checklist.md",
+    "references/cookies.md",
+    "references/cryptography.md",
+    "references/filesystem.md",
+    "references/injection.md",
+    "references/logging.md",
+    "references/memory-safety.md",
+    "references/network.md",
+    "references/secrets.md",
+    "references/third-party.md",
+    "references/threat-modeling.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Samuel Berthe",
+    "handle": "samber",
+    "user_id": "s173arkhs3131fq5jf769qq75583hdgt"
+  },
+  "slug": "golang-security",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/golang-security",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=golang-security&ownerHandle=samber",
+    "page_url": "https://clawhub.ai/samber/skills/golang-security"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1254,
+    "installs": 26,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Security best practices and vulnerability prevention for Golang. Covers injection (SQL, command, XSS), cryptography, filesystem safety, network security, cookies, secrets management, memory safety, and logging. Apply when writing, reviewing, or auditing Go code for security, or when working on any risky code involving crypto, I/O, secrets management, user input handling, or authentication. Includes configuration of security tools.",
+  "updated_at": 1787445216371,
+  "version": "1.2.0"
+}
