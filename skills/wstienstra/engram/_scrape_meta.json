@@ -1,0 +1,33 @@
+{
+  "changelog": "- Major skill rewrite: now provides a one-command install and migration of associative memory for any OpenClaw workspace.\n- Adds a robust migration tool to convert existing markdown memories (`MEMORY.md`, `memory/*.md`, `AGENTS.md`) into Engram's semantic graph, with dry-run and human approval required.\n- Includes a full uninstall and restore path with manifest-based file backup and idempotent operation.\n- Engine degrades gracefully if dependencies (onnxruntime, numpy, ollama, flashrank) are missing; all fallback modes are loud and non-fatal.\n- Configuration is fully path-based and workspace-isolated; no hardcoded paths in engine code.\n- Old `skill-card.md` file removed.",
+  "created_at": 1783280073915,
+  "display_name": "Engram",
+  "fetched_at": 1787778070924,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Wietse Stienstra",
+    "handle": "wstienstra",
+    "user_id": "s17cqjpwa89zpe4tk675b1d55d89yyej"
+  },
+  "slug": "engram",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/engram",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=engram&ownerHandle=wstienstra",
+    "page_url": "https://clawhub.ai/wstienstra/skills/engram"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 72,
+    "installs": 0,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "One-install associative memory graph for any OpenClaw workspace: stage, migrate markdown memory, rewire, verify with a seeded battery, and revert.\n\nSQLite knowledge graph with hybrid retrieval: FTS5 + ONNX embeddings + tag/graph channels fused via weighted RRF, reranked by a CPU cross-encoder. Calibrated abstention blocks ungrounded answers. Intentions fire on deterministic keyword match (~50ms, no LLM). Bi-temporal props track fact validity. Warm daemon; degrades to pure FTS. Zero cloud.",
+  "updated_at": 1783281206367,
+  "version": "0.1.0"
+}
