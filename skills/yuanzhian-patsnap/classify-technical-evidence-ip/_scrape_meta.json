@@ -1,0 +1,54 @@
+{
+  "changelog": "Initial release of classify-technical-evidence-ip.\n\n- Introduces an evidence-based taxonomy workflow for labeling patents, scientific literature, and technical records.\n- Distinguishes business decisions, model judgments, external evidence, and deterministic validation as separate steps.\n- Implements a multi-gate confirmation process (scope, freeze, execution) to govern labeling lifecycle.\n- Provides detailed procedures for external data authorization and data minimization.\n- Supports discovery, semi-open, and closed operating modes for label management and taxonomy updates.",
+  "created_at": 1786607913351,
+  "display_name": "Evidence-Based Technical Labeling",
+  "fetched_at": 1787772398668,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/decision-rules-template.yaml",
+    "assets/label-confirmation-card-template.md",
+    "assets/task-config-template.yaml",
+    "assets/taxonomy-template.csv",
+    "references/default-decision-rules.md",
+    "references/domain-milk-protein-examples.csv",
+    "references/domain-milk-protein-rules.md",
+    "references/domain-milk-protein-taxonomy.csv",
+    "references/domain-milk-protein.yaml",
+    "references/input-output-contract.md",
+    "references/quality-and-review.md",
+    "references/taxonomy-design.md",
+    "references/workflow-modes.md",
+    "references/zhihuiya-mcp-orchestration.md",
+    "scripts/create_labeling_workbook.mjs",
+    "scripts/inspect_labeling_input.mjs",
+    "scripts/validate_labeling_output.mjs",
+    "scripts/validate_task_config.py",
+    "scripts/validate_taxonomy.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "yuanzhian-patsnap",
+    "handle": "yuanzhian-patsnap",
+    "user_id": "s17bvft5kywc2rr8r8df1ra0x589g677"
+  },
+  "slug": "classify-technical-evidence-ip",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/classify-technical-evidence-ip",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=classify-technical-evidence-ip&ownerHandle=yuanzhian-patsnap",
+    "page_url": "https://clawhub.ai/yuanzhian-patsnap/skills/classify-technical-evidence-ip"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 128,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Build and apply an auditable technical taxonomy",
+  "updated_at": 1786608002261,
+  "version": "1.0.0"
+}
