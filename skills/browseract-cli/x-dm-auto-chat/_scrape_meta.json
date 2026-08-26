@@ -1,0 +1,52 @@
+{
+  "changelog": "x-dm-auto-chat 1.0.0\n\n- Initial release with full end-to-end X (Twitter) DM automation features.\n- Scans DM inbox, identifies pending replies, reads conversation context, and sends persona-based responses.\n- Supports searching for users and initiating new DM conversations.\n- Includes E2E DM passcode unlock, DM permission checks, and rate control.\n- Automatic browser and X account session detection with clear error handling.\n- All actions operate within the user's authenticated browser, never bypassing access controls.",
+  "created_at": 1783600185713,
+  "display_name": "X Dm Auto Chat",
+  "fetched_at": 1787777380246,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/check-composer.py",
+    "scripts/check-page-state.py",
+    "scripts/fetch-inbox-api.py",
+    "scripts/open-conversation-by-user.py",
+    "scripts/read-conversation.py",
+    "scripts/scan-inbox-merged.py",
+    "scripts/scroll-load-history.py",
+    "scripts/search-users.py",
+    "scripts/verify-sent.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783600969274,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "x-dm-auto-chat",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/x-dm-auto-chat",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=x-dm-auto-chat&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/x-dm-auto-chat"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 488,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "X (Twitter) DM automated chat end-to-end Skill: scan DM inbox to identify pending-reply conversations, read message history, generate persona-based replies and send; also supports searching users and starting new conversations. Built-in E2E passcode unlock, DM permission filtering, and rate control.",
+  "updated_at": 1783600185713,
+  "version": "1.0.0"
+}
