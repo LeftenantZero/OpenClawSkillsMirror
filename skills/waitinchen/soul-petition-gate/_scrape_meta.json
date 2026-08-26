@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of soul-petition-gate.  \nProvides a secure, human-in-the-loop workflow for AI agents to propose, but not self-apply, changes to protected identity files.\n\n- Agents submit structured petitions (what, where, why, and intended outcome) for changes to SOUL.md, IDENTITY.md, or other protected files.\n- Humans review, approve, or reject petitions; approved changes are auto-applied with a complete backup and audit trail.\n- Six required petition fields enforce agent reflection and maturity.\n- Full API and ready-to-mount Flask blueprint included.\n- Designed for safety: agents cannot self-approve or directly edit their own 'soul' files; all edits require explicit human consent.\n- Complete audit history of all proposals, approvals, and rejections.",
+  "created_at": 1774192869280,
+  "display_name": "Soul Petition Gate",
+  "fetched_at": 1787787507870,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/soul_petition_routes.py",
+    "examples/petition_examples.md",
+    "hooks/openclaw/HOOK.md",
+    "hooks/openclaw/handler.ts",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090037365,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "waitinchen",
+    "handle": "waitinchen",
+    "user_id": "s17d169n4p9z4bphh60jg7hybn83znxe"
+  },
+  "slug": "soul-petition-gate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/soul-petition-gate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=soul-petition-gate&ownerHandle=waitinchen",
+    "page_url": "https://clawhub.ai/waitinchen/skills/soul-petition-gate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 652,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Gives your AI agent a formal channel to propose changes to its own soul files (SOUL.md, IDENTITY.md, or any protected workspace file) \u2014 without ever letting...",
+  "updated_at": 1779078845860,
+  "version": "1.0.0"
+}
