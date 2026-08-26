@@ -1,0 +1,34 @@
+{
+  "changelog": "v1.0.0 \u2014 First publication.\n\nInitial release. Ports the operating doctrine for Facebook Page automation\nfrom a regulated-field operation to a domain-agnostic skill.\n\nIncludes:\n- Pages-only doctrine (explicit rules against personal-profile + third-party-group\n  automation \u2014 the fast-track to permanent ban)\n- 3-role mental model (fb-post / fb-engage / fb-stealth)\n- MBS-first \u2014 never automate facebook.com directly\n- Page Quality-aware phase gating (Phase A/B) with manual override path\n- Zero-outgoing-link policy in comments; max 1 URL in DMs\n- Page moderation discipline (Hide vs Delete vs Ban; prefer Hide)\n- The MBS comment-Reply navigation-bug workaround (shared with IG)\n- 24h Messenger window awareness; out-of-window outbound needs message-tag\n  templates (out of scope here)\n- Strict reply qualification (skip testimonials-without-link, recognize existing\n  clients, 7-day per-user cap)\n- Hard quotas calibrated to avoid Page Quality drops\n- \"Posting as: Page\" toggle drift check\n- Recovery playbook for Page Quality drops, Page restrictions, admin-account\n  \"in review\", comment automod removals\n- 9-file memory inventory (including fb-banned-users.md) + first-run checklist + FAQ\n\nCompanion to instagram-account-operations (same MBS backbone, IG-specific\ndoctrine) and to the reddit / twitter / tiktok / whatsapp family.",
+  "created_at": 1779140085557,
+  "display_name": "Facebook Account Operations",
+  "fetched_at": 1787786647606,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Alexandre Bloch",
+    "handle": "alexbloch-ia",
+    "user_id": "s179c74ca8kjff2gapygs9y13d86yr3z"
+  },
+  "slug": "facebook-account-operations",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/facebook-account-operations",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=facebook-account-operations&ownerHandle=alexbloch-ia",
+    "page_url": "https://clawhub.ai/alexbloch-ia/skills/facebook-account-operations"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 735,
+    "installs": 16,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Operating doctrine for Facebook Page automation \u2014 careful brand-page pattern via Meta Business Suite, role separation, page-vs-profile-vs-group surface aware...",
+  "updated_at": 1779140103475,
+  "version": "1.0.0"
+}
