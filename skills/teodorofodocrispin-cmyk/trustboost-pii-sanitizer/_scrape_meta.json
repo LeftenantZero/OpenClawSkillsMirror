@@ -1,0 +1,33 @@
+{
+  "changelog": "What changed in v2.6.0:\n\nAdded data handling notice \u2014 explicit disclosure that text is transmitted to remote API over HTTPS and immediately discarded after sanitization\nAdded /.well-known/x402.json discovery endpoint for autonomous x402 agent payment flow\nAdded /preflight endpoint with billing_model, price_per_unit, and bundle_description for buyer-agent wallet authorization\nAdded /policy endpoint returning SHA-256 hash of service terms for agent verification before payment\nAdded HEAD method support to /.well-known/x402 for agent preflight checks\nAdded 10 discovery aliases \u2014 /agents.txt, /mcp.json, /.well-known/agents.json, /.well-known/mcp/server-card.json and more\nAdded /trustboost-pii-sanitizer alias for ClawHub skill agents\nAdded /.well-known/glama.json for Glama marketplace indexing\nAdded billing_model transparency field to /preflight\nExtended llms.txt with complete payment flow example and Python copy-paste code\nAdded AGENTS.md \u2014 Linux Foundation standard for agent interaction\nAdded .cursor/rules for automatic PII sanitization in Cursor workflows\nAdded plugin.json and manifest.json for Claude Code plugin directory\n8 languages supported: EN, ES-LATAM, PT-BR, DE, JA, FR, IT, KO",
+  "created_at": 1777078232549,
+  "display_name": "TrustBoost PII Sanitizer",
+  "fetched_at": 1787780458183,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "teodorofodocrispin-cmyk",
+    "handle": "teodorofodocrispin-cmyk",
+    "user_id": "s174f8wsyybamj8bhwkwa7y5fh85h9zs"
+  },
+  "slug": "trustboost-pii-sanitizer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/trustboost-pii-sanitizer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=trustboost-pii-sanitizer&ownerHandle=teodorofodocrispin-cmyk",
+    "page_url": "https://clawhub.ai/teodorofodocrispin-cmyk/skills/trustboost-pii-sanitizer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1126,
+    "installs": 29,
+    "stars": 1,
+    "versions": 10
+  },
+  "summary": "Context-aware PII sanitization for autonomous AI agent pipelines. Sanitizes text before LLMs with 5 context modes (legal/financial/medical/code/general), Pri...",
+  "updated_at": 1781664372152,
+  "version": "2.0.7"
+}
