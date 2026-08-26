@@ -1,0 +1,49 @@
+{
+  "changelog": "CORRECTION to the 1.7.1 release note. No code change in this version. 1.7.1 said the inverted book read skipped liquid markets 'while trading near-empty ones'. The second half was wrong: worst-ask minus worst-bid is always >= the touch spread, so the gate could only ever be too STRICT, never too loose - over-trading was not a reachable outcome. Measured on 96 live books, the old read rejected 96 of 96 where a correct read passes 24: about 25 percent of tradeable books skipped, and ZERO thin books wrongly traded. The harm was missed opportunity, not adverse selection. Your past fills were not affected.",
+  "created_at": 1771076618259,
+  "display_name": "Polymarket FastLoop Trader",
+  "fetched_at": 1787773049646,
+  "files": [
+    "DISCLAIMER.md",
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "config.json",
+    "fastloop_trader.py",
+    "skill-card.md",
+    "tests/test_fastloop_orderbook_summary.py",
+    "tests/test_fastloop_preflight_gate.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786258689991,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Simmer.Markets",
+    "handle": "simmer",
+    "user_id": "s17eez0vajry6hjb97y9mbtv2s85wekv"
+  },
+  "slug": "polymarket-fast-loop",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polymarket-fast-loop",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polymarket-fast-loop&ownerHandle=simmer",
+    "page_url": "https://clawhub.ai/simmer/skills/polymarket-fast-loop"
+  },
+  "stats": {
+    "comments": 5,
+    "downloads": 8895,
+    "installs": 263,
+    "stars": 50,
+    "versions": 45
+  },
+  "summary": "Trade Polymarket BTC 5-minute and 15-minute fast markets using CEX price momentum signals via Simmer API. Default signal is Binance BTC/USDT klines. Use when user wants to trade sprint/fast markets, automate short-term crypto trading, or use CEX momentum as a Polymarket signal.",
+  "updated_at": 1786258426417,
+  "version": "1.7.3"
+}
