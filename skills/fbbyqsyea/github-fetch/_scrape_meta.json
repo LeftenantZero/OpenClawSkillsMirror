@@ -1,0 +1,45 @@
+{
+  "changelog": "**github-fetch v1.0.0**\n\n- Major overhaul: replaced shell scripts with a unified Python script (`scripts/github_fetch.py`) for downloading repositories, release assets, and files from GitHub.\n- Added automatic detection and benchmarking of proxy mirrors, supporting fallback when direct connections to GitHub are slow or blocked.\n- Download process now includes resume for interrupted downloads, SHA-256 checksum verification, and optional extraction/installation of assets.\n- Removed legacy shell scripts (`github-clone.sh`, `github-fetch-file.sh`) and migrated all workflow instructions and logic to new documentation and Python tooling.\n- Rewrote documentation for cross-language audience, updated usage instructions, clarified download/clone scenarios, and expanded troubleshooting guidance.",
+  "created_at": 1785810157444,
+  "display_name": "GitHub Fetch",
+  "fetched_at": 1787773574525,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "scripts/github_fetch.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785811010985,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fbbyqsyea",
+    "handle": "fbbyqsyea",
+    "user_id": "s178b473cg0b5zem4n6jwj6mk9843q1p"
+  },
+  "slug": "github-fetch",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/github-fetch",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=github-fetch&ownerHandle=fbbyqsyea",
+    "page_url": "https://clawhub.ai/fbbyqsyea/skills/github-fetch"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 40,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Download files, release assets, or entire repositories (including submodules) from GitHub. Use whenever the user needs to fetch GitHub resources but direct connections are slow, timing out, rate-limited, or blocked \u2014 large release assets (ffmpeg builds, binaries, models), git clone with submodules, or single files. The skill auto-detects network problems, probes and benchmarks proxy mirrors, resumes interrupted downloads, verifies SHA-256 checksums, and extracts/installs artifacts. Make sure to use this skill whenever the user mentions downloading from GitHub, cloning a repo, fetching a release, getting a binary from GitHub, or any download that fails or stalls on GitHub \u2014 even if they don't explicitly ask for help with mirrors or proxies.",
+  "updated_at": 1785810255500,
+  "version": "1.0.0"
+}
