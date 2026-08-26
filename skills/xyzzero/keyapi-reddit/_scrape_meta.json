@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of the keyapi-reddit skill for Reddit analysis via the KeyAPI REST API.\n\n- Turn natural-language Reddit queries into live, docs-driven KeyAPI workflows for posts, comments, users, and subreddits.\n- Enforces use of official KeyAPI docs as source of truth for API details, never falling back to unofficial sources.\n- Includes local helper scripts for authentication, docs lookup, and robust API execution.\n- Comprehensive workflow for scenario selection, parameter handling, and user onboarding, including credential setup guidance.\n- Supports entity analysis, dynamic search, ranking, reporting, comment traversal, and feed monitoring.\n- Implements strict separation of API facts vs. inference and prioritizes minimal user input for common scenarios.",
+  "created_at": 1783581394012,
+  "display_name": "Keyapi Reddit",
+  "fetched_at": 1787777425036,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/global-rules.md",
+    "references/reddit-community-rules.md",
+    "references/reddit-discovery-rules.md",
+    "references/reddit-post-comment-rules.md",
+    "references/reddit-rules.md",
+    "references/routing-policy.md",
+    "references/scenarios.md",
+    "references/setup-and-auth.md",
+    "scripts/configure-keyapi-auth.mjs",
+    "scripts/keyapi-api.mjs",
+    "scripts/search-keyapi-docs.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "xyz",
+    "handle": "xyzzero",
+    "user_id": "s171syq0yzqa444gtv8q9v8rhd8a7ma1"
+  },
+  "slug": "keyapi-reddit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/keyapi-reddit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=keyapi-reddit&ownerHandle=xyzzero",
+    "page_url": "https://clawhub.ai/xyzzero/skills/keyapi-reddit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 534,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Analyze Reddit posts, comments, users, subreddits, feeds, rules, settings, and search signals through the KeyAPI REST API using live official docs. Use for single/batch post details, threaded comments, sub-comment traversal, user activity, public trophies, active communities, subreddit info/rules/se",
+  "updated_at": 1783581394012,
+  "version": "1.0.0"
+}
