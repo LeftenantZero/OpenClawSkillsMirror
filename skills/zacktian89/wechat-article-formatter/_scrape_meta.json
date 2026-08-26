@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release of wechat-article-formatter skill.\n- Provides structured workflow for generating, normalizing, theming, and previewing HTML-first WeChat articles.\n- Supports converting topics, briefs, notes, outlines, Markdown, or existing HTML into WeChat-friendly article body.\n- Applies reusable style presets with default fallback to \"warm-editorial\" theme.\n- Includes image base64 inlining, complete HTML preview generation, and rigorous style/content QA before delivery.\n- Emphasizes one-source HTML workflow, strict preview interaction, compliance with theming/output rules, and prevention of common misuses.",
+  "created_at": 1779762182941,
+  "display_name": "\u5fae\u4fe1\u6587\u7ae0\u6392\u7248\u9884\u89c8",
+  "fetched_at": 1787784675922,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/completeness-checklist.md",
+    "references/image-rules.md",
+    "references/output-contract.md",
+    "references/preview-implementation.md",
+    "references/template-parts/layout.html",
+    "references/template-parts/script.js",
+    "references/template-parts/style.css",
+    "references/theme-presets.md",
+    "references/visual-guidelines.md",
+    "scripts/convert_cover_to_base64.py",
+    "scripts/generate_preview.py",
+    "scripts/inline_images.py",
+    "scripts/open_preview.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Zack Fair",
+    "handle": "zacktian89",
+    "user_id": "s172hz43cha99wmqeqr82z54zs87eq8t"
+  },
+  "slug": "wechat-article-formatter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wechat-article-formatter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wechat-article-formatter&ownerHandle=zacktian89",
+    "page_url": "https://clawhub.ai/zacktian89/skills/wechat-article-formatter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 660,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u751f\u6210\u3001\u89c4\u8303\u5316\u3001\u4e3b\u9898\u5316\u5fae\u4fe1\u516c\u4f17\u53f7\u6587\u7ae0 HTML\uff0c\u5e76\u8f93\u51fa\u53ef\u590d\u5236\u6216\u53ef\u9884\u89c8\u7684\u6b63\u6587\u3002",
+  "updated_at": 1779762182941,
+  "version": "1.0.0"
+}
