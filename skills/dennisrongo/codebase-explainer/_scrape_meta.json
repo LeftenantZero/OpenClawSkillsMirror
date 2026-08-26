@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of codebase-explainer \u2014 an automated, citation-based onboarding artifact generator for code repositories.\n\n- Produces a detailed, durable ONBOARDING.md covering system overview, dependency map, startup and auth flows, and top files\u2014every claim cited with file:line.\n- Explores the repo using parallel Explore sub-agents, ensuring deep context even for large or complex projects.\n- Refreshes existing onboarding docs in-place instead of overwriting them.\n- Focuses on what makes THIS codebase non-obvious\u2014avoiding generic framework descriptions.\n- Offers a condensed \"read this first\" summary in chat and an optional sharing step for teammates.",
+  "created_at": 1786913308965,
+  "display_name": "codebase-explainer",
+  "fetched_at": 1787771697941,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "codebase-explainer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/codebase-explainer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=codebase-explainer&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/codebase-explainer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 121,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Produce a durable onboarding artifact for a codebase \u2014 writes `ONBOARDING.md` (or `docs/ONBOARDING.md` if `docs/` exists) covering a \"read this first\" minimum, system overview, dependency map (top-level deps + how each is actually used), startup flow (entry points \u2192 bootstrap \u2192 config), auth flow (or explicit \"none detected\"), and 5\u201315 important files \u2014 every claim backed by a `file:line` citation. Walks the repo via parallel Explore sub-agents so big projects don't blow context, calls out what makes THIS codebase non-obvious (not generic framework descriptions), refreshes an existing onboarding doc instead of rewriting from scratch, and renders a condensed summary inline. Built for revisiting a project after months away and for new teammates landing in an unfamiliar repo. Use this skill whenever the user says \"explain this codebase\", \"explain the codebase\", \"onboard me\", \"give me a tour\", \"tour this repo\", \"what does this repo do\", \"where do I start\", \"I haven't looked at this in months\", \"codebase overview\", \"read this first\", or invokes `/codebase-explainer` \u2014 even if they don't name the skill.",
+  "updated_at": 1786913365632,
+  "version": "1.0.0"
+}
