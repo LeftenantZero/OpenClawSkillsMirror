@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of operation-tracer.\n\n- Tracks all operations including tool calls, LLM calls, errors, and compression events.\n- Stores trace data persistently in a SQLite database.\n- Provides tools for performance analysis: slow operation detection, error statistics, and data export (JSON/CSV).\n- Includes automatic cleanup of old data.\n- Offers integration hooks for tool usage tracking and self-improving workflows.",
+  "created_at": 1783467587817,
+  "display_name": "Operation Tracer",
+  "fetched_at": 1787777634288,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/trace_schema.md",
+    "scripts/analyzer.py",
+    "scripts/test_tracer.py",
+    "scripts/tracer.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "paudyyin",
+    "handle": "paudyyin",
+    "user_id": "s172x1s50dh0bgmm3yc9516nr586kk4b"
+  },
+  "slug": "operation-tracer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/operation-tracer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=operation-tracer&ownerHandle=paudyyin",
+    "page_url": "https://clawhub.ai/paudyyin/skills/operation-tracer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 261,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "SQLite \u64cd\u4f5c\u8ffd\u8e2a\u7cfb\u7edf\u3002\u8bb0\u5f55\u6240\u6709\u5de5\u5177\u8c03\u7528\u3001LLM\u8c03\u7528\u3001\u9519\u8bef\u548c\u538b\u7f29\u64cd\u4f5c\uff0c\u4f9b\u4e8b\u540e\u5206\u6790\u548c\u6027\u80fd\u4f18\u5316\u3002",
+  "updated_at": 1783467587817,
+  "version": "1.0.0"
+}
