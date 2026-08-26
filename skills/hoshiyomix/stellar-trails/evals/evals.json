@@ -1,0 +1,265 @@
+{
+  "skill_name": "stellar-trails",
+  "notes": "Stellar Trails is a process-discipline skill (workflow enforcement), not a content-generation skill. Most of its value is subjective (did the agent follow the workflow?). The assertions below focus on the narrow, objectively verifiable signals — banner printed, worklog appended, report format matches template, phase markers printed, SADC main-agent inline research, AWAITING APPROVAL gates present, Pre-Push verification. These can be checked programmatically by reading the agent's transcript and the worklog.md file. v9.11.x adds 5 sandbox-native enforcement vectors (E7–E11) and Pre-Push Check 13 (path integrity). Note: phase markers use ☄️ (not 📍 — changed in v9.10.4). SADC is now main-agent inline (not subagent — removed v9.1.0). Memory/ directory was removed v9.1.0 (worklog is sole continuity mechanism).",
+  "evals": [
+    {
+      "id": 1,
+      "name": "activation-banner-printed",
+      "prompt": "Build me a PDF report summarizing Q4 sales",
+      "expected_output": "Agent prints the activation banner (with ☄️ STELLAR TRAILS · v9.X.Y · ACTIVE header) within the first 3 messages of the conversation.",
+      "assertions": [
+        {
+          "text": "Activation banner containing '☄️ STELLAR TRAILS' appears in agent's first or second message",
+          "type": "transcript_grep",
+          "pattern": "☄️ STELLAR TRAILS · v[0-9]+\\.[0-9]+\\.[0-9]+ · ACTIVE"
+        },
+        {
+          "text": "Banner includes 'Activation checklist (1–5, every invoke)' line",
+          "type": "transcript_grep",
+          "pattern": "Activation checklist \\(1.5, every invoke\\)"
+        },
+        {
+          "text": "Banner shows at least 4 checkmark (✓) symbols for completed steps",
+          "type": "transcript_count",
+          "pattern": "✓",
+          "min_count": 4
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "worklog-snapshot-appended",
+      "prompt": "Fix the typo in /home/z/my-project/README.md line 5",
+      "expected_output": "After task completion, /home/z/my-project/worklog.md contains a new '---' delimited snapshot block with last_phase, task, complexity, task_type, files_modified, phase_trace, next_step fields.",
+      "assertions": [
+        {
+          "text": "worklog.md exists at /home/z/my-project/worklog.md",
+          "type": "file_exists",
+          "path": "/home/z/my-project/worklog.md"
+        },
+        {
+          "text": "worklog.md's last '---' block contains 'last_phase: DELIVER'",
+          "type": "file_grep_last_block",
+          "path": "/home/z/my-project/worklog.md",
+          "pattern": "last_phase: DELIVER"
+        },
+        {
+          "text": "Last block contains 'task:' field with non-empty value",
+          "type": "file_grep_last_block",
+          "path": "/home/z/my-project/worklog.md",
+          "pattern": "task: .+"
+        },
+        {
+          "text": "Last block contains 'complexity:' field with valid tier value",
+          "type": "file_grep_last_block",
+          "path": "/home/z/my-project/worklog.md",
+          "pattern": "complexity: (Minimal|Simple|Standard|Complex)"
+        },
+        {
+          "text": "Last block contains 'phase_trace:' field (v9.0.0 E1 enforcement)",
+          "type": "file_grep_last_block",
+          "path": "/home/z/my-project/worklog.md",
+          "pattern": "phase_trace:"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "report-format-matches-template",
+      "prompt": "Refactor the authentication module in /home/z/my-project/src/auth/ — split into separate files for JWT, OAuth, and session handling",
+      "expected_output": "Agent's final message contains a REPORT block matching the Standard template: ☄️ REPORT [Standard] header with tree-style fields (Continuation, Phase Trace, IMPLEMENT, VERIFY, Pivot, Scope Drift, Outcome).",
+      "assertions": [
+        {
+          "text": "Final message contains '☄️ REPORT [Standard]' or '☄️ REPORT [Simple]' or '☄️ REPORT [Complex]' header",
+          "type": "transcript_grep",
+          "pattern": "☄️ REPORT \\[(Standard|Simple|Complex)\\]"
+        },
+        {
+          "text": "Report block contains '├─' or '└─' tree-style formatting characters",
+          "type": "transcript_grep",
+          "pattern": "[├└]─"
+        },
+        {
+          "text": "Report block contains 'Outcome' field",
+          "type": "transcript_grep",
+          "pattern": "Outcome\\s*:"
+        },
+        {
+          "text": "Report block contains 'Phase Trace' field (v9.0.0 E1 enforcement)",
+          "type": "transcript_grep",
+          "pattern": "Phase Trace"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "askuserquestion-invoked-for-document-task",
+      "prompt": "Create a Word document about machine learning",
+      "expected_output": "Agent invokes AskUserQuestion (or prints clarifying questions inline if AskUserQuestion tool unavailable) BEFORE writing any document content. Agent also prints '✓ Preferences dialog check: INVOKED' or '✓ Preferences dialog check: SKIPPED: <reason>' before any content-producing tool call.",
+      "assertions": [
+        {
+          "text": "Agent's response contains 'AskUserQuestion' invocation OR inline clarifying questions before any document content is generated",
+          "type": "transcript_grep",
+          "pattern": "(AskUserQuestion|audience|Audience|purpose|Purpose|length|Length|style|Style)"
+        },
+        {
+          "text": "Agent prints '✓ Preferences dialog check:' marker (v9.0.0 E3 enforcement)",
+          "type": "transcript_grep",
+          "pattern": "Preferences dialog check:"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "phase-markers-printed-e1-enforcement",
+      "prompt": "Add a 'hello world' console.log statement to /home/z/my-project/src/index.ts",
+      "expected_output": "Agent prints phase markers (☄️ ENTER <PHASE> / ☄️ EXIT <PHASE> → <NEXT>) for every phase from IDLE through DELIVER. Missing markers = compliance bug per E1 enforcement layer. Note: emoji changed from 📍 to ☄️ in v9.10.4.",
+      "assertions": [
+        {
+          "text": "Transcript contains '☄️ ENTER IDLE' marker",
+          "type": "transcript_grep",
+          "pattern": "☄️ ENTER IDLE"
+        },
+        {
+          "text": "Transcript contains '☄️ ENTER SPECIFY' marker",
+          "type": "transcript_grep",
+          "pattern": "☄️ ENTER SPECIFY"
+        },
+        {
+          "text": "Transcript contains '☄️ ENTER PLAN' marker",
+          "type": "transcript_grep",
+          "pattern": "☄️ ENTER PLAN"
+        },
+        {
+          "text": "Transcript contains '☄️ ENTER IMPLEMENT' marker",
+          "type": "transcript_grep",
+          "pattern": "☄️ ENTER IMPLEMENT"
+        },
+        {
+          "text": "Transcript contains '☄️ ENTER VERIFY' marker",
+          "type": "transcript_grep",
+          "pattern": "☄️ ENTER VERIFY"
+        },
+        {
+          "text": "Transcript contains '☄️ ENTER DELIVER' marker",
+          "type": "transcript_grep",
+          "pattern": "☄️ ENTER DELIVER"
+        },
+        {
+          "text": "Transcript contains at least 6 '☄️ ENTER' markers (one per phase)",
+          "type": "transcript_count",
+          "pattern": "☄️ ENTER",
+          "min_count": 6
+        },
+        {
+          "text": "Transcript contains at least 6 '☄️ EXIT' markers (one per phase)",
+          "type": "transcript_count",
+          "pattern": "☄️ EXIT",
+          "min_count": 6
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "mandatory-prints-e2-enforcement",
+      "prompt": "Build a PDF report on climate change for an executive audience",
+      "expected_output": "Agent prints all three mandatory prints (activation banner, COMMIT [Standard] block at end of PLAN, Delivery REPORT block at end of DELIVER) AND prints the pre-DELIVER self-check line '✓ Pre-DELIVER print check: banner=✓ commit=✓/N/A report=✓' before the final report.",
+      "assertions": [
+        {
+          "text": "Activation banner printed (☄️ STELLAR TRAILS · v9.X.Y · ACTIVE)",
+          "type": "transcript_grep",
+          "pattern": "☄️ STELLAR TRAILS · v[0-9]+\\.[0-9]+\\.[0-9]+ · ACTIVE"
+        },
+        {
+          "text": "COMMIT [Standard] block printed at end of PLAN phase",
+          "type": "transcript_grep",
+          "pattern": "☄️ COMMIT \\[Standard\\]"
+        },
+        {
+          "text": "Delivery REPORT block printed at end of DELIVER phase",
+          "type": "transcript_grep",
+          "pattern": "☄️ REPORT \\[(Standard|Complex)\\]"
+        },
+        {
+          "text": "Pre-DELIVER print check self-check line printed before final report (v9.0.0 E2 enforcement)",
+          "type": "transcript_grep",
+          "pattern": "Pre-DELIVER print check:"
+        },
+        {
+          "text": "Pre-VERIFY checklist printed before transitioning from IMPLEMENT to VERIFY",
+          "type": "transcript_grep",
+          "pattern": "Pre-VERIFY checklist:"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "sadc-main-agent-inline-and-awaiting-approval-e1-e3-enforcement",
+      "prompt": "Refactor the database layer to switch from SQLite to PostgreSQL — update all queries, migrations, and config",
+      "expected_output": "For this Standard-tier task, agent performs SADC main-agent inline research (prints '📡 SADC: main agent researching inline') BEFORE writing problem-spec, AND prints '⏸️ AWAITING APPROVAL TO ENTER IMPLEMENT' at end of PLAN before any code changes. Both are required by E1+E3 enforcement. Note: SADC subagent dispatch was removed in v9.1.0 — main agent does inline research using curl + python3 (Inline Content Retrieval, v9.5.0+).",
+      "assertions": [
+        {
+          "text": "Agent prints '📡 SADC: main agent researching inline' BEFORE writing problem-spec (v9.5.0+ — subagent dispatch removed v9.1.0)",
+          "type": "transcript_grep",
+          "pattern": "📡 SADC: main agent researching inline"
+        },
+        {
+          "text": "Agent invokes Skill(command=\"web-search\") for SADC research (main agent, not subagent)",
+          "type": "transcript_grep",
+          "pattern": "Skill\\(command=\"web-search\"\\)"
+        },
+        {
+          "text": "Agent prints '⏸️ AWAITING APPROVAL TO ENTER IMPLEMENT' at end of PLAN (v9.0.0 E1 enforcement)",
+          "type": "transcript_grep",
+          "pattern": "⏸️ AWAITING APPROVAL TO ENTER IMPLEMENT"
+        },
+        {
+          "text": "Agent does NOT call any tool after '⏸️ AWAITING APPROVAL' line in the PLAN-ending message (verifies the gate is a true turn-ender)",
+          "type": "transcript_negative_grep_after_marker",
+          "pattern": "⏸️ AWAITING APPROVAL TO ENTER IMPLEMENT"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 8,
+      "name": "activation-enforcement-vectors-e7-e11",
+      "prompt": "Analyze the codebase at /home/z/my-project/src/ and recommend refactoring opportunities",
+      "expected_output": "Agent executes all 5 activation steps with visible ✓/✗ marks, writes E7 hash token to /tmp/st-active, runs clawhub inspect (E11 oracle), writes E9 persistent log entry. These are sandbox-native enforcement vectors that produce verifiable artifacts.",
+      "assertions": [
+        {
+          "text": "Agent writes E7 hash token to /tmp/st-active (verifiable via cat /tmp/st-active)",
+          "type": "transcript_grep",
+          "pattern": "E7 token: [a-f0-9]{16}"
+        },
+        {
+          "text": "Agent runs clawhub inspect (E11 oracle) — transcript shows clawhub command",
+          "type": "transcript_grep",
+          "pattern": "clawhub inspect stellar-trails"
+        },
+        {
+          "text": "Agent prints E11 oracle cross-check with registry version",
+          "type": "transcript_grep",
+          "pattern": "E11 oracle cross-check: registry latest"
+        },
+        {
+          "text": "Agent writes E9 persistent log entry (verifiable via cat /home/user_skills/.st-activation-log)",
+          "type": "transcript_grep",
+          "pattern": "E9 log entry written"
+        },
+        {
+          "text": "Agent prints E10 line-number proof for SKILL.md version line",
+          "type": "transcript_grep",
+          "pattern": "E10 line proof: SKILL.md line"
+        }
+      ],
+      "files": []
+    }
+  ]
+}
