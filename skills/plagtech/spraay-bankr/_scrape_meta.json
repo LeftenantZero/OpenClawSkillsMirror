@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of spraay-bankr skill.\n\n- Adds integration to batch-pay up to 200 recipients from a Bankr agent wallet via Spraay, saving ~80% gas vs individual transfers.\n- Supports airdrops, splitting creator/trading fees, USDC payroll, and ERC-20 batch distributions on Base.\n- Ensures all payments are atomic: either all succeed or all revert.\n- Built-in safety rails: always validate, estimate, and seek user confirmation before execution; never fabricate recipient data.\n- Requires Bankr skill and Spraay gateway access; no separate API key needed for paid endpoints.",
+  "created_at": 1787248882834,
+  "display_name": "Spraay \u00d7 Bankr",
+  "fetched_at": 1787770325608,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Plag",
+    "handle": "plagtech",
+    "user_id": "s171hpae7vwspvaq01fg581j2s87w0kj"
+  },
+  "slug": "spraay-bankr",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/spraay-bankr",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=spraay-bankr&ownerHandle=plagtech",
+    "page_url": "https://clawhub.ai/plagtech/skills/spraay-bankr"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 102,
+    "installs": 0,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Earn with Bankr, distribute with Spraay \ud83d\udca7. Pairs a Bankr agent wallet with Spraay's batch payment gateway \u2014 pay up to 200 recipients in one atomic tx, ~80% gas savings. Airdrop launched tokens, split creator fees, run USDC payroll on Base.",
+  "updated_at": 1787248943748,
+  "version": "1.0.0"
+}
