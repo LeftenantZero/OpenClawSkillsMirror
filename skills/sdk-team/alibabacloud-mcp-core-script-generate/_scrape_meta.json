@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release \u2014 generate Python scripts compatible with Alibaba Cloud RunScript/MCP Core sandbox.\n\n- Converts natural-language Alibaba Cloud requests into RunScript-compatible Python scripts using only approved APIs and modules.\n- Scripts rely exclusively on the injected call_cli function; prohibits use of SDKs, direct HTTP calls, or unapproved imports.\n- Validates output scripts against the local sandbox checker (check_sandbox.py) to enforce security and compatibility rules.\n- Produces only script bodies as output, with no Markdown or explanations unless requested.\n- Designed specifically for RunScript/MCP Core/Sandbox-style automation; not for generating standard SDK-based project code.",
+  "created_at": 1783305332534,
+  "display_name": "Alibabacloud Mcp Core Script Generate",
+  "fetched_at": 1787778009499,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/runscript-contract.md",
+    "scripts/check_sandbox.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-mcp-core-script-generate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-mcp-core-script-generate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-mcp-core-script-generate&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-mcp-core-script-generate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 264,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate Alibaba Cloud MCP Core RunScript-compatible Python scripts from natural-language cloud operation requests. Use when the user explicitly asks for Run...",
+  "updated_at": 1783305332534,
+  "version": "0.0.1"
+}
