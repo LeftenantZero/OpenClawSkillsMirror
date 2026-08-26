@@ -1,0 +1,54 @@
+{
+  "changelog": "Initial release of agent-relay: a bridge between AI agents and phones, featuring push notification delivery with polling fallback.\n\n- Push-first webhook architecture with polling for reliable message delivery.\n- Supports text, attachments (images/files), and standalone push notifications.\n- CLI tools for sending/receiving messages and notifications.\n- Full documentation and template configs for easy OpenClaw integration.\n- Includes transform scripts for secure attachment handling.\n- Polling fallback ensures no messages are lost if webhooks fail.",
+  "created_at": 1782855336439,
+  "display_name": "Agent Relay",
+  "fetched_at": 1787778578243,
+  "files": [
+    "RELAY_API.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "poll-inbox",
+    "poll-inbox-fallback",
+    "references/RELAY_API.md",
+    "references/hooks-config.md",
+    "references/transform.mjs",
+    "relay",
+    "scripts/poll-inbox",
+    "scripts/poll-inbox-fallback",
+    "scripts/relay",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782856621150,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alvinmediallc",
+    "handle": "alvinmediallc",
+    "user_id": "s172pmc3258533vrcjg4pemk3989nvqn"
+  },
+  "slug": "agent-relay",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-relay",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-relay&ownerHandle=alvinmediallc",
+    "page_url": "https://clawhub.ai/alvinmediallc/skills/agent-relay"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 88,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Bridge between an AI agent and a phone \u2014 send/receive messages with attachments and push notifications. Push-first webhook architecture with polling fallback.",
+  "updated_at": 1782855336439,
+  "version": "1.0.0"
+}
