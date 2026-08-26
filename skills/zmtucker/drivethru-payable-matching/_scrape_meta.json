@@ -1,0 +1,37 @@
+{
+  "changelog": "drivethru-payable-matching 0.9.0\n\n- Documentation updated across SKILL.md and reference guides for clarity and detail.\n- Removed the obsolete skill-card.md file.\n- Improved instructions on connecting to Odoo and tool usage.\n- No functional (code) changes; this release focuses solely on documentation refinements.",
+  "created_at": 1784642130859,
+  "display_name": "drivethru-payable-matching",
+  "fetched_at": 1787773617060,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/matching_procedure.md",
+    "references/sportsinc_payables.md",
+    "scripts/_bootstrap.py",
+    "scripts/paymatch.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "zmtucker",
+    "handle": "zmtucker",
+    "user_id": "s17fq291581evd78xzn1930b0n87bfny"
+  },
+  "slug": "drivethru-payable-matching",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/drivethru-payable-matching",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=drivethru-payable-matching&ownerHandle=zmtucker",
+    "page_url": "https://clawhub.ai/zmtucker/skills/drivethru-payable-matching"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 807,
+    "installs": 0,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "Payable matching for BaconCo \u2014 reconcile vendor documents in Odoo's Documents app against their purchase orders and correct incorrect PO line pricing. Use for requests like \"check the Purchasing folder against the POs and fix the pricing\", \"match the vendor invoice / order confirmation / acknowledgement to its PO\", \"AP price matching / invoice-to-PO matching / three-way match\", \"reconcile the vendor documents and mark the POs checked\", or \"go through the Purchasing folder\". The flow: read every document in a Documents-app folder (extracting text out-of-context so large batches don't bloat the context window \u2014 falling back to a page render + OCR/vision for scanned or custom-encoded PDFs that won't extract as text), pull the PO number / line items / unit prices from each, compare to the purchase order line by line, correct any wrong `price_unit`, post a \"checked\" log note on the PO (internal, never a \"Send message\"), and FILE every document into the `Matched` or `Questions` subfolder \u2014 escalating genuine questions to a reviewer (default Zach Tucker). Also runs the buying-group payables flow: pull Sports Inc invoices from the SportsLink API (via the `sportsinc-sportslink` adapter), reconcile each to its PO, correct price variances, create the vendor bill and \u2014 when the bill total matches the invoice within tolerance \u2014 POST it, leaving any mismatch in draft for a human (\"get the Sports Inc invoices and bill them\", \"match the SI invoices to POs and post the payables\", \"match the vendor invoice and post the bill if it matches\"). Handles the multi-shipment case where one PO returns several Sports Inc invoices, splitting it into one vendor bill per shipment via `account.move.line` edits (the `ap_*_bill_line(s)` tools). Runs at volume on a low-cost model. Driven by the Odoo `drivethru_mcp` MCP server; complements the broader `drivethru-odoo` skill.",
+  "updated_at": 1785769195119,
+  "version": "0.9.0"
+}
