@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release of spatial autocorrelation analysis skill:\n\n- Computes Global Moran's I (with z/p values), Local Moran's I (LISA), and Getis-Ord Gi*, with Monte Carlo permutation tests.\n- Supports both synthetic data and real input files, with offline, privacy-friendly operation.\n- Outputs results as GeoTIFF, GeoJSON, or JSON, including LISA, Gi*, and run statistics.\n- Supports rook adjacency and KNN spatial weight matrices.\n- Open source (MIT License).",
+  "created_at": 1785851201262,
+  "display_name": "geoskill-spatial-autocorrelation",
+  "fetched_at": 1787773432172,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-spatial-autocorrelation.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785852132303,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-spatial-autocorrelation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-spatial-autocorrelation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-spatial-autocorrelation&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-spatial-autocorrelation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 192,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Global Moran I+LISA+Gi*+\u8499\u7279\u5361\u6d1b\u68c0\u9a8c\uff0c\u8bc4\u4f30\u7a7a\u95f4\u805a\u96c6\u6a21\u5f0f",
+  "updated_at": 1785851369222,
+  "version": "1.0.0"
+}
