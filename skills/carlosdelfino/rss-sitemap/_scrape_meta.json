@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of rss-sitemap skill.\n\n- Discovers website URLs, feed entries, and recent publications via sitemap.xml, sitemaps.xml, atom.xml, and rss.xml before crawling.\n- Bundles a Node.js 18+ script for deterministic pre-crawl discovery and parsing of sitemap, RSS, and Atom resources.\n- Prioritizes site-provided XML indexes and feeds for recency and coverage before blind crawling.\n- Outputs normalized URLs and entries with resource provenance; sorts entries using publication dates when available.\n- Falls back to crawling and scraping tools if XML resources are unavailable or access is blocked.",
+  "created_at": 1780010587037,
+  "display_name": "RSS Sitemap",
+  "fetched_at": 1787782768926,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "scripts/preprocess-rss-sitemap.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Carlos Delfino",
+    "handle": "carlosdelfino",
+    "user_id": "s170b1fz655f17dk9t1c1q35rn877cxx"
+  },
+  "slug": "rss-sitemap",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/rss-sitemap",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=rss-sitemap&ownerHandle=carlosdelfino",
+    "page_url": "https://clawhub.ai/carlosdelfino/skills/rss-sitemap"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 491,
+    "installs": 8,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Discover website URLs, feed entries, and latest publications by checking sitemap.xml, sitemaps.xml, atom.xml, and rss.xml before crawling a specific site. Us...",
+  "updated_at": 1780691021467,
+  "version": "1.0.0"
+}
