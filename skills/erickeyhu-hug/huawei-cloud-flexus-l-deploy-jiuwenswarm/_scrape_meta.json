@@ -1,0 +1,62 @@
+{
+  "changelog": "- Initial release of skill for one-click deployment of JiuwenSwarm (JiuwenClaw) multi-agent collaboration platform on Huawei Cloud Flexus L instances.\n- Automates the complete process: instance creation, environment preparation, deployment via COC, model API and message channel configuration (Xiaoyi, Feishu, DingTalk).\n- User confirmation required before any cloud resource creation or deployment actions.\n- Credentials (AK/SK/Token) handled securely via environment variables\u2014never exposed or requested interactively.\n- Strict execution and security rules: all scripts run via skill exec action; sensitive info protected at all times.",
+  "created_at": 1785748370128,
+  "display_name": "huawei-cloud-flexus-l-deploy-jiuwenswarm",
+  "fetched_at": 1787771155465,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/config_template.yaml",
+    "assets/deploy_script_template.sh",
+    "assets/env.template",
+    "assets/huaweicloud_region_project_map.json",
+    "assets/jiuwenswarm.service.template",
+    "references/api_specs.md",
+    "references/deployment_checklist.md",
+    "references/iam_policies.md",
+    "references/troubleshooting.md",
+    "scripts/config_channel.py",
+    "scripts/config_model.py",
+    "scripts/create_instance.py",
+    "scripts/deploy_service.py",
+    "scripts/install_deps.py",
+    "scripts/prepare_env.py",
+    "scripts/query_coc_status.py",
+    "scripts/requirements.txt",
+    "scripts/utils.py",
+    "scripts/verify_deployment.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785991446362,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-flexus-l-deploy-jiuwenswarm",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-flexus-l-deploy-jiuwenswarm",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-flexus-l-deploy-jiuwenswarm&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-flexus-l-deploy-jiuwenswarm"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 49,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "One-click deployment of JiuwenSwarm multi-Agent collaboration platform on Huawei Cloud Flexus L instances. Usage scenarios: When users need to quickly deploy JiuwenSwarm/JiuwenClaw on Huawei Cloud Flexus L instances, when they need to automatically create cloud instances and deploy AI Agent platforms, when they need to configure model APIs and message channels (Xiaoyi/Feishu/DingTalk). Automatically create instances, deploy applications via COC, configure models and message channels. Trigger keywords: JiuwenSwarm deployment, JiuwenClaw deployment, \u4e5d\u95eeSwarm\u90e8\u7f72, \u4e5d\u95eeClaw\u90e8\u7f72, \u4e00\u952e\u90e8\u7f72JiuwenSwarm, AI\u667a\u80fd\u4f53\u5e73\u53f0\u90e8\u7f72, \u90e8\u7f72\u4e5d\u95eeSwarm, \u90e8\u7f72\u4e5d\u95eeClaw,\u4e91\u670d\u52a1\u5668\u90e8\u7f72AI\u5e73\u53f0.",
+  "updated_at": 1785990607857,
+  "version": "1.0.1"
+}
