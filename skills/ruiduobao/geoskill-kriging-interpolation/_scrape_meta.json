@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release of Kriging interpolation skill.\n\n- Implements Ordinary Kriging interpolation for spatial data, with semivariogram fitting (spherical model) and leave-one-out cross-validation.\n- Generates raster outputs including interpolation result and kriging variance, plus variogram parameters and a run manifest.\n- Supports both synthetic (offline, simulated data) and real input data modes.\n- Outputs GeoTIFF, GeoJSON, and JSON files.\n- Fully offline; no external data sources or network requests.\n- MIT licensed.",
+  "created_at": 1785846634579,
+  "display_name": "geoskill-kriging-interpolation",
+  "fetched_at": 1787773470407,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-kriging-interpolation.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785847632102,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-kriging-interpolation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-kriging-interpolation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-kriging-interpolation&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-kriging-interpolation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 180,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u534a\u53d8\u5f02\u51fd\u6570\u62df\u5408+\u666e\u901a\u514b\u91cc\u91d1\u63d2\u503c+\u4ea4\u53c9\u9a8c\u8bc1\uff0c\u8f93\u51fa\u63d2\u503c\u6805\u683cGeoTIFF",
+  "updated_at": 1785846799665,
+  "version": "1.0.0"
+}
