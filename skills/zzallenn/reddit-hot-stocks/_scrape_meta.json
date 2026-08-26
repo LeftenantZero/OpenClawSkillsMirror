@@ -1,0 +1,35 @@
+{
+  "changelog": "- Initial release of reddit-hot-stocks skill (v1.0.0).\n- Identifies US stocks gaining retail attention by combining live Reddit discussions, market quotes, catalyst checks, sentiment drivers, and risk signals.\n- Requires connection to AgentKey MCP (via OAuth or API key).\n- Always performs AgentKey preflight to ensure tools are available before running any workflow.\n- Default scope: US-listed equities and ETFs, major stock subreddits, recent activity, and no trading instructions (watchlist focus).\n- Structured workflow for collecting, normalizing, and ranking tickers based on Reddit and market data, with detailed scoring and evidence reporting.",
+  "created_at": 1783464296140,
+  "display_name": "Reddit Hot Stocks",
+  "fetched_at": 1787777677224,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/agentkey-tools.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "zzAllenn",
+    "handle": "zzallenn",
+    "user_id": "s17ap383jy6km34keje7zkzx198a293z"
+  },
+  "slug": "reddit-hot-stocks",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/reddit-hot-stocks",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=reddit-hot-stocks&ownerHandle=zzallenn",
+    "page_url": "https://clawhub.ai/zzallenn/skills/reddit-hot-stocks"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 236,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Find Reddit stock momentum with AgentKey",
+  "updated_at": 1783464296140,
+  "version": "1.0.0"
+}
