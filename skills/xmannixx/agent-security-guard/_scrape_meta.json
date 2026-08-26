@@ -1,0 +1,33 @@
+{
+  "changelog": "AgentSecurityGuard v0.2.0 expands security controls with self-modification governance.\n\n- Added governance for self-modification: procedural rule and skill update changes now require explicit, hash-bound, two-step confirmation, never direct allow.\n- Denied ambiguous or broad-scoped write attempts before per-tier rule-checking.\n- Existing features: deterministic policy engine for action gating, origin trust vs. data sensitivity classification, sequence (kill-chain) detection, untrusted content wrapping, audit output, and broad test coverage.\n- Maintains autonomy for read/search/summarize; risk scores log only (not decisive).\n- Fully compatible with Hermes/OpenClaw, with CLI, audit, and plugin support.",
+  "created_at": 1782684121778,
+  "display_name": "Agent Security Guard",
+  "fetched_at": 1787778791190,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "xMannixx",
+    "handle": "xmannixx",
+    "user_id": "s1706pq5smf3s441g3gqth3e9h87ccq3"
+  },
+  "slug": "agent-security-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-security-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-security-guard&ownerHandle=xmannixx",
+    "page_url": "https://clawhub.ai/xmannixx/skills/agent-security-guard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 349,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Runtime interaction guard for Hermes/OpenClaw: a deterministic transition policy engine that keeps reading, browsing, and summarizing free while stripping co...",
+  "updated_at": 1782684578031,
+  "version": "0.1.0"
+}
