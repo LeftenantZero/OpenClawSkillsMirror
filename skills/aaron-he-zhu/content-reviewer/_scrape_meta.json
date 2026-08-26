@@ -1,0 +1,36 @@
+{
+  "changelog": "content-reviewer 17.0.0 changes (major rewrite for audit rigor and runtime compatibility):\n\n- Overhauled SKILL.md for concise, audit-focused workflow, direct evidence chain, and strict ART/claim/disclosure logic.\n- Replaced legacy \"must trigger\"/contract sections with explicit trigger and runtime handling, including failfast and \"NOT_SCORED\" guardrails.\n- Demands version-locked evidence (asset, brief, claim/disclosure, specs); unclear or missing input now blocks scoring.\n- Adds deterministic runtime instructions: invokes scoring scripts, prohibits guessing, enforces full ART item coverage.\n- Tightens feedback mapping: requires location/timecode for every revision request; prohibits \u201cfix by vibe\u201d or rewriting claims.\n- Removes obsolete skill-card.md; introduces references/auditor-runtime.md for immutable standalone reference.",
+  "created_at": 1783184073760,
+  "display_name": "Content Reviewer",
+  "fetched_at": 1787777179044,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/auditor-runtime.md",
+    "references/quality-review-aids.md",
+    "references/review-templates.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Aaron Zhu",
+    "handle": "aaron-he-zhu",
+    "user_id": "s17e1tg8pjra8dn1dvtq21sahx83hrxj"
+  },
+  "slug": "content-reviewer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/content-reviewer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=content-reviewer&ownerHandle=aaron-he-zhu",
+    "page_url": "https://clawhub.ai/aaron-he-zhu/skills/content-reviewer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 664,
+    "installs": 1,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Use when the user asks to \"review this influencer content\" or \"check if this post meets brand guidelines\"; runs a typed C3 ART asset gate, checks disclosure...",
+  "updated_at": 1783787645432,
+  "version": "17.0.0"
+}
