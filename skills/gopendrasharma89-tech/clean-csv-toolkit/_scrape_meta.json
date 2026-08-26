@@ -1,0 +1,51 @@
+{
+  "changelog": "v0.5.0: Add scripts/transform.py - derived columns + schema operations. Hand-rolled tokenizer + recursive-descent parser (no eval, no subprocess) supports arithmetic, string concat, parens, comparisons, function calls (upper/lower/strip/len/abs/round/int/float/str/replace/split/join/coalesce/year/month/day). Six ops: --add, --set, --drop, --rename, --cast (int/float/bool/string), --keep. Schema computed symbolically before streaming so empty cells in arithmetic don't crash the pipeline; per-row errors leave the derived value empty but continue processing. Bug fixed: schema-detection pass was evaluating expressions against empty rows. All 14 scripts now use the same safe-path policy and 0/1/2 exit codes.",
+  "created_at": 1778588010830,
+  "display_name": "Clean CSV Toolkit",
+  "fetched_at": 1787785500444,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/_common.py",
+    "scripts/_preview.py",
+    "scripts/check_deps.sh",
+    "scripts/concat.py",
+    "scripts/convert.py",
+    "scripts/dedupe.py",
+    "scripts/diff.py",
+    "scripts/filter.py",
+    "scripts/head.py",
+    "scripts/inspect.py",
+    "scripts/merge.py",
+    "scripts/pivot.py",
+    "scripts/sample.py",
+    "scripts/sort.py",
+    "scripts/tail.py",
+    "scripts/transform.py",
+    "scripts/validate.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Gopendra Sharma",
+    "handle": "gopendrasharma89-tech",
+    "user_id": "s17cp87fy279ggwne1mqcb6675843tdy"
+  },
+  "slug": "clean-csv-toolkit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clean-csv-toolkit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clean-csv-toolkit&ownerHandle=gopendrasharma89-tech",
+    "page_url": "https://clawhub.ai/gopendrasharma89-tech/skills/clean-csv-toolkit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 965,
+    "installs": 24,
+    "stars": 1,
+    "versions": 5
+  },
+  "summary": "Local CSV / TSV / JSONL inspection and cleanup toolkit. Profile, validate, deduplicate, diff, preview (head/tail/random sample), filter with a safe predicate...",
+  "updated_at": 1779347767997,
+  "version": "0.5.0"
+}
