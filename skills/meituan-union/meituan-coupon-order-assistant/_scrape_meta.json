@@ -1,0 +1,56 @@
+{
+  "changelog": "- Skill version update focused on environment and login improvements.\n- Environment preparation now searches for `run.js` relative to the SKILL.md path first, with a fallback to the user home directory.\n- Updated login QR code logic: the `qrcode` command now returns an image URL (`imageUrl`), simplifying QR code display.\n- Removed references to the client_id argument in the QR code generation process.\n- Updated documentation and user flow descriptions to match changes in environment detection and login method.\n- Removed unnecessary files and further streamlined setup instructions.",
+  "created_at": 1779692057088,
+  "display_name": "meituan-coupon-order-assistant",
+  "fetched_at": 1787781962865,
+  "files": [
+    ".catpaw-install-meta.json",
+    "SKILL.md",
+    "_meta.json",
+    "references/terms-of-service.md",
+    "scripts/auth.py",
+    "scripts/config.json",
+    "scripts/get_location_by_address.py",
+    "scripts/get_user_recent_location.py",
+    "scripts/hotword.py",
+    "scripts/order.py",
+    "scripts/product_search.py",
+    "scripts/run.js",
+    "scripts/vendor/cliguard/__init__.py",
+    "scripts/vendor/cliguard/js/cliguard-wrapper.js",
+    "scripts/vendor/cliguard/js/cliguard.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780991965868,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Meituan-Union",
+    "handle": "meituan-union",
+    "user_id": "s177sfz52nvyhj9wg6c842jrph84hy0t"
+  },
+  "slug": "meituan-coupon-order-assistant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/meituan-coupon-order-assistant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=meituan-coupon-order-assistant&ownerHandle=meituan-union",
+    "page_url": "https://clawhub.ai/meituan-union/skills/meituan-coupon-order-assistant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 930,
+    "installs": 15,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "\u7f8e\u56e2\u4f18\u60e0\u4e0b\u5355\u52a9\u624b\u3002\u5f53\u4f60\u60f3\u5403\u996d\u3001\u627e\u9910\u5385\u3001\u4e70\u56e2\u8d2d\u5238\u3001\u559d\u5496\u5561\u3001\u559d\u5976\u8336\u3001\u627e\u996e\u54c1\u3001\u5403\u5feb\u9910\u3001\u5403\u706b\u9505\u3001\u5403\u70e7\u70e4\u3001\u5403\u65e5\u6599\u3001\u5403\u5ddd\u83dc\u3001\u5403\u81ea\u52a9\u9910\u3001\u627e\u4e0b\u5348\u8336\u3001\u9644\u8fd1\u6709\u4ec0\u4e48\u597d\u5403\u7684\u597d\u559d\u7684\uff0c\u53ea\u9700\u544a\u8bc9\u6211\u60f3\u5403\u4ec0\u4e48\u559d\u4ec0\u4e48\u6216\u5728\u54ea\u9644\u8fd1\u627e\uff0c\u6211\u4f1a\u81ea\u52a8\u5e2e\u4f60\u9886\u5238\u3001\u641c\u7d22\u5546\u54c1\u3001\u5c55\u793a\u56fe\u6587\u5217\u8868\uff0c\u9009\u597d\u540e\u76f4\u63a5\u5e2e\u4f60\u4e0b\u5355\u3002\u6211\u4e5f\u53ef\u4ee5\u5355\u72ec\u5e2e\u4f60\u9886\u4f18\u60e0\u5238\u3001\u9886\u5238\u3001\u9886\u7ea2\u5305\u3001\u9886\u795e\u5238\u3001\u9886\u4e13\u5c5e\u7ea2\u5305...",
+  "updated_at": 1780987338314,
+  "version": "1.0.2"
+}
