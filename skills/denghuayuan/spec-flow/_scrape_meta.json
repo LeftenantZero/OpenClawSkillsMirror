@@ -1,0 +1,38 @@
+{
+  "changelog": "**Summary: Major overhaul making spec-flow a lighter, more automated spec-driven documentation pipeline.**\n\n- Replaces phase-heavy, multi-file workflow with a compact four-document SDD pipeline (`constitution`, `spec`, `plan`, `tasks`) under a `.specify/` directory, fully in Chinese.\n- Automates project analysis and document generation\u2014actively infers as much as possible from context, minimizing user prompts.\n- Only pauses for user confirmation at critical review points; combines clarifying questions into single rounds if unavoidable.\n- Streamlines output: spec.md (what/why, \u2264150 lines), plan.md (how/technical decisions), tasks.md (step-by-step), all tightly aligned.\n- Drops support for multi-agent documentation and fine-grained phase confirmations (e.g., EARS, interaction rules, legacy scripts).\n- Outputs are now compatible with GitHub spec-kit conventions.",
+  "created_at": 1784873385060,
+  "display_name": "Spec Flow",
+  "fetched_at": 1787775336782,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/analyze-checklist.md",
+    "references/constitution-template.md",
+    "references/plan-template.md",
+    "references/spec-template.md",
+    "references/tasks-template.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "denghuayuan",
+    "handle": "denghuayuan",
+    "user_id": "s178jw2xfexggsfser8ks7jbjx83nnfj"
+  },
+  "slug": "spec-flow",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/spec-flow",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=spec-flow&ownerHandle=denghuayuan",
+    "page_url": "https://clawhub.ai/denghuayuan/skills/spec-flow"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 84,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u8f7b\u91cf\u7ea7 SDD\uff08\u89c4\u8303\u9a71\u52a8\u5f00\u53d1\uff09\u6587\u6863\u6d41\u6c34\u7ebf\u3002\u5f53\u7528\u6237\u63cf\u8ff0\u4e00\u4e2a\u65b0\u529f\u80fd\u3001\u4ea7\u54c1\u60f3\u6cd5\u6216\u6539\u8fdb\u9700\u6c42\uff0c \u5e0c\u671b\u5728\u52a8\u624b\u5199\u4ee3\u7801\u524d\u5148\u628a\"\u505a\u4ec0\u4e48/\u4e3a\u4ec0\u4e48/\u600e\u4e48\u505a/\u62c6\u6210\u54ea\u4e9b\u4efb\u52a1\"\u68b3\u7406\u6e05\u695a\u65f6\u4f7f\u7528\u3002 \u81ea\u52a8\u5b8c\u6210 constitution \u2192 spec \u2192 plan \u2192 tasks \u5168\u6d41\u7a0b\uff0c\u4ea7\u51fa\u5bf9\u9f50 GitHub spec-kit \u7684 .specify/ \u76ee\u5f55\u3002 \u89e6\u53d1\uff1a\"\u6211\u60f3\u52a0\u4e00\u4e2a XX \u529f\u80fd\"\"\u5e2e\u6211\u89c4\u5212/\u8bbe\u8ba1 XX\"\"\u8fd9\u4e2a\u9700\u6c42\u5148\u51fa\u4e2a\u5f00\u53d1\u6587\u6863\"\u3002 \u4e0d\u89e6\u53d1\uff1a\u7eaf\u4ee3\u7801\u5b9e\u73b0\u3001bug \u4fee\u590d\u3001\u5df2\u6709 spec \u7684\u5c40\u90e8\u4fee\u6539\u3001\u591a\u667a\u80fd\u4f53\u7f16\u6392\uff08\u90a3\u5c5e\u4e8e\u5b8c\u6574\u7248 Harness \u573a\u666f\uff09\u3002",
+  "updated_at": 1784878177339,
+  "version": "1.0.0"
+}
