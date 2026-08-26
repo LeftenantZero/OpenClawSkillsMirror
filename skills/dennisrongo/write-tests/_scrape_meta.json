@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of write-tests: a skill for authoring meaningful, risk-driven, and provable tests.\n\n- Detects and runs the existing test suite in non-interactive mode, always quoting observed results.\n- Ranks candidate behaviors by risk (branches, boundaries, errors, money/auth/concurrency) before writing tests.\n- Proves every new test can fail by intentionally breaking code before seeing it pass.\n- Writes only observable, high-value assertions; mocks only true external boundaries.\n- Pins legacy code with labeled characterization tests before changes.\n- Avoids common test anti-patterns such as tautological assertions and fixation on coverage numbers.",
+  "created_at": 1786913876392,
+  "display_name": "write-tests",
+  "fetched_at": 1787771686361,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "write-tests",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/write-tests",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=write-tests&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/write-tests"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 107,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Author tests that actually catch regressions \u2014 picks WHAT to test by risk (branch points, boundaries, error paths, money/auth/concurrency), proves every new test can fail (a test never seen red is decoration), mocks only boundaries you don't own, and pins untested legacy code with labeled characterization tests before anything else touches it. Use this skill whenever the user says \"write tests\", \"add tests\", \"test this\", \"add coverage\", \"unit test this function\", \"increase coverage\", \"add a regression test\", \"characterization tests\", \"TDD this\", or \"/write-tests\" \u2014 even if they don't explicitly say \"test skill\". Do not use for diagnosing a failing test (use diagnose) or reviewing existing tests as part of a diff (use code-review).",
+  "updated_at": 1786913928687,
+  "version": "1.0.0"
+}
