@@ -1,0 +1,67 @@
+{
+  "changelog": "- Removed the file skill-card.md from the repository.\n- No other functional or interface changes in this version.",
+  "created_at": 1785748967023,
+  "display_name": "huawei-cloud-msmodelslim-model-adapt",
+  "fetched_at": 1787773643649,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/model_adapter_template.py",
+    "assets/vlm_model_adapter_template.py",
+    "references/acceptance-criteria.md",
+    "references/core_workflow.md",
+    "references/implementation_guide.md",
+    "references/interface_checklist.md",
+    "references/interface_reference.md",
+    "references/llm/fallback_config.yaml",
+    "references/llm/w8a8_dynamic_full_model.yaml",
+    "references/llm/w8a8_static_full_model.yaml",
+    "references/model_analysis.md",
+    "references/moe_unpacked_adapter_example.py",
+    "references/moe_unpacked_module_example.py",
+    "references/registration_guide.md",
+    "references/troubleshooting.md",
+    "references/verification-method.md",
+    "references/verification_guide.md",
+    "references/vlm/fallback_config.yaml",
+    "references/vlm/w8a8_dynamic_full_model.yaml",
+    "references/vlm/w8a8_static_full_model.yaml",
+    "scripts/step1_generate_test_model.py",
+    "scripts/step2_run_quantization.py",
+    "scripts/step3_verify_weights.py",
+    "scripts/step4_verify_quant_description.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785750051926,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-msmodelslim-model-adapt",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-msmodelslim-model-adapt",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-msmodelslim-model-adapt&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-msmodelslim-model-adapt"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 33,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Create basic Transformers model adapters for msModelSlim. Implements required interfaces and completes a four-step verification workflow: generate test model -> full fallback quantization -> weight verification -> quantization description validation. Use this skill when the user wants to: (1) create msModelSlim adapters for decoder-only LLM, (2) adapt understanding VLM text backbones for quantization, (3) implement W8A8/W4A16 quantization workflow for new models. Trigger: user mentions \"msModelSlim\", \"adapter\", \"model adapter\",\"quantization\", \"W8A8\",\"W4A16\", \"transformers\", \"LLM\", \"VLM\", \"adapter creation\", \"\u9002\u914d\u5668\",\"\u6a21\u578b\u9002\u914d\", \"\u91cf\u5316\", \"\u6a21\u578b\u9002\u914d\u5668\", \"LLM\u91cf\u5316\"",
+  "updated_at": 1785749065992,
+  "version": "1.0.0"
+}
