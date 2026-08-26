@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release with structured capability extraction and built-in self-improving learning:\n\n- Extracts workflow steps, headings, triggers, known limits, scripts, and decision rules from SKILL.md or any skill documentation.\n- Outputs a machine-readable JSON \"capability signature\" supporting downstream model distillation and verification workflows.\n- Zero non-standard dependencies; fully runnable locally with --selftest sample included.\n- Built-in learning module tracks usage, errors, and preferences for continuous self-evolution and performance improvement.\n- Facilitates efficient and automated translation of expert knowledge into structured, actionable data for model distillation.",
+  "created_at": 1786625697186,
+  "display_name": "cross-model-knowledge-extraction",
+  "fetched_at": 1787772253105,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "learned_patterns.json",
+    "scripts/extract_signature.py",
+    "scripts/learner.py",
+    "scripts/section.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786672121640,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "qq435912743",
+    "handle": "qq435912743",
+    "user_id": "s171ndzm69p9g2ee5kcw6t7smh8azd5h"
+  },
+  "slug": "cross-model-knowledge-extraction",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cross-model-knowledge-extraction",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cross-model-knowledge-extraction&ownerHandle=qq435912743",
+    "page_url": "https://clawhub.ai/qq435912743/skills/cross-model-knowledge-extraction"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 117,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u8de8\u6a21\u578b\u84b8\u998f\u5de5\u7a0b\u5316\u7684\u7b2c\u4e00\u73af\uff1a\u4ece WorkBuddy \u5185\u90e8\u6559\u5e08\u6280\u80fd\u7684 SKILL.md\uff08\u6216\u4efb\u610f\u6280\u80fd\u6b63\u6587\uff09 \u4e2d\u7ed3\u6784\u5316\u63d0\u53d6\u80fd\u529b\u7b7e\u540d\u2014\u2014\u5de5\u4f5c\u6d41\u6b65\u9aa4\u3001\u89e6\u53d1\u573a\u666f\u3001\u5df2\u77e5\u9650\u5236/\u5751\u3001\u5de5\u5177\u811a\u672c\u3001\u4ee5\u53ca\u53ef\u88ab \u84b8\u998f\u7684\u51b3\u7b56\u89c4\u5219\uff08if/when-then/\u5fc5\u987b\uff09\u3002\u8f93\u51fa JSON \u80fd\u529b\u753b\u50cf\uff0c\u76f4\u63a5\u5582\u7ed9 model-distillation \u7684\u7b7e\u540d\u5408\u6210\u4e0e\u5bf9\u6297\u9a8c\u8bc1\u3002\u7eaf\u6807\u51c6\u5e93\u3001\u96f6\u4f9d\u8d56\u3001\u53ef\u672c\u5730\u5b9e\u8dd1\uff08--selftest \u81ea\u5e26\u6837\u4f8b\uff09\u3002",
+  "updated_at": 1786671125108,
+  "version": "1.0.0"
+}
