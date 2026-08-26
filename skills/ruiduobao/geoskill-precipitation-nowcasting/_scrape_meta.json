@@ -1,0 +1,68 @@
+{
+  "changelog": "Initial release of geoskill-precipitation-nowcasting:\n\n- Implements optical flow (cross-correlation) based Lagrangian persistence nowcasting of precipitation, extrapolating fields 0\u20136 hours ahead.\n- Outputs forecast precipitation sequences in multi-band GeoTIFF and estimated displacement fields in JSON.\n- Supports input from local multi-band GeoTIFF or synthetic test data (Gaussian rain cells) for offline validation.\n- Runs fully offline with local computation; no network access or external data required.\n- Provides example usage for both synthetic and real radar/satellite data.\n- Licensed under MIT.",
+  "created_at": 1785849216412,
+  "display_name": "geoskill-precipitation-nowcasting",
+  "fetched_at": 1787773448839,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_nowcast/displacement.json",
+    "_test_cli_nowcast/output-manifest.json",
+    "e2e_test.py",
+    "geoskill-precipitation-nowcasting.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785850400024,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-precipitation-nowcasting",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-precipitation-nowcasting",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-precipitation-nowcasting&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-precipitation-nowcasting"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 183,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u57fa\u4e8e\u5149\u6d41\u6cd5\uff08\u4ea4\u53c9\u76f8\u5173\u4f4d\u79fb\u4f30\u8ba1\uff09\u7684\u62c9\u683c\u6717\u65e5\u6301\u4e45\u6027\u964d\u6c34\u4e34\u8fd1\u9884\u62a5\uff0c\u5916\u63a8\u672a\u6765 0-6 \u5c0f\u65f6\u964d\u6c34\u573a\uff0c\u8f93\u51fa\u9884\u62a5\u5e8f\u5217 GeoTIFF \u4e0e\u4f4d\u79fb\u573a JSON\u3002Optical-flow (cross-correlation) Lagrangian persistence nowcasting that extrapolates precipitation fields 0-6 hours ahead, outputting a forecast GeoTIFF stack and a displacement-field JSON.",
+  "updated_at": 1785849395939,
+  "version": "1.0.0"
+}
