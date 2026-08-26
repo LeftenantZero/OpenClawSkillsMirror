@@ -1,0 +1,33 @@
+{
+  "changelog": "- Major rewrite: The skill now focuses exclusively on attacker\u2019s-eye security reviews of code diffs, branches, or modules, not external packages.\n- Scope clarified: Only triggers for explicit security review requests or when changes hit trust boundaries (auth, endpoints, sensitive paths).\n- Review process strictly catalogs classes of vulnerabilities (authz, injection, secrets, SSRF, path traversal, crypto misuse, dependency CVEs).\n- Every finding must state a concrete attack path (actor, action, impact) or is demoted to hardening advice. No speculative or padded findings.\n- Never claims \"secure\"\u2014only \"nothing found in these classes, on this evidence, here\u2019s what wasn\u2019t checked\". All coverage/exclusions must be explicit.\n- Removed prior install-blocking workflow and package-focused review steps in favor of code-change threat modeling.",
+  "created_at": 1786913703747,
+  "display_name": "security-review",
+  "fetched_at": 1787771699233,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "security-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/security-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=security-review&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/security-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 18,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Attacker's-eye security review of a diff, branch, or module \u2014 walks a fixed vulnerability catalog (missing authz on new endpoints, injection, secrets in code/logs, trusting client-sent identity, SSRF, path traversal, insecure deserialization, mass assignment, broken crypto, unsafe redirects, dependency CVEs) where every finding must name a concrete attack path (attacker does X \u2192 gains Y) or be demoted to hardening advice. Never claims \"secure\", only \"nothing found in the classes checked\". Use this skill whenever the user says \"security review\", \"is this secure\", \"check for vulnerabilities\", \"audit the auth\", \"threat model this\", \"pentest mindset\", \"check for injection\", or \"/security-review\" \u2014 even if they don't name the skill. Distinct from code-review (security is one lens there); this is the dedicated deep pass.",
+  "updated_at": 1786913754715,
+  "version": "1.0.0"
+}
