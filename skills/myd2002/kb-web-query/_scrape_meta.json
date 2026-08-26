@@ -1,0 +1,55 @@
+{
+  "changelog": "- Added compiled Python bytecode files to the repository (`scripts/__pycache__/*.pyc`).\n- Removed the `skill-card.md` file.\n- Clarified in documentation that only overview pages or actually fetched KB pages are accepted as team sources; non-compliant sources are filtered and logged in errors but do not invalidate generated answers.\n- Stipulated that supplemental KB pages must be explicitly selected and documented if used as team sources.\n- Made minor updates to process descriptions regarding evidence fetching and answer application steps.",
+  "created_at": 1783608088170,
+  "display_name": "Kb Web Query",
+  "fetched_at": 1787777364775,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "env-example.txt",
+    "main.js",
+    "requirements.txt",
+    "scripts/catalog.py",
+    "scripts/gitea_api.py",
+    "scripts/qa_writer.py",
+    "scripts/query_context.py",
+    "scripts/run_task.py",
+    "scripts/task_io.py",
+    "scripts/text_extractors.py",
+    "scripts/utils.py",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783615209587,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "myd2002",
+    "handle": "myd2002",
+    "user_id": "s175zrvz5m28epr76c6rt4dtex8474t6"
+  },
+  "slug": "kb-web-query",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kb-web-query",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kb-web-query&ownerHandle=myd2002",
+    "page_url": "https://clawhub.ai/myd2002/skills/kb-web-query"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 602,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Answer Research KB dialogue questions with team-overview-guided web search, external citations, optional reference attachments, and no QA persistence.",
+  "updated_at": 1783614325797,
+  "version": "1.0.1"
+}
