@@ -1,0 +1,41 @@
+{
+  "changelog": "- Bumped version to 1.3.0 and updated metadata.\n- Refined compatibility statement (now includes Codex and clarifies usage with harnesses).\n- Added explicit orchestration and thinking mode descriptions for Claude Code, including `ultrathink` and `ultracode` triggers and sub-agent parallelization strategy.\n- Introduced `paths` configuration for scoping tool access to Go files.\n- Clarified instructions for running multi-variant benchmarks with isolated worktrees and referenced serial measurement caveats.\n- Removed `skill-card.md` from the repository.",
+  "created_at": 1774234568462,
+  "display_name": "golang-performance",
+  "fetched_at": 1787770095700,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/prometheus-alerts.yml",
+    "evals/evals.json",
+    "references/caching.md",
+    "references/cpu.md",
+    "references/io-networking.md",
+    "references/memory.md",
+    "references/observability.md",
+    "references/runtime.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Samuel Berthe",
+    "handle": "samber",
+    "user_id": "s173arkhs3131fq5jf769qq75583hdgt"
+  },
+  "slug": "golang-performance",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/golang-performance",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=golang-performance&ownerHandle=samber",
+    "page_url": "https://clawhub.ai/samber/skills/golang-performance"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1191,
+    "installs": 28,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Golang performance optimization patterns and methodology - if X bottleneck, then apply Y. Covers allocation reduction, CPU efficiency, memory layout, GC tuning, pooling, caching, and hot-path optimization. Use when profiling or benchmarks have identified a bottleneck and you need the right optimization pattern to fix it. Also use when performing performance code review to suggest improvements or benchmarks that could help identify quick performance gains. Not for measurement methodology (\u2192 See `samber/cc-skills-golang@golang-benchmark` skill) or debugging workflow (\u2192 See `samber/cc-skills-golang@golang-troubleshooting` skill).",
+  "updated_at": 1787353499392,
+  "version": "1.3.0"
+}
