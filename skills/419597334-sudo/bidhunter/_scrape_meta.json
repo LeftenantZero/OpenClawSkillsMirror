@@ -1,0 +1,82 @@
+{
+  "changelog": "v1.5.0 \u89c4\u5219\u8fdb\u5316+\u529f\u80fd\u589e\u5f3a\uff1a\u96f6\u4ee3\u7801\u89c4\u5219\u7f16\u8f91\u5668(\u56fe\u5f62\u5316\u914d\u89c4\u5219/\u5b9e\u65f6\u6d4b\u8bd5/\u6a21\u677f)\u3001\u8d44\u8d28\u5339\u914d\u5ea6\u8bc4\u5206(0-100)\u4e0e\u6392\u5e8f\u3001\u6295\u6807\u65e5\u5386\u4e0e\u5f00\u6807\u5012\u8ba1\u65f6\u3001\u91d1\u989d/\u5730\u533a/\u884c\u4e1a\u591a\u7ef4\u7b5b\u9009\u3001\u8bca\u65ad\u4e2d\u5fc3(doctor)\u3001\u793a\u4f8b\u6a21\u5f0f(demo)\u3001\u96c6\u4e2dFAQ\u3001\u7edf\u4e00\u547d\u4ee4\u5165\u53e3\u3001\u81ea\u5b9a\u4e49\u6570\u636e\u6e90\u6269\u5c55\u5e73\u53f0\u8986\u76d6\u3002\u96f6\u4e91\u6210\u672c\u3002",
+  "created_at": 1786088336271,
+  "display_name": "V1.5.0",
+  "fetched_at": 1787769707443,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/field_standard.md",
+    "references/filter_rules.md",
+    "references/platforms.md",
+    "references/setup-guide.md",
+    "requirements.txt",
+    "scripts/ai/analytics.py",
+    "scripts/ai/bid_advisor.py",
+    "scripts/ai/clause_extractor.py",
+    "scripts/ai/doc_parser.py",
+    "scripts/ai/doc_reader.py",
+    "scripts/ai/minimax_client.py",
+    "scripts/ai/risk_scanner.py",
+    "scripts/api_server.py",
+    "scripts/bid_monitor.sh",
+    "scripts/bidhunter.py",
+    "scripts/calendar.py",
+    "scripts/check_environment.py",
+    "scripts/config_wizard.py",
+    "scripts/custom_source.py",
+    "scripts/demo.py",
+    "scripts/docs/FAQ.md",
+    "scripts/doctor.py",
+    "scripts/faq.py",
+    "scripts/filter_multi.py",
+    "scripts/pipeline.sh",
+    "scripts/push_manager.py",
+    "scripts/qual_check.py",
+    "scripts/qual_rules.json",
+    "scripts/quote_gen.py",
+    "scripts/report_html.py",
+    "scripts/report_text.py",
+    "scripts/rule_editor.py",
+    "scripts/samples/demo_cache.jsonl",
+    "scripts/samples/demo_qual.jsonl",
+    "scripts/samples/demo_rules.json",
+    "scripts/sources.example.json",
+    "scripts/status.py",
+    "scripts/webhook_publish.py",
+    "skill-card.md",
+    "skill-dependencies.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787541209556,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "419597334-sudo",
+    "handle": "419597334-sudo",
+    "user_id": "s17a4re35sh5y6p33fdzmtdff1865pkx"
+  },
+  "slug": "bidhunter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bidhunter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bidhunter&ownerHandle=419597334-sudo",
+    "page_url": "https://clawhub.ai/419597334-sudo/skills/bidhunter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 348,
+    "installs": 0,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "\u56fd\u592e\u4f01\u62db\u6295\u6807\u4fe1\u606f\u76d1\u63a7\u4e0e\u7814\u5224\u6280\u80fd\u3002\u81ea\u52a8\u91c7\u96c6\u591a\u5e73\u53f0\u516c\u544a\uff0c\u6309\u8d44\u8d28\u89c4\u5219\u6bd4\u5bf9\u53ef\u6295\u6027\uff08\u53ef\u6295/\u4e0d\u53ef\u6295/\u9700\u786e\u8ba4\uff09\uff0c\u751f\u6210\u5e26\u7814\u5224\u7b80\u62a5\u5e76\u591a\u901a\u9053\u63a8\u9001\u3002v1.5 \u8d77\u65b0\u589e\uff1a\u8d44\u8d28\u5339\u914d\u5ea6\u8bc4\u5206(0-100)\u3001\u6295\u6807\u65e5\u5386\u4e0e\u5f00\u6807\u5012\u8ba1\u65f6\u3001\u91d1\u989d/\u5730\u533a/\u884c\u4e1a\u591a\u7ef4\u7b5b\u9009\u3001\u96f6\u4ee3\u7801\u89c4\u5219\u7f16\u8f91\u5668\u3001\u8bca\u65ad\u4e2d\u5fc3\u3001\u793a\u4f8b\u6a21\u5f0f\u3001\u96c6\u4e2dFAQ\u3001\u7edf\u4e00\u547d\u4ee4\u5165\u53e3\uff1bv2.0 \u672c\u5730AI\u589e\u5f3a\uff08\u62db\u6807\u6587\u4ef6AI\u901f\u8bfb+\u98ce\u9669\u6761\u6b3e\u8bc6\u522b\uff0c\u96f6\u4e91\u6210\u672c\uff09\uff1bv2.5 \u6295\u6807\u7b56\u7565\u5efa\u8bae\u751f\u6210\uff1bv3.0 \u672c\u5730\u5f00\u653eAPI+\u7b7e\u540dwebhook\u3002\u8fb9\u754c\u611f\u77e5\u667a\u80fd\u5339\u914d\u9632\u5b50\u4e32\u8bef\u5339\u914d\uff0c\u89c4\u5219\u5e93\u5065\u5eb7\u68c0\u67e5\uff0c\u9489\u9489/\u4f01\u4e1a\u5fae\u4fe1/\u90ae\u4ef6\u63a8\u9001\u3002\u89e6\u53d1\u8bcd\uff1a\u6293\u62db\u6295\u6807\u3001\u4eca\u65e5\u54ea\u4e9b\u80fd\u6295\u3001\u6807\u8baf\u76d1\u63a7\u3001\u6807\u4e66\u7814\u5224\u3001\u62db\u6295\u6807\u516c\u544a\u3001\u592e\u4f01\u62db\u6807\u3001\u6295\u6807\u8d44\u8d28\u5339\u914d\u3001AI\u8bfb\u6807\u4e66\u3001\u6295\u6807\u5efa\u8bae\u3002",
+  "updated_at": 1787540434262,
+  "version": "1.5.0"
+}
