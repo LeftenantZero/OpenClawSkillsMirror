@@ -435,9 +435,9 @@ JSON
 
 ### Upload File (Large - resumable)
 
-For files over 4MB, use resumable upload:
+For files over 4MB, use the resumable flow (`createUploadSession`):
 
-**Step 1: Create upload session**
+**Step 1: Call `createUploadSession`**
 ```bash
 maton one-drive item upload ./large-report.pdf --path large-report.pdf --conflict rename
 ```
@@ -454,7 +454,7 @@ maton api -X POST '/one-drive/v1.0/me/drive/root:/large-report.pdf:/createUpload
 JSON
 ```
 
-Files larger than 4 MiB automatically use a resumable upload session.
+Files larger than 4 MiB automatically use the resumable flow that `createUploadSession` returns.
 
 **Response:**
 ```json
@@ -656,7 +656,7 @@ maton one-drive item view root --json --jq '.name'
 - OneDrive uses Microsoft Graph API (`graph.microsoft.com`)
 - Item IDs are unique within a drive
 - Use colon (`:`) syntax for path-based addressing: `/root:/path/to/file`
-- Files ≤4MB upload via a single PUT; larger files automatically use a resumable upload session
+- Files ≤4MB upload via a single PUT; larger files automatically use the resumable flow from `createUploadSession`
 - Download URLs from `@microsoft.graph.downloadUrl` are pre-authenticated and temporary
 - Conflict behavior options: `fail`, `replace`, `rename`
 - On personal OneDrive accounts, only the user's own drive ID (returned by `whoami`) is directly addressable. The additional `b!...`-prefixed IDs that appear in `drive list` return HTTP 400 from Microsoft Graph when fetched this way. Use `me/drive` instead.
