@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial public release of markitdown-skill-for-non-multimodal-agent.\n\n- Enables text-only agents to read content from document attachments (PDF, Word, Excel, PowerPoint, etc.) by converting them to Markdown via a local MCP server.\n- Optional OCR layer extracts text from scanned PDFs and images using an OpenAI-compatible vision model if API key is provided.\n- Free layer handles most document formats without API keys or extra cost.\n- Designed to skip conversion for plain text files and images unless OCR is enabled.\n- Setup requires local markitdown MCP server; OCR requires additional CLI tools and a vision model API key.",
+  "created_at": 1781335027662,
+  "display_name": "Markitdown-Skill-for-non-multimodal-agent",
+  "fetched_at": 1787780953917,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781337783729,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Tommy, Joon Shin",
+    "handle": "keepyaoung",
+    "user_id": "s173945wawm0mf9yxtkzrc129188k7q1"
+  },
+  "slug": "markitdown-skill-for-non-multimodal-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/markitdown-skill-for-non-multimodal-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=markitdown-skill-for-non-multimodal-agent&ownerHandle=keepyaoung",
+    "page_url": "https://clawhub.ai/keepyaoung/skills/markitdown-skill-for-non-multimodal-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 372,
+    "installs": 4,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when a NON-multimodal agent (a text-only LLM backend that cannot read attachments) receives a document \u2014 PDF, Word (docx), PowerPoint (pptx), Excel (xlsx...",
+  "updated_at": 1781335027662,
+  "version": "1.0.0"
+}
