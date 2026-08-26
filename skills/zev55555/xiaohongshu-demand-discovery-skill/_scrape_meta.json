@@ -1,0 +1,59 @@
+{
+  "changelog": "Xiaohongshu Demand Discovery Collector initial release.\n\n- Adds a demand discovery mode for collecting recent high-interaction Xiaohongshu notes and comments using demand-related keywords, optimized for downstream LLM analysis.\n- Provides QR-code login, keyword search with filters, note detail, comment loading, user profile, and explore feed extraction.\n- Demand discovery cleans and deduplicates comments, removes user identity fields, and outputs structured files.\n- Designed for small-scale, research, or product validation use\u2014does not bypass login, captchas, or risk controls.\n- Emphasizes privacy (no raw usernames/avatars saved) and conservative, reviewable collection.\n- Offers clear CLI usage, parameters, and troubleshooting instructions.",
+  "created_at": 1779603883654,
+  "display_name": "Xiaohongshu Demand Discovery",
+  "fetched_at": 1787784990296,
+  "files": [
+    "OPENCLAW_USAGE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/__init__.py",
+    "scripts/__main__.py",
+    "scripts/client.py",
+    "scripts/comment.py",
+    "scripts/demand_discovery.py",
+    "scripts/explore.py",
+    "scripts/feed.py",
+    "scripts/interact.py",
+    "scripts/login.py",
+    "scripts/publish.py",
+    "scripts/search.py",
+    "scripts/user.py",
+    "skill-card.md",
+    "tests/test_demand_discovery_cleaning.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779963127714,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Zev",
+    "handle": "zev55555",
+    "user_id": "s174mb0aq2zjnw7p9zmg2n51yh87a10m"
+  },
+  "slug": "xiaohongshu-demand-discovery-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/xiaohongshu-demand-discovery-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=xiaohongshu-demand-discovery-skill&ownerHandle=zev55555",
+    "page_url": "https://clawhub.ai/zev55555/skills/xiaohongshu-demand-discovery-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 575,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Collect recent high-interaction Xiaohongshu notes and cleaned comments using demand-style keywords for small-scale user need discovery and analysis.",
+  "updated_at": 1779603883654,
+  "version": "0.1.0"
+}
