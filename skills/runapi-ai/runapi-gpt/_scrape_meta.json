@@ -1,0 +1,34 @@
+{
+  "changelog": "## Changed\n- Document GPT authentication, request, result verification, and stop boundaries in the primary recipe, with compatibility protocols loaded only when required.\n\n## Removed\n- Stop advertising the retired gpt-5.2-pro model.\n  Migration: Use a currently advertised GPT model instead; gpt-5.2 remains available through Chat Completions but no longer supports Responses.\n- Stop advertising Responses support for gpt-5.2.\n  Migration: Send gpt-5.2 requests to Chat Completions, Anthropic Messages, or Gemini contents; choose another advertised GPT model when Responses is required.",
+  "created_at": 1779561535917,
+  "display_name": "gpt",
+  "fetched_at": 1787772543735,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/compatibility-protocols.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "RunAPI",
+    "handle": "runapi-ai",
+    "user_id": "s1771k6pjxksnjws51x2htfjvd876syh"
+  },
+  "slug": "runapi-gpt",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/runapi-gpt",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=runapi-gpt&ownerHandle=runapi-ai",
+    "page_url": "https://clawhub.ai/runapi-ai/skills/runapi-gpt"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1193,
+    "installs": 12,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Call GPT generation and OpenAI text embedding models through RunAPI using OpenAI-compatible clients. Use for chat, Responses, embeddings, streaming, tools, vision, or an existing compatibility client that needs the conditional reference.",
+  "updated_at": 1786516347601,
+  "version": "0.2.12"
+}
