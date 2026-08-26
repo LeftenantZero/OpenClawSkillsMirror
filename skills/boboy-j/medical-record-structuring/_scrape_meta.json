@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of the medical-record-structuring skill:\n\n- Converts unstructured Chinese clinical narratives (admission, progress, discharge, outpatient notes) into structured JSON aligned with HL7 FHIR R4 and Chinese EMR standards.\n- Supports entity extraction for patient info, chief complaint, history, vitals, diagnoses (ICD-10), medication, procedures (ICD-9-CM-3), and lab results.\n- Provides FHIR bundle output plus compliance with WS 445-2014 and related standards.\n- Built-in PII masking, auditability, and low-confidence flagging for safe and transparent extraction.\n- No clinical decision logic; strictly data structuring and code normalization.\n- Includes batch, preview, and validation workflows; locally bundled dictionaries\u2014no network required.",
+  "created_at": 1779817472632,
+  "display_name": "medical-record-structuring",
+  "fetched_at": 1787784552884,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/README.md",
+    "examples/admission_input.txt",
+    "knowledge/README.md",
+    "knowledge/icd10_sample.csv",
+    "scripts/assemble_fhir.py",
+    "scripts/render_preview.py",
+    "scripts/rule_extract.py",
+    "scripts/run_pipeline.py",
+    "scripts/segment_sections.py",
+    "scripts/validate_fhir.py",
+    "skill-card.md",
+    "tests/test_pipeline.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "boboy",
+    "handle": "boboy-j",
+    "user_id": "s17ckg9br2p4k5kx6cr8fc4jz5852pah"
+  },
+  "slug": "medical-record-structuring",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/medical-record-structuring",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=medical-record-structuring&ownerHandle=boboy-j",
+    "page_url": "https://clawhub.ai/boboy-j/skills/medical-record-structuring"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 531,
+    "installs": 10,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "EN: Convert unstructured Chinese clinical narratives (admission notes, progress notes, discharge summaries, outpatient records) into structured JSON aligned...",
+  "updated_at": 1779817472632,
+  "version": "1.0.0"
+}
