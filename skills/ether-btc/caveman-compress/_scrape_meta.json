@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of caveman-compress.\n\n- Compresses workspace bootstrap files into caveman-speak, reducing input tokens by ~45%.\n- Creates `.original.md` backup before overwriting files and aborts if backup exists.\n- Only compresses SOUL.md, IDENTITY.md, and USER.md by default; AGENTS.md, HEARTBEAT.md, and MEMORY.md require feature flags.\n- Files larger than 500KB are rejected for safety.\n- Supports multiple model backends (claude CLI, MiniMax, DeepSeek) using subprocess + curl.\n- Includes dry-run option and environment variable controls for model and file support.",
+  "created_at": 1775988959550,
+  "display_name": "Caveman Input Compression",
+  "fetched_at": 1787779269766,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/__init__.py",
+    "scripts/__main__.py",
+    "scripts/cli.py",
+    "scripts/compress.py",
+    "scripts/detect.py",
+    "scripts/validate.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090390280,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "austrian_guy",
+    "handle": "ether-btc",
+    "user_id": "s1759m1gyza9v1mqeqtmsq9rrn84c5cw"
+  },
+  "slug": "caveman-compress",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/caveman-compress",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=caveman-compress&ownerHandle=ether-btc",
+    "page_url": "https://clawhub.ai/ether-btc/skills/caveman-compress"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 619,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Compress workspace bootstrap files into caveman-speak to reduce input tokens on every session load. Creates .original.md backups before overwriting.",
+  "updated_at": 1778492548178,
+  "version": "0.1.0"
+}
