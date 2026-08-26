@@ -1,0 +1,76 @@
+{
+  "changelog": "**Version 1.0.2 introduces a new parsing backend and multi-layered financial post-processing for PDF finance documents.**\n\n- Added 10 new scripts for 6-layer financial post-processing, covering HTML table parsing, multi-level header detection, cross-page table merging, numeric normalization, finance term alignment, and rule-based business validation.\n- Switched backend to use Volcano LAS las_pdf_parse_doubao for primary PDF parsing with TOS upload integration.\n- Enhanced output with schema-compliant financial JSON (including value, unit, source_page, and validation fields).\n- Updated environment requirements: now requires LAS_API_KEY and TOS credentials.\n- Workflow, output structure, and troubleshooting documentation revised to support the new engine and processing pipeline.",
+  "created_at": 1779709539308,
+  "display_name": "pdf-fin-parse",
+  "fetched_at": 1787784582614,
+  "files": [
+    "SKILL.md",
+    "_legacy/layout.py",
+    "_legacy/numeric_normalizer.py",
+    "_legacy/parse.py",
+    "_legacy/table_extractor.py",
+    "_legacy/utils.py",
+    "_legacy/vlm_fallback.py",
+    "_meta.json",
+    "assets/output_schema.json",
+    "env.sh",
+    "evals/evals.json",
+    "evals/trigger_eval.json",
+    "references/api.md",
+    "references/commands.md",
+    "references/configuration.md",
+    "references/faq.md",
+    "references/finance_terms.md",
+    "references/prompts.md",
+    "references/table_patterns.md",
+    "scripts/cells_to_html.py",
+    "scripts/cross_page_merger.py",
+    "scripts/finance_terms_aligner.py",
+    "scripts/finance_validator.py",
+    "scripts/html_table_parser.py",
+    "scripts/las_client.py",
+    "scripts/multi_header_detector.py",
+    "scripts/numeric_normalizer.py",
+    "scripts/output_writer.py",
+    "scripts/pdf_renderer.py",
+    "scripts/prompts.py",
+    "scripts/rule_extractor.py",
+    "scripts/save_utils.py",
+    "scripts/skill.py",
+    "scripts/tos_uploader.py",
+    "scripts/vlm_client.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779965383959,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xcbc",
+    "handle": "xcbc",
+    "user_id": "s17at0gjzhsezn2ems3egrxqtx87drc7"
+  },
+  "slug": "pdf-fin-parse",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pdf-fin-parse",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pdf-fin-parse&ownerHandle=xcbc",
+    "page_url": "https://clawhub.ai/xcbc/skills/pdf-fin-parse"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 655,
+    "installs": 14,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "\u89e3\u6790\u91d1\u878d\u884c\u4e1a PDF \u6587\u6863\uff08A\u80a1\u5e74\u62a5\u3001\u6e2f\u80a1\u8d22\u62a5\u3001\u7f8e\u80a110-K\u3001\u62db\u80a1\u8bf4\u660e\u4e66\u7b49\uff09\u4e3a\u7ed3\u6784\u5316 Markdown + JSON\u3002\u4e13\u4e3a\u8de8\u9875\u8868\u683c\u3001\u65e0\u8fb9\u6846\u8868\u683c\u3001\u591a\u7ea7\u8868\u5934\u3001\u5bc6\u96c6\u6570\u503c\u3001\u591a\u680f\u6392\u7248\u7b49\u91d1\u878d\u573a\u666f\u8bbe\u8ba1\u3002\u5e95\u5c42\u8c03\u7528\u706b\u5c71 LAS las_pdf_parse_doubao \u7b97\u5b50\u505a\u901a\u7528\u89e3\u6790\uff0c\u518d\u7ecf 6 \u5c42\u91d1\u878d\u540e\u5904\u7406\uff08HTML \u8868\u683c\u89e3\u6790 /...",
+  "updated_at": 1779792405662,
+  "version": "1.0.2"
+}
