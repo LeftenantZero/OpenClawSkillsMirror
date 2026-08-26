@@ -1,0 +1,36 @@
+{
+  "changelog": "**Added prerequisite checks and installation guidance for agent routing functionality.**\n\n- Introduced a new \"Prerequisites\" section: explains that agent definitions (e.g., agency-agents-zh) must be installed before routing can work.\n- Added user and agent installation steps with commands for installing and verifying agents.\n- Clarified that the router must check for installed agents before attempting orchestration, and instruct the user if none are found.\n- No functional changes to routing or orchestration logic.",
+  "created_at": 1780476126662,
+  "display_name": "Agency Agents Router",
+  "fetched_at": 1787783179973,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents.json",
+    "scripts/rebuild_index.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u77b0\u767e",
+    "handle": "staok",
+    "user_id": "s17b6q0zz08bewcdk63scg1x6h85g46x"
+  },
+  "slug": "agency-agents-router",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agency-agents-router",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agency-agents-router&ownerHandle=staok",
+    "page_url": "https://clawhub.ai/staok/skills/agency-agents-router"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 548,
+    "installs": 8,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Orchestrate multiple configured agents by classifying tasks, resolving ambiguities, selecting appropriate agents, planning execution, and aggregating results.",
+  "updated_at": 1780479848663,
+  "version": "1.0.2"
+}
