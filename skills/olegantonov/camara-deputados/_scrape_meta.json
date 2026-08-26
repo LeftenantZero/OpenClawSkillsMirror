@@ -1,0 +1,51 @@
+{
+  "changelog": "**Chamber of Deputies API skill: Version 1.1.1**\n\n- Major documentation overhaul for clarity, reproducibility, and endpoint-specific guidance; details now in SKILL.md and new references.\n- Improved API usage discipline: now mandates resolving reference codes (e.g., codSituacao, codTema) from endpoints, not hardcoded.\n- Adds guidance for handling pagination, date/time zones, and endpoint edge cases.\n- Example Python client usage and skill contracts updated for stricter correctness and transparency.\n- New documentation on handling cross-house (Chamber/Senate) bill relationships.\n- Licensing and meta info reorganized and clarified.",
+  "created_at": 1772616773668,
+  "display_name": "C\u00e2mara dos Deputados",
+  "fetched_at": 1787769792386,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "camara_client.py",
+    "pyproject.toml",
+    "references/api-endpoints.md",
+    "references/cross-house.md",
+    "references/response-shapes.md",
+    "requirements-dev.txt",
+    "requirements.txt",
+    "scripts/camara.py",
+    "scripts/validate_skill.py",
+    "skill-card.md",
+    "test_manual.py",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/integration/__init__.py",
+    "tests/integration/test_camara_integration.py",
+    "tests/unit/__init__.py",
+    "tests/unit/test_camara_client.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Daniel Marques",
+    "handle": "olegantonov",
+    "user_id": "s179nqtaze6mz32bkzfhcer5kh85b73f"
+  },
+  "slug": "camara-deputados",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/camara-deputados",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=camara-deputados&ownerHandle=olegantonov",
+    "page_url": "https://clawhub.ai/olegantonov/skills/camara-deputados"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1032,
+    "installs": 27,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Research Brazil's Chamber of Deputies using its official open-data API. Use for federal deputies, Chamber bills, votes, events, committees, parliamentary fronts, and CEAP expenses; use senado-federal for Senate-only records.",
+  "updated_at": 1787514586575,
+  "version": "1.1.1"
+}
