@@ -1,0 +1,47 @@
+{
+  "changelog": "- Removed the sample file skill-card.md from the project.\n- No functionality or behavioral changes to the skill itself in this release.",
+  "created_at": 1782107504374,
+  "display_name": "proxmox-aiops",
+  "fetched_at": 1787772962716,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agent-guardrails.md",
+    "references/capabilities.md",
+    "references/cli-reference.md",
+    "references/setup-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786346380877,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wei zhou",
+    "handle": "zw008",
+    "user_id": "s171xgnmqse0nqvgqvqnaq5f9183kyre"
+  },
+  "slug": "proxmox-aiops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/proxmox-aiops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=proxmox-aiops&ownerHandle=zw008",
+    "page_url": "https://clawhub.ai/zw008/skills/proxmox-aiops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1485,
+    "installs": 1,
+    "stars": 0,
+    "versions": 12
+  },
+  "summary": "Use this skill whenever the user needs to manage VMs and containers on Proxmox VE \u2014 list/inspect/configure VMs, power and lifecycle (start/stop/shutdown/reboot/reconfigure/clone/delete/migrate), snapshots (create/delete/list/rollback), disk grow/move, vzdump backups (create/list/restore), LXC containers (list/start/stop), cluster/node status, cluster resource inventory, async task polling + logs, free-VMID lookup, HA status, resource pools, firewall inspection, guest-agent ping, and storage listing. Also use it to diagnose cluster health \u2014 rank nodes by CPU/memory/disk pressure and scan guests for saturation (read-only RCA). Always use this skill for \"list proxmox vms\", \"start proxmox vm\", \"stop proxmox vm\", \"proxmox snapshot\", \"proxmox backup\", \"restore proxmox vm\", \"resize proxmox disk\", \"proxmox vm status\", \"migrate proxmox vm\", \"proxmox container\", \"proxmox ha\", \"proxmox pool\", \"proxmox firewall\", \"list proxmox storage\", \"proxmox node pressure\", or \"why is proxmox slow\" when the context is explicitly Proxmox / Proxmox VE / PVE. Do NOT use for non-Proxmox hypervisors, Kubernetes, or cloud providers. Broad coverage of common Proxmox operations, with a built-in governance harness (audit, token budget, undo, risk-tier labels).",
+  "updated_at": 1786344958179,
+  "version": "0.12.0"
+}
