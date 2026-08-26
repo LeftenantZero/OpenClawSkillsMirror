@@ -1,0 +1,38 @@
+{
+  "changelog": "pixiv-cli 0.10.0\n\n- Enhanced NDJSON handling: lists now emit canonical NDJSON automatically when stdout is a pipe; `--ndjson` and `--filter EXPR` can be used explicitly for programmatic processing.\n- Output and piping behavior clarified, especially for programmatic workflows and pipelines.\n- Updated documentation in references/discover.md and references/download.md to reflect new output and processing rules.\n- Removed deprecated `skill-card.md` file.\n- Various clarifications and improvements to operational rules.",
+  "created_at": 1785360153767,
+  "display_name": "pixiv-cli",
+  "fetched_at": 1787773941713,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/auth.md",
+    "references/discover.md",
+    "references/download.md",
+    "references/install.md",
+    "references/troubleshooting.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "FlanChan",
+    "handle": "flanchanxwo",
+    "user_id": "s17cqdrhyamvar7kxkd6n1tpph8b848t"
+  },
+  "slug": "pixiv-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pixiv-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pixiv-cli&ownerHandle=flanchanxwo",
+    "page_url": "https://clawhub.ai/flanchanxwo/skills/pixiv-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 353,
+    "installs": 1,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Operate Pixiv through the pixiv-cli binary \u2014 search illustrations, novels, and users; inspect Pixiv artwork or user IDs/URLs; view rankings and recommendations; manage bookmarks/follows; and download works. Load only when the user explicitly mentions Pixiv or pixiv-cli, provides a pixiv.net URL or ID in a clear Pixiv context, or requests a specific Pixiv operation or `pixiv` command. Do not trigger for generic illustration, artist, image-search, or download requests without Pixiv context. Verify current syntax with `pixiv <cmd> --help`.",
+  "updated_at": 1785603251314,
+  "version": "0.10.0"
+}
