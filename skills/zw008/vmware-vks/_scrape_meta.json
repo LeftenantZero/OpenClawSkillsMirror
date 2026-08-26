@@ -1,0 +1,48 @@
+{
+  "changelog": "Supervisor VM Service reads \u2014 VM snapshot / multi-NIC / VM groups via vm-operator CRDs (20\u219223), runtime-discovered version. Container Service not built (no CRD).",
+  "created_at": 1774409020900,
+  "display_name": "vmware-vks",
+  "fetched_at": 1787773249021,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/agent-guardrails.md",
+    "references/capabilities.md",
+    "references/cli-reference.md",
+    "references/setup-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786010324167,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wei zhou",
+    "handle": "zw008",
+    "user_id": "s171xgnmqse0nqvgqvqnaq5f9183kyre"
+  },
+  "slug": "vmware-vks",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/vmware-vks",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=vmware-vks&ownerHandle=zw008",
+    "page_url": "https://clawhub.ai/zw008/skills/vmware-vks"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4183,
+    "installs": 50,
+    "stars": 0,
+    "versions": 66
+  },
+  "summary": "Use this skill whenever the user needs to manage vSphere Kubernetes Service (VKS) \u2014 Supervisor clusters, vSphere Namespaces, and TKC cluster lifecycle. Directly handles: check VKS compatibility, create/delete namespaces, create/scale/upgrade/delete TKC clusters, get kubeconfig, check Harbor registry. Always use this skill for \"create Kubernetes cluster\", \"scale workers\", \"upgrade K8s version\", \"create namespace\", \"get kubeconfig\", or any VKS/TKC task. Do NOT use for vanilla VM operations (use vmware-aiops), non-vSphere Kubernetes (e.g., kubeadm, EKS, AKS), or AVI/AKO load balancing (use vmware-avi). For networking use vmware-nsx.",
+  "updated_at": 1786009565584,
+  "version": "1.8.10"
+}
