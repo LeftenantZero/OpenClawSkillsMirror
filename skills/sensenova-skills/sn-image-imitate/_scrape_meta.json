@@ -1,0 +1,38 @@
+{
+  "changelog": "**sn-image-imitate v2026.8.19 Changelog**\n\n- Introduced a multi-stage pipeline to generate images imitating the style of a reference while updating content per user intent.\n- Added robust input validation, error handling, and structured JSON outputs for debugging and reproducibility.\n- Main/worker agent architecture separates user interaction from image processing logic.\n- Supports user triggers for style imitation and transfer, with explicit workflows for agents and dependencies.\n- Clear documentation of non-goals, input specifications, environment configuration, and API usage.",
+  "created_at": 1787107687124,
+  "display_name": "sn-image-imitate",
+  "fetched_at": 1787770700698,
+  "files": [
+    "README.md",
+    "README_CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "prompts/caption_rewrite.md",
+    "prompts/image_annotate.md",
+    "prompts/layout_review.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SenseNova-Skills",
+    "handle": "sensenova-skills",
+    "user_id": "s17fzc6fnxkbqzh6z8jr5bcvhh8bw2vm"
+  },
+  "slug": "sn-image-imitate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sn-image-imitate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sn-image-imitate&ownerHandle=sensenova-skills",
+    "page_url": "https://clawhub.ai/sensenova-skills/skills/sn-image-imitate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 94,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generates a new image that imitates the style of a reference image while updating content based on user intent. Uses a three-stage pipeline: image annotation (long caption), caption rewriting, and image generation. Use when user asks to \"imitate style\", \"\u4fdd\u6301\u8fd9\u4e2a\u98ce\u683c\u91cd\u753b\", \"\u6309\u8fd9\u5f20\u56fe\u98ce\u683c\u751f\u6210\", or \"style transfer with new content\".",
+  "updated_at": 1787107761817,
+  "version": "2026.8.19"
+}
