@@ -1,0 +1,60 @@
+{
+  "changelog": "Version 1.1.4\n\n- Enforced explicit confirmation for all registry write actions (e.g. push, message, order, payment-hold) through a new `--confirm` flag and strong warnings.\n- Added `--allow-insecure-localhost` flag to permit non-HTTPS local registry usage; remote registries require HTTPS by default.\n- Updated documentation and quick start guides to reflect new registry usage boundaries.\n- Removed legacy skill-card documentation file.\n- Improved security controls for public and private marketplace modes, with stricter enforcement against unconfirmed or insecure API activity.",
+  "created_at": 1773713198098,
+  "display_name": "Mai",
+  "fetched_at": 1787779211681,
+  "files": [
+    "Dockerfile",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "clawhub.json",
+    "docker-compose.yml",
+    "docs/superpowers/plans/2026-05-03-mai-implementation.md",
+    "docs/superpowers/specs/2026-05-03-mai-design.md",
+    "package.json",
+    "plugins/mai-plugin/README.md",
+    "plugins/mai-plugin/index.js",
+    "plugins/mai-plugin/openclaw.plugin.json",
+    "plugins/mai-plugin/openclaw_compat.js",
+    "plugins/mai-plugin/package.json",
+    "references/data-schema.md",
+    "references/public-deployment.md",
+    "references/registry-api.md",
+    "references/transaction-model.md",
+    "registry.example.env",
+    "scripts/install.sh",
+    "scripts/mai.py",
+    "scripts/mai_registry.py",
+    "scripts/verify.sh",
+    "skill-card.md",
+    "tests/mai_plugin.test.mjs",
+    "tests/test_cli.py",
+    "tests/test_install.py",
+    "tests/test_public_marketplace.py",
+    "tests/test_registry.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "haidong",
+    "handle": "harrylabsj",
+    "user_id": "s17a8m9q4jybb46cv60h4fxard83hmsn"
+  },
+  "slug": "mai",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mai",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mai&ownerHandle=harrylabsj",
+    "page_url": "https://clawhub.ai/harrylabsj/skills/mai"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 946,
+    "installs": 21,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "AI shopping matchmaking agent for OpenClaw and Hermes. Use when merchants want to publish products, manage stock, answer buyer questions, and handle order re...",
+  "updated_at": 1782313108265,
+  "version": "1.1.4"
+}
