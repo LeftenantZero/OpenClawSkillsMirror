@@ -1,0 +1,55 @@
+{
+  "changelog": "Instagram Downloader v2.2 introduces multiple robust modes for downloading Instagram media.\n\n- Adds three operation modes: sessionid (recommended), Apify fallback, and interactive setup wizard.\n- Avoids password sharing by supporting sessionid cookies and interactive browser-based setup.\n- Clarifies that the standard username/password login mode is broken due to Instagram deprecating the endpoint.\n- Supports full download of reels (MP4), photos (JPG), and all carousel images (multi-image JPG) from any profile you can access.\n- Provides detailed credential resolution order and guided setup for session cookie retrieval.\n- Updates documentation with architecture diagrams, prerequisites, usage instructions, and command-line options.",
+  "created_at": 1783465388401,
+  "display_name": "Instagram Downloader",
+  "fetched_at": 1787777663248,
+  "files": [
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "instagram_downloader.py",
+    "install.ps1",
+    "install.sh",
+    "pyproject.toml",
+    "requirements.txt",
+    "scripts/auto_release.py",
+    "skill-card.md",
+    "tests/test_downloader.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783512548128,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Edgar Zorrilla",
+    "handle": "cripterhack",
+    "user_id": "s174daw50p7n6wfwbg7x4qz42n884hxp"
+  },
+  "slug": "igd",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/igd",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=igd&ownerHandle=cripterhack",
+    "page_url": "https://clawhub.ai/cripterhack/skills/igd"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 254,
+    "installs": 1,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Download Instagram profile media (reels MP4, photos JPG, full carousel multi-image JPG) via sessionid (instagrapi), Apify dataset fallback, or interactive se...",
+  "updated_at": 1783465388401,
+  "version": "1.0.0"
+}
