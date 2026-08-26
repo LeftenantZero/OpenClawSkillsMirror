@@ -1,0 +1,66 @@
+{
+  "changelog": "- Initial public release of degree-day-factor (DDF) snowmelt runoff modeling skill.\n- Provides daily snowmelt runoff hydrograph and snow-cover depletion curve, with outputs in raster (GeoTIFF) and JSON formats.\n- Supports both real DEM and fully offline synthetic data generation for validation.\n- Includes customizable options for degree-day factor, melting threshold temperature, and temperature lapse rate.\n- Runs completely offline; all computation is local with no network requests.",
+  "created_at": 1785850959870,
+  "display_name": "geoskill-snowmelt-runoff-modeling",
+  "fetched_at": 1787773434450,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-snowmelt-runoff-modeling.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785851990460,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-snowmelt-runoff-modeling",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-snowmelt-runoff-modeling",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-snowmelt-runoff-modeling&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-snowmelt-runoff-modeling"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 196,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5ea6\u65e5\u56e0\u5b50\u6cd5\uff08DDF\uff09\u878d\u96ea\u5f84\u6d41\u6a21\u62df\uff0c\u9010\u65e5\u7d2f\u79ef\u878d\u96ea\u751f\u6210\u5f84\u6d41\u8fc7\u7a0b\u7ebf\u4e0e\u79ef\u96ea\u9762\u79ef\u66f2\u7ebf\u3002Degree-day-factor snowmelt runoff modeling producing daily hydrograph and snow-cover depletion curve. \u8f93\u51fa\u5f84\u6d41\u65f6\u5e8f/\u79ef\u96ea\u66f2\u7ebf JSON + \u5f84\u6d41\u6df1\u6805\u683c\u3002",
+  "updated_at": 1785851131011,
+  "version": "1.0.0"
+}
