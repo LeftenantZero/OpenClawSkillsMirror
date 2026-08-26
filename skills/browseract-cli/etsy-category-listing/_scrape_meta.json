@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release of Etsy category page scraping skill.\n- Given an Etsy category URL (and optional page number), returns paginated product listings with detailed fields (listingId, shopId, title, url, image, prices, shopName, and more).\n- Handles pagination and extraction from both category and subcategory pages.\n- Includes error handling for anti-bot protection and loading issues.\n- Designed for use cases like trend research, competitor benchmarking, and bulk data collection within Etsy categories.",
+  "created_at": 1783526234690,
+  "display_name": "Etsy Category Listing",
+  "fetched_at": 1787777504120,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-listings.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783644713718,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "etsy-category-listing",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/etsy-category-listing",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=etsy-category-listing&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/etsy-category-listing"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 270,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Etsy category page scraper: given an Etsy category URL (e.g. https://www.etsy.com/c/jewelry) and optional page number, returns paginated product listings with listingId, shopId, title, url, image, salePrice, originalPrice, currency, rating, reviewCount, shopName, isAd, freeShipping, badge from categ",
+  "updated_at": 1783526234690,
+  "version": "1.0.0"
+}
