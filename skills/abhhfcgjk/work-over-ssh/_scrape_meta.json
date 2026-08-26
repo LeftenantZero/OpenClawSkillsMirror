@@ -1,0 +1,36 @@
+{
+  "changelog": "work-over-ssh v1.0.0\n\n- Initial release for editing and validating remote Git repositories over SSH without requiring remote agent runtimes.\n- Uses local SSH and Python clients to inspect, patch, and test remote projects, supporting both virtualenv and Conda environments.\n- All edits are applied as reviewed git patches with safety checks; no direct file overwrites.\n- Does not request credentials or modify SSH configuration\u2014requires pre-configured, key-based authentication.\n- Interactive sessions not required; each command is one-shot for safety and simplicity.\n- Comprehensive usage instructions, environment selection workflow, and operational boundaries detailed in documentation.",
+  "created_at": 1785603285667,
+  "display_name": "Work over SSH",
+  "fetched_at": 1787773927869,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/usage.md",
+    "scripts/remote_workspace.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "abhhfcgjk",
+    "handle": "abhhfcgjk",
+    "user_id": "s172jgdt3ywstxd6m9tcc71e418bm6gd"
+  },
+  "slug": "work-over-ssh",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/work-over-ssh",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=work-over-ssh&ownerHandle=abhhfcgjk",
+    "page_url": "https://clawhub.ai/abhhfcgjk/skills/work-over-ssh"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 219,
+    "installs": 1,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Work safely over SSH with Git and Python envs",
+  "updated_at": 1785626225665,
+  "version": "1.0.0"
+}
