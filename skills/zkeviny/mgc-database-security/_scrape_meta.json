@@ -1,0 +1,45 @@
+{
+  "changelog": "\"version\": \"1.2.0\",\n      \"changes\": [\n        \"Upgraded to adapt to MGC 1.4.10\",\n        \"Refactored zero-exposure flow: AI calls mgc_run, local script reads config via HTTP API; credentials never enter AI context\",\n        \"Replaced mgc_get with mgc_run for executing sealed scripts (1.4.7+ blackbox)\",\n        \"Added mgc_find (1.4.10 fuzzy search) and mgc_open_webui to mcp_tools; removed mgc_get\",\n        \"Documented mgc_seal ext02/ext03 packaging (1.4.10 auto-parse) and multi-line PEM requirement for ext04\",\n        \"Added update_if_exists=true for credential rotation\",\n        \"Added 1.4.9 sandbox mode note\",\n        \"Updated MGC main skill doc reference to WebUI MGC Skills button (1.4.7+)\",\n        \"Templates updated with parse_known_args and JSON array ext02 contract\"",
+  "created_at": 1782141615043,
+  "display_name": "Database Credential Security (Zero\u2011Exposure Edition)",
+  "fetched_at": 1787771454942,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787035682643,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zkeviny",
+    "handle": "zkeviny",
+    "user_id": "s173fckt3bzxxvt9dfp0rrdeg1894z72"
+  },
+  "slug": "mgc-database-security",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mgc-database-security",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mgc-database-security&ownerHandle=zkeviny",
+    "page_url": "https://clawhub.ai/zkeviny/skills/mgc-database-security"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 672,
+    "installs": 0,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "Secure database credential management using MGC Blackbox 1.4.10. Supports MySQL, PostgreSQL, SQLite, MariaDB and other databases. Credentials are stored encrypted; local scripts retrieve them via HTTP API at runtime, while AI agents never touch plaintext.",
+  "updated_at": 1787035003512,
+  "version": "1.2.1"
+}
