@@ -1,0 +1,35 @@
+{
+  "changelog": "- Initial release of NFT Floor Sweep Calculator.\n- Calculates estimated total cost to sweep N NFTs off a collection's floor on Solana (Magic Eden) or EVM chains (CoinGecko) using live floor prices.\n- Supports customizable per-item slippage and marketplace fees.\n- Outputs subtotal, fee breakdown, average price per item, and total estimated spend.\n- Does not require API keys; works with free, public endpoints.\n- For planning and research only; does not execute trades or manage wallets.",
+  "created_at": 1786852878984,
+  "display_name": "NFT Floor Sweep Calculator",
+  "fetched_at": 1787771774186,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/floor_sweep.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ssyopro",
+    "handle": "ssidharhubble",
+    "user_id": "s1751xfhp40q8vjjqd22y5vaw584gpke"
+  },
+  "slug": "nft-floor-sweep-calculator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nft-floor-sweep-calculator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nft-floor-sweep-calculator&ownerHandle=ssidharhubble",
+    "page_url": "https://clawhub.ai/ssidharhubble/skills/nft-floor-sweep-calculator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 130,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Calculates the total cost of sweeping N items off an NFT collection's floor, pulling live floor prices from Magic Eden (Solana collections) or CoinGecko's free NFT API (EVM collections) with no API key required, then applying marketplace fees and a configurable naive price-step slippage curve to estimate total spend, average price per item, and subtotal before fees. Useful for NFT trading, crypto whale-style bulk buying, defi and passive income research, python developers, and ai agent operators who want a quick pre-trade cost estimate before executing a floor sweep. Not an execution engine \u2014 it does not place orders or touch a wallet, purely a cost calculator for planning purposes on Solana and EVM NFT collections.",
+  "updated_at": 1786852936011,
+  "version": "1.0.0"
+}
