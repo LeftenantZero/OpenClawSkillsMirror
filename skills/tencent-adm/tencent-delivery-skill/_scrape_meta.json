@@ -1,0 +1,58 @@
+{
+  "changelog": "- Clarified skill scope to strictly same-city, \u22652-hour courier tasks (\u201c\u8dd1\u817f\u201d) within China, excluding cross-city shipping, food delivery, ride-hailing, and finance queries.\n- Now requires running a bootstrap command before every user interaction to determine state and response path; all reply templates and branches must follow tool output strictly.\n- Enforced tool-first data sourcing, input authenticity (no assumptions or invented info), and output sanitization (filtering restricted fields).\n- Improved error handling instructions for script execution failures, with specific troubleshooting steps.\n- Expanded FSM and workflow details, supporting flexible user input order and robust state/session management.\n- Added strong privacy and output leakage barriers to prevent exposure of sensitive identifiers or technical metadata.",
+  "created_at": 1780053750750,
+  "display_name": "\u817e\u8baf\u51fa\u884c\u670d\u52a1\u8dd1\u817f Skill",
+  "fetched_at": 1787783946986,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/PREFERENCE.md",
+    "references/api-contract.md",
+    "references/delivery-workflow.md",
+    "references/delivery/step-1-sender.md",
+    "references/delivery/step-2-receiver.md",
+    "references/delivery/step-3-estimate.md",
+    "references/delivery/step-4-select.md",
+    "references/delivery/step-5-book.md",
+    "references/delivery/step-6-payment.md",
+    "references/delivery/step-7-confirm.md",
+    "references/error-handling.md",
+    "references/order-workflow.md",
+    "references/quick-start-workflow.md",
+    "references/session-state.md",
+    "scripts/tms_delivery.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780056085621,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u817e\u8baf\u5f00\u6e90",
+    "handle": "tencent-adm",
+    "user_id": "s171cxjdnjyqjxa91pj2bfmr6x83gyg1"
+  },
+  "slug": "tencent-delivery-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tencent-delivery-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tencent-delivery-skill&ownerHandle=tencent-adm",
+    "page_url": "https://clawhub.ai/tencent-adm/skills/tencent-delivery-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 575,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Books same-city on-demand courier delivery (pickup-and-deliver within 2 hours, typically small parcels <30kg) via Tencent Mobility MCP. Use this skill when t...",
+  "updated_at": 1780053750750,
+  "version": "1.0.1"
+}
