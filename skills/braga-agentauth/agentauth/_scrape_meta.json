@@ -1,0 +1,45 @@
+{
+  "changelog": "agentauth 1.0.4\n\n- Added non-blocking uninstall and cleanup workflow: new `cleanup` sub-agent command for restoring original config and removing integrations (see SKILL.md and scripts/cli.cjs).\n- Updated documentation to describe the required flow for uninstall/removal, with detailed main agent and sub-agent responsibilities.\n- Removed obsolete skill-card.md file.\n- Now explicitly covers uninstall/disable scenarios as well as setup and approval flows.",
+  "created_at": 1777445382858,
+  "display_name": "agentauth",
+  "fetched_at": 1787783918528,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/cli.cjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780082302363,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "agentauth",
+    "handle": "braga-agentauth",
+    "user_id": "s17b7080jwvq0ztmjxpt47f1es85m7z6"
+  },
+  "slug": "agentauth",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agentauth",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agentauth&ownerHandle=braga-agentauth",
+    "page_url": "https://clawhub.ai/braga-agentauth/skills/agentauth"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 984,
+    "installs": 26,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Require user-initiated biometric passkey approval before your OpenClaw agent deletes files, sends emails, makes purchases, or modifies system config. Every a...",
+  "updated_at": 1780080035159,
+  "version": "1.0.4"
+}
