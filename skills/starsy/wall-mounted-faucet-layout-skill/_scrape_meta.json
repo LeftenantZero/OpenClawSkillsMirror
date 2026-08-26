@@ -1,0 +1,40 @@
+{
+  "changelog": "**Enhanced wall-mounted faucet layout skill with SVG diagram output and faucet-selection guidance.**\n\n- Added support for generating annotated SVG diagrams to visualize calculated faucet layouts using the new script (`scripts/render_geometry_svg.py`).\n- Updated skill guidance to prioritize solving for faucet reach (L) or outlet height (H1) based on user scenario, supporting product selection.\n- Expanded workflow and response template to clarify the recommended formulas and selection process.\n- Revised documentation to explain the new SVG diagram feature and show usage examples.\n- No breaking changes to existing calculation formulas or core geometry logic.",
+  "created_at": 1781769669839,
+  "display_name": "Wall Mounted Faucet Layout",
+  "fetched_at": 1787780220652,
+  "files": [
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/wall_mounted_faucet_geometry_v2.svg",
+    "assets/wall_mounted_faucet_geometry_v2_zh.svg",
+    "scripts/faucet_geometry.py",
+    "scripts/render_geometry_svg.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "starsy",
+    "handle": "starsy",
+    "user_id": "s1784p5hqtxqr57k0q4d0xsqzh88xggp"
+  },
+  "slug": "wall-mounted-faucet-layout-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wall-mounted-faucet-layout-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wall-mounted-faucet-layout-skill&ownerHandle=starsy",
+    "page_url": "https://clawhub.ai/starsy/skills/wall-mounted-faucet-layout-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 330,
+    "installs": 3,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Calculate, validate, and visualize wall-mounted faucet installation geometry, especially faucet reach L and outlet height H1 for product selection. Use when...",
+  "updated_at": 1781796402587,
+  "version": "1.2.0"
+}
