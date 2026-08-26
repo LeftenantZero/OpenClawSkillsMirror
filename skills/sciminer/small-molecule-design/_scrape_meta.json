@@ -1,0 +1,33 @@
+{
+  "changelog": "- Migrated tool registry and workflow documentation from local Python files to authoritative published Markdown docs at `https://sciminer.tech/tool_api_files/`.\n- Removed local registry logic and file references (`scripts/__init__.py`, `scripts/sciminer_registry.py`, and `skill-card.md`), enforcing parameter and API correctness strictly via the public Markdown docs.\n- Updated invocation workflow: agents now resolve endpoints, parameters, content-type, and upload rules by reading the Markdown docs for each tool before every call.\n- Result summaries now require attaching the `share_url` for every successful task, improving user access to online results.\n- Documentation and file-upload instructions now strictly follow the API doc source, ensuring more reliable and up-to-date task execution.",
+  "created_at": 1776508777076,
+  "display_name": "Small molecule design",
+  "fetched_at": 1787783770876,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SciMiner",
+    "handle": "sciminer",
+    "user_id": "s170qp1q4twz35wa85ppa8894h83w461"
+  },
+  "slug": "small-molecule-design",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/small-molecule-design",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=small-molecule-design&ownerHandle=sciminer",
+    "page_url": "https://clawhub.ai/sciminer/skills/small-molecule-design"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 953,
+    "installs": 24,
+    "stars": 2,
+    "versions": 6
+  },
+  "summary": "Small-molecule generation workflows combining REINVENT4, PocketXMol, fpocket, and Gnina Score through SciMiner.",
+  "updated_at": 1780221806143,
+  "version": "1.0.5"
+}
