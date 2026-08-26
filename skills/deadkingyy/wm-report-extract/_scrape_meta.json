@@ -1,0 +1,59 @@
+{
+  "changelog": "\u8de8\u884c\u4e1a\u7ed3\u6784\u4fee\u590d + Agent \u95ed\u73af\uff08auto-heal \u843d\u5730\uff09\uff1aclose \u7f16\u6392\u547d\u4ee4\uff08auto-promote\u2192narrative-scan\u2192agent-apply\u2192qa\u2192review\uff09\uff1b\u53d9\u8ff0\u5c42\u8bc1\u636e\u626b\u63cf\u4e0e agent_tasks \u534f\u8bae\uff08quote \u9010\u5b57+\u9875\u7801\u673a\u5668\u6821\u9a8c\u3001\u52fe\u7a3d\u4ef2\u88c1\u3001\u884c\u4e1a\u786e\u8ba4\uff09\uff1b\u8de8\u9875\u7eed\u94fe\u6761\u4ef6\u589e\u8865\u4e0e\u52fe\u7a3d\u81ea\u548c\u89e3\uff1bcanonical \u9009\u4e3b\u5408\u5e76\u4f18\u5148+\u591a\u5e74\u6458\u8981\u60e9\u7f5a\uff0ctyped \u8868 variant \u6807\u6ce8\uff1b\u5206\u6790\u7c7b\u6807\u9898\u5426\u51b3\u4e0e\u4fdd\u9669\u53e3\u5f84\u4e09\u8868\u7b7e\u540d\uff1b\u65b0\u589e 6 \u884c\u4e1a\uff08\u94a2\u94c1/\u5316\u5de5/\u901a\u4fe1\u8fd0\u8425/\u4e92\u8054\u7f51\u4e0e\u6d88\u8d39\u7535\u5b50/\u519c\u4e1a/\u534a\u5bfc\u4f53\uff09\uff1b\u77ed\u6587\u6863\u884c\u4e1a\u6309\u53d1\u884c\u4eba\u7ee7\u627f\uff1b\u89c4\u5219\u6f14\u8fdb\u6d41\u7a0b adaptation.md\u3002",
+  "created_at": 1787633436128,
+  "display_name": "wm-report-extract",
+  "fetched_at": 1787768985592,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/agent-render.md",
+    "examples/promotions.json",
+    "examples/qa-verdicts.json",
+    "examples/request-full.json",
+    "examples/request-specific.json",
+    "examples/response-resolve.json",
+    "examples/response-specific.json",
+    "marketplace.json",
+    "references/adaptation.md",
+    "references/anchors.md",
+    "references/capabilities.json",
+    "references/coverage-checklist.md",
+    "references/provenance.md",
+    "references/workflow.md",
+    "scripts/domain/__init__.py",
+    "scripts/domain/catalogs.py",
+    "scripts/domain/industry.py",
+    "scripts/domain/narratives.py",
+    "scripts/domain/policy.py",
+    "scripts/domain/signatures.py",
+    "scripts/domain/synonyms.py",
+    "scripts/render_html.py",
+    "scripts/test_wm_report.py",
+    "scripts/wm_report.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "deadkingyy",
+    "handle": "deadkingyy",
+    "user_id": "s1747frv2qb54sxnhqg9vnac6n8d43nv"
+  },
+  "slug": "wm-report-extract",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wm-report-extract",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wm-report-extract&ownerHandle=deadkingyy",
+    "page_url": "https://clawhub.ai/deadkingyy/skills/wm-report-extract"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 69,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "\u8d22\u62a5 PDF\uff08\u5e74\u62a5/\u534a\u5e74\u62a5/\u5b63\u62a5\uff0cA \u80a1 + \u6e2f\u80a1 IFRS\uff09\u5185\u5bb9\u7406\u89e3\u4e0e\u6309\u9700\u53ef\u6eaf\u6e90\u63d0\u53d6\u3002\u53cc\u8f68\u8f6c\u6362\uff08Docling FAST + PyMuPDF \u6709\u6846\u7ebf\u8868\u683c\u63a5\u7ba1 + ACCURATE \u62a5\u8868\u9875\u7cbe\u4fee\uff09\u2192 \u53ef\u63d0\u53d6\u6027 meta \u2192 adapt-plan \u63d0\u53d6\u5267\u672c \u2192 \u5168\u8868 records \u9884\u63d0\u53d6 \u2192 materialize \u5206\u8868 \u2192 \u5b9a\u578b\u664b\u5347 + \u8d28\u91cf\u95e8\uff08\u52fe\u7a3d\u6821\u9a8c/\u6570\u503c\u5b58\u5728\u6027/quote \u56de\u9a8c\uff09\u2192 review-extract \u72ec\u7acb\u5ba1\u6838\u3002\u6bcf\u4e2a\u6570\u503c\u5e26\u9875\u7801\u4e0e\u539f\u6587 quote \u6eaf\u6e90\uff0c\u65e0 quality.json / review.json \u4e0d\u5f97\u7ed9\u4e0b\u6e38\u3002Standalone\u2014\u2014`fetch --pdf-url` \u65e0\u9700\u4efb\u4f55 API key \u5373\u53ef\u5168\u94fe\u8def\u8fd0\u884c\uff1b\u53ef\u9009\u63a5\u5165 WinMale \u5e73\u53f0\u542f\u7528 symbol \u6a21\u5f0f\u3002Use when the user asks to extract or locate data in a financial report PDF (annual/semi-annual/quarterly), e.g. \u8d27\u5e01\u8d44\u91d1\u3001\u524d\u5341\u5927\u80a1\u4e1c\u3001\u5206\u7ea2\u65b9\u6848\u3001\u5168\u91cf\u6838\u5fc3\u6570\u636e\u3001\u7b2c N \u9875\u5185\u5bb9\u3002",
+  "updated_at": 1787640801831,
+  "version": "0.6.1"
+}
