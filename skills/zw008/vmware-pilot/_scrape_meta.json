@@ -1,0 +1,53 @@
+{
+  "changelog": "Moved to vmware-skills GitHub org; MCP Registry namespace \u2192 io.github.vmware-skills. Links updated.",
+  "created_at": 1775058566005,
+  "display_name": "vmware-pilot",
+  "fetched_at": 1787774001265,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/agent-guardrails.md",
+    "references/capabilities.md",
+    "references/cli-reference.md",
+    "references/integration-patterns.md",
+    "references/setup-guide.md",
+    "references/templates.md",
+    "references/workflow-design.md",
+    "scripts/list_available_tools.py",
+    "scripts/validate_workflow.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785554972829,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wei zhou",
+    "handle": "zw008",
+    "user_id": "s171xgnmqse0nqvgqvqnaq5f9183kyre"
+  },
+  "slug": "vmware-pilot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/vmware-pilot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=vmware-pilot&ownerHandle=zw008",
+    "page_url": "https://clawhub.ai/zw008/skills/vmware-pilot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1625,
+    "installs": 23,
+    "stars": 1,
+    "versions": 24
+  },
+  "summary": "Use this skill whenever the user wants to design, execute, or manage complex multi-step VMware workflows with human approval and automatic rollback. Pilot is the orchestration brain \u2014 it breaks a goal into steps across companion VMware skills (aiops, monitor, nsx, nsx-security, aria, vks, storage, avi), adds approval gates before destructive operations, and rolls back automatically if anything fails. Always use vmware-pilot for: \"clone and test before applying to production\", \"VMware incident response with checkpoints\", \"investigate alert root cause\", \"VMware rolling restart with health checks\", \"baseline capture and drift detection\", \"rolling maintenance with AVI drain\", or any VMware workflow needing approval gates or rollback. 15 built-in templates + custom YAML + AI-designed workflows. Do NOT use for single-step work \u2014 use vmware-aiops for one VM action, vmware-monitor for read-only queries, vmware-avi for load balancer queries.",
+  "updated_at": 1785554022265,
+  "version": "1.8.8"
+}
