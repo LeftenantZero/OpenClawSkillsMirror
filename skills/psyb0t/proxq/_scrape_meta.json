@@ -1,0 +1,34 @@
+{
+  "changelog": "- Removed obsolete skill-card.md file.\n- Updated references/setup.md (details not specified).\n- No changes to core functionality or user-facing documentation.\n- Cleanup and minor maintenance for repository organization.",
+  "created_at": 1785024143736,
+  "display_name": "proxq",
+  "fetched_at": 1787773101773,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/setup.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ciprian Mandache",
+    "handle": "psyb0t",
+    "user_id": "s17fq93tmpky791n7516jcn08n83sfn2"
+  },
+  "slug": "proxq",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/proxq",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=proxq&ownerHandle=psyb0t",
+    "page_url": "https://clawhub.ai/psyb0t/skills/proxq"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 744,
+    "installs": 1,
+    "stars": 0,
+    "versions": 13
+  },
+  "summary": "Go, Redis-backed async HTTP proxy queue (built on asynq). POST any HTTP request (any method, any path, any body) to a configured upstream, get a job ID back instantly (202), a worker forwards it later, you poll GET /__jobs/{id} for status (queued/running/completed/failed) and GET /__jobs/{id}/content for the replayed upstream response (status/headers/body). DELETE /__jobs/{id} cancels. Path-prefix routing to multiple upstreams, per-upstream timeout/retries/pathFilter, optional response caching (memory or Redis LRU), automatic direct-proxy bypass for WebSocket/chunked/large-body requests. No built-in auth. Use when the user wants to turn a slow/unreliable backend into a fire-and-forget async API, decouple a client from upstream latency, relay webhooks with retries, or queue heavy uploads/processing jobs behind short-timeout reverse proxies.",
+  "updated_at": 1786224976632,
+  "version": "0.10.13"
+}
