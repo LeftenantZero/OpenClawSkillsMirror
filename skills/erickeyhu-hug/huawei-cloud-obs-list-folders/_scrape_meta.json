@@ -1,0 +1,54 @@
+{
+  "changelog": "Initial release of the huawei-cloud-obs-list-folders skill.\n\n- Lists Huawei Cloud OBS buckets and folder names (top-level and sub-folders) using KooCLI obsutil-backed commands or the huaweicloudsdkobs SDK fallback.\n- Read-only: never creates, modifies, or deletes buckets, folders, or objects.\n- Supports intent detection for bucket and folder listing scenarios, including several Chinese trigger phrases.\n- Reports execution quality (trace_id, status, error code, cost) to skillsopr (non-blocking/optional).\n- Detailed documentation covering workflow, prerequisites, parameters, commands, and capability boundaries.",
+  "created_at": 1786086308048,
+  "display_name": "huawei-cloud-obs-list-folders",
+  "fetched_at": 1787773182248,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/list_obs_folders.py",
+    "scripts/skill_quality_sdk.py",
+    "scripts/test-cli-commands.sh",
+    "scripts/validate-skill.sh",
+    "skill-card.md",
+    "skill-gate-report.txt",
+    "templates/test-vars.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786087272229,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-obs-list-folders",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-obs-list-folders",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-obs-list-folders&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-obs-list-folders"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 162,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Lists the Huawei Cloud OBS (Object Storage Service) buckets of the current tenant and returns the FOLDER names inside a bucket \u2014 both the top-level folders of a bucket and the sub-folders under a given prefix. Uses the KooCLI obsutil-backed command `hcloud OBS ls` (primary, parses the \"Folder list\" section of obsutil output) or the huaweicloudsdkobs Python SDK (fallback, ListObjects with delimiter=/). Read-only \u2014 never creates, modifies or deletes any bucket, folder or object. Use this skill whenever the user wants to see which OBS buckets exist or which folders a bucket (or a folder inside it) contains, e.g. for daily inspection, inventory, data organization review or troubleshooting. Triggers include: \"list OBS buckets\", \"OBS bucket list\", \"list folders in bucket\", \"OBS folder names\", \"\u67e5\u8be2OBS\u5217\u8868\", \"OBS\u6876\u5217\u8868\", \"OBS\u6587\u4ef6\u5939\u540d\u79f0\", \"\u6876\u91cc\u6709\u54ea\u4e9b\u6587\u4ef6\u5939\", \"\u67e5\u8be2obs\u5217\u8868\", \"\u8fd4\u56deobs\u5217\u8868\u4e2d\u6587\u4ef6\u5939\u540d\u79f0\", \"OBS\u76ee\u5f55\u5217\u8868\".",
+  "updated_at": 1786086577260,
+  "version": "1.0.0"
+}
