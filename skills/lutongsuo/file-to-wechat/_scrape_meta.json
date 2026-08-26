@@ -1,0 +1,45 @@
+{
+  "changelog": "**File-to-WeChat 1.1.0 \u2014 Major update for reliability, UTF-8 support, and easy setup.**\n\n- Switched to `markitdown` pip package as the default file-to-Markdown converter for higher reliability (no API needed).\n- Improved Windows and Mac support with explicit UTF-8 encoding for all file and console I/O; prevents Chinese text garbling.\n- Updated documentation with clear, step-by-step first-time setup (Python deps, WeChat credentials, companion skill).\n- Added new trigger phrases for broader natural language support.\n- Simplified prerequisites: now requires only `anything-to-wechat` skill; others are optional fallbacks.\n- Updated publishing instructions for cross-platform launch, including complete environment variable handling for Windows, Mac, and Linux.",
+  "created_at": 1782875761347,
+  "display_name": "File to WeChat",
+  "fetched_at": 1787778559014,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/md_to_wechat_html.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782883009119,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "lutongsuo",
+    "handle": "lutongsuo",
+    "user_id": "s17bmrs73egtma72qx832g8p8d89k3bn"
+  },
+  "slug": "file-to-wechat",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/file-to-wechat",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=file-to-wechat&ownerHandle=lutongsuo",
+    "page_url": "https://clawhub.ai/lutongsuo/skills/file-to-wechat"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 278,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "\u5c06\u4efb\u610f\u6587\u4ef6\uff08PDF\u3001Word\u3001Excel\u3001PPT\u3001\u56fe\u7247\u3001\u97f3\u9891\u3001\u7f51\u9875\u7b49\uff09\u8f6c\u6362\u4e3a Markdown\uff0c\u518d\u751f\u6210\u4e3a\u7cbe\u7f8e\u7684\u5fae\u4fe1\u516c\u4f17\u53f7\u6587\u7ae0\u5e76\u53d1\u5e03\u5230\u8349\u7a3f\u7bb1\u3002\u7ec4\u5408 markitdown + md_to_wechat_html + publish_to_wechat \u4e09\u9636\u6bb5\u6d41\u6c34\u7ebf\u3002Use when the user wants to...",
+  "updated_at": 1782876980944,
+  "version": "1.1.0"
+}
