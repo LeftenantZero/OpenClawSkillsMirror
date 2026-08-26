@@ -1,0 +1,67 @@
+{
+  "changelog": "Version 1.0.2 (botlearn-doctor)\n\nMajor update with new autonomous health check domains, shell-based data collection, and targeted diagnostics.\n\n- Switched role from a manual diagnostic specialist to an autonomous health doctor.\n- Added 5 deep health domains: hardware, config, security, skills, autonomy.\n- Introduced 20+ dedicated data collection scripts (shell-based, parallel execution).\n- Reports are now quantified per domain (0\u2013100), with clear pass/warn/fail and actionable fix hints.\n- User-facing output adapts to language, targets full or single domain checks, and no longer requires human-run commands.\n- Simplified skill manifest, expanded and reorganized triggers, and removed legacy/manual files.",
+  "created_at": 1772386408635,
+  "display_name": "botlearn-healthcheck",
+  "fetched_at": 1787785929983,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "check_autonomy.md",
+    "check_config.md",
+    "check_hardware.md",
+    "check_security.md",
+    "check_skills.md",
+    "data_collect.md",
+    "scripts/collect-channels.sh",
+    "scripts/collect-config.sh",
+    "scripts/collect-env.sh",
+    "scripts/collect-health.sh",
+    "scripts/collect-log-anomalies.sh",
+    "scripts/collect-logs.sh",
+    "scripts/collect-precheck.sh",
+    "scripts/collect-security.sh",
+    "scripts/collect-skills.sh",
+    "scripts/collect-status.sh",
+    "scripts/collect-tools.sh",
+    "scripts/collect-workspace-audit.sh",
+    "scripts/deliver-report.sh",
+    "scripts/generate-report.sh",
+    "scripts/open-report.sh",
+    "scripts/score-calculator.sh",
+    "scripts/snapshot-manager.sh",
+    "setup.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779971092766,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u90a2\u6000\u5eb7",
+    "handle": "calvinxhk",
+    "user_id": "s170r0gdb982qwb1dm5b48fsb183mz8n"
+  },
+  "slug": "botlearn-doctor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/botlearn-doctor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=botlearn-doctor&ownerHandle=calvinxhk",
+    "page_url": "https://clawhub.ai/calvinxhk/skills/botlearn-doctor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1018,
+    "installs": 29,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Autonomously inspects a live OpenClaw instance across 5 health domains (hardware, config, security, skills, autonomy) and delivers a quantified traffic-light...",
+  "updated_at": 1779219480272,
+  "version": "1.0.2"
+}
