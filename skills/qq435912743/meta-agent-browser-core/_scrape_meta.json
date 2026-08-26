@@ -1,0 +1,45 @@
+{
+  "changelog": "meta-agent-browser-core 1.0.0\n\n- Initial release: distilled and enhanced from agent-browser-core using cross-model distillation.\n- Adds self-verification (reason-verify) to validate outputs; unreliable steps are retried automatically.\n- Incorporates a self-reflection loop to record failures and improve continuously.\n- Integrates with super-agent framework, enabling full cycle of perceive\u2192plan\u2192execute\u2192verify\u2192reflect\u2192memory for complex tasks.\n- Implements adversarial validation to test distilled decision rules and prevent superficial imitation.\n- Supports ongoing self-evolution via meta-evolver, becoming more robust with use.",
+  "created_at": 1786625650217,
+  "display_name": "meta-agent-browser-core",
+  "fetched_at": 1787772266056,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "distillation_report.md",
+    "scripts/learner.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786672033647,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "qq435912743",
+    "handle": "qq435912743",
+    "user_id": "s171ndzm69p9g2ee5kcw6t7smh8azd5h"
+  },
+  "slug": "meta-agent-browser-core",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/meta-agent-browser-core",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=meta-agent-browser-core&ownerHandle=qq435912743",
+    "page_url": "https://clawhub.ai/qq435912743/skills/meta-agent-browser-core"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 115,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7531 model-distillation \u4ece\u6559\u5e08\u6280\u80fd agent-browser-core \u84b8\u998f\u5e76\u589e\u5f3a\u7684\u8d85\u8d8a\u578b\u5143\u6280\u80fd\uff0c \u5728\u6559\u5e08\u80fd\u529b\u4e4b\u4e0a\u53e0\u52a0\u81ea\u9a8c\u8bc1\u3001\u81ea\u6211\u53cd\u601d\u3001super-agent \u7f16\u6392\u4e0e\u6301\u7eed\u81ea\u8fdb\u5316\u95ed\u73af\uff0c\u9010\u6b65\u8d85\u8d8a\u6559\u5e08\u3002",
+  "updated_at": 1786671104022,
+  "version": "1.0.0"
+}
