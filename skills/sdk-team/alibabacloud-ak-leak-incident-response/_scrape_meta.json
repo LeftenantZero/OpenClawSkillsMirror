@@ -1,0 +1,59 @@
+{
+  "changelog": "alibabacloud-ak-leak-incident-response v0.0.1 \u2014 Initial release\n\n- Provides a secure, read-only workflow to investigate Alibaba Cloud AccessKey (AK) leak incidents.\n- Runs a single, orchestrated script to produce a mandatory six-section investigation report with risk assessment and remediation guidance.\n- Enforces strict read-only operation: never executes or generates mutating API calls; provides only manual remediation instructions.\n- Requires explicit scoping and user confirmation before execution, with masked credentials and complete provenance declaration.\n- Output follows a fixed format with a required banner, including a four-step remediation workflow and clear account/region details.",
+  "created_at": 1787542858847,
+  "display_name": "alibabacloud-ak-leak-incident-response",
+  "fetched_at": 1787769690210,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/high_risk_api_list.md",
+    "references/internal_implementation.md",
+    "references/investigation_flow.md",
+    "references/module1_notification_check.md",
+    "references/module2_ak_lifecycle_lookup.md",
+    "references/module3_actiontrail_audit.md",
+    "references/module4_timeline_report.md",
+    "references/module5_remediation_best_practices.md",
+    "references/ram-policies.md",
+    "scripts/_cli.py",
+    "scripts/_constants.py",
+    "scripts/ak_leak_investigation.py",
+    "scripts/query_account_info.py",
+    "scripts/query_actiontrail_audit.py",
+    "scripts/query_notification.py",
+    "scripts/requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787543362426,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-ak-leak-incident-response",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-ak-leak-incident-response",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-ak-leak-incident-response&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-ak-leak-incident-response"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 72,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Investigate an Alibaba Cloud AccessKey (AK) leakage incident and produce a read-only investigation report. Use when the user reports a leaked / exposed / stolen / compromised Alibaba Cloud AccessKey (AK / AK-SK / access key / secret key / RAM credential); receives an AK-leak alert, risk notification, SMS, or email; finds an AK/secret exposed on GitHub, Gitee, a public repo, logs, or config files; needs AK-leak incident response, post-theft investigation, or risk assessment; or wants to trace a leaked AK's malicious operations, attack chain, created sub-users (RAM users), or new AccessKeys.",
+  "updated_at": 1787542968590,
+  "version": "0.0.1"
+}
