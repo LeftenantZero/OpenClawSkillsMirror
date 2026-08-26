@@ -1,0 +1,33 @@
+{
+  "changelog": "CLI-first rewrite: the maton CLI with OAuth login is the documented path, every example is a maton command, SDK examples added, and the raw HTTP fallback feeds the key on stdin instead of reading it from the environment",
+  "created_at": 1778797529914,
+  "display_name": "Zoom Admin",
+  "fetched_at": 1787768610848,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "byungkyu",
+    "handle": "byungkyu",
+    "user_id": "s174c3s2kc1ehqj1ytzntezj2983e2aj"
+  },
+  "slug": "zoom-admin-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/zoom-admin-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=zoom-admin-api&ownerHandle=byungkyu",
+    "page_url": "https://clawhub.ai/byungkyu/skills/zoom-admin-api"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 880,
+    "installs": 16,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Zoom Admin API integration with managed OAuth. Manage users, meetings, webinars, recordings, and account settings with admin-level access. Use this skill when users want to list users, create or manage meetings, view recordings, check user/account settings, or administer a Zoom workspace. For other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway). Security: The MATON_API_KEY authenticates with Maton.ai but grants NO access to Zoom by itself. Zoom access requires explicit OAuth authorization by the user through Maton's connect flow. Access is strictly scoped to the Zoom account the user has authorized. All API requests are proxied through Maton's gateway, which handles OAuth token management. Only connect the intended Zoom account and revoke the connection when no longer needed. Requires network access and valid Maton API key. Calls run through the `maton` CLI with OAuth login; default to read and list calls, and confirm every write or new connection with the user.",
+  "updated_at": 1787730669754,
+  "version": "1.1.0"
+}
