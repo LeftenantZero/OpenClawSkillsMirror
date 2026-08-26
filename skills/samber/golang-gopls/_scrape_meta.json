@@ -1,0 +1,38 @@
+{
+  "changelog": "- Added detailed documentation on `gopls` integration, including usage via MCP server, native LSP tool, and CLI.\n- Clarified intended use cases: navigation, semantic code discovery, diagnostics, safe refactors, and formatting for Go workspaces.\n- Outlined best-practice workflows for reading and editing Go code with safety checks and vulnerability scanning.\n- Emphasized agent-oriented use and distinction between text-based search (grep) and semantic analysis (`gopls`).\n- Specified dependencies, compatibility, and clear guidance for setup and tool preference order.",
+  "created_at": 1787314429694,
+  "display_name": "golang-gopls",
+  "fetched_at": 1787770155438,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cli.md",
+    "references/features.md",
+    "references/matrix.md",
+    "references/mcp.md",
+    "references/settings.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Samuel Berthe",
+    "handle": "samber",
+    "user_id": "s173arkhs3131fq5jf769qq75583hdgt"
+  },
+  "slug": "golang-gopls",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/golang-gopls",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=golang-gopls&ownerHandle=samber",
+    "page_url": "https://clawhub.ai/samber/skills/golang-gopls"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 91,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Golang semantic code intelligence via `gopls`, the official Go language server \u2014 go-to-definition, find references, call/implementation hierarchy, workspace symbol search, package API discovery, diagnostics, safe rename, refactors (extract/inline/fill/rewrite code actions), formatting, and generated tests. Reaches an agent via gopls's own MCP server (`go_*` tools), Claude Code's native `LSP` tool, or the `gopls` CLI. Use when navigating or refactoring Go code \u2014 jumping to a definition, finding call sites before a rename, understanding a file's or package's dependencies, running diagnostics after an edit, or extracting/inlining/renaming. Not for the published ecosystem \u2014 packages not in your `go.mod`, versions, licenses, importers \u2014 \u2192 See `samber/cc-skills-golang@golang-pkg-go-dev` skill (`godig`). Not for a whole-tree vulnerability audit \u2192 See `samber/cc-skills-golang@golang-security` skill (`govulncheck`).",
+  "updated_at": 1787314507675,
+  "version": "1.1.0"
+}
