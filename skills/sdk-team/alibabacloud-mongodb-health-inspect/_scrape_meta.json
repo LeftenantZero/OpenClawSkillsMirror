@@ -1,0 +1,51 @@
+{
+  "changelog": "alibabacloud-mongodb-health-inspect 0.0.1-beta.1\n\n- Initial release supporting read-only health inspections for Alibaba Cloud MongoDB (DDS) instances.\n- Standardized HTML report generation for Sharding and ReplicaSet architectures across single-instance, multi-instance, and account/region-level scopes.\n- Single-command operation covers instance discovery, data collection (DDS, DAS, CMS), and report creation.\n- Detailed usage decision tree, command assembly guidance, enforcement of strict forbidden actions, and security/permission requirements.\n- Pre-checks for Aliyun CLI version and credential configuration.",
+  "created_at": 1782368960976,
+  "display_name": "Alibabacloud Mongodb Health Inspect",
+  "fetched_at": 1787779097135,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cli-installation-guide.md",
+    "references/manual-workflow.md",
+    "references/ram-policies.md",
+    "references/report-format.md",
+    "scripts/check-write-operation.sh",
+    "scripts/find-instance-region.py",
+    "scripts/health-inspect.py",
+    "scripts/run-inspect.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782369657662,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-mongodb-health-inspect",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-mongodb-health-inspect",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-mongodb-health-inspect&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-mongodb-health-inspect"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 244,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Run a read-only health inspection on Alibaba Cloud MongoDB (DDS) instances and produce a standardized report. Supports Sharding and ReplicaSet architectures...",
+  "updated_at": 1782368960976,
+  "version": "0.0.1-beta.1"
+}
