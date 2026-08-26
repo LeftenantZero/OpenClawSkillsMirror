@@ -1,0 +1,33 @@
+{
+  "changelog": "tt-live 1.0.0 \u2014 Initial Release\n\n- Monitor TikTok LIVE status for any user via their @handle.\n- Resolve and retrieve the current m3u8 stream URL (360p only).\n- Spawn a polling background daemon to watch for live/offline/rename events over a time window.\n- All state is managed in an auto-created workspace; events and logs are structured for easy sub-agent consumption.\n- Standalone read-only tools included for ad-hoc status checks without workspace writes.\n- Strictly data provider only \u2014 all announcements/notifications handled by sub-agents.",
+  "created_at": 1786054255906,
+  "display_name": "tt_live",
+  "fetched_at": 1787773229697,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Karim Kiki",
+    "handle": "kikikari",
+    "user_id": "s1758dpxe8hkp0hvht0fbd948h84mh2s"
+  },
+  "slug": "tt-live",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tt-live",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tt-live&ownerHandle=kikikari",
+    "page_url": "https://clawhub.ai/kikikari/skills/tt-live"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 164,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "TikTok LIVE monitor. Check whether a TikTok user is live right now, resolve their current m3u8 stream URL, or spawn a background daemon that polls them over a timer window and emits go_live / go_offline / rename_detected events for the sub-agent to announce.",
+  "updated_at": 1786057719018,
+  "version": "1.0.0"
+}
