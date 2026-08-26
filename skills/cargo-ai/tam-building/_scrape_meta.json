@@ -1,0 +1,40 @@
+{
+  "changelog": "Version 0.2.0 of tam-building adds robust support for splitting oversized Sales Navigator searches into manageable sub-searches and integrating results into a shared, deduped accounts model.\n\n- Decomposes large Sales Navigator company searches exceeding the 1,000 record extraction cap.\n- Sub-searches are split primarily by industry, then geography and headcount, until each is under the limit.\n- Results resolve to real domains and merge into a shared accounts model, deduped.\n- New guidance provided for integrating with existing Cargo CDK projects.\n- Details clear project adaptation, validation, and deployment steps.\n- Requires no LinkedIn login or cookie; operates cookieless with @cargo-ai/cli.",
+  "created_at": 1787097043863,
+  "display_name": "tam-building",
+  "fetched_at": 1787771380799,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "connectors/cargo.ts",
+    "connectors/sales-navigator.ts",
+    "folders/gtm.ts",
+    "models/accounts.ts",
+    "models/salesnav-companies.ts",
+    "plays/promote-to-accounts.ts",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Cargo",
+    "handle": "cargo-ai",
+    "user_id": "s178dcd9wkfn0a2fqrygmt3jzn87j9e1"
+  },
+  "slug": "tam-building",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tam-building",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tam-building&ownerHandle=cargo-ai",
+    "page_url": "https://clawhub.ai/cargo-ai/skills/tam-building"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 95,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Stand up your account universe as a deployed pipeline: a Sales Navigator company search split past the 1,000 extraction cap, resolved to real domains, deduped into a shared accounts model. Triggers: \"our TAM is a stale CSV\", \"build our account universe\", \"the search has more companies than it will export\", \"keep our market list current\", \"size our market then load it\". Cargo CDK, salesNavigator, searchCompanyMetrics, fetchAccountSearch, accounts model. Skip when: you want the list once rather than a pipeline that keeps producing it, which is cargo-gtm's build-tam recipe.",
+  "updated_at": 1787097130643,
+  "version": "0.2.0"
+}
