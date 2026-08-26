@@ -1,0 +1,45 @@
+{
+  "changelog": "- Initial release: fetch Instagram posts by hashtag with captions, engagement counts, media URLs, and user info.\n- Requires user to be logged into Instagram in a browser.\n- Handles login verification and error states, informing the user if authentication or access issues occur.\n- Executes data extraction via browser scripting, respecting user-visible session data and access permissions.\n- Limits: Only displays \"top posts\" per hashtag; subject to Instagram's rate limiting and anti-scraping measures.\n- Supports pagination for additional posts and provides batch execution efficiency guidelines.",
+  "created_at": 1781755259459,
+  "display_name": "Instagram Hashtag Posts",
+  "fetched_at": 1787780308716,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/fetch-hashtag-posts.py",
+    "scripts/parse-hashtag-response.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781756126832,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "instagram-hashtag-posts",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/instagram-hashtag-posts",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=instagram-hashtag-posts&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/instagram-hashtag-posts"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 269,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Scrapes Instagram posts by hashtag, returning media items with captions, like/comment counts, media URLs and user info from the hashtag explore feed. Use whe...",
+  "updated_at": 1781755259459,
+  "version": "1.0.0"
+}
