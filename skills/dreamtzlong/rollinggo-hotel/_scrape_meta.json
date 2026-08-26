@@ -1,0 +1,48 @@
+{
+  "changelog": "**Major change: RollingGo hotel booking skill overhauled for usability and compliance.**\n\n- Renamed and repositioned the skill as \"rollinggo-hotel-booking\" with a new repository and versioning system.\n- Fully replaced the CLI and install approach: now uses the standalone `rgg` tool, with multi-platform install methods (npm, Python script, and direct download).\n- Output policy is now strictly non-technical, user-focused: never expose CLI commands, JSON, or technical parameters.\n- Added comprehensive, scenario-based usage and trigger guidelines: covers searching, filtering, comparison, booking, and order checking.\n- Introduced strict security and booking workflow policies: two-step confirmation, guest info completeness, temporary price lock handling.\n- All CLI usage now requires dynamic parameter discovery via wrapper scripts and `--help`, ensuring command and parameter freshness.\n- Cleaned up obsolete files and references, added new helper scripts and documentation.",
+  "created_at": 1773309464600,
+  "display_name": "rollinggo-hotel",
+  "fetched_at": 1787773369223,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cli-params.md",
+    "scripts/.gitkeep",
+    "scripts/install.py",
+    "scripts/rgg.js",
+    "scripts/rgg.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785898196363,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "dreamtzlong",
+    "handle": "dreamtzlong",
+    "user_id": "s1778zncyn3j956nag4kfqw3cs83grbr"
+  },
+  "slug": "rollinggo-hotel",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/rollinggo-hotel",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=rollinggo-hotel&ownerHandle=dreamtzlong",
+    "page_url": "https://clawhub.ai/dreamtzlong/skills/rollinggo-hotel"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 995,
+    "installs": 24,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "RollingGo Hotel Search & Booking Assistant. Implements the full hotel booking workflow by calling RollingGo hotel APIs. Supported scenarios: \u2460 Search hotels by city, attraction, metro, airport, etc. \u2461 Filter by star rating, budget, tags (pool, breakfast, family, pet-friendly) \u2462 Query real-time room",
+  "updated_at": 1785897420971,
+  "version": "1.0.4"
+}
