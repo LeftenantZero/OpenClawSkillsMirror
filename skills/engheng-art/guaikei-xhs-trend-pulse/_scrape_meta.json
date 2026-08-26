@@ -1,0 +1,55 @@
+{
+  "changelog": "Initial release of guaikei-xhs-trend-pulse\n\n- Enables searching Xiaohongshu public notes by keyword, viewing note details, fetching comments, and listing creator\u2019s public posts.\n- Supports query via keywords or direct Xiaohongshu links (including xhslink).\n- Validates and guides required inputs (e.g., keyword, URL); refuses login, private, or publishing tasks.\n- Modular commands for search, detail view, comment fetch, and creator\u2019s post list.\n- Provides clear usage instructions, error handling, and output interpretation for structured data delivery.",
+  "created_at": 1786591122069,
+  "display_name": "guaikei\u00b7\u5c0f\u7ea2\u4e66\u8d8b\u52bf\u8109\u640f",
+  "fetched_at": 1787772447439,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "readme.md",
+    "references/changelog.md",
+    "references/options.md",
+    "skill-card.md",
+    "src/api/comment.js",
+    "src/api/detail.js",
+    "src/api/post.js",
+    "src/api/search.js",
+    "src/config/constants.js",
+    "src/utils/args.js",
+    "src/utils/key.js",
+    "src/utils/log.js",
+    "src/utils/name.js",
+    "src/utils/request.js",
+    "src/utils/retry.js",
+    "src/utils/utils.js",
+    "src/validate/keyword.js",
+    "src/validate/url.js",
+    "src/xiaohongshu/comment-cli.js",
+    "src/xiaohongshu/detail-cli.js",
+    "src/xiaohongshu/post-cli.js",
+    "src/xiaohongshu/search-cli.js"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "engheng-art",
+    "handle": "engheng-art",
+    "user_id": "s17av7fakvdwpsbhaddxp8e7mh89wsrx"
+  },
+  "slug": "guaikei-xhs-trend-pulse",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/guaikei-xhs-trend-pulse",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=guaikei-xhs-trend-pulse&ownerHandle=engheng-art",
+    "page_url": "https://clawhub.ai/engheng-art/skills/guaikei-xhs-trend-pulse"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 133,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Search Xiaohongshu (RedNote/xhs) public notes, view note details, fetch comments, list a creator's public posts. \u5f53\u7528\u6237\u9700\u8981\u641c\u5c0f\u7ea2\u4e66\u7b14\u8bb0\u3001\u770b\u8be6\u60c5\u3001\u67e5\u8bc4\u8bba\u3001\u67e5\u535a\u4e3b\u4f5c\u54c1\u65f6\u4f7f\u7528\u672c\u6280\u80fd\uff1b\u5373\u4f7f\u7528\u6237\u53ea\u8bf4 rednote/xhs \u6216\u7ed9\u51fa\u94fe\u63a5\u4e5f\u60f3\u4e86\u89e3\u5185\u5bb9\u4e5f\u9002\u7528\u3002Use when the task needs Xiaohongshu public data. \u4e0d\u7528\u4e8e\u767b\u5f55/\u53d1\u5e03/\u79c1\u5bc6\u5185\u5bb9\u3002",
+  "updated_at": 1786591234256,
+  "version": "1.0.0"
+}
