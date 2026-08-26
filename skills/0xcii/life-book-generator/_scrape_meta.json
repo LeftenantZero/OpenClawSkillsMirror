@@ -1,0 +1,47 @@
+{
+  "changelog": "**Major update: Adds official Agent API workflow, expands payment handling, and clarifies communication rules.**\n\n- Introduces API-driven workflow for ordering and tracking Life Book full-report generation, including paid options.\n- Provides detailed steps for intake validation, task creation, payment state, and status/result polling.\n- Sets explicit communication boundaries for payment and result readiness based on API responses.\n- Supports two product editions: \u6807\u51c6\u7248 (lite) and \u5178\u85cf\u7248 (pro), with clear pricing.\n- Clarifies environment variables and requirements for both public and controlled/internal integrations.\n- Recommends fallback to website checkout only if Agent API is unavailable.",
+  "created_at": 1783454887640,
+  "display_name": "\u4eba\u751f\u8bf4\u660e\u4e66",
+  "fetched_at": 1787777732477,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "examples/intake.example.json",
+    "package.json",
+    "scripts/_shared.mjs",
+    "scripts/check-health.mjs",
+    "scripts/confirm-manual-payment.mjs",
+    "scripts/create-intake.mjs",
+    "scripts/create-order.mjs",
+    "scripts/create-report-task.mjs",
+    "scripts/get-order.mjs",
+    "scripts/get-report-result.mjs",
+    "scripts/get-report-task.mjs",
+    "scripts/wait-report-result.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "0xcii",
+    "handle": "0xcii",
+    "user_id": "s17284t4hbschfbw4pkfwqmz8d83n8cy"
+  },
+  "slug": "life-book-generator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/life-book-generator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=life-book-generator&ownerHandle=0xcii",
+    "page_url": "https://clawhub.ai/0xcii/skills/life-book-generator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 278,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u628a\u4e00\u4e2a\u4eba\uff0c\u8ba4\u771f\u5730,\u5199\u6210\u4e00\u672c\u4e66\u3002 \u628a\u4eba\u751f\u91cc\u53cd\u590d\u53d1\u751f\u7684\u6a21\u5f0f\uff0c\u6574\u7406\u6210\u4e00\u5957\u53ef\u6267\u884c\u7684\u8bf4\u660e\u4e66\u3002\u5b83\u4e0d\u66ff\u4f60\u9884\u6d4b\u547d\u8fd0\uff0c\u800c\u662f\u5e2e\u52a9\u4f60\u770b\u6e05\u4f18\u52bf\u3001\u4ee3\u4ef7\u3001\u73af\u5883\u4e0e\u5f53\u4e0b\u9009\u62e9\u3002 \u611f\u60c5\u6709\u6ca1\u6709\u7ed3\u679c\u3001\u5de5\u4f5c\u8981\u4e0d\u8981\u6362\u3001\u94b1\u4f1a\u4e0d\u4f1a\u51fa\u95ee\u9898\u3001\u4eca\u5e74\u9002\u4e0d\u9002\u5408\u52a8\u3002Life Book \u5148\u56de\u7b54\u8fd9\u4e9b\u771f\u6b63\u56f0\u4f4f\u4f60\u7684\u95ee\u9898\uff0c\u518d\u544a\u8bc9\u4f60\u80cc\u540e\u7684\u7ed3\u6784\u4e3a\u4ec0\u4e48\u8fd9\u6837\u5224\u65ad\u3002 Life Book \u4e0d\u627f\u8bfa\u66ff\u4ee3\u533b\u7597\u3001\u6cd5\u5f8b\u3001\u6295\u8d44\u7b49\u4e13\u4e1a\u5efa\u8bae\uff0c\u4e5f\u4e0d\u4f1a\u628a\u672a\u6765\u8bf4\u6210\u5bbf\u547d\u94c1\u5f8b\u3002\u5b83\u771f\u6b63\u505a\u7684\u662f\uff1a\u5e2e\u4f60\u770b\u6e05\u4f18\u52bf\u3001\u4ee3\u4ef7\u3001\u73af\u5883\u4e0e\u5f53\u4e0b\u9009\u62e9\uff0c\u8ba9\u4f60\u77e5\u9053\u8be5\u5728\u54ea\u4e9b\u5730\u65b9\u53d1\u529b\u3001\u5728\u54ea\u4e9b\u5730\u65b9\u8bbe\u9650\u3001\u4ec0\u4e48\u4fe1\u53f7\u51fa\u73b0\u65f6\u8be5\u8c03\u6574\u5224\u65ad\u3002 \u6362\u53e5\u8bdd\u8bf4\uff0c\u4eba\u751f\u8bf4\u660e\u4e66\u7684\u4ef7\u503c\u4e0d\u5728\u201c\u795e\u79d8\u201d\uff0c\u800c\u5728\u201c\u53ef\u590d\u76d8\u201d\u3002\u5b83\u8ba9\u4e00\u4e2a\u4eba\u7b2c\u4e00\u6b21\u8f83\u4e3a\u5b8c\u6574\u5730\u770b\u89c1\u81ea\u5df1.",
+  "updated_at": 1783454887640,
+  "version": "1.0.0"
+}
