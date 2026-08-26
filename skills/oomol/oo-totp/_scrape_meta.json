@@ -1,0 +1,33 @@
+{
+  "changelog": "- Adds an OOMOL-backed `oo-totp` skill for working with TOTP Authenticator through the `totp` connector.\n- Supports generating the current six-digit TOTP code for a configured website account via `generate_code`.\n- Requires live schema inspection with `oo connector schema` before constructing action payloads.\n- Runs connector actions through the `oo` CLI with server-side credential injection, avoiding direct handling of raw tokens.\n- Documents auth, connection, billing, and setup recovery steps for common first-run failures.\n\nSource: `oomol-lab/skills@00cf041`",
+  "created_at": 1787656703006,
+  "display_name": "TOTP Authenticator",
+  "fetched_at": 1787768908906,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-totp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-totp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-totp&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-totp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 41,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "TOTP Authenticator (rfc-editor.org). Use this skill for ANY TOTP Authenticator request \u2014 searching and reading data. Whenever a task involves TOTP Authenticator, use this skill instead of calling the API directly.",
+  "updated_at": 1787656764679,
+  "version": "1.0.0"
+}
