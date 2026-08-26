@@ -1,0 +1,54 @@
+{
+  "changelog": "keyapi-youtube 1.0.0\n\n- Initial release of the skill for analyzing YouTube videos and channels using the KeyAPI REST API and live official docs.\n- Supports a wide range of YouTube data operations: video info, comments (with threads), streams, related videos, Shorts search, video/channel search, trending, channel metadata, channel videos, and ID/URL/handle resolution.\n- Strict API workflow enforced: always consult live KeyAPI docs for method/path/parameters, do not use scraped or inferred API routes.\n- Includes robust onboarding and authentication check with guidance for missing credentials and setup scripts.\n- Integrates with helper scripts for API calls, docs resolution, and local credential management.\n- Scenario-based question routing for both technical and non-technical users; workflow prioritizes minimal user input and strongest filtering.",
+  "created_at": 1783581320147,
+  "display_name": "Keyapi Youtube",
+  "fetched_at": 1787777423812,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/global-rules.md",
+    "references/routing-policy.md",
+    "references/scenarios.md",
+    "references/setup-and-auth.md",
+    "references/youtube-channel-rules.md",
+    "references/youtube-rules.md",
+    "references/youtube-search-trends-rules.md",
+    "references/youtube-video-rules.md",
+    "scripts/configure-keyapi-auth.mjs",
+    "scripts/keyapi-api.mjs",
+    "scripts/search-keyapi-docs.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783581709859,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xyz",
+    "handle": "xyzzero",
+    "user_id": "s171syq0yzqa444gtv8q9v8rhd8a7ma1"
+  },
+  "slug": "keyapi-youtube",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/keyapi-youtube",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=keyapi-youtube&ownerHandle=xyzzero",
+    "page_url": "https://clawhub.ai/xyzzero/skills/keyapi-youtube"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 536,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Analyze YouTube videos and channels through the KeyAPI REST API using live official docs. Use for video information, comments, sub-comments, streams, related videos, Shorts search, video search, trending videos, channel description, channel videos, channel ID/URL conversion, channel search, filtered",
+  "updated_at": 1783581320147,
+  "version": "1.0.0"
+}
