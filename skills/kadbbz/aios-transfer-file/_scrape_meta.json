@@ -1,0 +1,38 @@
+{
+  "changelog": "**Enforces per-senderId file isolation and workspace directory structure.**\n\n- All file operations are now strictly isolated by the current channel's senderId; topic_id can no longer be used as a substitute.\n- Local workspace subdirectories standardized to `<senderId>/upload`, `<senderId>/download`, and `<senderId>/generated`.\n- All script invocations (download and upload) must require explicit `--sender-id <senderId>`; transfer will not proceed if senderId is missing or ambiguous.\n- File input/output handling, local file placement, and directory creation updated to follow new senderId-based structure.\n- Strengthened documentation on forbidden usage, directory access, and failure cases.\n- Removed legacy references and renamed usage of `file_input`/`file_output` directories.",
+  "created_at": 1778830556945,
+  "display_name": "AIOS File Transfer",
+  "fetched_at": 1787777970396,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "package-lock.json",
+    "package.json",
+    "scripts/transfer_s3.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u5b81\u4f1f",
+    "handle": "kadbbz",
+    "user_id": "s17c9yyt2sff7jk8nmf7ptf3r183g8kf"
+  },
+  "slug": "aios-transfer-file",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aios-transfer-file",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aios-transfer-file&ownerHandle=kadbbz",
+    "page_url": "https://clawhub.ai/kadbbz/skills/aios-transfer-file"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 966,
+    "installs": 17,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "\u901a\u8fc7\u517c\u5bb9 AWS S3 \u7684 SDK \u4e3a OpenClaw \u548c AIOS agent \u5904\u7406\u6587\u4ef6\u4f20\u8f93\u3002\u5f53 agent \u6536\u5230 `file_input://...` URI\u3001\u9700\u8981\u6309\u5f53\u524d `senderId` \u628a\u8f93\u5165\u6587\u4ef6\u4e0b\u8f7d\u5230\u5de5\u4f5c\u533a\uff0c\u6216\u9700\u8981\u628a\u5f53\u524d `senderId` \u76ee\u5f55\u5185\u7684\u672c\u5730\u6587\u4ef6\u4e0a\u4f20\u540e\u4ee5 `file_output:/...",
+  "updated_at": 1783327383647,
+  "version": "1.0.1"
+}
