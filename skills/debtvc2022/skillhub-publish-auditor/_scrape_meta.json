@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of skillhub-publish-auditor.\n\n- Audits agent skill folders for public release readiness across structure, discovery, safety, and packaging gates.\n- Identifies issues as blocker, warn, or info, with specific file-level recommendations.\n- Checks every file for credential leaks, unsafe scripts, metadata completeness, and packaging errors.\n- Requires a final release decision: READY, READY_WITH_WARNINGS, or BLOCKED.\n- Supports both markdown and machine-readable (JSON) output for manual and CI workflows.",
+  "created_at": 1781773280951,
+  "display_name": "SkillHub Publish Auditor",
+  "fetched_at": 1787780255124,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/release-checklist.md",
+    "scripts/audit_skill_release.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "CUPVC",
+    "handle": "debtvc2022",
+    "user_id": "s173kk8h4ppcrv8qar191agdfs8502wk"
+  },
+  "slug": "skillhub-publish-auditor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skillhub-publish-auditor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skillhub-publish-auditor&ownerHandle=debtvc2022",
+    "page_url": "https://clawhub.ai/debtvc2022/skills/skillhub-publish-auditor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 345,
+    "installs": 5,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when preparing a Skill folder for public release to SkillHub, ClawHub, or another agent-skill marketplace, especially before publishing third-party insta...",
+  "updated_at": 1781773280951,
+  "version": "1.0.0"
+}
