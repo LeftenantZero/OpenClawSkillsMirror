@@ -1,0 +1,58 @@
+{
+  "changelog": "alibabacloud-dns-resolve-diagnose-customer v0.0.1\n\n- Initial public release of a read-only Alibaba Cloud DNS diagnostic tool for end users.\n- Supports troubleshooting DNS issues (e.g. resolution failure, unreachable domains, NXDOMAIN) on Alibaba Cloud DNS, GTM, PrivateZone, and third-party DNS.\n- Performs WHOIS lookup, recursive tracing, Alibaba Cloud OpenAPI config checks, and nationwide probing via boce to generate reports.\n- Strict read-only guarantee: all create, update, delete, or modify operations are refused, with standard refusal responses and cannot be bypassed.\n- Clear instructions on environment setup, parameter confirmation, authentication, and required RAM permissions.",
+  "created_at": 1785323815532,
+  "display_name": "alibabacloud-dns-resolve-diagnose-customer",
+  "fetched_at": 1787774278364,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/api-reference.md",
+    "references/cli-installation-guide.md",
+    "references/examples.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "scripts/dns_analyze.py",
+    "scripts/dns_boce.py",
+    "scripts/dns_common.py",
+    "scripts/dns_dig.py",
+    "scripts/dns_openapi.py",
+    "scripts/dns_quick_check.py",
+    "scripts/dns_whois.py",
+    "scripts/requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785330461367,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-dns-resolve-diagnose-customer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-dns-resolve-diagnose-customer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-dns-resolve-diagnose-customer&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-dns-resolve-diagnose-customer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 229,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Alicloud DNS Diagnostic Skill (Read-Only). Diagnostic tool for domain unreachable, DNS resolution failure, DNS record not taking effect, NXDOMAIN, unknownhost, and other DNS-layer issues. Automatically performs WHOIS lookup, recursive tracing, OpenAPI config verification, and nationwide probing via boce to generate diagnostic reports. Covers Alibaba Cloud DNS, GTM, PrivateZone, and third-party DNS. This skill is read-only and will NOT execute any Create, Update, Delete, or other write operations. Triggers: \"DNS resolution failed\", \"domain unreachable\", \"DNS not working\", \"NXDOMAIN\", \"domain ping failed\", \"DNS diagnose\", \"quick check\", \"\u5feb\u901f\u68c0\u67e5\", \"DNS record check\", \"\u8bb0\u5f55\u89e3\u6790\", \"DNS resolution status\", \"\u89e3\u6790\u72b6\u6001\", \"check A/CNAME/MX/TXT record\"",
+  "updated_at": 1785329453274,
+  "version": "0.0.1"
+}
