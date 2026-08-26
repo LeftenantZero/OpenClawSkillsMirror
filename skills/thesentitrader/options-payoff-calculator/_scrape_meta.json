@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release: interactive profit-and-loss-at-expiry diagrams for nine strategies, pre-loaded with live per-ticker data (last price, 30/60/90d implied volatility, 25-delta skew, IV rank, next earnings date). Premiums modeled with Black-Scholes from end-of-day IV; artifact renders offline.",
+  "created_at": 1787726915146,
+  "display_name": "Options Payoff Calculator - SentiSense",
+  "fetched_at": 1787768684009,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/prepare_data.mjs",
+    "scripts/template.html",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Senti",
+    "handle": "thesentitrader",
+    "user_id": "s171aan38r2dn7ew5hddyscf1983x1h9"
+  },
+  "slug": "options-payoff-calculator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/options-payoff-calculator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=options-payoff-calculator&ownerHandle=thesentitrader",
+    "page_url": "https://clawhub.ai/thesentitrader/skills/options-payoff-calculator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 26,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Options payoff calculator for stocks and ETFs, pre-loaded with live data for the ticker instead of hand typed inputs: an interactive profit and loss chart at expiry for long calls, long puts, covered calls, cash secured puts, bull call spreads, bear put spreads, straddles, strangles and iron condors, with breakevens, max profit, max loss and the expected move band drawn in behind the curve. The real last price, implied volatility at 30, 60 and 90 days, the 25 delta skew, the IV rank and the next earnings date are bound in at build time. Premiums are modeled with Black-Scholes from end of day implied volatility, not quoted from a live options chain. Renders offline, no live call at view time. Use for options payoff calculator, options payoff diagram, options profit calculator, options P/L chart, covered call calculator, vertical spread calculator, straddle payoff, iron condor calculator, options breakeven calculator. Read-only. No trading, no purchases, no write operations, no wallet access.",
+  "updated_at": 1787726970784,
+  "version": "1.0.0"
+}
