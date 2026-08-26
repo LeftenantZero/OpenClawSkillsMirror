@@ -1,0 +1,52 @@
+{
+  "changelog": "- Initial release of the skill for MCP-based file system operations via stdio.\n- Supports listing directories, reading/writing files, creating directories, deleting, and moving files using natural language commands.\n- Skill performs parameter validation and JSON packaging; all actual file IO is executed by go-fs-mcp-server.\n- Provides command line usage and configuration examples for both WSL and Windows environments.\n- Installation instructions for required binaries and setup guidance included.",
+  "created_at": 1781079260240,
+  "display_name": "system-file-handler",
+  "fetched_at": 1787781298956,
+  "files": [
+    "INSTALL.md",
+    "PUBLISH.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/openclaw.example.json",
+    "scripts/build.ps1",
+    "scripts/build.sh",
+    "skill-card.md",
+    "skill.json",
+    "skill.windows.json",
+    "skill.wsl.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781079586003,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "laiguangwei",
+    "handle": "lgwventrue",
+    "user_id": "s172rva3mjf017y1tjaj9gc7p585bfst"
+  },
+  "slug": "system-file-handler",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/system-file-handler",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=system-file-handler&ownerHandle=lgwventrue",
+    "page_url": "https://clawhub.ai/lgwventrue/skills/system-file-handler"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 396,
+    "installs": 5,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u901a\u8fc7 MCP stdio \u63d0\u4f9b\u6587\u4ef6\u7cfb\u7edf\u64cd\u4f5c\uff08\u5217\u51fa\u76ee\u5f55\u3001\u8bfb\u5199\u6587\u4ef6\u3001\u521b\u5efa\u76ee\u5f55\u3001\u5220\u9664\u4e0e\u79fb\u52a8\uff09\uff0c\u7531\u72ec\u7acb go-fs-mcp-server \u6267\u884c\u5b9e\u9645 IO\u3002",
+  "updated_at": 1781079260240,
+  "version": "1.0.0"
+}
