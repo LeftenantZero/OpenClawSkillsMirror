@@ -1,0 +1,46 @@
+{
+  "changelog": "**ExpertLens 2.0.0 \u2014 Changelog**\n\nv1.0.2 \u2192 v2.0.0 \u2014 full rebuild. Same reasoning framework, denser format, fewer files.\n\n- Rewritten in dense, instructional form throughout \u2014 every rule stated as trigger \u2192 correct behavior, no explanatory prose. Same underlying reasoning architecture, not a stripped-down one.\n- Companion file is now `expert-persona-lite.md` (replaces `expert-persona.md`) \u2014 43K characters, down from ~70K, with every protocol, principle, and hard-case rule re-verified against the original line by line. Nothing dropped, only restated tighter.\n- Swarm relay templates, model routing, and per-platform storage rules \u2014 previously in separate `references/swarm-protocol.md` and `references/platform-guide.md` \u2014 are now fully folded into `SKILL.md`. No `references/` folder, nothing external to lose track of.\n- `SKILL.md` holds at ~29.5K characters despite absorbing both reference files \u2014 same footprint, meaningfully more inside it.\n- Added `SKILL_CARD.md` \u2014 a compact trust/risk record (NVIDIA skill-card pattern) covering what this skill does and known risks, for anyone auditing before install.\n- Every cross-reference between files re-verified end to end \u2014 zero dangling pointers to old filenames or removed docs.\n- Full, uncompressed original preserved separately: github.com/Ashutosh2M/ExpertLens",
+  "created_at": 1776679132398,
+  "display_name": "ExpertLens",
+  "fetched_at": 1787774459816,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "SKILL_CARD.md",
+    "_meta.json",
+    "expert-persona-lite.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785419845193,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Ashutosh",
+    "handle": "ashutosh2m",
+    "user_id": "s1794f435tg2sbgbzd7d8y9ays83gp56"
+  },
+  "slug": "expertlens",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/expertlens",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=expertlens&ownerHandle=ashutosh2m",
+    "page_url": "https://clawhub.ai/ashutosh2m/skills/expertlens"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 919,
+    "installs": 18,
+    "stars": 5,
+    "versions": 3
+  },
+  "summary": "ExpertLens-Lite turns any AI into a genuine expert thinking partner. It diagnoses the real problem, adapts reasoning to the domain, self-audits before answering, gives real recommendations instead of hedged lists, and can consult other AI models for tougher calls. Platform-agnostic \u2014 any LLM.",
+  "updated_at": 1785255590332,
+  "version": "2.0.0"
+}
