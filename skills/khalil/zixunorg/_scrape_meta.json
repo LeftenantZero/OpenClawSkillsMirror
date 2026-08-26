@@ -1,0 +1,34 @@
+{
+  "changelog": "- Initial release of the spec-product-prototype skill for SDLC Dev flow R3.\n- Automatically generates a requirements/prototype.md file from requirements/prd.md, including: structured task flows, page/dialog lists, pure ASCII wireframes, AC mappings, and walkthrough scripts.\n- Enforces strict input/output requirements: must have valid FEATURE_DIR and prd.md, no generation if required context or PRD is missing.\n- Strong compliance rules: prohibits guessing, open questions lists, or non-ASCII wireframes; only routes when explicitly allowed.\n- Outputs standardized ROUTER_SUMMARY upon completion and automatically triggers using-aisdlc for next step routing.\n- Designed for traceable, reviewable prototypes with enforced feedback loops and robust error handling.",
+  "created_at": 1779858038686,
+  "display_name": "PrototypeSkill",
+  "fetched_at": 1787784499630,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/prototype-template.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Khalil",
+    "handle": "khalil",
+    "user_id": "s1705669jp7avcnn70tfgg1jc987hc3z"
+  },
+  "slug": "zixunorg",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/zixunorg",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=zixunorg&ownerHandle=khalil",
+    "page_url": "https://clawhub.ai/khalil/skills/zixunorg"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 507,
+    "installs": 9,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when \u9700\u8981\u5728 sdlc-dev \u7684\u4ea7\u54c1\u9700\u6c42 Spec \u6d41\u7a0b\u6267\u884c R3\uff08\u539f\u578b\u751f\u6210\uff09\uff0c\u57fa\u4e8e requirements/prd.md \u4ea7\u51fa requirements/prototype.md\uff08\u4efb\u52a1\u6d41+\u9875\u9762\u7ed3\u6784+ASCII\u7ebf\u6846+AC\u6620\u5c04+\u8d70\u67e5\u811a\u672c\uff09\uff0c\u5e76\u907f\u514d\u7f3a\u5c11\u4e0a\u4e0b\u6587/\u7f3a\u5c11 PRD \u4ecd\u7ee7\u7eed\u751f\u6210\u3001\u7528 Open Q...",
+  "updated_at": 1779858038686,
+  "version": "1.0.0"
+}
