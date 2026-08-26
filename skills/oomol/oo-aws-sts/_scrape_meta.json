@@ -1,0 +1,43 @@
+{
+  "changelog": "- Provides OOMOL-backed access to AWS STS through the `aws_sts` connector and `oo` CLI.\n- Uses server-side credential injection so users can request STS operations without handling raw AWS tokens.\n- Includes schema-first guidance for building valid action payloads before execution.\n- Supports `assume_role` for retrieving temporary credentials from a connected AWS access key pair.\n- Supports `get_federated_credentials` for temporary credentials from OOMOL OIDC federation.\n- Documents auth, connection, billing, and setup fallbacks for first-time or failed runs.\n\nSource: `oomol-lab/skills@146ef20`",
+  "created_at": 1780485239601,
+  "display_name": "AWS STS",
+  "fetched_at": 1787781840054,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781001801627,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-aws-sts",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-aws-sts",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-aws-sts&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-aws-sts"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 484,
+    "installs": 7,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "AWS STS (aws.amazon.com). Use this skill for ANY AWS STS request \u2014 searching and reading data. Whenever a task involves AWS STS, use this skill instead of ca...",
+  "updated_at": 1780998835680,
+  "version": "1.0.1"
+}
