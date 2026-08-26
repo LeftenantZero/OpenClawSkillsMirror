@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release of geoskill-spatial-join-analysis:\n\n- Provides spatial join analysis between two vector layers with support for various spatial relationships (intersects, within, contains, crosses, touches, overlaps, nearest).\n- Includes attribute aggregation statistics (count, sum, mean, max, min) on join results.\n- Accelerated by STRtree for fast spatial queries.\n- Supports both synthetic (offline) and real-data (local files only) modes, with outputs in GeoJSON/JSON and a manifest file.\n- Runs fully offline with strong privacy: no network requests and all computations are local.",
+  "created_at": 1785851453562,
+  "display_name": "geoskill-spatial-join-analysis",
+  "fetched_at": 1787773430649,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-spatial-join-analysis.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785852348874,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-spatial-join-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-spatial-join-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-spatial-join-analysis&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-spatial-join-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 198,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7a7a\u95f4\u5173\u7cfb\u5224\u65ad(intersects/within/nearest)+\u5c5e\u6027\u805a\u5408\u7edf\u8ba1",
+  "updated_at": 1785851620813,
+  "version": "1.0.0"
+}
