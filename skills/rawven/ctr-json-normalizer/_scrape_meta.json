@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of ctr-json-normalizer Skill.\n\n- Normalizes and validates JSON output for CTR product-card click diagnosis.\n- Ensures the report contains exactly the required fields: query, clicked item, unclicked items, five fixed dimensions, structured suggestions, and limitations.\n- Designed as the final step after diagnosis drafting, before responding.\n- Automatic error handling: script returns \"error\" if the output does not meet requirements.\n- Does not fetch images, infer causes, or generate new business suggestions.",
+  "created_at": 1786781353227,
+  "display_name": "ctr-json-normalizer",
+  "fetched_at": 1787771831417,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/normalize_ctr_report.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Rawven",
+    "handle": "rawven",
+    "user_id": "s178t2fxzjz0v8yxcg3emqtq498cgd4w"
+  },
+  "slug": "ctr-json-normalizer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ctr-json-normalizer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ctr-json-normalizer&ownerHandle=rawven",
+    "page_url": "https://clawhub.ai/rawven/skills/ctr-json-normalizer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 618,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Normalize the final JSON output of a single-session CTR product-card click diagnosis. Use after the diagnosis draft is complete and before replying, whenever the report must contain exactly the agreed query, clicked item, unclicked items, five fixed dimensions, structured suggestions, and limitations.",
+  "updated_at": 1786781402301,
+  "version": "0.1.0"
+}
