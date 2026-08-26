@@ -1,0 +1,62 @@
+{
+  "changelog": "Initial release: Alibaba Cloud LHM tool for Hive-to-Paimon data migration (full and incremental).\n\n- Supports both full (\"\u5b58\u91cf\") and incremental (\"\u589e\u91cf\") Hive-to-DLF Paimon migration including DDL conversion, HDFS-to-OSS sync, and data load with row-count verification.\n- Provides CLI tools for complete automation and standalone Hive DDL to Paimon DDL conversion.\n- Includes features for dry-run previews, parallel/concurrent execution, direct-read optimizations, and detailed migration reporting.\n- Emphasizes production safety: overwrites require explicit confirmation, credential security best practices are enforced, and dry-run/preview is strongly recommended before data changes.\n- Scenario-detection logic guides users to appropriate scripts and options based on input type and environment.",
+  "created_at": 1785980283833,
+  "display_name": "alibabacloud-migration-lhm-migrate-hive-to-paimon",
+  "fetched_at": 1787773310445,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agent-rules.md",
+    "references/configuration.md",
+    "references/overview.md",
+    "references/serde-mapping.md",
+    "references/troubleshooting.md",
+    "scripts/common.py",
+    "scripts/ddl_converter/__init__.py",
+    "scripts/ddl_converter/cli.py",
+    "scripts/ddl_converter/formatter.py",
+    "scripts/ddl_converter/parser.py",
+    "scripts/ddl_converter/transformer.py",
+    "scripts/incremental_migrate.py",
+    "scripts/main.py",
+    "scripts/step1_generate_paimon_ddl.py",
+    "scripts/step2_generate_ext_ddl.py",
+    "scripts/step3_execute_ddl.py",
+    "scripts/step4_rclone_sync.py",
+    "scripts/step5_insert_overwrite.py",
+    "scripts/utils_verification.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785981521299,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-migration-lhm-migrate-hive-to-paimon",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-migration-lhm-migrate-hive-to-paimon",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-migration-lhm-migrate-hive-to-paimon&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-migration-lhm-migrate-hive-to-paimon"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 170,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Hive \u5230\u963f\u91cc\u4e91 DLF Paimon \u6570\u636e\u8fc1\u79fb\u5de5\u5177\uff0c\u8986\u76d6\u5b58\u91cf\u8fc1\u79fb\u4e0e\u589e\u91cf\u8fc1\u79fb\u5168\u6d41\u7a0b\u3002\u5b58\u91cf\u8fc1\u79fb\uff1aHive DDL \u81ea\u52a8\u8f6c\u6362\u4e3a Paimon DDL \u4e0e format-table \u5916\u8868\u3001rclone \u540c\u6b65 HDFS \u5230 OSS\u3001Spark Thrift Server \u6267\u884c INSERT OVERWRITE\uff0c\u652f\u6301 orc/parquet/csv/json/text\uff1b\u63d0\u4f9b --auto-create-db\u3001--force\u3001--max-parallel \u5e76\u884c\u3001--verify \u884c\u6570\u6821\u9a8c\u3001--direct-read \u76f4\u8bfb\u6a21\u5f0f\uff08OSS-HDFS/DLS \u573a\u666f\u8df3\u8fc7 rclone\uff09\u3001\u8fc1\u79fb\u62a5\u544a\u81ea\u52a8\u751f\u6210\u3002\u589e\u91cf\u8fc1\u79fb\uff1a\u4e09\u9636\u6bb5\u6d41\u6c34\u7ebf\uff08DDL \u2192 rclone \u2192 INSERT\uff09\u6267\u884c hive-exploration \u589e\u91cf\u63a2\u67e5\u7ed3\u679c\u3002\u5185\u7f6e\u72ec\u7acb ddl_converter \u652f\u6301 Hive DDL \u5feb\u901f\u8f6c\u6362\u4e3a DLF Paimon/FORMAT \u5916\u8868 DDL\u3002\u4f7f\u7528\u573a\u666f\uff1a\u7528\u6237\u63d0\u5230\"\u5b58\u91cf\u8fc1\u79fb\"\u3001\"\u589e\u91cf\u8fc1\u79fb\"\u3001\"\u589e\u91cf\u540c\u6b65\"\u3001\"Hive Paimon \u8fc1\u79fb\"\u3001\"Paimon \u5efa\u8868\"\u3001\"Hive \u6570\u636e\u6e56\u8fc1\u79fb\"\u3001\"format-table\"\u3001\"direct-read\"\u3001\"hive-to-paimon\"\u3001\"migration-lhm-migrate-hive-to-paimon\"\u3001\"\u8f6c\u6362 Hive DDL\"\u3001\"\u5efa DLF \u8868\"\u3001\"\u751f\u6210 Paimon/\u5916\u8868 DDL\"\u3001\"\u8868\u8bb0\u5f55\u6570\u7edf\u8ba1SQL\"\u65f6\u8c03\u7528\u6b64 skill\u3002",
+  "updated_at": 1785980818858,
+  "version": "0.0.1"
+}
