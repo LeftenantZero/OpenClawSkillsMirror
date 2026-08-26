@@ -1,0 +1,41 @@
+{
+  "changelog": "- Initial release of the \"teach\" skill: record a screen demonstration and generate a reusable, parameterized OpenClaw skill file from it.\n- Handles both video-only and optional narrated demonstrations, with explicit user consent required for audio capture.\n- Automatic validation of recordings, including frame sampling to check demo quality before transcription.\n- Generates step-by-step playbooks with clear identification of variable inputs and safe parameterization (never including secrets or credentials).\n- Supports optional narration transcription and browser history verification for added accuracy (with consent).\n- Outputs a DRAFT skill and offers a dry run, with a strong focus on privacy and non-destructive operation.",
+  "created_at": 1786542807729,
+  "display_name": "Openclaw_Teach",
+  "fetched_at": 1787772508529,
+  "files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/skill-schema.md",
+    "references/teach-principles.md",
+    "scripts/frames.py",
+    "scripts/record.py",
+    "scripts/transcribe.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "aldow3n-a11y",
+    "handle": "aldow3n-a11y",
+    "user_id": "s177373rhj19spch3673evsqnd885c4v"
+  },
+  "slug": "grokbot-inspired-teach-as-openclaw-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/grokbot-inspired-teach-as-openclaw-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=grokbot-inspired-teach-as-openclaw-skill&ownerHandle=aldow3n-a11y",
+    "page_url": "https://clawhub.ai/aldow3n-a11y/skills/grokbot-inspired-teach-as-openclaw-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 768,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Record a screen demonstration and turn it into a reusable, parameterized OpenClaw SKILL.md.",
+  "updated_at": 1786542919756,
+  "version": "0.1.0"
+}
