@@ -1,0 +1,70 @@
+{
+  "changelog": "yy-world-cup v1.0.6\n\n- Added strict timezone handling to ensure all times are in Beijing Time; implemented UTC <-> BJT conversion.\n- Introduced utilities for timezone management (`predictor/utils/timezone.py`).\n- Updated Polymarket data client to support dynamic match schedule fetching with correct time handling.\n- Enhanced predictor logic with differentiated betting strategies and improved estimation of Chinese Sports Lottery odds.\n- Removed deprecated documentation file (`skill-card.md`).",
+  "created_at": 1781530852663,
+  "display_name": "yyWorldCup",
+  "fetched_at": 1787780398919,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "docs/MODEL_v3.1.md",
+    "predictor/__init__.py",
+    "predictor/auto_evolution.py",
+    "predictor/auto_evolution_v2.py",
+    "predictor/calibration.py",
+    "predictor/core.py",
+    "predictor/data/__init__.py",
+    "predictor/data/api_client.py",
+    "predictor/data/cache.py",
+    "predictor/data/models.py",
+    "predictor/data/polymarket_client.py",
+    "predictor/data/weather_client.py",
+    "predictor/enhanced_demo.py",
+    "predictor/factors.py",
+    "predictor/ml_enhancer.py",
+    "predictor/simple_predictor.py",
+    "predictor/strategy/__init__.py",
+    "predictor/strategy/aggressive.py",
+    "predictor/strategy/conservative.py",
+    "predictor/strategy/lottery.py",
+    "predictor/utils/__init__.py",
+    "predictor/utils/timezone.py",
+    "predictor/validator/__init__.py",
+    "predictor/validator/backtest.py",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/test_factors.py",
+    "tests/test_polymarket.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781736737406,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "DeloYong",
+    "handle": "deloyong",
+    "user_id": "s17b4vnvwbe44nv20a94k6nn4d88qn5g"
+  },
+  "slug": "yy-world-cup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/yy-world-cup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=yy-world-cup&ownerHandle=deloyong",
+    "page_url": "https://clawhub.ai/deloyong/skills/yy-world-cup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 494,
+    "installs": 6,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Use when predicting World Cup match results and generating China Sports Lottery betting strategies (\u80dc\u5e73\u8d1f/\u8ba9\u7403/\u534a\u5168\u573a/\u603b\u8fdb\u7403/\u6bd4\u5206), including injury factor analysis, wea...",
+  "updated_at": 1781690056673,
+  "version": "1.0.6"
+}
