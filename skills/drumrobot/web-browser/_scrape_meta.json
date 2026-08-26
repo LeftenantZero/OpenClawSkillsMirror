@@ -1,0 +1,49 @@
+{
+  "changelog": "web-browser v0.2.8\n\n- Documentation files updated for improved clarity and detail in SKILL.md and CHANGELOG.md.\n- Removed skill-card.md file.\n- No changes to core logic or functional behavior.",
+  "created_at": 1781910649842,
+  "display_name": "web-browser",
+  "fetched_at": 1787768387379,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "cdp-trace.md",
+    "credential-issue.md",
+    "scripts/cdp-trace.js",
+    "skill-card.md",
+    "ui-test.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787766127694,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "es6kr",
+    "handle": "drumrobot",
+    "user_id": "s17ay1v6v88r2m102pvvc44gz183qcrm"
+  },
+  "slug": "web-browser",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/web-browser",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=web-browser&ownerHandle=drumrobot",
+    "page_url": "https://clawhub.ai/drumrobot/skills/web-browser"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1067,
+    "installs": 1,
+    "stars": 0,
+    "versions": 8
+  },
+  "summary": "Environment-aware browser operations. Detects wmux/cmux/tmux and routes to the right backend (wmux/cmux panel \u2192 user-visible, plain \u2192 Playwright MCP, chrome-devtools \u2192 reuse the user's real logged-in session). Topics: ui-test - snapshots, click/fill/verify, closed shadow DOM cascade diagnosis (cdp-trace) [ui-test.md, cdp-trace.md]. credential-issue - open service login via detected backend \u2192 wait for user sign-in \u2192 issue OR refresh an access key / token / secret / OAuth scope \u2192 hand off to follow-up automation (aws-cli, gh secret set, gh auth refresh, etc.) [credential-issue.md]. Covers both new issuance and existing-token scope expansion (PAT scope add, OAuth re-authorize, device-code). Use for: \"UI check\", \"browser test\", \"screen verify\", \"Playwright test\", \"shadow DOM cascade\", \"::part not working\", \"CDP trace\", \"issue token\", \"service credential\", \"open login screen\", \"PAT refresh\", \"scope expansion\", \"device-code auth\", \"browser device-code\".",
+  "updated_at": 1787765331986,
+  "version": "0.2.8"
+}
