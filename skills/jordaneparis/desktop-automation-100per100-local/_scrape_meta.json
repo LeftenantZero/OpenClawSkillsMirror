@@ -1,0 +1,65 @@
+{
+  "changelog": "SKILL TOTALY RENAMED FOR RESEARSH IMPROVEMENT : \nhttps://clawhub.ai/JordaneParis/desktop-automation-ultra\naiting merge capability\n\n**Desktop Automation Skill v2.0.1 \u2014 Major Safety & Architecture Overhaul**\n\n- Completely refactored core for zero-error operation and full thread safety; all logic is modularized in new `lib/` package.\n- Introduced robust safety features: default safe mode, powerful dangerous action/pattern detection, and dry-run support for all actions.\n- All actions now support `dry_run` parameter for logging/test runs without side effects.\n- Built-in audit logging: every action writes detailed logs to a date-stamped file in `~/.openclaw/skills/desktop-automation-logs/`.\n- Macro system fully reworked: robust recording with mouse debouncing and secure, well-structured JSON storage; macro playback supports dry-run and subroutine macros.\n- Significantly improved documentation: precise action tables, safety notes, configuration, advanced macro recording, test suite, setup, and troubleshooting.\n- All dependencies and core actions now unit-tested (see `scripts/test_automation.py`).\n\nSKILL TOTALY RENAMED FOR RESEARSH IMPROVEMENT : \nhttps://clawhub.ai/JordaneParis/desktop-automation-ultra\naiting merge capability",
+  "created_at": 1773528409423,
+  "display_name": "desktop-automation-100per100-local",
+  "fetched_at": 1787788754124,
+  "files": [
+    "AUTHORS.md",
+    "CONTRIBUTING.md",
+    "DEPENDENCIES.md",
+    "LICENSE.txt",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "lib/__init__.py",
+    "lib/actions.py",
+    "lib/advanced_automation.py",
+    "lib/automation.py",
+    "lib/image_recognition.py",
+    "lib/macro_player.py",
+    "lib/ocr_engine.py",
+    "lib/safety.py",
+    "lib/safety_manager.py",
+    "lib/utils.py",
+    "lib/vision.py",
+    "requirements.txt",
+    "scripts/play_macro.py",
+    "scripts/record_macro.py",
+    "scripts/test_automation.py",
+    "skill-card.md",
+    "skill.js",
+    "skill.yaml"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089895828,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "JordaneParis",
+    "handle": "jordaneparis",
+    "user_id": "s17357789tm2c987adhe1vv5x183mvxj"
+  },
+  "slug": "desktop-automation-100per100-local",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/desktop-automation-100per100-local",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=desktop-automation-100per100-local&ownerHandle=jordaneparis",
+    "page_url": "https://clawhub.ai/jordaneparis/skills/desktop-automation-100per100-local"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 1213,
+    "installs": 34,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Automate desktop tasks locally with mouse, keyboard, window control, OCR, and image recognition using Python on Windows/macOS/Linux.",
+  "updated_at": 1779078228199,
+  "version": "2.0.1"
+}
