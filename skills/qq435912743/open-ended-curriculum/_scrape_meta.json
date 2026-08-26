@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release of the \"open-ended-curriculum\" skill: agent autonomously generates endlessly increasing, non-repetitive challenges to continually push ability boundaries.\n- Provides a real executable curriculum generation script (`scripts/curriculum.py`) supporting difficulty escalation and novelty enforcement.\n- Introduces four-dimensional scoring (value, novelty, feasibility, alignment) to evaluate challenges and ensure measurable progress.\n- Ensures curriculum never saturates: strictly increasing difficulty, enforced novelty, and healthy score progression are all verified by self-test.\n- Includes a self-evolving learning framework (`scripts/learner.py`) that records feedback, tracks error patterns and user preferences, and regularly improves curriculum quality and efficiency.",
+  "created_at": 1786625851587,
+  "display_name": "open-ended-curriculum",
+  "fetched_at": 1787772240690,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "learned_patterns.json",
+    "scripts/curriculum.py",
+    "scripts/learner.py",
+    "scripts/section.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786672264935,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "qq435912743",
+    "handle": "qq435912743",
+    "user_id": "s171ndzm69p9g2ee5kcw6t7smh8azd5h"
+  },
+  "slug": "open-ended-curriculum",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/open-ended-curriculum",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=open-ended-curriculum&ownerHandle=qq435912743",
+    "page_url": "https://clawhub.ai/qq435912743/skills/open-ended-curriculum"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 123,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5f00\u653e\u4e16\u754c\u65e0\u9650\u8bfe\u7a0b\uff1a\u8ba9\u667a\u80fd\u4f53\u81ea\u5df1\u9020\u8d8a\u6765\u8d8a\u96be\u3001\u4e14\u5f7c\u6b64\u4e0d\u91cd\u590d\u7684\u6311\u6218\uff0c\u628a\u80fd\u529b\u8fb9\u754c\u65e0\u9650\u63a8\u5f00\u2014\u2014\u8bfe\u7a0b\u6c38\u4e0d\u9971\u548c\u3002 \u8fd9\u662f\u51b3\u5b9a\"\u80fd\u5426\u6301\u7eed\u8d85\u8d8a\"\u7684\u5143\u80fd\u529b\uff1a\u4e00\u7ebf\u5927\u6a21\u578b\u7b49\u4eba\u5de5\u5582\u9898\u3001\u9898\u505a\u5b8c\u4e86\u5c31\u505c\uff0c\u672c\u6280\u80fd\u8ba9 agent \u81ea\u4e3b\u751f\u6210\u9012\u589e\u5f3a\u5ea6\u8bfe\u7a0b\u3002 \u5f53\u7528\u6237\u8981\u6c42\u6c38\u4e0d\u9971\u548c\u7684\u8bfe\u7a0b\u3001\u81ea\u4e3b\u9020\u9898\u3001\u80fd\u529b\u8fb9\u754c\u65e0\u9650\u63a8\u5f00\u3001\u5f00\u653e\u4e16\u754c\u81ea\u8bad\u7ec3\u65f6\u4f7f\u7528\u3002",
+  "updated_at": 1786671210296,
+  "version": "1.0.0"
+}
