@@ -1,0 +1,56 @@
+{
+  "changelog": "- Initial release of Huawei Cloud DNS management skill.\n- Supports listing and querying DNS zones and record sets (public/private).\n- Enables dynamic creation, update, and deletion of DNS record sets.\n- Batch update functionality for failover, traffic switching, and blue-green deployments.\n- Provides DNS resolution validation and audit logging features.\n- Supports standard DNS record types: A, AAAA, CNAME, MX, TXT, NS, SRV, CAA.\n- Shell scripts utilize hcloud CLI (KooCLI) for all operations; environment and credential checks included.",
+  "created_at": 1785746932255,
+  "display_name": "huawei-cloud-dns-managemengt",
+  "fetched_at": 1787773666824,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dns-api-guide.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/check_env.sh",
+    "scripts/config.sh",
+    "scripts/dns_audit_log.sh",
+    "scripts/list_recordsets.sh",
+    "scripts/list_zones.sh",
+    "scripts/manage_recordset.sh",
+    "scripts/update_dns.sh",
+    "scripts/validate_dns.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785748209246,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-dns-managemengt",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-dns-managemengt",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-dns-managemengt&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-dns-managemengt"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 182,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Huawei Cloud DNS domain resolution dynamic management skill using hcloud CLI (KooCLI). 1. List and query DNS zones (public/private) and record sets with detailed status 2. Create, update, and delete DNS record sets for dynamic domain resolution management 3. Batch update DNS records for failover, traffic switching, and blue-green deployments 4. Generate DNS resolution audit logs and change history reports 5. Validate DNS resolution and verify record propagation 6. Support A, AAAA, CNAME, MX, TXT, NS, SRV, CAA record types Triggers include: \"DNS management\", \"DNS record update\", \"domain resolution\", \"zone query\", \"record set create\", \"record set delete\", \"DNS failover\", \"traffic switch\", \"blue-green DNS\", \"DNS audit\", \"DNS \u9a8c\u8bc1\", \"\u57df\u540d\u89e3\u6790\u7ba1\u7406\", \"DNS \u8bb0\u5f55\u66f4\u65b0\", \"\u57df\u540d\u89e3\u6790\", \"Zone \u67e5\u8be2\", \"\u8bb0\u5f55\u96c6\u521b\u5efa\", \"\u8bb0\u5f55\u96c6\u5220\u9664\", \"DNS \u6545\u969c\u5207\u6362\", \"\u6d41\u91cf\u5207\u6362\", \"\u84dd\u7eff DNS\", \"DNS \u5ba1\u8ba1\"",
+  "updated_at": 1785747020453,
+  "version": "1.0.0"
+}
