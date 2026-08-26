@@ -1,0 +1,67 @@
+{
+  "changelog": "- Initial public release of adversarial-spec: structured, adversarial specification writer.\n- Transforms a brief into a formal spec.md with YAML frontmatter, requirements, acceptance criteria, and target files.\n- Git-aware pipeline with automatic branching, phase-driven challenge and revision loop, and squash-merge on approval.\n- CLI supports selectable writer/reviewer commands, provider registries, and robust configuration.\n- Emphasizes disk-based, English-only spec handling and clear prompt separation\u2014no embedding of spec text in prompts.\n- Includes comprehensive pre-flight checklist and persona-based workflow for clear, repeatable spec development.",
+  "created_at": 1785780690582,
+  "display_name": "adversarial-spec",
+  "fetched_at": 1787773591198,
+  "files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "_retrospective/ISSUES.md",
+    "references/adversarial-2026-07-14-pre-publication-review.md",
+    "references/claude-timeout-notes.md",
+    "references/claude-tmux-wrapper-system-notes.md",
+    "references/phase-challenge-prompt-reduction.md",
+    "references/provider-agnostic-design.md",
+    "scripts/__init__.py",
+    "scripts/adversarial_spec.py",
+    "scripts/install.sh",
+    "scripts/phases/__init__.py",
+    "scripts/phases/phase_challenge.py",
+    "scripts/phases/phase_revise.py",
+    "scripts/phases/phase_spec.py",
+    "scripts/phases/phase_verify.py",
+    "scripts/phases/phase_write.py",
+    "spec.md",
+    "tests/conftest.py",
+    "tests/test_contract_gate.py",
+    "tests/test_orchestrator.py",
+    "tests/test_p14_integration.py",
+    "tests/test_p15_optional_modes.py",
+    "tests/test_phases.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785781631400,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "chpomob",
+    "handle": "chpomob",
+    "user_id": "s17435m3chty5jmw4jhpkyhnb58brn8g"
+  },
+  "slug": "adversarial-spec",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/adversarial-spec",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=adversarial-spec&ownerHandle=chpomob",
+    "page_url": "https://clawhub.ai/chpomob/skills/adversarial-spec"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1786,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Adversarial specification writer. Takes a brief (from grill-me or user) and produces a structured spec.md with YAML frontmatter, requirements, acceptance criteria, and target files. Git-aware pipeline: each run on its own branch, squash-merge on approval.",
+  "updated_at": 1785780822611,
+  "version": "0.1.0"
+}
