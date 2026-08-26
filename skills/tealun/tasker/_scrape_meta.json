@@ -1,0 +1,34 @@
+{
+  "changelog": "Summary: Formal timeouts, retries, and retreat/upgrade rules added for robust execution and failure handling.\n\n- Added version 1.2.0 with explicit version tagging.\n- Introduced strict retry and retreat rules: up to 3 retreats per stage, auto-upgrading task level and requiring user/human intervention beyond limit.\n- Added execution time budget, per-step timeout, and state transition limits for each task size (S/M/L).\n- Enhanced `execute` rules to cap retries at 3, with escalation to user/manual action after repeated failures.\n- Clarified state machine with robust retreat and escalation flows for error and verification gaps.\n- Updated documentation; added RELEASE_v1.2.0.md and removed outdated skill-card.md.",
+  "created_at": 1774071424655,
+  "display_name": "Tasker",
+  "fetched_at": 1787780828640,
+  "files": [
+    "RELEASE_v1.2.0.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "tealun",
+    "handle": "tealun",
+    "user_id": "s17exyncwvaashrrdbq1j0b7c983kcym"
+  },
+  "slug": "tasker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tasker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tasker&ownerHandle=tealun",
+    "page_url": "https://clawhub.ai/tealun/skills/tasker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 963,
+    "installs": 22,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "Use for task execution, debugging, implementation, analysis, review, planning, workflow execution, and user dissatisfaction handling in agent interactions. \u4efb...",
+  "updated_at": 1781433026425,
+  "version": "1.2.0"
+}
