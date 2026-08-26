@@ -1,0 +1,41 @@
+{
+  "changelog": "Initial release.\n\n- First public version of the skill for purchasing and applying SSL certificates via Alibaba Cloud CAS (China and International sites supported).\n- Automates instance acquisition (purchase new or reuse inactive) and certificate application for DV/OV/EV certificates.\n- Implements strict intent clarification, parameter confirmation, and confirmation gates to prevent accidental purchases or operations.\n- Provides clear, documented flow for credential checks, permission handling, plugin requirements, and environment variable usage.\n- Removes sample file: skill-card.md.",
+  "created_at": 1784599813497,
+  "display_name": "alibabacloud-cas-ssl-cert-purchase",
+  "fetched_at": 1787774149560,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/api-commands.md",
+    "references/cli-installation-guide.md",
+    "references/error-handling.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "scripts/bss-purchase.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-cas-ssl-cert-purchase",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-cas-ssl-cert-purchase",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-cas-ssl-cert-purchase&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-cas-ssl-cert-purchase"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 367,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Purchase and apply SSL certificates via Alibaba Cloud CAS (V2.0 unified flow). Supports China site (ProductCode=cas) and International site (ProductCode=cas_intl). Automates instance acquisition via BSS API or reuses existing inactive instances. All certificate types follow: list-instances \u2192 update-instance \u2192 apply-certificate. OV/EV certificates require additional company info and contact IDs. Activate when user says \"apply certificate\", \"purchase SSL\", \"buy certificate\", \"certificate order\", \"purchase certificate instance\", \"buy overseas certificate\", \"\u7533\u8bf7\u8bc1\u4e66\", \"\u8d2d\u4e70 SSL\", \"\u4e70\u8bc1\u4e66\", \"\u8bc1\u4e66\u4e0b\u5355\", \"\u8d2d\u4e70\u8bc1\u4e66\u5b9e\u4f8b\", \"\u4e70\u6d77\u5916\u8bc1\u4e66\".",
+  "updated_at": 1785408828848,
+  "version": "0.0.1"
+}
