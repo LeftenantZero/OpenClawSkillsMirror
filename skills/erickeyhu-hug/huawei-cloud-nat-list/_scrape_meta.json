@@ -1,0 +1,54 @@
+{
+  "changelog": "huawei-cloud-nat-list v1.0.0\n\n- Initial release: Provides read-only listing and inspection of public NAT gateways in Huawei Cloud under the current tenant/project.\n- Supports output of gateway name, id, status, spec, router (VPC) id, internal network id, and created time.\n- Allows filtering by name, id, status, spec, enterprise project id, and pagination (limit/marker).\n- Uses KooCLI (primary) and Python SDK (fallback); reports execution quality to the operations console.\n- Strictly query-only: does not create, modify, or delete NAT resources, SNAT/DNAT rules, or private NAT resources.\n- Designed for scenarios such as NAT inventory, daily inspection, or fast lookup.",
+  "created_at": 1786068305393,
+  "display_name": "huawei-cloud-nat-list",
+  "fetched_at": 1787773229459,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/list_nat_gateways.py",
+    "scripts/skill_quality_sdk.py",
+    "scripts/test-cli-commands.sh",
+    "scripts/validate-skill.sh",
+    "skill-card.md",
+    "skill-gate-report.txt",
+    "templates/test-vars.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786069137335,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-nat-list",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-nat-list",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-nat-list&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-nat-list"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 161,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query the list of Huawei Cloud public NAT gateways (\u516c\u7f51NAT\u7f51\u5173) under the current tenant / project, focused on the NAT gateway NAME list. Returns each gateway's name, id, status, spec, router (VPC) id, internal network id and created time. Supports filtering by name, id, status, spec, enterprise project id and pagination via limit/marker. Uses the KooCLI command `hcloud NAT ListNatGateways --cli-region={region}` (primary) against the v2 API, or the huaweicloudsdknat Python SDK (fallback). Read-only \u2014 never creates, modifies or deletes any NAT gateway. Use this skill whenever the user wants to list/inspect the public NAT gateways of the tenant or query the NAT gateway name list, e.g. for NAT gateway inventory, daily inspection, or cost review. Triggers include: \"list NAT gateways\", \"NAT gateway list\", \"query NAT gateway names\", \"\u516c\u7f51NAT\u7f51\u5173\u5217\u8868\", \"\u67e5\u8be2\u516c\u7f51NAT\u7f51\u5173\", \"NAT\u7f51\u5173\u5217\u8868\", \"NAT\u7f51\u5173\u540d\u79f0\", \"list nat\", \"nat list\", \"how many NAT gateways\", \"NAT inventory\".",
+  "updated_at": 1786068398053,
+  "version": "1.0.0"
+}
