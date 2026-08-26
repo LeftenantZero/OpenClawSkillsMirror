@@ -1,0 +1,51 @@
+{
+  "changelog": "- Test case and test report files added under case-run/2026-08-05, including error credential scenarios, integration reports, and issue documentation\n- SKILL.md updated: now reports only the GaussDB instance count, not total storage size; documentation is streamlined and scope clarified\n- References (acceptance-criteria.md, dataflow-diagram.md, security-audit-report.txt, verification-method.md) updated to match functional/spec changes\n- Script and test files (count_gaussdb_instances.py, test-cli-commands.sh, test-vars.json) updated for new single-metric focus and verified scenarios\n- Obsolete skill-card.md removed",
+  "created_at": 1785896926045,
+  "display_name": "huawei-cloud-gaussdb-count",
+  "fetched_at": 1787773356855,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "case-run/2026-08-05/N3_\u9519\u8bef\u51ed\u8bc1_\u901a\u8fc7/\u539f\u59cb\u8f93\u51fa.txt",
+    "case-run/2026-08-05/N3_\u9519\u8bef\u51ed\u8bc1_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-05/N3_\u9519\u8bef\u51ed\u8bc1_\u901a\u8fc7/\u9519\u8bef\u51ed\u8bc1\u91cd\u6d4b\u8f93\u51fa.txt",
+    "case-run/2026-08-05/huawei-cloud-gaussdb-count_\u603b\u6d4b\u8bd5\u62a5\u544a.md",
+    "case-run/2026-08-05/huawei-cloud-gaussdb-count_\u95ee\u9898\u5355.md",
+    "case-run/2026-08-05/\u6574\u5408\u6d4b\u8bd5\u62a5\u544a.md",
+    "case-run/2026-08-05/\u6b63\u53cd\u7528\u4f8b\u96c6.md",
+    "case-run/2026-08-05/\u89e6\u53d1\u8bcd\u5f52\u6863.md",
+    "case-run/2026-08-05/\u8d44\u6e90\u91ca\u653e\u62a5\u544a.md",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/security-audit-report.txt",
+    "references/verification-method.md",
+    "scripts/count_gaussdb_instances.py",
+    "scripts/test-cli-commands.sh",
+    "skill-card.md",
+    "templates/test-vars.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-gaussdb-count",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-gaussdb-count",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-gaussdb-count&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-gaussdb-count"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 228,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Count the number of Huawei Cloud GaussDB instances in a region and output the count. Covers both GaussDB for openGauss and GaussDB (MySQL-compatible) instances. Returns the authoritative total_count from the list API, so the reported number is always correct. Read-only \u2014 never creates, modifies or deletes any resource. Use for GaussDB database inventory, daily inspection, or cost review. Triggers include: count GaussDB, GaussDB count, GaussDB instance count, how many GaussDB instances, GaussDB\u6570\u91cf, GaussDB\u5b9e\u4f8b\u6570\u91cf, \u67e5\u8be2GaussDB\u6570\u91cf, GaussDB\u603b\u6570, \u7edf\u8ba1GaussDB\u5b9e\u4f8b\u6570.",
+  "updated_at": 1785913831522,
+  "version": "1.0.1"
+}
