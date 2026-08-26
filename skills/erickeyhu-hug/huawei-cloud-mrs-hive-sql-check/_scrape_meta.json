@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release of huawei-cloud-mrs-hive-sql-check skill.\n- Provides automated Hive SQL syntax and specification checking using built-in checker engine.\n- Supports triggers: \u201cHive SQL\u4f18\u5316\u201d, \u201c\u68c0\u67e5Hive SQL\u201d, \u201cHive SQL\u68c0\u67e5\u201d, \u201cHive SQL\u89c4\u8303\u201d, \u201cHive SQL\u8bed\u6cd5\u201d, \u201cHive SQL review\u201d.\n- Enforces a strict reporting policy: only checker-detected rule violations are reported, with no extra manual analysis or interpretations.\n- Supports syntax, specification, and interception checks across multi-statement SQL inputs according to Huawei Cloud MRS Hive standards.",
+  "created_at": 1785748671972,
+  "display_name": "huawei-cloud-mrs-hive-sql-check",
+  "fetched_at": 1787771150529,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/report_template.md",
+    "references/ast-schema.md",
+    "rules/grammar_rules.py",
+    "rules/keywords.py",
+    "rules/perf_rules.yaml",
+    "rules/spec_rules.yaml",
+    "rules/syntax_rules.yaml",
+    "scripts/hive_sql_checker.py",
+    "scripts/hive_sql_parser.py",
+    "scripts/hive_sql_tokenizer.py",
+    "skill-card.md",
+    "tests/analyze_errors.py",
+    "tests/extract_samples.py",
+    "tests/test_q_files.py",
+    "tests/test_regression.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-mrs-hive-sql-check",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-mrs-hive-sql-check",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-mrs-hive-sql-check&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-mrs-hive-sql-check"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 175,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Huawei Cloud MRS Hive SQL specification checking skill. Checks SQL statements against defined syntax and specification rules using the automated checker engine. No extra manual analysis beyond defined rules. Trigger:\"Hive SQL\u4f18\u5316\"\u3001\"\u68c0\u67e5Hive SQL\"\u3001\"Hive SQL\u68c0\u67e5\"\u3001\"Hive SQL\u89c4\u8303\"\u3001\"Hive SQL\u8bed\u6cd5\"\u3001\"Hive SQL review\"",
+  "updated_at": 1785748767992,
+  "version": "1.0.0"
+}
