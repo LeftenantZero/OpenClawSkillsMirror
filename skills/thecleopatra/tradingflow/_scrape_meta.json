@@ -1,0 +1,49 @@
+{
+  "changelog": "## v0.0.2 (2026-03-22)\n\n  ### Fixed\n  - **Instruction conflict resolved**: Removed contradictory `/auth/me` validation guidance- Agent uses API key (`x-api-key`\n  header), cannot call `/auth/me` (requires JWT token)\n    - Correct flow: attempt `POST /user-secrets`, handle `403 RD_MODE_REQUIRED` response\n    - Updated R&D Mode check instructions (line 487-503, 999)\n  - **Security scan improvements**: Addressed ClawHub \"Instruction Scope\" warning\n\n  ### Documentation\n  - Clarified that `/auth/me` is frontend-only (JWT-based), not for Agent validation\n  - Updated security best practices to match actual API behavior",
+  "created_at": 1774189279289,
+  "display_name": "TradingFlow \u2014 AI-Powered Intent Trading Across Crypto, Stocks & More",
+  "fetched_at": 1787787708845,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api-reference.md",
+    "references/strategy-format.md",
+    "references/vault-operations.md",
+    "references/webhook-triggers.md",
+    "scripts/create-strategy.sh",
+    "scripts/deploy-process.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090037855,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Caesar Lynch",
+    "handle": "thecleopatra",
+    "user_id": "s1728xxnk5atcp9gq9bd5sxydx840298"
+  },
+  "slug": "tradingflow",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tradingflow",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tradingflow&ownerHandle=thecleopatra",
+    "page_url": "https://clawhub.ai/thecleopatra/skills/tradingflow"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 729,
+    "installs": 17,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Create and manage crypto trading strategies, deploy automated trading bots, and control on-chain vaults on BSC, Aptos, and Solana. Use when the user wants to...",
+  "updated_at": 1779078727124,
+  "version": "0.0.2"
+}
