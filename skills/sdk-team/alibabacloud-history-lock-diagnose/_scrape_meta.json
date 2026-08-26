@@ -1,0 +1,51 @@
+{
+  "changelog": "alibabacloud-history-lock-diagnose v0.0.1 \u2013 Initial Release\n\n- Diagnoses historical lock wait issues on PolarDB/RDS MySQL, identifying root cause, lock chain, and lock holder.\n- Integrates with Aliyun CLI and DAS; requires Python \u22653.7 and Aliyun CLI \u22653.3.3.\n- Supports various lock types: InnoDB row/metadata/table locks, deadlocks, and more.\n- Includes strict parameter confirmation, observability (per-session user-agent), and RAM permission handling.\n- Outputs concise, actionable diagnosis and recommendations based on real SQL audit data.",
+  "created_at": 1782117598022,
+  "display_name": "Alibabacloud History Lock Diagnose",
+  "fetched_at": 1787779752125,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/best-practices.md",
+    "references/cli-installation-guide.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/transaction-lifecycle.md",
+    "references/verification-method.md",
+    "scripts/smart-lock-diagnosis.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782126366629,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-history-lock-diagnose",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-history-lock-diagnose",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-history-lock-diagnose&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-history-lock-diagnose"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 288,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Alibaba Cloud PolarDB/RDS MySQL historical lock wait root cause analysis skill. Diagnoses and analyzes historical lock wait issues, identifies the complete l...",
+  "updated_at": 1782117598022,
+  "version": "0.0.1"
+}
