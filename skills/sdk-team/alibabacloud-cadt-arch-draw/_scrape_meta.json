@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release: Enables users to draw Alibaba Cloud architecture diagrams through CADT AI agent using the Aliyun CLI.\n\n- Accepts resource/product descriptions and submits them to the CADT backend for automated architecture generation.\n- Supports multi-turn conversations, including clarifying questions from the AI agent.\n- Requires session reuse: user-provided `sessionId` must always be used for follow-ups.\n- All results are relayed via Markdown summary; no local diagram generation.\n- Strict error handling, polling, and security rules to ensure reliability and privacy.\n- Fully CLI-based workflow with mandatory user-agent tagging for observability.",
+  "created_at": 1783563683736,
+  "display_name": "Alibabacloud Cadt Arch Draw",
+  "fetched_at": 1787777488240,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783646673864,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-cadt-arch-draw",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-cadt-arch-draw",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-cadt-arch-draw&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-cadt-arch-draw"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 494,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Draw cloud architecture diagrams via CADT AI agent. Submit a product/resource description, the backend creates the architecture and returns a summary. Trigge...",
+  "updated_at": 1783563683736,
+  "version": "0.0.1"
+}
