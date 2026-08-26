@@ -1,0 +1,44 @@
+{
+  "changelog": "- Added comprehensive agent execution manual for setting up scheduled tasks to run every N minutes on Windows.\n- Clarified core facts: WorkBuddy's built-in scheduler does not support minute-level intervals; must use Windows Task Scheduler with custom scripts.\n- Provided step-by-step workflow for creating, testing, and registering scripts as scheduled tasks using PowerShell.\n- Outlined best practices for naming, lifecycle management, and avoiding conflicts between task systems.\n- Documented known pitfalls and troubleshooting tips for Windows task automation.\n- Included instructions for Feishu message sending via lark-cli within scheduled scripts.",
+  "created_at": 1785911249504,
+  "display_name": "minutes-task",
+  "fetched_at": 1787773358553,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.yaml",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785911986154,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Eddie4xioshi",
+    "handle": "eddie4xioshi-netizen",
+    "user_id": "s17dt91qkj8wbvcydxam9bqe618bxbct"
+  },
+  "slug": "minutes-task",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/minutes-task",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=minutes-task&ownerHandle=eddie4xioshi-netizen",
+    "page_url": "https://clawhub.ai/eddie4xioshi-netizen/skills/minutes-task"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 190,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5f53\u7528\u6237\u9700\u8981\"\u6bcf N \u5206\u949f\"\uff08\u5982\u6bcf10\u5206\u949f\u3001\u6bcf5\u5206\u949f\uff09\u5b9a\u65f6\u6267\u884c\u4efb\u52a1\u65f6\u4f7f\u7528\u3002WorkBuddy \u5185\u7f6e\u8c03\u5ea6\u5668\u4ec5\u652f\u6301 DAILY/HOURLY/WEEKLY/MONTHLY/YEARLY \u4e14\u5ffd\u7565 BYMINUTE\uff0c\u5fc5\u987b\u6539\u7528 Windows \u4efb\u52a1\u8ba1\u5212\u7a0b\u5e8f + \u72ec\u7acb\u811a\u672c\u5b9e\u73b0\u5206\u949f\u7ea7\u8c03\u5ea6\u3002",
+  "updated_at": 1785911325437,
+  "version": "1.0.0"
+}
