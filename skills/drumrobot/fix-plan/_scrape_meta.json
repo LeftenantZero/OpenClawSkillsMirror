@@ -1,0 +1,79 @@
+{
+  "changelog": "- Added integrity and bulk update scripts for improved sync and data validation (plane_sync, plane_bulk_update, hook_integrity_check).\n- Introduced new tests for priority mapping and schema validation.\n- Removed obsolete skill-card and plane_create_issue scripts.\n- Updated completion criteria and documentation for enhanced consistency and clarity across lifecycle management and automation.",
+  "created_at": 1781188606755,
+  "display_name": "fix-plan",
+  "fetched_at": 1787768389386,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "add.md",
+    "claim.md",
+    "completion-criteria.md",
+    "draft.md",
+    "flowchart.md",
+    "format.md",
+    "issue-drafts.md",
+    "model-triage.md",
+    "move.md",
+    "priority.md",
+    "resources/block-direct-checklist-edit.js",
+    "resources/check-completed-bloat.sh",
+    "resources/sync-checkpoint-nudge.sh",
+    "resources/warn-fixplan-item-schema.sh",
+    "scripts/add_item.py",
+    "scripts/artifact_post_ingest.py",
+    "scripts/artifact_pre_lookup.py",
+    "scripts/cleanup.py",
+    "scripts/detect_bloated_tasks.py",
+    "scripts/fable_queue_replenish.py",
+    "scripts/hook_integrity_check.py",
+    "scripts/plane_bulk_update.py",
+    "scripts/plane_sync.py",
+    "scripts/stale_check.py",
+    "scripts/test_cleanup.py",
+    "scripts/test_plane_priority_mapping.py",
+    "scripts/test_plane_sync.py",
+    "scripts/test_workspace_profile.py",
+    "scripts/workspace_profile.py",
+    "skill-card.md",
+    "sync-automation.md",
+    "sync.md",
+    "tests/test-warn-fixplan-item-schema.sh",
+    "tests/test_workspace_profile.py",
+    "verify.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787766156894,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "es6kr",
+    "handle": "drumrobot",
+    "user_id": "s17ay1v6v88r2m102pvvc44gz183qcrm"
+  },
+  "slug": "fix-plan",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fix-plan",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fix-plan&ownerHandle=drumrobot",
+    "page_url": "https://clawhub.ai/drumrobot/skills/fix-plan"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1274,
+    "installs": 5,
+    "stars": 0,
+    "versions": 14
+  },
+  "summary": "fix_plan.md / checklist.md schema and lifecycle management. Topics \u2014 format ([ ]/[x]/[BLOCKED] markers, Progress/Completed sections), priority (P0-P3 BLOCKED suffix + external/selfable classification), add (Action/Why/How authoring), draft (deferred plan stub \u2192 promote via code-workflow), move ([x] \u2192 Completed summary, subtree partial completion), sync (gh pr/issue state polling \u2192 auto-check), issue-drafts (write \u2192 publish \u2192 archive \u2192 delete), model-triage (fit + dedicated section), completion-criteria (DoD + marker rules). Default (no args): move (or archive-receiver) \u2192 format \u2192 sync \u2192 priority \u2192 flowchart-sync, scoped by role-profile (--role=pm|deep|impl). Use when: \"fix_plan\", \"checklist\", \"BLOCKED priority\", \"triage blocked\", \"fix-plan sync\", \"issue draft cleanup\", \"fix-plan draft\", \"fix-plan default\", \"fix-plan archive\", \"model triage\", \"completion criteria\", \"role profile\", \"--role\".",
+  "updated_at": 1787765354461,
+  "version": "0.9.1"
+}
