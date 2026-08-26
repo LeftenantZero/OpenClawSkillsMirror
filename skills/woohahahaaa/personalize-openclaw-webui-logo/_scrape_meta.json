@@ -1,0 +1,44 @@
+{
+  "changelog": "v2.4.2 \u2014 Documentation-only: adds scenario D (just-installed welcome prompt). When the agent detects a fresh install with no applied-state stamp, it asks the user once whether to apply a logo now, optionally picking a random set from logos/ (excluding 'original'). Asks once, never re-prompts. No code change; relies entirely on the existing apply-logo.sh <set-name> flow.",
+  "created_at": 1781959869579,
+  "display_name": "Personalize Openclaw Webui Logo",
+  "fetched_at": 1787779239107,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "apply-logo.sh",
+    "check-and-restore.sh",
+    "hooks/logo-guard/HOOK.md",
+    "hooks/logo-guard/handler.js",
+    "install-hook.sh",
+    "logos/linux/favicon-master.txt",
+    "logos/mac-finder/favicon-master.txt",
+    "logos/mac/favicon-master.txt",
+    "logos/original/favicon-master.txt",
+    "logos/windows/favicon-master.txt",
+    "skill-card.md",
+    "uninstall-hook.sh"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "wooh",
+    "handle": "woohahahaaa",
+    "user_id": "s17aedvq929g5nxabkexhtjzhs8914ae"
+  },
+  "slug": "personalize-openclaw-webui-logo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/personalize-openclaw-webui-logo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=personalize-openclaw-webui-logo&ownerHandle=woohahahaaa",
+    "page_url": "https://clawhub.ai/woohahahaaa/skills/personalize-openclaw-webui-logo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 440,
+    "installs": 2,
+    "stars": 0,
+    "versions": 13
+  },
+  "summary": "Personalize the OpenClaw WebUI (control panel) favicon \u2014 i.e. the OpenClaw / crawfish browser-tab logo. Deploys a bundled logo set (logos/<set-name>/) to all...",
+  "updated_at": 1782300121658,
+  "version": "2.4.2"
+}
