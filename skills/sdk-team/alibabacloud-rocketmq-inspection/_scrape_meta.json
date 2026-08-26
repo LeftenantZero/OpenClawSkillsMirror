@@ -1,0 +1,55 @@
+{
+  "changelog": "Initial beta release: RocketMQ read-only inspection for Alibaba Cloud\n\n- Provides read-only batch health inspection for Alibaba Cloud RocketMQ (classic 4.x & 5.x serverless).\n- Gathers metrics from cloud monitoring (CMS) and RocketMQ management APIs using aliyun CLI in plugin mode.\n- Outputs a scored Markdown health report with instance summaries, quotas, consumer lag/backlogs, DLQ growth, and warnings.\n- Includes single-group deep-dive diagnosis, regional quota status, and per-instance/consumer-group detail.\n- Enforces strict read-only operation by limiting API calls to non-mutating actions.\n- Requires Aliyun CLI >=3.3.3 and specific plugins; includes preflight and threshold configuration setup.",
+  "created_at": 1785205704761,
+  "display_name": "alibabacloud-rocketmq-inspection",
+  "fetched_at": 1787774548526,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/instances.example.yaml",
+    "assets/thresholds.default.yaml",
+    "references/cli-pitfalls.md",
+    "references/metrics.md",
+    "references/ram-policies.md",
+    "references/thresholds.md",
+    "scripts/diagnose_group.sh",
+    "scripts/fetch_metric.sh",
+    "scripts/inspect.sh",
+    "scripts/list_instances.sh",
+    "scripts/preflight.sh",
+    "scripts/render_report.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785210657443,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-rocketmq-inspection",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-rocketmq-inspection",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-rocketmq-inspection&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-rocketmq-inspection"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 235,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read-only batch health inspection for Alibaba Cloud RocketMQ instances (4.x classic and 5.x serverless). Pulls metrics from CMS namespace acs_rocketmq and management APIs via aliyun CLI plugin mode, emits a scored Markdown report. Triggers include \"RocketMQ inspection\", \"MQ health check\", \"consumer lag\", \"consumer delay\", \"message backlog\", \"DLQ\", \"RocketMQ inspect\".",
+  "updated_at": 1785209963526,
+  "version": "0.0.1-beta.1"
+}
