@@ -1,0 +1,45 @@
+{
+  "changelog": "- Added modular compliance plugins for CCPA, GDPR, finance, and PIPL rules.\n- Expanded compliance checks to cover platform best practices (supply chain, MCP, output security, etc.).\n- Introduced dual-track scoring: legal compliance score (PASS/NEEDS_FIX/REJECT) and platform advisories (non-scoring).\n- Updated documentation to reflect new checks and scoring mechanisms.\n- Removed obsolete skill-card.md; internal structure reorganized for extensibility.",
+  "created_at": 1784882902071,
+  "display_name": "Skill Compliance",
+  "fetched_at": 1787775320373,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "plugins/__init__.py",
+    "plugins/base.py",
+    "plugins/ccpa.py",
+    "plugins/finance.py",
+    "plugins/gdpr.py",
+    "plugins/pipl.py",
+    "requirements.txt",
+    "rules/skillhub-rules.json",
+    "scripts/comply.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Wei Wu",
+    "handle": "wwumit",
+    "user_id": "s171gysg9m3c2gxwwc6pvt62z983jxn1"
+  },
+  "slug": "skill-compliance",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-compliance",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-compliance&ownerHandle=wwumit",
+    "page_url": "https://clawhub.ai/wwumit/skills/skill-compliance"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 64,
+    "installs": 0,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Skill\u4e0a\u67b6\u5408\u89c4\u68c0\u67e5\u5668\uff08\u9762\u5411\u56fd\u5185\u5e73\u53f0\uff09\u3002\u5728\u4e0a\u4f20\u524d\u68c0\u67e5skill\u662f\u5426\u7b26\u5408\u56fd\u5185\u76d1\u7ba1\u8981\u6c42\uff0c\u5305\u62ec\u91d1\u878d\u654f\u611f\u8bcd\u3001\u514d\u8d23\u58f0\u660e\u3001\u5b89\u5168\u7ea2\u7ebf\u7b49\u3002",
+  "updated_at": 1784884856216,
+  "version": "1.2.0"
+}
