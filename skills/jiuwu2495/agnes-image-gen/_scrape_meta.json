@@ -1,0 +1,44 @@
+{
+  "changelog": "- Added automatic dual-endpoint failover: the system now tries a domestic endpoint if the international endpoint is unreachable, with no manual intervention needed.\n- Connection is now checked at the TCP level with an 8s timeout before switching endpoints.\n- The final chosen endpoint is output for user reference.\n- No changes to inputs, outputs, or API usage; usage and core capabilities remain unchanged.\n- Internal files scripts/__pycache__/agnes_gen.cpython-313.pyc and skill-card.md were removed.",
+  "created_at": 1780541212821,
+  "display_name": "agnes-\u56fe\u7247\u751f\u6210",
+  "fetched_at": 1787774217290,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/agnes_gen.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785386058891,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jiuwu2495",
+    "handle": "jiuwu2495",
+    "user_id": "s17amm86tg4znarg14ppbv33y18445er"
+  },
+  "slug": "agnes-image-gen",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agnes-image-gen",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agnes-image-gen&ownerHandle=jiuwu2495",
+    "page_url": "https://clawhub.ai/jiuwu2495/skills/agnes-image-gen"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 988,
+    "installs": 13,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "\u4f7f\u7528 Agnes AI \u5347\u7ea7\u7248\u56fe\u50cf\u751f\u6210\u6a21\u578b agnes-image-2.1-flash \u751f\u6210\u56fe\u7247\u3002\u540c\u65f6\u652f\u6301\u6587\u751f\u56fe\uff08text-to-image\uff09\u4e0e\u56fe\u751f\u56fe\uff08image-to-image\uff09\u3002\u5f53\u7528\u6237\u8bf4\u300c\u7528 Agnes \u751f\u6210\u56fe\u7247\u300d\u300c\u7528 Agnes \u753b\u4e00\u5f20\u300d\u300cAgnes \u751f\u6210\u300d\u300c\u7528\u8fd9\u5f20\u56fe\u751f\u6210/\u6539\u6210\u2026\u2026\u300d\u6216\u660e\u786e\u8981\u6c42\u4f7f\u7528 Agnes API \u8fdb\u884c\u6587\u751f\u56fe/\u56fe\u751f\u56fe\u65f6\uff0c\u52a0\u8f7d\u672c skill\u3002\u4e0d\u6d88\u8017 WorkBuddy \u79ef\u5206\uff0c\u4ec5\u6d88\u8017 Agnes API \u989d\u5ea6\uff08\u5f53\u524d\u56fe\u50cf\u751f\u6210\u514d\u8d39\uff09\u3002",
+  "updated_at": 1785385384436,
+  "version": "1.0.3"
+}
