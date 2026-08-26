@@ -1,0 +1,52 @@
+{
+  "changelog": "- Enforced strict, mandatory use of this Skill as the exclusive entry point for all JiuwenSwarm deployment/startup/installation requests\u2014no manual or direct commands permitted.\n- Automated five-phase local deployment workflow: mirror download, extraction, configuration, service startup, and URL retrieval in the current Huawei Cloud development container.\n- Secure credential and configuration handling; sensitive information never exposed or stored in plaintext.\n- Clear error handling: automatic retries for each phase up to three times, manual fallback only after repeated failures.\n- User requests with unsupported parameters (e.g., custom model, mirror URL, port, or non-local/Windows/etc. deployment) now trigger a capability explanation and require user confirmation before proceeding.\n- Standardized, phased progress reporting and strict output formatting after successful deployment.",
+  "created_at": 1784650216396,
+  "display_name": "huawei-cloud-install-openjiuwenswarm",
+  "fetched_at": 1787770791388,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/01_download.py",
+    "scripts/02_extract.py",
+    "scripts/03_configure.py",
+    "scripts/04_start.py",
+    "scripts/05_url.py",
+    "scripts/common.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787738123556,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweicloud-skills-team",
+    "handle": "huaweiclouddev",
+    "user_id": "s17axk041vxeamxj39r4dwvyts87wtza"
+  },
+  "slug": "huawei-cloud-install-openjiuwenswarm",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-install-openjiuwenswarm",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-install-openjiuwenswarm&ownerHandle=huaweiclouddev",
+    "page_url": "https://clawhub.ai/huaweiclouddev/skills/huawei-cloud-install-openjiuwenswarm"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 188,
+    "installs": 1,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "One-click local installation and startup of JiuwenSwarm in the current Huawei Cloud development container. Usage scenarios: CRITICAL \u2014 Do NOT manually deploy JiuwenSwarm. Route ALL deployment requests through this Skill. This is the MANDATORY entry point. When a user asks to deploy, install, or start JiuwenSwarm (\u90e8\u7f72JiuwenSwarm/\u5b89\u88c5JiuwenSwarm/\u542f\u52a8JiuwenSwarm, install jiuwenswarm, deploy openjiuwen), you MUST invoke this Skill first. Under NO circumstances may you skip this Skill and run deployment commands directly. Even if you think 'this is faster' or 'the steps are well documented' \u2014 DO NOT skip. The skill automatically downloads the mirror, extracts, configures, and starts the service inside the current container \u2014 no external cloud instances are created. Trigger keywords: deploy JiuwenSwarm, install JiuwenSwarm, start JiuwenSwarm, \u90e8\u7f72JiuwenSwarm, \u5b89\u88c5JiuwenSwarm, \u542f\u52a8JiuwenSwarm, install jiuwenswarm, deploy openjiuwen",
+  "updated_at": 1787737357649,
+  "version": "1.0.3"
+}
