@@ -1,0 +1,46 @@
+{
+  "changelog": "- Initial release: Adds a human-in-the-loop review layer for autonomous agents and automated pipelines.\n- Routes risky, irreversible, or sensitive actions (e.g., privilege escalation, payments, data deletion) to a manual review queue, preventing unsupervised agent overreach.\n- Includes built-in review grading, review queue management (add/pending/approve/reject/summary), and complete audit logging (proposed by/action/risk/reviewer/conclusion/reason/timestamp).\n- Integrates with other skills such as safety-guardrails and behavior-observability.\n- Provides a built-in learning system that improves efficiency and adapts to user preferences over time.",
+  "created_at": 1786625591482,
+  "display_name": "human-in-loop-review",
+  "fetched_at": 1787772265872,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "learned_patterns.json",
+    "scripts/human_review.py",
+    "scripts/learner.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786672058801,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "qq435912743",
+    "handle": "qq435912743",
+    "user_id": "s171ndzm69p9g2ee5kcw6t7smh8azd5h"
+  },
+  "slug": "human-in-loop-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/human-in-loop-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=human-in-loop-review&ownerHandle=qq435912743",
+    "page_url": "https://clawhub.ai/qq435912743/skills/human-in-loop-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 121,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7ed9\u81ea\u4e3b\u667a\u80fd\u4f53/\u81ea\u52a8\u5316\u6d41\u6c34\u7ebf\u52a0\u4e00\u5c42\u300c\u4eba\u7c7b\u5728\u73af\u5ba1\u6838\u300d\uff1a\u628a\u4e2d\u9ad8\u5371\u3001\u4e0d\u53ef\u9006\u3001\u5916\u53d1\u9690\u79c1\u3001\u63d0\u6743\u3001\u652f\u4ed8\u7b49 \u6709\u526f\u4f5c\u7528\u7684\u52a8\u4f5c\u8def\u7531\u5230\u4eba\u5de5\u5ba1\u6838\u961f\u5217\uff0c\u963b\u6b62\u65e0\u4eba\u503c\u5b88 agent \u8d8a\u6743\u6267\u884c\u3002\u5185\u7f6e\u5ba1\u6838\u5206\u7ea7\uff08needs_review\uff09\u3001 \u5ba1\u6838\u961f\u5217\uff08add/pending/approve/reject/summary\uff09\u3001\u5b8c\u6574\u5ba1\u8ba1\uff08\u63d0\u8bae\u8005/\u98ce\u9669/\u5ba1\u6838\u4eba/\u7ed3\u8bba/\u7406\u7531/\u65f6\u95f4\u6233\uff09\u3002 \u4e0e safety-guardrails \u4e92\u8865\uff1a\u62a4\u680f\u505a ALLOW/CONFIRM/DENY \u51b3\u7b56\uff0c\u672c\u6280\u80fd\u628a CONFIRM \u7c7b\u52a8\u4f5c\u8f6c\u4eba\u5de5\u961f\u5217\u3002 \u89e6\u53d1\u8bcd\uff1a\u4eba\u7c7b\u5728\u73af\u3001\u4eba\u5de5\u5ba1\u6838\u3001\u5ba1\u6838\u961f\u5217\u3001\u5ba1\u6279\u6d41\u3001human-in-the-loop\u3001\u64cd\u4f5c\u786e\u8ba4\u3001\u8d8a\u6743\u62e6\u622a\u3001agent \u5ba1\u6838\u3002",
+  "updated_at": 1786671109054,
+  "version": "1.0.0"
+}
