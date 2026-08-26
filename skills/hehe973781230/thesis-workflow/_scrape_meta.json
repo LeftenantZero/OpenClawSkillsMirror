@@ -1,0 +1,76 @@
+{
+  "changelog": "[v2.0.0] outline-anchored \u5b8c\u6574\u5408\u5e76\u7248\n\n\u26a0\ufe0f \u91cd\u5927\u53d8\u66f4\uff08\u7834\u574f\u6027\uff09\uff1a\u4ece v1.7.3 \u5347\u7ea7\u9700\u8981\u9075\u5faa\u8fc1\u79fb\u6307\u5357\u3002\n\n## \u6838\u5fc3\u80fd\u529b\u589e\u5f3a\n\n### Step 9 \u2014 \u8de8\u7236\u8282\u70b9 Bridge\uff08\u7ae0\u8282\u6458\u8981\u8282\u70b9\uff09\n- \u5728\u6bcf\u4e2a L1 \u7ae0\u8282\u672b\u5c3e\u63d2\u5165\u865a\u62df\u8282\u70b9 __ch{N}_summary__\n- \u5438\u6536\u672c\u7ae0\u6240\u6709 L2/L3 key_conclusion\n- generate_bridge \u65b0\u589e P3 fallback\uff08\u8de8\u7ae0\u8282\u9996\u8282\u70b9\u5f15\u7528\u4e0a\u4e00\u7ae0\u8282\u6458\u8981\uff09\n- LLM \u5408\u6210 200-300 \u5b57\u7ae0\u8282\u6458\u8981\uff0c\u5931\u8d25\u65f6\u8be2\u95ee\u7528\u6237\n\n### Step 10 \u2014 \u5199\u4f5c\u524d\u4fe1\u606f\u68c0\u67e5\n- \u65b0\u589e check_info_scarcity() \u6807\u51c6 A \u68c0\u67e5\n- 3 \u9879\u4fe1\u606f\u6e90\uff1acontent_hint / user_hints / bridge\n- \u4efb\u4e00\u4e3a\u7a7a \u2192 action=\"needs_user_input\" + 3 \u51b3\u7b56\u8def\u5f84\n- \u5b8c\u6574\u63a5\u5165 content_hint \u5230 prompt \u5305\uff08## \u5f00\u9898\u62a5\u544a\u65b9\u5411\u53c2\u8003 section\uff09\n\n### Step 11 \u2014 Orchestrator Phase 1.3 \u96c6\u6210\n- \u65b0\u589e orchestrate_phase1_1() \u89e3\u6790\u5165\u53e3\uff08\u652f\u6301 docx + \u6587\u672c\uff09\n- Phase 1.3 \u5f3a\u5236\u6d41\u7a0b\uff08\u4e0d\u786e\u8ba4\u5f52\u56e0\u4e0d\u80fd\u8fdb Phase 2\uff09\n- \u7ec6\u7c92\u5ea6\u8fd4\u56de node_details\uff08\u542b content_hint + matched_paragraphs\uff09\n- \u7528\u6237\u53ef\u8c03\u6574 content_hint\uff08update_node_content_hint\uff09\n\n### Step 12 \u2014 \u5168\u94fe\u8def\u96c6\u6210\u6d4b\u8bd5\n- 3 \u4e2a\u7aef\u5230\u7aef\u6d4b\u8bd5\u8986\u76d6\u5168\u90e8\u7ec4\u4ef6\u534f\u540c\n- \u4fee\u590d L3 \u9996\u8282\u70b9 prev_chapter_summary \u89e6\u53d1\u6761\u4ef6 bug\n\n## \u7834\u574f\u6027\u53d8\u66f4\u6e05\u5355\n\n1. Phase 1.3 \u5f3a\u5236\u6d41\u7a0b\uff08\u65e7\u8c03\u7528 confirm_phase1 \u76f4\u63a5\u8fdb phase2 \u4e0d\u518d\u5de5\u4f5c\uff09\n2. outline_state \u65b0\u589e\u865a\u62df\u8282\u70b9\uff08\u8282\u70b9\u6570 = \u539f\u8282\u70b9 + L1 \u7ae0\u8282\u6570\uff09\n3. orchestrate_state \u65b0\u589e 5 \u4e2a phase1_3_* \u5b57\u6bb5\n4. generate_bridge \u4e09\u7ea7\u964d\u7ea7\u94fe\uff08\u65b0\u589e P3\uff09\n5. \u5199\u4f5c\u524d\u4fe1\u606f\u68c0\u67e5\uff08check_info_scarcity() \u5f15\u5165\uff09\n\n## \u4ee3\u7801\u53d8\u66f4\n\n+3818 / -28 \u884c\uff0816 \u6587\u4ef6\uff09\n\n## \u6d4b\u8bd5\n\n72 \u4e2a\u6d4b\u8bd5\u5168\u90e8\u901a\u8fc7 \u2705\uff08v1.7.3 \u65e2\u6709 25 + Step 9-12 \u65b0\u589e 47\uff09\n\n## \u8fc1\u79fb\u6307\u5357\n\n\u65e7\u8c03\u7528\u65b9\u5f0f\uff08v1.7.3\uff09\uff1a\n  orchestrate(paper, action=\"phase1_confirm\")  # \u76f4\u63a5\u8fdb phase2\n  orchestrate(paper, phase=\"phase2\", ...)\n\n\u65b0\u8c03\u7528\u65b9\u5f0f\uff08v2.0.0\uff09\uff1a\n  orchestrate(paper, action=\"phase1_1_init\", input_type=\"docx\", input_data=docx_path)\n  orchestrate(paper, action=\"phase1_confirm\")\n  orchestrate(paper, action=\"phase1_3_submit\")\n  orchestrate(paper, action=\"phase1_3_confirm\")\n  orchestrate(paper, phase=\"phase2\", ...)",
+  "created_at": 1781659514811,
+  "display_name": "Mba Thesis Workflow",
+  "fetched_at": 1787779607995,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "OUTLINE_ANCHORED_TODO.md",
+    "README.md",
+    "README_EN.md",
+    "SKILL.md",
+    "_meta.json",
+    "install.sh",
+    "references/chapter-summary-design.md",
+    "references/checklist.md",
+    "references/loop-design.md",
+    "scripts/__init__.py",
+    "scripts/context_builder.py",
+    "scripts/loop_self_check.py",
+    "scripts/md2docx_strict.py",
+    "scripts/node_writer.py",
+    "scripts/orchestrator.py",
+    "scripts/orchestrator_v2.py",
+    "scripts/outline_parser.py",
+    "scripts/reviewer.py",
+    "scripts/state_manager.py",
+    "scripts/state_manager_v2.py",
+    "scripts/tests/__init__.py",
+    "scripts/tests/test_bridge_p3_fallback.py",
+    "scripts/tests/test_chapter_summary.py",
+    "scripts/tests/test_context_builder.py",
+    "scripts/tests/test_full_workflow.py",
+    "scripts/tests/test_info_scarcity.py",
+    "scripts/tests/test_integration_chapter_summary.py",
+    "scripts/tests/test_node_writer.py",
+    "scripts/tests/test_orchestrator.py",
+    "scripts/tests/test_outline_parser.py",
+    "scripts/tests/test_phase1_3.py",
+    "scripts/tests/test_reviewer.py",
+    "scripts/tests/test_synthesize_summary.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782190513510,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "hehe973781230",
+    "handle": "hehe973781230",
+    "user_id": "s177cnrnh50t3jxyh7y9exta3h87sc86"
+  },
+  "slug": "thesis-workflow",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/thesis-workflow",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=thesis-workflow&ownerHandle=hehe973781230",
+    "page_url": "https://clawhub.ai/hehe973781230/skills/thesis-workflow"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 557,
+    "installs": 5,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "\u591aAgent\u534f\u4f5c\u5b8c\u6210MBA/\u5b66\u672f\u8bba\u6587\u5199\u4f5c\u7684\u5b8c\u6574\u5de5\u4f5c\u6d41\uff0c\u652f\u6301\u53cc\u7248\u672c\u8d77\u8349\u3001\u5ba1\u6838\u3001\u6574\u5408\u3001\u5b9a\u7a3f\u3002",
+  "updated_at": 1782184514176,
+  "version": "2.0.0"
+}
