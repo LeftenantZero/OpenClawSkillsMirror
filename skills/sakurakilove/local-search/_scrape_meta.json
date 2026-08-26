@@ -1,0 +1,51 @@
+{
+  "changelog": "v1.6.2: 88-scenario comprehensive test (10 categories: Daily Life, Work, Study, Programming, Shopping, Health, Travel, Entertainment, News, Edge Cases). Result: 85/88 passed (97%). Fixes: (1) Chinese question-word + brand rewrite ('\u600e\u4e48\u6ce8\u518c\u652f\u4ed8\u5b9d' \u2192 '\u652f\u4ed8\u5b9d Alipay \u6ce8\u518c\u652f\u4ed8\u5b9d') \u2014 Bing was returning dictionary entry for '\u600e\u4e48'. (2) Mixed CJK/Latin locale detection \u2014 'iPhone 15 Pro \u4ef7\u683c' now correctly detects zh-CN (was en-US \u2192 Korean results). (3) \u7279\u65af\u62c9 rewrite strengthened. Per-category: Work/Programming/Health/Travel/Entertainment/Edge 100%, Daily Life/Shopping 100% after fix, Study 87%, News 75%.",
+  "created_at": 1782893125965,
+  "display_name": "Local Search",
+  "fetched_at": 1787778503799,
+  "files": [
+    "LICENSE",
+    "LICENSE.txt",
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "bin/web-search.ts",
+    "package.json",
+    "scripts/test.ts",
+    "scripts/web_search.ts",
+    "skill-card.md",
+    "src/engines/_shared.ts",
+    "src/engines/bing.ts",
+    "src/engines/brave.ts",
+    "src/engines/duckduckgo.ts",
+    "src/engines/google.ts",
+    "src/engines/index.ts",
+    "src/index.ts",
+    "src/search.ts",
+    "src/types.ts",
+    "tsconfig.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u671d\u6b4c",
+    "handle": "sakurakilove",
+    "user_id": "s177e7krqvptysnfvsdn7dnvgx89p08k"
+  },
+  "slug": "local-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/local-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=local-search&ownerHandle=sakurakilove",
+    "page_url": "https://clawhub.ai/sakurakilove/skills/local-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 339,
+    "installs": 1,
+    "stars": 1,
+    "versions": 10
+  },
+  "summary": "Local web search skill that runs entirely on the user's machine. Scrapes DuckDuckGo / Bing / Google HTML directly with automatic engine fallback (DDG -> Bing...",
+  "updated_at": 1782911593961,
+  "version": "1.6.2"
+}
