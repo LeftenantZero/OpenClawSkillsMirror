@@ -1,0 +1,54 @@
+{
+  "changelog": "gitea-repo-ingest 1.0.6\n\n- Clarified usage of the validate-pages script: do not treat successful validation as the final result; always continue to the apply stage, as only apply updates the final result file.\n- Documented that apply writes a stable itemKey in the sourceItems array for repository sources, improving catalog consistency.\n- No code or implementation changes; documentation updated for workflow accuracy and clarity.",
+  "created_at": 1783355675553,
+  "display_name": "Gitea Repo Ingest",
+  "fetched_at": 1787777374339,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "env-example.txt",
+    "main.js",
+    "requirements.txt",
+    "scripts/catalog.py",
+    "scripts/gitea_api.py",
+    "scripts/kb_writer.py",
+    "scripts/repo_reader.py",
+    "scripts/run_task.py",
+    "scripts/task_io.py",
+    "scripts/utils.py",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783608402263,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "myd2002",
+    "handle": "myd2002",
+    "user_id": "s175zrvz5m28epr76c6rt4dtex8474t6"
+  },
+  "slug": "gitea-repo-ingest",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gitea-repo-ingest",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gitea-repo-ingest&ownerHandle=myd2002",
+    "page_url": "https://clawhub.ai/myd2002/skills/gitea-repo-ingest"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 800,
+    "installs": 0,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Ingest public Git repositories or repositories on the configured Gitea server into the Research KB. Use for Git/Gitea source scans that need OpenClaw code understanding, incremental commit comparison, code repository overview pages, concept pages, resource pages, related wiki page updates, source tr",
+  "updated_at": 1783607878657,
+  "version": "1.0.6"
+}
