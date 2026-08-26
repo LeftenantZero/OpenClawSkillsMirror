@@ -1,0 +1,38 @@
+{
+  "changelog": "Updated review-github-pr from 0.4.1 to 0.4.2.\nChanges:\n- modified `SKILL.md`\n- deleted `skill-card.md`",
+  "created_at": 1775594593318,
+  "display_name": "review-github-pr",
+  "fetched_at": 1787770156696,
+  "files": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "evals/fixtures/clean/setup.sh",
+    "evals/fixtures/correctness-convention/setup.sh",
+    "evals/fixtures/efficiency-design/setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Misha Kolesnik",
+    "handle": "tenequm",
+    "user_id": "s17bp3v1hm1dnkzey0c9tfh02183j0y5"
+  },
+  "slug": "review-github-pr",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/review-github-pr",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=review-github-pr&ownerHandle=tenequm",
+    "page_url": "https://clawhub.ai/tenequm/skills/review-github-pr"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1235,
+    "installs": 22,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Reviews a GitHub pull request end to end. Fetches the diff, runs automated checks, analyzes the changes with three parallel review agents (correctness, convention compliance, efficiency), validates every finding against the actual code, and drafts a GitHub review that posts findings as inline diff comments with a recommended action of approve, request changes, or comment only.",
+  "updated_at": 1787314484837,
+  "version": "0.4.2"
+}
