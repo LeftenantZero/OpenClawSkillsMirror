@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release: Extracts structured product listings from any Amazon search results or category browse page across all regional Amazon sites.\n- Returns per-item product cards with details like ASIN, title, URL, image, prices, star rating, review count, badges (Amazon's Choice, Best Seller), sponsorship, delivery info, social proof, and position index.\n- Provides pagination info: current page, next page URL, hasNextPage, and approximate total results.\n- Supports full pagination, including walking through multi-page search/category results (within Amazon\u2019s known page limit where applicable).\n- Works directly in the user's browser session and never bypasses authentication or access controls.\n- Suitable for use cases like price monitoring, competitive tracking, keyword ranking analysis, category audits, and bulk ASIN extraction.",
+  "created_at": 1783675250430,
+  "display_name": "Amazon Search Listing",
+  "fetched_at": 1787777299219,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-search-results.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783675388445,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "amazon-search-listing",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/amazon-search-listing",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=amazon-search-listing&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/amazon-search-listing"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 349,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Amazon search and category listing scraper: extract product listings from any Amazon search results page, keyword search URL, or category browse page and return per-item cards (asin, title, url, image, price, listPrice, stars, reviewCount, badges, isAmazonChoice, isBestSeller, isSponsored, delivery,",
+  "updated_at": 1783675250430,
+  "version": "1.0.0"
+}
