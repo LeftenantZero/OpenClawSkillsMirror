@@ -1,0 +1,66 @@
+{
+  "changelog": "- Initial release of SAR backscatter analysis skill.\n- Computes multi-temporal, per-pixel SAR backscatter statistics: mean, standard deviation, amplitude, coefficient of variation, and polarization ratio.\n- Accepts input as multi-date \u03c3\u2070 data cubes or generates synthetic phenology time-series with --synthetic.\n- Outputs statistical multi-band GeoTIFF and a JSON file with time-series curves.\n- All processing is performed locally and offline; user privacy is protected.",
+  "created_at": 1785849775842,
+  "display_name": "geoskill-sar-backscatter-analysis",
+  "fetched_at": 1787773444905,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-sar-backscatter-analysis.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785851184565,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-sar-backscatter-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-sar-backscatter-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-sar-backscatter-analysis&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-sar-backscatter-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 185,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u591a\u65f6\u76f8 SAR \u540e\u5411\u6563\u5c04\u65f6\u5e8f\u7edf\u8ba1\uff1a\u9010\u50cf\u5143\u5747\u503c/\u6807\u51c6\u5dee/\u632f\u5e45/\u53d8\u5f02\u7cfb\u6570\u4e0e\u6781\u5316\u6bd4\u3002Multi-temporal SAR backscatter time-series statistics (mean/std/amplitude/CV) and polarization ratio. \u8f93\u5165\u591a\u65f6\u76f8 \u03c3\u2070 \u7acb\u65b9\u4f53\uff08\u6216\u7528 --synthetic \u751f\u6210\u542b\u690d\u88ab\u7269\u5019\u6b63\u5f26\u4fe1\u53f7\u7684\u65f6\u5e8f\uff09\uff0c\u8f93\u51fa\u591a\u6ce2\u6bb5\u7edf\u8ba1 GeoTIFF + \u65f6\u5e8f\u66f2\u7ebf JSON\u3002",
+  "updated_at": 1785850062004,
+  "version": "1.0.0"
+}
