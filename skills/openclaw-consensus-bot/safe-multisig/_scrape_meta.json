@@ -1,0 +1,55 @@
+{
+  "changelog": "safe-multisig 2.1.0\\n\\n- Replaces the legacy release with the full TypeScript-strict Safe multisig CLI (Safe{Core} protocol-kit v6 / api-kit v4).\\n- Core scripts: create-safe, safe-info, list-pending, propose-tx, approve-tx, execute-tx.\\n- Adds 70 tests + strict typecheck.\\n",
+  "created_at": 1770611249478,
+  "display_name": "Safe Multisig Skill",
+  "fetched_at": 1787785910805,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "package-lock.json",
+    "package.json",
+    "references/example.tx.json",
+    "references/examples.md",
+    "references/tx_request.schema.json",
+    "references/tx_service_slugs.md",
+    "scripts/approve-tx.ts",
+    "scripts/bootstrap.sh",
+    "scripts/create-safe.ts",
+    "scripts/execute-tx.ts",
+    "scripts/list-pending.ts",
+    "scripts/propose-tx.ts",
+    "scripts/safe-info.ts",
+    "scripts/safe_about.sh",
+    "scripts/safe_lib.ts",
+    "scripts/safe_txs_list.ts",
+    "skill-card.md",
+    "tests/cli.test.ts",
+    "tests/safe_lib.test.ts",
+    "tests/smoke.sh",
+    "tsconfig.json",
+    "vitest.config.ts"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "openclaw-consensus-bot",
+    "handle": "openclaw-consensus-bot",
+    "user_id": "s17abyc0z9d80ev1crpcrxzt1h884mfk"
+  },
+  "slug": "safe-multisig",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/safe-multisig",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=safe-multisig&ownerHandle=openclaw-consensus-bot",
+    "page_url": "https://clawhub.ai/openclaw-consensus-bot/skills/safe-multisig"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1784,
+    "installs": 57,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Propose, confirm, and execute Safe multisig transactions using the Safe{Core} SDK (protocol-kit v6 / api-kit v4). TypeScript strict. Use when an agent needs to operate a Safe smart account \u2014 (1) create/predict a new Safe, (2) fetch Safe owners/threshold/nonce, (3) list pending multisig txs, (4) build + propose a tx, (5) add confirmations, (6) execute a tx onchain, or (7) troubleshoot Safe nonce/signature issues across chains (Base/Ethereum/Optimism/Arbitrum/Polygon/etc.).",
+  "updated_at": 1779219493410,
+  "version": "2.1.0"
+}
