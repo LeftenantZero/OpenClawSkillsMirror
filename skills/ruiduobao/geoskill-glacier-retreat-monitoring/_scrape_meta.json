@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release of geoskill-glacier-retreat-monitoring:\n\n- Extracts multi-temporal glacier extents using NDSI and vectorizes glacier boundaries into polygons.\n- Analyzes terminus retreat and area change over time, outputting area curves and retreat rates.\n- Supports both synthetic data generation (offline mode) and user-provided multi-temporal image cubes.\n- Outputs include GeoJSON boundaries, GeoTIFF glacier mask, JSON with retreat analysis, and a run manifest.\n- Fully offline operation; no user data is uploaded.",
+  "created_at": 1785845485955,
+  "display_name": "geoskill-glacier-retreat-monitoring",
+  "fetched_at": 1787773482797,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-glacier-retreat-monitoring.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785846546584,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-glacier-retreat-monitoring",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-glacier-retreat-monitoring",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-glacier-retreat-monitoring&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-glacier-retreat-monitoring"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 184,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7528 NDSI \u63d0\u53d6\u591a\u671f\u51b0\u5ddd\u8303\u56f4\u5e76\u77e2\u91cf\u5316\u4e3a\u8fb9\u754c\u591a\u8fb9\u5f62\uff0c\u5206\u6790\u51b0\u5ddd\u672b\u7aef\u4f4d\u7f6e\u540e\u9000\u4e0e\u9762\u79ef\u53d8\u5316\u66f2\u7ebf\uff0c\u8f93\u51fa\u8fb9\u754c GeoJSON \u5e8f\u5217\u3001\u9000\u7f29\u901f\u7387\u4e0e\u9762\u79ef JSON\u3002Monitors glacier retreat from multi-temporal NDSI boundaries.",
+  "updated_at": 1785845657901,
+  "version": "1.0.0"
+}
