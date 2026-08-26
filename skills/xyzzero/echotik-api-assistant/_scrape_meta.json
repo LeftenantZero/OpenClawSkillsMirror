@@ -1,0 +1,57 @@
+{
+  "changelog": "Initial release of EchoTik API Assistant skill:\n\n- Routes natural language TikTok commerce intelligence tasks to authenticated EchoTik API workflows.\n- Identifies user goals, selects relevant scenarios, collects only essential inputs, and executes workflows via local scripts.\n- Enforces strict rules: uses only EchoTik API for data queries, never substitutes with web scraping or manual site navigation.\n- Guides users through credential setup and authentication steps before enabling live API requests.\n- Adapts its flow for business-focused interaction, compressing complex API inputs into simple goal-driven questions.\n- Provides guidance and fallback options if scenarios or parameters are unclear, consulting the official docs as needed.",
+  "created_at": 1783587111964,
+  "display_name": "Echotik Api Assistant",
+  "fetched_at": 1787777400833,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/global-rules.md",
+    "references/influencer-rules.md",
+    "references/live-rules.md",
+    "references/orchestration-playbooks.md",
+    "references/product-rules.md",
+    "references/routing-policy.md",
+    "references/scenarios.md",
+    "references/search-rules.md",
+    "references/seller-rules.md",
+    "references/setup-and-auth.md",
+    "references/video-rules.md",
+    "script/configure-echotik-auth.mjs",
+    "script/echotik-api.mjs",
+    "script/search-echotik-docs.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783587554056,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xyz",
+    "handle": "xyzzero",
+    "user_id": "s171syq0yzqa444gtv8q9v8rhd8a7ma1"
+  },
+  "slug": "echotik-api-assistant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/echotik-api-assistant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=echotik-api-assistant&ownerHandle=xyzzero",
+    "page_url": "https://clawhub.ai/xyzzero/skills/echotik-api-assistant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 519,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Route natural-language TikTok commerce intelligence requests into authenticated EchoTik API workflows. Use when the task involves creator discovery, product research, seller analysis, video intelligence, live lookup, search, reporting, or documentation-guided parameter mapping over the EchoTik API s",
+  "updated_at": 1783587111964,
+  "version": "1.0.0"
+}
