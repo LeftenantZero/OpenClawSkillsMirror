@@ -1,0 +1,38 @@
+{
+  "changelog": "- Initial release: Fetches and analyzes the OpenRouter live model catalog.\n- Supports filtering and sorting by 8 price categories, context length, and input/output modalities (text, image, file, audio, video).\n- Enables comparison by provider, free/paid status, and specialized abilities (e.g., image input/output, cache, reasoning).\n- Offers output as aligned tables, JSON, or coverage statistics, suitable for data analysis or automation.\n- Usable for quick queries like \"cheapest X-capable model\", all models of a family, or free model listings.\n- Designed exclusively for models listed on OpenRouter, not for general LLM pricing or generation tasks.",
+  "created_at": 1781669897499,
+  "display_name": "Openrouter Models Pricing",
+  "fetched_at": 1787780427577,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/model_families.md",
+    "references/pricing_fields.md",
+    "scripts/analyze.py",
+    "scripts/fetch_models.py",
+    "scripts/models_raw.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Rytia",
+    "handle": "zzfly256",
+    "user_id": "s177gnqbwh87rr7acqjgf6tfq588v6km"
+  },
+  "slug": "openrouter-models",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openrouter-models",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openrouter-models&ownerHandle=zzfly256",
+    "page_url": "https://clawhub.ai/zzfly256/skills/openrouter-models"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 327,
+    "installs": 3,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u62c9\u53d6\u5e76\u5206\u6790 OpenRouter \u6a21\u578b\u76ee\u5f55\u2014\u2014\u6db5\u76d6 8 \u9879\u5b9a\u4ef7\uff08prompt / completion / cache_read / cache_write / web_search / reasoning / image / audio\uff09\u3001\u4e0a\u4e0b\u6587\u957f\u5ea6\u53ca\u8f93\u5165\u8f93\u51fa\u6a21\u6001\uff08text\u3001image\u3001file\u3001audio\u3001v...",
+  "updated_at": 1781669897499,
+  "version": "1.0.0"
+}
