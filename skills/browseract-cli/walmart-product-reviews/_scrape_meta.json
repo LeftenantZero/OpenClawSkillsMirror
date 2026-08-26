@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial public release of Walmart product reviews scraper.\n\n- Scrapes paginated customer reviews from any walmart.com product, using item ID and page number.\n- Extracts structured data: reviewId, rating, text, author nickname, date, verified purchase, helpful votes, variant (e.g., color/size), badges, fulfillment and seller info, and photo count.\n- Handles pagination, returning 10 reviews per page until all reviews are collected.\n- Includes robust error handling for unsupported pages or extraction errors.\n- Provides detailed guidance on pre-execution setup, batching, error resumption, and experience logging.",
+  "created_at": 1784544778081,
+  "display_name": "Walmart Product Reviews",
+  "fetched_at": 1787775897091,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-reviews.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784549324366,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "walmart-product-reviews",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/walmart-product-reviews",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=walmart-product-reviews&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/walmart-product-reviews"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 241,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Walmart product reviews scraper: given a walmart.com product item ID, navigate to the reviews page and extract paginated customer reviews including reviewId, rating, title, review text, author nickname, submission date, verified purchase status, helpful votes, variant selected (color/size), badges,",
+  "updated_at": 1784548328675,
+  "version": "1.0.0"
+}
