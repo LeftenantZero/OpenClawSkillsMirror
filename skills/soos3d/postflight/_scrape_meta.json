@@ -1,0 +1,43 @@
+{
+  "changelog": "**This update clarifies workflow documentation, splits drafting details into a dedicated guide, and refines skill boundaries.**\n\n- Drafting workflow and approval process are now separated into DRAFTING.md for clarity.\n- SKILL.md is streamlined: concise introductory summary, stricter statements of approval and reply rules.\n- Mode selection is clarified, with guidance to follow each mode's dedicated doc.\n- Outbound message behavior (reply discipline) is now explicit and more restrictive.\n- Old, redundant, or moved documentation files updated or removed.",
+  "created_at": 1786055369736,
+  "display_name": "postflight",
+  "fetched_at": 1787772997479,
+  "files": [
+    "CONTENT.md",
+    "DRAFTING.md",
+    "PHOTO-INGESTION.md",
+    "PUBLISH-API.md",
+    "PUBLISH-BROWSER.md",
+    "REPLY-DRAFTING.md",
+    "SKILL.md",
+    "VOICE.md",
+    "_meta.json",
+    "ingest-photo.sh",
+    "pillars.example.md",
+    "settings.example.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Soos3D",
+    "handle": "soos3d",
+    "user_id": "s1758v6vk757q73a6xctdnmxe58bzfm3"
+  },
+  "slug": "postflight",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/postflight",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=postflight&ownerHandle=soos3d",
+    "page_url": "https://clawhub.ai/soos3d/skills/postflight"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 374,
+    "installs": 1,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "Drafts X (Twitter) posts on a weighted pillar schedule, sends each draft to the authorized user for approval, and publishes only the ones they ship. Invoke on cron messages that mention postflight (drafting, or backlog/style/metrics maintenance), a request for a tweet draft, a ship/skip/edit reply to a pending draft, a forwarded x.com post link to get reply options drafted, or a photo sent to file into a photo library.",
+  "updated_at": 1786333163462,
+  "version": "1.4.0"
+}
