@@ -1,0 +1,38 @@
+{
+  "changelog": "Initial release of ECS Health Inspection skill for Alibaba Cloud:\n\n- Provides comprehensive health inspection for a single ECS instance, assessing CPU, load, memory, disk IO, network, disk capacity, and GPU (if present).\n- Selects data source automatically: prefers CloudMonitor, falls back to ECS Monitor API.\n- Generates a structured HTML report with findings and recommendations.\n- Requires Aliyun CLI >= 3.3.3, plugin update, and Python >= 3.8 (stdlib-only; no pip dependencies).\n- Fully read-only with zero resource creation or mutation.\n- User parameters (instance ID, region) must be explicitly confirmed before execution.\n- Includes clear installation, authentication, and permission troubleshooting guidance.",
+  "created_at": 1780392806185,
+  "display_name": "Alibabacloud Ecs Health Inspection",
+  "fetched_at": 1787783384926,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/degradation-and-validation.md",
+    "references/inspection-commands.md",
+    "references/ram-policies.md",
+    "scripts/render_report.py",
+    "scripts/requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-ecs-health-inspection",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-ecs-health-inspection",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-ecs-health-inspection&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-ecs-health-inspection"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 451,
+    "installs": 7,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "ECS Health Inspection - Perform comprehensive health inspection on Alibaba Cloud ECS instances. Checks CPU usage, system load, memory usage, disk IO (BPS and...",
+  "updated_at": 1780392806185,
+  "version": "0.0.1"
+}
