@@ -1,0 +1,34 @@
+{
+  "changelog": "belief-assessor v2 introduces major upgrades:\n\n  - 4-way constraint system (contradiction, provenance, temporal, density) that \n    caps confidence and explains why via veto_reasons\n  - Formula-based confidence intervals that adapt to evidence quality and quantity,\n    replacing the fixed \u00b10.15 margin\n  - 3 strategy presets (standard, conservative, permissive) + fully customizable\n    thresholds via ProjectionConfig\n  - Historical claim auto-detection \u2014 exempts past events from temporal decay\n    unless actively challenged\n  - Expanded benchmarks: 56 internal + 400 external (FEVER/PubHealth/LIAR),\n    0 false positives across all datasets",
+  "created_at": 1780907233081,
+  "display_name": "Belief Assessor",
+  "fetched_at": 1787781178645,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/assess.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "hqzzdsda",
+    "handle": "hqzzdsda",
+    "user_id": "s174gpn3gamj9v84xcsk16v5dx87t9a8"
+  },
+  "slug": "belief-assessor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/belief-assessor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=belief-assessor&ownerHandle=hqzzdsda",
+    "page_url": "https://clawhub.ai/hqzzdsda/skills/belief-assessor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 492,
+    "installs": 8,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "LLM-driven epistemic reasoning engine. Evaluates claims against evidence, outputs calibrated confidence and structured belief state (VERIFIED/CONTESTED/UNCER...",
+  "updated_at": 1781161412052,
+  "version": "2.0.0"
+}
