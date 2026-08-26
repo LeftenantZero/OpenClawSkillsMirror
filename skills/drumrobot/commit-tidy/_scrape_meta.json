@@ -1,0 +1,52 @@
+{
+  "changelog": "commit-tidy v0.5.5\n\n- Added a new \"Mandatory Invocation Gate\" (HARD STOP): commit-tidy must be invoked before committing if 5+ files are changed or multiple components are edited.\n- Updated SKILL.md and CHANGELOG.md documentation with clarifications on mandatory usage and review steps in large or cross-directory modifications.\n- Removed obsolete skill-card.md file.",
+  "created_at": 1774932150426,
+  "display_name": "commit-tidy",
+  "fetched_at": 1787770253638,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "hunk-split.md",
+    "interactive-amend.md",
+    "message-discipline.md",
+    "resources/commit-review-trigger.sh",
+    "security-scan.md",
+    "skill-card.md",
+    "soft-reset-amend.md",
+    "staging-discipline.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787291738141,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "es6kr",
+    "handle": "drumrobot",
+    "user_id": "s17ay1v6v88r2m102pvvc44gz183qcrm"
+  },
+  "slug": "commit-tidy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/commit-tidy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=commit-tidy&ownerHandle=drumrobot",
+    "page_url": "https://clawhub.ai/drumrobot/skills/commit-tidy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1659,
+    "installs": 24,
+    "stars": 1,
+    "versions": 13
+  },
+  "summary": "Analyze staged/committed changes and recommend split, squash, or commit-message strategy. Topics \u2014 hunk-split (non-interactive single-hunk staging via git apply --cached when git add -p isn't usable), interactive-amend (worktree-based amend+rebase loop), soft-reset-amend (soft-reset top N + selective re-commit), staging-discipline (`git diff --cached --name-only` audit + sensitive-dir gate for rules/agents/docs), security-scan (PUBLIC repo 4-grep secret pattern check before commit), message-discipline (Conventional Commit tags, PUBLIC English enforcement, operation-type continuity, --amend refresh, source-code .md behavior verbs). Use when: \"commit split\", \"squash commits\", \"tidy commits\", \"amend earlier\", \"interactive amend\", \"soft reset\", \"rewrite commits\", \"PUBLIC repo commit\", \"secret in commit\", \"commit message\", \"commit author identity\", \"commit message English\", \"staging discipline\", \"hunk split\", \"stage one hunk\", \"git apply --cached\", \"non-interactive git add -p\".",
+  "updated_at": 1787290980626,
+  "version": "0.5.5"
+}
