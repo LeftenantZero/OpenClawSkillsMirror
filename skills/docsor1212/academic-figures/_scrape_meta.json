@@ -1,0 +1,80 @@
+{
+  "changelog": "- New default theme: modern \u201cglm\u201d palette (muted, elegant, colorblind-safe) replaces previous default for improved aesthetics and accessibility.\n- Added `--list-themes` and `--theme-swatch` commands for easy, in-terminal viewing and export of all available color themes.\n- Introduced setup and demo helpers: `scripts/setup_env.py` for one-command environment/font setup, and `--demo` for interactive chart previews.\n- Expanded examples directory with 12+ JSON templates and visual previews for each chart type and theme.\n- Simplified theme selection with prefix/case-insensitive matching and convenient aliases (e.g., `okabe` \u2192 `okabe-ito`, `default`/`classic` \u2192 `glm`).\n- Documentation updates: quick start enhanced, recommendations clarified, with emphasis on colorblind-safe palettes and journal submission standards.",
+  "created_at": 1777377827543,
+  "display_name": "academic-figures",
+  "fetched_at": 1787772473762,
+  "files": [
+    "SKILL.md",
+    "SKILL_ZH.md",
+    "_meta.json",
+    "evals/evals.json",
+    "examples/README.md",
+    "examples/example_bar.json",
+    "examples/example_box.json",
+    "examples/example_composite.json",
+    "examples/example_diagram.json",
+    "examples/example_dual.json",
+    "examples/example_forest.json",
+    "examples/example_heatmap.json",
+    "examples/example_km.json",
+    "examples/example_line.json",
+    "examples/example_roc.json",
+    "examples/example_scatter.json",
+    "examples/example_stacked.json",
+    "examples/previews/theme_classic_swatch.png",
+    "examples/previews/theme_conservative_swatch.png",
+    "examples/previews/theme_cool_swatch.png",
+    "examples/previews/theme_glm_swatch.png",
+    "examples/previews/theme_lancet_swatch.png",
+    "examples/previews/theme_nature_swatch.png",
+    "examples/previews/theme_okabe-ito_swatch.png",
+    "references/chinese-lab-report-extraction.md",
+    "references/clinical-lab-trends.md",
+    "references/composite-layouts.md",
+    "references/data-formats.md",
+    "references/pitfalls.md",
+    "references/reverse-engineering-colors.md",
+    "references/v1.5-upgrade-analysis.md",
+    "scripts/audit_pdf.py",
+    "scripts/detect_cjk_font.py",
+    "scripts/extract_lab_pdf.py",
+    "scripts/gen_figure.py",
+    "scripts/gen_legend.py",
+    "scripts/setup_env.py",
+    "scripts/verify_overlap_pixel.py",
+    "skill-card.md",
+    "tests/run_tests.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786565589036,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "docsor1212",
+    "handle": "docsor1212",
+    "user_id": "s17dagtwyk21qs6vpz98bzcrh1853t29"
+  },
+  "slug": "academic-figures",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/academic-figures",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=academic-figures&ownerHandle=docsor1212",
+    "page_url": "https://clawhub.ai/docsor1212/skills/academic-figures"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1241,
+    "installs": 21,
+    "stars": 4,
+    "versions": 5
+  },
+  "summary": "Stop redoing figures. One command renders publication-ready charts: 14 chart types (bar, scatter, heatmap, forest, KM, ROC, violin, composite, flow...), 7 curated themes incl. colorblind-safe Okabe-Ito/GLM, Nature/Lancet journal presets, and built-in PDF verification (text-overlap + minimum font-size gates) that catches rejection-worthy flaws before you export. 600dpi PNG/SVG/PDF/TIFF/EPS output, 100% local, data never leaves your machine. Triggers: make figure, generate chart, plot data, bar chart, scatter plot, heatmap, forest plot, Kaplan-Meier, ROC curve, survival curve, violin plot, composite figure, flow diagram, hatching, journal figure, publication figure, colorblind-safe palette, 600dpi export.",
+  "updated_at": 1786564755953,
+  "version": "2.0.1"
+}
