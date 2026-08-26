@@ -1,0 +1,50 @@
+{
+  "changelog": "- Initial release of the public network MTR diagnosis tool.\n- Supports both manual (user-guided) and automated (ECS Cloud Assistant) diagnostic modes.\n- Provides detailed procedures for troubleshooting public network issues such as access failures, high latency, packet loss, SLB health check failures, and NAT outbound problems.\n- Enforces clear user consent and guidance protocols for installing tools or running remote diagnostics.\n- Includes best practices for bidirectional MTR testing and using the aliyun CLI with enhanced observability measures.\n- Designed for troubleshooting both end-user devices and Alibaba Cloud ECS instances.",
+  "created_at": 1785391383419,
+  "display_name": "alibabacloud-mtr-network-diagnosis-customer",
+  "fetched_at": 1787774165368,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ram-policies.md",
+    "references/reference.md",
+    "scripts/check-write-operation.sh",
+    "scripts/detect_python.sh",
+    "scripts/mtr_analyze.py",
+    "scripts/mtr_common.py",
+    "scripts/mtr_ecs.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785403436719,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-mtr-network-diagnosis-customer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-mtr-network-diagnosis-customer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-mtr-network-diagnosis-customer&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-mtr-network-diagnosis-customer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 231,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Public network MTR diagnosis tool. Supports both manual guidance and Cloud Assistant automation modes. Manual mode guides users to run MTR tools locally (macOS/Linux/Android/Windows) and analyze result screenshots. Automated mode remotely executes mtr/ping/curl diagnostics on ECS instances via Alibaba Cloud Cloud Assistant. Applicable to public network access failures, high latency, packet loss, SLB health check failures, NAT outbound packet loss, etc. Use this skill when users encounter network connectivity issues, need to troubleshoot public network link quality, or analyze MTR screenshots.",
+  "updated_at": 1785402733946,
+  "version": "0.0.1"
+}
