@@ -1,0 +1,71 @@
+{
+  "changelog": "- Updated skill version to 1.0.11.\n- Updated documentation in SKILL.md for accuracy and clarity.\n- Removed obsolete file: skill-card.md.\n- Minor updates to configuration file for improved maintainability.",
+  "created_at": 1779388824551,
+  "display_name": "Pet Adaptive Drying Temperature Recommendation | \u5ba0\u7269\u70d8\u5e72\u6e29\u5ea6\u81ea\u9002\u5e94\u63a8\u8350",
+  "fetched_at": 1787770549420,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api_doc.md",
+    "scripts/__init__.py",
+    "scripts/config.py",
+    "scripts/config.yaml",
+    "scripts/skill.py",
+    "scripts/smyx_adaptive_pet_drying_temperature_analysis.py",
+    "skill-card.md",
+    "skills/smyx_analysis/__init__.py",
+    "skills/smyx_analysis/references/api_doc.md",
+    "skills/smyx_analysis/requirements.txt",
+    "skills/smyx_analysis/scripts/__init__.py",
+    "skills/smyx_analysis/scripts/api_service.py",
+    "skills/smyx_analysis/scripts/config.py",
+    "skills/smyx_analysis/scripts/config.yaml",
+    "skills/smyx_analysis/scripts/skill.py",
+    "skills/smyx_analysis/scripts/smyx_analysis.py",
+    "skills/smyx_common/__init__.py",
+    "skills/smyx_common/requirements.txt",
+    "skills/smyx_common/scripts/__init__.py",
+    "skills/smyx_common/scripts/api_service.py",
+    "skills/smyx_common/scripts/base.py",
+    "skills/smyx_common/scripts/config-dev.yaml",
+    "skills/smyx_common/scripts/config-prod.yaml",
+    "skills/smyx_common/scripts/config-test.yaml",
+    "skills/smyx_common/scripts/config.py",
+    "skills/smyx_common/scripts/config.yaml",
+    "skills/smyx_common/scripts/dao.py",
+    "skills/smyx_common/scripts/skill.py",
+    "skills/smyx_common/scripts/util.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787153662341,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "smyx-skills",
+    "handle": "18072937735",
+    "user_id": "s17f8q65zg3y98t86jdg1177g583whq8"
+  },
+  "slug": "smyx-adaptive-pet-drying-temperature-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/smyx-adaptive-pet-drying-temperature-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=smyx-adaptive-pet-drying-temperature-analysis&ownerHandle=18072937735",
+    "page_url": "https://clawhub.ai/18072937735/skills/smyx-adaptive-pet-drying-temperature-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1243,
+    "installs": 11,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "Triggers when a user provides a full-body image/video of a pet (multi-angle preferred) for analysis; supports local uploads or network URLs to call server-side APIs for breed/body-type recognition and fur-density estimation (sparse / medium / dense), then outputs a recommended drying temperature curve (temperature in \u2103 + time in minutes) for personalized care to reduce scald risk (not a medical recommendation). Application scenarios: pet drying boxes, pet grooming salons, smart pet care devices. | \u5f53\u7528\u6237\u63d0\u4f9b\u5ba0\u7269\u5168\u8eab\u56fe\u50cf/\u89c6\u9891\uff08\u591a\u89d2\u5ea6\u6700\u4f73\uff09\u65f6\uff0c\u89e6\u53d1\u672c\u6280\u80fd\u8fdb\u884c\u54c1\u79cd\u8bc6\u522b\u4e0e\u6bdb\u53d1\u5bc6\u5ea6\u4f30\u7b97\uff08\u7a00\u758f/\u4e2d\u7b49/\u6d53\u5bc6\uff09\uff0c\u8f93\u51fa\u4e2a\u6027\u5316\u70d8\u5e72\u6e29\u5ea6\u66f2\u7ebf\uff08\u6e29\u5ea6 \u2103 + \u65f6\u957f \u5206\u949f\uff09\u53c2\u6570\uff0c\u5b9e\u73b0\u4e2a\u6027\u5316\u62a4\u7406\uff0c\u51cf\u5c11\u70eb\u4f24\u98ce\u9669\uff08\u4e0d\u63d0\u4f9b\u533b\u7597\u5efa\u8bae\uff09\u3002\u5e94\u7528\u573a\u666f\uff1a\u5ba0\u7269\u70d8\u5e72\u7bb1\u3001\u5ba0\u7269\u7f8e\u5bb9\u5e97\u3001\u667a\u80fd\u5ba0\u7269\u62a4\u7406\u8bbe\u5907\u3002",
+  "updated_at": 1787152914684,
+  "version": "1.0.9"
+}
