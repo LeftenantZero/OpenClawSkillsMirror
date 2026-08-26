@@ -1,0 +1,34 @@
+{
+  "changelog": "- Updated setup and reference documentation in `references/setup.md`.\n- Removed redundant `skill-card.md` file.\n- No user-facing functionality changes; documentation cleanup only.",
+  "created_at": 1779074263482,
+  "display_name": "docker-mailbox",
+  "fetched_at": 1787770350861,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/setup.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ciprian Mandache",
+    "handle": "psyb0t",
+    "user_id": "s17fq93tmpky791n7516jcn08n83sfn2"
+  },
+  "slug": "docker-mailbox",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/docker-mailbox",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=docker-mailbox&ownerHandle=psyb0t",
+    "page_url": "https://clawhub.ai/psyb0t/skills/docker-mailbox"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 957,
+    "installs": 15,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Multi-mailbox IMAP/SMTP control plane exposed as a REST API + MCP server (streamable HTTP) on a single port. Read, search, send, mark-seen, and delete mail across multiple inboxes in one call \u2014 `GET /inbox` fans out across every IMAP account in parallel and returns a merged, newest-first feed. Use when you need an agent (or a script, or a curl one-liner) to drive one or more real mail accounts without standing up a webmail UI, a message store, or any per-provider client library. Stdlib `imaplib`/`smtplib` under the hood, FastAPI on top, bearer-token auth optional.",
+  "updated_at": 1787236816886,
+  "version": "1.2.3"
+}
