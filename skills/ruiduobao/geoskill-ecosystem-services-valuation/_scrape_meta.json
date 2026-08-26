@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release of geoskill-ecosystem-services-valuation.\n\n- Provides ecosystem service value estimation using Xie Gaodi\u2019s equivalent-factor table and NDVI-based LULC classification.\n- Outputs include four GeoTIFFs (provisioning, regulating, supporting, cultural service values) and summary JSONs.\n- Supports both synthetic NDVI scenarios and real NDVI raster input.\n- Runs fully offline with no network requests; preserves user data privacy.\n- Open source under the MIT License.",
+  "created_at": 1785843831431,
+  "display_name": "geoskill-ecosystem-services-valuation",
+  "fetched_at": 1787773492050,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-ecosystem-services-valuation.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785844809774,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-ecosystem-services-valuation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-ecosystem-services-valuation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-ecosystem-services-valuation&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-ecosystem-services-valuation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 175,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7528\u5f53\u91cf\u56e0\u5b50\u6cd5\u8bc4\u4f30\u4f9b\u7ed9\u3001\u8c03\u8282\u3001\u652f\u6301\u3001\u6587\u5316\u56db\u7c7b\u751f\u6001\u7cfb\u7edf\u670d\u52a1\u4ef7\u503c\u3002Estimates four ecosystem service values with a simplified InVEST plus equivalent-factor method. \u8f93\u51fa\u56db\u7c7b\u670d\u52a1\u4ef7\u503c GeoTIFF \u4e0e\u603b\u91cf JSON\u3002",
+  "updated_at": 1785843971584,
+  "version": "1.0.0"
+}
