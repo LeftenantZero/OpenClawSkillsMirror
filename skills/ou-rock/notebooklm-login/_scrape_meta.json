@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release of notebooklm-login skill.\n- Enables login to Google NotebookLM using the Chrome DevTools Protocol.\n- Works around issues with the default `nlm login` command in non-standard environments.\n- Guides users through manual Chromium launch, Google authentication, and automated cookie extraction.\n- Stores authentication cookies and metadata for use by the notebooklm-mcp CLI/server.\n- Includes troubleshooting steps for common login and environment issues.",
+  "created_at": 1774103309228,
+  "display_name": "NotebookLM MCP Login",
+  "fetched_at": 1787787787881,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/login.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090018590,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ou-rock",
+    "handle": "ou-rock",
+    "user_id": "s175v3pbswgkc1sepmc1y96hsd83yrg1"
+  },
+  "slug": "notebooklm-login",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/notebooklm-login",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=notebooklm-login&ownerHandle=ou-rock",
+    "page_url": "https://clawhub.ai/ou-rock/skills/notebooklm-login"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 704,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Login to Google NotebookLM via Chrome DevTools Protocol and save auth cookies for notebooklm-mcp. Use when user asks to login, authenticate, or re-authentica...",
+  "updated_at": 1779078683451,
+  "version": "1.0.0"
+}
