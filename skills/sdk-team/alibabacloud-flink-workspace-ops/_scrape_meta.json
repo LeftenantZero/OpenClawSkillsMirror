@@ -1,0 +1,66 @@
+{
+  "changelog": "alibabacloud-flink-workspace-ops v0.0.2\n\n- Added strict observability requirements: all `aliyun` CLI API calls must include a unique session-specific `--user-agent` flag; session ID set per session and propagated via environment variable to scripts and SDK for audit consistency.\n- Clarified AI-Mode and plugin update guidance; removed instructions to enable/disable AI-Mode and focused on plugin management.\n- Updated boundaries and disambiguation rules for workspace definitions.\n- Improved documentation structure and consistency, with concise examples for CLI invocation and environment propagation.\n- Removed the unused file: `skill-card.md`",
+  "created_at": 1778312044777,
+  "display_name": "alibabacloud-flink-workspace-ops",
+  "fetched_at": 1787771610684,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/requirements.txt",
+    "references/agent-operating-protocol.md",
+    "references/cli-installation-guide.md",
+    "references/command-catalog.md",
+    "references/command-map.md",
+    "references/error-handling.md",
+    "references/playbooks/create-validate-deploy.md",
+    "references/playbooks/list-filter-act.md",
+    "references/playbooks/session-cluster-lifecycle.md",
+    "references/ram-policies.md",
+    "references/related-apis.md",
+    "references/resource-disclosure.md",
+    "references/verification-method.md",
+    "references/vvp-product-model.md",
+    "scripts/client.py",
+    "scripts/convert_evals.py",
+    "scripts/e2e_test.py",
+    "scripts/flink_ververica_ops.py",
+    "scripts/w1_sql_development.py",
+    "scripts/w2_deployment_ops.py",
+    "scripts/w3_session_cluster.py",
+    "scripts/w4_dev_resources.py",
+    "scripts/w5_workspace_admin.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786947315527,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-flink-workspace-ops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-flink-workspace-ops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-flink-workspace-ops&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-flink-workspace-ops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 630,
+    "installs": 13,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Use when user explicitly asks Flink/Ververica/Realtime Compute Console workspace operations: \u8349\u7a3f(draft), SQL\u6821\u9a8c/\u6267\u884c, \u90e8\u7f72(deployment), \u4f5c\u4e1a(job), Session Cluster, namespace, \u8868(table), \u6210\u5458(member), \u53d8\u91cf(variable), \u6216 checkpoint timeout \u8bca\u65ad, especially with workspace/deployment/job IDs (w-*, d-*, j-*, sc-*, draft-*). Also use when prompt asks to test/verify Flink Console lifecycle flow, safety guardrails, or parameter validation for these operations. This includes prompts such as create draft, deploy draft, list deployments, start/stop job, create/list session cluster, get tables, list variables. Also use when prompt explicitly asks to run `python scripts/flink_ververica_ops.py` for Flink Console workspace operations. Do not trigger for unrelated \"workspace\" contexts or generic cloud/platform tasks (ECS, OSS, RDS, Kafka, Spark, Kubernetes, billing, weather). Do not trigger for Flink instance lifecycle operations (create/scale/delete/renew); those belong to alibabacloud-flink-instance-manage.",
+  "updated_at": 1786946614149,
+  "version": "0.0.2"
+}
