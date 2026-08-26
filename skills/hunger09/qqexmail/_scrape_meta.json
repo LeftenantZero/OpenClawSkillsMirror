@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of \u817e\u8baf\u4f01\u4e1a\u90ae\u7bb1 skill:\n\n- Send, receive, and read emails from exmail.qq.com via IMAP/SMTP using Node.js scripts.\n- Credentials (account and authorization code) are read from environment variables.\n- Includes scripts for sending (`send.js`), receiving (`receive.js`), and fetching full email body by UID (`get-body.js`).\n- Supports fetching recent N messages or messages from the last N days, with convenient CLI options.\n- Output includes subject, sender, date, UID, and content summary. Full plain-text body available by UID.\n- Security best practices: never commit credentials; use authorization code, not login password.",
+  "created_at": 1774569232813,
+  "display_name": "\u817e\u8baf\u4f01\u4e1a\u90ae\u7bb1/qqexmail",
+  "fetched_at": 1787787238323,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "package-lock.json",
+    "package.json",
+    "scripts/get-body.js",
+    "scripts/receive.js",
+    "scripts/send.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090143183,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "hunger09",
+    "handle": "hunger09",
+    "user_id": "s174y10m7q793f4jxvndq3329s83fqfn"
+  },
+  "slug": "qqexmail",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/qqexmail",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=qqexmail&ownerHandle=hunger09",
+    "page_url": "https://clawhub.ai/hunger09/skills/qqexmail"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 607,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u901a\u8fc7 IMAP/SMTP \u6536\u53d1\u817e\u8baf\u4f01\u4e1a\u90ae\u7bb1\uff08exmail.qq.com\uff09\u90ae\u4ef6\u3002\u652f\u6301\u53d1\u9001\u90ae\u4ef6\u3001\u6536\u53d6\u90ae\u4ef6\u5217\u8868\u3001\u83b7\u53d6\u90ae\u4ef6\u6b63\u6587\u3002\u51ed\u8bc1\u4ece\u73af\u5883\u53d8\u91cf\u8bfb\u53d6\u3002",
+  "updated_at": 1779078990609,
+  "version": "1.0.0"
+}
