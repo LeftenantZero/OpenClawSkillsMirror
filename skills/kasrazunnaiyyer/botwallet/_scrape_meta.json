@@ -1,0 +1,45 @@
+{
+  "changelog": "> Added heartbeat section: teaches the agent to periodically run botwallet events to pick up approvals, deposits, and other updates between sessions.\n\n> Clarified the event processing workflow \u2014 actionable events (approval_resolved, fund_request_funded) vs informational ones (deposit_received, payment_completed).\n\n> Documented botwallet events --mark-read for clearing the event queue after processing.",
+  "created_at": 1774213713830,
+  "display_name": "Botwallet -- Let Your Agent Earn & Spend",
+  "fetched_at": 1787787669928,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "claw.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090050002,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Kasra Zunnaiyyer",
+    "handle": "kasrazunnaiyyer",
+    "user_id": "s179nyvpsdrmjwm9pw0v57zzf583faae"
+  },
+  "slug": "botwallet",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/botwallet",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=botwallet&ownerHandle=kasrazunnaiyyer",
+    "page_url": "https://clawhub.ai/kasrazunnaiyyer/skills/botwallet"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 885,
+    "installs": 23,
+    "stars": 1,
+    "versions": 5
+  },
+  "summary": "Operate Botwallet CLI to autonomously create wallets, make USDC payments, earn via paylinks, and manage funds on Solana within your human owner's guard rails.",
+  "updated_at": 1779078752650,
+  "version": "0.2.1"
+}
