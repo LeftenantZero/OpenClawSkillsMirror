@@ -1,0 +1,36 @@
+{
+  "changelog": "- Initial release of the codex-token-usage skill.\n- Summarizes token usage from Codex Desktop or CLI session JSONL logs.\n- Supports detailed reports including total, input, cached input, output, reasoning output, non-cached input, net usage, cache hit rate, and daily average.\n- Allows flexible time windows: today, this week, last month, any calendar month, or custom range, using the user\u2019s timezone when provided.\n- Outputs results as a clear Markdown table or JSON, and highlights peak day and busiest week.\n- Ensures deterministic and consistent reporting via a bundled Python script.",
+  "created_at": 1780986778550,
+  "display_name": "Codex Token Usage",
+  "fetched_at": 1787781960936,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "scripts/codex_token_usage.py",
+    "scripts/test_codex_token_usage.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "helenalhq",
+    "handle": "helenalhq",
+    "user_id": "s17dzq3nm6d77cs658c55rwfns83j2mm"
+  },
+  "slug": "codex-token-usage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/codex-token-usage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=codex-token-usage&ownerHandle=helenalhq",
+    "page_url": "https://clawhub.ai/helenalhq/skills/codex-token-usage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 371,
+    "installs": 5,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Summarize Codex token usage from local Codex Desktop or CLI session JSONL logs. Use when the user asks to count, audit, total, compare, or report Codex/OpenA...",
+  "updated_at": 1780986778550,
+  "version": "1.0.0"
+}
