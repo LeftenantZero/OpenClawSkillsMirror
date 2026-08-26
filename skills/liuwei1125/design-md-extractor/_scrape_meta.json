@@ -1,0 +1,59 @@
+{
+  "changelog": "- Initial release of design-md-extractor.\n- Generate DESIGN.md or design.md from any user-provided webpage URL or local HTML file.\n- Uses Playwright to sample computed styles and extract design tokens (colors, typography, spacing, radius, shadows, components) locally.\n- No model API calls or external uploads; fully deterministic and privacy-respecting.\n- Outputs both a human/model-friendly design.md and a design-snapshot.json for evidence and debugging.\n- Detailed error reporting on navigation, browser, sampling, dependency installation, or generation failures.",
+  "created_at": 1780314111999,
+  "display_name": "Design.md Extractor",
+  "fetched_at": 1787783582632,
+  "files": [
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "fixtures/product.html",
+    "lib/design-extractor-core/analyzer/pageAnalyzer.js",
+    "lib/design-extractor-core/analyzer/types.js",
+    "lib/design-extractor-core/browser-sampler.js",
+    "lib/design-extractor-core/core/color-normalization.js",
+    "lib/design-extractor-core/core/color-sanity.js",
+    "lib/design-extractor-core/core/detect-components.js",
+    "lib/design-extractor-core/core/detect-design-system.js",
+    "lib/design-extractor-core/core/extract-colors.js",
+    "lib/design-extractor-core/core/extract-radius.js",
+    "lib/design-extractor-core/core/extract-shadows.js",
+    "lib/design-extractor-core/core/extract-spacing.js",
+    "lib/design-extractor-core/core/extract-typography.js",
+    "lib/design-extractor-core/core/infer-color-roles.js",
+    "lib/design-extractor-core/core/types.js",
+    "lib/design-extractor-core/export/generators.js",
+    "lib/design-extractor-core/index.js",
+    "lib/design-extractor-core/package.json",
+    "package.json",
+    "pnpm-lock.yaml",
+    "references/extraction-rules.md",
+    "references/snapshot-schema.md",
+    "scripts/extract-design.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Liuwei1125",
+    "handle": "liuwei1125",
+    "user_id": "s1786t9tb6d98w4k8k00rkwpnn85m4qh"
+  },
+  "slug": "design-md-extractor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/design-md-extractor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=design-md-extractor&ownerHandle=liuwei1125",
+    "page_url": "https://clawhub.ai/liuwei1125/skills/design-md-extractor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 518,
+    "installs": 9,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when the user wants to generate DESIGN.md or design.md from a webpage URL by running a local, rule-based design token extraction script. The skill opens...",
+  "updated_at": 1780314111999,
+  "version": "1.0.0"
+}
