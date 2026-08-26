@@ -1,0 +1,62 @@
+{
+  "changelog": "- Initial release providing cargo recommendations for vessel owners based on current port, destination, and vessel capacity.\n- Integrated with \u822a\u8fd0\u5728\u7ebf cargo listings; supports both domestic and international routes with distinct matching logic.\n- Presents up to 10 results, sorted by cargo confirmation status and total relevant distances; highlights cargo that need manual quantity confirmation.\n- Provides clickable Markdown links for each cargo listing, with structured detail actions for compatible frontends.\n- Fully command-driven workflow with auto-recording of user requirements after each successful query.\n- Includes API endpoints and deployment guidelines for running the service and backend integration.",
+  "created_at": 1785228799800,
+  "display_name": "\u79df\u8d41-\u8239\u627e\u8d27",
+  "fetched_at": 1787774490184,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/backend-api.md",
+    "requirements.txt",
+    "scripts/__init__.py",
+    "scripts/__pycache__/__init__.cpython-312.pyc",
+    "scripts/__pycache__/common.cpython-312.pyc",
+    "scripts/__pycache__/demand_sync.cpython-312.pyc",
+    "scripts/__pycache__/find_cargo.cpython-312.pyc",
+    "scripts/__pycache__/port_resolver.cpython-312.pyc",
+    "scripts/__pycache__/self_test.cpython-312.pyc",
+    "scripts/__pycache__/service.cpython-312.pyc",
+    "scripts/__pycache__/sol_cargo.cpython-312.pyc",
+    "scripts/common.py",
+    "scripts/demand_sync.py",
+    "scripts/find_cargo.py",
+    "scripts/port_resolver.py",
+    "scripts/self_test.py",
+    "scripts/service.py",
+    "scripts/sol_cargo.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785237893796,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "linyihuang",
+    "handle": "linyihuang1992-ops",
+    "user_id": "s177wjtpzd6abt3k1msb7vb1qd8401z6"
+  },
+  "slug": "find-cargo-for-vessel",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/find-cargo-for-vessel",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=find-cargo-for-vessel&ownerHandle=linyihuang1992-ops",
+    "page_url": "https://clawhub.ai/linyihuang1992-ops/skills/find-cargo-for-vessel"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 240,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6309\u8239\u8236\u5f53\u524d\u6e2f\u3001\u8ba1\u5212\u76ee\u7684\u6e2f\u548c\u53ef\u8f7d\u5428\u4f4d\u667a\u80fd\u5339\u914d\u5185\u5916\u8d38\u8d27\u76d8\u6570\u636e",
+  "updated_at": 1785237159076,
+  "version": "1.0.0"
+}
