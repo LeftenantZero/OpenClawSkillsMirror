@@ -1,0 +1,66 @@
+{
+  "changelog": "- Initial release of LiDAR Ground Point Classification skill.\n- Implements two ground/non-ground separation methods: Progressive Morphological Filter (PMF) and slope filtering.\n- Supports both real point cloud input (npy/csv/txt with xyz) and synthetic data generation for offline validation.\n- Produces classified points, DTM (GeoTIFF), density maps, and comprehensive JSON statistics.\n- Fully offline operation with privacy protection; no data uploaded.\n- Usage examples and documentation provided in both English and Chinese.",
+  "created_at": 1785847328667,
+  "display_name": "geoskill-lidar-ground-classification",
+  "fetched_at": 1787773466361,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-lidar-ground-classification.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785848535507,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-lidar-ground-classification",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-lidar-ground-classification",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-lidar-ground-classification&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-lidar-ground-classification"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 183,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6e10\u8fdb\u5f62\u6001\u5b66\u6ee4\u6ce2PMF/\u5761\u5ea6\u6ee4\u6ce2\u5206\u79bb\u5730\u9762\u70b9\u5e76\u751f\u6210DTM",
+  "updated_at": 1785847550865,
+  "version": "1.0.0"
+}
