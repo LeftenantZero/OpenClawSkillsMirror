@@ -1,0 +1,37 @@
+{
+  "changelog": "- Added integration guidance for related skills (`golang-pkg-go-dev`, `golang-gopls`) for deeper package and code navigation.\n- Updated compatibility to explicitly include Claude Code, Codex, and similar.\n- Enhanced allowed tools with support for `godig`, `gopls`, LSP, and related Bash commands.\n- Introduced a `paths` field to declare relevant `.go` files for the skill.\n- Improved documentation clarity and made cross-skill navigation recommendations explicit.\n- Removed obsolete `skill-card.md` file.",
+  "created_at": 1777675276944,
+  "display_name": "golang-uber-dig",
+  "fetched_at": 1787769823282,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/advanced.md",
+    "references/recipes.md",
+    "references/testing.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Samuel Berthe",
+    "handle": "samber",
+    "user_id": "s173arkhs3131fq5jf769qq75583hdgt"
+  },
+  "slug": "golang-uber-dig",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/golang-uber-dig",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=golang-uber-dig&ownerHandle=samber",
+    "page_url": "https://clawhub.ai/samber/skills/golang-uber-dig"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 631,
+    "installs": 14,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Implements dependency injection in Golang using uber-go/dig \u2014 reflection-based container, Provide/Invoke, dig.In/dig.Out parameter and result objects, named values, value groups, optional dependencies, scopes, and Decorate. Apply when using or adopting uber-go/dig, when the codebase imports `go.uber.org/dig`, or when wiring an application graph at startup. For higher-level lifecycle and modules, see `samber/cc-skills-golang@golang-uber-fx` skill.",
+  "updated_at": 1787492423118,
+  "version": "1.2.0"
+}
