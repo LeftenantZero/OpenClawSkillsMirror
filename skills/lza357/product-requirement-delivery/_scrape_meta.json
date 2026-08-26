@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of the product-requirement-delivery skill.\n\n- Converts lightweight product requests and related signed-in pages into a confirmed requirements baseline, published as a single Feishu document.\n- Guides the full workflow: auditing intake, real-page investigation (with screenshots and permission checks), drafting, review, product confirmation, and Feishu publication.\n- Enforces non-negotiable gates on roles, permissions, business flows, exceptions, and auditability; ensures every business rule and acceptance criterion is clear and evidenced.\n- Prevents publication before explicit product manager confirmation; preserves rigorous distinction between observed, user-stated, recommended, and unverified facts.\n- No development or test plans produced; focus is on product requirements baseline and audit trail.",
+  "created_at": 1786005327454,
+  "display_name": "\u98de\u4e66\u4ea7\u54c1\u9700\u6c42\u4ea4\u4ed8",
+  "fetched_at": 1787773262049,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/human-review-reference.docx",
+    "references/audit-manifest.example.json",
+    "references/deliverable-contract.md",
+    "references/fact-source-schema.md",
+    "references/intake-card.md",
+    "references/ui-evidence-rules.md",
+    "scripts/annotate_screenshot.py",
+    "scripts/audit_delivery.py",
+    "scripts/validate_fact_source.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "LZA357",
+    "handle": "lza357",
+    "user_id": "s170exqyhtjf9jbzqqprthagax8bycex"
+  },
+  "slug": "product-requirement-delivery",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/product-requirement-delivery",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=product-requirement-delivery&ownerHandle=lza357",
+    "page_url": "https://clawhub.ai/lza357/skills/product-requirement-delivery"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 167,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Convert a lightweight product request plus related signed-in pages into a product-confirmed requirements baseline published as one Feishu document. Use when a product manager asks Codex to investigate existing pages, clarify roles and business rules, capture complete route-aware screenshots, define",
+  "updated_at": 1786005437243,
+  "version": "1.0.0"
+}
