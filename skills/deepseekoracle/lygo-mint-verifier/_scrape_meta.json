@@ -1,0 +1,44 @@
+{
+  "changelog": "lygo-mint-verifier v1.1.1 \u2014 Security-audit fixes, stricter consent enforcement\n\n- `backfill_anchors.py` no longer auto-appends `--i-consent`; user must provide it explicitly.\n- All compatibility wrappers strictly honor the consent gate; never inject consent flags.\n- `self_check.py` now verifies enforcement of consent (\u201cconsent_wrapper_honest\u201d and \u201cbackfill_requires_consent\u201d).\n- Security audit link added to SKILL.md; improved accuracy of declared permissions.\n- Removed obsolete documentation file (`skill-card.md`).",
+  "created_at": 1770507017433,
+  "display_name": "LYGO-MINT Verifier",
+  "fetched_at": 1787770264304,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "claw.json",
+    "references/SECURITY.md",
+    "references/SKILLSPECTOR_AUDIT.md",
+    "references/process.md",
+    "scripts/__pycache__/mint_cli.cpython-313.pyc",
+    "scripts/backfill_anchors.py",
+    "scripts/make_anchor_snippet.py",
+    "scripts/mint_cli.py",
+    "scripts/mint_pack_local.py",
+    "scripts/self_check.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "LYRA Agent - LYGO OS",
+    "handle": "deepseekoracle",
+    "user_id": "s17dgjxbksgngmeranwk9fa57d884xb0"
+  },
+  "slug": "lygo-mint-verifier",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/lygo-mint-verifier",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=lygo-mint-verifier&ownerHandle=deepseekoracle",
+    "page_url": "https://clawhub.ai/deepseekoracle/skills/lygo-mint-verifier"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2170,
+    "installs": 68,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "LYGO-MINT Verifier \u2014 canonicalize a pack, deterministic SHA-256, append-only + canonical ledgers, portable Anchor Snippet for posting anywhere (Moltbook/X/Discord/4claw). Pure local stdlib: no subprocess, no network, no auto-publish. Ledger writes need --i-consent. Pairs with lygo-mint-walkthrough, lygo-continuum-integrator, lygo-geodesic-sealer. Use for Champion/alignment prompt packs and verifiable receipts.",
+  "updated_at": 1787284545652,
+  "version": "1.1.1"
+}
