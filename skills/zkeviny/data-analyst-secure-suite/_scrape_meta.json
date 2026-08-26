@@ -1,0 +1,49 @@
+{
+  "changelog": "Version 1.2.0\n\n- Synced documentation and workflows with MGC Blackbox 1.4.10, including new tools and patterns.\n- Added fuzzy-search workflows using mgc_find for locating credentials, scripts, and knowledge by name.\n- Updated script execution to use mgc_run tool instead of legacy mgc_get(action=\"run\").\n- Clarified script sealing requirements (ext04 must be a multi-line PEM public key).\n- Expanded and clarified Agent prompt templates and recommended find \u2192 get/run workflow.\n- Dropped the sample skill-card.md file.",
+  "created_at": 1783454830776,
+  "display_name": "Secure Data Analyst Skill Suite",
+  "fetched_at": 1787771778847,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agent_system_prompt.md",
+    "manifest.json",
+    "prompts/credential_management.md",
+    "prompts/knowledge_management.md",
+    "prompts/script_management.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786852600761,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zkeviny",
+    "handle": "zkeviny",
+    "user_id": "s173fckt3bzxxvt9dfp0rrdeg1894z72"
+  },
+  "slug": "data-analyst-secure-suite",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/data-analyst-secure-suite",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=data-analyst-secure-suite&ownerHandle=zkeviny",
+    "page_url": "https://clawhub.ai/zkeviny/skills/data-analyst-secure-suite"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 452,
+    "installs": 0,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "A secure data analysis workflow suite based on MGC Blackbox, providing credential protection, zero-exposure script application, script sealing collaboration, and knowledge management. Also includes a Data Analyst Agent system prompt template.",
+  "updated_at": 1786851930832,
+  "version": "1.1.2"
+}
