@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release: Query and export Alibaba Cloud WAF 3.0 billing data with local backup support.\n\n- Retrieve WAF instance and region information automatically.\n- Query WAF bills by day or hour, including SeCU and Credit usage details.\n- Automatically handle T+1 settlement restriction for pay-as-you-go bills (adjusts queries by date).\n- Export billing data and summaries as JSON/CSV to a date-organized local backup directory.\n- Pure read-only operation: never exposes credentials, only reads and backs up billing data.\n- Requires aliyun-cli \u2265 3.3.3 and read-only RAM permissions.",
+  "created_at": 1787711744055,
+  "display_name": "alibabacloud-waf-billing-backup",
+  "fetched_at": 1787768725278,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/billing-fields-reference.md",
+    "references/cli-installation-guide.md",
+    "references/ram-policies.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-waf-billing-backup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-waf-billing-backup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-waf-billing-backup&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-waf-billing-backup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 28,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query and back up Alibaba Cloud WAF 3.0 billing data. Use this Skill when a user asks to check WAF bills, export WAF cost details, back up WAF billing data locally, or analyze daily/hourly SeCU and Credit usage. The Skill retrieves instance information, daily bill summaries, and hourly cost breakdowns (function fees, traffic processing fees, Credit usage) via aliyun-cli, then exports the results as JSON and CSV files to the local workspace.",
+  "updated_at": 1787711805968,
+  "version": "0.0.1"
+}
