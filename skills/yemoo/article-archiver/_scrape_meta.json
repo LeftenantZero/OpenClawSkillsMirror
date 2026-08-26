@@ -1,0 +1,82 @@
+{
+  "changelog": "- Initial release of article-archiver.\n- Automatically archives shared web and Twitter (X) articles to Feishu documents, triggered by links or specific user phrases.\n- Supports long articles (600+ lines), multiple images (20+), and preserves formatting (bold, code blocks, lists).\n- Ensures precise image placement and complete metadata with stylish citation block.\n- Includes robust duplicate detection by article title, and notifies user on success.\n- Fully automatic: archives as soon as a supported URL is detected\u2014no extra confirmation needed.",
+  "created_at": 1773559401910,
+  "display_name": "Article Archiver",
+  "fetched_at": 1787788590353,
+  "files": [
+    "LESSONS.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/feishu-locations.sh",
+    "config/twitter-cookies.txt",
+    "data/archived_urls.txt",
+    "evals/evals.json",
+    "package-lock.json",
+    "package.json",
+    "scripts/archive-article.js",
+    "scripts/archive-example.sh",
+    "scripts/archive-long-article-v2.py",
+    "scripts/archive-long-article.js",
+    "scripts/archive-long-article.py",
+    "scripts/archive-long-article.sh",
+    "scripts/archive-simple.py",
+    "scripts/archive.sh",
+    "scripts/check-duplicate.sh",
+    "scripts/config.sh",
+    "scripts/convert-v2-to-blocks.js",
+    "scripts/extract-article.js",
+    "scripts/fetch-twitter-article-formatted.js",
+    "scripts/fetch-twitter-article.js",
+    "scripts/html-to-markdown-final.js",
+    "scripts/html-to-markdown-fixed.js",
+    "scripts/html-to-markdown-turndown.js",
+    "scripts/html-to-markdown-v2.js",
+    "scripts/html-to-markdown-v3.js",
+    "scripts/html-to-markdown-v4.js",
+    "scripts/html-to-markdown-v5.js",
+    "scripts/html-to-markdown-v6.js",
+    "scripts/html-to-markdown.js",
+    "scripts/prepare-segments.py",
+    "scripts/test-contentblocks.js",
+    "scripts/test-image-extraction.js",
+    "scripts/upload-image.py",
+    "scripts/upload-markdown-to-feishu.sh",
+    "scripts/upload-to-feishu-batch.sh",
+    "scripts/v6-modification-summary.md",
+    "scripts/write-to-doc.py",
+    "skill-card.md",
+    "test_image_insert.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089895116,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yemoo",
+    "handle": "yemoo",
+    "user_id": "s17d1aedfb4x20wdpfwb6crkwh83j4b9"
+  },
+  "slug": "article-archiver",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/article-archiver",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=article-archiver&ownerHandle=yemoo",
+    "page_url": "https://clawhub.ai/yemoo/skills/article-archiver"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 894,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Automatically archive web articles and Twitter Articles to Feishu documents. ALWAYS trigger when user shares URLs from x.com (Twitter), mp.weixin.qq.com (WeC...",
+  "updated_at": 1779078297999,
+  "version": "1.0.0"
+}
