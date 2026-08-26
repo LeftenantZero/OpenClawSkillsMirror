@@ -1,0 +1,50 @@
+{
+  "changelog": "- Initial release of the \"Huawei Cloud Ascend Small Model Migration\" skill.\n- Provides end-to-end workflow to migrate vision/detection/segmentation small models to Ascend NPU.\n- Features model structure analysis, migration feasibility verification, NPU inference testing, performance profiling, and optimization recommendations.\n- Supports typical use cases for migrating and optimizing models like YOLO, ResNet, and UNet on Ascend hardware.\n- Compatible with torch_npu (\u22652.0.0) and msprof (\u22657.0.0).",
+  "created_at": 1785748877018,
+  "display_name": "huawei-cloud-ascend-small-model-migrate",
+  "fetched_at": 1787773641812,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/migration-scripts.md",
+    "references/profiler-sql.md",
+    "references/report-template.md",
+    "references/troubleshooting.md",
+    "references/verification-method.md",
+    "scripts/analyze_model.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785749973757,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-ascend-small-model-migrate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-ascend-small-model-migrate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-ascend-small-model-migrate&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-ascend-small-model-migrate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 34,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Migrate vision/detection/segmentation small models to Ascend NPU, covering the full workflow: model structure analysis, migration verification, performance profiling, and optimization. Based on torch_npu and msprof Use this skill when the user wants to: (1) migrate encoder-only models like ResNet, YOLO, UNet to Ascend NPU, (2) analyze model structure for migration feasibility, (3) verify model inference on NPU, (4) identify performance bottlenecks and get optimization suggestions Trigger: user mentions \"migrate\", \"migration\", \"Ascend\", \"NPU\", \"YOLO\", \"ResNet\", \"encoder-only\", \"detection\", \"segmentation\", \"adaptation\", \"adapt\", \"\u8fc1\u79fb\", \"\u6607\u817e\u8fc1\u79fb\", \"\u5c0f\u6a21\u578b\", \"\u9002\u914d\", \"\u6607\u817e\u9002\u914d\", \"GPU\u8fc1\u79fb\", \"NPU\u9002\u914d\", \"\u9002\u914dNPU\", \"\u9002\u914d\u6607\u817e\"",
+  "updated_at": 1785748959094,
+  "version": "1.0.0"
+}
