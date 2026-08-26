@@ -1,0 +1,35 @@
+{
+  "changelog": "v1.1.2 \u2014 Backfill the v1.1.1 release notes\nChangelog now includes v1.1.1 (full bilingual independence)\nv1.1.1 \u2014 Full bilingual independence\nThe English variant now ships its own English hook script and English README/Changelog; the two variants are published independently \u2014 users install either Chinese or English\nThis skill gained its own README (with changelog); SKILL.md gained a \"Version record\" ref pointing to it\nv1.1.0 \u2014 Context hygiene + automatic reminder hooks + storage-root migration + resume enhancements\nContext hygiene: init/verify/export/profile delegate reading to a sub-agent by default; the main context receives only a digest. New ironclad Rule 13; Rule 8 revised.\nAutomatic reminder hooks: wdp-hook.sh with four events (load / load-after-clear / load-after-compact / save-precompact), wired in dev + user-level + plugin.\nStorage-root migration (P0): data isolated to .claude/wdp/; reinstalling the skill no longer wipes data.\nResume enhancements: snapshot template +4 fields, init re-entry brief + one-line handoff, explicit commit policy, snapshot filename uniqueness.\nRuntime verification pending: session-start init prompt and /compact \"save first\" warning (require /hooks or restart).",
+  "created_at": 1786166473627,
+  "display_name": "Wdp Ctx En",
+  "fetched_at": 1787773071470,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "hooks/wdp-hook.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "wdp",
+    "handle": "luckystar513",
+    "user_id": "s1710aw1khahxxvk3yybc4g3y58c1wnd"
+  },
+  "slug": "wdp-ctx-en",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wdp-ctx-en",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wdp-ctx-en&ownerHandle=luckystar513",
+    "page_url": "https://clawhub.ai/luckystar513/skills/wdp-ctx-en"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 272,
+    "installs": 0,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Save, load, verify, export, or clear a project's stable profile and incremental work snapshots to enable session-resilient context management in English.",
+  "updated_at": 1786248800531,
+  "version": "1.1.2"
+}
