@@ -1,0 +1,69 @@
+{
+  "changelog": "alibabacloud-safety-checker v0.0.1\n\n- Initial release of Alibaba Cloud content moderation and AI guardrail automated testing skill.\n- Supports content moderation API testing, cross-service comparison, manual annotation, and false-negative/root cause analysis.\n- Includes AI guardrail testing for prompt injection, sensitive data leaks, and jailbreak attacks.\n- Generates detailed alignment and effectiveness reports in multiple formats (JSON/XLSX/HTML).\n- Provides step-by-step workflow: scenario selection, tag/switch configuration, sample prep, batch testing, annotation, and analysis.\n- Offers troubleshooting for authentication, API limits, and detection coverage.",
+  "created_at": 1779775380977,
+  "display_name": "Alibabacloud Safety Checker",
+  "fetched_at": 1787784665597,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/ai_guardrail_157.json",
+    "assets/bias_test.json",
+    "assets/chinese_10.json",
+    "assets/elderly_scam_test.json",
+    "assets/game_industry_20.json",
+    "assets/guardrail_test_suite.json",
+    "assets/zhipu_poc_10.json",
+    "references/console-guide.md",
+    "references/label-matrix.md",
+    "references/ram-policies.md",
+    "references/scenarios.md",
+    "scripts/ai_guardrail.py",
+    "scripts/annotator.py",
+    "scripts/client.py",
+    "scripts/config.py",
+    "scripts/console_automator.py",
+    "scripts/cst.py",
+    "scripts/main.py",
+    "scripts/models.py",
+    "scripts/prepare_novel.py",
+    "scripts/reporter.py",
+    "scripts/requirements.txt",
+    "scripts/runner.py",
+    "scripts/scenario_manager.py",
+    "scripts/scenarios.py",
+    "scripts/verify_auth.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966118179,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-safety-checker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-safety-checker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-safety-checker&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-safety-checker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 567,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Alibaba Cloud content moderation and AI guardrails automated testing. Tests sample content against moderation APIs, compares multiple services, tracks reques...",
+  "updated_at": 1779775380977,
+  "version": "0.0.1"
+}
