@@ -1,0 +1,33 @@
+{
+  "changelog": "1.0.6: security-review fixes \u2014 the session-service rule is now one consistent refuse-by-default policy (single explicit-informed-override exception), and 'charge -> proceed silently' is gone: every mainnet payment goes through pay-per-call's confirmation gate.",
+  "created_at": 1775999125401,
+  "display_name": "MPP Router \u2014 Service Discovery",
+  "fetched_at": 1787772776625,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Shawn Muggle",
+    "handle": "shawnmuggle",
+    "user_id": "s17a57ypabprvxk3s4hkg6w6ax8460f3"
+  },
+  "slug": "mpprouter-discover",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mpprouter-discover",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mpprouter-discover&ownerHandle=shawnmuggle",
+    "page_url": "https://clawhub.ai/shawnmuggle/skills/mpprouter-discover"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 909,
+    "installs": 21,
+    "stars": 1,
+    "versions": 7
+  },
+  "summary": "Discover paid API services available via MPP Router (apiserver.mpprouter.dev) that accept Stellar USDC payments. Triggers on prompts like \"summarize X using parallel.ai via MPPRouter\", \"search with exa via mpp\", \"find a service for <task>\", \"list mpp services\", \"what APIs can I pay for with stellar\". Fetches the live service catalog, picks a matching service, and hands off to the pay-per-call sub-skill to actually invoke it.",
+  "updated_at": 1786414672009,
+  "version": "1.0.6"
+}
