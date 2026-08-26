@@ -1,0 +1,45 @@
+{
+  "changelog": "- Initial release: Enables scraping Instagram posts tagged at a specific location.\n- Supports searching for locations by name and retrieving posts using cursor-based pagination.\n- Returns media items with captions, like/comment counts, media URLs, and user info.\n- Requires user to be logged into Instagram; browser must be open on an Instagram page.\n- Includes guidance for pre-execution checks, capability invocation, and error handling.\n- Details best practices for batch processing and notes for resuming interrupted sessions.",
+  "created_at": 1781761819400,
+  "display_name": "Instagram Place Posts",
+  "fetched_at": 1787780288973,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/get-place-posts.py",
+    "scripts/search-location.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781800733029,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "instagram-place-posts",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/instagram-place-posts",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=instagram-place-posts&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/instagram-place-posts"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 279,
+    "installs": 2,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Scrapes Instagram posts tagged at a specific location or place, returning media items with captions, like/comment counts, media URLs and user info. Use when...",
+  "updated_at": 1781761819400,
+  "version": "1.0.0"
+}
