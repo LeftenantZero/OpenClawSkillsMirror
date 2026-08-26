@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release of automated job application assistant.\n\n- Searches multiple job boards and URLs, filters listings, and deduplicates applications.\n- Composes and sends personalized application emails with CV attached via Gmail SMTP.\n- Maintains and updates an applications tracker (Applications.json) including status for each job.\n- First three applications require user approval (review mode); subsequent applications send automatically.\n- Session summary and email/application status updates provided at the end of each run.",
+  "created_at": 1774130205907,
+  "display_name": "automate applying to jobs with email",
+  "fetched_at": 1787770218935,
+  "files": [
+    "Applications.json",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/Platform-notes.md",
+    "references/Tracker-commands.md",
+    "references/config.md",
+    "references/email-templates.md",
+    "references/job-profile.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090024134,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ZHDesignS",
+    "handle": "z-hussein",
+    "user_id": "s1792y5b91gb9dszjw5hw9m62d83e8mg"
+  },
+  "slug": "job-apply-automation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/job-apply-automation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=job-apply-automation&ownerHandle=z-hussein",
+    "page_url": "https://clawhub.ai/z-hussein/skills/job-apply-automation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 829,
+    "installs": 18,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Automated job searching assistant. Searches for jobs on LinkedIn, Indeed, Glassdoor, Wellfound, Agentur f\u00fcr Arbeit, and direct URLs, composes personalised application emails with CV attached, sends via Gmail SMTP, and maintains a JSON tracker. Use when: apply to jobs, find jobs, job search, check tracker, update application, send application email, or check inbox for job replies.",
+  "updated_at": 1787297261463,
+  "version": "1.0.0"
+}
