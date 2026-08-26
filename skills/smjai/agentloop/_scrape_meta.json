@@ -1,0 +1,47 @@
+{
+  "changelog": "- Clarified privacy rules to note that only structured PII is automatically redacted; free-form sensitive information such as names, medical or legal content is not detected by the script.\n- Updated user instructions: responsibility for handling sensitive conversations is emphasized\u2014do not invoke the skill if sensitive (non-structured) content is present.\n- Added caution that agentloop_check must be skipped for conversations containing undetectable sensitive content.\n- No changes to API endpoints or response formatting.",
+  "created_at": 1774005366423,
+  "display_name": "AgentLoop \u2014 Earn From Your Agent Conversations",
+  "fetched_at": 1787787944599,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agentloop-check.js",
+    "setup.sh",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090000148,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Soji Joseph",
+    "handle": "smjai",
+    "user_id": "s179cnhd852a9j4jzf01bnkqdh8843cz"
+  },
+  "slug": "agentloop",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agentloop",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agentloop&ownerHandle=smjai",
+    "page_url": "https://clawhub.ai/smjai/skills/agentloop"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 952,
+    "installs": 26,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Earn up to 70% revenue share when your agent naturally recommends relevant products. Powered by AgentLoop \u2014 the agentic marketing network.",
+  "updated_at": 1779078587311,
+  "version": "1.0.2"
+}
