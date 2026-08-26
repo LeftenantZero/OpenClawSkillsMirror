@@ -1,0 +1,81 @@
+{
+  "changelog": "**Default trial-first entry and removal of legacy configuration files.**\n\n- Now defaults to \u201cpromotion trial mode\u201d on first use, without prompting the user to select usage mode, unless the user explicitly requests formal account access.\n- Missing use mode is automatically set to trial; the skill now asks only for essential call details upfront.\n- User is informed about trial mode and that credentials are not required unless they mention having a formal account.\n- Analytics fields (`use_mode=trial`, `use_mode_source=default`, `entry_strategy=default_trial`) added for backend usage tracking.\n- Removed legacy files: .env, .gitignore, and skill-card.md.",
+  "created_at": 1779708971268,
+  "display_name": "Vox \u81ea\u5b9a\u4e49\u7535\u8bdd Bot",
+  "fetched_at": 1787781169157,
+  "files": [
+    "FIRST_SETUP.md",
+    "GET_STARTED.md",
+    "REGISTRATION_GUIDE.md",
+    "SKILL.md",
+    "WORKBUDDY.md",
+    "_meta.json",
+    "bmad_skill_manifest.yaml",
+    "package.json",
+    "resources/analytics_client.js",
+    "resources/analytics_manifest.json",
+    "resources/business_context_rules.js",
+    "resources/call_job_store.js",
+    "resources/call_task.js",
+    "resources/content_safety_guard.js",
+    "resources/credentials.example.json",
+    "resources/credentials_loader.js",
+    "resources/distribution_channel.js",
+    "resources/hmac_outbound_client.js",
+    "resources/hosted_api_example.js",
+    "resources/implementation_checklist.md",
+    "resources/index.js",
+    "resources/intent_completeness.js",
+    "resources/phone_validator.js",
+    "resources/post_call_callback_client.js",
+    "resources/prompt_to_agent_profile.js",
+    "resources/prompt_to_call_intent.js",
+    "resources/request_id.js",
+    "resources/result_advice.js",
+    "resources/risk_classifier.js",
+    "resources/run_demo.js",
+    "resources/run_tests.js",
+    "resources/task_briefing.js",
+    "resources/test_prompts.json",
+    "resources/trial_state.js",
+    "resources/voice_requirements.js",
+    "resources/voice_type_selector.js",
+    "resources/vox_call_result_client.js",
+    "resources/vox_result_poller.js",
+    "skill-card.md",
+    "skill.json",
+    "workflow.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781169954260,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ziliangZhu",
+    "handle": "ziliangzhu",
+    "user_id": "s175sche5fq6wyqyvyvy6pqfrs86n4yr"
+  },
+  "slug": "vox-custom-phone-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/vox-custom-phone-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=vox-custom-phone-agent&ownerHandle=ziliangzhu",
+    "page_url": "https://clawhub.ai/ziliangzhu/skills/vox-custom-phone-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 821,
+    "installs": 19,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Convert natural language phone tasks into structured Vox custom bot outbound calls with guided prompts and voice options, ensuring compliance and secure dial...",
+  "updated_at": 1781166616879,
+  "version": "1.0.6"
+}
