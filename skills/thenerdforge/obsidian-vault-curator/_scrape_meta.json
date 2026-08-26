@@ -1,0 +1,44 @@
+{
+  "changelog": "Major prompt-engineering and safety hardening release for large Obsidian/Markdown vault curation workflows.\n\nAdded:\n- New read-only roles: duplicate-cluster-agent, sensitive-content-agent, and threshold-based structural-move-planner.\n- Concrete subagent packet examples for every named role.\n- Glossary for sensitive content, operational data, heterogeneous slices, folder roots, canonical changes, and affected backlinks.\n- Sensitive-content precedence rule.\n- Topic and confidence rules, plus topic slug validation.\n\nChanged:\n- Multi-note and heterogeneous vault work now defaults to inventory-first read-only subagent passes.\n- Main agent remains the only writer; subagents are strictly read-only and never write, even with user approval.\n- Read-only subagent slices are capped at 200 notes; write slices are capped at 3-10 related notes.\n- Output shapes are centralized in references/output-format.md.\n- Migration planning now requires reviewer pass for every note in the slice.\n- Link-verifier and sensitive-content-agent now have explicit slice caps and split rules.\n\nFixed:\n- Removed writer-subagent loophole.\n- Removed ambiguous unverified terminology from script output.\n- Clarified that pending verification is not a frontmatter status.\n- Reduced ambiguity between sensitive content and operational data.\n- Tightened stop conditions, human-review gates, and anti-hallucination guardrails.\n\nReviewed through multiple Claude Code prompt-engineering audits. Final regression review verdict: publish-ready.",
+  "created_at": 1778600808492,
+  "display_name": "Obsidian Vault Curator",
+  "fetched_at": 1787785757575,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/bases-views.md",
+    "references/classification-rubric.md",
+    "references/output-format.md",
+    "references/status-schema.md",
+    "references/subagent-packets.md",
+    "references/subagents.md",
+    "references/workflow.md",
+    "scripts/check_links.py",
+    "scripts/generate_migration_plan.py",
+    "scripts/inventory_slice.py",
+    "scripts/validate_frontmatter.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "TheNerd",
+    "handle": "thenerdforge",
+    "user_id": "s174xf840fv9gsykcep648d75d83qqy6"
+  },
+  "slug": "obsidian-vault-curator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/obsidian-vault-curator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=obsidian-vault-curator&ownerHandle=thenerdforge",
+    "page_url": "https://clawhub.ai/thenerdforge/skills/obsidian-vault-curator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 897,
+    "installs": 23,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Cautious curation, classification, review, and migration planning for Obsidian or Markdown vaults. Use when the user wants to organize a messy vault, classif...",
+  "updated_at": 1779221380337,
+  "version": "1.1.0"
+}
