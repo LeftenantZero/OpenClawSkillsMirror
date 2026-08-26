@@ -1,0 +1,38 @@
+{
+  "changelog": "Repositioned as a live data and capability router. Leads with the benefit (getting past the model's training cutoff) instead of the architecture, and documents a free-first flow: free handshake, read the route, check price and verification, authorise before any payment.\n\nAdds scripts/route.py (free handshake only, refuses credential-bearing intents, no payment code path), scripts/smoke_test.py (free surface checks with an offline mode), and three references: route recipes for eight task families, verification with four explicit states and a local JWKS check, and x402 safety with the 402 quote flow and budget rules.\n\nRemoves claims the live surfaces did not support: the 98-oracle catalog figure, the ~30 ms latency promise, the stale 'dedicated issuer key is planned but not yet deployed' statement, the 0.01 USD headline price, and the welcome-credit promise. Volatile numbers now reference live discovery files instead of being copied. Compatibility metadata separates verified paths from documentary ones.\n\n71 offline tests and CI on Python 3.11 and 3.12.",
+  "created_at": 1775479272523,
+  "display_name": "OracleNet \u2014 Live Data & Capability Router for AI Agents",
+  "fetched_at": 1787774075049,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/route-recipes.md",
+    "references/verification.md",
+    "references/x402-safety.md",
+    "scripts/route.py",
+    "scripts/smoke_test.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ToolOracle",
+    "handle": "tooloracle",
+    "user_id": "s176bq48c1caf4g3dyyr6jccbs84ajhf"
+  },
+  "slug": "oraclenet-mesh",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oraclenet-mesh",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oraclenet-mesh&ownerHandle=tooloracle",
+    "page_url": "https://clawhub.ai/tooloracle/skills/oraclenet-mesh"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 817,
+    "installs": 17,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Give an AI agent one route to live external data and MCP capabilities. Use when a task needs current blockchain, market, research, sanctions, weather, travel, or compliance data beyond the model's training cutoff. OracleNet discovers the relevant route, shows where pricing and verification metadata live, and starts with free discovery before any payment.",
+  "updated_at": 1785501391557,
+  "version": "3.0.0"
+}
