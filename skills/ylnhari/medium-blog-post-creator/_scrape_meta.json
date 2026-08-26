@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial public release",
+  "created_at": 1782314048401,
+  "display_name": "Medium Blog Post Creator",
+  "fetched_at": 1787779056100,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/meta.template.json",
+    "assets/post-template.html",
+    "references/configuration.md",
+    "references/html-standards.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782315301514,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ylnhari",
+    "handle": "ylnhari",
+    "user_id": "s17ec1n5yfxgmyjy2w71rz38h1885xh1"
+  },
+  "slug": "medium-blog-post-creator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/medium-blog-post-creator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=medium-blog-post-creator&ownerHandle=ylnhari",
+    "page_url": "https://clawhub.ai/ylnhari/skills/medium-blog-post-creator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 268,
+    "installs": 1,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Publish to Medium without an API token. Medium closed its API to new integrations in Jan 2025, so this skill uses the one stable path left: it writes your post as Medium-ready HTML, deploys it to your own GitHub Pages, and uses Medium's URL importer to create a draft. Say 'blog about X' and it scaffolds your blog repo on first run, then drafts each post end to end. It always stops at a draft for your review and never auto-publishes. Needs GitHub, Medium, and the gh CLI.",
+  "updated_at": 1782399052218,
+  "version": "1.0.0"
+}
