@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release of geoskill-multimodal-fusion-ai.\n\n- Provides offline, numpy-based multimodal raster fusion and joint classification equivalent to a deep-learning pipeline.\n- Supports min-max/z-score normalization, automatic or user-specified weighting, and KMeans clustering for joint classification.\n- Accepts local multi-band rasters (each band = modality) or synthetic test data.\n- Outputs fused raster, joint classification labels, detailed fusion report, and run manifest (all offline).\n- No data uploads; fully local processing; privacy-respecting by default.",
+  "created_at": 1785848519860,
+  "display_name": "geoskill-multimodal-fusion-ai",
+  "fetched_at": 1787773456584,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-multimodal-fusion-ai.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785849425936,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-multimodal-fusion-ai",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-multimodal-fusion-ai",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-multimodal-fusion-ai&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-multimodal-fusion-ai"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 179,
+    "installs": 1,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u591a\u6e90\u6805\u683c\u6807\u51c6\u5316+\u52a0\u6743\u878d\u5408+\u8054\u5408\u5206\u7c7b\uff0c\u8f93\u51fa\u878d\u5408\u5206\u7c7b\u6805\u683c\uff08\u79bb\u7ebfnumpy\u7b49\u4ef7\u5b9e\u73b0\uff09",
+  "updated_at": 1785848700157,
+  "version": "1.0.0"
+}
