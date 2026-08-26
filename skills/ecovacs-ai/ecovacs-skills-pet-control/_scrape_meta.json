@@ -1,0 +1,54 @@
+{
+  "changelog": "- Added protocol and documentation for single-action and action-sequence motion control (see new references/phoenix-*.md, action-sequence.md).\n- Added support for dance routines with a fixed ~45s \u201cshowcase_custom\u201d preset (see references/dance-routines.md).\n- Expanded sound control: clarified `playSound` handling for `category` and `file` payloads for mood-specific barking.\n- Updated documentation to explain motion control JSONs, timing limits, and error prevention.\n- Removed obsolete documentation file (skill-card.md).\n- Default gateway clarified as Mainland China (https://open.ecovacs.cn); non-China regions supported with override.",
+  "created_at": 1778822979006,
+  "display_name": "ecovacs-skills-pet-control",
+  "fetched_at": 1787783019243,
+  "files": [
+    "README.md",
+    "README.zh.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/action-sequence.md",
+    "references/api.md",
+    "references/dance-routines.md",
+    "references/phoenix-action-control.md",
+    "references/phoenix-single-action.md",
+    "references/schema.md",
+    "references/troubleshooting.md",
+    "scripts/dance_choreography.py",
+    "scripts/ecovacs.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780562787261,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ecovacs",
+    "handle": "ecovacs-ai",
+    "user_id": "s177vaxqzeqpy140w93wn2f49s86sz35"
+  },
+  "slug": "ecovacs-skills-pet-control",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ecovacs-skills-pet-control",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ecovacs-skills-pet-control&ownerHandle=ecovacs-ai",
+    "page_url": "https://clawhub.ai/ecovacs-ai/skills/ecovacs-skills-pet-control"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 666,
+    "installs": 14,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Control Ecovacs FAMIBOT (pet) robots via the Open Platform Access Key (AK) and POST /robot/skill/pet/cmd. Covers device discovery, queries/settings, display/...",
+  "updated_at": 1780561455843,
+  "version": "1.0.1"
+}
