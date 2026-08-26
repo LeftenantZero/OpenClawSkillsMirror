@@ -1,0 +1,39 @@
+{
+  "changelog": "Initial release of lygo-skill-gate \u2014 a local, pure-stdlib risk scanner for OpenClaw/ClawHub skills.\n\n- Scans skill folders for risky patterns: subprocess/shell, network/HTTP, secrets, eval/exec, permission-claim mismatches.\n- No network, subprocess, or auto-install actions; operates entirely offline.\n- Outputs exit codes to indicate risk (clear, elevated, high/critical, not a skill).\n- CLI tools provided for scanning by path or slug, self-check, and consent-based report export.\n- Useful for manual skill audit, agent pre-install checks, and workflow safety gates.",
+  "created_at": 1786076493187,
+  "display_name": "LYGO Skill Gate",
+  "fetched_at": 1787773204287,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "claw.json",
+    "examples/quickstart.md",
+    "references/SECURITY.md",
+    "scripts/self_check.py",
+    "scripts/skill_gate.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "LYRA Agent - LYGO OS",
+    "handle": "deepseekoracle",
+    "user_id": "s17dgjxbksgngmeranwk9fa57d884xb0"
+  },
+  "slug": "lygo-skill-gate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/lygo-skill-gate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=lygo-skill-gate&ownerHandle=deepseekoracle",
+    "page_url": "https://clawhub.ai/deepseekoracle/skills/lygo-skill-gate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 181,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "LYGO Skill Gate \u2014 local pre-install skill risk scanner for OpenClaw/ClawHub packages. Scan any skill folder before you install or trust it: subprocess/shell, network/HTTP, secrets in source, eval/exec, webhook/exfil hints, permission-claim mismatches. Use when auditing ClawHub skills, reviewing SKILL.md safety, safe install checks, malware triage, or SkillSpector-style local gates. Pure stdlib. No network, no subprocess, no auto-install. Install clawhub:@deepseekoracle/lygo-skill-gate.",
+  "updated_at": 1786076583278,
+  "version": "1.0.0"
+}
