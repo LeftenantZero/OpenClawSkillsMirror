@@ -1,0 +1,45 @@
+{
+  "changelog": "reddit-post-comments 1.0.0 \u2014 initial release\n\n- Fetch Reddit comment threads by post ID using Reddit's public JSON API.\n- Supports batch fetching (up to 500 comments), nesting depth, and created_utc date filters.\n- Recursively collects all nested replies and paginated overflow via the morechildren endpoint.\n- Returns a flat JSON array of comments, each with 30+ detailed fields (id, parent_id, body, author, score, etc.).\n- Includes error handling for invalid post IDs and missing/malformed input.\n- Designed for automation: usage only accesses data visible to the user, never bypasses authentication or access controls.",
+  "created_at": 1784550883371,
+  "display_name": "Reddit Post Comments",
+  "fetched_at": 1787775894182,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/fetch-comments.py",
+    "scripts/more-comments.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784554543250,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "reddit-post-comments",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/reddit-post-comments",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=reddit-post-comments&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/reddit-post-comments"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 252,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fetches Reddit comment threads from a post via Reddit's public JSON API, returning flat structured comment records. Input: post ID, optional limit per batch (up to 500), comment depth, and date range filters for created_utc. Handles nested reply trees recursively and paginated overflow batches via t",
+  "updated_at": 1784554011377,
+  "version": "1.0.0"
+}
