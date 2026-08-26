@@ -1,0 +1,56 @@
+{
+  "changelog": "- Removed redundant file: skill-card.md\n- No functional or behavioral changes to the skill itself\n- Documentation and core usage unchanged",
+  "created_at": 1785746912414,
+  "display_name": "huawei-cloud-eip-cost-optimizer",
+  "fetched_at": 1787771587905,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/eip-api-guide.md",
+    "references/iam-policies.md",
+    "references/test-vars.json",
+    "references/verification-method.md",
+    "scripts/analyze_idle_eips.sh",
+    "scripts/check_env.sh",
+    "scripts/config.sh",
+    "scripts/eip_audit_log.sh",
+    "scripts/eip_cost_report.sh",
+    "scripts/list_eips.sh",
+    "scripts/monitor_idle_eips.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785748203678,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-eip-cost-optimizer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-eip-cost-optimizer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-eip-cost-optimizer&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-eip-cost-optimizer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 46,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Huawei Cloud EIP (Elastic IP) cost optimization skill using hcloud CLI (KooCLI). 1. List and query EIPs across regions with detailed status 2. Identify idle/unbound EIPs and generate cost optimization reports 3. Set up idle EIP monitoring with webhook/email alerts 4. Generate HTML/JSON cost analysis reports 5. Maintain operation audit logs for compliance **Read-only analysis only - NO bandwidth adjustment, tag management, or EIP release/deletion**. Triggers include: \"EIP cost optimization\", \"idle EIP analysis\", \"EIP audit\", \"cost report\", \"EIP status query\", \"EIP list\", \"EIP monitoring\", \"EIP alert\", \"cost analysis\", \"idle monitoring\", \"operation audit\", \"EIP \u6210\u672c\u4f18\u5316\", \"\u95f2\u7f6e EIP \u5206\u6790\", \"EIP \u5ba1\u8ba1\", \"\u6210\u672c\u62a5\u544a\", \"EIP \u72b6\u6001\u67e5\u8be2\", \"EIP \u67e5\u8be2\", \"EIP \u5217\u8868\", \"EIP \u76d1\u63a7\", \"EIP \u544a\u8b66\", \"\u6210\u672c\u5206\u6790\", \"\u95f2\u7f6e\u76d1\u63a7\", \"\u64cd\u4f5c\u5ba1\u8ba1\"",
+  "updated_at": 1785747033891,
+  "version": "1.0.0"
+}
