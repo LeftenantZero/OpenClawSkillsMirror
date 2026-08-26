@@ -1,0 +1,44 @@
+{
+  "changelog": "- Expanded documentation in SKILL.md, detailing all commands, arguments, flags, and usage tips.\n- Clarified when to use this skill versus related tools (gopls, Context7, govulncheck).\n- Provided complete installation and server setup instructions, including hosted instance details.\n- Added comprehensive command reference table with options and exit codes.\n- Included usage guidance for output formatting, entry points, and troubleshooting.",
+  "created_at": 1787357042896,
+  "display_name": "golang-pkg-go-dev",
+  "fetched_at": 1787770092416,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/sample-output.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787358483809,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Samuel Berthe",
+    "handle": "samber",
+    "user_id": "s173arkhs3131fq5jf769qq75583hdgt"
+  },
+  "slug": "golang-pkg-go-dev",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/golang-pkg-go-dev",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=golang-pkg-go-dev&ownerHandle=samber",
+    "page_url": "https://clawhub.ai/samber/skills/golang-pkg-go-dev"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 95,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Golang package and module documentation and exploration via `godig`, a pkg.go.dev API client (CLI + MCP server) \u2014 package docs, API references, symbols, code examples, available versions, importers (who imports a package), licenses, and known vulnerabilities. Read-only, no auth. Use for looking up any Go/Golang library's documentation, API signatures, usage examples, which versions exist, whether a dependency has CVEs, or who imports a package \u2014 prefer this over Context7 for any Go package or module. Triggers on: how to use a Go library, Go API docs, import usage, code examples, pkg.go.dev. Not for upgrading dependencies (\u2192 See `samber/cc-skills-golang@golang-dependency-management` skill) or choosing a library (\u2192 See `samber/cc-skills-golang@golang-popular-libraries` skill). Not for local symbols, or for navigating an already-used dependency's resolved source, call sites, or generic instantiations \u2014 \u2192 See `samber/cc-skills-golang@golang-gopls` skill for those.",
+  "updated_at": 1787357103666,
+  "version": "1.4.0"
+}
