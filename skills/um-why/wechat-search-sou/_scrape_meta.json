@@ -1,0 +1,61 @@
+{
+  "changelog": "wechat-sou v1.0.1\n\n- Added search and CLI support for both WeChat articles and videos.\n- Introduced JSON Schema files for article/video search input and output for LLM/CLI integration.\n- Provided detailed command examples and parameters for enhanced usability.\n- Expanded documentation with references/options and comprehensive CLI command usage.\n- Removed deprecated skill-card.md.\n\nThis update enables flexible, real-time WeChat article and video searching via both direct CLI and structured API/LLM calls.",
+  "created_at": 1782203370958,
+  "display_name": "\u5fae\u4fe1\u641c\u7d22",
+  "fetched_at": 1787779490432,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/article_cli_req.schema.json",
+    "assets/article_cli_resp.schema.json",
+    "assets/video_cli_req.schema.json",
+    "assets/video_cli_resp.schema.json",
+    "package.json",
+    "references/options.md",
+    "scripts/api/article.js",
+    "scripts/api/video.js",
+    "scripts/config/constants.js",
+    "scripts/utils/errors.js",
+    "scripts/utils/log.js",
+    "scripts/utils/request.js",
+    "scripts/utils/retry.js",
+    "scripts/utils/token.js",
+    "scripts/utils/utils.js",
+    "scripts/validate/keyword.js",
+    "scripts/wechat/article-cli.js",
+    "scripts/wechat/video-cli.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782205014668,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "um-why",
+    "handle": "um-why",
+    "user_id": "s17dekqcarz582t04nvd15aj1183gf0v"
+  },
+  "slug": "wechat-search-sou",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wechat-search-sou",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wechat-search-sou&ownerHandle=um-why",
+    "page_url": "https://clawhub.ai/um-why/skills/wechat-search-sou"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 347,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5fae\u4fe1\u641c\u4e00\u641c\u5b9e\u65f6\u641c\u7d22\u5de5\u5177\u3002\u652f\u6301WECHAT\u6587\u7ae0\u3001\u89c6\u9891\u3001\u56fe\u7247\u5b9e\u65f6\u641c\u7d22\u6570\u636e\u83b7\u53d6\uff0c\u5f53\u9700\u8981\u83b7\u53d6\u5fae\u4fe1\u641c\u7d22\u7ed3\u679c\u65f6\u4f7f\u7528\u3002",
+  "updated_at": 1782203370958,
+  "version": "1.0.1"
+}
