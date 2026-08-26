@@ -1,0 +1,45 @@
+{
+  "changelog": "Version 1.0.1\n\n- Removed the skill-card.md file.\n- Trimmed and focused the description to highlight key use cases (user profile, influencer data, blogger analysis).\n- Clarified login handling: now prompts the user for action if login fails, instead of terminating automatically.\n- Updated pagination instructions to always confirm the max page count with the user.\n- Adjusted batch orchestration recommendations: suggest multiple browser sessions for higher throughput, but only with user approval.",
+  "created_at": 1782563957549,
+  "display_name": "Xiaohongshu User Profile",
+  "fetched_at": 1787777400022,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-user-notes.py",
+    "scripts/extract-user-profile.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783587954973,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "xiaohongshu-user-profile",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/xiaohongshu-user-profile",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=xiaohongshu-user-profile&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/xiaohongshu-user-profile"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 640,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Fetch Xiaohongshu (RedNote / xhs) user profile information and their published notes list by user ID, returning nickname, bio, follower/following counts, engagement totals, tags, and paginated notes with engagement stats. Use when user mentions xiaohongshu user profile, rednote creator profile, xhs",
+  "updated_at": 1783587529076,
+  "version": "1.0.1"
+}
