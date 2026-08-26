@@ -1,0 +1,38 @@
+{
+  "changelog": "- Initial release of the Alibaba Cloud ECS Disaster Recovery Image skill.\n- Enables creation of a full-instance image (system + data disks) from an existing ECS instance and deployment of a new instance in a different availability zone within the same region.\n- Strictly operates as a backup (original instance/resources remain untouched, not a migration).\n- Automates parameter capture, user confirmation, and privilege checks; all key steps require explicit user choice via clickable options.\n- Includes detailed pre-checks for CLI version, plugin updates, credential validity, and permission requirements.\n- All API-related CLI commands use a standardized User-Agent with a unique session ID for observability and traceability.",
+  "created_at": 1781714714436,
+  "display_name": "Alibabacloud Ecs Disaster Recovery Image",
+  "fetched_at": 1787780369321,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-ecs-disaster-recovery-image",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-ecs-disaster-recovery-image",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-ecs-disaster-recovery-image&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-ecs-disaster-recovery-image"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 333,
+    "installs": 3,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u963f\u91cc\u4e91 ECS \u8de8\u53ef\u7528\u533a\u707e\u5907\u6062\u590d\u6280\u80fd\u3002\u4ece\u73b0\u6709 ECS \u5b9e\u4f8b\u521b\u5efa\u7cfb\u7edf\u955c\u50cf\uff0c\u5e76\u5728\u4e0d\u540c\u53ef\u7528\u533a\u90e8\u7f72\u65b0\u5b9e\u4f8b\u3002 \u5f53\u7528\u6237\u63d0\u5230\u4ee5\u4e0b\u573a\u666f\u65f6\u4f7f\u7528\uff1a\u53ef\u7528\u533a\u6545\u969c\u6062\u590d\u3001\u8de8\u53ef\u7528\u533a\u5907\u4efd\u3001\u8de8\u53ef\u7528\u533a\u5b9e\u4f8b\u514b\u9686\u3001ECS \u707e\u5907\u3001 \u7528\u955c\u50cf\u5728\u5176\u4ed6\u53ef\u7528\u533a\u521b\u5efa\u5b9e\u4f8b\u3001\"\u5e2e\u6211\u505a\u4e2a\u955c\u50cf\u7136\u540e\u6362\u4e2a\u53ef\u7528\u533a\u521b\u5efa\u5b9e\u4f8b\"\u7b49\u3002 \u4e5f\u9002\u7528\u4e8e\uff1a\u707e\u5907\u5b9e\u4f8b\u3001\u955c\u50cf\u5907\u4efd\u3001\u6362\u4e2a\u53ef\u7528\u533a\u521b\u5efa\u5b9e\u4f8b\u3001\u53ef...",
+  "updated_at": 1781714714436,
+  "version": "0.0.1"
+}
