@@ -1,0 +1,68 @@
+{
+  "changelog": "- Initial release of bailian-usage-proxy.\n- Provides a proxy service for precise usage tracking when sharing an Alibaba Bailian (DashScope) account among multiple users.\n- Tracks token usage and call counts per user, model, and time period.\n- Supports daily quota management and rate limiting for individual users.\n- Includes a management dashboard for usage queries and report export.\n- Compatible with OpenAI-style API, requiring minimal client changes.",
+  "created_at": 1774324508107,
+  "display_name": "Bailian Usage Proxy",
+  "fetched_at": 1787787368637,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "app/__init__.py",
+    "app/admin.py",
+    "app/api.py",
+    "app/config.py",
+    "app/database.py",
+    "app/main.py",
+    "app/models.py",
+    "app/proxy.py",
+    "assets/docker-compose.yml",
+    "assets/requirements.txt",
+    "docker-compose.yml",
+    "references/api.md",
+    "references/architecture.md",
+    "references/database.md",
+    "requirements.txt",
+    "scripts/create_user.py",
+    "scripts/init_db.py",
+    "scripts/usage_report.py",
+    "skill-card.md",
+    "start.sh",
+    "start_daemon.sh",
+    "status.sh",
+    "stop.sh",
+    "templates/base.html",
+    "templates/dashboard.html"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090055065,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "bjmfjoy",
+    "handle": "bjmfjoy",
+    "user_id": "s1710zpncshy0smw5x96tk7pbd83gdxh"
+  },
+  "slug": "bailian-usage-proxy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bailian-usage-proxy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bailian-usage-proxy&ownerHandle=bjmfjoy",
+    "page_url": "https://clawhub.ai/bjmfjoy/skills/bailian-usage-proxy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 622,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u963f\u91cc\u767e\u70bc\u5927\u6a21\u578b\u5e73\u53f0\u7684\u591a\u4eba\u5171\u4eab\u8d26\u53f7\u7528\u91cf\u7edf\u8ba1\u4ee3\u7406\u670d\u52a1\u3002\u7528\u4e8e\u89e3\u51b3\u516c\u53f8\u5171\u7528\u963f\u91cc\u767e\u70bc\u8d26\u53f7\u65f6\u65e0\u6cd5\u533a\u5206\u4e2a\u4eba\u7528\u91cf\u7684\u95ee\u9898\u3002\u5f53\u7528\u6237\u9700\u8981\uff1a1) \u90e8\u7f72\u963f\u91cc\u767e\u70bc\u7528\u91cf\u7edf\u8ba1\u4ee3\u7406\uff0c2) \u7edf\u8ba1\u591a\u4ebaToken\u7528\u91cf\u548c\u8c03\u7528\u6b21\u6570\uff0c3) \u7ba1\u7406\u5927\u6a21\u578bAPI\u8c03\u7528\u914d\u989d\u65f6\u6fc0\u6d3b\u6b64\u6280\u80fd\u3002",
+  "updated_at": 1779078926795,
+  "version": "1.0.0"
+}
