@@ -1,0 +1,44 @@
+{
+  "changelog": "**Expanded endpoint support and documentation improvements.**\n\n- Added support and documentation for fetching org chart and detailed worker profiles (with drill-in tasks).\n- Updated references/endpoints.md with new verified GET endpoints and clear notes on unsupported features.\n- Clarified documentation on coverage/exclusions: notes now specify that inbox and global search are only available via GraphQL (POST), not GET.\n- Removed outdated skill-card.md file.",
+  "created_at": 1785416022097,
+  "display_name": "Tmp.OaG0mpsA2R",
+  "fetched_at": 1787770624685,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/endpoints.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787113698499,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "chrischall",
+    "handle": "chrischall",
+    "user_id": "s17cjx1a349nz5apaqp02vgz4h85728z"
+  },
+  "slug": "workday-fpx",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/workday-fpx",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=workday-fpx&ownerHandle=chrischall",
+    "page_url": "https://clawhub.ai/chrischall/skills/workday-fpx"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 362,
+    "installs": 1,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Read Workday HR data (org chart, worker profiles, tasks, pay, benefits, compensation, your app menu) from a shell with the fpx CLI (@fetchproxy/cli) instead of running the workday-mcp server \u2014 fetch any *.htmld data endpoint through your own signed-in *.myworkday.com tab (SSO/Ping/Okta/Entra already cleared). Use when you want Workday data without the MCP, in a script, or on a machine where the MCP isn't installed.",
+  "updated_at": 1787112611852,
+  "version": "0.4.0"
+}
