@@ -1,0 +1,62 @@
+{
+  "changelog": "Security hardening (2.2.1): pin lxml>=6.1.0 to fix CVE-2026-41066 (XXE); add secure lxml parser with entity resolution disabled for .wdx/.opju; fully disclose sidecar metadata & backup file writes in manifest.",
+  "created_at": 1783077874224,
+  "display_name": "statdata-transfer",
+  "fetched_at": 1787773787594,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "README_zh-CN.md",
+    "SKILL.md",
+    "_icon.svg",
+    "_meta.json",
+    "assets/logo.svg",
+    "references/new_formats_architecture_analysis.json",
+    "references/usage_examples.py",
+    "references/v1.4_implementation_summary.json",
+    "requirements.txt",
+    "scripts/__init__.py",
+    "scripts/check_env.py",
+    "scripts/reader_arff.py",
+    "scripts/reader_core.py",
+    "scripts/reader_epinfo.py",
+    "scripts/reader_excel.py",
+    "scripts/reader_gretl.py",
+    "scripts/reader_legacy.py",
+    "scripts/reader_modern.py",
+    "scripts/reader_odm.py",
+    "scripts/reader_r.py",
+    "scripts/reader_sas.py",
+    "scripts/reader_science.py",
+    "scripts/reader_spss.py",
+    "scripts/reader_stata.py",
+    "scripts/reader_tableau.py",
+    "scripts/reader_v14.py",
+    "scripts/writer.py",
+    "skill-card.md",
+    "test_report.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Wintone Zhang",
+    "handle": "medstatstar",
+    "user_id": "s176fv8983h1rte6dmxwp9wt4n89j8p5"
+  },
+  "slug": "statdata-transfer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/statdata-transfer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=statdata-transfer&ownerHandle=medstatstar",
+    "page_url": "https://clawhub.ai/medstatstar/skills/statdata-transfer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1424,
+    "installs": 2,
+    "stars": 0,
+    "versions": 19
+  },
+  "summary": "\u8bfb\u5165/\u8f6c\u5b58 50+ \u7edf\u8ba1\u8f6f\u4ef6\u683c\u5f0f\uff0c\u5bf9\u7edf\u8ba1\u4e8c\u8fdb\u5236\u683c\u5f0f\u5b8c\u6574\u4fdd\u7559\u53d8\u91cf\u6807\u7b7e/\u503c\u6807\u7b7e/\u7279\u6b8a\u7f3a\u5931\u503c\u7b49\u5143\u6570\u636e\u3002\u526f\u4f5c\u7528\u58f0\u660e\uff08\u5b8c\u6574\uff09\uff1a\u8fd0\u884c\u73af\u5883\u68c0\u67e5\uff08scripts/check_env.py\uff09\uff1b\u53ef\u5e94\u8981\u6c42 pip \u5b89\u88c5\u7f3a\u5931\u5305\uff1b\u5199\u5165\u4e3b\u8f93\u51fa\u6587\u4ef6\u7684\u540c\u65f6\u53ef\u80fd\u751f\u6210 sidecar \u5143\u6570\u636e\uff08CSV/TSV \u65c1 <\u540d>_metadata.json\u3001Parquet/Arrow \u5185\u5d4c\uff09\u53ca\u8986\u76d6 .hyper \u65f6\u7684 .bak/.bak.1 \u5907\u4efd\uff1b\u5904\u7406 .rda/.rds/.RData/.mtw/.mpj/.rec \u65f6\u53ef\u8c03\u7528\u672c\u5730 R \u89e3\u91ca\u5668\uff0c\u4f46\u8be5\u56de\u9000\u9ed8\u8ba4\u7981\u7528\uff0c\u9700 allow_r_exec=True \u663e\u5f0f\u5f00\u542f\u3002 / Read/convert 50+ statistical software formats, preserving variable/value labels and missing-value metadata for binary stats formats. FULL side effects: runs environment checks (scripts/check_env.py); may optionally pip-install missing packages on request; writes the main output file AND may emit sidecar metadata (e.g. <name>_metadata.json beside CSV/TSV, embedded in Parquet/Arrow schema) and .bak/.bak.1 backups when overwriting .hyper; can invoke the local R interpreter for .rda/.rds/.RData/.mtw/.mpj/.rec files via a fallback DISABLED by default and opted in only with allow_r_exec=True.",
+  "updated_at": 1785668657420,
+  "version": "2.2.1"
+}
