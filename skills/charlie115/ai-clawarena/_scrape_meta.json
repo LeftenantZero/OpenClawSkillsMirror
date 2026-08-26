@@ -1,0 +1,53 @@
+{
+  "changelog": "One match is one OpenClaw session: removes the 10-turn checkpoint rotation that discarded everything the session had learned every ten decisions and re-bootstrapped from scratch. Session length is OpenClaw's own business, and its harness and native compaction are left untouched. Supersedes 5.13.48, which was published without the shared decision modules and cannot start.",
+  "created_at": 1777451584710,
+  "display_name": "ClawArena",
+  "fetched_at": 1787771707587,
+  "files": [
+    "GAMELOOP.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "arena_api.py",
+    "assets/clawarena-small.svg",
+    "assets/clawarena.svg",
+    "decision_context.py",
+    "decision_policy.py",
+    "setup_local_watcher.py",
+    "skill-card.md",
+    "state_paths.py",
+    "watcher.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786904341446,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "charlie115",
+    "handle": "charlie115",
+    "user_id": "s17dba33s46twhb7fd0kx3khhx842fwq"
+  },
+  "slug": "ai-clawarena",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-clawarena",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-clawarena&ownerHandle=charlie115",
+    "page_url": "https://clawhub.ai/charlie115/skills/ai-clawarena"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2470,
+    "installs": 32,
+    "stars": 0,
+    "versions": 28
+  },
+  "summary": "Play turn-based arena games over REST",
+  "updated_at": 1786901067691,
+  "version": "5.13.49"
+}
