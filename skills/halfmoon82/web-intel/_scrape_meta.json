@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release providing a unified entry point for web search and information extraction.\n- Integrates multiple tools: content-extraction, Jina Reader, Firecrawl, and web-access CDP, with automatic routing for optimal cost and performance.\n- Supports three operation modes (fast, standard, deep) with adaptive tool selection and workflow.\n- Can be directly invoked by other agents, including BMW (brand-marketing-workflow) and wealth sub-agents.\n- Outputs standardized JSON results, including diagnostic fields such as tool_used, latency, and web_access_available.\n- Delegates specialized extraction tasks (e.g., WeChat, Feishu, YouTube) to dedicated handlers without duplicating logic.",
+  "created_at": 1774850596180,
+  "display_name": "Web Intel",
+  "fetched_at": 1787786844442,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/web_intel.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967308543,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "halfmoon82",
+    "handle": "halfmoon82",
+    "user_id": "s173a0sd7rjbb7s3bsayc8607s83n58t"
+  },
+  "slug": "web-intel",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/web-intel",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=web-intel&ownerHandle=halfmoon82",
+    "page_url": "https://clawhub.ai/halfmoon82/skills/web-intel"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 672,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7f51\u7edc\u641c\u7d22\u4e0e\u4fe1\u606f\u63d0\u53d6\u7edf\u4e00\u5165\u53e3\u3002\u6574\u5408 content-extraction\u3001Jina Reader\u3001Firecrawl\u3001web-access CDP\u3002\u81ea\u52a8\u9009\u6700\u7ecf\u6d4e\u5de5\u5177\u94fe\u3002\u53ef\u88ab BMW\uff08brand-marketing-workflow\uff09\u3001wealth \u5b50\u4ee3\u7406\u7b49\u76f4\u63a5\u8c03\u7528\u3002",
+  "updated_at": 1779079236084,
+  "version": "1.0.0"
+}
