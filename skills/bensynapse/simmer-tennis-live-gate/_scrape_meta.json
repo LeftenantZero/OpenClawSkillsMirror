@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release",
+  "created_at": 1787066108835,
+  "display_name": "Tennis Live-State Gate",
+  "fetched_at": 1787771396755,
+  "files": [
+    "CHANGELOG.md",
+    "DISCLAIMER.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "config.json",
+    "scripts/status.py",
+    "skill-card.md",
+    "tennis_live_gate_skill.py",
+    "tests/__init__.py",
+    "tests/test_break_point.py",
+    "tests/test_fetch_and_flow.py",
+    "tests/test_gate.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "bensynapse",
+    "handle": "bensynapse",
+    "user_id": "s17fej4d2919ejxknrnpazcns98cp06x"
+  },
+  "slug": "simmer-tennis-live-gate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/simmer-tennis-live-gate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=simmer-tennis-live-gate&ownerHandle=bensynapse",
+    "page_url": "https://clawhub.ai/bensynapse/skills/simmer-tennis-live-gate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 104,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Gate Simmer/Polymarket tennis market entries on the live match state (score, who is serving, break-point flag, retirement/walkover/suspension) from the Live Tennis API. Observe-only \u2014 it returns a trade/no-trade decision and a suggested size; it places no orders. Modeled line-for-line on simmer-sdk's regime_gate_skill.py. Use when a tennis strategy should not fire into a break point or a stopped match.",
+  "updated_at": 1787066213216,
+  "version": "0.1.0"
+}
