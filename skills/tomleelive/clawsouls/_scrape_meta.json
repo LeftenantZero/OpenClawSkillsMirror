@@ -1,0 +1,39 @@
+{
+  "changelog": "- Added Hermes Agent integration notes (new HERMES_ADAPTER.md file).\n- Expanded supported agent platforms in the description (now includes Hermes Agent, ZeroClaw, and other Soul Spec-compatible agents).\n- Updated documentation to clarify compatibility and context-specific usage.\n- Removed outdated skill-card.md file.",
+  "created_at": 1770913631752,
+  "display_name": "Clawsouls Skill",
+  "fetched_at": 1787772710666,
+  "files": [
+    "HERMES_ADAPTER.md",
+    "LICENSE.md",
+    "README.md",
+    "SKILL.md",
+    "ZEROCLAW_ADAPTER.md",
+    "_meta.json",
+    "package.json",
+    "scripts/clawsouls.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Tom Jaejoon Lee",
+    "handle": "tomleelive",
+    "user_id": "s17cg611ta38yf4ayqk7sqy1sn84065x"
+  },
+  "slug": "clawsouls",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawsouls",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawsouls&ownerHandle=tomleelive",
+    "page_url": "https://clawhub.ai/tomleelive/skills/clawsouls"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1904,
+    "installs": 50,
+    "stars": 0,
+    "versions": 14
+  },
+  "summary": "Manage AI agent personas (Souls) for OpenClaw, Hermes Agent, ZeroClaw, and other agents that use Soul Spec workspace files (SOUL.md, IDENTITY.md, AGENTS.md). Installs/switches/restores persona files in the agent workspace, searches and publishes to the clawsouls.ai registry (network + token auth), optionally syncs encrypted agent memory via Git (explicit `sync`/`swarm` commands only), and detects the local agent platform. Use only when the user explicitly asks to manage personas \u2014 e.g. \"install a soul\", \"switch persona to X\", \"list souls\", \"restore my previous soul\", \"publish my soul\", or \"login to clawsouls\". Workspace-modifying and publishing actions should be confirmed with the user first.",
+  "updated_at": 1786442921836,
+  "version": "0.6.5"
+}
