@@ -1,0 +1,49 @@
+{
+  "changelog": "Version 1.0.1 \u2014 Switched to PubMed and Semantic Scholar as primary data sources. Streamlined, API-key-free workflow.\n\n- Replaced Web of Science and Springer with PubMed (NCBI E-utilities) and Semantic Scholar as main sources; both require no API key.\n- Removed dependency on search scripts using proprietary APIs (search_wos.py, search_springer.py deleted).\n- Added dedicated scripts for PubMed and Semantic Scholar queries.\n- Updated documentation and workflows to reflect new data sources, processes, and field mappings.\n- Now outputs citation counts and publication types in structured tables.\n- All search, extraction, and reporting processes now work without requiring user API credentials.",
+  "created_at": 1780656373149,
+  "display_name": "\u5fc3\u7406\u5b66\u6587\u732e\u641c\u7d22\u4e0e\u6574\u7406",
+  "fetched_at": 1787782810744,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/api_reference.md",
+    "references/output_templates.md",
+    "scripts/journal_level.py",
+    "scripts/search_pubmed.py",
+    "scripts/search_semantic.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780662712929,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Agjvsxgm",
+    "handle": "agjvsxgm",
+    "user_id": "s177x4n16bq0gtt7xjt8jwbqy1882wxn"
+  },
+  "slug": "psych-literature-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/psych-literature-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=psych-literature-search&ownerHandle=agjvsxgm",
+    "page_url": "https://clawhub.ai/agjvsxgm/skills/psych-literature-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 545,
+    "installs": 8,
+    "stars": 12,
+    "versions": 2
+  },
+  "summary": "Searches and organizes academic literature on a given topic or research question. Queries PubMed (NCBI E-utilities, no API key required) and Semantic Scholar...",
+  "updated_at": 1780661560170,
+  "version": "1.0.1"
+}
