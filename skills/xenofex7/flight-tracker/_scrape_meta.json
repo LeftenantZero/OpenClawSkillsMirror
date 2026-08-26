@@ -1,0 +1,46 @@
+{
+  "changelog": "**Added flight schedule search feature**\n\n- Introduced scripts/schedule.py for searching scheduled flights between airports.\n- Now supports both live flight tracking and schedule lookup via AviationStack API (optional, with API key).\n- SKILL.md updated: covers both live tracking (OpenSky) and flight schedule features (AviationStack), explains API usage, and clarifies supported airport code formats.\n- Added helpful fallback: without an API key, schedule search provides direct links to external flight search engines.\n- Project description updated to reflect new scheduling capabilities.",
+  "created_at": 1768420470253,
+  "display_name": "A simple Flight Tracker",
+  "fetched_at": 1787779387343,
+  "files": [
+    ".clawdhub/origin.json",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/schedule.py",
+    "scripts/track.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783649876796,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xenofex7",
+    "handle": "xenofex7",
+    "user_id": "s17e2474yecxkn45ydydcjwz09885b4w"
+  },
+  "slug": "flight-tracker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/flight-tracker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=flight-tracker&ownerHandle=xenofex7",
+    "page_url": "https://clawhub.ai/xenofex7/skills/flight-tracker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4514,
+    "installs": 164,
+    "stars": 5,
+    "versions": 2
+  },
+  "summary": "Flight tracking and scheduling. Track live flights in real-time by region, callsign, or airport using OpenSky Network. Search flight schedules between airports. Use for queries like \"What flights are over Switzerland?\" or \"When do flights from Hamburg arrive in Zurich?\" or \"Track flight SWR123\".",
+  "updated_at": 1778485733200,
+  "version": "1.1.0"
+}
