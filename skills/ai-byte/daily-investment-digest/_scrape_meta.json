@@ -1,0 +1,38 @@
+{
+  "changelog": "- Added support for recent-N-day reports (2\u20137 days) with filtering and larger fetch window (up to 250 records).\n- Updated CLI and script interfaces: new --recent-days argument; --max-page capped at 25 in recent-days mode.\n- Clarified output policy: scripts do not emit \"\u6295\u8d44\u4e8b\u4ef6\u603b\u7ed3\"; final section must be AI-appended.\n- Improved documentation and usage examples for multi-day reporting. \n- Removed sample card file (skill-card.md).",
+  "created_at": 1773275212829,
+  "display_name": "\u6295\u878d\u8d44\u65e5\u62a5",
+  "fetched_at": 1787783231867,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/field_mapping.md",
+    "scripts/fetch_events.mjs",
+    "scripts/generate_report.mjs",
+    "scripts/run_full_report.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "iyiou",
+    "handle": "ai-byte",
+    "user_id": "s1744ghz9kh4r662gcd6anre0n83g896"
+  },
+  "slug": "daily-investment-digest",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/daily-investment-digest",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=daily-investment-digest&ownerHandle=ai-byte",
+    "page_url": "https://clawhub.ai/ai-byte/skills/daily-investment-digest"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1150,
+    "installs": 31,
+    "stars": 2,
+    "versions": 2
+  },
+  "summary": "Fetch financing event lists from the iYiou skill API and generate daily or recent-N-days financing reports in Markdown to stdout. Use when the task asks to p...",
+  "updated_at": 1780456033137,
+  "version": "1.0.1"
+}
