@@ -1,0 +1,63 @@
+{
+  "changelog": "Recommends the keyless default path and the stellar-agent-wallet skill (shawnmuggle/stellar-agentic-wallet) over configuring .env hot-wallet keys, demoting the .env template to unattended EVM/Solana automation with a dedicated low-balance hot wallet, across SKILL.md and all eight localized docs; declares the skill's permissions (network endpoints, env vars, filesystem access, signing cap) in SKILL.md metadata, answering the ClawHub audit's 13 Credential Access findings and Lp3.",
+  "created_at": 1786335454847,
+  "display_name": "rozo-checkout",
+  "fetched_at": 1787772778884,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "docs/QUICKSTART.es.md",
+    "docs/QUICKSTART.ja.md",
+    "docs/QUICKSTART.md",
+    "docs/QUICKSTART.zh.md",
+    "docs/README.es.md",
+    "docs/README.ja.md",
+    "docs/README.zh.md",
+    "docs/how-it-works.md",
+    "docs/safety.md",
+    "docs/security-audit-notes.md",
+    "llms.txt",
+    "scripts/dist/blacklist.json",
+    "scripts/dist/cli.js",
+    "scripts/dist/create-order.js",
+    "scripts/dist/quote.js",
+    "scripts/dist/send-evm.js",
+    "scripts/dist/send-sol.js",
+    "scripts/dist/status.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786420377323,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Shawn Muggle",
+    "handle": "shawnmuggle",
+    "user_id": "s17a57ypabprvxk3s4hkg6w6ax8460f3"
+  },
+  "slug": "rozo-checkout",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/rozo-checkout",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=rozo-checkout&ownerHandle=shawnmuggle",
+    "page_url": "https://clawhub.ai/shawnmuggle/skills/rozo-checkout"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 306,
+    "installs": 0,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Pay an OpenRouter Coinbase Payment Link with Stellar, Solana, BNB Chain, Ethereum, Polygon, Base (USDT/USDC) or Bitcoin Lightning. A bridge creates a one-time deposit order for the coin you actually hold, then a funder wallet settles the Coinbase invoice for you. Use when a payments.coinbase.com/payment-links/pl_* (or payment-sessions/paymentSession_*) URL should be paid with any of these coins, or on \"rozo-checkout\" / \"pay this link with bitcoin\".",
+  "updated_at": 1786416071665,
+  "version": "0.1.10"
+}
