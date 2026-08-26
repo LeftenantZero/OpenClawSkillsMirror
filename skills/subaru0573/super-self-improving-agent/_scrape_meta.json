@@ -1,0 +1,47 @@
+{
+  "changelog": "Self-Improvement Skill v1.0.0 \u2014 Initial Release\n\n- Introduces a robust framework for agents to automatically log learnings, errors, and feature requests via markdown files in a `.learnings/` directory.\n- Details initialization procedures, logging guidelines, and safeguards (e.g., never write secrets, prefer summaries over raw output).\n- Includes quick-reference tables defining when and where to log different kinds of learnings or failures.\n- Supports promotion of key insights to broader workspace memory files (e.g., AGENTS.md, SOUL.md, TOOLS.md).\n- Provides OpenClaw-specific integration steps and hooks for setup/reminder automation.\n- Compatible with other agents via generic setup instructions.",
+  "created_at": 1782798868300,
+  "display_name": "Super Self Improving Agent",
+  "fetched_at": 1787778694316,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/ERRORS.md",
+    "assets/FEATURE_REQUESTS.md",
+    "assets/LEARNINGS.md",
+    "assets/SKILL-TEMPLATE.md",
+    "hooks/openclaw/HOOK.md",
+    "hooks/openclaw/handler.js",
+    "hooks/openclaw/handler.ts",
+    "references/examples.md",
+    "references/hooks-setup.md",
+    "references/openclaw-integration.md",
+    "scripts/activator.sh",
+    "scripts/error-detector.sh",
+    "scripts/extract-skill.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Subaru0573",
+    "handle": "subaru0573",
+    "user_id": "s17fv9b8ta6mn155x3x71jzdf583p03s"
+  },
+  "slug": "super-self-improving-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/super-self-improving-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=super-self-improving-agent&ownerHandle=subaru0573",
+    "page_url": "https://clawhub.ai/subaru0573/skills/super-self-improving-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 258,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Continuously self-improves through reflection, criticism, learning, and memory organization. Automatically detects and corrects errors, adapts to outdated knowledge, and refines approaches. Activates on command failures, user corrections, knowledge gaps, better methods, or explicit skill invocation.",
+  "updated_at": 1782798868300,
+  "version": "1.0.0"
+}
