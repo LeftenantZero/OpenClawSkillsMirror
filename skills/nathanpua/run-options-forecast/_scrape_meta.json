@@ -1,0 +1,48 @@
+{
+  "changelog": "- Initial release of run-options-forecast skill.\n- Forecasts expected close range for stocks at option expiration using a Breeden-Litzenberger risk-neutral density model.\n- Recommends ranked options strategies (spreads, iron condor, butterfly, straddle), including strikes, probability of profit, and reward-to-risk, tailored to the forecasted bands.\n- Command-line interface for generating text or machine-readable forecasts; includes a dashboard for detailed analysis and visualization.\n- Designed for easy setup and portability with clear troubleshooting support and minimal configuration required.",
+  "created_at": 1785064663192,
+  "display_name": "run-options-forecast",
+  "fetched_at": 1787774982852,
+  "files": [
+    ".env.example",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/__pycache__/expiration_model.cpython-312.pyc",
+    "scripts/__pycache__/lse_options.cpython-312.pyc",
+    "scripts/__pycache__/recommend_plays.cpython-312.pyc",
+    "scripts/backtest.py",
+    "scripts/expiration_model.py",
+    "scripts/forecast_cli.py",
+    "scripts/lse_options.py",
+    "scripts/recommend_plays.py",
+    "scripts/run_analysis.py",
+    "scripts/run_streaming.py",
+    "scripts/visualize.py",
+    "scripts/ws_stream.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Nathan Pua",
+    "handle": "nathanpua",
+    "user_id": "s170km81cf47rc98b6p4pa78n98b9zs0"
+  },
+  "slug": "run-options-forecast",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/run-options-forecast",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=run-options-forecast&ownerHandle=nathanpua",
+    "page_url": "https://clawhub.ai/nathanpua/skills/run-options-forecast"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 245,
+    "installs": 0,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Forecast where a stock will close at option expiration and recommend options plays. Use when the user asks for an options forecast, expected close range, CI bands, or trade ideas for a specific ticker and expiration. Produces a Breeden-Litzenberger risk-neutral density forecast (median, 50/80/95% CI",
+  "updated_at": 1785065231455,
+  "version": "1.0.0"
+}
