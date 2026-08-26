@@ -1,0 +1,35 @@
+{
+  "changelog": "talkies 1.3.17\n\n- Removed skill-card.md, consolidating documentation into SKILL.md.\n- No functional changes; this update is documentation-only.",
+  "created_at": 1779968482409,
+  "display_name": "talkies",
+  "fetched_at": 1787770196389,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/setup.md",
+    "scripts/bulk_transcribe.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ciprian Mandache",
+    "handle": "psyb0t",
+    "user_id": "s17fq93tmpky791n7516jcn08n83sfn2"
+  },
+  "slug": "talkies",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/talkies",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=talkies&ownerHandle=psyb0t",
+    "page_url": "https://clawhub.ai/psyb0t/skills/talkies"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1444,
+    "installs": 13,
+    "stars": 0,
+    "versions": 21
+  },
+  "summary": "Self-hosted OpenAI-compatible speech service. /v1/audio/transcriptions fronts 12 open ASR models (Whisper, Parakeet, Nemotron-3.5-ASR, Canary, Sherpa-ONNX, Vosk); /v1/audio/transcriptions/stream accepts live PCM over WebSocket. /v1/audio/speech fronts 3 TTS engines / 4 backends \u2014 Kokoro-82M (41 baked voices, PyTorch + ONNX runtimes), the CUDA-only Qwen3-TTS family (voice cloning, preset speakers, voice design), and the CUDA-only Chatterbox Turbo (English, 19 inline emotion tags, transcript-free cloning). Stereo diarization, URL fetching, six ASR/file-staging MCP tools, bearer auth.",
+  "updated_at": 1787306635618,
+  "version": "1.3.17"
+}
