@@ -1,0 +1,35 @@
+{
+  "changelog": "Taobao Product Reviews Skill v1.0.0\n\n- Fetches Taobao or Tmall product reviews by itemId, returning reviewer name, date, purchased variant, review text, and photo URLs.\n- Operates only on pages already open and visible in the user's browser, requiring user login to Taobao.\n- Automates navigation, popup handling, scroll to lazy-load reviews, data extraction, and DOM-based pagination.\n- Error handling documents known limitations when sections fail to load; suggests workarounds and logs exceptional cases for future runs.\n- Focuses on usability for individual or batch review collection, with efficiency and session management best practices.",
+  "created_at": 1783675348966,
+  "display_name": "Taobao Product Reviews",
+  "fetched_at": 1787777298820,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-reviews.py",
+    "scripts/next-review-page.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "taobao-product-reviews",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/taobao-product-reviews",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=taobao-product-reviews&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/taobao-product-reviews"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 346,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fetch customer reviews for a Taobao or Tmall product by itemId, returning reviewer name, date, purchased variant, review text, and photo URLs. Use when user asks to get product reviews from Taobao, scrape Taobao customer feedback, extract buyer reviews by item ID, collect Tmall ratings and comments,",
+  "updated_at": 1783675348966,
+  "version": "1.0.0"
+}
