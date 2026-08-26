@@ -1,0 +1,35 @@
+{
+  "changelog": "- Removed the file skill-card.md.\n- No functional or API changes; all features, endpoints, and documentation remain unchanged.\n- Documentation is now consolidated in SKILL.md only.",
+  "created_at": 1785006460360,
+  "display_name": "predictalot",
+  "fetched_at": 1787773932915,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/setup.md",
+    "scripts/predictalot.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ciprian Mandache",
+    "handle": "psyb0t",
+    "user_id": "s17fq93tmpky791n7516jcn08n83sfn2"
+  },
+  "slug": "predictalot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/predictalot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=predictalot&ownerHandle=psyb0t",
+    "page_url": "https://clawhub.ai/psyb0t/skills/predictalot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 735,
+    "installs": 1,
+    "stars": 0,
+    "versions": 11
+  },
+  "summary": "Self-hosted forecasting/prediction service. Foundation time-series endpoints under /v1/timeseries/<type>/{forecast,forecast/ensemble} + GET .../models \u2014 univariate, past/future/both covariates, multivariate, samples \u2014 over 5 zero-shot models (chronos-2, timesfm-2.5, moirai-2, toto-1, sundial-base-128m). Plus supervised tabular ML under /v1/tabular/ (9 backends \u2014 lightgbm, xgboost, hist-gbt, random-forest, logistic, mlp, svm-rbf, knn, naive-bayes \u2014 over direction/value/quantile modes) with train+persist, weighted ensembles, and calibrated/stacking/diversified meta-learners. Unified REST + MCP (streamable-HTTP at /mcp, one tool per (type, model) cell + per-type ensemble + listing) + optional bearer auth. Use when the user wants to forecast a numeric time series (quantile bands or raw sample paths), condition a forecast on known/future covariates, ensemble several forecasters, or train a tabular model on engineered features and predict direction/value/quantiles on the latest snapshot.",
+  "updated_at": 1785616637284,
+  "version": "1.1.9"
+}
