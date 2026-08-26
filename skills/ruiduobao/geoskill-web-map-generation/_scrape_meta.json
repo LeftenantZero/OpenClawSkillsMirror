@@ -1,0 +1,66 @@
+{
+  "changelog": "- Initial release of interactive web map generation skill.\n- Converts GeoTIFF or GeoJSON to self-contained Leaflet HTML maps with georeferenced PNG overlays.\n- Supports percentile and min-max contrast stretches and 8 matplotlib colormaps.\n- Produces verifiable output: rendered GeoTIFF, metadata JSON (extent, colormap, statistics), and run manifest.\n- Fully offline workflow, including a synthetic data mode that requires no network access.\n- Easy local processing with documented command-line usage and privacy guarantees.",
+  "created_at": 1785863520884,
+  "display_name": "geoskill-web-map-generation",
+  "fetched_at": 1787773406530,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-web-map-generation.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785864646132,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-web-map-generation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-web-map-generation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-web-map-generation&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-web-map-generation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 180,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate interactive web maps from GeoTIFF or GeoJSON with Leaflet templates and metadata",
+  "updated_at": 1785863723581,
+  "version": "1.0.0"
+}
