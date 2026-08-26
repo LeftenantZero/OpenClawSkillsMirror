@@ -1,0 +1,49 @@
+{
+  "changelog": "- Initial release of markitdown-skill.\n- Convert documents and web pages (PDF, Word, PPT, Excel, images/OCR, audio, HTML, YouTube, URLs) to Markdown using Microsoft's MarkItDown CLI.\n- Proactively converts files and links before reading, summarizing, analyzing, or depositing content to knowledge base, cutting token costs by extracting semantic content first.\n- Includes guidance on token-saving workflow, batch conversion, and utility scripts (batch_convert.py, token_saver.py).\n- Provides both English and Chinese documentation and setup instructions.",
+  "created_at": 1787657147855,
+  "display_name": "MarkItDown",
+  "fetched_at": 1787770905711,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/TOKEN-SAVER.md",
+    "references/USAGE-GUIDE.md",
+    "references/reference.md",
+    "scripts/batch_convert.py",
+    "scripts/token_saver.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787657591972,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "stwhwing",
+    "handle": "stwhwing",
+    "user_id": "s17ds8sdwvy316btsdg1fr2yk98by42t"
+  },
+  "slug": "markitdown-skill-2",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/markitdown-skill-2",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=markitdown-skill-2&ownerHandle=stwhwing",
+    "page_url": "https://clawhub.ai/stwhwing/skills/markitdown-skill-2"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 90,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Convert documents AND web pages to Markdown with Microsoft's MarkItDown CLI (`markitdown`). Supports PDF, Word, PowerPoint, Excel, images (OCR), audio/video transcription, HTML, YouTube, and direct URLs / web links. Proactively use whenever a user provides a file OR a webpage link / URL / \u7f51\u5740 / \u94fe\u63a5 and asks to read, analyze, summarize, extract, translate, or Q&A about it, or to deposit (\u6c89\u6dc0) its content into a knowledge base. ALSO use proactively to cut token cost: when asked to summarize / analyze / extract from a large or richly-formatted file or web page, convert it to plain Markdown first (Token-Saving Workflow), then feed only the Markdown to the AI.",
+  "updated_at": 1787657237547,
+  "version": "0.1.0"
+}
