@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release of alibabacloud-cfw-nat-firewall-protect.\n\n- Manage Alibaba Cloud Firewall (CFW) NAT boundary firewall: query, enable/disable protection, and assess/plan NAT gateway protection.\n- Diagnose issues (e.g., route entry inconsistencies), run creation pre-checks, and prepare manual-mode diversion assets.\n- Supports both automatic and manual firewall creation workflows, and allows changing engine strict mode.\n- Deleting or releasing firewalls is NOT supported; only disabling protection is possible through the skill.\n- Requires aliyun CLI >= 3.3.3 with CFW and Vpc plugins, and bash/python3 for scripts.\n- Includes detailed environment validation steps, permission probes, and user-agent session management.",
+  "created_at": 1787640643271,
+  "display_name": "alibabacloud-cfw-nat-firewall-protect",
+  "fetched_at": 1787768983424,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/api-errors.md",
+    "references/nat-prerequisites.md",
+    "references/ram-policies.md",
+    "references/verification-method.md",
+    "scripts/common.sh",
+    "scripts/nat-fw-lifecycle.sh",
+    "scripts/nat-fw-switch.sh",
+    "scripts/validate-cli.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787641553841,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-cfw-nat-firewall-protect",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-cfw-nat-firewall-protect",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-cfw-nat-firewall-protect&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-cfw-nat-firewall-protect"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 47,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Manage Alibaba Cloud Firewall (CFW) NAT Firewall (NAT boundary firewall): query firewalls and protection status, enable/disable the protection switch, assess which NAT gateways can be protected and produce a plan, run the creation pre-check, diagnose route-entry inconsistency (route-diff), prepare manual-mode diversion assets, create a firewall (auto or manual vswitch diversion), and change engine strict mode. Deleting/releasing a firewall is NOT supported: protection can be switched off, but the resource must be released by the user in the console. Use when users mention NAT firewall, NAT boundary firewall, NAT gateway protection, protecting private-network outbound traffic, opening/closing the NAT firewall switch, assessing how to enable protection, or diagnosing creation failures from inconsistent custom route entries. \u7ba1\u7406\u963f\u91cc\u4e91\u4e91\u9632\u706b\u5899\uff08CFW\uff09NAT\u8fb9\u754c\u9632\u706b\u5899\uff1a\u67e5\u8be2\u9632\u706b\u5899\u4e0e\u9632\u62a4\u72b6\u6001\u3001\u5f00\u542f/\u5173\u95ed\u9632\u62a4\u5f00\u5173\u3001\u5f00\u5899\u8bc4\u4f30\u4e0e\u5f00\u5899\u65b9\u6848\u3001 \u521b\u5efa\u9884\u68c0\u67e5\u3001\u8def\u7531\u6761\u76ee\u4e0d\u4e00\u81f4\u8bca\u65ad\u3001\u624b\u52a8\u5f15\u6d41\u51c6\u5907\u3001\u521b\u5efaNAT\u9632\u706b\u5899\u3001\u4fee\u6539\u5f15\u64ce\u6a21\u5f0f\u3002\u4e0d\u652f\u6301\u5220\u9664/\u91ca\u653e\u9632\u706b\u5899\uff0c \u9700\u7528\u6237\u5728\u63a7\u5236\u53f0\u81ea\u884c\u64cd\u4f5c\u3002\u9002\u7528\u4e8eNAT\u9632\u706b\u5899\u3001NAT\u7f51\u5173\u9632\u62a4\u3001\u79c1\u7f51\u51fa\u65b9\u5411\u9632\u62a4\u3001\u5f00\u5173NAT\u5899\u3001\u5f00\u5899\u8bc4\u4f30\u7b49\u573a\u666f\u3002",
+  "updated_at": 1787640760597,
+  "version": "0.0.1"
+}
