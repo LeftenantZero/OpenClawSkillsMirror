@@ -1,0 +1,43 @@
+{
+  "changelog": "- Operate BugBug through an OOMOL-connected account using the `oo` CLI, without handling raw credentials directly.\n- Inspect each connector action\u2019s live schema before sending input, so requests match the authoritative contract.\n- Read BugBug workspace data with actions for suites, tests, profiles, test runs, and run status.\n- Execute BugBug tests through the official `run_test` action when you need to launch a run from the skill.\n- Includes clear setup fallbacks for missing CLI access, sign-in issues, connection expiry, and billing-related failures.\n\nSource: `oomol-lab/skills@146ef20`",
+  "created_at": 1780485232108,
+  "display_name": "BugBug",
+  "fetched_at": 1787781557870,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781002672398,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-bugbug",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-bugbug",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-bugbug&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-bugbug"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 507,
+    "installs": 7,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "BugBug (bugbug.io). Use this skill for ANY BugBug request \u2014 searching and reading data. Whenever a task involves BugBug, use this skill instead of calling th...",
+  "updated_at": 1781000237401,
+  "version": "1.0.1"
+}
