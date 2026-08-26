@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of alibabacloud-alb-ingress-doctor:\n\n- Diagnose Alibaba Cloud ACK cluster ALB Ingress reconcile errors using kubectl and knowledge base of 61+ error patterns.\n- Matches and reports error codes explicitly (e.g., LISTENER_NOT_EXIST, HTTPS_EMPTY_CERT), with required context and solution steps.\n- Checks environment, retrieves cluster events, matches known issues, and suggests full YAML configuration fixes.\n- Supports root cause analysis, including version-specific behaviors and configuration best practices.\n- Offers multi-cluster diagnosis through optional aliyun-cli integration.",
+  "created_at": 1785224472414,
+  "display_name": "alibabacloud-alb-ingress-doctor",
+  "fetched_at": 1787774526613,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/alb_ingress_reference.md",
+    "references/concepts_reference.md",
+    "references/diagnostic_tree.json",
+    "references/error_classification.md",
+    "references/ram-policies.md",
+    "scripts/check-write-operation.sh",
+    "scripts/cluster_connect.sh",
+    "scripts/diagnose.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785228749006,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-alb-ingress-doctor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-alb-ingress-doctor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-alb-ingress-doctor&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-alb-ingress-doctor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 234,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Diagnose Alibaba Cloud ACK cluster ALB Ingress reconcile errors, Warning events, and configuration issues. Use this Skill when users report: ALB Ingress errors, reconcile failures, AlbConfig sync problems, Ingress not working, ALB configuration not taking effect, actions/conditions annotations not working as expected, certificate not updating, listener errors, or any ALB Ingress related abnormal behavior. Supports matching 61+ known error patterns from the knowledge base.",
+  "updated_at": 1785227909439,
+  "version": "0.0.1"
+}
