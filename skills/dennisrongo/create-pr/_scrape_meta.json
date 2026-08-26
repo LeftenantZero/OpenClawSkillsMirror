@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of the create-pr skill: end-to-end pull request creation flow with pre-publish review gate.\n\n- Automates entire PR flow: review branch before publishing, push with approval, create one PR per repo (multi-repo supported).\n- Integrates with code-review and sql-review skills if present for pre-publish gate; blocks on unresolved critical findings.\n- Auto-detects provider (Azure DevOps or GitHub) from git remote for PR creation and applies house-configured defaults.\n- Verifies PR settings (reviewers, work-item links, auto-complete) are correctly applied after creation.\n- Handles multi-repo work items: links sibling PRs, supports deploy order annotation, and transparently reports partial successes.\n- Only executes with explicit user approval for all pushes; reports PR URLs in a summary table.",
+  "created_at": 1786913329887,
+  "display_name": "create-pr",
+  "fetched_at": 1787771697783,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "create-pr",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/create-pr",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=create-pr&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/create-pr"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 95,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "End-to-end pull-request flow with a review gate \u2014 reviews the branch BEFORE publishing (code-review skill's branch scope if installed; blockers must be fixed or explicitly waived), pushes with user approval, creates one PR per repo for multi-repo work items with house defaults from config (title pattern, target branch, required reviewers, auto-complete, work-item link), cross-references sibling PRs with deploy-order coupling, verifies every setting after creation, and reports the URLs. Detects the provider from the git remote (Azure DevOps via the azure-devops skill, GitHub via gh). Use this skill whenever the user says \"create a PR\", \"open a pull request\", \"publish the branch and create a PR\", \"PR this\", \"ship this branch\", \"create the PRs for this task\", or \"raise a PR\" \u2014 even if they don't explicitly say \"create-pr skill\". For reviewing someone else's PR (not creating one), use a review skill instead.",
+  "updated_at": 1786913378623,
+  "version": "1.0.0"
+}
