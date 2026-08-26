@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release of geoskill-ecological-corridor-design:\n\n- Provides ecological corridor design and landscape connectivity analysis based on habitat suitability rasters.\n- Computes resistance surfaces [(1 - suitability) \u00d7 100 + 1], identifies least-cost corridors with Dijkstra's algorithm, and generates corridor GeoTIFF outputs.\n- Calculates the PC (Probability of Connectivity) index to quantify overall landscape connectivity.\n- Supports both synthetic (demo) and real-data modes, with fully local offline computation and privacy-safe workflow.\n- Outputs include resistance and corridor rasters, connectivity parameters, and run manifest in JSON format.\n- Includes usage examples and clear dependency/installation instructions.",
+  "created_at": 1785843785459,
+  "display_name": "geoskill-ecological-corridor-design",
+  "fetched_at": 1787773492859,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-ecological-corridor-design.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785844831300,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-ecological-corridor-design",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-ecological-corridor-design",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-ecological-corridor-design&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-ecological-corridor-design"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 174,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7531\u6816\u606f\u5730\u9002\u5b9c\u6027\u6784\u5efa\u963b\u529b\u9762\uff0cDijkstra \u6700\u5c0f\u6210\u672c\u8def\u5f84\u8bc6\u522b\u751f\u6001\u5eca\u9053\uff0c\u5e76\u8ba1\u7b97 PC \u666f\u89c2\u8fde\u901a\u6027\u6307\u6570\u3002Designs ecological corridors with least-cost paths and connectivity indices. \u8f93\u51fa\u963b\u529b\u9762\u4e0e\u5eca\u9053 GeoTIFF + \u53c2\u6570 JSON\u3002",
+  "updated_at": 1785843934932,
+  "version": "1.0.0"
+}
