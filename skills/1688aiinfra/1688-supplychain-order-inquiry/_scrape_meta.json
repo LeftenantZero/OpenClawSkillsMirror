@@ -1,0 +1,68 @@
+{
+  "changelog": "Initial release of the 1688-supplychain-order-inquiry skill.\n\n- Supports sending order inquiries and batch inquiries for multiple orders in parallel.\n- Detects user intent for inquiries using trigger words (e.g., \u8be2\u76d8, \u8be2\u4ef7, \u8ba2\u5355\u8be2\u76d8, \u53d1\u8d27\u65f6\u95f4).\n- Handles negotiation scenarios where each order may have a different target price, with clear task-splitting logic.\n- Requires strict adherence to command documentation and usage of absolute paths.\n- Prompts users for missing inquiry details and provides progress messages during inquiry execution.",
+  "created_at": 1780404772008,
+  "display_name": "1688 Supplychain Order Inquiry",
+  "fetched_at": 1787783346176,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "cli.py",
+    "references/capabilities/batch_inquiry.md",
+    "references/capabilities/configure.md",
+    "references/capabilities/inquiry_send.md",
+    "references/common/error-handling.md",
+    "references/skill\u57cb\u70b9\u8bf4\u660e.md",
+    "requirements.txt",
+    "scripts/__init__.py",
+    "scripts/_auth.py",
+    "scripts/_errors.py",
+    "scripts/_http.py",
+    "scripts/_img_upload.py",
+    "scripts/_output.py",
+    "scripts/_tracker.py",
+    "scripts/capabilities/__init__.py",
+    "scripts/capabilities/batch_inquiry/__init__.py",
+    "scripts/capabilities/batch_inquiry/cmd.py",
+    "scripts/capabilities/batch_inquiry/service.py",
+    "scripts/capabilities/configure/__init__.py",
+    "scripts/capabilities/configure/cmd.py",
+    "scripts/capabilities/configure/service.py",
+    "scripts/capabilities/inquiry_send/__init__.py",
+    "scripts/capabilities/inquiry_send/cmd.py",
+    "scripts/capabilities/inquiry_send/service.py",
+    "scripts/settings.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780406092507,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "1688AiInfra",
+    "handle": "1688aiinfra",
+    "user_id": "s177df9srv6z2y0gd1kw90rern83hzxb"
+  },
+  "slug": "1688-supplychain-order-inquiry",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/1688-supplychain-order-inquiry",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=1688-supplychain-order-inquiry&ownerHandle=1688aiinfra",
+    "page_url": "https://clawhub.ai/1688aiinfra/skills/1688-supplychain-order-inquiry"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 465,
+    "installs": 7,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u8ba2\u5355\u8be2\u76d8Skill\u3002\u652f\u6301\u5bf9\u6307\u5b9a\u8ba2\u5355\u53d1\u8d77\u8be2\u76d8\uff08\u5355\u4e2a\u8be2\u76d8\uff09\u548c\u6279\u91cf\u8ba2\u5355\u8be2\u76d8\uff08\u5e76\u884c\uff09\u3002 \u89e6\u53d1\u8bcd\uff1a\u8be2\u76d8\u3001\u8be2\u4ef7\u3001\u5e2e\u6211\u95ee\u5546\u5bb6\u3001\u8ba2\u5355\u8be2\u76d8\u3001\u6279\u91cf\u8be2\u76d8\u3001\u53d1\u8d27\u65f6\u95f4\u3001\u4ec0\u4e48\u65f6\u5019\u53d1\u8d27\u3002",
+  "updated_at": 1780404772008,
+  "version": "0.1.0"
+}
