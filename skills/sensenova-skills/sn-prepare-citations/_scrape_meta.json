@@ -1,0 +1,34 @@
+{
+  "changelog": "- Now supports processing sn-deep-research `stitched.md` by converting `[ ^source_id ]` citations to numbered `[N]` references and appending a references section.\n- Collects `sources[]` metadata from multiple `evidence.json` files and merges duplicate sources by normalized URL.\n- Detects and handles claim-id citation leakage, reporting unresolved citations and auto-fixing when possible.\n- Supports optional L0 summary and table of contents insertion based on outline input.\n- Outputs both the processed markdown file and a structured `citations.json` with warning/error states for controller logic.\n- Maintains backward compatibility for legacy workflows without `--outline`/`--output` arguments.",
+  "created_at": 1787108452188,
+  "display_name": "sn-prepare-citations",
+  "fetched_at": 1787770693843,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/prepare_citations.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SenseNova-Skills",
+    "handle": "sensenova-skills",
+    "user_id": "s17fzc6fnxkbqzh6z8jr5bcvhh8bw2vm"
+  },
+  "slug": "sn-prepare-citations",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sn-prepare-citations",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sn-prepare-citations&ownerHandle=sensenova-skills",
+    "page_url": "https://clawhub.ai/sensenova-skills/skills/sn-prepare-citations"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 96,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7528\u4e8e\u7ec8\u7a3f\u5b8c\u6210\u4e14\u811a\u6ce8\u9700\u8981\u540e\u5904\u7406\u65f6\uff1a\u53bb\u91cd [^key] \u5f15\u7528\uff0c\u8f6c\u6362\u4e3a [N] \u7f16\u53f7\uff0c\u5e76\u8ffd\u52a0\u53c2\u8003\u6587\u732e\u3002",
+  "updated_at": 1787108951381,
+  "version": "2026.8.19"
+}
