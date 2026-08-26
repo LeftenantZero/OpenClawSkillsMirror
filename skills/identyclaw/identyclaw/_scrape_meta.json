@@ -1,0 +1,49 @@
+{
+  "changelog": "v1.9.1: **Native NEAR account generator:** `identyclaw-generate-near-account` / `identyclaw_generate_near_account` write local-host JSON (`implicit_account_id`, `account_id` alias, `private_key`, `ed25519:` **base58** `public_key`) from 32 bytes of CSPRNG entropy. Compact one-line JSON (mode `0600`) for `NEAR_CREDENTIALS_JSON_B64`. No BIP39 seed phrase (accounts are not for wallet export).; **Docs:** how to enable optional `idcp` and install `near` (near-cli-rs). `idcp` stays off by default (`tools.allow`); native account generation does not need it.; **Observability / config:** log JWT `New-Token` rejections, missing `exp`, and federated claim warnings; require `jwt_token` (no silent `token` fallback); HTTP errors surface API `error.code` / `error.message` without raw bodies; config uses nullish (`??`) resolution and a redacted startup snapshot. `.gitignore` covers `secrets/`; CI runs Gitleaks before install.; **Vocabulary:** say **main** (not production) for the identyclaw-agents deploy tier. Agent workspace `IDENTYCLAW.md` files point at the skill instead of duplicating federated/HOLA workflows.",
+  "created_at": 1780741397447,
+  "display_name": "IdentyClaw",
+  "fetched_at": 1787771395247,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/api-reference.md",
+    "references/collaboration-envelope.md",
+    "references/did-rodit-method.md",
+    "references/enrollment.md",
+    "references/finding-agents.md",
+    "references/hola-agent-authentication.md",
+    "references/hola-howto.md",
+    "references/hola-subagent-authentication.md",
+    "references/holanonce-api.md",
+    "references/identyclaw-skill.md",
+    "references/login-authentication.md",
+    "references/mcp-auth-tools.md",
+    "references/mcp-discovery-index.md",
+    "references/openclaw-integration-guide.md",
+    "references/token-metadata.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "IdentyClaw",
+    "handle": "identyclaw",
+    "user_id": "s170pyvwn8ckxjt7575svq7r71881627"
+  },
+  "slug": "identyclaw",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/identyclaw",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=identyclaw&ownerHandle=identyclaw",
+    "page_url": "https://clawhub.ai/identyclaw/skills/identyclaw"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1352,
+    "installs": 9,
+    "stars": 0,
+    "versions": 14
+  },
+  "summary": "IdentyClaw API workflows \u2014 multi-API JWT sessions (auto-login), HOLA peer handshake lines, DID resolution, and Passport lookup. Requires an IdentyClaw Passport on the Gateway. Use when calling home or federated APIs, creating or verifying HOLA lines, resolving Passport IDs, or reading agent discovery metadata. For agent-to-agent A2A messaging use the separate identyclaw-a2a plugin.",
+  "updated_at": 1787075832444,
+  "version": "1.9.1"
+}
