@@ -1,0 +1,56 @@
+{
+  "changelog": "Initial release of alibabacloud-sre-toolkit, an advanced SRE skill for Alibaba Cloud diagnosis and health management.\n\n- Provides end-to-end Alibaba Cloud SRE workflows for diagnosis, inspection, capacity planning, incident response, and security audit.\n- Enforces a strict, read-only diagnostic workflow via STAROps digital employees, with detailed CRITICAL RULES to prevent missteps and unauthorized operations.\n- CLI fallback supported only under tightly controlled, explicitly defined conditions.\n- Absolute restrictions on using the Aliyun CLI: only allowed for read-only commands, never for write operations.\n- Mandatory, non-negotiable command sequence required for any SRE or troubleshooting workflow.\n- Includes detailed instructions and security provisions for installation, authentication, and report generation.",
+  "created_at": 1784860181724,
+  "display_name": "Alibabacloud Sre Toolkit",
+  "fetched_at": 1787775356765,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/initialization-guide.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/session-management.md",
+    "references/starops-api.md",
+    "references/starops-config.md",
+    "references/verification-method.md",
+    "scripts/requirements.txt",
+    "scripts/session_manager.py",
+    "scripts/starops_manager.py",
+    "scripts/verify_stream.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784864253862,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-sre-toolkit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-sre-toolkit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-sre-toolkit&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-sre-toolkit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 247,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Alibaba Cloud SRE skill for cloud infrastructure diagnosis, health inspection, capacity planning, incident response, and security audit, including scenarios...",
+  "updated_at": 1784863524157,
+  "version": "0.0.1"
+}
