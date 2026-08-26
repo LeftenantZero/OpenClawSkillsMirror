@@ -1,0 +1,75 @@
+{
+  "changelog": "- Initial release of guaikei-douyin-competitor-analysis skill.\n- Provides search, hot trends, post collection, and comment analysis for Douyin public data.\n- Supports competitor research, content ideation, trend tracking, and sentiment monitoring.\n- Node.js command-line usage, requires GUAIKEI_API_TOKEN for API access.\n- Designed for content creators, analysts, and marketers focusing on Douyin.\n- Outputs structured JSON data; does not support content posting, editing, or non-Douyin platforms.",
+  "created_at": 1787019951603,
+  "display_name": "guaikei-douyin-competitor-analysis",
+  "fetched_at": 1787771493568,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/comment_cli_req.schema.json",
+    "assets/comment_cli_resp.schema.json",
+    "assets/hot_cli_resp.schema.json",
+    "assets/post_cli_req.schema.json",
+    "assets/post_cli_resp.schema.json",
+    "assets/search_cli_req.schema.json",
+    "assets/search_cli_resp.schema.json",
+    "package.json",
+    "readme.md",
+    "references/changelog.md",
+    "references/options.md",
+    "skill-card.md",
+    "src/api/comment.js",
+    "src/api/hot.js",
+    "src/api/post.js",
+    "src/api/search.js",
+    "src/config/constants.js",
+    "src/douyin/comment-cli.js",
+    "src/douyin/hot-cli.js",
+    "src/douyin/post-cli.js",
+    "src/douyin/search-cli.js",
+    "src/utils/args.js",
+    "src/utils/errors.js",
+    "src/utils/log.js",
+    "src/utils/name.js",
+    "src/utils/request.js",
+    "src/utils/retry.js",
+    "src/utils/token.js",
+    "src/utils/utils.js",
+    "src/validate/comment.js",
+    "src/validate/hot.js",
+    "src/validate/keyword.js",
+    "src/validate/post.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787021707294,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "engheng-art",
+    "handle": "engheng-art",
+    "user_id": "s17av7fakvdwpsbhaddxp8e7mh89wsrx"
+  },
+  "slug": "guaikei-douyin-competitor-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/guaikei-douyin-competitor-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=guaikei-douyin-competitor-analysis&ownerHandle=engheng-art",
+    "page_url": "https://clawhub.ai/engheng-art/skills/guaikei-douyin-competitor-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 108,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5f53\u7528\u6237\u9700\u8981\u641c\u6296\u97f3\u89c6\u9891\u3001\u67e5\u6296\u97f3\u70ed\u699c\u3001\u770b\u6296\u97f3\u8bc4\u8bba\u3001\u6293\u535a\u4e3b\u4f5c\u54c1\u3001\u505a\u6296\u97f3\u7ade\u54c1\u5206\u6790\u3001\u77ed\u89c6\u9891\u9009\u9898\u8c03\u7814\u3001\u8206\u60c5\u76d1\u63a7\u3001\u70ed\u70b9\u8ffd\u8e2a\u3001\u7206\u6b3e\u6316\u6398\u65f6\uff0c\u4f7f\u7528\u672c\u6280\u80fd\u3002\u652f\u6301\u5173\u952e\u8bcd\u641c\u7d22\u3001\u535a\u4e3b\u4f5c\u54c1\u6293\u53d6\u3001\u8bc4\u8bba\u5206\u6790\u3001\u5b9e\u65f6\u70ed\u699c\u67e5\u8be2\u3002\u7528\u6237\u505a\u5185\u5bb9\u8c03\u7814\u672a\u70b9\u540d\u6296\u97f3\u65f6\u540c\u6837\u9002\u7528\u3002\u4e0d\u7528\u4e8e\u53d1\u5e03/\u526a\u8f91/\u4e0b\u8f7d\u89c6\u9891\u6216\u5176\u4ed6\u5e73\u53f0\u3002",
+  "updated_at": 1787020071843,
+  "version": "1.0.0"
+}
