@@ -1,0 +1,45 @@
+{
+  "changelog": "model-verify-flagos 1.0.0 \u2013 Initial release\n\n- New skill to verify model serving stack with and without multi-chip features (FlagGems/FlagCX), isolating model-specific and stack-specific errors.\n- Runs target model in two phases (offline/serve mode), with and without multi-chip stack enabled.\n- Automatically handles model download if given a remote ID; checks prerequisites and asks user for any missing info.\n- Produces a structured JSON report summarizing results, error analysis, and recommended stack to use.\n- Includes robust error handling, dynamic timeouts, and integration with components reused from env-verify.",
+  "created_at": 1779174208409,
+  "display_name": "Model Verify Flagos",
+  "fetched_at": 1787786551651,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/multichip-errors.md",
+    "scripts/diff_analysis.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779956467783,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Flagos",
+    "handle": "wbavon",
+    "user_id": "s179mcxns07mhashdtzg4tbf6584wt8v"
+  },
+  "slug": "model-verify-flagos",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/model-verify-flagos",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=model-verify-flagos&ownerHandle=wbavon",
+    "page_url": "https://clawhub.ai/wbavon/skills/model-verify-flagos"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 577,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Verify the serving stack with a user-specified target model. Runs twice: first with FlagGems/FlagCX disabled (isolate model-specific errors), then with full...",
+  "updated_at": 1779174225587,
+  "version": "1.0.0"
+}
