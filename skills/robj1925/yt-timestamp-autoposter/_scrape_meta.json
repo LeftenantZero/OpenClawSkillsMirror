@@ -1,0 +1,45 @@
+{
+  "changelog": "**Major update: Skill refocused on timestamp (chapters) generation and auto-posting.**\n\n- Skill name changed to \"yt-timestamp-autoposter\" to reflect new focus.\n- Now generates only SEO-optimized YouTube timestamps (not full descriptions).\n- Adds support for raw transcript string input and a new `--latest` mode for operating on most recent uploads.\n- Auto-posting now appends timestamps to video descriptions (with safeguards to prevent duplicate chapters in latest mode).\n- Natural language mapping and decision rules updated to cover new functionality.\n- Output cleaned up: only the timestamp block is returned, with no extra text.\n- Internal documentation and usage instructions revised for all supported modes.",
+  "created_at": 1774131353153,
+  "display_name": "Youtube Description Autoposter",
+  "fetched_at": 1787787778374,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/youtube_desc_generator.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090312107,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Robj1925",
+    "handle": "robj1925",
+    "user_id": "s174am2jq82n87pja21vw1q9j184993h"
+  },
+  "slug": "yt-timestamp-autoposter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/yt-timestamp-autoposter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=yt-timestamp-autoposter&ownerHandle=robj1925",
+    "page_url": "https://clawhub.ai/robj1925/skills/yt-timestamp-autoposter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 702,
+    "installs": 18,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Generate SEO-optimized YouTube timestamps from a YouTube URL or a raw transcript string, then optionally append them to the description of that specific vide...",
+  "updated_at": 1779078690452,
+  "version": "1.0.1"
+}
