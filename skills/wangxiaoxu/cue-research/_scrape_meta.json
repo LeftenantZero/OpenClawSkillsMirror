@@ -1,0 +1,46 @@
+{
+  "changelog": "cue-research 1.0.1\n\n- Documentation updated in SKILL.md for clarity and usage, including important instructions about identifiers and output paths.\n- Strengthened instructions for template selection: always use the string `template_id` (e.g., `template_xxxxx`) instead of numeric `id` or list index.\n- Clarified guidance on not exposing internal log lines or technical details (`STARTED conv_id=`, etc.) to end users.\n- Provided precise directions for background execution, output/log handling, and completion detection.\n- Removed the outdated skill-card.md file.",
+  "created_at": 1782272858120,
+  "display_name": "Cue \u6df1\u7814",
+  "fetched_at": 1787772692458,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/research_run.py",
+    "scripts/test_skill_regression.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786445018467,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wangxiaoxu",
+    "handle": "wangxiaoxu",
+    "user_id": "s172hqdtbgb0pejddkypg1adgx898sym"
+  },
+  "slug": "cue-research",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cue-research",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cue-research&ownerHandle=wangxiaoxu",
+    "page_url": "https://clawhub.ai/wangxiaoxu/skills/cue-research"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 399,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Use when the user asks a research question they want Cue to run \u2014 against a saved \u642d\u5b50(buddy) template or as free-form deep research. \u5728 AI agent \u91cc\u7528\u81ea\u7136\u8bed\u8a00\u628a\u8c03\u7814\u95ee\u9898\u4ea4\u7ed9 Cue \u6df1\u7814\u5e73\u53f0\uff1a\u81ea\u52a8\u5339\u914d \u22642 \u4e2a\u642d\u5b50\uff08\u6216\u8d70\u5e26\u9690\u79c1\u8131\u654f\u4e0e\u516c\u5f00\u4fe1\u6e90\u7ea6\u675f\u7684\u81ea\u7531\u5f0f\u6df1\u7814\uff09\uff0c\u786e\u8ba4 credits \u540e\u540e\u53f0\u6267\u884c\uff0c\u53d6\u56de\u5e26\u6765\u6e90\u94fe\u63a5\u7684\u62a5\u544a\uff0c\u6ee1\u610f\u53ef\u4e00\u952e\u6c89\u6dc0\u4e3a\u642d\u5b50\u3002Triggers: \u5e2e\u6211\u67e5/\u8c03\u7814/\u7814\u7a76 + \u4e3b\u4f53\u6216\u8bdd\u9898; ask Cue about X; \u7528 Cue \u8dd1\u4e00\u4e0b Y; \u770b\u770b\u54ea\u4e2a\u642d\u5b50\u80fd\u67e5 X; \u628a\u521a\u624d\u90a3\u6b21\u8c03\u7814\u5b58\u6210\u642d\u5b50. Public-data scope only \u2014 refuse for private-data scenarios (real AML / medical / internal accounting).",
+  "updated_at": 1786444332919,
+  "version": "1.0.1"
+}
