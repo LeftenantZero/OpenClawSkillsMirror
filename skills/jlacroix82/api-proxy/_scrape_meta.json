@@ -1,0 +1,48 @@
+{
+  "changelog": "api-proxy v1.1.8\n\n- Improved privacy documentation: SKILL.md now explicitly states that request and response bodies are never written to persistent logs or caches by default.\n- Clarified metadata-only caching: Detailed that only response status, timestamp, headers, and body length are stored, unless full caching is manually enabled.\n- Minor language and formatting improvements for accuracy and clarity.\n- Obsolete or redundant documentation (skill-card.md) was removed.",
+  "created_at": 1784412191419,
+  "display_name": "api-gateway",
+  "fetched_at": 1787771761790,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "api-gateway.js",
+    "clawhub.yaml",
+    "skill-card.md",
+    "test/run-tests.js",
+    "tests/run-self-tests.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786885246204,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jlacroix82",
+    "handle": "jlacroix82",
+    "user_id": "s175p518b8g47fx6r9zyvs95ks876t4t"
+  },
+  "slug": "api-proxy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/api-proxy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=api-proxy&ownerHandle=jlacroix82",
+    "page_url": "https://clawhub.ai/jlacroix82/skills/api-proxy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 995,
+    "installs": 2,
+    "stars": 0,
+    "versions": 12
+  },
+  "summary": "Smart proxy for external API calls with retry, caching, rate limiting, and fallback providers. Key management with masked display. Zero external dependencies.",
+  "updated_at": 1786885246204,
+  "version": "1.1.8"
+}
