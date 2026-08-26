@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release of dev-find-log-skill for DEV environment log search and analysis.\n- Supports parallel layered log searches across procurement, platform, supplier, and order services.\n- Service instances and headers adapted for DEV environment (`_deve` suffix, `profile: DEV`, user pattern `{account}_dev-{token}`).\n- Enforces automatic supplier log trace and HTTP request/response extraction on suspected supplier errors, without user prompt.\n- Lane override options: Only specified services use requested lane tags; others default to `deve`.\n- Comprehensive documentation for configuration, trace search commands, and service mapping included.",
+  "created_at": 1783160612256,
+  "display_name": "zzr-testUpload-skill",
+  "fetched_at": 1787778174945,
+  "files": [
+    ".clawhub/origin.json",
+    "SKILL.md",
+    "_meta.json",
+    "references/api.md",
+    "references/service-layers.md",
+    "scripts/dev_log.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783617845757,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "extraskittles",
+    "handle": "extraskittles",
+    "user_id": "s170d4kr7e86mm6graje5ezwvx89why3"
+  },
+  "slug": "zzrtest",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/zzrtest",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=zzrtest&ownerHandle=extraskittles",
+    "page_url": "https://clawhub.ai/extraskittles/skills/zzrtest"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 249,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "DEV \u6d4b\u8bd5\u73af\u5883\u670d\u52a1\u5668\u65e5\u5fd7\u641c\u7d22\u4e0e\u5206\u6790\u5de5\u5177\u3002\u5f53\u7528\u6237\u9700\u8981\u641c\u7d22\u6d4b\u8bd5\u73af\u5883\u65e5\u5fd7\u3001\u67e5\u627e\u9519\u8bef\u3001 \u6392\u67e5\u6d4b\u8bd5\u73af\u5883\u95ee\u9898\u3001\u67e5\u8be2 traceId/requestId/\u8ba2\u5355\u53f7/\u8bf7\u6c42\u8bb0\u5f55\u3001\u6216\u8005\u8bf4\"\u5e2e\u6211\u67e5\u4e00\u4e0b\u6d4b\u8bd5\u65e5\u5fd7\"\u3001 \"\u67e5 dev \u65e5\u5fd7\"\u3001\"\u770b\u770b\u6d4b\u8bd5\u73af\u5883\u6709\u6ca1\u6709\"\u3001\"grep \u4e00\u4e0b\u6d4b\u8bd5\u670d\"\u65f6\uff0c\u5fc5\u987b\u4f7f\u7528\u6b64 skill\u3002 \u6821\u9a8c\u3001\u751f\u5355\u3001\u652f\u4ed8\u3001\u7533\u8bf7\u51fa\u7968\u7b49\u4ea4\u6613\u573a\u666f\uff0c\u6309\u91c7\u8d2d\u4fa7\u2192\u5e73\u53f0\u4fa7\u2192\u4f9b\u5e94\u4fa7\u2192order \u5206\u5c42\u641c\u7d22\uff0c\u4e14\u5fc5\u987b\u5e76\u884c\u67e5\u8be2\u3002 \u5e73\u53f0\u4fa7\u5224\u65ad\u4e3a\u4f9b\u5e94\u5e95\u5c42\u8bf7\u6c42/\u54cd\u5e94\u95ee\u9898\u65f6\uff0cAgent \u5fc5\u987b\u81ea\u52a8\u7ee7\u7eed\u67e5\u4f9b\u5e94\u4fa7\u65e5\u5fd7\uff08\u7981\u6b62\u8be2\u95ee\u7528\u6237\u662f\u5426\u7ee7\u7eed\uff09\uff1b\u786e\u8ba4\u4f9b\u5e94\u54cd\u5e94\u62a5\u9519\u540e\u5fc5\u987b\u544a\u77e5\u7528\u6237\u5e76\u8f93\u51fa\u5e95\u5c42 HTTP \u8bf7\u6c42\u4e0e\u54cd\u5e94\u62a5\u6587\u3002 \u5173\u952e\u8bcd\uff1a\u6d4b\u8bd5\u73af\u5883\u3001dev\u3001\u67e5\u65e5\u5fd7\u3001",
+  "updated_at": 1783160612256,
+  "version": "1.0.0"
+}
