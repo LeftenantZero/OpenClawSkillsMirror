@@ -1,0 +1,42 @@
+{
+  "changelog": "- Initial release of the Huawei Cloud OBS Total Size skill.\n- Allows querying the total storage size (in bytes, or other units) for a single OBS bucket or across all buckets in a Huawei Cloud account.\n- Supports both the `hcloud OBS ls ... -du -bf=raw` CLI command (primary) and the huaweicloudsdkobs Python SDK (fallback).\n- Read-only operation: never creates, modifies, or deletes any resources.\n- Designed for scenarios like capacity review, cost estimation, and storage planning.\n- Handles multi-region buckets and inaccessible buckets gracefully.",
+  "created_at": 1785746553416,
+  "display_name": "huawei-cloud-obs-total-size",
+  "fetched_at": 1787773672447,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/query_obs_total_size.py",
+    "scripts/test-cli-commands.sh",
+    "scripts/validate-skill.sh",
+    "skill-card.md",
+    "templates/test-vars.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-obs-total-size",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-obs-total-size",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-obs-total-size&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-obs-total-size"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 185,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Queries the total storage size of Huawei Cloud OBS (Object Storage Service) buckets and returns ONLY the size value \u2014 a single number, in bytes by default. Supports querying the total size of one bucket or the combined total across all buckets under the account. Uses the KooCLI obsutil-backed `hcloud OBS ls ... -du -bf=raw` command (primary) or the huaweicloudsdkobs Python SDK (fallback). Read-only \u2014 never creates, modifies or deletes any resource. Use this skill whenever the user wants to know the total size of an OBS bucket or the overall OBS storage usage, e.g. for capacity review, cost estimation or storage planning. Triggers include: OBS total size, OBS bucket size, total storage usage, bucket capacity, OBS\u5927\u5c0f, OBS\u603b\u5927\u5c0f, OBS\u5bb9\u91cf, \u6876\u5927\u5c0f, \u67e5\u8be2OBS\u5927\u5c0f, \u5b58\u50a8\u5360\u7528, OBS\u5b58\u50a8\u91cf.",
+  "updated_at": 1785746661374,
+  "version": "1.0.0"
+}
