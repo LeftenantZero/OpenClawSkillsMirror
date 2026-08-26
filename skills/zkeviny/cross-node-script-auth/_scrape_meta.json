@@ -1,0 +1,45 @@
+{
+  "changelog": "Cross\u2011Device Encrypted Script Authorization 1.1.0 introduces major improvements for compatibility and feature support with MGC Blackbox 1.4.10:\n\n- Upgraded documentation and examples for MGC 1.4.10, including blackbox execution flow.\n- Replaces script execution via mgc_get(action=run) with mgc_run (available from 1.4.7+).\n- Documents ext02 auto-parsing: argparse defaults now bundled into ext_02 field during sealing (1.4.10).\n- Clarifies mgc_seal parameter requirements: info_type is now optional, ext04 (public key) must be multi-line PEM.\n- Adds mgc_find command for fuzzy searching scripts and credentials.\n- Updates public key retrieval instructions for WebUI (Settings \u2192 Node Public Key).\n- Describes update_if_exists for overwriting same-name scripts on save.\n- Notes new 1.4.9+ sandbox mode installation requirement.\n- Removes sample file: skill-card.md.",
+  "created_at": 1783868469770,
+  "display_name": "Cross\u2011Device Encrypted Script Authorization",
+  "fetched_at": 1787771485303,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787022021133,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zkeviny",
+    "handle": "zkeviny",
+    "user_id": "s173fckt3bzxxvt9dfp0rrdeg1894z72"
+  },
+  "slug": "cross-node-script-auth",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cross-node-script-auth",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cross-node-script-auth&ownerHandle=zkeviny",
+    "page_url": "https://clawhub.ai/zkeviny/skills/cross-node-script-auth"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 446,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Zero\u2011exposure cross\u2011device script authorization using MGC Blackbox seal functionality. Scripts are encrypted with target node's RSA public key, transferred as ciphertext, and decrypted only during execution on the authorized node. Adapted to MGC 1.4.10 with mgc_run blackbox execution and ext02 auto-",
+  "updated_at": 1787021359457,
+  "version": "1.0.1"
+}
