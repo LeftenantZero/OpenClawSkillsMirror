@@ -1,0 +1,54 @@
+{
+  "changelog": "**Initial release of video-downloader-enhanced.**\n\n- Download videos and extract original post captions, audio transcripts, and metadata from Douyin, Bilibili, Xiaohongshu, and YouTube links.\n- Output a structured folder containing media files, captions, transcripts, SRT subtitles (where available), and metadata.\n- Folder names include publish date, cleaned title, platform, and author; supports deduplication.\n- Multiple ASR options: local whisper.cpp, openai-whisper, SiliconFlow, or skip.\n- Douyin: prefers H5 primary route with yt-dlp as fallback; Bilibili, YouTube, Xiaohongshu handled via yt-dlp.\n- WeChat Channels not yet supported; users are instructed to use the `kg\u767e\u5b9d\u7bb1` mini program for that platform.",
+  "created_at": 1785643318817,
+  "display_name": "video-downloader-enhanced",
+  "fetched_at": 1787773922566,
+  "files": [
+    ".gitignore",
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/asr.py",
+    "scripts/download_video.py",
+    "scripts/folder_utils.py",
+    "scripts/providers/__init__.py",
+    "scripts/providers/bilibili.py",
+    "scripts/providers/douyin.py",
+    "scripts/providers/xiaohongshu.py",
+    "scripts/providers/youtube.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785644126959,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "SyanChen7",
+    "handle": "syanchen7",
+    "user_id": "s1753gwq3cv6dbevemzv7jhq1h8bpzwv"
+  },
+  "slug": "video-downloader-enhanced",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/video-downloader-enhanced",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=video-downloader-enhanced&ownerHandle=syanchen7",
+    "page_url": "https://clawhub.ai/syanchen7/skills/video-downloader-enhanced"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1660,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Download videos and extract original post captions, audio transcripts, and metadata from video platform links. Use when the user provides Douyin, Bilibili, WeChat Channels, Xiaohongshu, or YouTube links and asks to save the original video, capture the post text/caption, transcribe the spoken in-video script/copy, archive source material, or prepare video material for downstream analysis or skill creation. Douyin is implemented with an H5 primary route and yt-dlp fallback; Bilibili, YouTube, and Xiaohongshu are implemented through yt-dlp; WeChat Channels is not implemented yet and should currently be handled via the WeChat mini program kg\u767e\u5b9d\u7bb1.",
+  "updated_at": 1785643449171,
+  "version": "0.1.0"
+}
