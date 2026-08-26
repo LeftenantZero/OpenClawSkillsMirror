@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of Jenkins Executor Skill:\n\n- Provides full lifecycle management of Jenkins jobs, including listing jobs, triggering builds (with or without parameters), querying build status, fetching logs, and stopping running builds.\n- Integrates directly with Jenkins REST API using HTTP Basic Auth.\n- Supports job listing with pagination, parameterized and non-parameterized build triggers, real-time status checking, complete/incremental log retrieval, and precise build termination.\n- Requires configuration of Jenkins URL, user, and token via environment variables.\n- Includes comprehensive error handling for network issues, authentication failures, job not found, and stopped/finished builds.",
+  "created_at": 1773999013955,
+  "display_name": "Jenkins Executor Skill",
+  "fetched_at": 1787787971973,
+  "files": [
+    "SKILL.md",
+    "__init__.py",
+    "_meta.json",
+    "config.json",
+    "requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089997601,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jack084015",
+    "handle": "jack084015",
+    "user_id": "s17d6mqcp0gqmsvd6mwn0epx9s83hw98"
+  },
+  "slug": "jenkins-executor-job",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/jenkins-executor-job",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=jenkins-executor-job&ownerHandle=jack084015",
+    "page_url": "https://clawhub.ai/jack084015/skills/jenkins-executor-job"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 963,
+    "installs": 29,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Jenkins \u4efb\u52a1\u5168\u751f\u547d\u5468\u671f\u7ba1\u7406\u5de5\u5177\uff0c\u652f\u6301\u4efb\u52a1\u5217\u8868\u83b7\u53d6\u3001\u8fdc\u7a0b\u6784\u5efa\u3001\u6784\u5efa\u72b6\u6001\u5b9e\u65f6\u67e5\u8be2\u3001\u6784\u5efa\u65e5\u5fd7\u5168\u6587\u83b7\u53d6\u3001\u8fd0\u884c\u4e2d\u6784\u5efa\u5f3a\u5236\u7ec8\u6b62\uff0c\u9002\u7528\u4e8e CI/CD \u81ea\u52a8\u5316\u3001\u53d1\u5e03\u6d41\u6c34\u7ebf\u3001\u8fd0\u7ef4\u81ea\u52a8\u5316\u573a\u666f\u3002",
+  "updated_at": 1779078579532,
+  "version": "1.0.0"
+}
