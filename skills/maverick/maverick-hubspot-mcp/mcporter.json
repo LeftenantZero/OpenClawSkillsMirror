@@ -1,0 +1,27 @@
+{
+  "imports": [],
+  "mcpServers": {
+    "maverick-hubspot-mcp": {
+      "baseUrl": "https://mcp.hubspot.com",
+      "transport": "http",
+      "auth": "oauth",
+      "oauthClientId": "${MAVERICK_HUBSPOT_MCP_CLIENT_ID}",
+      "oauthClientSecretEnv": "MAVERICK_HUBSPOT_MCP_CLIENT_SECRET",
+      "oauthTokenEndpointAuthMethod": "client_secret_post",
+      "allowedTools": [
+        "get_user_details",
+        "search_crm_objects",
+        "get_crm_objects",
+        "search_properties",
+        "get_properties",
+        "search_owners",
+        "get_campaign_contacts_by_type",
+        "get_campaign_analytics",
+        "get_campaign_asset_types",
+        "get_campaign_asset_metrics",
+        "search_conversations",
+        "get_conversation_channel_metadata"
+      ]
+    }
+  }
+}
