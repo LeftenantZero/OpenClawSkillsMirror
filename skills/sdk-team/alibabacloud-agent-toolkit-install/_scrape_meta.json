@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release: End-to-end installer and environment checker for Alibaba Cloud Agent Toolkit.\n\n- Guides users step-by-step to check and install all prerequisites (uv, Alibaba Cloud CLI, CLI plugins).\n- Enforces a strict safety policy: asks for user confirmation on any install or cloud write action; never executes pipe-to-shell commands automatically.\n- Checks CLI authentication (AK or OAuth), provides clear user instructions for OAuth setup.\n- Verifies and sets up MCP Server Core resource, with explicit user approval for cloud changes.\n- Handles bearer token exchange checks.\n- Installs Alibaba Cloud Agent Toolkit via openplugin, only after all prerequisites pass.\n- Tracks all CLI operations with a unique user-agent for observability.",
+  "created_at": 1782479272318,
+  "display_name": "Alibabacloud Agent Toolkit Install",
+  "fetched_at": 1787778943775,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782509949398,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-agent-toolkit-install",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-agent-toolkit-install",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-agent-toolkit-install&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-agent-toolkit-install"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 278,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Install Alibaba Cloud Agent Toolkit end-to-end: verify and set up prerequisites (uv, Alibaba Cloud CLI, authentication, CLI plugins, MCP Server Core, bearer...",
+  "updated_at": 1782479272318,
+  "version": "0.0.1"
+}
