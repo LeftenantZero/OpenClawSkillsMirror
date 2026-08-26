@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of the make-motion-comic skill.\n\n- Create low-cost motion-comic videos from story/script using AI-generated keyframes, multi-character Chinese TTS, captions, and FFmpeg assembly.\n- Ensures character identity consistency, professional voice quality, smooth motion, and independently editable assets.\n- Provides a structured workflow: script/shot writing, identity locking, keyframe generation, TTS voice production, precise timeline/timing, and final video rendering.\n- Default video format is 9:16, 1080\u00d71920, 30 fps, 45\u201390s, with 6\u201312 keyframes and post-rendered captions.\n- Includes quality checks for image consistency, hand anatomy, subtitle safety, audio balance, and deliberate/non-jittery motion.\n- Requires dependency check before media production, and supports reviewable, reusable production assets for episodic work.",
+  "created_at": 1787713560241,
+  "display_name": "\u52a8\u6001\u6f2b\u753b\u5236\u4f5c",
+  "fetched_at": 1787770816643,
+  "files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/templates/tts-script.json",
+    "docs/demo-cover.jpg",
+    "references/audio-and-tts.md",
+    "references/image-consistency.md",
+    "references/motion-and-qc.md",
+    "references/story-and-shots.md",
+    "scripts/build_timeline.py",
+    "scripts/preflight.sh",
+    "scripts/render_still_clip.sh",
+    "scripts/synthesize_edge_tts.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ToBeWin",
+    "handle": "tobewin",
+    "user_id": "s174rz3f0862tcfw7pzfh5w8kn83hv2z"
+  },
+  "slug": "make-motion-comic",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/make-motion-comic",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=make-motion-comic&ownerHandle=tobewin",
+    "page_url": "https://clawhub.ai/tobewin/skills/make-motion-comic"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 47,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4ece\u5267\u672c\u3001\u7edf\u4e00\u89d2\u8272\u56fe\u5230 Edge TTS \u4e0e\u9632\u6296\u7ad6\u5c4f\u6210\u7247",
+  "updated_at": 1787713660630,
+  "version": "0.1.0"
+}
