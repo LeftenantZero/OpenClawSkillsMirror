@@ -1,0 +1,35 @@
+{
+  "changelog": "# Deyo Skill v1.0.11 explicit OpenClaw update consent\n\n- Require Deyo CLI 0.2.2 and move the OpenClaw update manager out of the Skill artifact into the installed npm CLI.\n- Enroll only verified owner-qualified managed installs, keep status offline, and check the verified `latest` candidate at most once every 24 hours without installing it.\n- Require a fresh user confirmation before `openclaw skills update @casatwy/deyo`; stale candidates are never updated under an earlier confirmation.\n- Publish an OpenClaw v2 projection that is slash-invocable only, declares the required `deyo` and `openclaw` binaries, and contains no child-process updater.",
+  "created_at": 1776083223847,
+  "display_name": "Deyo",
+  "fetched_at": 1787776574149,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "scripts/publish-cleaned.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Casa Taloyum",
+    "handle": "casatwy",
+    "user_id": "s175yhrpsrq8swvzc1ptz9vm4d84r8mz"
+  },
+  "slug": "deyo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/deyo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=deyo&ownerHandle=casatwy",
+    "page_url": "https://clawhub.ai/casatwy/skills/deyo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1237,
+    "installs": 18,
+    "stars": 0,
+    "versions": 12
+  },
+  "summary": "Use only when the current user explicitly asks to use Deyo to transcribe one provided URL or one exact local audio/video file path, or explicitly asks for De...",
+  "updated_at": 1784204341539,
+  "version": "1.0.11"
+}
