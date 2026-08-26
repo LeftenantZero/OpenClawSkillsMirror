@@ -1,0 +1,51 @@
+{
+  "changelog": "- Initial release of alibabacloud-ddos-origin-exposure-detector.\n- Detects if websites behind Alibaba Cloud Anti-DDoS Proxy (ddoscoo) have origin server IPs exposed to public attack.\n- Supports two detection scenarios: (S1) DNS points to origin IP; (S2) origin IP directly reachable from public internet.\n- Offers two probe modes: Alibaba Cloud SiteMonitor (multi-point cloud probe) or local machine (dig/curl/nc).\n- Requires confirmation of all user-customizable parameters and explicit disclosure of involved product APIs.\n- Handles RAM permission errors with guided troubleshooting and pauses for user action.",
+  "created_at": 1787659602101,
+  "display_name": "alibabacloud-ddos-origin-exposure-detector",
+  "fetched_at": 1787768895407,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "scripts/create_probes.py",
+    "scripts/fetch_config.py",
+    "scripts/parse_probe_log.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787660489755,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-ddos-origin-exposure-detector",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-ddos-origin-exposure-detector",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-ddos-origin-exposure-detector&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-ddos-origin-exposure-detector"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 39,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Alibaba Cloud Anti-DDoS Proxy (ddoscoo) origin-server IP exposure risk detector. Detects whether a website protected by Anti-DDoS Proxy still has its origin IP exposed to direct attack, across two scenarios: (S1) a protected domain whose public DNS still resolves to the origin IP, bypassing protection; (S2) the origin IP is directly reachable from the public Internet. Reads protected domains / CNAME / origin IPs via ddoscoo (DescribeWebRules / DescribeNetworkRules). Two probe methods: (1) cloud probe via Cms one-off site monitor (CreateInstantSiteMonitor + DescribeSiteMonitorLog); (2) local dig / curl / nc, used when cloud probe is unavailable. Binary verdict. Triggers: \"\u6e90\u7ad9IP\u66b4\u9732\", \"\u6e90\u7ad9\u66b4\u9732\u68c0\u6d4b\", \"\u9ad8\u9632\u88ab\u7ed5\u8fc7\", \"\u6d41\u91cf\u7ed5\u8fc7\u9ad8\u9632\", \"origin IP exposure\", \"DDoS origin detection\", \"ddos-origin-exposure\", \"\u68c0\u6d4b\u6e90\u7ad9\", \"\u63a2\u6d4b\u6e90\u7ad9\", \"\u7f51\u7edc\u5206\u6790\u4e0e\u76d1\u63a7\u63a2\u6d4b\u6e90\u7ad9\", \"Call DescribeWebRules\", \"DescribeWebRules\", \"DescribeNetworkRules\", \"CreateInstantSiteMonitor\", \"DescribeSiteMonitorLog\", \"get protected domains\", \"probe origin server\", \"site monitor probe origin\".",
+  "updated_at": 1787659728485,
+  "version": "0.0.1"
+}
