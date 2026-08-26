@@ -1,0 +1,53 @@
+{
+  "changelog": "Initial release with 3 functional modes for verification criteria (VC) management:\n\n- Supports VC Generation, VC Quality Audit, and Coverage Audit modes aligned with ASPICE SYS.2 BP5, ISO/IEC 29148, and VC-First methodology.\n- Quick mode selector enables streamlined workflow for generating, auditing, and tracing verification criteria.\n- Mode A: Automates VC creation with Source Depth labeling and coverage audit, following a decision-tree for verification method selection.\n- Mode B: Provides SMARTR-OC rubric scoring, checklist audit, and quality improvement cycles for existing VCs.\n- Mode C: Generates traceability matrices, detects uncovered requirements and orphan VCs, enforcing full coverage.\n- Distinguishes Lite and Full modes for efficiency; parallel processing for large input sets.",
+  "created_at": 1786341460446,
+  "display_name": "verification-criteria",
+  "fetched_at": 1787772986842,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/vc-checklist.md",
+    "assets/vc-template.md",
+    "references/vc-anti-patterns.md",
+    "references/vc-exceptions.md",
+    "references/vc-framework.md",
+    "references/vc-hard-gates.md",
+    "references/vc-output-format.md",
+    "references/vc-report-templates.md",
+    "references/vc-safety-patterns.md",
+    "references/vc-sequence-guide.md",
+    "references/vc-smartr-oc.md",
+    "references/vc-source-depth.md",
+    "references/vc-subagent-prompt.md",
+    "references/vc-workflow-a.md",
+    "references/vc-workflow-b.md",
+    "references/vc-workflow-c.md",
+    "scripts/merge_vc.py",
+    "scripts/split_req.py",
+    "skill-card.md",
+    "test-prompts.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "UnknowCao",
+    "handle": "unknowcao",
+    "user_id": "s1767kkcmd0f5019cz6r7yxg958c7vtg"
+  },
+  "slug": "verification-criteria",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/verification-criteria",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=verification-criteria&ownerHandle=unknowcao",
+    "page_url": "https://clawhub.ai/unknowcao/skills/verification-criteria"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 141,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate, audit, and trace verification criteria (VC) for functional system requirements. Three modes: VC Generation (5-element + SMARTR-OC + Source Depth), VC Quality Audit (8-point rubric + CK checklist), Coverage Audit (traceability matrix + orphan detection). ASPICE SYS.2 BP5, ISO/IEC 29148, VC-First. Use when: \u751f\u6210VC, \u9a8c\u8bc1\u6807\u51c6, \u5ba1\u6838VC, SMARTR-OC, \u8986\u76d6\u7387, traceability, VC\u8d28\u91cf, VC\u8bc4\u5206, \u9700\u6c42\u9a8c\u8bc1, \u6d4b\u8bd5\u6807\u51c6, verification criteria, coverage audit.",
+  "updated_at": 1786341606829,
+  "version": "0.1.0"
+}
