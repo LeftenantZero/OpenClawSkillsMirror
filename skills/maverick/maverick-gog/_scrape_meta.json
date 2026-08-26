@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of the internal setup hook for provisioning gogcli with Google OAuth credentials.\n\n- Adds a setup script to install and rotate credentials from environment variables via the OpenClaw `skills.setup` RPC.\n- Enables multi-account support, allowing independent provisioning of multiple Google accounts per client.\n- Not user-facing; does not provide agent-callable commands or user interface surface.\n- Designed for non-interactive, orchestrated provisioning \u2014 does not handle manual/in-browser auth.\n- Persistent handling of refresh tokens by gogcli; only fatal error is user-side grant revocation.",
+  "created_at": 1779271862439,
+  "display_name": "Maverick gog",
+  "fetched_at": 1787785614952,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/init-gog-oauth.sh",
+    "scripts/setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Maverick",
+    "handle": "maverick",
+    "user_id": "s17b4scyfsybdcep8c0034pgs186087n"
+  },
+  "slug": "maverick-gog",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/maverick-gog",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=maverick-gog&ownerHandle=maverick",
+    "page_url": "https://clawhub.ai/maverick/skills/maverick-gog"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 718,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Internal setup hook that provisions gogcli with Google OAuth credentials supplied by an external orchestrator over the OpenClaw `skills.setup` RPC. Not user-...",
+  "updated_at": 1779271862439,
+  "version": "1.0.0"
+}
