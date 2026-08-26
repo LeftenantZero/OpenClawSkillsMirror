@@ -1,0 +1,55 @@
+{
+  "changelog": "Initial release of guaikei-xiaohongshu-data-collector:\n\n- Provides structured JSON access to public XiaoHongShu (\u5c0f\u7ea2\u4e66) note data\u2014likes, comments, favorites, note details, and creator posts\u2014without requiring login.\n- Supports searching notes by keyword, fetching individual note details and comments, and monitoring creator posts using command-line scripts.\n- Includes robust input checks, link type detection, and detailed routing based on user intent (keywords, note links, or profile links).\n- Handles errors with clear output structure and status codes, including FAQ for common issues.\n- Requires GUAIKEI_API_TOKEN environment variable for API access.\n- Logs each data request for easy reference and follow-up analysis.",
+  "created_at": 1786845927616,
+  "display_name": "guaikei\u00b7\u5c0f\u7ea2\u4e66\u6570\u636e\u91c7\u96c6\u5de5\u5177",
+  "fetched_at": 1787771788961,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "readme.md",
+    "references/changelog.md",
+    "references/options.md",
+    "skill-card.md",
+    "src/api/comment.js",
+    "src/api/detail.js",
+    "src/api/post.js",
+    "src/api/search.js",
+    "src/config/constants.js",
+    "src/utils/args.js",
+    "src/utils/key.js",
+    "src/utils/log.js",
+    "src/utils/name.js",
+    "src/utils/request.js",
+    "src/utils/retry.js",
+    "src/utils/utils.js",
+    "src/validate/keyword.js",
+    "src/validate/url.js",
+    "src/xiaohongshu/comment-cli.js",
+    "src/xiaohongshu/detail-cli.js",
+    "src/xiaohongshu/post-cli.js",
+    "src/xiaohongshu/search-cli.js"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "engheng-art",
+    "handle": "engheng-art",
+    "user_id": "s17av7fakvdwpsbhaddxp8e7mh89wsrx"
+  },
+  "slug": "guaikei-xiaohongshu-data-collector",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/guaikei-xiaohongshu-data-collector",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=guaikei-xiaohongshu-data-collector&ownerHandle=engheng-art",
+    "page_url": "https://clawhub.ai/engheng-art/skills/guaikei-xiaohongshu-data-collector"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 126,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u83b7\u53d6\u5c0f\u7ea2\u4e66\u535a\u4e3b\u516c\u5f00\u4f5c\u54c1\u53ca\u5355\u7bc7\u7b14\u8bb0\u7684\u771f\u5b9e\u70b9\u8d5e/\u8bc4\u8bba/\u6536\u85cf\u6570\u636e\uff0c\u8bc4\u4f30\u5176\u4e92\u52a8\u8d28\u91cf\u3002\u5f53\u7528\u6237\u8981\u7b5b\u9009\u5c0f\u7ea2\u4e66 KOL\u3001\u5224\u65ad\u535a\u4e3b\u6570\u636e\u662f\u5426\u6ce8\u6c34\u3001\u6216\u4e3a\u5408\u4f5c\u51b3\u7b56\u51c6\u5907\u4f9d\u636e\u65f6\u4f7f\u7528\u672c\u6280\u80fd\uff1b\u5373\u4f7f\u7528\u6237\u6ca1\u63d0\"KOL\"\uff0c\u53ea\u8981\u60f3\u4e86\u89e3\u67d0\u4e2a\u5c0f\u7ea2\u4e66\u535a\u4e3b\u7684\u771f\u5b9e\u4e92\u52a8\u6c34\u5e73\u4e5f\u9002\u7528\u3002\u4e0d\u7528\u4e8e\u7c89\u4e1d\u6570\u4f30\u7b97\u6216\u540e\u53f0\u6570\u636e\u3002",
+  "updated_at": 1786846065806,
+  "version": "1.0.0"
+}
