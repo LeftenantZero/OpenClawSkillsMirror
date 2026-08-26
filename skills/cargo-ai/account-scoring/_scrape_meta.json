@@ -1,0 +1,44 @@
+{
+  "changelog": "- Adds a detailed SKILL.md with clear guidance for deploying and adapting account scoring using a live ICP, rationale logging, and CRM integration.\n- Outlines failure modes, required environment setup, and deployment steps for reliable operation.\n- Explains how ICP criteria are derived and how to check CRM readiness before use.\n- Provides concrete advice for customizing the skill and recording decisions.\n- Describes triggers, key features, and integration points with Cargo CDK, CRM systems, and LLM connectors.",
+  "created_at": 1787096864384,
+  "display_name": "account-scoring",
+  "fetched_at": 1787771381165,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/scorer.ts",
+    "connectors/cargo.ts",
+    "connectors/hubspot.ts",
+    "connectors/openai.ts",
+    "context.ts",
+    "context/icp.md",
+    "folders/gtm.ts",
+    "models/accounts.ts",
+    "plays/score-accounts.ts",
+    "segments/tiers.ts",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Cargo",
+    "handle": "cargo-ai",
+    "user_id": "s178dcd9wkfn0a2fqrygmt3jzn87j9e1"
+  },
+  "slug": "account-scoring",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/account-scoring",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=account-scoring&ownerHandle=cargo-ai",
+    "page_url": "https://clawhub.ai/cargo-ai/skills/account-scoring"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 97,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Keep every account scored and tiered against your written ICP by a deployed agent that re-scores as accounts arrive and as the ICP changes, writing the rationale back to the CRM. Triggers: \"keep our accounts scored as they arrive\", \"re-score everything when the ICP changes\", \"which accounts should the team work first\", \"our scoring is a spreadsheet nobody trusts\", \"why is this account tier A\", \"stand up account tiering\". Cargo CDK, defineAgent, cargo_score, cargo_tier, HubSpot, Salesforce, Attio. Skip when: someone hands you a list and wants it qualified once, which is cargo-gtm's job, not a deployed scorer's.",
+  "updated_at": 1787096950584,
+  "version": "0.2.0"
+}
