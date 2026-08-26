@@ -1,0 +1,49 @@
+{
+  "changelog": "Exclude the dev-only installer (scripts/install-local.ts) from the published bundle. It reads a local Plow credential token, so on-device security vetting rejected the whole skill at install time. No functional change to the skill.",
+  "created_at": 1787003621108,
+  "display_name": "Track houses for sale on a private map",
+  "fetched_at": 1787771384316,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "justfile",
+    "references/frontend/index.html",
+    "references/frontend/vendor/leaflet.css",
+    "references/frontend/vendor/leaflet.js",
+    "scripts/commands.test.ts",
+    "scripts/extract.test.ts",
+    "scripts/extract.ts",
+    "scripts/fixtures/compass-detail.json",
+    "scripts/properties.test.ts",
+    "scripts/properties.ts",
+    "scripts/scrape.test.ts",
+    "scripts/scrape.ts",
+    "scripts/store.test.ts",
+    "scripts/store.ts",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Sam Odio",
+    "handle": "srosro",
+    "user_id": "s175hyney9g37q3x941bpxj1q985p5gk"
+  },
+  "slug": "property-hunt",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/property-hunt",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=property-hunt&ownerHandle=srosro",
+    "page_url": "https://clawhub.ai/srosro/skills/property-hunt"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 211,
+    "installs": 0,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Track houses for sale on a private map. Use when the user texts a photo or screenshot of a property listing, pastes a listing URL, asks to add or remove a property, wants to rate one, leave notes on one, mark it toured or passed, refresh its price, or asks which houses they have saved. Looks up the full listing in the browser, keeps everything in ~/Plow/properties, and renders a map with photo pins.",
+  "updated_at": 1787092123981,
+  "version": "0.1.3"
+}
