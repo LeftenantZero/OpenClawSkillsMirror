@@ -1,0 +1,45 @@
+{
+  "changelog": "- Removed the question argument from the order creation workflow; now order creation no longer processes or stores user input.\n- Updated interaction triggers: order/payment process now requires explicit user confirmation to proceed.\n- Relaxed language restrictions: primary language is Chinese, but assistant will switch based on user preference.\n- Expanded and clarified privacy and data security section\u2014explicitly states the skill does not collect or transmit video content, API keys, or personal information.\n- Minor workflow documentation updates and improved instructions for use.",
+  "created_at": 1785253288206,
+  "display_name": "ai-video-creator-assistant",
+  "fetched_at": 1787774280576,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/create_order.py",
+    "scripts/service.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785327825292,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jackskill",
+    "handle": "jinyu12166",
+    "user_id": "s17bk5y82fk590863n8fb20zvn8afqra"
+  },
+  "slug": "ai-video-creator-assistant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-video-creator-assistant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-video-creator-assistant&ownerHandle=jinyu12166",
+    "page_url": "https://clawhub.ai/jinyu12166/skills/ai-video-creator-assistant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 302,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "AI-assisted short video creation. User selects topic, aspect ratio, and duration. AI guides through video generation using the user's own API key (Kling/Doubao etc.). One-time payment \u00a516.90 per creation.",
+  "updated_at": 1785326845074,
+  "version": "1.0.1"
+}
