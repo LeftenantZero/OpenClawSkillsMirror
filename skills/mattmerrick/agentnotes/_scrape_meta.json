@@ -1,0 +1,51 @@
+{
+  "changelog": "- Initial release of the agentnotes skill.\n- Allows logging of OpenClaw task summaries to AgentNotes for hourly/daily rollups (SparkNotes).\n- Supports both success and failure logging, including multi-step session tracking.\n- Requires configuration with AGENTNOTES_API_KEY and AGENTNOTES_AGENT_ID environment variables.\n- Includes setup instructions and recommended usage patterns for task and error logging.",
+  "created_at": 1780455100304,
+  "display_name": "Agentnotes",
+  "fetched_at": 1787783230342,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "bin/install.mjs",
+    "package.json",
+    "scripts/complete-run.mjs",
+    "scripts/config.mjs",
+    "scripts/log.mjs",
+    "scripts/start-run.mjs",
+    "scripts/task.mjs",
+    "scripts/verify.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780460257726,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mattmerrick",
+    "handle": "mattmerrick",
+    "user_id": "s178k801ex2azrjamgd9rmgdys87yn5q"
+  },
+  "slug": "agentnotes",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agentnotes",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agentnotes&ownerHandle=mattmerrick",
+    "page_url": "https://clawhub.ai/mattmerrick/skills/agentnotes"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 420,
+    "installs": 7,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Log OpenClaw tasks to AgentNotes for SparkNotes rollups (success, failures, what happened). Use after cron jobs, channel replies, or multi-step sessions. Req...",
+  "updated_at": 1780455100304,
+  "version": "0.1.0"
+}
