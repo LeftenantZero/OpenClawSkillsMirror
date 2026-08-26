@@ -1,0 +1,40 @@
+{
+  "changelog": "Initial release of read-only diagnostics for Alibaba Cloud cloud-native products\u2019 public internet egress.\n\n- Diagnoses outbound connectivity for MSE gateway, cloud-native API gateway, AI gateway, Serverless App Engine, and Function Compute.\n- Confirms product type, region, and instance ID with the user before running.\n- Uses only read-only queries; never creates, modifies, or deletes any resource.\n- Requires aliyun CLI v3.3.3+ and Python 3.8+; blocks execution if requirements aren\u2019t met.\n- Auto-derives UID when possible and reports derivation in output.\n- Runs all cloud queries through a dedicated script with strict sequencing and error handling.",
+  "created_at": 1787743896018,
+  "display_name": "alibabacloud-cloud-native-internet-diagnostics",
+  "fetched_at": 1787768529669,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/module1_instance_lookup.md",
+    "references/module2_vswitch_egress.md",
+    "references/ram-policies.md",
+    "references/report-template.md",
+    "scripts/cloud_native_internet_diag.py",
+    "scripts/requirements.txt",
+    "scripts/sts_token.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-cloud-native-internet-diagnostics",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-cloud-native-internet-diagnostics",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-cloud-native-internet-diagnostics&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-cloud-native-internet-diagnostics"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 17,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read-only diagnostics for the public internet egress capability of Alibaba Cloud cloud-native products: cloud-native gateway (MSE), cloud-native API gateway, AI gateway, Serverless App Engine (SAE), and Function Compute (FC). Use when the user asks whether such an instance can access the public internet, reports outbound connectivity failure, or wants to check a fixed public egress IP. Resolves the VPC/vSwitch bound to the instance, then verifies NAT gateway SNAT egress for that vSwitch; produces a diagnosis report. Read-only: never creates, modifies, or deletes any resource. Triggers: \"cloud-native gateway public internet\", \"MSE gateway outbound\", \"APIG outbound connectivity\", \"AI gateway public network\", \"SAE public internet\", \"SAE outbound connectivity\", \"FC fixed public IP\", \"FC function outbound\", \"cloud-native internet diagnostics\", \"vSwitch NAT SNAT egress\".",
+  "updated_at": 1787743977863,
+  "version": "0.0.1"
+}
