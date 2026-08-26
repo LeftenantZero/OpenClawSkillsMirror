@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of risk-aware-retry skill.\n\n- Provides reliability-first task execution in flaky environments.\n- Automatically retries low-risk, reversible failures with backoff and tactic switching.\n- Handles risk classification: low (auto-retry), medium (brief notify and proceed), high (pause and request confirmation).\n- Clearly reports DONE with proof, or BLOCKED with cause and next step.\n- Enforces safety guardrails\u2014prefers reversible actions, avoids hidden risks, escalates on uncertainty.",
+  "created_at": 1787111366869,
+  "display_name": "risk-aware-retry",
+  "fetched_at": 1787770665928,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "pinguy",
+    "handle": "pinguy",
+    "user_id": "s17btgsbbg6rp8h250xb9x14y58csd5x"
+  },
+  "slug": "risk-aware-retry",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/risk-aware-retry",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=risk-aware-retry&ownerHandle=pinguy",
+    "page_url": "https://clawhub.ai/pinguy/skills/risk-aware-retry"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 96,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Execute tasks with reliability-first behavior under flaky conditions. Use when commands fail due to transient errors (network, timeouts, rate limits, temporary locks), when deciding whether to retry vs escalate, or when the user asks for risk-based judgment (engineer around low risk issues, notify on medium/high risk).",
+  "updated_at": 1787111413090,
+  "version": "0.1.0"
+}
