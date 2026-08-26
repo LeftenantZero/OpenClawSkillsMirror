@@ -1,0 +1,44 @@
+{
+  "changelog": "**Summary:**  \nIntroduced structured pre-coding design validation and decision-tree interrogation to ensure user intent and code safety before local modification.\n\n- Added two new workflow steps: design review and interrogation (now an 8-step workflow).\n- Step 2: Require restating/challenging the user\u2019s intended modification as a decision tree, ask one design question per turn, and confirm before proceeding.\n- Step 3: Mandate a formal design document (validated and user-confirmed) before any code changes.\n- Enforcement: Do not inspect or modify code until design intent is clarified and documented.\n- Removed obsolete skill-card.md file.",
+  "created_at": 1777011593016,
+  "display_name": "gitcode-issue-workflow",
+  "fetched_at": 1787784291971,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/gitcode-api.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779953031855,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "hummel mao",
+    "handle": "guitenbay",
+    "user_id": "s17f9m0x7ek58c96t233aedh5583xbw9"
+  },
+  "slug": "gitcode-issue-workflow",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gitcode-issue-workflow",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gitcode-issue-workflow&ownerHandle=guitenbay",
+    "page_url": "https://clawhub.ai/guitenbay/skills/gitcode-issue-workflow"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 770,
+    "installs": 19,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "End-to-end GitCode issue workflow covering issue pickup, analysis, code modification, and PR submission. Use when user asks to handle/fix/resolve a GitCode i...",
+  "updated_at": 1779952667058,
+  "version": "1.0.2"
+}
