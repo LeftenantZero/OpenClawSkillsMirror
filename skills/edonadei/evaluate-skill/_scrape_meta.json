@@ -1,0 +1,46 @@
+{
+  "changelog": "- MCP servers (mcp: spec block) \u2014 documented the new optional top-level mcp: mapping: local stdio (command/args/env) vs remote HTTP/SSE (type/url/headers) servers, ${VAR} secret resolution at the harness boundary, per-backend support (claude-code, hermes, codex; pi refuses by design), namespaced tool names in the transcript (mcp__server__tool / mcp_server_tool), and caliper validate rules. Added to both the spec skeleton and Key concepts.\n- Persisted transcripts \u2014 results-storage section now notes each attempt records an optional transcript array (ordered turns with tool_name/tool_input/tool_output); older result JSON without it still loads.",
+  "created_at": 1781907652746,
+  "display_name": "Evaluate Skill",
+  "fetched_at": 1787777020228,
+  "files": [
+    "REFERENCE.md",
+    "SKILL.md",
+    "_meta.json",
+    "evaluate-skill.eval.yaml",
+    "references/evals/claude-code-smoke/SKILL.md",
+    "references/evals/claude-code-smoke/claude-code-smoke.eval.yaml",
+    "references/evals/commit-simple/SKILL.md",
+    "references/evals/commit-simple/commit-simple.eval.yaml",
+    "references/evals/screenshot/SKILL.md",
+    "references/evals/screenshot/screenshot.eval.yaml",
+    "references/evals/summarize/SKILL.md",
+    "references/evals/summarize/summarize.eval.yaml",
+    "references/evals/tdd/SKILL.md",
+    "references/evals/tdd/tdd.eval.yaml",
+    "references/examples/simple.eval.yaml",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Emrick Donadei",
+    "handle": "edonadei",
+    "user_id": "s17fhassds1tss1zjq6jkjcfd983rjwt"
+  },
+  "slug": "evaluate-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/evaluate-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=evaluate-skill&ownerHandle=edonadei",
+    "page_url": "https://clawhub.ai/edonadei/skills/evaluate-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 779,
+    "installs": 0,
+    "stars": 0,
+    "versions": 12
+  },
+  "summary": "Measure a skill's reliability \u2014 run it k times for a pass@k score, design or interpret its eval, or compare it against the base agent. Use when the user wants to run, design, or interpret a skill's eval, or write an .eval.yaml spec.",
+  "updated_at": 1783878184366,
+  "version": "1.0.11"
+}
