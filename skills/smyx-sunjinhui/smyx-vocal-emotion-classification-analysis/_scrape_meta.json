@@ -1,0 +1,71 @@
+{
+  "changelog": "Version 1.0.7\n\n- Updated configuration in SKILL.md and `skills/smyx_common/scripts/config.yaml`.\n- Removed the redundant or outdated `skill-card.md` file.\n- Version or metadata fields updated as part of housekeeping.\n- No changes to core analysis logic or user-facing features.",
+  "created_at": 1779465737840,
+  "display_name": "Pet Vocal Emotion Deep Classification | \u5ba0\u7269\u53eb\u58f0\u60c5\u7eea\u6df1\u5ea6\u5206\u7c7b",
+  "fetched_at": 1787770345866,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api_doc.md",
+    "scripts/__init__.py",
+    "scripts/config.py",
+    "scripts/config.yaml",
+    "scripts/skill.py",
+    "scripts/smyx_vocal_emotion_classification_analysis.py",
+    "skill-card.md",
+    "skills/smyx_analysis/__init__.py",
+    "skills/smyx_analysis/references/api_doc.md",
+    "skills/smyx_analysis/requirements.txt",
+    "skills/smyx_analysis/scripts/__init__.py",
+    "skills/smyx_analysis/scripts/api_service.py",
+    "skills/smyx_analysis/scripts/config.py",
+    "skills/smyx_analysis/scripts/config.yaml",
+    "skills/smyx_analysis/scripts/skill.py",
+    "skills/smyx_analysis/scripts/smyx_analysis.py",
+    "skills/smyx_common/__init__.py",
+    "skills/smyx_common/requirements.txt",
+    "skills/smyx_common/scripts/__init__.py",
+    "skills/smyx_common/scripts/api_service.py",
+    "skills/smyx_common/scripts/base.py",
+    "skills/smyx_common/scripts/config-dev.yaml",
+    "skills/smyx_common/scripts/config-prod.yaml",
+    "skills/smyx_common/scripts/config-test.yaml",
+    "skills/smyx_common/scripts/config.py",
+    "skills/smyx_common/scripts/config.yaml",
+    "skills/smyx_common/scripts/dao.py",
+    "skills/smyx_common/scripts/skill.py",
+    "skills/smyx_common/scripts/util.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787239998334,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "smyx-sunjinhui",
+    "handle": "smyx-sunjinhui",
+    "user_id": "s17cfv2h26b7hq5w47tgfy23xx83z9x6"
+  },
+  "slug": "smyx-vocal-emotion-classification-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/smyx-vocal-emotion-classification-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=smyx-vocal-emotion-classification-analysis&ownerHandle=smyx-sunjinhui",
+    "page_url": "https://clawhub.ai/smyx-sunjinhui/skills/smyx-vocal-emotion-classification-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1144,
+    "installs": 9,
+    "stars": 0,
+    "versions": 8
+  },
+  "summary": "Triggers when a user provides a pet vocalization audio/video URL or file for analysis; extracts acoustic features such as frequency, duration, interval, and harmonic structure via AI audio analysis, and classifies the vocalization into 6+ emotion categories (howling, growling, excitement, loneliness, fear, whining/coaxing) with confidence scores. Helps owners understand pet emotional states, improve human-pet interaction, and detect potential stress or health issues early. Application: daily companionship (smart camera / collar), boarding center mood monitoring, vet clinic calming assessment, behavior training assistance. Does NOT provide medical or behavior-modification advice \u2014 only outputs audio-based emotion classification results with confidence. | \u5f53\u7528\u6237\u63d0\u4f9b\u5ba0\u7269\uff08\u72ac/\u732b\uff09\u53eb\u58f0\u97f3\u9891\u6216\u89c6\u9891URL/\u6587\u4ef6\u65f6\uff0c\u89e6\u53d1\u672c\u6280\u80fd\u8fdb\u884c\u53eb\u58f0\u60c5\u7eea\u6df1\u5ea6\u5206\u7c7b\u5206\u6790\uff1b\u5229\u7528AI\u97f3\u9891\u5206\u6790\u6280\u672f\u63d0\u53d6\u9891\u7387\u3001\u65f6\u957f\u3001\u95f4\u9694\u3001\u8c10\u6ce2\u7ed3\u6784\u7b49\u58f0\u5b66\u7279\u5f81\uff0c\u5c06\u53eb\u58f0\u5206\u7c7b\u4e3a\u54c0\u568e\u3001\u4f4e\u543c\u3001\u5174\u594b\u3001\u5b64\u72ec\u3001\u6050\u60e7\u3001\u6492\u5a07\u7b496\u79cd\u4ee5\u4e0a\u60c5\u7eea\u7c7b\u522b\uff0c\u5e76\u8f93\u51fa\u7f6e\u4fe1\u5ea6\uff1b\u5e2e\u52a9\u5ba0\u7269\u4e3b\u4eba\u7406\u89e3\u5ba0\u7269\u60c5\u7eea\u72b6\u6001\uff0c\u6539\u5584\u4eba\u5ba0\u4e92\u52a8\uff0c\u53ca\u65f6\u53d1\u73b0\u6f5c\u5728\u538b\u529b\u6216\u5065\u5eb7\u95ee\u9898\u3002\u5e94\u7528\u573a\u666f\uff1a\u5ba0\u7269\u5bb6\u5ead\u65e5\u5e38\u966a\u4f34\uff08\u667a\u80fd\u6444\u50cf\u5934/\u9879\u5708\uff09\u3001\u5bc4\u517b\u4e2d\u5fc3\u60c5\u7eea\u76d1\u6d4b\u3001\u5ba0\u7269\u533b\u9662\u5b89\u629a\u8bc4\u4f30\u3001\u884c\u4e3a\u8bad\u7ec3\u8f85\u52a9\u3002\u4ec5\u8f93\u51fa\u57fa\u4e8e\u97f3\u9891\u7684\u60c5\u7eea\u5206\u7c7b\u7ed3\u679c\u53ca\u7f6e\u4fe1\u5ea6\uff0c\u4e0d\u63d0\u4f9b\u533b\u7597\u6216\u884c\u4e3a\u77eb\u6b63\u5efa\u8bae\u3002",
+  "updated_at": 1787239260241,
+  "version": "1.0.7"
+}
