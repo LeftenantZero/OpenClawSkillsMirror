@@ -1,0 +1,42 @@
+{
+  "changelog": "Initial release: full interactive troubleshooting assistant for Huawei Cloud RDS (MySQL & PostgreSQL).\n\n- Provides guided, step-by-step troubleshooting for common RDS production issues like slow queries, disk full, replication failures, and connectivity problems.\n- Covers basic Q&A, SQL performance optimization (slow-log analysis), daily operations/status inspection, parameter tuning, and backup/restore guidance.\n- Uses hcloud CLI (KooCLI) as primary execution mode, falling back to Python SDK/REST API if needed.\n- All mutating operations require explicit user confirmation before execution.\n- Output is interactive, showing one diagnostic step at a time, never dumping raw JSON.",
+  "created_at": 1785944352244,
+  "display_name": "huawei-cloud-rds-troubleshoot",
+  "fetched_at": 1787773337289,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/troubleshooting-guide.md",
+    "references/verification-method.md",
+    "scripts/test-cli-commands.sh",
+    "scripts/validate-skill.sh",
+    "skill-card.md",
+    "templates/test-vars.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-rds-troubleshoot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-rds-troubleshoot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-rds-troubleshoot&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-rds-troubleshoot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 186,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Full-scenario intelligent assistant for Huawei Cloud RDS (Relational Database Service, MySQL + PostgreSQL). Provides basic RDS Q&A, SQL performance optimization (slow-log analysis), daily instance operations, online fault location and troubleshooting, parameter tuning, and backup/restore guidance. Core scenario is ONLINE FAULT TROUBLESHOOTING: the skill guides the user step by step through symptoms (unreachable instance, slow queries, disk full, replication broken, connection limit exceeded, memory overrun) to diagnosis and resolution. Execution is CLI-first via `hcloud RDS ... --cli-region={region}` (KooCLI), falling back to the huaweicloudsdkrds Python SDK and then REST API. Output is interactive and guided \u2014 one diagnostic step at a time, with user confirmation before any mutating action (restart, parameter change, manual backup, restore). Triggers include: \"RDS troubleshooting\", \"RDS\u6545\u969c\u6392\u67e5\", \"\u6570\u636e\u5e93\u8fde\u4e0d\u4e0a\", \"RDS slow query\", \"RDS\u6162SQL\", \"RDS\u78c1\u76d8\u6ee1\", \"RDS instance down\", \"RDS\u4e3b\u5907\u4e0d\u540c\u6b65\", \"RDS\u53c2\u6570\u8c03\u4f18\", \"RDS\u5907\u4efd\u6062\u590d\", \"RDS error log\", \"RDS storage full\", \"troubleshoot RDS\", \"RDS\u8bca\u65ad\", \"\u6570\u636e\u5e93\u6027\u80fd\u4f18\u5316\", \"RDS\u8fde\u63a5\u6570\u6ee1\", \"MySQL/PostgreSQL fault\".",
+  "updated_at": 1785945283256,
+  "version": "1.0.0"
+}
