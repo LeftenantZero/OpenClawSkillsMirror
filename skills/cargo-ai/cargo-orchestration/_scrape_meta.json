@@ -1,0 +1,48 @@
+{
+  "changelog": "- Added ASCII diagram output for workflow, tool, and play visualizations (requires CLI \u2265 1.0.56).\n- Expanded skill description and triggers to include \u201cshow me the workflow\u201d, \u201cdraw the graph\u201d, and related diagram queries.\n- Updated documentation to clarify the new --format ascii option for node diagrams, with usage guidance.\n- Improved references and instructions in SKILL.md to highlight places where diagram output, format selection, and related documentation are relevant.\n- Removed redundant/obsolete file (skill-card.md).",
+  "created_at": 1779992773056,
+  "display_name": "cargo-orchestration",
+  "fetched_at": 1787771773095,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/examples/actions.md",
+    "references/examples/agents.md",
+    "references/examples/plays.md",
+    "references/examples/queries.md",
+    "references/examples/segments.md",
+    "references/examples/templates.md",
+    "references/examples/tools.md",
+    "references/filter-syntax.md",
+    "references/node-diagram.md",
+    "references/node-selection.md",
+    "references/nodes.md",
+    "references/polling.md",
+    "references/response-shapes.md",
+    "references/troubleshooting.md",
+    "skill-card.md",
+    "skill-metadata.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Cargo",
+    "handle": "cargo-ai",
+    "user_id": "s178dcd9wkfn0a2fqrygmt3jzn87j9e1"
+  },
+  "slug": "cargo-orchestration",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cargo-orchestration",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cargo-orchestration&ownerHandle=cargo-ai",
+    "page_url": "https://clawhub.ai/cargo-ai/skills/cargo-orchestration"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1391,
+    "installs": 16,
+    "stars": 0,
+    "versions": 11
+  },
+  "summary": "Make Cargo actually run something, or show what it would run \u2014 execute one connector action, run a multi-step workflow, trigger a batch across a whole segment or model, message an AI agent, build or edit a node graph, draw a workflow, tool or play as a diagram, and query the runtime tables (runs, batches, spans, records) with SQL. Triggers: \"run this on all my contacts\", \"execute the action\", \"kick off a batch\", \"build a workflow\", \"schedule a play\", \"make it run every morning\", \"ask the agent\", \"show me the workflow\", \"what does this tool do\", \"visualize this play\", \"draw the graph\", \"explain this workflow\", \"how many runs failed today\", \"what is the output schema for this action\", \"add a step that\". Skip when: explaining why a run misbehaved \u2014 use cargo-diagnostics; downloading result files \u2014 use cargo-analytics; committing the workflow as code \u2014 use cargo-cdk.",
+  "updated_at": 1786858989761,
+  "version": "1.8.0"
+}
