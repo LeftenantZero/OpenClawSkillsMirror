@@ -1,0 +1,37 @@
+{
+  "changelog": "- Removed the skill-card.md file.\n- No changes to functional code or user-facing features.\n- Documentation footprint reduced.",
+  "created_at": 1783923882524,
+  "display_name": "observability-aiops",
+  "fetched_at": 1787772963379,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agent-guardrails.md",
+    "references/capabilities.md",
+    "references/cli-reference.md",
+    "references/setup-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "wei zhou",
+    "handle": "zw008",
+    "user_id": "s171xgnmqse0nqvgqvqnaq5f9183kyre"
+  },
+  "slug": "observability-aiops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/observability-aiops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=observability-aiops&ownerHandle=zw008",
+    "page_url": "https://clawhub.ai/zw008/skills/observability-aiops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 895,
+    "installs": 1,
+    "stars": 0,
+    "versions": 9
+  },
+  "summary": "Use this skill whenever the user needs to operate a self-hosted observability stack on Prometheus (HTTP API + PromQL), Alertmanager, Grafana, or Grafana Loki (logs) \u2014 a one-shot overview, PromQL instant/range queries, label + series metadata, scrape-target health (up/down + why) and dropped targets, recording/alerting rule health, firing/pending alerts, Alertmanager alerts + silences, Grafana dashboards/datasources/folders, bounded Loki LogQL log reads (labels, query, error-tail), five flagship analyses (firing-alert RCA, target-scrape-health, alert-noise/flap, log-error-burst RCA, log-volume/cardinality) plus an alert->log cross-signal, and guarded writes (create/expire silence, create annotation, update/delete dashboard, reload Prometheus config). Always use this skill for \"Prometheus\", \"PromQL\", \"Alertmanager\", \"Grafana\", \"Loki\", \"LogQL\", \"logs\", \"which targets are down\", \"scrape failing\", \"why is this alert firing\", \"root cause this alert\", \"firing alerts\", \"silence this alert\", \"noisy alerts\", \"alert flapping\", \"recording rule\", \"alerting rule\", \"dashboard\", \"datasource health\", \"reload prometheus config\", \"TSDB cardinality\", \"error burst\", \"log volume\", \"log cardinality\", \"tail errors\" when the context is a self-hosted metrics/logs/observability stack. Do NOT use when the target is something other than a Prometheus/Grafana observability stack (a hypervisor, storage appliance, backup product, container-orchestrator control plane, network device config, or OT/industrial equipment) \u2014 route those to the appropriate other AIops-tools skill. Hosted/SaaS monitoring suites (Datadog, New Relic, enterprise NMS) are out of scope. Governed observability operations with a built-in governance harness (audit, policy, token budget, undo, risk-tiers). Beyond the mock suite, the Prometheus/Alertmanager/Grafana surfaces have been exercised against a live Prometheus 3.x + Alertmanager + Grafana 13 stack (RCAs, governed writes, undo); the Loki surface has not (see docs/VERIFICATION.md).",
+  "updated_at": 1786344874226,
+  "version": "0.9.0"
+}
