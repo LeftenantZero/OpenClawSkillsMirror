@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of Alibaba Cloud ACK Pod Performance Profiling skill.\n\n- Provides SysOM-based performance profiling for ACK cluster Pods to diagnose issues like CPU throttling, OOM, network jitter, and IO latency.\n- Enforces strict credential security and access key handling; never logs or requests credentials in conversation.\n- Requires user confirmation of all input parameters (region, cluster ID, namespace, Pod name).\n- Details mandatory step-by-step workflow for environment setup, credential check, and controlled diagnosis API execution.\n- Outlines permission diagnostics and guidance for missing RAM permissions via a dedicated support skill.",
+  "created_at": 1780916794661,
+  "display_name": "Alibabacloud Aes Ack Pod Performance Profiling",
+  "fetched_at": 1787782079378,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/diagnose-workflow.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "scripts/create-cluster-vpc-endpoint-connection.py",
+    "scripts/setup-sdk.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780921785361,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-aes-ack-pod-performance-profiling",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-aes-ack-pod-performance-profiling",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-aes-ack-pod-performance-profiling&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-aes-ack-pod-performance-profiling"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 400,
+    "installs": 5,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Perform SysOM performance profiling on ACK cluster Pods to identify root causes of Pod-level performance issues (CPU throttling, OOM, memory distribution, ne...",
+  "updated_at": 1780916794661,
+  "version": "0.0.1"
+}
