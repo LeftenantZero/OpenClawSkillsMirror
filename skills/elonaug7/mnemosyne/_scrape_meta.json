@@ -1,0 +1,46 @@
+{
+  "changelog": "- Renamed the skill from \"auto-memory\" to \"mnemosyne\" and redefined purpose and description.\n- Fully replaced legacy script-based memory pipeline with a new cognitive psychology-based engine (compound-cue theory, no embeddings).\n- Switched memory management to pure local Markdown storage; removed dependencies on LLM APIs, vector databases, and embedding models.\n- Added benchmark references and protocol documents in the `references/` directory.\n- Deleted old user guides, scripts, auto-analysis tools, and command-line interfaces to reflect new architecture.\n- Updated protocol: memory integration now mandates reading/recalling via core engine scripts and injecting structured flashbacks before responses.",
+  "created_at": 1787402840524,
+  "display_name": "mnemosyne",
+  "fetched_at": 1787771153903,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/architecture.md",
+    "references/benchmark.md",
+    "references/hermes.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787403620683,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Elon",
+    "handle": "elonaug7",
+    "user_id": "s177c8jq0th2ajyf3w36zgxv458cyfjs"
+  },
+  "slug": "mnemosyne",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mnemosyne",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mnemosyne&ownerHandle=elonaug7",
+    "page_url": "https://clawhub.ai/elonaug7/skills/mnemosyne"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 17,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Cognitive memory engine for AI agents: gives OpenClaw/Hermes human-like long-term memory using 140 years of cognitive psychology (compound-cue theory), not embeddings. Zero LLM API, zero vector DB, pure Markdown storage. Use when the agent needs cross-session recall of user facts, preferences, decisions, or conversation history; when setting up persistent memory that survives restarts; when the user asks 'do you remember X' or complains the agent forgets; when memory must stay 100% local with no API cost. Beats embedding-based systems on Memory-Native benchmarks (nDCG 0.238, 5.2x) with ~7ms keyword search.",
+  "updated_at": 1787402940493,
+  "version": "1.0.0"
+}
