@@ -1,0 +1,41 @@
+{
+  "changelog": "- Initial release: lists Huawei Cloud IAM roles using KooCLI or SDK fallback.\n- Supports querying by role ID, display name, catalog, and type.\n- CLI and SDK usage examples included for inventory and auditing.\n- Read-only: does not modify or delete roles.\n- Includes filtering, output formatting, and parameter reference.",
+  "created_at": 1785588046858,
+  "display_name": "huawei-cloud-iam-role-list",
+  "fetched_at": 1787773949845,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/test-cli-commands.sh",
+    "scripts/validate-skill.sh",
+    "skill-card.md",
+    "templates/test-vars.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-iam-role-list",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-iam-role-list",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-iam-role-list&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-iam-role-list"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 203,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Lists Huawei Cloud IAM (Identity and Access Management) roles \u2014 enumerates all IAM roles (permissions) under the authenticated account with role ID, display name, internal name, catalog and type, using the KooCLI `hcloud IAM KeystoneListPermissions` command (primary) or the `ListPoliciesV5` command / huaweicloudsdkiam Python SDK (fallback). Provides read-only IAM role inventory for account management, security auditing, permission review and resource discovery. Use this skill whenever the user mentions IAM role list query. Triggers include: list IAM roles, IAM role list, query IAM roles, enumerate IAM roles, show IAM roles, IAM role inventory, permission list, \u67e5\u8be2IAM\u89d2\u8272, IAM\u89d2\u8272\u5217\u8868, \u67e5\u770bIAM\u89d2\u8272, \u89d2\u8272\u5217\u8868, \u6743\u9650\u5217\u8868, \u5217\u51faIAM\u89d2\u8272, \u67e5\u8be2\u89d2\u8272, \u83b7\u53d6\u89d2\u8272\u5217\u8868.",
+  "updated_at": 1785588130701,
+  "version": "1.0.0"
+}
