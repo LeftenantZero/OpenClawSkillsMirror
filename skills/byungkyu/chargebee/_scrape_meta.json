@@ -1,0 +1,33 @@
+{
+  "changelog": "CLI-first rewrite: the maton CLI with OAuth login is the documented path, every example is a maton command, SDK examples added, and the raw HTTP fallback feeds the key on stdin instead of reading it from the environment",
+  "created_at": 1770020111858,
+  "display_name": "chargebee",
+  "fetched_at": 1787768673534,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "byungkyu",
+    "handle": "byungkyu",
+    "user_id": "s174c3s2kc1ehqj1ytzntezj2983e2aj"
+  },
+  "slug": "chargebee",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/chargebee",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=chargebee&ownerHandle=byungkyu",
+    "page_url": "https://clawhub.ai/byungkyu/skills/chargebee"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 6125,
+    "installs": 217,
+    "stars": 3,
+    "versions": 9
+  },
+  "summary": "Chargebee API integration with managed OAuth. Install only if you need Chargebee billing administration. Connect with least-privilege access, verify the intended connection ID before each request, and revoke unused connections promptly. This integration can mutate billing data \u2014 approve only specific write actions after checking the exact endpoint, account, resource ID, and consequence. For other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway). Calls run through the `maton` CLI with OAuth login; default to read and list calls, and confirm every write or new connection with the user.",
+  "updated_at": 1787728337148,
+  "version": "1.1.0"
+}
