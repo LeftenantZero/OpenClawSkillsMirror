@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of \"clay-to-cargo\": migrate Clay enrichment tables to Cargo, fully as code.\n\n- Enables rebuilding any existing Clay table on the Cargo platform, mapping each enrichment column to its corresponding provider action.\n- Prices the migration up-front, so users know costs before running.\n- Stores the result as version-controlled code (not spreadsheets), supporting git workflows.\n- Offers clear mapping guidance when full configuration is unavailable (e.g., CSV-only exports), with explicit caveats.\n- Requires only Cargo CLI and account sign-in; comes with 100 free credits to run a sample without a purchase.\n- Directs users to use separate skills for sourcing new contacts or list validation, ensuring tight scope.",
+  "created_at": 1786754402938,
+  "display_name": "clay-to-cargo",
+  "fetched_at": 1787771905508,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786755172628,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Cargo",
+    "handle": "cargo-ai",
+    "user_id": "s178dcd9wkfn0a2fqrygmt3jzn87j9e1"
+  },
+  "slug": "clay-to-cargo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clay-to-cargo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clay-to-cargo&ownerHandle=cargo-ai",
+    "page_url": "https://clawhub.ai/cargo-ai/skills/clay-to-cargo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 131,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Rebuild a Clay table on Cargo, powered by Cargo \u2014 map every Clay enrichment column to its provider action, price the run before it happens, and keep the result as version-controlled code instead of a spreadsheet. Triggers: \"migrate from Clay\", \"move my Clay table to Cargo\", \"Clay alternative\", \"replace Clay\", \"I have a Clay export\", \"what does Clay's enrichment column map to\", \"my Clay bill is too high\", \"Clay but as code\". Migration, mapping, parity, spreadsheet, declarative. Skip when: you have no Clay table and simply want contacts sourced \u2014 use find-b2b-leads; or you hold a plain list to validate rather than a table to port \u2014 use verify-email-list.",
+  "updated_at": 1786754483222,
+  "version": "1.0.0"
+}
