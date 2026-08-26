@@ -1,0 +1,60 @@
+{
+  "changelog": "Clearer disclosure of what is stored and where",
+  "created_at": 1770687196680,
+  "display_name": "JSON",
+  "fetched_at": 1787771186895,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "api-payloads.md",
+    "config.md",
+    "databases.md",
+    "debug.md",
+    "encoding.md",
+    "evolution.md",
+    "languages.md",
+    "memory-template.md",
+    "numbers.md",
+    "patching.md",
+    "performance.md",
+    "querying.md",
+    "schema.md",
+    "security.md",
+    "signing.md",
+    "skill-card.md",
+    "streaming.md",
+    "testing.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785143779266,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Iv\u00e1n",
+    "handle": "ivangdavila",
+    "user_id": "s178jdk12x4qj3gs2se3etxf3h83h7ft"
+  },
+  "slug": "json",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/json",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=json&ownerHandle=ivangdavila",
+    "page_url": "https://clawhub.ai/ivangdavila/skills/json"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3538,
+    "installs": 112,
+    "stars": 3,
+    "versions": 3
+  },
+  "summary": "Parses, validates, transforms, and designs JSON payloads that survive real parsers, real clients, and real data sizes. Use when a parse fails at a byte offset or on a trailing comma, an id or an amount loses precision, accents and emoji come back as mojibake, a field is null when it should be absent, duplicate keys silently win, a JSON Schema passes what it should reject or a `$ref` will not resolve, a multi-gigabyte file will not fit in memory, a jq, JMESPath, or JSONPath expression returns nothing, two documents must be diffed or patched, a webhook signature fails after the body was re-serialized, untrusted input must be parsed safely, or a response shape has to change without breaking existing clients. Covers NDJSON, JSON Patch, canonical form, JSON columns in SQL, and JSON5/JSONC config files. Not for constraining LLM output (`structured-output`), for YAML, TOML, XML, or CSV (their own skills), or for designing REST endpoints (`rest-api`).",
+  "updated_at": 1785142015275,
+  "version": "1.0.2"
+}
