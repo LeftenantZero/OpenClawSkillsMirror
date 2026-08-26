@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of Engineering Drawing Parser.\n\n- Extracts structured data (BOM, dimensions, tolerances, title block, symbol inventory) from mechanical, P&ID, electrical, and architectural/structural engineering drawings.\n- Supports input formats: DWG, DXF, PDF (vector or scanned), and common image types.\n- Delivers machine-readable outputs (JSON, XLSX, CSV), each item traceable to original drawing coordinates.\n- Features region segmentation, title block/BOM/dimension/symbol extraction, and cross-reference resolution.\n- Includes confidence scoring and safety measures (local processing, no design inference, IP protection).\n- Ready-to-use pipeline scripts and batch processing tools with multilingual prompt triggers.",
+  "created_at": 1779817343327,
+  "display_name": "engineering-drawing-parser",
+  "fetched_at": 1787784551270,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/README.md",
+    "examples/sample_drawing.txt",
+    "knowledge/README.md",
+    "knowledge/symbols_mechanical.md",
+    "scripts/extract_bom.py",
+    "scripts/extract_dimensions.py",
+    "scripts/extract_title_block.py",
+    "scripts/render_preview.py",
+    "scripts/run_pipeline.py",
+    "skill-card.md",
+    "tests/test_parser.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "boboy",
+    "handle": "boboy-j",
+    "user_id": "s17ckg9br2p4k5kx6cr8fc4jz5852pah"
+  },
+  "slug": "engineering-drawing-parser",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/engineering-drawing-parser",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=engineering-drawing-parser&ownerHandle=boboy-j",
+    "page_url": "https://clawhub.ai/boboy-j/skills/engineering-drawing-parser"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 910,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "EN: Extract structured information from engineering drawings \u2014 mechanical 2D drafts, P&IDs, electrical schematics, construction architectural/structural draw...",
+  "updated_at": 1779817343327,
+  "version": "1.0.0"
+}
