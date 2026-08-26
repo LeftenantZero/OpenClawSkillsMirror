@@ -1,0 +1,50 @@
+{
+  "changelog": "Version 1.0.3\n\n- Added new environment variables for multi-device support, machine state tracking, personal-knowledge contribution, and explicit cleanup modes.\n- Improved multi-device workflow: separate partitions per device, with stable device IDs and controls for local/global output publishing.\n- Introduced safer cleanup defaults with a recoverable trash folder; permanent deletion is opt-in via config.\n- Enhanced OpenCode support with explicit database path discovery.\n- Clarified privacy, safety, and workflow guidelines for handling sensitive data and using Git push.\n- Removed sample file: skill-card.md.",
+  "created_at": 1780501336157,
+  "display_name": "Memory Sync",
+  "fetched_at": 1787778827927,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "config/filters.json",
+    "config/keywords.json",
+    "config/triggers.json",
+    "scripts/__init__.py",
+    "scripts/main.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782654071567,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Wildprogrammer",
+    "handle": "wildprogrammer",
+    "user_id": "s17f7r69b6ssvchq2dvxe9tcyd83h4wy"
+  },
+  "slug": "agent-memory-sync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-memory-sync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-memory-sync&ownerHandle=wildprogrammer",
+    "page_url": "https://clawhub.ai/wildprogrammer/skills/agent-memory-sync"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 603,
+    "installs": 8,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "Use when preserving, searching, reviewing, or exporting user-owned agent memory across OpenClaw, Codex, Claude, OpenCode, Hermes, Qoder, Obsidian, and Git. Inputs are local memory/chat stores and handoff summaries; outputs are Obsidian sources, memory indexes, context/profile packs, skill inventorie",
+  "updated_at": 1782651838946,
+  "version": "1.0.3"
+}
