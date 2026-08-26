@@ -1,0 +1,34 @@
+{
+  "changelog": "- Expands review scope determination: now defaults to reviewing all commits on the current branch not in the upstream, with clear fallback behavior.\n- Overview section now requires reporting the exact resolved diff range for transparency.\n- Refines runtime and architecture checklists for more precise bug and contract detection (e.g., interface breaches, subclass obligations).\n- Updates wording for architecture severity: emphasizes interface contract violations and subclass obligations over specific decorators.\n- Adjusts fallback and prompts when no changes are found, improving user guidance.",
+  "created_at": 1782957664164,
+  "display_name": "Parallel Code Review",
+  "fetched_at": 1787778426354,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "HHetLI",
+    "handle": "hhetli",
+    "user_id": "s177h773bf9xdnwj547a1cywpn89s09x"
+  },
+  "slug": "parallel-code-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/parallel-code-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=parallel-code-review&ownerHandle=hhetli",
+    "page_url": "https://clawhub.ai/hhetli/skills/parallel-code-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 323,
+    "installs": 0,
+    "stars": 2,
+    "versions": 2
+  },
+  "summary": "Parallel code review \u2014 dispatches two subagents to audit **runtime safety** (resource leaks, null paths, race conditions) and **architecture consistency** simultaneously, then merges and deduplicates into a single report. One pass covers two orthogonal bug dimensions.",
+  "updated_at": 1782958706655,
+  "version": "1.0.1"
+}
