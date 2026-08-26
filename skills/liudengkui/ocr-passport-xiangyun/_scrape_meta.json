@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of ocr-passport-xiangyun skill.\n\n- Structured OCR extraction for passports using Xiangyun API, supporting Chinese and international documents.\n- Accepts passport images via local file, Base64 input, or URL.\n- Guides users through first-time API credential setup and persists configuration securely.\n- Automatically saves OCR JSON results next to uploaded images; supports table-formatted output.\n- Provides explicit, on-demand export to Excel/CSV from cached results.\n- Handles error codes and credential issues with clear prompts.\n- Works cross-platform with Python 3.x and requires no host-specific dependencies.",
+  "created_at": 1779439022899,
+  "display_name": "ocr-passport-xiangyun",
+  "fetched_at": 1787785221399,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api_docs.md",
+    "scripts/config_manager.py",
+    "scripts/export.py",
+    "scripts/recognize.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779961447448,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "liudengkui",
+    "handle": "liudengkui",
+    "user_id": "s1741bfyzp3b0en85c71e500e584v20a"
+  },
+  "slug": "ocr-passport-xiangyun",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ocr-passport-xiangyun",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ocr-passport-xiangyun&ownerHandle=liudengkui",
+    "page_url": "https://clawhub.ai/liudengkui/skills/ocr-passport-xiangyun"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 519,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Xiangyun Platform Passport OCR Skill. Calls the Xiangyun API to perform structured recognition of passports from images, extracting fields such as passport n...",
+  "updated_at": 1779439022899,
+  "version": "1.0.0"
+}
