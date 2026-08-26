@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release: Quickly check Alibaba Cloud security product coverage for specific vulnerabilities (CVE/AVD) using an offline data snapshot.\n\n- Supports queries for Security Center (SAS), WAF, Cloud Firewall (CFW), and RASP coverage on 1697 high-risk vulnerabilities (2002\u20132026).\n- Purely offline: uses Bash and grep on a local data file, requires no credentials or network access.\n- Detects Chinese/English product names and answers in Chinese with official AVD references.\n- Automatically handles product in/out of scope, file availability checks, and bulk CVE lookups.\n- Prevents leakage or live data fetching; responds exclusively based on the included snapshot.",
+  "created_at": 1782117664256,
+  "display_name": "Alibabacloud Security Vuln Coverage Check",
+  "fetched_at": 1787779748982,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/coverage-data.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-security-vuln-coverage-check",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-security-vuln-coverage-check",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-security-vuln-coverage-check&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-security-vuln-coverage-check"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 331,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u67e5\u8be2\u963f\u91cc\u4e91\u56db\u6b3e\u5b89\u5168\u4ea7\u54c1\uff08\u4e91\u5b89\u5168\u4e2d\u5fc3 / WAF / \u4e91\u9632\u706b\u5899 / RASP\uff09\u5bf9\u6307\u5b9a\u6f0f\u6d1e\u7684\u9632\u62a4\u8986\u76d6\u60c5\u51b5\uff0c\u8f93\u5165 CVE \u7f16\u53f7\u6216 AVD \u7f16\u53f7\u5373\u53ef\u8fd4\u56de\u5404\u4ea7\u54c1\u662f\u5426\u5df2\u8986\u76d6\u3002\u5f53\u5ba2\u6237\u6216\u552e\u524d SA \u95ee\"\u6211\u4eec\u4ea7\u54c1\u80fd\u4e0d\u80fd\u9632\u4f4f CVE-XXXX\uff1f\"\u3001\"WAF \u8986\u76d6\u8fd9\u4e2a\u6f0f\u6d1e\u4e86\u5417\uff1f\"\u3001\"\u65b0\u7206\u51fa\u6765\u7684 XX \u6f0f\u6d1e\u6709\u6ca1\u6709\u8986\u76d6\uff1f\"\u3001\"\u9ad8\u5371\u6f0f\u6d1e Y...",
+  "updated_at": 1782117664256,
+  "version": "0.0.1"
+}
