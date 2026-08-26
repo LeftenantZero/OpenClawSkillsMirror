@@ -1,0 +1,39 @@
+{
+  "changelog": "Initial release: Convert Apple iWork files (.pages, .numbers, .key) to Markdown using a pure standard library Python parser.\n\n- Supports extraction of all readable content, tables, and slide text from iWork '13+ format documents.\n- Dependency-free: uses only Python 3.8+ standard library (no third-party packages required).\n- Handles non-standard iWork Snappy framing and Protobuf containers to recover UTF-8 text.\n- CLI supports file conversion, text extraction, printing to stdout, and media listing.\n- Does not support encrypted documents or visual layout reconstruction.",
+  "created_at": 1785330233340,
+  "display_name": "iwork2md",
+  "fetched_at": 1787774276862,
+  "files": [
+    ".gitignore",
+    "LICENSE.txt",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/FORMAT.md",
+    "scripts/iwa.py",
+    "scripts/iwork2md.py",
+    "scripts/test_iwa.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Stephen",
+    "handle": "slearnai",
+    "user_id": "s171srzvxc5431ssbjh7vggsvs884354"
+  },
+  "slug": "iwork2md",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/iwork2md",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=iwork2md&ownerHandle=slearnai",
+    "page_url": "https://clawhub.ai/slearnai/skills/iwork2md"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1831,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Convert Apple iWork documents (Pages .pages, Numbers .numbers, Keynote .key) into Markdown. Use whenever the user wants to read, extract, or translate the content of an iWork file into text/markdown, for example 'convert this .pages file to markdown', 'extract text from a Numbers sheet', 'read a Keynote file', or 'open a .key/.numbers/.pages and turn it into markdown'. Handles the iWork '13+ format (bundle containing Index.zip with .iwa files that wrap Snappy-framed Protobuf) with no third-party dependencies.",
+  "updated_at": 1785331662714,
+  "version": "0.1.0"
+}
