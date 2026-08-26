@@ -1,0 +1,66 @@
+{
+  "changelog": "- Initial release of the environmental impact assessment skill.\n- Implements a composite impact index by normalizing and weighted overlay of four pressure factors.\n- Uses an independent-probability model to estimate cumulative environmental effects.\n- Classifies impact into five grades based on defined thresholds.\n- Outputs include impact index and grade GeoTIFFs, along with run parameters and manifest in JSON.\n- Supports both synthetic scenario generation and real multi-band raster inputs; runs fully offline by default.",
+  "created_at": 1785844017185,
+  "display_name": "geoskill-environmental-impact-assessment",
+  "fetched_at": 1787773492572,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-environmental-impact-assessment.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785844952993,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-environmental-impact-assessment",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-environmental-impact-assessment",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-environmental-impact-assessment&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-environmental-impact-assessment"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 176,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u591a\u538b\u529b\u56e0\u5b50\u5f52\u4e00\u5316\u52a0\u6743\u53e0\u52a0\u5f97\u7efc\u5408\u5f71\u54cd\u6307\u6570\uff0c\u72ec\u7acb\u6982\u7387\u6a21\u578b\u4f30\u7b97\u7d2f\u79ef\u6548\u5e94\uff0c\u6309\u9608\u503c\u5212\u52065 \u7ea7\u5f71\u54cd\u7b49\u7ea7\u3002Assesses environmental impact grades by multi-factor overlay and cumulative effects. \u8f93\u51fa\u5f71\u54cd\u6307\u6570\u4e0e\u7b49\u7ea7 GeoTIFF\u3002",
+  "updated_at": 1785844164627,
+  "version": "1.0.0"
+}
