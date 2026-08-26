@@ -1,0 +1,54 @@
+{
+  "changelog": "**Summary:** Adds production-ready security hardening for VPS running OpenClaw AI agents, focused on SSH, firewall, audit logging, and alerting.\n\n- SSH hardening with custom port, key-only auth, and brute-force protection.\n- BSI IT-Grundschutz & NIST guideline alignment with low resource overhead.\n- Firewall defaults to \"deny incoming,\" allows only chosen SSH port.\n- Audit logging with kernel-level rules, privilege escalation alerts, and daily security briefings.\n- Centralized credential management and multi-channel security alerting (Telegram, Discord, Slack, Webhook).\n- Automated rollback and verification scripts included for safety and usability.",
+  "created_at": 1785242713700,
+  "display_name": "vps-openclaw-security-hardening",
+  "fetched_at": 1787774480590,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "REMOTE.txt",
+    "SKILL.md",
+    "VERSION.txt",
+    "_meta.json",
+    "scripts/audit-log-monitor.sh",
+    "scripts/critical-alert.sh",
+    "scripts/daily-briefing.sh",
+    "scripts/install.sh",
+    "scripts/rollback-ssh.sh",
+    "scripts/verify.sh",
+    "scripts/weekly-report.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785248460662,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "shake27",
+    "handle": "bustes01",
+    "user_id": "s179k2f5a78brwssac6hqw3e3586yns2"
+  },
+  "slug": "vps-openclaw-security-hardening",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/vps-openclaw-security-hardening",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=vps-openclaw-security-hardening&ownerHandle=bustes01",
+    "page_url": "https://clawhub.ai/bustes01/skills/vps-openclaw-security-hardening"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 60,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Production-ready security hardening for VPS running OpenClaw AI agents. Includes SSH hardening (custom port), firewall, audit logging, credential management, and intelligent alerting. Follows BSI IT-Grundschutz and NIST guidelines with minimal resource overhead.",
+  "updated_at": 1785247126397,
+  "version": "1.2.0"
+}
