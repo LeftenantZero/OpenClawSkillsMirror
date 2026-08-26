@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of pageskim\n\n- Generates .llm.md (and optional .llm.json) files for each site page, enabling AI agents to read sites using 10\u201350x fewer tokens.\n- Detects popular static site generators (Astro, Next.js, Hugo, Jekyll, or plain HTML) and auto-selects output folders and build commands.\n- Adds a site index at /.well-known/pageskim.json for agent discovery.\n- Integrates with site build and CI processes to keep skim files up-to-date.\n- Validates generated files to ensure quality and reports token savings to the user.\n- Recommends non-intrusive deployment: no mandatory dependency or version lock-in.",
+  "created_at": 1783311114635,
+  "display_name": "Skills",
+  "fetched_at": 1787777998775,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/generate-and-validate.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Venkat Ambati",
+    "handle": "venki0552",
+    "user_id": "s17d6jcfkzsp1x83tva2zt6hyd847gz9"
+  },
+  "slug": "pageskim",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pageskim",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pageskim&ownerHandle=venki0552",
+    "page_url": "https://clawhub.ai/venki0552/skills/pageskim"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 252,
+    "installs": 0,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Make a website readable by LLMs and agents at 10-50x fewer tokens by generating PageSkim .llm.md sibling files for its pages. Use when the user asks to \"make my site agent-readable\", \"add llm.md / llms.txt-style files / PageSkim to my site\", \"reduce token costs for agents or AI crawlers reading my s",
+  "updated_at": 1783311114635,
+  "version": "1.0.0"
+}
