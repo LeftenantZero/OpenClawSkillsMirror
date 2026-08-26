@@ -1,0 +1,38 @@
+{
+  "changelog": "Version 1.3.0 of golang-testing makes test file structure requirements explicit and adds orchestration guidance for advanced audit workflows.\n\n- Clarifies that test files must be named after the source file under test (not the function/method), enhancing navigation and tool compatibility.\n- Advises maintaining test function order to match source file order, aiding readability.\n- Documents rare exceptions for splitting large test files.\n- Adds orchestration mode instructions for audit sub-agents and merging reports, with explicit knobs for Claude Code (ultrathink, ultracode).\n- Updates compatibility metadata to include Codex-style harnesses.\n- Removes skill-card.md file.",
+  "created_at": 1774345645885,
+  "display_name": "golang-testing",
+  "fetched_at": 1787769872604,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/helpers.md",
+    "references/http-testing.md",
+    "references/integration-testing.md",
+    "references/mocking.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Samuel Berthe",
+    "handle": "samber",
+    "user_id": "s173arkhs3131fq5jf769qq75583hdgt"
+  },
+  "slug": "golang-testing",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/golang-testing",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=golang-testing&ownerHandle=samber",
+    "page_url": "https://clawhub.ai/samber/skills/golang-testing"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1418,
+    "installs": 30,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Production-ready Golang tests \u2014 table-driven tests, testify suites and mocks, parallel tests, fuzzing, fixtures, goroutine leak detection with goleak, snapshot testing, code coverage, integration tests, idiomatic test naming. Use when writing or reviewing Go tests, choosing a testing approach, setting up Go test CI, or debugging flaky/slow tests. For testify-specific APIs see `samber/cc-skills-golang@golang-stretchr-testify`; for measurement methodology see `samber/cc-skills-golang@golang-benchmark`.",
+  "updated_at": 1787472475930,
+  "version": "1.3.0"
+}
