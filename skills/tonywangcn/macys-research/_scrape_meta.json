@@ -1,0 +1,45 @@
+{
+  "changelog": "Sync via scripts/sync-directories.sh",
+  "created_at": 1786732224151,
+  "display_name": "macys-research",
+  "fetched_at": 1787769601734,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "reference/endpoints.md",
+    "scripts/crawlora.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787556844468,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Tony Wang",
+    "handle": "tonywangcn",
+    "user_id": "s179sh3aydn86dy8tvgqwdvq858c7xj4"
+  },
+  "slug": "macys-research",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/macys-research",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=macys-research&ownerHandle=tonywangcn",
+    "page_url": "https://clawhub.ai/tonywangcn/skills/macys-research"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 201,
+    "installs": 1,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Looks up a Macy's product's full detail and customer reviews by its numeric productId, and pulls Macy's own search-box (typeahead) suggestions, using the Crawlora API, returning clean JSON. Use when the user has (or can get) a Macy's product page ?ID= value and wants its price/description/variants/reviews, or wants Macy's autocomplete suggestions for a query \u2014 instead of scraping macys.com. There is no full-text product search or category browse \u2014 a known numeric productId is required as the entry point.",
+  "updated_at": 1787556045324,
+  "version": "1.0.3"
+}
