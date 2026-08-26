@@ -1,0 +1,33 @@
+{
+  "changelog": "fuxin-office-bridge 1.0.0\n\n- Provides a comprehensive 5-layer preflight check for Foxit Office integration, covering MCP gateway, product registration, skill registration, backend accessibility, and active document status.\n- Consolidates results into 4 readiness states (not installed / not ready / partially ready / ready) with unified user messaging and actionable guidance for each.\n- Enforces strict detection logic: checks installation via registry and file existence, validates product/process status, and avoids false positives from leftover directories.\n- Skills must reference this bridge for preflight checks without direct user orchestration or hardcoding of network ports or paths.\n- Includes standardized user prompts for all readiness scenarios; other skills must reuse these messages without modification.",
+  "created_at": 1787215520191,
+  "display_name": "\u798f\u6615 Office \u8fde\u63a5\u52a9\u624b",
+  "fetched_at": 1787770420229,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "foxitnet",
+    "handle": "foxitnet",
+    "user_id": "s1779bwjapp95a9mfzm1c86hmn8bjnyg"
+  },
+  "slug": "fuxin-office-bridge",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fuxin-office-bridge",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fuxin-office-bridge&ownerHandle=foxitnet",
+    "page_url": "https://clawhub.ai/foxitnet/skills/fuxin-office-bridge"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 89,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u798f\u6615 Office \u8fde\u63a5\u52a9\u624b\u662f\u6574\u5957\u798f\u6615Office Skill\u5957\u4ef6\u80fd\u529b\u7684\u524d\u7f6e\u68c0\u67e5\u5de5\u5177\u3002\u5b83\u4f1a\u5728\u6267\u884c\u6587\u6863\u64cd\u4f5c\u524d\uff0c\u81ea\u52a8\u9a8c\u8bc1\u672c\u5730 Office \u73af\u5883\u3001\u6ce8\u518c\u9879\u3001\u4f9d\u8d56\u5e93\u4e0e\u8fdb\u7a0b\u72b6\u6001\uff1b\u53d1\u73b0\u5f02\u5e38\u65f6\u7ed9\u51fa\u660e\u786e\u7684\u4fee\u590d\u6b65\u9aa4\uff0c\u907f\u514d\u5728\u6b63\u5f0f\u4efb\u52a1\u4e2d\u56e0\u73af\u5883\u95ee\u9898\u4e2d\u65ad\u4efb\u52a1\u3002",
+  "updated_at": 1787217467804,
+  "version": "1.0.0"
+}
