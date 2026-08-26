@@ -1,0 +1,33 @@
+{
+  "changelog": "- Adds a ServerAvatar skill for working with the `serveravatar` connector through the OOMOL `oo` CLI.\n- Covers read-only ServerAvatar actions: list organizations, servers, applications, and databases, plus fetch a single organization by ID.\n- Uses live action schemas before execution so payloads match the connector contract.\n- Standardizes safe run flow: inspect schema, then call `oo connector run` with JSON data.\n- Includes first-time setup guidance for missing CLI, sign-in, connector, and billing issues.\n- Flags write and destructive actions in the contract so state-changing operations can be handled deliberately.\n\nSource: `oomol-lab/skills@46cfb3e`",
+  "created_at": 1786455246543,
+  "display_name": "ServerAvatar",
+  "fetched_at": 1787772647917,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-serveravatar",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-serveravatar",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-serveravatar&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-serveravatar"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 158,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "ServerAvatar (serveravatar.com). Use this skill for ANY ServerAvatar request \u2014 searching and reading data. Whenever a task involves ServerAvatar, use this skill instead of calling the API directly.",
+  "updated_at": 1786455317105,
+  "version": "1.0.1"
+}
