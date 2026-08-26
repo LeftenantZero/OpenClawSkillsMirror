@@ -1,0 +1,58 @@
+{
+  "changelog": "- Clarified the skill's role as a foundational step for downstream video editing automation.\n- Added detailed workflow instructions, covering project initialization, probing, transcription, analysis, validation, and artifact generation.\n- Specified precise dependencies (ffmpeg/ffprobe, Python, faster-whisper) and environmental requirements.\n- Enhanced guidance for language handling and timeline precision in transcription.\n- Outlined conventions for machine files, schema contracts, and directory structure.\n- Emphasized strict review, validation, and separation of editorial decisions from objective analysis.",
+  "created_at": 1784714065189,
+  "display_name": "video-understand",
+  "fetched_at": 1787772996202,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "examples/understanding.example.json",
+    "reference/project-schema.md",
+    "reference/timeline-schema.md",
+    "reference/understanding-schema.md",
+    "scripts/analyze.py",
+    "scripts/build_render_plan.py",
+    "scripts/build_timeline.py",
+    "scripts/check_protocol_extensions.py",
+    "scripts/init_project.py",
+    "scripts/probe.py",
+    "scripts/projectlib.py",
+    "scripts/render_project.py",
+    "scripts/transcribe.py",
+    "scripts/validate.py",
+    "skill-card.md",
+    "tests/test_render_project.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786342478538,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "WhiteTowerAI",
+    "handle": "whitetowerai",
+    "user_id": "s178pg569r7j3dkw6ekc9bn7258b0eme"
+  },
+  "slug": "video-understand",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/video-understand",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=video-understand&ownerHandle=whitetowerai",
+    "page_url": "https://clawhub.ai/whitetowerai/skills/video-understand"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 127,
+    "installs": 0,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Use when a video project needs reusable media metadata, word-level transcription, objective speech analysis, or evidence-backed semantic understanding before optional editing skills run.",
+  "updated_at": 1786341367203,
+  "version": "1.0.6"
+}
