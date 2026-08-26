@@ -1,0 +1,73 @@
+{
+  "changelog": "cert-lifecycle-harness 1.0.0 \u2013 Initial Release\n\n- Introduces a rigorous assistant workflow for managing the full lifecycle of X.509/TLS certificates in complex infrastructures, including renewal, replacement, and migration.\n- Enforces a strict role: agent acts as safety officer, document engineer, and trusted executor\u2014never as an autonomous SRE.\n- Mandates a six-gate protocol before any write APIs (Import/Modify) are executed; Delete operations are never executed, only script-generated.\n- Implements complexity-based workflow splits (Fast/Standard/Full paths) with clear criteria for each, ensuring tailored processes for various infrastructures.\n- Adapts asset discovery to graph closure models, supporting wildcard, cross-zone, and provenance tracking.\n- Aligns processes with the CA/B Forum\u2019s upcoming certificate validity reductions and requires all outputs (scripts, reviews, runbooks) to be delivered as standalone files for auditability.",
+  "created_at": 1779364277433,
+  "display_name": "cert lifecycle harness",
+  "fetched_at": 1787785441739,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "phases/00-intake-checklist.md",
+    "phases/01-inventory-guidance.md",
+    "phases/02-scope-lock-and-reflow.md",
+    "phases/03-risk-assessment-playbook.md",
+    "phases/04-planning-playbook.md",
+    "phases/05-dry-run-matrix.md",
+    "phases/06-verify-rollback-playbook.md",
+    "phases/runbook-templates/README.md",
+    "phases/runbook-templates/cdn-manual-upload.md.tpl.md",
+    "phases/runbook-templates/jks-rollover.sh.tpl.md",
+    "phases/runbook-templates/k8s-secret-rollover.sh.tpl.md",
+    "phases/runbook-templates/nginx-reload.sh.tpl.md",
+    "references/README.md",
+    "references/cert-chain-verification.md",
+    "references/cloud-api-naming.md",
+    "references/csr-persona-talks.md",
+    "references/dns-probing.md",
+    "references/inquiry-protocol.md",
+    "references/san-closure-discovery.md",
+    "references/topology-detection.md",
+    "references/wildcard-inventory.md",
+    "review-guides/L1-execution-review.md",
+    "review-guides/L2-strategy-review.md",
+    "review-guides/L3-decision-review.md",
+    "review-guides/self-review-checklist.md",
+    "scripts/readonly/TEMPLATE.sh",
+    "scripts/version-check.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779959032740,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "dima",
+    "handle": "dimayip",
+    "user_id": "s177dy98zbtbbr10cysccgw6z585v7hq"
+  },
+  "slug": "cert-lifecycle-harness",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cert-lifecycle-harness",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cert-lifecycle-harness&ownerHandle=dimayip",
+    "page_url": "https://clawhub.ai/dimayip/skills/cert-lifecycle-harness"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 531,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "A harness for guiding humans through the full lifecycle of an X.509/TLS certificate renewal, replacement, or migration in complex infrastructures (CDN / LB /...",
+  "updated_at": 1779364277433,
+  "version": "1.0.0"
+}
