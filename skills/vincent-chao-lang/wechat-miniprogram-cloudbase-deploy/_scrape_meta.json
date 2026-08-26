@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release: deployment workflow for WeChat Mini Programs on CloudBase (tcb + miniprogram-ci)",
+  "created_at": 1787711069269,
+  "display_name": "WeChat MiniProgram CloudBase Deploy",
+  "fetched_at": 1787768728079,
+  "files": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "_meta.json",
+    "references/pitfalls.md",
+    "scripts/deploy-cloud.sh",
+    "scripts/upload.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787712796553,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Vincent",
+    "handle": "vincent-chao-lang",
+    "user_id": "s177hp4y3h42aryk6e9yprkbwh8a45ts"
+  },
+  "slug": "wechat-miniprogram-cloudbase-deploy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wechat-miniprogram-cloudbase-deploy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wechat-miniprogram-cloudbase-deploy&ownerHandle=vincent-chao-lang",
+    "page_url": "https://clawhub.ai/vincent-chao-lang/skills/wechat-miniprogram-cloudbase-deploy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 30,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "WeChat Mini Program deployment onto WeChat CloudBase (\u4e91\u5f00\u53d1): deploy cloud functions via tcb, manually create database collections in the console, and upload the frontend via miniprogram-ci. Covers real-environment pitfalls: CLI cannot create collections, tcb fn invoke returns a Namespace metadata bug, the upload IP-whitelist only accepts IPv4 (so an IPv6 egress is always rejected), and the trial env defaults to ap-shanghai. Trigger when the task involves \u90e8\u7f72\u5fae\u4fe1\u5c0f\u7a0b\u5e8f, \u4e91\u5f00\u53d1, CloudBase, tcb \u90e8\u7f72\u4e91\u51fd\u6570, or miniprogram-ci \u4e0a\u4f20.",
+  "updated_at": 1787711146174,
+  "version": "1.0.0"
+}
