@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of Alibaba Cloud WAF Protection Config Backup.\n\n- Export and backup Alibaba Cloud WAF protection configurations (WAF 3.0 & 2.0) to Excel (.xlsx) by region, with each data module as a separate sheet.\n- Supports both China mainland (cn-hangzhou) and international (ap-southeast-1) regions.\n- Requires Aliyun CLI (>=3.3.3), up-to-date CLI plugins, and the Python openpyxl library.\n- Enforces use of read-only RAM permissions and secure credential handling.\n- All `aliyun` API requests include a unique session-based user-agent for observability.\n- Confirms all user-customizable parameters before execution; no defaults assumed without user approval.",
+  "created_at": 1781259812985,
+  "display_name": "Alibabacloud Waf Protectionconfig Backup",
+  "fetched_at": 1787781024662,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/defense-scene-values.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "references/waf2-backup-workflow.md",
+    "references/waf3-backup-workflow.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781260116594,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-waf-protectionconfig-backup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-waf-protectionconfig-backup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-waf-protectionconfig-backup&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-waf-protectionconfig-backup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 372,
+    "installs": 4,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Export and backup Alibaba Cloud WAF protection configurations for WAF 3.0 and WAF 2.0 instances. Supports both China mainland (cn-hangzhou) and international...",
+  "updated_at": 1781259812985,
+  "version": "0.0.1"
+}
