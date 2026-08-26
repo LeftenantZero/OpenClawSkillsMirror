@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of lab-result-interpretation skill.\n\n- Provides patient-friendly explanations for biochemical lab test results, including severity flags and health recommendations.\n- Flags critical values and displays an urgent summary at the top, sorted by severity.\n- Supports common panels: blood, lipid, liver, kidney, electrolytes, thyroid, inflammation, and blood sugar tests.\n- Enforces strict boundaries (no diagnosis, no treatment, no non-lab result interpretation).\n- Includes robust input validation, error handling, and fallback behaviors.\n- Every output includes a mandatory medical disclaimer.",
+  "created_at": 1774489711961,
+  "display_name": "Lab Result Interpretation",
+  "fetched_at": 1787787478423,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "lab-result-interpretation_audit_result_v4.json",
+    "references/explanation_templates.json",
+    "references/lab_reference_ranges.json",
+    "requirements.txt",
+    "scripts/main.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090109883,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "AIpoch",
+    "handle": "aipoch-ai",
+    "user_id": "s17fjw78yq6wtd4ep6zsaxwrn983hznr"
+  },
+  "slug": "lab-result-interpretation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/lab-result-interpretation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=lab-result-interpretation&ownerHandle=aipoch-ai",
+    "page_url": "https://clawhub.ai/aipoch-ai/skills/lab-result-interpretation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 700,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "A medical assistant tool that transforms complex biochemical laboratory test results into clear, patient-friendly explanations with safety disclaimers and se...",
+  "updated_at": 1779078871589,
+  "version": "1.0.0"
+}
