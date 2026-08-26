@@ -1,0 +1,62 @@
+{
+  "changelog": "Initial release of jumpserver-skills\n\n- Provides read-only querying and environment initialization for JumpServer V4 via bundled CLI scripts.\n- Supports `.env.local` generation/updating and persistent org selection (`JMS_ORG_ID`).\n- Allows listing and retrieving assets, users, nodes, permissions, and audit details.\n- Blocks all create, update, delete, append, or remove actions for business objects or permissions.\n- Preflight checks enforce a strict flow: config status \u2192 config write \u2192 ping \u2192 org selection \u2192 query.\n- Only executes queries through official CLI entry points; temporary SDK/HTTP scripts not supported.",
+  "created_at": 1774425965730,
+  "display_name": "JumpServer",
+  "fetched_at": 1787787289844,
+  "files": [
+    "README.en.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "env.sh",
+    "references/audit-queries.md",
+    "references/object-mapping.md",
+    "references/object-queries.md",
+    "references/permission-queries.md",
+    "references/preflight-and-diagnostics.md",
+    "references/query-boundaries.md",
+    "references/runtime-behavior.md",
+    "references/troubleshooting-guide.md",
+    "requirements.txt",
+    "scripts/jms_assets.py",
+    "scripts/jms_audit.py",
+    "scripts/jms_bootstrap.py",
+    "scripts/jms_diagnose.py",
+    "scripts/jms_permissions.py",
+    "scripts/jms_runtime.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090090086,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "liqiang-fit2cloud",
+    "handle": "liqiang-fit2cloud",
+    "user_id": "s173f2qd73s3pczbgvwg83n93983j96w"
+  },
+  "slug": "jumpserver-skills",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/jumpserver-skills",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=jumpserver-skills&ownerHandle=liqiang-fit2cloud",
+    "page_url": "https://clawhub.ai/liqiang-fit2cloud/skills/jumpserver-skills"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 643,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use for JumpServer V4 preflight, `.env.local` initialization, org selection, and read-only asset, permission, audit, and access queries through the bundled `...",
+  "updated_at": 1779078963971,
+  "version": "1.0.0"
+}
