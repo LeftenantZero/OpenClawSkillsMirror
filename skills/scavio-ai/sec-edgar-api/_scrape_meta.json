@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of sec-edgar-api skill.\n\n- Resolve ticker or company name to SEC CIK and exchange with `/lookup`.\n- Retrieve filer profiles, SIC, EIN, LEI, and key company data via `/company`.\n- Page through and filter company filings with `/filings`.\n- List every reported XBRL financial concept via `/facts`.\n- Retrieve the full reported value history of an XBRL concept using `/concept`.\n- Run full-text search of SEC EDGAR filings from 2001 to present with `/search`, supporting filters and facets.\n- All endpoints return structured JSON; 1 credit per request with API key.",
+  "created_at": 1787741069707,
+  "display_name": "SEC EDGAR API - Ticker to CIK, Filings, Filing Documents",
+  "fetched_at": 1787768535780,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "scavio-ai",
+    "handle": "scavio-ai",
+    "user_id": "s175sr0x7m30cfs7kpvrpmg0ns83z36t"
+  },
+  "slug": "sec-edgar-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sec-edgar-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sec-edgar-api&ownerHandle=scavio-ai",
+    "page_url": "https://clawhub.ai/scavio-ai/skills/sec-edgar-api"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 19,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Resolve a ticker to a CIK, then pull SEC EDGAR filer profiles, filings, XBRL financial concepts and full-text search across 2001-today. 6 endpoints, 1 credit each, structured JSON.",
+  "updated_at": 1787741130982,
+  "version": "1.0.0"
+}
