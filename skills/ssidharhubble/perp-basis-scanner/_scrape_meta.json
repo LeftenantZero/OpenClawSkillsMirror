@@ -1,0 +1,35 @@
+{
+  "changelog": "perp-basis-scanner v1.0.0 \u2013 Initial release\n\n- Scans and compares the spot-vs-perpetual basis across Binance, Bybit, OKX, and Deribit for any listed symbol, with no API key required.\n- Reports live spot price, perpetual mark price, basis percentage, rough annualized basis, and current 8-hour funding rate side by side across exchanges.\n- Offers both one-shot scans and a repeating watch mode for monitoring basis drift over time.\n- Outputs in table or JSON format, with support for exchange selection and error handling for unavailable data.\n- Designed for python developers and crypto researchers seeking quick, cross-exchange basis checks before executing basis or funding-rate-arbitrage trades.",
+  "created_at": 1786852860838,
+  "display_name": "perp-basis-scanner",
+  "fetched_at": 1787771776312,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/basis_scanner.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ssyopro",
+    "handle": "ssidharhubble",
+    "user_id": "s1751xfhp40q8vjjqd22y5vaw584gpke"
+  },
+  "slug": "perp-basis-scanner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/perp-basis-scanner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=perp-basis-scanner&ownerHandle=ssidharhubble",
+    "page_url": "https://clawhub.ai/ssidharhubble/skills/perp-basis-scanner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 123,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Scans the spot-vs-perpetual futures basis (contango/backwardation) across Binance, Bybit, OKX, and Deribit for any symbol they list, using free public REST market-data endpoints with no API key required. Useful for crypto trading, basis trade, cash-and-carry arbitrage, funding rate arbitrage, perpetual futures, options and derivatives research, whale-style institutional strategies, and passive income via delta-neutral spot-perp spreads. Reports live spot price, perp mark price, basis percentage, a rough annualized basis estimate, and the current 8-hour funding rate side by side across exchanges so you can spot the widest, most tradeable dislocations. Supports one-shot scans and a repeating watch mode for monitoring basis drift over time. Built for python developers, ai agent operators, and defi/crypto researchers who want a quick cross-exchange basis check before sizing a cash-and-carry or funding-rate-arbitrage position.",
+  "updated_at": 1786852925935,
+  "version": "1.0.0"
+}
