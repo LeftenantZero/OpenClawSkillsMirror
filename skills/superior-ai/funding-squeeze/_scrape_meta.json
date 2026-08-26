@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of funding-squeeze strategy for Hyperliquid perps.\n\n- Implements a long-only strategy: enters when funding APR is deeply negative (shorts paying longs) and price has started rising, exits on funding normalization or after 24 hours.\n- Designed for short squeeze scenarios, e.g., \"fade the shorts\", \"squeeze fuel\", on choppy up-moves with negative funding.\n- Includes historical backtest data for BTC/USDC perps (Jan\u2013May 2026, \u22120.75% PnL in a bear market).\n- Lists recommended refinements: use a higher-timeframe trend filter and multi-pair scanning for better results.\n- Provides a ready-to-use Freqtrade implementation with suggested config and parameter tuning guidance.",
+  "created_at": 1782126452228,
+  "display_name": "Funding Squeeze",
+  "fetched_at": 1787779705342,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Superior-AI",
+    "handle": "superior-ai",
+    "user_id": "s176a46hwrqn38f05j90yrnww583h5w0"
+  },
+  "slug": "funding-squeeze",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/funding-squeeze",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=funding-squeeze&ownerHandle=superior-ai",
+    "page_url": "https://clawhub.ai/superior-ai/skills/funding-squeeze"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 302,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when writing a strategy that captures short-squeeze setups on Hyperliquid perps \u2014 anything described as squeeze, short squeeze fuel, negative funding ral...",
+  "updated_at": 1782126452228,
+  "version": "1.0.0"
+}
