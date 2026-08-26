@@ -1,0 +1,55 @@
+{
+  "changelog": "- Initial release of Huawei Ascend NPU command skill.\n- Provides natural language management and translation for npu-smi commands (device queries, configuration, firmware, virtualization, certificates, FLOPS tests).\n- Supports both local and SSH remote execution modes.\n- Real-time metrics tracking and comprehensive status queries for Ascend NPU devices.\n- Removed sample documentation file (skill-card.md).",
+  "created_at": 1785748778179,
+  "display_name": "huawei-cloud-ascend-command",
+  "fetched_at": 1787773643940,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/certificate-management.md",
+    "references/configuration.md",
+    "references/device-queries.md",
+    "references/firmware-upgrade.md",
+    "references/troubleshooting.md",
+    "references/verification-method.md",
+    "references/virtualization.md",
+    "scripts/__init__.py",
+    "scripts/executor.py",
+    "scripts/main.py",
+    "scripts/npu_client.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785749804918,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-ascend-command",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-ascend-command",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-ascend-command&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-ascend-command"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 33,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Huawei Ascend NPU natural language management skill, supporting both local direct connection and SSH remote modes. Provides comprehensive npu-smi command capabilities including device queries, configuration management, firmware upgrade, vNPU virtualization, certificate management, and compute power testing (FLOPS). Enables remote management and monitoring of Ascend NPU devices with real-time metrics tracking. Use this skill when the user wants to: (1) query NPU device status and health, (2) monitor temperature, power, memory/HBM utilization, (3) configure ECC settings and fan modes, (4) perform firmware upgrades, (5) manage vNPU virtualization, (6) run compute power tests, (7) check certificate information. Trigger: user mentionsnpu', 'ascend', 'NPU', 'Ascend', 'temperature', 'power', 'HBM', 'firmware', 'upgrade', 'vNPU', 'virtualization', 'certificate', 'FLOPS', 'compute', 'health', 'memory', 'utilization', 'ECC', 'fan', '\u6607\u817e', '\u6607\u817e\u5361', '\u6607\u817e\u72b6\u6001', '\u663e\u5b58', '\u7b97\u529b', '\u8bbe\u5907\u67e5\u8be2', 'NPU\u76d1\u63a7'\"",
+  "updated_at": 1785748903681,
+  "version": "1.0.0"
+}
