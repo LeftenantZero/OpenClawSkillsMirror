@@ -1,0 +1,62 @@
+{
+  "changelog": "Initial release of 1688-bp-inquiry-evaluate.\n\n- Provides quality evaluation and improvement suggestions for 1688 shop staff/customer service team.\n- Supports team-level summary and individual staff inquiry diagnosis functions.\n- Strictly displays only real data obtained by CLI commands; prohibits fabrication of summaries, ratings, or user IDs.\n- Automatically enforces time range limitation (no queries beyond 31 days; opens full evaluation page if exceeded).\n- Includes robust parameter prompting for missing dates or staff IDs.\n- All outputs are either original CLI returns or specific fallback messages; no output modifications.\n- Requires ALI_1688_AK environment variable, with clear user guidance for authentication issues.\n- Automatic skill usage tracking for every CLI command executed.",
+  "created_at": 1779190878885,
+  "display_name": "1688 Bp Inquiry Evaluate",
+  "fetched_at": 1787786475135,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "cli.py",
+    "references/capabilities/bp_inquiry_evaluate_sales_detail.md",
+    "references/capabilities/bp_inquiry_evaluate_summary.md",
+    "references/capabilities/configure.md",
+    "scripts/_auth.py",
+    "scripts/_const.py",
+    "scripts/_errors.py",
+    "scripts/_http.py",
+    "scripts/_output.py",
+    "scripts/_tracker.py",
+    "scripts/capabilities/bp_inquiry_evaluate_sales_detail/__init__.py",
+    "scripts/capabilities/bp_inquiry_evaluate_sales_detail/cmd.py",
+    "scripts/capabilities/bp_inquiry_evaluate_sales_detail/service.py",
+    "scripts/capabilities/bp_inquiry_evaluate_summary/__init__.py",
+    "scripts/capabilities/bp_inquiry_evaluate_summary/cmd.py",
+    "scripts/capabilities/bp_inquiry_evaluate_summary/service.py",
+    "scripts/capabilities/configure/__init__.py",
+    "scripts/capabilities/configure/cmd.py",
+    "scripts/capabilities/configure/service.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779956577476,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "1688AiInfra",
+    "handle": "1688aiinfra",
+    "user_id": "s177df9srv6z2y0gd1kw90rern83hzxb"
+  },
+  "slug": "1688-bp-inquiry-evaluate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/1688-bp-inquiry-evaluate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=1688-bp-inquiry-evaluate&ownerHandle=1688aiinfra",
+    "page_url": "https://clawhub.ai/1688aiinfra/skills/1688-bp-inquiry-evaluate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 742,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "1688 \u5546\u5bb6\u5ba2\u670d/\u4e1a\u52a1\u5458\u8be2\u76d8\u63a5\u5f85\u8d28\u91cf\u8bc4\u4f30\u4e0e\u6539\u8fdb\u5efa\u8bae\u62a5\u544a\u3002 \u80fd\u529b\u5212\u5206\uff1a - bp_inquiry_evaluate_summary\uff1a\u5e97\u94fa\u4e1a\u52a1\u5458\u6574\u4f53\u8868\u73b0\uff08\u56e2\u961f\u8bc4\u4f30\u6307\u6807 / \u4e1a\u52a1\u5458\u57fa\u7840\u8bc4\u4f30\u5217\u8868\uff09\u3002 - bp_inquiry_evaluate_sales_detail\uff1a\u5355\u4e2a\u4e1a\u52a1\u5458\u8be2\u76d8\u8bca\u65ad\uff08\u4e1a\u52a1\u5458\u7ef4\u5ea6\u7684\u8bc4\u4f30\u6307\u6807\u5217\u8868 /...",
+  "updated_at": 1779190902665,
+  "version": "0.1.0"
+}
