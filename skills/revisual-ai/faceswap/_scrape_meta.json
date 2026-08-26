@@ -1,0 +1,44 @@
+{
+  "changelog": "**Summary:** Major update with streamlined face image upload, simplified API steps, and clarified requirements.\n\n- Face image is now uploaded directly within the job creation API (no separate upload step required).\n- Only the video file must be uploaded via the /upload-video API and PUT request to the presigned URL.\n- API usage formats, authentication methods, and required curl options are clearly documented.\n- Max video duration is now 30 seconds (trim input first if necessary).\n- All flow and temp file requirements are explicitly outlined for reliability and correctness.\n- Old documentation files replaced with a single, concise skill.md.",
+  "created_at": 1773057747984,
+  "display_name": "Faceswap",
+  "fetched_at": 1787782080449,
+  "files": [
+    "README.md",
+    "_meta.json",
+    "skill-card.md",
+    "skill.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780915649857,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "VergingAI",
+    "handle": "revisual-ai",
+    "user_id": "s17fj0fhmhfeafjppea4rnskph8847ss"
+  },
+  "slug": "faceswap",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/faceswap",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=faceswap&ownerHandle=revisual-ai",
+    "page_url": "https://clawhub.ai/revisual-ai/skills/faceswap"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1209,
+    "installs": 31,
+    "stars": 2,
+    "versions": 6
+  },
+  "summary": "AI Face Swap - Swap face in video using verging.ai API. Supports local video files, YouTube/Bilibili URLs, local and remote face images. Auto-download, trimm...",
+  "updated_at": 1780914639821,
+  "version": "1.0.5"
+}
