@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of website deep-crawling skill for LLM-ready corpus creation.\n\n- Supports deep, breadth-first crawling of websites starting from user-provided URLs.\n- Extracts per-page clean content (markdown/text/HTML), structured metadata, and in-scope outbound links.\n- Integrates with browser automation via `browser-act`, following authentication and pre-checks as needed.\n- Utilizes `/llms.txt`, `/sitemap.xml`, and DOM link discovery for comprehensive URL extraction.\n- Removes boilerplate (navigation, headers, cookie banners) and applies custom selectors and URL filters.\n- Outputs structured records per page, suitable for RAG pipelines, knowledge bases, or vector databases.",
+  "created_at": 1782551386287,
+  "display_name": "Webcrawler Deep Crawl",
+  "fetched_at": 1787778894310,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/discover-links.py",
+    "scripts/discover-llms-txt.py",
+    "scripts/discover-sitemap.py",
+    "scripts/extract-page-content.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782566842785,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "webcrawler-deep-crawl",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/webcrawler-deep-crawl",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=webcrawler-deep-crawl&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/webcrawler-deep-crawl"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 245,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Deep-crawl any website from start URLs, return per-page LLM-ready text/markdown/HTML plus metadata (title, description, author, language, canonical URL, OG) and in-scope outbound links. Use when user mentions deep crawl website, recursive crawl, crawl a whole site, scrape entire website, scrape docs",
+  "updated_at": 1782551386287,
+  "version": "1.0.0"
+}
