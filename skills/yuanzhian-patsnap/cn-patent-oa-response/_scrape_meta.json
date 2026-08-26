@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of cn-patent-oa-response, a skill for drafting CNIPA patent office action responses:\n\n- Analyzes CNIPA office actions and supporting documents to generate issue breakdowns, amendment bases, and draft responses.\n- Enforces strict compliance: never fabricates examiner reasoning, citations, claim features, or legal arguments; all substantive statements require source citation.\n- Supports OCR for scanned documents, using a local AI60 cloud service CLI with API key authentication.\n- Details step-by-step workflow: file parsing, issue mapping, claim feature extraction, D1/D2 comparison, search supplement, and structured draft output.\n- Outlines comprehensive tool architecture, rules for tool selection/mutual exclusion, and special workflows for chemical/biological inventions.\n- Emphasizes mandatory review by qualified patent attorneys before CNIPA submission; all outputs are drafts only.",
+  "created_at": 1786608017749,
+  "display_name": "\u4e2d\u56fd\u4e13\u5229\u5ba1\u67e5\u610f\u89c1\u7b54\u590d\uff08CN Patent OA Response\uff09",
+  "fetched_at": 1787772392936,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/source-map.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "yuanzhian-patsnap",
+    "handle": "yuanzhian-patsnap",
+    "user_id": "s17bvft5kywc2rr8r8df1ra0x589g677"
+  },
+  "slug": "cn-patent-oa-response",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cn-patent-oa-response",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cn-patent-oa-response&ownerHandle=yuanzhian-patsnap",
+    "page_url": "https://clawhub.ai/yuanzhian-patsnap/skills/cn-patent-oa-response"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 130,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5206\u6790CNIPA\u5ba1\u67e5\u610f\u89c1\u5e76\u5f62\u6210\u4fee\u6539\u4f9d\u636e\u4e0e\u7b54\u590d\u8349\u6848",
+  "updated_at": 1786608078402,
+  "version": "1.0.0"
+}
