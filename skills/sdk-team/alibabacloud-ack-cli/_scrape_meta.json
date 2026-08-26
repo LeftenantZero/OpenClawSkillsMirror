@@ -1,0 +1,51 @@
+{
+  "changelog": "alibabacloud-ack-cli version 0.0.2 changelog:\n\n- Enforces a new observability rule: every `aliyun cs` business command must include a per-session `--user-agent` flag of the form `AlibabaCloud-Agent-Skills/alibabacloud-ack-cli/{session-id}`.\n- Documents how to generate and use a session-scoped, 32-character lowercase hex `session-id` in all API calls and helper scripts.\n- Clarifies that utility/system/--help commands must not carry the custom user agent.\n- Updates examples and instructions to reflect new observability and session ID requirements.\n- Removes the unused file `skill-card.md`.",
+  "created_at": 1780544885274,
+  "display_name": "alibabacloud-ack-cli",
+  "fetched_at": 1787772172369,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/async-tasks.md",
+    "references/cli-plugin-installation-guide.md",
+    "references/cs-scenarios.md",
+    "references/error-catalogue.md",
+    "references/ram-policies.md",
+    "scripts/check-cs-plugin.sh",
+    "scripts/install-cs-plugin.sh",
+    "scripts/wait-for-task.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786675799263,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-ack-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-ack-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-ack-cli&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-ack-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 611,
+    "installs": 8,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Use when the user operates Alibaba Cloud Container Service for Kubernetes (ACK). Covers cluster lifecycle (create / modify / delete / upgrade), node pools & nodes (create, modify, delete, repair, fix CVE), addons (install / upgrade / uninstall), KubeConfig & RBAC (issue for RAM user, grant / revoke), security & policy (CVE scan/fix, policy governance, KMS, delete protection), logging / audit / alerting, intelligent O&M (check / inspect / diagnosis / auto-repair), async tasks (track / pause / resume / cancel), templates, autoscaling, tags & quotas. Triggers: create / upgrade / delete ACK cluster, migrate to Pro, scale nodepool, fix node CVE, install / remove addon, get / revoke kubeconfig, grant RBAC, enable audit log, run inspection, diagnose cluster, track task_id, debug cs error, Forbidden.RAM, kubectl cannot connect. Terms: ACK, container service, k8s cluster, nodepool, addon, AutoMode, Terway, Flannel, ForRegion, kubeconfig, RBAC, CVE.",
+  "updated_at": 1786674969149,
+  "version": "0.0.2"
+}
