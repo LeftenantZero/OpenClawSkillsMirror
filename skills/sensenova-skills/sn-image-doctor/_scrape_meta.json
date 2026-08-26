@@ -1,0 +1,44 @@
+{
+  "changelog": "sn-image-doctor 2026.8.19\n\n- Introduces a diagnostic skill for the SenseNova-Skills project to check installation, dependencies, and environment configuration.\n- Interactively prompts for and saves missing required environment variables, then reloads the environment.\n- Provides clear output and troubleshooting steps for missing directories, dependencies, or environment variables.\n- Suggests restarting the agent if environment reload fails after configuration.\n- Includes command-line usage examples, output/error formats, integration notes, and troubleshooting guides.",
+  "created_at": 1787107201882,
+  "display_name": "sn-image-doctor",
+  "fetched_at": 1787770702605,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/check_environment.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787108058182,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "SenseNova-Skills",
+    "handle": "sensenova-skills",
+    "user_id": "s17fzc6fnxkbqzh6z8jr5bcvhh8bw2vm"
+  },
+  "slug": "sn-image-doctor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sn-image-doctor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sn-image-doctor&ownerHandle=sensenova-skills",
+    "page_url": "https://clawhub.ai/sensenova-skills/skills/sn-image-doctor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 97,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Environment diagnostic skill for SenseNova-Skills project. Checks that sn-image-base is properly installed and configured, validates dependencies and environment variables. Prompts user to configure missing required variables and saves them to .env file. After configuration, reloads environment and suggests agent restart if needed.",
+  "updated_at": 1787107267854,
+  "version": "2026.8.19"
+}
