@@ -1,0 +1,53 @@
+{
+  "changelog": "Initial release of alibabacloud-sas-log-to-oss skill.\n\n- Automates export of Alibaba Cloud SLS (Log Service) logs to OSS for cold storage/archive and Security Center backup scenarios.\n- Provides installation steps for Aliyun CLI and Python SDK with strict pre-checks for environment and credentials.\n- Enforces security best practices: no exposure or direct handling of access keys in outputs or prompts.\n- Details required environment variables and RAM permissions for reliable operation.\n- Implements standardized, transparent error handling with human-in-the-loop requirements for all unrecoverable errors.\n- Supports all SLS export lifecycle actions: list, view, create, delete, stop, start, manage, and clean up export tasks.",
+  "created_at": 1785980255461,
+  "display_name": "alibabacloud-sas-log-to-oss",
+  "fetched_at": 1787773309959,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/aliyun-help-create-sls-export-oss-task.md",
+    "references/aliyun-help-oss-bucket.md",
+    "references/cli-installation-guide.md",
+    "references/ram-policies.md",
+    "references/reference.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "scripts/requirements.txt",
+    "scripts/sls_oss_export.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785981473181,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-sas-log-to-oss",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-sas-log-to-oss",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-sas-log-to-oss&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-sas-log-to-oss"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 172,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Alicloud Service Scenario-Based Skill. Use for automating SLS (Log Service) log export to OSS (Object Storage) for cold storage archival. Triggers: \"SLS\", \"OSS\", \"log export\", \"log shipping\", \"cold storage\", \"log archive\", \"Security Center log backup\", \"list LogStore\", \"view LogStore\", \"create export task\", \"delete export task\", \"stop export task\", \"start export task\", \"manage export task\", \"cleanup export task\", \"force delete export\", \"\u65e5\u5fd7\u5bfc\u51fa\", \"\u65e5\u5fd7\u6295\u9012\", \"\u51b7\u5b58\u50a8\", \"\u65e5\u5fd7\u5f52\u6863\", \"\u521b\u5efa\u5bfc\u51fa\", \"\u5220\u9664\u5bfc\u51fa\", \"\u505c\u6389\u5bfc\u51fa\", \"\u6682\u505c\u5bfc\u51fa\", \"\u5173\u95ed\u5bfc\u51fa\", \"\u505c\u7528\u5bfc\u51fa\", \"\u7ec8\u6b62\u5bfc\u51fa\", \"\u542f\u52a8\u5bfc\u51fa\", \"\u67e5\u770b\u5bfc\u51fa\", \"\u5217\u51fa\u5bfc\u51fa\", \"\u6e05\u7406\u5bfc\u51fa\".",
+  "updated_at": 1785980730155,
+  "version": "0.0.1"
+}
