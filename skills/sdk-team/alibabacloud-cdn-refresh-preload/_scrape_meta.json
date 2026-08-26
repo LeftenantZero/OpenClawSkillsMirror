@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release providing read-only diagnostics for Alibaba Cloud CDN refresh and preload issues.\n\n- Diagnoses ineffective CDN refresh/preload operations by querying task records and edge cache status.\n- Automatically derives UID and fills incomplete input parameters; declares all auto-completions in report output.\n- Integrates with aliyun CLI for all OpenAPI calls; never submits refresh/preload jobs.\n- Guides users on missing permissions or incomplete diagnostic prerequisites.\n- Follows a clear multi-step diagnostic flow and generates a detailed report for each scenario.",
+  "created_at": 1786934788293,
+  "display_name": "alibabacloud-cdn-refresh-preload",
+  "fetched_at": 1787771670507,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cache-rules.md",
+    "references/diagnosis-tree.md",
+    "references/probe-result-routing.md",
+    "references/ram-policies.md",
+    "references/report-template.md",
+    "scripts/cdn_probe.py",
+    "scripts/cdn_refresh_preload.py",
+    "scripts/requirements.txt",
+    "scripts/sts_token.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786935611884,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-cdn-refresh-preload",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-cdn-refresh-preload",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-cdn-refresh-preload&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-cdn-refresh-preload"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 131,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read-only diagnostics for Alibaba Cloud CDN refresh and preload issues. Use when a URL/file/directory refresh or preload looks ineffective - refresh failed, preload failed, cache not cleared, or the task failed. Verifies task records and edge cache status, and produces a diagnosis report; never submits refresh/preload jobs. Triggers: \"refresh failed\", \"preload failed\", \"cache not cleared\", \"purge not working\", \"prefetch not cached\", \"warm up ineffective\", \"invalidation unsuccessful\", \"pre-warming failure\", \"pre-fetching\".",
+  "updated_at": 1786934885343,
+  "version": "0.0.1"
+}
