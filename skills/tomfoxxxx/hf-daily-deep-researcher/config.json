@@ -1,0 +1,72 @@
+{
+  "user_profile": {
+    "name": "User",
+    "institution": "",
+    "research_focus": [],
+    "current_projects": []
+  },
+  "tracking": {
+    "base_frequency": "weekly",
+    "adaptive": true,
+    "sources": [
+      "arxiv",
+      "hf_papers"
+    ],
+    "max_papers_per_scan": 50,
+    "last_scan_date": null,
+    "next_scan_date": null
+  },
+  "keywords": {
+    "auto_expand": true,
+    "min_weight": 0.1,
+    "max_keywords": 30,
+    "expansion_model": "default"
+  },
+  "analysis": {
+    "default_level": "scan",
+    "auto_deep_read": true,
+    "auto_deep_threshold": 0.7,
+    "max_deep_papers_per_scan": 3
+  },
+  "output": {
+    "local_save_dir": "~/.openclaw/workspace/skills/hf-daily-deep-researcher/reports",
+    "report_naming_pattern": "{source}_{period}_{focus}_Report_{date}.md",
+    "version_management": {
+      "enabled": true,
+      "keep_per_period": 1,
+      "period_format": "%Y%m%d"
+    },
+    "cloud_upload": {
+      "enabled": false,
+      "on_demand": true,
+      "folder_token": ""
+    },
+    "report_format": "markdown",
+    "save_history": true,
+    "history_dir": "~/.openclaw/workspace/skills/hf-daily-deep-researcher/history"
+  },
+  "notifications": {
+    "p0_alert": true,
+    "weekly_summary": true,
+    "trend_change_alert": true,
+    "author_alert": false
+  },
+  "network": {
+    "proxy": {
+      "enabled": false,
+      "http_proxy": "",
+      "https_proxy": ""
+    },
+    "hf_mirror": {
+      "enabled": true,
+      "url": "https://hf-mirror.com"
+    },
+    "github_hf_mirror": {
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/AtharvaDomale/Daily-HuggingFace-AI-Papers/main/data/latest.json",
+      "description": "HuggingFace Daily Papers 的 GitHub 镜像 JSON，稳定可靠，不受 HF 网络封锁影响"
+    }
+  },
+  "version": "5.2.9",
+  "created_date": "2026-06-28T13:43:25.965233"
+}
