@@ -1,0 +1,45 @@
+{
+  "changelog": "Axiom skill v0.1.1 changelog\n\n- Updated polling behavior for `get_purchase_status`: each call now waits up to 30 seconds for a parked/terminal status change and returns accordingly, supporting keep-polling responses if work is still in progress.\n- Clarified tool documentation for polling (`get_purchase_status`), reflecting timing and workflow expectations.\n- Removed the unused `skill-card.md` file.\n- No behavior changes beyond improved documentation for polling.",
+  "created_at": 1775063951775,
+  "display_name": "axiom_wallet",
+  "fetched_at": 1787770101653,
+  "files": [
+    "SKILL.md",
+    "VERSION",
+    "_meta.json",
+    "references/authentication.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787348476781,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Axiom",
+    "handle": "axiom-wallet",
+    "user_id": "s171t8hh337z66h4hwtwkq3qeh8410k4"
+  },
+  "slug": "axiom",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/axiom",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=axiom&ownerHandle=axiom-wallet",
+    "page_url": "https://clawhub.ai/axiom-wallet/skills/axiom"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1155,
+    "installs": 25,
+    "stars": 0,
+    "versions": 18
+  },
+  "summary": "Use Axiom Wallet via MCP to manage payment methods, review account activity, and complete user-requested purchases through Axiom's server-managed browser checkout.",
+  "updated_at": 1787346544056,
+  "version": "0.1.1"
+}
