@@ -1,0 +1,35 @@
+{
+  "changelog": "**Major update: Migrated from a standalone Python script + key-based flow to Codex CLI integration for ChatGPT-based image generation.**\n\n- Now runs through the `codex` CLI using your own ChatGPT Plus/Pro subscription \u2014 no separate OpenAI key or per-image billing required.\n- Added support for both text-to-image and image-to-image (editing, style transfer, multi-reference) via bash (`gen.sh`) and Python helpers.\n- Removed key validation, explicit quota checks, and legacy generate_image.py flow.\n- Skill triggers only when the user explicitly requests GPT Image 2 or ChatGPT Images 2.0 \u2014 never auto-fallback.\n- No longer stores or manages user secrets or quotas; relies fully on the user's existing ChatGPT session and permissions.\n- Broader documentation provided: details requirements, flow, fail modes, and privacy design.",
+  "created_at": 1785124845514,
+  "display_name": "GPT Image 2 \u2014 Image Generation via Your ChatGPT Subscription",
+  "fetched_at": 1787771593013,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract_image.py",
+    "scripts/gen.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mew",
+    "handle": "permew",
+    "user_id": "s17af27kmxn6ac8n1m0wdx0drh8bb4gd"
+  },
+  "slug": "gpt-image-2",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gpt-image-2",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gpt-image-2&ownerHandle=permew",
+    "page_url": "https://clawhub.ai/permew/skills/gpt-image-2"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 67,
+    "installs": 0,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Generate images with GPT Image 2 (ChatGPT Images 2.0) inside Claude Code, using your existing ChatGPT Plus or Pro subscription \u2014 no separate OpenAI access, no per-image billing. Supports text-to-image, image-to-image editing, style transfer, and multi-reference composition via the local Codex CLI. Triggers on \"gpt image 2\", \"gpt-image-2\", \"ChatGPT Images 2.0\", \"image 2\", or any explicit ask to generate or edit an image through the user's ChatGPT plan.",
+  "updated_at": 1785127189388,
+  "version": "1.0.0"
+}
