@@ -1,0 +1,37 @@
+{
+  "changelog": "Polymarket Market Maker v0.9.0\n\n- Initial release of advanced limit order market-making skill for Polymarket CLOB.\n- Posts two-sided GTC (Good \u2018Til Cancelled) limit orders with configurable spread, size, and drift management.\n- Supports automated inventory skew control to pause quoting when risk thresholds are exceeded.\n- Favors maker rebate optimization by posting synthetic sell (NO buy) quotes on asks.\n- Provides dry-run, live trading, status, config, and cancel-all CLI commands.\n- Detailed setup guides and market selection best practices included.\n- Designed for developer use with inventory monitoring and parameter tuning required.",
+  "created_at": 1779607967549,
+  "display_name": "Polymarket Market Maker",
+  "fetched_at": 1787784979617,
+  "files": [
+    "DISCLAIMER.md",
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "market_maker.py",
+    "requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Simmer.Markets",
+    "handle": "simmer",
+    "user_id": "s17eez0vajry6hjb97y9mbtv2s85wekv"
+  },
+  "slug": "polymarket-clob-maker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polymarket-clob-maker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polymarket-clob-maker&ownerHandle=simmer",
+    "page_url": "https://clawhub.ai/simmer/skills/polymarket-clob-maker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 546,
+    "installs": 10,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Posts two-sided GTC limit orders on Polymarket binary markets, managing inventory skew and price drift to earn bid-ask spread and estimate maker rebate volume.",
+  "updated_at": 1779607967549,
+  "version": "0.9.0"
+}
