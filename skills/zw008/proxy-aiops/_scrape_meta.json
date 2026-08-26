@@ -1,0 +1,47 @@
+{
+  "changelog": "- Removed the file skill-card.md.\n- No other changes to documentation or functionality.",
+  "created_at": 1784267843290,
+  "display_name": "proxy-aiops",
+  "fetched_at": 1787772959401,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agent-guardrails.md",
+    "references/capabilities.md",
+    "references/cli-reference.md",
+    "references/setup-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786345777828,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wei zhou",
+    "handle": "zw008",
+    "user_id": "s171xgnmqse0nqvgqvqnaq5f9183kyre"
+  },
+  "slug": "proxy-aiops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/proxy-aiops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=proxy-aiops&ownerHandle=zw008",
+    "page_url": "https://clawhub.ai/zw008/skills/proxy-aiops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 794,
+    "installs": 0,
+    "stars": 0,
+    "versions": 9
+  },
+  "summary": "Use this skill whenever the user needs to operate a Traefik, Caddy or HAProxy reverse proxy / load balancer \u2014 a one-shot overview, routes (routers / caddy routes / frontends) with host/path matching, services and server-level upstream health, middlewares, TLS certificate inventory with an expiry sweep, traffic and 5xx error counters, config snapshot/search, four flagship RCAs (backend health, cert expiry, error rate, route conflicts), and governed writes (caddy config set/delete/load with prior-config capture; haproxy server drain/maint/ready and weight). Always use this skill for \"Traefik\", \"Caddy\", \"HAProxy\", \"reverse proxy\", \"load balancer\", \"upstream down\", \"502/503/504 errors\", \"bad gateway\", \"cert expiring\", \"TLS certificate\", \"route not matching\", \"which route serves this host\", \"drain a server\", \"server weight\", \"redirect loop\" when the context is a Traefik/Caddy/HAProxy edge. Do NOT use when the target is something other than a Traefik/Caddy/HAProxy proxy (a hypervisor, storage appliance, backup product, container-orchestration cluster, multi-vendor router/switch config, or OT/industrial equipment) \u2014 route those to the appropriate other AIops-tools skill. Do NOT use for firewall rules \u2014 use firewall-aiops. Managed cloud load balancers are out of scope. Governed proxy operations with a built-in governance harness (audit, policy, token budget, undo, risk-tiers). Behaviour is validated by a mock-based test suite; see docs/VERIFICATION.md for the live-verification checklist.",
+  "updated_at": 1786344980124,
+  "version": "0.8.0"
+}
