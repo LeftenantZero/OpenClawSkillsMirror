@@ -1,0 +1,57 @@
+{
+  "changelog": "Claims now match behavior exactly: the manual install line runs the bundled installer (no process substitution over curl), the bundled bootstrap forbids remote-script fallbacks via LINGGEN_NO_REMOTE_SCRIPT=1, and SHA-256 claims name ling-mem only \u2014 engine and bun checksum verification stated as roadmap.",
+  "created_at": 1778094809478,
+  "display_name": "linggen",
+  "fetched_at": 1787771533555,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "doc/shared-memory-design.md",
+    "references/condense-flow.md",
+    "references/dream-flow.md",
+    "references/extractor-prompt.md",
+    "references/routing-rules.md",
+    "scripts/bootstrap.sh",
+    "scripts/collect.sh",
+    "scripts/collect_sessions.sh",
+    "scripts/extract_session.sh",
+    "scripts/install-bin.sh",
+    "scripts/install-engine.sh",
+    "scripts/scan.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786984517352,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Linggen",
+    "handle": "linggen",
+    "user_id": "s172zz5p82y8keqvtq5gmsjhm5867sm9"
+  },
+  "slug": "linggen",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/linggen",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=linggen&ownerHandle=linggen",
+    "page_url": "https://clawhub.ai/linggen/skills/linggen"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2105,
+    "installs": 29,
+    "stars": 1,
+    "versions": 25
+  },
+  "summary": "Linggen \u2014 durable cross-host memory plus browser control, over two local MCP servers: `ling-mem` for memory, the Linggen engine for browser, X and agents. Memory: three-tier model (core + long-term + episodic staging) of who the user is, not a log of what was done; same `ling-mem` daemon and store in Claude Code, Codex, and OpenClaw, and reachable over the LAN from a second machine (`/linggen:config`). Browser: agent control of the user's own Chrome with per-site permission prompts, and logged-in X session reads.",
+  "updated_at": 1786983746730,
+  "version": "2.3.2"
+}
