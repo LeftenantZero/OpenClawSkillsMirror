@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release of Alibaba Cloud DDoS Native Protection (Anti-DDoS Origin) intercept query skill.\n\n- Enables query and troubleshooting of network-layer intercept records via aliyun CLI (ddosbgp / antiddos-public).\n- Analyzes intercept modules, including blacklist, port blocking, geo-blocking, source rate limiting, fingerprint filtering, and default policy mechanisms.\n- Maps each intercept record to its originating policy (custom or default, IP-specific or port-specific).\n- Strictly read-only: skill refuses all write/modification operations per explicit refusal template.\n- Covers scenario-based queries, IP block investigation, policy lookup, false positive diagnosis, and protection pack info retrieval.",
+  "created_at": 1779876044153,
+  "display_name": "Alibabacloud Ddos Native Intercept Query",
+  "fetched_at": 1787784444307,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/default-policy-details.md",
+    "references/packet-filter-edge-cases.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967440170,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-ddos-native-intercept-query",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-ddos-native-intercept-query",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-ddos-native-intercept-query&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-ddos-native-intercept-query"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 531,
+    "installs": 10,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Alibaba Cloud scenario-based skill. Query and troubleshoot Alibaba Cloud DDoS Native Protection (Anti-DDoS Origin) network-layer intercept records via aliyun...",
+  "updated_at": 1779876044153,
+  "version": "0.0.1"
+}
