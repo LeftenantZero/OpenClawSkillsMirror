@@ -1,0 +1,42 @@
+{
+  "changelog": "### Added\n- Step 8 gains two one-pass platform readiness checks that run inside the single revise pass:\n  - **Xiaohongshu virality-readiness check** (cover hook, title pull, opening retention, save value, tag fit). It catches structural misses rather than predicting virality, and forbids a re-score / re-optimize loop (which regresses drafts toward generic copy).\n  - **YouTube Shorts click-readiness check** (thumbnail hook, title pull, description hook, Shorts hygiene), scoped only to the click surface this skill produces \u2014 retention/script quality stays out of scope, owned by the video pipeline.\n  Both forbid a re-score / re-optimize loop. Synced the README Phase 4 summary.",
+  "created_at": 1780371989445,
+  "display_name": "Saas Founder Content Writer",
+  "fetched_at": 1787780706250,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/data-card.html",
+    "assets/xiaohongshu-cover.html",
+    "assets/youtube-thumbnail.html",
+    "render-image-setup.md",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "scripts/render-image.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "devasher",
+    "handle": "archlab-space",
+    "user_id": "s176qz6rwtpzj9gk93r7b3jm6984ty2d"
+  },
+  "slug": "saas-founder-content-writer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/saas-founder-content-writer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=saas-founder-content-writer&ownerHandle=archlab-space",
+    "page_url": "https://clawhub.ai/archlab-space/skills/saas-founder-content-writer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 711,
+    "installs": 12,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Use this skill when a creator, SaaS founder, indie hacker, or product builder wants to turn raw material \u2014 product updates, user pain points, technical lesso...",
+  "updated_at": 1781524329469,
+  "version": "0.12.0"
+}
