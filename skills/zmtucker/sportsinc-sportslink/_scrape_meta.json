@@ -1,0 +1,52 @@
+{
+  "changelog": "Version 0.7.1 introduces scanned invoice PDF retrieval, OCR extraction, and new dependencies for full header-only document recovery:\n\n- Added support for header-only (scanned) invoices: identifies these in every retrieval via a new needs_line_recovery field.\n- New commands to fetch scanned invoice PDFs from the SportsWeb portal and reconcile their lines after manual/OCR review.\n- Introduced OCR extraction for scanned PDFs, extracting readable text via rapidocr/tesseract or providing images if OCR is off.\n- Significant increase in environment variables for portal credentials, OCR, and PDF handling.\n- Added several dependencies: pypdf, pillow, playwright, rapidocr-onnxruntime.\n- Updated documentation to detail scanned-document recovery workflow, configuration, and command usage.",
+  "created_at": 1784669192734,
+  "display_name": "sportsinc-sportslink",
+  "fetched_at": 1787773159515,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/pdf_extraction.md",
+    "references/sportslink_api.md",
+    "references/sportsweb_flow_notes.md",
+    "scripts/_selftest.py",
+    "scripts/invoice_lines.py",
+    "scripts/invoice_pdf.py",
+    "scripts/ocr.py",
+    "scripts/sportslink.py",
+    "scripts/sportsweb_browser.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786112451740,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zmtucker",
+    "handle": "zmtucker",
+    "user_id": "s17fq291581evd78xzn1930b0n87bfny"
+  },
+  "slug": "sportsinc-sportslink",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sportsinc-sportslink",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sportsinc-sportslink&ownerHandle=zmtucker",
+    "page_url": "https://clawhub.ai/zmtucker/skills/sportsinc-sportslink"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 821,
+    "installs": 0,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Sports Inc SportsLink API adapter \u2014 pull a dealer's invoices (\"documents\") from the Sports Inc SportsWeb Invoice Center and mark them consumed. Sports Inc is a buying group that does NOT send individual vendor invoices; its SportsLink REST API is where the invoices live. Use when you need to retrieve Sports Inc invoices for payables \u2014 \"get the Sports Inc invoices\", \"pull SportsLink documents\", \"fetch this month's SI invoices to match against POs\". This is the SOURCE adapter only: it authenticates, pages, normalises each SI document into a common invoice shape (po_number, invoice_number/date, lines[], charges, total, is_credit), and marks documents historical once imported. Some documents are scanned rather than EDI, so the API returns their header totals with NO line items (`has_lines: false`) \u2014 every retrieval names those in `needs_line_recovery`, and they are not billable as returned. For each, this skill logs in to the SportsWeb portal, downloads the invoice PDF, OCRs the scanned vendor invoice into text for the agent to read, and then checks the extracted lines against the API's own merchandise total before any of it is billable. It is customer-agnostic (every Sports Inc dealer uses this same API) and touches no ERP \u2014 pair it with a payables workflow (e.g. `drivethru-payable-matching`) to match against POs and create the bill.",
+  "updated_at": 1786111291899,
+  "version": "0.7.1"
+}
