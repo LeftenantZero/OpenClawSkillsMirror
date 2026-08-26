@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release: citation-backed Q&A, Studio generation, quota-aware batch pattern.",
+  "created_at": 1786008634023,
+  "display_name": "NotebookLM",
+  "fetched_at": 1787773254442,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/research-workflows.md",
+    "references/rest-api.md",
+    "scripts/nblm.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786009777205,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "roomi-fields",
+    "handle": "roomi-fields",
+    "user_id": "s174s19wzbmh5sbzdg5qz7f7as8bypwk"
+  },
+  "slug": "notebooklm",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/notebooklm",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=notebooklm&ownerHandle=roomi-fields",
+    "page_url": "https://clawhub.ai/roomi-fields/skills/notebooklm"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 383,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "This skill should be used when the user wants to query their Google NotebookLM notebooks for citation-backed, source-grounded answers, or manage notebooks, sources, and Studio content (audio, report, video, infographic, presentation, data table, flashcards, quiz, mind map). It drives the @roomi-fields/notebooklm-mcp engine \u2014 via the notebooklm MCP tools when they are available in the session, otherwise via its HTTP REST API \u2014 and covers Google login, citation formats, the daily-quota-aware batch/ingestion pattern, and source discovery.",
+  "updated_at": 1786008710601,
+  "version": "1.0.0"
+}
