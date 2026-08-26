@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of the create-technology-intelligence-briefing-ip skill.\n\n- Generates auditable technology-intelligence briefings using patent, scientific literature, and current news evidence.\n- Produces both an accessible HTML report and a reproducible Markdown trace.\n- Enforces rigorous, evidence-based rules for all data points; prohibits invented or unverifiable information.\n- Provides clear workflows for scope parsing, company/entity resolution, technology definition, and evidence handling.\n- Outlines connector usage for patents (search, briefing, mining), literature, and news, with strict evidence citation requirements.\n- Integrates with reference files, scripts, and normalization helpers to ensure process fidelity and reproducibility.",
+  "created_at": 1786608584676,
+  "display_name": "create-technology-intelligence-briefing-ip",
+  "fetched_at": 1787772383861,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/company_aliases.json",
+    "references/keyword_expansion.md",
+    "references/parse_rules.md",
+    "references/trace_template.md",
+    "scripts/build_report_v2.py",
+    "scripts/sogou_search.py",
+    "scripts/v2_css.py",
+    "scripts/v2_data.sample.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786610120151,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yuanzhian-patsnap",
+    "handle": "yuanzhian-patsnap",
+    "user_id": "s17bvft5kywc2rr8r8df1ra0x589g677"
+  },
+  "slug": "create-technology-intelligence-briefing-ip",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/create-technology-intelligence-briefing-ip",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=create-technology-intelligence-briefing-ip&ownerHandle=yuanzhian-patsnap",
+    "page_url": "https://clawhub.ai/yuanzhian-patsnap/skills/create-technology-intelligence-briefing-ip"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 121,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Create an auditable technology-intelligence briefing for named companies and/or a technical topic using patent, scientific-literature, and current-news evidence. Use when the user requests a technology briefing, company technology comparison, patent-and-literature scan, subtechnology map, or evidence-backed technical trend report in HTML.",
+  "updated_at": 1786608688665,
+  "version": "1.0.0"
+}
