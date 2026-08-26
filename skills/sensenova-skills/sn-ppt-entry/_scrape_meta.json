@@ -1,0 +1,41 @@
+{
+  "changelog": "sn-ppt-entry 2026.8.19\n\n- Introduces a clear entry point for PPT slide generation, with support for fast, standard, and creative modes.\n- Collects key parameters (role, audience, scene, page count, language) as appropriate for each mode.\n- For standard mode, allows users to choose image and chart sources, and output format (PPTX or PDF).\n- Properly handles user intent: dispatches to sn-ppt-workbench when only opening or editing an existing deck.\n- Parses and digests uploaded reference documents (pdf/docx/md/txt) for content injection.\n- Writes all config and info files to a fixed, absolute path in $(pwd)/ppt_decks/<topic>_<timestamp>/\n- Integrates a generation progress WebUI; gracefully handles missing dependencies and permissions.",
+  "created_at": 1787107700011,
+  "display_name": "sn-ppt-entry",
+  "fetched_at": 1787770698213,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "prompts/document_digest.md",
+    "prompts/query_normalize.md",
+    "references/ask_user_templates.md",
+    "references/conventions.md",
+    "requirements.txt",
+    "scripts/caption_images.py",
+    "scripts/parse_user_docs.py",
+    "scripts/timing_helper.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SenseNova-Skills",
+    "handle": "sensenova-skills",
+    "user_id": "s17fzc6fnxkbqzh6z8jr5bcvhh8bw2vm"
+  },
+  "slug": "sn-ppt-entry",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sn-ppt-entry",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sn-ppt-entry&ownerHandle=sensenova-skills",
+    "page_url": "https://clawhub.ai/sensenova-skills/skills/sn-ppt-entry"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 100,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Entry point for PPT generation. Asks the user to choose a mode (fast, standard, or creative), then collects role / audience / scene / page_count as needed. For standard mode, also asks how images should be sourced (AI generation, web search, or none), whether charts should use AI-generated infographics or ECharts, and whether the final deliverable should be PPTX or PDF. Parses uploaded pdf/docx/md/txt files, produces task_pack.json + info_pack.json in a new deck_dir, then dispatches to sn-ppt-creative or sn-ppt-standard. Fast mode skips optional questions and gets straight to building. Use when the user asks to make a PPT / presentation / \u6f14\u793a / PPT. If the user asks to open, preview, inspect, or edit previously generated HTML slides in the WebUI/workbench without regenerating, dispatch to sn-ppt-workbench instead of this generation entry.",
+  "updated_at": 1787107919266,
+  "version": "2026.8.19"
+}
