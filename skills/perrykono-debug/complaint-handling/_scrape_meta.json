@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of complaint-handling skill.\n\n- Implements standardized complaint classification and response processes based on \u300aC+\u57fa\u7840\u4fdd\u969c\u670d\u52a1\u624b\u518c\u300b\u7b2c\u5341\u4e09\u7ae0.\n- Covers entire complaint lifecycle: intake, classification, tracking, closure, and customer follow-up.\n- Defines clear handling timelines (30-minute response, 7-day closure, 100% callback).\n- Specifies roles and responsibilities for each department.\n- Supports data recording, analysis, and reporting with defined templates and sample outputs.\n- Integrates with related skills for visit management, customer management, fee collection, and satisfaction survey.",
+  "created_at": 1781015450578,
+  "display_name": "Complaint Handling",
+  "fetched_at": 1787781409628,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "config/wecom_config.json",
+    "main.py",
+    "scripts/__init__.py",
+    "scripts/complaint_handler.py",
+    "scripts/data_manager.py",
+    "scripts/reminder_generator.py",
+    "scripts/wecom_sender.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781017354626,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "perrykono-debug",
+    "handle": "perrykono-debug",
+    "user_id": "s1749nct6fm15k8p49bzsewc7587f5aw"
+  },
+  "slug": "complaint-handling",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/complaint-handling",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=complaint-handling&ownerHandle=perrykono-debug",
+    "page_url": "https://clawhub.ai/perrykono-debug/skills/complaint-handling"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 379,
+    "installs": 5,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u89c4\u8303\u5ba2\u6237\u6295\u8bc9\u53d7\u7406\u3001\u5206\u7c7b\u3001\u8c03\u67e5\u3001\u5904\u7406\u3001\u56de\u8bbf\u548c\u7edf\u8ba1\uff0c\u786e\u4fdd7\u5929\u5185\u53ca\u65f6\u95ed\u73af\uff0c\u63d0\u5347\u5ba2\u6237\u6ee1\u610f\u5ea6\u5e76\u652f\u6301\u591a\u6e20\u9053\u6295\u8bc9\u7ba1\u7406\u3002",
+  "updated_at": 1781015450578,
+  "version": "1.0.0"
+}
