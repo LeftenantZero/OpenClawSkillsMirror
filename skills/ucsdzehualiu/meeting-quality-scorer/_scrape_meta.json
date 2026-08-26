@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of meeting-quality-scorer:\n\n- Objectively scores meeting transcripts across three key dimensions: decision clarity, time efficiency, and participation balance.\n- Generates both a Markdown report and an interactive HTML visualization.\n- Works with any OpenAI-compatible LLM endpoint (Ollama, DeepSeek, OpenAI, etc.).\n- Integrates smoothly with meeting_whisper for a transcribe-then-score workflow.\n- Fully configurable via environment variables or YAML config file.\n- Ensures privacy: no telemetry, transcript sent only to your specified LLM backend.",
+  "created_at": 1782263765705,
+  "display_name": "Meeting Quality Scorer",
+  "fetched_at": 1787779329374,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.yaml",
+    "requirements.txt",
+    "scripts/__init__.py",
+    "scripts/analyzer.py",
+    "scripts/llm_adapter.py",
+    "scripts/parser.py",
+    "scripts/reporter.py",
+    "scripts/score_meeting.py",
+    "scripts/scorer.py",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_llm_adapter.py",
+    "tests/test_scorer.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ucsdzehualiu",
+    "handle": "ucsdzehualiu",
+    "user_id": "s17bk47xgrxy45rkmxpwv5p1z983nsd8"
+  },
+  "slug": "meeting-quality-scorer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/meeting-quality-scorer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=meeting-quality-scorer&ownerHandle=ucsdzehualiu",
+    "page_url": "https://clawhub.ai/ucsdzehualiu/skills/meeting-quality-scorer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 310,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Objectively score meeting quality from a transcript. Three dimensions: decision clarity, time efficiency, participation balance. Outputs a Markdown report an...",
+  "updated_at": 1782263765705,
+  "version": "1.0.0"
+}
