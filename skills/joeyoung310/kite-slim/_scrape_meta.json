@@ -1,0 +1,52 @@
+{
+  "changelog": "kite-slim 1.0.0 Changelog\n\n- Initial release of kite-slim: Dr. Kite\u2019s AI companion for weight loss supervision.\n- Core logic: yesterday\u2019s caloric intake determines today\u2019s step goal; step goal completion is the primary metric.\n- Clear daily workflow: record food \u2192 calculate calorie gap \u2192 set step target \u2192 supervise/track \u2192 end-of-day check-in \u2192 give feedback.\n- Strict data rule: only real records from `data/user_records.json` are valid for tracking; estimates must be labeled and can't be stored or shown as real.\n- Includes dedicated support for menstrual cycle, binge eating emergency modes, and schedule personalization.\n- Added reward system for consecutive target completion and gentle reminders for missed goals.",
+  "created_at": 1780117058437,
+  "display_name": "AI\u966a\u4f34\u51cf\u80a5",
+  "fetched_at": 1787783891698,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/icon.svg",
+    "data/conversation_state.json",
+    "data/daily_records/2026-05-14.json",
+    "data/daily_records/2026-05-15.json",
+    "data/user_profile.json",
+    "references/food_calories.md",
+    "scripts/data_manager.py",
+    "scripts/diet_calculator.py",
+    "scripts/test_suite.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780121031404,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "joeyoung310",
+    "handle": "joeyoung310",
+    "user_id": "s17c41g9t0qtz7e8snakx8tzt1871v03"
+  },
+  "slug": "kite-slim",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kite-slim",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kite-slim&ownerHandle=joeyoung310",
+    "page_url": "https://clawhub.ai/joeyoung310/skills/kite-slim"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 539,
+    "installs": 9,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Kite\u535a\u58eb\u7684AI\u51cf\u80a5\u966a\u4f34\u667a\u80fd\u4f53\uff1b\u6839\u636e\u6628\u65e5\u996e\u98df\u70ed\u91cf\u667a\u80fd\u8ba1\u7b97\u4eca\u65e5\u76ee\u6807\u6b65\u6570\uff0c\u6b65\u6570\u5b8c\u6210\u5ea6\u662f\u6838\u5fc3\u76d1\u7763\u6307\u6807\uff0c\u996e\u98df\u8bb0\u5f55\u670d\u52a1\u4e8e\u6b65\u6570\u76ee\u6807\u7684\u8fbe\u6210",
+  "updated_at": 1780117058437,
+  "version": "1.0.0"
+}
