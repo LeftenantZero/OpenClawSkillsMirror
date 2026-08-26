@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of agent-config-lint.\n\n- Checks agent configuration files for common portability and reliability issues.\n- Detects broken or missing file references, undeclared CLI dependencies, problematic absolute paths, unresolved placeholders, and overly similar skill descriptions.\n- Verifies that frontmatter name matches the skill's directory and that required metadata is present.\n- Provides machine-readable output options and supports suppressing or ignoring findings deliberately.\n- No model or API key required; focuses on static analysis for hygiene and portability.",
+  "created_at": 1785837950615,
+  "display_name": "agent-config-lint",
+  "fetched_at": 1787773516750,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "hyuga",
+    "handle": "hyuga611",
+    "user_id": "s179n8ewmv4hnyh22kfnnd10tx8bvnzy"
+  },
+  "slug": "agent-config-lint",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-config-lint",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-config-lint&ownerHandle=hyuga611",
+    "page_url": "https://clawhub.ai/hyuga611/skills/agent-config-lint"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 225,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Check agent config for things that break silently on someone else's machine. Use before publishing or committing a SKILL.md, AGENTS.md, CLAUDE.md or llms.txt, before publishing a skill to ClawHub, when a skill \"works on my machine\" but not for a teammate, when a skill fails to trigger, or when asked to review agent config. Catches references to files that do not exist, absolute paths under the author's home directory, undeclared CLI dependencies, a frontmatter name that does not match the skill's directory, and two skills whose descriptions are so similar the agent fires the wrong one.",
+  "updated_at": 1785838035838,
+  "version": "1.0.0"
+}
