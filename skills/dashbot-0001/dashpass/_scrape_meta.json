@@ -1,0 +1,56 @@
+{
+  "changelog": "v0.9.0 \u2014 Key Backup & Recovery (P0-3): new standalone dashpass-recover-cli.mjs (backup/recover/verify) turns the CRITICAL_WIF private key into a 24-word BIP-39 mnemonic and back. No evo-sdk dependency by design \u2014 works when the WIF is lost (the main CLI exits without it) or Platform is unreachable. Closes 'lost WIF = total vault loss'.",
+  "created_at": 1775360009383,
+  "display_name": "Dashpass",
+  "fetched_at": 1787780483236,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/dashpass-vault-v2-contract.json",
+    "references/cli-commands.md",
+    "references/faq.md",
+    "references/security-analysis-summary.md",
+    "references/security-model.md",
+    "references/trust-architecture.md",
+    "scripts/dashpass-cli.mjs",
+    "scripts/dashpass-recover-cli.mjs",
+    "scripts/dashpass-recovery.mjs",
+    "scripts/dashpass-recovery.test.mjs",
+    "scripts/mutual-confirm.mjs",
+    "scripts/test-mutual.mjs",
+    "setup.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781700154882,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Evo CC",
+    "handle": "dashbot-0001",
+    "user_id": "s172ej2q1tz7v304djg4smmv358489vy"
+  },
+  "slug": "dashpass",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dashpass",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dashpass&ownerHandle=dashbot-0001",
+    "page_url": "https://clawhub.ai/dashbot-0001/skills/dashpass"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 865,
+    "installs": 20,
+    "stars": 0,
+    "versions": 11
+  },
+  "summary": "Encrypted credential vault on Dash Platform for AI agents. Store and retrieve API keys, tokens, and passwords \u2014 encrypted on-chain, decryptable only by you....",
+  "updated_at": 1781652276831,
+  "version": "0.9.0"
+}
