@@ -1,0 +1,63 @@
+{
+  "changelog": "v2.0.0: 4-layer DeAI gate with weighted fusion composite (word patterns + translation smell + stylometric style features + terminology). Catches AI-paraphrased drafts that dodge word blacklists (EVAL separation 49.2). Zero dependencies, 100% local.",
+  "created_at": 1786798223491,
+  "display_name": "Paper Polisher Pro",
+  "fetched_at": 1787771828447,
+  "files": [
+    "SKILL.md",
+    "SKILL_ZH.md",
+    "_meta.json",
+    "data/terminology.json",
+    "references/ai_patterns_en.json",
+    "references/ai_patterns_zh.json",
+    "references/ai_patterns_zh.json.bak.20260616",
+    "references/article-review-workflow.md",
+    "references/guiwu-pdf-pipeline.md",
+    "references/sentence_patterns_zh.json",
+    "references/synonyms_general.json",
+    "scripts/__pycache__/ai_detector.cpython-312.pyc",
+    "scripts/__pycache__/perplexity.cpython-312.pyc",
+    "scripts/ai_detector.py",
+    "scripts/deai_gate.py",
+    "scripts/ngram_similarity.py",
+    "scripts/perplexity.py",
+    "scripts/quality_report.py",
+    "scripts/style_distance.py",
+    "scripts/term_check.py",
+    "scripts/translation_smell_check.py",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786799085164,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "docsor1212",
+    "handle": "docsor1212",
+    "user_id": "s17dagtwyk21qs6vpz98bzcrh1853t29"
+  },
+  "slug": "paper-polisher",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/paper-polisher",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=paper-polisher&ownerHandle=docsor1212",
+    "page_url": "https://clawhub.ai/docsor1212/skills/paper-polisher"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 25,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "AI Detection \u00b7 4-Layer DeAI Gate \u00b7 De-AI Rewriting \u00b7 Terminology Check \u00b7 Metaphor Audit \u00b7 Quality Report. Bilingual (CN/EN), 100% local, zero upload. 9-layer word engine with 1002 patterns and model-specific fingerprinting for Chinese LLMs, PLUS stylometric style analysis that catches AI-paraphrased drafts which dodge word blacklists (EVAL gap 49.2), translation-smell layer, and a weighted-fusion composite verdict from one command.",
+  "updated_at": 1786798343363,
+  "version": "2.0.0"
+}
