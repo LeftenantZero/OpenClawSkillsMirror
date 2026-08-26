@@ -1,0 +1,58 @@
+{
+  "changelog": "**Initial release: Autonomous IBKR paper trading agent with modular, safe, and research-ready architecture.**\n\n- Executes and manages trades via Interactive Brokers using TWS or IBKR Gateway with robust safety defaults (paper-only mode, kill switch, risk validation).\n- Modular design with isolated engines for strategy, execution, risk management, performance analysis, and memory logging.\n- Supports technical signal generation, multi-factor scoring, order execution (bracket with stop loss), position monitoring, and self-tuning strategies.\n- Advanced v2: Adds news-based decision engine and RSS news intelligence for smarter market response, multi-score trade validation, auto-weighting, and special risk event defenses.\n- Easily extensible: new strategies, order types (OCO/trailing), and news analytics by modular scripts and clear config/memory structure.",
+  "created_at": 1775663253598,
+  "display_name": "IBKR Autonomous Trader",
+  "fetched_at": 1787785945851,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/settings.yaml",
+    "memory/news_log.json",
+    "memory/performance.json",
+    "memory/strategies.json",
+    "memory/trades.json",
+    "references/ibkr_connection.md",
+    "references/order_types.md",
+    "references/self_improvement.md",
+    "scripts/decision_engine.py",
+    "scripts/execution_engine.py",
+    "scripts/news_engine.py",
+    "scripts/performance.py",
+    "scripts/risk_manager.py",
+    "scripts/strategy_engine.py",
+    "scripts/trader.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779975493052,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "player-1101",
+    "handle": "player-1101",
+    "user_id": "s17506vkscdwbhdfpd6nc91cp184e00j"
+  },
+  "slug": "ibkr-auto-trade",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ibkr-auto-trade",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ibkr-auto-trade&ownerHandle=player-1101",
+    "page_url": "https://clawhub.ai/player-1101/skills/ibkr-auto-trade"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 686,
+    "installs": 15,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Autonomous paper trading research agent for Interactive Brokers (IBKR). Use this skill whenever the user wants to connect to IBKR, execute trades, manage pos...",
+  "updated_at": 1779219456572,
+  "version": "1.0.0"
+}
