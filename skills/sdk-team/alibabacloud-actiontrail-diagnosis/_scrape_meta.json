@@ -1,0 +1,41 @@
+{
+  "changelog": "Initial release of alibabacloud-actiontrail-diagnosis: read-only querying and diagnosis of Alibaba Cloud ActionTrail events.\n\n- Query operation audit logs to find who performed which operation, when, from which IP, on which resource, across any region.\n- Always strictly read-only (never writes or modifies any cloud resource).\n- Guides users to provide required info (region, time, product/event) and never runs wide, unfiltered queries without confirmation.\n- Supports output as a detailed 12-column Markdown table or machine-readable JSON.\n- Enforces strict credential safety rules\u2014never outputs secrets.\n- Handles multi-region, paginated queries with built-in error handling and summary rendering.",
+  "created_at": 1787744201904,
+  "display_name": "alibabacloud-actiontrail-diagnosis",
+  "fetched_at": 1787768527366,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api-reference.md",
+    "references/lookup-attribute.md",
+    "references/network-events-catalog.md",
+    "references/ram-policies.md",
+    "references/service-mapping.md",
+    "scripts/_cli.py",
+    "scripts/lookup_events.py",
+    "scripts/requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-actiontrail-diagnosis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-actiontrail-diagnosis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-actiontrail-diagnosis&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-actiontrail-diagnosis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 17,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read-only query and diagnosis of Alibaba Cloud ActionTrail operation audit events: find out who performed which operation, when, from which source IP, and on which resource, across one or many regions, rendered as a 12-column event table or machine-readable JSON. Use when the user asks about the audit log or operation history of an Alibaba Cloud account; wants to know who changed, created, deleted, or operated on a resource; asks when a resource was operated on; needs to trace read/write operation records, console sign-ins, or API calls of a cloud service; or wants to investigate suspicious or failed operations recorded by ActionTrail. Triggers: audit log, operation history, operation records, who changed, who operated, who deleted, when was it operated, action history, read/write operations, ActionTrail, audit event, operation trace.",
+  "updated_at": 1787744316892,
+  "version": "0.0.1"
+}
