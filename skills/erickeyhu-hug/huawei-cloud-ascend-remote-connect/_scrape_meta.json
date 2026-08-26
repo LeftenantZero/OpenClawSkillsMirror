@@ -1,0 +1,52 @@
+{
+  "changelog": "huawei-cloud-ascend-remote-connect 1.0.1\n\n- Provides temporary SSH remote connection for Huawei Cloud Ascend devices, with support for dynamic host/port/user/password (stored in memory only).\n- Enables NPU health monitoring, disk and container management, and log analysis on remote Ascend servers.\n- Sensitive operations (e.g., delete, format, reboot) require explicit user confirmation before execution.\n- Secure credential handling: passwords are not printed, echoed, or requested interactively; only accepted via command line.\n- Offers structured output formats for both command responses and errors for consistent troubleshooting.\n- Supports multiple simultaneous connections and includes session management, command parsing, and security auditing.",
+  "created_at": 1785748856397,
+  "display_name": "huawei-cloud-ascend-remote-connect",
+  "fetched_at": 1787771407482,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/iam-policies.md",
+    "references/troubleshooting.md",
+    "references/verification-method.md",
+    "scripts/__init__.py",
+    "scripts/command_validator.py",
+    "scripts/executor.py",
+    "scripts/main.py",
+    "scripts/session_manager.py",
+    "scripts/ssh_client.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787066108060,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-ascend-remote-connect",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-ascend-remote-connect",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-ascend-remote-connect&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-ascend-remote-connect"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 57,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Provides temporary SSH remote connection for Huawei Cloud Ascend devices with dynamic host/port/user/password input (in-memory only), disk management, NPU monitoring, container management, security auditing and log analysis; sensitive operations require user confirmation before execution Use this skillthis skill to remotely connect to Ascend servers, monitor NPU health, manage disks/LVM, or troubleshoot Ascend devices. Triggerer words: SSH, remote, Ascend, NPU, \u8fdc\u7a0b\u8fde\u63a5, \u6607\u817e, NPU\u76d1\u63a7",
+  "updated_at": 1787065352053,
+  "version": "1.0.1"
+}
