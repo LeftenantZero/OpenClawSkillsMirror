@@ -1,0 +1,44 @@
+{
+  "changelog": "- Replaces Python-based MCP client with a Node.js script (`scripts/mcp-call.js`) for spawning and interacting with MCP servers via JSON-RPC stdio.\n- Now reads MCP server configuration from user\u2019s OpenClaw config (supports both JSON and YAML formats).\n- Removes previous Python library and documentation (`mcp_client.py`, `skill-card.md`); all workflow details moved to updated `SKILL.md`.\n- Details a new workflow for discovering, launching, and communicating with any locally configured MCP server instance.\n- Adds comprehensive documentation on intended use cases, security considerations, helper script commands, and server tool reference.\n- Informs users this skill is for OpenClaw versions lacking native MCP client support and will be obsolete once native support is available.",
+  "created_at": 1784785914089,
+  "display_name": "Mcp Client",
+  "fetched_at": 1787775540998,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/mcp-call.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784823629798,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Deepak Vaid",
+    "handle": "space-cadet",
+    "user_id": "s17dfmfy79et7b7hb5944pm7qd8a031j"
+  },
+  "slug": "mcp-client",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mcp-client",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mcp-client&ownerHandle=space-cadet",
+    "page_url": "https://clawhub.ai/space-cadet/skills/mcp-client"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 39,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Spawn and interact with MCP (Model Context Protocol) servers via JSON-RPC stdio. Use when the user wants to call tools from MCP servers that are configured i...",
+  "updated_at": 1784787579064,
+  "version": "1.0.0"
+}
