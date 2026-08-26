@@ -1,0 +1,36 @@
+{
+  "changelog": "Humanizer skill v1.0.0\n\n- New skill to remove common AI writing patterns (\"AI tells\") from text, making it read more naturally.\n- Enforces strict fact preservation; does not invent specifics or add artificial \"human\" markers.\n- Applies different rewrite standards by genre (engineering/reference vs. essay/opinion).\n- Supports multiple invocation modes: review-only, embedded fixes, file rewrites with summaries, and longform step-by-step.\n- Provides clear guidelines for use cases, workflow, and voice calibration when user samples are supplied.",
+  "created_at": 1786913482937,
+  "display_name": "humanizer",
+  "fetched_at": 1787771234706,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "references/patterns.md",
+    "references/word-tiers.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "humanizer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/humanizer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=humanizer&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/humanizer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 93,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Rewrite text so it does not read like an LLM wrote it. Strips AI-writing patterns (significance inflation, \"delve\"/\"tapestry\" vocabulary, rule-of-three lists, em-dash sales rhythm, sycophancy, hedge filler, tidy cadence) without inventing facts or putting a narrator into engineering prose. Use this skill whenever the user says \"humanize\", \"de-AI\", \"de-slop\", \"un-ChatGPT\", \"review this for AI tells\", or asks to make a draft sound less like ChatGPT \u2014 even if they never say \"humanizer\". Do not use it to derive a voice profile (that is creator-voice-profile) and do not apply it to your own output unless the user asked for a humanize pass.",
+  "updated_at": 1786913538042,
+  "version": "1.0.0"
+}
