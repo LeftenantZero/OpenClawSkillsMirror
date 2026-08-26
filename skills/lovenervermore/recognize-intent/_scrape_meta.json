@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of recognize_intent skill.\n\n- Identifies the intent category and extracts core semantic entities (indicator & dimension) from natural language queries.\n- Takes rewritten queries as input and outputs intent, metric, and info for downstream processing.\n- Supports intent routing: handle_data_query, handle_metadata_query, attribution_analysis, other.\n- Integrates with multiple backend services (vector search, MySQL, dictionary/logic enhancer) with automatic degradation on connection failure.\n- Triggers clarification workflow if confidence is below threshold.\n- Provides standalone execution guidance.",
+  "created_at": 1773710307109,
+  "display_name": "Recognize Intent",
+  "fetched_at": 1787788353555,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "index.js",
+    "recognize_intent.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089922852,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "LoveNerverMore",
+    "handle": "lovenervermore",
+    "user_id": "s179eehz3gk12qcjky3an7t6sx83pxjj"
+  },
+  "slug": "recognize-intent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/recognize-intent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=recognize-intent&ownerHandle=lovenervermore",
+    "page_url": "https://clawhub.ai/lovenervermore/skills/recognize-intent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 838,
+    "installs": 23,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u8bc6\u522b\u81ea\u7136\u8bed\u8a00\u7684\u610f\u56fe\u7c7b\u522b\u5e76\u89e3\u6790\u5176\u4e2d\u7684\u8bed\u4e49\uff0c\u5305\u62ec\u6307\u6807\u548c\u7ef4\u5ea6\uff0c\u4f8b\u5982\uff1a\"\u4eca\u5929\u7684\u7f24\u679c\u5e97\u7684\u4e1a\u7ee9\u5982\u4f55 \" ,\u5c06\u63d0\u53d6\u6307\u6807\uff1a\u8ba2\u5355\u6210\u4ea4\u989d\uff08\u4e1a\u7ee9\uff09 \uff0c\u7ef4\u5ea6\uff1a\u5e74\u6708\u65e5-\u4eca\u5929\uff082026-03-10\uff09 \uff0c\u5e97\u94fa-\u7f24\u679c\u5e97 ...",
+  "updated_at": 1779078397184,
+  "version": "1.0.0"
+}
