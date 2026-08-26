@@ -1,0 +1,53 @@
+{
+  "changelog": "Huawei Cloud DDS List Skill 1.0.0 \u2013 Initial Release\n\n- Provides a read-only skill to list Huawei Cloud DDS (Document Database Service) instances by name.\n- Supports filtering by instance name, id, mode, datastore type, VPC, subnet, with pagination options.\n- By default, outputs only the instance names; additional flags enable more detailed output (id, status, mode, engine, version, created time).\n- Uses KooCLI (`hcloud DDS ListInstances`) as primary method, with a `huaweicloudsdkdds` Python SDK fallback.\n- Explicitly does not create/modify/delete/stop/restart any instance\u2014safe for inventory and inspection use only.\n- Reports execution quality to the operations console without impacting responses.",
+  "created_at": 1786876771183,
+  "display_name": "huawei-cloud-dds-list",
+  "fetched_at": 1787771763797,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/list_dds_instances.py",
+    "scripts/skill_quality_sdk.py",
+    "scripts/test-cli-commands.sh",
+    "scripts/validate-skill.sh",
+    "skill-card.md",
+    "templates/test-vars.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786877556085,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-dds-list",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-dds-list",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-dds-list&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-dds-list"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 123,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query the list of Huawei Cloud DDS (Document Database Service, \u6587\u6863\u6570\u636e\u5e93\u670d\u52a1) instances under the current tenant / project and return the DDS instance NAMES. By default the skill prints only the instance names (one per line); with extra flags it also returns id, status, mode, datastore engine, version and created time. Supports filtering by instance name, id, mode (Sharding/ReplicaSet/Single), datastore type (DDS-Community/DDS-Enhanced), VPC and subnet, plus pagination via limit/offset. Uses the KooCLI command `hcloud DDS ListInstances --cli-region={region}` (primary) or the huaweicloudsdkdds Python SDK (fallback). Read-only \u2014 never creates, modifies, deletes, restarts or stops any DDS instance. Use this skill whenever the user wants to list/inspect the DDS instances of the tenant or query the DDS instance name list, e.g. for database inventory, daily inspection, or cost review. Triggers include: \"list DDS\", \"DDS list\", \"query DDS names\", \"DDS\u5b9e\u4f8b\u5217\u8868\", \"\u67e5\u8be2DDS\", \"DDS\u5b9e\u4f8b\u540d\u79f0\", \"dds list\", \"how many DDS\", \"DDS inventory\", \"list document database instances\", \"\u6587\u6863\u6570\u636e\u5e93\u5b9e\u4f8b\", \"MongoDB\u5b9e\u4f8b\u5217\u8868\".",
+  "updated_at": 1786876872250,
+  "version": "1.0.0"
+}
