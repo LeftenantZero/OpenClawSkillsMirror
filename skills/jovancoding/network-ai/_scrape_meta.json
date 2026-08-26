@@ -1,0 +1,42 @@
+{
+  "changelog": "v5.15.1 security patch: fix GHSA-743h-jr5x-mpcr (ClaudeHookBridge deny-pattern bypass via truncation before the security decision) and GHSA-9v4f-j8cv-fhxw (SandboxPolicy blocklist/approval-gate bypass via quote/whitespace matcher mismatch); 3638 tests across 41 suites",
+  "created_at": 1771249598498,
+  "display_name": "Network-AI",
+  "fetched_at": 1787774450823,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/blackboard.py",
+    "scripts/check_permission.py",
+    "scripts/context_manager.py",
+    "scripts/revoke_token.py",
+    "scripts/swarm_guard.py",
+    "scripts/validate_token.py",
+    "skill-card.md",
+    "skill.json",
+    "swarm-blackboard.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jovan Marinovic",
+    "handle": "jovancoding",
+    "user_id": "s171ekwxgx1x85ga807c8zc0ws840q1k"
+  },
+  "slug": "network-ai",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/network-ai",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=network-ai&ownerHandle=jovancoding",
+    "page_url": "https://clawhub.ai/jovancoding/skills/network-ai"
+  },
+  "stats": {
+    "comments": 2,
+    "downloads": 6487,
+    "installs": 164,
+    "stars": 6,
+    "versions": 159
+  },
+  "summary": "Local Python orchestration skill: multi-agent workflows via shared blackboard file, permission gating, token budget scripts, and persistent project context. The bundled Python scripts make no network calls and have zero third-party dependencies. The parent repository also contains a TypeScript engine (not included in this skill bundle).",
+  "updated_at": 1785265592181,
+  "version": "5.15.1"
+}
