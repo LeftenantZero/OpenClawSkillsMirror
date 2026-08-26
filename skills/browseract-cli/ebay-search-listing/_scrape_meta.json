@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of ebay-search-listing:\n\n- Extracts product listings from any eBay search or category page URL across all regional eBay domains.\n- Provides per-item details including item number, URL, title, price, subtitle, caption, shipping, seller info, ratings, and image.\n- Returns pagination state: current page, next page URL, has next page, and approximate total results.\n- Handles both search result and category URLs, supporting paginated bulk extraction.\n- Outputs data in the user's language and requires no login for public pages.\n- Designed for quick extraction, price comparison, competitive monitoring, and category catalog audits.",
+  "created_at": 1783526143459,
+  "display_name": "Ebay Search Listing",
+  "fetched_at": 1787777506159,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-listing.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783644707769,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "ebay-search-listing",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ebay-search-listing",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ebay-search-listing&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/ebay-search-listing"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 286,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Extracts product listings from any eBay search or category page URL, returning per-item cards (itemNumber, url, title, subtitle, caption, price, priceWithCurrency, currency, wasPrice, bids, shipping, seller, sellerFeedbackCount, sellerPositiveRating, reviewsCount, starRating, image) plus pagination",
+  "updated_at": 1783526143459,
+  "version": "1.0.0"
+}
