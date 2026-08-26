@@ -1,0 +1,33 @@
+{
+  "changelog": "- Operates PractiTest through an OOMOL-connected account using the `oo` CLI, with credentials injected server-side.\n- Supports project and test reads via `list_projects`, `get_project`, `list_tests`, and `get_test`.\n- Supports test lifecycle changes with `create_test`, `update_test`, and `delete_test`.\n- Requires live schema inspection before each action so payloads match the connector contract.\n- Defines clear safety rules for read, write, and destructive actions, including confirmation before state-changing operations.\n\nSource: `oomol-lab/skills@3e4b3ff`",
+  "created_at": 1786945670271,
+  "display_name": "PractiTest",
+  "fetched_at": 1787769004118,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-practitest",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-practitest",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-practitest&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-practitest"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 142,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "PractiTest (practitest.com). Use this skill for ANY PractiTest request \u2014 reading, creating, updating, and deleting data. Whenever a task involves PractiTest, use this skill instead of calling the API directly.",
+  "updated_at": 1787633627555,
+  "version": "1.0.1"
+}
