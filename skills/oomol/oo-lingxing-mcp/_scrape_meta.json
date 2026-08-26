@@ -1,0 +1,43 @@
+{
+  "changelog": "- Provides a dedicated Codex skill for working with Lingxing MCP through an OOMOL-connected account.\n- Uses the `oo` CLI to inspect live connector schemas before building requests, so calls match the current contract.\n- Supports running Lingxing MCP actions directly, with responses returned in structured JSON.\n- Includes two core capabilities: listing available ERP MCP tools and calling a selected tool with validated JSON arguments.\n- Treats read operations as safe by default and flags write or destructive actions for explicit confirmation before execution.\n\nSource: `oomol-lab/skills@46cfb3e`",
+  "created_at": 1786435590106,
+  "display_name": "Lingxing MCP",
+  "fetched_at": 1787772740108,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786436590197,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-lingxing-mcp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-lingxing-mcp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-lingxing-mcp&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-lingxing-mcp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 131,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Lingxing MCP (lingxing.com). Use this skill for ANY Lingxing MCP request \u2014 searching and reading data. Whenever a task involves Lingxing MCP, use this skill instead of calling the API directly.",
+  "updated_at": 1786435722313,
+  "version": "1.0.0"
+}
