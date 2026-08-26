@@ -1,0 +1,51 @@
+{
+  "changelog": "Add weekly cron job for automatic skill optimization. Cron script analyzes all workspace skills, identifies low-scoring ones, generates weekly reports.",
+  "created_at": 1786810423013,
+  "display_name": "skill-optimizer",
+  "fetched_at": 1787771816659,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/optimization-example.md",
+    "references/meta-skill-patterns.md",
+    "references/skillopt-paper.md",
+    "scripts/analyze-skill.sh",
+    "scripts/cron/skill-optimizer-cron.sh",
+    "skill-card.md",
+    "templates/optimized-skill-template.md",
+    "templates/skill-quality-rubric.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786813872471,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Akmal Dirgantara",
+    "handle": "akdira",
+    "user_id": "s171w2df9actg46d1j6bxdcp5188vyk0"
+  },
+  "slug": "skill-optimizer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-optimizer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-optimizer&ownerHandle=akdira",
+    "page_url": "https://clawhub.ai/akdira/skills/skill-optimizer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 30,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Systematically analyze, score, and optimize OpenClaw skill documents (SKILL.md files). Adapted from Microsoft SkillOpt research \u2014 treats skill docs as trainable state with validation-gated edits. Use when improving skill quality, auditing skills, onboarding new skills, or batch-optimizing workspace skills.",
+  "updated_at": 1786813188207,
+  "version": "1.1.0"
+}
