@@ -1,0 +1,53 @@
+{
+  "changelog": "Brave Browser Agent 1.0.0 \u2014 Initial Release\n\n- Attach to user-controlled Brave Browser (port 9222) for automation; does not manage browser lifecycle.\n- Supports content extraction, robust clicking (multi-framework), script execution, tab listing, and screenshots.\n- Adds anti-detection strategies: CDP-native user events, multi-strategy SPA click handling (React/Vue/Angular).\n- Includes health check/diagnostic scripts and advanced commands for editor sync, page analysis, and element interaction.\n- Comprehensive documentation with strict rules forbidding browser start/restart.\n- Provides CLI quick-starts, troubleshooting, and framework-aware automation guidance.",
+  "created_at": 1780673747817,
+  "display_name": "Brave Browser Agent",
+  "fetched_at": 1787782786658,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/README.md",
+    "references/PATTERNS.md",
+    "references/framework-publish.md",
+    "references/site-patterns.md",
+    "scripts/cdp_exec.py",
+    "scripts/check_brave.py",
+    "scripts/check_cdp.py",
+    "scripts/framework_click.py",
+    "scripts/page_state.py",
+    "scripts/smart_interact.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780677049860,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mayf3",
+    "handle": "mayf3",
+    "user_id": "s17fv8qs1xk21m0src5wx6qhdh86tz36"
+  },
+  "slug": "brave-browser-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/brave-browser-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=brave-browser-agent&ownerHandle=mayf3",
+    "page_url": "https://clawhub.ai/mayf3/skills/brave-browser-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 402,
+    "installs": 6,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Control Brave Browser via CDP for web browsing, content extraction, screenshots, and JavaScript execution. Use when needing browser automation, web scraping,...",
+  "updated_at": 1780673747817,
+  "version": "1.0.0"
+}
