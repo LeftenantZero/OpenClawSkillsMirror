@@ -1,0 +1,82 @@
+{
+  "changelog": "- Initial public release of the spex skill for spec-driven development workflows.\n- Manages the full SDLC through manual command invocation via /spex <command>.\n- Supports commands: create (new), modify, apply (run, do, go), apply-one-step (step), merge (submit), archive, and init.\n- Features command routing to specific SOP files and intent inference for free-form input.\n- Does not act on user prompts directly\u2014always routes via the correct command procedure.",
+  "created_at": 1786664346042,
+  "display_name": "spex",
+  "fetched_at": 1787772176828,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "commands/apply-one-step.md",
+    "commands/apply.md",
+    "commands/archive.md",
+    "commands/create.md",
+    "commands/init.md",
+    "commands/merge.md",
+    "commands/modify.md",
+    "pyproject.toml",
+    "references/SKILLS-SPEC.md",
+    "references/apply-review-loop.md",
+    "references/compact-sop-style.md",
+    "scripts/__init__.py",
+    "scripts/apply_helper.py",
+    "scripts/archive.py",
+    "scripts/branch.py",
+    "scripts/cli.py",
+    "scripts/common.py",
+    "scripts/config.py",
+    "scripts/create_helper.py",
+    "scripts/debug_log.py",
+    "scripts/hooks.py",
+    "scripts/init.py",
+    "scripts/list.py",
+    "scripts/merge.py",
+    "scripts/meta_helper.py",
+    "scripts/open.py",
+    "scripts/prompt.py",
+    "scripts/review_helper.py",
+    "scripts/show.py",
+    "scripts/spex",
+    "scripts/todo_helper.py",
+    "scripts/version.py",
+    "skill-card.md",
+    "templates/apply-commit.md",
+    "templates/apply-fix.md",
+    "templates/apply-one-task.md",
+    "templates/apply-review.md",
+    "templates/modify-spec.md",
+    "templates/modify-todo.md",
+    "templates/spec-template.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786675858203,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jiang Xin",
+    "handle": "jiangxin",
+    "user_id": "s17b9ma4knyq98wa22f9n3e6398ccsbs"
+  },
+  "slug": "spex",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/spex",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=spex&ownerHandle=jiangxin",
+    "page_url": "https://clawhub.ai/jiangxin/skills/spex"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 130,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Spec-Driven Development (Spex) skill that manages the full SDLC \u2014 from requirement analysis and design to incremental implementation and submission. Invoked manually via /spex <command>. Supports commands: create (new), modify, apply (run, do, go), apply-one-step (step), merge (submit), archive, init.",
+  "updated_at": 1786674796193,
+  "version": "0.1.0"
+}
