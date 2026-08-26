@@ -1,0 +1,42 @@
+{
+  "changelog": "Initial release of the Alibaba Cloud DDoS Pro (ddoscoo) domain-level configuration backup and migration skill.\n\n- Enables full export and import of Layer 7 (website) DDoS Pro domain configurations in YAML v2.0 format.\n- Supports disaster recovery backup, configuration audit, rollback, and batch import of domain settings across 20 configuration areas.\n- Strictly limited to domain-level (website) business; Layer 4 TCP/UDP port forwarding is not supported (see sister skill).\n- Requires explicit user confirmation on all parameters including region, domain scope, and file paths, with warnings on region isolation.\n- Enforces critical operational rules: session-based user-agent tagging, credential best practices, and RAM permission checks.\n- Compatible with aliyun CLI >= 3.3.1.",
+  "created_at": 1782981972684,
+  "display_name": "Alibabacloud Ddoscoo Domain Configuration Backup",
+  "fetched_at": 1787778337130,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/export-workflow.md",
+    "references/import-workflow.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "references/yaml-example.yaml",
+    "references/yaml-schema.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-ddoscoo-domain-configuration-backup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-ddoscoo-domain-configuration-backup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-ddoscoo-domain-configuration-backup&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-ddoscoo-domain-configuration-backup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 276,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Alibaba Cloud DDoS Pro (ddoscoo) domain-level (Layer 7 website) configuration full export and import. Use for disaster recovery backup, configuration audit,...",
+  "updated_at": 1782981972684,
+  "version": "0.0.1"
+}
