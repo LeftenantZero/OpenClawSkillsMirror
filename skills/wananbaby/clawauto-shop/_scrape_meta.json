@@ -1,0 +1,43 @@
+{
+  "changelog": "Version 2.0.2\n\n- No file changes detected for this release.\n- No updates or modifications to code or documentation compared to the previous version.\n- All functionality remains as in the prior release.\nThis skill automates KFC/McD order-link flows via a user-configured backend.\nIt sends phone + API key + order parameters to the configured backend URL.\nBy default, browser flow stops before final confirmation. Final submit is opt-in.\nFor testing, use a controlled backend/account and keep --no-final-submit behavior.\n- Renamed skill to clawauto-shop.\n- Declared required env vars and primary credential in registry metadata.\n- Clarified external backend usage and order-risk behavior.\n- Added explicit safety guidance (default no-final-submit, production caution).",
+  "created_at": 1774906639368,
+  "display_name": "clawauto-shop",
+  "fetched_at": 1787786878165,
+  "files": [
+    ".env",
+    "OPENCLAW_INSTALL_CHECKLIST.md",
+    "SKILL.md",
+    "_meta.json",
+    "kfc_custom_product_flow.py",
+    "kfc_place_order_test_old.py",
+    "kfc_vip_choose_spec_flow.py",
+    "mcd_custom_product_flow.py",
+    "mcd_place_order_test.py",
+    "openclaw_skill.py",
+    "requirements.txt",
+    "skill-card.md",
+    "test_store_api.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "wananbaby",
+    "handle": "wananbaby",
+    "user_id": "s172nf2ceetbrjd0cbc584shg183xx2g"
+  },
+  "slug": "clawauto-shop",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawauto-shop",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawauto-shop&ownerHandle=wananbaby",
+    "page_url": "https://clawhub.ai/wananbaby/skills/clawauto-shop"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 662,
+    "installs": 16,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Automates KFC and McDonald's order flows by converting backend order links into browser actions to confirm and retrieve pickup codes and order info.",
+  "updated_at": 1779079200732,
+  "version": "2.0.2"
+}
