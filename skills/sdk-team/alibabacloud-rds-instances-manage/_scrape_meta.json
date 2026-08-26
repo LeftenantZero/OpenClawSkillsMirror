@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of Alibaba Cloud RDS Instances Manage skill.\n\n- Enables querying and management of RDS instances, zones, classes, performance, logs, parameters, accounts, networks, whitelists, bills, and SQL statistics in the user\u2019s Alibaba Cloud account.\n- Supports explicit instance lifecycle operations: creation, parameter or spec changes, description, account creation, whitelist management, public endpoint allocation, whitelist template attachment, tagging, restart, and deletion.\n- Requires readiness checks for CLI (\u2265 v3.3.3), plugins, credentials, and parameter correctness before any operation.\n- Integrates CLI-based regional APIs with structured session observability and User-Agent tagging.\n- Clearly separates read-only and mutating workflows; enforces strict confirmation and validation before any changes.",
+  "created_at": 1785145105214,
+  "display_name": "alibabacloud-rds-instances-manage",
+  "fetched_at": 1787774719416,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/ram-policies.md",
+    "references/related-apis.md",
+    "references/verification-method.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-rds-instances-manage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-rds-instances-manage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-rds-instances-manage&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-rds-instances-manage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 236,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query and manage Alibaba Cloud RDS instances in the user's own account through Alibaba Cloud CLI and official RDS, VPC, BssOpenApi, and DAS OpenAPIs. Use for listing or inspecting RDS instances, zones, classes, performance, logs, parameters, databases, accounts, networks, whitelists, bills, and SQL insight statistics, or for explicitly requested instance creation, parameter/specification/description changes, account creation, whitelist changes, public endpoint allocation, whitelist-template attachment, tagging, restart, and instance deletion. Do not use this skill to diagnose incidents, troubleshoot performance anomalies, or perform root-cause analysis; it only queries current RDS instance state and executes the explicitly supported instance-management operations.",
+  "updated_at": 1785150386790,
+  "version": "0.0.1"
+}
