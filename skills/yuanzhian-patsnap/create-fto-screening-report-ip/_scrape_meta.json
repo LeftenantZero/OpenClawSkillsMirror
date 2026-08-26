@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial international release for FTO-screening report skill.\n\n- Converts a supplied risk-point Word document and user-approved PatSnap search expressions into a structured FTO screening report.\n- Supports feature extraction, patent retrieval, claim-data collection, structured claim-limitation comparison, risk triage, and HTML/DOCX reporting.\n- Handles both PatSnap REST API and MCP connector workflows, with strict provenance and data normalization.\n- Does not generate legal opinions or guarantees; clearly defines analytical boundaries and required source materials.\n- Preserves user query integrity\u2014no silent changes or assumptions to search expressions.",
+  "created_at": 1786608532872,
+  "display_name": "create-fto-screening-report-ip",
+  "fetched_at": 1787772383628,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/FTO\u62a5\u544a\u6a21\u677f.docx",
+    "references/api_call_policy.md",
+    "references/api_reference.md",
+    "references/claim_chart_schema.md",
+    "references/config.json",
+    "references/report_requirements.md",
+    "references/zhihuiya_config.json",
+    "scripts/render_report.py",
+    "scripts/run_generic_fto_report.py",
+    "scripts/zhihuiya_api.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "yuanzhian-patsnap",
+    "handle": "yuanzhian-patsnap",
+    "user_id": "s17bvft5kywc2rr8r8df1ra0x589g677"
+  },
+  "slug": "create-fto-screening-report-ip",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/create-fto-screening-report-ip",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=create-fto-screening-report-ip&ownerHandle=yuanzhian-patsnap",
+    "page_url": "https://clawhub.ai/yuanzhian-patsnap/skills/create-fto-screening-report-ip"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 121,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Create a traceable, screening-level freedom-to-operate report from a supplied risk-point Word document and user-approved PatSnap search expressions. Use when a patent analyst, IP team, product counsel, or R&D owner needs structured feature extraction, PatSnap patent retrieval, claim-data collection, claim-limitation comparison, candidate risk triage, HTML/DOCX reporting, and evidence JSON. Supports a bundled global PatSnap REST workflow or normalized evidence from verified PatSnap MCP connectors. The output is an FTO screening, not a legal clearance opinion.",
+  "updated_at": 1786608657838,
+  "version": "1.0.0"
+}
