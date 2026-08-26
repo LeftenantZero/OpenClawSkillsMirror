@@ -1,0 +1,33 @@
+{
+  "changelog": "- Initial release of the Video Inpainting skill for RunComfy via CLI.\n- Supports region-based edits across video frames: object removal, watermark cleanup, region replacement.\n- Automatically routes requests to the most suitable model: Wan 2-7 Edit-Video (default), Lucy Edit Restyle, or Seedream 4-0 Edit-Sequential.\n- Responds to various trigger phrases for video region editing tasks.\n- Provides clear guidance on CLI usage, prompting, and selection of advanced workflows for mask-driven or pixel-precise inpainting.\n- Includes troubleshooting tips and exit codes for common CLI responses.",
+  "created_at": 1785124945760,
+  "display_name": "Video Inpainting \u2014 Pro Pack on RunComfy",
+  "fetched_at": 1787774782461,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mew",
+    "handle": "permew",
+    "user_id": "s17af27kmxn6ac8n1m0wdx0drh8bb4gd"
+  },
+  "slug": "video-inpainting",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/video-inpainting",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=video-inpainting&ownerHandle=permew",
+    "page_url": "https://clawhub.ai/permew/skills/video-inpainting"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 262,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Region edits across video frames on RunComfy via the `runcomfy` CLI \u2014 remove an object that appears across many frames, clean up wires or watermarks, replace a region with matching motion. Routes across Wan 2-7 edit-video (default, prompt-driven region edits with spatial language), Lucy Edit Restyle (identity-stable region-aware restyle), and Seedream 4-0 edit-sequential (when treating the clip as a frame stack). Picks the right route based on whether the change is prose-driven, identity-locked, or needs frame-by-frame still inpaint chained into a video. Triggers on \"video inpaint\", \"video inpainting\", \"remove from video\", \"mask region in video\", \"clean up video\", \"remove object from clip\", \"video patch\", \"frame-by-frame edit\", \"remove watermark from video\", \"remove passing person\", or any explicit ask to edit a region across video frames.",
+  "updated_at": 1785127289443,
+  "version": "1.0.0"
+}
