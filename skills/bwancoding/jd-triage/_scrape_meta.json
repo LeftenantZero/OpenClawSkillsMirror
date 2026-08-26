@@ -1,0 +1,43 @@
+{
+  "changelog": "Fixes a language leak: a non-English posting in a non-English conversation came back with its verdict and headings in English. The screen now takes the reader's language including the tier; the English token stays in jd_history.md where history and compare parse it. No schema or scoring change.",
+  "created_at": 1779346884674,
+  "display_name": "JD - Triage",
+  "fetched_at": 1787774797768,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/criteria-template.yaml",
+    "assets/presets/knowledge-work.yaml",
+    "assets/presets/people-lead.yaml",
+    "assets/presets/tech-ic.yaml",
+    "references/analysis-commands.md",
+    "references/bootstrap.md",
+    "references/history.md",
+    "references/intensity-signals.md",
+    "references/scoring.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "bwancoding",
+    "handle": "bwancoding",
+    "user_id": "s17fej7x2x0thkvnqzpvzkakh1872tj1"
+  },
+  "slug": "jd-triage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/jd-triage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=jd-triage&ownerHandle=bwancoding",
+    "page_url": "https://clawhub.ai/bwancoding/skills/jd-triage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 827,
+    "installs": 11,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Scores a job posting on two independent dimensions \u2014 how much you want it (five weighted axes against your own criteria) and how likely you are to get it (your skills vs its stated requirements) \u2014 then returns one action. Any market, language, or profession.",
+  "updated_at": 1785123089291,
+  "version": "1.1.1"
+}
