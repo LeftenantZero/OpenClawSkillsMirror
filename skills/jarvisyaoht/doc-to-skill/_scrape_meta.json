@@ -1,0 +1,46 @@
+{
+  "changelog": "doc-to-skill 1.0.0\n\n- Initial release.\n- Converts TXT, Markdown, DOCX, and PDF documents into a portable, indexed skill zip, backed by normalized Markdown, extracted images, and a grounded JSONL knowledge index.\n- Provides a step-by-step workflow for document preparation, batch indexing, index merging, and skill packaging.\n- Supports image extraction and proper handling of image-only content.\n- Ensures all outputs are stored within the system-defined task directory and enforces strict boundaries on file and command usage.\n- The generated skill is self-contained with no dependency on the host application.",
+  "created_at": 1785114824374,
+  "display_name": "DocToSkill",
+  "fetched_at": 1787774803696,
+  "files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/indexing.md",
+    "references/metadata.md",
+    "scripts/batch_index.py",
+    "scripts/build_skill.py",
+    "scripts/convert_documents.py",
+    "scripts/merge_index.py",
+    "scripts/prepare_workflow.py",
+    "scripts/search_index.py",
+    "scripts/split_markdown.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jarvisyaoht",
+    "handle": "jarvisyaoht",
+    "user_id": "s171bxf94jec4b51ygfjnshqsh83g1md"
+  },
+  "slug": "doc-to-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/doc-to-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=doc-to-skill&ownerHandle=jarvisyaoht",
+    "page_url": "https://clawhub.ai/jarvisyaoht/skills/doc-to-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 226,
+    "installs": 2,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06\u4f01\u4e1a\u6c89\u6dc0\u7684\u5404\u7c7b\u6587\u6863\uff08\u652f\u6301 DOCX\u3001PDF\u3001MD\u3001TXT \u7b49\u683c\u5f0f\uff09\u4e00\u952e\u8f6c\u5316\u4e3a\u53ef\u590d\u7528\u7684\u6280\u80fd\u5305\uff08.zip\uff09\u3002\u6280\u80fd\u5305\u5185\u5305\u542b\u7edf\u4e00\u89c4\u8303\u7684 Markdown \u6b63\u6587\u3001\u63d0\u53d6\u7684\u56fe\u7247\u8d44\u6e90\uff0c\u4ee5\u53ca\u57fa\u4e8e JSONL \u683c\u5f0f\u7684\u7ed3\u6784\u5316\u77e5\u8bc6\u7d22\u5f15\uff0c\u53ef\u76f4\u63a5\u6302\u8f7d\u7ed9 AI Agent \u4f5c\u4e3a\u4e13\u5c5e\u77e5\u8bc6\u6e90\u4f7f\u7528\u3002",
+  "updated_at": 1785115399243,
+  "version": "1.0.0"
+}
