@@ -1,0 +1,46 @@
+{
+  "changelog": "Goofish-search-list 1.0.0 \u2014 Initial release\n\n- Enables scraping of Goofish (\u95f2\u9c7c) second-hand item search results with support for keyword queries, sorting, price range, and publish-date filters.\n- Returns structured lists of 30 item cards per page with id, title, price, image, location, and want-count.\n- Handles login checks, CAPTCHA/rate-limiting, and pagination (up to 25 pages).\n- Provides examples and detailed output structure for seamless integration.\n- Includes clear success criteria, limitations, and batch execution best practices.",
+  "created_at": 1781766756424,
+  "display_name": "Goofish Search List",
+  "fetched_at": 1787780272942,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/apply-search-filters.py",
+    "scripts/extract-search-items.py",
+    "scripts/goto-page.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781807687644,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "goofish-search-list",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/goofish-search-list",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=goofish-search-list&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/goofish-search-list"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 325,
+    "installs": 3,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Scrapes second-hand item search results from Goofish (\u95f2\u9c7c/xianyu, goofish.com) \u2014 China's largest second-hand marketplace. Input: keyword, optional sort/filter...",
+  "updated_at": 1781766756424,
+  "version": "1.0.0"
+}
