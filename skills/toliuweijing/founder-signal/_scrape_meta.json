@@ -1,0 +1,65 @@
+{
+  "changelog": "## Founder Signal v0.2.14\n\n- Every run now generates and attempts to publish a public Draft review page, even if no evidence is found or the run fails.\n- The Draft publication handoff is now unconditional, with local artifacts and failure metadata preserved if Draft publishing fails.\n- The config import and profile management process is streamlined; setup and runtime profile handling are clarified to avoid legacy user-editable profiles.\n- Old modules for profile store, review output, and review scripts removed; codebase is more focused on main run/review/publish flow.\n- Documentation updated for the always-publish review model, revised setup flow, and cleaned up legacy details.",
+  "created_at": 1777875306683,
+  "display_name": "Founder Signal",
+  "fetched_at": 1787782918817,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "founder-signal.config.example.json",
+    "profiles/README.md",
+    "profiles/draft.example.json",
+    "profiles/hitrl-remote-agents.example.json",
+    "profiles/reusable-ai-insights.example.json",
+    "scripts/run_founder_signal_once.sh",
+    "skill-card.md",
+    "src/founder_signal/__init__.py",
+    "src/founder_signal/__main__.py",
+    "src/founder_signal/action_card.py",
+    "src/founder_signal/candidate_discovery.py",
+    "src/founder_signal/candidate_history.py",
+    "src/founder_signal/config.py",
+    "src/founder_signal/draft_publish.py",
+    "src/founder_signal/models.py",
+    "src/founder_signal/platforms/__init__.py",
+    "src/founder_signal/platforms/reddit.py",
+    "src/founder_signal/platforms/v2ex.py",
+    "src/founder_signal/reddit_fetcher.py",
+    "src/founder_signal/report.py",
+    "src/founder_signal/runtime_paths.py",
+    "src/founder_signal/scoring.py",
+    "src/founder_signal/setup.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780631594262,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jim Liu",
+    "handle": "toliuweijing",
+    "user_id": "s1792my6kfgvzgtqavh11j5h0h83grgt"
+  },
+  "slug": "founder-signal",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/founder-signal",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=founder-signal&ownerHandle=toliuweijing",
+    "page_url": "https://clawhub.ai/toliuweijing/skills/founder-signal"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1353,
+    "installs": 39,
+    "stars": 0,
+    "versions": 35
+  },
+  "summary": "Founder Signal turns verified Reddit and V2EX evidence into a small, reviewable signal package for founders evaluating product demand and positioning across...",
+  "updated_at": 1780630290655,
+  "version": "0.2.14"
+}
