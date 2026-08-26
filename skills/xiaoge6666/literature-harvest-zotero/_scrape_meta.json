@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release: Automated literature harvesting and Zotero import pipeline integrating CNKI, NCBI, and Google Scholar.\n\n- Supports downloading literature from CNKI, NCBI (PMC), and Google Scholar, then importing to Zotero as a unified collection.\n- Handles parent entries, linked_file attachments, tags, and Chinese notes in Zotero for each item.\n- Integrates browser/manual steps for CNKI, script-based APIs for NCBI/PMC and Scholar, with routing through local proxy as needed.\n- Robust error handling, batch validation, and detailed fallback solutions for known issues (like CNKI CAPTCHA, PMC POW challenges, Scholar 403/404).\n- Complete operation and validation flow, with templates and tooling for repeatable, verifiable import batches.",
+  "created_at": 1787383428827,
+  "display_name": "literature-harvest-zotero",
+  "fetched_at": 1787770001887,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md",
+    "templates/dl_epmc.py",
+    "templates/ncbi_search.py",
+    "templates/pmc_pow_dl.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787384213436,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xiaoge6666",
+    "handle": "xiaoge6666",
+    "user_id": "s175d62dn19dag24j9amk75m7d87tb3a"
+  },
+  "slug": "literature-harvest-zotero",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/literature-harvest-zotero",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=literature-harvest-zotero&ownerHandle=xiaoge6666",
+    "page_url": "https://clawhub.ai/xiaoge6666/skills/literature-harvest-zotero"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 96,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u77e5\u7f51+NCBI+Google Scholar \u591a\u6e90\u6587\u732e\u4e0b\u8f7d \u2192 Zotero \u5408\u96c6\u5165\u5e93\u5b8c\u6574\u6d41\u6c34\u7ebf\uff08\u7236\u6761\u76ee+linked_file+\u6807\u7b7e+\u4e2d\u6587\u7b14\u8bb0\uff09",
+  "updated_at": 1787383522199,
+  "version": "1.0.0"
+}
