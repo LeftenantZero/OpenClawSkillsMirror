@@ -1,0 +1,41 @@
+{
+  "changelog": "- Initial release of the Huawei Cloud SWR Namespace List skill.\n- Enables querying and filtering of SWR namespaces (organizations) in the current project/region.\n- Returns key details: namespace ID, name, creator, auth level, user and repository counts.\n- Supports filtering by namespace name or complex filter expression.\n- Read-only: supports list operations; does not support creation, deletion, or modification.\n- Provides both CLI and Python SDK methods for listing namespaces.",
+  "created_at": 1785988012306,
+  "display_name": "huawei-cloud-swr-namespace-list",
+  "fetched_at": 1787773281668,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/test-cli-commands.sh",
+    "scripts/validate-skill.sh",
+    "skill-card.md",
+    "templates/test-vars.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-swr-namespace-list",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-swr-namespace-list",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-swr-namespace-list&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-swr-namespace-list"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 177,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query the list of Huawei Cloud SWR (Software Repository for Container) namespaces (organizations) under the current project/region. Lists all namespaces with their ID, name, creator, auth level, access user count and repository count. Supports optional filtering by namespace name. This is the top-level resource listing for SWR \u2014 namespaces organize image repositories into groups. Use when the user wants to: (1) list all Huawei Cloud SWR namespaces / \u67e5\u8be2\u534e\u4e3a\u4e91SWR\u7ec4\u7ec7\u5217\u8868, (2) check how many SWR organizations exist in the account or region, (3) inspect namespace auth level, repository count, or creator for daily inspection or troubleshooting, (4) filter namespaces by name. Triggers include: \"SWR\u7ec4\u7ec7\u5217\u8868\", \"\u534e\u4e3a\u4e91SWR\u7ec4\u7ec7\u5217\u8868\", \"\u67e5\u8be2SWR\u7ec4\u7ec7\", \"SWR namespace list\", \"list SWR namespaces\", \"ListNamespaces\", \"SWR\u547d\u540d\u7a7a\u95f4\u5217\u8868\", \"\u67e5\u770bSWR\u7ec4\u7ec7\", \"SWR\u540d\u79f0\u5217\u8868\"",
+  "updated_at": 1785988098725,
+  "version": "1.0.0"
+}
