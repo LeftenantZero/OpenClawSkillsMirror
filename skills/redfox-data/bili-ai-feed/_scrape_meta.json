@@ -1,0 +1,51 @@
+{
+  "changelog": "- Enforced date validity pre-check: prohibits all data interface calls for unavailable dates unless user explicitly confirms, following new 15:00 daily data-refresh rule.\n- Added support for robust custom keyword batch queries; main workflow and API usage fully adapted for single or multiple custom keywords, improving flexibility beyond fixed topics.\n- Default query changed to only use the \u201cAI\u201d keyword for efficiency; auto-expands with fallback keywords when data is insufficient, all through batch API.\n- Output format is now strictly regulated: all reply structure and section headers must be preserved exactly as in the provided template, with no free-form text.\n- Updated documentation for workflow, parameters, error handling, and custom queries; clarified user interaction requirements.\n- Removed redundant file: skill-card.md.",
+  "created_at": 1781251218184,
+  "display_name": "AI B\u7ad9\u4fe1\u606f\u6e90",
+  "fetched_at": 1787779517986,
+  "files": [
+    "README.en.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/daily_report.py",
+    "assets/report_template.html",
+    "references/engine-strategy.md",
+    "references/investigation-modes.md",
+    "references/investigation-templates.md",
+    "references/investigator-config.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781636458649,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "RedFox",
+    "handle": "redfox-data",
+    "user_id": "s171kp1a76rjevha5b9m61sxv984vncz"
+  },
+  "slug": "bili-ai-feed",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bili-ai-feed",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bili-ai-feed&ownerHandle=redfox-data",
+    "page_url": "https://clawhub.ai/redfox-data/skills/bili-ai-feed"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 490,
+    "installs": 5,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "B\u7ad9AI\u4fe1\u606f\u6e90 \u2014 \u6bcf\u65e5\u626b\u63cfB\u7ad9AI\u76f8\u5173\u8d26\u53f7\uff0c\u6309\u70b9\u8d5e\u91cf\u53d1\u73b0\u7206\u6b3e\u89c6\u9891\uff0c\u667a\u80fd\u805a\u7c7b\u8bdd\u9898\u540e\u751f\u6210\u5305\u542b\u5c01\u9762\u56fe\u3001\u4e92\u52a8\u6570\u636e\u4e0e\u8ba2\u9605\u652f\u6301\u7684HTML\u65e5\u62a5\u3002\u540c\u65f6\u57fa\u4e8e\u70ed\u95e8\u8bdd\u9898\u6267\u884cAI\u60c5\u62a5\u8c03\u67e5\uff0c\u91c7\u7528\u591a\u5f15\u64ce\u641c\u7d22\u4e0e\u4ea4\u53c9\u9a8c\u8bc1\uff0c\u8f93\u51fa\u7ed3\u6784\u5316\u8c03\u67e5\u62a5\u544a\u3002\u652f\u6301\u7528\u6237\u81ea\u5b9a\u4e49\u5173\u952e\u8bcd\u5b9a\u5411\u67e5\u8be2\u3002\u26a0\ufe0f\u6570\u636e\u6bcf\u65e515:00\u66f4\u65b0\u524d\u4e00\u5929\u6570\u636e\uff0c\u76ee\u6807\u65e5\u671f\u65e0\u6570\u636e\u65f6\u5fc5\u987b\u5148\u544a\u77e5\u7528\u6237\u5e76\u7b49...",
+  "updated_at": 1782193891977,
+  "version": "1.0.2"
+}
