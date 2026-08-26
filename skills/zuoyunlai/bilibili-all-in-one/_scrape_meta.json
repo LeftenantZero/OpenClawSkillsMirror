@@ -1,0 +1,48 @@
+{
+  "changelog": "Bilibili All-in-One v1.0.18\n\n- Initial public release of a comprehensive toolkit for Bilibili.\n- Integrates modules for hot trending monitoring, video downloading (multi-quality), video playback, subtitle download/conversion, and video publishing/upload.\n- Most features (monitoring, standard downloads, subtitles, statistics) work without Bilibili login; publishing and high-quality downloads require providing session cookies.\n- Supports both CLI and API usage, with multi-format and batch download features.\n- Credentials can be provided via environment variables, config file, or direct parameters, with optional secure persistence.\n- Emphasizes clear security practices for handling sensitive Bilibili session cookies.",
+  "created_at": 1786695780929,
+  "display_name": "bilibili-all-in-one",
+  "fetched_at": 1787772129468,
+  "files": [
+    "README.md",
+    "STRUCTURE.md",
+    "_meta.json",
+    "main.py",
+    "requirements.txt",
+    "scripts/publish.sh",
+    "skill-card.md",
+    "skill.json",
+    "skill.md",
+    "src/__init__.py",
+    "src/auth.py",
+    "src/downloader.py",
+    "src/hot_monitor.py",
+    "src/player.py",
+    "src/publisher.py",
+    "src/subtitle.py",
+    "src/utils.py",
+    "src/watcher.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "zuoyunlai",
+    "handle": "zuoyunlai",
+    "user_id": "s172mdwjfennafd6dacwpbhzph83hqjc"
+  },
+  "slug": "bilibili-all-in-one",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bilibili-all-in-one",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bilibili-all-in-one&ownerHandle=zuoyunlai",
+    "page_url": "https://clawhub.ai/zuoyunlai/skills/bilibili-all-in-one"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 24,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "A comprehensive Bilibili toolkit that integrates hot trending monitoring, video downloading, video watching/playback, subtitle downloading, and video publishing capabilities into a single unified skill. Supports Bilibili session cookie authentication for publishing and high-quality downloads. Requests go to official Bilibili API endpoints over HTTPS.",
+  "updated_at": 1786695924637,
+  "version": "1.0.0"
+}
