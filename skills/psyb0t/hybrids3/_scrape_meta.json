@@ -1,0 +1,35 @@
+{
+  "changelog": "- Removed the file: skill-card.md.\n- No functional or user-facing changes; documentation and interfaces remain the same.",
+  "created_at": 1785005441217,
+  "display_name": "hybrids3",
+  "fetched_at": 1787773935279,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/setup.md",
+    "scripts/hybrids3.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ciprian Mandache",
+    "handle": "psyb0t",
+    "user_id": "s17fq93tmpky791n7516jcn08n83sfn2"
+  },
+  "slug": "hybrids3",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hybrids3",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hybrids3&ownerHandle=psyb0t",
+    "page_url": "https://clawhub.ai/psyb0t/skills/hybrids3"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 696,
+    "installs": 1,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "Self-hosted lightweight object storage speaking three interfaces at once \u2014 the S3 API (boto3 / AWS-SDK compatible, AWS Sig V4), a plain HTTP API (curl-friendly, Bearer auth), and MCP (Streamable HTTP tools for agents). Buckets/objects with SQLite metadata and flat-file storage on disk; buckets are config-defined (no create/delete API), each with a public/private flag, a private key + public key pair, optional TTL expiry, and a max upload size. Auth is per-bucket keys plus a cross-bucket master key; presigned GET/PUT URLs for handing out single-object access. Use when the user wants to put/get/list/delete files in a self-hosted S3-compatible store, generate presigned upload/download links, drive their own boto3-compatible object storage, or connect an agent to object storage over MCP.",
+  "updated_at": 1785616255741,
+  "version": "0.3.8"
+}
