@@ -1,0 +1,37 @@
+{
+  "changelog": "**Introduces outcome contract and tighter delivery standards for paid x402 service execution.**\n\n- Added requirement to freeze and reference an explicit \"outcome contract\" specifying the desired result dimensions before payment or fulfillment.\n- Workflows now demand a match with the frozen outcome contract before successful delivery; material mismatches (market, count, type, staleness, etc.) are classified as result_mismatch.\n- Condensed user interaction: internalizes plan/lookup/discovery steps, reduces clarification requests, and restricts chat confirmations between proof creation and use.\n- Clarified interaction flow and protocol/version handling: freeze the protocol version before payment; do not ask the user to \"pay again\" for mismatches.\n- Removed the skill-card.md file.",
+  "created_at": 1787135308505,
+  "display_name": "Mermail x402 Agent",
+  "fetched_at": 1787769976822,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/security.md",
+    "references/tools.md",
+    "references/workflows.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Mermail",
+    "handle": "mermail",
+    "user_id": "s17ftn36z3n6jzg45nvqp29dvs8axjr5"
+  },
+  "slug": "mermail-x402-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mermail-x402-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mermail-x402-agent&ownerHandle=mermail",
+    "page_url": "https://clawhub.ai/mermail/skills/mermail-x402-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 363,
+    "installs": 1,
+    "stars": 1,
+    "versions": 12
+  },
+  "summary": "Pay x402 with Agent Wallet, then continue the task",
+  "updated_at": 1787389951630,
+  "version": "1.0.11"
+}
