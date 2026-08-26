@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release of driver-card-tachograph.\n\n- Parses EU Digital Tachograph driver card files (.ddd) to JSON.\n- Imports parsed tachograph data into a structured SQLite database.\n- Supports exporting driving activity data to CSV.\n- Includes analyzer functions for driver hours, violations, and vehicle usage.\n- Provides a script for the full workflow from file ingest to database import and archiving.\n- Documentation covers requirements, workflows, commands, and certificate handling.",
+  "created_at": 1774675627098,
+  "display_name": "Driver Card Tachograph",
+  "fetched_at": 1787787056153,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/build.md",
+    "references/certificates.md",
+    "scripts/cleanup.py",
+    "scripts/export.py",
+    "scripts/health_check.py",
+    "scripts/import.py",
+    "scripts/process.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090162923,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Sanweb",
+    "handle": "sanwebgit",
+    "user_id": "s1716q5ac0tac8855fb0f7k2g183f7jr"
+  },
+  "slug": "driver-card-tachograph",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/driver-card-tachograph",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=driver-card-tachograph&ownerHandle=sanwebgit",
+    "page_url": "https://clawhub.ai/sanwebgit/skills/driver-card-tachograph"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 638,
+    "installs": 15,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Parses EU Digital Tachograph driver card (.ddd) files, converts to JSON, imports data into SQLite, and exports driving info and violations to CSV.",
+  "updated_at": 1779079094132,
+  "version": "1.0.0"
+}
