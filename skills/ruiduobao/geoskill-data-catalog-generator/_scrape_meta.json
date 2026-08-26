@@ -1,0 +1,70 @@
+{
+  "changelog": "Initial release: generates a data catalog for geospatial raster and vector files.\n\n- Scans directories for raster (.tif) and vector (.geojson, .shp, .gpkg) files, skipping Shapefile auxiliary files.\n- Extracts and classifies metadata (size, bands, CRS, extent, feature count, geometry type, etc.).\n- Outputs the catalog in multiple formats: HTML (styled), CSV, and JSON.\n- Handles errors per file without interrupting the whole process.\n- Includes a `--synthetic` mode for generating example data sets.\n- All processing runs locally and offline.",
+  "created_at": 1785843413231,
+  "display_name": "geoskill-data-catalog-generator",
+  "fetched_at": 1787773498299,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_run/catalog.csv",
+    "_test_cli_run/catalog.html",
+    "_test_cli_run/catalog.json",
+    "_test_cli_run/output-manifest.json",
+    "e2e_test.py",
+    "geoskill-data-catalog-generator.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785844336734,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-data-catalog-generator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-data-catalog-generator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-data-catalog-generator&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-data-catalog-generator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 173,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u626b\u63cf\u76ee\u5f55\u4e2d\u7684\u6805\u683c\u4e0e\u77e2\u91cf\u6587\u4ef6\uff0c\u63d0\u53d6\u5143\u6570\u636e\u5e76\u5206\u7c7b\uff0c\u751f\u6210\u53ef\u6d4f\u89c8\u7684 HTML / CSV \u6570\u636e\u76ee\u5f55\u3002Scan raster and vector files in a directory, extract and classify metadata, and generate a browsable HTML / CSV data catalog.",
+  "updated_at": 1785843562596,
+  "version": "1.0.0"
+}
