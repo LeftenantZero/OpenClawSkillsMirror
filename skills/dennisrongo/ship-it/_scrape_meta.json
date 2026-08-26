@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release \u2014 provides an operational readiness audit before shipping code.\n\n- Runs a comprehensive 10-category checklist (logging, error handling, telemetry, feature flags, migrations, rollback, secrets, local-first storage, auth, update strategy).\n- Produces a structured report: each item is marked PASS (with file:line evidence and named probe), GAP (with citation), or N/A (with justification tied to the scope).\n- Final verdict groups findings as Blocking / Should-fix / N/A with reason / Passing.\n- Never edits code automatically; only delivers recommendations and asks for confirmation before proposing fixes.\n- Clearly distinguishes operational checks (`ship-it`) from code quality/diff reviews (`code-review`).",
+  "created_at": 1786913715878,
+  "display_name": "ship-it",
+  "fetched_at": 1787771692615,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "ship-it",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ship-it",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ship-it&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/ship-it"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 105,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Pre-launch operational-readiness checklist for a feature, release, or branch. Walks a fixed 10-category gate (logging, error handling, telemetry, feature flags, migrations, rollback, secrets, local-first storage, auth, update strategy), produces a structured report with PASS / GAP / N/A per item, every PASS backed by `file:line` evidence and every GAP cited as `no evidence found at <path>`. Final verdict groups findings as **Blocking** / **Should-fix** / **N/A with reason** / **Passing**. Use this skill whenever the user says \"is this ready to ship?\", \"ship-it check\", \"/ship-it\", \"production checklist\", \"pre-launch checklist\", \"production readiness\", \"release readiness\", \"launch checklist\", or asks whether a release is operationally safe \u2014 even if they don't explicitly say \"ship-it skill\". Use [`code-review`](../code-review/SKILL.md) for diff-level code quality (DRY, dead code, tests). Use `ship-it` for cross-cutting operational readiness. Never edits code unprompted \u2014 recommendation first, ask, then fix.",
+  "updated_at": 1786913759216,
+  "version": "1.0.0"
+}
