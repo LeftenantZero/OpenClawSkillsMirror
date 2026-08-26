@@ -1,0 +1,81 @@
+{
+  "changelog": "- Major update introducing detailed multi-dimensional Amazon listing health audits: integrates CDQ (content quality), A9 (indexability), COSMO (intent coverage), Alexa (discoverability), plus compliance checks.\n- Now supports diagnosis (not rewriting), generating health reports with granular scores, critical issue identification, and prioritized fix lists.\n- Accepts listings as pasted text, URL, or ASIN, normalizing all inputs to a consistent JSON schema; missing data results in transparent scoring downgrades, not errors.\n- Enhanced support for global users: works in any language, including simplified workflows for \u4e2d\u6587\u5356\u5bb6 (Chinese sellers).\n- Zero dependencies and works fully offline; emphasizes reliable, partial results even with incomplete data.\n- Comprehensive documentation and workflow guides added.",
+  "created_at": 1785399398290,
+  "display_name": "Listing Doctor Publish",
+  "fetched_at": 1787774150802,
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "README_EN.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/output-template.json",
+    "assets/report-template.md",
+    "evals/evals.json",
+    "references/alexa_lexicon.json",
+    "references/categories.json",
+    "references/category_attributes/apparel.json",
+    "references/category_attributes/baby.json",
+    "references/category_attributes/beauty.json",
+    "references/category_attributes/electronics.json",
+    "references/category_attributes/grocery.json",
+    "references/category_attributes/home_kitchen.json",
+    "references/category_attributes/pet.json",
+    "references/category_attributes/sports.json",
+    "references/category_attributes/tools.json",
+    "references/category_attributes/toys.json",
+    "references/cdq_weights.json",
+    "references/cosmo_ontology.json",
+    "references/image_rules.json",
+    "references/indexability_rules.json",
+    "references/new-rules-2026.md",
+    "references/rules.json",
+    "references/sites-overrides.md",
+    "scripts/alexa_check.py",
+    "scripts/cdq_score.py",
+    "scripts/check_keyword_layering.py",
+    "scripts/compliance_report.py",
+    "scripts/cosmo_check.py",
+    "scripts/image_check.py",
+    "scripts/indexability.py",
+    "scripts/lint_backend.py",
+    "scripts/lint_bullets.py",
+    "scripts/lint_highlights.py",
+    "scripts/lint_title.py",
+    "scripts/sellersprite_fetch.py",
+    "scripts/title_triage.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785409990280,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "buluslan",
+    "handle": "buluslan",
+    "user_id": "s171sh0f8gs8mgyn654tpdzqq98bgcgz"
+  },
+  "slug": "listing-doctor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/listing-doctor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=listing-doctor&ownerHandle=buluslan",
+    "page_url": "https://clawhub.ai/buluslan/skills/listing-doctor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 240,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Audit and score Amazon listings on CDQ, A9 indexability, COSMO intent coverage, Alexa discoverability, and compliance; outputs detailed health reports and fi...",
+  "updated_at": 1785409247802,
+  "version": "0.3.0"
+}
