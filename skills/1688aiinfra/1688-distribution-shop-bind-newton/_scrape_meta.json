@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of 1688-distribution-shop-bind-newton.\n\n- Guides users through the entire 1688 shop binding flow in the Newton client via natural conversation.\n- Supports step-by-step interactive process: platform selection, shop authorization, and binding within Newton's Electron embedded browser.\n- Includes environment checks for API credentials, required Python packages, and correct client context.\n- Provides detailed workflow commands and output standards for robust integration.\n- Structured with clear dependencies and modular scripts for authentication, HTTP calls, shop queries, and browser actions.",
+  "created_at": 1780294122485,
+  "display_name": "1688 Distribution Shop Bind Newton",
+  "fetched_at": 1787783634484,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "cli.py",
+    "references/api_reference.md",
+    "references/commands.md",
+    "references/output_schema.md",
+    "scripts/_auth.py",
+    "scripts/_const.py",
+    "scripts/_errors.py",
+    "scripts/_http.py",
+    "scripts/_tracker.py",
+    "scripts/capabilities/browser/__init__.py",
+    "scripts/capabilities/browser/cmd.py",
+    "scripts/capabilities/browser/service.py",
+    "scripts/capabilities/shop_bind_process/__init__.py",
+    "scripts/capabilities/shop_bind_process/cmd.py",
+    "scripts/capabilities/shop_bind_process/service.py",
+    "scripts/capabilities/shop_info/__init__.py",
+    "scripts/capabilities/shop_info/cmd.py",
+    "scripts/capabilities/shop_info/service.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "1688AiInfra",
+    "handle": "1688aiinfra",
+    "user_id": "s177df9srv6z2y0gd1kw90rern83hzxb"
+  },
+  "slug": "1688-distribution-shop-bind-newton",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/1688-distribution-shop-bind-newton",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=1688-distribution-shop-bind-newton&ownerHandle=1688aiinfra",
+    "page_url": "https://clawhub.ai/1688aiinfra/skills/1688-distribution-shop-bind-newton"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 535,
+    "installs": 8,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u725b\u987f\u5ba2\u6237\u7aef\u5206\u9500\u4e70\u5bb6\u7ed1\u5e97 Skill\u3002\u5f53\u7528\u6237\u63d0\u5230\"\u7ed1\u5b9a\u5e97\u94fa\"\u3001\"\u7ed1\u5e97\"\u3001\"\u5e97\u94fa\u6388\u6743\"\u3001\"\u6dfb\u52a0\u5e97\u94fa\"\u3001\"\u5173\u8054\u5e97\u94fa\"\u3001\"\u8fde\u63a5\u5e97\u94fa\"\u65f6\u4f7f\u7528\u3002 \u901a\u8fc7\u5bf9\u8bdd\u5f15\u5bfc\u7528\u6237\u5728\u725b\u987f Electron \u5185\u5d4c\u6d4f\u89c8\u5668\u4e2d\u5b8c\u6210\u7ed1\u5e97\u5168\u6d41\u7a0b\uff0c\u5305\u62ec\u5e73\u53f0\u9009\u62e9\u3001\u6388\u6743\u767b\u5f55\u3001\u5e97\u94fa\u7ed1\u5b9a\u3002",
+  "updated_at": 1780294122485,
+  "version": "0.1.0"
+}
