@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of the AlphaGBM Fear Score skill.\n\n- Provides a per-ticker panic index (0\u2013100) based on six weighted market and options signals.\n- Bull Put Spread entry signal triggers at score \u2265 60, shown to yield higher historical returns.\n- Transparent component breakdown: VIX, IV Rank, RSI-14, volume anomaly, put/call ratio, and consecutive down days.\n- Robust API output with fallbacks for missing data and per-indicator details.\n- Query examples and mock data for easy integration and validation.\n- Positioned as a smarter alternatives to VIX-only or opaque sentiment signals.",
+  "created_at": 1784784458721,
+  "display_name": "Alphagbm Fear Score",
+  "fetched_at": 1787775550961,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Clement Gu",
+    "handle": "clementgu",
+    "user_id": "s17fsz3rx9wrnw593kpx5w87jn85c6qc"
+  },
+  "slug": "alphagbm-fear-score",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alphagbm-fear-score",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alphagbm-fear-score&ownerHandle=clementgu",
+    "page_url": "https://clawhub.ai/clementgu/skills/alphagbm-fear-score"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 228,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Per-ticker panic index (0-100) that weights six real signals: VIX, IV Rank, RSI-14, options volume anomaly, Put/Call ratio, and consecutive-down days. Scores...",
+  "updated_at": 1784787242841,
+  "version": "1.0.0"
+}
