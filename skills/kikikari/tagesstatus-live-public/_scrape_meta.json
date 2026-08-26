@@ -1,0 +1,37 @@
+{
+  "changelog": "tagesstatus-live-public 1.0.0 \u2014 Erste \u00f6ffentliche Version des generischen Tagesstatus-Reports\n\n- \u00d6ffentliche, umgebungs-unabh\u00e4ngige Version ohne feste Zugangsdaten oder Schl\u00fcssel.\n- Liest Tokens und IDs zur Laufzeit per Nutzerabfrage oder aus `keys.env`; fehlt einer, wird die Quelle \u00fcbersprungen.\n- Unterst\u00fctzt mehrere Datenquellen (u.a. GitHub, Vercel, Docker Hub, OpenAI, Anthropic, Tailscale, ClawHub).\n- Gibt Statusbericht mit TL;DR, Quellabschnitten und Fehlerprotokoll aus; Zugangsdaten/Keys werden nie angezeigt.\n- Inklusive separater Dashboard-HTML f\u00fcr lokale/Browser-Nutzung, Beispiel-Konfiguration und Screenshots.",
+  "created_at": 1786054242953,
+  "display_name": "tagesstatus-live-public",
+  "fetched_at": 1787773230592,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "keys-beispiel.png",
+    "keys.env.template",
+    "skill-card.md",
+    "statusseite-beispiel.png"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Karim Kiki",
+    "handle": "kikikari",
+    "user_id": "s1758dpxe8hkp0hvht0fbd948h84mh2s"
+  },
+  "slug": "tagesstatus-live-public",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tagesstatus-live-public",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tagesstatus-live-public&ownerHandle=kikikari",
+    "page_url": "https://clawhub.ai/kikikari/skills/tagesstatus-live-public"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 175,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u00d6ffentliche, umgebungs-unabh\u00e4ngige Version des Tagesstatus-Reports. KEINE eingebetteten Keys, NICHT mit einer Umgebung verbunden. Tokens werden beim Lauf abgefragt bzw. aus keys.env gelesen; fehlt ein Key, wird die Quelle \u00fcbersprungen (\"keine Daten\"). Quellen: GitHub, Vercel, Docker Hub, OpenRouter, OpenAI, Anthropic/Claude, Tailscale, ClawHub (plus Perplexity/Codex nur als Hinweis). Wichtig: Je nach Quelle sind neben dem Token zus\u00e4tzlich Identifikatoren n\u00f6tig \u2013 Anmeldename/Namespace (Docker), Repo owner/repo (GitHub), Team- und Projekt-ID (Vercel), Tailnet (Tailscale), Skill-Slugs (ClawHub); manche Logins erfolgen mit Benutzername/E-Mail + Token (z. B. Docker-Login).",
+  "updated_at": 1786057659955,
+  "version": "1.0.0"
+}
