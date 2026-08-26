@@ -1,0 +1,38 @@
+{
+  "changelog": "Fix ~2.6x over-count: switch source from *.trajectory.jsonl (which emits multiple events per LLM call, each carrying the same usage snapshot) to canonical session *.jsonl (type=message, role=assistant). Add --tz utc|local (default utc, aligns with pew). Pew's 86.9M vs old 229M for the same day was caused by this bug.",
+  "created_at": 1779272448705,
+  "display_name": "Agent Token Usage",
+  "fetched_at": 1787779406741,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "apply-ui.sh",
+    "remove-ui.sh",
+    "scripts/agent_token_usage.py",
+    "scripts/refresh-data.sh",
+    "scripts/token-usage-button.iife.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SymbolStar",
+    "handle": "symbolstar",
+    "user_id": "s1726nyv3qt86twd2b8ytpbxad86nanq"
+  },
+  "slug": "agent-token-usage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-token-usage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-token-usage&ownerHandle=symbolstar",
+    "page_url": "https://clawhub.ai/symbolstar/skills/agent-token-usage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 853,
+    "installs": 16,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Summarize daily LLM token usage per OpenClaw agent from trajectory logs, showing input, output, cache reads/writes, total, and optional billable token estima...",
+  "updated_at": 1782214859115,
+  "version": "0.3.0"
+}
