@@ -1,0 +1,54 @@
+{
+  "changelog": "No user-visible changes in this version.\n\n- Updated documentation to clarify that concept/resource/overview pages cannot substitute for single-file entity pages (minor wording fix in \"\u786c\u6027\u89c4\u5219\" section).\n- No code or logic changes.",
+  "created_at": 1783446520165,
+  "display_name": "Local Document Ingest",
+  "fetched_at": 1787777375836,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "env-example.txt",
+    "main.js",
+    "requirements.txt",
+    "scripts/catalog.py",
+    "scripts/gitea_api.py",
+    "scripts/kb_writer.py",
+    "scripts/local_file_reader.py",
+    "scripts/run_task.py",
+    "scripts/task_io.py",
+    "scripts/utils.py",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783648456923,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "myd2002",
+    "handle": "myd2002",
+    "user_id": "s175zrvz5m28epr76c6rt4dtex8474t6"
+  },
+  "slug": "local-document-ingest",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/local-document-ingest",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=local-document-ingest&ownerHandle=myd2002",
+    "page_url": "https://clawhub.ai/myd2002/skills/local-document-ingest"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 762,
+    "installs": 1,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Ingest desktop-uploaded local files into the Research KB. Use for local folder scan tasks where OpenClaw must read backend shared-file paths, understand each changed file, create a type-specific entity wiki page for every readable file, archive originals under source_files, update related pages, syn",
+  "updated_at": 1783607820698,
+  "version": "1.0.4"
+}
