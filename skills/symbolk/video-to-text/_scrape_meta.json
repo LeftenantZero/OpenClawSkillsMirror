@@ -1,0 +1,44 @@
+{
+  "changelog": "- Major update: Skill refocused from general video processing to dedicated video/audio transcription.\n- Renamed skill to \"video-to-text\" with new description and clarified target use cases (transcription, subtitles, speech-to-text).\n- Removed platform/quality/workflow/command reference files and general editing scope.\n- Added local transcription workflow using Whisper (no API key needed) with clear installation and usage instructions.\n- Skill now outputs both plain text and SRT subtitle files.\n- Provided guidance to escalate to AI Edit tool for advanced, transcript-driven video editing tasks.",
+  "created_at": 1772266154660,
+  "display_name": "Video Transcribe",
+  "fetched_at": 1787780276007,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/transcribe.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967029659,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "BoShen",
+    "handle": "symbolk",
+    "user_id": "s17e3mejw3ew7dtqfqz71spav583g96y"
+  },
+  "slug": "video-to-text",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/video-to-text",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=video-to-text&ownerHandle=symbolk",
+    "page_url": "https://clawhub.ai/symbolk/skills/video-to-text"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1043,
+    "installs": 35,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Use when the user wants to transcribe, caption, or get the text content of a video or audio file \u2014 e.g. \"transcribe this video\", \"get the transcript\", \"what...",
+  "updated_at": 1778993882527,
+  "version": "1.0.0"
+}
