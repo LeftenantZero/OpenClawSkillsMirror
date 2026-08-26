@@ -1,0 +1,44 @@
+{
+  "changelog": "SettlementWitness v0.1.1 updates the bundled SAR public key registry so local verification works for current DefaultVerifier SAR receipts.\n\nFixed:\n- Bundled sar-prod-ed25519-01, sar-prod-ed25519-02, and sar-prod-ed25519-03 public keys\n- Added a current kid-03 signed SAR fixture\n- Updated self-test to verify PASS, FAIL, INDETERMINATE, current kid-03, and tampered receipts\n- Clarified that local verification requires the receipt kid to be present in the local registry\n\nThis patch supersedes v0.1.0 before public announcement. Verification remains local-first and requires no network for receipt checking.",
+  "created_at": 1770270546077,
+  "display_name": "Settlement Witness",
+  "fetched_at": 1787778219895,
+  "files": [
+    "CHANGELOG.md",
+    "EGRESS.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "fixtures/sar-v0.1-current-kid03.json",
+    "fixtures/sar-v0.1-fail.json",
+    "fixtures/sar-v0.1-indeterminate.json",
+    "fixtures/sar-v0.1-pass.json",
+    "fixtures/tampered-receipt.json",
+    "keys/sar-keys.json",
+    "scripts/verify_receipt.py",
+    "skill-card.md",
+    "spec/canonicalization.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "nutstrut",
+    "handle": "nutstrut",
+    "user_id": "s1727xn24msgdvsrzx31kvyn9d83jk5t"
+  },
+  "slug": "settlement-witness",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/settlement-witness",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=settlement-witness&ownerHandle=nutstrut",
+    "page_url": "https://clawhub.ai/nutstrut/skills/settlement-witness"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2963,
+    "installs": 86,
+    "stars": 1,
+    "versions": 13
+  },
+  "summary": "Verify signed SAR v0.1 settlement receipts locally with Ed25519 and RFC 8785 canonicalization. Use when you need to confirm a receipt is cryptographically va...",
+  "updated_at": 1783139903417,
+  "version": "0.1.1"
+}
