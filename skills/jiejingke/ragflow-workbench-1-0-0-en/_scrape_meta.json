@@ -1,0 +1,64 @@
+{
+  "changelog": "Initial release of RAGFlow Workbench skill.\n\n- Supports end-to-end RAGFlow lifecycle on Windows, including installation guidance, environment checks, admin and API key setup, and default model configuration.\n- Provides workflows for creating and managing knowledge bases, uploading and parsing documents, and running search and chat sessions.\n- Smart detection of existing installations to skip redundant steps and automate environment setup.\n- Ensures user confirmation before privileged or destructive actions; includes robust error reporting and troubleshooting links.\n- Structured output and automation-friendly commands, following documented formats and constraints.",
+  "created_at": 1780546414432,
+  "display_name": "Ragflow Workbench 1.0.0 En",
+  "fetched_at": 1787783065339,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/command-reference.md",
+    "references/output-format.md",
+    "references/quickstart_windows.md",
+    "references/troubleshooting.md",
+    "scripts/bootstrap_admin.py",
+    "scripts/bootstrap_common.py",
+    "scripts/check_windows_install.py",
+    "scripts/common.py",
+    "scripts/configure_default_models.py",
+    "scripts/create_chat.py",
+    "scripts/datasets.py",
+    "scripts/list_llms.py",
+    "scripts/list_models.py",
+    "scripts/parse.py",
+    "scripts/parse_status.py",
+    "scripts/search.py",
+    "scripts/stop_parse_documents.py",
+    "scripts/update_dataset.py",
+    "scripts/update_document.py",
+    "scripts/upload.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780551693247,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "JieJingKe",
+    "handle": "jiejingke",
+    "user_id": "s17b1wbfqtgmwe8mah230ejtb588199t"
+  },
+  "slug": "ragflow-workbench-1-0-0-en",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ragflow-workbench-1-0-0-en",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ragflow-workbench-1-0-0-en&ownerHandle=jiejingke",
+    "page_url": "https://clawhub.ai/jiejingke/skills/ragflow-workbench-1-0-0-en"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 384,
+    "installs": 6,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "RAGFlow Workbench \u2014 end-to-end RAG platform on Windows: Docker install check, admin bootstrap and API key generation, default model setup (Embedding/Chat/Rer...",
+  "updated_at": 1780546414432,
+  "version": "1.0.0"
+}
