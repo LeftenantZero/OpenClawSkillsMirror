@@ -1,0 +1,36 @@
+{
+  "changelog": "llm-wiki 0.1.0 \u2014 Initial release with a new schema and operations model\n\n- Overhauled to manage Karpathy LLM-Wiki as a domain-centric personal knowledge base, using a three-layer + domain axis design.\n- Four core modes: [INIT] project setup walkthrough, [INGEST] new data compilation, [QUERY] wiki-powered answers, and [LINT] health checks (domain-focused).\n- Domain layer (`domains/` with `_meta.json`) enables scalable navigation and domain evolution (split/merge/rename).\n- Requires `/obsidian` and `/markitdown` skills for vault integration and document parsing.\n- All operations maintain or update domain structure; enforcement of frontmatter for all wiki pages.\n- Old single-topic structure, scripts, and documentation removed in favor of new templates and modular references.",
+  "created_at": 1787301096140,
+  "display_name": "Llm Wiki Admin",
+  "fetched_at": 1787771291371,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/ingest-logic.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jacky Shen",
+    "handle": "mebusw",
+    "user_id": "s17fqnnawywqwp37410y5w9r1h83pwab"
+  },
+  "slug": "llm-wiki",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/llm-wiki",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=llm-wiki&ownerHandle=mebusw",
+    "page_url": "https://clawhub.ai/mebusw/skills/llm-wiki"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 16,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7ba1\u7406 Karpathy LLM-Wiki \u7406\u5ff5\u77e5\u8bc6\u5e93\uff0c\u56db\u5927\u64cd\u4f5c\u5305\u62ec\uff1a\u521d\u59cb\u5316\u9879\u76ee\u3001\u6444\u5165\u65b0\u539f\u59cb\u8d44\u6599\uff08\u7f16\u8bd1\u4e3a wiki \u9875\u9762\uff09\u3001\u56de\u7b54\u57fa\u4e8e wiki \u7684\u67e5\u8be2\u3001\u6267\u884c\u5065\u5eb7\u68c0\u67e5\uff08lint\uff09\u3002\u5f53\u7528\u6237\u60f3\u8981\u521d\u59cb\u5316\u77e5\u8bc6\u5e93\u3001ingest/\u6444\u5165\u65b0\u6587\u7ae0\u6216\u7b14\u8bb0\u3001\u4ece wiki \u67e5\u8be2\u77e5\u8bc6\u3001\u7ef4\u62a4 wiki \u5065\u5eb7\u3001\u6216\u63d0\u5230 llm-wiki / llm_wiki / schema.md / \u7b2c\u4e8c\u5927\u8111 / Karpathy wiki / Obsidian wiki / \u77e5\u8bc6\u7f16\u8bd1 \u65f6\uff0c\u5fc5\u987b\u4f7f\u7528\u6b64\u6280\u80fd\u3002\u5373\u4f7f\u7528\u6237\u53ea\u8bf4\"\u5e2e\u6211\u628a\u8fd9\u7bc7\u6587\u7ae0\u52a0\u8fdb wiki\"\u6216\"wiki \u91cc\u6709\u5173\u4e8e X \u7684\u5185\u5bb9\u5417\"\uff0c\u4e5f\u8981\u89e6\u53d1\u6b64\u6280\u80fd\u3002",
+  "updated_at": 1787301207446,
+  "version": "0.1.0"
+}
