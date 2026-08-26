@@ -1,0 +1,39 @@
+{
+  "changelog": "voice-notes-to-reminders 1.0.0\n\n- Initial release: create local-only reminders and `.ics` calendar events from NxVET voice notes.\n- Polls NxVET API for new button recordings, interprets transcripts, and organizes them into daily triage notes and calendar files.\n- Fully privacy-preserving: all processing and file creation stays local; no send paths or external sharing.\n- Setup guides included for prerequisites (NxVET account, API key, and device); designed for non-technical operators.\n- Ensures idempotency by tracking processed note IDs and avoids duplicate entries.",
+  "created_at": 1784907894002,
+  "display_name": "NxHUB Voice Notes to Reminders",
+  "fetched_at": 1787775129033,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "reference/caching-and-state.md",
+    "reference/good-practices.md",
+    "reference/nxvet-api.md",
+    "reference/security.md",
+    "scripts/make_ics.py",
+    "scripts/nxvet_poll.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Tal Nir",
+    "handle": "talnirnx",
+    "user_id": "s179xab9cq54tabgw3yhptrx458b4zg2"
+  },
+  "slug": "voice-notes-to-reminders",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/voice-notes-to-reminders",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=voice-notes-to-reminders&ownerHandle=talnirnx",
+    "page_url": "https://clawhub.ai/talnirnx/skills/voice-notes-to-reminders"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 255,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Turn NxVET voice notes / button recordings into LOCAL reminders, calendar events (.ics), and a daily triage note \u2014 entirely on the user's own machine, no sen...",
+  "updated_at": 1784914616106,
+  "version": "1.0.0"
+}
