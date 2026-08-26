@@ -1,0 +1,68 @@
+{
+  "changelog": "Initial release of urban canyon analysis skill.\n\n- Computes street canyon height-to-width ratio and sky view factor (SVF) from digital surface model (DSM) data.\n- Supports both local DSM GeoTIFF input and synthetic (offline) block grid generation.\n- Outputs GeoTIFF with urban canyon parameters, JSON statistics, and run manifest.\n- Runs entirely offline and does not upload any user data.\n- Dual-language documentation (English and Chinese).",
+  "created_at": 1785862879787,
+  "display_name": "geoskill-urban-canyon-analysis",
+  "fetched_at": 1787773417038,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_synth/canyon_stats.json",
+    "_test_cli_synth/output-manifest.json",
+    "e2e_test.py",
+    "geoskill-urban-canyon-analysis.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785863889912,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-urban-canyon-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-urban-canyon-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-urban-canyon-analysis&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-urban-canyon-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 175,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Compute street canyon height-to-width ratio and sky view factor (SVF) from a digital surface model.",
+  "updated_at": 1785863061442,
+  "version": "1.0.0"
+}
