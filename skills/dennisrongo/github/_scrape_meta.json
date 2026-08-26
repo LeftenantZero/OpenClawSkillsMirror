@@ -1,0 +1,33 @@
+{
+  "changelog": "- Initial release providing GitHub integration via the gh CLI with proven workflows for issue tracking, image attachment reading, and PR creation using house-configured defaults.\n- Supports reading assigned work and milestone issues, including cross-repo and Projects v2 board queries, always using config-driven values from `.claude/github.json`.\n- Reads full issue descriptions and downloads embedded screenshots with authentication; validates and reports on each image's status.\n- Publishes branches and creates PRs with company defaults for reviewers, auto-merge, and issue linking; validates all PR settings post-creation.\n- Never hardcodes org-specific data or paraphrases acceptance criteria; all values and workflows are verified and transparent.\n- Can offer to generate missing config files and guides the user through auth or config resolution as needed.",
+  "created_at": 1786913432310,
+  "display_name": "github",
+  "fetched_at": 1787771229723,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "github",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/github",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=github&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/github"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 48,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Work with GitHub issues and pull requests via the gh CLI \u2014 query assigned/milestone issues (incl. cross-repo search and Projects v2 boards), read an issue's description AND download+view its embedded screenshots, publish branches, and create PRs with configured house defaults (reviewers, auto-merge, issue linked via closing keyword, one PR per repo). Reads reviewer/branch/title settings from `.claude/github.json` and offers to create it on first use. Use this skill whenever the user says \"pull my issues\", \"what's assigned to me\", \"read issue 123\", \"get the screenshots from the issue\", \"link the PR to the issue\", \"enable auto-merge\", or mentions \"gh\", \"github issues\", \"github project board\" \u2014 even if they don't explicitly say \"github skill\". For \"create a PR\" defer to the create-pr skill (this skill is its GitHub backend and supplies the PR mechanics). Do not use for Azure DevOps orgs (use the azure-devops skill) or for local git-only operations.",
+  "updated_at": 1786913489368,
+  "version": "1.0.0"
+}
