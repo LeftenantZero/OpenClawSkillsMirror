@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of image-edit-runcomfy \u2014 advanced image editing powered by RunComfy CLI.\n\n- Supports various image editing tasks: background swap, object removal/addition, text rewriting, and mask-driven region replacement.\n- Handles single-image, batch (up to 20), multi-reference, and mask-based edits up to 4K resolution.\n- Automatically routes requests to the appropriate model based on user intent for optimal results.\n- Integrates with RunComfy CLI; requires RunComfy account and setup.\n- Triggered by explicit image edit prompts such as \u201cedit image,\u201d \u201cremove object,\u201d \u201cswap background,\u201d etc.",
+  "created_at": 1785124867497,
+  "display_name": "Image Edit \u2014 Pro Pack on RunComfy",
+  "fetched_at": 1787774786304,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mew",
+    "handle": "permew",
+    "user_id": "s17af27kmxn6ac8n1m0wdx0drh8bb4gd"
+  },
+  "slug": "image-edit-runcomfy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/image-edit-runcomfy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=image-edit-runcomfy&ownerHandle=permew",
+    "page_url": "https://clawhub.ai/permew/skills/image-edit-runcomfy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 256,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Image edit on RunComfy. This image edit skill transforms an existing image \u2014 background swap, object removal, in-image text rewrite, mask- driven region replacement, or any other image edit task \u2014 by routing the image edit request to the right model in the RunComfy catalog. Image edit supports single-image edit, batch image edit (up to 20), multi-reference image edit, and mask-based image edit at up to 4K. Calls `runcomfy run <model>/edit` through the local RunComfy CLI. Triggers on \"image edit\", \"edit image\", \"image-to-image\", \"i2i\", \"image editing\", \"swap background\", \"remove object\", \"rewrite headline\", or any explicit ask to edit an image.",
+  "updated_at": 1785127201908,
+  "version": "1.0.0"
+}
