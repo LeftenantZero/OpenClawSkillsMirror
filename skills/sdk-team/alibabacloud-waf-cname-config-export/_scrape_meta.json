@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of Alibaba Cloud WAF 3.0 CNAME domain configuration batch export.\n\n- Enables batch export of all CNAME-based WAF domain configurations to a structured Excel file.\n- Queries and merges configurations from both Chinese Mainland (`cn-hangzhou`) and Non-Chinese Mainland (`ap-southeast-1`) WAF instances.\n- Automatically discovers all WAF 3.0 instances and their domains; retrieves detailed config for audit and report purposes.\n- Uses a bundled Python script to generate Excel files with standardized 18-column schema, one sheet per region.\n- Strictly enforces credential, permission, and parameter confirmation best practices before any execution.\n- AI-mode enable/disable steps integrated to comply with Agent Skill requirements.",
+  "created_at": 1780392828885,
+  "display_name": "Alibabacloud Waf Cname Config Export",
+  "fetched_at": 1787783380439,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "scripts/alibabacloud_waf_cname_config_export.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780395910914,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-waf-cname-config-export",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-waf-cname-config-export",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-waf-cname-config-export&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-waf-cname-config-export"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 426,
+    "installs": 7,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Batch export Alibaba Cloud WAF 3.0 CNAME-based domain configuration to Excel. Use when the user needs \"export WAF domain config\", \"WAF onboarding checklist\",...",
+  "updated_at": 1780392828885,
+  "version": "0.0.1"
+}
