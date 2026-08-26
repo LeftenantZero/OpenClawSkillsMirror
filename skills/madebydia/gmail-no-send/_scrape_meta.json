@@ -1,0 +1,51 @@
+{
+  "changelog": "- Initial public release of gmail-no-send: a read-only Gmail CLI with no capability to send emails.\n- Supports searching, reading messages, creating/updating drafts, and archiving; sending is fundamentally impossible by design.\n- Requires user-provided Google Cloud OAuth credentials; tokens and all operations are securely logged and stored locally.\n- Purpose-built for agents that need Gmail access without risk of sending messages.",
+  "created_at": 1774355870070,
+  "display_name": "Gmail No Send",
+  "fetched_at": 1787787393776,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/threat-model.md",
+    "scripts/gmail_no_send/__init__.py",
+    "scripts/gmail_no_send/auth.py",
+    "scripts/gmail_no_send/cli.py",
+    "scripts/gmail_no_send/client.py",
+    "scripts/gmail_no_send/utils.py",
+    "scripts/pyproject.toml",
+    "scripts/requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090074089,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Diana Park",
+    "handle": "madebydia",
+    "user_id": "s176b3312npmthbt2chf2mccw183grfh"
+  },
+  "slug": "gmail-no-send",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gmail-no-send",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gmail-no-send&ownerHandle=madebydia",
+    "page_url": "https://clawhub.ai/madebydia/skills/gmail-no-send"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 776,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read-only Gmail CLI that cannot send email by design. Search, read, create drafts, update drafts, and archive messages \u2014 with zero send capability in the cod...",
+  "updated_at": 1779078916906,
+  "version": "1.0.0"
+}
