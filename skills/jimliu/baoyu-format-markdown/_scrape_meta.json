@@ -1,0 +1,50 @@
+{
+  "changelog": "## 1.117.2 - 2026-05-17\n\n### Documentation\n- `baoyu-cover-image`: ban programmatic text repair on generated bitmaps \u2014 disallow ImageMagick / Pillow / Canvas / SVG / HTML overlays to cover, rewrite, or replace title/subtitle text; regenerate from a corrected prompt or switch to a lower-text or no-title variant instead\n- `baoyu-article-illustrator`, `baoyu-comic`, `baoyu-image-cards`, `baoyu-xhs-images`, `baoyu-infographic`, `baoyu-slide-deck`: sync the same text-repair ban with skill-specific text categories (labels/captions, dialogue/sound effects, titles/body/tags, headings/data values, slide titles/bullets)",
+  "created_at": 1773085240997,
+  "display_name": "Baoyu Format Markdown",
+  "fetched_at": 1787775807952,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/title-formulas.md",
+    "scripts/autocorrect.ts",
+    "scripts/bun.lock",
+    "scripts/main.ts",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "scripts/quotes.ts",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090828445,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jim Liu \u5b9d\u7389",
+    "handle": "jimliu",
+    "user_id": "s17dfbhg0khk4fvtnx0stqg0yx83j25z"
+  },
+  "slug": "baoyu-format-markdown",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/baoyu-format-markdown",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=baoyu-format-markdown&ownerHandle=jimliu",
+    "page_url": "https://clawhub.ai/jimliu/skills/baoyu-format-markdown"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3239,
+    "installs": 96,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "Formats plain text or markdown files with frontmatter, titles, summaries, headings, bold, lists, and code blocks. Use when user asks to \"format markdown\", \"b...",
+  "updated_at": 1779124375921,
+  "version": "1.117.2"
+}
