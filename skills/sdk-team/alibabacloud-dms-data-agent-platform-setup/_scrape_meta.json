@@ -1,0 +1,39 @@
+{
+  "changelog": "- Session observability added: all workflows now generate and propagate a consistent session-id across both Python scripts and Aliyun CLI commands.\n- User-Agent handling improved: per-command `--user-agent` flag usage replaces deprecated `set-user-agent` configuration.\n- Pre-check step added: `detect_dify_instance.py` must now be run to verify DMS service availability before provisioning.\n- New utility scripts: `detect_dify_instance.py` and `dify_skill_utils.py` added for improved feature checks and code organization.\n- Documentation updated: SKILL.md rewritten to reflect new observability, workflow, and script usage patterns.\n- Deprecated/legacy file `skill-card.md` has been removed.",
+  "created_at": 1778727694225,
+  "display_name": "Alibabacloud Dms Data Agent Platform Setup",
+  "fetched_at": 1787779086447,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ram-policies.md",
+    "scripts/detect_dify_instance.py",
+    "scripts/dify_skill_utils.py",
+    "scripts/fill_in_param_body.py",
+    "scripts/openAPI_call.py",
+    "scripts/requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-dms-data-agent-platform-setup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-dms-data-agent-platform-setup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-dms-data-agent-platform-setup&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-dms-data-agent-platform-setup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 639,
+    "installs": 10,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Create an agent platform instance in DMS via Alibaba Cloud OpenAPI. Supports Simple Mode and Advanced Mode. Use this skill when the user wants to provision,...",
+  "updated_at": 1782380593943,
+  "version": "0.0.2"
+}
