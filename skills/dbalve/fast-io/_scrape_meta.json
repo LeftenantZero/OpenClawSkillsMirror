@@ -1,0 +1,44 @@
+{
+  "changelog": "**fast-io 1.223.0 Changelog**\n\n- Renamed the `event` tool filter parameters from `created-min`/`created-max` to `created_min`/`created_max` (snake_case). Legacy hyphenated names are still accepted and migrated automatically.\n- Tool schema now publishes free-form JSON fields (e.g., `apps.extra_params`, `approval.properties`, `execute.body`, `execute.params`) as `{type: \"string\"}` to satisfy strict-mode validators. The server continues accepting both native objects and JSON strings.\n- `/file/workspace` and `/file/share` endpoints now support both `Mcp-Session-Id` and `Authorization: Bearer` headers, improving compatibility for OAuth-only clients streaming large files.\n- Added a new unauthenticated `resource://status` MCP resource for lightweight server health checks, returning basic server details and status.\n- Guide updated with a summary of allowed ID parameter naming conventions for tool actions.",
+  "created_at": 1770235828506,
+  "display_name": "Fast.io",
+  "fetched_at": 1787785168690,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/REFERENCE.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783654696819,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Derek Labian",
+    "handle": "dbalve",
+    "user_id": "s179ngcfv1d33rr1384fnxm1hd83fv2z"
+  },
+  "slug": "fast-io",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fast-io",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fast-io&ownerHandle=dbalve",
+    "page_url": "https://clawhub.ai/dbalve/skills/fast-io"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 7247,
+    "installs": 232,
+    "stars": 6,
+    "versions": 41
+  },
+  "summary": "Workspaces for agentic teams. Complete agent guide with all 19 consolidated tools using action-based routing \u2014 parameters, workflows, ID formats, and constra...",
+  "updated_at": 1779468375548,
+  "version": "1.233.0"
+}
