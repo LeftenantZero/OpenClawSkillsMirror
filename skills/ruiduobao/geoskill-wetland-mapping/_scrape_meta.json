@@ -1,0 +1,66 @@
+{
+  "changelog": "- Initial release of geoskill-wetland-mapping.\n- Classifies wetlands by fusing NDWI/MNDWI, NDVI, DEM, and SAR backscatter (co-registered raster bands).\n- Rule-based decision tree outputs open water, swamp, mudflat, or non-wetland classes with priority water > swamp > mudflat.\n- Supports both local fused 4-band raster input and offline multi-source synthetic data (--synthetic).\n- Outputs wetland classification GeoTIFF, area statistics (JSON), and manifest (JSON, with QA in synthetic mode).\n- All processing is offline and local; no network or user data upload required.",
+  "created_at": 1785863559571,
+  "display_name": "geoskill-wetland-mapping",
+  "fetched_at": 1787773408556,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-wetland-mapping.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785864693515,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-wetland-mapping",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-wetland-mapping",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-wetland-mapping&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-wetland-mapping"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 182,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u878d\u5408 NDWI/MNDWI\u3001NDVI\u3001\u5730\u5f62\u4f4e\u6d3c\u4e0e SAR \u540e\u5411\u6563\u5c04\uff0c\u89c4\u5219\u9608\u503c\u5206\u7c7b\u6e7f\u5730\u7c7b\u578b\u5e76\u7edf\u8ba1\u9762\u79ef",
+  "updated_at": 1785863740762,
+  "version": "1.0.0"
+}
