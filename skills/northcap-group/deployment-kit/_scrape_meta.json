@@ -1,0 +1,47 @@
+{
+  "changelog": "21/8: Renset \u2014 ubrugelig northcap-ca.pem fjernet. Ingen x402-spor",
+  "created_at": 1787164055838,
+  "display_name": "deployment-kit",
+  "fetched_at": 1787770106838,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/deploy.sh",
+    "scripts/myapp.service",
+    "scripts/notify.sh",
+    "scripts/watchdog.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787340378287,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Northcap Group",
+    "handle": "northcap-group",
+    "user_id": "s17bvcqx4dxz1k2fe936rwdhs58ctnxf"
+  },
+  "slug": "deployment-kit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/deployment-kit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=deployment-kit&ownerHandle=northcap-group",
+    "page_url": "https://clawhub.ai/northcap-group/skills/deployment-kit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 300,
+    "installs": 1,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "Deploy and maintain services on a VPS with 1 command: build \u2192 restart \u2192 verify \u2192 monitor with heartbeat + Telegram alerts. Complete DevOps package: systemd units, nginx reverse proxy, cron @reboot, watchdog restarts, deploy scripts. WARNING: runs systemd restarts, sudo, nohup/setsid and changes runtime state \u2014 only use on services you own, test on staging first.",
+  "updated_at": 1787339678383,
+  "version": "1.0.9"
+}
