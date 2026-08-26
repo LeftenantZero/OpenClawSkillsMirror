@@ -1,0 +1,71 @@
+{
+  "changelog": "- Initial release of word-latex-formula: convert manually typed formulas in Word documents into editable Word equations.\n- Supports .doc, .docx, and .wps formats using local Microsoft Word or LibreOffice automation.\n- Preserves original document layout and modifies only OOXML formula targets for accuracy.\n- Offers both one-step and staged (scan/review/apply) workflows for academic manuscripts or batch conversion.\n- Optional AI-assisted formula classification with privacy controls and no document upload by default.\n- Includes command-line interface and quick-launch Web UI for local use.",
+  "created_at": 1779698860233,
+  "display_name": "Word Formula Converter",
+  "fetched_at": 1787784815099,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/SECURITY_AND_PRIVACY.md",
+    "references/USAGE.md",
+    "resources/latex_convert_project/apps/web/index.html",
+    "resources/latex_convert_project/apps/web/package-lock.json",
+    "resources/latex_convert_project/apps/web/package.json",
+    "resources/latex_convert_project/apps/web/src/main.tsx",
+    "resources/latex_convert_project/apps/web/src/styles.css",
+    "resources/latex_convert_project/apps/web/tsconfig.json",
+    "resources/latex_convert_project/apps/web/vite.config.ts",
+    "resources/latex_convert_project/latex_convert/__init__.py",
+    "resources/latex_convert_project/latex_convert/candidate_pipeline.py",
+    "resources/latex_convert_project/latex_convert/cli.py",
+    "resources/latex_convert_project/latex_convert/detect.py",
+    "resources/latex_convert_project/latex_convert/document_converter.py",
+    "resources/latex_convert_project/latex_convert/math_parser.py",
+    "resources/latex_convert_project/latex_convert/omml.py",
+    "resources/latex_convert_project/latex_convert/ooxml_transform.py",
+    "resources/latex_convert_project/latex_convert/preview.py",
+    "resources/latex_convert_project/pyproject.toml",
+    "resources/latex_convert_project/scripts/start_web.py",
+    "resources/latex_convert_project/scripts/start_web.sh",
+    "resources/latex_convert_project/scripts/status_web.sh",
+    "resources/latex_convert_project/scripts/stop_web.sh",
+    "resources/latex_convert_project/services/api/app/__init__.py",
+    "resources/latex_convert_project/services/api/app/main.py",
+    "resources/latex_convert_project/services/api/requirements.txt",
+    "resources/latex_convert_project/tests/test_math_parser.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779964278351,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "DavidTian",
+    "handle": "tianyedavid",
+    "user_id": "s172qectfxt2wsgct1eadcbj6583sp8a"
+  },
+  "slug": "word-latex-formula",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/word-latex-formula",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=word-latex-formula&ownerHandle=tianyedavid",
+    "page_url": "https://clawhub.ai/tianyedavid/skills/word-latex-formula"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 620,
+    "installs": 13,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Convert manually typed formulas in Word documents (.doc, .docx, .wps) into editable Word equations while preserving layout through local Microsoft Word or Li...",
+  "updated_at": 1779698860233,
+  "version": "1.0.0"
+}
