@@ -1,0 +1,55 @@
+{
+  "changelog": "Initial release of docx-fill:\n\n- Generates Word documents by filling .docx templates with user-provided content while preserving original styles.\n- Specialized for table-heavy templates including project proposals, lesson plans, curriculum standards, reports, etc.\n- Uses a 9-step, role-based process combining automated structure extraction, LLM-based contract creation and content writing, conflict checking, and multi-tier validation.\n- Ensures strict separation of concerns via fill contracts and role switching, with code-based checks for structure and formatting.\n- Automatically handles complex table features (e.g., nested tables, merged cells) and preserves static text in templates.\n- Triggers whenever users request generation of a structured Word document from templates and reference materials, even if not explicitly requesting template filling.",
+  "created_at": 1784273864540,
+  "display_name": "Docx Fill",
+  "fetched_at": 1787776073219,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/conflict_checker.md",
+    "references/content_agent.md",
+    "references/evaluation_rules.md",
+    "references/evaluator.md",
+    "references/fill_contract_schema.md",
+    "references/structure_agent.md",
+    "scripts/extract_structure.py",
+    "scripts/extract_styles.py",
+    "scripts/render_document.py",
+    "scripts/validate_content.py",
+    "scripts/validate_contract.py",
+    "scripts/validate_format.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784336190957,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "hanli",
+    "handle": "neuhanli",
+    "user_id": "s170fra97dyryvewpm8k1555p983efvx"
+  },
+  "slug": "docx-fill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/docx-fill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=docx-fill&ownerHandle=neuhanli",
+    "page_url": "https://clawhub.ai/neuhanli/skills/docx-fill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 323,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Generate Word documents by filling templates with content based on reference materials. Use this skill whenever the user provides a .docx template (or asks to fill a Word document) along with reference materials and wants the content written into the template with original styles preserved. Speciali",
+  "updated_at": 1784332900115,
+  "version": "1.0.1"
+}
