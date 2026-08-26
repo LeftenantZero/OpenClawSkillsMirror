@@ -1,0 +1,38 @@
+{
+  "changelog": "Initial release of remix-v2-perf-ssr-review.\n\n- Reviews Remix v2 TypeScript route modules for common SSR and performance issues.\n- Checks for caching header misuse, improper server/client code split, hydration mismatches, prefetching problems, and asset bottlenecks.\n- Provides a detailed review checklist and clear reference patterns for valid and invalid usage.\n- Includes rules for context-sensitive reporting and mandatory validation steps before finding/report drafting.\n- Designed to catch subtle issues in routes that export headers, use `.server.ts`/`.client.ts`, or render non-deterministic values in a Remix v2 codebase.",
+  "created_at": 1780449144591,
+  "display_name": "Remix V2 Perf Ssr Review",
+  "fetched_at": 1787783263510,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/assets.md",
+    "references/caching-headers.md",
+    "references/hydration.md",
+    "references/prefetch-streaming.md",
+    "references/server-client-split.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Kevin Anderson",
+    "handle": "anderskev",
+    "user_id": "s17b1fzefm8nj8j1sdkzrze7gn83pfrg"
+  },
+  "slug": "remix-v2-perf-ssr-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/remix-v2-perf-ssr-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=remix-v2-perf-ssr-review&ownerHandle=anderskev",
+    "page_url": "https://clawhub.ai/anderskev/skills/remix-v2-perf-ssr-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 419,
+    "installs": 7,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Reviews Remix v2 code for caching header misuse, missing server/client split, hydration mismatches (Date, Math.random, locale), prefetch hygiene, and asset b...",
+  "updated_at": 1780449144591,
+  "version": "1.0.0"
+}
