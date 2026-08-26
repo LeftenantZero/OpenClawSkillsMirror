@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of openclaw-plugin-upgrade.\n\n- Introduces an OpenClaw plugin upgrade assistant, activated by user requests to update OpenClaw or qqbot plugins.\n- Supports upgrading any OpenClaw plugin (npm package) and specialized upgrade for the QQ bot plugin (@tencent-connect/openclaw-qqbot), including file verification, compatibility tweaks, and automatic rollback.\n- Provides a unified script (`upgrade-plugin.sh`) to perform upgrades directly in the agent, no manual terminal input required.\n- Special handling for openclaw-qqbot upgrades, with options for version targeting, hot updates, file verification, and cleaning obsolete directories.\n- Script outputs structured upgrade results for user feedback and error reporting.",
+  "created_at": 1774587078329,
+  "display_name": "Openclaw Plugin Upgrade",
+  "fetched_at": 1787787099275,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/upgrade-plugin.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090149225,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ryanlee-gemini",
+    "handle": "ryanlee-gemini",
+    "user_id": "s1741sts1vxbg2py4n2ccvxmgd83k71j"
+  },
+  "slug": "openclaw-plugin-upgrade",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-plugin-upgrade",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-plugin-upgrade&ownerHandle=ryanlee-gemini",
+    "page_url": "https://clawhub.ai/ryanlee-gemini/skills/openclaw-plugin-upgrade"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 588,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "OpenClaw \u63d2\u4ef6\u5347\u7ea7\u52a9\u624b\u3002\u5f53\u7528\u6237\u8bf4\u300c\u5347\u7ea7 qqbot \u63d2\u4ef6\u300d\u300c\u66f4\u65b0 openclaw-qqbot\u300d\u300cqqbot \u66f4\u65b0\u300d\u300c\u5e2e\u6211\u5347\u7ea7\u63d2\u4ef6\u300d\u300c\u5347\u7ea7 openclaw \u63d2\u4ef6\u300d\u7b49\u76f8\u5173\u8bed\u53e5\u65f6\u6fc0\u6d3b\u3002\u652f\u6301\u901a\u7528 openclaw \u63d2\u4ef6\uff08\u4efb\u610f npm \u5305\uff09\u5347\u7ea7\uff0c\u4ee5\u53ca QQ \u673a\u5668\u4eba\u63d2\u4ef6\uff08@tencent-connect/open...",
+  "updated_at": 1779079064644,
+  "version": "1.0.0"
+}
