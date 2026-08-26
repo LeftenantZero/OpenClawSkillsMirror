@@ -1,0 +1,42 @@
+{
+  "changelog": "Add isolated per-skill virtualenv entrypoints (scripts/x_publisher and scripts/post_thread): provision a shared .venv on first run and auto-install tweepy (now declared in requirements.txt). SKILL.md, README, and CLAUDE.md updated to invoke the wrappers; no manual pip install needed.",
+  "created_at": 1784263373021,
+  "display_name": "X (Twitter) Publisher",
+  "fetched_at": 1787774702706,
+  "files": [
+    "CLAUDE.md",
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/x_api.md",
+    "requirements.txt",
+    "scripts/post_thread",
+    "scripts/post_thread.py",
+    "scripts/x_publisher",
+    "scripts/x_publisher.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jiangsier-xyz",
+    "handle": "jiangsier-xyz",
+    "user_id": "s173nsfjwe1yqehavmtjgmxnjs86xwmn"
+  },
+  "slug": "x-publisher",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/x-publisher",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=x-publisher&ownerHandle=jiangsier-xyz",
+    "page_url": "https://clawhub.ai/jiangsier-xyz/skills/x-publisher"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 99,
+    "installs": 0,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Publish tweets to X (Twitter) using the official Tweepy library. Supports text-only tweets, tweets with images or videos, and returns detailed publish results including tweet ID and URL. Requires X API credentials (API Key, API Secret, Access Token, Access Token Secret).",
+  "updated_at": 1785159175842,
+  "version": "1.2.1"
+}
