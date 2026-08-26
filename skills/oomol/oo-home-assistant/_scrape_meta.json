@@ -1,0 +1,33 @@
+{
+  "changelog": "- Operate Home Assistant through the OOMOL-connected `oo` CLI, without handling raw credentials directly.\n- Inspect live action schemas before sending payloads, so requests match the authoritative connector contract.\n- Run Home Assistant reads for states, history, logbook entries, registries, services, calendars, events, templates, and configs.\n- Perform controlled writes for services, scripts, automations, and scenes, with destructive actions clearly separated and gated.\n- Validate and check Home Assistant configuration before storing changes, reducing bad automations and broken config.\n- Use one skill for the full Home Assistant workflow: discovery, diagnostics, control, and config management.\n\nSource: `oomol-lab/skills@46cfb3e`",
+  "created_at": 1780502403656,
+  "display_name": "Home Assistant",
+  "fetched_at": 1787772722544,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-home-assistant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-home-assistant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-home-assistant&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-home-assistant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 828,
+    "installs": 9,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Home Assistant (home-assistant.io). Use this skill for ANY Home Assistant request \u2014 reading, creating, updating, and deleting data. Whenever a task involves Home Assistant, use this skill instead of calling the API directly.",
+  "updated_at": 1786436057396,
+  "version": "1.0.3"
+}
