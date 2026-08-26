@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release of Taobao Product Detail skill.\n- Fetches full product information from Taobao or Tmall product pages by itemId, including title, price, shop info, images, SKU variants, and attributes.\n- Requires browser session with user logged in; performs pre-checks for tool readiness and authentication.\n- Implements extraction via Python scripts on live product page, handling common popups.\n- Handles both Taobao and Tmall pages; outputs structured JSON with all key product fields.\n- Includes usage guidance for batch processing, error resumption, and experience-based strategy adjustments.",
+  "created_at": 1781767311738,
+  "display_name": "Taobao Product Detail",
+  "fetched_at": 1787780273510,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-product.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781810433551,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "taobao-product-detail",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/taobao-product-detail",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=taobao-product-detail&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/taobao-product-detail"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 321,
+    "installs": 3,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fetch full product detail from a Taobao or Tmall product page by itemId, returning title, price, shop info, images, SKU variants, and product attributes. Use...",
+  "updated_at": 1781767311738,
+  "version": "1.0.0"
+}
