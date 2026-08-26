@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of the expedite skill for executing audit backlogs:\n\n- Takes an audit backlog (line-check, bug-hunt, or security-sweep) and systematically applies fixes in leverage (impact/effort) order.\n- Enforces strict execution discipline: one finding per focused commit, with full verification before marking as resolved.\n- Surfaces out-of-bounds findings (destructive, ambiguous, etc.) for user decision without making unsafe changes.\n- Provides clear output categorizing fixed, parked, skipped, and remaining findings, with next steps.\n- Prevents re-auditing, batching fixes, or marking incomplete/problematic fixes as done.",
+  "created_at": 1781488247449,
+  "display_name": "Expedite",
+  "fetched_at": 1787780791223,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Solomon Neas",
+    "handle": "solomonneas",
+    "user_id": "s175vcq9b774xbehtq2py4r5vn83f1k2"
+  },
+  "slug": "expedite",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/expedite",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=expedite&ownerHandle=solomonneas",
+    "page_url": "https://clawhub.ai/solomonneas/skills/expedite"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 356,
+    "installs": 4,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when the user wants to act on an audit, fix the findings in a line-check/bug-hunt/security-sweep report, work a prioritized backlog, or asks to \"fix the...",
+  "updated_at": 1781488247449,
+  "version": "1.0.0"
+}
