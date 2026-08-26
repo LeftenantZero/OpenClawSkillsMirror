@@ -1,0 +1,39 @@
+{
+  "changelog": "Initial release of \"diagram-to-code\" skill.\n\n- Converts architecture diagrams (Mermaid, PlantUML, draw.io, ASCII, or text-based) into infrastructure as code or component code.\n- Includes strict activation triggers; only processes requests with clear diagrams.\n- Returns code in appropriate formats (Terraform, Kubernetes YAML, CloudFormation, workflow scripts, component code) mapped from diagram elements.\n- Handles validation, clear error messages, and states assumptions when input is ambiguous.\n- Provides a mapping of diagram nodes to code resources in responses.\n- Declines off-topic or invalid requests with concise explanations.",
+  "created_at": 1780045774422,
+  "display_name": "diagram-to-code",
+  "fetched_at": 1787783959991,
+  "files": [
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "README.md",
+    "README_zh.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/index.md",
+    "skill-card.md",
+    "tests/test_skill.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u738b\u7ee7\u9e4f",
+    "handle": "wangjipeng977",
+    "user_id": "s179qwqch3yp9926afz4rxbz0h85z9mm"
+  },
+  "slug": "wangjipeng-diagram-to-code",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wangjipeng-diagram-to-code",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wangjipeng-diagram-to-code&ownerHandle=wangjipeng977",
+    "page_url": "https://clawhub.ai/wangjipeng977/skills/wangjipeng-diagram-to-code"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 487,
+    "installs": 9,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Use when (1) user provides architecture diagram and needs infrastructure as code or component code.",
+  "updated_at": 1780045774422,
+  "version": "1.0.0"
+}
