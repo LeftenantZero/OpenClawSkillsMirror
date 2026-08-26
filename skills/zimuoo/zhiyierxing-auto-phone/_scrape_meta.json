@@ -1,0 +1,72 @@
+{
+  "changelog": "Initial release of zhiyierxing-auto-phone skill for end-to-end phone agent deployment and operation.\n\n- Enables product-grade, runnable phone-agent workflows for Zhipu AutoGLM-Phone / Open-AutoGLM on Android, HarmonyOS, and iPhone.\n- Accepts natural-language phone task requests and automatically infers/setup environment, device connection, dependencies, and model endpoints as needed.\n- Aggressively reuses any existing environments, dependencies, and device connections; prompts user only when an actual runtime blocker is detected.\n- Provides clear, step-by-step troubleshooting and precise user instructions when manual intervention is required.\n- Supports cross-platform deployment (macOS, Linux, Windows) and covers all host/device prerequisites, model validation, and smoke-test verification before executing the target phone task.",
+  "created_at": 1779190259553,
+  "display_name": "\u5b89\u5353\u624b\u673a\u81ea\u52a8\u5316\uff0c\u7c7b\u4f3c\u8c46\u5305\u624b\u673a",
+  "fetched_at": 1787786487186,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/adb-keyboard.md",
+    "references/deployment-flow.md",
+    "references/runbook.md",
+    "references/source-notes.md",
+    "references/troubleshooting.md",
+    "scripts/check_android_ready.py",
+    "scripts/check_android_ready.sh",
+    "scripts/check_harmonyos_ready.py",
+    "scripts/check_harmonyos_ready.sh",
+    "scripts/check_host_env.py",
+    "scripts/check_iphone_ready.py",
+    "scripts/check_iphone_ready.sh",
+    "scripts/check_skill_ready.py",
+    "scripts/check_skill_ready.sh",
+    "scripts/clone_or_update_open_autoglm.py",
+    "scripts/clone_or_update_open_autoglm.sh",
+    "scripts/deploy_open_autoglm.py",
+    "scripts/deploy_open_autoglm.sh",
+    "scripts/device_memory.py",
+    "scripts/ensure_and_run_task.py",
+    "scripts/ensure_and_run_task.sh",
+    "scripts/install_host_tools.py",
+    "scripts/install_host_tools.sh",
+    "scripts/prepare_android_connection.py",
+    "scripts/print_next_steps.py",
+    "scripts/python_runtime.py",
+    "scripts/run_phone_task.py",
+    "scripts/run_phone_task.sh",
+    "scripts/verify_open_autoglm.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779956541520,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u5b50\u6cab",
+    "handle": "zimuoo",
+    "user_id": "s17f3he19v8b83h56t09qrsw7n83kj3k"
+  },
+  "slug": "zhiyierxing-auto-phone",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/zhiyierxing-auto-phone",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=zhiyierxing-auto-phone&ownerHandle=zimuoo",
+    "page_url": "https://clawhub.ai/zimuoo/skills/zhiyierxing-auto-phone"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 711,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Product-grade deployment and operation skill for Zhipu AutoGLM-Phone / Open-AutoGLM.Use when the user wants a complete, runnable local setup: clone the GitHu...",
+  "updated_at": 1779190287653,
+  "version": "1.0.0"
+}
