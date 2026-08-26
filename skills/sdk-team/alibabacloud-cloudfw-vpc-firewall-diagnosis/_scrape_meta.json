@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of alibabacloud-cloudfw-vpc-firewall-diagnosis (version 0.0.1):\n\n- Provides read-only diagnosis for Alibaba Cloud Cloud Firewall VPC firewall provisioning, route policy, and closure pre-check issues.\n- Requires aliyun-cli >= 3.3.0, Python 3.6+, and only read-only RAM permissions.\n- Ensures all Alibaba Cloud API calls use a specific User-Agent and enforce AI-Mode setup/teardown procedures.\n- Strictly forbids any write, modify, or destructive operations; provides only analysis and configuration guidance.\n- Includes Bash command whitelist and mandatory user input collection to ensure safe, controlled diagnostic actions.",
+  "created_at": 1782380615374,
+  "display_name": "Alibabacloud Cloudfw Vpc Firewall Diagnosis",
+  "fetched_at": 1787779082126,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api_reference.md",
+    "references/cli_commands.md",
+    "references/closure_precheck_guide.md",
+    "references/configuration_guide.md",
+    "references/diagnosis_rules.md",
+    "references/diagnosis_scenarios.md",
+    "references/diagnosis_steps.md",
+    "references/execution_standards.md",
+    "references/firewall_lifecycle.md",
+    "references/profile_setup_guide.md",
+    "references/ram-policies.md",
+    "references/security_rules.md",
+    "scripts/analyze_routes.py",
+    "scripts/check-write-operation.sh",
+    "scripts/closure_precheck.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-cloudfw-vpc-firewall-diagnosis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-cloudfw-vpc-firewall-diagnosis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-cloudfw-vpc-firewall-diagnosis&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-cloudfw-vpc-firewall-diagnosis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 260,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Diagnose Alibaba Cloud Cloud Firewall VPC firewall provisioning failures, route policy configuration failures, and closure pre-check risks using read-only Cl...",
+  "updated_at": 1782380615374,
+  "version": "0.0.1"
+}
