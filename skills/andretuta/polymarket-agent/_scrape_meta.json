@@ -1,0 +1,54 @@
+{
+  "changelog": "Fixes a High-severity finding (SkillSpector E2, 0.93 confidence) surfaced by the 2.1.2 scan: POLYMARKET_KEY was checked before the encrypted keystore and activated on mere presence, with no warning at use-time. Now the keystore is tried first; the env var is a gated fallback requiring the new POLYMARKET_ALLOW_ENV_KEY=1, and warns on every actual use, not just in poly doctor. 3 new tests cover the precedence and gating.",
+  "created_at": 1769554893241,
+  "display_name": "Polymarket Agent",
+  "fetched_at": 1787775689196,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "install.sh",
+    "polymarket_agent/__init__.py",
+    "polymarket_agent/alerts.py",
+    "polymarket_agent/cli.py",
+    "polymarket_agent/config.py",
+    "polymarket_agent/guardrails.py",
+    "polymarket_agent/http.py",
+    "polymarket_agent/journal.py",
+    "polymarket_agent/keystore.py",
+    "polymarket_agent/markets.py",
+    "polymarket_agent/paths.py",
+    "polymarket_agent/trading.py",
+    "polymarket_agent/whales.py",
+    "pyproject.toml",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/test_guardrails.py",
+    "tests/test_journal.py",
+    "tests/test_whales.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Andr\u00e9LanD",
+    "handle": "andretuta",
+    "user_id": "s178x9vtfn21b2etrs9v6rmwzh8855gy"
+  },
+  "slug": "polymarket-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polymarket-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polymarket-agent&ownerHandle=andretuta",
+    "page_url": "https://clawhub.ai/andretuta/skills/polymarket-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 8695,
+    "installs": 276,
+    "stars": 27,
+    "versions": 7
+  },
+  "summary": "Research Polymarket markets, whale flow and smart money; optionally trade a Polygon wallet behind deterministic risk guard-rails.",
+  "updated_at": 1784702418485,
+  "version": "2.1.3"
+}
