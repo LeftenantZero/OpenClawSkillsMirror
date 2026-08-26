@@ -1,0 +1,48 @@
+{
+  "changelog": "v2.2.0: Security audit remediation \u2014 search snippets now opt-in (--snippets), --force propagates to watch mode, permissions declared, journal disclosure documented.",
+  "created_at": 1784410834236,
+  "display_name": "smart-files",
+  "fetched_at": 1787771759436,
+  "files": [
+    "CHANGELOG.txt",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.yaml",
+    "skill-card.md",
+    "smart-files.js",
+    "test/run-tests.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786885248679,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jlacroix82",
+    "handle": "jlacroix82",
+    "user_id": "s175p518b8g47fx6r9zyvs95ks876t4t"
+  },
+  "slug": "smart-files",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/smart-files",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=smart-files&ownerHandle=jlacroix82",
+    "page_url": "https://clawhub.ai/jlacroix82/skills/smart-files"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 923,
+    "installs": 2,
+    "stars": 0,
+    "versions": 29
+  },
+  "summary": "Content-aware file management for workspace files: search (content snippets opt-in via --snippets), dedup, organize, rename, file metadata inspection, and continuous watch mode. Watch mode persists a journal (paths/hashes/sizes/ timestamps/change events) to memory/smart-files-journal.json and can monitor paths outside the workspace when --force is passed. All file mutations (organize/rename) require --force and are dry-run by default.",
+  "updated_at": 1786885248679,
+  "version": "2.2.0"
+}
