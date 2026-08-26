@@ -1,0 +1,47 @@
+{
+  "changelog": "lokaler-companion 1.0.0 \u2013 Erstver\u00f6ffentlichung\n\n- Stellt ein Muster f\u00fcr lokale Beobachtungsanwendungen bereit, inklusive Server, Starter, PWA und optionaler Browser-Erweiterung.\n- Erm\u00f6glicht zuverl\u00e4ssige Status\u00fcberwachung und Benachrichtigungen f\u00fcr beliebige Quellen (Livestreams, Feeds, Preise, Serverstatus etc.).\n- Umgeht CORS-Beschr\u00e4nkungen durch einen lokalen Server, der fremde APIs abrufen und an die Oberfl\u00e4che weitergeben kann.\n- Enth\u00e4lt klare Anleitungen zur Handhabung von Zustandswechseln, Fehlerbehandlung und dauerhafter Ausf\u00fchrung.\n- Ziel: Einfache, lokal laufende Apps ohne Cloud- oder Kontozwang, mit Fokus auf Robustheit und Nutzerfreundlichkeit.",
+  "created_at": 1786054185723,
+  "display_name": "lokaler-companion",
+  "fetched_at": 1787773231833,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/docker.md",
+    "references/erweiterung.md",
+    "references/fallstricke.md",
+    "references/pwa.md",
+    "references/starter.md",
+    "scripts/check_no_hardcode.py",
+    "scripts/probe_api.py",
+    "scripts/pwa_kit.py",
+    "scripts/starter/Beenden.cmd",
+    "scripts/starter/Fehlersuche.cmd",
+    "scripts/starter/Start.cmd",
+    "scripts/starter/start.ps1",
+    "scripts/starter/start.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Karim Kiki",
+    "handle": "kikikari",
+    "user_id": "s1758dpxe8hkp0hvht0fbd948h84mh2s"
+  },
+  "slug": "lokaler-companion",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/lokaler-companion",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=lokaler-companion&ownerHandle=kikikari",
+    "page_url": "https://clawhub.ai/kikikari/skills/lokaler-companion"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 171,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Baut einen \"Companion\" \u2014 eine lokal laufende Beobachtungs-Anwendung: kleiner Server auf 127.0.0.1, Doppelklick-Starter, installierbare PWA, optionale Browser-Erweiterung, Meldung beim Zustandswechsel, Dauerbetrieb im Container. Nutze diesen Skill, sobald jemand etwas dauerhaft im Auge behalten und benachrichtigt werden will \u2014 Livestreams, Kan\u00e4le, Feeds, Preise, Build-Zust\u00e4nde, Serververf\u00fcgbarkeit, Ordner, Warteschlangen. Auch wenn die Anfrage nur nach einem Teil klingt: \"sag mir Bescheid wenn X online geht\", \"kleines Tool das im Hintergrund l\u00e4uft\", \"Statusseite f\u00fcr Y\", \"als App installierbar\", \"soll dauerhaft laufen\", \"auch nach Neustart\", \"als Docker-Container\". Besonders wichtig bei einer einzelnen HTML-Datei, die fremde Daten abruft: ob das tr\u00e4gt, h\u00e4ngt an einer CORS-Freigabe, die man vorher pr\u00fcfen muss \u2014 sonst bleibt die Datei beim Nutzer leer.",
+  "updated_at": 1786057664765,
+  "version": "1.0.0"
+}
