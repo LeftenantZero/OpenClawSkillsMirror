@@ -1,0 +1,37 @@
+{
+  "changelog": "- Initial release of verity-guard: an independent, fail-closed verification service for reviewing risky actions, fact-checking claims, screening for prompt injection, and redacting sensitive information.\n- Supports four main checks: check (allow/review/block actions), verify (fact-check claims), injection (scan text for threats), and redact (flag PII/secrets).\n- Every paid verdict is Ed25519-signed and independently re-verifiable.\n- Pay-per-call model using USDC on Base; no subscription or API key required.\n- Advises users on irreversible or high-risk actions with actionable, signed decisions (allow, review, block), including rationale and safer alternatives. \n- Includes free receipt verification and robust guidance for safe usage and setup.",
+  "created_at": 1784331072476,
+  "display_name": "verity-guard",
+  "fetched_at": 1787776086822,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "license.txt",
+    "references/catalog.md",
+    "references/enforcement.md",
+    "scripts/verity.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Melchiorre Oliva",
+    "handle": "meloliva14",
+    "user_id": "s178e1shvmd8f6gdyz4w125mg98apcvw"
+  },
+  "slug": "verity-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/verity-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=verity-guard&ownerHandle=meloliva14",
+    "page_url": "https://clawhub.ai/meloliva14/skills/verity-guard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 268,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Independent fail-closed second opinion before acting: allow/review/block a risky action, fact-check a claim, screen text for prompt injection, or flag PII/se...",
+  "updated_at": 1784331314734,
+  "version": "1.0.0"
+}
