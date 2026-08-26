@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of agent-extract: a skill to split features from the main agent into independent agents, supporting session isolation and independent uptime.\n\n- Enables separating any feature/skill from main agent into a new, dedicated agent.\n- Ensures session, workspace, memory, and identity isolation between agents.\n- Preserves original data: all files are copied, not moved or deleted.\n- Protects channel and main agent integrity\u2014no modifications unless explicitly requested.\n- Provides step-by-step processes for setup, verification, and rollback.\n- Includes practical examples and a file migration checklist for safer adoption.",
+  "created_at": 1774262470190,
+  "display_name": "Agent Extract",
+  "fetched_at": 1787786210471,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/verify.sh",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779971063065,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "kings0527",
+    "handle": "kings0527",
+    "user_id": "s17fgq0mdrjfszwzye90119w4h83k7a5"
+  },
+  "slug": "agent-extract",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-extract",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-extract&ownerHandle=kings0527",
+    "page_url": "https://clawhub.ai/kings0527/skills/agent-extract"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 482,
+    "installs": 9,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06\u6307\u5b9a\u6280\u80fd\u4ece\u4e3b agent \u4e2d\u5265\u79bb\uff0c\u521b\u5efa\u72ec\u7acb agent \u5b9e\u73b0 session \u9694\u79bb\u3001\u72ec\u7acb\u5fc3\u8df3\u548c\u72ec\u7acb workspace \u4fdd\u6301\u8fd0\u884c\u3002",
+  "updated_at": 1779219151063,
+  "version": "1.0.0"
+}
