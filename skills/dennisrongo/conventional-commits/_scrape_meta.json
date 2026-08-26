@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release with expanded context-aware commit message formatting.\n\n- Follows the Conventional Commits specification with enforced ticket number and project tag when possible.\n- Adds logic to extract ticket numbers from the current branch name.\n- Auto-detects project type (API, CLIENT, CONSOLE, DB) from file paths in the diff; includes project tag only when determinable.\n- Commit message headers include ticket number and/or project tag when available; omits them if unavailable.\n- Enforces rules on message formatting, type matching the actual diff, and body usage.\n- SKILL.md rewritten for clarity; sample skill-card.md removed.",
+  "created_at": 1786913318986,
+  "display_name": "conventional-commits",
+  "fetched_at": 1787771704149,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "conventional-commits",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/conventional-commits",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=conventional-commits&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/conventional-commits"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 18,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Write git commit messages following the Conventional Commits specification, with an automatic ticket number pulled from the current branch and a project tag (API / CLIENT / CONSOLE / DB) when the project type can be detected from the diff. Use this skill whenever the user asks to write a commit message, asks for help committing changes, runs `git commit`, or mentions writing changelog entries \u2014 even if they don't explicitly say \"conventional commits\".",
+  "updated_at": 1786913372218,
+  "version": "1.0.0"
+}
