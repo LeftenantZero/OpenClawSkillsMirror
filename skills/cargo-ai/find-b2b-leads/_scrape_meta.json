@@ -1,0 +1,43 @@
+{
+  "changelog": "Version 1.1.0\n\n- Expanded supported triggers in the description (e.g., \"build a b2b lead list\", \"lead sourcing\").\n- Improved session attribution logic in setup instructions to avoid double-counting when the Cargo GTM plugin is installed.\n- Added a new section guiding users to optionally star the `getcargohq/gtm-skills` repository after successful use, with safe prompting and implementation details.\n- Removed skill-card.md from the project.",
+  "created_at": 1786573045901,
+  "display_name": "find-b2b-leads",
+  "fetched_at": 1787771769985,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786863069061,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Cargo",
+    "handle": "cargo-ai",
+    "user_id": "s178dcd9wkfn0a2fqrygmt3jzn87j9e1"
+  },
+  "slug": "find-b2b-leads",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/find-b2b-leads",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=find-b2b-leads&ownerHandle=cargo-ai",
+    "page_url": "https://clawhub.ai/cargo-ai/skills/find-b2b-leads"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 211,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Find B2B leads by job title, company, and keyword, and return them as a structured list, powered by Cargo. Triggers: \"find 50 VPs of Sales at fintech companies\", \"build me a list of leads\", \"who are the heads of engineering at Series B startups\", \"get me prospects matching this profile\", \"source leads for my outbound\", \"build a b2b lead list\", \"lead sourcing\". Providers: salesNavigator. Skip when: you need companies rather than people \u2014 use build-tam-list; or you already have the people and need contact details \u2014 use find-work-email.",
+  "updated_at": 1786862340616,
+  "version": "1.1.0"
+}
