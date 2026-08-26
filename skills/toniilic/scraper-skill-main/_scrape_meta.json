@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of search-harvester: ScrapeBox-style search engine harvesting with Tor rotation.\n\n- Performs candidate website discovery for link building and outreach, rotating Tor exit nodes to avoid server IP bans and captchas.\n- Supports multi-engine scraping (DuckDuckGo HTML, Marginalia), deduplication, liveness/barrier triage, and exports a scored candidate list.\n- Includes robust setup instructions, rotation/retry logic, and sample query design for optimal result coverage.\n- Bundled Python script automates query rotation, deduplication, and candidate scoring/export.\n- Designed primarily for Linux with dependencies on `tor`, `curl`, `python3`, and `nc`.",
+  "created_at": 1786098309874,
+  "display_name": "search-harvester",
+  "fetched_at": 1787773167833,
+  "files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "search-harvester/SKILL.md",
+    "search-harvester/scripts/search-harvester.py",
+    "search-harvester/skill-card.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786099259982,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Toni Ili\u0107",
+    "handle": "toniilic",
+    "user_id": "s17862g3pvt0bj1b931ewdy6d18bxct9"
+  },
+  "slug": "scraper-skill-main",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/scraper-skill-main",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=scraper-skill-main&ownerHandle=toniilic",
+    "page_url": "https://clawhub.ai/toniilic/skills/scraper-skill-main"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 162,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "ScrapeBox-style candidate discovery for link building and outreach. Rotates Tor exit nodes (and optionally public HTTP proxies) so the server's datacenter IP never touches the search engine, harvests candidate URLs from multiple engines (DuckDuckGo html, Marginalia), dedupes, triages liveness/barrie",
+  "updated_at": 1786098575722,
+  "version": "1.0.0"
+}
