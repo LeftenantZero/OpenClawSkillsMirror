@@ -1,0 +1,50 @@
+{
+  "changelog": "**Summary: Adds required AI-Mode integration and CLI version checks for robust skill invocation and compliance.**\n\n- Introduced mandatory AI-Mode enable/disable steps for every command invocation, ensuring AI-mode is always explicitly toggled on at start and off at every exit point.\n- Enforced required User-Agent header (`AlibabaCloud-Agent-Skills/alibabacloud-resourcecenter-search`) on every CLI command.\n- Increased minimum supported Aliyun CLI version to 3.3.3 and clarified installation/update procedures.\n- Added requirement to always run `aliyun plugin update` to ensure plugins are current.\n- Documented stricter command pre-check flow and enhanced security guidance.\n- No impact to resource query or scenario logic; all core search and inventory features remain unchanged.",
+  "created_at": 1775544976707,
+  "display_name": "Alibabacloud Resourcecenter Search",
+  "fetched_at": 1787786793326,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/error-codes.md",
+    "references/ram-policies.md",
+    "references/related-apis.md",
+    "references/verification-method.md",
+    "scripts/query-resource-types.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090831798,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-resourcecenter-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-resourcecenter-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-resourcecenter-search&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-resourcecenter-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 773,
+    "installs": 18,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Alibaba Cloud Resource Center - Global Resource Inventory, Search & Statistics Skill. Provides cross-region, cross-product, and cross-account resource invent...",
+  "updated_at": 1779092663675,
+  "version": "0.0.2"
+}
