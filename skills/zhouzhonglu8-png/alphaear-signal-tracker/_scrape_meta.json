@@ -1,0 +1,78 @@
+{
+  "changelog": "AlphaEar Signal Tracker Skill v1.0.0\n\n- Initial release of signal tracking logic for finance investment signals.\n- Tracks and updates investment signal states (Strengthened, Weakened, Falsified, or Unchanged) based on new market information.\n- Outlines an agentic workflow using research, analysis, and signal evolution tracking prompts.\n- Integrates with `alphaear-search` and `alphaear-stock` for data gathering.\n- Depends on `agno` agent framework and uses a `DatabaseManager` with `sqlite3`.",
+  "created_at": 1775046193464,
+  "display_name": "alphaear-signal-tracker",
+  "fetched_at": 1787774721388,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/PROMPTS.md",
+    "scripts/__init__.py",
+    "scripts/fin_agent.py",
+    "scripts/prompts/fin_agent.py",
+    "scripts/prompts/forecast_analyst.py",
+    "scripts/prompts/intent_agent.py",
+    "scripts/prompts/isq_prompt_generator.py",
+    "scripts/prompts/report_agent.py",
+    "scripts/prompts/trend_agent.py",
+    "scripts/prompts/visualizer.py",
+    "scripts/schema/isq_template.py",
+    "scripts/schema/models.py",
+    "scripts/tools/__init__.py",
+    "scripts/tools/toolkits.py",
+    "scripts/utils/__init__.py",
+    "scripts/utils/content_extractor.py",
+    "scripts/utils/database_manager.py",
+    "scripts/utils/hybrid_search.py",
+    "scripts/utils/json_utils.py",
+    "scripts/utils/llm/capability.py",
+    "scripts/utils/llm/factory.py",
+    "scripts/utils/llm/router.py",
+    "scripts/utils/logging_setup.py",
+    "scripts/utils/md_to_html.py",
+    "scripts/utils/news_tools.py",
+    "scripts/utils/predictor/evaluation.py",
+    "scripts/utils/predictor/kline_generate.py",
+    "scripts/utils/predictor/model/__init__.py",
+    "scripts/utils/predictor/model/kronos.py",
+    "scripts/utils/predictor/model/module.py",
+    "scripts/utils/predictor/training.py",
+    "scripts/utils/search_tools.py",
+    "scripts/utils/sentiment_tools.py",
+    "scripts/utils/stock_tools.py",
+    "skill-card.md",
+    "tests/test_tracker.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090234949,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zhouzhonglu8-png",
+    "handle": "zhouzhonglu8-png",
+    "user_id": "s17fc97saqx9w7mhqhm8bqe1ss840tq5"
+  },
+  "slug": "alphaear-signal-tracker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alphaear-signal-tracker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alphaear-signal-tracker&ownerHandle=zhouzhonglu8-png",
+    "page_url": "https://clawhub.ai/zhouzhonglu8-png/skills/alphaear-signal-tracker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 504,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Track finance investment signal evolution and update logic based on new finance market information. Use when monitoring finance signals and determining if th...",
+  "updated_at": 1778492348942,
+  "version": "1.0.0"
+}
