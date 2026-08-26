@@ -1,0 +1,43 @@
+{
+  "changelog": "Expanded manager/org chart and worker profile tools; wider request coverage and new navigation/diagnostic commands.\n\n- Added support for org chart, worker profiles, and team data (new `workday_get_org_chart`, `workday_get_worker`, etc.).\n- Extended trigger phrases to cover org charts, people lookup, team management, and performance reviews.\n- Added typed tools for navigating any Workday hub/app and reading specific profile tasks.\n- Introduced raw fetch and read-only GraphQL commands for advanced/unsupported surfaces.\n- Improved documentation detailing page types, navigation flow, and known limitations.\n- Removed obsolete `skill-card.md`.",
+  "created_at": 1782309923365,
+  "display_name": "Tmp.KptiadeZCQ",
+  "fetched_at": 1787770624412,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787113340434,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "chrischall",
+    "handle": "chrischall",
+    "user_id": "s17cjx1a349nz5apaqp02vgz4h85728z"
+  },
+  "slug": "workday-mcp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/workday-mcp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=workday-mcp&ownerHandle=chrischall",
+    "page_url": "https://clawhub.ai/chrischall/skills/workday-mcp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 694,
+    "installs": 1,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Read Workday HR data \u2014 your org chart and team, worker profiles, pay, benefits, compensation, performance, and any task or data card \u2014 via MCP through your own signed-in session. Triggers on phrases like \"check my workday\", \"who reports to X\", \"my org chart\", \"look up <person> in workday\", \"read my workday compensation\", \"my workday benefits\", \"<person>'s performance review\", \"pull this workday page\", or any request involving Workday people, pay, benefits, or team data. Read-only. Requires workday-mcp installed and the fetchproxy extension active (see Setup below).",
+  "updated_at": 1787112629818,
+  "version": "0.4.0"
+}
