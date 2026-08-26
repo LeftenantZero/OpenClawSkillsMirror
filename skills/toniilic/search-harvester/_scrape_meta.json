@@ -1,0 +1,35 @@
+{
+  "changelog": "Discovery-only scope per scan findings: removed form-automation and directory-submission references, added explicit permissions declaration, strictly accurate capability table, no state-changing actions",
+  "created_at": 1786112979510,
+  "display_name": "search-harvester",
+  "fetched_at": 1787773155586,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/__pycache__/search-harvester.cpython-312.pyc",
+    "scripts/search-harvester.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Toni Ili\u0107",
+    "handle": "toniilic",
+    "user_id": "s17862g3pvt0bj1b931ewdy6d18bxct9"
+  },
+  "slug": "search-harvester",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/search-harvester",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=search-harvester&ownerHandle=toniilic",
+    "page_url": "https://clawhub.ai/toniilic/skills/search-harvester"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 206,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Candidate discovery for link building and outreach. Harvests candidate URLs from DuckDuckGo HTML and Marginalia through a local privacy-preserving Tor circuit (server IP never contacts the engine), then dedupes, triages liveness/anti-bot barriers, and exports a scored candidate list. DISCOVERY ONLY \u2014 this skill never submits forms, posts listings, or performs any state-changing action on third-party sites. Use ONLY when the user explicitly asks to find directories, submission platforms, blogs, or link-building candidates (e.g. \"find more places to submit\", \"find directories\", \"get candidate websites like scrapebox\", \"search for link building opportunities\"). Requires explicit user confirmation before routing any query through Tor; never for generic web search, never for sensitive/personal queries.",
+  "updated_at": 1786113631214,
+  "version": "1.0.2"
+}
