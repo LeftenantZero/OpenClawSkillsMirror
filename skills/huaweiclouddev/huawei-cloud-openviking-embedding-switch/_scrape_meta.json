@@ -1,0 +1,53 @@
+{
+  "changelog": "Sync from GitHub",
+  "created_at": 1786954808677,
+  "display_name": "huawei-cloud-openviking-embedding-switch",
+  "fetched_at": 1787771601163,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "demo/example-input.json",
+    "references/acceptance-criteria.md",
+    "references/config-reference.md",
+    "references/dataflow-diagram.md",
+    "references/guardrails.md",
+    "references/iam-policies.md",
+    "references/related-commands.md",
+    "references/troubleshooting.md",
+    "references/verification-method.md",
+    "scripts/switch-embedding-model.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786955579798,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweicloud-skills-team",
+    "handle": "huaweiclouddev",
+    "user_id": "s17axk041vxeamxj39r4dwvyts87wtza"
+  },
+  "slug": "huawei-cloud-openviking-embedding-switch",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-openviking-embedding-switch",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-openviking-embedding-switch&ownerHandle=huaweiclouddev",
+    "page_url": "https://clawhub.ai/huaweiclouddev/skills/huawei-cloud-openviking-embedding-switch"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 100,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Switch OpenViking's embedding model to a local llama-server (or any OpenAI-compatible embedding endpoint) running inside a bwrap sandbox managed by job-env-manager. Handles the full lifecycle: detect current config, validate the target embedding endpoint, modify ov.conf, delete incompatible vectordb index when dimension changes, restart the openviking-server process in the sandbox, and verify the new collection dimension. Use this skill when the user wants to: (1) switch the OpenViking embedding model, (2) change the embedding dimension, (3) fix EmbeddingRebuildRequiredError after a dimension mismatch, (4) rebuild the vectordb index after an embedding model change, (5) use a local llama-server for OpenViking embeddings. Trigger words: \"\u5207\u6362OpenViking embedding\", \"OpenViking embedding\u6a21\u578b\", \"OpenViking\u5411\u91cf\u5316\u6a21\u578b\", \"openviking embedding switch\", \"change openviking embedding model\", \"\u914d\u7f6eopenviking embedding\", \"openviking llama embedding\", \"bge embedding openviking\", \"\u5207\u6362\u5411\u91cf\u5316\u6a21\u578b\", \"OpenViking\u6a21\u578b\u5207\u6362\".",
+  "updated_at": 1786954906883,
+  "version": "1.0.0"
+}
