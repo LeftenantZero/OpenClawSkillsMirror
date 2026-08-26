@@ -1,0 +1,32 @@
+{
+  "changelog": "**Introduction of persistent emotional state and user consent**\n\n- Ajout de la gestion d\u2019un \u00e9tat \u00e9motionnel \"persist\u00e9\" d\u2019une session \u00e0 l\u2019autre via un fichier `tone-state.md`, pour calibrer le ton de d\u00e9part selon la derni\u00e8re \u00e9motion m\u00e9moris\u00e9e.\n- Au d\u00e9marrage, la skill lit `tone-state.md` si pr\u00e9sent et l\u2019utilise comme r\u00e9f\u00e9rence initiale, sinon elle commence en S\u00e9r\u00e9nit\u00e9. Ignore les fichiers trop anciens (>2 jours).\n- Activation requiert d\u00e9sormais un consentement explicite de l'utilisateur \u00e0 la premi\u00e8re utilisation, avec possibilit\u00e9 de refus ou de d\u00e9sactivation \u00e0 tout moment par commande.\n- Si le consentement est donn\u00e9, l\u2019\u00e9tat \u00e9motionnel est m\u00e9moris\u00e9 \u00e0 la fin de chaque session.\n- Fonctionnement normal : la d\u00e9tection \u00e9motionnelle lors de la conversation reste prioritaire sur l\u2019\u00e9tat persist\u00e9 pour moduler le ton en temps r\u00e9el.\n- Aucun changement au principe de modulation des styles selon l\u2019\u00e9motion, mais l\u2019amor\u00e7age initial et la persistance sont introduits.",
+  "created_at": 1776316658405,
+  "display_name": "qapten-sentient",
+  "fetched_at": 1787778924060,
+  "files": [
+    "_meta.json",
+    "skill.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Michel LEVY PROVENCAL",
+    "handle": "mikiane",
+    "user_id": "s17bnpv38397963eyac1v02q8184dvq7"
+  },
+  "slug": "qapten-sentient",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/qapten-sentient",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=qapten-sentient&ownerHandle=mikiane",
+    "page_url": "https://clawhub.ai/mikiane/skills/qapten-sentient"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 426,
+    "installs": 6,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Modulate le ton, le style et le vocabulaire des r\u00e9ponses en fonction de l'\u00e9tat \u00e9motionnel d\u00e9tect\u00e9 dans la session. Utilise quand l'utilisateur exprime une \u00e9m...",
+  "updated_at": 1782513950959,
+  "version": "1.0.1"
+}
