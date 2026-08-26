@@ -1,0 +1,33 @@
+{
+  "changelog": "Lipsync 1.0.0\n\n- Initial release of the lipsync skill for RunComfy.\n- Supports multiple lip-sync endpoints: ByteDance OmniHuman, Sync Labs sync v2 / Pro, Kling lipsync, and Creatify lipsync.\n- Automatically selects the appropriate model based on input type: portrait still + audio, source video + audio, or script.\n- Provides clear consent guidance for ethical usage.\n- Includes CLI usage instructions and links to model documentation.",
+  "created_at": 1785124898816,
+  "display_name": "Lipsync \u2014 Pro Pack on RunComfy",
+  "fetched_at": 1787774785676,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mew",
+    "handle": "permew",
+    "user_id": "s17af27kmxn6ac8n1m0wdx0drh8bb4gd"
+  },
+  "slug": "lipsync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/lipsync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=lipsync&ownerHandle=permew",
+    "page_url": "https://clawhub.ai/permew/skills/lipsync"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 251,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Lip-sync a face to a specific audio track on RunComfy via the `runcomfy` CLI. Routes across ByteDance OmniHuman (audio-driven full-body avatar from a portrait + audio), Sync Labs sync v2 / Pro (state-of-the-art mouth sync onto a video), Kling lipsync (audio-to- video and text-to-video with synced speech), and Creatify lipsync. The skill picks the right endpoint for the user's actual intent \u2014 portrait still + audio (avatar-style), source video + audio (mouth- swap on existing footage), or generate-and-sync from a script. Triggers on \"lip sync\", \"lipsync\", \"make this video speak\", \"match audio to mouth\", \"dub video\", \"sync lips to voice\", \"Sync Labs\", \"voiceover sync\", or any explicit ask to drive a face's mouth from an audio track.",
+  "updated_at": 1785127234302,
+  "version": "1.0.0"
+}
