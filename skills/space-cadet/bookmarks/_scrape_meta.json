@@ -1,0 +1,44 @@
+{
+  "changelog": "Bookmarks skill v1.0.0 \u2014 Initial version, new Telegram-centric workflow\n\n- Telegram-first design: supports saving, listing, searching, and managing bookmarks via `/save` commands in Telegram.\n- Adds `scripts/handler.py` to normalize and process Telegram `/save ...` operations.\n- Removes previous multi-platform, background import flow and unified markdown workspace structure.\n- All bookmark actions (save, list, show, search, remove) are now Telegram subcommands, including inline and reply modes.\n- Supports unique assistant message handling: fetches full response from session history to avoid truncated saves.\n- Stores bookmarks in a single append-only markdown log (`memory/bookmarks.md`) with timestamped entries and tag extraction.",
+  "created_at": 1784785845592,
+  "display_name": "Bookmarks",
+  "fetched_at": 1787775543352,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/handler.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784788285957,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Deepak Vaid",
+    "handle": "space-cadet",
+    "user_id": "s17dfmfy79et7b7hb5944pm7qd8a031j"
+  },
+  "slug": "bookmarks",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bookmarks",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bookmarks&ownerHandle=space-cadet",
+    "page_url": "https://clawhub.ai/space-cadet/skills/bookmarks"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 38,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Save, list, search, and manage Telegram message bookmarks via /save commands.",
+  "updated_at": 1784787485199,
+  "version": "1.0.0"
+}
