@@ -1,0 +1,62 @@
+{
+  "changelog": "Initial release of the PAI-EAS Inference Service Deployment skill.\n\n- Provides end-to-end workflow to deploy AI models as inference services on Alibaba Cloud PAI-EAS.\n- Enforces strict duplicate service name checks; never reuses or recreates existing services.\n- Requires Aliyun CLI >= 3.3.3 and enforces plugin installation/verification for `aiworkspace` and `eas`.\n- Implements a unified session-based user-agent for observability and traceability on all API/CLI calls.\n- Executes all required validation and deployment steps directly via CLI commands\u2014no scripts, wrappers, or skipped steps.\n- Documents self-verification checkpoints, error handling, and required permissions for reliable, autonomous operation.",
+  "created_at": 1776927032293,
+  "display_name": "Alibabacloud Pai Eas Service Deploy",
+  "fetched_at": 1787776935107,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/api-reference.md",
+    "references/cli-installation-guide.md",
+    "references/config-examples.md",
+    "references/config-patterns.md",
+    "references/config-schema.md",
+    "references/deployment-workflow.md",
+    "references/image-categories.md",
+    "references/model-image-matching.md",
+    "references/network-config.md",
+    "references/ram-policies.md",
+    "references/related-apis.md",
+    "references/service-features.md",
+    "references/service-invoke-examples.md",
+    "references/storage-mount.md",
+    "references/verification-method.md",
+    "scripts/create-service-from-json.sh",
+    "scripts/list-images.sh",
+    "scripts/validate-service-config.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783929850854,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-pai-eas-service-deploy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-pai-eas-service-deploy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-pai-eas-service-deploy&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-pai-eas-service-deploy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 813,
+    "installs": 14,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Deploy AI models as PAI-EAS inference services. Supports LLMs (Qwen, Llama), image gen (SD, SDXL), speech synthesis, and more. When to use: deploy models, cr...",
+  "updated_at": 1783929570842,
+  "version": "0.0.1"
+}
