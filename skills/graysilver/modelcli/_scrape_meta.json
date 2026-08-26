@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of modelcli skill.\n\n- Wraps local ModelCLI for object detection, OCR, speech recognition, speech synthesis, model management, and diagnostics.\n- Selects appropriate ModelCLI commands based on user requests for image, text, or audio processing.\n- Ensures input file validity and executes CLI via a Python wrapper with consistent output handling.\n- Handles confirmation for sensitive operations such as file overwrites and model removal.\n- Parses results from JSON output, manages retry logic for transient errors, and summarizes outcomes concisely to users.",
+  "created_at": 1784778064496,
+  "display_name": "ModelCLI",
+  "fetched_at": 1787775563265,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/commands.md",
+    "references/protocol.md",
+    "scripts/invoke.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784780392092,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Overlord",
+    "handle": "graysilver",
+    "user_id": "s17c6q86pekf2pm4rzv7z5wrsd8b36w8"
+  },
+  "slug": "modelcli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/modelcli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=modelcli&ownerHandle=graysilver",
+    "page_url": "https://clawhub.ai/graysilver/skills/modelcli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 261,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4f7f\u7528\u672c\u5730 ModelCLI \u5b8c\u6210\u76ee\u6807\u68c0\u6d4b\u3001OCR\u3001\u8bed\u97f3\u8bc6\u522b\u3001\u8bed\u97f3\u5408\u6210\u3001\u6a21\u578b\u7ba1\u7406\u4e0e\u8fd0\u884c\u8bca\u65ad\u3002 Use when the user asks to detect objects in an image, extract Chinese or English text from an image, transcribe...",
+  "updated_at": 1784779640259,
+  "version": "0.1.0"
+}
