@@ -1,0 +1,40 @@
+{
+  "changelog": "Initial release with significant feature and documentation updates:\n\n- Added CLI and core logic scripts for semantic compression and validation (`scripts/` directory).\n- Documentation fully rewritten: now focused on \"caveman compress\" for memory files (CLAUDE.md, todos).\n- Strong rules for what to compress vs. what to preserve (technical data, structure), with explicit examples.\n- Compression runs via CLI and handles file type detection, anchor validation, iterative fixing, and error reporting.\n- Backup of originals now automatic; excludes non-natural language file types from compression.\n- Removed older reference documentation (metrics, validation details, etc.) for a focused, actionable SKILL.md.",
+  "created_at": 1782459668922,
+  "display_name": "Compress",
+  "fetched_at": 1787775352244,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/__init__.py",
+    "scripts/__main__.py",
+    "scripts/benchmark.py",
+    "scripts/cli.py",
+    "scripts/compress.py",
+    "scripts/detect.py",
+    "scripts/validate.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Sean Ford",
+    "handle": "seanford",
+    "user_id": "s1789sb4jmdxm4cdhqr1j4rjq583j23c"
+  },
+  "slug": "compress",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/compress",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=compress&ownerHandle=seanford",
+    "page_url": "https://clawhub.ai/seanford/skills/compress"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 104,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Compress natural language memory files (CLAUDE.md, todos, preferences) into caveman format to save input tokens. Preserves all technical substance, code, URL...",
+  "updated_at": 1782459668922,
+  "version": "1.0.0"
+}
