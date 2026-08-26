@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release: universal claim-verification gate engine with 2 ready-to-use gates (zero-residual, no-abs-path).",
+  "created_at": 1787548749163,
+  "display_name": "gate-switch",
+  "fetched_at": 1787769667384,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/gate_switch.py",
+    "scripts/specs/no_abs_path.json",
+    "scripts/specs/zero_residual.json",
+    "skill-card.md",
+    "templates/CLAIM_GATE_TEMPLATE.md",
+    "templates/L3_FRAMEWORK_TEMPLATE.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787549633582,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xu-jin-cs",
+    "handle": "xu-jin-cs",
+    "user_id": "s17azcnmdk15x67zbdt75tw26d8d2m2j"
+  },
+  "slug": "gate-switch",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gate-switch",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gate-switch&ownerHandle=xu-jin-cs",
+    "page_url": "https://clawhub.ai/xu-jin-cs/skills/gate-switch"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 67,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Claim-verification gate engine for LLM agent workflows. Whenever an agent claims 'X is done / written / synced / verified', write X as a spec JSON of mechanical checks; the engine verifies each check and returns a verdict (A=pass / B=block with violations / CLARIFY / VIOLATION). Cures three chronic LLM failures: skipped work, partial delivery, fabricated claims. \u58f0\u79f0 X \u5df2\u6ee1\u8db3\uff0c\u5c31\u673a\u68b0\u6838\u9a8c X\u2014\u2014\u5224\u5b9a\u7981\u6b62\u624b\u5199\uff0c\u7167\u6284\u8f93\u51fa\u3002",
+  "updated_at": 1787548818228,
+  "version": "1.0.0"
+}
