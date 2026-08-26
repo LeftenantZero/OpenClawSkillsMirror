@@ -1,0 +1,43 @@
+{
+  "changelog": "- Initial release: standards-corpus-classifier v1.0.0.\n- Classifies standard PDFs by level (\u56fd\u5bb6/\u884c\u4e1a/\u5730\u65b9) and domain (\u5efa\u7b51/\u98df\u54c1/\u4ea4\u901a\u7b49), organizing files and generating an inventory CSV.\n- Provides an offline HTML report with filterable categories, statistics, and domain/year breakdowns.\n- Includes scripts to export/download filtered subsets (by domain, year, standard number, or name) to ZIP archives with strong safety guarantees.\n- Ensures consistency and accuracy with a verification script checking all outputs, and supports easy metadata and taxonomy extension without internet.\n- Tested and verified on large real-world corpora (e.g., \u5317\u4eacDB11, \u6c14\u8c61QX) with 0 missing or duplicate entries.",
+  "created_at": 1786806435206,
+  "display_name": "\u6807\u51c6\u8bed\u6599\u5206\u7c7b\u5668",
+  "fetched_at": 1787771816455,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/cover.png",
+    "manifest.yaml",
+    "references/domains.json",
+    "references/qx_domains.json",
+    "references/sources.json",
+    "scripts/classify_standards.py",
+    "scripts/discover_sources.py",
+    "scripts/export_standards.py",
+    "scripts/make_report.py",
+    "scripts/verify_consistency.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jeffm2020",
+    "handle": "jeffm2020",
+    "user_id": "s174nx68hz295hhb5vgeagqgrh83js1f"
+  },
+  "slug": "standards-corpus-classifier",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/standards-corpus-classifier",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=standards-corpus-classifier&ownerHandle=jeffm2020",
+    "page_url": "https://clawhub.ai/jeffm2020/skills/standards-corpus-classifier"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 134,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06\u4e00\u6279\u6807\u51c6 PDF\uff08\u56fd\u5bb6 GB / \u884c\u4e1a QX\u00b7JB\u00b7YY\u2026 / \u5730\u65b9 DB11\u00b7DB31\u2026\uff09\u6309\u300c\u7ea7\u522b \u00d7 \u9886\u57df\u300d\u81ea\u52a8\u5f52\u7f6e\uff1a \u89e3\u6790\u6587\u4ef6\u540d\u4e2d\u7684\u6807\u51c6\u4ee3\u53f7\uff0c\u67e5\u6ce8\u518c\u8868\u5f97\u7ea7\u522b\u4e0e\u5f52\u5c5e\uff0c\u6309\u540d\u79f0\u5173\u952e\u8bcd\u5206\u5165\u7f16\u53f7\u9886\u57df\u5b50\u6587\u4ef6\u5939\uff0c \u5e76\u4ea7\u51fa CSV \u7f16\u76ee\u4e0e HTML \u53ef\u89c6\u5316\u62a5\u544a\uff0c\u652f\u6301\u6309\u5206\u7c7b/\u5e74\u4efd/\u6807\u51c6\u53f7/\u540d\u79f0\u7b5b\u9009\u6253\u5305\u4e0b\u8f7d\u3002 This skill should be used when a user has a folder of standard PDFs (\u56fd\u5bb6\u6807\u51c6/\u884c\u4e1a\u6807\u51c6/\u5730\u65b9\u6807\u51c6/\u56e2\u4f53\u6807\u51c6/\u4f01\u4e1a\u6807\u51c6) and wants them classified, organized into domain subfolders, or inventoried \u2014 e.g. \"\u628a\u8fd9\u6279\u6807\u51c6\u6309\u5efa\u7b51\u3001\u98df\u54c1\u3001\u4ea4\u901a\u7b49\u5206\u7c7b\", \"\u6574\u7406\u4e00\u4e0b\u5730\u65b9\u6807\u51c6\u6587\u4ef6\u5939\", \"\u7ed9\u8fd9\u4e9b PDF \u51fa\u4e2a\u5206\u7c7b\u76ee\u5f55\", \"\u4e0b\u8f7d\u67d0\u5206\u7c7b/\u67d0\u5e74\u5ea6\u6807\u51c6\".",
+  "updated_at": 1786806509261,
+  "version": "1.0.0"
+}
