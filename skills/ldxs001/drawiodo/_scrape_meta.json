@@ -1,0 +1,78 @@
+{
+  "changelog": "# drawiodo 2.6.1 \u2013 Major update with unified layout engine, hooks, and modular structure\n\n- Introduced a unified diagram layout engine: layered topological sort, barycenter reordering, dynamic spacing, and obstacle-aware routing for all diagram types.\n- Added an extensible hook system with 8 enforced hook points for workflow integrity and automatic version/backup management; all critical checks are enforced at the Python level.\n- Modularized the codebase: core logic split into `drawio_unified.py`, `drawio_module.py`, `drawio_modules.py`, `drawio_route.py`, and more.\n- New references/ documentation files: LICENSE, changelog, hooks, layout rules, test reports, and more; progressive loading for guides and best practices.\n- Enhanced shape and theme support: support for more diagram node shapes and five color themes with unified cycling across diagrams.\n- Strengthened permission and safety checks; improved test reporting and FAQ coverage.",
+  "created_at": 1779076678069,
+  "display_name": "drawiodo",
+  "fetched_at": 1787779084498,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/LICENSE.md",
+    "references/antipatterns.md",
+    "references/api_reference.md",
+    "references/changelog.md",
+    "references/faq.md",
+    "references/generation.md",
+    "references/guide.md",
+    "references/hooks.md",
+    "references/known_issues.md",
+    "references/layout_rules.md",
+    "references/permissions.md",
+    "references/test-report.md",
+    "scripts/build_network.py",
+    "scripts/debug_class.py",
+    "scripts/debug_network.py",
+    "scripts/debug_zpath.py",
+    "scripts/drawio.py",
+    "scripts/drawio_agent.py",
+    "scripts/drawio_gen.py",
+    "scripts/drawio_hooks.py",
+    "scripts/drawio_layout.py",
+    "scripts/drawio_layout_algorithms.py",
+    "scripts/drawio_module.py",
+    "scripts/drawio_modules.py",
+    "scripts/drawio_regen_all.py",
+    "scripts/drawio_route.py",
+    "scripts/drawio_templates.py",
+    "scripts/drawio_unified.py",
+    "scripts/drawio_version.py",
+    "scripts/generate_network_topology.py",
+    "scripts/test_modules.py",
+    "scripts/test_org.py",
+    "scripts/test_rich.py",
+    "scripts/test_themes.py",
+    "scripts/test_unified.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782383563271,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Lighthexuish",
+    "handle": "ldxs001",
+    "user_id": "s1794v2r46s8y5d1r4jdd7ec5h84rw70"
+  },
+  "slug": "drawiodo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/drawiodo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=drawiodo&ownerHandle=ldxs001",
+    "page_url": "https://clawhub.ai/ldxs001/skills/drawiodo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 655,
+    "installs": 11,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "draw.io \u81ea\u52a8\u505a\u56fe Skill\u3002\u5f53\u7528\u6237\u8981\u6c42\u753b\u56fe\u3001\u751f\u6210\u56fe\u8868\u3001\u505a\u67b6\u6784\u56fe\u3001\u6d41\u7a0b\u56fe\u3001UML\u3001ER \u56fe\u3001\u65f6\u5e8f\u56fe\u3001\u601d\u7ef4\u5bfc\u56fe\u7b49\u65f6\u89e6\u53d1\u3002\u751f\u6210 .drawio \u6587\u4ef6\u5e76\u7528 draw.io \u6253\u5f00\u3002\u652f\u6301\u601d\u8003-\u786e\u8ba4-\u8fed\u4ee3-\u7248\u672c\u56de\u6eaf\u7684\u5b8c\u6574\u5de5\u4f5c\u6d41\uff0c8 \u4e2a Hook Point \u5b89\u5168\u6821\u9a8c\u3002",
+  "updated_at": 1782382902873,
+  "version": "2.6.1"
+}
