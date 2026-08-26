@@ -1,0 +1,45 @@
+{
+  "changelog": "v1.0.4: Fixed /tmp world-readable issue \u2014 audio now written to mode-700 /tmp/kittentts-walkie/. Fixed unused speed parameter bug \u2014 VOICE_SPEED now passed to tts.generate(). WAV intermediates cleaned up after conversion. Added Security Notes section.",
+  "created_at": 1774476436103,
+  "display_name": "KittenTTS WhatsApp",
+  "fetched_at": 1787787336778,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/transcribe.sh",
+    "scripts/tts_walkie.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090108137,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ReadY",
+    "handle": "lakshibro",
+    "user_id": "s176sj3v61gd38p21dmx8z4cjx83kyqa"
+  },
+  "slug": "kittentts-whatsapp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kittentts-whatsapp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kittentts-whatsapp&ownerHandle=lakshibro",
+    "page_url": "https://clawhub.ai/lakshibro/skills/kittentts-whatsapp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 747,
+    "installs": 18,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Voice-to-voice mode for WhatsApp using KittenTTS + ffmpeg. Transcribe incoming audio with whisper, reply with a TTS voice note converted to WhatsApp-compatib...",
+  "updated_at": 1779078948572,
+  "version": "1.0.4"
+}
