@@ -1,0 +1,54 @@
+{
+  "changelog": "Initial release of PDF-to-EPUB OCR skill.\n\n- Scanned PDF ebooks can be converted to structured, reflowable EPUB files using OCR.\n- Supports cover image extraction, automatic chapter detection, text cleaning, and metadata management.\n- Handles multi-stage workflow: file validation, OCR processing, text structuring, EPUB generation, and quality checks.\n- Excludes pure-text PDFs and offers guidance for common issues (e.g., low quality scans, missing metadata).\n- Included resource directories for scripts, best practices, and templates.",
+  "created_at": 1786098959297,
+  "display_name": "pdf-to-epub-ocr",
+  "fetched_at": 1787773166022,
+  "files": [
+    ".gitignore",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/epub_style.css",
+    "references/chapter_patterns.md",
+    "references/epub_structure_guide.md",
+    "references/ocr_best_practices.md",
+    "requirements.txt",
+    "scripts/epub_generator.py",
+    "scripts/ocr_processor.py",
+    "scripts/pdf_to_epub_converter.py",
+    "scripts/text_cleaner.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786099840245,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Eric JIE",
+    "handle": "erich1566",
+    "user_id": "s17amde2emhcgwty2p2w954ebn84yrw7"
+  },
+  "slug": "pdf-to-epub-ocr",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pdf-to-epub-ocr",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pdf-to-epub-ocr&ownerHandle=erich1566",
+    "page_url": "https://clawhub.ai/erich1566/skills/pdf-to-epub-ocr"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1450,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06\u626b\u63cf\u7248PDF\u7535\u5b50\u4e66\u901a\u8fc7OCR\u8bc6\u522b\u8f6c\u6362\u4e3a\u7ed3\u6784\u5316\u7cbe\u6392\u7684EPUB\u683c\u5f0f\u3002\u5f53\u7528\u6237\u63d0\u5230\"PDF\u8f6cEPUB\"\u3001\"PDF\u8f6c\u7535\u5b50\u4e66\"\u3001\"OCR\u63d0\u53d6PDF\"\u3001\"\u626b\u63cf\u7248PDF\u8f6c\u6362\"\u3001\"PDF\u7ed3\u6784\u5316\u5904\u7406\"\u6216\u4e0a\u4f20PDF\u6587\u4ef6\u8981\u6c42\u8f6c\u6362\u4e3a\u7535\u5b50\u4e66\u683c\u5f0f\u65f6\u89e6\u53d1\u3002\u4e0d\u9002\u7528\u4e8e\u7eaf\u6587\u672cPDF\uff08\u53ef\u76f4\u63a5\u63d0\u53d6\u6587\u5b57\u7684PDF\u4e0d\u9700\u8981OCR\uff09\u3001\u56fe\u7247\u683c\u5f0f\u8f6c\u6362\u6216PDF\u7f16\u8f91\u529f\u80fd\u3002",
+  "updated_at": 1786099086764,
+  "version": "0.1.0"
+}
