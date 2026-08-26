@@ -1,0 +1,44 @@
+{
+  "changelog": "- Added optional Lobster pipeline support for parallel PR data gathering; falls back to `gh` CLI-only if Lobster is unavailable.\n- New script suite: `run-pr-review.sh` (main entry), plus supporting fetch/merge scripts, enables one-step PR context collection as JSON.\n- Updated documentation to describe Lobster integration, direct CLI fallback, new scripts, and usage examples.\n- Skill now produces a normalized `pr-context-v0` envelope for analysis instead of issuing multiple sequential CLI calls.\n- Removed legacy skill-card and adjusted references to reflect new workflow and integration options.",
+  "created_at": 1776297174595,
+  "display_name": "Structured PR Review",
+  "fetched_at": 1787775566025,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/addressing-workflow.md",
+    "references/conventions.md",
+    "references/iac-checklist.md",
+    "references/lobster-integration.md",
+    "references/review-layers.md",
+    "scripts/fetch-ci.sh",
+    "scripts/fetch-pr.sh",
+    "scripts/fetch-reviews.sh",
+    "scripts/lobster-safe-run.sh",
+    "scripts/merge-pr-context.py",
+    "scripts/run-pr-review.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Grace Gettert",
+    "handle": "ggettert",
+    "user_id": "s17bj3ze3bdgz5fv4m1dbjz8mn84wmhv"
+  },
+  "slug": "structured-pr-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/structured-pr-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=structured-pr-review&ownerHandle=ggettert",
+    "page_url": "https://clawhub.ai/ggettert/skills/structured-pr-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1408,
+    "installs": 15,
+    "stars": 2,
+    "versions": 2
+  },
+  "summary": "Layered PR code review with severity tiers (MUST FIX/SHOULD FIX/SUGGESTION) and addressing-mode. Default: gh CLI only; optional Lobster pipeline.",
+  "updated_at": 1784776434493,
+  "version": "0.1.1"
+}
