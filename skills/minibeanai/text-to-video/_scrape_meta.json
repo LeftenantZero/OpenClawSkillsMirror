@@ -1,0 +1,41 @@
+{
+  "changelog": "Initial release of text-to-video: generate videos (MP4) from text/scripts in a single pipeline.\n\n- Automates script planning, scene breakdown, asset sourcing, TTS configuration, HTML composition, and MP4 rendering.\n- Supports multi-stage workflow with 3 user confirmation gates (script, assets+TTS, render).\n- Integrates text-to-video-planner (planning) and hyperframes (rendering).\n- Workflow applies to explainer, voiceover, education, and social short video scenarios.\n- Enforces strict animation rules (GSAP, timeline sync) for on-screen emphasis; key pitfalls and best practices documented.\n- Outputs structured project files, including video plan, assets, HTML composition, and final MP4.",
+  "created_at": 1784996669370,
+  "display_name": "text-to-video",
+  "fetched_at": 1787775022227,
+  "files": [
+    ".gitignore",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/hyperframes-handoff.md",
+    "references/tts-providers.md",
+    "scripts/generate_tts.sh",
+    "templates/composition_skeleton.html",
+    "templates/video_plan_template.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "AIjindouhua",
+    "handle": "minibeanai",
+    "user_id": "s17b01j3yq2xecvwp3zcr41adh83nyep"
+  },
+  "slug": "text-to-video",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/text-to-video",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=text-to-video&ownerHandle=minibeanai",
+    "page_url": "https://clawhub.ai/minibeanai/skills/text-to-video"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1054,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4ece\u6587\u672c/\u8d44\u6599/\u53e3\u64ad\u811a\u672c\u4e00\u7ad9\u5f0f\u751f\u6210\u53ef\u4ea4\u4ed8\u7684\u89c6\u9891 MP4\u3002\u6d41\u7a0b\uff1aplanner \u9636\u6bb5\u4ea7\u51fa\u811a\u672c+\u5206\u955c+\u7d20\u6750\u6e05\u5355+TTS \u914d\u7f6e \u2192 hyperframes \u9636\u6bb5\u81ea\u52a8 init \u9879\u76ee\u3001\u751f\u6210 HTML composition\u3001\u5408\u6210 TTS \u97f3\u9891\u3001\u6e32\u67d3 MP4\u3002\u9002\u7528\u4e8e\u4ea7\u54c1\u8bb2\u89e3\u3001\u53e3\u64ad\u89c6\u9891\u3001\u6982\u5ff5\u89e3\u91ca\u3001\u6559\u80b2\u79d1\u666e\u7b49\u573a\u666f\u3002",
+  "updated_at": 1784997282708,
+  "version": "0.1.0"
+}
