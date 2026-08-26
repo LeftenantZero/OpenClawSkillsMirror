@@ -1,0 +1,34 @@
+{
+  "changelog": "Implement step 2 of the one rule. This skill has documented a two-step mandatory gate since 0.1.0 - free preflight AND free merchant_card (wash_flagged -> do not pay) - but example.ts only ever called preflight and then proceeded to the payment path. It never fetched merchant_card at all, so anyone following the example paid counterparties the documentation says to refuse. Caught by the ClawHub scanner on 0.2.0 (TP4, HIGH, 0.93) after 0.2.0 cleared the other five findings. twzrdMerchantCard() is now wired into createClawRouterOnBeforePaymentHook: wash_flagged refuses, and in enforce mode an unreachable card is unresolved and also refuses. in_corpus:false does not refuse, since most wallets are not in the corpus. Verified live: a wash-flagged merchant is refused where 0.2.0 allowed it, and the clean warn control still passes.",
+  "created_at": 1781228699388,
+  "display_name": "TWZRD Preflight for ClawRouter",
+  "fetched_at": 1787771519699,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "example.ts",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "agent-trust",
+    "handle": "twzrd-sol",
+    "user_id": "s178rxbzn4nz1zvhqkn5chnvcs83sea5"
+  },
+  "slug": "twzrd-clawrouter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/twzrd-clawrouter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=twzrd-clawrouter&ownerHandle=twzrd-sol",
+    "page_url": "https://clawhub.ai/twzrd-sol/skills/twzrd-clawrouter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 547,
+    "installs": 6,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "TWZRD Preflight for ClawRouter / BlockRun / OpenClaw. The independent pre-spend gate for agents using ClawRouter (for LLM models, Surf crypto data, Predexon, voice, image, etc.) or paying BlockRun. The one rule: Before using ClawRouter or paying BlockRun, call free TWZRD preflight (decision=block \u2192 abort) and free merchant_card (wash_flagged \u2192 do not pay). Composes with AgentCash or direct; Solana-native receipt proof after. Use before any x402 spend through ClawRouter proxy or BlockRun gateway. WHAT YOU GET FREE: ReadinessCard (allow / warn / block + trust_score + caveats) from Solana x402 payer graph before routing spend. PAID (x402, USDC on Solana): full trust + portable Ed25519-signed v6 receipt (when querying TWZRD intel alongside). TRIGGERS: clawrouter preflight, blockrun spend gate, surf data safe, openclaw before pay, pre clawrouter, x402 router gate, blockrun trust, preflight claw",
+  "updated_at": 1787003055115,
+  "version": "0.2.1"
+}
