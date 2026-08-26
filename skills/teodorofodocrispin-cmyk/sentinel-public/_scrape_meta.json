@@ -1,0 +1,33 @@
+{
+  "changelog": "Version 1.1.0 \u2014 verified against the live service.\n\n- Description rewritten and expanded; clearer statement of what the skill does and its scope.\n- Pricing corrected to reflect the tiered model: price scales with transaction value (from $0.005 USDC), and the exact amount is always quoted in the 402 challenge.\n- Payment flow detailed: x402 with facilitator verification plus a facilitator-free local EIP-3009 fallback; the agent's private key never leaves its environment.\n- ed25519-signed receipts documented, with the signer's public key now referenced at /health for independent, offline verification.\n- Reframed as \"one oracle, two capabilities\": transaction safety (/v1/guard) and counterparty trust (/v1/attestation), so integrators understand the full surface.\n- Added references to the public track record (/stats) and the outcome-reporting loop (/v1/outcome).\n- Data sources clarified: GoPlus token security + Alchemy eth_call simulation, reviewed by an LLM council.\n- Repository slimmed to a minimal skill manifest (SKILL.md) for agent marketplaces and integration.",
+  "created_at": 1785299037829,
+  "display_name": "Sentinel Transaction Safety",
+  "fetched_at": 1787773372752,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "teodorofodocrispin-cmyk",
+    "handle": "teodorofodocrispin-cmyk",
+    "user_id": "s174f8wsyybamj8bhwkwa7y5fh85h9zs"
+  },
+  "slug": "sentinel-public",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sentinel-public",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sentinel-public&ownerHandle=teodorofodocrispin-cmyk",
+    "page_url": "https://clawhub.ai/teodorofodocrispin-cmyk/skills/sentinel-public"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 647,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Pre-execution transaction safety check for autonomous AI agents from the SENTINEL trust oracle (sentinel-agent.dev). Before signing an on-chain transaction on Base, an agent gets a SAFE / UNSAFE / UNKNOWN verdict, a SENTINEL Score (0-100, AAA-D), and an ed25519-signed receipt. Pay-per-call via x402.",
+  "updated_at": 1785891044671,
+  "version": "1.1.0"
+}
