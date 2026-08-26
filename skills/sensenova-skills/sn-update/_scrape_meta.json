@@ -1,0 +1,33 @@
+{
+  "changelog": "- Major redesign: SKILL.md rewritten with comprehensive instructions for updating SenseNova (sn-*) skills in OpenClaw or hermes-agent environments.\n- Now supports flexible scope: update all sn-* skills or only specifically named ones.\n- Agent targeting clarified\u2014detects OpenClaw/hermes, prompts if both found, halts if neither present.\n- Reliable version comparison: upgrade decisions per skill using subtree SHA, release tags, or explicit SKILL.md version.\n- Backup improvements: previous skill versions are moved to a timestamped backup folder (max 3 retained), never symlinked or left inside the skills directory.\n- Improved error handling and user reporting: summarizes updated, up-to-date, and errored skills separately; offers clear instructions for edge cases.",
+  "created_at": 1787107093310,
+  "display_name": "sn-update",
+  "fetched_at": 1787770702853,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SenseNova-Skills",
+    "handle": "sensenova-skills",
+    "user_id": "s17fzc6fnxkbqzh6z8jr5bcvhh8bw2vm"
+  },
+  "slug": "sn-update",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sn-update",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sn-update&ownerHandle=sensenova-skills",
+    "page_url": "https://clawhub.ai/sensenova-skills/skills/sn-update"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 99,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Update SenseNova Skills (the sn-* bundle) inside an OpenClaw or hermes-agent install. ALWAYS use this skill when the user says any of: \"update SenseNova skills\", \"update SN skills\", \"\u66f4\u65b0 sensenova skills\", \"\u66f4\u65b0 sn skills\", \"\u5237\u65b0 sn-*\", \"\u5347\u7ea7 sn-* skills\", or names a specific sn-* skill to update (e.g. \"\u66f4\u65b0 sn-ppt-standard\", \"refresh sn-image-base\"). Default scope is the whole sn-* bundle; if the user names specific skills, update ONLY those.",
+  "updated_at": 1787107178498,
+  "version": "2026.8.19"
+}
