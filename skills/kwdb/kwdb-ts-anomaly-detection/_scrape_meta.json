@@ -1,0 +1,55 @@
+{
+  "changelog": "**Expanded workflow, stricter validation, and enforced security confirmation for anomaly detection in KaiwuDB/KWDB time-series data.**\n\n- Added mandatory security confirmation prompt before all operations; requires explicit user consent to proceed.\n- Defined strict, step-by-step workflow with detailed constraints and error handling; all SQL must be executed via a specified script.\n- Enhanced validation: checks for script availability, connection parameters, proper time-series and column types, and tag scope.\n- Volume controls: automatic LIMIT enforcement and new hard stop for large data sets (>100k rows) unless filtered.\n- Enforced confirmation of SQL, reporting format choice (direct, Markdown, PDF, HTML), and consistent cleanup.\n- Clarified forbidden actions; added references to supporting documentation for full details.",
+  "created_at": 1784786085976,
+  "display_name": "KWDB Time-Series Anomaly Detection",
+  "fetched_at": 1787775524740,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/column-comment.md",
+    "references/constraints.md",
+    "references/error-handling.md",
+    "references/metadata-query.md",
+    "references/report-template-html.md",
+    "references/report-template.md",
+    "references/ts-select.md",
+    "references/workflow.md",
+    "scripts/3-sigma-detection.py",
+    "scripts/html-report-gen.py",
+    "scripts/kwdb_connection.py",
+    "scripts/kwdb_sql_execute.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784788527161,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "KWDB",
+    "handle": "kwdb",
+    "user_id": "s17e2f9k2hwm2p7q50y9wz03fs8445dh"
+  },
+  "slug": "kwdb-ts-anomaly-detection",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kwdb-ts-anomaly-detection",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kwdb-ts-anomaly-detection&ownerHandle=kwdb",
+    "page_url": "https://clawhub.ai/kwdb/skills/kwdb-ts-anomaly-detection"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 245,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Automates end-to-end anomaly detection for time-series data stored in KaiwuDB / KWDB. Use this skill whenever the user mentions: - anomaly detection, outlier...",
+  "updated_at": 1784787724252,
+  "version": "1.2.0"
+}
