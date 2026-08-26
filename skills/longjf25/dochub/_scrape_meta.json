@@ -1,0 +1,45 @@
+{
+  "changelog": "dochub 1.5.0 \u2014 Big update: Introduced a layered architecture and richer knowledge workflows.\n\n- Implements Karpathy\u2019s three-layer methodology (raw \u2192 wiki \u2192 schema) for document knowledge base management.\n- Major refactor of directory structure with clear separation: raw/ (immutable originals), wiki/ (LLM-generated Markdown), update/ (incremental docs), and schema definition.\n- Extensive overhaul of initialization and update flows, with step-by-step procedures and stricter safety/data-sensitive checks.\n- Adds YAML frontmatter, structured indexing, new types of wiki pages (concepts, entities, comparisons), and improved tagging.\n- Expanded knowledge base operations: initialization, incremental update, search/Q&A, and lint (health check).\n- Simplifies dependencies; native Python libraries preferred for doc conversion (.docx/.xlsx), external tool fallback optional.\n- Up-to-date documentation and workflow templates now provided in references/.",
+  "created_at": 1774794976038,
+  "display_name": "Dochub",
+  "fetched_at": 1787782862621,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/entity-types.md",
+    "references/karpathy-methodology.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780647927003,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "juanfenglong",
+    "handle": "longjf25",
+    "user_id": "s171gz7gmrefdayrd3gs39znf583tmf4"
+  },
+  "slug": "dochub",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dochub",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dochub&ownerHandle=longjf25",
+    "page_url": "https://clawhub.ai/longjf25/skills/dochub"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 873,
+    "installs": 20,
+    "stars": 1,
+    "versions": 8
+  },
+  "summary": "\u4e13\u4e1a\u6587\u6863\u77e5\u8bc6\u5e93\u7ba1\u7406\u6280\u80fd\u3002\u5c06 .docx/.xlsx \u539f\u59cb\u6587\u6863\u7f16\u8bd1\u4e3a\u7ed3\u6784\u5316 Markdown \u77e5\u8bc6\u5e93\uff0c\u57fa\u4e8e Andrej Karpathy \u4e09\u5c42\u67b6\u6784\u65b9\u6cd5\u8bba\uff08raw -> wiki -> schema\uff09\u3002\u652f\u6301\u521d\u59cb\u5316\u3001\u589e\u91cf\u66f4\u65b0\u3001\u6e10\u8fdb\u5f0f\u68c0\u7d22\u95ee\u7b54\u548c\u77e5\u8bc6\u5065\u5eb7\u68c0\u67e5\u56db\u5927\u64cd\u4f5c\u3002\u89e6\u53d1\u573a\u666f\uff1a\u7528\u6237\u521d\u59cb\u5316\u6587\u6863\u77e5\u8bc6\u5e93\u3001\u6d88\u5316\u65b0\u6587\u6863\u3001\u641c\u7d22\u6587\u6863\u5185...",
+  "updated_at": 1780644649017,
+  "version": "1.5.0"
+}
