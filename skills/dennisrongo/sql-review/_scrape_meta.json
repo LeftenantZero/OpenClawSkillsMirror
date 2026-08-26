@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of the sql-review skill \u2013 a focused, practical SQL pre-commit code review tool:\n\n- Detects 17 SQL-specific antipatterns that commonly trigger real-world incidents, including masked errors, broken retry logic, unsafe error handling, indexing omissions, injection risks, and more.\n- Only reports issues (does not edit SQL automatically); findings are categorized as BLOCKER, WARN, or INFO with file:line citations and actionable recommendations.\n- Reviews entire content for new SQL files, but only changed hunks for modified files to reduce noise.\n- Output includes precise, verbatim SQL snippets and incident risk explanations for all findings.\n- Run this skill whenever SQL review, linting, or audit is requested\u2014distinct from general code review, with a deeper SQL-focused catalog.",
+  "created_at": 1786913727059,
+  "display_name": "sql-review",
+  "fetched_at": 1787771692472,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "sql-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sql-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sql-review&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/sql-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 134,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Pre-commit SQL code review for uncommitted database changes. Detects antipatterns that cause real production incidents \u2014 `sp_send_dbmail` in CATCH blocks (masks the real error as a misleading permission denial), broken retry patterns (`@retry` declared without a surrounding `WHILE` loop), swallowing CATCH blocks (no `THROW`/`RAISERROR`/log), new tables created without a primary key or any index (silent perf-then-deadlock killer), parameter-vs-column type mismatches (8152 truncation risk), `EXEC()` string concatenation without `sp_executesql` parameters (SQL injection), `NOLOCK` in write paths, `UPDATE`/`DELETE` without `WHERE`, cursors without `READ_ONLY FORWARD_ONLY LOCAL`, hardcoded env values (emails, server names, paths), cross-DB references like `msdb.dbo.*`, missing `SET NOCOUNT ON`, missing `GRANT EXECUTE` on `CREATE PROC`, `BEGIN TRANSACTION` outside `TRY`/`CATCH`, and vestigial control-flow comments hinting at refactor leftovers (e.g. `-- end while loop` with no `WHILE`). Reports findings as `BLOCKER` / `WARN` / `INFO` with `file:line` citations and per-finding fix recommendations. **Never edits SQL** \u2014 surfaces findings for human review. Use this skill whenever the user says \"/sql-review\", \"review my SQL\", \"review the SQL diff\", \"lint the SQL\", \"check my SQL changes\", \"SQL pre-commit check\", \"audit my stored proc\", or \"any SQL antipatterns in this diff\" \u2014 even if they don't explicitly say \"SQL review skill\". Distinct from `code-review` (general best-practice review) \u2014 this carries SQL-specific patterns that surface DB-layer production incidents.",
+  "updated_at": 1786913777167,
+  "version": "1.0.0"
+}
