@@ -1,0 +1,41 @@
+{
+  "changelog": "golang-observability v1.3.0\n\n- Added explicit orchestration mode to enable parallel sub-agent audits for metrics, logging, tracing, profiling, and RUM coverage.\n- Updated best practices to reference the full awesome-prometheus-alerts collection and clarified alerting recommendations.\n- Refined compatibility metadata and skill targeting (now includes Codex as well as Claude Code).\n- Introduced a new glob pattern for Go files (paths: \"**/*.go\").\n- Removed obsolete skill-card.md file.\n- Updated linked reference docs (alerting, dashboards, metrics) with improved guidance.",
+  "created_at": 1774239032090,
+  "display_name": "golang-observability",
+  "fetched_at": 1787770097396,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/alerting.md",
+    "references/dashboards.md",
+    "references/logging.md",
+    "references/metrics.md",
+    "references/profiling.md",
+    "references/rum.md",
+    "references/tracing.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Samuel Berthe",
+    "handle": "samber",
+    "user_id": "s173arkhs3131fq5jf769qq75583hdgt"
+  },
+  "slug": "golang-observability",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/golang-observability",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=golang-observability&ownerHandle=samber",
+    "page_url": "https://clawhub.ai/samber/skills/golang-observability"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1136,
+    "installs": 28,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Golang everyday observability \u2014 the always-on signals in production. Covers structured logging with slog, Prometheus metrics, OpenTelemetry distributed tracing, continuous profiling with pprof/Pyroscope, server-side RUM event tracking, alerting, and Grafana dashboards. Apply when instrumenting Go services for production monitoring, setting up metrics or alerting, adding OpenTelemetry tracing, correlating logs with traces, migrating legacy loggers (zap/logrus/zerolog) to slog, adding observability to new features, or implementing GDPR/CCPA-compliant tracking with Customer Data Platforms (CDP). Not for temporary deep-dive performance investigation (\u2192 See `samber/cc-skills-golang@golang-benchmark` and `samber/cc-skills-golang@golang-performance` skills).",
+  "updated_at": 1787349293030,
+  "version": "1.3.0"
+}
