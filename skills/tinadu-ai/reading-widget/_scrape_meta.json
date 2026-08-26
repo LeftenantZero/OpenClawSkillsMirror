@@ -1,0 +1,40 @@
+{
+  "changelog": "Fix: editing the monthly goal now updates the progress %/bar under \u00dcbersicht. The recompute lived in a <script> that never runs when \u00dcbersicht injects the widget via innerHTML; moved it to an inline oninput handler (mirrors the working flip cards) and persist via an absolute 127.0.0.1:47900 URL with text/plain to avoid a CORS preflight. Also: the helper now binds its port before the initial WeRead fetch, so startup no longer stalls when there is no proxy env (e.g. under launchd).",
+  "created_at": 1779074799657,
+  "display_name": "Reading Widget Clawhub",
+  "fetched_at": 1787783326665,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.default.json",
+    "install.sh",
+    "open-widget.sh",
+    "server.py",
+    "skill-card.md",
+    "template.html",
+    "update.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "NANA",
+    "handle": "tinadu-ai",
+    "user_id": "s178xc11mj68f9c018344m5xw183y7z8"
+  },
+  "slug": "reading-widget",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/reading-widget",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=reading-widget&ownerHandle=tinadu-ai",
+    "page_url": "https://clawhub.ai/tinadu-ai/skills/reading-widget"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 691,
+    "installs": 14,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "\u5728 macOS \u684c\u9762\u4e0a\u653e\u4e00\u4e2a\u5fae\u4fe1\u8bfb\u4e66\u6570\u636e\u5c0f\u5361\u7247\uff0c\u81ea\u52a8\u663e\u793a\u8fde\u7eed\u9605\u8bfb\u5929\u6570\u3001\u4eca\u65e5/\u672c\u6708\u9605\u8bfb\u65f6\u957f\uff08\u53ef\u70b9\u5f00\u770b\u672c\u5468/\u4eca\u5e74\u5bf9\u6bd4\uff09\u3001\u672c\u6708\u76ee\u6807\u8fdb\u5ea6\u3001\u5f53\u524d\u5728\u8bfb\u3001\u5e74\u5ea6\u8bfb\u5b8c\u672c\u6570\u548c\u5f53\u4e0b\u91d1\u53e5\u3002\u5b89\u88c5\u540e\u901a\u8fc7 Chrome --app \u6a21\u5f0f\u6253\u5f00\u6210\u65e0\u8fb9\u6846\u7a97\u53e3\u8d34\u5728\u5c4f\u5e55\u89d2\u843d\u3002\u89e6\u53d1\uff1a\u7528\u6237\u8bf4\"\u88c5\u9605\u8bfb widget\"\u3001\"\u505a\u4e2a\u8bfb\u4e66\u684c\u9762\u5c0f\u5361\u7247\"\u3001\"reading...",
+  "updated_at": 1780412181987,
+  "version": "1.1.1"
+}
