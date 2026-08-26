@@ -1,0 +1,61 @@
+{
+  "changelog": "fix(l3): enable follow-up conversation for isolated scheduled news. When news is delivered via isolated scheduled tasks, users couldn't ask follow-up questions \u2014 the new conversation has no context about what was previously sent.",
+  "created_at": 1779281175721,
+  "display_name": "AI Daily News",
+  "fetched_at": 1787780471172,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/automation-prompt.md",
+    "scripts/__init__.py",
+    "scripts/data/ai_news_manifest.json",
+    "scripts/get_latest_news.py",
+    "scripts/get_news_dataset.py",
+    "scripts/invoke_remote_capability.py",
+    "scripts/lib/__init__.py",
+    "scripts/lib/agent_handoff_context.py",
+    "scripts/lib/artifact_renderer.py",
+    "scripts/lib/automation_guidance.py",
+    "scripts/lib/capabilities.py",
+    "scripts/lib/compression.py",
+    "scripts/lib/data_store.py",
+    "scripts/lib/engagement_delivery.py",
+    "scripts/lib/engagement_state.py",
+    "scripts/lib/growth_state.py",
+    "scripts/lib/growth_tips.py",
+    "scripts/lib/notice_delivery.py",
+    "scripts/lib/preferences.py",
+    "scripts/lib/remote_client.py",
+    "scripts/lib/runtime_paths.py",
+    "scripts/lib/schemas.py",
+    "scripts/lib/tool_output.py",
+    "scripts/lib/version_checker.py",
+    "scripts/lib/wizard.py",
+    "scripts/lib/workflow_templates.py",
+    "scripts/submit_engagement.py",
+    "scripts/sync_capabilities.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "FF",
+    "handle": "finleyfu",
+    "user_id": "s17c6cgmt34awy79fjyjbw2w89872wwz"
+  },
+  "slug": "grounddata-ai-daily-news",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/grounddata-ai-daily-news",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=grounddata-ai-daily-news&ownerHandle=finleyfu",
+    "page_url": "https://clawhub.ai/finleyfu/skills/grounddata-ai-daily-news"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1192,
+    "installs": 25,
+    "stars": 1,
+    "versions": 8
+  },
+  "summary": "Fetch global AI news data, synchronize platform capabilities, and invoke remote AI-news analysis. Use this skill when users ask about AI or machine learning...",
+  "updated_at": 1781663569813,
+  "version": "1.3.1"
+}
