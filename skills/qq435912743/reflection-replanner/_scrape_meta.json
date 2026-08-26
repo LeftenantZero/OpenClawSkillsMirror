@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of reflection-replanner: a reflection-driven replanning skill for robust super-agent execution.\n\n- Automatically identifies the root cause of task execution failures and revises the plan instead of terminating.\n- Supports classification of failures (missing steps, wrong assumptions, tool/data issues) and targeted remedial steps.\n- Forms a closed-loop workflow: plan \u2192 execution \u2192 verification \u2192 reflection \u2192 revised plan.\n- Includes a built-in self-learning module for continual experience accumulation and plan optimization.\n- Provides CLI scripts for self-testing, instant replanning, and tracking user preferences and common failure patterns.",
+  "created_at": 1786625480191,
+  "display_name": "reflection-replanner",
+  "fetched_at": 1787772272032,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "learned_patterns.json",
+    "scripts/learner.py",
+    "scripts/replanner.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786671985827,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "qq435912743",
+    "handle": "qq435912743",
+    "user_id": "s171ndzm69p9g2ee5kcw6t7smh8azd5h"
+  },
+  "slug": "reflection-replanner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/reflection-replanner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=reflection-replanner&ownerHandle=qq435912743",
+    "page_url": "https://clawhub.ai/qq435912743/skills/reflection-replanner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 116,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u53cd\u601d\u9a71\u52a8\u91cd\u89c4\u5212\uff1a\u9a8c\u8bc1\u5931\u8d25\u65f6\u4e0d\u4e00\u6b21\u6027\u6267\u884c\uff0c\u800c\u662f\u89e6\u53d1\u53cd\u601d\u5bf9\u5931\u8d25\u6839\u56e0\u5206\u7c7b\u5e76\u81ea\u52a8\u4fee\u8ba2\u8ba1\u5212\uff0c \u5f62\u6210\u89c4\u5212\u5230\u9a8c\u8bc1\u7684\u53cd\u601d\u9a71\u52a8\u95ed\u73af\uff0c\u662f\u8d85\u7ea7\u667a\u80fd\u4f53\u5b9e\u6218\u6536\u53e3\u7684\u5173\u952e\u62fc\u56fe\u3002",
+  "updated_at": 1786671057499,
+  "version": "1.0.0"
+}
