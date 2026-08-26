@@ -1,0 +1,39 @@
+{
+  "changelog": "- Initial release: install-stack-flagos 1.0.0 installs a 5-package multi-chip software stack (vLLM, FlagTree, FlagGems, FlagCX, vllm-plugin-FL) in a running GPU container.\n- Handles network mirror detection, disk space verification, package dependency ordering, wheel selection for FlagTree, per-package validation, and structured error reporting.\n- Includes detailed execution flow, timeout rules for each step, and user prompts for required inputs if context is missing.\n- Produces a comprehensive final JSON report with install status for each package and overall outcome.\n- Supports partial installation (with gating on critical failures), and logs errors for troubleshooting.",
+  "created_at": 1779174200656,
+  "display_name": "Install Stack Flagos",
+  "fetched_at": 1787786549951,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/network-mirrors.md",
+    "references/vendor-mappings.md",
+    "scripts/collect_env_info.py",
+    "scripts/detect_network.py",
+    "scripts/select_flagtree_wheel.py",
+    "scripts/validate_packages.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Flagos",
+    "handle": "wbavon",
+    "user_id": "s179mcxns07mhashdtzg4tbf6584wt8v"
+  },
+  "slug": "install-stack-flagos",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/install-stack-flagos",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=install-stack-flagos&ownerHandle=wbavon",
+    "page_url": "https://clawhub.ai/wbavon/skills/install-stack-flagos"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 586,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Install the 5-package multi-chip software stack (vLLM, FlagTree, FlagGems, FlagCX, vllm-plugin-FL) inside a GPU container. Handles network mirror detection,...",
+  "updated_at": 1779174214565,
+  "version": "1.0.0"
+}
