@@ -1,0 +1,50 @@
+{
+  "changelog": "byted-voice-to-text 1.0.0 \u2013 Initial Release\n\n- Provides voice-to-text conversion using Volcengine BigModel ASR, supporting both Express (\u22642h/100MB, synchronous) and Standard (\u22645h, asynchronous) modes.\n- Supports Feishu voice messages, local audio files, and audio URLs (.ogg/.mp3/.wav).\n- Enforces mandatory script routing and error handling procedures; does not fall back to whisper or other providers.\n- Includes pre-checks for audio properties and ffmpeg/ffprobe dependencies, with auto-installation if missing.\n- Outlines precise instructions, environment variable requirements, and command samples for all supported workflows.",
+  "created_at": 1774597118325,
+  "display_name": "Byted Voice To Text",
+  "fetched_at": 1787787090593,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/routing_strategy.md",
+    "requirements.txt",
+    "scripts/api_key.py",
+    "scripts/asr_flash.py",
+    "scripts/asr_standard.py",
+    "scripts/ensure_ffmpeg.py",
+    "scripts/inspect_audio.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090153037,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "volcengine-skills",
+    "handle": "volcengine-skills",
+    "user_id": "s17bcxs73bckd3eercvtn6cmsx83g5kg"
+  },
+  "slug": "byted-voice-to-text",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/byted-voice-to-text",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=byted-voice-to-text&ownerHandle=volcengine-skills",
+    "page_url": "https://clawhub.ai/volcengine-skills/skills/byted-voice-to-text"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 752,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u8bed\u97f3\u8f6c\u6587\u5b57\uff08ASR\uff09\u3002\u4f7f\u7528\u706b\u5c71\u5f15\u64ce BigModel ASR \u8bc6\u522b\u8bed\u97f3\uff0c\u5305\u542b\u6781\u901f\u7248\uff08\u22642h/100MB \u540c\u6b65\u5feb\u901f\u8fd4\u56de\uff09\u548c\u6807\u51c6\u7248\uff08\u22645h \u5f02\u6b65\u8bc6\u522b\uff09\u4e24\u79cd\u6a21\u5f0f\u3002\u652f\u6301\u98de\u4e66\u8bed\u97f3\u6d88\u606f\u3001\u672c\u5730\u97f3\u9891\u6587\u4ef6\u53ca\u97f3\u9891 URL\u3002\u5f53\u6536\u5230\u8bed\u97f3\u6d88\u606f\u6216\u97f3\u9891\u9644\u4ef6\uff08.ogg/.mp3/.wav\uff09\u65f6\u4f7f\u7528\u672c\u6280\u80fd\u3002",
+  "updated_at": 1779079069110,
+  "version": "1.0.0"
+}
