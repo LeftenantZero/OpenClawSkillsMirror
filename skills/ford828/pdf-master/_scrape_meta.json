@@ -1,0 +1,62 @@
+{
+  "changelog": "- \u5f15\u5165\u73af\u5883\u81ea\u68c0\u903b\u8f91\uff0c\u65b0\u589e Step 0\uff1a\u9996\u6b21\u4f7f\u7528\u6216\u7f3a\u4f9d\u8d56\u65f6\u62a5\u9519\u65f6\u81ea\u52a8\u68c0\u6d4b\u73af\u5883\uff0c\u7f3a\u5931\u6838\u5fc3\u4f9d\u8d56\u65f6\u5f15\u5bfc\u7528\u6237\u7528 setup.sh \u4e00\u952e\u5b89\u88c5\n- \u6dfb\u52a0 LICENSE\uff08MIT-0\uff09\u3001README.md \u548c\u73af\u5883\u811a\u672c\uff0c\u5b8c\u5584\u5f00\u6e90\u5408\u89c4\u4e0e\u90e8\u7f72\u8bf4\u660e\n- \u652f\u6301\u80fd\u529b\u5c31\u7eea\u77e9\u9635\u68c0\u67e5\uff0c\u7f3a\u589e\u5f3a\u4f9d\u8d56\u65f6\u81ea\u52a8\u964d\u7ea7\u5e76\u544a\u77e5\u8d28\u91cf\u5f71\u54cd\n- \u5b8c\u5584\u5143\u6570\u636e\u58f0\u660e\u548c\u4f9d\u8d56\u8981\u6c42\uff0c\u65b0\u589e requirements.txt\u3001requirements-optional.txt\n- \u7edf\u4e00\u5165\u53e3\uff0c\u5f15\u5bfc\u8bfb\u8005\u4f7f\u7528 bash setup.sh \u5b8c\u6210\u90e8\u7f72\uff0c\u53bb\u9664 skill-card.md",
+  "created_at": 1779542927901,
+  "display_name": "PDF\u4e07\u80fd\u5927\u5e08",
+  "fetched_at": 1787774957374,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "references/capabilities-core.md",
+    "references/capabilities-pro.md",
+    "references/capabilities-value.md",
+    "references/command-guide.md",
+    "references/error-handling.md",
+    "references/feishu-setup.md",
+    "references/few-shot-examples.md",
+    "references/ocr-config.md",
+    "references/quality-standards.md",
+    "references/security-compliance.md",
+    "references/tech-spec.md",
+    "references/value-messaging.md",
+    "requirements-optional.txt",
+    "requirements.txt",
+    "scripts/check_env.py",
+    "scripts/pdf_batch_replace.py",
+    "scripts/pdf_compress.py",
+    "scripts/pdf_convert.py",
+    "scripts/pdf_extract_tables.py",
+    "scripts/pdf_info.py",
+    "scripts/pdf_merge.py",
+    "scripts/pdf_ocr.py",
+    "scripts/pdf_redact.py",
+    "scripts/pdf_split.py",
+    "scripts/pdf_watermark.py",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ford828",
+    "handle": "ford828",
+    "user_id": "s17frrzcg4chdh4z6rnsntmhgd86c8vv"
+  },
+  "slug": "pdf-master",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pdf-master",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pdf-master&ownerHandle=ford828",
+    "page_url": "https://clawhub.ai/ford828/skills/pdf-master"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 949,
+    "installs": 13,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "\u5168\u80fd PDF \u667a\u80fd\u5904\u7406\u6280\u80fd\uff0c\u8986\u76d6 25 \u9879\u80fd\u529b\u4e94\u5927\u6838\u5fc3\uff08Office \u9ad8\u4fdd\u771f\u4e92\u8f6c\u3001\u626b\u63cf\u4ef6 OCR\u3001PDF \u76f4\u63a5\u7f16\u8f91\u3001\u52a0\u5bc6\u6c34\u5370\u6743\u9650\u3001\u6279\u91cf\u5408\u5e76\u62c6\u5206\u91cd\u547d\u540d\uff09\u3001\u4e5d\u5927\u589e\u503c\uff08\u8868\u683c\u63d0\u53d6\u3001\u56fe\u6587\u89e3\u6790\u3001\u6458\u8981\u3001\u8131\u654f\u3001\u5143\u6570\u636e\u6e05\u6d17\u3001\u81ea\u52a8\u547d\u540d\u3001\u7248\u672c\u5bf9\u6bd4\u3001\u6587\u6863\u95ee\u7b54\u3001\u89c4\u683c\u5bf9\u6bd4\u77e9\u9635\uff09\u3001\u56db\u5927\u6269\u5c55\uff08\u667a\u80fd\u538b\u7f29\u3001\u6392\u7248\u4fdd\u7559\u7ffb\u8bd1\u3001\u5408\u540c\u98ce\u9669\u5ba1\u67e5\u3001\u53d1\u7968\u9a8c\u771f\u5f52\u6863\uff09\u3001\u4e03\u5927\u58c1\u5792\uff08\u7535\u5b50\u7b7e\u540d\u5ba1\u6279\u6d41\u3001\u6279\u91cf\u5185\u5bb9\u66ff\u6362\u3001\u8868\u5355\u521b\u5efa\u3001\u56fe\u7eb8\u6d4b\u91cf\u3001\u7ffb\u9875\u7535\u5b50\u4e66\u3001\u5370\u5237\u7ea7\u5bfc\u51fa\u3001\u5bc6\u6587\u7ea7\u6c38\u4e45\u5220\u9664\uff09\u3002\u5f53\u7528\u6237\u4e0a\u4f20 PDF \u5e76\u63d0\u51fa\u8f6c\u6362\u3001\u8bc6\u522b\u3001\u7f16\u8f91\u3001\u52a0\u5bc6\u3001\u538b\u7f29\u3001\u7ffb\u8bd1\u3001\u5ba1\u67e5\u3001\u5f52\u6863\u3001\u7b7e\u540d\u3001\u66ff\u6362\u3001\u8868\u5355\u3001\u6d4b\u91cf\u3001\u7535\u5b50\u4e66\u3001\u5370\u5237\u3001\u5220\u9664\u7b49\u9700\u6c42\uff0c\u6216\u63d0\u5230\"\u8f6cWord\"\"OCR\"\"\u52a0\u6c34\u5370\"\"\u538b\u7f29\u5230xxMB\"",
+  "updated_at": 1785074555177,
+  "version": "2.1.0"
+}
