@@ -1,0 +1,50 @@
+{
+  "changelog": "- Added top-level compliance documentation: COMPLIANCE-MAPPING.md, LOG-SCHEMA.md, and REPLAY.md moved from 'references/' to the root directory.\n- Updated skill description to clarify: now only triggers on explicit safety decisions or compliance actions, not general logging requests.\n- Added a \"Privacy & Data Warning\" section highlighting best practices and risks, advising caution with sensitive information in logs.\n- Removed redundant or out-of-date files from the 'references/' directory.",
+  "created_at": 1779130421673,
+  "display_name": "Guardian Audit",
+  "fetched_at": 1787784778265,
+  "files": [
+    "COMPLIANCE-MAPPING.md",
+    "LOG-SCHEMA.md",
+    "README.md",
+    "REPLAY.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/export-report.py",
+    "scripts/log-event.py",
+    "scripts/verify-chain.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779954530399,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Tooled-app",
+    "handle": "tooled-app",
+    "user_id": "s1732m0wt3pbwh1b2yn4byean986njc4"
+  },
+  "slug": "data-guardian-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/data-guardian-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=data-guardian-audit&ownerHandle=tooled-app",
+    "page_url": "https://clawhub.ai/tooled-app/skills/data-guardian-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 841,
+    "installs": 20,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Tamper-evident audit logger that pairs with Guardian safety skill. Captures safety decisions (halts, approvals, escalations) in an append-only, hash-chained...",
+  "updated_at": 1779716135672,
+  "version": "1.2.0"
+}
