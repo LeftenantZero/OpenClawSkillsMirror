@@ -1,0 +1,75 @@
+{
+  "changelog": "Initial release of guaikei\u6296\u97f3\u8d8b\u52bf\u4fe1\u53f7\u63a2\u6d4b\u5668:\n\n- Provides structured JSON data for Douyin keyword search, post fetching, video comment extraction, and real-time trending topics.\n- Covers typical user intents such as content research, competitor analysis, and hot trend tracking, triggered by natural language queries.\n- Enforces strict token management and error-handling protocols; only public Douyin data, no promotion or cross-platform support.\n- Commands run under Node.js, configured via environment variable; outputs and logs are standardized.\n- Supports multi-step workflows and parameter inference based on user phrasing.",
+  "created_at": 1787539264669,
+  "display_name": "guaikei-douyin-trend-signal-detector",
+  "fetched_at": 1787769715889,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/comment_cli_req.schema.json",
+    "assets/comment_cli_resp.schema.json",
+    "assets/hot_cli_resp.schema.json",
+    "assets/post_cli_req.schema.json",
+    "assets/post_cli_resp.schema.json",
+    "assets/search_cli_req.schema.json",
+    "assets/search_cli_resp.schema.json",
+    "package.json",
+    "readme.md",
+    "references/changelog.md",
+    "references/options.md",
+    "skill-card.md",
+    "src/api/comment.js",
+    "src/api/hot.js",
+    "src/api/post.js",
+    "src/api/search.js",
+    "src/config/constants.js",
+    "src/douyin/comment-cli.js",
+    "src/douyin/hot-cli.js",
+    "src/douyin/post-cli.js",
+    "src/douyin/search-cli.js",
+    "src/utils/args.js",
+    "src/utils/errors.js",
+    "src/utils/log.js",
+    "src/utils/name.js",
+    "src/utils/request.js",
+    "src/utils/retry.js",
+    "src/utils/token.js",
+    "src/utils/utils.js",
+    "src/validate/comment.js",
+    "src/validate/hot.js",
+    "src/validate/keyword.js",
+    "src/validate/post.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787540693628,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "engheng-art",
+    "handle": "engheng-art",
+    "user_id": "s17av7fakvdwpsbhaddxp8e7mh89wsrx"
+  },
+  "slug": "guaikei-douyin-trend-signal-detector",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/guaikei-douyin-trend-signal-detector",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=guaikei-douyin-trend-signal-detector&ownerHandle=engheng-art",
+    "page_url": "https://clawhub.ai/engheng-art/skills/guaikei-douyin-trend-signal-detector"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 66,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5f53\u7528\u6237\u63d0\u5230\u6296\u97f3\u3001\u77ed\u89c6\u9891\u5e73\u53f0\u3001\u67d0\u6761\u89c6\u9891\u3001\u67d0\u4e2a\u535a\u4e3b\u3001\u70ed\u641c\u8bdd\u9898\u5e76\u60f3\u83b7\u53d6\u6570\u636e\u65f6\uff0c\u4f7f\u7528\u672c\u6280\u80fd\u3002\u7528\u6237\u4e0d\u9700\u8981\u4f1a\u8bf4\u672f\u8bed\u2014\u2014\u8bf4\"\u770b\u770b\u8fd9\u89c6\u9891\u5e95\u4e0b\u5927\u5bb6\u548b\u8bf4\"\"\u8fd9\u535a\u4e3b\u706b\u4e0d\u706b\"\u5c31\u80fd\u89e6\u53d1\u3002\u4e0d\u63d0\u4f9b\u6da8\u7c89\u4ee3\u8fd0\u8425\u5efa\u8bae\uff0c\u4e5f\u4e0d\u5904\u7406\u5176\u4ed6\u5e73\u53f0\u3002",
+  "updated_at": 1787539399420,
+  "version": "1.0.0"
+}
