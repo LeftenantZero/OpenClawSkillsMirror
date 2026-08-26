@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release of the \u201cimage-recognize\u201d skill.\n- Supports object, scene, text, landmark, plant, animal, face, emotion, product, toy, and general image recognition using Baidu AI.\n- Accepts local images, URLs, or Base64-encoded images as input.\n- Requires a Baidu API Key (set via environment variable or user prompt).\n- Results include description, confidence score, similar images (optional), and category tags in Markdown format.\n- Not intended for image editing, precise OCR extraction, detection/localization, identity verification, face comparison, or medical imaging.",
+  "created_at": 1776329307716,
+  "display_name": "Baidu image recognize",
+  "fetched_at": 1787777697762,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/image_recognize.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090446841,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ide-rea",
+    "handle": "ide-rea",
+    "user_id": "s17a4y7rpj2bmp94zpqe8r915h83gq6d"
+  },
+  "slug": "image-recognize",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/image-recognize",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=image-recognize&ownerHandle=ide-rea",
+    "page_url": "https://clawhub.ai/ide-rea/skills/image-recognize"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 673,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u767e\u5ea6AI\u8bc6\u522b\u56fe\u7247\u4e2d\u7684\u7269\u4f53\u3001\u573a\u666f\u3001\u6587\u5b57\u7b49\u5185\u5bb9\uff0c\u9700\u8981\u7528\u6237\u63d0\u4f9b\u672c\u5730\u56fe\u7247\u6216\u7f51\u7edc\u56fe\u7247\uff0c\u652f\u6301Base64\u7f16\u7801\u3002\u652f\u6301\uff08\u9898\u76ee\uff0c\u6587\u5b57\uff0c\u56fe\u7247\u4eba\u8138\uff0c\u690d\u7269\uff0c\u52a8\u7269\uff0c\u8868\u60c5\uff0c\u7d20\u6750\uff0c\u5546\u54c1\uff0c\u73a9\u5177\uff0c\u666f\u70b9\uff0c\u901a\u7528\u8bc6\u522b\u7b49\uff09\u5185\u5bb9\u8bc6\u522b\u3002\u7528\u4e8e\u901a\u7528\u56fe\u7247\u5185\u5bb9\u5206\u7c7b\u8bc6\u522b\uff0c\u4e0d\u8d1f\u8d23\u56fe\u7247\u751f\u6210\u6216\u7f16\u8f91",
+  "updated_at": 1778492618017,
+  "version": "1.0.0"
+}
