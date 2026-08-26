@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of the printer-control skill.\n\n- List available printers, print files or raw text, check status, and set default printer on Windows systems.\n- Supports both local and network printers.\n- Works with pywin32 or falls back to PowerShell if needed.\n- Partial printer name matching makes printer selection easier.\n- Requires explicit user authorization before performing any print operation.",
+  "created_at": 1773801623212,
+  "display_name": "printer-control",
+  "fetched_at": 1787788119588,
+  "files": [
+    "SKILL.md",
+    "TESTING.md",
+    "_meta.json",
+    "scripts/list_printers.py",
+    "scripts/print_file.py",
+    "scripts/print_text.py",
+    "scripts/printer_status.py",
+    "scripts/set_default.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089945221,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zhangpl666ya",
+    "handle": "zhangpl666ya",
+    "user_id": "s175vjs4asvn7kfrmcneghp9e5884kpd"
+  },
+  "slug": "printer-control",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/printer-control",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=printer-control&ownerHandle=zhangpl666ya",
+    "page_url": "https://clawhub.ai/zhangpl666ya/skills/printer-control"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 973,
+    "installs": 27,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Control local and network printers on Windows to list printers, print files or text, check status, and set default printer with name matching support.",
+  "updated_at": 1779078499403,
+  "version": "1.0.0"
+}
