@@ -1,0 +1,82 @@
+{
+  "changelog": "Huawei Cloud Monitoring Query Skill 1.0.1\n\n- Clarified that only local Python scripts within the skill directory are supported for all queries; direct CLI or API use is strictly prohibited.\n- Detailed supported features: querying alarm rules, histories, templates, dashboards, notification masks, resource groups, one-click alarms, and enterprise project information (list, detail, quotas, resource bindings, migration records).\n- Listed strict usage and result output principles to avoid unsupported queries, unreliable responses, or unsafe operations.\n- Expanded prerequisites and environment setup instructions, with mandatory environment check script usage before any query.\n- Outlined workflow: environment check, guide-based script selection, dry run with -h, followed by targeted query execution.\n- Clearly stated that only CES (Cloud Eye) and EPS (Enterprise Project) services are supported; queries for other services are not permitted.",
+  "created_at": 1785746959189,
+  "display_name": "huawei-cloud-monitoring-query",
+  "fetched_at": 1787772293959,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ces/guide.md",
+    "references/eps/guide.md",
+    "references/iam-policies.md",
+    "requirements.txt",
+    "scripts/ces/list_agent_dimension_info.py",
+    "scripts/ces/list_alarm_histories.py",
+    "scripts/ces/list_alarm_rule_policies.py",
+    "scripts/ces/list_alarm_rule_resources.py",
+    "scripts/ces/list_alarm_rules.py",
+    "scripts/ces/list_alarm_template_association_alarms.py",
+    "scripts/ces/list_alarm_templates.py",
+    "scripts/ces/list_ces_target_project_tags.py",
+    "scripts/ces/list_dashboard_infos.py",
+    "scripts/ces/list_dashboard_widgets.py",
+    "scripts/ces/list_notification_mask_resources.py",
+    "scripts/ces/list_notification_masks.py",
+    "scripts/ces/list_one_click_alarm_rules.py",
+    "scripts/ces/list_one_click_alarms.py",
+    "scripts/ces/list_resource_groups.py",
+    "scripts/ces/list_resource_groups_services_resources.py",
+    "scripts/ces/show_alarm_template.py",
+    "scripts/ces/show_resource_group.py",
+    "scripts/ces/show_widget.py",
+    "scripts/check_env.ps1",
+    "scripts/check_env.sh",
+    "scripts/config.py",
+    "scripts/ensure_env.py",
+    "scripts/eps/list_api_versions.py",
+    "scripts/eps/list_enterprise_projects.py",
+    "scripts/eps/list_migration_records.py",
+    "scripts/eps/list_providers.py",
+    "scripts/eps/list_resource_mapping.py",
+    "scripts/eps/show_api_version.py",
+    "scripts/eps/show_associated_resources.py",
+    "scripts/eps/show_enterprise_project.py",
+    "scripts/eps/show_enterprise_project_quota.py",
+    "scripts/eps/show_ep_configs.py",
+    "scripts/eps/show_resource_bind_enterprise_project.py",
+    "scripts/iam/get_project_id.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786671985652,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-monitoring-query",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-monitoring-query",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-monitoring-query&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-monitoring-query"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 48,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Queries Huawei Cloud monitoring and enterprise project resources (CES/EPS). Covers alarm rules, alarm histories, alarm templates, dashboards, notification masks, resource groups, one-click alarms, and enterprise projects (list/detail/quotas/bound resources/migration records). No write operations. Use this skill when the user needs to check alarm status, view monitoring dashboards, query alarm rules, or manage enterprise project info. Triggers include: \u4e91\u76d1\u63a7, \u544a\u8b66, \u544a\u8b66\u89c4\u5219, \u544a\u8b66\u5386\u53f2, \u4eea\u8868\u76d8, \u4f01\u4e1a\u9879\u76ee, CES, EPS, \u544a\u8b66\u6a21\u677f, \u8d44\u6e90\u5206\u7ec4, alarm, monitoring, alert.",
+  "updated_at": 1786671018664,
+  "version": "1.0.1"
+}
