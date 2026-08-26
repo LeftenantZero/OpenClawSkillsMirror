@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of skill jobber-fpx for accessing Jobber Client Hub from the shell without MCP:\n\n- Allows fetching appointment, quote, invoice, and work request data for Jobber customers using @fetchproxy/cli (`fpx`) and the Transporter extension in Chrome.\n- Uses your existing, signed-in Chrome tab to bypass Cloudflare protection; no server-side method or cookie access required.\n- Supports read-only access to your Jobber customer portal data in scriptable JSON form via a provided parser.\n- Strongly protects your unique hub URL as a credential; each vendor provides a separate hub.\n- Includes clear error handling, exit codes, and ready-to-use recipes for common queries.\n- No write capabilities or file downloads; payments and form submissions are not supported.",
+  "created_at": 1786465423864,
+  "display_name": "Tmp.QSM0AG6Srx",
+  "fetched_at": 1787772616970,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/parse-clienthub.mjs",
+    "references/recipes.md",
+    "references/why-not-the-api.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "chrischall",
+    "handle": "chrischall",
+    "user_id": "s17cjx1a349nz5apaqp02vgz4h85728z"
+  },
+  "slug": "jobber-mcp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/jobber-mcp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=jobber-mcp&ownerHandle=chrischall",
+    "page_url": "https://clawhub.ai/chrischall/skills/jobber-mcp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 221,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read your Jobber Client Hub \u2014 the customer portal a service business (pest control, lawn care, HVAC, cleaning) uses to send you appointments, quotes and invoices \u2014 from a shell with the fpx CLI (@fetchproxy/cli), instead of running the jobber-mcp server. Use when you want your Jobber data without the MCP, in a script, or on a machine where the MCP isn't installed.",
+  "updated_at": 1786465499800,
+  "version": "0.1.0"
+}
