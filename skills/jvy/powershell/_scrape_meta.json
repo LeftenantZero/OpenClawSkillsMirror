@@ -1,0 +1,33 @@
+{
+  "changelog": "- Major update: Focus shifted to preventing file encoding issues when writing files via PowerShell on Chinese Windows systems.\n- Detailed new guidance on avoiding GBK encoding corruption with Chinese or non-ASCII text.\n- Specifies which PowerShell commands and file-writing methods to avoid.\n- Recommends always using dedicated tools (`WriteFile`, `StrReplaceFile`) for writing/editing files.\n- Provides safe alternatives for unavoidable shell usage, with explicit UTF-8 instructions.\n- Adds tips for verifying system encoding and recognizing unsafe scenarios.",
+  "created_at": 1786236970212,
+  "display_name": "powershell",
+  "fetched_at": 1787773090665,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jvy",
+    "handle": "jvy",
+    "user_id": "s17drhqvqmrfz94tm5320kfgj983kf7m"
+  },
+  "slug": "powershell",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/powershell",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=powershell&ownerHandle=jvy",
+    "page_url": "https://clawhub.ai/jvy/skills/powershell"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 44,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Prevent file-writing via Windows PowerShell to avoid GBK encoding corruption. Use when Kimi Code CLI is running on Windows and the task involves creating, writing, or modifying text files, especially when content contains Chinese or other non-ASCII characters.",
+  "updated_at": 1786237021657,
+  "version": "1.0.0"
+}
