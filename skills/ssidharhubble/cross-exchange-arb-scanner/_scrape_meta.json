@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of cross-exchange-arb-scanner:\n\n- Scans live spot bid/ask prices across Coinbase, Kraken, Bitstamp, Gemini, and OKX (no API key needed) to detect arbitrage opportunities for BTC, ETH, SOL, and other supported tokens.\n- Flags price discrepancies where the best bid on one exchange exceeds the best ask on another, reporting gross spreads in basis points and which exchanges to buy/sell.\n- Supports CLI options to filter by minimum spread or output JSON.\n- Excludes fees, withdrawal times, and only surfaces gross top-of-book spreads; real-world costs may erase small opportunities.\n- Binance is not included due to API restrictions; some tokens may be unavailable on all venues.\n- Scanner is for detection only, not automated trading.",
+  "created_at": 1786248047968,
+  "display_name": "Cross-Exchange Arbitrage Scanner",
+  "fetched_at": 1787773075003,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/notes.md",
+    "scripts/arb_scanner.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ssyopro",
+    "handle": "ssidharhubble",
+    "user_id": "s1751xfhp40q8vjjqd22y5vaw584gpke"
+  },
+  "slug": "cross-exchange-arb-scanner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cross-exchange-arb-scanner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cross-exchange-arb-scanner&ownerHandle=ssidharhubble",
+    "page_url": "https://clawhub.ai/ssidharhubble/skills/cross-exchange-arb-scanner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 162,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Scans live public spot tickers across Coinbase, Kraken, Bitstamp, Gemini, and OKX (no API key required) to detect cross-exchange crypto arbitrage opportunities, price discrepancies, and crossed markets for BTC, ETH, SOL, and other listed tokens. Use this when the user asks about crypto arbitrage, cross exchange arbitrage, cex arbitrage scanner, price spread between exchanges, buy low sell high across crypto exchanges, spot arbitrage bot, exchange price discrepancy, best bid ask across venues, or wants to check if an arbitrage opportunity currently exists between major spot exchanges. Reports spread in basis points and which venue to buy/sell on, but does not account for withdrawal time, network fees, or trading fees, so results are gross spreads only.",
+  "updated_at": 1786248116796,
+  "version": "1.0.0"
+}
