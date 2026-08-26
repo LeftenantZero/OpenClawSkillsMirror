@@ -1,0 +1,57 @@
+{
+  "changelog": "Initial release of the self-improving-agent skill for OpenClaw and generic coding agents.\n\n- Enables structured logging of learnings, errors, and feature requests to facilitate continuous improvement.\n- Provides clear guidelines on when and how to log entries for operational failures, corrections, knowledge gaps, and new feature requests.\n- Supports automatic and manual setup, ensuring a `.learnings/` folder with standardized markdown files.\n- Offers workflows for promoting important learnings to project-wide memory files like AGENTS.md, SOUL.md, and TOOLS.md.\n- Includes example usage, OpenClaw integration steps, and security guidance to avoid logging sensitive data.\n- Defines a consistent entry format for logging and reviewing issues and improvements.",
+  "created_at": 1782649195117,
+  "display_name": "Self Improving Agent",
+  "fetched_at": 1787773277148,
+  "files": [
+    ".clawhub/origin.json",
+    "SKILL.md",
+    "_meta.json",
+    "assets/ERRORS.md",
+    "assets/FEATURE_REQUESTS.md",
+    "assets/LEARNINGS.md",
+    "assets/SKILL-TEMPLATE.md",
+    "hooks/openclaw/HOOK.md",
+    "hooks/openclaw/handler.js",
+    "hooks/openclaw/handler.ts",
+    "references/examples.md",
+    "references/hooks-setup.md",
+    "references/openclaw-integration.md",
+    "scripts/activator.sh",
+    "scripts/error-detector.sh",
+    "scripts/extract-skill.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782651438841,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "NguyenManhDung-app",
+    "handle": "nguyenmanhdung-app",
+    "user_id": "s173dd0x1czjzbdgeg7fzyb2zn88zay1"
+  },
+  "slug": "self-improving-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/self-improving-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=self-improving-agent&ownerHandle=nguyenmanhdung-app",
+    "page_url": "https://clawhub.ai/nguyenmanhdung-app/skills/self-improving-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 372,
+    "installs": 2,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Claude ('No, that's wrong...', 'Actually...'), (3) User requests a capability that doesn't exist, (4) An external API or tool fails, (5) Claude rea",
+  "updated_at": 1782649195117,
+  "version": "1.0.0"
+}
