@@ -1,0 +1,33 @@
+{
+  "changelog": "FMind 2.0.0 introduces a robust, security-focused gateway for unified knowledge and memory APIs:\n\n- Separates knowledge and memory data paths, enforcing never to call private MemoryCore directly.\n- Requires explicit knowledge base selection and confirmation for destructive actions.\n- Introduces secure, environment-based credential handling: user key for knowledge, both user and agent keys for memory.\n- Adds detailed setup instructions for Agent Binding with one-time setup secret and runtime key management.\n- Clarifies endpoint usage for memory operations, enforcing never to expose credentials in prompts, logs, or public files.\n- Enhances compatibility with OpenClaw and MCP, mandating strict environment variable and header usage for credential management.",
+  "created_at": 1787132784448,
+  "display_name": "Fmind Skill",
+  "fetched_at": 1787770584956,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "justaboyhai-wq",
+    "handle": "justaboyhai-wq",
+    "user_id": "s17e15ngsnnxr4dexemcr4eazn83nm2q"
+  },
+  "slug": "fmind",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fmind",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fmind&ownerHandle=justaboyhai-wq",
+    "page_url": "https://clawhub.ai/justaboyhai-wq/skills/fmind"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 92,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use FMind as the unified knowledge and external-memory gateway. Import and search tenant knowledge bases through the FMind API, and use L0-L2 memory, context, and published Memory Wiki through an Agent Binding. Never call MemoryCore directly and never expose credentials in prompts, logs, URLs, or saved files.",
+  "updated_at": 1787132839269,
+  "version": "2.0.0"
+}
