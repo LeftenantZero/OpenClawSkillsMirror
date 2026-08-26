@@ -1,0 +1,35 @@
+{
+  "changelog": "- Removed the sample skill card file (skill-card.md) for cleanup.\n- No changes to functionality or API; this update removes extra documentation only.",
+  "created_at": 1785006787991,
+  "display_name": "flickies",
+  "fetched_at": 1787773933193,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/setup.md",
+    "scripts/flickies.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ciprian Mandache",
+    "handle": "psyb0t",
+    "user_id": "s17fq93tmpky791n7516jcn08n83sfn2"
+  },
+  "slug": "flickies",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/flickies",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=flickies&ownerHandle=psyb0t",
+    "page_url": "https://clawhub.ai/psyb0t/skills/flickies"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 758,
+    "installs": 1,
+    "stars": 0,
+    "versions": 14
+  },
+  "summary": "Self-hosted video REST + MCP API. POST JSON, get a video back. Lipsync (LatentSync 1.5 + Wav2Lip/Wav2Lip-GAN) at /v1/video/lipsync, GFPGAN face restore at /v1/video/restore, pure-ffmpeg ops (trim, concat, transcode incl. gif + fps + codec, scale, mux_audio, extract_audio, thumbnail_grid) under /v1/video/*, and ffprobe metadata at /v1/video/info. file_path (staged) xor file_url in; output_path xor output_url out. Fire-and-forget async jobs (async_job=true \u2192 202 \u2192 poll /v1/jobs/{id}) with HMAC-signed webhooks. 11 MCP tools at /v1/mcp. Bearer-token auth. CPU + CUDA images. Use when the user wants to lipsync a face to audio, restore faces in footage, trim/concat/transcode/scale/mux/extract/thumbnail video, probe a video's metadata, or drive any of that from an LLM over MCP.",
+  "updated_at": 1785617232294,
+  "version": "0.3.16"
+}
