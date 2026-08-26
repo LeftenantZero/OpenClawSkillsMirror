@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of WeChat MP Draft Publisher.\n\n- Publish WeChat Official Account draft articles via a packaged CLI that enforces the sequence: getAuth \u2192 uploadArticleImage \u2192 uploadCoverImage \u2192 addDraft.\n- Supports specifying the executable by local path, environment variable, or automatic download from GitHub Releases.\n- Requires local credentials and prepared article content/image files.\n- Outputs publishing results in structured JSON; prints errors to stderr.\n- Provides example usage for various integration options.",
+  "created_at": 1774769872233,
+  "display_name": "wechat-mp-draft-publisher",
+  "fetched_at": 1787787003390,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cli-contract.md",
+    "scripts/install_mp_weixin_skill.sh",
+    "scripts/publish_draft.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090176932,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Mesus",
+    "handle": "mesus",
+    "user_id": "s173pyzx6qrsc9be7zpmdr1q4h83tmjm"
+  },
+  "slug": "wechat-mp-draft-publisher",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wechat-mp-draft-publisher",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wechat-mp-draft-publisher&ownerHandle=mesus",
+    "page_url": "https://clawhub.ai/mesus/skills/wechat-mp-draft-publisher"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 657,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Publish WeChat Official Account draft articles through a packaged CLI executable that wraps WeChat API calls. Use when the user wants to publish or create a...",
+  "updated_at": 1779079130876,
+  "version": "0.0.1"
+}
