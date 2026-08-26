@@ -1,0 +1,81 @@
+{
+  "changelog": "Version 13.0.0 (coding-framework) \u2013 Major update with new structure and advanced multi-skill orchestration\n\n- Refactored SKILL.md: now includes explicit skill path mapping and extended modular loading rules for each sub-skill.\n- Fully revised opening workflow: distinct separation of brainstorming (design/idea), spec definition, planning, implementation, and review with clear stage detection.\n- Enhanced Red Flags and design gate processes with step-by-step auto triggers and user checkpoints to prevent process skipping.\n- Skill dependencies now updated to explicitly include debugging and error recovery by default.\n- Numerous agent YAMLs, rules, hooks, and references updated for consistency with new orchestration logic.\n- Removed obsolete skill-card.md and legacy references; all subsystems now documented in the main SKILL.md.",
+  "created_at": 1782487879897,
+  "display_name": "coding-framework",
+  "fetched_at": 1787773753759,
+  "files": [
+    "CONTRIBUTING.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/architecture-critic.yaml",
+    "agents/backend-reviewer.yaml",
+    "agents/code-reviewer.yaml",
+    "agents/documentation-checker.yaml",
+    "agents/explore.yaml",
+    "agents/frontend-reviewer.yaml",
+    "agents/maintainability-reviewer.yaml",
+    "agents/performance-analyst.yaml",
+    "agents/python-reviewer.yaml",
+    "agents/security-auditor.yaml",
+    "agents/test-engineer.yaml",
+    "agents/typescript-reviewer.yaml",
+    "hooks/post-exec-log.sh",
+    "hooks/pre-exec-check.sh",
+    "hooks/stop-iteration.sh",
+    "plans/README.md",
+    "references/agent-system.md",
+    "references/external-agents.md",
+    "references/hook-system.md",
+    "references/iteration-patterns.md",
+    "references/security-patterns-detail.md",
+    "references/tdd-anti-patterns.md",
+    "references/workflow-examples.md",
+    "references/worktree-guide.md",
+    "rules/coding-standards.md",
+    "rules/review-checklist.md",
+    "rules/security-patterns.md",
+    "rules/security-rules.md",
+    "scripts/check-environment.py",
+    "scripts/dag-scheduler.py",
+    "scripts/instinct-manager.py",
+    "scripts/loop-controller.py",
+    "scripts/review-orchestrator.py",
+    "scripts/spec-init.py",
+    "scripts/tdd_runner.py",
+    "scripts/workflow-orchestrator.py",
+    "scripts/worktree-manager.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785719582242,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "paudyyin",
+    "handle": "paudyyin",
+    "user_id": "s172x1s50dh0bgmm3yc9516nr586kk4b"
+  },
+  "slug": "coding-framework",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/coding-framework",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=coding-framework&ownerHandle=paudyyin",
+    "page_url": "https://clawhub.ai/paudyyin/skills/coding-framework"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 753,
+    "installs": 1,
+    "stars": 0,
+    "versions": 16
+  },
+  "summary": "Orchestrate the complete coding workflow with multiple development modes (TDD/incremental/spec-dr...",
+  "updated_at": 1785718720778,
+  "version": "13.0.0"
+}
