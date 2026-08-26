@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial public release.\n\n- Fuses DEM/DSM and building height data into a 3D city digital twin scene configuration and OpenAPI-style interface description.\n- Supports synthetic (offline) and real data sources as multi-band GeoTIFFs.\n- Outputs include building height raster, LOD1 building blocks (GeoJSON), scene config, API spec, completeness report, and manifest.\n- Command-line interface with options for configurable bbox, formats, thresholds, and output directories.\n- Processes data locally (no upload or online requirement); full privacy by design.\n- Dependencies: numpy, rasterio, geopandas, shapely, scipy.",
+  "created_at": 1785850773967,
+  "display_name": "geoskill-smart-city-digital-twin",
+  "fetched_at": 1787773439562,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-smart-city-digital-twin.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785851712117,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-smart-city-digital-twin",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-smart-city-digital-twin",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-smart-city-digital-twin&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-smart-city-digital-twin"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 189,
+    "installs": 1,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Multi-source data fusion to build 3D scene configuration and API interface descriptions for a city digital twin",
+  "updated_at": 1785850919349,
+  "version": "1.0.0"
+}
