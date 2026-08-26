@@ -1,0 +1,61 @@
+{
+  "changelog": "tencentcloud-sms-skill 1.0.0\n\n- Initial release of the Tencent Cloud SMS Skill.\n- Enables SMS sending (verification codes, notifications, marketing), including single and bulk sending.\n- Supports signature and template management: query, apply, and track review status.\n- Provides SMS package usage statistics and delivery/receipt tracking by phone number.\n- Designed with strict security and user interaction guidelines.\n- Covers domestic and international/HK/Macau/Taiwan SMS scenarios via Tencent Cloud SMS API.",
+  "created_at": 1781753218920,
+  "display_name": "tencentcloud-sms-skill",
+  "fetched_at": 1787780314435,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/\u56fd\u5185\u77ed\u4fe1\u7fa4\u53d1\u6a21\u677f.xlsx",
+    "assets/\u56fd\u9645\u6e2f\u6fb3\u53f0\u77ed\u4fe1\u7fa4\u53d1\u6a21\u677f.xlsx",
+    "references/api-limits.md",
+    "references/error-codes.md",
+    "scripts/_common.py",
+    "scripts/add_sign.py",
+    "scripts/add_template.py",
+    "scripts/callback_status_statistics.py",
+    "scripts/check_env.py",
+    "scripts/describe_sign.py",
+    "scripts/describe_template.py",
+    "scripts/packages_statistics.py",
+    "scripts/parse_bulk_template.py",
+    "scripts/prepare_bulk_template.py",
+    "scripts/pull_reply_status_by_phone.py",
+    "scripts/pull_send_status_by_phone.py",
+    "scripts/send_sms.py",
+    "scripts/send_status_statistics.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781776365015,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u817e\u8baf\u5f00\u6e90",
+    "handle": "tencent-adm",
+    "user_id": "s171cxjdnjyqjxa91pj2bfmr6x83gyg1"
+  },
+  "slug": "tencentcloud-sms-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tencentcloud-sms-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tencentcloud-sms-skill&ownerHandle=tencent-adm",
+    "page_url": "https://clawhub.ai/tencent-adm/skills/tencentcloud-sms-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 284,
+    "installs": 4,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u817e\u8baf\u4e91\u77ed\u4fe1\uff08SMS\uff09\u670d\u52a1 Skill\u3002\u5f53\u7528\u6237\u9700\u8981\u53d1\u9001\u77ed\u4fe1\uff08\u9a8c\u8bc1\u7801/\u901a\u77e5/\u8425\u9500\uff0c\u5355\u53d1\u6216\u6279\u91cf\u7fa4\u53d1\uff09\uff0c\u7ba1\u7406\u77ed\u4fe1\u7b7e\u540d\u4e0e\u6a21\u677f\uff08\u67e5\u8be2\u3001\u7533\u8bf7\u3001\u8ddf\u8e2a\u5ba1\u6838\u72b6\u6001\uff09\uff0c\u67e5\u8be2\u5957\u9910\u5305\u7528\u91cf\uff0c\u7edf\u8ba1\u53d1\u9001\u91cf\u4e0e\u56de\u6267\u9001\u8fbe\u7387\uff0c\u6216\u6309\u624b\u673a\u53f7\u8ffd\u8e2a\u77ed\u4fe1\u4e0b\u53d1/\u56de\u590d\u72b6\u6001\u65f6\u4f7f\u7528\u3002\u8986\u76d6\u56fd\u5185\u77ed\u4fe1\u4e0e\u56fd\u9645/\u6e2f\u6fb3\u53f0\u77ed\u4fe1\uff0c\u57fa\u4e8e\u817e\u8baf\u4e91 SMS API\u3002",
+  "updated_at": 1781753218920,
+  "version": "1.0.0"
+}
