@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release of post-experience-rater, enabling quick, structured ratings after experiences.\n\n- Captures fast, casual feedback after events like dining, travel, or meetings, storing it as a structured annotation in Fulcra.\n- Focuses on speed (~15 seconds) to make rating feel effortless, like texting a friend.\n- Customizes prompts and scoring keys based on the experience type (restaurant, hotel, event, etc.).\n- Automatically infers companions and tags from the user's input, minimizing follow-up questions.\n- Directly writes ratings to Fulcra once confirmed, reflecting summary feedback back to the user.\n- Designed for personal, private logging with sensitive data handling.",
+  "created_at": 1782445737131,
+  "display_name": "Post-Experience Rater",
+  "fetched_at": 1787778990635,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/concierge_bootstrap.py",
+    "scripts/lib/attio_client.py",
+    "scripts/lib/concierge_cli.py",
+    "scripts/lib/concierge_fulcra.py",
+    "scripts/lib/concierge_secrets.py",
+    "scripts/lib/fulcra_annotations.py",
+    "scripts/lib/fulcra_read.py",
+    "scripts/post_experience.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782455845732,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "keng009",
+    "handle": "keng009",
+    "user_id": "s174qh534a121m8d29jk5kykz1874vzn"
+  },
+  "slug": "fulcra-post-experience-rater",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fulcra-post-experience-rater",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fulcra-post-experience-rater&ownerHandle=keng009",
+    "page_url": "https://clawhub.ai/keng009/skills/fulcra-post-experience-rater"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 200,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Capture a fast, casual rating right after the user finishes something -- a restaurant, hotel, trip, event, or meeting a new person -- and store it in Fulcra...",
+  "updated_at": 1782448019697,
+  "version": "1.0.0"
+}
