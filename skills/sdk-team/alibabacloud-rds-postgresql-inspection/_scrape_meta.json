@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release supporting batch health inspection for Alibaba Cloud RDS PostgreSQL instances.\n\n- Supports inspection of single, multiple, or all RDS PostgreSQL instances with configurable time window (default 7 days, up to 30 days).\n- Automatically produces HTML reports for each instance and a summary HTML report (in global mode).\n- Analyzes instance basics, resource utilization, alert history, slow queries, long transactions, table bloat, QPS/TPS, and replication delay.\n- Auto-detects cluster instances and aggregates per-node metrics.\n- Recognizes natural language triggers in both English and Chinese for flexible inspection requests.\n- Strictly runs the batch script for inspection; no manual composition or deliverable fabrication required.",
+  "created_at": 1782368990779,
+  "display_name": "Alibabacloud Rds Postgresql Inspection",
+  "fetched_at": 1787779099801,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/cli-installation-guide.md",
+    "references/acceptance-criteria.md",
+    "references/ram-policies.md",
+    "scripts/check-write-operation.sh",
+    "scripts/inspect.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782369747009,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-rds-postgresql-inspection",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-rds-postgresql-inspection",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-rds-postgresql-inspection&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-rds-postgresql-inspection"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 299,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Batch health inspection of Alibaba Cloud RDS PostgreSQL instances with detailed HTML reports on resource use, alerts, slow logs, long transactions, and repli...",
+  "updated_at": 1782368990779,
+  "version": "0.0.1"
+}
