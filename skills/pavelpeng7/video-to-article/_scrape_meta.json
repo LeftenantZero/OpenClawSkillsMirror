@@ -1,0 +1,39 @@
+{
+  "changelog": "**This version introduces safety confirmation and stricter output controls before performing any file operations or downloads.**\n\n- Enforces a \"preview/read-only\" mode by default; only runs workflows with user confirmation.\n- Will not download videos, write files, or run scripts unless the user explicitly requests full execution.\n- Adds guidelines to never store or display sensitive information like cookies.\n- Rejects any implicit file output; user must confirm output destinations and side-effect operations.\n- Separates and requires explicit user confirmation for Git commit and push steps.\n- Minor: Added Python bytecode files for internal scripts; removed redundant documentation file.",
+  "created_at": 1783307068599,
+  "display_name": "Video To Article",
+  "fetched_at": 1787777336637,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/large-course-ingest-workflow.md",
+    "references/single-video-ingest.md",
+    "references/subagent-context-optimization.md",
+    "references/subtitle-study-modes.md",
+    "scripts/plan-screenshots.py",
+    "scripts/preprocess-srt.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u84ec\u84ec\u5934Pavel",
+    "handle": "pavelpeng7",
+    "user_id": "s173tj2trqb7x7pjfwnz9mc6ds885cx9"
+  },
+  "slug": "video-to-article",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/video-to-article",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=video-to-article&ownerHandle=pavelpeng7",
+    "page_url": "https://clawhub.ai/pavelpeng7/skills/video-to-article"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 515,
+    "installs": 2,
+    "stars": 3,
+    "versions": 6
+  },
+  "summary": "\u5c06\u89c6\u9891\u3001\u5b57\u5e55\u6587\u4ef6\u6216\u5927\u578b\u8bfe\u7a0b\u76ee\u5f55\u8f6c\u6362\u4e3a\u7ed3\u6784\u5316\u56fe\u6587\u7b14\u8bb0\u3002\u4ec5\u5f53\u7528\u6237\u660e\u786e\u8981\u6c42\u6267\u884c\u5b8c\u6574\u7684\u89c6\u9891\u8f6c\u6587\u7ae0\u5de5\u4f5c\u6d41\uff0c\u4f8b\u5982\u4e0b\u8f7d\u89c6\u9891\u3001\u751f\u6210\u56fe\u6587\u6587\u7ae0\u3001\u5199\u5165 Obsidian \u6216\u6279\u91cf\u5bfc\u5165\u8bfe\u7a0b\u65f6\u4f7f\u7528\uff1b\u5982\u679c\u7528\u6237\u53ea\u60f3\u505a\u6458\u8981\u3001\u95ee\u7b54\u3001\u672f\u8bed\u63d0\u53d6\u6216\u8f7b\u91cf\u5206\u6790\uff0c\u5e94\u4f18\u5148\u91c7\u7528\u53ea\u8bfb\u5206\u6790\u6d41\u7a0b\u3002",
+  "updated_at": 1783653630574,
+  "version": "0.1.5"
+}
