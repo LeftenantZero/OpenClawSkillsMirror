@@ -1,0 +1,69 @@
+{
+  "changelog": "yinxiang-skill 1.0.4\n\n- Expanded and clarified skill usage instructions for guiding authorization and supporting a full set of note, notebook, and tag operations for Evernote (\u5370\u8c61\u7b14\u8bb0).\n- Provided precise mapping of trigger phrases to supported scenarios: note creation, editing, moving, tag management, batch operations, and listing/searching of notes, notebooks, and tags.\n- Emphasized use of correct platform-specific commands for environment detection, token handling, and all API calls, including detailed bash/PowerShell scripts.\n- Updated operational rules: Only supported features are advertised; unsupported requests prompt guidance toward alternatives without attempting unsupported actions.\n- Improved error handling and user feedback: all API messages are converted to user-friendly and context-aware Chinese responses.",
+  "created_at": 1784187975721,
+  "display_name": "Yinxiang Skill 1.0.4",
+  "fetched_at": 1787776629190,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/api-commands.md",
+    "scripts/_common.ps1",
+    "scripts/_common.sh",
+    "scripts/clip-url.ps1",
+    "scripts/clip-url.sh",
+    "scripts/create-note.ps1",
+    "scripts/create-note.sh",
+    "scripts/create-notebook.ps1",
+    "scripts/create-notebook.sh",
+    "scripts/create-tag.ps1",
+    "scripts/create-tag.sh",
+    "scripts/get-note-detail.ps1",
+    "scripts/get-note-detail.sh",
+    "scripts/list-notebooks.ps1",
+    "scripts/list-notebooks.sh",
+    "scripts/list-notes.ps1",
+    "scripts/list-notes.sh",
+    "scripts/list-tags.ps1",
+    "scripts/list-tags.sh",
+    "scripts/save-token.ps1",
+    "scripts/save-token.sh",
+    "scripts/search-notes.ps1",
+    "scripts/search-notes.sh",
+    "scripts/update-note.ps1",
+    "scripts/update-note.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784188690650,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Yinxiang Team",
+    "handle": "yinxiang-team",
+    "user_id": "s1736qyev20ev0fdyx2pfsbxq58akr5f"
+  },
+  "slug": "yinxiang-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/yinxiang-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=yinxiang-skill&ownerHandle=yinxiang-team",
+    "page_url": "https://clawhub.ai/yinxiang-team/skills/yinxiang-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 331,
+    "installs": 5,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "\u3010\u5370\u8c61\u7b14\u8bb0\u5b98\u65b9Skill\u3011 \u652f\u6301\u8ba9 OpenClaw\u3001Claude Code\u3001Cursor\u3001Codex\u3001WorkBuddy \u7b49\u652f\u6301 Skill \u7684 AI \u52a9\u624b\u8fde\u63a5\u5370\u8c61\u7b14\u8bb0\uff0c\u5e2e\u4f60\u968f\u65f6\u8bb0\u5f55\u3001\u67e5\u627e\u548c\u6574\u7406\u4e2a\u4eba\u77e5\u8bc6\u3002 \u5b8c\u6210\u8d26\u53f7\u6388\u6743\u540e\uff0c\u53ea\u8981\u8bf4\u4e00\u53e5\u201c\u5e2e\u6211\u8bb0\u5230\u5370\u8c61\u7b14\u8bb0\u201d\uff0c\u5c31\u80fd\u4fdd\u5b58\u7075\u611f\u3001\u4f1a\u8bae\u8bb0\u5f55\u3001\u5f85\u529e\u4e8b\u9879\u7b49\u5185\u5bb9\uff0c\u5e76\u6307\u5b9a\u7b14\u8bb0\u672c\u548c\u6807\u7b7e\uff1b \u9047\u5230\u503c\u5f97\u6536\u85cf\u7684\u7f51\u9875\uff0c\u4e5f\u53ef\u4ee5\u63d0\u4ea4\u5230\u5370\u8c61\u7b14\u8bb0\u8fdb\u884c\u526a\u85cf\u3002 \u9700\u8981\u627e\u56de\u8d44\u6599\u65f6\uff0c\u53ef\u4ee5\u6309\u5173\u952e\u8bcd\u3001\u6807\u9898\u3001\u6807\u7b7e\u3001\u7b14\u8bb0\u672c\u6216\u65f6\u95f4\u8303\u56f4\u641c\u7d22\u7b14\u8bb0\uff0c\u5e76\u67e5\u770b\u6700\u8fd1\u7b14\u8bb0\u548c\u5b8c\u6574\u5185\u5bb9\u3002 \u6b64\u5916\uff0c\u8fd8\u652f\u6301\u4fee\u6539\u7b14\u8bb0\u6807\u9898\u4e0e\u6b63\u6587\u3001\u79fb\u52a8\u7b14\u8bb0\u3001\u66f4\u65b0\u6807\u7b7e\uff0c\u4ee5\u53ca\u521b\u5efa\u548c\u6279\u91cf\u6574\u7406\u7b14\u8bb0\u672c\u3002",
+  "updated_at": 1784189796248,
+  "version": "1.0.4"
+}
