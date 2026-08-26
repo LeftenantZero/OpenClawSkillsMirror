@@ -1,0 +1,33 @@
+{
+  "changelog": "sync.py version preflight against both namespaces; remove downloads-vs-installs note",
+  "created_at": 1785073830429,
+  "display_name": "Multi-Channel Skill Publisher",
+  "fetched_at": 1787774818355,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "TheRacoon",
+    "handle": "readysoon",
+    "user_id": "s1773w7hwzc8a15zxd8bh46xcd83sfgy"
+  },
+  "slug": "multi-channel-skill-publisher",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/multi-channel-skill-publisher",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=multi-channel-skill-publisher&ownerHandle=readysoon",
+    "page_url": "https://clawhub.ai/readysoon/skills/multi-channel-skill-publisher"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 375,
+    "installs": 0,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Publish ONE skill to ALL agent-skill channels from a single source of truth: the ClawHub skill registry, a ClawHub bundle-plugin package, and a Claude Code plugin marketplace (plain GitHub repo). Use when the user wants to publish, release, rename, or version-bump a skill/plugin across registries, or asks how to package a skill as a Claude Code plugin or OpenClaw bundle plugin. Covers the SSOT/sync model against redundancy, exact manifests (plugin.json, marketplace.json, openclaw.plugin.json), known CLI bugs and their web-UI workarounds (rename, --name, display-name fallback), versioning pitfalls (permanent versions, highest-version-wins display name, web-UI version drift), and publish gotchas (version must exceed live on BOTH namespaces, push before source-linked package publish, name-driven search).",
+  "updated_at": 1785098919654,
+  "version": "1.0.3"
+}
