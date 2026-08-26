@@ -1,0 +1,58 @@
+{
+  "changelog": "First hub release. Pure-local memoized workspace backup to a fixed folder AND an external drive: inventory -> classify -> route -> copy -> verify, incremental with resume. Never deletes from source; three hard safety lines enforced by exit codes (Time Machine volume refusal, guard-approved destinations only, no SAFE verdict without real observation). Two adversarial battery rounds + a real 36 GB run behind it.",
+  "created_at": 1785593699732,
+  "display_name": "workspace-backup",
+  "fetched_at": 1787773944805,
+  "files": [
+    "CHANGELOG.md",
+    "README.en.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/destination-policy.md",
+    "references/first-run-setup.md",
+    "references/ledger-format.md",
+    "references/openrsync-compat.md",
+    "scripts/_state.py",
+    "scripts/copy.py",
+    "scripts/guard_destination.py",
+    "scripts/init_destination.py",
+    "scripts/inventory.py",
+    "scripts/plan.py",
+    "scripts/status.py",
+    "scripts/verify.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785594272471,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "VincentJiang06",
+    "handle": "vincentjiang06",
+    "user_id": "s1784t4rkmx28018kynwsymwvn83hk4s"
+  },
+  "slug": "workspace-backup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/workspace-backup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=workspace-backup&ownerHandle=vincentjiang06",
+    "page_url": "https://clawhub.ai/vincentjiang06/skills/workspace-backup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 193,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "PURE LOCAL file backup of this Mac's workspace: mirrors ~/playground, ~/experiment and ~/WorkBuddy into BOTH a fixed local folder and an external drive, incremental and verified, so an interrupted run resumes. Use-when: '\u5907\u4efd\u4e00\u4e0b\u5de5\u4f5c\u533a', 'back up my workspace to the external drive', 'what is not backed up yet / \u5907\u4efd\u72b6\u6001', 'the drive is plugged in, catch up the backup', '$workspace-backup'. Do-NOT use for: Time Machine repair or restore; git push to a remote; iCloud or cloud sync; database dumps; deleting node_modules to free space (this skill never deletes from the source); or a single-file .bak.",
+  "updated_at": 1785593808839,
+  "version": "0.2.3"
+}
