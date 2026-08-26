@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial open-source release. Team-wide P2P mesh for OpenClaw agents over WebSocket. Direct calls between teammates' gateways, no broker. Includes: 3-layer identity auto-detect (env/USER.md/sso.json), separate chmod 600 tokens file (not in git), 4KB warn / 8KB block message size limits, --dry-run for send and broadcast, atomic broadcast output, IM fallback hook. XDG paths. Zero pip deps, bash + Python stdlib + curl only.",
+  "created_at": 1781960937059,
+  "display_name": "agent-team-mesh",
+  "fetched_at": 1787774315922,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/registry.json",
+    "references/tokens.example.json",
+    "scripts/agent-mesh.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781984227484,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Evan Song",
+    "handle": "songhonglei",
+    "user_id": "s17dz40vg2v0b4hy1e0jj91ny584egag"
+  },
+  "slug": "agent-team-mesh",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-team-mesh",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-team-mesh&ownerHandle=songhonglei",
+    "page_url": "https://clawhub.ai/songhonglei/skills/agent-team-mesh"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 341,
+    "installs": 1,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Team-wide P2P mesh for OpenClaw agents running on different containers/pods. Each agent's gateway listens on its own pod IP:18789 over WebSocket; the mesh CL...",
+  "updated_at": 1785315153847,
+  "version": "1.0.0"
+}
