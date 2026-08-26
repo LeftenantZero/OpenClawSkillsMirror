@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release with cost and compute budget control for super-agents.\n\n- Estimates token usage and cost for each inference/tool call, enforcing hard token/cost budget limits.\n- Intercepts over-budget invocations and provides compression suggestions to reduce costs.\n- Includes compress function to shrink context by sentence importance without losing key numerical info.\n- CLI and self-test support for budget estimation, enforcement, and compression.\n- Logs learning progress with automatic self-reflection and customizable user preferences.\n- Integrates with broader agent evaluation and safety frameworks.",
+  "created_at": 1786625508063,
+  "display_name": "cost-budget-control",
+  "fetched_at": 1787772271672,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "learned_patterns.json",
+    "scripts/budget_control.py",
+    "scripts/learner.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786671980794,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "qq435912743",
+    "handle": "qq435912743",
+    "user_id": "s171ndzm69p9g2ee5kcw6t7smh8azd5h"
+  },
+  "slug": "cost-budget-control",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cost-budget-control",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cost-budget-control&ownerHandle=qq435912743",
+    "page_url": "https://clawhub.ai/qq435912743/skills/cost-budget-control"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 113,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6210\u672c\u4e0e\u7b97\u529b\u9884\u7b97\u63a7\u5236\uff1a\u5bf9\u6bcf\u6b21\u63a8\u7406\u4e0e\u5de5\u5177\u8c03\u7528\u505a token \u4e0e\u6210\u672c\u9884\u7b97\u4f30\u7b97\u4e0e\u786c\u6027\u62e6\u622a\uff0c\u5e76\u63d0\u4f9b \u538b\u7f29\u964d\u672c\u5efa\u8bae\uff0c\u8ba9\u8d85\u7ea7\u667a\u80fd\u4f53\u53ef\u89c4\u6a21\u5316\u3001\u53ef\u63a7\u6210\u672c\u5730\u8fd0\u884c\uff0c\u662f\u53ef\u9760\u8d85\u8d8a\u7684\u843d\u5730\u524d\u63d0\u3002",
+  "updated_at": 1786671054729,
+  "version": "1.0.0"
+}
