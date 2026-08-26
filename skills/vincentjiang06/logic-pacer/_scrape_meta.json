@@ -1,0 +1,41 @@
+{
+  "changelog": "First hub release. Slows the logical pacing of prose you already like: shrinks inference step size so\u6bcf\u6b65 lands where the reader stands (given-new), without touching style, vocabulary, facts, or stance (net length <=~1.3x). Built end-to-end by the skill-creator-max pipeline; independent battery caught and fixed a real defect the builder's self-tests missed.",
+  "created_at": 1785593673046,
+  "display_name": "logic-pacer",
+  "fetched_at": 1787773945238,
+  "files": [
+    "CHANGELOG.md",
+    "README.en.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/anti-patterns.md",
+    "references/mechanisms.md",
+    "references/step-followability-probe.md",
+    "references/worked-example-quetelet.md",
+    "scripts/pace_checks.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "VincentJiang06",
+    "handle": "vincentjiang06",
+    "user_id": "s1784t4rkmx28018kynwsymwvn83hk4s"
+  },
+  "slug": "logic-pacer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/logic-pacer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=logic-pacer&ownerHandle=vincentjiang06",
+    "page_url": "https://clawhub.ai/vincentjiang06/skills/logic-pacer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 200,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Rewrite EXISTING admired Chinese/English expository prose so its reasoning is easier to follow \u2014 shrink the inferential STEP SIZE and re-anchor each step on ground the reader already holds (given-new), while KEEPING the voice, the vocabulary (never \u5bf9\u9f50\u8bcd\u6c47), the facts/claims/stance, and staying lean (net length <= ~1.3x). Method: detect >=2-move leaps, unfold each into its minimal chain, subtract ornament. Use for \"\u8fd9\u6bb5\u903b\u8f91\u8df3\u592a\u5feb\uff0c\u653e\u6162\u4f46\u522b\u52a8\u6587\u98ce/\u8bcd\u6c47\", \"reduce the inferential step size\", \"$logic-pacer\". ABSTAIN if the prose is already followable. NOT de-AI (\u2192humanizer-academic), NOT simplify-words/\u5bf9\u9f50\u8bcd\u6c47, NOT summarize/translate, NOT reorder points, NOT generate new prose.",
+  "updated_at": 1785593743781,
+  "version": "1.0.0"
+}
