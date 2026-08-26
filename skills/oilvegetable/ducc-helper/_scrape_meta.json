@@ -1,0 +1,53 @@
+{
+  "changelog": "ducc-helper 1.0.0\n\n- \u9996\u6b21\u53d1\u5e03\uff0c\u63d0\u4f9b\u4eac\u4e1c DUCC \u914d\u7f6e\u4e2d\u5fc3\u7684\u7edf\u4e00\u5165\u53e3\uff0c\u652f\u6301\u547d\u540d\u7a7a\u95f4/\u914d\u7f6e\u6587\u4ef6/profile \u7684\u68c0\u7d22\u3001\u914d\u7f6e\u9879\u8bfb\u5199\u4e0e\u53d1\u5e03\u3002\n- \u5b9e\u73b0\u96f6\u914d\u7f6e\u8ba4\u8bc1\uff1a\u81ea\u52a8\u4ece\u672c\u673a\u4eacME\u5ba2\u6237\u7aef\u83b7\u53d6 SSO\uff0c\u65e0\u9700\u6d4f\u89c8\u5668\u4ea4\u4e92\u6216\u624b\u52a8\u586b\u5199 token\u3002\n- \u652f\u6301\u76f4\u89c2\u7684\u914d\u7f6e\u7ba1\u7406\uff1a\u67e5\u627e\u3001\u589e\u5220\u6539\u914d\u7f6e\u9879\uff0c\u4ec5\u5f71\u54cd\u8349\u7a3f\u533a\uff0c\u9700\u786e\u8ba4\u53d1\u5e03\u624d\u751f\u6548\u3002\n- \u63d0\u4f9b\u5168\u91cf\u4e0e\u7070\u5ea6\u5206\u6279\u53d1\u5e03\uff08\u53ef\u9009\u6309\u6a21\u677f\u5206\u6279/\u6682\u505c\uff09\uff0c\u652f\u6301\u751f\u4ea7\u4e0e\u9884\u53d1\u73af\u5883\u5207\u6362\u3002\n- \u4e2d\u6587 code/\u540d\u79f0\u4e5f\u53ef\u7528\uff0c\u811a\u672c\u81ea\u52a8\u89e3\u6790\u4e3a\u5185\u90e8 ID\uff0c\u63d0\u5347\u6613\u7528\u6027\u3002",
+  "created_at": 1785320612839,
+  "display_name": "ducc-helper",
+  "fetched_at": 1787774279126,
+  "files": [
+    ".gitignore",
+    ".omc/state/agent-replay-4e89417e-d70a-4b13-875c-9657335303b6.jsonl",
+    ".omc/state/subagent-tracking.json",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "lib/ducc_client.py",
+    "lib/jme_auth.py",
+    "references/api.md",
+    "requirements.txt",
+    "scripts/config.py",
+    "scripts/write.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785327743284,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "oilvegetable",
+    "handle": "oilvegetable",
+    "user_id": "s17c9kfgqwwfhc8jzwd0649h1d8bfebs"
+  },
+  "slug": "ducc-helper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ducc-helper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ducc-helper&ownerHandle=oilvegetable",
+    "page_url": "https://clawhub.ai/oilvegetable/skills/ducc-helper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 222,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4eac\u4e1c DUCC \u914d\u7f6e\u4e2d\u5fc3(\u6cf0\u5c71 taishan.jd.com/ducc\u3001\u540e\u7aef console.ducc.jd.com)\u7edf\u4e00\u5165\u53e3\uff0c\u8ba9 agent \u80fd\u8bfb\u5199\u53d1\u5e03 DUCC \u914d\u7f6e\u3002\u96f6\u914d\u7f6e\u8ba4\u8bc1\uff08\u672c\u673a\u4eacME\u5ba2\u6237\u7aef\u6362 sso.jd.com\uff0c\u65e0\u9700\u6d4f\u89c8\u5668/\u624b\u586btoken\uff09\u3002\u5f53\u7528\u6237\u60f3\u8981\u300c\u67e5 DUCC \u547d\u540d\u7a7a\u95f4/\u5e94\u7528\u914d\u7f6e\u7a7a\u95f4\u300d\u300c\u5217\u67d0\u547d\u540d\u7a7a\u95f4\u4e0b\u7684\u914d\u7f6e\u6587\u4ef6\u300d\u300c\u770b\u914d\u7f6e\u6587\u4ef6\u6709\u54ea\u4e9b\u73af\u5883/profile(\u5982 dev/common/\u751f\u4ea7\u914d\u7f6e/\u9884\u53d1\u914d\u7f6e)\u300d\u300c\u8bfb\u67d0\u4e2a\u914d\u7f6e\u9879\u7684\u503c/key value\u300d\u300c\u67e5 DUCC \u67d0\u5f00\u5173/\u53c2\u6570\u5f53\u524d\u914d\u7684\u5565\u300d\u300c\u6539 DUCC \u914d\u7f6e\u9879/\u65b0\u589e\u914d\u7f6e\u9879/\u5220\u9664\u914d\u7f6e\u9879\u300d\u300c\u53d1\u5e03 DUCC \u914d\u7f6e/\u5168\u91cf\u53d1\u5e03/\u7070\u5ea6\u53d1\u5e03/\u5206\u6279\u53d1",
+  "updated_at": 1785327036185,
+  "version": "1.0.0"
+}
