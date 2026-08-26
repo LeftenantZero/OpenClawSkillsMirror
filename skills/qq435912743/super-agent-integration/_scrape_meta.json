@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release: Enables true end-to-end autonomous agent integration and measurable evaluation.\n\n- Integrates planner, execution, verification, reflection/replanning, memory, and evaluation engines into a real, measurable autonomous loop.\n- Ensures all engines are hard dependencies and are explicitly imported and invoked in sequence\u2014no silent failures or stub behavior.\n- Provides comprehensive health scoring, including reliability, replan count, and pass rate, to determine if the agent loop is actually usable.\n- Includes self-evolution features: usage and error patterns are automatically recorded and used to guide future improvements without manual maintenance.\n- Offers CLI commands for one-click end-to-end self-test, custom task runs, and reporting/reflecting on skill usage and learning.",
+  "created_at": 1786625815175,
+  "display_name": "super-agent-integration",
+  "fetched_at": 1787772252917,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "learned_patterns.json",
+    "scripts/integration_runner.py",
+    "scripts/learner.py",
+    "scripts/section.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786672147655,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "qq435912743",
+    "handle": "qq435912743",
+    "user_id": "s171ndzm69p9g2ee5kcw6t7smh8azd5h"
+  },
+  "slug": "super-agent-integration",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/super-agent-integration",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=super-agent-integration&ownerHandle=qq435912743",
+    "page_url": "https://clawhub.ai/qq435912743/skills/super-agent-integration"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 114,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u628a\u5206\u6563\u5efa\u6210\u7684\u8d85\u7ea7\u667a\u80fd\u4f53\u5355\u70b9\u80fd\u529b\u7194\u6210\u4e00\u6b21\u771f\u5b9e\u53ef\u8dd1\u3001\u53ef\u88ab\u5ea6\u91cf\u7684\u7aef\u5230\u7aef\u81ea\u4e3b\u95ed\u73af\uff0c\u662f\u8d85\u8d8a\u4e00\u7ebf\u5927\u6a21\u578b\u7684\u6700\u540e\u4e00\u516c\u91cc\u3002 \u771f\u5b9e import \u5e76\u8c03\u7528 planner / reason-verify / memory-cross-engine / reflection-replanner / super-agent-bootstrap / agent-eval-harness\uff0c\u8dd1\u901a\u300c\u611f\u77e5\u2192\u89c4\u5212\u2192\u6267\u884c\u2192\u81ea\u9a8c\u8bc1\u2192\u53cd\u601d\u91cd\u89c4\u5212\u2192\u8de8\u5f15\u64ce\u8bb0\u5fc6\u2192\u56de\u5f52\u8bc4\u6d4b\u300d \u5168\u94fe\u8def\uff0c\u6700\u540e\u7528\u8bc4\u6d4b\u5f15\u64ce\u91cf\u5316\u95ed\u73af\u5065\u5eb7\u5ea6\u5e76\u5224\u5b9a\u662f\u5426\u95ed\u73af\u53ef\u7528\u3002\u5f53\u7528\u6237\u8981\u6c42\u771f\u6b63\u8dd1\u901a\u81ea\u4e3b\u667a\u80fd\u4f53\u3001 \u9a8c\u8bc1\"\u662f\u5426\u771f\u7684\u80fd\u7aef\u5230\u7aef\u81ea\u4e3b\u5b8c\u6210\u4efb\u52a1\"\u3001\u5ea6\u91cf\u8d85\u7ea7\u667a\u80fd\u4f53\u5065\u5eb7\u5ea6\u65f6\u4f7f\u7528\u3002",
+  "updated_at": 1786671125561,
+  "version": "1.0.0"
+}
