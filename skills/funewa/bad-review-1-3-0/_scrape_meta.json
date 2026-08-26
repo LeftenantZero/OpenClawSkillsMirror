@@ -1,0 +1,48 @@
+{
+  "changelog": "amazon-bad-review-analysis v1.3.0\n\n- Initial release of the \u4e9a\u9a6c\u900a\u5dee\u8bc4\u5206\u6790 Skill for Amazon negative review root cause analysis (focus: 1\u20133 star reviews).\n- Collects, analyzes, and ranks root causes (quality issues, logistics, misdescription, user confusion) by frequency.\n- Provides improvement suggestions for product and copywriting to help reduce returns; includes star distribution and negative trend charts.\n- Requires ARI API key for review data access and emphasizes safe API key handling and accurate user flow.\n- Enforces strict workflow: always quote before fee-based operations, confirmation required, and careful handling of API interruptions.\n- Includes reporting structure, CLI/API entry points, free/paid usage notes, and clear separation of data reading, inference, and actionable strategy.",
+  "created_at": 1786539791875,
+  "display_name": "Amazon Bad Review Analysis",
+  "fetched_at": 1787772510718,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/reference.md",
+    "scripts/ari.py",
+    "skill-card.md",
+    "\u4f7f\u7528\u8bf4\u660e.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786540639025,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "funewa",
+    "handle": "funewa",
+    "user_id": "s17ddkyn6xqtz4f83y2v0marjh89xqb5"
+  },
+  "slug": "bad-review-1-3-0",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bad-review-1-3-0",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bad-review-1-3-0&ownerHandle=funewa",
+    "page_url": "https://clawhub.ai/funewa/skills/bad-review-1-3-0"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 164,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5dee\u8bc4\u6839\u56e0\u62c6\u89e3\uff1a\u8d28\u91cf\u3001\u7269\u6d41\u3001\u63cf\u8ff0\u4e0d\u7b26\u6309\u9891\u6b21\u6392\u5e8f",
+  "updated_at": 1786539915008,
+  "version": "0.1.0"
+}
