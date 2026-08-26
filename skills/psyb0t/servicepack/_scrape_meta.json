@@ -1,0 +1,34 @@
+{
+  "changelog": "- Removed obsolete skill-card.md file.\n- Updated SKILL.md file content.\n- `make audit` shell permission removed.\n- Minor metadata/permissions clean-up.",
+  "created_at": 1785023073222,
+  "display_name": "servicepack",
+  "fetched_at": 1787770248580,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/setup.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ciprian Mandache",
+    "handle": "psyb0t",
+    "user_id": "s17fq93tmpky791n7516jcn08n83sfn2"
+  },
+  "slug": "servicepack",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/servicepack",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=servicepack&ownerHandle=psyb0t",
+    "page_url": "https://clawhub.ai/psyb0t/skills/servicepack"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1217,
+    "installs": 1,
+    "stars": 0,
+    "versions": 33
+  },
+  "summary": "Build a Go service on psyb0t/servicepack \u2014 clone-and-own framework (not a `go get` library) providing a Service interface (Name/Run/Stop), a singleton ServiceManager that runs services concurrently with dependency-ordered topological start, automatic retry (Retryable), non-fatal failures (AllowedFailure), readiness gating (ReadyNotifier), per-service CLI subcommands (Commander), an App singleton with OnPreRun/OnPostStop lifecycle hooks, gofindimpl-based service auto-discovery codegen, ctxscope/slogging structured logging, and a graceful-shutdown Runner. Import path github.com/psyb0t/servicepack. Use when the user wants related Go services debugged together locally, then deployed as one binary or split into separate microservices, with retry/dependency/readiness semantics.",
+  "updated_at": 1787293419868,
+  "version": "1.9.2"
+}
