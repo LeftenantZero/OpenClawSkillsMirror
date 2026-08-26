@@ -1,0 +1,53 @@
+{
+  "changelog": "Initial release of voice-agent-memory: a full-stack voice agent with persistent, cross-call memory.\n\n- Make and receive phone calls with automatic, real-time transcription and memory storage.\n- Vector-based memory per caller: agent recalls previous conversations on every call.\n- Integrates Twilio (phone), ElevenLabs/Deepgram (voice), BlueColumn (memory), and Claude (agent logic).\n- Auto-transcribes, summarizes, and stores every call with seamless recall on subsequent calls from the same number.\n- Provides a FastAPI-based bridge server for handling real-time communication between components.",
+  "created_at": 1785548100338,
+  "display_name": "voice-agent-memory",
+  "fetched_at": 1787774011963,
+  "files": [
+    "ARCHITECTURE.md",
+    "SKILL.md",
+    "_meta.json",
+    "bridge/__init__.py",
+    "bridge/memory.py",
+    "bridge/prompt_builder.py",
+    "bridge/server.py",
+    "contacts.json",
+    "requirements.txt",
+    "scripts/start.sh",
+    "scripts/test-call.sh",
+    "scripts/test-recall.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785548944555,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "bluecolumnconsulting-lgtm",
+    "handle": "bluecolumnconsulting-lgtm",
+    "user_id": "s17bvy8gx9dwzphyvevmeh94nh84v4wz"
+  },
+  "slug": "voice-agent-memory",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/voice-agent-memory",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=voice-agent-memory&ownerHandle=bluecolumnconsulting-lgtm",
+    "page_url": "https://clawhub.ai/bluecolumnconsulting-lgtm/skills/voice-agent-memory"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 203,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Full-stack voice agent with BlueColumn persistent memory. Make and receive phone calls with real-time transcription, automatic vector memory storage, and cross-call recall. Every call remembers who called, what they said, and what happened last time.",
+  "updated_at": 1785548201447,
+  "version": "1.0.0"
+}
