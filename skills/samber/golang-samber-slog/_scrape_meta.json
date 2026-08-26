@@ -1,0 +1,48 @@
+{
+  "changelog": "- Compatibility updated: now officially supports Claude Code, Codex, and similar harnesses (not just Claude Code).\n- Added references in documentation to skills for Go package docs (`golang-pkg-go-dev`/`godig`) and code navigation (`golang-gopls`/`gopls`), encouraging their use for Go-specific queries.\n- Updated internal versioning to 1.1.0 in metadata.\n- Expanded allowed tools and file path patterns for improved integration.\n- Removed the legacy `skill-card.md` file.",
+  "created_at": 1774336747037,
+  "display_name": "golang-samber-slog",
+  "fetched_at": 1787769909162,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/backend-handlers.md",
+    "references/http-middlewares.md",
+    "references/pipeline-patterns.md",
+    "references/sampling-strategies.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787443093046,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Samuel Berthe",
+    "handle": "samber",
+    "user_id": "s173arkhs3131fq5jf769qq75583hdgt"
+  },
+  "slug": "golang-samber-slog",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/golang-samber-slog",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=golang-samber-slog&ownerHandle=samber",
+    "page_url": "https://clawhub.ai/samber/skills/golang-samber-slog"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1002,
+    "installs": 23,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Structured logging extensions for Golang using samber/slog-**** packages \u2014 multi-handler pipelines (slog-multi), log sampling (slog-sampling), attribute formatting (slog-formatter), HTTP middleware (slog-fiber, slog-gin, slog-chi, slog-echo), and backend routing (slog-datadog, slog-sentry, slog-loki, slog-syslog, slog-logstash, slog-graylog...). Apply when using or adopting slog, or when the codebase already imports any github.com/samber/slog-* package.",
+  "updated_at": 1787441578298,
+  "version": "1.1.0"
+}
