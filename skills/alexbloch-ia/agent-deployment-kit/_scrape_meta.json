@@ -1,0 +1,35 @@
+{
+  "changelog": "Fix fail-open contradictions in the guard guidance. (1) Troubleshooting told readers to 'serialize before testing' \u2014 the exact shape the body proves refuses only 3/6 hostile values; now prescribes type-check-first (6/6). (2) The 'Placeholder with no value' fix contradicted Rule 2's removal test and silently un-did scope cuts. (3) Sentinel gate scope was ambiguous between config and context \u2014 the shipped example's INSTALL_HOME sentinel exploited the gap; gate now walks both blocks. (4) Added the missing warn/strict two-mode spec that three hard gates already referenced. (5) INSTALL_HOME could never satisfy the no-sentinel hard gate in documented CLI-arg mode. (6) Fixed dead xref to Gotchas and a wrong 'next row' reference. (7) MEMORY.md and README.md were audited but absent from the anatomy tree. (8) requires.bins omitted node. (9) Scoped the *.bak-* .gitignore claim to what it actually covers. (10) Example questionnaire violated its own ASCII-only rule in a rendered value.",
+  "created_at": 1784207107171,
+  "display_name": "Agent Deployment Kit",
+  "fetched_at": 1787775908847,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "context/QUESTIONNAIRE.example.json",
+    "context/secrets.example.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Alexandre Bloch",
+    "handle": "alexbloch-ia",
+    "user_id": "s179c74ca8kjff2gapygs9y13d86yr3z"
+  },
+  "slug": "agent-deployment-kit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-deployment-kit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-deployment-kit&ownerHandle=alexbloch-ia",
+    "page_url": "https://clawhub.ai/alexbloch-ia/skills/agent-deployment-kit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 453,
+    "installs": 2,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Replicate one agent across N clients without drift \u2014 one context source, a generator that refuses unknowns. Use when duplicating an agent deployment. Trigger...",
+  "updated_at": 1784539374892,
+  "version": "1.1.0"
+}
