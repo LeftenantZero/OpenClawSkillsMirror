@@ -1,0 +1,51 @@
+{
+  "changelog": "cargo 1.21.0\n\n- Added a new capability skill: \"mailbox management,\" bringing the total to 15 capability skills and 18 skills overall.\n- Updated documentation in SKILL.md to reflect new skill count and mailbox management.\n- Removed skill-card.md file.",
+  "created_at": 1779992747882,
+  "display_name": "cargo",
+  "fetched_at": 1787769672482,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "cli-version",
+    "references/glossary.md",
+    "references/gotchas.md",
+    "references/interaction.md",
+    "references/prerequisites.md",
+    "references/use-cases.md",
+    "references/uuid-flow.md",
+    "skill-card.md",
+    "skill-metadata.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787548762274,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Cargo",
+    "handle": "cargo-ai",
+    "user_id": "s178dcd9wkfn0a2fqrygmt3jzn87j9e1"
+  },
+  "slug": "cargo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cargo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cargo&ownerHandle=cargo-ai",
+    "page_url": "https://clawhub.ai/cargo-ai/skills/cargo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2593,
+    "installs": 15,
+    "stars": 0,
+    "versions": 28
+  },
+  "summary": "Router for the Cargo CLI skill bundle \u2014 load first for anything Cargo, and whenever a task spans two Cargo domains. Explains what each skill owns, declarative workspace-as-code (cargo-cdk) vs the imperative CLI, the UUID and slug flow between skills, async polling of runs and batches, end-to-end use cases, and the gotchas that fail silently (`conjonction` spelling, run vs batch, model-uuid vs segment-uuid). Triggers: \"set up Cargo\", \"what can Cargo do\", \"which Cargo skill\", \"bootstrap my workspace\", \"I have a Cargo account\", \"cargo-ai \u2026\", or any `cargo-ai` command whose domain you are unsure of. Skip when: the task obviously belongs to one skill \u2014 load that skill directly.",
+  "updated_at": 1787547150579,
+  "version": "1.21.0"
+}
