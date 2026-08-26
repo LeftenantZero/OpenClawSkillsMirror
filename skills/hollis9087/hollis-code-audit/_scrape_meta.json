@@ -1,0 +1,45 @@
+{
+  "changelog": "Narrow skill trigger description to reduce false positives. The skill now explicitly avoids routine implementation, debugging, refactoring, docs, design, and general review requests unless audit/risk/security/regression evidence is requested.",
+  "created_at": 1780207236010,
+  "display_name": "Code Audit",
+  "fetched_at": 1787783791009,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.json",
+    "evals/evals.json",
+    "references/audit-checklist.md",
+    "references/independent-reviewer-prompt.md",
+    "review_routes.example.json",
+    "scripts/audit_snapshot.py",
+    "scripts/build_audit_packet.py",
+    "scripts/detect_review_models.py",
+    "scripts/run_evals.py",
+    "scripts/run_tests.py",
+    "skill-card.md",
+    "tests/test_scripts.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "hollis9087",
+    "handle": "hollis9087",
+    "user_id": "s177cqfxj8hyd271e27az0p2nx85tds8"
+  },
+  "slug": "hollis-code-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hollis-code-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hollis-code-audit&ownerHandle=hollis9087",
+    "page_url": "https://clawhub.ai/hollis9087/skills/hollis-code-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 610,
+    "installs": 11,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Use this skill only when the user explicitly asks for a code audit, security audit, risk-focused PR/diff review, repo or module audit, regression-risk review...",
+  "updated_at": 1780220623734,
+  "version": "0.1.2"
+}
