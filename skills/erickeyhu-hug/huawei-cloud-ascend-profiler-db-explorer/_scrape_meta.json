@@ -1,0 +1,38 @@
+{
+  "changelog": "- Initial release of the huawei-cloud-ascend-profiler-db-explorer skill  \n- Converts natural language profiling questions into safe SQL queries for Ascend PyTorch Profiler / msprof databases  \n- Supports operator time, communication, and dispatch performance analysis  \n- Provides table schema extraction using official documentation  \n- Skill-card.md file removed (no impact on core functionality)",
+  "created_at": 1785748835174,
+  "display_name": "huawei-cloud-ascend-profiler-db-explorer",
+  "fetched_at": 1787773641517,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/profiler_db_data_format.md",
+    "references/troubleshooting.md",
+    "references/verification-method.md",
+    "scripts/get_schema.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-ascend-profiler-db-explorer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-ascend-profiler-db-explorer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-ascend-profiler-db-explorer&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-ascend-profiler-db-explorer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 37,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Convert natural language questions into safe executable SQL to query Ascend PyTorch Profiler / msprof database for operator time consumption, communication, dispatch, and other performance data. Supports table schema extraction from official documentation. Use this skill when the user wants to: (1) analyze Ascend profiling database, (2) query operator performance data, (3) analyze communication and dispatch bottlenecks, (4) check table schema for profiling data. Trigger: user mentions \"profiler db\", \"sqlite\", \"sql\", \"table\", \"schema\", \"ascend-pytorch-profiler\", \"msprof\", \"operator time\", \"communication time\", \"dispatch analysis\", \"\u6027\u80fd\u5206\u6790\", \"\u7b97\u5b50\u8017\u65f6\", \"\u6570\u636e\u5e93\u67e5\u8be2\", \"\u6027\u80fd\u6570\u636e\", \"\u6027\u80fd\u74f6\u9888\"",
+  "updated_at": 1785748936064,
+  "version": "1.0.0"
+}
