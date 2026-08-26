@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release: 5 token types, 3 placement locations, 4 detection methods, cron monitoring, bilingual README",
+  "created_at": 1785389121959,
+  "display_name": "agent-canary",
+  "fetched_at": 1787774186853,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "README_CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/check_canaries.py",
+    "scripts/cleanup_canaries.py",
+    "scripts/generate_tokens.py",
+    "scripts/plant_canaries.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785393200011,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Thomaszhou",
+    "handle": "thomaszhou22",
+    "user_id": "s1783bkbcvv24shjjcb0z41v8s86ghv6"
+  },
+  "slug": "agent-canary",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-canary",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-canary&ownerHandle=thomaszhou22",
+    "page_url": "https://clawhub.ai/thomaszhou22/skills/agent-canary"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 227,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Plant decoy credentials in your OpenClaw workspace to detect malicious skill behavior. Canary tokens trigger alerts when read, copied, or exfiltrated. Activate when user says \"deploy canary\", \"set up honeypot\", \"plant decoy\", \"canary check\", \"canary status\", or \"canary cleanup\".",
+  "updated_at": 1785392271919,
+  "version": "1.0.0"
+}
