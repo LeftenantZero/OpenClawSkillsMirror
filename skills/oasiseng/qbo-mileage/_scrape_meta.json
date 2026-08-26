@@ -1,0 +1,46 @@
+{
+  "changelog": "Changelog\n1.0.1 \u2014 2026-06-10\nFixed (tax correctness)\n\nChain legs now belong to the destination event. Intermediate legs in a\ntrip chain previously inherited the date, purpose, vehicle, and\nBUSINESS/PERSONAL type of the event being left, not the event being\ndriven to. A personal stop between two business stops inverted the\nclassification of both surrounding legs: the drive to the personal stop was\nexported as BUSINESS (overstating the deduction) and the drive from the\npersonal stop to the next job site was exported as PERSONAL (losing a\nlegitimate deduction). (trip_builder.py)\nPERSONAL legs now export a 0.00 deduction instead of miles \u00d7 IRS rate,\nso the CSV and run report never overstate the deductible total.\n(pipeline.py)\n\nFixed (reliability)\n\nA corrupt or half-written distance cache no longer crashes every run; the\ncache is rebuilt with a warning. Cache writes are now atomic\n(temp file + rename). (cache.py)\nMonthly cron script no longer computes the wrong month when run on the\n29th\u201331st (GNU date \"last month\" normalization bug); also falls back to\npython3 when python is not on PATH. (scripts/run_monthly.sh)\nThe skill entry point now adds the plugin's src/ folder to sys.path,\nso it runs from a freshly installed plugin without pip install.\n(skills/qbo-mileage/scripts/run.py)\nMissing IRS rate for the requested year now fails fast before any source\nAPI calls are spent. (pipeline.py)\n\nSecurity\n\nSMTP STARTTLS now uses an explicit ssl.create_default_context() so the\nserver certificate is always verified regardless of Python version\ndefaults. (senders/email.py)\n\nDocs\n\nSKILL.md documents the python3 fallback and the no-install entry point,\nand adds a PERSONAL-deduction check to the review checklist.\n\nTests\n\nRegression tests for chain-leg attribution (mixed business/personal chains)\nand zero deduction on personal legs.",
+  "created_at": 1778284047267,
+  "display_name": "QuickBooks Mileage CSV",
+  "fetched_at": 1787781236730,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "plugin.json",
+    "pyproject.toml",
+    "scripts/run_monthly.sh",
+    "skill-card.md",
+    "skills/qbo-mileage/SKILL.md",
+    "skills/qbo-mileage/scripts/run.py",
+    "src/qbo_mileage/__init__.py",
+    "src/qbo_mileage/cache.py",
+    "src/qbo_mileage/pipeline.py",
+    "src/qbo_mileage/senders/email.py",
+    "src/qbo_mileage/trip_builder.py",
+    "tests/test_personal_deduction.py",
+    "tests/test_trip_builder.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Oasis Engineering",
+    "handle": "oasiseng",
+    "user_id": "s17cnytngezw9fmhens6qh4ah9858mwv"
+  },
+  "slug": "qbo-mileage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/qbo-mileage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=qbo-mileage&ownerHandle=oasiseng",
+    "page_url": "https://clawhub.ai/oasiseng/skills/qbo-mileage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 766,
+    "installs": 15,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Generate QuickBooks Online mileage CSV files from Airtable, Outlook, or Google Calendar records using the local qbo-mileage CLI and user-owned credentials.",
+  "updated_at": 1781124307747,
+  "version": "1.0.1"
+}
