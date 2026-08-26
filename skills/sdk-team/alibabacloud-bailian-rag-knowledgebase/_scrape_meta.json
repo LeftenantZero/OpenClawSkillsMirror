@@ -1,0 +1,48 @@
+{
+  "changelog": "- Major update: Migrated from Node.js SDK to Python HTTPS API scripts for all skill operations.\n- Added unified Python-based API Key management script (api_key.py) with secure auto-discovery and creation.\n- All skill operations now use secure API Key handling: keys are never hardcoded, printed, or directly accessed.\n- Replaced previous Node.js scripts with Python scripts (list_indices.py, retrieve.py) and removed obsolete scripts.\n- Introduced mandatory per-command User-Agent with session tracking for all CLI and HTTPS API calls.\n- Updated documentation and workflow reflecting new Python-based usage, security, and auditability requirements.",
+  "created_at": 1775716591093,
+  "display_name": "Alibabacloud Bailian Rag Knowledgebase",
+  "fetched_at": 1787781094129,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ram-policies.md",
+    "scripts/api_key.py",
+    "scripts/list_indices.py",
+    "scripts/requirements.txt",
+    "scripts/retrieve.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781236639723,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-bailian-rag-knowledgebase",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-bailian-rag-knowledgebase",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-bailian-rag-knowledgebase&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-bailian-rag-knowledgebase"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 908,
+    "installs": 19,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Alibaba Cloud Bailian Knowledge Base Retrieval Tool. Use HTTPS API to query and retrieve knowledge base content. Use when: User needs to query knowledge base...",
+  "updated_at": 1781233602942,
+  "version": "0.0.3"
+}
