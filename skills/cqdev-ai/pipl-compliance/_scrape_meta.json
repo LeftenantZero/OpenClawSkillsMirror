@@ -1,0 +1,56 @@
+{
+  "changelog": "pipl-compliance v1.2.2\n\n- Skill\u540d\u79f0\u66f4\u65b0\u4e3a\u201cpipl-compliance-enhanced\u201d\uff0c\u7a81\u51fa\u529f\u80fd\u589e\u5f3a\u3002\n- \u5168\u65b0\u5b8c\u5584\u7684SKILL.md\uff0c\u7cfb\u7edf\u4ecb\u7ecd\u529f\u80fd\u3001\u6838\u5fc3\u573a\u666f\u3001\u6cd5\u5f8b\u58f0\u660e\u53ca\u8be6\u7ec6\u4f7f\u7528\u8bf4\u660e\u3002\n- \u52a0\u5f3a\u6cd5\u5f8b\u514d\u8d23\u58f0\u660e\u4e0e\u77e5\u8bc6\u4ea7\u6743\u8bf4\u660e\uff0c\u660e\u786e\u5f00\u53d1\u8005\u4e0e\u7528\u6237\u8d23\u4efb\u3002\n- \u4e30\u5bcc\u5408\u89c4\u68c0\u67e5\u3001\u98ce\u9669\u8bc4\u4f30\u4e0e\u6587\u6863\u751f\u6210\u7684\u5de5\u5177\u6587\u6863\u548c\u4f7f\u7528\u793a\u4f8b\u3002\n- \u660e\u786e\u652f\u6301\u591a\u79cd\u8f93\u51fa\u683c\u5f0f\u4e0e\u5178\u578b\u5e94\u7528\u573a\u666f\uff0c\u66f4\u6613\u4e8e\u96c6\u6210\u548c\u6269\u5c55\u3002\n- \u589e\u52a0\u67b6\u6784\u8bf4\u660e\u4e0e\u6e10\u8fdb\u5f0f\u6587\u6863\u7ed3\u6784\uff0c\u4f7f\u529f\u80fd\u5c42\u6b21\u6e05\u6670\u3001\u5165\u95e8\u66f4\u53cb\u597d\u3002",
+  "created_at": 1784436425004,
+  "display_name": "PIPL-Compliance",
+  "fetched_at": 1787775090752,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/templates/privacy-policy-cn.md",
+    "package.json",
+    "references/cn-checklist.md",
+    "references/enforcement-cases.md",
+    "references/pipl-checklist.md",
+    "references/pipl-law.md",
+    "references/risk-assessment-guide.md",
+    "requirements.txt",
+    "scripts/core/__init__.py",
+    "scripts/core/check_engine.py",
+    "scripts/core/cli_base.py",
+    "scripts/core/legal_disclaimer.py",
+    "scripts/core/report_core.py",
+    "scripts/document-generator.py",
+    "scripts/pipl-check.py",
+    "scripts/report-generator.py",
+    "scripts/risk-assessment.py",
+    "scripts/utils/data_validator.py",
+    "scripts/utils/report_formatter.py",
+    "scripts/utils/template_engine.py",
+    "skill-card.md",
+    "tests/README.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ChengQian",
+    "handle": "cqdev-ai",
+    "user_id": "s178qp1nzze50r1f2gp87262tx8atjfy"
+  },
+  "slug": "pipl-compliance",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pipl-compliance",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pipl-compliance&ownerHandle=cqdev-ai",
+    "page_url": "https://clawhub.ai/cqdev-ai/skills/pipl-compliance"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 87,
+    "installs": 0,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "\u4e2d\u56fd\u4e2a\u4eba\u4fe1\u606f\u4fdd\u62a4\u6cd5\uff08PIPL\uff09\u5408\u89c4\u68c0\u67e5\u3001\u98ce\u9669\u8bc4\u4f30\u548c\u6587\u6863\u751f\u6210\u5de5\u5177\u3002\n\u4e3a\u4f01\u4e1a\u63d0\u4f9b\u5168\u9762\u7684PIPL\u5408\u89c4\u89e3\u51b3\u65b9\u6848\u3002\n\nUse when: \u9700\u8981\u8fdb\u884cPIPL\u5408\u89c4\u81ea\u67e5\u3001\u4e2a\u4eba\u4fe1\u606f\u5904\u7406\u98ce\u9669\u8bc4\u4f30\u3001\n\u5408\u89c4\u6587\u6863\u751f\u6210\u3001\u4f01\u4e1a\u5408\u89c4\u7ba1\u7406\u3001\u6570\u636e\u5904\u7406\u5f71\u54cd\u8bc4\u4f30\u3001\u8de8\u5883\u4f20\u8f93\u5408\u89c4\u68c0\u67e5\u3002\n\n\ud83c\udf89 v1.1.9 \u91cd\u8981\u66f4\u65b0\uff1a\n- \ud83d\udd27 \u5168\u65b0\u7edf\u4e00\u5316CLI\u63a5\u53e3\uff0c\u7b80\u6d01\u9ad8\u6548\n- \ud83d\udcca \u652f\u6301JSON/Markdown/HTML/CSV\u591a\u683c\u5f0f\u62a5\u544a\u8f93\u51fa\n- \ud83e\uddf9 \u7cbe\u7b80\u6838\u5fc3\u6587\u4ef6\uff0c\u79fb\u9664\u5197\u4f59\u6f14\u793a\u811a\u672c\n\n\u89e6\u53d1\u5173\u952e\u8bcd\uff1aPIPL\u3001\u4e2a\u4eba\u4fe1\u606f\u4fdd\u62a4\u6cd5\u3001\u5408\u89c4\u68c0\u67e5\u3001\u98ce\u9669\u8bc4\u4f30\u3001\n\u9690\u79c1\u5408\u89c4\u3001\u6570\u636e\u4fdd\u62a4\u3001\u8de8\u5883\u4f20\u8f93\u3001\u5f71\u54cd\u8bc4\u4f30\n\n\u9002\u7528\u8303\u56f4\uff1a\u4e2d\u534e\u4eba\u6c11\u5171\u548c\u56fd\u4e2a\u4eba\u4fe1\u606f\u4fdd\u62a4\u6cd5\uff08PIPL\uff09\n\u8fd0\u884c\u6a21\u5f0f",
+  "updated_at": 1784509865213,
+  "version": "1.2.2"
+}
