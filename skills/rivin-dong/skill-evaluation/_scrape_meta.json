@@ -1,0 +1,56 @@
+{
+  "changelog": "**Summary:** Adds a dedicated trigger evaluation phase for improved skill testing granularity.\n\n- Introduced Phase 1.5: Trigger Evaluation, requiring design and testing of trigger probes for both positive and negative cases.\n- New mandatory output file: trigger-results.json, containing precision and recall metrics for skill activation.\n- Updated pipeline, output directory structure, and file index to include trigger evaluation and its associated script.\n- Revised instructions and table details to reflect the new trigger testing phase before case design.\n- No breaking changes to existing evaluation logic; enhances depth of quality checks.",
+  "created_at": 1778766609812,
+  "display_name": "skill-evaluation",
+  "fetched_at": 1787779261739,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/advisor.md",
+    "agents/executor.md",
+    "agents/judge.md",
+    "agents/planner.md",
+    "agents/reporter.md",
+    "references/report-format.md",
+    "references/rubrics.md",
+    "references/schemas.md",
+    "references/scoring.md",
+    "references/test-case-design.md",
+    "scripts/__init__.py",
+    "scripts/generate_scorecard.py",
+    "scripts/run_trigger_eval.py",
+    "scripts/safety_scanner.py",
+    "scripts/score_engine.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [],
+    "summary": "Security findings were reviewed by moderators and cleared for public use.",
+    "updated_at": 1778860249450,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Rivin-Dong",
+    "handle": "rivin-dong",
+    "user_id": "s177tj4bvbx81qv1tagws5ch0985c1sh"
+  },
+  "slug": "skill-evaluation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-evaluation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-evaluation&ownerHandle=rivin-dong",
+    "page_url": "https://clawhub.ai/rivin-dong/skills/skill-evaluation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 738,
+    "installs": 23,
+    "stars": 3,
+    "versions": 6
+  },
+  "summary": "Evaluate any AI skill's quality through step-by-step diagnosis \u2014 measuring trigger accuracy, per-step execution (completion/correctness/quality), efficiency,...",
+  "updated_at": 1778860249450,
+  "version": "1.0.5"
+}
