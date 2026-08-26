@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release: extract full item detail from any open eBay item URL, returning a comprehensive JSON object with over 25 fields (title, price, categories, seller info, condition, item specifics, hi-res images, and more).\n- Works across all eBay regional domains and handles both public and anonymous sessions.\n- Includes robust pre-execution checks for correct page context, with clear error handling for redirects and missing data.\n- Designed for seamless integration\u2014automation only reads data already visible to the user, mirroring manual copy-paste.\n- Returns all details useful for enrichment, cataloging, price monitoring, and product research.",
+  "created_at": 1783526097167,
+  "display_name": "Ebay Item Detail",
+  "fetched_at": 1787777505344,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-item-detail.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783644696502,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "ebay-item-detail",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ebay-item-detail",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ebay-item-detail&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/ebay-item-detail"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 284,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Extracts full item detail from any open eBay item URL, returning JSON with url, itemNumber, title, subTitle, categories, price, priceWithCurrency, currency, wasPrice, available, availableText, sold, image, images, seller, sellerUrl, sellerFeedbackCount, sellerPositiveRating, itemLocation, brand, typ",
+  "updated_at": 1783526097167,
+  "version": "1.0.0"
+}
