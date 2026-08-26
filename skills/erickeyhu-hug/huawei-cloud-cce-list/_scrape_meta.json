@@ -1,0 +1,70 @@
+{
+  "changelog": "- Added comprehensive test case documentation for normal and edge cases, including invalid region, invalid state, missing credentials, and success scenarios.\n- Expanded coverage with integration test reports, trigger phrase archives, and resource release reports.\n- Updated acceptance and problem reports to reflect the latest verification results.\n- No change to core skill logic; documentation and test completeness improved.",
+  "created_at": 1785935639360,
+  "display_name": "huawei-cloud-cce-list",
+  "fetched_at": 1787773345352,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "case-run/2026-08-05/N1_\u975e\u6cd5\u533a\u57df_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-05/N2_\u975e\u6cd5\u72b6\u6001\u503c_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-05/N3_\u5199\u610f\u56fe\u58f0\u660e_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-05/N4_\u8d8a\u754c\u58f0\u660e_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-05/N5_\u9274\u6743\u5931\u8d25_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-05/N6_\u51ed\u8bc1\u7f3a\u5931_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-05/N7_\u7a7a\u7ed3\u679c_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-05/P1_CCE\u96c6\u7fa4\u5217\u8868_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-05/P2_\u96c6\u7fa4\u540d\u79f0\u5217\u8868_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-05/P3_\u72b6\u6001\u8fc7\u6ee4_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-05/P4_\u7c7b\u578b\u8fc7\u6ee4_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-05/P5_\u8be6\u60c5\u67e5\u8be2_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-05/P6_SDK\u515c\u5e95_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-05/huawei-cloud-cce-list_\u603b\u6d4b\u8bd5\u62a5\u544a.md",
+    "case-run/2026-08-05/huawei-cloud-cce-list_\u95ee\u9898\u5355.md",
+    "case-run/2026-08-05/\u6574\u5408\u6d4b\u8bd5\u62a5\u544a.md",
+    "case-run/2026-08-05/\u6b63\u53cd\u7528\u4f8b\u96c6.md",
+    "case-run/2026-08-05/\u89e6\u53d1\u8bcd\u5f52\u6863.md",
+    "case-run/2026-08-05/\u8d44\u6e90\u91ca\u653e\u62a5\u544a.md",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/test-cli-commands.sh",
+    "scripts/validate-skill.sh",
+    "skill-card.md",
+    "templates/test-vars.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785936568198,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-cce-list",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-cce-list",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-cce-list&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-cce-list"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 205,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Query the list of Huawei Cloud CCE (Cloud Container Engine) clusters under the current tenant / project, focused on the CCE cluster NAME list. Returns each cluster's name, id, status (phase), version and flavor. Supports filtering by status and cluster type, and extracting a pure cluster-name list. Uses the KooCLI command `hcloud CCE ListClusters --cli-region={region}` (primary) against the v3 API, or the huaweicloudsdkcce Python SDK (fallback). Read-only \u2014 never creates, modifies or deletes any cluster or node. Use this skill whenever the user wants to list/inspect the CCE clusters of the tenant or query the CCE cluster name list, e.g. for CCE cluster inventory, daily inspection, or cost review. Triggers include: \"list CCE clusters\", \"CCE cluster list\", \"query CCE cluster names\", \"CCE name list\", \"CCE\u96c6\u7fa4\u5217\u8868\", \"\u67e5\u8be2CCE\u96c6\u7fa4\", \"CCE\u96c6\u7fa4\u540d\u79f0\u5217\u8868\", \"CCE\u96c6\u7fa4\u540d\u79f0\", \"list cce\", \"cce list\", \"how many CCE clusters\".",
+  "updated_at": 1785936121911,
+  "version": "1.0.1"
+}
