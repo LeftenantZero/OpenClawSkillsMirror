@@ -1,0 +1,42 @@
+{
+  "changelog": "TokenFlow v1.0.0 \u2014 2026-04-27\nWhat: File/URL \u2192 structured text. Agent-agnostic.\nConverts: PDF, DOCX, PPTX, XLSX, CSV, audio (transcription), ZIP, URLs.\nConfig: Agent-side config.json \u2014 per-filetype rules (convert / skip / ask).\nAPI: POST /convert, /convert/url, /convert/preview (XLSX sheets), /health, /usage.\nError handling: Quota \u2192 tell user. Too large / unsupported \u2192 skip. 5xx \u2192 retry once, fallback.\nInstall: openclaw skills install tokenflow or drop in ~/.hermes/skills/.\nNeeds: TOKENFLOW_API_KEY + network to tokenflow.fly.dev.\nLive: tokenflow.ironlion.cc",
+  "created_at": 1779179119420,
+  "display_name": "TokenFlow \u8bcd\u5143\u6d41",
+  "fetched_at": 1787786522892,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.js",
+    "hermes/DESCRIPTION.md",
+    "skill-card.md",
+    "skill.json",
+    "tokenflow-client.js",
+    "tokenflow-v1.0.0/SKILL.md",
+    "tokenflow-v1.0.0/config.js",
+    "tokenflow-v1.0.0/hermes/DESCRIPTION.md",
+    "tokenflow-v1.0.0/skill.json",
+    "tokenflow-v1.0.0/tokenflow-client.js"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u9a6c\u9177 Maku",
+    "handle": "kolemaravilla",
+    "user_id": "s176eyvmfagmrcw2rdsd56hwp983h7yf"
+  },
+  "slug": "tokenflow",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tokenflow",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tokenflow&ownerHandle=kolemaravilla",
+    "page_url": "https://clawhub.ai/kolemaravilla/skills/tokenflow"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 618,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Convert files and URLs to structured text using the TokenFlow API with customizable per-filetype conversion and fallback options.",
+  "updated_at": 1779179132847,
+  "version": "1.0.0"
+}
