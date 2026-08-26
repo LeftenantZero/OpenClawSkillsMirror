@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of alibabacloud-ai-innovation-lab-skill\n\n- Introduces a skill that helps users discover and one-click deploy popular AI open-source projects from GitHub on Alibaba Cloud, via the AI Innovation Lab.\n- Strictly guides response structure and data workflow, including defensive fallback handling if data is unavailable.\n- Only triggers on specific AI project exploration/deployment queries, not for maintenance, stats, or framework comparisons.\n- Ensures output fully aligns with a fixed, stepwise template and enforces strict data validation and formatting rules.\n- Supports dynamic content by fetching and displaying the latest projects from the official lab page, with clear fallback protocols if the source is unavailable.",
+  "created_at": 1783672871204,
+  "display_name": "Alibabacloud Ai Innovation Lab Skill",
+  "fetched_at": 1787777304146,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cron-platforms.md",
+    "references/json-schema.md",
+    "references/output-format.md",
+    "scripts/fetch_ai_lab.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783673566721,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-ai-innovation-lab-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-ai-innovation-lab-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-ai-innovation-lab-skill&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-ai-innovation-lab-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 349,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5f53\u7528\u6237\u60f3\u4f53\u9a8c\u3001\u63a2\u7d22\u6216\u83b7\u53d6 GitHub \u70ed\u95e8 AI \u5f00\u6e90\u9879\u76ee\u7684\u4e91\u7aef\u4e00\u952e\u90e8\u7f72\u63a8\u8350\u65f6\u89e6\u53d1\u6b64\u6280\u80fd\uff0c\u6b64\u6280\u80fd\u75312\u90e8\u5206\u7ec4\u6210\uff1a1\uff09\u524d\u7aef\u9875\u9762\u901a\u8fc7\u300cAI\u5c1d\u9c9c\u5b9e\u9a8c\u5ba4\u300d\u9875\u9762\u5c55\u793aAI\u9879\u76ee\uff0c\u300cAI\u5c1d\u9c9c\u5b9e\u9a8c\u5ba4\u300d\u9875\u9762\u5730\u5740\uff1ahttps://www.aliyun.com/daily-act/ecs/ai-innovation-lab\uff1b2\uff09\u540e\u7aef\u7684\u4e00...",
+  "updated_at": 1783672871204,
+  "version": "0.0.1"
+}
