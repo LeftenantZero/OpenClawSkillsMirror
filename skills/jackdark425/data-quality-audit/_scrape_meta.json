@@ -1,0 +1,35 @@
+{
+  "changelog": "- Added new rule checks: restatement_aware, roe_definition_check, and price_basis_check (total rule set increased to 13).\n- Enhanced common-sense sanity checks to flag or fail suspect data based on updated rules.\n- Improved cross-source auditing workflow: enforces use of independent data sources for each number, flags unverifiable or unavailable second sources.\n- Audit report now provides clearer verdicts (PASS / FLAG / FAIL) and includes actionable next steps.\n- Documentation thoroughly explains audit logic, typical failure scenarios, and integration with other data verification steps.",
+  "created_at": 1776698445405,
+  "display_name": "Data Quality Audit",
+  "fetched_at": 1787776502694,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/common-sense-rules.yaml",
+    "scripts/quality-audit.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jackdark",
+    "handle": "jackdark425",
+    "user_id": "s176mxzq3jzjv11d44t7jjr33x83rvkb"
+  },
+  "slug": "data-quality-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/data-quality-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=data-quality-audit&ownerHandle=jackdark425",
+    "page_url": "https://clawhub.ai/jackdark425/skills/data-quality-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 685,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Independent cross-source audit of a completed CN banker deliverable. Use when the user asks to audit / double-check / \u53cc\u6838\u5b9e / \u4ea4\u53c9\u9a8c\u8bc1 / \u6570\u636e\u8d28\u91cf\u68c0\u67e5 / \u5ba1\u8ba1 an existing de...",
+  "updated_at": 1778492680262,
+  "version": "0.8.2"
+}
