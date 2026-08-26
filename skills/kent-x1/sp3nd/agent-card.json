@@ -1,0 +1,386 @@
+{
+  "name": "SP3ND",
+  "description": "Create server-priced carts, place lifecycle-aware physical-goods orders, pay payment-ready orders with USDC on Solana, and track fulfillment through SP3ND.",
+  "url": "https://us-central1-sp3nddotshop-prod.cloudfunctions.net",
+  "provider": {
+    "organization": "SP3ND",
+    "url": "https://sp3nd.shop"
+  },
+  "version": "1.8.0",
+  "documentationUrl": "https://sp3nd.shop/skill.md",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "x402Payment": true,
+    "asynchronousQuotes": true,
+    "manualReview": true,
+    "shippingOptionSelection": true,
+    "idempotentOrderCreation": true,
+    "serverAuthoritativePricing": true,
+    "walletAttribution": true
+  },
+  "supportedAmazonTLDs": [
+    "amazon.com",
+    "amazon.co.uk",
+    "amazon.ca",
+    "amazon.de",
+    "amazon.fr",
+    "amazon.es",
+    "amazon.it",
+    "amazon.nl",
+    "amazon.com.be",
+    "amazon.pl",
+    "amazon.se",
+    "amazon.com.br",
+    "amazon.com.mx",
+    "amazon.com.au",
+    "amazon.in",
+    "amazon.co.jp",
+    "amazon.sg",
+    "amazon.ae",
+    "amazon.sa",
+    "amazon.eg",
+    "amazon.com.tr",
+    "amazon.co.za"
+  ],
+  "supportedEbayTLDs": [
+    "ebay.com",
+    "ebay.ca",
+    "ebay.co.uk",
+    "ebay.de",
+    "ebay.fr",
+    "ebay.it",
+    "ebay.es",
+    "ebay.com.au"
+  ],
+  "tldNote": "Use a marketplace URL appropriate for the recipient, and always send the complete final destination when creating the order. eBay pricing and shipping are destination-dependent.",
+  "authentication": {
+    "schemes": [
+      "apiKey"
+    ],
+    "description": "Register with POST /registerAgent. Include X-API-Key and X-API-Secret on authenticated requests."
+  },
+  "defaultInputModes": [
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "schemaVersion": 2,
+  "lifecycle": {
+    "paymentGate": "Only pay when payment_ready is true. Canonical current orders use pricing_status ready_for_payment; quoted is a deprecated legacy value and never makes an order payable by itself.",
+    "manualReview": "Mixed or unverified carts remain one Awaiting Review order with checkout_role manual_review, pricing_status awaiting_team_quote, requires_manual_quote true, and payment_ready false.",
+    "requiredTransition": "An Awaiting Review order must reach Ready for Payment before Paid. Ready for Payment means the payment gate passes, the quote is current, and any required shipping option is selected.",
+    "quoteSafety": "Honor quote_revision, quote_expires_at, shipping_options, selected_shipping_option_id, and selected_shipping_option. Refresh expired or changed quotes.",
+    "shippingCompatibility": "Canonical options use shipping_option_id and canonical selections expose selected_shipping_option_id plus selected_shipping_option. Legacy id and selected_manual_shipping_option values may appear only for compatibility.",
+    "pricingAuthority": "SP3ND resolves product data and payment requirements. Caller-provided prices, totals, currency, recipient, and memo are not authoritative.",
+    "walletAttribution": "Send user_wallet for end-user history and points attribution."
+  },
+  "skills": [
+    {
+      "id": "register-agent",
+      "name": "Register Agent",
+      "description": "Register an agent and receive API credentials.",
+      "inputModes": [
+        "application/json"
+      ],
+      "outputModes": [
+        "application/json"
+      ],
+      "endpoint": "/registerAgent",
+      "method": "POST",
+      "authentication": false,
+      "parameters": {
+        "agent_name": {
+          "type": "string",
+          "required": true
+        },
+        "solana_public_key": {
+          "type": "string",
+          "required": true
+        },
+        "contact_email": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    {
+      "id": "create-cart",
+      "name": "Create Server-Priced Cart",
+      "description": "Create a cart from product URLs and quantities. Display metadata supplied by callers is non-authoritative.",
+      "inputModes": [
+        "application/json"
+      ],
+      "outputModes": [
+        "application/json"
+      ],
+      "endpoint": "/createPartnerCart",
+      "method": "POST",
+      "authentication": true,
+      "parameters": {
+        "items": {
+          "type": "array",
+          "required": true,
+          "description": "Products to resolve and price on the server.",
+          "items": {
+            "product_url": {
+              "type": "string",
+              "required": true
+            },
+            "quantity": {
+              "type": "integer",
+              "required": true,
+              "minimum": 1
+            }
+          }
+        },
+        "user_wallet": {
+          "type": "string",
+          "required": false,
+          "description": "End-user Solana wallet for attribution. Always include it for end-user purchases."
+        }
+      }
+    },
+    {
+      "id": "create-order",
+      "name": "Create Lifecycle-Aware Order",
+      "description": "Create one idempotent order from a cart. The result may be payment-ready or may require a team quote.",
+      "inputModes": [
+        "application/json"
+      ],
+      "outputModes": [
+        "application/json"
+      ],
+      "endpoint": "/createPartnerOrder",
+      "method": "POST",
+      "authentication": true,
+      "headers": {
+        "Idempotency-Key": {
+          "type": "string",
+          "required": false,
+          "description": "Stable key for this intended checkout. Supply this header or the idempotency_key body field, and reuse it for retries."
+        }
+      },
+      "parameters": {
+        "cart_id": {
+          "type": "string",
+          "required": true
+        },
+        "idempotency_key": {
+          "type": "string",
+          "required": false,
+          "description": "Stable key supplied in the body instead of the Idempotency-Key header. If both are present, use the same value."
+        },
+        "user_wallet": {
+          "type": "string",
+          "required": false,
+          "description": "End-user Solana wallet. Always include it for end-user attribution."
+        },
+        "customer_email": {
+          "type": "string",
+          "required": true
+        },
+        "shipping_address": {
+          "type": "object",
+          "required": true,
+          "description": "Complete final destination; required for destination-aware eBay verification.",
+          "properties": {
+            "name": {
+              "type": "string",
+              "required": true
+            },
+            "recipient": {
+              "type": "string",
+              "required": true
+            },
+            "address1": {
+              "type": "string",
+              "required": true
+            },
+            "address2": {
+              "type": "string",
+              "required": false
+            },
+            "city": {
+              "type": "string",
+              "required": true
+            },
+            "state": {
+              "type": "string",
+              "required": true
+            },
+            "postalCode": {
+              "type": "string",
+              "required": true
+            },
+            "country": {
+              "type": "string",
+              "required": true
+            },
+            "countryCode": {
+              "type": "string",
+              "required": false
+            },
+            "phone": {
+              "type": "string",
+              "required": true
+            }
+          }
+        }
+      },
+      "outputLifecycleFields": [
+        "schema_version",
+        "status",
+        "checkout_role",
+        "pricing_status",
+        "requires_manual_quote",
+        "payment_ready",
+        "quote_revision",
+        "quote_expires_at",
+        "shipping_options",
+        "selected_shipping_option_id",
+        "selected_shipping_option"
+      ]
+    },
+    {
+      "id": "get-order",
+      "name": "Get One Order",
+      "description": "Read an order and its schema v2 quote, payment-readiness, and fulfillment fields.",
+      "inputModes": [
+        "application/json"
+      ],
+      "outputModes": [
+        "application/json"
+      ],
+      "endpoint": "/getPartnerOrder",
+      "method": "GET",
+      "authentication": true,
+      "parameters": {
+        "order_id": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    {
+      "id": "get-orders",
+      "name": "List Orders",
+      "description": "List authenticated partner orders. Omit status to return all orders (recommended); status=all is also supported for compatibility.",
+      "inputModes": [
+        "application/json"
+      ],
+      "outputModes": [
+        "application/json"
+      ],
+      "endpoint": "/getPartnerOrders",
+      "method": "GET",
+      "authentication": true,
+      "parameters": {
+        "status": {
+          "type": "string",
+          "required": false,
+          "description": "A real named status such as Created, Awaiting Review, Paid, Ordered, Shipped, or Delivered. Omit for all (recommended), or use all for compatibility."
+        }
+      }
+    },
+    {
+      "id": "select-shipping-option",
+      "name": "Select Order Shipping Option",
+      "description": "Select an opaque option from the order's current shipping_options. The server enforces quote revision and expiry.",
+      "inputModes": [
+        "application/json"
+      ],
+      "outputModes": [
+        "application/json"
+      ],
+      "endpoint": "/selectPartnerOrderShippingOption",
+      "method": "POST",
+      "authentication": true,
+      "parameters": {
+        "order_id": {
+          "type": "string",
+          "required": true
+        },
+        "shipping_option_id": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    {
+      "id": "pay-order",
+      "name": "Pay Payment-Ready Order via x402",
+      "description": "Call only when payment_ready is true, the quote is current, and any required shipping option is selected. Canonical current orders use pricing_status ready_for_payment; quoted is deprecated legacy compatibility. Payment fields come from the server's 402 response.",
+      "inputModes": [
+        "application/json"
+      ],
+      "outputModes": [
+        "application/json"
+      ],
+      "endpoint": "/payAgentOrder",
+      "method": "POST",
+      "authentication": true,
+      "x402": {
+        "enabled": true,
+        "asset": "server_authoritative",
+        "network": "server_authoritative",
+        "facilitator": "https://facilitator.payai.network"
+      },
+      "parameters": {
+        "order_id": {
+          "type": "string",
+          "required": true
+        },
+        "order_number": {
+          "type": "string",
+          "required": false,
+          "description": "Optional and validated against order_id."
+        }
+      }
+    },
+    {
+      "id": "create-transaction",
+      "name": "Register Manual Payment Transaction",
+      "description": "Register payment intent for a payment-ready order. Caller amount, currency, memo, and recipient fields are ignored; use server-returned instructions.",
+      "inputModes": [
+        "application/json"
+      ],
+      "outputModes": [
+        "application/json"
+      ],
+      "endpoint": "/createPartnerTransaction",
+      "method": "POST",
+      "authentication": true,
+      "parameters": {
+        "order_id": {
+          "type": "string",
+          "required": true
+        },
+        "order_number": {
+          "type": "string",
+          "required": false,
+          "description": "Optional and validated against order_id."
+        }
+      }
+    },
+    {
+      "id": "agent-status",
+      "name": "Agent Status",
+      "description": "Return agent registration and operational status.",
+      "inputModes": [
+        "application/json"
+      ],
+      "outputModes": [
+        "application/json"
+      ],
+      "endpoint": "/getAgentStatus",
+      "method": "GET",
+      "authentication": true
+    }
+  ]
+}
