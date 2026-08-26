@@ -1,0 +1,62 @@
+{
+  "changelog": "**Summary: Version 0.0.3 significantly updates CLI initialization and user-agent requirements to support AI-mode and new best practices.**\n\n- Requires Aliyun CLI version >= 3.3.3 (was 3.3.1).\n- All CLI invocations MUST enable AI-mode at workflow start and disable it at every exit point.\n- Every CLI command MUST include a specific User-Agent: `--user-agent AlibabaCloud-Agent-Skills/alibabacloud-pds-multimodal-search`.\n- Updated setup and installation instructions to require `aliyun plugin update`.\n- Documentation updated for precise conformance with new Alibaba Cloud agent standards.",
+  "created_at": 1774959045489,
+  "display_name": "Alibabacloud Pds Multimodal Search",
+  "fetched_at": 1787786494111,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cli-installation-guide.md",
+    "references/config.md",
+    "references/download-file.md",
+    "references/drive.md",
+    "references/multianalysis-file.md",
+    "references/ram-policies.md",
+    "references/search-file.md",
+    "references/upload-file.md",
+    "references/visual-similar-search.md",
+    "scripts/build_query.py",
+    "scripts/build_query_test.py",
+    "scripts/doc_analysis_formatter.py",
+    "scripts/get_scalar_query_prompt.py",
+    "scripts/get_semantic_query_prompt.py",
+    "scripts/pds_poll_processor.py",
+    "scripts/ppt_extraction.py",
+    "scripts/render_visual_similar_search_process.py",
+    "scripts/requirements.txt",
+    "scripts/video_analysis_formatter.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090839935,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-pds-multimodal-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-pds-multimodal-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-pds-multimodal-search&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-pds-multimodal-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 791,
+    "installs": 19,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Implements exact filename search, fuzzy filename search, semantic file search, and image-based image search Triggers: \"PDS drive file search\", \"PDS image sea...",
+  "updated_at": 1779184006645,
+  "version": "0.0.3"
+}
