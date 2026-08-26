@@ -1,0 +1,37 @@
+{
+  "changelog": "### v0.10.0 Summary: Adds OSCAL export and a new integrity tool.\n\n- Added OSCAL assessment results export tool (`oscal_assessment_results`), bringing total to 19 MCP tools.\n- Updated framework support and documentation to include OSCAL export capability.\n- Removed `skill-card.md` file.\n- Documentation and CLI references updated to reflect new tool and features.",
+  "created_at": 1783848945655,
+  "display_name": "compliance-aiops",
+  "fetched_at": 1787772459919,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agent-guardrails.md",
+    "references/capabilities.md",
+    "references/cli-reference.md",
+    "references/setup-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "wei zhou",
+    "handle": "zw008",
+    "user_id": "s171xgnmqse0nqvgqvqnaq5f9183kyre"
+  },
+  "slug": "compliance-aiops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/compliance-aiops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=compliance-aiops&ownerHandle=zw008",
+    "page_url": "https://clawhub.ai/zw008/skills/compliance-aiops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1093,
+    "installs": 0,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "Use this skill whenever the user needs compliance evidence from the audit trails their governed AIops agents already write \u2014 mapping AI-agent infra-ops activity to HIPAA \u00a7164.312, PCI-DSS v4.0, SOC 2 TSC, or GDPR controls, producing a change-approval report, a gap analysis, an exceptions/anomaly report, or a hash-chain-sealed, tamper-evident evidence bundle. Always use this skill for \"compliance evidence\", \"HIPAA / PCI-DSS / SOC 2 / GDPR evidence\", \"audit trail report\", \"coverage for control X\", \"which controls are we short on / gap analysis\", \"who approved this change / change-management evidence\", \"denied or errored ops / anomaly evidence\", \"seal / sign an evidence bundle\", \"prove this bundle wasn't altered\", or \"detect deleted audit rows\". Do NOT use to scan or operate infrastructure and do NOT treat it as a GRC platform \u2014 it reads the local audit databases the OTHER AIops-tools write and converts them to evidence; for platform operations use those other AIops-tools. Evidence, not certification. Reads sibling audit trails read-only; no external API, no network, no platform credentials. Fully offline and deterministic.",
+  "updated_at": 1786580960118,
+  "version": "0.10.0"
+}
