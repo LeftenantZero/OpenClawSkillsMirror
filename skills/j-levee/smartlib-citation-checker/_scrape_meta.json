@@ -1,0 +1,48 @@
+{
+  "changelog": "smartlib-citation-checker 3.6.3\n\n- Updated production gateway endpoint to SmartLib Gateway v52.1.\n- Quota API fields expanded: now includes download_quota_free, download_reset_at, download_paid_remain, and download_remain.\n- Adjusted low-quota prompts: users are now instructed to say \"\u6211\u8981\u5347\u7ea7\" to view packages, with details managed entirely through global-biblio-base's unified wallet (see its account documentation).\n- Unified payment, quota, and upgrade management: all handled by global-biblio-base (smartlib-account); removed separate payment steps from this skill.\n- Removed redundant skill-card.md file.",
+  "created_at": 1780907226350,
+  "display_name": "Smartlib Citation Checker",
+  "fetched_at": 1787775789613,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.json",
+    "config.json",
+    "examples/citation_check_ai_hallucination_sample.html",
+    "examples/citation_check_paper_draft_sample.html",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784639508617,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "J-levee",
+    "handle": "j-levee",
+    "user_id": "s179kz7zy88fw5x9nrsb2mh68x86jwtk"
+  },
+  "slug": "smartlib-citation-checker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/smartlib-citation-checker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=smartlib-citation-checker&ownerHandle=j-levee",
+    "page_url": "https://clawhub.ai/j-levee/skills/smartlib-citation-checker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 950,
+    "installs": 9,
+    "stars": 0,
+    "versions": 11
+  },
+  "summary": "\u6838\u67e5\u7528\u6237\u63d0\u4ea4\u7684\u8bba\u6587\u7a3f\u4ef6\u6216AI\u751f\u6210\u53c2\u8003\u6587\u732e\u662f\u5426\u771f\u5b9e\uff0c\u9632\u6b62AI\u5e7b\u89c9\u3002\u57fa\u4e8eSmartLib API\uff0c\u8f93\u51faHTML\u6838\u67e5\u62a5\u544a\uff08\u542b\u5dee\u5f02\u6807\u8bb0\u3001\u9a8c\u8bc1\u94fe\u63a5\u3001\u7edf\u8ba1\u5206\u6790\uff09\u3002\u652f\u6301GB/T 7714/APA/MLA/Chicago/BibTeX\u591a\u683c\u5f0f\u89e3\u6790\u4e0e\u8f93\u51fa\uff0c\u5e76\u884c\u68c0\u7d22\uff088\u6761/\u6279\uff09+ Token\u7f13\u5b58\u590d\u7528 + \u667a\u80fd\u63d0\u524d\u7ec8\u6b62\u56de\u9000\u3002\u2728 \u4eae\u70b9\uff1a\u6838...",
+  "updated_at": 1784638751706,
+  "version": "3.6.3"
+}
