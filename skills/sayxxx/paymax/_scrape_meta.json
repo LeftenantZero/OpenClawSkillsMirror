@@ -1,0 +1,45 @@
+{
+  "changelog": "paymax 1.0.0\n\n- Initial release of the Payment Skill for recognizing user payment-related intents and handling payment requests.\n- Supports both direct user triggers (e.g. \"\u6211\u8981\u652f\u4ed8\", \"\u7ed3\u8d26\") and calls from other skills with payment parameters.\n- Executes payment scripts in Node.js or Python, automatically selecting an available environment.\n- Interacts with the payment API to obtain and prominently display tradeCode and payment links.\n- Covers error handling, fallback guidance, and user-friendly prompts for missing or failed payment attempts.\n- Enforces strict display and return policies for tradeCode, with clear reply templates for all success and failure scenarios.",
+  "created_at": 1773565521307,
+  "display_name": "paymax",
+  "fetched_at": 1787786367524,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/payment_api.js",
+    "scripts/payment_api.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779952746122,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "sayxxx",
+    "handle": "sayxxx",
+    "user_id": "s1765hc1pkp2ca5sv1y8h4acks8853hk"
+  },
+  "slug": "paymax",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/paymax",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=paymax&ownerHandle=sayxxx",
+    "page_url": "https://clawhub.ai/sayxxx/skills/paymax"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 405,
+    "installs": 8,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u8bc6\u522b\u652f\u4ed8\u610f\u56fe\u6216\u63a5\u6536\u8c03\u7528\uff0c\u8c03\u7528\u652f\u4ed8\u811a\u672c\u751f\u6210\u6536\u6b3e\u7801\uff0c\u5e76\u51c6\u786e\u5c55\u793a\u4ea4\u6613\u7801\u548c\u652f\u4ed8\u94fe\u63a5\u7ed9\u7528\u6237\u5b8c\u6210\u652f\u4ed8\u3002",
+  "updated_at": 1779219007523,
+  "version": "1.0.0"
+}
