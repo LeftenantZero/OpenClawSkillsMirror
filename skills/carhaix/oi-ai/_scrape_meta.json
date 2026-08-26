@@ -1,0 +1,36 @@
+{
+  "changelog": "oi-ai 2.0.0\n\n- Major overhaul to align with the unified Oi MCP surface; all operations now route through MCP rather than simulating Oi locally.\n- Expanded support for Contexts, Workflows, Skills, Guardrails, Brain, Connections, sessions, prompts, and reporting\u2014each with specific routing and lifecycle instructions.\n- Enforced clear separation of discovery, retrieval, execution, authoring, and memory operations, with explicit instructions on which operations require user confirmation.\n- Improved handling of confirmation flows, usage reporting, and billing/plan limits by strictly following returned Oi prompts and authorities.\n- Updated selector and operation routing for canonical dotted tool names, with support for client-specific aliases and resource-type parsing.\n- Removed legacy references and replaced detailed implementation instructions for higher accuracy, compliance, and flexibility.",
+  "created_at": 1782041973271,
+  "display_name": "Oi",
+  "fetched_at": 1787772975015,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/authentication.md",
+    "references/mcp-tools.md",
+    "references/product-surfaces.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Carhaix",
+    "handle": "carhaix",
+    "user_id": "s17c4a3m5rnpk1h0hh4v56frgd892p39"
+  },
+  "slug": "oi-ai",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oi-ai",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oi-ai&ownerHandle=carhaix",
+    "page_url": "https://clawhub.ai/carhaix/skills/oi-ai"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 446,
+    "installs": 1,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Route Oi requests through MCP for Contexts, Workflows, Skills, Guardrails, Brain, Connections, prompts, resources, sessions, and reporting.",
+  "updated_at": 1786343416054,
+  "version": "2.0.0"
+}
