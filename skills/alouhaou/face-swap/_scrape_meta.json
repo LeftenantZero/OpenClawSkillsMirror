@@ -1,0 +1,34 @@
+{
+  "changelog": "- Major documentation restructuring for clarity and accuracy.\n- API flow updated: only the video requires separate upload via /upload-video; face image uploads directly in the /faceswap/create-job request.\n- Added precise example commands for each API step and clarified which headers and formats are required.\n- Reinforced that all multipart/form-data operations must use curl -F, not JSON.\n- Maximum video duration for job is now clearly set to 30 seconds; videos must be trimmed beforehand if longer.\n- Removed redundant and outdated files; now references only skill.md.\n- Added quick troubleshooting for yt-dlp dependencies and outlined temp file handling.",
+  "created_at": 1773135394824,
+  "display_name": "face swap",
+  "fetched_at": 1787782201418,
+  "files": [
+    "README.md",
+    "_meta.json",
+    "skill-card.md",
+    "skill.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alouhaou",
+    "handle": "alouhaou",
+    "user_id": "s17b1y06g0mfs08sdm21asfps1884zc6"
+  },
+  "slug": "face-swap",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/face-swap",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=face-swap&ownerHandle=alouhaou",
+    "page_url": "https://clawhub.ai/alouhaou/skills/face-swap"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1525,
+    "installs": 42,
+    "stars": 3,
+    "versions": 7
+  },
+  "summary": "AI Face Swap - Swap face in video using verging.ai API. Supports local video files, YouTube/Bilibili URLs, local and remote face images. Auto-download, trimm...",
+  "updated_at": 1780848023718,
+  "version": "1.2.0"
+}
