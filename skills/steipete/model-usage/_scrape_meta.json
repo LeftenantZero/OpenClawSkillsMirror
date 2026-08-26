@@ -1,0 +1,35 @@
+{
+  "changelog": "- Initial release of the model-usage skill for summarizing per-model usage and cost from CodexBar CLI local cost logs.\n- Supports both Codex and Claude providers.\n- Allows fetching summaries for the current (most recent) model or all models.\n- Provides both text and JSON output formats.\n- Can process costs directly from CodexBar CLI output or from a JSON file/stdin.\n- Includes guidance for CLI use and script automation.",
+  "created_at": 1767667639455,
+  "display_name": "Model Usage",
+  "fetched_at": 1787779010006,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/codexbar-cli.md",
+    "scripts/model_usage.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Peter Steinberger",
+    "handle": "steipete",
+    "user_id": "s179zksw999xz8ms4cy7pb2fr183m5jq"
+  },
+  "slug": "model-usage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/model-usage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=model-usage&ownerHandle=steipete",
+    "page_url": "https://clawhub.ai/steipete/skills/model-usage"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 38904,
+    "installs": 1591,
+    "stars": 114,
+    "versions": 1
+  },
+  "summary": "Use CodexBar CLI local cost usage to summarize per-model usage for Codex or Claude, including the current (most recent) model or a full model breakdown. Trigger when asked for model-level usage/cost data from codexbar, or when you need a scriptable per-model summary from codexbar cost JSON.",
+  "updated_at": 1778485729679,
+  "version": "1.0.0"
+}
