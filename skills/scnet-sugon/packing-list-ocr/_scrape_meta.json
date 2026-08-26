@@ -1,0 +1,40 @@
+{
+  "changelog": "Initial release of the packing_list_ocr skill:\n\n- Supports OCR extraction of goods categories, weight/volume, sender/recipient, and document number from packing list images.\n- Requires SCNET_API_KEY for authentication; supports optional API base configuration.\n- Input: specify recognition type and local image file path; Output: structured JSON with results and confidence scores.\n- Includes usage instructions, environment setup, and troubleshooting guidelines.\n- Enforces 10 QPS API rate limit with recommendations for serial invocation and error handling.\n- Provides comprehensive documentation for configuration and command-line usage.",
+  "created_at": 1786414232453,
+  "display_name": "packing_list_ocr",
+  "fetched_at": 1787772778047,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE.txt",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/templates/fields-summary.md",
+    "references/api-docs.md",
+    "scripts/main.py",
+    "skill-card.md",
+    "skill.yaml"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SCNet-sugon",
+    "handle": "scnet-sugon",
+    "user_id": "s17aan1jdk93c5398r3ypc523d83hqys"
+  },
+  "slug": "packing-list-ocr",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/packing-list-ocr",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=packing-list-ocr&ownerHandle=scnet-sugon",
+    "page_url": "https://clawhub.ai/scnet-sugon/skills/packing-list-ocr"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 956,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u652f\u6301\u8bc6\u522b\u63d0\u53d6\u8d27\u7269\u54c1\u7c7b\u3001\u91cd\u91cf\u4f53\u79ef\u3001\u6536\u53d1\u8d27\u4e3b\u4f53\uff0c\u63d0\u53d6\u5355\u636e\u7f16\u53f7\u7b49\u4fe1\u606f\u3002",
+  "updated_at": 1786414329409,
+  "version": "0.1.0"
+}
