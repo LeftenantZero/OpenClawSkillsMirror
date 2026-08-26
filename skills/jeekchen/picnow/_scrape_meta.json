@@ -1,0 +1,35 @@
+{
+  "changelog": "v1.1.0 \u2014 Switch to async image API; fixes \"image fails to generate\" on 2K/4K renders\n\n  \u3010Root cause\u3011The previous version called the synchronous endpoints /v1/images/{generations,edits}. 2K/4K renders and complex image-to-image edits often exceeded 100s and were killed by\n   Cloudflare's edge timeout (524), which users experienced as silent failures.\n\n  \u3010Changes\u3011\n  - Switched to the async API /v1/async/images/{generations,edits}: submission returns a task_id immediately, the client polls until completion\n  - Polling: 1.5s initial delay, 3s interval, 10 min cap\n  - Return value is still an upstream public CDN URL \u2014 no auth required, ready to render or share inline\n  - CLI flags and stdout JSON format are unchanged; no migration needed\n\n  \u3010Verified\u3011\n  - 1K square text-to-image: ~10s\n  - 2K landscape text-to-image: 62s\n  - 1K image-to-image edit: 117s \u2705 (would have hit Cloudflare 524 on the old sync path)\n  - Error paths (missing token, invalid token, task failure, submission error) all surface clean messages and exit 1\n\n  \u3010Deprecated\u30111.0.0 and 1.0.1 are marked deprecated on npm. All users should upgrade to 1.1.0+.",
+  "created_at": 1778170125243,
+  "display_name": "Picnow \u2014 Image Generation",
+  "fetched_at": 1787784116269,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/generate.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jeek",
+    "handle": "jeekchen",
+    "user_id": "s173f300j681dxrv9x50arfmp9868yzn"
+  },
+  "slug": "picnow",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/picnow",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=picnow&ownerHandle=jeekchen",
+    "page_url": "https://clawhub.ai/jeekchen/skills/picnow"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 809,
+    "installs": 19,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Generate high-quality images via Picnow (api.letmego.top). Activate when the user wants to create, generate, draw, or design images \u2014 including product photo...",
+  "updated_at": 1779980640606,
+  "version": "1.1.0"
+}
