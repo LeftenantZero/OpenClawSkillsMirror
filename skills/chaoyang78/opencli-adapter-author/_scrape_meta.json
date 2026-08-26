@@ -1,0 +1,59 @@
+{
+  "changelog": "opencli-adapter-author 1.0.1\n\n- Added required \"strategy note\" step before coding: must document and justify data-fetching approach.\n- New `Strategy` ladder and decision table: now formally differentiates PUBLIC_API, COOKIE_API, DOM/UI, internal, and interception strategies, emphasizing stability and maintenance cost.\n- Detailed guidance for filling out strategy justification and evidence, including explicit contract/evidence checklists.\n- Updated browser debug workflow: advise `--trace on`, `--keep-tab true`, `--window foreground`.\n- Expanded runbook and reference, including with new jsdom-fixture-pattern, strategy-selection, and typed-errors docs.\n- Removed deprecated skill-card.md; updated conventions throughout for clarity and accuracy.",
+  "created_at": 1785290475742,
+  "display_name": "opencli-adapter-author",
+  "fetched_at": 1787774458095,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/adapter-template.md",
+    "references/api-discovery.md",
+    "references/coverage-matrix.md",
+    "references/field-conventions.md",
+    "references/field-decode-playbook.md",
+    "references/jsdom-fixture-pattern.md",
+    "references/output-design.md",
+    "references/site-memory.md",
+    "references/site-memory/bilibili.md",
+    "references/site-memory/eastmoney.md",
+    "references/site-memory/tonghuashun.md",
+    "references/site-memory/xueqiu.md",
+    "references/site-recon.md",
+    "references/strategy-selection.md",
+    "references/success-rate-pitfalls.md",
+    "references/typed-errors.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785291947713,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Kevin Stone",
+    "handle": "chaoyang78",
+    "user_id": "s177bzvqf3s7ftyvws7t42cwd184taap"
+  },
+  "slug": "opencli-adapter-author",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/opencli-adapter-author",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=opencli-adapter-author&ownerHandle=chaoyang78",
+    "page_url": "https://clawhub.ai/chaoyang78/skills/opencli-adapter-author"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 53,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when writing an OpenCLI adapter for a new site or adding a new command to an existing site. Guides end-to-end from first recon through field decoding, adapter coding, and verify. Replaces opencli-oneshot / opencli-explorer. For ad-hoc browser driving (no adapter), see opencli-browser instead; for a top-level orientation to opencli, see opencli-usage.",
+  "updated_at": 1785291250512,
+  "version": "1.0.1"
+}
