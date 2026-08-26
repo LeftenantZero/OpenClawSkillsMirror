@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release of anjuke-scraper skill\n\n- Implements a complete pipeline for Anjuke rental listing scraping, geolocation, distance calculation, and Excel report generation.\n- Supports batch collection and structured comparison of rental data near specific locations.\n- Integrates anti-bot measures for efficient, verification-free data gathering.\n- Includes city/keyword/configuration instructions for flexible reuse.\n- Validated on Chongqing region; outputs well-structured data and Excel sheets for property comparison.",
+  "created_at": 1786856225298,
+  "display_name": "anjuke-scraper",
+  "fetched_at": 1787771774674,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.json",
+    "requirements.txt",
+    "scripts/amap_coords2.py",
+    "scripts/fetch_details.py",
+    "scripts/grab_full.py",
+    "scripts/make_excel3.py",
+    "scripts/parse_final.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786856993880,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "shiqixiangxiang-collab",
+    "handle": "shiqixiangxiang-collab",
+    "user_id": "s17ev35gapvgt582gttjsxajkd8bdfmx"
+  },
+  "slug": "anjuke-scraper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/anjuke-scraper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=anjuke-scraper&ownerHandle=shiqixiangxiang-collab",
+    "page_url": "https://clawhub.ai/shiqixiangxiang-collab/skills/anjuke-scraper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 125,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5b89\u5c45\u5ba2\uff0858 \u7cfb\uff09\u623f\u6e90\u6570\u636e\u91c7\u96c6\u4e0e\u5bf9\u6bd4\u5206\u6790\uff1a\u6293\u53d6\u79df\u623f\u5217\u8868\u4e0e\u8be6\u60c5\u3001\u63d0\u53d6\u7ecf\u7eaa\u4eba\u7535\u8bdd\u3001\u9ad8\u5fb7 poiInfo \u83b7\u53d6\u5c0f\u533a\u5750\u6807\u3001haversine \u8ba1\u7b97\u8ddd\u76ee\u6807\u5730\u70b9\u8ddd\u79bb\u3001\u751f\u6210\u6392\u5e8f\u8fc7\u6ee4\u540e\u7684 Excel \u5bf9\u6bd4\u8868\u3002\u9002\u7528\uff1a\u627e\u623f\u5bf9\u6bd4\u3001\u623f\u6e90\u6570\u636e\u5206\u6790\u3001\u6362\u57ce\u5e02/\u5173\u952e\u8bcd\u590d\u7528\u91c7\u96c6\u7ba1\u7ebf\u3002",
+  "updated_at": 1786856299275,
+  "version": "1.0.0"
+}
