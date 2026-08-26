@@ -1,0 +1,47 @@
+{
+  "changelog": "minio-aiops 0.11.0\n\n- Major expansion: now supports 48 tools (was 31), adding WORM/retention and IAM operations.\n- New flagship tools: diagnose_retention_gaps, diagnose_iam_exposure.\n- Object lock (WORM) support: read/add lock status, retention settings, legal holds.\n- IAM user, group, and policy management added with read/write capabilities.\n- Documentation updated; CLI reference and capabilities now reflect expanded features.\n- skill-card.md removed.",
+  "created_at": 1784267864946,
+  "display_name": "minio-aiops",
+  "fetched_at": 1787772460111,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agent-guardrails.md",
+    "references/capabilities.md",
+    "references/cli-reference.md",
+    "references/setup-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786581620157,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wei zhou",
+    "handle": "zw008",
+    "user_id": "s171xgnmqse0nqvgqvqnaq5f9183kyre"
+  },
+  "slug": "minio-aiops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/minio-aiops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=minio-aiops&ownerHandle=zw008",
+    "page_url": "https://clawhub.ai/zw008/skills/minio-aiops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 823,
+    "installs": 0,
+    "stars": 0,
+    "versions": 11
+  },
+  "summary": "Use this skill whenever the user needs to operate or diagnose MinIO object storage \u2014 explain why the cluster is filling up or refusing writes (capacity_rca), find publicly exposed buckets and hygiene gaps (bucket_exposure_audit), find storage that lifecycle/ILM should be reclaiming but isn't, including noncurrent versions and incomplete multipart uploads (lifecycle_gap_analysis), check heal backlog and erasure-set write-quorum risk (healing_health), read service health / cluster status / per-bucket config (policy, versioning, lifecycle, encryption, quota, tags) \u2014 plus governed writes (set or delete bucket policy, enable/suspend versioning, set or delete lifecycle rules, set bucket quota, purge incomplete uploads, delete an empty bucket). Always use this skill for \"minio health\", \"why is my object storage full\", \"which bucket is biggest\", \"is any bucket public / anonymous access\", \"versioning / noncurrent versions piling up\", \"incomplete multipart uploads\", \"lifecycle / ILM rules\", \"bucket quota\", \"erasure set / drive failure tolerance\", \"healing backlog\", or \"delete a bucket safely\" when the context is a MinIO deployment. Do NOT use when the target is not MinIO \u2014 for Ceph/RGW use ceph-aiops; for TrueNAS storage use truenas-aiops; for a hypervisor, backup product, container cluster, or network device route to the appropriate other AIops-tools skill (negative routing hint only). Common MinIO ops with a built-in governance harness (audit, policy, token budget, undo, risk-tiers).",
+  "updated_at": 1786580960683,
+  "version": "0.11.0"
+}
