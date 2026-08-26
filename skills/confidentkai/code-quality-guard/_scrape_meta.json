@@ -1,0 +1,46 @@
+{
+  "changelog": "- Clarified triggers and exclusions for when to perform reviews (explicit code/diff/test/health requests only).\n- Outlined strict usage of the Iron Law reporting pattern (Symptom \u2192 Source \u2192 Consequence \u2192 Remedy).\n- Added mode-based loading guidance for efficiency (Quick, PR Review, Architecture, Tests, Release).\n- Provided detailed risk index tables for production, tests, and editorial checks.\n- Expanded session contract to enforce default review-only behavior and scope discipline.\n- Updated companion file roles and references for easier navigation.\n- Refined severity and scoring framework, emphasizing use of canonical references for scoring mechanics.",
+  "created_at": 1785053516397,
+  "display_name": "code-quality-guard",
+  "fetched_at": 1787774986199,
+  "files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "install.sh",
+    "references/AGENTS-template.md",
+    "references/common.md",
+    "references/decay-risks.md",
+    "references/editorial-extensions.md",
+    "references/examples.md",
+    "references/hooks.json",
+    "references/pr-review-guide.md",
+    "references/source-coverage.md",
+    "references/test-decay-risks.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "kvs-GoN",
+    "handle": "confidentkai",
+    "user_id": "s178zptfxy85cb8ggdvqzq875183hvjc"
+  },
+  "slug": "code-quality-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/code-quality-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=code-quality-guard&ownerHandle=confidentkai",
+    "page_url": "https://clawhub.ai/confidentkai/skills/code-quality-guard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 71,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Pair-style code quality reviewer: twelve book-grounded decay risks (R1\u2013R6, T1\u2013T6) plus release-safety and first-paint UX checks. Findings always use Iron Law (Symptom \u2192 Source \u2192 Consequence \u2192 Remedy) and a 0\u2013100 review-index Health Score. Triggers when: user asks to review code/PR/diff, \"any issues\"",
+  "updated_at": 1785066935892,
+  "version": "1.0.1"
+}
