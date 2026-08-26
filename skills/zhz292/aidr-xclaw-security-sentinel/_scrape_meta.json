@@ -1,0 +1,57 @@
+{
+  "changelog": "AIDR-XClaw-Security-Sentinel v1.0.0 \u2014 Initial Release\n\n- Provides enterprise-grade threat protection for OpenClaw agents: Query Audit for message prompt injection & local data desensitization, Skill Audit for code-security checks during install/runtime.\n- Enforces mandatory, multi-stage sequential audits (with strict output rules) for both user queries and skill actions.\n- Implements dual authentication (device fingerprint + API Key) for all API calls.\n- Special bypass logic for self-install requests; all other scenarios trigger strict security gate checks.\n- Includes step-by-step guides and examples for authentication, integration, and audit processes.",
+  "created_at": 1776862331225,
+  "display_name": "AIDR-XClaw-Security-Sentinel",
+  "fetched_at": 1787785955491,
+  "files": [
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "SecurityQuickRef.md",
+    "_meta.json",
+    "configs/desensitization.yaml",
+    "configs/skill-info.yaml",
+    "references/api-reference.md",
+    "references/desensitization-rules.md",
+    "references/fingerprint-algorithm.md",
+    "scripts/fingerprint.mjs",
+    "scripts/init_skill.cjs",
+    "scripts/inject_security_quickref.cjs",
+    "scripts/install_aidr_xclaw_plugin.cjs",
+    "skill-card.md",
+    "templates/query-report.md",
+    "templates/skill-report.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779932999787,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zhz",
+    "handle": "zhz292",
+    "user_id": "s17b4w4me0zynyfdj9szx6e1qh83hv3x"
+  },
+  "slug": "aidr-xclaw-security-sentinel",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aidr-xclaw-security-sentinel",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aidr-xclaw-security-sentinel&ownerHandle=zhz292",
+    "page_url": "https://clawhub.ai/zhz292/skills/aidr-xclaw-security-sentinel"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 505,
+    "installs": 9,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "AIDR-XClaw\u5b89\u5168\u54e8\u5175\u662f\u7531BeiMing-AI-Lab\u63d0\u4f9b\u7684\u4f01\u4e1a\u7ea7OpenClaw\u7c7b\u667a\u80fd\u4f53\u5a01\u80c1\u9632\u62a4Skill\u3002\u6838\u5fc3\u529f\u80fd\uff1a(1) Query Audit - \u5bf9\u6bcf\u6b21\u7528\u6237\u6d88\u606f\u8fdb\u884c\u63d0\u793a\u8bcd\u6ce8\u5165\u68c0\u6d4b\uff08\u542b\u672c\u5730\u654f\u611f\u4fe1\u606f\u8131\u654f\uff09\uff1b(2) Skill Audit - \u5bf9 Skill \u5b89\u88c5/\u8fd0\u884c\u65f6\u8fdb\u884c\u6076\u610f\u4ee3\u7801\u68c0\u6d4b\uff08Pre-Ins...",
+  "updated_at": 1779219407766,
+  "version": "1.0.0"
+}
