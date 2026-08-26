@@ -1,0 +1,39 @@
+{
+  "changelog": "UEXX Data Cloud skill, initial release:\n\n- Provides direct answers to cryptocurrency market data queries (sentiment, funding rates, OI, long/short ratios, ETF flows) using the UEXX Data Cloud.\n- Automatically obtains or reuses a Free API Key and fetches cached data\u2014no need for users to manage API credential flow.\n- Default answers use clear, natural language interpretation (no raw JSON) with relevant cache times.\n- Supports symbol-level queries with a default to BTCUSDT if no symbol is given.\n- API integration details (curl/Python examples) are only shown when explicitly requested by the user.\n- Clearly explains available intents and access levels (Free/PRO) within the SKILL documentation.",
+  "created_at": 1779199352965,
+  "display_name": "UEXX Data Cloud",
+  "fetched_at": 1787786448155,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/api_catalog.md",
+    "scripts/list_catalog.py",
+    "scripts/query.py",
+    "scripts/uexx_client.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Fanfanscoin",
+    "handle": "fanfanscoin",
+    "user_id": "s17e8fkxsnmp5dem517fzjx9ys86ev77"
+  },
+  "slug": "uexx-data-cloud",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/uexx-data-cloud",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=uexx-data-cloud&ownerHandle=fanfanscoin",
+    "page_url": "https://clawhub.ai/fanfanscoin/skills/uexx-data-cloud"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 598,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use this skill when the user wants to query cryptocurrency market data, sentiment, ETF flows, funding rates, OI, long/short ratios, or asks to use UEXX Data...",
+  "updated_at": 1779199369804,
+  "version": "1.0.0"
+}
