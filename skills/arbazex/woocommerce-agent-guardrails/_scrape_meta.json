@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of WooCommerce Agent Guardrails skill providing critical safety features for live store automation:\n\n- Introduces tiered action classification for WooCommerce write operations, with increasing approval requirements for bulk, irreversible, or high-risk changes.\n- Implements hard caps on bulk edits, price changes, and deletes, prompting user confirmation when thresholds are exceeded.\n- Requires dry-run previews with before/after diffs and explicit user approval for major changes (bulk price updates, deletes, coupons, storewide edits).\n- Adds a circuit breaker to halt further actions after repeated write failures, reporting the partial progress made.\n- Includes prompt-injection defense for product descriptions, reviews, and supplier feeds.\n- Automatically triggers for any agent request that creates, updates, deletes, or bulk-modifies WooCommerce data.",
+  "created_at": 1783276804190,
+  "display_name": "Woocommerce Agent Guardrails",
+  "fetched_at": 1787778063406,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Arbaz Asif",
+    "handle": "arbazex",
+    "user_id": "s1796zx7mth14phfvq45028d7983s0s3"
+  },
+  "slug": "woocommerce-agent-guardrails",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/woocommerce-agent-guardrails",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=woocommerce-agent-guardrails&ownerHandle=arbazex",
+    "page_url": "https://clawhub.ai/arbazex/skills/woocommerce-agent-guardrails"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 286,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Safety guardrails for AI agents writing to a live WooCommerce store via MCP or the REST API \u2014 price/bulk-change caps, mandatory approval gates before irrever...",
+  "updated_at": 1783276804190,
+  "version": "0.1.0"
+}
