@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of tap-skill-preflight.\n\n- Validates SKILL.md files before publishing, checking frontmatter, required fields, semver versioning, and declared binaries.\n- Runs self-validation with Python 3 and returns a machine-readable JSON outcome.\n- Ensures all required tools are present on PATH, preventing missing requirements at load time.\n- Requires no dependencies beyond the Python 3 standard library.\n- Provides clear reasons for validation failures to help fix issues before publishing.",
+  "created_at": 1783331283750,
+  "display_name": "Skill Preflight",
+  "fetched_at": 1787777958912,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/preflight.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Leon",
+    "handle": "leonting1010",
+    "user_id": "s17axg010j644jshcrkcpaszrh83xsn6"
+  },
+  "slug": "tap-skill-preflight",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tap-skill-preflight",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tap-skill-preflight&ownerHandle=leonting1010",
+    "page_url": "https://clawhub.ai/leonting1010/skills/tap-skill-preflight"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 238,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Validate a SKILL.md before publishing \u2014 checks frontmatter completeness, semver, and that every declared bin actually resolves on PATH. Use before `clawhub publish`, or when a skill fails to load / shows as missing requirements.",
+  "updated_at": 1783331283750,
+  "version": "1.0.0"
+}
