@@ -1,0 +1,68 @@
+{
+  "changelog": "Initial release of Earthquake Liquefaction Risk skill.\n\n- Assesses sandy-soil liquefaction risk using the Youd simplified method, supporting both synthetic (offline) and real geodata inputs.\n- Outputs liquefaction index (LPI), safety factor (FS), and parameter summary as GeoTIFF and JSON files.\n- Includes clear dependency and usage instructions in both English and Chinese.\n- Processes all data locally with no user data uploaded for privacy.",
+  "created_at": 1785843748131,
+  "display_name": "geoskill-earthquake-liquefaction-risk",
+  "fetched_at": 1787773493453,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_out/liquefaction_params.json",
+    "_test_cli_out/output-manifest.json",
+    "e2e_test.py",
+    "geoskill-earthquake-liquefaction-risk.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785844805749,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-earthquake-liquefaction-risk",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-earthquake-liquefaction-risk",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-earthquake-liquefaction-risk&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-earthquake-liquefaction-risk"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 173,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Youd\u7b80\u5316\u6cd5\u7ed3\u5408\u5730\u8d28\u5730\u4e0b\u6c34\u4f4d\u4e0ePGA\u7684\u6db2\u5316\u6307\u6570\u8bc4\u4f30",
+  "updated_at": 1785843903847,
+  "version": "1.0.0"
+}
