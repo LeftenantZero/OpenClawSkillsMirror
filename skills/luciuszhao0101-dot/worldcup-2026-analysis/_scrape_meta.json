@@ -1,0 +1,43 @@
+{
+  "changelog": "- Added optional football-data.org API as a backup for score calibration (with team name mapping).\n- Web search remains the primary source for live score, injury, lineup, and odds information.\n- No dependency changes to the core prediction engine; new APIs are used only if search is unavailable.\n- Updated documentation to clarify data provenance requirements and calibration steps.",
+  "created_at": 1781253469066,
+  "display_name": "World Cup 2026 DEEP analysis",
+  "fetched_at": 1787781073094,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "data/corrections.json",
+    "data/elo_ratings.json",
+    "data/team_names.json",
+    "data/team_stats.json",
+    "data/world_cup_schedule.json",
+    "logs/calibration_log.md",
+    "logs/prediction_log.md",
+    "scripts/calibrate.py",
+    "scripts/odds_provider.py",
+    "scripts/prediction_engine.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "luciuszhao0101-dot",
+    "handle": "luciuszhao0101-dot",
+    "user_id": "s17darzhff5b8b0vrjstf81wan88h9pd"
+  },
+  "slug": "worldcup-2026-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/worldcup-2026-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=worldcup-2026-analysis&ownerHandle=luciuszhao0101-dot",
+    "page_url": "https://clawhub.ai/luciuszhao0101-dot/skills/worldcup-2026-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 487,
+    "installs": 6,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "2026\u4e16\u754c\u676f/\u8db3\u7403\u6bd4\u8d5b\u91cf\u5316\u5206\u6790\u4e0e\u9884\u6d4b\u5f15\u64ce\u3002\u57fa\u4e8eElo\u8bc4\u7ea7+Dixon-Coles\u6cca\u677e+\u8499\u7279\u5361\u6d1b\u6a21\u62df\uff0c\u7ed3\u5408\u7f51\u9875\u641c\u7d22\u83b7\u53d6\u6700\u65b0\u8d5b\u679c/\u4f24\u75c5/\u8d54\u7387\u8fdb\u884c\u5b9e\u65f6\u6821\u51c6\u3002\u63d0\u4f9b\u5355\u573a\u80dc\u5e73\u8d1f\u9884\u6d4b\u3001\u6bd4\u5206\u6982\u7387\u3001\u5c0f\u7ec4\u51fa\u7ebf\u6982\u7387\u3001\u6dd8\u6c70\u8d5b\u664b\u7ea7\u6982\u7387\u3001\u7206\u51b7\u5206\u6790\u3001\u8d54\u7387\u4ef7\u503c\u68c0\u6d4b\u3002\u5f53\u7528\u6237\u8981\u6c42\u5206\u6790\u8db3\u7403\u6bd4\u8d5b\u3001\u9884\u6d4b\u7ed3\u679c\u3001\u67e5\u770b\u664b\u7ea7/\u51fa\u7ebf\u6982\u7387\u3001\u5bf9\u6bd4\u7403\u961f\u5b9e\u529b\u3001\u68c0\u6d4b\u8d54\u7387\u4ef7...",
+  "updated_at": 1781253469066,
+  "version": "2.1.1"
+}
