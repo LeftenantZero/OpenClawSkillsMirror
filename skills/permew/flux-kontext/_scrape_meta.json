@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of Flux Kontext Pro skill for RunComfy.\n\n- Enables precise single-image local edits using Flux 1 Kontext Pro via the RunComfy CLI.\n- Bundles documented, high-performing prompt patterns for improved edit fidelity.\n- Documents model strengths, schema (single image + prompt), and when to route to sibling models.\n- Triggers on phrases like \"flux kontext\", \"BFL kontext\", or explicit user requests.\n- Requires local RunComfy CLI and authentication (via login or env token).\n- Provides security, limitations, and prompt guidance for best results.",
+  "created_at": 1785124838410,
+  "display_name": "Flux Kontext Pro \u2014 Pro Pack on RunComfy",
+  "fetched_at": 1787774790852,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mew",
+    "handle": "permew",
+    "user_id": "s17af27kmxn6ac8n1m0wdx0drh8bb4gd"
+  },
+  "slug": "flux-kontext",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/flux-kontext",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=flux-kontext&ownerHandle=permew",
+    "page_url": "https://clawhub.ai/permew/skills/flux-kontext"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 279,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Edit images with Flux 1 Kontext Pro (Black Forest Labs' precise local image-edit model) on RunComfy \u2014 bundled with the model's documented prompting patterns so the skill gets sharper output than naive prompting against the same model. Documents Flux Kontext's strengths (single-reference precise local edits, strong prompt control, consistent high-fidelity outputs), the schema (single image + prompt), and when to route to Nano Banana Edit / GPT Image 2 edit / Flux 2 Klein instead. Calls `runcomfy run blackforestlabs/flux-1-kontext/pro/edit` through the local RunComfy CLI. Triggers on \"flux kontext\", \"flux-kontext\", \"flux 1 kontext\", \"kontext\", \"BFL kontext\", or any explicit ask to edit with this model.",
+  "updated_at": 1785127176313,
+  "version": "1.0.0"
+}
