@@ -1,0 +1,63 @@
+{
+  "changelog": "buyma-order-automation 1.0.0 \u2013 initial release\n\n- Automates BUYMA order processing for daily scheduled runs and ad hoc order-number ranges.\n- Ensures deadlines, manages fallback CSV inputs, and selects the correct base workbook.\n- Checks and fills receipt memo numbers per detailed rules.\n- Generates order workbooks, enriches with historical data, and sends results via Naver Mail.\n- On any critical failure (BUYMA, CSV, or mail), stops immediately and notifies via Telegram with file attachment.",
+  "created_at": 1773576966368,
+  "display_name": "Buyma Order Automation",
+  "fetched_at": 1787788682246,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/README.txt",
+    "references/column-mapping.md",
+    "references/failure-rules.md",
+    "references/file-rules.md",
+    "references/memo-rules.md",
+    "references/run-modes.md",
+    "references/workflow.md",
+    "scripts/apply_translated_names.py",
+    "scripts/build_order_sheet.py",
+    "scripts/build_raw_names_json.py",
+    "scripts/build_translated_names_from_raw_json.py",
+    "scripts/build_translated_names_json.py",
+    "scripts/compose_output_filename.py",
+    "scripts/enrich_from_history.py",
+    "scripts/parse_buyma_csv.py",
+    "scripts/select_base_file.py",
+    "scripts/update_state.py",
+    "scripts/validate_buyma_raw_text.py",
+    "scripts/validate_output.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089897034,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "innoucon-blip",
+    "handle": "innoucon-blip",
+    "user_id": "s179wj3qkt27aj24e73yzq4fdn884syd"
+  },
+  "slug": "buyma-order-automation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/buyma-order-automation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=buyma-order-automation&ownerHandle=innoucon-blip",
+    "page_url": "https://clawhub.ai/innoucon-blip/skills/buyma-order-automation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 872,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "automate buyma order processing for regular daily runs and ad hoc order-range runs. use when chatgpt needs to access buyma in chrome, check or fill receipt m...",
+  "updated_at": 1779078261620,
+  "version": "1.0.0"
+}
