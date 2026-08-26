@@ -1,0 +1,57 @@
+{
+  "changelog": "calendar-extractor 0.7.2\n\n- Added prompt-context fallback logic for dispatcher-invoked runs: when a single-unit fetch fails (e.g. empty/404 session), now falls back to extracting and pushing events using the transcript and reference date embedded in the prompt context, instead of emitting nothing.\n- Added documentation for the above behavior in SKILL.md (see dispatcher path exception).\n- Added docs/pr-drafts/2026-08-02-prompt-context-fallback.md.\n- Removed obsolete skill-card.md file.",
+  "created_at": 1779853308637,
+  "display_name": "Calendar Extractor",
+  "fetched_at": 1787773911280,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "data/users/self.json",
+    "data/users/self.prefs.json",
+    "docs/pr-drafts/2026-08-02-prompt-context-fallback.md",
+    "package.json",
+    "references/route-contract.md",
+    "scripts/calendar-extractor.js",
+    "scripts/data.js",
+    "scripts/lib.js",
+    "scripts/register.js",
+    "skill-card.md",
+    "test/cli.test.js",
+    "test/data.test.js",
+    "test/lib.test.js",
+    "test/update.test.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785659255323,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "SamuelWei",
+    "handle": "samuel-wei",
+    "user_id": "s1735yg3x5h8qgtpapgt8es6f9844ese"
+  },
+  "slug": "calendar-extractor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/calendar-extractor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=calendar-extractor&ownerHandle=samuel-wei",
+    "page_url": "https://clawhub.ai/samuel-wei/skills/calendar-extractor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1493,
+    "installs": 28,
+    "stars": 1,
+    "versions": 21
+  },
+  "summary": "Periodically scans recent transcripts to extract calendar events and sends a daily summary of meetings to your iOS chat via push notifications.",
+  "updated_at": 1785658571364,
+  "version": "0.7.2"
+}
