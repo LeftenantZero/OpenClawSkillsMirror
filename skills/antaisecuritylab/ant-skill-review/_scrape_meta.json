@@ -1,0 +1,53 @@
+{
+  "changelog": "- Updated documentation to clarify the use of a 0\u20135 risk score scale, mapping to safe/medium/high risk levels.\n- Revised the workflow to describe two main analysis steps and integrated the deepAnalysis tool into LLM analysis.\n- Modified output details: risk scoring is now 0\u20135, with changes to overall risk and recommendation levels.\n- Usage, options, and output sections were updated to reflect new terminology and option set.\n- Overall language made more concise and focused on deterministic static and LLM-driven risk analysis.",
+  "created_at": 1775791767813,
+  "display_name": "Skill Review",
+  "fetched_at": 1787785254858,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "index.mjs",
+    "package.json",
+    "skill-card.md",
+    "src/cli.mjs",
+    "src/config.mjs",
+    "src/prescan.mjs",
+    "src/prompts.mjs",
+    "src/report.mjs",
+    "src/scoring.mjs",
+    "src/tools.mjs",
+    "src/utils.mjs"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779979216709,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Ant AI Security Lab",
+    "handle": "antaisecuritylab",
+    "user_id": "s1769dnfmd232dyj6bvbe4xahs845f7v"
+  },
+  "slug": "ant-skill-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ant-skill-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ant-skill-review&ownerHandle=antaisecuritylab",
+    "page_url": "https://clawhub.ai/antaisecuritylab/skills/ant-skill-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 777,
+    "installs": 18,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Security scanner for Claude Code Skill packages. Use when the user wants to audit, review, or check the safety of a Skill before installing \u2014 e.g. \"is this s...",
+  "updated_at": 1779432823666,
+  "version": "1.0.2"
+}
