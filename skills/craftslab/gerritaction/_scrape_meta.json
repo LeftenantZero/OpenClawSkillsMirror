@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of Gerrit Action Skill.\n\n- Query Gerrit accounts, changes, groups, and projects via CLI with flexible selectors.\n- Perform actions on change queries: add/remove reviewers or attention, approve, delete, or submit changes.\n- Outputs results as JSON to file or standard output.\n- Strict invocation: only one query selector per command; actions require a change query.\n- Built-in safety guidelines to prevent accidental destructive actions.",
+  "created_at": 1773825558804,
+  "display_name": "gerritaction",
+  "fetched_at": 1787788246277,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.yml",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089951108,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jia",
+    "handle": "craftslab",
+    "user_id": "s175w99ap6xk0j3tw2ppjd4vpx842bh7"
+  },
+  "slug": "gerritaction",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gerritaction",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gerritaction&ownerHandle=craftslab",
+    "page_url": "https://clawhub.ai/craftslab/skills/gerritaction"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 866,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query Gerrit accounts, changes, groups, or projects and perform actions like adding reviewers, approving, submitting, or deleting changes via the Gerrit API.",
+  "updated_at": 1779078435023,
+  "version": "0.1.0"
+}
