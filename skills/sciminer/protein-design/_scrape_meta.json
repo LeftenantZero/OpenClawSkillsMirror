@@ -1,0 +1,33 @@
+{
+  "changelog": "**Expanded to cover multiple state-of-the-art protein design APIs and workflows alongside Boltzgen.**\n\n- Now supports Boltzgen, RFdiffusion, RFdiffusion2, RFdiffusion3, ProteinMPNN, LigandMPNN, BindCraft, and FreeBindCraft tools via SciMiner.\n- Replaces the local registry with live doc-based parameter and API resolution from authoritative Markdown files at https://sciminer.tech/tool_api_files/.\n- Handles de novo backbone generation, binder design, antibody/nanobody design, enzyme and catalytic motif scaffolding, sequence design, and end-to-end pipeline workflows.\n- Ensures parameter names, payloads, file upload forms, and allowed values always match the referenced online tool doc, not agent memory.\n- Guides users to the most appropriate tool or tool sequence for their design goals, including multi-step workflows.\n- Users continue to supply their SciMiner API key as before; all invocations and summaries now cite the selected API doc rather than a local script/registry.",
+  "created_at": 1774859022707,
+  "display_name": "Protein Design",
+  "fetched_at": 1787783782229,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SciMiner",
+    "handle": "sciminer",
+    "user_id": "s170qp1q4twz35wa85ppa8894h83w461"
+  },
+  "slug": "protein-design",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/protein-design",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=protein-design&ownerHandle=sciminer",
+    "page_url": "https://clawhub.ai/sciminer/skills/protein-design"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1266,
+    "installs": 31,
+    "stars": 8,
+    "versions": 9
+  },
+  "summary": "Protein, peptide, antibody, nanobody, binder, enzyme, and sequence design workflows using Boltzgen, RFdiffusion, RFdiffusion2, RFdiffusion3, ProteinMPNN, Lig...",
+  "updated_at": 1780221445485,
+  "version": "1.0.8"
+}
