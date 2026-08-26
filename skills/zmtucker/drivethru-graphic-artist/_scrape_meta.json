@@ -1,0 +1,56 @@
+{
+  "changelog": "- Added new reference files: decoration_guide.png, decoration_spec_sheet.pdf, and mockup_routine.md for improved decoration and mockup guidance.\n- Removed outdated documentation file: skill-card.md.\n- Documentation updated in SKILL.md to reflect new references and improved process details.",
+  "created_at": 1782156031599,
+  "display_name": "drivethru-graphic-artist",
+  "fetched_at": 1787773338982,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/decoration_guide.png",
+    "assets/placement_rules.json",
+    "references/decoration_spec.md",
+    "references/decoration_spec_sheet.pdf",
+    "references/iterative_feedback.md",
+    "references/location_dimensions.json",
+    "references/mockup_routine.md",
+    "references/placement_rules_schema.json",
+    "references/production_cleanup.md",
+    "references/production_ready.md",
+    "references/self_review.md",
+    "scripts/_bootstrap.py",
+    "scripts/_paths.py",
+    "scripts/cleanup_art.py",
+    "scripts/compose_mockup.py",
+    "scripts/detect_garment_bbox.py",
+    "scripts/edit_placement_rule.py",
+    "scripts/extract_colors.py",
+    "scripts/knockout_color.py",
+    "scripts/prepare_dtf_production.py",
+    "scripts/remove_background.py",
+    "scripts/thumbnail_card.py",
+    "scripts/upload_production_file.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "zmtucker",
+    "handle": "zmtucker",
+    "user_id": "s17fq291581evd78xzn1930b0n87bfny"
+  },
+  "slug": "drivethru-graphic-artist",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/drivethru-graphic-artist",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=drivethru-graphic-artist&ownerHandle=zmtucker",
+    "page_url": "https://clawhub.ai/zmtucker/skills/drivethru-graphic-artist"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1002,
+    "installs": 0,
+    "stars": 0,
+    "versions": 11
+  },
+  "summary": "Graphic-artist tasks for Bacon & Co decorations \u2014 (1) generate product mockups by compositing a decoration (logo/graphic) onto a blank product photo (deterministic; no model-generated pixels; self-reviewed), (2) make a DTF decoration \"production-ready\" / \"drop the art\" \u2014 take the real thumbnail, size it to the decoration location, render at 300 DPI, upload the DTF production file, set size + colors, and create a print sample, driving the decoration toward the 'done' state via the drivethru_mcp decoration_* tools, and (3) clean up degraded / AI-generated flat art before production \u2014 deterministically snap it back to its true inks, rebuild faded/broken/jagged outlines, and re-render crisp at print size (fixes the \"looks fine as a thumbnail, falls apart at 13 inches\" problem). Use whenever the user wants to see a logo on a garment, place artwork on a blank, remove an image background (knock a solid color out of flat art, or segment a photographic subject), tune a print's size/position, clean up / fix / \"drop for production\" a low-quality or AI-generated logo (ghosting, haze, jagged or fading outlines, soft edges), OR make a decoration production-ready / drop art / get a DTF decoration to done.",
+  "updated_at": 1785943320840,
+  "version": "0.8.0"
+}
