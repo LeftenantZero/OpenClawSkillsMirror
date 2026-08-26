@@ -1,0 +1,53 @@
+{
+  "changelog": "alibabacloud-waf-rule-management v0.0.1 \u2013 Initial public release with major compliance-focused improvements:\n\n- Enforced strict read-only mode: all write/configure/modify operations and script output are explicitly forbidden.\n- Introduced session-based User-Agent tracking: every CLI call must use a unique session ID per workflow.\n- Enhanced CLI and SLS plugin setup guidance, including postpay/subscription logstore naming and region handling.\n- Expanded and clarified pre-checklists, command traps, and absolute prohibitions to protect credentials and prevent misconfiguration.\n- Updated documentation for compliance, including mandatory disclaimer and precise audit guidance for all outputs.\n- Removed obsolete files; focused all logic/documentation on secure, text-based guidance and diagnostic analysis only.",
+  "created_at": 1782358743228,
+  "display_name": "Alibabacloud Waf Rule Management",
+  "fetched_at": 1787777715661,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api_reference.md",
+    "references/cli_commands.md",
+    "references/cli_guide.md",
+    "references/cli_traps.md",
+    "references/configuration_guide.md",
+    "references/profile_setup_guide.md",
+    "references/ram-policies.md",
+    "references/security_rules.md",
+    "references/troubleshooting.md",
+    "scripts/rule_matcher.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783498782451,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-waf-rule-management",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-waf-rule-management",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-waf-rule-management&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-waf-rule-management"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 387,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Alibaba Cloud WAF 3.0 read-only diagnostic assistant for interception diagnosis, rule queries, and configuration guidance. Use when: query WAF logs (405 erro...",
+  "updated_at": 1783463363256,
+  "version": "0.0.1"
+}
