@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of the Huawei Cloud CCE kubectl installer skill.\n\n- Installs, upgrades, verifies, and troubleshoots local `kubectl` and Huawei Cloud `kubectl-cce` plugin.\n- Supports read-only inspection, installation plan preview, and confirmed installation for Linux and macOS.\n- Falls back to official/release sources or builds from source if downloads fail.\n- Provides detailed permission, dependency, and risk guidelines for local changes.\n- Windows installation requires manual steps with clear instructions.\n- No cloud or cluster resources are created or changed by this skill.",
+  "created_at": 1785748235980,
+  "display_name": "huawei-cloud-kubectl-cce-installer",
+  "fetched_at": 1787771151381,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/plugin-usage.md",
+    "scripts/install_kubectl_cce.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-kubectl-cce-installer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-kubectl-cce-installer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-kubectl-cce-installer&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-kubectl-cce-installer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 175,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Install, upgrade, verify, or troubleshoot local kubectl and the Huawei Cloud kubectl-cce plugin. Trigger when a user asks to install kubectl, install kubectl-cce, configure the CCE kubectl plugin, verify kubectl-cce availability, or repair local command prerequisites for CCE Kubernetes resource access.",
+  "updated_at": 1785748319221,
+  "version": "1.0.0"
+}
