@@ -1,0 +1,42 @@
+{
+  "changelog": "- Added support for durable multi-document Task Runtime workflows, including status checks, selective reads, exports, and debugging, beyond single-document parsing.\n- Updated guidance to prefer Task Runtime for multiple documents or when persistent Task IDs and runtime features are needed.\n- Introduced a structured error handling protocol: every failed `xparse-cli` invocation must parse the final stderr object and handle retryability as indicated, without shell piping/wrapping.\n- Clarified that workflow selection (Task vs. parse) is based on document count and durability needs, separate from billing method (auto/free/paid).\n- Removed the legacy skill-card.md and added a new documentation reference for task-runtime.\n- Expanded security and operational notes, including explicit handling for non-retryable failures and credentials.",
+  "created_at": 1775734688738,
+  "display_name": "TextIn xParse Document Parse",
+  "fetched_at": 1787769351299,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/logo.png",
+    "references/api-reference.md",
+    "references/authentication.md",
+    "references/cli-guidance.md",
+    "references/error-handling.md",
+    "references/navigation.md",
+    "references/task-runtime.md",
+    "references/textin-key-setup.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "IntSig",
+    "handle": "intsig-textin",
+    "user_id": "s1742z4nj1gh2e6er3jnae0xxs84eh1v"
+  },
+  "slug": "xparse-parser",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/xparse-parser",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=xparse-parser&ownerHandle=intsig-textin",
+    "page_url": "https://clawhub.ai/intsig-textin/skills/xparse-parser"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1279,
+    "installs": 28,
+    "stars": 2,
+    "versions": 4
+  },
+  "summary": "Parse, read, search, navigate, summarize, and extract tables or structured evidence from PDFs, images, Office files, HTML, OFD, and other supported local documents or document URLs through xparse-cli. Use this Skill for single-document conversion, targeted section/page/fact extraction, and durable m",
+  "updated_at": 1787571766783,
+  "version": "0.1.4"
+}
