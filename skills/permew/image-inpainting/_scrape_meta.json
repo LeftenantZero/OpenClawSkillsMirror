@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of Image Inpainting \u2014 Pro Pack on RunComfy:\n\n- Enables mask-driven image inpainting via the runcomfy CLI, routing to Z-Image Turbo Inpainting for precise region edits.\n- Automatically falls back to instruction-driven edit models (Nano Banana 2 Edit, GPT Image 2 Edit, FLUX Kontext Pro) when a mask isn't provided.\n- Supports use cases like object removal, watermark cleanup, region replacement, and blemish fixes.\n- Detailed CLI usage instructions and model selection guidance included.\n- Requires the runcomfy CLI and a valid RUNCOMFY_TOKEN.",
+  "created_at": 1785124873210,
+  "display_name": "Image Inpainting \u2014 Pro Pack on RunComfy",
+  "fetched_at": 1787774789917,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mew",
+    "handle": "permew",
+    "user_id": "s17af27kmxn6ac8n1m0wdx0drh8bb4gd"
+  },
+  "slug": "image-inpainting",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/image-inpainting",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=image-inpainting&ownerHandle=permew",
+    "page_url": "https://clawhub.ai/permew/skills/image-inpainting"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 288,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Mask-driven image inpainting on RunComfy via the `runcomfy` CLI. Routes to Tongyi MAI Z-Image Turbo Inpainting (the dedicated inpainting endpoint with mask, strength, and control-scale) and to identity-preserving edit models (Nano Banana 2 Edit, GPT Image 2 Edit, FLUX Kontext Pro) when a mask isn't available and the region must be described instead. Use for object removal, watermark removal, region replacement, blemish cleanup, and any controlled local edit where a binary mask defines the target area. Triggers on \"inpaint\", \"inpainting\", \"image inpaint\", \"remove from image\", \"fill region\", \"mask-driven edit\", \"remove watermark\", \"remove object\", \"patch the photo\", \"fill the hole\", or any explicit ask to edit a specific masked region of a still.",
+  "updated_at": 1785127194883,
+  "version": "1.0.0"
+}
