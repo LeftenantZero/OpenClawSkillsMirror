@@ -1,0 +1,33 @@
+{
+  "changelog": "basis-arb v1.0.0 \u2014 Initial release\n\n- Provides a directional spot\u2013perp basis strategy template for Freqtrade (long-perp leg only).\n- Reads spot-perp basis and funding rate to generate a long-perp entry when both flip negative (basis < 0 and funding < 0).\n- Requires both spot and perp pairs (e.g., on Hyperliquid); does not run actual two-leg hedged arb.\n- Does not place trades unless spot OHLCV data is available; current backtest engines may result in zero trades.\n- Shipped as a teachable example for basis-driven directional entries, not as a market-neutral arbitrage bot.",
+  "created_at": 1782122312685,
+  "display_name": "Basis Arb",
+  "fetched_at": 1787779741791,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Superior-AI",
+    "handle": "superior-ai",
+    "user_id": "s176a46hwrqn38f05j90yrnww583h5w0"
+  },
+  "slug": "basis-arb",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/basis-arb",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=basis-arb&ownerHandle=superior-ai",
+    "page_url": "https://clawhub.ai/superior-ai/skills/basis-arb"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 309,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when the user asks for spot-perp basis trade, basis arbitrage, cash-and-carry, perp discount, or any setup that reads the spot\u2013perp basis as a positionin...",
+  "updated_at": 1782122312685,
+  "version": "1.0.0"
+}
