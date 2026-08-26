@@ -1,0 +1,49 @@
+{
+  "changelog": "**Summary:**  \nThis version updates cookie handling and search execution policies for increased privacy and more ethical crawling.\n\n- Switched to initializing an empty in-memory cookie store; no cookies are pre-loaded from files.\n- Cookies are acquired dynamically only when a search request is denied and cleared immediately after the session.\n- Only relevant search engines are queried, based on language and engine availability, rather than always searching all engines in a category.\n- Introduced stricter rate limiting (1-2 second delays, batch sizes of 3-4) to control request flow.\n- Strengthened privacy statements: cookies are held strictly in memory and never written to disk or config files.\n- Improved documentation of search logic, cookie management, and crawling ethics.",
+  "created_at": 1770221093765,
+  "display_name": "Multi Search Engine",
+  "fetched_at": 1787772215696,
+  "files": [
+    "CHANGELOG.md",
+    "CHANNELLOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "metadata.json",
+    "references/advanced-search.md",
+    "references/international-search.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783655336262,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "g_pyAng",
+    "handle": "gpyangyoujun",
+    "user_id": "s178eaap4bvprfw0tc3avqxe6584cegd"
+  },
+  "slug": "multi-search-engine",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/multi-search-engine",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=multi-search-engine&ownerHandle=gpyangyoujun",
+    "page_url": "https://clawhub.ai/gpyangyoujun/skills/multi-search-engine"
+  },
+  "stats": {
+    "comments": 6,
+    "downloads": 159950,
+    "installs": 5503,
+    "stars": 762,
+    "versions": 7
+  },
+  "summary": "Multi search engine integration with 16 engines (7 CN + 9 Global). Supports advanced search operators, time filters, site search, privacy engines, and Wolfra...",
+  "updated_at": 1778486017068,
+  "version": "2.1.3"
+}
