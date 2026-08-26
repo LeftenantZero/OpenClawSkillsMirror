@@ -1,0 +1,44 @@
+{
+  "changelog": "- Improved description and documentation for ODSH Bridge protocol and task routing between OpenClaw and DeepSeek Harness (DSH).\n- Clarified decision process for routing tasks based on weight and predicted token cost.\n- Outlined bridge communication zones, envelope contract, and notification channel integration.\n- Detailed new examples and steps for collaboration, including Windows desktop execution with Cua channel.\n- Added explicit instructions for envelope creation, relay rules, and setup requirements.",
+  "created_at": 1787741628342,
+  "display_name": "ODSH-Interop",
+  "fetched_at": 1787768533230,
+  "files": [
+    "PUBLISH-clawhub.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787742365126,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "MikoRibbit",
+    "handle": "mikoribbit",
+    "user_id": "s17av952wa8r2hvk6zpx7nfgbs8a7h4k"
+  },
+  "slug": "odsh-interop",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/odsh-interop",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=odsh-interop&ownerHandle=mikoribbit",
+    "page_url": "https://clawhub.ai/mikoribbit/skills/odsh-interop"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 22,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "ODSH Bridge interop skill: decides when OpenClaw should handle an operator request itself vs relay it to the DeepSeek Harness (DSH) execution layer. Weighs each task by size and predicted token cost, then hands heavy work to DSH through lightweight bridge envelopes (Input/Output zones). Covers task routing rules, the envelope contract, notification channel setup, and read-only queries into the optional SQLite audit ledger (dsh.db) for bridge health and failure stats.",
+  "updated_at": 1787741882738,
+  "version": "1.2.5"
+}
