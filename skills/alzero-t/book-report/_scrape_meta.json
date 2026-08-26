@@ -1,0 +1,46 @@
+{
+  "changelog": "book-report 1.0.0 \u2014 Initial release focused on structured book reports for popular Chinese literature.\n\n- Input a book name to get two outputs: an HTML self-study report and a conversational \u201c\u5f39\u836f\u5e93\u201d.\n- Covers high-profile Chinese books well (e.g., major award-winners); warns users for less-supported genres.\n- Collects data primarily from Baidu Baike, Chinese Wikipedia, and Zhihu; avoids sources like Douban and web novel sites.\n- Extracts 9 key fields (summary, themes, characters, awards, etc.) per book; \u201c\u5f39\u836f\u5e93\u201d includes opening lines, stories, talking points, and closers.\n- Built-in data quality safeguards: unverifiable details are omitted or marked, and results are withheld if sources are missing.\n- Notifies user of exact report file paths after generation.",
+  "created_at": 1781227828704,
+  "display_name": "Book Report",
+  "fetched_at": 1787781101197,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agent.sh",
+    "book-report/README.md",
+    "book-report/SKILL.md",
+    "book-report/agent.sh",
+    "book-report/lib/fetch.py",
+    "book-report/lib/pdf_extract.py",
+    "book-report/lib/render.py",
+    "book-report/reports/README.md",
+    "book-report/sources/cache/goodreads__The_Old_Man_and_the_Sea.html",
+    "book-report/sources/cache/wiki_en__The_Old_Man_and_the_Sea.html",
+    "book-report/sources/raw__TheOldManandtheSea__en.json",
+    "lib/fetch.py",
+    "lib/render.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "allen.t",
+    "handle": "alzero-t",
+    "user_id": "s170jftmmtd445v3aber3fxccd88g12h"
+  },
+  "slug": "book-report",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/book-report",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=book-report&ownerHandle=alzero-t",
+    "page_url": "https://clawhub.ai/alzero-t/skills/book-report"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 377,
+    "installs": 4,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6839\u636e\u4e66\u540d\u751f\u6210\u8be6\u7ec6HTML\u8bfb\u4e66\u62a5\u544a\u548c\u7b80\u6d01\u5f39\u836f\u5e93\uff0c\u5305\u542b\u4e3b\u9898\u3001\u4eba\u7269\u3001\u5173\u7cfb\u56fe\u3001\u83b7\u5956\u3001\u4f5c\u8005\u53ca\u91d1\u53e5\uff0c\u4fbf\u4e8e\u81ea\u5b66\u548c\u4ea4\u6d41\u8bb2\u89e3\u3002",
+  "updated_at": 1781227828704,
+  "version": "1.0.0"
+}
