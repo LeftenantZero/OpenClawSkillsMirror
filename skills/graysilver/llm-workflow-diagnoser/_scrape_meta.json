@@ -1,0 +1,41 @@
+{
+  "changelog": "llm-workflow-diagnoser v0.2.0 introduces an LLM-driven process to evaluate if existing offline/reusable workflows are suitable for LLM transformation.\n\n- Adds a step-by-step workflow: entry clarification, up to 6 rounds of 8-dimension questioning, LLM-based judgment with difficulty/ROI scoring, and structured report output.\n- Defines strict trigger/exclusion criteria to ensure correct activation only for reusable workflows seeking LLM transformation assessment.\n- Report output standardized into six fixed sections, including clear ROI score (0\u201310) and detailed difficulty ratings across five dimensions.\n- Integrates safeguard rules: prohibits skipping questions, using only rules-based scoring, or outputting reports to files.\n- Includes comprehensive guidance on boundary cases, mandatory question structure, and stepwise interaction flow.",
+  "created_at": 1784819898015,
+  "display_name": "Llm Workflow Diagnoser",
+  "fetched_at": 1787775356049,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/examples/full_replace.md",
+    "references/examples/not_suitable.md",
+    "references/examples/partial_replace.md",
+    "references/question_bank.md",
+    "references/report_template.md",
+    "references/scoring_rubric.md",
+    "scripts/diagnose.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Overlord",
+    "handle": "graysilver",
+    "user_id": "s17c6q86pekf2pm4rzv7z5wrsd8b36w8"
+  },
+  "slug": "llm-workflow-diagnoser",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/llm-workflow-diagnoser",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=llm-workflow-diagnoser&ownerHandle=graysilver",
+    "page_url": "https://clawhub.ai/graysilver/skills/llm-workflow-diagnoser"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2105,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use this skill whenever a user wants to evaluate whether an existing offline / reusable workflow is worth converting into an LLM-driven workflow. Triggers on...",
+  "updated_at": 1784856640273,
+  "version": "0.1.0"
+}
