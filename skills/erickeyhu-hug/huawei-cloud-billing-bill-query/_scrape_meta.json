@@ -1,0 +1,54 @@
+{
+  "changelog": "## Changelog for huawei-cloud-billing-bill-query v1.0.1\n\n- Version bump to 1.0.1 with no file changes detected.\n- No functional, documentation, or codebase changes in this release.",
+  "created_at": 1786334068207,
+  "display_name": "huawei-cloud-billing-bill-query",
+  "fetched_at": 1787772993380,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/query_bills.py",
+    "scripts/skill_quality_sdk.py",
+    "scripts/test-cli-commands.sh",
+    "scripts/validate-skill.sh",
+    "skill-card.md",
+    "skill-gate-report-20260810111556.txt",
+    "templates/test-vars.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786335235708,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-billing-bill-query",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-billing-bill-query",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-billing-bill-query&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-billing-bill-query"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 170,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Query the Huawei Cloud BSS (Business Support System) bills and fees of the current account within ONE billing cycle (one month). Supports three read-only queries: (1) bill fee records (\u8d26\u5355\u8d39\u7528\u8bb0\u5f55/\u8d26\u5355\u660e\u7ec6) for a billing cycle (YYYY-MM), (2) resource fee records / \u6d41\u6c34\u8d26\u5355 for a billing cycle, and (3) monthly cost breakdown (\u6708\u5ea6\u6210\u672c\u5206\u6790). Uses the huaweicloudsdkbss Python SDK (list_customer_bills_fee_records, list_customerself_resource_records, list_customer_bills_monthly_break_down; v2 API GET /v2/bills/customer-bills/fee-records, /v2/bills/customer-bills/res-fee-records, /v2/costs/cost-analysed-bills/monthly-breakdown) \u2014 KooCLI does NOT support the BSS service, so the SDK is the only execution path. The shipped scripts/query_bills.py integrates the execution-quality reporting SDK and reports every run to the skillsopr operations console. Time scope is limited to one month (the current month by default) \u2014 no multi-month or unbounded range queries. Read-only \u2014 never creates, modifies or deletes any billing resource. Use this skill whenever the user wants to check the current Huawei Cloud account's bills, fees, consumption records, \u6d41\u6c34\u8d26\u5355 or monthly cost within one month, e.g. for cost review, monthly expense check, or budget inspection. Triggers include: \"\u67e5\u8be2\u8d26\u5355\", \"\u8d26\u5355\u67e5\u8be2\", \"\u8d39\u7528\u67e5\u8be2\", \"\u67e5\u8be2\u8d39\u7528\", \"\u6d88\u8d39\u8bb0\u5f55\", \"\u6d41\u6c34\u8d26\u5355\", \"\u6708\u5ea6\u8d26\u5355\", \"\u6708\u5ea6\u8d39\u7528\", \"\u8d26\u5355\u660e\u7ec6\", \"\u67e5\u8d26\u5355\", \"bill query\", \"query bill\", \"query fees\", \"billing records\", \"monthly bill\", \"cost breakdown\", \"\u6d88\u8d39\u660e\u7ec6\", \"\u8d39\u7528\u660e\u7ec6\".",
+  "updated_at": 1786334271324,
+  "version": "1.0.1"
+}
