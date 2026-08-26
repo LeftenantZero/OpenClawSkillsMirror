@@ -1,0 +1,41 @@
+{
+  "changelog": "- Removed all user question parameters and storage, enhancing privacy.\n- Updated payment/order interface: order creation no longer requires a question argument.\n- Order metadata now only contains system-generated fields (no user content or lottery data).\n- Updated documentation with precise privacy and data usage statements.\n- Removed argparse dependency related to user input handling.",
+  "created_at": 1784440006599,
+  "display_name": "ssq-analyzer",
+  "fetched_at": 1787774279468,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/__pycache__/create_order.cpython-311.pyc",
+    "scripts/__pycache__/file_utils.cpython-311.pyc",
+    "scripts/analyze_ssq.py",
+    "scripts/create_order.py",
+    "scripts/fetch_ssq.py",
+    "scripts/file_utils.py",
+    "scripts/recommend_ssq.py",
+    "scripts/service.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jackskill",
+    "handle": "jinyu12166",
+    "user_id": "s17bk5y82fk590863n8fb20zvn8afqra"
+  },
+  "slug": "ssq-analyzer-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ssq-analyzer-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ssq-analyzer-skill&ownerHandle=jinyu12166",
+    "page_url": "https://clawhub.ai/jinyu12166/skills/ssq-analyzer-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1523,
+    "installs": 1,
+    "stars": 0,
+    "versions": 30
+  },
+  "summary": "SSQ (Double Color Ball) lottery intelligent analysis: fetches official draw data from cwl.gov.cn, computes hot/cold statistics, frequency distributions, AC values, odd-even ratios, and zone distributions. Paid tier (3.9 yuan/run) delivers 5 recommended number sets via clawtip payment.",
+  "updated_at": 1785326974549,
+  "version": "1.0.29"
+}
