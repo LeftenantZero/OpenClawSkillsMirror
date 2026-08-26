@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release of the Walmart Keyword Search scraper skill.\n- Extracts paginated Walmart product search results by keyword and page.\n- Returns structured product details including itemId, title, URL, image, price, rating, review count, availability, seller info, fulfillment badge, and more.\n- Supports navigation by URL, page number, and sort order (e.g., best_match, price_low).\n- Includes batching guidance, error recording, and execution efficiency tips.\n- Designed for safe, manual-equivalent data extraction\u2014never bypasses authentication or access controls.",
+  "created_at": 1784544295060,
+  "display_name": "Walmart Keyword Search",
+  "fetched_at": 1787775900081,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-listing.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784548956715,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "walmart-keyword-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/walmart-keyword-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=walmart-keyword-search&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/walmart-keyword-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 253,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Walmart keyword search scraper: input a search keyword and page number, navigate to walmart.com search results, extract paginated product listings with itemId, url, title, brand, image, price, wasPrice, rating, reviewCount, availability, seller info, fulfillmentBadge, classType, and shortDescription",
+  "updated_at": 1784548254177,
+  "version": "1.0.0"
+}
