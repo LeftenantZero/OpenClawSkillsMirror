@@ -1,0 +1,68 @@
+{
+  "changelog": "- Initial release of geoskill-green-infrastructure-mapping.\n- Maps green infrastructure using high-resolution multispectral imagery with NDVI-based segmentation, tree crown detection, and patch connectivity analysis.\n- Provides command-line interface with support for both local GeoTIFF input and fully offline synthetic data generation.\n- Outputs include a GeoTIFF (NDVI + green-space mask) and JSON summaries (green-space stats, manifest).\n- All data processing is done locally to ensure privacy; no user data is uploaded.",
+  "created_at": 1785845491267,
+  "display_name": "geoskill-green-infrastructure-mapping",
+  "fetched_at": 1787773483063,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_synth/green_stats.json",
+    "_test_cli_synth/output-manifest.json",
+    "e2e_test.py",
+    "geoskill-green-infrastructure-mapping.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785846530967,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-green-infrastructure-mapping",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-green-infrastructure-mapping",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-green-infrastructure-mapping&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-green-infrastructure-mapping"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 175,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Map green infrastructure from high-resolution NDVI, tree crown detection, green-space classification and patch connectivity.",
+  "updated_at": 1785845631226,
+  "version": "1.0.0"
+}
