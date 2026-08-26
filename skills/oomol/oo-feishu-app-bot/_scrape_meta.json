@@ -1,0 +1,43 @@
+{
+  "changelog": "- Feishu App Bot connector skill for operating `open.feishu.cn` through the OOMOL-connected account, without handling raw tokens directly.\n- Covers the full bot workflow: inspect live action schemas, then run the matching connector action with validated JSON payloads.\n- Supports broad Feishu automation across chats, messages, tasks, calendars, mail, Drive, Wiki, Base, Sheets, Slides, whiteboards, and video meetings.\n- Includes both read and write operations, from listing and searching data to creating, updating, moving, and deleting resources.\n- Flags destructive actions clearly and requires confirmation before running state-changing or data-removing operations.\n- Provides first-time setup guidance for auth, connection, and billing issues when the connector is not ready.\n\nSource: `oomol-lab/skills@46cfb3e`",
+  "created_at": 1780502433157,
+  "display_name": "Feishu App Bot",
+  "fetched_at": 1787772740725,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786436258232,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-feishu-app-bot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-feishu-app-bot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-feishu-app-bot&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-feishu-app-bot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 678,
+    "installs": 7,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Feishu App Bot (open.feishu.cn). Use this skill for ANY Feishu App Bot request \u2014 reading, creating, updating, and deleting data. Whenever a task involves Feishu App Bot, use this skill instead of calling the API directly.",
+  "updated_at": 1786435709420,
+  "version": "1.0.3"
+}
