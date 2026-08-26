@@ -1,0 +1,76 @@
+{
+  "changelog": "**Major update: adds full multi-format build scripts, templates, prompts, and site skeletons for Cookbook-forge automation.**\n\n- Added assets and scripts to support automated conversion from MDX to ElegantBook LaTeX/PDF, Nextra site, and optimized EPUB using both LLM and pure JS pipelines.\n- Included full Nextra v3 website skeleton with Dockerfile, config, scripts, and pages for instant deployment.\n- Provided LLM prompt templates for MDX\u2192LaTeX and MDX\u2192EPUB conversion, and utility scripts for diagram rendering, formula/image fixes, word count, and font subsetting.\n- Added comprehensive style guide references and single-chapter MDX templates for consistent output.\n- Updated workflows and documentation to reflect new modular, template-driven, and LLM-enabled architecture.\n- Removed deprecated skill-card; all documentation is now in SKILL.md and references.",
+  "created_at": 1784182039409,
+  "display_name": "Cookbook Forge",
+  "fetched_at": 1787776062374,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/elegantbook-main.template.tex.txt",
+    "assets/nextra-template/Dockerfile.txt",
+    "assets/nextra-template/components/PdfDownload.tsx",
+    "assets/nextra-template/docker-compose.yml",
+    "assets/nextra-template/middleware.js",
+    "assets/nextra-template/next.config.mjs",
+    "assets/nextra-template/package.json",
+    "assets/nextra-template/pages/_app.tsx",
+    "assets/nextra-template/pages/_meta.ts",
+    "assets/nextra-template/scripts/build-meta.mjs",
+    "assets/nextra-template/scripts/render-plantuml.mjs",
+    "assets/nextra-template/scripts/renumber-content.mjs",
+    "assets/nextra-template/scripts/scaffold-nextra.mjs",
+    "assets/nextra-template/styles/globals.css",
+    "assets/nextra-template/theme.config.tsx",
+    "assets/nextra-template/tsconfig.json",
+    "assets/prompts/mdx-to-epub.md",
+    "assets/prompts/mdx-to-latex.md",
+    "assets/stylesheet.formula-image.css",
+    "assets/stylesheet.template.css",
+    "assets/template-mdx/chapter-template.mdx",
+    "references/style-guide-oreilly.md",
+    "references/style-guide-springer.md",
+    "scripts/epub-zip.mjs",
+    "scripts/kroki-render.mjs",
+    "scripts/lbuild-epub.mjs",
+    "scripts/lib/diagram-renderer.mjs",
+    "scripts/lib/mdx-utils.mjs",
+    "scripts/lmdx2tex.mjs",
+    "scripts/optimize-formula-images.mjs",
+    "scripts/render-diagrams.mjs",
+    "scripts/subset-fonts.mjs",
+    "scripts/word-count.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784340858284,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Samon Yu",
+    "handle": "samonysh",
+    "user_id": "s179t2y0de4pmccw2jxzpwwkr18802cc"
+  },
+  "slug": "cookbook-forge",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cookbook-forge",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cookbook-forge&ownerHandle=samonysh",
+    "page_url": "https://clawhub.ai/samonysh/skills/cookbook-forge"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 401,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Generates deep technical CookBooks, Handbooks, and Surveys from user materials (websites, PDFs, EPUBs, GitHub repos, arxiv papers, docs). Produces MDX chapters first, then ElegantBook LaTeX/PDF, Nextra website, and optimized EPUB. Invoke when user asks to write a Cookbook, handbook, survey, technica",
+  "updated_at": 1784340126237,
+  "version": "1.2.0"
+}
