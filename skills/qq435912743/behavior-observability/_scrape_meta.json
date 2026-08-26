@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of behavior-observability skill.\n\n- Provides structured behavior observability for agents/automation pipelines, recording every action (tool/LLM calls, decisions, reviews) as structured events for auditing and analysis.\n- Supports multidimensional querying, metric aggregation (error rates, average/p95 latency), and behavior timeline replay for postmortem audit and debugging.\n- Integrates with related skills (safety-guardrails, human-in-loop-review, agent-eval-harness, super-agent-loop) by emitting events for a comprehensive, trustworthy behavior log.\n- Includes a built-in self-learning module that automatically reviews and improves based on usage, tracking patterns, errors, and user preferences in learned_patterns.json.\n- Command line tools provided for emitting events, querying logs, viewing metrics, timeline replay, and managing learning/insight processes.",
+  "created_at": 1786625606359,
+  "display_name": "behavior-observability",
+  "fetched_at": 1787772246640,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "learned_patterns.json",
+    "scripts/learner.py",
+    "scripts/observability.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786672171345,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "qq435912743",
+    "handle": "qq435912743",
+    "user_id": "s171ndzm69p9g2ee5kcw6t7smh8azd5h"
+  },
+  "slug": "behavior-observability",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/behavior-observability",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=behavior-observability&ownerHandle=qq435912743",
+    "page_url": "https://clawhub.ai/qq435912743/skills/behavior-observability"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 122,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7ed9\u81ea\u4e3b\u667a\u80fd\u4f53/\u81ea\u52a8\u5316\u6d41\u6c34\u7ebf\u63d0\u4f9b\u300c\u884c\u4e3a\u53ef\u89c2\u6d4b\u6027\u300d\uff1a\u628a\u6bcf\u4e00\u6b21\u52a8\u4f5c\uff08\u5de5\u5177\u8c03\u7528\u3001LLM \u8c03\u7528\u3001\u51b3\u7b56\u95e8\u3001 \u5ba1\u6838\u7ed3\u8bba\uff09\u4ee5\u7ed3\u6784\u5316\u4e8b\u4ef6\u843d\u76d8\uff0c\u652f\u6301\u591a\u7ef4\u67e5\u8be2\u3001\u6307\u6807\u805a\u5408\uff08\u9519\u8bef\u7387/\u5e73\u5747\u65f6\u5ef6/P95\uff09\u4e0e\u884c\u4e3a\u65f6\u95f4\u7ebf\u56de\u653e\uff0c \u4fbf\u4e8e\u4e8b\u540e\u5ba1\u8ba1\u3001\u6545\u969c\u5f52\u56e0\u4e0e\u7b56\u7565\u8c03\u4f18\u3002\u4e0e safety-guardrails\uff08\u51b3\u7b56\uff09\u548c human-in-loop-review\uff08\u5ba1\u6838\uff09 \u4e92\u8865\uff1a\u5b83\u4eec\u7684\u51b3\u7b56/\u5ba1\u6838\u4e8b\u4ef6\u90fd\u5e94 emit \u5230\u672c\u65e5\u5fd7\uff0c\u5f62\u6210\u5b8c\u6574\u53ef\u4fe1\u884c\u4e3a\u8f68\u8ff9\u3002 \u89e6\u53d1\u8bcd\uff1a\u884c\u4e3a\u53ef\u89c2\u6d4b\u6027\u3001\u884c\u4e3a\u8ffd\u8e2a\u3001\u5ba1\u8ba1\u65e5\u5fd7\u3001\u4e8b\u4ef6\u6eaf\u6e90\u3001observability\u3001trace\u3001agent \u76d1\u63a7\u3001 \u884c\u4e3a\u65f6\u95f4\u7ebf\u3001\u9519\u8bef\u7387\u7edf\u8ba1\u3002",
+  "updated_at": 1786671137559,
+  "version": "1.0.0"
+}
