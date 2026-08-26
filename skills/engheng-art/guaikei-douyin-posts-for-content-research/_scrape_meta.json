@@ -1,0 +1,75 @@
+{
+  "changelog": "- Initial release of guaikei\u6296\u97f3\u4f5c\u54c1\u5185\u5bb9\u8c03\u7814 skill.\n- Supports keyword search, creator post retrieval, video comment extraction, and real-time Douyin trending list for structured content research.\n- Triggered by both explicit queries (e.g. \"\u6296\u97f3\u70ed\u641c\", \"\u535a\u4e3b\u6700\u8fd1\u53d1\u4e86\u4ec0\u4e48\") and generalized research questions.\n- Strict environment variable token handling with clear error reporting and no hardcoded credentials.\n- Outputs structured JSON, with logs saved and comprehensive error handling.\n- Limited to public Douyin data only; does not support publishing, video editing, downloads, or use on other platforms.",
+  "created_at": 1787370248346,
+  "display_name": "guaikei-douyin-posts-for-content-research",
+  "fetched_at": 1787770016006,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/comment_cli_req.schema.json",
+    "assets/comment_cli_resp.schema.json",
+    "assets/hot_cli_resp.schema.json",
+    "assets/post_cli_req.schema.json",
+    "assets/post_cli_resp.schema.json",
+    "assets/search_cli_req.schema.json",
+    "assets/search_cli_resp.schema.json",
+    "package.json",
+    "readme.md",
+    "references/changelog.md",
+    "references/options.md",
+    "skill-card.md",
+    "src/api/comment.js",
+    "src/api/hot.js",
+    "src/api/post.js",
+    "src/api/search.js",
+    "src/config/constants.js",
+    "src/douyin/comment-cli.js",
+    "src/douyin/hot-cli.js",
+    "src/douyin/post-cli.js",
+    "src/douyin/search-cli.js",
+    "src/utils/args.js",
+    "src/utils/errors.js",
+    "src/utils/log.js",
+    "src/utils/name.js",
+    "src/utils/request.js",
+    "src/utils/retry.js",
+    "src/utils/token.js",
+    "src/utils/utils.js",
+    "src/validate/comment.js",
+    "src/validate/hot.js",
+    "src/validate/keyword.js",
+    "src/validate/post.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787372332166,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "engheng-art",
+    "handle": "engheng-art",
+    "user_id": "s17av7fakvdwpsbhaddxp8e7mh89wsrx"
+  },
+  "slug": "guaikei-douyin-posts-for-content-research",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/guaikei-douyin-posts-for-content-research",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=guaikei-douyin-posts-for-content-research&ownerHandle=engheng-art",
+    "page_url": "https://clawhub.ai/engheng-art/skills/guaikei-douyin-posts-for-content-research"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 96,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5f53\u7528\u6237\u95ee\"\u6296\u97f3\u641c\u4e00\u4e0b\"\"\u8fd9\u4e2a\u535a\u4e3b\u6700\u8fd1\u53d1\u4e86\u4ec0\u4e48\"\"\u8fd9\u6761\u89c6\u9891\u8bc4\u8bba\u600e\u4e48\u770b\"\"\u4eca\u5929\u6296\u97f3\u70ed\u641c\u662f\u4ec0\u4e48\"\u65f6\uff0c\u4f7f\u7528\u672c\u6280\u80fd\uff0c\u5206\u522b\u5bf9\u5e94\u641c\u7d22\u3001\u535a\u4e3b\u4f5c\u54c1\u3001\u8bc4\u8bba\u3001\u70ed\u699c\u56db\u9879\u80fd\u529b\u3002\u7528\u6237\u6362\u53e3\u8bed\u95ee\u6cd5\uff08\"\u7f51\u4e0a\u706b\u5565\"\"\u8bc4\u8bba\u533a\u5565\u98ce\u5411\"\uff09\u65f6\u540c\u6837\u89e6\u53d1\u3002\u4e0d\u9002\u7528\u4e8e\u5176\u4ed6\u5e73\u53f0\u6216\u89c6\u9891\u53d1\u5e03\u3002",
+  "updated_at": 1787370378370,
+  "version": "1.0.0"
+}
