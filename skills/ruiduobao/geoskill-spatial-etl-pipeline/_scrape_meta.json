@@ -1,0 +1,68 @@
+{
+  "changelog": "- Initial release of config-driven spatial ETL pipeline.\n- Supports extraction from synthetic data or local vector files.\n- Transformation with configurable, composable operators: filter_bbox, filter_attribute (with 6 operators), reproject, add_field, rename, buffer.\n- Per-step structured logging (step name, duration, feature counts, status).\n- Aggregates a quality report (feature gain/loss, retention rate, null-value ratio, invalid geometry count, CRS).\n- Flexible pipeline customization via JSON config file; fully offline operation supported.",
+  "created_at": 1785851357355,
+  "display_name": "geoskill-spatial-etl-pipeline",
+  "fetched_at": 1787773430903,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_run/etl_report.json",
+    "_test_cli_run/output-manifest.json",
+    "e2e_test.py",
+    "geoskill-spatial-etl-pipeline.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785852374118,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-spatial-etl-pipeline",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-spatial-etl-pipeline",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-spatial-etl-pipeline&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-spatial-etl-pipeline"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 190,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u914d\u7f6e\u9a71\u52a8\u7684\u63d0\u53d6-\u8f6c\u6362-\u52a0\u8f7d\u6d41\u6c34\u7ebf\uff0c\u542b\u5206\u6b65\u65e5\u5fd7\u4e0e\u8d28\u91cf\u62a5\u544a\u3002Config-driven extract-transform-load pipeline with per-step logging and a quality report.",
+  "updated_at": 1785851504454,
+  "version": "1.0.0"
+}
