@@ -1,0 +1,80 @@
+{
+  "changelog": "v0.6.1 \u2014 Security: defense-in-depth SQL escape on chunk_id and hash in plugin/lib/ngram.mjs. WSL2: multi-signal detection (kernel >=5, /run/WSL, WSLInterop-late, or explicit WSL2 suffix); WSL1 refused; warn on /mnt/c paths; install_bun() now invoked on fresh systems. Upgrade fix: ${ENCODED_EMAIL:-} so --upgrade no longer aborts under set -u. child_process usage remains bounded to local sqlite3 + qmd, declared in openclaw.plugin.json.",
+  "created_at": 1774150335574,
+  "display_name": "Openclaw Memory Stack",
+  "fetched_at": 1787787562363,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "install.sh",
+    "lib/adapter-template.sh",
+    "lib/contracts.sh",
+    "lib/dedup.sh",
+    "lib/distill.sh",
+    "lib/expertise.sh",
+    "lib/facts.sh",
+    "lib/hyde.sh",
+    "lib/license.sh",
+    "lib/platform.sh",
+    "lib/self-organize.sh",
+    "lib/tiered-loading.sh",
+    "plugin/dist/index.mjs",
+    "plugin/dist/lib/license.mjs",
+    "plugin/dist/lib/llm.mjs",
+    "plugin/lib/license.mjs",
+    "plugin/lib/llm.mjs",
+    "plugin/lib/state-io.mjs",
+    "plugin/lib/update-check.mjs",
+    "plugin/openclaw.plugin.json",
+    "plugin/package.json",
+    "skill-card.md",
+    "skills/memory-lossless/capability.json",
+    "skills/memory-lossless/wrapper.sh",
+    "skills/memory-nowledge/capability.json",
+    "skills/memory-nowledge/wrapper.sh",
+    "skills/memory-openviking/capability.json",
+    "skills/memory-openviking/wrapper.sh",
+    "skills/memory-qmd/SKILL.md",
+    "skills/memory-qmd/capability.json",
+    "skills/memory-qmd/wrapper.sh",
+    "skills/memory-router/SKILL.md",
+    "skills/memory-totalrecall/SKILL.md",
+    "skills/memory-totalrecall/capability.json",
+    "skills/memory-totalrecall/wrapper.sh",
+    "skills/memory-vertex/capability.json",
+    "skills/memory-vertex/wrapper.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090583191,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Apptah",
+    "handle": "apptah",
+    "user_id": "s170xd9yydt52xyh9fz43m12f983h58c"
+  },
+  "slug": "openclaw-memory-stack",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-memory-stack",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-memory-stack&ownerHandle=apptah",
+    "page_url": "https://clawhub.ai/apptah/skills/openclaw-memory-stack"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1026,
+    "installs": 27,
+    "stars": 1,
+    "versions": 40
+  },
+  "summary": "Total recall, 90% fewer tokens. Open source OpenClaw memory plugin \u2014 5-engine local search, structured fact extraction, smart dedup, cross-agent sharing, and...",
+  "updated_at": 1779078828906,
+  "version": "0.6.1"
+}
