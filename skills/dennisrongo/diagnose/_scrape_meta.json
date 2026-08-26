@@ -1,0 +1,33 @@
+{
+  "changelog": "- Initial release of the \"diagnose\" skill for disciplined debugging of hard bugs and performance regressions.\n- Introduces a structured, multi-phase approach: Reproduce \u2192 Minimise \u2192 Hypothesise \u2192 Instrument \u2192 Fix \u2192 Regression-test.\n- Non-trivial cases include a hypothesis council with parallel sub-agents, each defending distinct, falsifiable predictions with specific file:line evidence.\n- Clearly defines criteria for initiating the diagnose skill and guidance for when to skip steps.\n- Emphasizes the importance of building solid feedback loops and responding explicitly when one cannot be created.",
+  "created_at": 1786913339651,
+  "display_name": "diagnose",
+  "fetched_at": 1787771710811,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "diagnose",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/diagnose",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=diagnose&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/diagnose"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 20,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Disciplined diagnosis loop for hard bugs and performance regressions. Reproduce \u2192 minimise \u2192 hypothesise \u2192 instrument \u2192 fix \u2192 regression-test. On non-trivial cases, Phase 3 spawns parallel `Explore` sub-agents \u2014 each defending a distinct hypothesis with falsifiable predictions and `file:line` evidence \u2014 then a cross-examination round drops the ones whose defender couldn't find support, breaking the single-chain anchoring trap. Trivial bugs skip the council. Use this skill whenever the user says \"diagnose this\", \"debug this\", \"/diagnose\", reports a bug, says something is broken / throwing / failing / flaky / hanging / leaking, or describes a performance regression \u2014 even if they don't explicitly ask for a \"diagnose skill\".",
+  "updated_at": 1786913395583,
+  "version": "1.0.0"
+}
