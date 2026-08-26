@@ -1,0 +1,41 @@
+{
+  "changelog": "release-gate-audit v1.0.1\n\n- Initial public release of the release-gate-audit skill.\n- Audits the \"public face\" of a product (tracked files + all git history) before release, rather than just scanning the working directory.\n- Separately handles four risk categories (credentials for revocation, org-internal info for generalization, PII/portability issues, and local-only products to stop tracking).\n- Provides machine-verifiable remediation workflow (report comparison, residual history check, mandatory revocation list).\n- Completely open source and requires no external dependencies or packages; organization-specific keywords are externally injected.\n- Suitable for open-sourcing, pre-release compliance checks, sharing code/products, and internal information leak audits.",
+  "created_at": 1787048039943,
+  "display_name": "release-gate-audit",
+  "fetched_at": 1787771421087,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/logo.png",
+    "assets/logo.svg",
+    "assets/org-terms.txt",
+    "assets/self-audit-baseline.json",
+    "references/false-positive-playbook.md",
+    "references/threat-categories.md",
+    "scripts/release_gate.py",
+    "scripts/verify_remediation.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u817e\u8baf\u5f00\u6e90",
+    "handle": "tencent-adm",
+    "user_id": "s171cxjdnjyqjxa91pj2bfmr6x83gyg1"
+  },
+  "slug": "release-gate-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/release-gate-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=release-gate-audit&ownerHandle=tencent-adm",
+    "page_url": "https://clawhub.ai/tencent-adm/skills/release-gate-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 109,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u53d1\u5e03\u524d\u653e\u884c\u95e8\u7981\uff1a\u5224\u5b9a\u4e00\u4e2a\u4ea7\u7269\u80fd\u5426\u516c\u5f00\u53d1\u5e03\u3002\u4e0e\u5e38\u89c4\u5bc6\u94a5\u626b\u63cf\u5668\u7684\u6839\u672c\u533a\u522b\u662f\u5224\u5b9a\u5bf9\u8c61\u2014\u2014\u5b83\u4ee5 git \u5df2\u8ffd\u8e2a\u5185\u5bb9 + \u5168\u90e8\u63d0\u4ea4\u5386\u53f2\u6784\u6210\u7684\u300c\u516c\u5f00\u9762\u300d\u4e3a\u51c6\uff0c\u800c\u4e0d\u662f ls \u770b\u5230\u7684\u5de5\u4f5c\u76ee\u5f55\uff0c\u56e0\u6b64\u65e2\u4e0d\u4f1a\u628a\u672c\u5730\u6587\u4ef6\u8bef\u62a5\u6210\u6cc4\u9732\uff0c\u4e5f\u4e0d\u4f1a\u6f0f\u6389\u5f53\u524d\u5df2\u5220\u9664\u4f46\u4ecd\u5b58\u5728\u4e8e\u65e7 commit \u4e2d\u7684\u51ed\u8bc1\u3002\u56db\u7c7b\u5a01\u80c1\u5206\u79bb\u5904\u7f6e\uff08\u51ed\u8bc1\u9700\u540a\u9500 / \u96c7\u4e3b\u5185\u90e8\u4fe1\u606f\u9700\u6cdb\u5316 / PII \u517c\u53ef\u79fb\u690d\u6027\u7f3a\u9677 / \u672c\u5730\u4e13\u5c5e\u4ea7\u7269\u9700\u505c\u6b62\u8ffd\u8e2a\uff09\uff0c\u5e76\u63d0\u4f9b\u6574\u6539\u95ed\u73af\u7684\u673a\u5668\u9a8c\u8bc1\uff08\u524d\u540e\u62a5\u544a\u5bf9\u6bd4 + \u5386\u53f2\u6b8b\u7559\u6838\u67e5 + \u5f3a\u5236\u540a\u9500\u6e05\u5355\uff09\uff0c\u907f\u514d\u300e\u6211\u89c9\u5f97\u4fee\u597d\u4e86\u300f\u3002\u5185\u90e8\u8bcd\u8868\u4e00\u5f8b\u5916\u90e8\u6ce8\u5165\uff0c\u5de5\u5177\u81ea\u8eab\u53ef\u5f00\u6e90\u3002\u9002\u7528\u573a\u666f\uff1a\u5f00\u6e90\u4ed3\u5e93\u9996\u6b21\u516c\u5f00\u3001\u5206\u4eab skill/\u6587\u7ae0/demo/slide\u3001\u4ee3\u7801\u5916\u53d1\u3001\u5408\u89c4\u5ba1\u67e5\u3001\u53d1\u7248\u524d\u653e\u884c\u3001\u4ee5\u53ca\u6392\u67e5\u300e\u5185\u90e8\u4fe1\u606f\u662f\u5426\u6cc4\u9732\u5230\u516c\u5f00\u4ea7\u7269\u300f\u3002",
+  "updated_at": 1787048146298,
+  "version": "1.0.1"
+}
