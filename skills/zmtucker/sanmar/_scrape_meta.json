@@ -1,0 +1,56 @@
+{
+  "changelog": "Initial release of the deterministic SanMar API toolkit.\n\n- Wraps SanMar's SOAP web services and PromoStandards order-shipment service with typed CLI tools.\n- Supports product search, inventory and pricing checks, cart validation, purchase order submission/tracking, PO PDF parsing, and color code resolution.\n- Purely deterministic JSON-in/JSON-out interface, no external dependencies except Python 3.11+ and requests.\n- Supports optional features (PDF parse, SFTP color resolution) with pypdf/paramiko.\n- All actions accessible via a single CLI entrypoint.\n- Credentials are provided via environment variables or inline JSON; FTP credentials are handled separately.\n- Only purchase order creation is write-capable and requires explicit confirmation; all other actions are safe reads.",
+  "created_at": 1781648777162,
+  "display_name": "Sanmar",
+  "fetched_at": 1787780481545,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/README.md",
+    "references/auth_and_patterns.md",
+    "references/examples.md",
+    "references/ftp_feeds.md",
+    "references/purchase_orders.md",
+    "references/web_services.md",
+    "scripts/_cli.py",
+    "scripts/ftp_resolver.py",
+    "scripts/pdf_parser.py",
+    "scripts/sanmar.py",
+    "scripts/sanmar_client.py",
+    "scripts/sanmar_tools.py",
+    "scripts/schemas.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781695008400,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zmtucker",
+    "handle": "zmtucker",
+    "user_id": "s17fq291581evd78xzn1930b0n87bfny"
+  },
+  "slug": "sanmar",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sanmar",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sanmar&ownerHandle=zmtucker",
+    "page_url": "https://clawhub.ai/zmtucker/skills/sanmar"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 290,
+    "installs": 3,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Deterministic SanMar API toolkit \u2014 wraps SanMar's SOAP web services and PromoStandards order-shipment service behind typed CLI tools. Search products, check...",
+  "updated_at": 1781648777162,
+  "version": "0.1.0"
+}
