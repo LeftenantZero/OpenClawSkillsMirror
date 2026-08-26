@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of apify-keys skill.\n\n- Provides a rotating Apify API key manager using least-recently-used logic with balance verification.\n- Retrieves and updates key usage from the ColdCore MySQL database.\n- Offers CLI usage for getting keys, JSON output, checking balances, and listing all available keys.\n- Uses environment variables for database configuration with sensible defaults.\n- Designed to be easily integrated with other scripts and skills.",
+  "created_at": 1774329008707,
+  "display_name": "Apify Keys",
+  "fetched_at": 1787787511370,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/get_key.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090063591,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "aces1up",
+    "handle": "aces1up",
+    "user_id": "s1740avm8hpy6c4p010vsj1jm583gvsc"
+  },
+  "slug": "apify-keys",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/apify-keys",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=apify-keys&ownerHandle=aces1up",
+    "page_url": "https://clawhub.ai/aces1up/skills/apify-keys"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 596,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Rotating Apify API key manager. Returns the least-recently-used active Apify key from the ColdCore database. Use before any Apify API call to get a fresh key...",
+  "updated_at": 1779078846075,
+  "version": "1.0.0"
+}
