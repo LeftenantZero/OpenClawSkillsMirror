@@ -1,0 +1,49 @@
+{
+  "changelog": "**v1.1.0 is a major update for compatibility with MGC 1.4.10 and functional enhancements:**\n\n- Upgraded the skill to work with MGC 1.4.10 (minimum requirement now 1.4.9+).\n- Fixed `mgc_run` usage: the ext02 parameter must now be a JSON array string.\n- Added documentation and usage notes for the new `mgc_find` fuzzy search tool.\n- Noted that `mgc_run` only returns process id and status; output is no longer provided directly.\n- Added guidance on MGC 1.4.9+ sandbox mode compatibility and special considerations.\n- Updated documentation links and clarified that main doc is referenced from the WebUI \"MGC Skills\" button.",
+  "created_at": 1784645438690,
+  "display_name": "Multi-Agent Safe-Cooperation (Single Device)",
+  "fetched_at": 1787771487698,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "prompts/cooperation_best_practice.md",
+    "prompts/executor_agent.md",
+    "prompts/master_agent.md",
+    "prompts/script_agent.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787023473649,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zkeviny",
+    "handle": "zkeviny",
+    "user_id": "s173fckt3bzxxvt9dfp0rrdeg1894z72"
+  },
+  "slug": "mgc-task-chain-meta-skill-en",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mgc-task-chain-meta-skill-en",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mgc-task-chain-meta-skill-en&ownerHandle=zkeviny",
+    "page_url": "https://clawhub.ai/zkeviny/skills/mgc-task-chain-meta-skill-en"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 330,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "A single-device multi-Agent task chain collaboration methodology based on MGC. Through Master Agent orchestration, Script Agent scripting, and Executor Agent execution, achieves zero-exposure security collaboration for sensitive resources. Adapted to MGC 1.4.10.",
+  "updated_at": 1787022792719,
+  "version": "1.1.0"
+}
