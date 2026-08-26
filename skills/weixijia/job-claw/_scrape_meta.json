@@ -1,0 +1,53 @@
+{
+  "changelog": "Auto-published from commit 142ceea: feat: auto-archive expired jobs (matches web app rules)\n\n- archiver.py: three rules \u2014 expired_30d, auto_rejected, url_dead\n  - 30d: New/Interested with no update \u2192 expired_30d\n  - 60d: Rejected/Passed cleanup \u2192 auto_rejected\n  - URL check: non-LinkedIn 404/dead-phrase \u2192 url_dead\n  - LinkedIn skipped (always inconclusive)\n  - Dry-run by default, --commit to apply\n  - --restore to bring jobs back from archive\n  - --stats for archive summary\n- run_daily.sh: auto-archive runs after every daily search\n- notify.py: shows archived count in daily summary message\n- SKILL.md + references/commands.md: archive commands documented",
+  "created_at": 1773956436220,
+  "display_name": "JobClaw",
+  "fetched_at": 1787787986992,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/config.example.json",
+    "references/commands.md",
+    "references/keywords.md",
+    "references/screening_guide.md",
+    "scripts/archiver.py",
+    "scripts/notify.py",
+    "scripts/run_daily.sh",
+    "scripts/search.py",
+    "scripts/setup.py",
+    "scripts/tracker.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090180774,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Simon",
+    "handle": "weixijia",
+    "user_id": "s179ae7jzj8401pfgr8w2z8dn583v3mb"
+  },
+  "slug": "job-claw",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/job-claw",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=job-claw&ownerHandle=weixijia",
+    "page_url": "https://clawhub.ai/weixijia/skills/job-claw"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1077,
+    "installs": 29,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "AI-powered automated job search skill. Searches LinkedIn and Indeed daily, scores jobs against the user's profile, and saves results to a local CSV. Use when...",
+  "updated_at": 1779078570107,
+  "version": "1.0.20260329-142ceea"
+}
