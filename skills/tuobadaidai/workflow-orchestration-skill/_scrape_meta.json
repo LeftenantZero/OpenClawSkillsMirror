@@ -1,0 +1,45 @@
+{
+  "changelog": "Fix: depth UnboundLocalError when constraints=None; Implement max_parallelism validation; Fix dag_patterns cycle vs DAG conflict (patterns 5,6 marked as future); Fix validate_scope: entry nodes allowed empty scoped_state_keys (warn, not error)",
+  "created_at": 1780368193670,
+  "display_name": "Workflow Orchestration Skill",
+  "fetched_at": 1787783494527,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/output_schema.json",
+    "assets/sample_input.json",
+    "assets/sample_plan.json",
+    "references/dag_patterns.md",
+    "references/orchestration_rules.md",
+    "references/scope_rules.md",
+    "references/security_guardrails.md",
+    "scripts/bind_skills.py",
+    "scripts/compile_plan.py",
+    "scripts/validate_schema.py",
+    "scripts/validate_scope.py",
+    "scripts/validate_topology.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "tuobadaidai",
+    "handle": "tuobadaidai",
+    "user_id": "s171s30jbmhtrc2kxbr4hxmyn583gsk3"
+  },
+  "slug": "workflow-orchestration-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/workflow-orchestration-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=workflow-orchestration-skill&ownerHandle=tuobadaidai",
+    "page_url": "https://clawhub.ai/tuobadaidai/skills/workflow-orchestration-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 462,
+    "installs": 7,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06\u590d\u6742\u4e1a\u52a1\u76ee\u6807\u7f16\u8bd1\u4e3a\u53ef\u9759\u6001\u6821\u9a8c\u7684\u5de5\u4f5c\u6d41\u6267\u884c\u8ba1\u5212\uff08Plan IR\uff09\u3002 Use when user asks to \u7f16\u6392\u591a\u6b65\u4efb\u52a1\u3001\u89c4\u5212\u5de5\u4f5c\u6d41\u3001\u751f\u6210DAG\u6267\u884c\u8ba1\u5212\u3001 \u591aSkill\u7f16\u6392\u3001\u4efb\u52a1\u62c6\u89e3\u4e3aDAG\u3001\u751f\u6210\u7ed3\u6784\u5316\u6267\u884c\u8ba1\u5212\u3001workflow planning. \u4e0d\u9002\u7528\u4e8e\u5355\u8f6e\u95ee\u7b54/\u5355\u5de5\u5177\u64cd\u4f5c/\u7eaf\u6587\u672c\u6539\u5199/\u8f7b\u4efb\u52a1\u3002",
+  "updated_at": 1780368193670,
+  "version": "1.0.1"
+}
