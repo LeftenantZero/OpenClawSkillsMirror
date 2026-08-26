@@ -1,0 +1,38 @@
+{
+  "changelog": "Initial release of novel-to-audiobook skill.\n\n- Converts novel chapters into audiobooks (MP3) with automatic segmentation and character voice assignment.\n- Supports text input or file path for chapter content.\n- Analyzes narrative/dialogue, assigns voices, and generates background music to match chapter mood.\n- Integrates DeepSeek for content analysis and MiniMax for TTS and music generation (API key required).\n- Outputs final audiobook with mixed background music, plus details such as file path, duration, and character list.\n- Users can customize narrator/character voices, music style, and output location in config.json.",
+  "created_at": 1780401719218,
+  "display_name": "Novel To Audiobook Hznuyx17",
+  "fetched_at": 1787783343960,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "scripts/audio_assembler.py",
+    "scripts/chapter_analyzer.py",
+    "scripts/music_generator.py",
+    "scripts/tts_generator.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "lws-lzh",
+    "handle": "lws-lzh",
+    "user_id": "s1791h675pgnfd2shnxbnrs4dh87wsej"
+  },
+  "slug": "novel-to-audiobook-hznuyx17",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/novel-to-audiobook-hznuyx17",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=novel-to-audiobook-hznuyx17&ownerHandle=lws-lzh",
+    "page_url": "https://clawhub.ai/lws-lzh/skills/novel-to-audiobook-hznuyx17"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 431,
+    "installs": 7,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06\u5c0f\u8bf4\u7ae0\u8282\u8f6c\u6362\u4e3a\u6709\u58f0\u4e66\uff08MP3\uff09\u3002\u5f53\u7528\u6237\u63d0\u5230\uff1a\u8f6c\u6709\u58f0\u4e66\u3001\u751f\u6210\u6709\u58f0\u4e66\u3001\u505a\u6210\u97f3\u9891\u3001\u542c\u4e66\u3001\u6717\u8bfb\u7ae0\u8282\u3001\u8bed\u97f3\u7248\u65f6\u4f7f\u7528\u3002\u81ea\u52a8\u5206\u6790\u7ae0\u8282\u5185\u5bb9\uff0c\u8bc6\u522b\u5bf9\u8bdd\u89d2\u8272\u5e76\u5206\u914d\u4e0d\u540c\u97f3\u8272\uff0c\u751f\u6210\u5e26\u80cc\u666f\u97f3\u4e50\u7684\u5b8c\u6574\u6709\u58f0\u4e66\u3002",
+  "updated_at": 1780401719218,
+  "version": "1.0.0"
+}
