@@ -1,0 +1,70 @@
+{
+  "changelog": "Initial release of Heatwave Impact Assessment skill.\n\n- Detects per-pixel heatwaves using P90 percentile threshold and connected-run (\u22653 days) detection.\n- Classifies wet-bulb temperature health risks using Stull or simplified formula.\n- Maps exposed population and computes a composite vulnerability index.\n- Supports fully offline analysis and a synthetic data generation mode for workflow verification.\n- Outputs results as GeoTIFFs (heatwave days, exposure, vulnerability, risk) and event summary JSONs.",
+  "created_at": 1785845625262,
+  "display_name": "geoskill-heatwave-impact-assessment",
+  "fetched_at": 1787773481978,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_out/heatwave_events.json",
+    "_test_cli_out/output-manifest.json",
+    "_test_cli_simple/heatwave_events.json",
+    "_test_cli_simple/output-manifest.json",
+    "e2e_test.py",
+    "geoskill-heatwave-impact-assessment.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785846647637,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-heatwave-impact-assessment",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-heatwave-impact-assessment",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-heatwave-impact-assessment&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-heatwave-impact-assessment"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 173,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u70ed\u6d6a\u5f71\u54cd\u8bc4\u4f30\uff1a\u9010\u50cf\u5143 P90 \u5206\u4f4d\u6570\u9608\u503c + \u8fde\u7eed\u22653\u5929\u8fde\u901a\u57df\u70ed\u6d6a\u68c0\u6d4b\uff0cStull/\u7b80\u5316\u6e7f\u7403\u6e29\u5ea6\u5065\u5eb7\u98ce\u9669\u5206\u7ea7\uff0c\u4eba\u53e3\u66b4\u9732\u4e0e\u8106\u5f31\u6027\u5236\u56fe\u3002Heatwave impact assessment: per-pixel P90 threshold with connected-run detection, wet-bulb temperature health risk, population exposure and vulnerability mapping. \u8f93\u51fa\u70ed\u6d6a\u65e5\u6570/\u66b4\u9732\u4eba\u53e3/\u8106\u5f31\u6027/\u6e7f\u7403\u98ce\u9669 GeoTIFF + \u4e8b\u4ef6\u6e05\u5355 JSON\u3002",
+  "updated_at": 1785845790674,
+  "version": "1.0.0"
+}
