@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release supporting ProxyLLM account setup and management for agents:\n\n- Automates signup for a ProxyLLM (OpenAI-compatible) account using operator email and OTP.\n- Handles paywall step: relays checkout link/message, polls until subscription active.\n- Supports provisioning routing keys and wiring provider lanes (e.g., Codex subscription seat).\n- Guides operator-assisted steps for connecting subscriptions.\n- Instructs on using ProxyLLM as a drop-in OpenAI endpoint for agent LLM access.\n- Documents introspection endpoints, limits, and billing boundaries.",
+  "created_at": 1784059736535,
+  "display_name": "Proxyllm Account",
+  "fetched_at": 1787776746881,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784060168857,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Eric Otten",
+    "handle": "ericslab",
+    "user_id": "s17954nhfqp6zdh3q48afags718ahzz7"
+  },
+  "slug": "proxyllm-account",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/proxyllm-account",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=proxyllm-account&ownerHandle=ericslab",
+    "page_url": "https://clawhub.ai/ericslab/skills/proxyllm-account"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 263,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Give your agent its own LLM gateway account. Signs up for ProxyLLM (an OpenAI-compatible gateway with fallback lanes, budgets, and request logs) autonomously...",
+  "updated_at": 1784059736535,
+  "version": "1.0.0"
+}
