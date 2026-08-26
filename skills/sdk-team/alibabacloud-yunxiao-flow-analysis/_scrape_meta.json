@@ -1,0 +1,72 @@
+{
+  "changelog": "**Security improvements and environment variable enforcement**\n\n- Personal Access Token authentication is now strictly enforced via the YUNXIAO_ACCESS_TOKEN environment variable; command-line arguments for the token are no longer supported.\n- Enhanced security: token is masked in output, format-validated, and never echoed, hardcoded, or requested from users directly.\n- Updated documentation to reflect exclusive environment variable usage for tokens, along with improved permission failure handling guides.\n- Added new reference: ram-policies.md for clarity on required permissions.\n- Removed the deprecated skill-card.md file.",
+  "created_at": 1781578778029,
+  "display_name": "Alibabacloud Yunxiao Flow Analysis",
+  "fetched_at": 1787777309621,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/flow_build_docker.md",
+    "references/flow_build_java.md",
+    "references/flow_build_nodeJs.md",
+    "references/flow_build_python.md",
+    "references/flow_customEnvironmentBuild.md",
+    "references/flow_deploy_docker.md",
+    "references/flow_deploy_fc.md",
+    "references/flow_deploy_kubectl.md",
+    "references/flow_deploy_vm.md",
+    "references/flow_git_clone.md",
+    "references/flow_test_golang.md",
+    "references/flow_test_maven.md",
+    "references/flow_test_nodeJS.md",
+    "references/flow_test_php.md",
+    "references/flow_test_python.md",
+    "references/flow_variables.md",
+    "references/flow_workspace_runtime.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/troubleshooting-guide.md",
+    "references/verification-method.md",
+    "references/yunxiao_base.md",
+    "references/yunxiao_flow_get_pipeline_runs.md",
+    "scripts/webTerminal.py",
+    "scripts/yunxiao_flow_get_job_step_log.py",
+    "scripts/yunxiao_flow_get_pipeline_runs.py",
+    "scripts/yunxiao_flow_get_vm_deploy_machine_log.py",
+    "scripts/yunxiao_flow_get_vm_deploy_order.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783673599214,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-yunxiao-flow-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-yunxiao-flow-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-yunxiao-flow-analysis&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-yunxiao-flow-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 519,
+    "installs": 3,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Yunxiao Flow Pipeline Troubleshooting and Solutions. Used to diagnose pipeline execution failures and provide fix recommendations. Trigger scenarios: Pipelin...",
+  "updated_at": 1783672866986,
+  "version": "0.0.1"
+}
