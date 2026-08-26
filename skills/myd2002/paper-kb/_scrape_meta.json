@@ -1,0 +1,53 @@
+{
+  "changelog": "**Summary:**\nCritical instructions and warnings added to ensure correct PDF saving in Gitea during paper ingestion.\n\n- \u660e\u786e\u8981\u6c42\u5728 arxiv \u6d41\u7a0b(B4)\u548c PDF \u6d41\u7a0b(C5)\u4e2d\uff0c\u5fc5\u987b\u539f\u6837\u4f20\u5165 pdf_local_path \u5b57\u6bb5\uff0c\u76f4\u63a5\u5f15\u81ea\u4e0a\u6e38\u63a5\u53e3\u8fd4\u56de\uff0c\u786e\u4fdd PDF \u6587\u4ef6\u88ab\u4fdd\u5b58\u5230 Gitea\u3002\n- \u63d0\u793a\uff1a\u5982\u679c\u7701\u7565 pdf_local_path \u5b57\u6bb5\uff0cPDF \u6587\u4ef6\u5c06\u4e0d\u4f1a\u5165\u5e93\uff0c\u4ec5\u4f1a\u4fdd\u5b58 MD \u4fe1\u606f\u3002\n- C5 \u6b65\u9aa4\u4e2d\u52a0\u5f3a\u8bf4\u660e\uff1a\u7528\u6237\u4e0a\u4f20\u7684 PDF\uff0c\u5fc5\u987b\u4f20\u5165 OpenClaw \u63d0\u4f9b\u7684\u539f\u59cb\u672c\u5730\u8def\u5f84\u4f5c\u4e3a pdf_local_path\u3002\n- \u4ec5\u4e3a\u5b9e\u73b0\u548c\u5408\u89c4\u6027\u6587\u5b57\u589e\u5f3a\uff0c\u672a\u6539\u52a8\u6574\u4f53\u6d41\u7a0b\u8bbe\u8ba1\u6216\u529f\u80fd\u3002\n- \u5176\u4ed6\u6b65\u9aa4\u6216\u63a5\u53e3\u672a\u505a\u66f4\u6539\u3002",
+  "created_at": 1780149381105,
+  "display_name": "Paper Kb",
+  "fetched_at": 1787783848881,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "env-example.txt",
+    "main.js",
+    "requirements.txt",
+    "scripts/ingest_paper.py",
+    "scripts/init_user.py",
+    "scripts/query_papers.py",
+    "scripts/utils/__init__.py",
+    "scripts/utils/arxiv_client.py",
+    "scripts/utils/gitea_client.py",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780154790369,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "myd2002",
+    "handle": "myd2002",
+    "user_id": "s175zrvz5m28epr76c6rt4dtex8474t6"
+  },
+  "slug": "paper-kb",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/paper-kb",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=paper-kb&ownerHandle=myd2002",
+    "page_url": "https://clawhub.ai/myd2002/skills/paper-kb"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 594,
+    "installs": 12,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Research paper knowledge base for storing and querying academic papers. Activate when: 1. User shares an arxiv link or PDF file AND expresses intent to save/...",
+  "updated_at": 1780154432408,
+  "version": "1.0.2"
+}
