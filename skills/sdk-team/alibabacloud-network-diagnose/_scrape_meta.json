@@ -1,0 +1,61 @@
+{
+  "changelog": "Initial public release of alibabacloud-network-diagnose.\n\n- Provides a private network connectivity diagnosis tool for Alibaba Cloud VPC/ECS/NAT/CEN/VPN/Express Connect scenarios.\n- Enforces strict first-step environment and input parsing using skill-provided scripts; blocks workflow until sufficient endpoint info is provided.\n- Does not support diagnosis of classic network, public internet, DNS, CDN, SLB, or WAF issues.\n- All diagnostic logic is handled through Python wrapper scripts; never inspects the agent runner/container environment.\n- Requires Python 3.7+, aliyun CLI, and configured Alibaba Cloud credentials.\n- Supports multi-fault investigation, enforcing bidirectional route checks, and session-based CLI user-agent tracking.",
+  "created_at": 1785380794985,
+  "display_name": "alibabacloud-network-diagnose",
+  "fetched_at": 1787774221955,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api-reference.md",
+    "references/cen-diagnosis.md",
+    "references/cli-installation-guide.md",
+    "references/examples.md",
+    "references/ram-policies.md",
+    "references/report-template.md",
+    "references/root-cause-priority.md",
+    "scripts/check-write-operation.sh",
+    "scripts/detect_python.sh",
+    "scripts/net_analyze.py",
+    "scripts/net_common.py",
+    "scripts/net_cross_vpc.py",
+    "scripts/net_ecs.py",
+    "scripts/net_hybrid.py",
+    "scripts/net_report.py",
+    "scripts/net_vpc.py",
+    "scripts/requirements.txt",
+    "scripts/validate_skill.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785382628559,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-network-diagnose",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-network-diagnose",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-network-diagnose&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-network-diagnose"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 235,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "[project] [user] Alibaba Cloud private network connectivity diagnosis tool. Use when ECS ping/telnet fails, same-VPC access fails, cross-VPC access fails, VPN or Express Connect is unreachable, NAT Gateway DNAT/SNAT behaves asymmetrically, or the user suspects security group, network ACL, route table, CEN/TR, VPC Peering, VPN Gateway, VBR, or NAT Gateway blocking. Not for classic network, public internet access, DNS resolution, CDN, SLB, or WAF issues.",
+  "updated_at": 1785381848690,
+  "version": "0.0.1"
+}
