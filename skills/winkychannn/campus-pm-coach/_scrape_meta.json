@@ -1,0 +1,57 @@
+{
+  "changelog": "- Improved hallucination safety in resume optimization: quantitative placeholders are now clearly quoted and no longer impact scoring.\n- Enhanced verb handling: scores avoid penalizing standard strong verbs (\"\u8d1f\u8d23/\u53c2\u4e0e/\u534f\u52a9\"), and default optimizations upgrade weak verbs and remove filler words.\n- Optimization fairness: meta information is stripped before scoring to ensure optimized resumes are assessed on content only.\n- Added closed-loop review: optimized resumes are auto-checked for scoring consistency with automated alerts for abnormal drops.\n- Minor documentation and clarity improvements throughout SKILL.md.\n- Removed unused skill-card.md file.",
+  "created_at": 1786708649403,
+  "display_name": "\u6821\u62db\u4ea7\u54c1\u7ecf\u7406\u6559\u7ec3",
+  "fetched_at": 1787772028668,
+  "files": [
+    "FINAL_REVIEW.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/default_dimensions.json",
+    "config/interview_templates.json",
+    "sample/jd.txt",
+    "sample/output/00_\u00e9\u00a6\u0096\u00e8\u00bd\u00ae\u00e8\u00af\u008a\u00e6\u0096\u00ad\u00e6\u008a\u00a5\u00e5\u0091\u008a.md",
+    "sample/output/01_\u00e8\u00af\u0084\u00e5\u0088\u0086\u00e6\u008a\u00a5\u00e5\u0091\u008a.md",
+    "sample/output/02_\u00e4\u00bc\u0098\u00e5\u008c\u0096\u00e5\u0090\u008e\u00e7\u00ae\u0080\u00e5\u008e\u0086.md",
+    "sample/output/03_\u00e8\u00af\u0084\u00e5\u0088\u0086\u00e7\u00bb\u0093\u00e6\u009e\u009c.json",
+    "sample/output/04_\u00e6\u00a8\u00a1\u00e6\u008b\u009f\u00e9\u009d\u00a2\u00e8\u00af\u0095\u00e9\u00a2\u0098.md",
+    "sample/resume.txt",
+    "scripts/env_loader.py",
+    "scripts/evaluator.py",
+    "scripts/formatter.py",
+    "scripts/interviewer.py",
+    "scripts/llm_client.py",
+    "scripts/main.py",
+    "scripts/ocr_service.py",
+    "scripts/ocr_utils.py",
+    "scripts/optimizer.py",
+    "scripts/requirements.txt",
+    "scripts/resume_parser.py",
+    "scripts/rule_engine.py",
+    "scripts/tests/test_e2e.py",
+    "scripts/tests/test_unit.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "winkychannn",
+    "handle": "winkychannn",
+    "user_id": "s1783jd2pkkdj1m9gpfj2887zn8cf1d3"
+  },
+  "slug": "campus-pm-coach",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/campus-pm-coach",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=campus-pm-coach&ownerHandle=winkychannn",
+    "page_url": "https://clawhub.ai/winkychannn/skills/campus-pm-coach"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 171,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "\u4e3a\u6821\u62db/\u5b9e\u4e60\u4e92\u8054\u7f51\u4ea7\u54c1\u7ecf\u7406\u5019\u9009\u4eba\u63d0\u4f9b\u4e00\u7ad9\u5f0f\u5e94\u8058\u52a9\u624b\u3002\u4e13\u4e1a\u8bc4\u5206\uff1a\u57fa\u4e8e 5 \u7ef4\u5ea6 100 \u5206\u5236\u4f53\u7cfb\uff08\u7ecf\u9a8c\u5339\u914d\u5ea6\u3001\u903b\u8f91\u80fd\u529b\u3001\u8868\u8fbe\u80fd\u529b\u3001AI \u63a2\u7d22\u3001\u4e2a\u4eba\u7d20\u517b\uff09\u8bc4\u4f30\u7b80\u5386\u3002\u4e00\u952e\u4f18\u5316\uff1a\u6309 STAR \u6846\u67b6\u4e0e\u5317\u6781\u661f\u6307\u6807\u91cd\u6784\u7b80\u5386\uff0c\u8f93\u51fa .docx \u6587\u6863\u3002JD \u62bc\u9898\uff1a\u57fa\u4e8e\u5c97\u4f4d JD \u9884\u6d4b 8-12 \u9053\u9762\u8bd5\u9898\uff0c\u9644\u7b54\u9898\u601d\u8def\u3002\u4e09\u5927\u80fd\u529b\u53ef\u4e32\u8054\u4f7f\u7528\uff1a\u8bc4\u5206\u2192\u4f18\u5316\u2192\u62bc\u9898\u3002",
+  "updated_at": 1786713437823,
+  "version": "1.0.1"
+}
