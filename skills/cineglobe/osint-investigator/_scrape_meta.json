@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of OSINT Investigator \u2013 a comprehensive, multi-source open-source intelligence gathering skill.\n\n- Automatically classifies targets (person, username, domain, IP, organization, etc.) and selects relevant investigation modules.\n- Executes deep web, social media, DNS/WHOIS, IP, email, phone, image, map/location, and corporate intelligence searches.\n- Sign in options/api keys for   (optional)\n  \u2022 Instagram (username + password)\n  \u2022 Twitter/X (Bearer Token \u2014 free API v2 tier works)\n  \u2022 LinkedIn (email + password)\n  \u2022 Facebook (email + password)\n  \u2022 Google Maps (API key \u2014 geocoding, places, Street View)\n  \u2022 Shodan (API key \u2014 deep IP intel)\n  \u2022 HaveIBeenPwned (API key \u2014 breach lookups)\n  \u2022 Hunter.io (email discovery)\n  \u2022 AbstractAPI (phone lookup)\n\n- Runs all applicable modules in parallel for thorough results.\n- Aggregates and cross-references findings across multiple sources.\n- Outputs a structured, actionable intelligence report for any investigated target.",
+  "created_at": 1772016218812,
+  "display_name": "OSINT Investigator",
+  "fetched_at": 1787778137704,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/osint_config.json",
+    "references/osint-sources.md",
+    "references/social-platforms.md",
+    "scripts/generate_pdf.py",
+    "scripts/generate_pdf.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779958943979,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "cineglobe",
+    "handle": "cineglobe",
+    "user_id": "s172kmdcj842vh12s4zwxbbk01884c9c"
+  },
+  "slug": "osint-investigator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/osint-investigator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=osint-investigator&ownerHandle=cineglobe",
+    "page_url": "https://clawhub.ai/cineglobe/skills/osint-investigator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2703,
+    "installs": 78,
+    "stars": 5,
+    "versions": 1
+  },
+  "summary": "Deep OSINT (Open Source Intelligence) investigations. Use when the user wants to research, find, or investigate any person, place, organisation, username, do...",
+  "updated_at": 1779077346649,
+  "version": "1.0.0"
+}
