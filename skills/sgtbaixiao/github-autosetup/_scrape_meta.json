@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial public release with full automated GitHub/git setup via Git Bash:\n\n- Automated end-to-end configuration: environment detection, protocol selection, browser OAuth, SSH key generation with passphrase, repository creation, and auto-push setup.\n- Pure Git Bash implementation; PowerShell completely avoided due to encoding/permission issues.\n- Sensible default security: no secrets/tokens/passwords appear in logs, history, or chat; all sensitive operations via interactive terminal or system keyring.\n- Supports both https+GCM and SSH channels based on network reachability.\n- Automatically installs post-commit hook and scheduled tasks for reliable auto-push operation.\n- Comprehensive troubleshooting, security self-check, and support for Windows (Git Bash verified), macOS/Linux (with adjustments).",
+  "created_at": 1786282728759,
+  "display_name": "github-autosetup",
+  "fetched_at": 1787773032347,
+  "files": [
+    ".claude-plugin/plugin.json",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/install-autopush.sh",
+    "scripts/probe.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786283481352,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "SgtBaixiao",
+    "handle": "sgtbaixiao",
+    "user_id": "s172yq424m3anmm92ags91c9xx8c5ac5"
+  },
+  "slug": "github-autosetup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/github-autosetup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=github-autosetup&ownerHandle=sgtbaixiao",
+    "page_url": "https://clawhub.ai/sgtbaixiao/skills/github-autosetup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1233,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u81ea\u52a8\u5316\u914d\u7f6e pi \u5728 GitHub/git \u7684\u884c\u52a8\uff08\u7eaf Git Bash \u9a71\u52a8\uff09\uff1a\u73af\u5883\u63a2\u6d4b \u2192 \u4f20\u8f93\u901a\u9053\u51b3\u7b56\uff08https/GCM \u6216 SSH\uff09\u2192 \u6d4f\u89c8\u5668 OAuth \u2192 \u5e26\u53e3\u4ee4 SSH \u5bc6\u94a5 + agent \u2192 \u5efa\u4ed3\u63a8\u9001 \u2192 post-commit \u81ea\u52a8\u63a8\u9001 + \u8ba1\u5212\u4efb\u52a1\u515c\u5e95\u3002\u5185\u7f6e\u654f\u611f\u4fe1\u606f\u4f20\u9012 SOP\uff08\u4ee4\u724c/\u53e3\u4ee4/\u5bc6\u94a5/cookie \u96f6\u660e\u6587\uff09\u3002\u5f53\u7528\u6237\u8bf4\"\u914d\u7f6e github / \u81ea\u52a8\u63a8\u9001 / \u5efa\u4ed3\u5e93 / \u63a8\u9001\u4ed3\u5e93 / \u914d\u7f6e git\"\u65f6\u4f7f\u7528\u3002",
+  "updated_at": 1786282812303,
+  "version": "0.1.0"
+}
