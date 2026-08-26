@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of the media-data-scraper skill.\n\n- Supports data scraping for Douyin, Xiaohongshu, Bilibili, Kuaishou, and WeChat Channels (\u89c6\u9891\u53f7) without login, API Key, or fees.\n- Extracts core metrics: views, likes, comments, shares, and collections for each platform.\n- Includes robust handling for Xiaohongshu\u2019s xsec_token and fallback browser workflows for platforms with API/access limitations.\n- Optional Feishu (Lark) Bitable integration for automatic data sync.\n- Provides both script-based and browser-based scraping methodologies, with DrissionPage support as a backup automation tool.\n- Thorough user guidance for installation, environment preparation, and troubleshooting.",
+  "created_at": 1781590565678,
+  "display_name": "\u5168\u7f51\u4f5c\u54c1\u6570\u636e\u6293\u53d6\u5206\u6790\u5de5\u5177\uff08\u6296\u97f3\u5c0f\u7ea2\u4e66\u89c6\u9891\u53f7\u5feb\u624bB\u7ad9\u901a\u7528\uff09",
+  "fetched_at": 1787780637838,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "appreciation.py",
+    "feishu_sync.py",
+    "scraper.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781625437810,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wu1982966308",
+    "handle": "wu1982966308",
+    "user_id": "s174pgy3t1ppv7k1qgsr4ae04188rsgz"
+  },
+  "slug": "media-data-scraper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/media-data-scraper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=media-data-scraper&ownerHandle=wu1982966308",
+    "page_url": "https://clawhub.ai/wu1982966308/skills/media-data-scraper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 400,
+    "installs": 5,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6293\u53d6\u6296\u97f3\u3001\u5c0f\u7ea2\u4e66\u3001B\u7ad9\u3001\u5feb\u624b\u3001\u89c6\u9891\u53f7\u4e94\u5927\u5e73\u53f0\u4f5c\u54c1\u6570\u636e\uff08\u64ad\u653e/\u70b9\u8d5e/\u8bc4\u8bba/\u5206\u4eab/\u6536\u85cf\uff09\uff0c\u5b8c\u5168\u514d\u8d39\uff0c\u65e0\u9700\u767b\u5f55/API Key/\u4ed8\u8d39\u3002\u652f\u6301\u98de\u4e66\u591a\u7ef4\u8868\u683c\u540c\u6b65\u3002",
+  "updated_at": 1781590565678,
+  "version": "1.0.0"
+}
