@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of math-screenshot-to-giscus:  \n\n- Converts Chinese math textbook screenshots or text (with formulas) into giscus/GitHub Discussion compatible Markdown.\n- Handles two input types: screenshots use vision_analyze for symbol confirmation and explanation; text input is converted directly without analysis unless requested.\n- Ensures all LaTeX commands use double backslashes (e.g., \\\\\\\\frac) for reliable rendering in GitHub MathJax.\n- Clearly documents handling of unsupported LaTeX matrix environments and provides alternative formatting strategies.\n- Highlights critical pitfalls\u2014such as issues with Chinese punctuation adjacent to $...$, and avoiding \\begin{bmatrix}\u2014with tested solutions.\n- Outputs both Markdown source (for user copy-paste) and rendered previews; for complex cases, supports file-based delivery to avoid copy/paste issues with double backslashes.",
+  "created_at": 1782988276938,
+  "display_name": "Math Screenshot To Giscus",
+  "fetched_at": 1787778321926,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "yuancaoyaoHW",
+    "handle": "yuancaoyaohw",
+    "user_id": "s17fd85031aq5jykmsna3e6grn89scvg"
+  },
+  "slug": "math-screenshot-to-giscus",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/math-screenshot-to-giscus",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=math-screenshot-to-giscus&ownerHandle=yuancaoyaohw",
+    "page_url": "https://clawhub.ai/yuancaoyaohw/skills/math-screenshot-to-giscus"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 247,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u628a\u6570\u5b66\u6559\u6750\u622a\u56fe\u6216\u6587\u672c(\u4e2d\u6587,\u542b\u516c\u5f0f)\u8f6c\u6210 giscus/GitHub Discussion \u53ef\u6e32\u67d3\u7684\u7248\u672c\u3002\u622a\u56fe\u7528 vision_analyze \u9010\u5b57\u786e\u8ba4\u7b26\u53f7; \u6587\u672c\u8f93\u5165\u4e00\u822c\u76f4\u63a5\u8f6c\u683c\u5f0f(\u4e0d\u505a\u5206\u6790),\u8f93\u51fa GitHub MathJax \u517c\u5bb9 Markdown\u3002",
+  "updated_at": 1782988276938,
+  "version": "0.1.0"
+}
