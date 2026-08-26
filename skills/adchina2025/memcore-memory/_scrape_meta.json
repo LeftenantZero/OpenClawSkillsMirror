@@ -1,0 +1,55 @@
+{
+  "changelog": "MemCore v2.1.0 introduces proactive agent upgrades and enhanced memory layer features:\n\n- Added WAL Protocol: SESSION-STATE.md traces indexed as high priority via `cmd_index`.\n- World Model tier now searches SESSION-STATE.md and working-buffer.md (\"Working Buffer Search\").\n- Introduced VFM (Value-Failure-Management) scoring: 4D evaluation\u2014frequency, failure reduction, user burden, and self cost.\n- New CLI command: `python3 scripts/memcore/cli.py vfm` for VFM score analysis.\n- Documentation and command updates in SKILL.md reflecting new features and workflows.",
+  "created_at": 1778903607765,
+  "display_name": "MemCore \u8bb0\u5fc6\u6838\u5fc3",
+  "fetched_at": 1787786747292,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/architecture.md",
+    "references/upgrade-guide.md",
+    "references/\u4f7f\u7528\u8bf4\u660e.md",
+    "scripts/install.sh",
+    "scripts/memcore/__init__.py",
+    "scripts/memcore/bootstrap_context.py",
+    "scripts/memcore/cli.py",
+    "scripts/memcore/crystallize.py",
+    "scripts/memcore/feedback.py",
+    "scripts/memcore/pattern.py",
+    "scripts/memcore/retriever.py",
+    "scripts/memcore/trace.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090834908,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "adchina2025",
+    "handle": "adchina2025",
+    "user_id": "s178zr3agqc91dpj9mr6we2xn983g5jq"
+  },
+  "slug": "memcore-memory",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memcore-memory",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memcore-memory&ownerHandle=adchina2025",
+    "page_url": "https://clawhub.ai/adchina2025/skills/memcore-memory"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 693,
+    "installs": 16,
+    "stars": 1,
+    "versions": 5
+  },
+  "summary": "v2.1.0 (WAL+VFM enhanced). Five-tier adaptive memory system with WAL indexing, Working Buffer search, and VFM scoring. \u4e3a OpenClaw \u6253\u9020\u7684\u4e94\u5c42\u81ea\u9002\u5e94\u8bb0\u5fc6\u68c0\u7d22\u7cfb\u7edf\uff0c\u56db\u5c42\u81ea\u8fdb\u5316\u8bb0\u5fc6\u6a21\u578b\uff08L1...",
+  "updated_at": 1779106995204,
+  "version": "2.1.0"
+}
