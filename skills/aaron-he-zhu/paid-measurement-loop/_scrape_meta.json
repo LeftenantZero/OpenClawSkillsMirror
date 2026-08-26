@@ -1,0 +1,44 @@
+{
+  "changelog": "**Separation of auditor and readback logic; refocused readback decision**\n\n- Clarified that this skill produces `readback_decision` only, not RQS auditor verdicts; all audit/veto logic now delegated to `ad-account-auditor`.\n- Updated description, usage, and instructions to explicitly exclude RQS scoring or veto adjudication.\n- Revised instructions to flag, but not adjudicate, measurement-signal issues\u2014refer such cases to the auditor skill instead.\n- Updated version metadata and removed/added relevant documentation files (`distribution-manifest.json` added, `skill-card.md` removed).",
+  "created_at": 1783227102991,
+  "display_name": "Paid Measurement Loop",
+  "fetched_at": 1787775216577,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "distribution-manifest.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784909322310,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Aaron Zhu",
+    "handle": "aaron-he-zhu",
+    "user_id": "s17e1tg8pjra8dn1dvtq21sahx83hrxj"
+  },
+  "slug": "paid-measurement-loop",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/paid-measurement-loop",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=paid-measurement-loop&ownerHandle=aaron-he-zhu",
+    "page_url": "https://clawhub.ai/aaron-he-zhu/skills/paid-measurement-loop"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 927,
+    "installs": 1,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Use when the user asks to \"read back\" a paid campaign change, \"did this ad change work\", or \"compare ROAS/CPA before and after\"; reads ROAS/CPA against a con...",
+  "updated_at": 1784908533187,
+  "version": "19.0.0"
+}
