@@ -1,0 +1,34 @@
+{
+  "changelog": "- Removed the file: skill-card.md\n- No changes to functionality or feature set. \n- Internal documentation cleanup only.",
+  "created_at": 1785022907951,
+  "display_name": "supervisor-config-gen",
+  "fetched_at": 1787773940354,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/setup.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ciprian Mandache",
+    "handle": "psyb0t",
+    "user_id": "s17fq93tmpky791n7516jcn08n83sfn2"
+  },
+  "slug": "supervisor-config-gen",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/supervisor-config-gen",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=supervisor-config-gen&ownerHandle=psyb0t",
+    "page_url": "https://clawhub.ai/psyb0t/skills/supervisor-config-gen"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 525,
+    "installs": 1,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Bash tool that generates a Supervisor (supervisord) `[program:*]` config file from zero CLI flags \u2014 it derives everything from the current directory (program name = dirname, `command=<dir>/run.sh`, `directory=<dir>`, `user=$(whoami)`, logs under `$HOME/logs/supervisord/`) and writes `<dirname>-supervisor.conf` into that same directory, overwriting silently if present. Use when the user wants to generate a Supervisor program config for an app directory that has a `run.sh` entrypoint.",
+  "updated_at": 1785614636766,
+  "version": "1.0.5"
+}
