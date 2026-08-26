@@ -1,0 +1,54 @@
+{
+  "changelog": "- Initial release of the skill for one-click deployment of SQLBot on a Huawei Cloud X instance server.\n- Implements a strict multi-step workflow: environment credential check, user confirmation, and server deployment.\n- Enforces mandatory user configuration confirmation before any resources can be created.\n- Removed skill-card.md documentation file.",
+  "created_at": 1785748346761,
+  "display_name": "huawei-cloud-ecs-sqlbot-deploy",
+  "fetched_at": 1787773659278,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/coc_deploy.py",
+    "scripts/config.py",
+    "scripts/deploy_sqlbot.py",
+    "scripts/huawei_cloud_ecs.py",
+    "scripts/pyproject.toml",
+    "scripts/query_regions.py",
+    "scripts/utils.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785749182854,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-ecs-sqlbot-deploy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-ecs-sqlbot-deploy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-ecs-sqlbot-deploy&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-ecs-sqlbot-deploy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 35,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Purchase Huawei Cloud X Instance server + one-click deploy SQLBot intelligent query application. Tech stack: Python 3.8+, Huawei Cloud SDK, COC (Cloud Operations Center) deployment. Key capabilities: AK/SK auth, X instance creation, auto security group config, SQLBot auto deployment. Use cases: Users who need to quickly deploy SQLBot intelligent query application on Huawei Cloud X instance servers. Trigger words: \"deploy sqlbot\", \"install sqlbot\", \"sqlbot deploy\", \"one-click deploy sqlbot\", \"x-instance deploy sqlbot\", \"\u90e8\u7f72sqlbot\", \"\u5b89\u88c5sqlbot\", \"sqlbot\u90e8\u7f72\", \"\u4e00\u952e\u90e8\u7f72sqlbot\", \"x\u5b9e\u4f8b\u90e8\u7f72sqlbot\".",
+  "updated_at": 1785748465531,
+  "version": "1.0.0"
+}
