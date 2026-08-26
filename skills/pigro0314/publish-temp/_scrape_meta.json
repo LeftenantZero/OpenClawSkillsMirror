@@ -1,0 +1,61 @@
+{
+  "changelog": "- Initial release of the Pok\u00e9mon GO PvP \u57f9\u517b\u67e5\u8be2\u6280\u80fd (v1.1) based on real data from PvPokeTW and game master stats.\n- Supports querying rankings, best IVs, movesets, and user IV comparisons for specified Pok\u00e9mon and league.\n- Command: `/pvp \u57f9\u517b <\u5b9d\u53ef\u68a6> <\u8054\u76df> [\u653b\u51fb/\u9632\u5fa1/\u751f\u547d]` with flexible input options (Chinese/English/nickname, league, IVs optional).\n- Outputs real PvPokeTW rankings, top IV combinations, level/CP, and recommended moves; additional comparison fields if user IV provided.\n- Strictly based on official data: no simulation, no product stats/output, no percentiles, and all outputs traceable to real sources.\n- Implements 7-day cache strategy for ranking and game master data; fallbacks and clear prompts for missing data.",
+  "created_at": 1779286786534,
+  "display_name": "pogo-pvp",
+  "fetched_at": 1787785584057,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "docs/auto-update-plan.md",
+    "docs/build-order-plan.md",
+    "docs/iv-plan.md",
+    "docs/league-fit-plan.md",
+    "docs/missing-core-plan.md",
+    "docs/move-cn-plan.md",
+    "docs/my-pokemon-plan.md",
+    "docs/roadmap.md",
+    "docs/team-plan.md",
+    "docs/train-priority-plan.md",
+    "elite_moves.json",
+    "my_pokemon.example.json",
+    "pokemon_alias.json",
+    "skill-card.md",
+    "skill.yaml",
+    "src/add.ts",
+    "src/buildOrder.ts",
+    "src/evaluate.ts",
+    "src/fetcher.ts",
+    "src/index.ts",
+    "src/iv.ts",
+    "src/list.ts",
+    "src/mapper.ts",
+    "src/missing.ts",
+    "src/query.ts",
+    "src/team.ts",
+    "src/train.ts",
+    "src/types.ts"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "pigro0314",
+    "handle": "pigro0314",
+    "user_id": "s1740vdqsjdrv8t7rz439f5ve5873h0k"
+  },
+  "slug": "publish-temp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/publish-temp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=publish-temp&ownerHandle=pigro0314",
+    "page_url": "https://clawhub.ai/pigro0314/skills/publish-temp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 620,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Pok\u00e9mon GO PvP \u57f9\u517b\u67e5\u8be2\u6280\u80fd v1.1\u3002\u57fa\u4e8e PvPokeTW \u771f\u5b9e\u6392\u884c\u6570\u636e + gamemaster \u57fa\u7840\u79cd\u65cf\u503c\uff0c\u63d0\u4f9b\u6392\u540d\u67e5\u8be2\u3001\u6700\u4f73 IV\u3001\u7528\u6237 IV \u5bf9\u6bd4\u7b49\u529f\u80fd\u3002",
+  "updated_at": 1779286786534,
+  "version": "1.0.0"
+}
