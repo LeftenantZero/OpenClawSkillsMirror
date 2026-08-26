@@ -1,0 +1,75 @@
+{
+  "changelog": "ima-plus-skill v1.0.8\n\n- Added notes/scripts/notes_create.cjs and notes/scripts/notes_append.cjs for creating and appending to notes.\n- Removed obsolete skill-card.md file.\n- Switched to environment variable-only credential and cache management: now requires IMA_OPENAPI_CLIENTID/IMA_OPENAPI_APIKEY for all operations, and mandates IMA_RESOLVE_CACHE for path resolution cache (enforced outside ima.copilot environment).\n- Introduced a hierarchical, persistent path resolution cache with auto-healing and mandatory configuration.\n- Updated documentation and quickstart to reflect new caching and credential requirements.",
+  "created_at": 1785130828353,
+  "display_name": "ima.plus-skill-v1.0.8",
+  "fetched_at": 1787770575816,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "ima_api.cjs",
+    "knowledge-base/SKILL.md",
+    "knowledge-base/references/api.md",
+    "knowledge-base/scripts/cos-upload.cjs",
+    "knowledge-base/scripts/create_folder.cjs",
+    "knowledge-base/scripts/create_knowledge_base.cjs",
+    "knowledge-base/scripts/export_kb_zip.cjs",
+    "knowledge-base/scripts/export_media.cjs",
+    "knowledge-base/scripts/join_knowledge.cjs",
+    "knowledge-base/scripts/list_all_files.cjs",
+    "knowledge-base/scripts/move_knowledge.cjs",
+    "knowledge-base/scripts/preflight-check.cjs",
+    "knowledge-base/scripts/rename_knowledge.cjs",
+    "knowledge-base/scripts/search_knowledge_base_in_square.cjs",
+    "knowledge-base/scripts/set_knowledge_top.cjs",
+    "knowledge-base/scripts/tag_add.cjs",
+    "knowledge-base/scripts/tag_delete.cjs",
+    "knowledge-base/scripts/tag_list.cjs",
+    "knowledge-base/scripts/tag_remove.cjs",
+    "knowledge-base/scripts/tag_rename.cjs",
+    "knowledge-base/scripts/update_knowledge_access_status.cjs",
+    "knowledge-base/scripts/update_knowledge_base_basic_info.cjs",
+    "knowledge-base/scripts/update_knowledge_base_permission.cjs",
+    "knowledge-base/scripts/upload_to_kb.cjs",
+    "meta.json",
+    "notes/SKILL.md",
+    "notes/references/api.md",
+    "notes/scripts/notes_append.cjs",
+    "notes/scripts/notes_create.cjs",
+    "notes/scripts/resolve_notebook.cjs",
+    "references/troubleshooting.md",
+    "resolve_path.cjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787139647783,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wxy",
+    "handle": "wwqww1",
+    "user_id": "s176erj4f2bg52kae7gtvxnc0x89vf8h"
+  },
+  "slug": "ima-plus-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ima-plus-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ima-plus-skill&ownerHandle=wwqww1",
+    "page_url": "https://clawhub.ai/wwqww1/skills/ima-plus-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 577,
+    "installs": 0,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "IMA.plus \u6280\u80fd\uff08V1.0.8\uff09\u2014\u2014\u51ed\u8bc1\u6765\u6e90\u4e8e\u6539\u6210\u4e86\u73af\u5883\u53d8\u91cf\u9700\u8981\u91cd\u65b0\u8bbe\u7f6e\uff0c\u540c\u65f6\u52a0\u5165\u4e86\u81ea\u7136\u8bed\u8a00\u76ee\u5f55\u548ckb_id\u7684\u7f13\u5b58\u51cf\u5c11\u8c03\u7528api\u7684\u6b21\u6570\u5f00\u9500\uff0c\u7f13\u5b58\u4fdd\u5b58\u4f4d\u7f6e\u9700\u8981\u5728\u5b89\u88c5skill\u540e\u914d\u7f6e\uff0c\u5426\u5219\u65e0\u6cd5\u6b63\u5e38\u4f7f\u7528\u3002\u540c\u65f6\u6709\u4efb\u4f55skill\u7684\u95ee\u9898\u6216\u5efa\u8bae\uff0c\u8bf7\u5230QQ\u9891\u9053\uff1apd86156007\u3002\u7b14\u8bb0\u7ba1\u7406\u4e0e\u77e5\u8bc6\u5e93\u64cd\u4f5c\u3002\u652f\u6301\u81ea\u7136\u8bed\u8a00\u76ee\u5f55\u8def\u5f84\u3001\u4e0a\u4f20/\u5bfc\u51fa\u6587\u4ef6\u3001\u6253\u5305\u5bfc\u51fa\u77e5\u8bc6\u5e93\u4e3a zip\u3001\u521b\u5efa\u6587\u4ef6\u5939\u3001\u79fb\u52a8/\u91cd\u547d\u540d/\u7f6e\u9876\u77e5\u8bc6\u6761\u76ee\u3001\u521b\u5efa\u4e0e\u4fee\u6539\u77e5\u8bc6\u5e93\u3001\u6807\u7b7e\u7ba1\u7406\u3001\u6743\u9650\u7ba1\u7406\u3001\u5e7f\u573a\u53d1\u73b0\u3001\u6dfb\u52a0\u7f51\u9875\u5230\u77e5\u8bc6\u5e93\u3001\u641c\u7d22/\u6d4f\u89c8/\u521b\u5efa/\u7f16\u8f91\u7b14\u8bb0\u3002",
+  "updated_at": 1787138927964,
+  "version": "1.0.8"
+}
