@@ -1,0 +1,44 @@
+{
+  "changelog": "agent-cli-orchestrator v2.0.1\n\n- Added a dedicated section in documentation emphasizing that AI CLI tool detection must use a scan script which properly sources user shell environments.\n- Clarified best practices on scanning for installed AI CLI tools, especially when tools are installed in custom shell configuration paths (e.g. ~/.zshrc).\n- Included usage instructions and rationale for the included `scan_ai_tools.sh` script.\n- Added `_meta.json` file to the project.",
+  "created_at": 1773614326162,
+  "display_name": "Agent Cli Orchestrator",
+  "fetched_at": 1787788647676,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/scan_ai_tools.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089907824,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Atom",
+    "handle": "cnatom",
+    "user_id": "s17em944adwyaa9j0npkdxcam1884kd2"
+  },
+  "slug": "agent-cli-orchestrator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-cli-orchestrator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-cli-orchestrator&ownerHandle=cnatom",
+    "page_url": "https://clawhub.ai/cnatom/skills/agent-cli-orchestrator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1137,
+    "installs": 31,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Orchestrates multiple AI CLI tools by auto-detecting, prioritizing, and switching between them for stable, fallback-enabled automated coding workflows.",
+  "updated_at": 1779078281329,
+  "version": "2.0.1"
+}
