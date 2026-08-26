@@ -1,0 +1,57 @@
+{
+  "changelog": "Initial release of the invoice-extractor skill.\n\n- Extracts key invoice data from image and PDF files using Baidu OCR, exporting results to Excel.\n- Supports multiple input modes: single file, multiple files, directory, or combination.\n- Batch processing enables handling of hundreds of invoices in one command.\n- Lists all extracted fields, including buyer, seller, item, and amount details.\n- Includes preview mode to list files before processing.\n- Provides command-line configuration, flexible output naming, and utility scripts for verification and batch runs.",
+  "created_at": 1773935756076,
+  "display_name": "Invoice-Recognition",
+  "fetched_at": 1787788091695,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.template.txt",
+    "examples.md",
+    "install.sh",
+    "requirements.txt",
+    "scripts/batch_process.py",
+    "scripts/verify_export.py",
+    "setup.md",
+    "skill-card.md",
+    "src/baidu_ocr_extractor.py",
+    "src/config.py",
+    "src/excel_exporter.py",
+    "src/invoice_extractor.py",
+    "src/invoice_model.py",
+    "src/main.py",
+    "src/main_baidu.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089988293,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "aitanjp",
+    "handle": "aitanjp",
+    "user_id": "s17e6js9erg27armes0jaerdhh83p851"
+  },
+  "slug": "invoice-extractor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/invoice-extractor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=invoice-extractor&ownerHandle=aitanjp",
+    "page_url": "https://clawhub.ai/aitanjp/skills/invoice-extractor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 985,
+    "installs": 28,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Extract invoice information from images and PDF files using Baidu OCR API, export to Excel. Supports single file, multiple files, or entire directory process...",
+  "updated_at": 1779078510046,
+  "version": "1.0.0"
+}
