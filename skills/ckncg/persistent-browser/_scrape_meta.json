@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release: Enables persistent browser context scraping for login-required websites.\n\n- Uses Playwright with a persistent user profile for sites needing authentication (YouTube, GitHub, HuggingFace, Reddit, Kaggle, X/Twitter).\n- Automatically triggers when accessing specified sites or when \"external web search\" is requested.\n- Ensures headless mode is disabled for proper page rendering, especially on X/Twitter.\n- Cleans up browser profile lock files before scraping to avoid errors.\n- Customizes waiting times per site for reliable JavaScript/SPAs rendering.\n- Extracts plain text content, avoiding screenshots.",
+  "created_at": 1774091725483,
+  "display_name": "Persistent Browser Scraper",
+  "fetched_at": 1787787780875,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090017034,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ckncg",
+    "handle": "ckncg",
+    "user_id": "s17da9gq4bxd6e7f7f0ptpqhbh88484d"
+  },
+  "slug": "persistent-browser",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/persistent-browser",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=persistent-browser&ownerHandle=ckncg",
+    "page_url": "https://clawhub.ai/ckncg/skills/persistent-browser"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 770,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7528 Playwright \u6301\u4e45\u5316\u4e0a\u4e0b\u6587\uff08main-identity\uff09\u6293\u53d6\u9700\u8981\u767b\u5f55\u6001\u7684\u7f51\u7ad9\uff08YouTube\u3001GitHub\u3001HuggingFace\u3001Reddit\u3001Kaggle\u3001X/Twitter\uff09\u3002\u5f53\u7528\u6237\u8981\u6c42\u5916\u7f51\u641c\u7d22\u6216\u6307\u5b9a\u8fd9\u4e9b\u7f51\u7ad9\u65f6\u81ea\u52a8\u89e6\u53d1\u3002",
+  "updated_at": 1779078679685,
+  "version": "1.0.0"
+}
