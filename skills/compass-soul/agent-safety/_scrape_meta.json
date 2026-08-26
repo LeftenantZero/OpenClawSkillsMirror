@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of agent-safety: automated outbound safety tools for autonomous AI agents.\n\n- Scans output for secrets, tokens, PII, and internal paths before files leave your machine.\n- Includes a git pre-commit hook to block commits with API keys, passwords, or sensitive info.\n- Provides a pre-publish security scanner for files and directories.\n- Adds a health-check script for monitoring system and workspace security.\n- Designed for automated enforcement at the git level; does not rely on prompts.",
+  "created_at": 1771200025580,
+  "display_name": "Agent Safety",
+  "fetched_at": 1787773749837,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/health-check.sh",
+    "scripts/install-hook.sh",
+    "scripts/pre-publish-scan.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "compass-soul",
+    "handle": "compass-soul",
+    "user_id": "s171apx7326hy8m6m3sc2qdwv9885ced"
+  },
+  "slug": "agent-safety",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-safety",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-safety&ownerHandle=compass-soul",
+    "page_url": "https://clawhub.ai/compass-soul/skills/agent-safety"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1550,
+    "installs": 47,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Outbound safety for autonomous AI agents \u2014 scans YOUR output before it leaves the machine. Git pre-commit hooks that automatically block commits containing A...",
+  "updated_at": 1778491552996,
+  "version": "1.0.0"
+}
