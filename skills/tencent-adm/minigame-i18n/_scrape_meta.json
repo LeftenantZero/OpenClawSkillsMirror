@@ -1,0 +1,57 @@
+{
+  "changelog": "- Clarified the localization workflow for WeChat mini-games targeting international markets, detailing each operation stage from intent recognition to quality validation.\n- Defined strict operational principles, including the use of specific scripts for text and image processing, and prohibiting manual/AI edits to source code or direct image uploads.\n- Outlined stage-by-stage processing, ensuring full automation except for terminology confirmation, and providing clear handoff points between system components.\n- Strengthened error handling and verification steps\u2014such as cross-validation for scan results, multi-layer syntax checks during replacement, and mandatory remediation for any failed automated replacements.\n- Added explicit controls for image translation scenarios, including requirements on tools and skipping logic when translation is not needed or MCP is unavailable.",
+  "created_at": 1779179625806,
+  "display_name": "\u5fae\u4fe1\u5c0f\u6e38\u620f\u672c\u5730\u5316Skill",
+  "fetched_at": 1787786522054,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/apply-resources.md",
+    "references/execute-translation.md",
+    "references/mcp-image-translation.md",
+    "references/plan-glossary.md",
+    "references/quality-verification.md",
+    "references/scan-analysis.md",
+    "references/scan-report-schema.md",
+    "scripts/generate-langpack.js",
+    "scripts/package.json",
+    "scripts/replace-image.js",
+    "scripts/replace-text.js",
+    "scripts/scan-chinese.js",
+    "scripts/upload-images.js",
+    "scripts/verify-build-strings.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779956532165,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u817e\u8baf\u5f00\u6e90",
+    "handle": "tencent-adm",
+    "user_id": "s171cxjdnjyqjxa91pj2bfmr6x83gyg1"
+  },
+  "slug": "minigame-i18n",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/minigame-i18n",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=minigame-i18n&ownerHandle=tencent-adm",
+    "page_url": "https://clawhub.ai/tencent-adm/skills/minigame-i18n"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 710,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5fae\u4fe1\u5c0f\u6e38\u620f\u51fa\u6d77\u672c\u5730\u5316\u7ffb\u8bd1\u6280\u80fd\u3002\u5e2e\u52a9\u56fd\u5185\u5fae\u4fe1\u5c0f\u6e38\u620f\u5b8c\u6210\u56fd\u9645\u5316\uff08i18n\uff09\uff0c\u652f\u6301\u4ece\u4e2d\u6587\u7ffb\u8bd1\u5230\u82f1\u8bed\u3001\u97e9\u8bed\u3001\u6cf0\u8bed\u7b49\u76ee\u6807\u8bed\u8a00\u3002 \u5f53\u7528\u6237\u63d0\u5230\u4ee5\u4e0b\u4efb\u4f55\u573a\u666f\u65f6\uff0c\u8bf7\u4f7f\u7528\u672c\u6280\u80fd\uff1a - \"\u672c\u5730\u5316\"\u3001\"\u56fd\u9645\u5316\"\u3001\"i18n\"\u3001\"\u7ffb\u8bd1\"\u3001\"\u51fa\u6d77\"\u3001\"\u591a\u8bed\u8a00\" - \"\u628a\u6e38\u620f\u7ffb\u8bd1\u6210\u82f1\u6587/\u97e9\u6587/\u6cf0\u6587\" - \"\u5c0f\u6e38\u620f\u51fa\u6d77\"\u3001\"\u6e38\u620f\u672c\u5730\u5316\" - \"...",
+  "updated_at": 1779179644965,
+  "version": "1.0.1"
+}
