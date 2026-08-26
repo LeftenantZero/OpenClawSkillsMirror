@@ -1,0 +1,50 @@
+{
+  "changelog": "CORRECTION to the 1.2.1 release note. No code change in this version. 1.2.1 said the inverted book read skipped liquid markets 'while near-empty books traded'. The second half was wrong: worst-ask minus worst-bid is always >= the touch spread, so the gate could only ever be too STRICT, never too loose - over-trading was not a reachable outcome. Measured on 96 live books, the old read rejected 96 of 96 where a correct read passes 24: about 25 percent of tradeable books skipped, and ZERO thin books wrongly traded. The harm was missed opportunity, not adverse selection. Your past fills were not affected.",
+  "created_at": 1779607909915,
+  "display_name": "Polymarket FastScaler",
+  "fetched_at": 1787773050087,
+  "files": [
+    "DISCLAIMER.md",
+    "NEXT.md",
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "config.json",
+    "fast_scaler.py",
+    "paper-validation-results.md",
+    "skill-card.md",
+    "tests/test_fastscaler_orderbook_spread.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786259182900,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Simmer.Markets",
+    "handle": "simmer",
+    "user_id": "s17eez0vajry6hjb97y9mbtv2s85wekv"
+  },
+  "slug": "polymarket-fast-scaler",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polymarket-fast-scaler",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polymarket-fast-scaler&ownerHandle=simmer",
+    "page_url": "https://clawhub.ai/simmer/skills/polymarket-fast-scaler"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 913,
+    "installs": 14,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Trade Polymarket BTC 5-minute fast markets using a magnitude-gated conviction-ladder strategy. Only fires when |1m BTC momentum| >= 0.10%, the magnitude threshold the strategy is built around. Position size scales with signal strength (3 conviction tiers). Reference template for gate-filtered BTC fast-market trading; the original performance claim was retracted (see below).",
+  "updated_at": 1786258516609,
+  "version": "1.2.3"
+}
