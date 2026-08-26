@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release of gh-address-comments.\n- Guides users to identify and address review/issue comments on the current branch\u2019s open GitHub PR using the gh CLI.\n- Verifies gh authentication, prompting for login if needed.\n- Fetches and lists PR comments, summarizes them, and allows users to select which to address.\n- Handles authentication or rate-limiting issues by prompting for re-authentication.",
+  "created_at": 1780840528906,
+  "display_name": "GitHub Address Comments",
+  "fetched_at": 1787782215591,
+  "files": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/github-small.svg",
+    "scripts/fetch_comments.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780842056348,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Tbeard602",
+    "handle": "tbeard602",
+    "user_id": "s1745y3889m0whjz7wsbayv6kn87z206"
+  },
+  "slug": "gh-address-comments",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gh-address-comments",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gh-address-comments&ownerHandle=tbeard602",
+    "page_url": "https://clawhub.ai/tbeard602/skills/gh-address-comments"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 707,
+    "installs": 6,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Help address review/issue comments on the open GitHub PR for the current branch using gh CLI; verify gh auth first and prompt the user to authenticate if not...",
+  "updated_at": 1780840528906,
+  "version": "1.0.0"
+}
