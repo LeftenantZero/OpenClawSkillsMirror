@@ -1,0 +1,51 @@
+{
+  "changelog": "**Version 1.0.7 \u2013 Switched API discovery to online search; removed all offline/local catalog logic.**\n\n- API discovery now uses only live API Explorer search (no local ranker or offline fallback).\n- Updated scripts to call API search endpoints directly; search is online-only, stateless, and does not require login.\n- Adjusted version selection: recommended version is prioritized over search order when user does not specify.\n- Removed all legacy catalog/alias/reference files and references to local/rg-based search.\n- Error handling updated: if search fails, user sees remote error rather than mock/guess.\n- Reduced number of support files; removed `skill-card.md` and offline query_aliases.",
+  "created_at": 1773384050550,
+  "display_name": "volcengine-sdk-generator",
+  "fetched_at": 1787774113140,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/sdk-integration-go.md",
+    "references/sdk-integration-java.md",
+    "references/sdk-integration-nodejs.md",
+    "references/sdk-integration-php.md",
+    "references/sdk-integration-python.md",
+    "scripts/make_code.py",
+    "scripts/rg_rank.py",
+    "scripts/sdk_info.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785465911675,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "sdk-team",
+    "handle": "volc-sdk-team",
+    "user_id": "s170xk93g8hnx1cthp5609en2s844kwe"
+  },
+  "slug": "volcengine-sdk-generator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/volcengine-sdk-generator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=volcengine-sdk-generator&ownerHandle=volc-sdk-team",
+    "page_url": "https://clawhub.ai/volc-sdk-team/skills/volcengine-sdk-generator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1145,
+    "installs": 25,
+    "stars": 2,
+    "versions": 5
+  },
+  "summary": "Generate accurate Volcengine SDK examples by locating an API through API Explorer search, fetching its swagger, and calling api/common/explorer/make-code with user-provided Params. Use when the user asks how to write Volcengine SDK code, generate SDK samples, or call a Volcengine API in Python, Go, Java, PHP, cURL, Node.js. Supports Chinese and English API names such as \"\u89d2\u8272\u626e\u6f14\", \"AssumeRole\", or \"STS AssumeRole\". Also use for explicit SDK configuration questions about retry, timeout, AK/SK, STS, AssumeRole, temporary credentials, proxy, connection pooling, SSL, debug mode, request signing, response parsing, and error handling. If the user only needs API parameters, enum values, required fields, error codes, response schemas, pagination, or API comparisons, hand off to volcengine-api. If they need CLI-based operations, hand off to volcengine-cli.",
+  "updated_at": 1785465201787,
+  "version": "1.0.7"
+}
