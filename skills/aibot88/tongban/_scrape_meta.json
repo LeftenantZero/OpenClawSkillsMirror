@@ -1,0 +1,42 @@
+{
+  "changelog": "Initial release of shanghai-service-guide skill:\n\n- Provides detailed guidance for users navigating Shanghai government service questions, leveraging public \"\u4e00\u7f51\u901a\u529e\" data.\n- Maps user needs to municipal departments, service items, and online/offline options for both individuals and organizations.\n- Supplies clear next steps, department info, and official URLs for verification.\n- Handles ambiguous or incomplete requests by asking clarifying questions or providing low-confidence suggestions.\n- Ensures practical, reliable, and always-verifiable recommendations for government services in Shanghai.",
+  "created_at": 1779189593418,
+  "display_name": "tongban government policy understanding",
+  "fetched_at": 1787786477708,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/departments.json",
+    "references/index.md",
+    "references/required-items.md",
+    "references/required_items.json",
+    "scripts/build_reference.py",
+    "scripts/fetch_zwdt.py",
+    "scripts/normalize_data.py",
+    "scripts/validate_data.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u6c64\u676d\u8fd0",
+    "handle": "aibot88",
+    "user_id": "s178hkwf5g0sd7qb5fejzyj5nn870av4"
+  },
+  "slug": "tongban",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tongban",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tongban&ownerHandle=aibot88",
+    "page_url": "https://clawhub.ai/aibot88/skills/tongban"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 602,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Help users with Shanghai government service questions using public Shanghai \"\u4e00\u7f51\u901a\u529e\" service-guide data. Use when the user asks about \u4e0a\u6d77\u529e\u4e8b, \u4e00\u7f51\u901a\u529e, \u529e\u4e8b\u6307\u5357, \u53bb\u54ea\u529e, \u54ea\u4e2a...",
+  "updated_at": 1779189606764,
+  "version": "1.0.0"
+}
