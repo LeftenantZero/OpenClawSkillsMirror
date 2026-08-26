@@ -1,0 +1,44 @@
+{
+  "changelog": "Trustpilot-company-info v1.0.0 \u2014 Initial Release\n\n- Provides Trustpilot company profile lookup by domain, extracting detailed metadata including TrustScore, star rating, review counts, categories, verification flags, status, website/contact info, and optional reply behavior metrics.\n- Accurately detects when a company profile is not found and returns isCompanyFound=false with the searched domain.\n- Designed for single or bulk domain enrichment (lead-list enrichment, supplier/agency vetting, brand monitoring, due diligence).\n- No login required; operates within public web access boundaries via browser automation using server-rendered JSON.\n- Supports advanced filtering and bulk data extraction use cases with clear error handling and retriable workflow guidance.",
+  "created_at": 1782551303998,
+  "display_name": "Trustpilot Company Info",
+  "fetched_at": 1787778891965,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-company-info.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782552402931,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "trustpilot-company-info",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/trustpilot-company-info",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=trustpilot-company-info&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/trustpilot-company-info"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 248,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Trustpilot company profile lookup on trustpilot.com \u2014 input a company domain (e.g. apple.com, shopify.com, shopwagandtail.com) and extract company metadata: official display name, businessUnitId, TrustScore (1-5), star rating, total review count, last-12-months review count, primary category and all",
+  "updated_at": 1782551303998,
+  "version": "1.0.0"
+}
