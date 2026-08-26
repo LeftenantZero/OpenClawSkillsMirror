@@ -1,0 +1,45 @@
+{
+  "changelog": "Key\u2011Safe Skill Generator 1.3.0 introduces support for MGC Blackbox 1.4.10 and fully enforces zero-exposure best practices.\n\n- Upgraded the skill to support MGC 1.4.10, using mgc_run and the HTTP API for true zero-exposure (AI never sees plaintext credentials)\n- Replaced mgc_get with mgc_run for sealed-script execution; added covering documentation for mgc_find (fuzzy search) and mgc_open_webui\n- Documented key changes: mgc_seal now returns a dictionary; ext02 auto-parsing and multi-line PEM handling for ext04\n- Updated credential workflows to require credential updates via update_if_exists=true\n- Included new troubleshooting for invalid key formats and sandboxed agent considerations\n- Added anti-patterns: AI calling mgc_get and passing passwords as ext02\n- Updated all templates and examples for the mgc_run + HTTP API usage pattern\n- Removed the obsolete skill-card.md file",
+  "created_at": 1782113608522,
+  "display_name": "Key\u2011Safe Skill Generator",
+  "fetched_at": 1787770512442,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787192898282,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zkeviny",
+    "handle": "zkeviny",
+    "user_id": "s173fckt3bzxxvt9dfp0rrdeg1894z72"
+  },
+  "slug": "key-safe-skill-generator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/key-safe-skill-generator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=key-safe-skill-generator&ownerHandle=zkeviny",
+    "page_url": "https://clawhub.ai/zkeviny/skills/key-safe-skill-generator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 666,
+    "installs": 0,
+    "stars": 1,
+    "versions": 5
+  },
+  "summary": "A documentation\u2011only meta\u2011skill that teaches AI agents how to generate secure, zero\u2011exposure skills using MGC Blackbox 1.4.10. Credentials are stored encrypted; local scripts read them via HTTP API at runtime, while AI agents never touch plaintext.",
+  "updated_at": 1787192107910,
+  "version": "1.2.1"
+}
