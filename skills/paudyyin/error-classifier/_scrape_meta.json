@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of error-classifier.\n\n- Automatically classifies errors into four types: TRANSIENT, PERMANENT, VALIDATION, CONTEXT.\n- Provides actionable handling strategies: retry with exponential backoff, report to user, trigger repair, or initiate compression.\n- Contains 50+ error patterns covering both Chinese and English error messages.\n- Simple Python API for error classification and handling, including built-in retry with exponential backoff (1s/2s/4s).\n- Integration hooks for coding-framework, daily-agent, and context-compressor.\n- Includes reference and test materials for easy adoption and extension.",
+  "created_at": 1783467564943,
+  "display_name": "Error Classifier",
+  "fetched_at": 1787777633054,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/retry_strategies.md",
+    "scripts/classifier.py",
+    "scripts/patterns.py",
+    "scripts/test_classifier.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "paudyyin",
+    "handle": "paudyyin",
+    "user_id": "s172x1s50dh0bgmm3yc9516nr586kk4b"
+  },
+  "slug": "error-classifier",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/error-classifier",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=error-classifier&ownerHandle=paudyyin",
+    "page_url": "https://clawhub.ai/paudyyin/skills/error-classifier"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 272,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u56db\u7c7b\u9519\u8bef\u5206\u7c7b\u4e0e\u5904\u7406\u5f15\u64ce\u3002\u81ea\u52a8\u8bc6\u522b\u4e34\u65f6\u9519\u8bef/\u6c38\u4e45\u9519\u8bef/\u9a8c\u8bc1\u9519\u8bef/\u4e0a\u4e0b\u6587\u9519\u8bef\uff0c\u5e76\u63d0\u4f9b\u76f8\u5e94\u5904\u7406\u7b56\u7565\uff08\u91cd\u8bd5/\u62a5\u544a/\u4fee\u590d/\u538b\u7f29\uff09\u3002\u5f53\u5de5\u5177\u8c03\u7528\u5931\u8d25\u3001API \u62a5\u9519\u3001\u7f16\u8bd1\u6d4b\u8bd5\u51fa\u9519\u3001\u4e0a\u4e0b\u6587\u8d85\u9650\u65f6\u81ea\u52a8\u5206\u7c7b\u5e76\u7ed9\u51fa\u5904\u7406\u5efa\u8bae\u3002",
+  "updated_at": 1783467564943,
+  "version": "1.0.0"
+}
