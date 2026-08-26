@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release \u2014 provides agent interrupt and rollback functionality with Python scripts.\n\n- Add scripts to install, interrupt, mark, run, and watch agent processes, enabling kill and rollback of agent sessions.\n- Supports interruption of individual agents by ID/name or all agents at once.\n- Rolls back agent memory to the state before the last user-triggering message; backs up removed transcript for recovery.\n- Includes setup and background watcher for automatic protocol injection into new agents.\n- Multi-platform support (Windows, Linux, macOS); no dependencies beyond Python stdlib.",
+  "created_at": 1773740261512,
+  "display_name": "Claw Mission Killer",
+  "fetched_at": 1787788363443,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agents-md-integration.md",
+    "scripts/install.py",
+    "scripts/interrupt.py",
+    "scripts/mark.py",
+    "scripts/run.py",
+    "scripts/watch.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089934259,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "maomao",
+    "handle": "dorianyoung7702",
+    "user_id": "s17b7jvbnx4sj38ms3y9mvc9p983gfsr"
+  },
+  "slug": "claw-mission-killer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claw-mission-killer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claw-mission-killer&ownerHandle=dorianyoung7702",
+    "page_url": "https://clawhub.ai/dorianyoung7702/skills/claw-mission-killer"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 940,
+    "installs": 25,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Interrupt a running agent task and rollback its session to the state before the last triggering user message. Use when an agent is stuck, running the wrong t...",
+  "updated_at": 1779078393962,
+  "version": "0.1.0"
+}
