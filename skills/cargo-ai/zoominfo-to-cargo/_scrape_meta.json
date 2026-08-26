@@ -1,0 +1,43 @@
+{
+  "changelog": "- Initial release of the zoominfo-to-cargo skill.\n- Enables rebuilding a ZoomInfo (or Lusha/Cognism) contact list on Cargo and directly measuring coverage differences before renewal decisions.\n- Guides users through sampling exports, re-enriching data via Cargo, verifying both vendors\u2019 results, and reporting verified coverage and cost.\n- Provides clear setup instructions and cost estimates, with free credits for new Cargo accounts.\n- Details when to use this skill and recommends switching to the full Cargo GTM skill pack for broader workflows.",
+  "created_at": 1786862428099,
+  "display_name": "zoominfo-to-cargo",
+  "fetched_at": 1787771768078,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786863189358,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Cargo",
+    "handle": "cargo-ai",
+    "user_id": "s178dcd9wkfn0a2fqrygmt3jzn87j9e1"
+  },
+  "slug": "zoominfo-to-cargo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/zoominfo-to-cargo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=zoominfo-to-cargo&ownerHandle=cargo-ai",
+    "page_url": "https://clawhub.ai/cargo-ai/skills/zoominfo-to-cargo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 131,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Rebuild a ZoomInfo list on Cargo and measure the coverage you actually lose or gain before the renewal, powered by Cargo. Triggers: \"ZoomInfo alternative\", \"migrate off ZoomInfo\", \"replace ZoomInfo\", \"our ZoomInfo renewal is coming up\", \"ZoomInfo is too expensive\", \"I have a ZoomInfo export\", \"cheaper than ZoomInfo\", \"Lusha alternative\", \"Cognism alternative\". Providers: waterfall. Skip when: you are porting a Clay table rather than a contact list \u2014 use clay-to-cargo; or you have no list yet and simply want contacts sourced \u2014 use find-b2b-leads.",
+  "updated_at": 1786862488564,
+  "version": "1.0.0"
+}
