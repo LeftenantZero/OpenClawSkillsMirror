@@ -1,0 +1,47 @@
+{
+  "changelog": "## v1.0.3\u2013 Security Hardening\n\n- Restricted API requests to approved Microsoft Graph hosts and Intune/Entra endpoint areas.\n- Prevented bearer tokens from being printed to stdout.\n- Added enforced confirmation flags for write operations.\n- Tier 3 actions now require the exact confirmed object name.\n- Preserved strict read-only mode for all non-GET requests.\n- Improved token-cache permissions and secret handling.\n- Fixed compatibility with macOS Bash 3.2.\n- Corrected license ownership information.\n- Updated security documentation and usage examples.",
+  "created_at": 1771622038790,
+  "display_name": "Openclaw Intune Skill",
+  "fetched_at": 1787777380656,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/conversations.md",
+    "references/admin.md",
+    "references/apps.md",
+    "references/devices.md",
+    "references/network-updates.md",
+    "references/platform.md",
+    "references/policies.md",
+    "references/reporting.md",
+    "references/troubleshooting.md",
+    "references/workflows.md",
+    "scripts/get_token.sh",
+    "scripts/graph.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Mattia Cirillo",
+    "handle": "mattiacirillo",
+    "user_id": "s178m7a08j5xgn63ydq96nxfws83wabz"
+  },
+  "slug": "openclaw-intune-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-intune-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-intune-skill&ownerHandle=mattiacirillo",
+    "page_url": "https://clawhub.ai/mattiacirillo/skills/openclaw-intune-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1688,
+    "installs": 38,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Manage Microsoft Intune and Entra ID device management via the Microsoft Graph API. Use this skill whenever the user mentions Intune, MDM, managed devices, device compliance, device sync/reboot/lock/wipe/retire, Autopilot, enrollment, compliance or configuration policies, Settings Catalog, Condition",
+  "updated_at": 1783599141980,
+  "version": "1.0.3"
+}
