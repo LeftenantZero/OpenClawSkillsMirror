@@ -1,0 +1,41 @@
+{
+  "changelog": "- Initial release of the AnalyticDB PostgreSQL Query Skill for AI agents with shell access.\n- Agents can connect to AnalyticDB PostgreSQL via psql, execute read-only queries, and export results as CSV, with explicit user confirmation required.\n- Strict security gates before execution: ensures read-only mode, statement timeout, semantic model presence, and query validation.\n- Enforces prohibition on accessing or exposing credential files; only `cat ~/.pg_service.conf` (excludes secrets) is permitted, never credentials.\n- Human-in-the-loop is required for every query execution and export, including sensitive data or large result sets.\n- No bypass allowed for security, HITL, or pre-query gates; Agents must always halt on errors or warnings for explicit user action.",
+  "created_at": 1782200743453,
+  "display_name": "Alibabacloud Analyticdb Postgresql Query",
+  "fetched_at": 1787779497427,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/_meta.json",
+    "assets/skill-card.md",
+    "references/best-practices.md",
+    "references/connection-guide.md",
+    "references/export-guide.md",
+    "references/resource-group-guide.md",
+    "references/semantic-model-guide.md",
+    "references/sql-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-analyticdb-postgresql-query",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-analyticdb-postgresql-query",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-analyticdb-postgresql-query&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-analyticdb-postgresql-query"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 378,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "AnalyticDB PostgreSQL Query Skill. Any AI Agent with shell execution capability can use this Skill to connect to an AnalyticDB PostgreSQL database via psql,...",
+  "updated_at": 1782200743453,
+  "version": "0.0.1-beta.1"
+}
