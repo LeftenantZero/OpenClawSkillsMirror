@@ -1,0 +1,54 @@
+{
+  "changelog": "Huawei Cloud MaaS tokens usage monitoring initial release:\n\n- Query usage statistics for Huawei Cloud MaaS (Model as a Service): total tokens, prompt tokens, completion tokens, total requests, and total errors.\n- Supports preset service, my service, and custom endpoint queries, with configurable time ranges (last 7/14/30 days or custom).\n- Enforces secure credential handling: credentials must be set by environment variable or file only, never directly input by the user.\n- Includes permissions guidance, quick verification steps, core commands, and troubleshooting references.\n- Data is sourced from the MaaS ShowStatistics API, consistent with the MaaS console.",
+  "created_at": 1785749031855,
+  "display_name": "huawei-cloud-maas-tokens-usage",
+  "fetched_at": 1787773165592,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/iam-policies.md",
+    "references/maas-metrics.md",
+    "references/related-apis.md",
+    "references/task-query-tokens-usage.md",
+    "references/troubleshooting.md",
+    "references/verification-method.md",
+    "scripts/maas_rest_usage_stats.py",
+    "scripts/skill_quality_sdk.py",
+    "skill-card.md",
+    "templates/test-vars.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786113191609,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-maas-tokens-usage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-maas-tokens-usage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-maas-tokens-usage&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-maas-tokens-usage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 47,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Query Huawei Cloud MaaS (Model as a Service) tokens usage statistics, including total tokens, prompt tokens, completion tokens, total requests, and total errors. Supports preset service, my service, and custom endpoint with time range queries (last 7/14/30 days or custom). Data source is MaaS ShowStatistics API, consistent with console. Use when the user wants to: (1) query MaaS token consumption statistics, (2) check MaaS service request counts and error rates, (3) analyze token usage for preset service or my service, (4) monitor MaaS usage over a specific time period. Triggers include: \"MaaS\", \"Model as a Service\", \"tokens usage\", \"token consumption\", \"request count\", \"error count\", \"MaaS usage\", \"preset service usage\", \"completion tokens\", \"prompt tokens\", \"MaaS statistics\", \"\u6a21\u578b\u670d\u52a1\", \"\u4ee4\u724c\u7528\u91cf\", \"token\u7edf\u8ba1\", \"token\u7528\u91cf\", \"\u8bcd\u5143\u7528\u91cf\", \"\u8bf7\u6c42\u6b21\u6570\", \"MaaS\u76d1\u63a7\", \"\u534e\u4e3a\u4e91MaaS\"",
+  "updated_at": 1786112358857,
+  "version": "1.0.1"
+}
