@@ -1,0 +1,67 @@
+{
+  "changelog": "- Improved clarity and detail in execution rules and workflow, emphasizing strict use of provided scripts and prohibiting ad-hoc code.\n- Enhanced documentation for Windows browser isolation: mandates use of a pre-packaged Chromium instance, comprehensive three-layer validation, and forbids interacting with the user's regular Chrome.\n- Added step-by-step instructions for Feishu push notifications, including credentials setup and troubleshooting guidance.\n- Expanded, structured overview of data collection process and plugin directory contents.\n- Explicit definitions for available scripts, paths, initialization steps, and report generation.\n- Updated skill triggers and usage cases, focusing on reliable, repeatable processes with heightened data integrity.",
+  "created_at": 1784022787660,
+  "display_name": "1688\u8fd0\u8425\u6570\u636e\u65e5\u62a5",
+  "fetched_at": 1787776806220,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "plugin/AGENT_GUIDE.md",
+    "plugin/README.md",
+    "plugin/background.js",
+    "plugin/content.js",
+    "plugin/manifest.json",
+    "plugin/md5.js",
+    "plugin/openclaw-bridge.js",
+    "plugin/popup.html",
+    "plugin/popup.js",
+    "scripts/cdp_client.py",
+    "scripts/env.ps1",
+    "scripts/env.sh",
+    "scripts/fetch_data.py",
+    "scripts/generate_report.py",
+    "scripts/generate_report_v2.py",
+    "scripts/generate_report_v3.py",
+    "scripts/login.py",
+    "scripts/push_feishu_post.py",
+    "scripts/setup.ps1",
+    "scripts/setup.sh",
+    "scripts/setup_manual.ps1",
+    "scripts/start-browser.ps1",
+    "scripts/start-browser.sh",
+    "scripts/test_post.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784023679323,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "howerlin0329",
+    "handle": "howerlin0329",
+    "user_id": "s176emez40f3fcwfj4xc2zcqzh8454jg"
+  },
+  "slug": "1688-alibaba-data-fetcher",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/1688-alibaba-data-fetcher",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=1688-alibaba-data-fetcher&ownerHandle=howerlin0329",
+    "page_url": "https://clawhub.ai/howerlin0329/skills/1688-alibaba-data-fetcher"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 338,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "1688\u5356\u5bb6\u5de5\u4f5c\u53f0\u6570\u636e\u6293\u53d6\uff1a\u539f\u751f\u804a\u5929\u7528MEDIA\u3001\u98de\u4e66\u5fc5\u987b\u7528message\uff1b\u767b\u5f55\u5fc5\u987b\u540c\u56de\u5408\u5185\u6301\u7eedpoll\u3002",
+  "updated_at": 1784022787660,
+  "version": "1.0.2"
+}
