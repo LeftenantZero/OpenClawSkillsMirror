@@ -1,0 +1,45 @@
+{
+  "changelog": "Version 1.0.1\n\n- Added error handling for mutually-exclusive operations: passing multiple (e.g. `<path>` + `--list`) now returns `conflicting_args` instead of silently ignoring extras.\n- Improved security: setting an AppKey that is too short no longer echoes part of the key in error output; only the length is reported.\n- Documentation updated to reflect new error type.\n- Removed redundant skill-card.md file.",
+  "created_at": 1782115142430,
+  "display_name": "Pinme Share",
+  "fetched_at": 1787774307681,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/upload_to_pinme.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783950576155,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Evan Song",
+    "handle": "songhonglei",
+    "user_id": "s17dz40vg2v0b4hy1e0jj91ny584egag"
+  },
+  "slug": "pinme-share",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pinme-share",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pinme-share&ownerHandle=songhonglei",
+    "page_url": "https://clawhub.ai/songhonglei/skills/pinme-share"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 485,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Upload any local file or directory to PinMe (pinme.eth.limo) and instantly get a short shareable URL (*.pinit.eth.limo). Supports all file types: HTML pages,...",
+  "updated_at": 1785323550159,
+  "version": "1.0.1"
+}
