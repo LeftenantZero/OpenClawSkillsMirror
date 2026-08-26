@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of codemap.\n\n- Build a local SQLite index of all functions, classes, methods, interfaces, and types in your code repositories for fast symbol lookup.\n- Supports Python (functions, classes, methods) and JS/TS/JSX/TSX (function declarations, exported arrow consts, classes, interfaces, type aliases).\n- CLI tool enables building, querying, and outlining indexed code symbols with a single command.\n- Pure Python implementation with no network, model calls, or external dependencies required.\n- Skips common directories like node_modules, .git, and dist during indexing.\n- Designed to reduce redundant file scans and token usage for agents working across large projects.",
+  "created_at": 1782913339037,
+  "display_name": "codemap",
+  "fetched_at": 1787778502444,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "bench.py",
+    "bin/codemap",
+    "clawhub.json",
+    "codemap/__init__.py",
+    "codemap/cli.py",
+    "codemap/extractors.py",
+    "codemap/index.py",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/test_cli.py",
+    "tests/test_extractors.py",
+    "tests/test_index.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Workloft",
+    "handle": "workloftai",
+    "user_id": "s17b4msacv23kywbf6ssbhm5jd89qe0t"
+  },
+  "slug": "codemap",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/codemap",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=codemap&ownerHandle=workloftai",
+    "page_url": "https://clawhub.ai/workloftai/skills/codemap"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 205,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Build a compact local SQLite index of every function, class, method, interface and type across your repos, so an agent finds a symbol's file:line and signatu...",
+  "updated_at": 1782913339037,
+  "version": "1.0.0"
+}
