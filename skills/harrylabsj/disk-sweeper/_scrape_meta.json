@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of Disk Sweeper: an intelligent, safety-focused disk analysis and cleanup tool.\n\n- Scans directories for disk usage by type, size, age, and detects large and duplicate files.\n- Identifies and analyzes Chinese app caches (WeChat, DingTalk, QQ, etc.) and common system caches.\n- Generates safety-graded cleanup suggestions with clear rationale (SAFE, CLEANABLE, CAUTION, PROTECTED).\n- Permanently excludes critical system paths for protection.\n- Preview, interactive, auto-safe, and undo cleanup modes supported.\n- User-friendly command-line experience with summarized reports and error handling.",
+  "created_at": 1781438854396,
+  "display_name": "Disk Sweeper",
+  "fetched_at": 1787780824926,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cache-patterns.json",
+    "references/file-types.json",
+    "references/protected-paths.json",
+    "scripts/analyzer.py",
+    "scripts/caches.py",
+    "scripts/cleaner.py",
+    "scripts/duplicates.py",
+    "scripts/formatter.py",
+    "scripts/progress.py",
+    "scripts/safety.py",
+    "scripts/scanner.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "haidong",
+    "handle": "harrylabsj",
+    "user_id": "s17a8m9q4jybb46cv60h4fxard83hmsn"
+  },
+  "slug": "disk-sweeper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/disk-sweeper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=disk-sweeper&ownerHandle=harrylabsj",
+    "page_url": "https://clawhub.ai/harrylabsj/skills/disk-sweeper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 417,
+    "installs": 5,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Intelligent disk space analysis and cleanup tool with safety grading, duplicate detection, and Chinese app cache recognition.",
+  "updated_at": 1781438854396,
+  "version": "1.0.0"
+}
