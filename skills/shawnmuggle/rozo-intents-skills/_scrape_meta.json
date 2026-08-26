@@ -1,0 +1,58 @@
+{
+  "changelog": "1.0.9: EURC disclosed (trustline verification only, never a payment token); prominent irreversibility warnings \u2014 verify destination/chain/token/memo/amount before funding; USDT pay-in table states Base is USDC-only in both directions.",
+  "created_at": 1775406956333,
+  "display_name": "ROZO Intents Pay & Bridge",
+  "fetched_at": 1787772757848,
+  "files": [
+    "LICENSE.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/api-reference.md",
+    "references/supported-chains.md",
+    "references/wallet-detection.md",
+    "scripts/dist/chains.js",
+    "scripts/dist/check-balance.js",
+    "scripts/dist/check-stellar-trustline.js",
+    "scripts/dist/create-payment.js",
+    "scripts/dist/get-payment.js",
+    "scripts/dist/parse-qr.js",
+    "skill-card.md",
+    "skills/check-balance/SKILL.md",
+    "skills/parse-qr/SKILL.md",
+    "skills/payment-status/SKILL.md",
+    "skills/send-payment/SKILL.md",
+    "version.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786423413447,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Shawn Muggle",
+    "handle": "shawnmuggle",
+    "user_id": "s17a57ypabprvxk3s4hkg6w6ax8460f3"
+  },
+  "slug": "rozo-intents-skills",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/rozo-intents-skills",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=rozo-intents-skills&ownerHandle=shawnmuggle",
+    "page_url": "https://clawhub.ai/shawnmuggle/skills/rozo-intents-skills"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 958,
+    "installs": 18,
+    "stars": 2,
+    "versions": 9
+  },
+  "summary": "Cross-chain crypto payments and bridging via Rozo. Send USDC/USDT across Ethereum, Arbitrum, Base, BNB Chain (BSC), Polygon, Solana, and Stellar (Base and Stellar are USDC-only; Solana receives USDC only but can pay in USDT). On Stellar the trustline checker can also verify EURC trustlines; EURC is trustline-verification only, never a payment token here. Use when the user asks to pay, send, transfer, or bridge crypto/USDC/USDT, check a wallet or USDC/USDT balance, check a crypto payment's status, or shares a crypto payment QR code screenshot, a wallet address (0x, base58, G/C stellar), or a transaction hash. Auto-detects wallet type and auto-selects token (USDC preferred). Every payment shows full details and waits for an explicit yes/no by default. Small-amount auto-execute is opt-in: it runs only if the user raises the confirmation thresholds in version.json (shipped 0 = off). Do NOT use for general blockchain questions, non-payment tasks, or ordinary fiat payments, bank transfers, or bank-account balance questions.",
+  "updated_at": 1786422711150,
+  "version": "1.0.9"
+}
