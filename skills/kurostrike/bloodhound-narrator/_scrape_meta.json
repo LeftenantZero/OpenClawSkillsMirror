@@ -1,0 +1,43 @@
+{
+  "changelog": "Fixes twelve edge types that were silently scored as zero \u2014 GenericWrite, WriteOwner, AllExtendedRights, ForceChangePassword, AddMember, ReadLAPSPassword, ReadGMSAPassword, GpLink, AdminTo, HasSession and others. Paths built from these alone previously reported as Low. Restores remediation guidance to Tier 0 findings, which rendered with an empty remediation section. Hardens against malformed pwdlastset values and edges referencing missing nodes, both of which aborted the run. Caps scores at 100.\n\nAdds AD CS detection (ESC1, ESC3, ESC4, ESC6a/b, ESC7, ESC9a/b, ESC10a/b, ESC13, Golden Certificate, CA management rights, PKI template flag writes), resource-based constrained delegation, shadow credentials, LAPS and gMSA password reads, and additional lateral movement edges \u2014 each with dedicated remediation guidance.\n\nTier 0 now weighted in two bands: core groups score above operator groups. Kerberoastable accounts detected anywhere in a path, not only at the source. Unrecognised edge labels are reported rather than scored as zero, so newer BloodHound schemas no longer understate severity silently.\n\nSeverity output for the bundled fixtures is unchanged from 1.0.1, enforced by a regression test. Paths relying on previously-unscored edges will rate higher than on 1.0.1 \u2014 note the tool version in deliverables and re-baseline before comparing assessments.",
+  "created_at": 1774367831120,
+  "display_name": "BloodHound Narrator",
+  "fetched_at": 1787774949200,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/Invoke-BHNarrator.txt",
+    "scripts/bh-narrator.sh",
+    "scripts/lib/NarrativeTemplates.txt",
+    "scripts/lib/SeverityClassifier.txt",
+    "skill-card.md",
+    "tests/Invoke-BHNarrator.Tests.txt",
+    "tests/run-tests.sh",
+    "tests/synthetic-adcs.json",
+    "tests/synthetic-bloodhound.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Kuro",
+    "handle": "kurostrike",
+    "user_id": "s176wq4hckzmyj9fg6nxe55yad83gjta"
+  },
+  "slug": "bloodhound-narrator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bloodhound-narrator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bloodhound-narrator&ownerHandle=kurostrike",
+    "page_url": "https://clawhub.ai/kurostrike/skills/bloodhound-narrator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 879,
+    "installs": 16,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Turn BloodHound attack path exports into dual-layer security reports \u2014 CISO executive prose on top, technical remediation playbook below. Automates Active Directory audit reporting for pentesters, blue teams, and security consultants. Supports DCSync, Kerberoasting, AD CS abuse (ESC1/3/4/6/7/9/10/13",
+  "updated_at": 1785082915929,
+  "version": "1.0.2"
+}
