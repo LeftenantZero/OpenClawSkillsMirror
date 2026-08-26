@@ -1,0 +1,55 @@
+{
+  "changelog": "Contract Risk Review v1.0.0\n\n- Initial release of Contract Risk Review skill.\n- Supports automated extraction and risk annotation for six contract types (purchase, sales, service, labor, lease, NDA).\n- Dual PDF extraction engines (PyMuPDF + pdfplumber) for robust text parsing.\n- AI-driven clause extraction and structured risk report generation (summary, key terms table, three-tier risk list).\n- Integrated Feishu (Lark) notification for sending interactive risk reports.\n- User provides OpenAI-compatible API key for model access; supports multiple AI providers.\n- Built-in risk library with configurable checklist and FAQ.\n- Free and paid plans with tiered features and batch processing in Pro/Max.",
+  "created_at": 1776842278419,
+  "display_name": "Contract Risk Review",
+  "fetched_at": 1787775370126,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/changelog.md",
+    "references/risk-checklist.md",
+    "scripts/__init__.py",
+    "scripts/ai_extractor.py",
+    "scripts/contract_type_detector.py",
+    "scripts/feishu_notifier.py",
+    "scripts/main.py",
+    "scripts/pdf_extractor.py",
+    "scripts/report_generator.py",
+    "scripts/risk_analyzer.py",
+    "scripts/test_contract_analyzer.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779922304455,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "YK-Global",
+    "handle": "jeffersplind92",
+    "user_id": "s175jrtenfrtk7xr9av6myt65s85bemf"
+  },
+  "slug": "contract-risk-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/contract-risk-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=contract-risk-review&ownerHandle=jeffersplind92",
+    "page_url": "https://clawhub.ai/jeffersplind92/skills/contract-risk-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 420,
+    "installs": 9,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Contract Risk Analyzer \u2014 Upload contract PDF, AI auto-extracts key clauses and annotates risk points, outputs structured risk report (summary + key terms tab...",
+  "updated_at": 1779219411318,
+  "version": "1.0.0"
+}
