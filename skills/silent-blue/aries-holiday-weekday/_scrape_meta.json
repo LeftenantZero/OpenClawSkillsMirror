@@ -1,0 +1,48 @@
+{
+  "changelog": "- Initial release of aries-holiday-weekday skill.\n- Supports querying Chinese holiday/workday status for specific dates or entire months based on official State Council (gov.cn) notices.\n- Accurately distinguishes between statutory holidays, weekend make-up workdays, and regular weekdays.\n- Automatically fetches and caches annual holiday arrangements from gov.cn if not already available.\n- Returns results in a clear, structured format for both single-date and month-wide queries.",
+  "created_at": 1779936553958,
+  "display_name": "Aries Holiday Weekday",
+  "fetched_at": 1787784307855,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "cache/2026.json",
+    "references/api_reference.md",
+    "scripts/query_holiday.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968352410,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Silent-Blue",
+    "handle": "silent-blue",
+    "user_id": "s173jfm7qfxp2xjec8exevm23d87j68q"
+  },
+  "slug": "aries-holiday-weekday",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aries-holiday-weekday",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aries-holiday-weekday&ownerHandle=silent-blue",
+    "page_url": "https://clawhub.ai/silent-blue/skills/aries-holiday-weekday"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 548,
+    "installs": 10,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query gov.cn Chinese holiday notices to determine workdays, holidays, and make-up workdays. Use when the user needs to check whether a specific date is a wor...",
+  "updated_at": 1779936553958,
+  "version": "1.0.0"
+}
