@@ -1,0 +1,63 @@
+{
+  "changelog": "Initial release of adversarial-plan: an adversarial implementation planner.\n\n- Takes a spec.md (from adversarial-spec), optional review findings, and generates a structured plan.md with ordered steps, dependencies, files, tests, and risks.\n- CLI supports extensive options for workflow control, provider selection, research, and CI integration.\n- Implements a challenge-revise-verify loop, with support for delegated execution and deep external research.\n- Outputs plan.md with clear YAML frontmatter and step breakdown; integrates with adversarial-code-loop for stepwise implementation.\n- Includes HTML reporting, detailed exit codes, and integration guidance.\n- Personas and related skills organized via adversarial-common for extensibility.",
+  "created_at": 1785780702037,
+  "display_name": "adversarial-plan",
+  "fetched_at": 1787773590898,
+  "files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "_retrospective/ISSUES.md",
+    "references/claude-timeout-notes.md",
+    "references/codex-claude-full-pipeline.md",
+    "references/pipeline-review-to-plan.md",
+    "references/run-plan-steps-without-plan-mode.md",
+    "scripts/__init__.py",
+    "scripts/adversarial_plan.py",
+    "scripts/install.sh",
+    "scripts/phases/__init__.py",
+    "scripts/phases/phase_challenge.py",
+    "scripts/phases/phase_plan.py",
+    "scripts/phases/phase_revise.py",
+    "scripts/phases/phase_verify.py",
+    "spec.md",
+    "tests/conftest.py",
+    "tests/test_contract_gate.py",
+    "tests/test_orchestrator.py",
+    "tests/test_phases.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785781656575,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "chpomob",
+    "handle": "chpomob",
+    "user_id": "s17435m3chty5jmw4jhpkyhnb58brn8g"
+  },
+  "slug": "adversarial-plan",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/adversarial-plan",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=adversarial-plan&ownerHandle=chpomob",
+    "page_url": "https://clawhub.ai/chpomob/skills/adversarial-plan"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1797,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Adversarial implementation planner. Takes a spec.md (from adversarial-spec) and optionally review findings, then produces a plan.md with ordered steps, dependencies, files, tests, and risks. Execute the result through focused per-step specs.",
+  "updated_at": 1785780858411,
+  "version": "0.1.0"
+}
