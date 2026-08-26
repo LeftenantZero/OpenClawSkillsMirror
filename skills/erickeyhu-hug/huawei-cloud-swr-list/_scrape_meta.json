@@ -1,0 +1,41 @@
+{
+  "changelog": "Initial release of huawei-cloud-swr-list.\n\n- Enables listing of Huawei Cloud SWR (Software Repository for Container) image repositories in the current project/region.\n- Supports optional filtering by namespace, repository name (fuzzy match), and category.\n- Provides pagination and sorting options for repository inventory.\n- Returns detailed repository information, including name, namespace, visibility, tag/image count, size, download count, image path, tags, and timestamps.\n- Requires Huawei Cloud CLI (KooCLI) \u2265 3.2.0 and proper account permissions.",
+  "created_at": 1785920243906,
+  "display_name": "huawei-cloud-swr-list",
+  "fetched_at": 1787773354634,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/test-cli-commands.sh",
+    "scripts/validate-skill.sh",
+    "skill-card.md",
+    "templates/test-vars.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-swr-list",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-swr-list",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-swr-list&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-swr-list"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 175,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query the list of Huawei Cloud SWR (Software Repository for Container) image repositories under the current project/region. Lists all image repositories with their name, namespace, category, visibility (public/private), image/tag count, size, download count, full image path, tags and timestamps. Supports optional filtering by namespace, repository name (fuzzy match), category, and pagination (limit/offset) with sorting for account-wide repository inventory. Use when the user wants to: (1) list all Huawei Cloud SWR image repositories / \u67e5\u8be2\u534e\u4e3a\u4e91SWR\u955c\u50cf\u4ed3\u5e93\u5217\u8868, (2) check how many image repositories exist in the account or region, (3) inspect repository visibility, size, tag count, or path for daily inspection or troubleshooting, (4) filter repositories by namespace, name, or category, (5) page through or sort repository results. Triggers include: \"SWR\u5217\u8868\", \"\u534e\u4e3a\u4e91SWR\u5217\u8868\", \"\u67e5\u8be2SWR\u5217\u8868\", \"SWR\u955c\u50cf\u4ed3\u5e93\u5217\u8868\", \"\u5bb9\u5668\u955c\u50cf\u4ed3\u5e93\u5217\u8868\", \"SWR repository list\", \"list SWR repos\", \"ListReposDetails\", \"SWR\u4ed3\u5e93\u67e5\u8be2\", \"\u67e5\u770bSWR\u4ed3\u5e93\", \"\u955c\u50cf\u4ed3\u5e93\u5217\u8868\"",
+  "updated_at": 1785920365401,
+  "version": "1.0.0"
+}
