@@ -1,0 +1,47 @@
+{
+  "changelog": "- Removed the skill-card.md file.\n- No changes to features or functionality.\n- Documentation cleanup only; no user-facing impact.",
+  "created_at": 1783923899380,
+  "display_name": "container-host-aiops",
+  "fetched_at": 1787772966744,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agent-guardrails.md",
+    "references/capabilities.md",
+    "references/cli-reference.md",
+    "references/setup-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786345468169,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wei zhou",
+    "handle": "zw008",
+    "user_id": "s171xgnmqse0nqvgqvqnaq5f9183kyre"
+  },
+  "slug": "container-host-aiops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/container-host-aiops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=container-host-aiops&ownerHandle=zw008",
+    "page_url": "https://clawhub.ai/zw008/skills/container-host-aiops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 916,
+    "installs": 1,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "Use this skill whenever the user needs to operate a single container host through the Docker Engine API, Portainer, or Podman \u2014 a one-shot host overview; container reads (list/inspect, logs tail, CPU/memory stats, top processes, restart summary); image reads (list, inspect with history, dangling, disk usage); volume reads (list, inspect, dangling); network reads (list, inspect); system reads (info, version, df disk-usage, recent events); Portainer stacks + endpoints; Compose-project rollups (list_compose_stacks, docker+podman); Podman pods (list_pods, podman-only); three flagship analyses \u2014 restart-loop RCA (crash-looping containers + cause/action), resource-pressure analysis (CPU/memory vs limits), and image & volume bloat (prune candidates + reclaimable bytes); and eight guarded writes (restart/stop/start/remove a container, prune images/volumes, update resource limits, recreate a Portainer stack). Always use this skill for \"Docker host overview\", \"which containers are crash-looping\", \"restart loop\", \"why does this container keep restarting\", \"container CPU/memory usage\", \"docker logs\", \"which containers are near their limits\", \"resource pressure\", \"dangling images/volumes\", \"reclaim disk\", \"prune images\", \"stop/start/restart a container\", \"update a container's memory limit\", \"Portainer stacks\", \"compose stacks\", \"Podman pods\" when the context is a Docker, Portainer, or Podman container host. Do NOT use when the target is a cluster orchestrator, a hypervisor, a storage appliance, a backup product, network device config, or OT/industrial equipment \u2014 route those to the appropriate other AIops-tools skill. This is for NON-orchestrator container hosts. Governed Docker/Portainer/Podman container-host operations with a built-in governance harness (audit, policy, token budget, undo, risk-tiers). Exercised against a live Docker Engine 27.5.1 daemon (doctor, overview, the three flagship analyses, and a governed stop_container with audit + undo recorded); the Portainer and Podman API paths are covered by the mock suite only. See docs/VERIFICATION.md.",
+  "updated_at": 1786344703474,
+  "version": "0.10.0"
+}
