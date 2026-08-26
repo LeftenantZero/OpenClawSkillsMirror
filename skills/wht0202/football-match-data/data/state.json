@@ -1,0 +1,648 @@
+{
+  "version": "2.7.1",
+  "created": "2026-06-24T04:55:30Z",
+  "last_updated": "2026-07-07T14:22:26.058044+00:00",
+  "backtest": {
+    "Steam": {
+      "稳定": {
+        "matches": 1798,
+        "hits": 1034,
+        "accuracy": 57.5,
+        "roi": -3.3
+      },
+      "强涌入": {
+        "matches": 3916,
+        "hits": 2045,
+        "accuracy": 52.2,
+        "roi": -3.7
+      },
+      "强冷却": {
+        "matches": 2856,
+        "hits": 1436,
+        "accuracy": 50.3,
+        "roi": -2.5
+      },
+      "冷却": {
+        "matches": 978,
+        "hits": 579,
+        "accuracy": 59.2,
+        "roi": -1.1
+      },
+      "涌入": {
+        "matches": 1109,
+        "hits": 653,
+        "accuracy": 58.9,
+        "roi": -4.9
+      }
+    },
+    "O/U双边": {
+      "大球热门": {
+        "matches": 4812,
+        "hits": 3009,
+        "accuracy": 62.5,
+        "roi": -2.3
+      },
+      "小球热门": {
+        "matches": 2779,
+        "hits": 1669,
+        "accuracy": 60.1,
+        "roi": -2.5
+      }
+    },
+    "离散度": {
+      "低离散": {
+        "matches": 7006,
+        "hits": 3787,
+        "accuracy": 54.1,
+        "roi": 0.0
+      },
+      "中离散": {
+        "matches": 3087,
+        "hits": 1595,
+        "accuracy": 51.7,
+        "roi": 0.0
+      },
+      "高离散": {
+        "matches": 568,
+        "hits": 202,
+        "accuracy": 35.6,
+        "roi": 0.0
+      }
+    },
+    "初盘偏差": {
+      "深开": {
+        "matches": 2089,
+        "hits": 1560,
+        "accuracy": 74.7,
+        "roi": 0.0
+      },
+      "浅开": {
+        "matches": 2138,
+        "hits": 853,
+        "accuracy": 39.9,
+        "roi": 0.0
+      }
+    },
+    "CLV": {
+      "正CLV": {
+        "matches": 2404,
+        "hits": 1249,
+        "accuracy": 52.0,
+        "roi": 0.0
+      },
+      "负CLV": {
+        "matches": 1760,
+        "hits": 894,
+        "accuracy": 50.8,
+        "roi": 0.0
+      }
+    },
+    "Pinnacle": {
+      "Pinnacle反向": {
+        "matches": 376,
+        "hits": 181,
+        "accuracy": 48.1,
+        "roi": 0.0
+      }
+    }
+  },
+  "best_filters": {
+    "steady": {
+      "min_prob": 0.55,
+      "min_edge": 0.03,
+      "min_score": 55
+    },
+    "bold": {
+      "min_prob": 0.5,
+      "min_edge": 0.05,
+      "min_score": 45
+    }
+  },
+  "model": {
+    "date": "2026-06-24 05:37",
+    "model": "dixon-coles",
+    "league": "ALL",
+    "n_matches": 2280,
+    "home_adv": 0.2031,
+    "intercept": 0.322,
+    "rho": -0.0154,
+    "half_life_days": 180.0
+  },
+  "data_sources": {
+    "footballdata": {
+      "last_fetch": "2026-06-24 05:07",
+      "league": "F1",
+      "matches": 2105
+    }
+  },
+  "live_sessions": [
+    {
+      "date": "2026-06-24 04:55",
+      "source": "nowscore",
+      "matches": 1
+    },
+    {
+      "date": "2026-06-24 05:03",
+      "source": "okooo",
+      "matches": 9
+    },
+    {
+      "date": "2026-06-24 05:03",
+      "source": "okooo",
+      "matches": 9
+    }
+  ],
+  "pending": [
+    "德甲/法甲 澳客联赛ID校准"
+  ],
+  "notes": "",
+  "ledger_summary": {},
+  "sniper": {
+    "min_prob": 0.8,
+    "min_edge": 0.08,
+    "max_kv": 0.001,
+    "verified_hit_rate": 0.885,
+    "verified_on": "EPL+SP1+I1 (26 picks, 23 hits)",
+    "active_leagues": [
+      "E0",
+      "SP1",
+      "I1",
+      "D1"
+    ],
+    "excluded": [
+      "F1 (50% hit rate)"
+    ],
+    "avg_odds": 1.35,
+    "picks_per_season": 9,
+    "date_verified": "2026-06-25"
+  },
+  "system_dimensions": 31,
+  "last_session": "2026-06-25",
+  "bifax_method": {
+    "source": "澳客 exchanges页 (oko oo.com)",
+    "method": "WebFetch渲染JS表格",
+    "id_discovery": "扫描已知ID区间(世界杯13158xx)",
+    "output": "赔率/成交量/成交占比/庄家盈亏/99均价/必发指数",
+    "status": "permanent"
+  },
+  "ou_sniper": {
+    "over_threshold": 0.65,
+    "under_threshold": 0.68,
+    "kv_max": 0.003,
+    "verified_hit_rate": 0.789,
+    "best_leagues": [
+      "E0",
+      "D1"
+    ],
+    "active": true
+  },
+  "core_techniques": {
+    "1x2_sniper": "88.5% (EPL+SP1+I1)",
+    "ou_sniper": "76.1% (O≥65%+KV<0.003)",
+    "cold_detector": "9-signal system",
+    "bookmaker_mind": "5 manipulation types",
+    "star_rating": "4+ stars only recommendation",
+    "iron_rules": [
+      "数据不全不分析，先补齐",
+      "零估算，全真实，标来源",
+      "23维不漏，每步自查",
+      "信号带概率区间，不绝对化",
+      "过度共识=反向指标"
+    ],
+    "data_sources": {
+      "500.com": "30-company European odds + opening/closing",
+      "okooo": "Betfair exchange + 99-avg",
+      "nowscore": "Injuries/lineups + O/U handicap lines",
+      "understat": "xG data (partial)"
+    },
+    "ou_handicap_techniques": [
+      "看大不看小",
+      "趋势混杂→放弃",
+      "封顶看空间",
+      "深盘降盘升水→小球+下盘",
+      "胜负降盘+大小升盘→大球",
+      "诱大诱小 trap patterns"
+    ]
+  },
+  "euro_ah_coordination": {
+    "core_principle": "欧赔定价值,亚盘管流向。差异=信号",
+    "three_patterns": [
+      "低水保护型",
+      "阻上造冷型",
+      "诱上型"
+    ],
+    "initial_check": "初盘合理性: 欧赔→理论盘口 vs 实际盘口,偏差>0.5=预警",
+    "status": "active"
+  },
+  "publish_reminder": {
+    "package": "ampan-skill/ (ready)",
+    "platform": "ClawHub",
+    "account": "wht0202",
+    "wait_until": "14 days from 2026-06-25",
+    "command": "clawhub skill publish ./ampan-skill --slug ampan --name \"暗盘系统 (Dark Market System)\" --version 1.0.0",
+    "contact": "微信 18001513718"
+  },
+  "clawhub_credentials": {
+    "email": "442912301@qq.com",
+    "password": "Dasiyebushuo22",
+    "username": "wht0202",
+    "note": "ClawHub登录凭证。发布技能时使用。CLI用clawhub login重新授权。"
+  },
+  "improvement_roadmap": {
+    "done": [
+      "泊松系数修正(Dixon-Coles接入清单28)",
+      "公司异常检测",
+      "冷门9信号接入清单17",
+      "四大操盘模型接入清单16",
+      "必发四步验证自动化(清单30)",
+      "基本面自动采集(清单19-23)",
+      "全信号历史回测(8954场)"
+    ],
+    "skipped": [
+      "资金管理(凯利分数制)"
+    ],
+    "pending": [
+      "ClawHub发布(等待至2026-07-09)",
+      "德甲/法甲 okooo联赛ID校准",
+      "nowscore Infocat ID桥接(伤病自动化)",
+      "O/U历史盘口数据重新抓取(ou_cache多为空)",
+      "多联赛模型训练(当前仅EPL)"
+    ]
+  },
+  "upgrades": {
+    "1_poisson_integration": {
+      "status": "done",
+      "date": "2026-06-26",
+      "files": [
+        "src/footy/models/loader.py",
+        "src/footy/analysis/auto_signals.py"
+      ],
+      "effect": "清单28项从粗略估算升级为Dixon-Coles模型预测(预期进球+最可能比分+O/U概率)"
+    },
+    "2_cold_detector": {
+      "status": "done",
+      "date": "2026-06-26",
+      "files": [
+        "src/footy/analysis/auto_signals.py"
+      ],
+      "effect": "清单17项从2个简陋信号升级为完整9信号检测(指数+建议)"
+    },
+    "3_advanced_ah": {
+      "status": "done",
+      "date": "2026-06-26",
+      "files": [
+        "src/footy/analysis/auto_signals.py"
+      ],
+      "effect": "清单16项从原始计数升级为四模型分类(浅阻/深阻/浅诱/深诱+信心+建议)"
+    },
+    "4_bifax_auto": {
+      "status": "done",
+      "date": "2026-06-26",
+      "files": [
+        "src/footy/data/bifax.py",
+        "src/footy/analysis/orchestrator.py",
+        "scripts/ampan_analyze.py"
+      ],
+      "effect": "清单30项从手动WebFetch升级为自动采集(500.com合成+okooo直抓)"
+    },
+    "5_fundamentals_auto": {
+      "status": "done",
+      "date": "2026-06-26",
+      "files": [
+        "src/footy/analysis/auto_fundamentals.py",
+        "src/footy/analysis/auto_signals.py"
+      ],
+      "effect": "清单19-23项从全手动升级为自动(Infocat伤病+DB状态+连胜分析)"
+    },
+    "6_full_backtest": {
+      "status": "done",
+      "date": "2026-06-26",
+      "files": [
+        "scripts/backtest_all_signals.py"
+      ],
+      "effect": "8954场8类信号回测完成, 发现: 初盘深开74%准确率, 浅开39.6%冷门预警"
+    },
+    "7_standardized_report": {
+      "status": "done",
+      "date": "2026-06-26",
+      "files": [
+        "src/footy/analysis/report.py",
+        "scripts/ampan_analyze.py"
+      ],
+      "effect": "标准化11板块全维报告模板，--full标志强制31维输出，永不再漏"
+    },
+    "8_5match_audit": {
+      "status": "done",
+      "date": "2026-06-26",
+      "matches": [
+        "Ecuador-Germany",
+        "Curacao-IvoryCoast",
+        "Tunisia-Netherlands",
+        "Japan-Sweden",
+        "Paraguay-Australia"
+      ],
+      "errors_found": 3,
+      "errors": [
+        "Curacao: 29全降→23降",
+        "Curacao: CLV-11.6%→-9.3%(实时波动)",
+        "Paraguay: 遗漏5维度(已修复)"
+      ]
+    },
+    "9_team_name_search": {
+      "status": "done",
+      "date": "2026-06-26",
+      "files": [
+        "src/footy/data/wubai.py",
+        "scripts/ampan_analyze.py"
+      ],
+      "effect": "find_fixture()修复+接入主命令，支持队名直接搜索，无需手动找fixture_id"
+    },
+    "10_okooo_dead": {
+      "status": "noted",
+      "date": "2026-06-26",
+      "effect": "okooo返回405反爬，标记不可用。核心管线(500.com)不受影响"
+    },
+    "11_odds_api": {
+      "status": "done",
+      "date": "2026-06-26",
+      "files": [
+        "src/footy/data/oddsapi.py"
+      ],
+      "effect": "Odds API接入+20联赛扩展, Pinnacle实时赔率, 双源交叉验证(API+500.com)"
+    },
+    "12_wc_group_standings": {
+      "status": "done",
+      "date": "2026-06-26",
+      "effect": "12场小组积分形势: 6场战意不足(已出线/已淘汰), 6场生死战"
+    },
+    "13_full_analysis_script": {
+      "status": "done",
+      "date": "2026-06-29",
+      "effect": "25维全自动脚本(一条命令), --search加基本面→30维"
+    },
+    "14_fundamentals_injection": {
+      "status": "done",
+      "effect": "--fundamentals参数注入WebSearch结果→30维"
+    },
+    "15_titan_scraper": {
+      "status": "done",
+      "effect": "Playwright+Edge绕过WebFetch封锁,恢复titan007/nowscore访问"
+    },
+    "16_triple_source": {
+      "status": "done",
+      "date": "2026-07-02",
+      "effect": "Playwright+Edge三源交叉:500.com(29家)+titan007(118家欧赔+15家AH)+Odds API(Pinnacle)"
+    },
+    "17_playwright_edge": {
+      "status": "done",
+      "date": "2026-07-02",
+      "effect": "titan007全站恢复:titan_scraper.py绕过WebFetch封锁,AH+欧赔+基本面全自动"
+    }
+  },
+  "auto_coverage": "25→30/31(世界杯/五大联赛全维+双源交叉)",
+  "checklist_summary": {
+    "auto_filled": 31,
+    "manual_only": 0,
+    "conditional": "items 19-20 need Infocat (network), items 22-23 need DB/league data"
+  },
+  "backtest_findings": {
+    "top_signals": [
+      {
+        "signal": "初盘深开",
+        "accuracy": 74.0,
+        "matches": 1748,
+        "note": "庄家大幅看好时热门胜率极高"
+      },
+      {
+        "signal": "大球热门",
+        "accuracy": 62.5,
+        "matches": 3941,
+        "note": "O/U水位一边倒可靠"
+      },
+      {
+        "signal": "小球热门",
+        "accuracy": 60.0,
+        "matches": 2335,
+        "note": "小球方向同样有效"
+      }
+    ],
+    "cold_signals": [
+      {
+        "signal": "初盘浅开",
+        "accuracy": 39.6,
+        "matches": 1796,
+        "note": "⚠️ 热门胜率仅39.6%,强冷门预警"
+      },
+      {
+        "signal": "高离散度",
+        "accuracy": 35.4,
+        "matches": 528,
+        "note": "⚠️ 公司分歧大=冷门高发"
+      },
+      {
+        "signal": "Pinnacle反向",
+        "accuracy": 46.6,
+        "matches": 337,
+        "note": "⚠️ Pinnacle背离=53.4%冷门率"
+      }
+    ],
+    "total_matches": 8954,
+    "leagues": "五大联赛 2018-2024"
+  },
+  "last_analysis": {
+    "match": "厄瓜多尔 vs 德国",
+    "fixture_id": "1359202",
+    "date": "2026-06-26",
+    "verdict": "大球⭐⭐⭐⭐⭐ | 厄瓜多尔+1AH ⭐⭐⭐⭐ | 平局 ⭐⭐⭐⭐"
+  },
+  "total_matches_analyzed": 6,
+  "matches": [
+    {
+      "fixture": "1359202",
+      "name": "Ecuador vs Germany",
+      "verdict": "Over2.5+Ecuador+AH",
+      "pinnacle": "REVERSAL"
+    },
+    {
+      "fixture": "1359238",
+      "name": "Curacao vs Ivory Coast",
+      "verdict": "Curacao+2.25AH",
+      "pinnacle": "OK"
+    },
+    {
+      "fixture": "1359205",
+      "name": "Tunisia vs Netherlands",
+      "verdict": "Over3.0+Tunisia+2.5AH",
+      "pinnacle": "OK"
+    },
+    {
+      "fixture": "1359241",
+      "name": "Japan vs Sweden",
+      "verdict": "Under2.5+Sweden+0.5AH",
+      "pinnacle": "SUBTL"
+    },
+    {
+      "fixture": "1359235",
+      "name": "Paraguay vs Australia",
+      "verdict": "Avoid/Draw unreliable",
+      "pinnacle": "OK"
+    },
+    {
+      "fixture": "1359193",
+      "name": "Turkey vs USA",
+      "verdict": "Over2.5+Turkey+0.5AH",
+      "pinnacle": "OK"
+    }
+  ],
+  "audit_errors_total": 3,
+  "limitations": "World Cup fundamentals unavailable (no national team DB/Infocat ID mapping)",
+  "all_leagues": true,
+  "rules": {
+    "14": "概率差>15%不反打热门",
+    "16": "AH信号不曲解(诱下=买上,诱上=买下)",
+    "13_update": "R13≥1.0=能穿; <1.0+AH>1.0=危险降星"
+  },
+  "triple_check": [
+    "概率差R14",
+    "AH信号R16"
+  ],
+  "user_handles": [
+    "1xBet分析(用户自行判断)"
+  ],
+  "clawtip": {
+    "status": "ready",
+    "price": "1 RMB/match (100 fen)",
+    "scripts": [
+      "create_order.py",
+      "service.py",
+      "file_utils.py"
+    ],
+    "test_date": "2026-07-09"
+  },
+  "standard_procedure": {
+    "step1": "500.com欧赔初即+Steam共识",
+    "step2": "Pinnacle反转检测(500.com+API双源)",
+    "step3": "AH盘路+Euro-AH偏差",
+    "step4": "O/U双边+盘水矛盾",
+    "step5": "凯利方差+离散度CV",
+    "step6": "四模操盘+冷门检测+庄家意图",
+    "step7": "基本面WebSearch(伤停/状态)",
+    "step8": "R13/R14/R16三重铁律过滤",
+    "step9": "1X2方向+AH方向双输出",
+    "step10": "30维自检表逐项确认"
+  },
+  "fundamentals_flow": "titan007 auto-search (Playwright) → cache → parse 19-23",
+  "titan007_map": {
+    "1359197(澳大利亚-埃及)": "2907389",
+    "1359187(葡萄牙-克罗地亚)": "2907387",
+    "1359192(瑞士-阿尔及利亚)": "2907388",
+    "1359194(阿根廷-佛得角)": "2907390",
+    "1359196(哥伦比亚-加纳)": "2907391",
+    "1362693(天狼星-米亚尔比)": "2912194",
+    "2913080(雷黑姆-斯塔贝克)": "2913080",
+    "2939003(布雷-亚隆城)": "2939003",
+    "2939004(科布漫步者-科克城)": "2939004",
+    "2939005(费恩夏普-韦克斯福德)": "2939005",
+    "2939006(特瑞特联-凯瑞)": "2939006",
+    "2939007(朗福特城-都柏林大学)": "2939007",
+    "2914361(德利城-瓦特福德)": "2914361",
+    "2914362(德罗赫达联-布咸美恩斯)": "2914362",
+    "2914364(圣帕特里克-戈尔韦联)": "2914364",
+    "2914365(斯莱戈流浪-沙姆洛克)": "2914365",
+    "2914363(舒尔本-登克尔克)": "2914363"
+  },
+  "changes_20260704": {
+    "titan007_pipeline": "欧赔+亚盘+基本面全自动, 500.com=0自动回退",
+    "leagues_tested": "爱超5场 + 爱甲5场 + 挪甲1场 + 世界杯3场",
+    "total_matches": 14,
+    "search": "赛程页通用搜索(任意联赛8s) + ID探针备用"
+  },
+  "titan007_search": "universal: live index page (oldIndexall.aspx) + ID probe fallback",
+  "titan007_euro_odds": "fetch_euro_odds() - 从分析页解析百家欧赔初盘+即时",
+  "full_analysis_fallback": "500.com=0家时自动走titan007欧赔+亚盘+基本面",
+  "changes_20260704_v2": {
+    "reference_company": "中位数(非Crow/单家) → 代表15家共识",
+    "odds_range_display": "报告显示全区间(最低-最高)",
+    "self_audit": "16项自动 → 双触发(full_analysis静默 + print_report打印)",
+    "fundamentals_auto_search": "500.com有数据时也搜titan007基本面",
+    "prob_gap_fix": "概率差从主vs平→主vs客",
+    "titan_euro_odds": "支持初/终两种格式"
+  },
+  "bugfix_20260705": "AH升盘/降盘方向bug: abs()比较, 影响巴西1-2挪威漏判",
+  "err_log": [
+    "ERR-20260705-001: AH方向反转→巴西1-2",
+    "ERR-002: 冰岛1-1 北欧全票+AH暴涨=诱盘降星",
+    "ERR-003: 考诺萨1-1, Steam冷却+AH升盘=矛盾→诱盘降星",
+    "ERR-004: 邦迪比达1-2, 基本面极端碾压(排名差>10+状态完全相反)时技术矛盾不构成反向信号"
+  ],
+  "improvements": {
+    "devig": "乘法去水 (Buchdahl)",
+    "kelly": "1/8 Kelly (Buchdahl保守)",
+    "clv": "乘法CLV公式",
+    "dixon_coles": "半衰90天 + 5大联赛(12533场/144队)",
+    "ou": "titan007 O/U数据"
+  },
+  "new_dimension": "31: Elo评分+蛊惑盘/浅开陷阱检测",
+  "books_applied": [
+    "足球财富(刘胜临)",
+    "赔率足彩",
+    "足彩310实战指南",
+    "Fixed Odds Sports Betting(Buchdahl)",
+    "Soccer Analytics Using R(Beggs)"
+  ],
+  "self_audit": "22项自动检测",
+  "books_integrated": [
+    "足球财富(刘胜临)",
+    "赔率足彩",
+    "足彩310实战指南",
+    "Fixed Odds Sports Betting(Buchdahl)",
+    "Soccer Analytics Using R(Beggs)",
+    "一个足彩高手亚盘和欧赔总结",
+    "凯利指数分析剖析",
+    "赔率必杀组合",
+    "经典盘口分析秘籍",
+    "欧赔手册(完整版)",
+    "威廉和立博及INTER赔率分析范文"
+  ],
+  "core_improvements": {
+    "devig": "乘法去水(Buchdahl)",
+    "kelly": "1/8 Kelly(Buchdahl保守)",
+    "clv": "乘法CLV公式",
+    "elo": "12533场训练+蛊惑盘/浅开陷阱检测",
+    "dixon_coles": "半衰90天+5大联赛",
+    "titan007": "欧赔/亚盘/O/U三源全覆盖",
+    "self_audit_22": "Kelly陷阱/北欧警告/必杀组合/尾数检测/立博典型/Elo/蛊惑盘",
+    "core_thinking": "宁缺毋滥+赔率是语言+信号冲突降星+北欧特殊"
+  },
+  "data_freshness": "每次分析自动记录拉取时间戳",
+  "stats": {
+    "books": 13,
+    "dimensions": 31,
+    "self_audit_rules": 41,
+    "cache_entries": 19
+  },
+  "report_order": "终判移至末尾, 自审+系统思维收尾",
+  "star_downgrade": "星级=基础-红灯-陷阱, 冲突信号自动降星",
+  "permanent_rules": [
+    {
+      "id": "PR-001",
+      "date": "2026-07-10",
+      "rule": "每次分析必须自带自审，不分家。格式：📊报告 + 🔍自审，自审包含31维覆盖+13本书知识+41项检查。永远跟在报告后面。",
+      "trigger": "任何比赛分析请求",
+      "penalty": "不可饶恕"
+    },
+    {
+      "id": "PR-002",
+      "date": "2026-07-10",
+      "rule": "支付三阶段必须完整执行：创建订单→支付→验付出报告。支付成功后必须立即调用service.py，不允许等待用户确认。",
+      "trigger": "任何支付流程"
+    },
+    {
+      "id": "PR-003",
+      "date": "2026-07-10",
+      "rule": "service.py严禁在SM4解密失败时返回SUCCESS。支付凭证必须真实验证通过才放行。",
+      "trigger": "支付验证",
+      "bug": "ERR-005: SM4解密失败→fallback SUCCESS→免费白嫖分析"
+    }
+  ]
+}
