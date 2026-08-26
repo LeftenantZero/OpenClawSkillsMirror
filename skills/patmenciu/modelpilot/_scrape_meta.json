@@ -1,0 +1,40 @@
+{
+  "changelog": "**Modelpilot v1.5.0 Changelog**\n\n- Major refactor: SKILL.md now emphasizes a strict local-only safety boundary, two-round replacement rule, and repeatable benchmark protocol for Ollama models.\n- Added: Benchmark example files (`examples/models.example.json`, `examples/prompts.example.json`, `outputs/example_report.md`) and local scripts for running/reporting benchmarks (`scripts/modelpilot_benchmark.py`, `scripts/modelpilot_report.py`).\n- Added: Unit test for the new reporting workflow (`tests/test_modelpilot_report.py`).\n- Removed: Skill metadata files (`CHANGELOG.md`, `skill-card.md`) now replaced by clearer in-skill documentation.\n- New: Required response format for benchmark and decision results to ensure consistent reporting.\n- Now explicitly prohibits cloud API calls, model downloading, and any non-local actions without user approval.",
+  "created_at": 1779876754936,
+  "display_name": "Ollama Model Pilot",
+  "fetched_at": 1787782062162,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/models.example.json",
+    "examples/prompts.example.json",
+    "outputs/example_report.md",
+    "scripts/modelpilot_benchmark.py",
+    "scripts/modelpilot_report.py",
+    "skill-card.md",
+    "tests/test_modelpilot_report.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "patmenciu",
+    "handle": "patmenciu",
+    "user_id": "s17b7ke0py60etvzaczrwdabh587gytb"
+  },
+  "slug": "modelpilot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/modelpilot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=modelpilot&ownerHandle=patmenciu",
+    "page_url": "https://clawhub.ai/patmenciu/skills/modelpilot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 987,
+    "installs": 18,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "Use this skill when the user wants to test, compare, promote, replace, or clean up local Ollama models with a repeatable two-round real-task benchmark, no-th...",
+  "updated_at": 1780928811217,
+  "version": "1.5.0"
+}
