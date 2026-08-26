@@ -1,0 +1,33 @@
+{
+  "changelog": "- Adds a Mendeley connector skill for working with the user\u2019s authorized library through the `oo` CLI.\n- Supports core library workflows: create, read, update, list, and delete document records.\n- Includes public catalog lookup for searching Mendeley metadata and fetching catalog documents by ID.\n- Uses live action schemas before execution so payloads match the connector contract.\n- Treats read actions as safe by default and requires confirmation for write and destructive actions.\n- Relies on OOMOL-managed credentials, so no raw token handling is needed in the skill.\n\nSource: `oomol-lab/skills@d6fb756`",
+  "created_at": 1786945664154,
+  "display_name": "Mendeley",
+  "fetched_at": 1787771614898,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-mendeley",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-mendeley",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-mendeley&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-mendeley"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 103,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Mendeley (mendeley.com). Use this skill for ANY Mendeley request \u2014 reading, creating, updating, and deleting data. Whenever a task involves Mendeley, use this skill instead of calling the API directly.",
+  "updated_at": 1786945714299,
+  "version": "1.0.0"
+}
