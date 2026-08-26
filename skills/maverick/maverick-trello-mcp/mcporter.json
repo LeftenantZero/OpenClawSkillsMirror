@@ -1,0 +1,21 @@
+{
+  "imports": [],
+  "mcpServers": {
+    "maverick-trello-mcp": {
+      "baseUrl": "https://mcp.trello.com/v1",
+      "transport": "http",
+      "auth": "oauth",
+      "oauthClientIdEnv": "MAVERICK_TRELLO_MCP_CLIENT_ID",
+      "oauthTokenEndpointAuthMethod": "none",
+      "allowedTools": [
+        "trelloReadMember",
+        "trelloReadBoard",
+        "trelloReadCard",
+        "trelloWriteList",
+        "trelloWriteCard",
+        "trelloWriteChecklist",
+        "trelloSearch"
+      ]
+    }
+  }
+}
