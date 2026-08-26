@@ -1,0 +1,53 @@
+{
+  "changelog": "Initial release: Huawei Cloud ICP Filing Rule Consultation Skill.\n\n- Provides read-only consultation on ICP filing rules for Huawei Cloud, focusing on process, required materials, entity/account limits, and filing types (change, access, cancellation, migration, APP).\n- Responds only to explicit user mentions of ICP filing-related keywords; refuses non-ICP topics like domain registration or pricing.\n- Uses embedded Q&A knowledge base as primary source; fetches official documentation or searches Huawei Cloud site as fallback.\n- Two built-in, Python-based tools: web_fetcher (for direct document retrieval) and web_searcher (for site search using Playwright).\n- No operations or filings performed on behalf of users; information only.\n- Designed for after-sales technical engineers handling mainland China non-commercial internet information service filings.",
+  "created_at": 1784649790095,
+  "display_name": "huawei-cloud-icp-rule-consult",
+  "fetched_at": 1787773648768,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/catalog.yml",
+    "references/doc-commands.md",
+    "references/filing-rules.yml",
+    "references/knowledge-base.md",
+    "references/prerequisites.md",
+    "references/verification-method.md",
+    "scripts/__init__.py",
+    "scripts/requirements.txt",
+    "scripts/web_fetcher.py",
+    "scripts/web_searcher.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784670041398,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweicloud-skills-team",
+    "handle": "huaweiclouddev",
+    "user_id": "s17axk041vxeamxj39r4dwvyts87wtza"
+  },
+  "slug": "huawei-cloud-icp-rule-consult",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-icp-rule-consult",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-icp-rule-consult&ownerHandle=huaweiclouddev",
+    "page_url": "https://clawhub.ai/huaweiclouddev/skills/huawei-cloud-icp-rule-consult"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 161,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "ICP Filing (\u5907\u6848) rule consultation skill for Huawei Cloud. Based on Python 3.9+ with requests/Playwright, answers whether ICP filing is required, filing proce...",
+  "updated_at": 1784669360238,
+  "version": "1.0.0"
+}
