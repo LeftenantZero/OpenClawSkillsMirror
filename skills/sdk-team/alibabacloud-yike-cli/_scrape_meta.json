@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release of alibabacloud-yike-cli skill.\n\n- Provides protocol for orchestrating the Yike CLI to handle media upload, generation, job management, and authentication with Alibaba Cloud Yike.\n- Includes detailed module selection and routing rules based on user needs (authentication, upload, generation, capability checks, media info, and job operations).\n- Standardizes execution procedures: always checks authentication and uses JSON output, with a strict dry-run/confirmation/submission flow for media generation.\n- Ensures commands align with current CLI help and surfaces inconsistencies to the user.\n- Loads the relevant sub-module for each user request, improving clarity and maintainability.",
+  "created_at": 1787724748006,
+  "display_name": "alibabacloud-yike-cli",
+  "fetched_at": 1787768690119,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/account-and-setup.md",
+    "references/generate-image.md",
+    "references/generate-video.md",
+    "references/generate.md",
+    "references/media-and-jobs.md",
+    "references/upload.md",
+    "references/video-model-capabilities.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787725535008,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-yike-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-yike-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-yike-cli&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-yike-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 21,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when the user needs Yike CLI for local image/video upload or uploading media to the cloud (including Agent chat attachments exposed as local paths), standalone image/video generation, media info or quality inspection, async media/job wait and recovery, account/auth/config/update checks, listing or installing bundled skill packages, or help showing and choosing Yike CLI model, resolution, ratio, size, duration, and task type parameters for video generation.",
+  "updated_at": 1787724861905,
+  "version": "0.0.1"
+}
