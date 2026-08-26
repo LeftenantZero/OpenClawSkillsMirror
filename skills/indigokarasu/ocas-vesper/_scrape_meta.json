@@ -1,0 +1,50 @@
+{
+  "changelog": "ocas-vesper 2.7.0\n\n- Major update: Vesper now reads proposals and data directly from other skills\u2019 directories, not via intake handoff.\n- Expanded formatting rules\u2014briefings output as plain text/minimal HTML (no markdown), stricter section management, new section header styles, and streamlined weather/markets language.\n- New ontology: Vesper observes and records entities (person, event, place) in briefing outputs, for use by downstream Chronicle.\n- Inter-skill integration revised: briefing content and status now rely on cooperative reads from Corvus, Custodian, Dispatch, and Rally; output files go to a new organized briefings directory for Dispatch pickup.\n- Documentation for run completion, formatting rules, and inter-skill interfaces rewritten and expanded.",
+  "created_at": 1773729003443,
+  "display_name": "Vesper",
+  "fetched_at": 1787788425584,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/briefing_templates.md",
+    "references/journal.md",
+    "references/schemas.md",
+    "references/signal_filtering.md",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090296143,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Indigo Karasu",
+    "handle": "indigokarasu",
+    "user_id": "s17bp0q5q5x87yfrmb4876eywh83rcts"
+  },
+  "slug": "ocas-vesper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ocas-vesper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ocas-vesper&ownerHandle=indigokarasu",
+    "page_url": "https://clawhub.ai/indigokarasu/skills/ocas-vesper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1028,
+    "installs": 29,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Daily briefing generator. Aggregates signals from across the system into concise morning and evening briefings. Surfaces outcomes, opportunities, and decisio...",
+  "updated_at": 1779078363235,
+  "version": "2.7.0"
+}
