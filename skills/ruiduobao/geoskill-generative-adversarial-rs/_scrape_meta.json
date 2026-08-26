@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release: Deep learning-based cloud removal and image enhancement for remote sensing using GAN (U-Net + PatchGAN), with CUDA GPU support.\n\n- Provides cloud removal (with mask detection and pixel reconstruction) and image enhancement (denoising autoencoder) modes.\n- Includes pretrained weights for immediate use or automatic training on first run.\n- Outputs reconstructed/enhanced images, cloud masks, and evaluation metrics in standard formats (GeoTIFF/JSON).\n- Runs fully offline; all processing is local and user data remains private.\n- Supports both synthetic and real single-band GeoTIFF imagery.\n- Baseline numpy operators included for comparison and testing.",
+  "created_at": 1785845341692,
+  "display_name": "geoskill-generative-adversarial-rs",
+  "fetched_at": 1787773485288,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-generative-adversarial-rs.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785846416490,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-generative-adversarial-rs",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-generative-adversarial-rs",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-generative-adversarial-rs&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-generative-adversarial-rs"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 173,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "GAN (U-Net + PatchGAN) \u4e91\u53bb\u9664 / \u5f71\u50cf\u589e\u5f3a\uff0ctorch+CUDA GPU \u8bad\u7ec3\u4e0e\u63a8\u7406",
+  "updated_at": 1785845497545,
+  "version": "1.0.0"
+}
