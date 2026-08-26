@@ -1,0 +1,47 @@
+{
+  "changelog": "Voice Agent 1.0.0 \u2014 Major overhaul: now fully automates voice cloning, ElevenLabs setup, and conversational AI calling, with self-configuration and Telegram notifications.\n\n- Full migration from local API & Whisper/AWS Polly to ElevenLabs: agent now clones voice, generates MP3s, and runs calls via Twilio.\n- Autonomous self-configuration: navigates ElevenLabs dashboard via virtual-desktop to generate API keys, clone principal\u2019s voice, and create agents.\n- Local scripts and legacy audio handling removed; all config handled in config.json, voice_generator.py, and supporting docs.\n- Sends Telegram updates on configuration, voice readiness, audio generation, and call outcomes.\n- No manual API key setup required: agent fetches credentials and completes onboarding autonomously.\n- Supports audio-driven workflows, scalable text-to-speech, and automated inbound/outbound calls.",
+  "created_at": 1773705258796,
+  "display_name": "Voice Agent",
+  "fetched_at": 1787788388763,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agent_prompt.md",
+    "config.json",
+    "skill-card.md",
+    "voice_generator.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089922062,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Wesley Armando",
+    "handle": "georges91560",
+    "user_id": "s17dcq1h2qc4zm3jjz3888cj7n8856k8"
+  },
+  "slug": "voice-agent-v1",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/voice-agent-v1",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=voice-agent-v1&ownerHandle=georges91560",
+    "page_url": "https://clawhub.ai/georges91560/skills/voice-agent-v1"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 859,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Enables autonomous cloning of your voice via ElevenLabs, converts text to speech, and deploys AI voice agents for automated inbound/outbound calls with Twili...",
+  "updated_at": 1779078380924,
+  "version": "1.0.0"
+}
