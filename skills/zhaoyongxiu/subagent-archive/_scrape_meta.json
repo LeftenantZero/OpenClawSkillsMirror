@@ -1,0 +1,57 @@
+{
+  "changelog": "subagent-archive v3.2.0 brings cross-platform workspace detection, multi-workspace support, and enhanced compatibility for OpenClaw 6.1+.\n\n- Added automatic workspace directory scanning and new `-WorkspaceDir` parameter for flexible multi-workspace handling (Windows/macOS/Linux).\n- Enhanced support for both PowerShell 5.1 and 7+; paths and environment detection now work seamlessly across platforms.\n- Maintains all v3.1 features, including dashboard parent session segregation, soft-deletion, and safe archiving rules.\n- Documentation updates: more concise, neutralized author credits, expanded compatibility matrix, and improved code samples.\n- Added extensive usage examples, new test scripts, and file structure documentation to assist users and maintainers.",
+  "created_at": 1777792820961,
+  "display_name": "subagent-archive",
+  "fetched_at": 1787782511748,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/README.md",
+    "examples/sample-dashboard-archive.md",
+    "examples/sample-dry-run-output.txt",
+    "examples/sample-json-output.json",
+    "examples/sample-log-entry.md",
+    "examples/sample-multi-workspace-error.txt",
+    "scripts/archive-sessions.ps1",
+    "skill-card.md",
+    "tests/README.md",
+    "tests/test-dry-run.ps1",
+    "tests/test-multi-workspace-error.ps1",
+    "tests/test-pwsh7-syntax.ps1",
+    "tests/test-syntax.ps1"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780722194771,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zhaoyongxiu",
+    "handle": "zhaoyongxiu",
+    "user_id": "s1781cskpfa82qkdqykrecs9ss8605jr"
+  },
+  "slug": "subagent-archive",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/subagent-archive",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=subagent-archive&ownerHandle=zhaoyongxiu",
+    "page_url": "https://clawhub.ai/zhaoyongxiu/skills/subagent-archive"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 642,
+    "installs": 14,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "\u5b89\u5168\u5f52\u6863/\u6e05\u7406\u5b50\u4f1a\u8bdd\u7684\u6807\u51c6\u64cd\u4f5c\u6d41\u7a0b\uff08\u8de8\u5e73\u53f0 + workspace \u53ef\u914d\u7f6e + \u539f\u751f\u6e05\u7406 + dashboard \u7236\u4f1a\u8bdd\u5206\u6d41 + \u53cd\u5411\u5339\u914d\u7d22\u5f15\u6e05\u7406 + \u8f6f\u5220\u9664 + OpenClaw 6.1 \u9002\u914d\uff09",
+  "updated_at": 1780715990739,
+  "version": "3.2.0"
+}
