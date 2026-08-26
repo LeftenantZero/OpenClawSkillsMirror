@@ -1,0 +1,61 @@
+{
+  "changelog": "v0.1.6 \u2014 first clean publish; the skill itself is unchanged since 0.1.4\n\nNo behaviour change. SKILL.md, references/, and every script the skill\nruns are byte-identical to 0.1.4. Nothing new to run.\n\n0.1.5 does not exist for this skill. It was published to a skill named\nafter a temporary directory, because the CLI derives the slug from the\nfolder name and the workflow had started staging into `mktemp -d`. The\nrun reported success and every check passed -- all of them verifying\ncorrect things about the wrong destination.\n\nThis release is the first with the publish path fully corrected:\n\n  slug and name are passed explicitly, so identity no longer depends on\n  where files sit on disk, and the response is checked against the\n  expected slug so a mispublish is a red run rather than a silent one.\n\n  version comes from the git tag rather than the CLI's \"next patch\"\n  default, which had matched by coincidence and would have diverged at\n  the first minor bump.\n\n  the changelog is the annotated tag message, guarded on tag object type\n  because a lightweight tag's contents fall back to the commit message.\n\n  the package excludes openspec/ and .claude/, 69 files down to 31, and\n  the staged tree is link-checked before upload so that trimming it\n  cannot ship dead links.\n\n  only release tags publish, and checkout runs on Node 24.",
+  "created_at": 1785143616808,
+  "display_name": "line-oa-chat-send",
+  "fetched_at": 1787774315006,
+  "files": [
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "containers/Dockerfile",
+    "containers/README.md",
+    "containers/build.sh",
+    "containers/entrypoint.sh",
+    "containers/reset.sh",
+    "containers/run.sh",
+    "containers/test/default.sh",
+    "containers/test/tunnel.sh",
+    "references/handoff-operations.md",
+    "references/line-oa-ui-selectors.md",
+    "references/public-repository-checklist.md",
+    "scripts/check_doc_links.sh",
+    "scripts/doctor.sh",
+    "scripts/lib/caddy.sh",
+    "scripts/lib/phase_timing.sh",
+    "scripts/lib/ports.sh",
+    "scripts/lib/session.sh",
+    "scripts/measure_handoff.sh",
+    "scripts/run_line_oa_chat.sh",
+    "scripts/send_line_oa_chat.py",
+    "scripts/setup_line_oa_runtime.sh",
+    "scripts/start_line_oa_chromium.sh",
+    "scripts/start_line_oa_vnc_handoff.sh",
+    "scripts/stop_line_oa_chromium.sh",
+    "scripts/stop_line_oa_vnc_handoff.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mosluce",
+    "handle": "mosluce",
+    "user_id": "s17934mwfw7y691b30bz9n5hhs8aqhhd"
+  },
+  "slug": "line-oa-chat-send",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/line-oa-chat-send",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=line-oa-chat-send&ownerHandle=mosluce",
+    "page_url": "https://clawhub.ai/mosluce/skills/line-oa-chat-send"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 656,
+    "installs": 0,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Send explicitly authorized LINE Official Account Chat messages through a persistent Chromium session; user-operated LINE login or reauthentication may use a temporary remote noVNC handoff that grants interactive browser control.",
+  "updated_at": 1785320603101,
+  "version": "0.1.6"
+}
