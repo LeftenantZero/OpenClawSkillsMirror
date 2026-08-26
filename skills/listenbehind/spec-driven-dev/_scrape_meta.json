@@ -1,0 +1,47 @@
+{
+  "changelog": "**v1.0.1 adds spec-driven-checkpoint skill integration and checkpoint/rollback support.**\n\n- \u65b0\u589e\u5bf9 `spec-driven-checkpoint` \u5b50 Skill \u7684\u96c6\u6210\uff0c\u53ef\u5728\u4efb\u610f\u9636\u6bb5\u901a\u8fc7\u547d\u4ee4\u4fdd\u5b58 checkpoint\uff0c\u5e76\u652f\u6301\u56de\u6eda\u81f3\u4efb\u610f checkpoint \u4ee5\u6062\u590d Git \u72b6\u6001\u548c Agent \u4e0a\u4e0b\u6587\u3002\n- \u6587\u6863\u65b0\u589e checkpoint \u76f8\u5173\u7684\u89e6\u53d1\u547d\u4ee4\uff1a`save_checkpoint-{us_id}`\u3001`checkpoint-{us_id}`\u3001`rollback {ckpt_id}`\u3001`list_checkpoints-{us_id}` \u7b49\u3002\n- \u8def\u5f84\u5e38\u91cf\u8865\u5145\u4e86 checkpoints \u76f8\u5173\u76ee\u5f55\u548c\u6587\u4ef6\uff1a`requirements/{us_id}/docs/checkpoints/index.md`\u3001`{ckpt_id}.md` \u7b49\u3002\n- Skill \u63cf\u8ff0\u4e0e\u6267\u884c\u534f\u8bae\u90e8\u5206\u540c\u6b65\u8bf4\u660e checkpoint \u4fdd\u5b58\u4e0e\u6062\u590d\u7684\u80fd\u529b\u3002\n- \u5176\u4f59\u751f\u547d\u5468\u671f\u548c\u63a5\u53e3\u4fdd\u6301\u517c\u5bb9\u3002",
+  "created_at": 1774403647105,
+  "display_name": "spec\u9a71\u52a8\u5f00\u53d1vibe coding skill",
+  "fetched_at": 1787787441700,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md",
+    "sub-skills/cr-code-gate/SKILL.md",
+    "sub-skills/cr-commit-check/SKILL.md",
+    "sub-skills/cr-logaf-review/SKILL.md",
+    "sub-skills/spec-driven-checkpoint/SKILL.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090126608,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u80e1\u5b9e",
+    "handle": "listenbehind",
+    "user_id": "s1762f2j3c8k9jxhm9nje7n6vs83gfv3"
+  },
+  "slug": "spec-driven-dev",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/spec-driven-dev",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=spec-driven-dev&ownerHandle=listenbehind",
+    "page_url": "https://clawhub.ai/listenbehind/skills/spec-driven-dev"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 702,
+    "installs": 17,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "\u5728\u514b\u9686\u7684 Git \u4ed3\u5e93\u4e2d\u9a71\u52a8\u5b8c\u6574\u7684\u89c4\u683c\u9a71\u52a8\u5f00\u53d1\u751f\u547d\u5468\u671f\uff08init\u2192requirements\u2192architecture\u2192process_design\u2192project_plan\u2192coding\u2192test\u2192bugfix\u2192code_review\u2192release\uff09\u3002\u9636\u6bb5\u95e8\u63a7\u3001\u4ea7\u7269\u5f3a\u5236\u8f93\u51fa\u3001\u591a\u8bed\u8a00\u652f\u6301\uff0c\u5185\u7f6e commit me...",
+  "updated_at": 1779078888739,
+  "version": "1.0.1"
+}
