@@ -1,0 +1,68 @@
+{
+  "changelog": "Initial release.\n\n- Batch converts raster (GeoTIFF) and vector (Shapefile, GeoPackage, GeoJSON) files using GDAL/OGR, with logging and error handling.\n- Supports input as a single file or directory (recursive scan optional), auto-detects file type by extension, and selects appropriate output format.\n- Provides local synthetic data generation mode for offline demonstration and testing.\n- Logs every conversion to a structured JSON file, including summary and errors/skips without halting the batch process.\n- All processing is performed locally; no data is uploaded, ensuring user privacy.\n- Includes example CLI usage and clear dependency list for setup.",
+  "created_at": 1785845277154,
+  "display_name": "geoskill-format-batch-converter",
+  "fetched_at": 1787773486919,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_run/conversion_log.json",
+    "_test_cli_run/output-manifest.json",
+    "e2e_test.py",
+    "geoskill-format-batch-converter.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785846284222,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-format-batch-converter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-format-batch-converter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-format-batch-converter&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-format-batch-converter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 173,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u57fa\u4e8e GDAL / OGR \u6279\u91cf\u8f6c\u6362\u6805\u683c\u4e0e\u77e2\u91cf\u683c\u5f0f (GeoTIFF / Shapefile / GeoPackage / GeoJSON) \u5e76\u8bb0\u5f55\u65e5\u5fd7\u3002Batch convert raster and vector formats (GeoTIFF / Shapefile / GeoPackage / GeoJSON) via GDAL / OGR with logging.",
+  "updated_at": 1785845431613,
+  "version": "1.0.0"
+}
