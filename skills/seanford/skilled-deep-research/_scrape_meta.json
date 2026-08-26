@@ -1,0 +1,49 @@
+{
+  "changelog": "- Upgraded to version 1.1.0 with significant architecture and protocol documentation.\n- Introduced multi-tiered research with simple (inline), standard (orchestrated), and deep (multi-worker + Sonnet synthesis) modes.\n- Added support for parallel sub-agent research using ACP, MCP (browser tools), and A2A (signaling).\n- Standardized checkpoints, deduplication, and quality ranking of sources.\n- Now supports a persistent data directory, checkpointed progress, retry queues, and explicit retry commands.\n- Skill can be triggered via natural language or explicit invocation; full protocol for integration documented.",
+  "created_at": 1780040762111,
+  "display_name": "Skilled Deep Research",
+  "fetched_at": 1787783976858,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/init-run.sh",
+    "scripts/merge-reports.py",
+    "scripts/retry-run.sh",
+    "scripts/status.sh",
+    "scripts/update-heartbeat.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780041699249,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Sean Ford",
+    "handle": "seanford",
+    "user_id": "s1789sb4jmdxm4cdhqr1j4rjq583j23c"
+  },
+  "slug": "skilled-deep-research",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skilled-deep-research",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skilled-deep-research&ownerHandle=seanford",
+    "page_url": "https://clawhub.ai/seanford/skills/skilled-deep-research"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 503,
+    "installs": 9,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Research any topic across multiple sources and produce a cited report. Use when the user asks to research, find, look into, deep dive, investigate, or get a...",
+  "updated_at": 1780040762111,
+  "version": "1.0.0"
+}
