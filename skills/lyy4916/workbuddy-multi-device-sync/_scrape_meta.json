@@ -1,0 +1,47 @@
+{
+  "changelog": "workbuddy-multi-device-sync v0.1.0 \u2013 Initial Release\n\n- Introduces automatic configuration sync for WorkBuddy across multiple Macs using a private GitHub repository.\n- Syncs core data: identity, memory (MEMORY.md), skills, scripts, and settings; excludes machine-specific files like binaries, logs, credentials, and local databases.\n- Provides two setup flows for Mac A: GitHub Device Flow (no SSH) and manual, with secure token storage.\n- Includes background daemon for 5-minute interval auto-sync, plus step-by-step setup for additional Macs with a one-click install script.\n- Adds terminal hooks for manual or on-login sync and health check commands.\n- Comprehensive documentation on setup, exclusions, security considerations, and troubleshooting is provided in SKILL.md.",
+  "created_at": 1785566323024,
+  "display_name": "workbuddy-multi-device-sync",
+  "fetched_at": 1787773992138,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/gitignore-template",
+    "references/sync-architecture.md",
+    "scripts/auto-sync.sh",
+    "scripts/setup-mac-b.sh.template",
+    "scripts/start-sync-daemon.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785567072431,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "lyy4916",
+    "handle": "lyy4916",
+    "user_id": "s177t5gz1g9bqr9wzdn3k301nh8bn7wz"
+  },
+  "slug": "workbuddy-multi-device-sync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/workbuddy-multi-device-sync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=workbuddy-multi-device-sync&ownerHandle=lyy4916",
+    "page_url": "https://clawhub.ai/lyy4916/skills/workbuddy-multi-device-sync"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1679,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Set up automatic configuration sync across multiple Macs using WorkBuddy. Use when the user wants to use WorkBuddy on two or more computers and keep identity, memory, skills, and settings synchronized. Triggers: \u591a\u53f0\u7535\u8111\u540c\u6b65, \u53cc\u673a\u540c\u6b65, \u4e24\u53f0 Mac \u540c\u6b65 WorkBuddy, sync WorkBuddy across devices, multi-device sync, \u6362\u7535\u8111\u914d\u7f6e\u540c\u6b65. Covers Git-based sync via GitHub, auto-sync daemon, and one-click setup for additional machines.",
+  "updated_at": 1785566411415,
+  "version": "0.1.0"
+}
