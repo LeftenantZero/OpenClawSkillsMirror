@@ -1,0 +1,33 @@
+{
+  "changelog": "### 1.1.2\n\n- Adds persistent HTTP config overrides in `~/.ccl/http.config` with merging behavior.\n- New CLI group: `circle config show` / `circle config set` for inspecting and updating HTTP settings.\n- Implements Node.js-only GeoIP logic: `common.getGatewayHttp()` auto-selects API host (`circle-node.net` for CN, `www.circlecoin.me` otherwise), with sign-off by user config or `CIRCLE_SKIP_GEO=1`.\n- Exposes new helper functions via the `common` namespace for config paths, merging, and host selection.\n- Includes new tests for GeoIP/cache/config and live HTTP config structures.\n- Minor build/tooling: CLI entry gains execute bit via build fixup.",
+  "created_at": 1773972748616,
+  "display_name": "circle chain skill",
+  "fetched_at": 1787779321937,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Charles",
+    "handle": "lidh04",
+    "user_id": "s178wvjbgx210ctbkegjy7pdad884ca4"
+  },
+  "slug": "circle-chain",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/circle-chain",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=circle-chain&ownerHandle=lidh04",
+    "page_url": "https://clawhub.ai/lidh04/skills/circle-chain"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 888,
+    "installs": 20,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "JavaScript SDK and CLI for Circle Chain (@lidh04/circle-chain-sdk): user auth, wallet, block, miner, transfers, contacts. Global CLI binary `circle`.",
+  "updated_at": 1782268477051,
+  "version": "1.1.2"
+}
