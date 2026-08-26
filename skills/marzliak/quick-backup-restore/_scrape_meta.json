@@ -1,0 +1,51 @@
+{
+  "changelog": "Scheduler cadence hotfix: systemd installs now preserve simple custom cron schedules like 0 */2 * * * as matching OnCalendar values, and unsupported cron expressions fall back to cron.d instead of hourly. Docs also clarify OpenClaw slug-only install.",
+  "created_at": 1772754574722,
+  "display_name": "Time Clawshine \u2014 OpenClaw Time Machine",
+  "fetched_at": 1787783541334,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE.txt",
+    "MARKETPLACE.md",
+    "PRIVACY.md",
+    "README.md",
+    "SECURITY.md",
+    "SETUP_GUIDE.md",
+    "SKILL.md",
+    "_meta.json",
+    "bin/backup.sh",
+    "bin/customize.sh",
+    "bin/prune.sh",
+    "bin/restore.sh",
+    "bin/setup.sh",
+    "bin/status.sh",
+    "bin/test.sh",
+    "bin/uninstall.sh",
+    "config.yaml",
+    "lib.sh",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Marz",
+    "handle": "marzliak",
+    "user_id": "s17e8p1qmgndbnt8k67r1my2mh84hh5n"
+  },
+  "slug": "quick-backup-restore",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/quick-backup-restore",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=quick-backup-restore&ownerHandle=marzliak",
+    "page_url": "https://clawhub.ai/marzliak/skills/quick-backup-restore"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1689,
+    "installs": 51,
+    "stars": 1,
+    "versions": 21
+  },
+  "summary": "Restic-powered encrypted time machine for OpenClaw: hourly incremental snapshots, fast restore by time/snapshot/file, local-only privacy defaults, integrity...",
+  "updated_at": 1780344697115,
+  "version": "3.2.3"
+}
