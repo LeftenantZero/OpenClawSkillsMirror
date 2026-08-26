@@ -1,0 +1,77 @@
+{
+  "changelog": "**Skill 1.0.2 introduces stronger privacy guarantees and an improved setup experience.**\n\n- Clarified that all credentials and data remain strictly local; nothing leaves your machine, including to OpenClaw servers.\n- Added a full listing of all environment variables the skill may set, including kind, tool, and typical token/session lifetimes.\n- Updated installation instructions: now requires Python Playwright (via pip), with automated Chromium install.\n- Simplified setup: just paste a tool URL\u2014the skill detects base URL and auth method automatically.\n- Expanded and clarified warnings for SSO usage, storage scope, and Playwright-based SSO capture.\n- Minor copyedits for clarity, transparency, and user confidence.",
+  "created_at": 1773971306059,
+  "display_name": "Tool Connector",
+  "fetched_at": 1787787903912,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/add-new-tool.md",
+    "references/setup.md",
+    "references/tool_connections/artifactory/connection-api-token.md",
+    "references/tool_connections/artifactory/setup.md",
+    "references/tool_connections/backstage/connection-api-token.md",
+    "references/tool_connections/backstage/setup.md",
+    "references/tool_connections/bitbucket-server/connection-api-token.md",
+    "references/tool_connections/bitbucket-server/setup.md",
+    "references/tool_connections/confluence/connection-api-token.md",
+    "references/tool_connections/confluence/setup.md",
+    "references/tool_connections/datadog/connection-api-key.md",
+    "references/tool_connections/datadog/setup.md",
+    "references/tool_connections/github/connection-api-token.md",
+    "references/tool_connections/github/setup.md",
+    "references/tool_connections/google-drive/connection-browser-session.md",
+    "references/tool_connections/google-drive/setup.md",
+    "references/tool_connections/grafana/connection-sso.md",
+    "references/tool_connections/grafana/setup.md",
+    "references/tool_connections/jenkins/connection-api-token.md",
+    "references/tool_connections/jenkins/setup.md",
+    "references/tool_connections/jira/connection-api-token.md",
+    "references/tool_connections/jira/setup.md",
+    "references/tool_connections/microsoft-teams/connection-personal-sso.md",
+    "references/tool_connections/microsoft-teams/setup.md",
+    "references/tool_connections/outlook/connection-m365.md",
+    "references/tool_connections/outlook/connection-personal.md",
+    "references/tool_connections/outlook/setup.md",
+    "references/tool_connections/pagerduty/connection-api-token.md",
+    "references/tool_connections/pagerduty/setup.md",
+    "references/tool_connections/slack/connection-sso.md",
+    "references/tool_connections/slack/setup.md",
+    "scripts/openclaw_sync.py",
+    "scripts/shared_utils/browser.py",
+    "scripts/shared_utils/playwright_sso.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089991211,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ZhixiangLuo",
+    "handle": "zhixiangluo",
+    "user_id": "s172pzeesc7mydt97f2dk5cdr5885gkg"
+  },
+  "slug": "tool-connector",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tool-connector",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tool-connector&ownerHandle=zhixiangluo",
+    "page_url": "https://clawhub.ai/zhixiangluo/skills/tool-connector"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1258,
+    "installs": 33,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Connect OpenClaw to any external tool or service \u2014 Slack, GitHub, Jira, Confluence, Grafana, Datadog, PagerDuty, Outlook, Google Drive, and more. Also teache...",
+  "updated_at": 1779078610650,
+  "version": "1.0.2"
+}
