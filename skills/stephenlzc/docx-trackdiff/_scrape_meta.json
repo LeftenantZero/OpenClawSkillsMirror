@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release: compare two `.docx` files and generate a single Word document with native tracked changes showing all differences.\n- Uses the NEW version as the base, preserving all its formatting, images, and styles.\n- Allows control over diff granularity with a `--threshold` parameter for more accurate paragraph-level or inline changes.\n- Requires user-supplied author name and revision date for tracked changes (defaults provided if omitted).\n- Verifies output for document integrity and tracked changes correctness.\n- Reports change statistics (inserted/deleted/modified paragraphs, fallbacks) after comparison.\n- Output file opens in Word's revision mode, making it easy to accept or reject individual changes.",
+  "created_at": 1786818488707,
+  "display_name": "docx-trackdiff",
+  "fetched_at": 1787771804429,
+  "files": [
+    ".gitignore",
+    "EVALUATION.md",
+    "LICENSE",
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "docs/banner.png",
+    "docs/demo-1.png",
+    "docs/demo-2.png",
+    "examples/demo_tracked.docx",
+    "examples/demo_v1.docx",
+    "examples/demo_v2.docx",
+    "references/ooxml-revision-rules.md",
+    "scripts/compare_docx_tracked.py",
+    "scripts/verify_tracked.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Big Stephen",
+    "handle": "stephenlzc",
+    "user_id": "s170nnpqv8ratxbb59qz0zxkp587h65b"
+  },
+  "slug": "docx-trackdiff",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/docx-trackdiff",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=docx-trackdiff&ownerHandle=stephenlzc",
+    "page_url": "https://clawhub.ai/stephenlzc/skills/docx-trackdiff"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 624,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Compare two versions of a .docx document and produce a single Word file in tracked-changes (revision / tracking) mode, as if a human had edited the old file into the new one with Track Changes turned on. Use whenever the user has two versions of a DOCX (e.g., successive drafts of a paper, report, or contract \u2014 often AI-generated or AI-assisted revisions) and wants to see the differences as native Word revisions (insertions/deletions) that can be accepted/rejected in Word. Triggers: \"\u5bf9\u6bd4\u4e24\u4e2a\u7248\u672c\u7684 docx\", \"tracked changes\", \"tracking mode\", \"\u4fee\u8ba2\u6a21\u5f0f\u5bf9\u6bd4\", \"compare two Word documents\", \"diff two drafts\", \"\u751f\u6210\u4fee\u8ba2\u5bf9\u6bd4\u6587\u4ef6\". Do NOT use for: creating new documents from scratch (use docx skill), single-file editing with revisions (use docx WIR engine), or PDF-only comparisons.",
+  "updated_at": 1786818606322,
+  "version": "0.1.0"
+}
