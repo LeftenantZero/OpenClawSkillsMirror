@@ -1,0 +1,49 @@
+{
+  "changelog": "alibabacloud-ecs-diagnose v0.0.3\n\n- Added mandatory full-session observability: every `aliyun` CLI command invoking a cloud API now requires a globally generated 32-character session ID appended to the User-Agent string.\n- Moved the AI-mode enable/disable workflow out; now relies entirely on standard CLI session and User-Agent tracking.\n- Introduced an explicit \"Phase 0: Instance Discovery\" as a required step before any scenario-based diagnostics, with strict handling of empty instance search results.\n- Updated CLI command requirements to use `--user-agent AlibabaCloud-Agent-Skills/alibabacloud-ecs-diagnose/{session-id}` for all cloud API calls; local utility commands are excluded.\n- Improved security notes, usage safeguards, and clarified parameter/user confirmation and permission error workflows.\n- Removed obsolete documentation files and redundant enable/disable AI-mode steps.",
+  "created_at": 1775036577889,
+  "display_name": "Alibabacloud Ecs Diagnose",
+  "fetched_at": 1787779748463,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/remote-connection-diagnose-design.md",
+    "references/verification-method.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782126380435,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-ecs-diagnose",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-ecs-diagnose",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-ecs-diagnose&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-ecs-diagnose"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 973,
+    "installs": 21,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Comprehensive Alibaba Cloud ECS instance diagnostics skill. Performs systematic troubleshooting including cloud platform status checks and GuestOS internal d...",
+  "updated_at": 1782117513533,
+  "version": "0.0.3"
+}
