@@ -1,0 +1,37 @@
+{
+  "changelog": "Major update: Skill rewritten to provide an Instagram data API alternative via fetcher.sh (read-only, pay-per-call), replacing prior posting scripts and Meta Graph API integration.\n\n- All endpoints are now HTTP GET for profile, posts, reels, stories, hashtags, locations, audio, followers, and comments \u2014 no posting/upload support.\n- Payment via USDC (x402) or Bearer API key; no login, session, or business verification required.\n- Core focus: resolve by @handle, search users, pull content feeds, export followers, read comments, and track hashtags/locations.\n- In-depth references added: endpoints list, usage scenarios, FAQs, and official-vs-alternative comparison.\n- Removed posting shell scripts and all details on Imgur/media hosting and Meta setup.\n- Skill is now documentation-driven and scenario-based, targeting data pipeline and social monitoring use cases.",
+  "created_at": 1787305058726,
+  "display_name": "Instagram API",
+  "fetched_at": 1787771290626,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/comparison.md",
+    "references/endpoints.md",
+    "references/faq.md",
+    "references/scenarios.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "fetcher-sh",
+    "handle": "fetcher-sh",
+    "user_id": "s17dcnrbn2f5qhk65dscfdycw98cw0kk"
+  },
+  "slug": "instagram-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/instagram-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=instagram-api&ownerHandle=fetcher-sh",
+    "page_url": "https://clawhub.ai/fetcher-sh/skills/instagram-api"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 728,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "An Instagram API alternative on fetcher.sh \u2014 pay-per-call in USDC via x402, or prepaid credits with a Bearer key, no login and no session cookies. Use when the user wants to resolve an Instagram profile by @handle, search users by keyword, pull a profile's posts, reels, stories, tagged posts, followers, or followings, look up a single post by its shortcode, read a post's comments, fetch posts under a hashtag or reel-only hashtag feed, pull posts from a location, or pull posts using a specific audio/music track. Also covers Instagram follower export, hashtag and location monitoring, influencer discovery, competitor content tracking, and Instagram data pipelines without an official Graph API business verification or a headless browser.",
+  "updated_at": 1787305137379,
+  "version": "0.1.0"
+}
