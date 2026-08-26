@@ -1,0 +1,37 @@
+{
+  "changelog": "golang-error-handling v1.3.0\n\n- Added explicit orchestration instructions for multi-agent audit mode, including \"Orchestration mode\" section and guidance for Claude Code users.\n- Updated compatibility notes to include Codex, clarified usage harness, and specified path targeting for Go files.\n- Changed metadata version to 1.3.0 and updated emoji in metadata (\"\u26a0\ufe0f\" to \"\u26a0\").\n- Removed legacy file (skill-card.md) and made minor clarifications throughout documentation.\n- No changes to core best practice guidance, but instructions for large scale audits are more actionable.",
+  "created_at": 1774234847888,
+  "display_name": "golang-error-handling",
+  "fetched_at": 1787770287209,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/error-creation.md",
+    "references/error-handling.md",
+    "references/error-wrapping.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Samuel Berthe",
+    "handle": "samber",
+    "user_id": "s173arkhs3131fq5jf769qq75583hdgt"
+  },
+  "slug": "golang-error-handling",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/golang-error-handling",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=golang-error-handling&ownerHandle=samber",
+    "page_url": "https://clawhub.ai/samber/skills/golang-error-handling"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1019,
+    "installs": 24,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Idiomatic Golang error handling \u2014 creation, wrapping with %w, errors.Is/As, errors.Join, custom error types, sentinel errors, panic/recover, the single handling rule, structured logging with slog, HTTP request logging middleware, and samber/oops for production errors. Built to make logs usable at scale with log aggregation 3rd-party tools. Apply when creating, wrapping, inspecting, or logging errors in Go code. For samber/oops specifics \u2192 See `samber/cc-skills-golang@golang-samber-oops` skill; for slog handler ecosystem \u2192 See `samber/cc-skills-golang@golang-samber-slog` skill.",
+  "updated_at": 1787276618497,
+  "version": "1.3.0"
+}
