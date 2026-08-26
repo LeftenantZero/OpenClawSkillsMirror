@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release of skill-sync-publisher.\n\n- Validates, publishes, and tracks a local SKILL.md directory across multiple marketplaces including GitHub, Awesome Codex Plugins, HOL Registry, skills.sh, SkillsMP, LobeHub, ClawHub, and Cursor Directory.\n- Includes a CLI for preflight checks, syncing, status tracking, and resets.\n- Implements strict safety and security policies: user confirmation, no secrets collected, isolated actions per platform, and detailed diffs for GitHub.\n- Supports both automated flows and manual handoffs for directories without official APIs.\n- Persists platform choices per repository and skill path in the user's state file.\n- Uses official CLIs or browser steps where available; does not invent or fake publication endpoints.",
+  "created_at": 1785224875413,
+  "display_name": "Skill Sync Publisher",
+  "fetched_at": 1787774525079,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/platform-matrix.md",
+    "references/security-policy.md",
+    "references/state-schema.md",
+    "scripts/__init__.py",
+    "scripts/adapters.py",
+    "scripts/preflight.py",
+    "scripts/state.py",
+    "scripts/sync.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785228894042,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "liuyewang",
+    "handle": "liuyewang",
+    "user_id": "s17ajpg38mr3hng3xtrkxkncws8bbs2p"
+  },
+  "slug": "skill-sync-publisher",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-sync-publisher",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-sync-publisher&ownerHandle=liuyewang",
+    "page_url": "https://clawhub.ai/liuyewang/skills/skill-sync-publisher"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 231,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Sync one skill across eight publishing channels",
+  "updated_at": 1785228123262,
+  "version": "0.1.0"
+}
