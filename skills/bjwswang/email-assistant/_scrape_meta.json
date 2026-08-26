@@ -1,0 +1,55 @@
+{
+  "changelog": "Initial release \u2013 streamlined, explicit email management via user-authorized IMAP/SMTP accounts.\n\n- Supports rapid search, retrieval, summarization, prioritization, drafting, and explicit sending for supported email providers.\n- Enforces strict safety contracts: all outbound email requires explicit user confirmation; never collects or displays credentials in chat.\n- Uses only safe, read-only IMAP operations for mailbox access; all write actions are refused or redirected to supported drafting/sending workflows.\n- Provides clear error-handling and user guidance for configuration or provider selection steps.\n- Designed for concise fact-based digests and action lists, always citing factual sources in results.",
+  "created_at": 1785919295157,
+  "display_name": "Email Assistant",
+  "fetched_at": 1787773362122,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/configuration.md",
+    "references/output-contract.md",
+    "references/writing.md",
+    "scripts/__pycache__/imap_readonly.cpython-313.pyc",
+    "scripts/__pycache__/imap_readonly.cpython-314.pyc",
+    "scripts/__pycache__/smtp_send.cpython-313.pyc",
+    "scripts/__pycache__/smtp_send.cpython-314.pyc",
+    "scripts/__pycache__/smtp_workflow.cpython-313.pyc",
+    "scripts/__pycache__/smtp_workflow.cpython-314.pyc",
+    "scripts/__pycache__/test_imap_readonly.cpython-313.pyc",
+    "scripts/__pycache__/test_imap_readonly.cpython-314.pyc",
+    "scripts/__pycache__/test_smtp_send.cpython-313.pyc",
+    "scripts/__pycache__/test_smtp_send.cpython-314.pyc",
+    "scripts/__pycache__/test_smtp_workflow.cpython-313.pyc",
+    "scripts/__pycache__/test_smtp_workflow.cpython-314.pyc",
+    "scripts/imap_readonly.py",
+    "scripts/smtp_send.py",
+    "scripts/smtp_workflow.py",
+    "scripts/test_imap_readonly.py",
+    "scripts/test_smtp_send.py",
+    "scripts/test_smtp_workflow.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "bjwswang",
+    "handle": "bjwswang",
+    "user_id": "s1759fgr96nqnjvwbcc9x736ts83jsv4"
+  },
+  "slug": "email-assistant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/email-assistant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=email-assistant&ownerHandle=bjwswang",
+    "page_url": "https://clawhub.ai/bjwswang/skills/email-assistant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 36,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Quickly search, retrieve, summarize, prioritize, draft, and explicitly send email for user-authorized IMAP/SMTP accounts. Use for questions such as what emails arrived today, which messages are valuable or require attention, finding mail by date/unread/sender/keyword, producing concise digests with",
+  "updated_at": 1785919391966,
+  "version": "1.0.0"
+}
