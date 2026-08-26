@@ -1,0 +1,38 @@
+{
+  "changelog": "Polymarket Coherence Arb v0.1.0 \u2014 initial release\n\n- Detects and arbitrages incoherent pricing among mutually exclusive Polymarket markets, using only market-internal logic (no external data).\n- Auto-discovers and trades only fully confirmed FIFA \"win Group X\" market sets; other linked sets can be supplied by the user but are only alerted, not traded, if not confirmed.\n- Trades are sim-first by default, with explicit safeguards and clear separation between simulation and live states.\n- Enforces budget and slippage limits, with configurable exposure, group, and coherence gap thresholds.\n- Provides clear usage instructions, safety rails, and known limitations, ensuring safe experimentation and extension.",
+  "created_at": 1781074161991,
+  "display_name": "Polymarket Coherence Arb",
+  "fetched_at": 1787781307337,
+  "files": [
+    "DISCLAIMER.md",
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "coherence_arb.py",
+    "discovery.py",
+    "skill-card.md",
+    "state.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "BridgeAISocial",
+    "handle": "bridgeaisocial",
+    "user_id": "s172q3r8hvm3crwf6nxv262g018884rk"
+  },
+  "slug": "polymarket-coherence-arb",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polymarket-coherence-arb",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polymarket-coherence-arb&ownerHandle=bridgeaisocial",
+    "page_url": "https://clawhub.ai/bridgeaisocial/skills/polymarket-coherence-arb"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 403,
+    "installs": 5,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Detects logically-linked Polymarket markets that price incoherently (a mutually-exclusive, exhaustive set whose YES prices don't sum to ~1) and trades the ch...",
+  "updated_at": 1781074161991,
+  "version": "0.1.0"
+}
