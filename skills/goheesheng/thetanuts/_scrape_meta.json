@@ -1,0 +1,71 @@
+{
+  "changelog": "Fix manifest updateUrl: now points at Thetanuts-Finance/thetanuts-openclaw (canonical) and the correct filename scripts/update.sh. v1.5.3 had both wrong org (legacy fork) and wrong filename (update-from-manifest.sh \u2014 does not exist), making manifest-driven updates 404. No skill code or SDK changes vs 1.5.3.",
+  "created_at": 1777632351934,
+  "display_name": "Thetanuts Openclaw",
+  "fetched_at": 1787784818430,
+  "files": [
+    "CLAUDE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "package-lock.json",
+    "package.json",
+    "scripts/approve-token.ts",
+    "scripts/build-rfq.ts",
+    "scripts/calculate-payout.ts",
+    "scripts/check-orderbook.ts",
+    "scripts/check-rfq-fill.ts",
+    "scripts/create-wallet.ts",
+    "scripts/fetch-orders.ts",
+    "scripts/fill-order.ts",
+    "scripts/get-balance.ts",
+    "scripts/get-mm-pricing.ts",
+    "scripts/get-positions.ts",
+    "scripts/get-prices.ts",
+    "scripts/import-wallet.ts",
+    "scripts/lib/load-seed.ts",
+    "scripts/onboard.sh",
+    "scripts/send-transaction.ts",
+    "scripts/sign-message.ts",
+    "scripts/update.sh",
+    "scripts/wallet-balance.js",
+    "scripts/wallet-create.js",
+    "scripts/wallet-discover.js",
+    "scripts/wallet-import.js",
+    "scripts/wallet-select.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968971115,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Goh Ee Sheng",
+    "handle": "goheesheng",
+    "user_id": "s175jhk385dyt0nf67dscfct5x83n12p"
+  },
+  "slug": "thetanuts",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/thetanuts",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=thetanuts&ownerHandle=goheesheng",
+    "page_url": "https://clawhub.ai/goheesheng/skills/thetanuts"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 849,
+    "installs": 22,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Trade crypto options on Thetanuts Finance - orderbook fills, RFQ lifecycle, multi-strike structures, real-time WebSocket, wallet management, early settlement...",
+  "updated_at": 1779695177705,
+  "version": "1.5.4"
+}
