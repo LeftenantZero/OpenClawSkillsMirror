@@ -1,0 +1,66 @@
+{
+  "changelog": "geoskill-irrigation-scheduling v1.0.0\n\n- Initial release of the irrigation scheduling skill.\n- Calculates crop water demand using the Penman-Monteith method and simulates soil water balance to trigger irrigation events.\n- Supports offline operation with synthetic data mode and local processing for user privacy.\n- Outputs include primary GeoTIFF results and a run manifest in JSON format.\n- Usage examples and dependencies are documented for easy setup.",
+  "created_at": 1785846587261,
+  "display_name": "geoskill-irrigation-scheduling",
+  "fetched_at": 1787773469507,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-irrigation-scheduling.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785847560493,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-irrigation-scheduling",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-irrigation-scheduling",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-irrigation-scheduling&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-irrigation-scheduling"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 183,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u57fa\u4e8e Penman-Monteith \u9700\u6c34\u4e0e\u571f\u58e4\u6c34\u5206\u5e73\u8861\uff0c\u6309\u9608\u503c\u89e6\u53d1\u704c\u6e89\u65e5\u5386\u3002Computes crop water demand with Penman-Monteith, runs a soil water balance and triggers an irrigation calendar.",
+  "updated_at": 1785846746017,
+  "version": "1.0.0"
+}
