@@ -1,0 +1,45 @@
+{
+  "changelog": "- Initial release of xiaohongshu-note-detail skill.\n- Fetches Xiaohongshu (RedNote / xhs) note detail and comments from a note ID.\n- Returns title, description, author info, engagement stats, tags, and paginated comment list.\n- Requires browser access with user logged in; guides user through login if needed.\n- Supports comment pagination via DOM scrolling and incremental extraction.\n- Details execution steps, error handling, and known limitations for reliable use.",
+  "created_at": 1782563834374,
+  "display_name": "Xiaohongshu Note Detail",
+  "fetched_at": 1787778882382,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-note-comments.py",
+    "scripts/extract-note-detail.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782564773225,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "xiaohongshu-note-detail",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/xiaohongshu-note-detail",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=xiaohongshu-note-detail&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/xiaohongshu-note-detail"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 256,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fetch Xiaohongshu (RedNote / xhs) note detail and comments by note ID, returning title, description, author info, engagement stats, tags, and paginated comment list. Use when user mentions note detail xiaohongshu, get rednote post, xhs note content, xiaohongshu comment scrape, fetch post comments, s",
+  "updated_at": 1782563834374,
+  "version": "1.0.0"
+}
