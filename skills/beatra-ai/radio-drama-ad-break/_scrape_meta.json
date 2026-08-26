@@ -1,0 +1,55 @@
+{
+  "changelog": "radio-drama-ad-break 0.1.1\n\n- Initial release: create labeled bumper audio clips from written radio-drama ad-break lines.\n- Accepts pre-roll, post-roll, and other bumper copy, returning 8\u201320 individual spoken clips.\n- Ensures correct pronunciation for any names or brands by requiring a pronunciation table when needed.\n- Manages voice cloning and text-to-speech workflows with authorization and billing checks.\n- All audio generation is handled using the bundled MCP client, with no direct API or host connector calls.\n- Includes guidance on error handling, billing, voice confirmation, and automatic safe updates.",
+  "created_at": 1787580666635,
+  "display_name": "radio-drama-ad-break",
+  "fetched_at": 1787769270061,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "references/automatic-updates-and-safety.md",
+    "references/billing-errors-and-recovery.md",
+    "references/installation-and-auth.md",
+    "references/installation-registration.md",
+    "references/mcp-connection.md",
+    "references/tasks-and-results.md",
+    "references/uninstall-and-disconnect.md",
+    "references/workflow.md",
+    "scripts/authorize.py",
+    "scripts/mcp_client.py",
+    "scripts/uninstall.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787581582322,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "beatra-ai",
+    "handle": "beatra-ai",
+    "user_id": "s176vcp4w7b7tt3j7a62gdnfys8cntp4"
+  },
+  "slug": "radio-drama-ad-break",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/radio-drama-ad-break",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=radio-drama-ad-break&ownerHandle=beatra-ai",
+    "page_url": "https://clawhub.ai/beatra-ai/skills/radio-drama-ad-break"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 58,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Turn written radio-drama ad-break lines into one spoken bumper clip per labeled slot. This radio-drama bumper studio records each pre-roll read, post-roll read, and sponsor bumper from the copy the producer already wrote, then delivers 8 to 20 bumper audio files. Use it for radio drama ad-break voiceovers that keep one bumper on each clip.",
+  "updated_at": 1787580778981,
+  "version": "0.1.1"
+}
