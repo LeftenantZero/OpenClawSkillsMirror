@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of the skill retirement and archiving mechanism.\n\n- Added shell scripts for usage tracking, retirement checking, archiving, and restoring skills: `record-usage.sh`, `check-retirement.sh`, `archive-skill.sh`, and `restore-skill.sh`\n- Usage data is now appended to `usage.jsonl` and summarized in `latest-usage.json`\n- Generates retirement reports with recommendations based on skill activity over time\n- Supports safe archiving and restoring of skills, with all metadata preserved\n- Automatic and manual workflows included for recording usage and managing archive operations\n- Old lifecycle management and command code removed, focusing the skill on streamlined usage tracking and lifecycle retirement",
+  "created_at": 1782352801254,
+  "display_name": "Skill Lifecycle",
+  "fetched_at": 1787779138170,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "archive-skill.sh",
+    "check-retirement.sh",
+    "record-usage.sh",
+    "restore-skill.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jimmy",
+    "handle": "jijinbao-code",
+    "user_id": "s17e8z5ejm7gseva402h1xbvgx83qc5z"
+  },
+  "slug": "skill-lifecycle",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-lifecycle",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-lifecycle&ownerHandle=jijinbao-code",
+    "page_url": "https://clawhub.ai/jijinbao-code/skills/skill-lifecycle"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 65,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6280\u80fd\u9000\u4f11\u673a\u5236 - \u8bb0\u5f55\u4f7f\u7528\u9891\u6b21\uff0c\u6807\u8bb0\u4f4e\u9891/\u9000\u4f11\u6280\u80fd\uff0c\u652f\u6301\u5f52\u6863\u548c\u6062\u590d",
+  "updated_at": 1782352801254,
+  "version": "1.0.0"
+}
