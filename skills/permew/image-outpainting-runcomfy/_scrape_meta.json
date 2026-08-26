@@ -1,0 +1,33 @@
+{
+  "changelog": "- Initial release of Image Outpainting \u2014 Pro Pack on RunComfy.\n- Enables extending images beyond their original canvas using the runcomfy CLI, with natural language prompts and aspect ratio changes.\n- Automatically routes requests to the best available model or endpoint (Nano Banana 2 Edit, GPT Image 2 Edit, FLUX Kontext Pro, or brand-specific edits) based on the outpainting scenario.\n- Supports both prose-driven and reference-driven outpainting, with guidance on prompt structure and model selection.\n- Includes detailed instructions for CLI usage and links to advanced GUI workflows for complex cases.",
+  "created_at": 1785124878403,
+  "display_name": "Image Outpainting \u2014 Pro Pack on RunComfy",
+  "fetched_at": 1787774785994,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mew",
+    "handle": "permew",
+    "user_id": "s17af27kmxn6ac8n1m0wdx0drh8bb4gd"
+  },
+  "slug": "image-outpainting-runcomfy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/image-outpainting-runcomfy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=image-outpainting-runcomfy&ownerHandle=permew",
+    "page_url": "https://clawhub.ai/permew/skills/image-outpainting-runcomfy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 265,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Image outpainting on RunComfy via the `runcomfy` CLI \u2014 extend a still beyond its original canvas, fill in what the camera didn't capture, change aspect ratio (square \u2192 16:9, portrait \u2192 landscape) while preserving the original content. Routes across Nano Banana 2 Edit (default, spatial-language driven), GPT Image 2 Edit (multi-ref with reference-style matching), FLUX Kontext Pro (single-shot maximum-preservation), and the brand edit endpoints (Seedream / Dreamina / Qwen / FLUX 2). Picks the right route based on whether the outpaint is prose-driven, reference-driven, or brand-locked. Triggers on \"outpaint\", \"outpainting\", \"extend image canvas\", \"expand the image\", \"fill in around the photo\", \"uncrop\", \"change aspect ratio\", \"extend frame\", \"wide-screen from square\", or any explicit ask to add canvas around an existing still.",
+  "updated_at": 1785127219683,
+  "version": "1.0.0"
+}
