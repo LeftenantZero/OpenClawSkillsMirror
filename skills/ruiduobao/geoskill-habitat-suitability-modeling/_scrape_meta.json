@@ -1,0 +1,70 @@
+{
+  "changelog": "Initial release of habitat suitability modeling skill.\n\n- Trains species distribution models from multi-band environmental rasters using random forest or logistic regression.\n- Supports both synthetic (NDVI-driven niche simulation) and real environmental input modes.\n- Outputs a habitat suitability GeoTIFF (probability in [0,1]), model parameter JSON (with variable contributions and 3-fold cross-validated AUC), and run manifest.\n- Provides detailed usage examples and supports reproducibility options (random seed, quiet mode).\n- Fully offline computation and no external data requirements in synthetic mode.",
+  "created_at": 1785845548132,
+  "display_name": "geoskill-habitat-suitability-modeling",
+  "fetched_at": 1787773481710,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_model_logreg/output-manifest.json",
+    "_test_model_logreg/suitability_params.json",
+    "_test_model_rf/output-manifest.json",
+    "_test_model_rf/suitability_params.json",
+    "e2e_test.py",
+    "geoskill-habitat-suitability-modeling.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785846561119,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-habitat-suitability-modeling",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-habitat-suitability-modeling",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-habitat-suitability-modeling&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-habitat-suitability-modeling"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 170,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7531\u591a\u53d8\u91cf\u73af\u5883\u6805\u683c\u8bad\u7ec3\u7269\u79cd\u5206\u5e03\u6a21\u578b\uff0c\u8f93\u51fa 0-1 \u6816\u606f\u5730\u9002\u5b9c\u6027\u6982\u7387\u4e0e\u53d8\u91cf\u8d21\u732e\u5ea6\u3002Models habitat suitability probability from environmental rasters with RF or logistic regression. \u8f93\u51fa\u9002\u5b9c\u6027 GeoTIFF + \u6a21\u578b\u53c2\u6570 JSON\uff08\u542b\u4ea4\u53c9\u9a8c\u8bc1 AUC\uff09\u3002",
+  "updated_at": 1785845693365,
+  "version": "1.0.0"
+}
