@@ -1,0 +1,54 @@
+{
+  "changelog": "**Initial release of multi-source-data-cleaner: unified, production-grade data cleaning for heterogeneous data sources.**\n\n- Supports CSV, Excel, JSON, Parquet, SQL dumps, and log files, auto-detecting schema, encoding, delimiter, and structure.\n- Cleans and unifies datasets: automatic type normalization, robust handling of missing values, fuzzy deduplication, and cross-source schema reconciliation.\n- Outputs a main clean dataset plus a detailed data quality report, deduplication review logs, schema mapping, and row-level provenance/audit trails.\n- Built-in privacy (PII) handling with configurable masking, logging every sensitive data operation for compliance.\n- Non-destructive processing with strong safety and human-in-the-loop review for low-confidence merges.",
+  "created_at": 1779817528014,
+  "display_name": "multi-source-data-cleaner-pro",
+  "fetched_at": 1787784550438,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/README.md",
+    "examples/dirty_sample.csv",
+    "knowledge/README.md",
+    "knowledge/pii_patterns.md",
+    "scripts/dedup.py",
+    "scripts/normalize_types.py",
+    "scripts/profile.py",
+    "scripts/run_pipeline.py",
+    "skill-card.md",
+    "tests/test_cleaner.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966682204,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "boboy",
+    "handle": "boboy-j",
+    "user_id": "s17ckg9br2p4k5kx6cr8fc4jz5852pah"
+  },
+  "slug": "multi-source-data-cleaner-pro",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/multi-source-data-cleaner-pro",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=multi-source-data-cleaner-pro&ownerHandle=boboy-j",
+    "page_url": "https://clawhub.ai/boboy-j/skills/multi-source-data-cleaner-pro"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 569,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "EN: Production-grade data cleaning across heterogeneous sources (CSV/Excel/JSON/Parquet/SQL dumps/log files). Profiles schemas, detects encoding/delimiter, n...",
+  "updated_at": 1779817528014,
+  "version": "1.0.0"
+}
