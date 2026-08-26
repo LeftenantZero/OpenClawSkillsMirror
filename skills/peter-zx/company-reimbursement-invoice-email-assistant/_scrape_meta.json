@@ -1,0 +1,62 @@
+{
+  "changelog": "- Added startup protocol: Skill now displays a mandatory, fixed startup message with feature details and disclaimer before any operation or credential prompt.\n- Improved deliverables: Added a new archive directory `archive/\u672c\u8f6e\u5168\u90e8PDF/` for flat-view PDF access via hard links or `.url` files.\n- Clarified usage flow: Must display the startup info before email/authorization/date prompts; no summary/omission allowed.\n- Refined archival description: Now documents both hierarchical and flat-view PDF access, with priority on hard links for efficient browsing.\n- Minor file housekeeping: Added `.env.example` and `.npmignore`, removed `skill-card.md`.",
+  "created_at": 1782123696836,
+  "display_name": "\u516c\u53f8\u62a5\u9500\u53d1\u7968\u90ae\u7bb1\u7ba1\u7406\u52a9\u624b",
+  "fetched_at": 1787779626250,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "archive-invoices.js",
+    "config/BUYER_MAP.js",
+    "config/IMAP_CREDENTIALS.example.js",
+    "config/mailboxes.example.json",
+    "docs/AGENT_WORKFLOW.md",
+    "docs/PROJECT_DESIGN.md",
+    "lib/env.js",
+    "package.json",
+    "run-all.js",
+    "scripts/check-syntax.js",
+    "scripts/configure-mailbox.js",
+    "scripts/doctor.js",
+    "skill-card.md",
+    "step1-email-scan.js",
+    "step2-classify-invoices.js",
+    "step2-download-pdf.js",
+    "step3-extract-pdf.js",
+    "step4-merge-data.js",
+    "step5-generate-ledger.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782185009497,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u5de6\u5c0f\u7a7a\u7a7a",
+    "handle": "peter-zx",
+    "user_id": "s17ctzydrcsq9aggvmca4daqz183fxdg"
+  },
+  "slug": "company-reimbursement-invoice-email-assistant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/company-reimbursement-invoice-email-assistant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=company-reimbursement-invoice-email-assistant&ownerHandle=peter-zx",
+    "page_url": "https://clawhub.ai/peter-zx/skills/company-reimbursement-invoice-email-assistant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 439,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "\u7ba1\u7406\u5e76\u5904\u7406\u516c\u53f8\u62a5\u9500\u53d1\u7968\u90ae\u7bb1\u90ae\u4ef6\uff0c\u81ea\u52a8\u4e0b\u8f7d\u53d1\u7968\u9644\u4ef6\uff0c\u63d0\u53d6\u53d1\u7968\u4fe1\u606f\uff0c\u751f\u6210\u53f0\u8d26\u5e76\u5f52\u6863\u53d1\u7968PDF\u6587\u4ef6\u3002",
+  "updated_at": 1782180477305,
+  "version": "1.0.1"
+}
