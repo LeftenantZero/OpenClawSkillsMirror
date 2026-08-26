@@ -1,0 +1,54 @@
+{
+  "changelog": "Initial release \u2013 diagnose why Alibaba Cloud WAF 3.0 custom protection rules are not effective.\n\n- Statistically checks if a custom WAF rule is in effect and identifies the first broken configuration link.\n- Supports ACL, CC/rate limiting, scan protection, and IP blacklist rules (\"DefenseOrigin=custom\").\n- Read-only: verifies platform configuration; does not generate test traffic or make changes.\n- Handles missing/ambiguous inputs by prompting the customer before proceeding.\n- Outputs clear root causes with actionable console paths for fixes, in customer's language.",
+  "created_at": 1787571837669,
+  "display_name": "alibabacloud-waf-rule-effectiveness-check",
+  "fetched_at": 1787769351581,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/effectiveness-chain-basics.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/remediation-table.md",
+    "references/scenario-description.md",
+    "references/symptom-checklists.md",
+    "references/verification-method.md",
+    "scripts/check_rule_effectiveness.py",
+    "scripts/requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787572794556,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-waf-rule-effectiveness-check",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-waf-rule-effectiveness-check",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-waf-rule-effectiveness-check&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-waf-rule-effectiveness-check"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 87,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Diagnose why a configured Alibaba Cloud WAF 3.0 custom protection rule (custom ACL, CC / rate limiting, scan protection, IP blacklist) is not working: name the first broken link in the chain and hand back the console fix path. Read-only checks of configuration state only; never sends test traffic. Use it when a customer says a rule has no effect at all, a rule matches in the logs but nothing is blocked, an attack that should have been blocked got through, a rule worked yesterday but not today, or a CC or rate-limiting rule does not trigger or bans far too widely. Not for: explaining why one specific request was blocked or looking it up by trace_id, whitelist rule effectiveness itself, live attack sample validation, built-in rule toggles, config export, or reports. Triggers: \"\u89c4\u5219\u4e0d\u751f\u6548\", \"\u89c4\u5219\u914d\u4e86\u4f46\u4e0d\u751f\u6548\", \"\u81ea\u5b9a\u4e49\u89c4\u5219\u4e0d\u751f\u6548\", \"\u9884\u671f\u62e6\u672a\u62e6\", \"\u8be5\u62e6\u7684\u6ca1\u62e6\u4f4f\", \"\u6f0f\u62e6\u622a\", \"\u89c4\u5219\u547d\u4e2d\u4f46\u6ca1\u62e6\", \"\u89c4\u5219\u6628\u5929\u8fd8\u597d\u4eca\u5929\u5931\u6548\", \"CC\u4e0d\u89e6\u53d1\", \"\u8bef\u5c01\u9762\u8fc7\u5927\", \"\u89c4\u5219\u4e3a\u4ec0\u4e48\u6ca1\u751f\u6548\", \"WAF rule not effective\", \"rule not taking effect\", \"rule hit but not blocked\"",
+  "updated_at": 1787571943421,
+  "version": "0.0.1"
+}
