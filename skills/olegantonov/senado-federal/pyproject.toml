@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "senado-federal"
+version = "1.1.0"
+description = "Cliente assíncrono para a API de Dados Abertos do Senado Federal"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{name = "olegantonov"}]
+keywords = ["senado", "senadores", "api", "brasil", "dados-abertos"]
+
+dependencies = [
+    "httpx>=0.27.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "pytest-cov>=5.0",
+    "pytest-mock>=3.14",
+    "PyYAML>=6.0",
+    "mypy>=1.11",
+    "ruff>=0.9",
+]
+
+[tool.setuptools]
+py-modules = ["senado_client"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+markers = [
+    "integration: marks tests as integration tests (deselect with '-m \"not integration\"')",
+]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.11"
+check_untyped_defs = true
+warn_unused_ignores = true
