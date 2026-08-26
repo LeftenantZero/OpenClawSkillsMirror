@@ -1,0 +1,55 @@
+{
+  "changelog": "## 2.0.2 \u2014 2026-07-02\n\n### Changed\n\n- Lean filter now excludes `agents/*/qmd/xdg-cache/**` (qmd embedding caches:\n  downloaded GGUF models and `index.sqlite`). Both are rebuildable from the\n  indexed sources and had inflated full archives from ~170 MB to ~1.17 GB once\n  qmd started caching local embedding models under agent state.",
+  "created_at": 1771372834801,
+  "display_name": "Cloud Backup",
+  "fetched_at": 1787778316329,
+  "files": [
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/credentials.md",
+    "references/providers/aws-s3.md",
+    "references/providers/backblaze-b2.md",
+    "references/providers/cloudflare-r2.md",
+    "references/providers/digitalocean-spaces.md",
+    "references/providers/minio.md",
+    "references/providers/other.md",
+    "references/security.md",
+    "references/setup-flow.md",
+    "scripts/cloud-backup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783586266104,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Evgeni Obuchowski",
+    "handle": "obuchowski",
+    "user_id": "s1761zhqb0c4es4qj1m36xxw1x83ypeq"
+  },
+  "slug": "cloud-backup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cloud-backup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cloud-backup&ownerHandle=obuchowski",
+    "page_url": "https://clawhub.ai/obuchowski/skills/cloud-backup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3017,
+    "installs": 89,
+    "stars": 4,
+    "versions": 10
+  },
+  "summary": "Secrets-safe encrypted OpenClaw backups to S3/R2/B2/MinIO \u2014 lean modes, opt-in cron, staged restore. Use only when explicitly asked to back up/restore OpenClaw.",
+  "updated_at": 1782999894788,
+  "version": "2.0.2"
+}
