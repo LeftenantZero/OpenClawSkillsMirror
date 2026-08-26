@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of the Amazon Best Sellers listing scraper skill.\n\n- Extracts ranked product lists, ASINs, titles, URLs, images, prices, ratings, and review counts from any Amazon Best Sellers (/zgbs/ or /gp/bestsellers/) page, supporting all Amazon regional domains.\n- Provides additional category metadata (name, full name, URL) and pagination details (current page, has next page, next page URL).\n- Supports pagination for accessing beyond the first 50 items when available.\n- Designed for competitive intelligence, discovering top/trending products, niche research, sourcing ASINs, and rank tracking.\n- Reads only what the user can see\u2014no logins, no bypassing of Amazon security or access controls.",
+  "created_at": 1783675050280,
+  "display_name": "Amazon Bestseller Listing",
+  "fetched_at": 1787777296829,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-bestseller.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783675391411,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "amazon-bestseller-listing",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/amazon-bestseller-listing",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=amazon-bestseller-listing&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/amazon-bestseller-listing"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 347,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Amazon Best Sellers listing scraper: extract product cards from any Amazon Best Sellers (zgbs) or /gp/bestsellers/ category page \u2014 returns rank (position on chart), asin, title, url, image, imageAlt, price, stars, reviewCount, ratingRaw per item, plus category metadata (categoryName, categoryFullNam",
+  "updated_at": 1783675050280,
+  "version": "1.0.0"
+}
