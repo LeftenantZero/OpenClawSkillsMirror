@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of gasbuddy-browser skill.\n\n- Automates fetching and parsing of GasBuddy fuel prices using Playwright scripts via Bash `exec`, specifically designed for cities like Toronto and North York.\n- Bypasses Cloudflare challenge by waiting for page title change, not by browser evasion.\n- Performs incremental scrolling to trigger loading of all gas station cards.\n- Extracts and sorts top cheapest stations, returning key info: brand, price (correctly parsed as \"XXX.X\u00a2\"), and address.\n- Provides direct city URL patterns for consistent, reliable automation.\n- Includes practical fallbacks and clarifies common automation pitfalls and corrections.",
+  "created_at": 1779406941713,
+  "display_name": "gasbuddy-browser",
+  "fetched_at": 1787785322318,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jacky Shen",
+    "handle": "mebusw",
+    "user_id": "s17fqnnawywqwp37410y5w9r1h83pwab"
+  },
+  "slug": "gasbuddy-browser",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gasbuddy-browser",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gasbuddy-browser&ownerHandle=mebusw",
+    "page_url": "https://clawhub.ai/mebusw/skills/gasbuddy-browser"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 547,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use Playwright via Bash `exec` tool (not the built-in browser tool) to fetch GasBuddy fuel prices for a target city/area (especially Toronto/North York), and...",
+  "updated_at": 1779406941713,
+  "version": "1.0.0"
+}
