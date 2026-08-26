@@ -1,0 +1,54 @@
+{
+  "changelog": "- Initial release of the evidence-based-labeling skill focused on building, optimizing, and applying a structured labeling system for patents, scientific literature, technical documents, and more.\n- Introduces end-to-end, evidence-driven labeling workflows supporting open, semi-open, and closed taxonomy modes with clear rules and user-driven checkpoints.\n- Integrates PatSnap MCP for concept discovery, evidence gathering, and sample enhancement, with clear separation between model judgment, external evidence, and business decisions.\n- Provides tooling for validation of labeling inputs, taxonomy structure, task configuration, and output quality, with auxiliary scripts included.\n- Emphasizes clear output statuses, role-based review queues, and quality tracking, with strong safeguards for data integrity, configuration, and MCP usage.",
+  "created_at": 1786608746801,
+  "display_name": "\u8bc1\u636e\u5316\u901a\u7528\u6807\u5f15",
+  "fetched_at": 1787772378430,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/decision-rules-template.yaml",
+    "assets/label-confirmation-card-template.md",
+    "assets/task-config-template.yaml",
+    "assets/taxonomy-template.csv",
+    "references/default-decision-rules.md",
+    "references/domain-milk-protein-examples.csv",
+    "references/domain-milk-protein-rules.md",
+    "references/domain-milk-protein-taxonomy.csv",
+    "references/domain-milk-protein.yaml",
+    "references/input-output-contract.md",
+    "references/quality-and-review.md",
+    "references/taxonomy-design.md",
+    "references/workflow-modes.md",
+    "references/zhihuiya-mcp-orchestration.md",
+    "scripts/create_labeling_workbook.mjs",
+    "scripts/inspect_labeling_input.mjs",
+    "scripts/validate_labeling_output.mjs",
+    "scripts/validate_task_config.py",
+    "scripts/validate_taxonomy.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "yuanzhian-patsnap",
+    "handle": "yuanzhian-patsnap",
+    "user_id": "s17bvft5kywc2rr8r8df1ra0x589g677"
+  },
+  "slug": "evidence-based-labeling",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/evidence-based-labeling",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=evidence-based-labeling&ownerHandle=yuanzhian-patsnap",
+    "page_url": "https://clawhub.ai/yuanzhian-patsnap/skills/evidence-based-labeling"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 124,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7528MCP\u8bc1\u636e\u6784\u5efa\u5e76\u6267\u884c\u53ef\u590d\u6838\u6807\u7b7e\u4f53\u7cfb",
+  "updated_at": 1786608869531,
+  "version": "1.0.0"
+}
