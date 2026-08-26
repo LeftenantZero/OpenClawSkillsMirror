@@ -1,0 +1,49 @@
+{
+  "changelog": "v1.5.0 any-workspace: agent presets (arena/openclaw/claude-code/generic) with secrets-never-in-recipes rule + symlink-escape guard, swr models scan -> blob tracking, export-recipes sh/md/json portable runbook (toposorted, bash -n valid)",
+  "created_at": 1785284603958,
+  "display_name": "snapshot-wipe-resilience",
+  "fetched_at": 1787768746970,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "reference/manifest.example.json",
+    "reference/turn-start-hook.sh",
+    "scripts/swr.py",
+    "scripts/swr_crypto.py",
+    "scripts/swr_paste.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787702417204,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "orionshaowswmw",
+    "handle": "orionshaowswmw",
+    "user_id": "s17d6323ed1jjxgp339202e6c98b1qq5"
+  },
+  "slug": "snapshot-wipe-resilience",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/snapshot-wipe-resilience",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=snapshot-wipe-resilience&ownerHandle=orionshaowswmw",
+    "page_url": "https://clawhub.ai/orionshaowswmw/skills/snapshot-wipe-resilience"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 558,
+    "installs": 1,
+    "stars": 1,
+    "versions": 10
+  },
+  "summary": "Detect and auto-repair partially-wiped agent workspaces, with hybrid post-quantum end-to-end encryption (X25519+ML-KEM-1024, ML-DSA-87) for any data sent off-box in sandboxes that only persist part of the filesystem between turns, and sync the recovery manifest off-box to a pastebin so it survives a total wipe. Verifies integrity (hash, byte-size, exec bits, tree sentinels) instead of mere existence, then runs tiered restore recipes for exactly the damaged pieces. Use when: (1) an agent sandbox 'forgets' files, binaries, models, or credentials between turns, (2) a build directory, node_modules, or venv keeps disappearing, (3) scripts lose their +x bit or a cloned repo comes back with empty subdirectories, (4) large model/dataset downloads exceed a snapshot size cap, (5) you want a one-command health check at the start of every turn, (6) you need to restore a workspace from nothing but a short pastebin URL. Secrets in restore recipes are redacted to ${ENV_VAR} placeholders before any upload. Supports pastebin.com, dpaste, and paste.rs.",
+  "updated_at": 1787701582966,
+  "version": "1.4.10"
+}
