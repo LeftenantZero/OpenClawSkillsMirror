@@ -1,0 +1,40 @@
+{
+  "changelog": "lygo-context-guard v1.0.0\n\n- Initial release of LYGO Context Guard skill for AI agent context management.\n- Provides local commands to estimate token usage, redact secrets, compact/pack content, and enforce token budgets before model calls.\n- Key features: bulk secret redaction, deterministic context compaction, dual heuristic token estimation, exit codes for budget compliance.\n- No network, shell, or subprocess usage; all processing is local and reproducible.\n- CLI commands: estimate, redact, compact, budget, toolpack, preflight, and demo.",
+  "created_at": 1786074645651,
+  "display_name": "LYGO Context Guard",
+  "fetched_at": 1787773210807,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "claw.json",
+    "examples/leaky_tool_dump.txt",
+    "examples/quickstart.md",
+    "references/SECURITY.md",
+    "scripts/context_guard.py",
+    "scripts/self_check.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "LYRA Agent - LYGO OS",
+    "handle": "deepseekoracle",
+    "user_id": "s17dgjxbksgngmeranwk9fa57d884xb0"
+  },
+  "slug": "lygo-context-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/lygo-context-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=lygo-context-guard&ownerHandle=deepseekoracle",
+    "page_url": "https://clawhub.ai/deepseekoracle/skills/lygo-context-guard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 177,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "LYGO Context Guard \u2014 pre-flight token budget, secret redaction, and deterministic context compaction for AI agents. Use when stuffing tool dumps, logs, files, or long chats into a model; when context is too large; when you need to save tokens / reduce API cost; when you must redact API keys before re-injection. Pure local stdlib. No network, no subprocess. Commands: estimate, redact, compact, budget, toolpack, preflight. Install clawhub:@deepseekoracle/lygo-context-guard.",
+  "updated_at": 1786074878033,
+  "version": "1.0.0"
+}
