@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of the product-review-panel skill:\n\n- Launches a structured, multi-expert panel to review Product Requirements Documents (PRDs) and deliver a clear verdict (GO / NO-GO / CONDITIONAL GO), with dissenting opinions always preserved.\n- Dynamically adapts expert roster based on user conversation language (Chinese or English) and PRD classification.\n- Enforces a rigorous review flow: intake interrogation, expert opinions, pointed debate, authoritative verdict by \"The Closer,\" and explicit inclusion of dissent.\n- Applies strict behavioral guardrails: no numeric scoring, no personal attacks, mandatory disclaimer, one verdict per run.\n- Accepts flexible PRD input formats (uploaded files, pasted text, document links).\n- Not for brainstorming, technical architecture, or non-product questions\u2014use other skills for those cases.",
+  "created_at": 1780895300338,
+  "display_name": "Product Review Panel Skill",
+  "fetched_at": 1787782134121,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/examples/example-cn-feature-review.md",
+    "references/examples/example-intl-pricing-review.md",
+    "references/personas/closer.md",
+    "references/personas/experts-cn.md",
+    "references/personas/experts-intl.md",
+    "references/personas/p9-director.md",
+    "references/templates/disclaimer.md",
+    "references/templates/intake-dialogue.md",
+    "references/templates/output-structure.md",
+    "references/templates/panel-intro-card.md",
+    "references/workflows/information-gap-check.md",
+    "references/workflows/prd-classification.md",
+    "references/workflows/verdict-logic.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Sean Liu",
+    "handle": "cpsean",
+    "user_id": "s17fx8atp092kybw1jg9xrwchs87jzzg"
+  },
+  "slug": "product-review-panel-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/product-review-panel-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=product-review-panel-skill&ownerHandle=cpsean",
+    "page_url": "https://clawhub.ai/cpsean/skills/product-review-panel-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 372,
+    "installs": 5,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Convene a multi-expert panel to review a Product Requirements Document (PRD) and deliver a binding verdict (GO / NO-GO / CONDITIONAL GO) with dissenting opin...",
+  "updated_at": 1780895300338,
+  "version": "1.0.0"
+}
