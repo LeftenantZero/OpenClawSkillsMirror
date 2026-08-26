@@ -1,0 +1,47 @@
+{
+  "changelog": "- Removed the skill-card.md file to clean up redundant documentation.\n- No functionality or interface changes; this is a documentation cleanup release.",
+  "created_at": 1782116319495,
+  "display_name": "network-aiops",
+  "fetched_at": 1787772964201,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agent-guardrails.md",
+    "references/capabilities.md",
+    "references/cli-reference.md",
+    "references/setup-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786345532418,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wei zhou",
+    "handle": "zw008",
+    "user_id": "s171xgnmqse0nqvgqvqnaq5f9183kyre"
+  },
+  "slug": "network-aiops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/network-aiops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=network-aiops&ownerHandle=zw008",
+    "page_url": "https://clawhub.ai/zw008/skills/network-aiops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1391,
+    "installs": 0,
+    "stars": 0,
+    "versions": 11
+  },
+  "summary": "Use this skill whenever the user needs to operate a network device \u2014 read device facts, interfaces (+ counters/IP), BGP/LLDP neighbors (summary and detail), ARP/MAC tables, VLANs, routes, hardware environment (fans/temp/power/CPU/mem), optics, NTP, users, SNMP info, VRFs, and an aggregated device-health summary; run read-only RCA diagnostics on interface health and BGP neighbors; back up a switch/router config, diff a candidate config (dry-run), and merge/replace/rollback config \u2014 across Cisco IOS/IOS-XE, Nexus NX-OS, IOS-XR, Arista EOS, and Juniper Junos via NAPALM. An optional NetBox block adds source-of-truth lookups. Always use this skill for \"back up switch config\", \"show bgp neighbors\", \"diff network config\", \"push config to router\", \"show interfaces on the switch\", or tasks mentioning \"cisco\", \"arista\", \"juniper\", \"nexus\", \"ios-xr\", or \"napalm\". Do NOT use when the target is not a NAPALM-supported network device (Kubernetes clusters, hypervisor VMs, and cloud consoles are out of scope \u2014 route those elsewhere). Common multi-vendor device operations with a built-in governance harness (audit, policy, token budget, undo, risk-tiers).",
+  "updated_at": 1786344849275,
+  "version": "0.11.0"
+}
