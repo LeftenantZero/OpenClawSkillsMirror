@@ -1,0 +1,39 @@
+{
+  "changelog": "- Initial release of portfolio-analytics skill.\n- Computes portfolio risk and exposure metrics using local CSVs for holdings and price history.\n- Supports optional inputs for benchmark, sector mapping, and liquidity analysis.\n- Outputs detailed portfolio, benchmark, correlation, concentration, sector exposure, risk contributor, and data confidence metrics.\n- Clearly defines required input structure, output contract, guardrails, and handoff bundle for downstream use.\n- Designed to assist in pre-sizing and rebalance analysis\u2014not for executing trades or fetching live data.",
+  "created_at": 1779409296547,
+  "display_name": "Portfolio Analytics",
+  "fetched_at": 1787785325580,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "scripts/analyze_portfolio.py",
+    "scripts/risk_metrics.py",
+    "skill-card.md",
+    "tests/fixtures/benchmark.csv",
+    "tests/fixtures/holdings.csv",
+    "tests/fixtures/prices.csv"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Nguy\u1ec5n \u0110\u1ee9c Th\u00e0nh",
+    "handle": "teahann",
+    "user_id": "s172d4r9d0h6bvvd3mpq517yrn861np5"
+  },
+  "slug": "portfolio-analytics",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/portfolio-analytics",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=portfolio-analytics&ownerHandle=teahann",
+    "page_url": "https://clawhub.ai/teahann/skills/portfolio-analytics"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 649,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Compute portfolio risk and exposure metrics.",
+  "updated_at": 1779409296547,
+  "version": "1.0.0"
+}
