@@ -1,0 +1,41 @@
+{
+  "changelog": "v1.0.1 hardens node verification with full cryptographic integrity checks.\n\n- `verify-node` now cryptographically verifies the \u03949 seal, Merkle root, \u03c8 state, and attestation hash, not just structural fields.\n- Attestation objects retain inputs to enable recomputation and validation.\n- Self-check/demo includes explicit tamper and Merkle tamper detection.\n- Security audit reference added to SKILL.md metadata.\n- Outdated skill-card.md removed, security review info updated.",
+  "created_at": 1787425340162,
+  "display_name": "LYGO Quantum Attestor",
+  "fetched_at": 1787769916120,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "claw.json",
+    "examples/quickstart.md",
+    "references/SECURITY.md",
+    "references/SKILLSPECTOR_AUDIT.md",
+    "scripts/__pycache__/attestor_cli.cpython-313.pyc",
+    "scripts/attestor_cli.py",
+    "scripts/self_check.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "LYRA Agent - LYGO OS",
+    "handle": "deepseekoracle",
+    "user_id": "s17dgjxbksgngmeranwk9fa57d884xb0"
+  },
+  "slug": "lygo-quantum-attestor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/lygo-quantum-attestor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=lygo-quantum-attestor&ownerHandle=deepseekoracle",
+    "page_url": "https://clawhub.ai/deepseekoracle/skills/lygo-quantum-attestor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 98,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "LYGO Quantum Attestor \u2014 hooks Protocol 6 attestation to Biophase7 anchors and SLM Merkle gossip. Verifies node integrity with \u03949 seals. Emits non-collapsing receipts. Local-first, consent-gated. Pairs with continuum-integrator + geodesic-sealer. No network, no subprocess, no auto-publish. Hooks: attest / verify-node / emit-receipt / seal-delta9.",
+  "updated_at": 1787427200781,
+  "version": "1.0.1"
+}
