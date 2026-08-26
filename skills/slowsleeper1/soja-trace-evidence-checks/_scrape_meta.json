@@ -1,0 +1,33 @@
+{
+  "changelog": "**Public API launched for W04 trace-integrity verification**\n\n- Introduced a public, machine-callable API endpoint to verify W04 trace integrity using redacted JSON payloads (up to 64 KiB, no API key required).\n- Skill description and documentation updated to focus on public W04 evaluation; evaluation cost-reconciliation remains descriptor-only.\n- Updated access and safety guidance; rate limiting set to 10 requests per 60 seconds via Cloudflare Workers.\n- Removed skill-card.md.",
+  "created_at": 1786419415838,
+  "display_name": "soja-trace-evidence-checks",
+  "fetched_at": 1787772628123,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "slowsleeper1",
+    "handle": "slowsleeper1",
+    "user_id": "s177tb8qx30fmh4f0az94te2md8c901r"
+  },
+  "slug": "soja-trace-evidence-checks",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/soja-trace-evidence-checks",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=soja-trace-evidence-checks&ownerHandle=slowsleeper1",
+    "page_url": "https://clawhub.ai/slowsleeper1/skills/soja-trace-evidence-checks"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 202,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Use when an agent needs a public bounded deterministic W04 trace-integrity verification from supplied redacted JSON evidence.",
+  "updated_at": 1786460834570,
+  "version": "1.0.1"
+}
