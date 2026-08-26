@@ -1,0 +1,33 @@
+{
+  "changelog": "- Updated security and usage documentation to clarify that Clio credentials remain in the gateway and are never handled locally.\n- Changed guidance on endpoint usage: emphasized using only the endpoints explicitly documented in the skill, and disallowing path assembly or probing for undocumented endpoints.\n- Added new callflow and security notes regarding limiting requests to reviewed scope and not letting user data influence API paths or destinations.\n- Removed the skill-card.md file.",
+  "created_at": 1770925245240,
+  "display_name": "clio",
+  "fetched_at": 1787768638224,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "byungkyu",
+    "handle": "byungkyu",
+    "user_id": "s174c3s2kc1ehqj1ytzntezj2983e2aj"
+  },
+  "slug": "clio",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clio",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clio&ownerHandle=byungkyu",
+    "page_url": "https://clawhub.ai/byungkyu/skills/clio"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2038,
+    "installs": 63,
+    "stars": 2,
+    "versions": 6
+  },
+  "summary": "Clio API integration with managed OAuth. Use this skill when users want to interact with legal practice data in Clio Manage. All write operations (creating/updating/deleting matters, contacts, billing) require explicit user approval with specific resource identifiers before execution.",
+  "updated_at": 1787729693244,
+  "version": "1.1.1"
+}
