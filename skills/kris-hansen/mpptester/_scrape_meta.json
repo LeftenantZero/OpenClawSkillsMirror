@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release \u2013 Run an MPP conformance test for Solana payments.\n\n- Verifies an agent or wallet can successfully send or receive a $0.50 USDC payment on Solana mainnet or devnet.\n- Provides easy test initiation with a helper script or API, returning a Solana Pay URL.\n- Confirms payment automatically via blockchain monitoring (Helius webhook and RPC polling).\n- Issues a shareable, public proof upon successful payment.\n- Supports \"send\" tests (no login required) and \"receive\" tests (login required, rate-limited).\n- Offers detailed documentation for both manual and automated usage.",
+  "created_at": 1781068788725,
+  "display_name": "Machine Payments Protocol Tester",
+  "fetched_at": 1787781314133,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/run-test.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781069039121,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Kris Hansen",
+    "handle": "kris-hansen",
+    "user_id": "s17abb2vf02fmnvkqz9kexf3rn8676t1"
+  },
+  "slug": "mpptester",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mpptester",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mpptester&ownerHandle=kris-hansen",
+    "page_url": "https://clawhub.ai/kris-hansen/skills/mpptester"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 372,
+    "installs": 5,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Run a Machine Payments Protocol (MPP) conformance test \u2014 prove an agent or wallet can complete a real $0.50 USDC payment on Solana and get a shareable \"passe...",
+  "updated_at": 1781068788725,
+  "version": "1.0.0"
+}
