@@ -1,0 +1,46 @@
+{
+  "changelog": "- Initial release of DeepSeek Dev Assistant.\n- Automatically detects and processes shared DeepSeek chat links or related trigger phrases.\n- Uses a headless browser (Puppeteer) to extract visible chat content, handling JS-rendered pages.\n- Cleans extracted text, deduplicates files, and reconstructs project structure from chat output.\n- Distinguishes between complete files and code fragments, saving each appropriately.\n- Generates a project README with source, extraction details, and a summary status.\n- Handles common edge cases, such as expired links, missing dependencies, and partial/incomplete code.",
+  "created_at": 1779562615901,
+  "display_name": "\u4f60\u804a\u6211\u5e72",
+  "fetched_at": 1787785044480,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/deepseek-page-structure.md",
+    "references/example.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779963049187,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fhekg",
+    "handle": "fhekg",
+    "user_id": "s17a2zvxc7vd91nv8zn8ymjnvd8789c0"
+  },
+  "slug": "deepseek-dev-assistant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/deepseek-dev-assistant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=deepseek-dev-assistant&ownerHandle=fhekg",
+    "page_url": "https://clawhub.ai/fhekg/skills/deepseek-dev-assistant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 640,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read DeepSeek chat share links and continue development from extracted code and docs.",
+  "updated_at": 1779562615901,
+  "version": "1.0.0"
+}
