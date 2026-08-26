@@ -1,0 +1,51 @@
+{
+  "changelog": "alibabacloud-kafka-capacity-assessment v0.0.1\n\n- Initial release enabling capacity assessment for Alibaba Cloud Kafka (v2/v3) instances.\n- Detects capacity bottlenecks by querying CloudMonitor metrics based on user-reported symptoms like consumer lag, send failures, or throttling.\n- Provides upgrade recommendations; never performs write operations or instance modifications.\n- Enforces strict parameter confirmation, authentication, and observability via session tracking and --user-agent usage.\n- Requires proper RAM permissions and Aliyun CLI v3.3.3+ with plugin updates; handles permission errors with clear user guidance.\n- Clearly lists what is and isn\u2019t supported to avoid misuse.",
+  "created_at": 1782117681010,
+  "display_name": "Alibabacloud Kafka Capacity Assessment",
+  "fetched_at": 1787779751607,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/README.md",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/kafka-v2-spec-and-capacity.md",
+    "references/kafka-v3-spec-and-capacity.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782118463554,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-kafka-capacity-assessment",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-kafka-capacity-assessment",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-kafka-capacity-assessment&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-kafka-capacity-assessment"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 299,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Performs capacity assessment on Alibaba Cloud Kafka instances to determine whether throttling is occurring and recommends instance upgrades when capacity is...",
+  "updated_at": 1782117681010,
+  "version": "0.0.1"
+}
