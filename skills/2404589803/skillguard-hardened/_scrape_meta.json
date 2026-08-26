@@ -1,0 +1,53 @@
+{
+  "changelog": "Switch ZenMux AI auditing from Anthropic-compatible messages to ZenMux OpenAI-compatible chat completions, default model openai/gpt-5.4, and refresh skill metadata wording.",
+  "created_at": 1773469228571,
+  "display_name": "SkillGuard Hardened",
+  "fetched_at": 1787788784901,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "lib/ai_audit.py",
+    "lib/analyzers.py",
+    "lib/discovery.py",
+    "lib/policy.py",
+    "lib/remediation.py",
+    "lib/reporting.py",
+    "policies/default_rules.json",
+    "scripts/guarded_flow.py",
+    "scripts/manage_skill.py",
+    "scripts/scan_skills.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089900674,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "2404589803",
+    "handle": "2404589803",
+    "user_id": "s17dp6g80wp5ejpjpmsep6x2bh83jbep"
+  },
+  "slug": "skillguard-hardened",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skillguard-hardened",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skillguard-hardened&ownerHandle=2404589803",
+    "page_url": "https://clawhub.ai/2404589803/skills/skillguard-hardened"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1018,
+    "installs": 28,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Security guard for OpenClaw skills, developed and maintained by rose\u5317\u6e2f\uff08\u5c0f\u7ea2\u5e3d / \u732b\u732b\u5e3d\u5e3d\uff09. Audits installed or incoming skills with local rules plus Zenmux AI inten...",
+  "updated_at": 1779078220305,
+  "version": "1.0.5"
+}
