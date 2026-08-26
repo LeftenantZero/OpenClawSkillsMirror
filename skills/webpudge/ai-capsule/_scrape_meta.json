@@ -1,0 +1,57 @@
+{
+  "changelog": "ai-capsule 1.0.5\n\n- Improved detection and handling of the \"daily\" trigger word: now only fires the digest for short, clear \"daily\" commands, reducing accidental activation in ordinary conversation.\n- Added clarification and documentation for X/Twitter data fetching: now specifies reading local Chrome x.com cookies via browser-cookie3 and using a twitter-cli subprocess, with possible auto-detection of a 127.0.0.1 proxy.\n- Updated documentation for input triggers and mode detection, especially distinguishing when to prompt for confirmation before fetching.\n- Removed deprecated `skill-card.md` file.",
+  "created_at": 1781503820175,
+  "display_name": "Ai Capsule",
+  "fetched_at": 1787779096126,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "README.zh.md",
+    "SKILL.md",
+    "_meta.json",
+    "fetch.py",
+    "requirements.txt",
+    "scripts/add-source.sh",
+    "scripts/publish.sh",
+    "scripts/setup-env.sh",
+    "sections/daily-mode.md",
+    "sections/output-format.md",
+    "sections/scoring.md",
+    "skill-card.md",
+    "sources/ai.yaml",
+    "sources/finance.yaml",
+    "sources_extract.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782370465428,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Pudge",
+    "handle": "webpudge",
+    "user_id": "s17dcbqgrgbwc9n4n2tach9agn88phg5"
+  },
+  "slug": "ai-capsule",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-capsule",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-capsule&ownerHandle=webpudge",
+    "page_url": "https://clawhub.ai/webpudge/skills/ai-capsule"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 572,
+    "installs": 6,
+    "stars": 2,
+    "versions": 6
+  },
+  "summary": "Ranks your daily AI news feed by personal relevance \u2014 scores every article and surfaces the most useful ones first. To fetch X/Twitter posts, the daily run r...",
+  "updated_at": 1782369692148,
+  "version": "1.0.5"
+}
