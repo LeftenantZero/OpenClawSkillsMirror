@@ -1,0 +1,83 @@
+{
+  "changelog": "- Added account binding and registration workflow, including scripts for bind_account and corresponding documentation.\n- Introduced support for live tests of account binding and credential protection.\n- Updated workflow routing: handling of account binding and collaborator management is now separated from general settings.\n- Improved credential checking and guest key creation process.\n- Expanded usage documentation and refined publish/update workflows.\n- Removed obsolete skill-card.md.",
+  "created_at": 1775791856038,
+  "display_name": "ShareOne HTML & Document Share Links",
+  "fetched_at": 1787771534734,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "scripts/bind_account.js",
+    "scripts/check_api_key.js",
+    "scripts/comment_list.js",
+    "scripts/comment_reply.js",
+    "scripts/comment_resolve.js",
+    "scripts/create_guest_key.js",
+    "scripts/delete_api_key.js",
+    "scripts/delete_share.js",
+    "scripts/download_share.js",
+    "scripts/ensure_credentials.js",
+    "scripts/manage_collaborators.js",
+    "scripts/proxy_support.test.cjs",
+    "scripts/publish.js",
+    "scripts/refresh_share.js",
+    "scripts/save_api_key.js",
+    "scripts/shareone_api_request.js",
+    "scripts/shareone_client.js",
+    "scripts/shareone_upload.js",
+    "scripts/update_share_settings.js",
+    "scripts/upload_page.js",
+    "skill-card.md",
+    "templates/client-side-inference.html",
+    "templates/page-storage-dropzone.html",
+    "test/redirect_follow.test.js",
+    "tests/test_bind_account_live.js",
+    "tests/test_credential_guard.js",
+    "workflows/bind-account.md",
+    "workflows/comments-process.md",
+    "workflows/comments-view.md",
+    "workflows/delete-api-key.md",
+    "workflows/delete-share.md",
+    "workflows/download-file.md",
+    "workflows/environment-and-credentials.md",
+    "workflows/manage-collaborators.md",
+    "workflows/publish-binary-file.md",
+    "workflows/publish-text-page.md",
+    "workflows/refresh-remote.md",
+    "workflows/result-and-errors.md",
+    "workflows/update-share-settings.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786984668083,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "beep879",
+    "handle": "beep879",
+    "user_id": "s1738e1h5cmvnpnk4hnwhy9aa588xxxz"
+  },
+  "slug": "shareone",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/shareone",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=shareone&ownerHandle=beep879",
+    "page_url": "https://clawhub.ai/beep879/skills/shareone"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1632,
+    "installs": 21,
+    "stars": 1,
+    "versions": 14
+  },
+  "summary": "Host HTML pages and share PDF/Word/PPT",
+  "updated_at": 1786983906857,
+  "version": "1.2.12"
+}
