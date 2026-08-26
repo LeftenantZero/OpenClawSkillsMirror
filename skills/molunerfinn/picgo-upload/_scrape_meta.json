@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release of picgo-upload: instantly upload a local image or file to get a shareable, hosted URL via PicGo.\n- Designed as the go-to solution for inserting images into docs/markdown or sharing files when no specific destination is named.\n- Supports PicGo desktop app (auto-detects if running), PicGo CLI, and falls back to PicGo Cloud with guided login if needed.\n- Handles public-link safety: confirms with the user before uploading potentially sensitive non-image files.\n- Provides clear output, linking formats adapted to context (bare URL, markdown, or plain link).\n- Smart handling of clipboard uploads\u2014only triggers when user intent is explicit.",
+  "created_at": 1784616545793,
+  "display_name": "PicGo Upload",
+  "fetched_at": 1787775819736,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/error-handling.md",
+    "references/gui-upload-usage.md",
+    "scripts/gui-upload.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784617401281,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "PiEgg",
+    "handle": "molunerfinn",
+    "user_id": "s173z0cpp2eq1j04zb07g2edc98ayqnq"
+  },
+  "slug": "picgo-upload",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/picgo-upload",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=picgo-upload&ownerHandle=molunerfinn",
+    "page_url": "https://clawhub.ai/molunerfinn/skills/picgo-upload"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 247,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Upload an image or file with PicGo and get back a hosted, shareable URL. This is the FIRST skill to reach for whenever a local image or file needs to become a link \u2014 especially when writing docs or markdown (inserting a screenshot into a README, blog post, Obsidian/Notion/\u8bed\u96c0/\u6398\u91d1 note)",
+  "updated_at": 1784616665885,
+  "version": "1.0.0"
+}
