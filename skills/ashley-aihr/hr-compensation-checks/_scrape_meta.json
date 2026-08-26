@@ -1,0 +1,59 @@
+{
+  "changelog": "**Summary:**  \nIntroduces dynamic market data handling, clearer output protocols, and improved decision logic for compensation and payroll checks.\n\n- Added support for dynamic market data input and output with new sample assets.\n- Refined workflow routing based on input content; now distinguishes between official, market, survey, and internal data sources.\n- Updated output structure to require explicit decision summaries, bases, risk levels, and human confirmation steps.\n- Improved clarity of documentation and protocols, including updated SKILL.md with new requirements and principles.\n- Expanded references and sample scenarios, including latest China compensation policy and market data architecture guides.",
+  "created_at": 1779134171372,
+  "display_name": "Compensation Repo",
+  "fetched_at": 1787786670379,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/band-offer-review-input.dynamic.sample.json",
+    "assets/band-offer-review-input.sample.json",
+    "assets/generated-band-dynamic-sample/band-offer-review-output.json",
+    "assets/generated-band-dynamic-sample/band-offer-review.csv",
+    "assets/generated-band-sample/band-offer-review-output.json",
+    "assets/generated-band-sample/band-offer-review.csv",
+    "assets/generated-sample/payroll-filing-precheck-output.json",
+    "assets/generated-sample/payroll-filing-precheck.csv",
+    "assets/payroll-precheck-input.sample.json",
+    "references/china-compensation-policy-kb-2026.md",
+    "references/compensation-workflows.md",
+    "references/dynamic-market-data-architecture.md",
+    "references/real-user-scenario.md",
+    "scripts/generate_band_offer_packet.js",
+    "scripts/generate_payroll_precheck_packet.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090836527,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Ashley",
+    "handle": "ashley-aihr",
+    "user_id": "s1709qwt8f7axz6nyace1xk5s5840gbe"
+  },
+  "slug": "hr-compensation-checks",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hr-compensation-checks",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hr-compensation-checks&ownerHandle=ashley-aihr",
+    "page_url": "https://clawhub.ai/ashley-aihr/skills/hr-compensation-checks"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1219,
+    "installs": 34,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "\u505a\u5b9a\u85aa\u5224\u65ad\uff0c\u4e5f\u5148\u628a\u7533\u62a5\u524d\u98ce\u9669\u6311\u51fa\u6765 / Price offers and catch filing risks",
+  "updated_at": 1779136507565,
+  "version": "0.5.0"
+}
