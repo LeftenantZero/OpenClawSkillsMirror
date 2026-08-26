@@ -1,0 +1,54 @@
+{
+  "changelog": "Initial release of Alibaba Cloud ECS Disk Snapshot Management skill.\n\n- Provides comprehensive conceptual guidance for managing the full lifecycle of Alibaba Cloud ECS disk snapshots, including creation, listing, auto snapshot policies, costs, and consistency groups.\n- Clearly defines execution boundaries: destructive operations like deleting snapshots or rolling back disks are covered only with guidance, not execution.\n- Details authentication and credential-handling best practices, emphasizing user privacy and safe methods for diagnosis.\n- Describes required Alibaba Cloud RAM permissions and outlines the process for handling permission failures, including integration with a dedicated permission-diagnosis skill.\n- Includes references for installation, policies, and further documentation to ensure users follow Alibaba Cloud best practices.",
+  "created_at": 1785412556676,
+  "display_name": "alibabacloud-ebs-disk-snapshot-management",
+  "fetched_at": 1787774127111,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api-reference.md",
+    "references/best-practices.md",
+    "references/cli-installation-guide.md",
+    "references/cost-formulas.md",
+    "references/error-code-handbook.md",
+    "references/ram-policies.md",
+    "references/workflow-decision-tree.md",
+    "scripts/auto_snapshot_policy_helper.py",
+    "scripts/snapshot_cleanup_planner.py",
+    "scripts/snapshot_cost_calculator.py",
+    "scripts/snapshot_lifecycle_validator.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785418992348,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-ebs-disk-snapshot-management",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-ebs-disk-snapshot-management",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-ebs-disk-snapshot-management&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-ebs-disk-snapshot-management"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 228,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "This skill should be used when the user asks about Alibaba Cloud ECS disk snapshots, including creating snapshots, listing snapshots, deleting snapshots, rolling back disks, configuring auto snapshot policies, calculating snapshot costs, managing snapshot lifecycle, or using snapshot consistency groups for crash-consistent backup of an entire instance. Triggers on phrases like \"create ECS snapshot\", \"query snapshot list\", \"delete snapshot\", \"rollback disk\", \"auto snapshot policy\", \"snapshot cost\", \"snapshot consistency group\", \"crash-consistent backup\", \"consistency backup\", or Chinese equivalents \"\u521b\u5efa\u5feb\u7167\", \"\u67e5\u8be2\u5feb\u7167\u5217\u8868\", \"\u5220\u9664\u5feb\u7167\", \"\u56de\u6eda\u4e91\u76d8\", \"\u81ea\u52a8\u5feb\u7167\u7b56\u7565\", \"\u5feb\u7167\u8d39\u7528\", \"\u5feb\u7167\u4e00\u81f4\u6027\u7ec4\", \"\u4e00\u81f4\u6027\u5907\u4efd\", \"\u6574\u673a\u5907\u4efd\", \"\u5d29\u6e83\u4e00\u81f4\u6027\u5907\u4efd\", \"\u6574\u673a\u5d29\u6e83\u4e00\u81f4\u6027\u5907\u4efd\", and broader ECS disk maintenance intents such as \"\u5e2e\u6211\u5904\u7406\u4e00\u4e0b ECS \u5b9e\u4f8b\", \"\u7ed9\u4e91\u76d8\u505a\u5907\u4efd\", \"ECS \u4e91\u76d8\u8fd0\u7ef4\".",
+  "updated_at": 1785418629345,
+  "version": "0.0.1"
+}
