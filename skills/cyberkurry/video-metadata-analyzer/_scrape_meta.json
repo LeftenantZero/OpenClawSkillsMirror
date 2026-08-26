@@ -1,0 +1,40 @@
+{
+  "changelog": "**Adds privacy notice and clarifies skill purpose/usage.**\n\n- Renamed skill to \"video-metadata-analyzer\" for accuracy and clarity.\n- Added explicit privacy notice: API modes send frames, audio, and metadata to external endpoints; users should verify endpoint trust, especially for sensitive content.\n- Adjusted usage triggers to focus on metadata analysis (\"\u751f\u6210\u6295\u7a3f\u5143\u6570\u636e\", \"\u89c6\u9891\u5143\u6570\u636e\u5206\u6790\", \"analyze video metadata\").\n- Updated documentation to highlight privacy risks, advise use of agent-direct/local modes for confidential media, and clarify suitable scenarios.\n- No changes to code or pipeline; documentation only.",
+  "created_at": 1779275234438,
+  "display_name": "Video Metadata Intelligence System",
+  "fetched_at": 1787784967297,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/REFERENCE.md",
+    "scripts/analyze.py",
+    "scripts/common.py",
+    "scripts/run.sh",
+    "scripts/transcribe.py",
+    "scripts/visual.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "CyberKurry",
+    "handle": "cyberkurry",
+    "user_id": "s172t3hy5d2bk2060j97s647r186vww3"
+  },
+  "slug": "video-metadata-analyzer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/video-metadata-analyzer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=video-metadata-analyzer&ownerHandle=cyberkurry",
+    "page_url": "https://clawhub.ai/cyberkurry/skills/video-metadata-analyzer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 791,
+    "installs": 19,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Video content analysis pipeline \u2014 extract frames, transcribe audio, run LLM visual+audio analysis, synthesize structured Bilibili publish metadata (title, in...",
+  "updated_at": 1779613301052,
+  "version": "1.2.0"
+}
