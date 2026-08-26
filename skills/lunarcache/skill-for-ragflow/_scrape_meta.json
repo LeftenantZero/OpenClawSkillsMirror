@@ -1,0 +1,47 @@
+{
+  "changelog": "v1.8.0 (RAGFlow v0.27.0): Updated references to v0.27.0. list-models now uses GET /api/v1/models (legacy /v1/llm/my_llms removed in v0.27.0) with fallback for older servers. list-connectors/create-connector corrected to tenant-scoped /api/v1/connectors (--dataset no longer required). Documented v0.27.0 connector types (GitLab, Bitbucket, Notion, GCS) and provider instance GET/PUT routes.",
+  "created_at": 1777268973333,
+  "display_name": "RAGFlow Skill",
+  "fetched_at": 1787769145815,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "lib/api.js",
+    "references/AGENT_GUIDE.md",
+    "references/API.md",
+    "references/COMMANDS.md",
+    "references/REFERENCE.md",
+    "references/TROUBLESHOOTING.md",
+    "references/examples/agents/01-conversational-message.json",
+    "references/examples/agents/02-retrieval-message.json",
+    "references/examples/agents/03-tool-agent.json",
+    "references/examples/agents/04-iteration-agent.json",
+    "references/examples/agents/05-webhook-message.json",
+    "scripts/ragflow.js",
+    "scripts/repro-delete-chunks.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Lunar Cache",
+    "handle": "lunarcache",
+    "user_id": "s17bykgzpmk1mf077wb7zt08kd85n0rz"
+  },
+  "slug": "skill-for-ragflow",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-for-ragflow",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-for-ragflow&ownerHandle=lunarcache",
+    "page_url": "https://clawhub.ai/lunarcache/skills/skill-for-ragflow"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1836,
+    "installs": 27,
+    "stars": 1,
+    "versions": 14
+  },
+  "summary": "Manage everyday RAGFlow datasets, retrieval, chat, and agents.",
+  "updated_at": 1787617237707,
+  "version": "1.8.0"
+}
