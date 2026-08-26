@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release of SAR sea ice type and concentration mapping.\n\n- Classifies sea ice into open water, young ice, and multi-year ice from SAR \u03c3\u2070 imagery using multi-class Otsu thresholding on a dB scale.\n- Refines multi-year ice detection with GLCM texture analysis; adapts thresholds for summer conditions.\n- Calculates ice concentration via sliding window analysis.\n- Supports both real SAR \u03c3\u2070 GeoTIFF and auto-generated synthetic data.\n- Outputs include GeoTIFFs for ice type and concentration, JSON statistics, and a run manifest.\n- Runs fully offline; no user data is uploaded.",
+  "created_at": 1785850086828,
+  "display_name": "geoskill-sar-sea-ice-mapping",
+  "fetched_at": 1787773441859,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-sar-sea-ice-mapping.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785851292668,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-sar-sea-ice-mapping",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-sar-sea-ice-mapping",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-sar-sea-ice-mapping&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-sar-sea-ice-mapping"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 187,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4eceSAR \u03c3\u2070\u5236\u56fe\u6d77\u51b0\u7c7b\u578b\u4e0e\u5bc6\u96c6\u5ea6\uff1adB\u523b\u5ea6\u4e09\u7c7bOtsu\u5206\u6c34\u9762/\u65b0\u51b0/\u591a\u5e74\u51b0\uff0cGLCM\u7eb9\u7406\u7cbe\u70bc\u591a\u5e74\u51b0\uff0c\u6ed1\u7a97\u8ba1\u7b97\u51b0\u5bc6\u96c6\u5ea6\uff0c\u8f93\u51fa\u6d77\u51b0\u7c7b\u578bGeoTIFF\u3001\u5bc6\u96c6\u5ea6GeoTIFF\u4e0e\u9762\u79ef\u7edf\u8ba1JSON\u3002SAR sea ice type and concentration mapping via multi-Otsu backscatter thresholds and GLCM texture.",
+  "updated_at": 1785850221928,
+  "version": "1.0.0"
+}
