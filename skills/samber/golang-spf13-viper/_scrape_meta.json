@@ -1,0 +1,39 @@
+{
+  "changelog": "golang-spf13-viper 1.1.0\n\n- Added compatibility with Claude Code, Codex, and similar harnesses.\n- Expanded metadata: new allowed tools (including godig, gopls, LSP), and specified explicit file patterns.\n- Guidance improved: Points to `golang-pkg-go-dev` skill for package docs/symbols/vulnerabilities and `golang-gopls` for code navigation.\n- Removed obsolete `skill-card.md` file.\n- Minor copy clarifications and rewording for tips on documentation lookup, making best practices and advisory links more visible.",
+  "created_at": 1777649383403,
+  "display_name": "golang-spf13-viper",
+  "fetched_at": 1787769895919,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/binding-and-env.md",
+    "references/sources-and-formats.md",
+    "references/testing-and-isolation.md",
+    "references/unmarshal.md",
+    "references/watch-and-reload.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Samuel Berthe",
+    "handle": "samber",
+    "user_id": "s173arkhs3131fq5jf769qq75583hdgt"
+  },
+  "slug": "golang-spf13-viper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/golang-spf13-viper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=golang-spf13-viper&ownerHandle=samber",
+    "page_url": "https://clawhub.ai/samber/skills/golang-spf13-viper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 856,
+    "installs": 19,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Golang configuration library using spf13/viper \u2014 layered precedence (flag > env > file > KV > default), BindPFlag/BindPFlags, SetEnvPrefix + SetEnvKeyReplacer + AutomaticEnv, ReadInConfig + ConfigFileNotFoundError, Unmarshal + mapstructure struct tags, Sub for sub-trees, WatchConfig + OnConfigChange for hot reload, viper.New() for test isolation, and remote KV integration. Apply when using or adopting spf13/viper, or when the codebase imports `github.com/spf13/viper`. For CLI command structure alongside viper, see the `samber/cc-skills-golang@golang-spf13-cobra` skill. For general CLI architecture, see `samber/cc-skills-golang@golang-cli`.",
+  "updated_at": 1787452497834,
+  "version": "1.1.0"
+}
