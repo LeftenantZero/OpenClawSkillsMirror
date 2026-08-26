@@ -1,0 +1,68 @@
+{
+  "changelog": "Initial release of Disaster Exposure Assessment skill.\n\n- Quantifies population and asset exposure by overlaying hazard zones with spatial data at both raster and vector levels.\n- Supports both real GeoTIFF input and offline synthetic scenario generation.\n- Outputs include exposed-area mask (GeoTIFF), hazard zone boundaries (GeoJSON), and detailed exposure statistics (JSON).\n- Runs entirely offline by default; no user data is uploaded.",
+  "created_at": 1785843619503,
+  "display_name": "geoskill-disaster-exposure-assessment",
+  "fetched_at": 1787773495029,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_out/exposure_stats.json",
+    "_test_cli_out/output-manifest.json",
+    "e2e_test.py",
+    "geoskill-disaster-exposure-assessment.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785844494202,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-disaster-exposure-assessment",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-disaster-exposure-assessment",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-disaster-exposure-assessment&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-disaster-exposure-assessment"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 178,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5371\u9669\u533a\u4e0e\u8d44\u4ea7\u4eba\u53e3\u7a7a\u95f4\u53e0\u52a0\u7684\u66b4\u9732\u91cf\u7edf\u8ba1",
+  "updated_at": 1785843754592,
+  "version": "1.0.0"
+}
