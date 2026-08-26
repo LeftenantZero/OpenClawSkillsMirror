@@ -1,0 +1,49 @@
+{
+  "changelog": "WeChat Contact List Video Extraction & CRM Analyzer 1.0.0\n\n- Initial release of a macOS-based tool for extracting WeChat personal contacts via screen recording, ensuring zero-risk and no system permission requirements.\n- Utilizes FFmpeg for high-FPS frame extraction and Apple Vision OCR with concurrent processing for rapid text recognition.\n- Implements rule-based NLP to parse contact details (Name, Title, Organization, Venue, City, Time) into structured data.\n- Outputs results in Excel/CSV, JSON, and interactive HTML dashboards for CRM applications.\n- Includes detailed usage guide covering best practices for WeChat contact remarking, extraction performance metrics, and command-line steps for end-to-end operation.",
+  "created_at": 1786968214881,
+  "display_name": "WeChat Contact List Video Extraction & CRM Analyzer",
+  "fetched_at": 1787771574207,
+  "files": [
+    "LICENSE",
+    "README_zh.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.json",
+    "scripts/mac_ocr_fast.swift",
+    "scripts/process_video.py",
+    "scripts/structure_contacts.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786968987186,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "emergencescience",
+    "handle": "emergencescience",
+    "user_id": "s17a35617mabw6kewbzv4z4e7x83w38h"
+  },
+  "slug": "emergence-wechat-contact-crm",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/emergence-wechat-contact-crm",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=emergence-wechat-contact-crm&ownerHandle=emergencescience",
+    "page_url": "https://clawhub.ai/emergencescience/skills/emergence-wechat-contact-crm"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 474,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Zero-risk, permission-free WeChat personal contacts extraction and structured CRM pipeline. Uses macOS native screen recording (Cmd+Shift+5), high-FPS FFmpeg frame extraction, Apple Silicon concurrent Vision OCR, and multi-dimensional rule-based NLP extraction (Name, Title, Org, Venue, City, Time) to generate Excel/CSV, JSON, and interactive HTML dashboards.",
+  "updated_at": 1786968323424,
+  "version": "0.1.0"
+}
