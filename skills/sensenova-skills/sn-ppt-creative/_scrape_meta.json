@@ -1,0 +1,41 @@
+{
+  "changelog": "sn-ppt-creative v2026.8.19 Changelog\n\n- Added detailed documentation in SKILL.md covering architecture, dependencies, and step-by-step pipeline for creative-mode PPT generation.\n- Clarified the execution flow: skill can only be invoked from /skill sn-ppt-entry, never directly.\n- Outlined separate backend routes for text (LLM/VLM) and image (T2I) processing, with strict call-routing policy.\n- Defined robust fallback: if image generation fails, falls back to web image search; creation of placeholders is strictly forbidden.\n- Added comprehensive progress reporting and error handling instructions for integration with the shared WebUI.\n- Provided detailed code snippets for Stage 2 (style generation with/without reference images), Stage 3 (outline), and Stage 4 (per-slide generation logic).",
+  "created_at": 1787107700543,
+  "display_name": "sn-ppt-creative",
+  "fetched_at": 1787770698634,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "prompts/outline.md",
+    "prompts/page_prompt.md",
+    "prompts/style_from_image.md",
+    "prompts/style_from_query.md",
+    "requirements.txt",
+    "scripts/build_pptx.py",
+    "scripts/resume_scan.py",
+    "scripts/sanitize_prompt.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SenseNova-Skills",
+    "handle": "sensenova-skills",
+    "user_id": "s17fzc6fnxkbqzh6z8jr5bcvhh8bw2vm"
+  },
+  "slug": "sn-ppt-creative",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sn-ppt-creative",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sn-ppt-creative&ownerHandle=sensenova-skills",
+    "page_url": "https://clawhub.ai/sensenova-skills/skills/sn-ppt-creative"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 103,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Creative-mode PPT pipeline. One full-page 16:9 PNG per slide. LLM / VLM calls go through sn-ppt-standard/lib/model_client.py (shared thin client). Text-to-image (the actual png rendering) goes through sn-image-base/scripts/sn_agent_runner.py. Falls back to web image search when T2I generation fails. Expects task_pack.json + info_pack.json already written by sn-ppt-entry.",
+  "updated_at": 1787107893962,
+  "version": "2026.8.19"
+}
