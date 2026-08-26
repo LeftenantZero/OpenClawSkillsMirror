@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release of the workbuddy-data-migration skill.\n- Enables seamless migration of the WorkBuddy data directory off the system drive to a fixed non-system disk using a Windows directory junction.\n- Ensures all data\u2014including conversation history, sessions, skills, logs, Python/Node runtimes, and caches\u2014move from C: to the target drive and remain there permanently.\n- Employs a bundled batch and Node.js script for safe, verified migration without breaking absolute paths or requiring config changes.\n- Includes read-only inventory, optional safe cleanup, data migration with verification, and robust handling of common Windows environment issues.\n- Provides detailed troubleshooting resources for custom or trimmed Windows images.",
+  "created_at": 1786261118660,
+  "display_name": "WorkBuddy \u6570\u636e\u76ee\u5f55\u8fc1\u79fb\uff08junction\uff09",
+  "fetched_at": 1787773049422,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "manifest.yaml",
+    "references/lessons.md",
+    "scripts/migrate.bat",
+    "scripts/migrate.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786261887575,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "GuIbE7391",
+    "handle": "guibe7391",
+    "user_id": "s171wtmf6hq90naspq4rb2q9qs8c4myc"
+  },
+  "slug": "workbuddy-data-migration",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/workbuddy-data-migration",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=workbuddy-data-migration&ownerHandle=guibe7391",
+    "page_url": "https://clawhub.ai/guibe7391/skills/workbuddy-data-migration"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 151,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u628a WorkBuddy \u6570\u636e\u76ee\u5f55\u7528 Windows \u76ee\u5f55\u8054\u63a5\u8fc1\u5230\u975e\u7cfb\u7edf\u76d8\uff0c\u91ca\u653e C \u76d8\u4e14\u4ee5\u540e\u65b0\u589e\u6570\u636e\u4e5f\u81ea\u52a8\u4e0d\u5360\u7cfb\u7edf\u76d8",
+  "updated_at": 1786261220910,
+  "version": "1.0.0"
+}
