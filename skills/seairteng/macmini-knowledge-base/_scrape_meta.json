@@ -1,0 +1,49 @@
+{
+  "changelog": "v1.4.7: SKILL.md version \u5b57\u6bb5\u4e0e _meta.json \u540c\u6b65",
+  "created_at": 1778404459524,
+  "display_name": "Mac \u77e5\u8bc6\u5e93\u642d\u5efa\u7cfb\u7edf",
+  "fetched_at": 1787771531597,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/generate_catalog.py",
+    "scripts/re_ocr_corrupted.py",
+    "scripts/run_analysis.py",
+    "scripts/setup.sh",
+    "scripts/utils.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786986763133,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "seairteng",
+    "handle": "seairteng",
+    "user_id": "s170wy77rm29wznbver4enx39986fr18"
+  },
+  "slug": "macmini-knowledge-base",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/macmini-knowledge-base",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=macmini-knowledge-base&ownerHandle=seairteng",
+    "page_url": "https://clawhub.ai/seairteng/skills/macmini-knowledge-base"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1177,
+    "installs": 25,
+    "stars": 0,
+    "versions": 13
+  },
+  "summary": "\u26a0\ufe0f **\u672c skill \u5305\u542b\u4ee5\u4e0b\u9ad8\u5371\u80fd\u529b\uff0c\u4f7f\u7528\u524d\u8bf7\u4ed4\u7ec6\u9605\u8bfb SKILL.md \u9876\u90e8\u300c\u26a0\ufe0f CAPABILITIES & RISKS\u300d\u7ae0\u8282**\uff1a - Shell \u6267\u884c + \u6587\u4ef6\u8bfb\u5199 + \u5b89\u88c5 Homebrew \u5305\uff08\u7248\u672c\u56fa\u5b9a\uff09+ \u4e0b\u8f7d Ollama \u6a21\u578b - \u4fee\u6539 OpenClaw \u914d\u7f6e + \u6ce8\u518c\u6301\u4e45 cron \u4efb\u52a1 + \u98de\u4e66 webhook \u63a8\u9001 \u5728 Mac Mini (M4) \u4e0a\u5feb\u901f\u642d\u5efa\u672c\u5730\u77e5\u8bc6\u5e93 + RAG \u81ea\u7136\u8bed\u8a00\u641c\u7d22\u7cfb\u7edf\u3002 \u9002\u7528\u573a\u666f\uff1a - \u65b0 Mac \u914d\u7f6e\u77e5\u8bc6\u5e93\uff1a\u4ece\u96f6\u5f00\u59cb\u5b89\u88c5\u914d\u7f6e Ollama\u3001embedding\u6a21\u578b\u3001\u5b9a\u65f6\u4efb\u52a1\u3001\u6587\u6863\u89e3\u6790 - \u9047\u5230 PDF \u63d0\u53d6\u4e71\u7801\u3001\u5b9a\u65f6\u4efb\u52a1\u8d85\u65f6\u3001skill \u52a0\u8f7d\u5931\u8d25\u7b49\u95ee\u9898 - \u60f3\u8981\u5efa\u7acb\u6bcf\u65e5\u81ea\u52a8\u5206\u6790\u6587\u6863 + 08:00\u53d1\u9001\u6458\u8981\u5230\u98de\u4e66\u7684\u6d41\u7a0b - \u8fc1\u79fb\u6216\u590d\u73b0\u77e5\u8bc6\u5e93\uff1a\u6253\u5305\u6574\u4e2a knowledge \u76ee\u5f55\u548c\u914d\u7f6e\u5230\u65b0\u7535\u8111 - **v1.4 \u65b0\u589e**\uff1aCMap \u6b8b\u7f3a\u5ea6\u81ea\u68c0\uff08\u4e0d\u9884\u8bbe\u6765\u6e90\uff09+ 50\u4e07\u5b57\u5b8c\u6574\u63d0\u53d6 + OCR fallback \u5230 .doc \u672c skill \u4f1a\u5f15\u5bfc\u5b8c\u6210\uff1a\u76ee\u5f55\u7ed3\u6784\u521b\u5efa\u3001\u4f9d\u8d56\u5b89\u88c5\u3001\u811a\u672c\u90e8\u7f72\u3001\u5b9a\u65f6\u4efb\u52a1\u6ce8\u518c\u3001OpenClaw \u914d\u7f6e\u3002 \u26a0\ufe0f **\u91cd\u8981\uff1a\u80fd\u529b\u8303\u56f4** \u672c skill \u4e0d\u53ea\u662f\u300c\u642d\u5efa\u300d\uff0c\u8fd8\u5305\u542b\uff1a - \u6279\u91cf OCR \u4fee\u590d\uff08\u626b\u63cf summaries/archives \u627e\u4e71\u7801 + \u91cd\u65b0\u63d0\u53d6\uff09 - \u76ee\u5f55\u5f52\u6863\u6e05\u7406\uff08\u79fb\u52a8\u91cd\u590d/\u5b64\u513f\u6587\u4ef6\u5230 .trash/\uff09 - \u81ea\u52a8\u5b9a\u65f6\u4efb\u52a1\uff0823:00 \u5206\u6790 + 06:00 \u98de\u4e66\u63a8\u9001\uff09 \u4f7f\u7528\u524d\u8bf7\u4ed4\u7ec6\u8bc4\u4f30\u6279\u91cf\u4fee\u6539\u98ce\u9669\u3002",
+  "updated_at": 1786985302263,
+  "version": "1.4.7"
+}
