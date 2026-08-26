@@ -1,0 +1,59 @@
+{
+  "changelog": "Huawei Cloud CCI Instance Management skill \u2014 initial release.\n\n- Provides full lifecycle management of CCI resources (Namespace, Network, Deployment, StatefulSet, Pod, EIPPool) via hcloud CLI.\n- Enforces two-step confirmation for all destructive operations to prevent accidental data loss.\n- Requires namespace flavor annotation; enforces resource limits equal to requests; validates correct workflow order (Network before workloads).\n- Provides strict security: never outputs credentials; validation via `hcloud configure list` only.\n- Explains CLI workarounds (Python helper script for Network creation) and credential separation.\n- Includes comprehensive documentation of constraints, workflows, and security rules.",
+  "created_at": 1785748120682,
+  "display_name": "huawei-cloud-cci-instance-management",
+  "fetched_at": 1787773673526,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cci-operation-catalog.md",
+    "references/common-workflows.md",
+    "references/credential-configuration.md",
+    "references/iam-policies.md",
+    "references/parameter-format.md",
+    "references/task-deployment-management.md",
+    "references/task-eippool-management.md",
+    "references/task-logs-and-status.md",
+    "references/task-namespace-management.md",
+    "references/task-network-management.md",
+    "references/task-pod-management.md",
+    "references/task-statefulset-management.md",
+    "references/troubleshooting.md",
+    "references/verification-method.md",
+    "scripts/cci_network_helper.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785749110767,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-cci-instance-management",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-cci-instance-management",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-cci-instance-management&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-cci-instance-management"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 41,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Huawei Cloud CCI (Cloud Container Instance) full lifecycle management using hcloud CLI. Covers Namespace, Network, Deployment, StatefulSet, Pod creation/update/delete/status, EIPPool for public IP, logs and metrics. Two-step confirmation for all destructive operations (delete namespace cascades all resources under it). Use this skill when the user wants to operate CCI serverless containers via command line. Triggers: CCI, \u4e91\u5bb9\u5668\u5b9e\u4f8b, serverless container, \u5bb9\u5668\u5b9e\u4f8b, namespace, deployment, statefulset, pod, EIPPool, CCI\u8d1f\u8f7d, \u65e0\u670d\u52a1\u5668\u5bb9\u5668, \u521b\u5efa\u5bb9\u5668\u5b9e\u4f8b, \u5220\u9664\u5bb9\u5668\u5b9e\u4f8b, \u5bb9\u5668\u72b6\u6001, \u5bb9\u5668\u65e5\u5fd7",
+  "updated_at": 1785748246137,
+  "version": "1.0.0"
+}
