@@ -1,0 +1,65 @@
+{
+  "changelog": "Agent Vault plans are now payable directly with x402 (USDC on Base/Solana, USDG on Robinhood Chain, USDm on MegaETH) \u2014 an agent holding stablecoins but no credits can buy Pro or Max in one call. Vault tiers updated: Free 1 GB / 1 rolling snapshot, Pro $3mo or $30yr for 10 GB and the last 10 snapshots of each agent, Max $5mo or $50yr for 50 GB and unlimited history. A downgrade or missed payment never deletes a snapshot.",
+  "created_at": 1771414096465,
+  "display_name": "x402 Compute",
+  "fetched_at": 1787770104015,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agent-pods.md",
+    "references/agent-vault.md",
+    "references/ai-machines.md",
+    "references/api-reference.md",
+    "references/node-operator.md",
+    "references/openwallet-ows.md",
+    "references/processors.md",
+    "requirements.txt",
+    "scripts/agent_pod.py",
+    "scripts/browse_plans.py",
+    "scripts/browse_regions.py",
+    "scripts/create_api_key.py",
+    "scripts/destroy_instance.py",
+    "scripts/extend_instance.py",
+    "scripts/get_one_time_password.py",
+    "scripts/instance_details.py",
+    "scripts/list_instances.py",
+    "scripts/ows_cli.py",
+    "scripts/provision.py",
+    "scripts/resize_instance.py",
+    "scripts/solana_signing.py",
+    "scripts/wallet_signing.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787342668562,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Ivaavi.eth",
+    "handle": "ivaavimusic",
+    "user_id": "s179r9z3n07jxsdszy7pdwqans83tjq8"
+  },
+  "slug": "x402-compute",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/x402-compute",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=x402-compute&ownerHandle=ivaavimusic",
+    "page_url": "https://clawhub.ai/ivaavimusic/skills/x402-compute"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2880,
+    "installs": 52,
+    "stars": 4,
+    "versions": 28
+  },
+  "summary": "This skill should be used when the user asks to \"provision GPU instance\", \"spin up a cloud server\", \"list compute plans\", \"browse GPU pricing\", \"deploy AI machine\", \"one-click GPU running an LLM\", \"deploy a private LLM endpoint\", \"OpenRouter-ready endpoint\", \"agent deploy GPU\", \"spin up my own OpenAI-compatible endpoint\", \"extend compute instance\", \"resize compute instance\", \"destroy server instance\", \"check instance status\", \"list my instances\", \"top up compute credits\", \"check credit balance\", \"run inference on the grid\", \"decentralized inference\", \"OpenAI-compatible API\", \"confidential / TEE inference\", \"list grid models\", \"check grid capacity\", \"run a node\", \"provide compute\", \"become a grid node\", \"node operator\", \"join the grid\", \"stake to run a node\", \"serve a model on the grid\", \"earn from compute\", \"deploy an always-on AI agent\", \"deploy a hosted OpenClaw agent\", \"spin up a ClawPod\", \"agent pod\", \"hosted agent with its own wallet\", \"free agent trial\", \"deploy a processor\", \"sell my code per call\", \"monetize an endpoint\", \"publish a paid API\", \"connect a processor as an MCP tool\", \"back up my agent\", \"agent backup\", \"restore my agent\", \"migrate my agent\", \"agent vault\", \"snapshot my agent's memory\", \"move my agent to a new machine\", or manage Singularity Cloud Network compute. Seven jobs: SGL Machines (GPU/VPS provisioning across Vultr & DigitalOcean), AI Machines (one-click GPU running an LLM \u2014 deploy a private OpenAI-compatible endpoint, or join the grid & earn), SGL Grid (decentralized, confidential, OpenAI-compatible inference \u2014 consume it), Provide Compute (run a TEE node on the grid to serve inference and earn USDC + SGL), and Agent Pods (deploy an always-on hosted OpenClaw agent with its own crypto wallet, memory, and preinstalled x402 skills \u2014 managed or BYOK, tiers, free 24h trial), and Processors (publish your own code as a paid endpoint \u2014 buyers pay you directly in USDC via x402, you pay only for runtime; every processor is also a connectable MCP server, so agents, harnesses and LangGraph nodes can call it with just a URL), and Agent Vault (zero-knowledge encrypted backup, restore & migration for OpenClaw/Hermes agents \u2014 snapshot an agent's memory and soul, store it encrypted, restore or migrate it to any machine or pod). Pay with USDC on Base or Solana, USDm on MegaETH, USDG on Robinhood Chain via x402, optional MPP/Mppx, or pre-loaded USD credits. Includes optional OWS-backed auth and management flows.",
+  "updated_at": 1787341406103,
+  "version": "1.21.0"
+}
