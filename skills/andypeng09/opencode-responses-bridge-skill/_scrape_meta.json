@@ -1,0 +1,55 @@
+{
+  "changelog": "- Major update: introduces a zero-dependency local proxy to bridge OpenAI Chat Completions with Responses API-only models.\n- Supports seamless use of OpenAI-compatible clients with Responses-API-only models like OpenCode Go gpt-5.6-luna.\n- Enables streaming, tool call/function support, reasoning content, and multi-modal input through protocol conversion.\n- Provides easy setup via Python script; configurable upstream endpoint and proxy host/port.\n- Adds troubleshooting guide, compatibility notes, and extensive usage examples and protocol mapping docs.",
+  "created_at": 1786174229304,
+  "display_name": "opencode-responses-bridge-skill",
+  "fetched_at": 1787773131590,
+  "files": [
+    ".clawhubignore",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/basic.md",
+    "examples/generic-client-setup.md",
+    "examples/workbuddy-setup.md",
+    "references/protocol-mapping.md",
+    "scripts/proxy.py",
+    "scripts/start_proxy.bat",
+    "skill-card.md",
+    "skill-info.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786175415034,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ANDYPENG09",
+    "handle": "andypeng09",
+    "user_id": "s179287h5dgtt822wrwrcv6nes8b3c0y"
+  },
+  "slug": "opencode-responses-bridge-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/opencode-responses-bridge-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=opencode-responses-bridge-skill&ownerHandle=andypeng09",
+    "page_url": "https://clawhub.ai/andypeng09/skills/opencode-responses-bridge-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1369,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Local stdlib-only proxy that adapts OpenAI Chat Completions to/from the Responses API so any OpenAI-compatible agent client (WorkBuddy, Cursor, Open WebUI, LobeChat, ...) can use Responses-API-only models such as OpenCode Go gpt-5.6-luna. Use when: setting up a Chat Completions to Responses API bridge, local proxy for responses-only models, fixing 'model only supports responses API', 'invalid_prompt' HTTP 400, 'custom model error 10000', or protocol transcoding for any Responses API endpoint (OPENCODE_UPSTREAM). \u4f7f\u7528\u573a\u666f\uff1a\u534f\u8bae\u8f6c\u63a5/\u672c\u5730\u4ee3\u7406/\u628a\u53ea\u652f\u6301 Responses API \u7684\u6a21\u578b\u63a5\u5165 OpenAI \u517c\u5bb9\u5ba2\u6237\u7aef/\u6a21\u578b\u62a5 invalid_prompt \u6216\u81ea\u5b9a\u4e49\u6a21\u578b\u9519\u8bef 10000\u3002",
+  "updated_at": 1786174405220,
+  "version": "0.1.0"
+}
