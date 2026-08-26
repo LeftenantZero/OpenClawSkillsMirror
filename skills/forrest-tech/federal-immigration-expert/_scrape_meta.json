@@ -1,0 +1,52 @@
+{
+  "changelog": "- Description now available in both English and Chinese; renamed for clarity and international audience.\n- No logic or technical changes; only SKILL.md documentation updated.\n- Core functionalities, user guidance, and tool usage remain unchanged.\n- Enhanced clarity for global users by describing the skill in generic, accessible English.",
+  "created_at": 1787354164388,
+  "display_name": "federal-immigration-expert",
+  "fetched_at": 1787770095923,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "data/snapshots/ircc-cec-OFFICIAL.txt",
+    "data/snapshots/ircc-fst-OFFICIAL.txt",
+    "data/snapshots/ircc-fsw-OFFICIAL.txt",
+    "data/sources.json",
+    "scripts/auto_discover.py",
+    "scripts/evaluator.py",
+    "scripts/policy_monitor.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787357655498,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Forrest Lin",
+    "handle": "forrest-tech",
+    "user_id": "s17fbbt0d5gyp9dhfbdj21k4vd8cwqhm"
+  },
+  "slug": "federal-immigration-expert",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/federal-immigration-expert",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=federal-immigration-expert&ownerHandle=forrest-tech",
+    "page_url": "https://clawhub.ai/forrest-tech/skills/federal-immigration-expert"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 127,
+    "installs": 2,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Generic Canadian federal immigration policy expert (IRCC Express Entry / CRS / CEC / FSW / FST). Fetches policy in real time from official sources, detects and surfaces updates, and computes multi-stream eligibility plus CRS scoring (with itemized detail) for any candidate. All policy judgements follow live official sources, never stale offline data.",
+  "updated_at": 1787356845458,
+  "version": "1.2.0"
+}
