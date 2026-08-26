@@ -1,0 +1,38 @@
+{
+  "changelog": "- Initial release: Scrapes weekly tilbudsaviser from 5 Danish supermarkets using the Tjek API.\n- Automatically filters and identifies \"wow\" grocery deals based on price and discount thresholds.\n- Publishes a concise wow deals summary and a full organized deal list to your phone via ntfy.sh.\n- Supports per-category interest filtering, de-duplication, and weekly scheduling.\n- Includes easy setup instructions, configuration template, and troubleshooting notes.",
+  "created_at": 1787164019346,
+  "display_name": "danish-grocery-deals",
+  "fetched_at": 1787770534848,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/notify.py",
+    "scripts/tilbudsavis.py",
+    "skill-card.md",
+    "templates/config.json",
+    "templates/deals-notify.service",
+    "templates/deals-notify.timer"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Rune-Philip",
+    "handle": "rune-philip",
+    "user_id": "s172swdp10e0vd3ygan6kwn8d98cr0fy"
+  },
+  "slug": "danish-grocery-deals",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/danish-grocery-deals",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=danish-grocery-deals&ownerHandle=rune-philip",
+    "page_url": "https://clawhub.ai/rune-philip/skills/danish-grocery-deals"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 93,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Scrape Danish supermarket weekly tilbudsaviser (Lidl, Rema 1000, Netto, Meny, 365 discount) from the Tjek API and push filtered wow deals to ntfy.sh",
+  "updated_at": 1787164114012,
+  "version": "1.0.0"
+}
