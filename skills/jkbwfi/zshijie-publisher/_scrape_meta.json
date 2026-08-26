@@ -1,0 +1,50 @@
+{
+  "changelog": "zshijie-publisher 0.1.5\n\n- Simplified QR login flow: replaced two-step \"prepare-login\" and \"wait-login\" with single \"login\" command that outputs both HTML and PNG for QR code.\n- Session file structure clarified: now explicitly supports and documents the use of `captured.sessionId` as valid.\n- Updated documentation and workflows to reflect the streamlined login procedure and reduced reference to QR internals.\n- Removed runtime/environment installation instructions and Homebrew integration guidance from user-facing docs.\n- Adjusted payload and session rules for better compatibility and simpler usage.\n- Minor command usage changes: `login` command replaces previous preparation and waiting steps for QR scan.",
+  "created_at": 1773928664642,
+  "display_name": "Z\u89c6\u4ecb Publisher",
+  "fetched_at": 1787787964001,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/qrcode.min.js",
+    "references/usage.md",
+    "references/zshijie-api.json",
+    "references/zshijie-api.md",
+    "scripts/publisher_cli.py",
+    "scripts/release_to_clawhub.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089989090,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jkbwfi",
+    "handle": "jkbwfi",
+    "user_id": "s171br7sn7a97rzw0kfshxdq6n83hny1"
+  },
+  "slug": "zshijie-publisher",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/zshijie-publisher",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=zshijie-publisher&ownerHandle=jkbwfi",
+    "page_url": "https://clawhub.ai/jkbwfi/skills/zshijie-publisher"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1115,
+    "installs": 31,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Operate the Z\u89c6\u4ecb publishing API from OpenClaw. Use when Codex needs to prompt the user to log in to Z\u89c6\u4ecb by QR code, then publish or edit \u56fe\u6587 and \u77ed\u89c6\u9891 content th...",
+  "updated_at": 1779078583776,
+  "version": "0.1.5"
+}
