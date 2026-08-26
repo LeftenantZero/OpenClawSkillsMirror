@@ -1,0 +1,47 @@
+{
+  "changelog": "v1.2.0: Security fix \u2014 removed all Telegram bot token references and config path grep instructions from SKILL.md. Audio download from messaging platforms is now explicitly delegated to the host agent. Skill only handles local audio files. Removed undocumented config path access. Should resolve VirusTotal and OpenClaw security scan flags.",
+  "created_at": 1774219826829,
+  "display_name": "Music Identify",
+  "fetched_at": 1787787447109,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/audd-api.md",
+    "scripts/identify.sh",
+    "scripts/spotify-auth.py",
+    "scripts/spotify-queue.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090082899,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "PlayOffP",
+    "handle": "playoffp",
+    "user_id": "s17270caa9rndzqeqjfnten0j183hwwc"
+  },
+  "slug": "music-identify",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/music-identify",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=music-identify&ownerHandle=playoffp",
+    "page_url": "https://clawhub.ai/playoffp/skills/music-identify"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 843,
+    "installs": 21,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Identify songs from audio clips using AudD API and optionally queue them to Spotify. Triggers on /songsearch command, voice messages with song identification...",
+  "updated_at": 1779078880773,
+  "version": "1.2.0"
+}
