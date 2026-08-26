@@ -1,0 +1,55 @@
+{
+  "changelog": "- Initial release of fund-page-set skill.\n- Converts user-supplied fund factsheet points into one still per page for prospectus/factsheet layouts.\n- Requires only user-approved facts and titles; does not invent missing data.\n- Uses the bundled MCP client for all Beatra operations\u2014never calls host Connectors or REST.\n- Provides a free, labeled plan of page stills before any paid generation.\n- Robust task management and recovery steps included; supports safe, automatic updates.",
+  "created_at": 1787578821946,
+  "display_name": "fund-page-set",
+  "fetched_at": 1787769291348,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "references/automatic-updates-and-safety.md",
+    "references/billing-errors-and-recovery.md",
+    "references/installation-and-auth.md",
+    "references/installation-registration.md",
+    "references/mcp-connection.md",
+    "references/tasks-and-results.md",
+    "references/uninstall-and-disconnect.md",
+    "references/workflow.md",
+    "scripts/authorize.py",
+    "scripts/mcp_client.py",
+    "scripts/uninstall.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787579924003,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "beatra-ai",
+    "handle": "beatra-ai",
+    "user_id": "s176vcp4w7b7tt3j7a62gdnfys8cntp4"
+  },
+  "slug": "fund-page-set",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fund-page-set",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fund-page-set&ownerHandle=beatra-ai",
+    "page_url": "https://clawhub.ai/beatra-ai/skills/fund-page-set"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 59,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Turn user-supplied fund factsheet points into one still per page. This fund factsheet page studio lays out each prospectus page still from the supplied fund factsheet. Use it for factsheet page graphics, fund page set layouts, and page-by-page fund stills.",
+  "updated_at": 1787579199658,
+  "version": "0.1.1"
+}
