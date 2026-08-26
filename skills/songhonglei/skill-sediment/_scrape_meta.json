@@ -1,0 +1,56 @@
+{
+  "changelog": "v1.0.2: fix review-prompt typo (converssation to conversation); enableAutoReview=false now also skips skill_manage tool registration (zero side-effects when disabled); converge nudgeInterval default to single source; align plugin core version",
+  "created_at": 1782113284463,
+  "display_name": "Skill Sediment",
+  "fetched_at": 1787774309694,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/plugin-source/index.ts",
+    "assets/plugin-source/openclaw.plugin.json",
+    "assets/plugin-source/package.json",
+    "assets/plugin-source/plugin-valid-agent-id.ts",
+    "assets/plugin-source/src/auto-review.ts",
+    "assets/plugin-source/src/skill-manage-tool.ts",
+    "assets/plugin-source/src/skills-guard.ts",
+    "assets/plugin-source/src/types.ts",
+    "assets/plugin-source/src/utils.ts",
+    "config/exclude.json",
+    "references/sediment-internals.md",
+    "scripts/manage.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783949975486,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Evan Song",
+    "handle": "songhonglei",
+    "user_id": "s17dz40vg2v0b4hy1e0jj91ny584egag"
+  },
+  "slug": "skill-sediment",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-sediment",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-sediment&ownerHandle=songhonglei",
+    "page_url": "https://clawhub.ai/songhonglei/skills/skill-sediment"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 485,
+    "installs": 0,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Install and operate the OpenClaw skill-sediment plugin extension (turns successful conversations into auto-generated SKILL.md files, then promotes them to sk...",
+  "updated_at": 1785323585083,
+  "version": "1.0.2"
+}
