@@ -1,0 +1,46 @@
+{
+  "changelog": "- Replaced file-based credential loading with mandatory SCIMINER_API_KEY environment variable for authentication; skill now requires the gateway to inject this variable.\n- Updated credential handling rules and error reporting if the required environment variable is missing.\n- Made `network_report.html` a mandatory output for every completed analysis, including cases with no eligible network or negative/empty results.\n- Removed documentation and sample configuration files (agents/openai.yaml, skill-card.md) from the distribution.",
+  "created_at": 1783697392111,
+  "display_name": "Network Pharmacology",
+  "fetched_at": 1787775580896,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/evidence-model.md",
+    "references/sciminer-tool-routing.md",
+    "scripts/render_network_report.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784746755589,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "SciMiner",
+    "handle": "sciminer",
+    "user_id": "s170qp1q4twz35wa85ppa8894h83w461"
+  },
+  "slug": "network-pharmacology",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/network-pharmacology",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=network-pharmacology&ownerHandle=sciminer",
+    "page_url": "https://clawhub.ai/sciminer/skills/network-pharmacology"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 475,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Build evidence-graded compound\u2013target\u2013disease network-pharmacology hypotheses for natural products, herbal medicines, formulae, and small molecules using live SciMiner tools plus public life-science evidence. Use when an agent must curate compounds, predict or verify targets, prioritize disease-rele",
+  "updated_at": 1784742497090,
+  "version": "1.0.1"
+}
