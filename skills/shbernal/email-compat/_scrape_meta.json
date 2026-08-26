@@ -1,0 +1,41 @@
+{
+  "changelog": "- Added support for pinning client versions in the check command with glob support; untested features now indicate which versions are on record.\n- Lint findings output now includes a legend keyed by slug for feature details and positions, and a guidance section keyed by verdict for next steps.\n- Findings are compressed by affected client groups and now always show the exact client count.\n- Improved output clarity by echoing version pins once per result, clarifying how features and verdict details are structured.\n- Removed outdated documentation (skill-card.md).",
+  "created_at": 1785865734571,
+  "display_name": "Email Compatibility",
+  "fetched_at": 1787773348122,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/caniemail-core.mjs",
+    "scripts/caniemail.mjs",
+    "scripts/css-scan.mjs",
+    "scripts/data/caniemail.json",
+    "scripts/detect.mjs",
+    "scripts/feature-titles.mjs",
+    "scripts/html-scan.mjs",
+    "scripts/selector-shapes.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Santiago Hernandez Bernal",
+    "handle": "shbernal",
+    "user_id": "s17cp8es41ccfsk46aqh3z4qsn864t7r"
+  },
+  "slug": "email-compat",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/email-compat",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=email-compat&ownerHandle=shbernal",
+    "page_url": "https://clawhub.ai/shbernal/skills/email-compat"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 279,
+    "installs": 3,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Write and verify HTML email that renders correctly across email clients. Use whenever building, editing, or reviewing an HTML email, an email template, or a transactional message \u2014 and whenever a question involves Outlook, Gmail, Apple Mail, or \"will this render in email\". Covers what CSS and HTML each client actually supports, backed by caniemail.com data. Provides the layout rules that keep an email compatible in the first place, then lints the finished markup and reports only what breaks, per client, with workarounds. Not for sending mail, deliverability, SPF/DKIM/DMARC, or ESP choice.",
+  "updated_at": 1785934211496,
+  "version": "0.2.0"
+}
