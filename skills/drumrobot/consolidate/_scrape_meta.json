@@ -1,0 +1,58 @@
+{
+  "changelog": "Version 0.6.1\n\n- Added block-summary-fabricated-claims.sh for enhanced resource management.\n- Updated documentation in SKILL.md, CHANGELOG.md, and post.md for workflow and usage clarity.\n- Removed deprecated skill-card.md file.\n- Minor improvements to interactive flow and edge case documentation.",
+  "created_at": 1776241442300,
+  "display_name": "consolidate",
+  "fetched_at": 1787768384174,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "classify.md",
+    "collect.md",
+    "decide.md",
+    "internal.md",
+    "next.md",
+    "post.md",
+    "pr.md",
+    "resources/block-consolidate-summary-ask.sh",
+    "resources/block-noncompliant-review-comment.sh",
+    "resources/block-summary-fabricated-claims.sh",
+    "scripts/collect.sh",
+    "scripts/verify_consolidate.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787766266612,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "es6kr",
+    "handle": "drumrobot",
+    "user_id": "s17ay1v6v88r2m102pvvc44gz183qcrm"
+  },
+  "slug": "consolidate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/consolidate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=consolidate&ownerHandle=drumrobot",
+    "page_url": "https://clawhub.ai/drumrobot/skills/consolidate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1839,
+    "installs": 20,
+    "stars": 0,
+    "versions": 19
+  },
+  "summary": "Consolidate and respond to external feedback on PRs/issues. Topics \u2014 pr (workflow entrypoint + skip conditions), collect (gather AI reviews + superpowers load), internal (Internal Code Review fallback + UI capture), classify (dual-label Type|Severity + diff scope check), decide (user decision: findings + Formal Review), post (Summary + Formal Review + status + deferred), next (post-summary next-action ask). Use when: \"review consolidate\", \"PR review\", \"AI review\", \"CodeRabbit review\", \"Copilot review\", \"review check\", \"review summary\", \"merge ready\", \"internal review\", \"code-reviewer\", \"inline review\", \"line-level comment\", \"PR line review\".",
+  "updated_at": 1787765522422,
+  "version": "0.6.1"
+}
