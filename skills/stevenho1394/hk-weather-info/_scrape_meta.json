@@ -1,0 +1,36 @@
+{
+  "changelog": "**Added 1-minute average temperature CSV support, improved language handling, and clarified output formats.**\n\n- Now fetches and displays the latest 1-minute average temperature from HKO CSV, with retry and parsing logic.\n- Language preference defaults to Traditional Chinese (`tc`); user override supported.\n- Output format clarified for each language, with consistent label usage and additional one-minute temp appended.\n- Updated handling and mapping of regional names for temperature extraction.\n- Skill no longer relies on removed file `skill-card.md`; added `references/1min-temp-csv.md` for CSV documentation.",
+  "created_at": 1780393330492,
+  "display_name": "Hong Kong Weather Information",
+  "fetched_at": 1787782863397,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "plugin.json",
+    "references/1min-temp-csv.md",
+    "scripts/hk_weather.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Steven Ho",
+    "handle": "stevenho1394",
+    "user_id": "s17bfk0ef12w09pdqpw6wghae183eqa8"
+  },
+  "slug": "hk-weather-info",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hk-weather-info",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hk-weather-info&ownerHandle=stevenho1394",
+    "page_url": "https://clawhub.ai/stevenho1394/skills/hk-weather-info"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 481,
+    "installs": 9,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Hong Kong weather information \u2014 current conditions, forecasts from HKO (Hong Kong Observatory). Use when user asks about HK weather, temperature, rainfall, o...",
+  "updated_at": 1780646123492,
+  "version": "1.0.1"
+}
