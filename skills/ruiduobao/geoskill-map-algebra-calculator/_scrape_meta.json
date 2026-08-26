@@ -1,0 +1,66 @@
+{
+  "changelog": "- Initial release of Map Algebra Calculator for safe raster band math.\n- Supports custom expressions (Python ast-based), built-in NDVI/NDWI/SAVI/EVI/etc. presets, and offline/synthetic data generation.\n- Ensures safety: only whitelisted functions allowed; no attribute access or imports; division by zero returns 0.\n- Produces GeoTIFF results, expression statistics (JSON), and a run manifest.\n- Entirely local processing; no user data uploaded.",
+  "created_at": 1785848106761,
+  "display_name": "geoskill-map-algebra-calculator",
+  "fetched_at": 1787773461509,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-map-algebra-calculator.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785849241093,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-map-algebra-calculator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-map-algebra-calculator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-map-algebra-calculator&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-map-algebra-calculator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 181,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Evaluate band math expressions like NDVI on rasters with a safe expression parser",
+  "updated_at": 1785848251862,
+  "version": "1.0.0"
+}
