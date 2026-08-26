@@ -1,0 +1,44 @@
+{
+  "changelog": "chat-logger v1.0.0\n\n- First release: provides strict-rule chat logging for Feishu/Dingtalk messaging.\n- Supports precise trigger commands: \u201cchatlog\u6c47\u603b\u201d, \u201c\u4eca\u65e5\u7b80\u62a5\u201d, \u201c\u6211\u7684\u8bb0\u5f55\u201d.\n- Strict separation: only this Skill handles trigger commands, main Agent must not process or alter results.\n- Dual mechanism records messages via both automatic hook and explicit Agent calls to ensure reliability.\n- Includes health check, flexible query/report APIs, and robust storage structure with daily user logs.",
+  "created_at": 1774324512345,
+  "display_name": "Chat Logger",
+  "fetched_at": 1787787254798,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md",
+    "skill.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090055088,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "bjmfjoy",
+    "handle": "bjmfjoy",
+    "user_id": "s1710zpncshy0smw5x96tk7pbd83gdxh"
+  },
+  "slug": "chat-logger",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/chat-logger",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=chat-logger&ownerHandle=bjmfjoy",
+    "page_url": "https://clawhub.ai/bjmfjoy/skills/chat-logger"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 688,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5bf9\u8bdd\u8bb0\u5f55 - \u81ea\u52a8\u8bb0\u5f55\u98de\u4e66/\u9489\u9489\u6d88\u606f\uff08\u4e25\u683c\u89e6\u53d1\u89c4\u5219\u7248\uff09 \u26a0\ufe0f \u4e25\u683c\u89e6\u53d1\u89c4\u5219\uff1a - \u6d88\u606f \"chatlog\u6c47\u603b\" \u2192 \u53ea\u80fd\u6267\u884c\u6b64 Skill\uff0c\u7981\u6b62\u4e3b Agent \u5904\u7406 - \u6d88\u606f \"\u4eca\u65e5\u7b80\u62a5\" \u2192 \u53ea\u80fd\u6267\u884c\u6b64 Skill\uff0c\u7981\u6b62\u4e3b Agent \u5904\u7406 - \u6d88\u606f \"\u6211\u7684\u8bb0\u5f55\" \u2192 \u53ea\u80fd\u6267\u884c\u6b64 Skill\uff0c\u7981\u6b62\u4e3b Agent...",
+  "updated_at": 1779078983291,
+  "version": "1.0.0"
+}
