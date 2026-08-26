@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release of geoskill-semantic-segmentation.\n\n- Implements per-pixel semantic segmentation for multispectral remote sensing imagery using offline numpy-based methods.\n- Supports both unsupervised (KMeans) and supervised (RandomForest) classification; supervised mode requires label rasters.\n- Performs sliding-window tiled prediction with stitching and majority-filter post-processing.\n- Includes synthetic data generation for testing and QA, along with real-image support.\n- Outputs GeoTIFF class raster, class statistics JSON, and a run manifest.\n- All processing is local and offline; no user data is uploaded.\n- MIT licensed.",
+  "created_at": 1785850499359,
+  "display_name": "geoskill-semantic-segmentation",
+  "fetched_at": 1787773438991,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-semantic-segmentation.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785851403679,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-semantic-segmentation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-semantic-segmentation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-semantic-segmentation&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-semantic-segmentation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 191,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u9010\u50cf\u5143sklearn\u968f\u673a\u68ee\u6797\u5206\u7c7b+\u6ed1\u7a97\u62fc\u63a5+\u540e\u5904\u7406\uff0c\u8f93\u51fa\u5206\u7c7b\u6805\u683c\uff08\u79bb\u7ebfnumpy\u7b49\u4ef7\u5b9e\u73b0\uff09",
+  "updated_at": 1785850665545,
+  "version": "1.0.0"
+}
