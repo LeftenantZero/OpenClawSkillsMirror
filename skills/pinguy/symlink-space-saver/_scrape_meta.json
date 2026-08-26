@@ -1,0 +1,33 @@
+{
+  "changelog": "symlink-space-saver 0.1.0\n\n- Initial release of the symlink-space-saver skill.\n- Provides a detailed workflow to safely deduplicate files and directories by replacing redundant copies with symlinks.\n- Emphasizes verification of canonical copies, consumer compatibility, rollback preservation, and detection of already-shared storage.\n- Outlines steps to guard against state drift and safely reclaim disk space.\n- Includes comprehensive checklists for identifying safe deduplication scenarios and avoiding risky symlink substitutions.",
+  "created_at": 1787111174171,
+  "display_name": "symlink-space-saver",
+  "fetched_at": 1787770683814,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "pinguy",
+    "handle": "pinguy",
+    "user_id": "s17btgsbbg6rp8h250xb9x14y58csd5x"
+  },
+  "slug": "symlink-space-saver",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/symlink-space-saver",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=symlink-space-saver&ownerHandle=pinguy",
+    "page_url": "https://clawhub.ai/pinguy/skills/symlink-space-saver"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 98,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Reduce duplicate storage by replacing safe redundant copies with symlinks. Identify the canonical copy first, verify consumers tolerate symlinks, preserve rollback, detect already-shared storage, guard against state drift, prefer atomic replacement, and prove the referenced path still works before reclaiming redundant data.",
+  "updated_at": 1787111225254,
+  "version": "0.1.0"
+}
