@@ -1,0 +1,44 @@
+{
+  "changelog": "## [1.0.0] - 2026-02-01\n\n### Added\n\n- LLM-powered memory security scanner (`memory-scan.py`)\n- Detection of 8 threat categories:\n  - Malicious Instructions, Prompt Injection, Credential Leakage, Data Exfiltration\n  - Guardrail Bypass, Behavioral Manipulation, Privilege Escalation, Prompt Stealing\n- 5-level security scoring: SAFE (90-100), LOW (70-89), MEDIUM (50-69), HIGH (20-49), CRITICAL (0-19)\n- Quarantine system with backup and redaction (`quarantine.py`)\n- Scheduled scanning via cron job (`schedule-scan.sh`)\n- Multiple output formats: human-readable, JSON (`--json`), quiet (`--quiet`)\n- Single-file and full-workspace scanning modes\n- LLM provider auto-detection (OpenAI / Anthropic)\n- Eval framework with test cases (`evals/`)\n- Signal alerting integration for MEDIUM+ findings",
+  "created_at": 1770063541966,
+  "display_name": "Memory Scan",
+  "fetched_at": 1787771182250,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "TESTING.md",
+    "_meta.json",
+    "docs/detection-prompt.md",
+    "evals/cases.json",
+    "evals/run.py",
+    "scripts/memory-scan.py",
+    "scripts/quarantine.py",
+    "scripts/schedule-scan.sh",
+    "scripts/setup-venv.sh",
+    "scripts/test-scan.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "dgriffin831",
+    "handle": "dgriffin831",
+    "user_id": "s17faq5seed7yjjqdaz8cs48sx88526g"
+  },
+  "slug": "memory-scan",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memory-scan",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memory-scan&ownerHandle=dgriffin831",
+    "page_url": "https://clawhub.ai/dgriffin831/skills/memory-scan"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 2218,
+    "installs": 78,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Scans OpenClaw agent memory files and workspace configs for malicious content, credential leaks, prompt injections, and security threats.",
+  "updated_at": 1778485997364,
+  "version": "1.0.0"
+}
