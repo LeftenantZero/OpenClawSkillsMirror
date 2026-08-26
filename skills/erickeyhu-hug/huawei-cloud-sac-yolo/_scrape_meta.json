@@ -1,0 +1,56 @@
+{
+  "changelog": "- Initial release of the Huawei Cloud YOLO Training Platform deployment skill.\n- Enables guided, end-to-end deployment of GPU-powered YOLO training environments on Huawei Cloud using Terraform and Python scripts.\n- Strong focus on security: never expose or request credentials in chat; always require user confirmation before operations.\n- Includes step-by-step workflow: from solution extraction and template download to manual security group configuration and post-deployment verification.\n- Output and script interactions standardized to JSON for integration and clarity.\n- Comprehensive documentation of prerequisites, parameters, and best practices included.",
+  "created_at": 1785746723306,
+  "display_name": "huawei-cloud-sac-yolo",
+  "fetched_at": 1787771154950,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "demo/example-input.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/iam-policies.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "scripts/download_tf_template_file.py",
+    "scripts/extract_sac_deploy_info.py",
+    "scripts/list_tf_variables.py",
+    "scripts/normalize_tf_providers.py",
+    "scripts/playwright_utils.py",
+    "scripts/templates/extract_sac_deploy_info.js",
+    "skill-card.md",
+    "templates/terraform.tfvars.template"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785936296780,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-sac-yolo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-sac-yolo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-sac-yolo&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-sac-yolo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 48,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "\"Deploy YOLO training platform on Huawei Cloud with GPU ECS via Terraform. Use when building or managing a YOLO GPU training environment. Trigger: deploy YOLO, YOLO training, GPU training, \u90e8\u7f72YOLO, YOLO\u8bad\u7ec3, GPU\u8bad\u7ec3, \u89c6\u89c9\u6a21\u578b\u8bad\u7ec3\"",
+  "updated_at": 1785935554520,
+  "version": "1.0.1"
+}
