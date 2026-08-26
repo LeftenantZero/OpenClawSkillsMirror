@@ -1,0 +1,43 @@
+{
+  "changelog": "- Removed the file: skill-card.md.\n- No other changes to functionality or documentation.\n- Package structure is now streamlined by removing the sample skill card.",
+  "created_at": 1782737611867,
+  "display_name": "iaiops",
+  "fetched_at": 1787769045017,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787632730892,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wei zhou",
+    "handle": "zw008",
+    "user_id": "s171xgnmqse0nqvgqvqnaq5f9183kyre"
+  },
+  "slug": "iaiops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/iaiops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=iaiops&ownerHandle=zw008",
+    "page_url": "https://clawhub.ai/zw008/skills/iaiops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1695,
+    "installs": 0,
+    "stars": 0,
+    "versions": 17
+  },
+  "summary": "Vendor-neutral, governed industrial/OT data tap + intelligent troubleshooting. Read (and, gated, write) PLCs, controllers, machine tools and IIoT brokers over OPC-UA, Modbus-TCP, Siemens S7comm, Mitsubishi MC, Omron FINS, MTConnect, MQTT/Sparkplug B, Allen-Bradley EtherNet/IP, EtherCAT (pysoem/SOEM), SECS/GEM (semiconductor / display fab equipment over HSMS), PROFINET (DCP discovery), the building edition (BACnet/IP), and Phoenix Contact PLCnext vPLC \u2014 plus cross-protocol diagnostics (\"no-data\" dataflow diagnosis, OPC-UA connection self-diagnosis, subscription health, ISA-18.2 alarm bad-actors, tag/historian health, and the AI downtime root-cause copilot) and analytics (OEE/downtime, asset inventory, OPC-UA HDA, change-of-value). Use when the task names any industrial protocol, a PLC/SCADA/HMI/historian/CNC/RTU/IED, a semiconductor/display fab or SECS/GEM equipment, an electrical substation, an opc.tcp:// or mqtt:// endpoint, OEE/downtime, downtime root-cause, or OT asset inventory. Routes to the iaiops MCP server. Read-first; writes are MOC-gated (high risk, dry-run + double-confirm). Do NOT use for IT/network gear, Kubernetes, hypervisors, or backups \u2014 those are separate AIops tools.",
+  "updated_at": 1787632392774,
+  "version": "0.23.0"
+}
