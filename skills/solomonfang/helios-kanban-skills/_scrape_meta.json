@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of Helios Kanban Remote skill.\n\n- Adds remote control for Helios Kanban via REST API: list, create, update tasks; start/stop coding agents; follow up; approve or deny processes; and check status.\n- Provides command-line interface (`hk.sh`) examples for typical workflows and operations.\n- Defines environment variable configuration for remote operations and project/repo defaults.\n- Clarifies feature scope, including actions requiring desktop/web access and safety rules for task deletion and network exposure.\n- Includes quick-reference tables for commands, statuses, priorities, and agent/executor names.",
+  "created_at": 1785483409606,
+  "display_name": "Helios Kanban Remote",
+  "fetched_at": 1787774103541,
+  "files": [
+    "INSTALL.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples.md",
+    "reference.md",
+    "scripts/hk.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785486448610,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ChrisFang",
+    "handle": "solomonfang",
+    "user_id": "s1740c8vy7zm5bfwdhwkr9hqhh8bk47a"
+  },
+  "slug": "helios-kanban-skills",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/helios-kanban-skills",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=helios-kanban-skills&ownerHandle=solomonfang",
+    "page_url": "https://clawhub.ai/solomonfang/skills/helios-kanban-skills"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1745,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Remote control Helios Kanban (helios-kanban) via REST API \u2014 list/create/update tasks, start/stop coding agents, follow-up, check status, handle approvals. Use when the user wants to control kanban from phone/chat, mentions Helios Kanban / helios-kanban / vibe-kanban remotely, or asks to create tasks, start agents, or check progress on a running instance. If the skill is not installed yet, read and follow INSTALL.md to self-install from GitHub first.",
+  "updated_at": 1785485759671,
+  "version": "0.1.0"
+}
