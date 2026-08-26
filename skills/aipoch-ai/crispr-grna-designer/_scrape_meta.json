@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of CRISPR gRNA Designer skill for targeted genome editing.\n\n- Designs CRISPR guide RNAs (gRNAs) for specific gene exons with customizable PAM, guide length, and GC content.\n- Supports on-target efficiency scoring using position-specific and sequence features.\n- Offers off-target prediction with mismatch thresholds and risk assessment.\n- Integrates with Ensembl API for gene/exon sequences; batch processing and genome build selection supported.\n- Outputs JSON-formatted results including guide details, scores, and off-target summaries.\n- Includes detailed usage, technical notes, dependencies, security checklist, and evaluation criteria.",
+  "created_at": 1773806115533,
+  "display_name": "Crispr Grna Designer",
+  "fetched_at": 1787788276568,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/efficiency_benchmarks.md",
+    "references/off_target_databases.md",
+    "references/scoring_algorithms.md",
+    "requirements.txt",
+    "scripts/main.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089946349,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "AIpoch",
+    "handle": "aipoch-ai",
+    "user_id": "s17fjw78yq6wtd4ep6zsaxwrn983hznr"
+  },
+  "slug": "crispr-grna-designer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/crispr-grna-designer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=crispr-grna-designer&ownerHandle=aipoch-ai",
+    "page_url": "https://clawhub.ai/aipoch-ai/skills/crispr-grna-designer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1043,
+    "installs": 27,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Design CRISPR gRNA sequences for specific gene exons with off-target prediction and efficiency scoring. Trigger when user needs gRNA design, CRISPR guide RNA...",
+  "updated_at": 1779078426454,
+  "version": "0.1.0"
+}
