@@ -1,0 +1,51 @@
+{
+  "changelog": "Add an isolated per-skill virtualenv entrypoint (scripts/seedance): provisions .venv on first run, auto-installs requirements.txt, and prefers python3.11/3.12 for proxy-TLS safety. SKILL.md, README, and CLAUDE.md updated to invoke scripts/seedance instead of python3 scripts/seedance.py. Runtime .venv is auto-excluded from publication.",
+  "created_at": 1783938806114,
+  "display_name": "seedance",
+  "fetched_at": 1787771734427,
+  "files": [
+    "CLAUDE.md",
+    "LICENSE",
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/seedance",
+    "scripts/seedance.py",
+    "scripts/test_seedance.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785163790975,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jiangsier-xyz",
+    "handle": "jiangsier-xyz",
+    "user_id": "s173nsfjwe1yqehavmtjgmxnjs86xwmn"
+  },
+  "slug": "seedance",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/seedance",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=seedance&ownerHandle=jiangsier-xyz",
+    "page_url": "https://clawhub.ai/jiangsier-xyz/skills/seedance"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 110,
+    "installs": 0,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Generate videos with the doubao-seedance-2.0 model (text-to-video, image-to-video, first/last-frame-to-video). Use when the user asks to \"generate a video\", mentions \"seedance\", or wants AI video generation from text and/or images. Wraps the asynchronous Volcengine Ark / OpenAI-style video API behind one synchronous call.",
+  "updated_at": 1785159144462,
+  "version": "1.2.1"
+}
