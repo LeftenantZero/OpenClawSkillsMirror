@@ -1,0 +1,33 @@
+{
+  "changelog": "pangolinfo-ai-serp 4.0.0 \u2013 Core authentication update & strict clientSource enforcement\n\n- Now requires every MCP tool call to include the top-level argument `\"clientSource\":\"skill\"` (not optional).\n- Updated API key handling: keys are now JWT strings (e.g., `eyJhbGci...`), not `pgl_`-prefix; all documentation and instructions updated accordingly.\n- Clarified setup and authentication flow\u2014removed all references to the obsolete `pgl_` key prefix.\n- Removed obsolete file: `skill-card.md`.\n- No functional change to skill capabilities or tool mappings; breaking changes are only in client/tool integration and setup requirements.",
+  "created_at": 1774333227503,
+  "display_name": "Pangolinfo AI SERP: AI Mode Output + AI Overviews",
+  "fetched_at": 1787770425237,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Pangolinfo",
+    "handle": "pangolinfo",
+    "user_id": "s1713qcay2x7frr7y0mm908crx83hmg8"
+  },
+  "slug": "pangolinfo-ai-serp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pangolinfo-ai-serp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pangolinfo-ai-serp&ownerHandle=pangolinfo",
+    "page_url": "https://clawhub.ai/pangolinfo/skills/pangolinfo-ai-serp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1215,
+    "installs": 26,
+    "stars": 5,
+    "versions": 9
+  },
+  "summary": "Use when: \u7528\u6237\u8981\"Google \u641c\u4e00\u4e0b\" / \"\u770b AI Overview / SGE \u600e\u4e48\u8bf4\" / \"\u6293\u641c\u7d22\u7ed3\u679c\u5e26\u5f15\u6587\u6765\u6e90\" / \"\u76d1\u63a7\u67d0\u5173\u952e\u8bcd\u7684 SERP\" / \"\u505a\u7ad9\u5916\u9700\u6c42/\u8206\u60c5\u8c03\u7814\" / \"Reddit/Quora \u4e0a\u5927\u5bb6\u600e\u4e48\u5410\u69fd X\" / \"\u6211\u7684\u5185\u5bb9\u4f1a\u4e0d\u4f1a\u88ab AI \u641c\u7d22\u5f15\u7528\" / \"compare A vs B \u7684\u70ed\u5ea6\u8d8b\u52bf\" / \"search Google for X\" / \"AI mode \u591a\u8f6e\u8ffd\u95ee\".\nCovers: \u7a0b\u5e8f\u5316\u6293 Google SERP + AI Overviews(SGE)\uff0c\u4e24\u79cd\u6a21\u5f0f overview / ai_mode\uff08\u591a\u8f6e followups\uff09\uff0c\u53ef",
+  "updated_at": 1787214660083,
+  "version": "4.0.0"
+}
