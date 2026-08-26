@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of alibabacloud-aisc-skill-inspection.\n\n- Enables submitting Skill files to Alibaba Cloud AISC for security scanning via URL, polling task status, and interpreting scan results.\n- Strictly avoids pre-checking or downloading user-provided URLs; files are passed to AISC APIs as-is.\n- Supports error handling for permission issues, credential problems, and invalid or inaccessible URLs.\n- Assists with parameter use, multiple file submission (handles batching), and result/report analysis.\n- Provides guidance for RAM permissions, authentication, and secure handling of sensitive data.\n- Comprehensive documentation of usage rules, critical safeguards, and API workflow.",
+  "created_at": 1783475925911,
+  "display_name": "Alibabacloud Aisc Skill Inspection",
+  "fetched_at": 1787777604594,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ram-policies.md",
+    "references/result-interpretation-guide.md",
+    "references/verification-method.md",
+    "scripts/requirements.txt",
+    "scripts/skill_file_check.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783641815383,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-aisc-skill-inspection",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-aisc-skill-inspection",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-aisc-skill-inspection&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-aisc-skill-inspection"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 298,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Submit Alibaba Cloud AISC Skill file security scans, poll scan tasks, diagnose API or upload failures, and interpret scan reports for malicious code, prompt...",
+  "updated_at": 1783475925911,
+  "version": "0.0.1"
+}
