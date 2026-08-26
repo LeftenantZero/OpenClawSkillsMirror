@@ -1,0 +1,72 @@
+{
+  "changelog": "v1.5.1 consumer-safety fix: selftest now runs in a throwaway $HOME sandbox (was rm -rf on the real user home \u2014 ClawHub scan was right), __pycache__ junk purged from artifact. All v1.5.0 features stand: per-agent state isolation, model-aware zombie thresholds, multilingual idempotent compaction, JSON contracts, portable tests (74/74, 13/13 mutants)",
+  "created_at": 1785146399220,
+  "display_name": "arena-turn-accelerator",
+  "fetched_at": 1787768748119,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "plugin.json",
+    "scripts/__pycache__/agent_state.cpython-313.pyc",
+    "scripts/__pycache__/arbiter.cpython-313.pyc",
+    "scripts/__pycache__/context_hygiene.cpython-313.pyc",
+    "scripts/__pycache__/prompt_compactor.cpython-313.pyc",
+    "scripts/__pycache__/quarry.cpython-313.pyc",
+    "scripts/__pycache__/register.cpython-313.pyc",
+    "scripts/__pycache__/request_lifecycle.cpython-313.pyc",
+    "scripts/__pycache__/spine.cpython-313.pyc",
+    "scripts/__pycache__/turn_preflight.cpython-313.pyc",
+    "scripts/__pycache__/verification_triage.cpython-313.pyc",
+    "scripts/agent_state.py",
+    "scripts/arbiter.py",
+    "scripts/context_hygiene.py",
+    "scripts/prompt_compactor.py",
+    "scripts/quarry.py",
+    "scripts/register.py",
+    "scripts/request_lifecycle.py",
+    "scripts/selftest.sh",
+    "scripts/spine.py",
+    "scripts/turn_preflight.py",
+    "scripts/verification_triage.py",
+    "skill-card.md",
+    "tests/agent_sanitize_test.py",
+    "tests/contradictions.py",
+    "tests/fuzz_fixpoint.py",
+    "tests/model_check.py",
+    "tests/mutate.py",
+    "tests/test_properties.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787703799146,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "orionshaowswmw",
+    "handle": "orionshaowswmw",
+    "user_id": "s17d6323ed1jjxgp339202e6c98b1qq5"
+  },
+  "slug": "arena-turn-accelerator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/arena-turn-accelerator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=arena-turn-accelerator&ownerHandle=orionshaowswmw",
+    "page_url": "https://clawhub.ai/orionshaowswmw/skills/arena-turn-accelerator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 655,
+    "installs": 2,
+    "stars": 0,
+    "versions": 16
+  },
+  "summary": "Fixes the four things that make a web agent chat feel slow, stale, dumb, or hostile: (1) long laggy \"waiting\" spinners after you hit send, (2) the agent still answering your PREVIOUS request after a flaky connection recovers, (3) the agent turning into a slow mindless \"zombie\" late in long conversations, and (4) needless Google/CAPTCHA human verification popping up when you are obviously human, (5) the agent abandoning a TRUE claim just because the user pushed back with displeasure instead of evidence, (6) holding a true claim in the WRONG VOICE - martyred, self-pitying, or joking about something serious - so the correct answer gets discarded anyway, and (7) an agent that either sprays unsolicited cleverness constantly (noise) or invents from nothing instead of from the user's own material. Provides a prompt compactor that reshapes input into a form models prefill 3-4x faster, a request-lifecycle fence that invalidates stale in-flight answers, a context-hygiene monitor that detects and reverses late-conversation degradation, a verification-triggers checklist that reduces bot-score false positives, and an intellectual-spine engine that distinguishes new evidence from mere social pressure so the agent holds true claims under pushback while conceding instantly to real facts (anti-sycophancy, explicitly not contrarianism). Use when a user reports lag, stale replies, degraded quality over time, repeated CAPTCHAs, or an agent that caves and flip-flops whenever it is contradicted.",
+  "updated_at": 1787703073402,
+  "version": "1.5.1"
+}
