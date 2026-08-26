@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of the SAR Analysis skill providing SciMiner-based SAR workflows and binding-mode predictions.\n\n- Adds MCS-based SAR, scaffold-based SAR, and target-aware binding-mode prediction using SciMiner and AlphaFold3 APIs.\n- Supports both file and inline table inputs; guides method selection based on analysis needs and series diversity.\n- Implements a detailed binding-mode workflow: PDB search, template extraction, AlphaFold3 prediction, Gnina scoring, and correlation to activity.\n- Strictly requires reading up-to-date Markdown tool docs for all invocations; enforces parameter validation and API conformity.\n- API key handling is documented and required via external credential file\u2014skill will prompt if missing.",
+  "created_at": 1783186868170,
+  "display_name": "SAR Analysis",
+  "fetched_at": 1787778150351,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "rcsb-pdb-skill/SKILL.md",
+    "rcsb-pdb-skill/scripts/rest_request.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783621734750,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "SciMiner",
+    "handle": "sciminer",
+    "user_id": "s170qp1q4twz35wa85ppa8894h83w461"
+  },
+  "slug": "sar-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sar-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sar-analysis&ownerHandle=sciminer",
+    "page_url": "https://clawhub.ai/sciminer/skills/sar-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 272,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Structure-activity relationship analysis workflows using SciMiner's MCS-based and scaffold-based SAR APIs for file or inline table inputs, plus an AlphaFold3-based binding-mode prediction workflow for target-aware SAR.",
+  "updated_at": 1783186868170,
+  "version": "1.0.0"
+}
