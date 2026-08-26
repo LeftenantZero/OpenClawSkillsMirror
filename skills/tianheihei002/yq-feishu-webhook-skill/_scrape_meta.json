@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of yq-feishu-webhook-skill:\n\n- Send Feishu (Lark) webhook messages in plain text, rich text (post), or interactive card formats.\n- Supports image upload with tenant_access_token for image-rich messages.\n- Comprehensive documentation for message structure, image handling, and message sample JSON included.\n- Requires configuration of FEISHU_TENANT_ACCESS_TOKEN and user-provided Feishu Webhook address.\n- Includes keyword triggers for various Feishu/Lark webhook message scenarios.",
+  "created_at": 1779584554835,
+  "display_name": "Yq Feishu Webhook Skill",
+  "fetched_at": 1787785024808,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/upload_image.py",
+    "skill-card.md",
+    "webhook-card-common.md",
+    "webhook-card-container.md",
+    "webhook-card-content.md",
+    "webhook-card-visual.md",
+    "webhook-image.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779963074321,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "tianheihei002",
+    "handle": "tianheihei002",
+    "user_id": "s17c88m5zqx7a0c9r1deb71hq584d4qa"
+  },
+  "slug": "yq-feishu-webhook-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/yq-feishu-webhook-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=yq-feishu-webhook-skill&ownerHandle=tianheihei002",
+    "page_url": "https://clawhub.ai/tianheihei002/skills/yq-feishu-webhook-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 597,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Send Feishu webhook messages including plain text, rich text (post), and interactive cards, with support for image upload via tenant_access_token.",
+  "updated_at": 1779584554835,
+  "version": "1.0.0"
+}
