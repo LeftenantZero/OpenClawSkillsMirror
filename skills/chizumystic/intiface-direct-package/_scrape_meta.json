@@ -1,0 +1,65 @@
+{
+  "changelog": "- Major update: Now connects directly to Intiface Central using the Buttplug v4 WebSocket protocol (no MCP bridge required).\n- Added a Node.js connector script for listing, vibrating, looping, and stopping devices using direct protocol messages.\n- Included the `ws` WebSocket library and dependencies locally (`node_modules/`).\n- Updated setup and troubleshooting instructions for direct protocol connection.\n- Removed old MCP/skill-card references; updated agent and scripting guidance for direct use.",
+  "created_at": 1784120710744,
+  "display_name": "Intiface Direct Control",
+  "fetched_at": 1787775880228,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "connector.cjs",
+    "node_modules/ws/README.md",
+    "node_modules/ws/browser.js",
+    "node_modules/ws/index.js",
+    "node_modules/ws/lib/buffer-util.js",
+    "node_modules/ws/lib/constants.js",
+    "node_modules/ws/lib/event-target.js",
+    "node_modules/ws/lib/extension.js",
+    "node_modules/ws/lib/limiter.js",
+    "node_modules/ws/lib/permessage-deflate.js",
+    "node_modules/ws/lib/receiver.js",
+    "node_modules/ws/lib/sender.js",
+    "node_modules/ws/lib/stream.js",
+    "node_modules/ws/lib/subprotocol.js",
+    "node_modules/ws/lib/validation.js",
+    "node_modules/ws/lib/websocket-server.js",
+    "node_modules/ws/lib/websocket.js",
+    "node_modules/ws/package.json",
+    "node_modules/ws/wrapper.mjs",
+    "package-lock.json",
+    "package.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784567240461,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "StillClaw",
+    "handle": "chizumystic",
+    "user_id": "s17ata0hbh8g0w2d9q2kh0wz3s8aktda"
+  },
+  "slug": "intiface-direct-package",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/intiface-direct-package",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=intiface-direct-package&ownerHandle=chizumystic",
+    "page_url": "https://clawhub.ai/chizumystic/skills/intiface-direct-package"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 389,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Intiface Direct Control \u2014 A direct Buttplug v4 WebSocket connector that lets OpenClaw agents control 750+ BLE intimate devices through Intiface Central without MCP bridges or extra dependencies. Supports single vibration, keepalive loop mode, and custom pattern generation via Node.js.",
+  "updated_at": 1784566547046,
+  "version": "1.0.1"
+}
