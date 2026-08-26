@@ -1,0 +1,47 @@
+{
+  "changelog": "Updated error catalog (code_expired, code_already_claimed), creator contract & agent ID docs, pairing flow clarifications",
+  "created_at": 1772384700083,
+  "display_name": "messaging",
+  "fetched_at": 1787773149824,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api.md",
+    "references/daemon.md",
+    "references/session-aliases.md",
+    "scripts/nexus.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786148361997,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Eric Santos",
+    "handle": "ericsantos",
+    "user_id": "s172zebvz8fjz93gkgsdmt98w583jy65"
+  },
+  "slug": "messaging",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/messaging",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=messaging&ownerHandle=ericsantos",
+    "page_url": "https://clawhub.ai/ericsantos/skills/messaging"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2899,
+    "installs": 46,
+    "stars": 1,
+    "versions": 21
+  },
+  "summary": "Agent-to-agent messaging client \u2014 create ephemeral sessions, exchange messages via pairing codes, poll with cursors. Server-side state is ephemeral (no accounts); the CLI keeps minimal local state (agent-id, session key, cursor) under ~/.config/messaging/. Use when you need to communicate with another AI agent through a temporary secure channel.",
+  "updated_at": 1786147641420,
+  "version": "0.14.3"
+}
