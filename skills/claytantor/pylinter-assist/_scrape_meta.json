@@ -1,0 +1,51 @@
+{
+  "changelog": "pylinter-assist v0.6.3 \u2014 safer, simpler setup and revised documentation\n\n- Replaced previous remote shell script and `uv` installation instructions with auditable, standard Python setup using pyenv and venv.\n- Major overhaul of user documentation: strong emphasis on security, recommending pinning workflow files to reviewed commit SHAs and avoiding `curl | sh`.\n- All integration steps now encourage local file review before commit; \u201ccopy, don\u2019t curl\u201d workflow for GitHub Actions.\n- CLI usage and examples simplified for typical Python developer workflows.\n- No code or linting logic changes; update is documentation, security, and beginner experience-focused.",
+  "created_at": 1774804589606,
+  "display_name": "Pylinter Assist",
+  "fetched_at": 1787786851445,
+  "files": [
+    "CLAUDE.md",
+    "LICENSE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "pylinter_assist/__init__.py",
+    "pylinter_assist/checks/__init__.py",
+    "pylinter_assist/checks/base.py",
+    "pylinter_assist/checks/fastapi.py",
+    "pylinter_assist/checks/react.py",
+    "pylinter_assist/checks/secrets.py",
+    "pylinter_assist/cli.py",
+    "pylinter_assist/config.py",
+    "pylinter_assist/github_actions.py",
+    "pylinter_assist/linter.py",
+    "pylinter_assist/notifications.py",
+    "pylinter_assist/reporter.py",
+    "pyproject.toml",
+    "scripts/lint_pr.py",
+    "scripts/publish.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Clay Graham",
+    "handle": "claytantor",
+    "user_id": "s1774dn00pjfgwbfh8n445dc0h83j8sj"
+  },
+  "slug": "pylinter-assist",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pylinter-assist",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pylinter-assist&ownerHandle=claytantor",
+    "page_url": "https://clawhub.ai/claytantor/skills/pylinter-assist"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 773,
+    "installs": 19,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "Provides context-aware Python linting with pattern-based heuristics for reviewing GitHub pull requests.",
+  "updated_at": 1779079235595,
+  "version": "0.6.3"
+}
