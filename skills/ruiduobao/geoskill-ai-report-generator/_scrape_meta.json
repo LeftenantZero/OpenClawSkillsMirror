@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release: generates AI-assisted remote sensing analysis reports offline using NumPy-equivalent logic.\n\n- Converts analysis results (JSON/raster stats) into structured HTML/Markdown reports, including summary stats, detail tables, ratings, and conclusions.\n- Fully offline operation; does not require LLMs or network access.\n- All dynamic content is HTML-escaped for security.\n- Outputs include HTML, Markdown, summary JSON, and run manifest files.\n- Supports both English and Chinese usage documentation.",
+  "created_at": 1785842399167,
+  "display_name": "geoskill-ai-report-generator",
+  "fetched_at": 1787773517003,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-ai-report-generator.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785843314260,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-ai-report-generator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-ai-report-generator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-ai-report-generator&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-ai-report-generator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 168,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5206\u6790\u7ed3\u679cJSON\u6a21\u677f\u586b\u5145\uff0c\u751f\u6210\u7ed3\u6784\u5316HTML/Markdown\u62a5\u544a\uff08\u79bb\u7ebfnumpy\u7b49\u4ef7\u5b9e\u73b0\uff09",
+  "updated_at": 1785842585800,
+  "version": "1.0.0"
+}
