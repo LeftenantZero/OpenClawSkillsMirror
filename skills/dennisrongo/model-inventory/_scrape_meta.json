@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of the model-inventory skill, providing structured discovery and verification of AI CLI model access for downstream agent-task routing.\n\n- Scans for installed AI coding CLIs (e.g., claude, codex, gemini, copilot, opencode, ollama) and detects their presence and authentication status using three evidence tiers.\n- Probes each CLI for live model access to distinguish between installed, likely-authenticated, and actually usable (verified) models.\n- Constructs and caches a routing table (role\u2192model chains) and CLI inventory in ~/.claude/model-inventory.json for other skills to consume.\n- Designed for explicit, on-demand inventory refresh requests (e.g., \u201cscan available models\u201d, \u201crefresh the model inventory\u201d); not for mid-task model selection.\n- Enforcement of evidence rigor: only models proven by live probe are marked as verified; credential presence alone never counts as verification.\n- Supports cost-efficient, fail-safe agent routing by only listing models and tools proven fully available for the current account/plan.",
+  "created_at": 1786913563942,
+  "display_name": "model-inventory",
+  "fetched_at": 1787771693049,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cli-registry.md",
+    "scripts/scan.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "model-inventory",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/model-inventory",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=model-inventory&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/model-inventory"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 121,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Scan the machine for installed AI coding CLIs (claude, codex, gemini, copilot, opencode, ollama), detect whether each account is actually active and which models are usable, and cache the result to ~/.claude/model-inventory.json with role\u2192model routing chains (planner/coder/scout/reviewer/fixer) that goal-runner and autopilot consume to pick the best available model per sub-agent while staying cost-efficient. Three evidence tiers \u2014 installed (binary found), likely-authenticated (zero-token credential heuristics), verified (a live one-line probe per model, the only ground truth for \"account active and model on the plan\"). Use this skill whenever the user says \"scan available models\", \"which models can I use\", \"what AI CLIs are installed\", \"refresh the model inventory\", \"is fable available\", \"check my model access\", or \"/model-inventory\" \u2014 even if they don't name the skill. Not for picking a model mid-task (consumers read the cached file, they don't rescan).",
+  "updated_at": 1786913643625,
+  "version": "1.0.0"
+}
