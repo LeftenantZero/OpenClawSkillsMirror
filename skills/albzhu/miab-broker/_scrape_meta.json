@@ -1,0 +1,58 @@
+{
+  "changelog": "miab-broker 1.3.0\n\n- Added detailed permissions to SKILL.md, defining environment, file access, and log write locations.\n- Added comprehensive test suite covering ledger schema, validation, path checks, file modes, and concurrency scenarios.\n- Introduced new utility and notification scripts, enhancing callback lifecycle management.\n- Updated documentation in SKILL.md for improved clarity and security notes.\n- Removed deprecated skill-card.md file.",
+  "created_at": 1782609500284,
+  "display_name": "miab-broker",
+  "fetched_at": 1787773102941,
+  "files": [
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/bin/claw-callback.py",
+    "scripts/notify_closed_bottles.py",
+    "scripts/reap-callbacks.sh",
+    "skill-card.md",
+    "tests/conftest.py",
+    "tests/test_ledger_schema_compat.py",
+    "tests/test_regression_happy_path.py",
+    "tests/test_t1_id_validation.py",
+    "tests/test_t2_paths.py",
+    "tests/test_t4_root_validation.py",
+    "tests/test_t5_file_modes.py",
+    "tests/test_t6_fail_closed.py",
+    "tests/test_t7_resume_constraints.py",
+    "tests/test_xfail_t11_concurrency.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786224231668,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Albert",
+    "handle": "albzhu",
+    "user_id": "s17dyhms24cy087ns1vdyeatw583m3q2"
+  },
+  "slug": "miab-broker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/miab-broker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=miab-broker&ownerHandle=albzhu",
+    "page_url": "https://clawhub.ai/albzhu/skills/miab-broker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 512,
+    "installs": 1,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Operate the Message-in-a-Bottle (MIAB) LIFO callback stack \u2014 the async inter-agent transport that lets agents delegate work, yield their turn, and get woken when results return instead of CPU-idling on poll loops. Use when registering wake paths, creating/forwarding/returning/resolving callbacks, or invoking the callback reaper.",
+  "updated_at": 1786224013533,
+  "version": "1.3.0"
+}
