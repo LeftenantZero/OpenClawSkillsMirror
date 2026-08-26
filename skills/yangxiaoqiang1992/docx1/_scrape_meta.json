@@ -1,0 +1,64 @@
+{
+  "changelog": "Initial release of the docx skill for creating, reading, editing, and analyzing Word documents.\n\n- Enables creation, editing, and content extraction for .docx files, with clear triggers for when to use the skill.\n- Provides detailed guidance for generating documents using JavaScript (`docx-js`), including page size, styles, lists, and table best practices.\n- Includes instructions for converting legacy .doc files and handling tracked changes.\n- Emphasizes validation and platform compatibility for reliable output.\n- Specifies key limitations (not for PDFs, spreadsheets, or general coding tasks).",
+  "created_at": 1781523116054,
+  "display_name": "Docx",
+  "fetched_at": 1787780708016,
+  "files": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/__init__.py",
+    "scripts/accept_changes.py",
+    "scripts/comment.py",
+    "scripts/office/helpers/__init__.py",
+    "scripts/office/helpers/merge_runs.py",
+    "scripts/office/helpers/simplify_redlines.py",
+    "scripts/office/pack.py",
+    "scripts/office/soffice.py",
+    "scripts/office/unpack.py",
+    "scripts/office/validate.py",
+    "scripts/office/validators/__init__.py",
+    "scripts/office/validators/base.py",
+    "scripts/office/validators/docx.py",
+    "scripts/office/validators/pptx.py",
+    "scripts/office/validators/redlining.py",
+    "scripts/templates/comments.xml",
+    "scripts/templates/commentsExtended.xml",
+    "scripts/templates/commentsExtensible.xml",
+    "scripts/templates/commentsIds.xml",
+    "scripts/templates/people.xml",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781528242629,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yangxiaoqiang1992",
+    "handle": "yangxiaoqiang1992",
+    "user_id": "s1738xk1cvts4yw1s5r9769atx88ehrr"
+  },
+  "slug": "docx1",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/docx1",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=docx1&ownerHandle=yangxiaoqiang1992",
+    "page_url": "https://clawhub.ai/yangxiaoqiang1992/skills/docx1"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 382,
+    "installs": 3,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of 'Word doc', 'word...",
+  "updated_at": 1781523116054,
+  "version": "1.0.0"
+}
