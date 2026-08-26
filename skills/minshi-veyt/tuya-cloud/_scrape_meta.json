@@ -1,0 +1,50 @@
+{
+  "changelog": "- Added new command: `tuya_read_last_n` to return the average soil moisture from the last N humidity readings, looking back up to 7 days.\n- `tuya_read_last_n` output matches `tuya_read_24h_avg` and is preferred for stable averages, avoiding pagination-related rate limiting.\n- Updated documentation to describe the new `tuya_read_last_n` command and recommendations for its use.\n- No code changes detected; changelog documents README/usage updates only.",
+  "created_at": 1772908670418,
+  "display_name": "Tuya Cloud",
+  "fetched_at": 1787784752055,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/config.py",
+    "scripts/tuya_controller.py",
+    "skill-card.md",
+    "tests/test_data_example.env",
+    "tests/test_scripts.py",
+    "tests/test_water_valve.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779951756366,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "minshi-veyt",
+    "handle": "minshi-veyt",
+    "user_id": "s17cx7a4cv5x0318ynafxfrs6h83hn86"
+  },
+  "slug": "tuya-cloud",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tuya-cloud",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tuya-cloud&ownerHandle=minshi-veyt",
+    "page_url": "https://clawhub.ai/minshi-veyt/skills/tuya-cloud"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1501,
+    "installs": 43,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "Read sensor data and control Tuya IoT devices via Tuya Cloud API or local LAN. Use when the user wants to list devices, read temperature, humidity, soil mois...",
+  "updated_at": 1779720818977,
+  "version": "1.0.9"
+}
