@@ -1,0 +1,33 @@
+{
+  "changelog": "- Adds a PlanetScale skill for working through the OOMOL-connected account via the `oo` CLI, without handling raw credentials.\n- Supports the core database lifecycle: create, list, get, and delete databases.\n- Supports branch operations: create, list, get, and delete branches, including descendant cleanup when requested.\n- Uses live action schemas before execution so payloads match the connector contract.\n- Distinguishes safe reads from write and destructive actions, with explicit confirmation required for state changes.\n- Includes first-time setup and recovery guidance for CLI installation, sign-in, connection, and billing issues.\n\nSource: `oomol-lab/skills@00cf041`",
+  "created_at": 1787633601016,
+  "display_name": "PlanetScale",
+  "fetched_at": 1787768918441,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-planetscale",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-planetscale",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-planetscale&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-planetscale"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 72,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "PlanetScale (planetscale.com). Use this skill for ANY PlanetScale request \u2014 reading, creating, updating, and deleting data. Whenever a task involves PlanetScale, use this skill instead of calling the API directly.",
+  "updated_at": 1787656653615,
+  "version": "1.0.1"
+}
