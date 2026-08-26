@@ -1,0 +1,33 @@
+{
+  "changelog": "**Major update: Paid, on-chain verifiable scan option added alongside free, instruction-only mode.**\n\n- Added support for live, paid regex scans via the DCL Trust Oracle MCP server, settled on-chain with x402 (USDC on Base).\n- Both free (instruction-only, no network call) and paid (real regex, cryptographically sealed) modes use the same S1\u2013S8 detection checklist.\n- Output from the live scan includes a transaction hash, audit chain proof, and verification URL; only redacted match samples and input hashes are ever stored.\n- Updated documentation to reflect new usage instructions, categories, and integration details for MCP/x402.\n- Removed the redundant skill-card.md file.",
+  "created_at": 1776050102758,
+  "display_name": "DCL Secret Leak Detector",
+  "fetched_at": 1787774482282,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dari Rinch",
+    "handle": "daririnch",
+    "user_id": "s177qzsztsa0qx35zmdc3g65s184c673"
+  },
+  "slug": "dcl-secret-leak-detector",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dcl-secret-leak-detector",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dcl-secret-leak-detector&ownerHandle=daririnch",
+    "page_url": "https://clawhub.ai/daririnch/skills/dcl-secret-leak-detector"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 862,
+    "installs": 16,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Scan AI agent outputs, tool results, and pipeline data for exposed secrets and credentials \u2014 API keys, tokens, private keys, database URLs, .env values \u2014 before they reach users, logs, or downstream systems. Runs as a free instruction-only checklist, or as a real, paid regex scan via the live DCL...",
+  "updated_at": 1785239988529,
+  "version": "1.0.2"
+}
