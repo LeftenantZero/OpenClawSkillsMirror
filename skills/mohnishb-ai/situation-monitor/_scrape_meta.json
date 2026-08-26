@@ -1,0 +1,79 @@
+{
+  "changelog": "Version 0.1.2 of situation-monitor introduces detailed usage guidelines and improved safety guardrails.\n\n- Added comprehensive SKILL.md documentation, outlining usage scenarios and command examples.\n- Documented new working modes for both Discord and Kubernetes (KubeWatch) monitoring, including fixture and live intake workflows.\n- Improved safety guardrails: now recommends fixture modes for demos, blocks personal/private ingestion, and restricts outbound posting without Civic approval.\n- Clarified expected output structure for situation reports, including executive summary and actionable items.\n- Provided step-by-step instructions for setup, operation, and integration with Apify and Civic approval systems.",
+  "created_at": 1774478615155,
+  "display_name": "Situation Monitor",
+  "fetched_at": 1787787258281,
+  "files": [
+    "02-incidents.sh",
+    "INPUT_SCHEMA.json",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "docs/context/bad-image-deploy.md",
+    "docs/context/cluster-network-degradation.md",
+    "docs/context/gke-control-plane-degradation.md",
+    "docs/context/high-memory-pressure.md",
+    "docs/context/ingress-502-errors.md",
+    "docs/context/pod-crashloopbackoff.md",
+    "docs/hackathon_pitch.md",
+    "docs/openclaw_admin_install.md",
+    "examples/apify_actor_input.json",
+    "examples/demo_messages.json",
+    "examples/kubewatch_incidents.json",
+    "main.js",
+    "package-lock.json",
+    "package.json",
+    "pyproject.toml",
+    "scripts/prepare_contextual_upload.py",
+    "skill-card.md",
+    "src/monitoring_the_situation/__init__.py",
+    "src/monitoring_the_situation/__main__.py",
+    "src/monitoring_the_situation/approvals.py",
+    "src/monitoring_the_situation/cli.py",
+    "src/monitoring_the_situation/cluster_live.py",
+    "src/monitoring_the_situation/config.py",
+    "src/monitoring_the_situation/contextual_grounding.py",
+    "src/monitoring_the_situation/digest.py",
+    "src/monitoring_the_situation/discord_live.py",
+    "src/monitoring_the_situation/fixtures.py",
+    "src/monitoring_the_situation/friendli.py",
+    "src/monitoring_the_situation/kubewatch.py",
+    "src/monitoring_the_situation/memory.py",
+    "src/monitoring_the_situation/models.py",
+    "tests/test_cluster_live.py",
+    "tests/test_digest.py",
+    "tests/test_kubewatch.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090108137,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mohnishb-ai",
+    "handle": "mohnishb-ai",
+    "user_id": "s173czy24xe1j3622tmz4km16d83jcta"
+  },
+  "slug": "situation-monitor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/situation-monitor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=situation-monitor&ownerHandle=mohnishb-ai",
+    "page_url": "https://clawhub.ai/mohnishb-ai/skills/situation-monitor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 651,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Triages Discord activity and Kubernetes incidents into ranked situation reports with fixture-first demos, live Discord and Apify intake, Contextual-grounded...",
+  "updated_at": 1779078982931,
+  "version": "0.1.2"
+}
