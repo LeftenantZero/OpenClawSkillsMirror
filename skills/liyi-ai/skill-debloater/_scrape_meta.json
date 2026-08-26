@@ -1,0 +1,38 @@
+{
+  "changelog": "skill-debloater v1.0.0 \u2014 Initial release\n\n- Introduces a four-axis method (WHAT, WHERE, HOW, ALIVE) for debloating and stabilizing bloated/flaky Agent Skills.\n- Automatic, lossless reorganization for WHAT, WHERE, and HOW axes; deletion on ALIVE axis always requires explicit user confirmation.\n- Provides scripts for health checks, orphan/stale file detection, and identifying deterministic processes for externalization.\n- Designed as a self-contained, platform-agnostic tool with clear conventions for cross-platform usage.\n- Includes robust documentation on methodology, automation boundaries, and user interaction steps.",
+  "created_at": 1783333217784,
+  "display_name": "Skill Debloater",
+  "fetched_at": 1787777961506,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/interaction-and-verify.md",
+    "references/methodology.md",
+    "scripts/audit_skill.py",
+    "scripts/scan_how.py",
+    "scripts/triage.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "skillsmith",
+    "handle": "liyi-ai",
+    "user_id": "s17f2aef7aq9ehr3rn31md6ecd87m75c"
+  },
+  "slug": "skill-debloater",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-debloater",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-debloater&ownerHandle=liyi-ai",
+    "page_url": "https://clawhub.ai/liyi-ai/skills/skill-debloater"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 246,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Debloats bloated, flaky Agent Skills into a lean, stable version. Classifies content on four axes: WHAT (nature), WHERE (layer), HOW (prose vs script) are automatic and lossless; ALIVE (still used?) requires user confirmation before deletion, defaulting to keep. Never auto-deletes.",
+  "updated_at": 1783333217784,
+  "version": "1.0.0"
+}
