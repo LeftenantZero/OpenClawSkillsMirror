@@ -1,0 +1,75 @@
+{
+  "changelog": "- Initial release of guaikei\u6296\u97f3\u53d1\u73b0\u7206\u6b3e\u5185\u5bb9 skill.\n- Enables CLI-based access to Douyin public data: video/user search, account posts, video comments, and real-time hot topics.\n- Enforces clear intent recognition and strict triggering rules for Douyin-related queries.\n- Implements robust token validation and error handling, ensuring compliance and safe operation.\n- Returns all data as structured JSON for easy further analysis.\n- Designed for research, trend tracking, and competitive analysis using only publicly accessible Douyin content.",
+  "created_at": 1787274063338,
+  "display_name": "guaikei-douyin-discover-viral-content",
+  "fetched_at": 1787770295823,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/comment_cli_req.schema.json",
+    "assets/comment_cli_resp.schema.json",
+    "assets/hot_cli_resp.schema.json",
+    "assets/post_cli_req.schema.json",
+    "assets/post_cli_resp.schema.json",
+    "assets/search_cli_req.schema.json",
+    "assets/search_cli_resp.schema.json",
+    "package.json",
+    "readme.md",
+    "references/changelog.md",
+    "references/options.md",
+    "skill-card.md",
+    "src/api/comment.js",
+    "src/api/hot.js",
+    "src/api/post.js",
+    "src/api/search.js",
+    "src/config/constants.js",
+    "src/douyin/comment-cli.js",
+    "src/douyin/hot-cli.js",
+    "src/douyin/post-cli.js",
+    "src/douyin/search-cli.js",
+    "src/utils/args.js",
+    "src/utils/errors.js",
+    "src/utils/log.js",
+    "src/utils/name.js",
+    "src/utils/request.js",
+    "src/utils/retry.js",
+    "src/utils/token.js",
+    "src/utils/utils.js",
+    "src/validate/comment.js",
+    "src/validate/hot.js",
+    "src/validate/keyword.js",
+    "src/validate/post.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787274939099,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "engheng-art",
+    "handle": "engheng-art",
+    "user_id": "s17av7fakvdwpsbhaddxp8e7mh89wsrx"
+  },
+  "slug": "guaikei-douyin-track-hot-topics",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/guaikei-douyin-track-hot-topics",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=guaikei-douyin-track-hot-topics&ownerHandle=engheng-art",
+    "page_url": "https://clawhub.ai/engheng-art/skills/guaikei-douyin-track-hot-topics"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 95,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5f53\u7528\u6237\u60f3\u641c\u6296\u97f3\u89c6\u9891\u3001\u67e5\u6296\u97f3\u70ed\u699c\u3001\u7ffb\u89c6\u9891\u8bc4\u8bba\u3001\u770b\u67d0\u4e2a\u535a\u4e3b\u90fd\u53d1\u8fc7\u4ec0\u4e48\u65f6\uff0c\u4f7f\u7528\u672c\u6280\u80fd\u3002\u7528\u6237\u8bf4\"\u5e2e\u6211\u641c\u4e0b\"\"\u7f51\u4e0a\u8c01\u5728\u8bb2\u8fd9\u4e2a\"\"\u8bc4\u8bba\u533a\u600e\u4e48\u8bf4\"\"\u8fd9\u4e2a\u8d26\u53f7\u66f4\u65b0\u4e86\u5565\"\u65f6\u4e5f\u8981\u7528\u2014\u2014\u5373\u4f7f\u6ca1\u63d0\u5230\"\u6296\u97f3\"\u4e24\u4e2a\u5b57\u3002\u4e0d\u9002\u7528\u4e8e\u53d1\u5e03\u89c6\u9891\u3001\u4e0b\u8f7d\u53bb\u6c34\u5370\u6216\u5176\u4ed6\u5e73\u53f0\u3002",
+  "updated_at": 1787274196606,
+  "version": "1.0.0"
+}
