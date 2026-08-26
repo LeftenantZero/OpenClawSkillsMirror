@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release: enroll Windows VMs on Proxmox into a Wazuh manager via the QEMU guest agent (no AD creds, no GPO): create the agent group, silent MSI install over QGA, connect, verify manager-side.",
+  "created_at": 1782743797941,
+  "display_name": "Proxmox Wazuh Enroll",
+  "fetched_at": 1787778740368,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "references/qga-exec.md",
+    "references/wazuh-agent-enroll.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782745559903,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Eddy",
+    "handle": "eddygk",
+    "user_id": "s1722zx8vry8w4hn5t6vf7zsq183n6a6"
+  },
+  "slug": "proxmox-wazuh-enroll",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/proxmox-wazuh-enroll",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=proxmox-wazuh-enroll&ownerHandle=eddygk",
+    "page_url": "https://clawhub.ai/eddygk/skills/proxmox-wazuh-enroll"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 248,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Install and enroll the Wazuh agent inside Windows VMs hosted on Proxmox VE using QEMU guest agent execution (qm guest exec or Proxmox REST API), with no WinR...",
+  "updated_at": 1782743797941,
+  "version": "1.0.0"
+}
