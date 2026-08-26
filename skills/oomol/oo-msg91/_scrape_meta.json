@@ -1,0 +1,43 @@
+{
+  "changelog": "- Operates MSG91 through an OOMOL-connected account using the `oo` CLI and server-side credential injection.\n- Supports OTP workflows: send, resend by SMS or voice call, and verify OTP codes.\n- Sends SMS messages through approved MSG91 Flow templates.\n- Requires live action schema inspection before constructing payloads for connector runs.\n- Marks state-changing actions clearly and requires user confirmation before write operations.\n\nSource: `oomol-lab/skills@0fdcf2d`",
+  "created_at": 1783872400313,
+  "display_name": "MSG91",
+  "fetched_at": 1787774557785,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785201615001,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-msg91",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-msg91",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-msg91&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-msg91"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 435,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "MSG91 (msg91.com). Use this skill for ANY MSG91 request \u2014 reading, creating, and updating data. Whenever a task involves MSG91, use this skill instead of calling the API directly.",
+  "updated_at": 1785200960007,
+  "version": "1.0.1"
+}
