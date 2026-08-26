@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release of the \"break-watch\" skill for real-time A\u80a1 monitoring.\n- Scans and outputs stocks meeting all three conditions: breakout volume, price increase, and bullish candlestick.\n- Integration with pytdx to fetch real-time market data from Tongdaxin servers.\n- Configurable scan parameters and multi-format output support (JSON, CSV, HTML, TXT).\n- Outputs concise, structured signals for intraday strategy and risk monitoring.",
+  "created_at": 1783455796168,
+  "display_name": "Break Watch",
+  "fetched_at": 1787777727387,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.example.toml",
+    "references/strategy.md",
+    "requirements.txt",
+    "scripts/scan_breakout.py",
+    "skill-card.md",
+    "src/break_watch/__init__.py",
+    "src/break_watch/__main__.py",
+    "src/break_watch/app.py",
+    "src/break_watch/config.py",
+    "src/break_watch/models.py",
+    "src/break_watch/output.py",
+    "src/break_watch/scanner.py",
+    "src/break_watch/tdx_client.py",
+    "src/break_watch/trading_time.py",
+    "src/break_watch/universe.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "hunkguo",
+    "handle": "hunkguo",
+    "user_id": "s174fev4embkm06sbmxe7z7yps83zn7m"
+  },
+  "slug": "break-watch",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/break-watch",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=break-watch&ownerHandle=hunkguo",
+    "page_url": "https://clawhub.ai/hunkguo/skills/break-watch"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 249,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u76d8\u4e2d\u653e\u91cf\u4e0a\u6da8\u9633\u7ebf\u80a1\u7968\u626b\u63cf\u5668\u3002\u5f53\u7528\u6237\u8be2\u95ee\u76d8\u4e2d\u9009\u80a1\u3001\u653e\u91cf\u7a81\u7834\u3001\u653e\u91cf\u4e0a\u6da8\u3001\u9633\u7ebf\u7b5b\u9009\u3001\u76d8\u4e2d\u626b\u63cf\u3001\u91cf\u6bd4\u9009\u80a1\u3001\u7a81\u7834\u9009\u80a1\u3001Break Watch\uff0c\u6216\u63d0\u5230'\u653e\u91cf'\u3001'\u4e0a\u6da8'\u3001'\u9633\u7ebf'\u3001'\u76d8\u4e2d\u9009\u80a1'\u3001'\u91cf\u6bd4'\u3001'\u7a81\u589e'\u7b49\u672f\u8bed\u65f6\u89e6\u53d1\u6b64\u6280\u80fd\u3002\u901a\u8fc7\u901a\u8fbe\u4fe1 pytdx \u83b7\u53d6\u5b9e\u65f6\u884c\u60c5\uff0c\u7b5b\u9009\u540c\u65f6\u6ee1\u8db3\u653e\u91cf\u3001\u4e0a\u6da8\u3001\u6536\u9633\u7ebf\u4e09\u4e2a\u6761\u4ef6\u7684 A \u80a1\u80a1\u7968\uff0c\u8f93\u51fa\u7ed3\u6784\u5316\u4fe1\u53f7\u5217\u8868\u3002",
+  "updated_at": 1783455796168,
+  "version": "1.0.0"
+}
