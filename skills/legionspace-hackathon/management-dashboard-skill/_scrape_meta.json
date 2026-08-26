@@ -1,0 +1,54 @@
+{
+  "changelog": "management-dashboard-skill 1.0.0\n\n- Initial release of the management-dashboard skill.\n- Generates a management dashboard daily HTML report by summarizing AI-generated meeting content from recordings.\n- Fetches recordings via paginated API using agentId resolved from current session, with strict handling of time ranges and empty data cases.\n- Enforces report structure containing six core sections: team assets, field efficiency, compliance monitoring, RM ranking, lead conversion, and management advice.\n- Ensures user receives only the generated file path as output, following prescribed workflow and error handling conventions.",
+  "created_at": 1783463922707,
+  "display_name": "Management Dashboard Skill",
+  "fetched_at": 1787777681933,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "analyzer.py",
+    "config.py",
+    "generate_empty_report.py",
+    "generate_sample_report.py",
+    "html_generator.py",
+    "main.py",
+    "reports/\u7cfb\u7edf\u9a7e\u9a76\u8231\u62a5\u544a_2026-06-23.html",
+    "reports/\u7cfb\u7edf\u9a7e\u9a76\u8231\u62a5\u544a_2026-06-24.html",
+    "requirements.txt",
+    "skill-card.md",
+    "utils.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783504919654,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "LegionSpace-Hackathon",
+    "handle": "legionspace-hackathon",
+    "user_id": "s17ecqe25y9chvw0dc8skt25qx83h73c"
+  },
+  "slug": "management-dashboard-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/management-dashboard-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=management-dashboard-skill&ownerHandle=legionspace-hackathon",
+    "page_url": "https://clawhub.ai/legionspace-hackathon/skills/management-dashboard-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 251,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7ba1\u7406\u9a7e\u9a76\u8231\u6280\u80fd\uff1a\u57fa\u4e8e\u5f55\u97f3 AI \u603b\u7ed3\u5185\u5bb9\uff0c\u751f\u6210\u7ba1\u7406\u8005\u65e5\u62a5 HTML \u62a5\u8868\u3002 \u901a\u8fc7\u5206\u9875\u63a5\u53e3\u83b7\u53d6\u5f55\u97f3\u7684 ai_summary_content\uff0c\u4f7f\u7528 LLM \u5206\u6790\u751f\u6210\u5305\u542b\u56e2\u961f\u8d44\u4ea7\u3001\u5916\u52e4\u6548\u80fd\u3001 \u5408\u89c4\u76d1\u63a7\u3001RM \u6392\u884c\u3001\u7ebf\u7d22\u8f6c\u5316\u3001\u7ba1\u7406\u5efa\u8bae\u516d\u5927\u677f\u5757\u7684\u53ef\u89c6\u5316\u62a5\u8868\u3002 MUST resolve agentId via session...",
+  "updated_at": 1783463922707,
+  "version": "1.0.0"
+}
