@@ -1,0 +1,33 @@
+{
+  "changelog": "Ship SKILL.md only (1 file). Versions through 1.13.8 bundled twzrd-x402-gate/dist plus eliza-plugin/dist/actions - claim.js (token-claim transactions) and infer.js (arbitrary model inference) - none of which this listing describes; the scanner scored that CRITICAL / DO_NOT_INSTALL (score 100, 36 issues). Doc content is canonical skill.md 1.13.10 and its frontmatter still reads 1.13.10 on purpose, so the self-update check against intel.twzrd.xyz/skill.md stays correct; ClawHub 1.13.10 was stranded by an interrupted publish. Content changes vs 1.13.8: refuse-fixture is HTTP 402 not helper JSON; BJGd demoted from wash-education fixture; AgentCash corrected to single-rail Solana exact; next_action.command does not clear W1.",
+  "created_at": 1781228684501,
+  "display_name": "TWZRD Trust",
+  "fetched_at": 1787771512221,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "agent-trust",
+    "handle": "twzrd-sol",
+    "user_id": "s178rxbzn4nz1zvhqkn5chnvcs83sea5"
+  },
+  "slug": "twzrd-trust",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/twzrd-trust",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=twzrd-trust&ownerHandle=twzrd-sol",
+    "page_url": "https://clawhub.ai/twzrd-sol/skills/twzrd-trust"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1383,
+    "installs": 7,
+    "stars": 0,
+    "versions": 14
+  },
+  "summary": "Discover x402 callables then check the seller BEFORE paying. Free resource join (GET /v1/intel/resources) lists listed|live_402 claims; free preflight returns a ReadinessCard (allow / warn / block) from the observed Solana x402 corpus. Composes with any x402 payer skill: discover \u2192 merchant_card wash refuse \u2192 preflight \u2192 gate_eval (AutoGate) when you control signing \u2192 optional pay; abort on decision=block. WHAT YOU GET FREE: resource join (source of truth), wash overlay on ingested listings (PayAI not_indexed), pre-spend ReadinessCard, merchant_card (wash_flagged refuse), wallet scores, secondary payer leaderboard research, counterparty + facilitator footprint, wash/sybil detection, batch + compare, offline receipt verify; route settle through TWZRD for free merchant_attach + twzrd_receipt on POST /settle. PAID (x402, USDC on Solana): full trust model + V6 receipt at GET /v1/intel/trust/{pubkey} (0.05 USDC); merchant track-record at GET /v1/intel/merchant/{pay_to} (0.05 USDC); score-only teaser at GET /v1/intel/quick/{pubkey} (0.001 USDC). TRIGGERS: should I pay this, is this wallet safe, check seller, x402 preflight, scam check, counterparty risk, wallet reputation, trust score, verify receipt, before paying, solana wallet check, agent trust, readiness card, wash flagged, merchant card, resource join, discover x402, facilitator settle, merchant attach, track record",
+  "updated_at": 1787009488911,
+  "version": "1.13.11"
+}
