@@ -1,0 +1,78 @@
+{
+  "changelog": "huo15-huihuo-suite v1.7.1\n\n- Updated documentation and metadata in SKILL.md and _meta.json.\n- Removed the file skill-card.md.\n- Miscellaneous edits in scripts/odoo_client.py.\n- No user-facing features changed.",
+  "created_at": 1782235662625,
+  "display_name": "huo15-huihuo-suite",
+  "fetched_at": 1787771766026,
+  "files": [
+    "CLAUDE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "docs/PRD-\u6d4b\u8bd5\u9a8c\u6536.md",
+    "references/commands.md",
+    "references/odoo-accounting-api.md",
+    "references/odoo-activity-calendar-api.md",
+    "references/odoo-calendar-advanced-api.md",
+    "references/odoo-crm-api.md",
+    "references/odoo-hr-api.md",
+    "references/odoo-knowledge-documents-api.md",
+    "references/odoo-project-api.md",
+    "references/odoo-sales-purchase-stock-api.md",
+    "references/odoo-testing-api.md",
+    "references/odoo-timesheet-api.md",
+    "references/odoo-todo-api.md",
+    "scripts/accounting.py",
+    "scripts/activity.py",
+    "scripts/agenda.py",
+    "scripts/briefing.py",
+    "scripts/crm.py",
+    "scripts/documents.py",
+    "scripts/heartbeat_check.py",
+    "scripts/hr.py",
+    "scripts/knowledge.py",
+    "scripts/login.py",
+    "scripts/odoo_client.py",
+    "scripts/odoo_utils.py",
+    "scripts/project.py",
+    "scripts/purchase.py",
+    "scripts/reminder.py",
+    "scripts/sales.py",
+    "scripts/stock.py",
+    "scripts/testing.py",
+    "scripts/timesheet.py",
+    "scripts/todo.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786876170264,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Job Zhao",
+    "handle": "zhaobod1",
+    "user_id": "s17f6q72skfgyjycm2frgdc8dn83v5mk"
+  },
+  "slug": "huo15-huihuo-suite",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huo15-huihuo-suite",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huo15-huihuo-suite&ownerHandle=zhaobod1",
+    "page_url": "https://clawhub.ai/zhaobod1/skills/huo15-huihuo-suite"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 585,
+    "installs": 2,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Use this skill whenever the user wants to manage their work in the \u706b\u4e00\u4e94/\u8f89\u706b\u4e91 company Odoo system (www.huo15.com, db=huo15) \u2014 to-dos / tasks (\"\u8bb0\u4e2a\u5f85\u529e\" \"\u52a0\u4efb\u52a1\" \"\u6211\u7684\u5f85\u529e\"), projects, timesheets (\"\u8bb0\u5de5\u65f6\"), CRM leads & opportunities (\"\u65b0\u5efa\u5546\u673a\" \"\u8ddf\u8fdb\u5ba2\u6237\" \"\u9500\u552e\u7ba1\u9053\"), follow-up activities & reminders (\"\u63d0\u9192\u6211\" \"3\u5929\u540e\u56de\u8bbf\"), calendar events & meetings (\"\u5b89\u6392\u4f1a\u8bae\" \"\u6211\u8fd9\u5468\u65e5\u7a0b\" \"\u63d0\u524d30\u5206\u949f\u63d0\u9192\"), knowledge-base articles (\"\u67e5/\u5199\u77e5\u8bc6\u5e93\" \"\u4ea7\u54c1\u624b\u518c\"), or document files (\"\u627e\u6587\u6863\" \"\u4e0a\u4f20\u6587\u4ef6\"). Also accounting (\"\u53d1\u7968\" \"\u8d26\u5355\" \"\u4ed8\u6b3e\" \"\u79d1\u76ee\"), and HR operations \u2014 employees (\"\u5458\u5de5\" \"\u90e8\u95e8\"), attendance (\"\u8003\u52e4\" \"\u7b7e\u5230\" \"\u7b7e\u9000\"), time off (\"\u8bf7\u5047\" \"\u4f11\u5047\"), expenses (\"\u62a5\u9500\"). Also a one-stop \"\u6211\u4eca\u5929/\u672c\u5468\u8981\u505a\u4ec0\u4e48\" briefing. Triggers on odoo, \u8f89\u706b\u4e91\u4f01\u4e1a\u5957\u4ef6, \u516c\u53f8\u7cfb\u7edf, /odoo/to-do /project /timesheets /crm /calendar /knowledge /documents /sale /purchase /inventory /invoices /hr, or \"\u767b\u5f55\u516c\u53f8\u7cfb\u7edf/\u4fdd\u5b58 odoo \u8d26\u53f7\". Treat bare work-context mentions of \u5f85\u529e/\u4efb\u52a1/\u9879\u76ee/\u5de5\u65f6/\u5ba2\u6237/\u5546\u673a/\u4f1a\u8bae/\u65e5\u7a0b/\u63d0\u9192/\u77e5\u8bc6\u5e93/\u6587\u6863/\u9500\u552e/\u91c7\u8d2d/\u5e93\u5b58/\u8ba2\u5355/\u53d1\u8d27/\u6536\u8d27/\u53d1\u7968/\u8d26\u5355/\u4ed8\u6b3e/\u79d1\u76ee/\u5458\u5de5/\u90e8\u95e8/\u8003\u52e4/\u7b7e\u5230/\u7b7e\u9000/\u8bf7\u5047/\u4f11\u5047/\u62a5\u9500 as this skill. First run: login.py init (\u5730\u5740/\u6570\u636e\u5e93/\u8d26\u53f7/\u5bc6\u7801 \u2192 ~/.huo15/tools.md). Pure standard library, zero dependencies.",
+  "updated_at": 1786875454889,
+  "version": "1.7.1"
+}
