@@ -1,0 +1,54 @@
+{
+  "changelog": "**Initial release of the accounting-skill:**\n\n- Extracts structured data from invoices, purchase orders, and bank statements in PDF (digital/scanned), JPG, and PNG formats using OCR.\n- Classifies unknown accounting documents and automatically routes them to the correct extractor.\n- Supports Vietnamese and international document formats.\n- Outputs Excel tracking sheets and JSON backup files for extracted data.\n- Includes batch processing workflow and validation rules for invoices, statements, and POs.\n- Provides installation instructions and reference documentation for field formats and OCR setup.",
+  "created_at": 1773935975658,
+  "display_name": "Accounting Skill",
+  "fetched_at": 1787788100005,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/bank-formats.md",
+    "references/invoice-fields.md",
+    "references/ocr-setup.md",
+    "references/po-fields.md",
+    "scripts/classify_document.py",
+    "scripts/extract_invoice.py",
+    "scripts/extract_po.py",
+    "scripts/extract_statement.py",
+    "scripts/generate_templates.py",
+    "scripts/ocr_utils.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089986363,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "DVNghiem",
+    "handle": "dvnghiem",
+    "user_id": "s176swzbjx3ec06d1w9ky2839d83pcwb"
+  },
+  "slug": "vn-accounting-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/vn-accounting-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=vn-accounting-skill&ownerHandle=dvnghiem",
+    "page_url": "https://clawhub.ai/dvnghiem/skills/vn-accounting-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1048,
+    "installs": 27,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Process accounting documents \u2014 invoices (h\u00f3a \u0111\u01a1n GTGT), purchase orders, and bank statements. Extract structured data from PDF (digital and scanned), JPG, an...",
+  "updated_at": 1779078503696,
+  "version": "0.1.0"
+}
