@@ -1,0 +1,78 @@
+{
+  "changelog": "Initial release of hr-candidate-discovery-screening skill for human-in-the-loop AI recruitment.\n\n- Automates paper collection, evidence organization, semantic matching, and outreach draft preparation for China-mainland AI talent.\n- Enforces explicit human approval at all key decision and sending steps; never approves or sends automatically.\n- Manages candidates and outreach using a structured workflow with SQLite-backed approval tracking.\n- Integrates DeepSeek for semantic job-paper matching and evidence-based screening.\n- Ensures rigorous mail handling: always drafts first, never batches or infers personal data, and strictly follows opt-out rules.\n- Includes detailed setup, operational, and retention instructions in SKILL.md.",
+  "created_at": 1781168043388,
+  "display_name": "\u4eba\u529b\u8d44\u6e90\u5019\u9009\u4eba\u53d1\u73b0\u548c\u7b5b\u67e5",
+  "fetched_at": 1787781168521,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "config/jobs.yaml",
+    "config/settings.yaml",
+    "config/sources.yaml",
+    "references/data-sources.md",
+    "references/outreach-guidelines.md",
+    "references/reply-classification.md",
+    "references/screening-policy.md",
+    "requirements.txt",
+    "scripts/collect_papers.py",
+    "scripts/config.py",
+    "scripts/db.py",
+    "scripts/deepseek_client.py",
+    "scripts/enrich_keywords.py",
+    "scripts/investigate_authors.py",
+    "scripts/manage_candidates.py",
+    "scripts/match_jobs.py",
+    "scripts/models.py",
+    "scripts/prepare_outreach.py",
+    "scripts/process_replies.py",
+    "skill-card.md",
+    "templates/email/followup-1.html",
+    "templates/email/followup-2.html",
+    "templates/email/initial.html",
+    "templates/email/reply.html",
+    "tests/conftest.py",
+    "tests/fixtures/jobs.yaml",
+    "tests/fixtures/openalex_works.json",
+    "tests/fixtures/replies.json",
+    "tests/test_candidates.py",
+    "tests/test_collect_papers.py",
+    "tests/test_config.py",
+    "tests/test_db.py",
+    "tests/test_deepseek.py",
+    "tests/test_outreach.py",
+    "tests/test_replies.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781169926715,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "CUPVC",
+    "handle": "debtvc2022",
+    "user_id": "s173kk8h4ppcrv8qar191agdfs8502wk"
+  },
+  "slug": "hr-candidate-discovery-screening",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hr-candidate-discovery-screening",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hr-candidate-discovery-screening&ownerHandle=debtvc2022",
+    "page_url": "https://clawhub.ai/debtvc2022/skills/hr-candidate-discovery-screening"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 359,
+    "installs": 4,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when discovering and screening China-mainland AI recruitment candidates from accepted conference or journal papers, matching authors to multiple job desc...",
+  "updated_at": 1781168043388,
+  "version": "1.0.0"
+}
