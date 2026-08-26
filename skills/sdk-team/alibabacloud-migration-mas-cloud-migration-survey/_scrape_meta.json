@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release with structured survey analysis and .docx report generation for cloud migration projects.\n\n- Automatically analyzes user-provided migration survey materials (Excel, Word, text, CSV) and outputs a structured .docx report.\n- Supports migration analysis from AWS, Azure, GCP, Huawei Cloud, Tencent Cloud, Baidu Cloud, or IDC to Alibaba Cloud.\n- Covers customer profile, current architecture, cloud product mapping, version compatibility risks, migration risks, and pending items.\n- Includes strict safety rules: never outputs sensitive customer data or pricing, and never performs actual migration operations.\n- Enforces mandatory use of provided Python scripts for file processing and report generation; custom parsing or file creation is strictly prohibited.\n- Automatically handles missing or invalid input files based on user-provided information, including security checks for path traversal.",
+  "created_at": 1784686507050,
+  "display_name": "Alibabacloud Migration Mas Cloud Migration Survey",
+  "fetched_at": 1787775701605,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cloud-mapping.md",
+    "references/version-risks.md",
+    "scripts/extract.py",
+    "scripts/generate_report.py",
+    "scripts/prepare_sample_input.py",
+    "scripts/requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784687341585,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-migration-mas-cloud-migration-survey",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-migration-mas-cloud-migration-survey",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-migration-mas-cloud-migration-survey&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-migration-mas-cloud-migration-survey"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 8123,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5f53\u7528\u6237\u63d0\u4f9b\u8fc1\u4e91\u8c03\u7814\u6750\u6599\uff08Excel/Word/\u6587\u672c/CSV\u6587\u4ef6\uff09\u5e76\u8981\u6c42\u751f\u6210\u7ed3\u6784\u5316\u8c03\u7814\u62a5\u544a\u65f6\uff0c\u81ea\u52a8\u5206\u6790\u6c47\u603b\u5e76\u8f93\u51fa .docx \u6587\u6863\u3002\u6db5\u76d6\u5ba2\u6237\u753b\u50cf\u3001\u67b6\u6784\u73b0\u72b6\u3001\u4e91\u4ea7\u54c1\u6620\u5c04\u3001\u7248\u672c\u517c\u5bb9\u6027\u98ce\u9669\u3001\u8fc1\u79fb\u98ce\u9669\u3001\u5f85\u786e\u8ba4\u4e8b\u9879\u3002\u652f\u6301 AWS/Azure/GCP/\u534e\u4e3a\u4e91/\u817e\u8baf\u4e91/\u767e\u5ea6\u4e91/IDC \u5230\u963f\u91cc\u4e91\u7684\u8fc1\u79fb\u8bc4\u4f30\u3002\u9002\u7528\u4e8e\u963f\u91cc\u4e91\u8fc1\u4e91\u9879\u76ee\u552e\u524d...",
+  "updated_at": 1784686599589,
+  "version": "0.0.1"
+}
