@@ -1,0 +1,66 @@
+{
+  "changelog": "Soil moisture mapping skill initial release.\n\n- Estimates surface soil moisture using thermal inertia and SAR Dubois models, including drought grading.\n- Supports both synthetic and real-world data input.\n- Provides local, fully offline processing with privacy protection.\n- Outputs results in GeoTIFF and JSON formats.\n- Includes basic usage instructions and sample commands.",
+  "created_at": 1785851085004,
+  "display_name": "geoskill-soil-moisture-mapping",
+  "fetched_at": 1787773432982,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-soil-moisture-mapping.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785852120746,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-soil-moisture-mapping",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-soil-moisture-mapping",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-soil-moisture-mapping&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-soil-moisture-mapping"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 194,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7528\u70ed\u60ef\u91cf\u6cd5\u4e0e SAR Dubois \u6a21\u578b\u4f30\u7b97\u8868\u5c42\u571f\u58e4\u6e7f\u5ea6\u5e76\u5212\u5206\u5e72\u65f1\u7b49\u7ea7\u3002Estimates surface soil moisture via thermal inertia and the SAR Dubois model, with drought grading.",
+  "updated_at": 1785851260093,
+  "version": "1.0.0"
+}
