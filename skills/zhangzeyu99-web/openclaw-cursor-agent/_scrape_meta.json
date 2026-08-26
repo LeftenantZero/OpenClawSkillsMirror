@@ -1,0 +1,68 @@
+{
+  "changelog": "OpenClaw Cursor Agent 1.0.0\n\n- Initial release with full support for managing persistent Cursor CLI coding tasks via OpenClaw tools and tmux sessions.\n- Supports starting, monitoring, sending commands to, and killing backend Cursor sessions.\n- Includes diagnostic tool to check environment and dependencies.\n- Provides natural language mappings for user instructions in both English and Chinese.\n- Outputs session and task IDs when spawning tasks; reports progress, current step, and tmux status when checking tasks.\n- Clear error reporting for missing dependencies (tmux, python3, agent, WSL).",
+  "created_at": 1773892333214,
+  "display_name": "OpenClaw Cursor Agent",
+  "fetched_at": 1787788072037,
+  "files": [
+    ".cursor/skills/openclaw-cursor-agent-system/SKILL.md",
+    ".cursor/skills/openclaw-cursor-agent-system/references/setup.md",
+    ".cursor/skills/openclaw-cursor-agent-system/references/task-prompt.md",
+    ".gitattributes",
+    ".gitignore",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "cursor-agent-system/README.md",
+    "cursor-agent-system/scripts/attach-session.sh",
+    "cursor-agent-system/scripts/check-status.sh",
+    "cursor-agent-system/scripts/common.sh",
+    "cursor-agent-system/scripts/kill-session.sh",
+    "cursor-agent-system/scripts/send-command.sh",
+    "cursor-agent-system/scripts/spawn-cursor.sh",
+    "cursor-agent-system/templates/cursor-task-prompt.md",
+    "docs/LOCAL_SETUP_GUIDE.md",
+    "docs/archive/WSL\u6700\u7ec8\u843d\u5730\u65b9\u6848.md",
+    "docs/archive/\u6700\u7ec8\u6d4b\u8bd5\u62a5\u544a.md",
+    "docs/usage-guide.md",
+    "extensions/openclaw-cursor-agent/README.md",
+    "extensions/openclaw-cursor-agent/examples/openclaw.json.windows.example.json",
+    "extensions/openclaw-cursor-agent/index.js",
+    "extensions/openclaw-cursor-agent/openclaw.plugin.json",
+    "extensions/openclaw-cursor-agent/package.json",
+    "extensions/openclaw-cursor-agent/skill/SKILL.md",
+    "extensions/openclaw-cursor-agent/skill/references/commands.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089969282,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Evenstar",
+    "handle": "zhangzeyu99-web",
+    "user_id": "s175jpjz8dgzfke3mb3z6w6vqd84rmcz"
+  },
+  "slug": "openclaw-cursor-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-cursor-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-cursor-agent&ownerHandle=zhangzeyu99-web",
+    "page_url": "https://clawhub.ai/zhangzeyu99-web/skills/openclaw-cursor-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1120,
+    "installs": 33,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Manage long-running Cursor CLI coding tasks through OpenClaw tools backed by tmux sessions. Use when the user asks to start a persistent coding job, inspect...",
+  "updated_at": 1779078524735,
+  "version": "1.0.0"
+}
