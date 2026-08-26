@@ -1,0 +1,36 @@
+{
+  "changelog": "**Complete upgrade to a comprehensive A-share investment decision framework.**\n\n- Integrated \"\u4e94\u7ef4\u8d1d\u53f6\u65af\u6295\u8d44\u6cd5 v3.4\" (quick filter \u2192 deep research \u2192 position sizing) with the new \"\u516d\u5c42\u955c\u5934\u51b3\u7b56\u77e9\u9635 v1.0\".\n- Added explicit behavioral finance bias correction modules (Kahneman's 3 Questions, triple debiasing, compulsory cooling-off periods by position size).\n- Systematized quick filter (one-minute veto), five-stage deep research (including industry topology, moat, valuation anchors, risk cards), and execution matrix (six lenses, weighted by scenario).\n- Automated structured investment diagnostic card output, including special logic for current holdings health-check.\n- Enhanced position sizing logic: position caps based on confidence and expected value matrix; built-in A-share/market context corrections.\n- Clearer rules for technical analysis integration, market phase, and \"missing data discipline\" in decision gates.",
+  "created_at": 1781789945259,
+  "display_name": "Stock Investment System",
+  "fetched_at": 1787780223897,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/six-layer-matrix-v1.0.md",
+    "references/wuwei-bayesian-v3.4.md",
+    "references/\u6848\u4f8b-\u798f\u65af\u7279603806.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "managaman-ship-it",
+    "handle": "managaman-ship-it",
+    "user_id": "s172bcyr269bsa4rf6mkm8abzh88w1t2"
+  },
+  "slug": "stock-investment-system",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/stock-investment-system",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=stock-investment-system&ownerHandle=managaman-ship-it",
+    "page_url": "https://clawhub.ai/managaman-ship-it/skills/stock-investment-system"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 527,
+    "installs": 9,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "# \ud83e\udd9e \u80a1\u7968\u6295\u8d44\u51b3\u7b56\u7cfb\u7edf\n\n> \u4e94\u7ef4\u8d1d\u53f6\u65af\u6846\u67b6 \u00d7 \u516d\u5c42\u955c\u5934\u51b3\u7b56\u77e9\u9635 \u00d7 \u884c\u4e3a\u91d1\u878d\u7ea0\u504f\n> \u9002\u5408A\u80a1/\u6e2f\u80a1\u4e2d\u957f\u7ebf\u6295\u8d44\u8005\n\n## \u8fd9\u662f\u4ec0\u4e48\uff1f\n\n\u8fd9\u4e0d\u662f\u4e00\u4e2a\u7b80\u5355\u7684\u300c\u95ee\u80a1\u4ef7\u300d\u5de5\u5177\u3002\u8fd9\u662f\u4e00\u5957\u5b8c\u6574\u3001\u53ef\u6267\u884c\u7684**\u6295\u8d44\u51b3\u7b56\u64cd\u4f5c\u7cfb\u7edf**\uff0c\u628a\u4e13\u4e1a\u6295\u8d44\u8005\u7684\u65b9\u6cd5\u8bba\u5c01\u88c5\u6210\u4e86AI\u53ef\u4ee5\u76f4\u63a5\u8c03\u7528\u7684\u6d41\u6c34\u7ebf\u3002\n\n## \u6838\u5fc3\u80fd\u529b\n\n### \u4e94\u7ef4\u8d1d\u53f6\u65af\u6295\u8d44\u6cd5\n1. **\u672c\u672b** \u2014 \u5148\u9a8c\u6821\u51c6\uff0c\u77e5\u9053\u81ea\u5df1\u77e5\u9053\u4ec0\u4e48\u3001\u4e0d\u77e5\u9053\u4ec0\u4e48\n2. **\u7ec8\u59cb** \u2014 \u62a4\u57ce\u6cb3\u4e94\u7ef4\u68c0\u67e5 + A\u80a1\u56db\u56e0\u5b50\u6821\u6b63\n3. **\u53d8\u91cf** \u2014 \u6b7b\u6cd5\u5361\u7247 + \u53d9\u4e8b\u62e5\u6324\u5ea6 + \u4e8b\u4ef6\u9a71\u52a8\u6e05\u5355\n4. **\u8def\u5f84** \u2014 \u53cc\u7ef4\u88c1\u51b3\u77e9\u9635 + \u7d22\u666e\u534a\u51ef\u5229\u4ed3\u4f4d\u7ba1\u7406\n5. **\u7ed3\u6784** \u2014 \u6295\u540e\u76d1\u6d4b + \u9000\u51fa\u6761\u4ef6\uff08\u4e70\u5165\u65f6\u5c31\u5199\u597d\uff09\n\n### \u516d\u5c42\u955c\u5934\u51b3\u7b56\u77e9\u9635\n| \u5c42 | \u955c\u5934 | \u4f5c\u7528 |\n|----|------|------|\n| L1 | \u4ef7\u503c\u951a | \u516c\u53f8\u503c\u591a\u5c11\uff1f\u5b89\u5168\u8fb9\u9645\u5728\u54ea\uff1f |\n| L2 | \u4ef7\u683c\u7ed3\u6784 | \u8d70\u52bf\u5728\u4ec0\u4e48\u4f4d\u7f6e\uff1f |\n| L3 | \u65f6\u673a\u80fd\u91cf | \u5f53\u524d\u5468\u671f\u65b9\u5411\uff1f |\n| L4 | \u8d44\u91d1\u9a8c\u8bc1 | \u4e3b\u529b\u5728\u8fdb\u8fd8\u662f\u51fa\uff1f |\n| L5 | \u5e02\u573a\u73af\u5883 | \u653f\u7b56/\u6563\u6237/\u91cf\u5316/A",
+  "updated_at": 1781790305822,
+  "version": "1.0.0"
+}
