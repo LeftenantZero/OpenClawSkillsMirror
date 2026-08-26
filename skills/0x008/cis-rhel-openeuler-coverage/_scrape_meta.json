@@ -1,0 +1,38 @@
+{
+  "changelog": "Initial release: Analyze coverage of CIS Red Hat Enterprise Linux Benchmark rules against the OpenEuler security baseline at the configuration level.\n\n- Automatically parses CIS RHEL Benchmark PDF and OpenEuler security baseline Markdown files to extract rule details.\n- Performs rule-by-rule comparison using configurable match strategies (exact, fuzzy, manual review).\n- Assesses coverage status as \u201cfully covered\u201d, \u201cpartially covered\u201d, or \u201cnot covered\u201d with detailed criteria for each.\n- Generates bilingual (Chinese/English) CSV reports summarizing rule alignment, values, and coverage status.\n- Includes clear workflow and command line usage instructions for end users.",
+  "created_at": 1779985624716,
+  "display_name": "Cis Rhel Openeuler Coverage",
+  "fetched_at": 1787784078230,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/coverage_analyzer.py",
+    "scripts/parse_cis_pdf.py",
+    "scripts/parse_openeuler_md.py",
+    "scripts/report_generator.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "0X008",
+    "handle": "0x008",
+    "user_id": "s1762e75b520en2wbm0bdcc5fh83gdd3"
+  },
+  "slug": "cis-rhel-openeuler-coverage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cis-rhel-openeuler-coverage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cis-rhel-openeuler-coverage&ownerHandle=0x008",
+    "page_url": "https://clawhub.ai/0x008/skills/cis-rhel-openeuler-coverage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 517,
+    "installs": 9,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5206\u6790 CIS Red Hat Enterprise Linux Benchmark \u4e2d\u7684\u5b89\u5168\u89c4\u5219\u5728 OpenEuler \u5b89\u5168\u914d\u7f6e\u57fa\u7ebf\u4e2d\u7684\u8986\u76d6\u60c5\u51b5\uff0c\u8f93\u51fa\u5b8c\u5168\u8986\u76d6\u3001\u90e8\u5206\u8986\u76d6\u3001\u672a\u8986\u76d6\u7684\u89c4\u5219\u6e05\u5355\u3002\u9002\u7528\u4e8e\uff1a\u7528\u6237\u63d0\u4f9b CIS RHEL Benchmark PDF \u6587\u4ef6\u8def\u5f84\u548c OpenEuler \u5b89\u5168\u57fa\u7ebf MD \u6587\u4ef6\u8def\u5f84\uff0c\u8981\u6c42...",
+  "updated_at": 1779985624716,
+  "version": "1.0.0"
+}
