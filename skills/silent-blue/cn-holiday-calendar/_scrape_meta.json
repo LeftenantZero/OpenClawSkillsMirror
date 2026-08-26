@@ -1,0 +1,47 @@
+{
+  "changelog": "- Removed the sample skill-card.md file.\n- Updated documentation to specify required environment setup, including Python and lunar-python package requirements.\n- Clarified input/output formats and fields for single-date and month queries.\n- Output instructions now state user-facing answers must directly specify workday status and details, and remind users about the option for expanded calendar info.\n- Expanded guidance on including full lunar calendar data when requested, reflecting all available lunar-python fields.",
+  "created_at": 1779947602937,
+  "display_name": "CN Holiday Calendar",
+  "fetched_at": 1787784165675,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/api_reference.md",
+    "scripts/query_holiday.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780025694720,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Silent-Blue",
+    "handle": "silent-blue",
+    "user_id": "s173jfm7qfxp2xjec8exevm23d87j68q"
+  },
+  "slug": "cn-holiday-calendar",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cn-holiday-calendar",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cn-holiday-calendar&ownerHandle=silent-blue",
+    "page_url": "https://clawhub.ai/silent-blue/skills/cn-holiday-calendar"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 686,
+    "installs": 14,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Query gov.cn Chinese holiday notices to determine workdays, holidays, and make-up workdays. Use when the user needs to check whether a specific date is a wor...",
+  "updated_at": 1779961997394,
+  "version": "1.0.1"
+}
