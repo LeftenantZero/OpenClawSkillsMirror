@@ -1,0 +1,51 @@
+{
+  "changelog": "Jobs-System v1.0.0 \u2014 Initial public release\n\n- Introduces the Jobs-System decision analysis workflow using a three-layer reasoning framework (Intent, Interrogation, Answer) with persistent Voice distillation, specifically tailored for high-stakes product, strategy, and opportunity analysis.\n- Enforces strict evidence, certainty, and domain routing protocols: all judgments must include sourced references, determinacy markers, and clear routing by domain (A/B/C, I-layer risk flagging).\n- Features a non-dialogue digital apprenticeship model: outputs reflect distilled thinking and critical evaluation, not expert substitution or roleplay.\n- Provides structured commands for common scenarios (product definition, cut, research, keynote, timing) and tightly scoped output voice rules for authenticity and clarity.\n- Built-in strong fail-safes: I-layer risk lockouts, evidence sufficiency checks, forced self-critique, and a Voice protocol modeled on authentic Jobs interviews.\n- All outputs are presented as draft, non-final insights requiring human validation; high-conviction judgments are reserved for verified contexts only.",
+  "created_at": 1786697453386,
+  "display_name": "Jobs-System",
+  "fetched_at": 1787772030376,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "jobs-voice.md",
+    "references/_selftest_record.json",
+    "references/cognitive_bridge.py",
+    "references/lattice_resolver.py",
+    "references/product_shell.py",
+    "references/quality_matrix.py",
+    "skill-card.md",
+    "\u5b89\u88c5\u8bf4\u660e.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786697955706,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Sabre",
+    "handle": "sabre232",
+    "user_id": "s173mxp2b5kyay08xyv7ehxbg18cemny"
+  },
+  "slug": "jobs-system-community",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/jobs-system-community",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=jobs-system-community&ownerHandle=sabre232",
+    "page_url": "https://clawhub.ai/sabre232/skills/jobs-system-community"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 125,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5e02\u9762\u4e0a\u6709\u4e00\u5343\u4e2a\u4f1a\u80cc\u8bed\u5f55\u7684\u4e54\u5e03\u65af\u3002\n\u6211\u4eec\u628a\"\u4ed6\u600e\u4e48\u60f3\u5230\u90a3\u53e5\u8bdd\"\u8fd9\u4ef6\u4e8b\uff0c\u505a\u6210\u4e86\u53ef\u590d\u73b0\u7684\u5de5\u7a0b\u3002\n\u4f60\u95ee\u5b83\"\u8fd9\u751f\u610f\u8be5\u4e0d\u8be5\u505a\"\uff0c\u5b83\u4e0d\u7ed9\u4f60\u5341\u9875\u62a5\u544a\uff0c\u5148\u7529\u4f60\u4e00\u53e5\uff1a\n\"\u8fd9\u4e8b\u7684\u6839\u4e0d\u5728\u5e02\u573a\uff0c\u5728\u4f60\u628a\u76f8\u673a\u5f53\u786c\u4ef6\u5356\u3002\"\n\u6211\u4eec\u8981\u590d\u523b\u7684\uff0c\u5c31\u662f\u8fd9\u4e00\u53e5\u600e\u4e48\u6765\u7684\u3002\n\n\u4e54\u5e03\u65af\u5f0f\u51b3\u7b56\u5206\u6790\u5de5\u4f5c\u6d41\uff08\u793e\u533a\u6f14\u793a\u7248\uff09\u3002\u5f53\u7528\u6237\u9700\u8981\u5206\u6790\u8d5b\u9053/\u521b\u4e1a\u673a\u4f1a\u3001\u505a\u4ea7\u54c1\u5b9a\u4e49\u3001\u6218\u7565\u53d6\u820d\u3001\u780d\u9700\u6c42\u505a\u51cf\u6cd5\u3001\u7ade\u54c1\u5b9a\u4f4d\u3001\u7528\u6237\u6d1e\u5bdf\u3001\u6280\u672f\u7a97\u53e3\u5224\u65ad\uff0c\u6216\u7528\u300c\u4e54\u5e03\u65af\u89c6\u89d2/\u8fde\u70b9\u6210\u7ebf\u300d\u62c6\u89e3\u95ee\u9898\u65f6\u542f\u7528\u3002\u4e09\u5c42\u63a8\u7406\u6846\u67b6\uff08\u7406\u89e3\u610f\u56fe+\u62f7\u95ee+\u7b54\u6848+Voice \u84b8\u998f\uff09\u4ea7\u51fa\u5e26\u8bc1\u636e\u94fe\u3001\u786e\u5b9a\u6027\u6807\u8bb0\u4e0e\u57df\u7c7b\u578b\u8def\u7531\u7684\u7ed3\u6784\u5316\u51b3\u7b56\uff1bB \u7aef/I \u5c42\u5371\u9669\u57df\u6807\u26a0\ufe0f\u7ffb\u8f66\u4e0d\u6a21\u4eff\u5176\u5224\u65ad\uff0cAI/\u4e91/\u793e\u5a92\u7b49\u672a\u53ca\u57df\u6807\u300c\u6846\u67b6\u63a8\u6f14\u00b7\u975e\u672c\u4eba\u7acb\u573a\u300d\u3002\u975e\u89e6\u53d1\uff08\u95f2\u804a\u3001\u7eaf\u4fe1\u606f\u68c0\u7d22\u3001\u7eaf\u4ee3\u7801\u5b9e\u73b0\uff09\u4e0d\u52a0\u8f7d\u3002",
+  "updated_at": 1786711090864,
+  "version": "1.0.0"
+}
