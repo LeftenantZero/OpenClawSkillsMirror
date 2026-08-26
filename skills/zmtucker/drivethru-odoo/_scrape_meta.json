@@ -1,0 +1,44 @@
+{
+  "changelog": "drivethru-odoo 0.9.0\n\n- Updated documentation in SKILL.md and production_scheduling.md for clarity and maintainability.\n- Removed skill-card.md for a streamlined skill package.\n- No changes to core functionality.",
+  "created_at": 1780499140865,
+  "display_name": "drivethru-odoo",
+  "fetched_at": 1787770313046,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agent_api_endpoints.md",
+    "references/po_pricing_review.md",
+    "references/production_scheduling.md",
+    "references/replenishment_purchasing.md",
+    "scripts/_cli.py",
+    "scripts/ap.py",
+    "scripts/odoo_client.py",
+    "scripts/odoo_mcp.py",
+    "scripts/po_docs.py",
+    "scripts/production.py",
+    "scripts/sales.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "zmtucker",
+    "handle": "zmtucker",
+    "user_id": "s17fq291581evd78xzn1930b0n87bfny"
+  },
+  "slug": "drivethru-odoo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/drivethru-odoo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=drivethru-odoo&ownerHandle=zmtucker",
+    "page_url": "https://clawhub.ai/zmtucker/skills/drivethru-odoo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1435,
+    "installs": 6,
+    "stars": 0,
+    "versions": 9
+  },
+  "summary": "Talk to an Odoo ERP through its `drivethru_mcp` MCP server \u2014 discover the available Odoo tools at runtime and call them to look up eBay products/inventory, push eBay orders and read tracking, run the Accounts Payable PO\u2192vendor-bill flow, review documents in the Documents app against their purchase orders and fix incorrect PO line pricing (the \"check the Purchasing folder against the POs\" / vendor-invoice pricing-review workflow, filing each document into Matched or Questions), schedule MRP production batches, drive vendor replenishment purchasing (run the replenishment report \u2192 curate lines \u2192 add to a PO \u2192 hand style/color/size/qty to the vendor's purchasing skill \u2192 write pricing + confirmation back and confirm the PO), and retrieve internal SOPs / best practices / policies from the Knowledge base scoped to the asking person's permissions. Use whenever the user needs to read from or write to Odoo, especially when you are answering a person inside an Odoo Discuss conversation.",
+  "updated_at": 1787254559978,
+  "version": "0.9.0"
+}
