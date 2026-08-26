@@ -1,0 +1,38 @@
+{
+  "changelog": "zoom-meeting-admin 1.0.5\n\n- Strengthened security documentation and clarified over-permission boundaries; agents are now explicitly prohibited from importing internal functions, modifying the script, or calling arbitrary Zoom API endpoints.\n- Enhanced SKILL.md with detailed warnings and examples about Zoom recurrence parameters, especially clarifying Zoom weekday encoding (1=Sunday).\n- Updated CLI usage section with correct positional parameters for recurring meetings and new reference examples for monthly recurrences.\n- Improved .gitignore and README files for consistency and reinforced credential file handling precautions.\n- Removed obsolete skill-card.md file.",
+  "created_at": 1777903059575,
+  "display_name": "zoom-meeting-admin",
+  "fetched_at": 1787771422959,
+  "files": [
+    ".env.sample",
+    ".gitignore",
+    "README.md",
+    "README.zh-cn.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/zoom-s2s.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jacky Shen",
+    "handle": "mebusw",
+    "user_id": "s17fqnnawywqwp37410y5w9r1h83pwab"
+  },
+  "slug": "zoom-meeting-admin",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/zoom-meeting-admin",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=zoom-meeting-admin&ownerHandle=mebusw",
+    "page_url": "https://clawhub.ai/mebusw/skills/zoom-meeting-admin"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1063,
+    "installs": 21,
+    "stars": 1,
+    "versions": 6
+  },
+  "summary": "Manage Zoom meetings, cloud recordings, and account users via a Server-to-Server OAuth REST script. Use this skill when the user wants to list, view, create, or delete a scheduled Zoom meeting; query cloud recordings for a user; or look up account users. The script exposes a fixed CLI action whitelist (list/get/create/delete meeting, get/list user, list recordings); agents must only invoke these documented actions and must not modify the script, import internal functions, or construct arbitrary Zoom API requests. create_meeting requires the agent to obtain explicit user confirmation of topic, start_time, and duration before invoking. delete_meeting is gated by a required --yes flag and the agent must display the meeting info and obtain explicit user confirmation before invoking. Requires a Zoom Server-to-Server OAuth app and a local .env with ACCOUNT_ID, CLIENT_ID, CLIENT_SECRET, USER_ID.",
+  "updated_at": 1787045368888,
+  "version": "1.0.5"
+}
