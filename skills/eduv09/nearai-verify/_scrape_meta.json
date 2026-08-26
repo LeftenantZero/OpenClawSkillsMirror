@@ -1,0 +1,36 @@
+{
+  "changelog": "nearai-verify 1.0.3\n\n- Added support for Level 3 (PROVEN) message-level verification using the nearai-verify OpenClaw plugin.\n- Updated documentation to include installation and usage instructions for the OpenClaw plugin.\n- Expanded agent triggers to cover new verification requests like \"verify your latest response.\"\n- Improved explanation of verification levels and clarified tool usage, installation steps, and upgrade paths.\n- Removed the legacy skill-card.md file for clarity and maintenance.",
+  "created_at": 1785259645497,
+  "display_name": "nearai-verify",
+  "fetched_at": 1787774235886,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "attest.py",
+    "check.py",
+    "skill-card.md",
+    "test_attest.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Eduardo Vasques",
+    "handle": "eduv09",
+    "user_id": "s177rmwgpyt1bg88bh71kj16d1895edh"
+  },
+  "slug": "nearai-verify",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nearai-verify",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nearai-verify&ownerHandle=eduv09",
+    "page_url": "https://clawhub.ai/eduv09/skills/nearai-verify"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 395,
+    "installs": 1,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Check whether this agent is talking to a NEAR AI Cloud TEE endpoint or to an ordinary one, and cryptographically attest that endpoint. Reports which models the chain uses, which ones actually served recent turns, warns when a fallback sends prompts outside the enclave, verifies the Intel TDX quote, and uses the nearai-verify OpenClaw plugin for message-level proof. Trigger when asked \"am I private\", \"is this a TEE\", \"prove it\", \"verify your latest response\", \"which model answered that\", or before handling sensitive data.",
+  "updated_at": 1785347368819,
+  "version": "1.0.3"
+}
