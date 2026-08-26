@@ -1,0 +1,57 @@
+{
+  "changelog": "- Introduced the card-shared skill to centralize research policy and output contracts for all card commands.\n- Documented shared references for sourcing, confidence, card identity resolution, formatting, and recency expectations.\n- Defined consistent behavior for card ambiguity handling, research workflow, confidence marking, and markdown output style.\n- Standardized hidden YAML usage and prevented visible sources footers in user-facing output.\n- Clarified command composition rules and the independence of news-related results.\n- For internal use as background reference; not a user-facing command.",
+  "created_at": 1786296314607,
+  "display_name": "Card Shared Rules",
+  "fetched_at": 1787773011374,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "card-identity-rules.md",
+    "command-contracts.yaml",
+    "confidence-rules.md",
+    "generate-pdf.py",
+    "normalization-rules.md",
+    "pdf-style.css",
+    "recency-rules.md",
+    "scripts/check_contract_composition.py",
+    "scripts/check_fixture_consistency.py",
+    "scripts/check_research_budgets.py",
+    "scripts/validate_card_output.py",
+    "section-definitions.md",
+    "skill-card.md",
+    "source-policy.yaml"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786297427152,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jiahongc",
+    "handle": "jiahongc",
+    "user_id": "s17bwps1v7fqm560253grqacxn83kpf2"
+  },
+  "slug": "card-shared",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/card-shared",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=card-shared&ownerHandle=jiahongc",
+    "page_url": "https://clawhub.ai/jiahongc/skills/card-shared"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 207,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Shared contracts and sourcing for card skills",
+  "updated_at": 1786296490462,
+  "version": "1.0.0"
+}
