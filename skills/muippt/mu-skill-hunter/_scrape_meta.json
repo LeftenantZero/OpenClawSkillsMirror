@@ -1,0 +1,49 @@
+{
+  "changelog": "mu-skill-hunter v2.8.0 brings a comprehensive upgrade for external Skill discovery, safety, and reporting.\n\n- Adds robust four-source search (GitHub, ClawHub, SkillHub, Skills.sh) with clear source tag, summary, clickable link, and popularity for every result.\n- Introduces mandatory pre-install code scanning via scanner.py to prevent prompt injection and block high/critical risk Skills unless approved.\n- Launches an automated weekly Skill trend report (Cron) with scene calibration, strict formatting, and automatic WeChat/Feishu push.\n- Implements detailed failure handling and environment checks for each source (with clear CLI install/config prompts).\n- Enforces strict operational boundaries and anti-patterns to enhance safety and user experience.\n- Introduces clear first-use onboarding for both search and reporting features.",
+  "created_at": 1787104042688,
+  "display_name": "Skill\u4e25\u9009\u730e\u624b",
+  "fetched_at": 1787771362809,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/search-guide.md",
+    "references/security-levels.md",
+    "references/weekly-report-template.md",
+    "scripts/scanner.py",
+    "scripts/search.py",
+    "scripts/trending.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787104840659,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u6728\u5148\u751fiPPT",
+    "handle": "muippt",
+    "user_id": "s172ye8cdtbt41pqwnjhzarfj18bbhpn"
+  },
+  "slug": "mu-skill-hunter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mu-skill-hunter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mu-skill-hunter&ownerHandle=muippt",
+    "page_url": "https://clawhub.ai/muippt/skills/mu-skill-hunter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 90,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5916\u90e8Skill\u641c\u7d22\uff0cGitHub/ClawHub/SkillHub/Skills.sh\u56db\u6e90\u53d1\u73b0\u3002\u89e6\u53d1\u8bcd\uff1a\u641cskill\u3001\u5916\u90e8skill\u3001\u627eskill\u3001\u641c\u5916\u90e8\u3001GitHub skill\u3001ClawHub skill\u3001SkillHub skill\u3001\u817e\u8bafskill\u5546\u5e97\u3001Skills.sh\u3002\u5373\u4f7f\u7528\u6237\u6ca1\u8bf4\u300c\u641cskill\u300d\uff0c\u53ea\u8981\u63d0\u5230\u300c\u627e\u5916\u90e8\u5de5\u5177\u300d\u300c\u6709\u6ca1\u6709\u73b0\u6210\u7684Skill\u300d\u300cGitHub\u4e0a\u6709\u6ca1\u6709\u300d\u4e5f\u8981\u7528\u3002\u4e0d\u9002\u7528\uff1a\u5185\u90e8Skill\u5e02\u573askill\uff08\u7528skillhub\uff09",
+  "updated_at": 1787104140519,
+  "version": "1.0.0"
+}
