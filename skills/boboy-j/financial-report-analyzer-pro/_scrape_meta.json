@@ -1,0 +1,54 @@
+{
+  "changelog": "Initial release of Financial Report Analyzer:\n\n- Automatically extracts, normalizes, and analyzes key metrics from corporate financial reports (PDF, XBRL, Excel, text).\n- Produces side-by-side YoY/QoQ comparisons, complete ratio analysis (including ROE, ROA, gross margin, debt ratio, cash conversion cycle), and red-flag detection.\n- Structured 5-section output: executive summary, KPIs, ratio analysis, red-flag findings, and peer benchmarking.\n- Supports Chinese and English reports, with auto-detection of accounting standards (CAS, IFRS, US-GAAP).\n- Ensures traceability for every metric with page/line provenance; never provides predictive or investment advice.\n- Optional integration with industry peer databases for benchmarking and percentile ranking.",
+  "created_at": 1779817413790,
+  "display_name": "financial-report-analyzer-pro",
+  "fetched_at": 1787784549644,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/README.md",
+    "examples/sample_financials.json",
+    "knowledge/README.md",
+    "knowledge/ratio_definitions.md",
+    "scripts/compute_ratios.py",
+    "scripts/detect_red_flags.py",
+    "scripts/render_report.py",
+    "scripts/run_pipeline.py",
+    "skill-card.md",
+    "tests/test_pipeline.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966675544,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "boboy",
+    "handle": "boboy-j",
+    "user_id": "s17ckg9br2p4k5kx6cr8fc4jz5852pah"
+  },
+  "slug": "financial-report-analyzer-pro",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/financial-report-analyzer-pro",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=financial-report-analyzer-pro&ownerHandle=boboy-j",
+    "page_url": "https://clawhub.ai/boboy-j/skills/financial-report-analyzer-pro"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 626,
+    "installs": 12,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "EN: Extract, normalize and analyze key metrics from corporate financial reports (10-K, 10-Q, A-share annual/interim reports, IFRS/GAAP/CAS PDFs). Produces si...",
+  "updated_at": 1779817413790,
+  "version": "1.0.0"
+}
