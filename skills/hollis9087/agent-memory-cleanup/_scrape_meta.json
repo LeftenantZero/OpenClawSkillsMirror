@@ -1,0 +1,48 @@
+{
+  "changelog": "Narrow the skill description to reduce over-triggering: focus on explicit agent-memory cleanup requests and concrete memory write/update failure or pollution signals, with negative trigger guidance for ordinary project docs, logs, README edits, code review, and general file cleanup.",
+  "created_at": 1780156098066,
+  "display_name": "Agent Memory Cleanup",
+  "fetched_at": 1787783789387,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/agent-paths.md",
+    "references/classification-rubric.md",
+    "references/default-rules.json",
+    "references/mcp-version.md",
+    "scripts/audit_memory.py",
+    "scripts/run_tests.py",
+    "skill-card.md",
+    "test-fixtures/clean-memory.md",
+    "test-fixtures/conflicting-memory.md",
+    "test-fixtures/expected-clean-memory.md",
+    "test-fixtures/noisy-memory.md",
+    "test-fixtures/secret-memory.md",
+    "test-fixtures/short-polluted-memory.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "hollis9087",
+    "handle": "hollis9087",
+    "user_id": "s177cqfxj8hyd271e27az0p2nx85tds8"
+  },
+  "slug": "agent-memory-cleanup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-memory-cleanup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-memory-cleanup&ownerHandle=hollis9087",
+    "page_url": "https://clawhub.ai/hollis9087/skills/agent-memory-cleanup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 887,
+    "installs": 19,
+    "stars": 0,
+    "versions": 11
+  },
+  "summary": "Clean and audit long-term agent memory files such as user.md, memory.md, memories.md, profile.md, preferences.md, and agent_memory.md. Use when the user expl...",
+  "updated_at": 1780221065603,
+  "version": "0.3.7"
+}
