@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release offering an auditable, evidence-based approach to patent portfolio triage and screening using transparent criteria.\n\n- Ranks a user-defined patent universe with a 30/30/20/20 scoring model based on citations, family size, core-inventor concentration, and verified legal-event activity.\n- Selects a documented 10\u201315% high-value screening portfolio with full traceability.\n- Generates static HTML and JSON reports by default; optional Word output on request.\n- Includes rigorous controls for required inputs, evidence preservation, error handling, and model transparency.\n- Designed to support screening, prioritization, and review\u2014explicitly not for patent valuation, enforceability, or investment decisions.",
+  "created_at": 1786607111357,
+  "display_name": "High-Value Patent Portfolio Screening",
+  "fetched_at": 1787772407010,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/screening-standard.md",
+    "scripts/README.md",
+    "scripts/hv_1_fetch.py",
+    "scripts/hv_2_numeric.py",
+    "scripts/hv_3_legal.py",
+    "scripts/hv_4_score.py",
+    "scripts/hv_5_display.py",
+    "scripts/hv_6_assemble.py",
+    "scripts/hv_7_html_a.py",
+    "scripts/hv_8_word.py",
+    "scripts/hv_common.py",
+    "scripts/run_all.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "yuanzhian-patsnap",
+    "handle": "yuanzhian-patsnap",
+    "user_id": "s17bvft5kywc2rr8r8df1ra0x589g677"
+  },
+  "slug": "assess-high-value-patent-portfolio-ip",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/assess-high-value-patent-portfolio-ip",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=assess-high-value-patent-portfolio-ip&ownerHandle=yuanzhian-patsnap",
+    "page_url": "https://clawhub.ai/yuanzhian-patsnap/skills/assess-high-value-patent-portfolio-ip"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 130,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Rank a PatSnap candidate universe with an auditable 30/30/20/20 evidence model.",
+  "updated_at": 1786607223609,
+  "version": "1.0.0"
+}
