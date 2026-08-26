@@ -1,0 +1,41 @@
+{
+  "changelog": "- Improved pipeline: 1-on-1 brief is now generated deterministically in a single agent session with exactly five tool calls (no sub-agents spawned).\n- Updated documentation to clarify the new inline LLM inference flow\u2014agents must not use sub-agents.\n- Removed the agent best practices section about sub-agent polling and management.\n- Added a \"quality gate\" step: agents must check for empty or non-meaningful briefs before presenting results.\n- Removed the sample skill-card.md file.",
+  "created_at": 1778012429552,
+  "display_name": "Engineering manager 1-on-1 meeting brief generator",
+  "fetched_at": 1787769771814,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "brief_v1.txt",
+    "models.py",
+    "prompt_builder.py",
+    "run_brief.py",
+    "scripts/agent_finalize_1on1.py",
+    "scripts/agent_prepare_1on1.py",
+    "scripts/ingest.py",
+    "scripts/score.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jacksync",
+    "handle": "jacksync",
+    "user_id": "s17797mbhv0wkbd3wj9d1mynr185px38"
+  },
+  "slug": "pullstar-1on1",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pullstar-1on1",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pullstar-1on1&ownerHandle=jacksync",
+    "page_url": "https://clawhub.ai/jacksync/skills/pullstar-1on1"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 790,
+    "installs": 17,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Generate a 1-on-1 brief from GitHub activity. Fully deterministic pipeline \u2014 5 tool calls, zero sub-agent spawns.",
+  "updated_at": 1787529852444,
+  "version": "1.0.3"
+}
