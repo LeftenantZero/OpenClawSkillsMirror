@@ -1,0 +1,75 @@
+{
+  "changelog": "Initial public release providing build and deploy orchestration for Alibaba Cloud ECS.\n\n- Enables local build, script injection, and asynchronous deployment to ECS instances via InstallApplication.\n- Supports direct deployment by specifying region and instance IDs without requiring project/environment hierarchy.\n- Offers dual workflow: standard build+deploy or diagnose+fix+redeploy for troubleshooting failed deployments.\n- Enforces mandatory pre-deploy gates (user input, doctor check, verified commands, HITL checklist, wait_ready loop).\n- Prohibits auto-discovery of instance information and ensures transparent, user-driven deployment steps.",
+  "created_at": 1784549863635,
+  "display_name": "Alibabacloud Cadt Deploy On Aliyun",
+  "fetched_at": 1787775898852,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/build-pipeline/README.md",
+    "references/build-pipeline/build-commands.md",
+    "references/cli-development.md",
+    "references/deploy-modes.md",
+    "references/failure-codex.md",
+    "references/quality-gates.md",
+    "references/ram-policies.md",
+    "references/state-machine.md",
+    "scripts/cli/cadt-deploy-on-aliyun.sh",
+    "scripts/cli/cadt_deploy_on_aliyun.py",
+    "scripts/cli/hooks/pre/EcsRunCommand.py",
+    "scripts/cli/hooks/pre/EcsRunCommandSync.py",
+    "scripts/cli/hooks/pre/EcsSendFile.py",
+    "scripts/cli/hooks/pre/InstallApplication.py",
+    "scripts/cli/lib/__init__.py",
+    "scripts/cli/lib/attrs.py",
+    "scripts/cli/lib/envelope.py",
+    "scripts/cli/lib/errors.py",
+    "scripts/cli/lib/hooks.py",
+    "scripts/cli/lib/identity.py",
+    "scripts/cli/lib/manifest.py",
+    "scripts/cli/lib/normalize.py",
+    "scripts/cli/lib/oss_upload.py",
+    "scripts/cli/lib/poller.py",
+    "scripts/cli/lib/runner.py",
+    "scripts/cli/lib/validator.py",
+    "scripts/cli/pyproject.toml",
+    "scripts/cli/tests/__init__.py",
+    "scripts/cli/tests/test_hooks.py",
+    "scripts/cli/tests/test_normalize.py",
+    "scripts/cli/tests/test_smoke.py",
+    "scripts/release.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784554696194,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-cadt-deploy-on-aliyun",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-cadt-deploy-on-aliyun",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-cadt-deploy-on-aliyun&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-cadt-deploy-on-aliyun"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 303,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Build and deploy applications to Alibaba Cloud ECS \u2014 Local build + script injection + InstallApplication async deployment. Triggers: build, deploy, CI/CD, co...",
+  "updated_at": 1784553881946,
+  "version": "0.0.1"
+}
