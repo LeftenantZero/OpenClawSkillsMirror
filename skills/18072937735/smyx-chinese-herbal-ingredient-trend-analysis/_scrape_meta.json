@@ -1,0 +1,71 @@
+{
+  "changelog": "- Updated version to 1.0.11.\n- Removed the file: skill-card.md.\n- Updated SKILL.md content, including version information.\n- Minor metadata or documentation maintenance.",
+  "created_at": 1779562942779,
+  "display_name": "Chinese Herbal Active Ingredient Trend Analysis | \u4e2d\u8349\u836f\u6709\u6548\u6210\u5206\u79ef\u7d2f\u8d8b\u52bf\u8bc4\u4f30",
+  "fetched_at": 1787769834482,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api_doc.md",
+    "scripts/__init__.py",
+    "scripts/config.py",
+    "scripts/config.yaml",
+    "scripts/skill.py",
+    "scripts/smyx_chinese_herbal_ingredient_trend_analysis.py",
+    "skill-card.md",
+    "skills/smyx_analysis/__init__.py",
+    "skills/smyx_analysis/references/api_doc.md",
+    "skills/smyx_analysis/requirements.txt",
+    "skills/smyx_analysis/scripts/__init__.py",
+    "skills/smyx_analysis/scripts/api_service.py",
+    "skills/smyx_analysis/scripts/config.py",
+    "skills/smyx_analysis/scripts/config.yaml",
+    "skills/smyx_analysis/scripts/skill.py",
+    "skills/smyx_analysis/scripts/smyx_analysis.py",
+    "skills/smyx_common/__init__.py",
+    "skills/smyx_common/requirements.txt",
+    "skills/smyx_common/scripts/__init__.py",
+    "skills/smyx_common/scripts/api_service.py",
+    "skills/smyx_common/scripts/base.py",
+    "skills/smyx_common/scripts/config-dev.yaml",
+    "skills/smyx_common/scripts/config-prod.yaml",
+    "skills/smyx_common/scripts/config-test.yaml",
+    "skills/smyx_common/scripts/config.py",
+    "skills/smyx_common/scripts/config.yaml",
+    "skills/smyx_common/scripts/dao.py",
+    "skills/smyx_common/scripts/skill.py",
+    "skills/smyx_common/scripts/util.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787484245867,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "smyx-skills",
+    "handle": "18072937735",
+    "user_id": "s17f8q65zg3y98t86jdg1177g583whq8"
+  },
+  "slug": "smyx-chinese-herbal-ingredient-trend-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/smyx-chinese-herbal-ingredient-trend-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=smyx-chinese-herbal-ingredient-trend-analysis&ownerHandle=18072937735",
+    "page_url": "https://clawhub.ai/18072937735/skills/smyx-chinese-herbal-ingredient-trend-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1483,
+    "installs": 12,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "AI-powered active-ingredient accumulation trend assessment for medicinal herbs (e.g. honeysuckle, wolfberry, astragalus, danshen). Uses high-resolution leaf images captured by fixed cameras or drones in TCM cultivation bases, analyzes leaf color saturation, hue angle, relative chlorophyll content (estimated via color indices) and leaf thickness (inferred from edge focus / silhouette), and compares against the cultivar's standard reference atlas (typical features at peak active-ingredient stage) to output an accumulation trend level (Low / Medium / High / Peak). Helps determine the optimal harvest window and improve herb quality. Scenarios: TCM planting bases, GAP bases, herb cooperatives, raw-material bases for pharmaceutical companies. | \u901a\u8fc7\u4e2d\u836f\u79cd\u690d\u57fa\u5730\u7684\u56fa\u5b9a\u6444\u50cf\u5934\u6216\u65e0\u4eba\u673a\u62cd\u6444\u836f\u7528\u690d\u7269\uff08\u5982\u91d1\u94f6\u82b1\u3001\u67b8\u675e\u3001\u9ec4\u82aa\u3001\u4e39\u53c2\u7b49\uff09\u53f6\u7247\u7684\u9ad8\u6e05\u56fe\u50cf\uff0c\u5229\u7528AI\u89c6\u89c9\u5206\u6790\u6280\u672f\u8bc4\u4f30\u53f6\u7247\u989c\u8272\u9971\u548c\u5ea6\u3001\u8272\u76f8\u89d2\u3001\u53f6\u7eff\u7d20\u76f8\u5bf9\u542b\u91cf\uff08\u901a\u8fc7\u989c\u8272\u6307\u6570\u4f30\u7b97\uff09\u4ee5\u53ca\u53f6\u7247\u539a\u5ea6\uff08\u901a\u8fc7\u8fb9\u7f18\u805a\u7126\u6216\u4fa7\u5f71\u4f30\u7b97\uff09\uff0c\u4e0e\u54c1\u79cd\u6807\u51c6\u56fe\u8c31\uff08\u7279\u5b9a\u751f\u957f\u9636\u6bb5/\u6709\u6548\u6210\u5206\u79ef\u7d2f\u5cf0\u503c\u671f\u7684\u5178\u578b\u7279\u5f81\uff09\u8fdb\u884c\u5bf9\u6bd4\uff0c\u8f93\u51fa\u6709\u6548\u6210\u5206\u79ef\u7d2f\u8d8b\u52bf\u7b49\u7ea7\uff08\u4f4e/\u4e2d/\u9ad8/\u5cf0\u503c\uff09\u3002\u8be5\u6280\u80fd\u6709\u52a9\u4e8e\u786e\u5b9a\u6700\u4f73\u91c7\u6536\u671f\uff0c\u63d0\u9ad8\u836f\u6750\u54c1\u8d28\u3002\u5e94\u7528\u573a\u666f\uff1a\u4e2d\u836f\u79cd\u690d\u57fa\u5730\u3001GAP\u79cd\u690d\u57fa\u5730\u3001\u4e2d\u836f\u6750\u5408\u4f5c\u793e\u3001\u836f\u4f01\u539f\u6599\u57fa\u5730\u3002",
+  "updated_at": 1787483449499,
+  "version": "1.0.9"
+}
