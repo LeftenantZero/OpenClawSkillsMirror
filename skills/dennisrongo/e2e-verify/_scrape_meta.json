@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of e2e-verify \u2014 a skill to verify web app changes by driving a real browser, with careful routing and strong safety rules.\n\n- Supports both ephemeral and durable end-to-end checks via Expect, browser-use, or Claude-driven Playwright, depending on user intent and context.\n- Enforces strict safeguards: only non-production targets, no real user cookies or accounts, and explicit reporting of what was tested.\n- Produces structured, observation-based evidence for every flow walked; never falsely reports \"e2e passes\" based on indirect evidence.\n- Guides users through test engine setup if none is available, never fails silently.\n- Durable Playwright test authoring follows best practices: risk-based test selection, robust selectors, no arbitrary waits, independent test isolation, and red-proof discipline.\n- Not for mobile apps, unit/integration test authoring, or e2e debugging; always routes requests by intended use, not just tooling.",
+  "created_at": 1786913421032,
+  "display_name": "E2e Verify",
+  "fetched_at": 1787771698142,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/browser-use.md",
+    "scripts/browser-use/config.py",
+    "scripts/browser-use/setup.sh",
+    "scripts/browser-use/verify_template.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "e2e-verify",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/e2e-verify",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=e2e-verify&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/e2e-verify"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 122,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "End-to-end browser verification of web app changes via ephemeral AI-driven checks or durable Playwright tests, ensuring no real user data is used.",
+  "updated_at": 1786913496596,
+  "version": "1.0.0"
+}
