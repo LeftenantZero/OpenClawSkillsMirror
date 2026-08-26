@@ -1,0 +1,43 @@
+{
+  "changelog": "- Connects to PayPal through an OOMOL-linked account and runs actions via the `oo` CLI.\n- Covers core PayPal workflows: create orders, authorize payments, capture funds, refund captures, and void authorizations.\n- Supports order and payment lookup for balances, transactions, orders, captures, refunds, and authorizations.\n- Includes shipment tracking actions to add or update tracking on completed captures and notify payers when needed.\n- Separates safe read operations from write and destructive actions, with schema-first payload validation before execution.\n\nSource: `oomol-lab/skills@3e4b3ff`",
+  "created_at": 1787633453709,
+  "display_name": "PayPal",
+  "fetched_at": 1787769013823,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787634335089,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-paypal",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-paypal",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-paypal&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-paypal"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 50,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "PayPal (paypal.com). Use this skill for ANY PayPal request \u2014 reading, creating, and updating data. Whenever a task involves PayPal, use this skill instead of calling the API directly.",
+  "updated_at": 1787633530898,
+  "version": "1.0.0"
+}
