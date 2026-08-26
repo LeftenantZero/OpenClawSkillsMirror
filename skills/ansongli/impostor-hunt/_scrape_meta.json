@@ -1,0 +1,49 @@
+{
+  "changelog": "impostor-hunt 1.0.0\n\n- Initial release of the \"impostor-hunt\" skill to detect deliverables whose results are surface-correct but causally misaligned with the user's intended purpose.\n- Introduces strict auto-invocation triggers based on completion declarations and recoverable user purpose from project context.\n- Provides a clear audit protocol focusing solely on causal impostor detection, separating side findings into a distinct section.\n- Enumerates precise preconditions and exclusions to avoid noise and off-target audits.\n- Outlines structured reporting steps, including explicit intake, purpose restoration, claim extraction, and evidence mapping.",
+  "created_at": 1780486408632,
+  "display_name": "Impostor Hunt",
+  "fetched_at": 1787783157397,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/audit-lenses.md",
+    "references/causal-impersonation-patterns.md",
+    "references/evidence-model.md",
+    "references/report-template.md",
+    "references/tribunal.md",
+    "references/verdict-rubric.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780487014635,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "AnsongLi",
+    "handle": "ansongli",
+    "user_id": "s17f48ps127g37rneks8kzed3987zwat"
+  },
+  "slug": "impostor-hunt",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/impostor-hunt",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=impostor-hunt&ownerHandle=ansongli",
+    "page_url": "https://clawhub.ai/ansongli/skills/impostor-hunt"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 396,
+    "installs": 7,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Hunt the impostor in a \"finished\" deliverable. An impostor is a result-correct artifact whose causal chain is NOT the one the user's purpose required \u2014 the t...",
+  "updated_at": 1780486408632,
+  "version": "1.0.0"
+}
