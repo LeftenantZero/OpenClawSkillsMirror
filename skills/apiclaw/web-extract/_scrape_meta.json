@@ -1,0 +1,36 @@
+{
+  "changelog": "Composite resolved_category_path metadata + ABA out-of-window date guidance; per-skill CLI command allowlists (COMMAND_NOT_ALLOWED enforcement); credential-source hardening; SKILL.md description trims. See CHANGELOG.",
+  "created_at": 1784885347583,
+  "display_name": "web-extract",
+  "fetched_at": 1787773223936,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/reference.md",
+    "scripts/__pycache__/webtools.cpython-310.pyc",
+    "scripts/webtools.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "apiclaw",
+    "handle": "apiclaw",
+    "user_id": "s17081rahwfg1emrhs1pmfhmq984gan3"
+  },
+  "slug": "web-extract",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/web-extract",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=web-extract&ownerHandle=apiclaw",
+    "page_url": "https://clawhub.ai/apiclaw/skills/web-extract"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 480,
+    "installs": 0,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Extract structured JSON from web pages, search engines, and entire sites in ONE call \u2014 {title, summary, sections, key_metrics, outgoing_links, author, date, page_type, ...} fields, no second LLM pass to parse HTML. Six endpoints: scrape (single URL), scrape-interactive (JS-rendered pages with click/scroll/type), search (Google SERP + deep-scrape), map (URL discovery), crawl + crawl-status (async recursive crawl). Markdown/raw HTML on request. USE when the user needs page DATA \u2014 product pricing/specs, article fields, link graphs, JS-heavy SPAs, Google results with content. Prefer over browser-act (automation/screenshots) and WebFetch (static, no JS, no structured fields). Not for citation-rich research (use deep-research). Trigger (EN): scrape this URL, extract data from page, crawl this site, deep-scrape search results, map a domain's URLs, render this JS page. \u89e6\u53d1\u8bcd\uff1a\u6293\u53d6/\u722c\u53d6/\u7f51\u9875\u63d0\u53d6/\u7ed3\u6784\u5316\u62bd\u53d6/\u641c\u7d22\u5e26\u5185\u5bb9/\u5168\u7ad9\u722c\u53d6/JS \u6e32\u67d3\u6293\u53d6/\u70b9\u51fb\u540e\u6293\u53d6. Requires ZOODATA_API_KEY (free key: https://zoodata.ai/en/api-keys).",
+  "updated_at": 1786068990045,
+  "version": "0.2.4"
+}
