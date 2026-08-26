@@ -1,0 +1,62 @@
+{
+  "changelog": "Tencent IMA-Hermes skill v1.0.2 \u2014 adds detailed reference docs and improves CLI API coverages.\n\n- Added 6 new reference and utility files including official endpoint coverage and API workflow quirks (`references/official-endpoint-coverage.md`, `references/ima-write-flow.md`, etc.).\n- Updated changelog and API documentation with extensive real-world probe results, including important new constraints and edge cases (e.g., folder ID namespace, upload behaviors, credential checks).\n- Improved SKILL.md with updated probe results, new troubleshooting insights, and explicit instructions for credential detection (now covering both env and config files).\n- CLI now named `bin/ima` (was `bin/ima.sh`) and reflects the latest API parameter/probe findings.\n- Rule clarifications for upload, folder operations, and credential precedence based on latest practical experience.",
+  "created_at": 1780535110502,
+  "display_name": "Tencent Ima Skill Publish",
+  "fetched_at": 1787782525524,
+  "files": [
+    "CHANGELOG.md",
+    "PUBLISH_GUIDE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "bin/ima.sh",
+    "ima_api.cjs",
+    "knowledge-base/GUIDE.md",
+    "knowledge-base/references/api.md",
+    "knowledge-base/scripts/cos-upload.cjs",
+    "knowledge-base/scripts/preflight-check.cjs",
+    "meta.json",
+    "notes/GUIDE.md",
+    "notes/references/api.md",
+    "references/api-quirks.md",
+    "references/ima-write-flow.md",
+    "references/ima-write-hard-gates.md",
+    "references/official-endpoint-coverage.md",
+    "references/post-upload-validation.md",
+    "requirements.json",
+    "scripts/build_kb_structure.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780701707531,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wat2012",
+    "handle": "wat2012",
+    "user_id": "s170ts8y5s4akzfb6x9d55488x880ewp"
+  },
+  "slug": "tencent-ima-hermes",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tencent-ima-hermes",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tencent-ima-hermes&ownerHandle=wat2012",
+    "page_url": "https://clawhub.ai/wat2012/skills/tencent-ima-hermes"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 563,
+    "installs": 10,
+    "stars": 2,
+    "versions": 3
+  },
+  "summary": "\u817e\u8baf IMA OpenAPI \u6280\u80fd\uff08\u7b14\u8bb0 + \u77e5\u8bc6\u5e93\uff09\u3002\u5f53\u7528\u6237\u63d0\u5230\u77e5\u8bc6\u5e93\u3001\u8d44\u6599\u5e93\u3001\u7b14\u8bb0\u3001\u5907\u5fd8\u5f55\u3001\u8bb0\u4e8b\uff0c \u6216\u8005\u60f3\u4e0a\u4f20\u6587\u4ef6\u5230\u77e5\u8bc6\u5e93\u3001\u6dfb\u52a0\u7f51\u9875/\u5fae\u4fe1\u6587\u7ae0\u5230\u77e5\u8bc6\u5e93\u3001\u641c\u7d22\u77e5\u8bc6\u5e93\u5185\u5bb9\u3001\u641c\u7d22/\u6d4f\u89c8/\u521b\u5efa/\u7f16\u8f91 \u7b14\u8bb0\u65f6\uff0c\u4f7f\u7528\u6b64 skill\u3002\u5373\u4f7f\u7528\u6237\u6ca1\u6709\u660e\u786e\u8bf4\"\u77e5\u8bc6\u5e93\"\u6216\"\u7b14\u8bb0\"\uff0c\u53ea\u8981\u610f\u56fe\u6d89\u53ca\u6587\u4ef6\u4e0a\u4f20\u5230 \u77e5\u8bc6\u5e93\u3001\u7f51\u9875\u6536\u85cf\u3001\u77e5\u8bc6\u641c\u7d22...",
+  "updated_at": 1780700979926,
+  "version": "1.0.2"
+}
