@@ -1,0 +1,51 @@
+{
+  "changelog": "- Removed the skill summary file skill-card.md.\n- No impact on skill logic or user experience.\n- All functionality, input/output schemas, and tool integrations remain unchanged.",
+  "created_at": 1785748731582,
+  "display_name": "huawei-cloud-dws-io-diag",
+  "fetched_at": 1787773646392,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/IO_DIAGNOSIS_REF.md",
+    "references/cli-installation-guide.md",
+    "references/diagnosis-json-format.md",
+    "references/dws-mcp-installation-guide.md",
+    "references/iam-policies.md",
+    "references/io-background.md",
+    "references/metric-reference.md",
+    "references/output-format.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785750018734,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-dws-io-diag",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-dws-io-diag",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-dws-io-diag&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-dws-io-diag"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 34,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "DWS cluster I/O overload root cause diagnosis skill, based on KooCLI v3.2.0+ and DWS Autopilot MCP Server. Automatically collects I/O metrics, analyzes root causes (customer-side / system-side) via three-stage decision tree, and outputs a standardized diagnosis report. Applicable to DWS cluster I/O usage too high, I/O alarms, disk I/O load anomaly scenarios. Trigger words: \"I/O\u9ad8\", \"I/O\u544a\u8b66\", \"I/O\u8bca\u65ad\", \"I/O\u8fc7\u8f7d\", \"IO\u9ad8\", \"IO\u544a\u8b66\", \"IO\u8bca\u65ad\", \"IO\u8fc7\u8f7d\", \"\u78c1\u76d8IO\u8d1f\u8f7d\u5f02\u5e38\", \"util\u6253\u6ee1\", \"await\u9ad8\", \"high I/O\", \"I/O alarm\", \"I/O diagnosis\"",
+  "updated_at": 1785748843823,
+  "version": "1.0.0"
+}
