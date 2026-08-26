@@ -1,0 +1,66 @@
+{
+  "changelog": "- Initial release with support for Cloude-Pottier (H/A/\u03b1) eigen decomposition on fully polarimetric SAR (T3: 9 bands) data.\n- Adds simplified Freeman-Durden three-component decomposition for C3 (3-band) data.\n- Provides documentation in both English and Chinese, including detailed usage instructions and input/output conventions.\n- Outputs scattering entropy, anisotropy, scattering angle, and surface/double-bounce/volume scattering powers as GeoTIFFs, plus run manifests and statistics as JSON.\n- Supports both real SAR GeoTIFF inputs and fully offline synthetic data generation.\n- Local-only processing; user data is never uploaded.",
+  "created_at": 1785849011264,
+  "display_name": "geoskill-polarimetric-decomposition",
+  "fetched_at": 1787773454306,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-polarimetric-decomposition.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785850311623,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-polarimetric-decomposition",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-polarimetric-decomposition",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-polarimetric-decomposition&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-polarimetric-decomposition"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 184,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6781\u5316SAR\u5206\u89e3\uff1aCloude-Pottier H/A/\u03b1 \u7279\u5f81\u5206\u89e3\u4e0e Freeman \u4e09\u5206\u91cf\u5206\u89e3\uff0c\u8f93\u51fa\u6563\u5c04\u71b5\u3001\u5404\u5411\u5f02\u6027\u3001\u6563\u5c04\u89d2\u4e0e\u8868\u9762/\u4e8c\u9762\u89d2/\u4f53\u6563\u5c04\u529f\u7387",
+  "updated_at": 1785849195070,
+  "version": "1.0.0"
+}
