@@ -1,0 +1,43 @@
+{
+  "changelog": "- Initial release of Tristan RFQ Overseer, version 1.0.0 (codename: Tristan).\n- Automates the full Request for Quotation (RFQ) pipeline: intake (email/Telegram), Obsidian-vault storage, pricing, supplier quote comparison, and client quotation drafting.\n- Supports multiple triggers including email keywords, Telegram commands, and a custom wake phrase for RFQ status.\n- Ensures cost-plus pricing as a non-negotiable pricing floor and enforces explicit user confirmation before sending quotes.\n- Integrates with Obsidian, Telegram, email, and Python scripts for extensible, auditable procurement operations.",
+  "created_at": 1784036783935,
+  "display_name": "Tristan RFQ overseer",
+  "fetched_at": 1787776779035,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/cert-note-template.md",
+    "assets/rfq-note-template.md",
+    "assets/rfq-response-template.md",
+    "references/email-conventions.md",
+    "references/telegram-conventions.md",
+    "references/vault-schema.md",
+    "scripts/compare_quotes.py",
+    "scripts/pricing_model.py",
+    "scripts/pricing_strategies.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "yrc96",
+    "handle": "yrc96",
+    "user_id": "s17exm7ecdxswg25be6warfhwn89n4dq"
+  },
+  "slug": "tristan-rfq-overseer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tristan-rfq-overseer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tristan-rfq-overseer&ownerHandle=yrc96",
+    "page_url": "https://clawhub.ai/yrc96/skills/tristan-rfq-overseer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 309,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use this skill to run an end-to-end RFQ (Request for Quotation) pipeline for a procurement/sourcing operation: intake from email or Telegram, Obsidian-vault storage, pricing calculation, supplier quote comparison, and confirmed-send drafting. Trigger on the wake phrase \"T, we live?\", on inbound RFQ",
+  "updated_at": 1784036783935,
+  "version": "1.0.0"
+}
