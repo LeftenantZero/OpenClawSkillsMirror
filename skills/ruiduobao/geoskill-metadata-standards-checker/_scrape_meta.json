@@ -1,0 +1,76 @@
+{
+  "changelog": "Initial release of geoskill-metadata-standards-checker.\n\n- Parses and checks ISO 19115 and FGDC XML geospatial metadata for compliance.\n- Validates required fields, controlled vocabularies, and consistency rules.\n- Calculates a completeness score and produces an error/warning issue list per file.\n- Supports auto-detection of metadata standard.\n- Includes a --synthetic mode to generate full or incomplete sample metadata for demo/testing.\n- All processing is performed offline; no data uploaded.\n- Outputs reports in JSON and (if synthetic mode) example XML files.",
+  "created_at": 1785848395673,
+  "display_name": "geoskill-metadata-standards-checker",
+  "fetched_at": 1787773457537,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_run/metadata_report.json",
+    "_test_cli_run/output-manifest.json",
+    "_test_cli_run/samples/fgdc_complete.xml",
+    "_test_cli_run/samples/iso_complete.xml",
+    "_test_cli_run/samples/iso_incomplete.xml",
+    "e2e_test.py",
+    "geoskill-metadata-standards-checker.py",
+    "openai.yaml",
+    "out_s06_bbox/metadata_report.json",
+    "out_s06_bbox/output-manifest.json",
+    "out_s06_bbox/samples/fgdc_complete.xml",
+    "out_s06_bbox/samples/iso_complete.xml",
+    "out_s06_bbox/samples/iso_incomplete.xml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785849436981,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-metadata-standards-checker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-metadata-standards-checker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-metadata-standards-checker&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-metadata-standards-checker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 176,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u89e3\u6790 ISO 19115 / FGDC \u683c\u5f0f XML \u5143\u6570\u636e\uff0c\u9a8c\u8bc1\u5fc5\u586b\u9879\u3001\u53d7\u63a7\u8bcd\u8868\u4e0e\u4e00\u81f4\u6027\u89c4\u5219\uff0c\u8f93\u51fa\u5b8c\u6574\u6027\u8bc4\u5206\u4e0e\u95ee\u9898\u6e05\u5355\u3002Parse ISO 19115 / FGDC XML metadata, validate required fields and controlled vocabularies, and report a completeness score.",
+  "updated_at": 1785848574642,
+  "version": "1.0.0"
+}
