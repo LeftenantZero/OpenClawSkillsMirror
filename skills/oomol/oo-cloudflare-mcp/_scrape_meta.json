@@ -1,0 +1,43 @@
+{
+  "changelog": "- Introduces the `oo-cloudflare-mcp` skill for operating Cloudflare MCP through an OOMOL-connected account.\n- Provides a safe workflow for Cloudflare MCP access using the `oo` CLI, with credentials handled server-side instead of exposing raw tokens.\n- Supports reading and discovery tasks through three core actions: `docs` for Cloudflare documentation search, `search` for OpenAPI endpoint discovery, and `execute` for sandboxed API calls.\n- Recommends inspecting each action\u2019s live schema before sending payloads, so requests match the authoritative input contract.\n- Includes setup and recovery guidance for common CLI, auth, connection, and billing failures.\n\nSource: `oomol-lab/skills@46cfb3e`",
+  "created_at": 1786435535876,
+  "display_name": "Cloudflare MCP",
+  "fetched_at": 1787772738892,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786436594418,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-cloudflare-mcp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-cloudflare-mcp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-cloudflare-mcp&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-cloudflare-mcp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 135,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Cloudflare MCP (github.com). Use this skill for ANY Cloudflare MCP request \u2014 searching and reading data. Whenever a task involves Cloudflare MCP, use this skill instead of calling the API directly.",
+  "updated_at": 1786435721236,
+  "version": "1.0.0"
+}
