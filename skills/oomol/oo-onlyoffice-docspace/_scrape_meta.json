@@ -1,0 +1,33 @@
+{
+  "changelog": "- Adds a skill for working with ONLYOFFICE DocSpace through the OOMOL-connected `oo` CLI.\n- Supports read-only DocSpace operations for users, rooms, and folder contents.\n- Includes `get_current_user`, `get_user`, `list_users`, `get_room`, `list_rooms`, and `get_folder_contents`.\n- Requires checking each action\u2019s live schema before building payloads, so requests match the connector contract.\n- Emphasizes safe usage by treating reads as direct runs and reserving write or destructive actions for explicit confirmation.\n\nSource: `oomol-lab/skills@46cfb3e`",
+  "created_at": 1786455231328,
+  "display_name": "ONLYOFFICE DocSpace",
+  "fetched_at": 1787772654181,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-onlyoffice-docspace",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-onlyoffice-docspace",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-onlyoffice-docspace&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-onlyoffice-docspace"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 171,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "ONLYOFFICE DocSpace (onlyoffice.com). Use this skill for ANY ONLYOFFICE DocSpace request \u2014 searching and reading data. Whenever a task involves ONLYOFFICE DocSpace, use this skill instead of calling the API directly.",
+  "updated_at": 1786455290429,
+  "version": "1.0.0"
+}
