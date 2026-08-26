@@ -1,0 +1,58 @@
+{
+  "changelog": "Initial release of earn-hunter skill.  \n- Automatically monitors OKX Flash Earn, Fixed Earn, and Flexible Earn opportunities.\n- Sends push notifications via Telegram, Lark, or session channel.\n- Guides user through subscription if requested.\n- Supports multiple platforms (OpenClaw, Claude Code, Hermes Agent, generic environments) with adaptive scheduler and config.\n- Includes interactive activation, platform/channel detection, and easy config via JSON files.\n- Handles both API Key and OAuth authentication modes.",
+  "created_at": 1785438937462,
+  "display_name": "earn-hunter",
+  "fetched_at": 1787774120923,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/claude-code.default.json",
+    "config/default.json",
+    "config/openclaw.default.json",
+    "references/config-reference.md",
+    "references/notify-channels.md",
+    "references/purchase-guide.md",
+    "references/scan-logic.md",
+    "references/scheduler-setup.md",
+    "scripts/scan.sh",
+    "skill-card.md",
+    "templates/activation.md",
+    "templates/error-alert.md",
+    "templates/fixed-earn.md",
+    "templates/flash-earn.md",
+    "templates/flexible-earn.md",
+    "templates/mixed-notify.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785444826562,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Satawat10",
+    "handle": "satawat10",
+    "user_id": "s17ct2pvbppcnqn7sn8v959cnd8bgsk9"
+  },
+  "slug": "agent-trade-kit-github-main",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-trade-kit-github-main",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-trade-kit-github-main&ownerHandle=satawat10",
+    "page_url": "https://clawhub.ai/satawat10/skills/agent-trade-kit-github-main"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 226,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Automatically monitors OKX Flash Earn, Fixed Earn and Flexible Earn opportunities, sends push notifications, and guides subscription. \u81ea\u52a8\u76d1\u63a7 OKX \u95ea\u8d5a\u3001\u5b9a\u671f\u548c\u6d3b\u671f\u8d5a\u5e01\u673a\u4f1a\uff0c\u63a8\u9001\u901a\u77e5\u5e76\u5f15\u5bfc\u7533\u8d2d\u3002Use when user says: \u6709\u95ea\u8d5a\u901a\u77e5\u6211, \u76d1\u63a7\u8d5a\u5e01, monitor earn, notify me about earn, \u5b9a\u65f6\u68c0\u67e5\u7406\u8d22, \u6267\u884c earn-hunter \u626b\u63cf, earn-hunter scan, \u6d3b\u671f\u5e74\u5316\u9ad8\u4e86\u901a\u77e5\u6211, \u76d1\u63a7\u6d3b\u671f.",
+  "updated_at": 1785444476370,
+  "version": "1.0.0"
+}
