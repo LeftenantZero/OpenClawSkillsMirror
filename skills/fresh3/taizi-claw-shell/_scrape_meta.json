@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of taizi-claw-shell.\n\n- Runs shell commands safely inside a dedicated tmux session named \"claw\".\n- Provides a single tool, `claw_shell_run`, for sending commands and reading back output.\n- Strictly avoids interfering with other tmux sessions.\n- Asks for user confirmation before executing potentially destructive commands (e.g., `sudo`, `rm`, `reboot`).\n- Ensures clear separation of safe and dangerous command handling.",
+  "created_at": 1773633768884,
+  "display_name": "Taizi Claw Shell",
+  "fetched_at": 1787788465452,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "handler.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089911759,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fresh3",
+    "handle": "fresh3",
+    "user_id": "s17aygwxtygkda5m8097923za18857ja"
+  },
+  "slug": "taizi-claw-shell",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/taizi-claw-shell",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=taizi-claw-shell&ownerHandle=fresh3",
+    "page_url": "https://clawhub.ai/fresh3/skills/taizi-claw-shell"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 903,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Runs shell commands inside a dedicated tmux session named 'claw', returning command output and prompting before destructive commands.",
+  "updated_at": 1779078349083,
+  "version": "1.0.0"
+}
