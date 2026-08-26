@@ -1,0 +1,45 @@
+{
+  "changelog": "- Initial release of claude-code-dispatch skill.\n- Enables delegating coding tasks to Claude Code CLI for operations requiring file access, editing, and shell command execution.\n- Supports triggering via phrases like \"use claude code\" or \"run claude on\".\n- Requires pre-installed and authenticated Claude Code CLI and jq.\n- Provides detailed usage instructions, toolset selection, and model options.\n- Includes structured output and clear guidelines on when and how to use the skill.",
+  "created_at": 1773571953478,
+  "display_name": "Claude Code Dispatch",
+  "fetched_at": 1787788778244,
+  "files": [
+    ".clawhub/origin.json",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/invoke-claude.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089895899,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "EZPeasyDave",
+    "handle": "ezpeasydave",
+    "user_id": "s172me68ynsbw74pq90aj25tw584xywe"
+  },
+  "slug": "claude-code-dispatch",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claude-code-dispatch",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claude-code-dispatch&ownerHandle=ezpeasydave",
+    "page_url": "https://clawhub.ai/ezpeasydave/skills/claude-code-dispatch"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1303,
+    "installs": 38,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Invoke Claude Code CLI as a subprocess for coding tasks that require file access, editing, and shell execution",
+  "updated_at": 1779078219631,
+  "version": "1.0.0"
+}
