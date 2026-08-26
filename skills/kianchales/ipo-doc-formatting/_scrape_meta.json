@@ -1,0 +1,54 @@
+{
+  "changelog": "ipo-doc-formatting v0.1.0\n\n- Initial release.\n- Automates applying IPO prospectus and feedback-reply formatting to Word documents per expert committee templates (000-009/0011/001).\n- Supports detecting document type and routing to appropriate toolchains (tencent-docx, minimax-docx, tencent-local-office-edit); provides script fallback and style completeness check.\n- Strictly formats layout (titles, numbering, table styles, paragraph spacing) and ensures zero text/content changes.\n- Modular template structure allows easy customization by replacing assets/templates/*.docx.",
+  "created_at": 1787664829097,
+  "display_name": "ipo-doc-formatting",
+  "fetched_at": 1787770885330,
+  "files": [
+    ".gitignore",
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/templates/\u53cd\u9988\u56de\u590d\u6837\u5f0f.docx",
+    "assets/templates/\u62a5\u544a\u6a21\u677f.docx",
+    "assets/templates/\u8868\u683c\u6a21\u677f.docx",
+    "references/examples.md",
+    "references/rules.md",
+    "references/style-map.md",
+    "scripts/check_styles.py",
+    "scripts/tests/test_check_styles.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787665685972,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u9ed8\u5149",
+    "handle": "kianchales",
+    "user_id": "s174y2zvk8xgrc1hatmtcvw2ns8d44s2"
+  },
+  "slug": "ipo-doc-formatting",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ipo-doc-formatting",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ipo-doc-formatting&ownerHandle=kianchales",
+    "page_url": "https://clawhub.ai/kianchales/skills/ipo-doc-formatting"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 85,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5728\u5199 Word \u6216\u6539 Word \u6587\u4ef6\u65f6\uff0c\u6309\u62db\u80a1\u4e66 / \u5ba1\u6838\u95ee\u8be2\u53cd\u9988\u56de\u590d\u7684\u6837\u5f0f\u8981\u6c42\u5e94\u7528\u683c\u5f0f\uff08\u62a5\u544a/\u5907\u5fd8\u5f55/\u5c3d\u8c03\u7b49\u6b63\u5f0f\u6587\u6863\u540c\u5f52\u62db\u80a1\u4e66\u7248 000-009\uff09\u3002\u89e6\u53d1\u8bcd\uff1a\u300c\u6309\u62db\u80a1\u4e66\u6837\u5f0f\u300d\u300c\u62db\u80a1\u4e66\u683c\u5f0f\u300d\u300c\u62db\u80a1\u4e66\u6392\u7248\u300d\u300c\u62db\u80a1\u4e66\u7ae0\u8282\u6837\u5f0f\u300d\u300c\u628a\u8fd9\u7bc7\u6539\u6210\u62db\u80a1\u4e66\u683c\u5f0f\u300d\u300c\u8fd9\u7bc7\u6309\u62db\u80a1\u4e66\u6392\u4e00\u4e0b\u300d\u300c\u6309\u53cd\u9988\u56de\u590d\u6837\u5f0f\u300d\u300c\u95ee\u8be2\u56de\u590d\u683c\u5f0f\u300d\u300c\u53cd\u9988\u56de\u590d\u6392\u7248\u300d\u300c\u53cd\u9988\u56de\u590d\u6392\u7248\u89c4\u8303\u300d\u300c\u843d\u5b9e\u51fd\u683c\u5f0f\u300d\u300c\u5957\u7528 000-009 \u6837\u5f0f\u300d\u300c\u5957 000-009\u300d\u300c\u62a5\u544a\u6a21\u677f\u6837\u5f0f\u300d\u300c\u5957\u6a21\u677f\u6837\u5f0f\u300d\u300c\u628a\u8fd9\u4e2a Word \u6539\u6210XXX\u683c\u5f0f\u300d\u300cWord \u6392\u7248\u89c4\u8303\u300d\u300c\u6309\u6295\u884c\u89c4\u8303\u6392\u7248\u300d\u300c\u6392\u7248\u89c4\u8303\u4e00\u70b9\u300d\u300c\u6587\u6863\u683c\u5f0f\u7edf\u4e00\u300d\u3002\u6838\u5fc3\u6d41\u7a0b\uff1a\u8bc6\u522b\u6587\u6863\u7c7b\u578b\u2192\u52a0\u8f7d\u6837\u5f0f\u6a21\u677f\uff08assets/templates/ \u4e0b\u62a5\u544a\u6a21\u677f.docx / \u53cd\u9988\u56de\u590d\u6837\u5f0f.docx\uff0c\u6a21\u677f\u5373\u6837\u5f0f\u6e90\u53ef\u81ea\u5b9a\u4e49\uff09\u2192\u8def\u7531\u5e95\u5c42\u5de5\u5177\uff08tencent-docx \u65b0\u5efa / minimax-docx apply-template \u5957\u6837\u5f0f / tencent-local-office-edit \u5c40\u90e8\u5fae\u8c03\uff0c\u4e0d\u53ef\u7528\u5219\u811a\u672c\u515c\u5e95\u5e76\u6807\u6ce8\u5c40\u9650\uff09\u2192\u5e94\u7528\u6837\u5f0f\u6620\u5c04\uff08000-009 \u4f53\u7cfb\u3001\u53cd\u9988\u56de\u590d 0011/001 \u76d1\u7ba1\u95ee\u9898\u9ed1\u4f53\u3001\u6807\u9898\u5e8f\u53f7\u4e5d\u7ea7\u94fe\u3001\u8868\u683c\u4e09\u7ebf\u8868\uff09\u2192\u6821\u9a8c\u95e8\u7981\uff08\u6837\u5f0f\u5b8c\u6574\u6027 + \u7a7a\u6bb5\u843d\u68c0\u6d4b\uff09\u3002\u4e0e ipo-write-response \u5206\u5de5\uff1a\u672c skill \u7ba1\u683c\u5f0f\u5c42\uff08\u6392\u7248/\u6837\u5f0f\uff09\uff0c\u5185\u5bb9\u5c42\u65b9\u6cd5\u8bba\u89c1 ipo-write-response\u3002",
+  "updated_at": 1787664953428,
+  "version": "0.1.0"
+}
