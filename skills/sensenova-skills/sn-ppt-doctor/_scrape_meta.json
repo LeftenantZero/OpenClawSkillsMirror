@@ -1,0 +1,49 @@
+{
+  "changelog": "sn-ppt-doctor 2026.8.19\n\n- New diagnostic tool for the PPT skill family: verifies environment wiring, API keys, Node runtime, and dependencies before running sn-ppt-entry.\n- Distinguishes between hard (blocking) checks and soft (warning) checks, clearly listing each.\n- Provides interactive CLI prompts to fill missing .env variables if issues are detected.\n- Does not modify other skills or install missing dependencies automatically; only reports and suggests commands.\n- Supports both interactive and non-interactive modes for automated or manual environment validation.\n- Output is a plain-text, user-friendly report with clear actions for each check.",
+  "created_at": 1787107691864,
+  "display_name": "sn-ppt-doctor",
+  "fetched_at": 1787770700843,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "ppt_doctor/__init__.py",
+    "ppt_doctor/__main__.py",
+    "ppt_doctor/check_environment.py",
+    "ppt_doctor/checks.py",
+    "ppt_doctor/interactive.py",
+    "requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787108103153,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "SenseNova-Skills",
+    "handle": "sensenova-skills",
+    "user_id": "s17fzc6fnxkbqzh6z8jr5bcvhh8bw2vm"
+  },
+  "slug": "sn-ppt-doctor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sn-ppt-doctor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sn-ppt-doctor&ownerHandle=sensenova-skills",
+    "page_url": "https://clawhub.ai/sensenova-skills/skills/sn-ppt-doctor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 92,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Environment diagnostic for the PPT family. Validates sn-image-base, API keys, Node runtime, and optional deps; interactively writes .env for required vars. Runs before sn-ppt-entry; does not modify sn-image-* skills.",
+  "updated_at": 1787107799196,
+  "version": "2026.8.19"
+}
