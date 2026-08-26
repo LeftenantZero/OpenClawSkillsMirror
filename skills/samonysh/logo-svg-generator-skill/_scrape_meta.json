@@ -1,0 +1,40 @@
+{
+  "changelog": "Initial release.\n\n- Launches the Logo SVG Generator skill to create production-ready SVG logos from product briefs, following Simple Icons design standards.\n- Implements an iterative workflow: generate, visually review with a vision-capable LLM, optimize, and finalize.\n- Supports multi-size (16\u2013512px) and color variants, including a Simple-Icons-compatible 24\u00d724 master SVG.\n- Automatically collects key product information (name, purpose, style, color) and infers defaults where possible.\n- Enforces single-path SVG output with strict design rule validation; provides feedback loop for fixes.\n- Explicitly requires vision-LLM for logo review; offers opt-in structural-only checks when unavailable.",
+  "created_at": 1784078693339,
+  "display_name": "Logo Svg Generator",
+  "fetched_at": 1787776741916,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/templates/concept-brief-template.md",
+    "assets/templates/visual-review-prompt.md",
+    "examples/01-novasync/README.md",
+    "examples/01-novasync/brief.md",
+    "references/design-rules.md",
+    "references/motif-patterns.md",
+    "references/sample-icons.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Samon Yu",
+    "handle": "samonysh",
+    "user_id": "s179t2y0de4pmccw2jxzpwwkr18802cc"
+  },
+  "slug": "logo-svg-generator-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/logo-svg-generator-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=logo-svg-generator-skill&ownerHandle=samonysh",
+    "page_url": "https://clawhub.ai/samonysh/skills/logo-svg-generator-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 377,
+    "installs": 2,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate multi-size SVG logos from natural-language product briefs, following Simple Icons design rules; runs an iterative generate \u2192 visual-check \u2192 optimize...",
+  "updated_at": 1784078693339,
+  "version": "0.1.0"
+}
