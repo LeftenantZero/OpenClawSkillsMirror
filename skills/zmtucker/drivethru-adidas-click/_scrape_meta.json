@@ -1,0 +1,50 @@
+{
+  "changelog": "**Restock date and backorder date reporting added to inventory checks.**\n\n- Inventory checks now report restock or back-in-stock dates for out-of-stock or backordered items.\n- Skill description and documentation updated to include live back-in-stock date support.\n- Internal schemas and product-page scraping updated to extract restock dates as part of inventory data.\n- Obsolete file skill-card.md removed.",
+  "created_at": 1783341265864,
+  "display_name": "drivethru-adidas-click",
+  "fetched_at": 1787770135985,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/order_flow_notes.md",
+    "scripts/_cli.py",
+    "scripts/adidas.py",
+    "scripts/adidas_browser.py",
+    "scripts/adidas_client.py",
+    "scripts/adidas_tools.py",
+    "scripts/schemas.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787322808588,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zmtucker",
+    "handle": "zmtucker",
+    "user_id": "s17fq291581evd78xzn1930b0n87bfny"
+  },
+  "slug": "drivethru-adidas-click",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/drivethru-adidas-click",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=drivethru-adidas-click&ownerHandle=zmtucker",
+    "page_url": "https://clawhub.ai/zmtucker/skills/drivethru-adidas-click"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 998,
+    "installs": 0,
+    "stars": 0,
+    "versions": 12
+  },
+  "summary": "Browser-driven adidas Click B2B toolkit \u2014 places purchase orders, runs live inventory / wholesale-pricing checks, and pulls shipment tracking numbers from the adidas Click portal with Playwright, since adidas exposes no public API. Ordering accepts style number, color, size, quantity, a purchase-order number, and a ship-to address, drives the cart/checkout, and (on confirm) submits the order. Checks reuse the same flow but never buy \u2014 inventory reads product pages (no cart) and reports the **re-stock date** for anything out of stock or backordered, pricing fills a throwaway \"DO NOT BUY\" cart, reads the priced checkout, and deletes it. Tracking searches the order book by PO number, opens every adidas order for it, and returns each delivery's carrier + tracking number (or, for an order that has not shipped, its expected ship dates). Use whenever the user needs to place/draft a PO on adidas Click, check live stock levels, restock/back-in-stock dates, or wholesale pricing, or find tracking numbers / ship dates for adidas POs.",
+  "updated_at": 1787322461964,
+  "version": "0.9.0"
+}
