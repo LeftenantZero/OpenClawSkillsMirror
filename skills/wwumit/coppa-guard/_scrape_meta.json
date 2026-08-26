@@ -1,0 +1,40 @@
+{
+  "changelog": "coppa-guard v1.0.0 \u2013 initial release\n\n- Real-time detection of 6 categories of COPPA-triggering/violating terms in drafts for US children\u2019s products (apps, games, e-commerce, education).\n- Automatic risk grading (high/medium/low) with actionable remediation advice per finding.\n- Deduplicates overlapping hits to reduce false positives and outputs results in structured JSON for agent integration.\n- Purely local, zero network requests, zero dynamic code execution; Python standard library only.\n- Detection rules are centralized in a single file for easy updates and transparent auditing.\n- Comprehensive compliance and usage disclaimers included; MIT license.",
+  "created_at": 1786247987131,
+  "display_name": "COPPA Guard - \u7f8e\u56fd\u513f\u7ae5\u9690\u79c1\u5408\u89c4\u62a4\u680f",
+  "fetched_at": 1787773073963,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "requirements.txt",
+    "scripts/guard.py",
+    "scripts/rules/__init__.py",
+    "scripts/rules/terms.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Wei Wu",
+    "handle": "wwumit",
+    "user_id": "s171gysg9m3c2gxwwc6pvt62z983jxn1"
+  },
+  "slug": "coppa-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/coppa-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=coppa-guard&ownerHandle=wwumit",
+    "page_url": "https://clawhub.ai/wwumit/skills/coppa-guard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 151,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "COPPA \u7f8e\u56fd\u513f\u7ae5\u9690\u79c1\u62a4\u680f (coppa-guard) v1.0.0\u3002\n\u5728\u9762\u5411\u7f8e\u56fd\u5e02\u573a\u7684\u513f\u7ae5\u5411 App / \u6e38\u620f / \u7535\u5546 / \u6559\u80b2\u4ea7\u54c1\u7684\u6587\u6848\u3001\u9690\u79c1\u653f\u7b56\u3001\n\u5e94\u7528\u5546\u5e97\u63cf\u8ff0\u53d1\u5e03\u524d\uff0c\u5b9e\u65f6\u68c0\u6d4b\u89e6\u53d1 COPPA \u9002\u7528\u7684\u8868\u8ff0\u4e0e\u513f\u7ae5\u9690\u79c1\u8fdd\u89c4\u7528\u8bed\uff0c\n\u6309\u98ce\u9669\u5206\u7ea7\u8f93\u51fa\u547d\u4e2d\u4e0e\u6574\u6539\u5efa\u8bae\uff0c\u4f9b Agent \u4e3b\u52a8\u8c03\u7528\u3002\u533a\u522b\u4e8e\u4e8b\u540e\u6df1\u5ea6\u5ba1\u8ba1\uff0c\u8fd9\u662f\u4e8b\u524d\u62e6\u622a\u3002\n\nUse when: \u9700\u8981\u5728\u53d1\u5e03\u9762\u5411\u7f8e\u56fd\u513f\u7ae5\u7684\u4ea7\u54c1\u7684\u6587\u6848 / \u9690\u79c1\u653f\u7b56 / \u5e94\u7528\u5546\u5e97\u63cf\u8ff0\u524d\uff0c\n\u5b9e\u65f6\u62e6\u622a\"\u9762\u5411 13 \u5c81\u4ee5\u4e0b\u513f\u7ae5\"\u89e6\u53d1 COPPA \u9002\u7528\u7684\u8868\u8ff0\uff0c\u4ee5\u53ca\u6536\u96c6\u513f\u7ae5\u4e2a\u4eba\u4fe1\u606f\u3001\n\u513f\u7ae5\u884c\u4e3a\u5b9a\u5411\u5e7f\u544a\u3001\u7f3a\u5c11\u53ef\u9a8c\u8bc1\u5bb6\u957f\u540c\u610f(VPC)\u3001\u7b2c\u4e09\u65b9\u62ab\u9732\u513f\u7ae5\u6570\u636e\u3001\u513f\u7ae5\u6301\u4e45\n\u6807\u8bc6\u7b26\u8ffd\u8e2a\u7b49",
+  "updated_at": 1786248121313,
+  "version": "1.0.0"
+}
