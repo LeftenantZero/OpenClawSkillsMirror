@@ -1,0 +1,43 @@
+{
+  "changelog": "- Initial release of alphagbm-tepper-signal skill.\n- Implements David Tepper\u2019s panic-buy signal using VIX \u2265 35, FearScore \u2265 80, and quality large-cap filter.\n- Returns clear signal levels: armed, watch, near, cold.\n- Integrates with existing FearScore; output includes diagnostics, ETF recommendations, and natural-language advice.\n- Designed to trigger only during genuine market panics; mostly returns \"waiting\" (cold) as per Tepper\u2019s framework.",
+  "created_at": 1784784519846,
+  "display_name": "Alphagbm Tepper Signal",
+  "fetched_at": 1787775540311,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784885635216,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Clement Gu",
+    "handle": "clementgu",
+    "user_id": "s17fsz3rx9wrnw593kpx5w87jn85c6qc"
+  },
+  "slug": "alphagbm-tepper-signal",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alphagbm-tepper-signal",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alphagbm-tepper-signal&ownerHandle=clementgu",
+    "page_url": "https://clawhub.ai/clementgu/skills/alphagbm-tepper-signal"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 222,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Quantified version of David Tepper's 2009 (+132%) and 2020 (+82%) panic-buy playbook. Detects whether current conditions match Tepper's signal: VIX \u2265 35 AND...",
+  "updated_at": 1784787346311,
+  "version": "1.0.0"
+}
