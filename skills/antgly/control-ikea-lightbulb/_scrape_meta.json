@@ -1,0 +1,40 @@
+{
+  "changelog": "**Switched to uv for dependency management and simplified setup.**\n\n- Removed the custom virtualenv bootstrap script; now uses uv and pyproject.toml for managing dependencies.\n- Added pyproject.toml with updated Python and python-kasa version constraints to address resolver issues.\n- Updated wrapper and helper scripts to use uv instead of manual virtualenv activation.\n- Updated documentation to reflect the new uv-based workflow, with quick start instructions.\n- Dropped mention of the old virtualenv in favor of uv; Git ignore advice simplified.",
+  "created_at": 1770227713643,
+  "display_name": "Control Ikea Lightbulb",
+  "fetched_at": 1787772054693,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "pyproject.toml",
+    "scripts/__init__.py",
+    "scripts/control_kasa_light.py",
+    "scripts/light_show.py",
+    "scripts/light_show_verbose.py",
+    "scripts/run_control_kasa.sh",
+    "scripts/run_test_light_show.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "antgly",
+    "handle": "antgly",
+    "user_id": "s171yjmghjd0esda3ccmg6qgth884xr8"
+  },
+  "slug": "control-ikea-lightbulb",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/control-ikea-lightbulb",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=control-ikea-lightbulb&ownerHandle=antgly",
+    "page_url": "https://clawhub.ai/antgly/skills/control-ikea-lightbulb"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2391,
+    "installs": 82,
+    "stars": 2,
+    "versions": 2
+  },
+  "summary": "Control IKEA/TP-Link Kasa smart bulbs (set on/off, brightness, and color). Use when you want to programmatically control a local smart bulb by IP on the LAN.",
+  "updated_at": 1778486017068,
+  "version": "1.0.1"
+}
