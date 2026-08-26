@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of the \"kb-literature-review\" skill.\n- Produces focused literature reviews using only selected Research KB contents.\n- Supports synthesis, comparison, and gap analysis across multiple KB pages.\n- Enforces evidence rules: only sourced information from selected repositories, with precise citations.\n- Returns structured JSON output with answer, citations, and traceability information.\n- Optionally writes the review summary back to the repository for future citation.",
+  "created_at": 1782415827815,
+  "display_name": "Kb Literature Review",
+  "fetched_at": 1787779037409,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "env-example.txt",
+    "main.js",
+    "requirements.txt",
+    "scripts/run_task.py",
+    "setup.sh",
+    "skill-card.md",
+    "tests/sample_literature_review_task.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782416808639,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "myd2002",
+    "handle": "myd2002",
+    "user_id": "s175zrvz5m28epr76c6rt4dtex8474t6"
+  },
+  "slug": "kb-literature-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kb-literature-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kb-literature-review&ownerHandle=myd2002",
+    "page_url": "https://clawhub.ai/myd2002/skills/kb-literature-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 247,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Produce a focused literature/knowledge review using only selected Research KB contents.",
+  "updated_at": 1782415827815,
+  "version": "1.0.0"
+}
