@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of replace-in-video.\n\n- Swap a single on-camera element (character, object, or garment) in an existing video while preserving original motion, timing, camera, lighting, background, and audio.\n- Accepts a source video, 1\u20133 reference images, and a prompt specifying what to replace and what to keep.\n- Uses the Pruna P-Video-Replace model (`prunaai:p-video@replace`) for element swaps; supports up to 3 reference images for better identity match through movement.\n- Asynchronous workflow: submit task, poll for completion, and retrieve final video output.\n- Detailed guidance for preparing reference images, writing prompts, and managing multi-element swaps provided.\n- Optional parameters for output resolution, frame rate, audio preservation, and source audio sync.",
+  "created_at": 1784386202649,
+  "display_name": "Replace In Video",
+  "fetched_at": 1787776032921,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/examples.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "runware",
+    "handle": "runware",
+    "user_id": "s171hhdywapwnn432ha7x4zfjx89jjad"
+  },
+  "slug": "replace-in-video",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/replace-in-video",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=replace-in-video&ownerHandle=runware",
+    "page_url": "https://clawhub.ai/runware/skills/replace-in-video"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 261,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Swap one on-camera element in an existing video while everything else stays put. Use when the user says \"recast this character\", \"put a different actor in th...",
+  "updated_at": 1784387110330,
+  "version": "1.0.0"
+}
