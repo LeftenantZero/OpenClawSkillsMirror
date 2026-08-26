@@ -1,0 +1,48 @@
+{
+  "changelog": "Version 1.0.3 \u2014 Broader Data Source Support & Integration-Agnostic Design\n\n- Expanded input sources: Now supports building digital twins from any connected communication data (transcripts, email, chat, docs), not just Fireflies meeting transcripts.\n- Integration-agnostic: The skill never requests or manages API keys or credentials, and relies entirely on pre-connected MCP skills/connectors for data retrieval.\n- Prerequisites and user flow updated to guide selection and validation of connected sources, including checks for minimum data volume across varied content types.\n- Consent and privacy notes broadened to cover the new range of possible data sources.\n- Invocation patterns, parameters, and usage examples expanded to reflect multi-source personality creation and updating existing skills.\n- Documentation simplified and generalized, making the skill compatible across platforms and transcript providers.",
+  "created_at": 1776262463814,
+  "display_name": "Digital Twin",
+  "fetched_at": 1787769771173,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/personality_skill_template.md",
+    "references/pillar_1_linguistic.md",
+    "references/pillar_2_psychometric.md",
+    "references/pillar_3_judgment.md",
+    "references/pillar_4_audience.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782410070127,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "EncryptShawn",
+    "handle": "encryptshawn",
+    "user_id": "s17acjjwshpqj4xkbngejj57nx83zbcy"
+  },
+  "slug": "digital-twin",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/digital-twin",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=digital-twin&ownerHandle=encryptshawn",
+    "page_url": "https://clawhub.ai/encryptshawn/skills/digital-twin"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 831,
+    "installs": 17,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Builds an installable personality clone (digital twin) of a named person from transcripts, email, chat, or docs the user already has connected. Triggers on 'clone/respond as [name]'. No credentials;\n\nThere is no security issue with this. It's going to use your communications to make a digital twin of you. That's not a surprise. clawhub has the worst security scanning of any site.",
+  "updated_at": 1787529227817,
+  "version": "1.0.3"
+}
