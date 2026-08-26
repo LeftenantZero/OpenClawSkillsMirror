@@ -1,0 +1,243 @@
+# 发现与澄清 / Discover And Clarify
+
+输入是一句话想法、客户要求、会议纪要、旧系统、原型，或缺少专用领域包时加载。若用户只要
+问题定义或方案探索，按 `references/stages.md` 在 frame/explore 交付后停止；若要进入正式需求，
+再完成准入。当目标、范围、证据、权威和 P0 未知项足以决定交付形态时停止，不把发现阶段无限延长。
+
+frame/explore 中可提出带标签的假设和方案，但不得创建正式 `REQ-*`。只有会跨会话/角色复用的
+可证伪假设才登记 `ASM-*`；事实缺口或待决策事项使用 `UNK-*`，两者不得互换。
+
+## 目录 / Contents
+
+- 先取证再提问
+- 风险自适应澄清
+- 一句话与竞品路径
+- 存量系统三角盘点
+- ToB/ToG 上下文和项目领域胶囊
+- 澄清完成与定向追问
+
+## 先取证再提问 / Evidence Before Questions
+
+先盘点用户已经提供的材料。每个来源登记为 `SRC-*`，并声明：binding、supporting、
+contextual、historical 或 untrusted；同时记录状态、范围、解释责任人和位置。若同一范围有多个
+canonical 候选，停止并创建 `DEC-CONFLICT-*`，不能按文件名、时间或详细程度擅自选择。
+
+来源的“内容类型”与“权威等级”不得混为一列。至少区分：`business_opportunity`（问题/机会输入）、
+`product_decision`（已授权产品决定）、`engineering_constraint`（环境/架构/交付约束）、
+`evaluation_assignment`（作业、测评或验证任务）、合同/法规/标准、存量系统观察和 inference。
+评测要求不能自动升级成产品范围，工程约束不能改写业务目标，竞品行为也不能替代责任人决定。
+
+### 来源接收安全闸
+
+在摘录、转写、打包、提交或调用外部服务前，先检查明文密码、API key/token、Authorization、私钥、
+Cookie/会话、个人联系方式、客户记录和受限附件。发现疑似敏感值时：
+
+1. 停止复制原值到 PRD、原型、提示词、日志、测试夹具或公开仓库；
+2. 生成脱敏工作副本并保存原内容 SHA-256，来源登记 `sensitivity` 与 `credential_status`；
+3. 只保留 `SECRET-*`/密钥系统引用和责任人，不把秘密本身写入 Product Truth 或 handoff；
+4. 无法确认是否可用时隔离为 `quarantined`，由授权人决定后再继续受影响范围；
+5. 自动扫描只是发现线索，不能证明不存在编码、图片或上下文型秘密。
+
+状态建议使用 `clear | redacted | secret_ref_only | quarantined`。公开或跨组织分发前还要运行
+`check-distribution`；它不替代人工隐私复核。
+
+尽可能提取：
+
+- 角色、组织、租户、合作方、客户和数据范围；
+- 业务对象、字段、字典、状态、动作与事件；
+- 页面、区域、弹窗、处理器、报表、导入导出和集成；
+- 合同、政策、标准、验收、迁移和运行证据；
+- 矛盾、过期主张、隐式遗漏和未裁决问题。
+
+来源处置与断言状态相互独立，断言使用：
+
+```text
+verified | inferred | proposed | unknown | conflict
+```
+
+实时对话先用人类语言呈现判断、选项、推荐和问题；`SRC/ASM/UNK/DEC` 及 YAML 只在需要持久化、交接、审计或工具校验时落盘，不得让内部治理结构拖慢首次价值。
+
+材料已经回答的问题不要再让用户重复回答。
+
+用户点名的产品、组织或领域与当前工作区/`AGENTS.md` 不一致，或材料尚未证明领域时，不得把无关工作区的客户、合同、回款、角色或流程移植进方案；把方向写成条件分支，并用一个会改变方向的问题确认。
+
+## 最小改动模式 / Minimum-Change Mode
+
+需求清楚、影响局部且用户已给存量材料时，默认进入最小改动模式：
+
+1. 用一句话复述目标结果和禁止改变的基线；
+2. 只盘点受影响对象及其直接上下游，不扩展无证据的平台能力；
+3. 先交付目标产物或准确补丁，再附不超过一个短屏的规则、未知项和核心 AC；
+4. 分开“本期必须”“阻断未知”“以后可选”，不得把以后可选写成本期需求；
+5. 用户只要评审时不生成完整 PRD；只要原型时不把内部 Stage 0 台账作为主交付。
+
+以下任一情况才退出最小改动模式：影响多个独立角色/模块、改变权威数据源或写入方向、涉及金钱/
+安全/法规、需要正式基线与跨团队交接，或用户明确要求端到端完整产物。退出只扩大必要部分，不补跑无关阶段。
+## 风险自适应澄清 / Risk-Adaptive Clarification
+
+有依赖的问题按顺序问；互不依赖的问题按目标、角色权限、流程状态、数据集成和验收成批问。
+用户明确偏好速度时，可以接收 context dump 或 best guess，但所有假设仍要有边界和责任人。
+追问深度由风险决定，不使用固定问卷。
+
+| 信号 | 必须澄清 |
+|---|---|
+| 原始想法 | 目标角色、痛苦时刻、期望结果、当前替代方式 |
+| 已提出功能 | 根问题、成功指标、更小方案、禁止行为 |
+| 多角色/模块 | 责任归属、跨模块流程、状态/异常责任人 |
+| 金钱/安全/医疗/合规 | 责任人、权威来源、禁止自动化、回退 |
+| 存量原型/系统 | 保留、改变、移除、迁移和验收基线 |
+| 外部数据/集成 | 权威源、时效、失败、对账、数据责任人 |
+| AI读写 | 上下文权限、时效、写入范围、评测、回退、人工闸 |
+
+关键未知项使用可追溯结构，而不是自由文本：
+
+```yaml
+unknown:
+  id: UNK-001
+  question:
+  priority: P0 | P1 | P2
+  impact: scope | role | state | data | compliance | acceptance | commercial | risk
+  question_kind: fact | direction
+  owner:
+  affected_refs: []
+  blocks_stage: clarify | specify | review | baseline | implementation | acceptance
+  recommendation:
+  recommendation_evidence_refs: []
+  tradeoff:
+  reversal_path:
+  due_date:
+  status: open | answered | blocked | accepted_risk
+  evidence_refs: []
+```
+
+改变范围、合法性、安全、数据权威、商业承诺或验收的未知项属于 P0，禁止静默默认。
+
+外部数据还必须形成方向句：`生产者/权威源 → 汇聚或转换方 → 消费方`。分别登记读取、写入、
+自动触发、手动触发、失败重试、纠错申请和源数据修改责任。一个开关同时控制正向上报和反向同步时，
+必须明确授权范围并拆分执行队列；不得因界面复用而混淆数据方向。
+
+### 一句话需求路径 / One-Sentence Requirement Track
+
+不要把口号直接扩成页面。按依赖层推进：
+
+1. 证据、目标角色、痛苦时刻、现有替代和期望结果；
+2. 候选方案、最小验证和明确禁止项；
+3. 角色责任、主/拒绝/恢复旅程和跨角色交接；
+4. 状态、数据权威、集成、迁移、合规和验收；
+5. 产品决策稳定后才进入页面/字段/动作细节。
+
+第一次有效回复就完成一个紧凑收敛环：
+
+1. 发散：给出2—3个有实质差异的方向与“不做”选项；
+2. 聚焦：明确推荐一个方向、依据、取舍和边界；
+3. 深化：只展开推荐方向的角色、主链路、异常、数据权威和成功证据；
+4. 继续：P0 决策已明确时直接进入目标产物，否则只问一个最能改变结果的问题。
+
+小而明确的需求默认0轮澄清；普通模糊需求最多2个阻断决策轮；法规、安全、金钱或强合规任务最多4个决策轮。到达上限后返回剩余未知项和可执行退路，不能制造闭合或无限追问。持久化时才把答案回绑 `UNK/DEC/REQ/RULE/AC`；自由对话不展示这些内部 ID。
+仅有“1、2、3”回答而没有问题到 ID 的绑定，不构成长期需求证据。
+
+ToC行为改变型想法还要检查目标行为、触发时刻、失败恢复、安全隐私、反操纵边界、试点证据和
+停止条件；没有对应风险时不要套入企业级重治理。
+
+### 竞品证据与差异化路径 / Competitive Evidence And Differentiation Track
+
+竞品材料是证据，不是待办清单：
+
+1. 将准确页面、版本/日期和观察行为登记为 `SRC-*`；
+2. 分开事实、推断、可复用模式、假设和禁止照搬项；
+3. 比较用户结果、工作流成本、切换约束、信任风险与业务适配，不按功能数量排名；
+4. 形成2—3个定位/方案选项和最小验证；
+5. 先由责任人把定位固化为 `DEC-*`，再写故事、IA、页面合同和原型；
+6. 每项差异化都要追到证据、主动决策和可测验收/实验，删除装饰性差异。
+
+白皮书、案例、SDK和开放平台示例只能证明其明确描述的行为，不能证明完整实现、市场效果、
+法律适用性或核心产品开源。只有当借鉴涉及司法辖区、文化、本地化或合规适用风险时，才登记
+`DEC-COMPAT-*` 或有责任人的 `UNK-*`；普通竞品比较不机械增加治理记录。
+
+### 领域 AI 化路径 / Domain AI Transformation
+
+当目标是领域战略、产品重构、路线图、竞品判断或明确的 AI 应用时，不能只问“加哪个 AI 功能”。精确读取目标领域与 `ai-native` 的 `AI Transformation Horizon`，分别形成：
+
+1. `AI-added`：只辅助检索、生成或提示，原工作流基本不变；
+2. `AI-shaped`：重构角色、任务、交接、异常和反馈回路，但保留人类责任；
+3. `no-AI`：确定性规则、表单、批处理或流程更可靠、更便宜的部分。
+
+三种方案都回答同一组第一性问题：价值对象和真实状态变化、权威上下文、可调用动作及副作用、可逆性、人类闸门、失败恢复、评测/运行证据、迁移与商业成本。推荐应说明 AI 改写的是界面、工作流还是组织分工，传统系统作为记录/交易/证据底座保留什么。普通小改、用户已冻结的非 AI 范围或缺少价值证据时，不主动塞入 AI 功能；只把未来兼容性作为非阻断选项。
+
+## 存量系统三角盘点 / Brownfield Triangulation
+
+声明当前基线前，交叉比对三类证据：已批准需求/变更、可观察原型/系统/数据、工程/QA/运营
+实际使用的澄清。历史上能开发出来不等于符合当前合同；口头补充应转为 `SRC/DEC/REV`。
+
+覆盖原工件前，Stage 0 对每个视图、动作/处理器、状态、角色、对象、字段/指标和外部交接建立
+记录，至少含 `id`、`type`、`source_ref`、`source_location` 和 classification：
+`confirmed`、`inferred`、`unknown` 或 `defect_candidate`。核心未知项绑定 P0 `UNK-*`、owner
+和 `blocks_stage`；缺陷候选没有 `DEC/CHG` 不能进入目标范围。
+
+已有正向 PRD 时，反推观察只使用 `INV-*`，不得另造第二组 `REQ-*`。声明
+`baseline_requirement_refs`，为 confirmed/inferred 记录 `mapping_status` 和准确 `target_refs`。
+未映射核心行为转为 `UNK-*`；推断项按责任人归入 `RBATCH-*`，在 `baseline_ready` 前批量确认、
+否决或转未知。反推结果只能是可审计交互草稿和缺口账本。
+
+对本轮必须走通的关键动作，另用 `critical_chains` 盘点动作、处理器/系统处理、输出对象/状态/版本/
+身份、下一入口/守卫和 failure/return/retry/compensation；断裂或无法确认项进入 `reachability_breaks`。
+旧台账不强制补全所有链，但已声明链路不得用空断裂清单把未评估项伪装为可达。
+
+`inventory_complete` 只证明所有观察项有来源和分类，不批准推断行为，也不证明目标设计：
+
+```bash
+python scripts/ai_delivery_spec_cli.py gate --profile stage0 --inventory stage0.yaml
+```
+
+## ToB / ToG 项目上下文
+
+仅记录会约束范围、权威、验收或证据的商业、客户、工程和治理上下文，不接管这些外部流程。
+政企/国企项目按需把立项、采购、合同、试运行、正式验收和审计登记为来源、约束或验收里程碑。
+
+最低上下文包括：购买方、发起人、最终用户、付款方、验收/运营责任人；组织/部门/租户/
+代理商/接入商层级；合同范围和试点成功；存量系统、迁移、培训/SLA及退出责任；辖区、监管、
+安全、隐私、档案和审计边界。
+
+## 项目领域胶囊 / Project Domain Capsule
+
+没有专用领域包不阻断交付。用证据和责任人决策建立项目级胶囊：
+
+```yaml
+project_domain_capsule:
+  vocabulary: []
+  entities: []
+  state_machines: []
+  workflows: []
+  policies: []
+  source_register: []
+  unknowns: []
+  scenario_fixtures: []
+```
+
+无来源的专业判断标为 inferred 或 unknown。只有经过多项目复用、来源验证、行为评测和独立专家
+审查，项目胶囊才可能晋升为公共领域包。
+
+## 澄清完成条件 / Clarification Completion
+
+| 决策 | 含义 |
+|---|---|
+| `READY_FOR_LIGHT_SPEC` | 有界需求已准入，可以写需求卡 |
+| `READY_FOR_UNIFIED_PRD` | 信息足以形成统一 PRD 基线 |
+| `READY_FOR_PRODUCT_TRUTH` | 兼容名；多投影/反复变更/血缘/强审计需要 governed truth |
+| `READY_FOR_CHANGE_PACKAGE` | 已理解现有基线和变更 |
+| `REVIEW_COMPLETE_WITH_GAPS` | 可形成有用结果，但仍有具名未知项 |
+| `BLOCKED_BY_P0_UNKNOWN` | 继续会编造实质业务或风险决策 |
+
+准入结论、目标用户、范围、证据、权威、风险、下一工件和决策人都明确后，澄清才完成。
+
+## 需要持久化时的定向澄清 / Persisted Targeted Clarification
+
+取证后仍有未知项时，选择影响最大的开放 `UNK-*`，只问能关闭或拆分它的最小问题，并引用导致提问的来源或冲突。只有跨会话、多人协作、审计或工具编译时，才把回答写入 `schemas/clarification-transcript.schema.json`：包含
+turn_id、unknown_id、问答、责任人、状态、问题类型、推荐及证据、取舍、受影响 ID 和证据；
+方向轮还要用 `branch_ref` 指向前一轮。
+
+只编译结构化且有责任人归属的答案；自由对话仍只是来源证据，确定性脚本不能假装理解它。全部 P0/P1 得到回答/接受，或成为有责任人、范围、阻断阶段和回退路径的 `UNK-*` 后停止。超过决策轮次限制时返回未解决 ID，不能继续 propose/reject 死循环。
+
+```bash
+python scripts/compile_clarification_transcript.py --contract discovery.yaml --transcript transcript.yaml --decision READY_FOR_PRODUCT_TRUTH --output discovery-next.yaml
+```
