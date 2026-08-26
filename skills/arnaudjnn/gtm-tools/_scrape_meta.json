@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release of gtm-tools skill with comprehensive setup and usage instructions.\n- Supports full onboarding: autonomous API key registration, human-based signup, and CLI-based authentication.\n- Clear guidance on connecting browser-based LinkedIn and Reddit sessions.\n- Complete error handling and metering rules for all GTM API calls, including cost management.\n- Outlines cost-aware call sequencing and related workflow skills for sales, LinkedIn, and Reddit automation.",
+  "created_at": 1785063944479,
+  "display_name": "GTM Tools",
+  "fetched_at": 1787774981842,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/tools.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785065890973,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Arnaud Jeannin",
+    "handle": "arnaudjnn",
+    "user_id": "s17536vcdc1qxwwbcqhkcmp7j9885myr"
+  },
+  "slug": "gtm-tools",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gtm-tools",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gtm-tools&ownerHandle=arnaudjnn",
+    "page_url": "https://clawhub.ai/arnaudjnn/skills/gtm-tools"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 238,
+    "installs": 2,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Set up and call the gtm-tools API from any agent \u2014 get an API key (including fully autonomous self-registration), connect the browser-session pool, then use all 63 LinkedIn, Reddit, email-finding, buying-signal, and geocoding tools over Bash + curl. Use this skill whenever the user wants to install / set up / connect / onboard gtm-tools, asks how to get a gtm-tools API key, hits a 401 / 402 / \"Unauthorized\" / \"Insufficient tokens\" from api.gtm-tools.sh, asks what tools or what token costs are available, asks to check their token balance or top up, asks which LinkedIn or Reddit accounts are connected, asks to install the browser extension, or names any gtm-tools tool (get_linkedin_company_url, get_email, detect_signal, list_linkedin_company_employees, get_reddit_post, \u2026) without a workflow skill already loaded. This is the base capability skill \u2014 for full drafting workflows use outbound-sales, linkedin-copywriter, or reddit-community-manager instead.",
+  "updated_at": 1785065222401,
+  "version": "1.0.0"
+}
