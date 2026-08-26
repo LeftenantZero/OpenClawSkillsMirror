@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release of the boardraw skill.\n- Converts natural-language descriptions directly into editable Excalidraw whiteboard files (.excalidraw) for diagrams, flowcharts, mind maps, wireframes, and more.\n- Enforces use of the provided excalidraw_builder.py helper for safe and robust file creation\u2014never hand-writes raw JSON.\n- Supports multilingual requests, defaulting to English but mirroring the user's language when appropriate.\n- Provides clear user confirmation, validation steps, and automated file upload to boardraw.com with proper error handling.\n- Includes detailed workflow and diagramming guidelines for consistent, user-friendly outputs.",
+  "created_at": 1787213572440,
+  "display_name": "boardraw",
+  "fetched_at": 1787770428616,
+  "files": [
+    ".env.example",
+    "SKILL.md",
+    "_meta.json",
+    "references/excalidraw-schema.md",
+    "scripts/excalidraw_builder.py",
+    "scripts/upload.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787214417191,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "darren",
+    "handle": "darrenli6",
+    "user_id": "s17cm8wy6jwgqt8mb7m5f3mx2d884fq5"
+  },
+  "slug": "boardraw",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/boardraw",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=boardraw&ownerHandle=darrenli6",
+    "page_url": "https://clawhub.ai/darrenli6/skills/boardraw"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 95,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Turn a natural-language description into a real Excalidraw whiteboard file (.excalidraw) \u2014 flowcharts, mind maps, architecture/system diagrams, org charts, wireframes, sticky-note brainstorms, sequence diagrams. Always use this skill whenever the user asks to draw, sketch, diagram, whiteboard, mind-map, or map something out, or mentions \"excalidraw\", \"boardraw\", \"\u767d\u677f\", \"\u753b\u4e00\u4e2a\", \"\u6d41\u7a0b\u56fe\", \"\u601d\u7ef4\u5bfc\u56fe\", \"\u67b6\u6784\u56fe\", \"\u7ec4\u7ec7\u67b6\u6784\u56fe\", \"\u7ebf\u6846\u56fe\", \"\u6cf3\u9053\u56fe\", \"\u770b\u677f\", or wants a file they can open in Excalidraw or Boardraw. Do NOT hand-write raw .excalidraw JSON directly \u2014 the schema has fragile id/seed/binding requirements \u2014 always build it with the bundled scripts/excalidraw_builder.py helper instead.",
+  "updated_at": 1787213664919,
+  "version": "0.1.0"
+}
