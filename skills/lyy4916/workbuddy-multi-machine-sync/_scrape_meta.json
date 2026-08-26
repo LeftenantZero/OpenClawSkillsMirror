@@ -1,0 +1,48 @@
+{
+  "changelog": "- Initial release: Multi-machine WorkBuddy config sync for 3 or more Macs.\n- Adds machine naming, registry file (machines.json), and per-machine commit tagging.\n- Includes robust conflict resolution and stale lock detection for higher-concurrency setups.\n- Provides wbstatus command to view all registered machines, their sync status, and activity.\n- Supports both GitHub and iCloud as sync backends.",
+  "created_at": 1785566310078,
+  "display_name": "workbuddy-multi-machine-sync",
+  "fetched_at": 1787773989628,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/gitignore-template",
+    "references/multi-machine-architecture.md",
+    "scripts/auto-sync-multi.sh",
+    "scripts/machine-status.sh",
+    "scripts/setup-machine.sh.template",
+    "scripts/start-sync-daemon.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785567147324,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "lyy4916",
+    "handle": "lyy4916",
+    "user_id": "s177t5gz1g9bqr9wzdn3k301nh8bn7wz"
+  },
+  "slug": "workbuddy-multi-machine-sync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/workbuddy-multi-machine-sync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=workbuddy-multi-machine-sync&ownerHandle=lyy4916",
+    "page_url": "https://clawhub.ai/lyy4916/skills/workbuddy-multi-machine-sync"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1697,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Set up WorkBuddy config sync across 3+ Macs with machine naming, conflict resolution, and status tracking. Supports GitHub or iCloud as backend. Triggers: \u591a\u673a\u540c\u6b65, \u4e09\u53f0\u7535\u8111\u540c\u6b65, \u591a\u53f0 Mac \u540c\u6b65 WorkBuddy, multi-machine sync, 3+ devices sync, \u591a\u53f0\u7535\u8111\u914d\u7f6e\u540c\u6b65, team sync WorkBuddy. Includes machine registry, per-machine commit tagging, stale lock detection, and a status command to see which machines are active.",
+  "updated_at": 1785566417917,
+  "version": "0.1.0"
+}
