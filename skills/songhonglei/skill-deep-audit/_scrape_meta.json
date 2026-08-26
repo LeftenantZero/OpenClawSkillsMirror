@@ -1,0 +1,49 @@
+{
+  "changelog": "skill-deep-audit v1.1.0\n\n- Increased max score: 120 points (L2) / 117 points (L1).\n- Added new bundled path boundary checker: `scripts/check_path_boundary.py` (python3 \u2265 3.8, no dependencies).\n- Clarified D3-E5/D3-E4 ERR handling: explicit 0-point ERRs now require summary reporting.\n- Added/updated references: new scan-commands.md, expanded output-template.md.\n- Removed deprecated file: skill-card.md.",
+  "created_at": 1782046931390,
+  "display_name": "skill-deep-audit",
+  "fetched_at": 1787769879863,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/check-rules.md",
+    "references/controlled-domains.md",
+    "references/output-template.md",
+    "references/scan-commands.md",
+    "scripts/check_path_boundary.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787471059026,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Evan Song",
+    "handle": "songhonglei",
+    "user_id": "s17dz40vg2v0b4hy1e0jj91ny584egag"
+  },
+  "slug": "skill-deep-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-deep-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-deep-audit&ownerHandle=songhonglei",
+    "page_url": "https://clawhub.ai/songhonglei/skills/skill-deep-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 489,
+    "installs": 1,
+    "stars": 1,
+    "versions": 5
+  },
+  "summary": "Generic skill-quality auditor for any agent skill (Claude, OpenClaw, Cursor, etc.). Runs a 7-dimension static analysis (D1 process closure & idempotency, D2 tool/command conventions, D3 portability & defense, D4 skill usability, D5 security & op risk, D6 code & doc quality, D7 dependency & footprint) with explicit ERR / WARN severity, 120-point scoring (pass line 90 + zero ERR), and an opt-in `--fix` workflow that always backs up first. Two depths: L1 static (~2 min) and L2 dryRun (~5 min, read-only hub + reachability checks). Strict red lines \u2014 read-only by default, never executes the audited skill's writes. Use when the user asks to \"audit a skill\", \"check skill quality\", \"is this skill ready to ship\", \"lint my skill\", or runs this tool by name. Triggers also: \"\u5ba1\u8ba1\u8fd9\u4e2a Skill\"\u3001\"\u68c0\u67e5 Skill \u8d28\u91cf\"\u3001\"Skill \u80fd\u4e0a\u7ebf\u5417\"\u3001 \"skill-deep-audit\"\u3001\"\u5ba1\u4e00\u4e0b xxx skill\"\u3002",
+  "updated_at": 1787466617323,
+  "version": "1.1.0"
+}
