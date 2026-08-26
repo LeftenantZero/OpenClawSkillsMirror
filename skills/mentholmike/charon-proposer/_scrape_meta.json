@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of charon-proposer.\n\n- Introduces a propose-only principal for authoring durable Lethe memory via Charon.\n- Allows users to read, branch, commit, and propose merge changesets to refs they own.\n- Enforces separation of duties: authors cannot review or merge their own proposals.\n- Documents the full authoring workflow, including proper operation types, branch/commit discipline, and proposal lifecycle.\n- Details recovery steps, idempotency principles, and critical security rules for proper use.",
+  "created_at": 1784834060089,
+  "display_name": "Charon Proposer",
+  "fetched_at": 1787775404265,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "MentholMike",
+    "handle": "mentholmike",
+    "user_id": "s178gq6bv91f0h726dnp4vh32183g86v"
+  },
+  "slug": "charon-proposer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/charon-proposer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=charon-proposer&ownerHandle=mentholmike",
+    "page_url": "https://clawhub.ai/mentholmike/skills/charon-proposer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 250,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Author durable Lethe memory through Charon as a proposer (author) principal: owned refs, CAS changesets, semantic operations, and merge proposals for independent review. Connect your charon docker container to MCP of frontier model. have it create a git type experience to propose memories locally.",
+  "updated_at": 1784834418518,
+  "version": "1.0.0"
+}
