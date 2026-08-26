@@ -1,0 +1,56 @@
+{
+  "changelog": "Initial OpenAPI skill package for Feishu integration.\n\n- Added full Feishu OpenAPI Python API wrapper for Docx, Sheets, Base, Wiki, Drive, and IM, under `scripts/feishu_api`.\n- Included standalone tools for doc operations: environment check, doc resolve, read, create, append, and block list.\n- Provided service-layer wrappers for advanced API operations, supporting user and app token flows.\n- Added reference documentation and setup guides for credentials, token handling, and OpenClaw bot routing.\n- Safe handling of app credentials and user tokens\u2014no hard-coding; all secrets required in `.env`.\n- Removed legacy or previous bridge/skill configuration files.",
+  "created_at": 1779682800234,
+  "display_name": "\u98de\u4e66\u6587\u6863API\u5bf9\u63a5",
+  "fetched_at": 1787784861022,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/interfaces.md",
+    "references/operations.md",
+    "references/setup.md",
+    "scripts/feishu_api/__init__.py",
+    "scripts/feishu_api/client.py",
+    "scripts/feishu_api/config.py",
+    "scripts/feishu_api/dns.py",
+    "scripts/feishu_api/errors.py",
+    "scripts/feishu_api/models.py",
+    "scripts/feishu_api/services/__init__.py",
+    "scripts/feishu_api/services/base.py",
+    "scripts/feishu_api/services/base_app.py",
+    "scripts/feishu_api/services/docs.py",
+    "scripts/feishu_api/services/drive.py",
+    "scripts/feishu_api/services/im.py",
+    "scripts/feishu_api/services/sheets.py",
+    "scripts/feishu_api/services/wiki.py",
+    "scripts/feishu_api/token_store.py",
+    "scripts/feishu_oauth_tool.py",
+    "scripts/feishu_openapi_tool.py",
+    "scripts/feishu_service_tool.py",
+    "scripts/requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "luz404",
+    "handle": "luz404",
+    "user_id": "s17da49ygfpbtsddrpsg4wwmbx8726d4"
+  },
+  "slug": "feishu-clouddoc-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-clouddoc-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-clouddoc-api&ownerHandle=luz404",
+    "page_url": "https://clawhub.ai/luz404/skills/feishu-clouddoc-api"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 549,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use this skill for Feishu/Lark OpenAPI integration work: configuring OpenClaw Feishu bot accounts, setting app credentials outside the skill, reading or writ...",
+  "updated_at": 1779682800234,
+  "version": "1.0.0"
+}
