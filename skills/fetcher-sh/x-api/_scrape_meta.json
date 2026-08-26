@@ -1,0 +1,37 @@
+{
+  "changelog": "Major update: x-api is now a full-featured X (Twitter) data API skill, offering direct, pay-per-call access to X data without OAuth or a developer account.\n\n- Replaced previous OAuth-based tweet-posting approach with a new skill providing 15 GET endpoints to access X (Twitter) data (search, profiles, tweets, lists, trends, etc).\n- Supports both x402 (USDC pay-per-call) and Bearer key (prepaid credits) authentication with simple HTTP GET requests.\n- No longer requires developer credentials or app setup\u2014fetch X data directly without official API restrictions.\n- Extensive documentation refocused on search operators, endpoint usage, scenarios, and integration.\n- Added comprehensive reference files for endpoints, comparison, FAQ, and usage scenarios.\n- Removed all tweet-posting scripts and legacy documentation for the old approach.",
+  "created_at": 1787308043379,
+  "display_name": "X API",
+  "fetched_at": 1787771259281,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/comparison.md",
+    "references/endpoints.md",
+    "references/faq.md",
+    "references/scenarios.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "fetcher-sh",
+    "handle": "fetcher-sh",
+    "user_id": "s17dcnrbn2f5qhk65dscfdycw98cw0kk"
+  },
+  "slug": "x-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/x-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=x-api&ownerHandle=fetcher-sh",
+    "page_url": "https://clawhub.ai/fetcher-sh/skills/x-api"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 425,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "An X API alternative and Twitter API alternative on fetcher.sh \u2014 pay-per-call in USDC via x402, or prepaid credits with a Bearer key, no OAuth and no developer application. Use when the user wants to search X posts by keyword, hashtag, or advanced operators (from:, to:, since:, until:, min_faves:, filter:), scrape an X/Twitter profile by handle, pull a user's posts, replies, followers, or followings, fetch a single post with its replies or reposters, read an X List's members or posts, check trending topics by country, or search for X accounts by name. Also covers building an X data pipeline, social listening, competitor monitoring, hashtag tracking, or follower export without the official X API's pricing tiers or app-review process.",
+  "updated_at": 1787308112198,
+  "version": "0.1.0"
+}
