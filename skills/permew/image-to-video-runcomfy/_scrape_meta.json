@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of image-to-video generation using RunComfy models.\n\n- Converts any still image into a short video using the RunComfy Model API.\n- Supports general image animation, lip-sync with custom audio, and multi-modal (image + reference video/audio) outputs.\n- Detects user intent to route requests to the correct image-to-video model and endpoint.\n- Requires RunComfy CLI, account, and configuration.\n- Triggers on common image-to-video requests like \"animate image\" or \"image2video\".",
+  "created_at": 1785124884493,
+  "display_name": "Image-to-Video \u2014 Pro Pack on RunComfy",
+  "fetched_at": 1787774783718,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785127530134,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mew",
+    "handle": "permew",
+    "user_id": "s17af27kmxn6ac8n1m0wdx0drh8bb4gd"
+  },
+  "slug": "image-to-video-runcomfy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/image-to-video-runcomfy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=image-to-video-runcomfy&ownerHandle=permew",
+    "page_url": "https://clawhub.ai/permew/skills/image-to-video-runcomfy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 251,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Image-to-video generation on RunComfy. This image-to-video skill turns any still image into a short video clip via the RunComfy Model API. The image-to-video pipeline supports portrait animation, product reveal, scene motion, and synchronized-audio image-to-video output. Calls the right image-to-video endpoint for the user's intent (general image-to-video, lip-sync image-to-video, multi-modal image-to-video) through `runcomfy run <model>/image-to-video`. Triggers on \"image to video\", \"image-to-video\", \"i2v\", \"animate image\", \"image2video\", \"make a video from image\", \"still to video\", \"still-to-video\", or any explicit ask for image-to-video conversion.",
+  "updated_at": 1785127242758,
+  "version": "1.0.0"
+}
