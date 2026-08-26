@@ -1,0 +1,33 @@
+{
+  "changelog": "**Skill now generates a standalone HTML dashboard visualizing your job application tracker data, offering charts and filterable tables from your SQLite database.**\n\n- Produces a self-contained HTML dashboard (stat cards, Chart.js visualizations, interactive tables) from your SQLite application tracker, no server required.\n- Reads \"applications\" from the same SQLite DB as the job-application-manager, without modifying your data.\n- Visualizes statuses (Active/Interview/Offer/Rejected), status breakdown doughnut, tags bar chart, applications-by-month, pipeline funnel, and a sortable table of all applications.\n- Supports chart fallbacks: if offline/Chart.js can't load, stat cards render regardless.\n- Fully updates SKILL.md for new focus; removes old static assets, CSS, templates, and Python build scripts from prior Odoo/markdown report versions.\n- Handles edge cases and schema detection for DB compatibility.",
+  "created_at": 1783865453880,
+  "display_name": "Html Report",
+  "fetched_at": 1787773748638,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Yuan Chen",
+    "handle": "chenyuan99",
+    "user_id": "s17ej20pbgf1t4n63yvq27gzh183fzvq"
+  },
+  "slug": "html-report",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/html-report",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=html-report&ownerHandle=chenyuan99",
+    "page_url": "https://clawhub.ai/chenyuan99/skills/html-report"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 191,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generates a self-contained HTML dashboard (stat cards, Chart.js charts, filterable table) from the same SQLite tracker database used by application-manager \u2014...",
+  "updated_at": 1783865453880,
+  "version": "1.0.0"
+}
