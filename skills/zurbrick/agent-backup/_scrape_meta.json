@@ -1,0 +1,56 @@
+{
+  "changelog": "v1.1.0: Added workflows \u2014 weekly-verify.sh (archive validation + retention pruning), monthly-drill.sh (automated restore dry-run), pre-change-snapshot.sh (quick snapshot before config changes), GitHub Actions CI for backup verification on push.",
+  "created_at": 1773918165160,
+  "display_name": "Openclaw Backup",
+  "fetched_at": 1787787883231,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/restore-guide.md",
+    "references/retention-policy.md",
+    "references/what-to-backup.md",
+    "scripts/backup.sh",
+    "scripts/monthly-drill.sh",
+    "scripts/pre-change-snapshot.sh",
+    "scripts/push-to-github.sh",
+    "scripts/restore.sh",
+    "scripts/schedule.sh",
+    "scripts/verify.sh",
+    "scripts/weekly-verify.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089979517,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Don Zurbrick",
+    "handle": "zurbrick",
+    "user_id": "s17644fr465554b2j12pdyaxrh83ekff"
+  },
+  "slug": "agent-backup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-backup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-backup&ownerHandle=zurbrick",
+    "page_url": "https://clawhub.ai/zurbrick/skills/agent-backup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 992,
+    "installs": 27,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Encrypted backup and restore for OpenClaw agents. Two-tier archives: operational data safe for cloud storage, secrets encrypted with age for local recovery....",
+  "updated_at": 1779078618120,
+  "version": "1.1.0"
+}
