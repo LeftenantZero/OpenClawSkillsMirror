@@ -1,0 +1,45 @@
+{
+  "changelog": "Version 1.2.0 introduces new execution options and MGC tool references:\n\n- Added mgc_run execution mode (Mode B) for full zero-exposure: tokens and script logic never exposed to AI.\n- Documented use of mgc_open_webui, mgc_list, and mgc_seal tools for management and security.\n- Detailed ext02 parameter for runtime message-passing to scripts.\n- Updated to require and support MGC Blackbox version 1.4.9+ (including notes on sandbox mode and Windows MCP encoding).\n- Unified info_type to \"config\" for all token storage.",
+  "created_at": 1782187265003,
+  "display_name": "Webhook Token Security (Zero\u2011Exposure Edition)",
+  "fetched_at": 1787773185274,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786085171398,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zkeviny",
+    "handle": "zkeviny",
+    "user_id": "s173fckt3bzxxvt9dfp0rrdeg1894z72"
+  },
+  "slug": "token-safe-webhook-sender",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/token-safe-webhook-sender",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=token-safe-webhook-sender&ownerHandle=zkeviny",
+    "page_url": "https://clawhub.ai/zkeviny/skills/token-safe-webhook-sender"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 484,
+    "installs": 0,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Secure webhook token management using MGC Blackbox. Supports DingTalk, WeCom, Feishu, Telegram, Slack and more. Store webhook tokens locally in encrypted form, retrieve at runtime without exposing to AI models.",
+  "updated_at": 1786084521744,
+  "version": "1.2.0"
+}
