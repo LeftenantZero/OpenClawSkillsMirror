@@ -1,0 +1,68 @@
+{
+  "changelog": "Initial release: edge detection and lineament extraction tool using Canny/Sobel and probabilistic Hough transform.\n\n- Detects edges and extracts lineaments from raster geodata.\n- Supports offline and synthetic data processing.\n- Outputs include edge raster (GeoTIFF) and line segment GeoJSON.\n- Runs entirely locally with no user data uploaded.\n- Detailed usage and privacy information provided in documentation.",
+  "created_at": 1785843867551,
+  "display_name": "geoskill-edge-detection-lineament",
+  "fetched_at": 1787773491788,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_canny/output-manifest.json",
+    "_test_sobel/output-manifest.json",
+    "e2e_test.py",
+    "geoskill-edge-detection-lineament.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785844839146,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-edge-detection-lineament",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-edge-detection-lineament",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-edge-detection-lineament&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-edge-detection-lineament"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 179,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Canny/Sobel\u8fb9\u7f18\u68c0\u6d4b+\u6982\u7387Hough\u53d8\u6362\u63d0\u53d6\u7ebf\u6027\u6784\u9020\uff0c\u8f93\u51fa\u8fb9\u7f18\u6805\u683c\u4e0e\u7ebf\u6bb5GeoJSON",
+  "updated_at": 1785844018106,
+  "version": "1.0.0"
+}
