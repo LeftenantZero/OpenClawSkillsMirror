@@ -1,0 +1,47 @@
+{
+  "changelog": "# Changelog for huawei-cloud-msmodelslim-model-analysis v1.0.0\n\n- Initial public release of the msModelSlim model analysis skill.\n- Enables pre-adaptation analysis for candidate models, including implementation source detection (transformers or model-local), structural feature extraction, layer-by-layer loading assessment, and MoE fused weight risk evaluation.\n- Provides detailed guidance on required input, analysis workflow, and expected output in the form of a structured Markdown analysis report.\n- Clearly defines supported and unsupported use cases and model types.\n- Sample documentation file (`skill-card.md`) has been removed.",
+  "created_at": 1785748985890,
+  "display_name": "huawei-cloud-msmodelslim-model-analysis",
+  "fetched_at": 1787773640524,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/analysis_checklist.md",
+    "references/troubleshooting.md",
+    "references/verification-method.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785749980943,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-msmodelslim-model-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-msmodelslim-model-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-msmodelslim-model-analysis&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-msmodelslim-model-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 33,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Analyze candidate models before adapter implementation. Determine model implementation source (transformers or model-local), structural features, layer-by-layer loading requirements, and MoE fused weight risks. Use this skill when the user wants to: (1) assess model adaptation feasibility before creating msModelSlim adapters, (2) analyze model structure and type classification, (3) evaluate MoE compatibility for quantization. Trigger: user mentions \"model analysis\", \"msModelSlim\", \"adapter\", \"transformers\", \"MoE\", \"layer-by-layer\", \"model assessment\", \"feasibility\", \"\u6a21\u578b\u5206\u6790\", \"\u9002\u914d\u53ef\u884c\u6027\", \"\u6a21\u578b\u8bc4\u4f30\", \"MoE\u5206\u6790\"",
+  "updated_at": 1785749070167,
+  "version": "1.0.0"
+}
