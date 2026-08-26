@@ -1,0 +1,49 @@
+{
+  "changelog": "- Added session-based User-Agent flag with {session-id} template to all API-invoking commands for unified observability and traceability.\n- Deprecated use of `aliyun configure ai-mode` for User-Agent; now all `--user-agent` flags must be passed explicitly per command.\n- Updated installation and usage instructions in SKILL.md to reflect new User-Agent and session tracking requirements.\n- Expanded observability guidance, including session-id generation and export rules.\n- Removed obsolete helper steps and documentation (e.g., skill-card.md, deprecated ai-mode instructions).",
+  "created_at": 1779351455106,
+  "display_name": "alibabacloud-pai-dlc-job",
+  "fetched_at": 1787772108940,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/job-management.md",
+    "references/ram-policies.md",
+    "references/related-apis.md",
+    "references/verification-method.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786697501274,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-pai-dlc-job",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-pai-dlc-job",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-pai-dlc-job&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-pai-dlc-job"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 986,
+    "installs": 16,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Alibaba Cloud PAI-DLC (Deep Learning Containers) job management skill. Covers: distributed training job CRUD, monitoring (logs and events), and GPU sanity check. Triggers: \"DLC\", \"PAI-DLC\", \"create-job\", \"list-jobs\", \"get-job\", \"stop-job\", \"update-job\", \"get-pod-logs\", \"get-job-events\", \"get-pod-events\", \"list-job-sanity-check-results\".",
+  "updated_at": 1786696831578,
+  "version": "0.0.2"
+}
