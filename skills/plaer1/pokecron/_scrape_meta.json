@@ -1,0 +1,83 @@
+{
+  "changelog": "- Removes the global `--default-quiet-hours` mechanism and the `--defaults` command. Quiet hours are per-reminder only.\n- Adds `POKE_NOW_OVERRIDE` (ISO timestamp env var) for deterministic clock injection at deliver time.\n- Adds `--reply-stdin`: reads reply text from stdin so it never lands in shell history, `ps`, or argv logs.\n- Adds `POKE_ALLOW_REMOTE_OLLAMA=1` opt-in for non-loopback vector-tone endpoints; localhost-only otherwise.\n- Drops the duplicate `presets/{en,cn}/` and `tones/{en,cn}/` locale folders (root files unchanged).",
+  "created_at": 1779813285071,
+  "display_name": "PokeCron \u00b7 \u2308\u62cd\u4e00\u62cd\u230b",
+  "fetched_at": 1787784070030,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "poke.js",
+    "poke.sh",
+    "presets/daily-standup.json",
+    "presets/morning-plan.json",
+    "presets/trash-day.json",
+    "presets/water-break.json",
+    "scripts/heartbeat-to-poke-mac.sh",
+    "scripts/heartbeat-to-poke.sh",
+    "skill-card.md",
+    "src/calendar.js",
+    "src/locale.js",
+    "src/reminders.js",
+    "src/runtime/index.js",
+    "src/runtime/mock.js",
+    "src/runtime/openclaw.js",
+    "src/scheduler.js",
+    "src/vector-tones.js",
+    "sub-skills/commitments.md",
+    "sub-skills/escalation.md",
+    "sub-skills/management.md",
+    "sub-skills/migration.md",
+    "sub-skills/multi-channel.md",
+    "sub-skills/quiet-hours.md",
+    "sub-skills/replies.md",
+    "sub-skills/scheduling.md",
+    "sub-skills/stages.md",
+    "tones/absurdist.json",
+    "tones/bored.json",
+    "tones/calm.json",
+    "tones/chaotic.json",
+    "tones/default.json",
+    "tones/detached.json",
+    "tones/helpful.json",
+    "tones/loving.json",
+    "tones/mean.json",
+    "tones/passive.json",
+    "tones/playful.json",
+    "tones/solemn.json",
+    "tones/stern.json",
+    "tones/warm.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779993988890,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u00c6liott",
+    "handle": "plaer1",
+    "user_id": "s17ce9e9ks0h17fhyc14pm7g118670r7"
+  },
+  "slug": "pokecron",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pokecron",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pokecron&ownerHandle=plaer1",
+    "page_url": "https://clawhub.ai/plaer1/skills/pokecron"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 771,
+    "installs": 18,
+    "stars": 2,
+    "versions": 4
+  },
+  "summary": "Power-user scheduler that creates persisted OS-native timers (systemd/launchd/Task Scheduler) which later run user-configured argv command hooks (`--pre-cmd`...",
+  "updated_at": 1779990840559,
+  "version": "1.0.4"
+}
