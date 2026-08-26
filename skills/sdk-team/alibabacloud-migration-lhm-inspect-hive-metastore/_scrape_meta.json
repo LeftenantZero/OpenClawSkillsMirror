@@ -1,0 +1,55 @@
+{
+  "changelog": "- Initial release of alibabacloud-migration-lhm-inspect-hive-metastore.\n- Supports full and incremental Hive data table exploration via DB direct or Thrift connection.\n- Exports table metadata, storage sizes, and DDL for comprehensive analysis.\n- Identifies changes since a given time point, including table schema and partition modifications.\n- Two connection types: DB direct (MySQL/PostgreSQL) and Thrift API (port 9083).\n- Includes a unified entry point script (hive_explore.py) to streamline exploration, testing, and comparison workflows.",
+  "created_at": 1785826225865,
+  "display_name": "alibabacloud-migration-lhm-inspect-hive-metastore",
+  "fetched_at": 1787773536823,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/config_manager.py",
+    "scripts/connection_utils.py",
+    "scripts/ddl_builder.py",
+    "scripts/generate_paimon_statements.py",
+    "scripts/generate_rclone_script.py",
+    "scripts/get_metastore_changes.py",
+    "scripts/get_metastore_changes_thrift.py",
+    "scripts/hive_dive.sh",
+    "scripts/hive_dive_thrift.py",
+    "scripts/hive_explore.py",
+    "scripts/main_metastore_changes.py",
+    "scripts/thrift_client.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785827368545,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-migration-lhm-inspect-hive-metastore",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-migration-lhm-inspect-hive-metastore",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-migration-lhm-inspect-hive-metastore&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-migration-lhm-inspect-hive-metastore"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 183,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6267\u884c Hive \u6570\u636e\u8868\u63a2\u67e5\u4efb\u52a1\uff0c\u652f\u6301\u5168\u91cf\u63a2\u67e5\u548c\u589e\u91cf\u63a2\u67e5\uff0c\u63d0\u4f9b\u4e24\u79cd\u8fde\u63a5\u65b9\u5f0f\uff1aDB \u76f4\u8fde\uff08\u901a\u8fc7 Metastore MySQL/PostgreSQL \u6570\u636e\u5e93\uff09\u548c Thrift \u76f4\u8fde\uff08\u901a\u8fc7 HMS Thrift API \u7aef\u53e3 9083\uff09\u3002\u5168\u91cf\u63a2\u67e5\u5bfc\u51fa\u6240\u6709\u8868\u7684\u5143\u6570\u636e\u3001\u5b58\u50a8\u5927\u5c0f\u548c DDL\uff1b\u589e\u91cf\u63a2\u67e5\u8bc6\u522b\u6307\u5b9a\u65f6\u95f4\u8282\u70b9\u4e4b\u540e\u7684\u8868\u521b\u5efa\u3001\u7ed3\u6784\u53d8\u66f4\u3001\u6570\u636e\u53d8\u66f4\u548c\u5206\u533a\u53d8\u66f4\u3002\u4f7f\u7528\u573a\u666f\uff1a\u7528\u6237\u63d0\u5230\"Hive \u63a2\u67e5\"\u3001\"\u5168\u91cf\u63a2\u67e5\"\u3001\"\u589e\u91cf\u63a2\u67e5\"\u3001\"Hive \u5143\u6570\u636e\"\u3001\"hive_dive\"\u3001\"metastore \u53d8\u66f4\"\u3001\"Thrift \u63a2\u67e5\"\u3001\"migration-lhm-inspect-hive-metastore\"\u65f6\u8c03\u7528\u6b64 skill\u3002\u4e0d\u9002\u7528\u4e8e\u6570\u636e\u8fc1\u79fb\u6267\u884c\u3001DDL \u8f6c\u6362\u3001\u6570\u636e\u5199\u5165\u7b49\u573a\u666f\uff0c\u8fd9\u4e9b\u529f\u80fd\u7531 migration-lhm-migrate-hive-to-paimon \u7b49\u4e0b\u6e38 skill \u627f\u62c5\u3002",
+  "updated_at": 1785826398081,
+  "version": "0.0.1"
+}
