@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of the verbs-to-urma-converter skill.\n\n- Enables full migration of RDMA Verbs (libibverbs) applications to the URMA API.\n- Handles API mapping, data structure conversion, and URMA-specific optimizations.\n- Enforces multi-phase, constraint-driven migration workflow for correctness:\n  - Source classification, mapping, and header verification.\n  - File-by-file code conversion with mapping traceability.\n  - Build configuration updates to support URMA libraries.\n- Includes strict verification and checklist mechanisms to avoid omissions and runtime errors.\n- Preserves original files by outputting all converted code to a separate directory.",
+  "created_at": 1779069794192,
+  "display_name": "verbs-to-urma-converter",
+  "fetched_at": 1787786721460,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/mapping.md",
+    "references/patterns.md",
+    "references/pitfalls.md",
+    "references/urma_sample.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782548780437,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "derricjs",
+    "handle": "derricjs",
+    "user_id": "s17bzx1rdsrrzc5zx25yxfhxt5869fza"
+  },
+  "slug": "verbs-to-urma-converter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/verbs-to-urma-converter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=verbs-to-urma-converter&ownerHandle=derricjs",
+    "page_url": "https://clawhub.ai/derricjs/skills/verbs-to-urma-converter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 610,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Migrate RDMA verbs code to URMA API. Use this skill when user wants to convert infiniband verbs code to URMA, or during RDMA/InfiniBand migration, or when us...",
+  "updated_at": 1779120267393,
+  "version": "1.0.0"
+}
