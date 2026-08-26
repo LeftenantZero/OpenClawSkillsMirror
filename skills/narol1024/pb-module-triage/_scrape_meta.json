@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of pb-module-triage skill for autonomous-driving module diagnosis:\n\n- Enables analysis of BrainNode protobuf recordings by matching natural-language problem descriptions to identify the most likely faulty module.\n- Supports deterministic triage workflow: normalizes user inputs, identifies PB file structures, inspects module-specific evidence, and cross-checks pipeline consistency.\n- Provides an evidence-based confidence rating for module blame (high/medium/low).\n- Outputs a structured, markdown analysis report (primarily in Chinese) including conclusion, evidence summary, module-by-module reasoning, and next steps.\n- Includes instructions for integrating with existing project tools for PB analysis, inspection, and replay.",
+  "created_at": 1786622130514,
+  "display_name": "PB Module Triage",
+  "fetched_at": 1787772315062,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/module-signals.md",
+    "scripts/pb_module_triage.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Narol",
+    "handle": "narol1024",
+    "user_id": "s17bfe3w29gf45y564d69rtn65884azf"
+  },
+  "slug": "pb-module-triage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pb-module-triage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pb-module-triage&ownerHandle=narol1024",
+    "page_url": "https://clawhub.ai/narol1024/skills/pb-module-triage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 113,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Analyze BrainNode protobuf recordings from this autonomous-driving project against a natural-language problem description, identify the most likely faulty module, and produce an evidence-based module analysis. Use for .pb/TotalDataCore/DataCoreFrame recordings, PB replay or dump analysis, localizati",
+  "updated_at": 1786670784396,
+  "version": "1.0.0"
+}
