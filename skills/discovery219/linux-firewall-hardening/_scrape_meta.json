@@ -1,0 +1,64 @@
+{
+  "changelog": "linux-firewall-hardening 2.7.0\n\n- Added container and network audit tools: `scripts/container-port-audit.sh` (detects Docker DNAT/port-forwarding) and `scripts/ip-consistency.sh` (checks IPv4/IPv6 drift).\n- Expanded emergency lockout procedure: clarified that the \"emergency ACCEPT\" command may not be auto-executed and must only be performed by a human via serial console.\n- Introduced explicit CONFIRM state in the state machine, making human confirmation mandatory before any firewall changes.\n- Added full documentation for `firewall-apply.sh` in `references/firewall-apply.md`.\n- Removed files related to publishing and the skill card (PUBLISH.md, skill-card.md) to streamline the distribution.\n- Updated documentation and references to reflect all new scripts and required confirmation process.",
+  "created_at": 1778553706262,
+  "display_name": "linux-firewall-hardening",
+  "fetched_at": 1787773232077,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/backend-firewalld.md",
+    "references/backend-iptables.md",
+    "references/backend-nftables.md",
+    "references/backend-ufw.md",
+    "references/compliance.md",
+    "references/declarative-policy.md",
+    "references/docker-hardening.md",
+    "references/firewall-apply.md",
+    "references/k8s-policy.md",
+    "references/observability.md",
+    "references/policy-schema.json",
+    "references/recovery.md",
+    "references/remaining-improvements.md",
+    "references/security-profiles.md",
+    "references/special-environments.md",
+    "scripts/audit-firewall.sh",
+    "scripts/container-port-audit.sh",
+    "scripts/firewall-apply.sh",
+    "scripts/firewall-plan.sh",
+    "scripts/firewall-verify.sh",
+    "scripts/ip-consistency.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786063438734,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "discovery219",
+    "handle": "discovery219",
+    "user_id": "s173agn7542hhrs96f5sqxpwwx86k4fs"
+  },
+  "slug": "linux-firewall-hardening",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/linux-firewall-hardening",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=linux-firewall-hardening&ownerHandle=discovery219",
+    "page_url": "https://clawhub.ai/discovery219/skills/linux-firewall-hardening"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1021,
+    "installs": 19,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Safe Linux firewall hardening with backend detection, idempotent atomic rules, rollback protection, and AI-executable state-machine workflows. Covers ufw, firewalld, nftables, iptables, Docker, Kubernetes CNI awareness, and fail2ban with compliance mapping to CIS/PCI-DSS/SOC2.",
+  "updated_at": 1786062722446,
+  "version": "2.7.0"
+}
