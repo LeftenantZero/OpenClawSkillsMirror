@@ -1,0 +1,38 @@
+{
+  "changelog": "0.4.2\n\nFixed\n- tasks list no longer hides tasks created in the Nextcloud Tasks web app.\n  Those omit the STATUS property, and the CalDAV filter only matched todos\n  that declare it, so they were silently missing from every result.\n  Completed tasks stay hidden as before.\n- Deck deletes no longer fail with 403 Forbidden on Nextcloud 34. This\n  affected boards, stacks, cards, labels and card comments.\n\nChanged\n- Requires Node.js 24 or higher, up from 20, which is end-of-life.\n\nSecurity\n- Dependencies pinned to exact versions. fast-xml-parser updated past two\n  high-severity advisories in a transitive dependency. Neither reached the\n  shipped bundle, which imports only the XML parser.\n- The build no longer downloads anything at install time.\n- The README documents the three findings automated skill scanners report\n  against this repo, and how to rebuild the bundle from source to verify it.",
+  "created_at": 1769986427353,
+  "display_name": "openclaw-nextcloud",
+  "fetched_at": 1787773121721,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "index.js",
+    "package-lock.json",
+    "package.json",
+    "scripts/nextcloud.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Keith Vassallo",
+    "handle": "keithvassallomt",
+    "user_id": "s173g6eexqfne6yrvjvygmpbbh85vv41"
+  },
+  "slug": "openclaw-nextcloud",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-nextcloud",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-nextcloud&ownerHandle=keithvassallomt",
+    "page_url": "https://clawhub.ai/keithvassallomt/skills/openclaw-nextcloud"
+  },
+  "stats": {
+    "comments": 2,
+    "downloads": 6373,
+    "installs": 187,
+    "stars": 9,
+    "versions": 14
+  },
+  "summary": "Manage Notes, Tasks, Calendar, Files, Contacts, and Deck Kanban boards in your Nextcloud instance via CalDAV, WebDAV, Notes, and Deck APIs. Use for creating notes, managing todos and calendar events, uploading/downloading files, managing contacts, and organizing Kanban boards, stacks, and cards.",
+  "updated_at": 1786188641212,
+  "version": "0.4.2"
+}
