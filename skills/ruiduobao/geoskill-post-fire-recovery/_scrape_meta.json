@@ -1,0 +1,66 @@
+{
+  "changelog": "- Initial release of post-fire vegetation recovery monitoring skill.\n- Detects five levels of burn severity using dNBR from pre/post-fire NIR/SWIR bands.\n- Analyzes NDVI time series to estimate recovery trajectory, recovery slope, and recovery year.\n- Outputs GeoTIFFs for burn severity, dNBR, recovery slope, and recovery year; provides recovery trajectory and manifest JSONs.\n- Supports offline synthetic data generation and fully local processing of user-supplied imagery.",
+  "created_at": 1785849143005,
+  "display_name": "geoskill-post-fire-recovery",
+  "fetched_at": 1787773451113,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-post-fire-recovery.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785850326325,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-post-fire-recovery",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-post-fire-recovery",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-post-fire-recovery&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-post-fire-recovery"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 181,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7528 dNBR\uff08NIR/SWIR \u5dee\u5206\u5f52\u4e00\u5316\u70e7\u4f24\u6bd4\uff09\u5224\u5b9a\u4e94\u7ea7\u70e7\u4f24\u4e25\u91cd\u5ea6\uff0c\u7ed3\u5408\u706b\u540e\u591a\u671f NDVI \u6062\u590d\u66f2\u7ebf\u4f30\u7b97\u6062\u590d\u8f68\u8ff9\u3001\u6062\u590d\u659c\u7387\u4e0e\u6062\u590d\u5e74\u9650\uff0c\u8f93\u51fa\u4e25\u91cd\u5ea6 GeoTIFF\u3001\u6062\u590d\u8f68\u8ff9 JSON \u4e0e\u6062\u590d\u5e74\u9650\u6805\u683c\u3002Post-fire recovery from dNBR severity and NDVI time series.",
+  "updated_at": 1785849294258,
+  "version": "1.0.0"
+}
