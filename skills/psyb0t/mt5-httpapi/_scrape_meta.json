@@ -1,0 +1,34 @@
+{
+  "changelog": "## mt5-httpapi 4.12.2\n\n- Removed the file: `skill-card.md`\n- No changes to feature set or skill configuration.",
+  "created_at": 1771144230099,
+  "display_name": "mt5-httpapi",
+  "fetched_at": 1787770352341,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/setup.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ciprian Mandache",
+    "handle": "psyb0t",
+    "user_id": "s17fq93tmpky791n7516jcn08n83sfn2"
+  },
+  "slug": "mt5-httpapi",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mt5-httpapi",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mt5-httpapi&ownerHandle=psyb0t",
+    "page_url": "https://clawhub.ai/psyb0t/skills/mt5-httpapi"
+  },
+  "stats": {
+    "comments": 2,
+    "downloads": 4198,
+    "installs": 106,
+    "stars": 4,
+    "versions": 33
+  },
+  "summary": "HTTP client for a user-deployed mt5-httpapi MetaTrader 5 bridge. Use ONLY when the user has explicitly installed and configured mt5-httpapi AND provided MT5_API_URL. Read endpoints (account, symbols, rates, ticks, server-side technical-analysis enrichment via the wickworks sidecar, history, backtest report fetching) are safe to invoke. Trade-mutating endpoints on /orders and /positions require explicit per-action confirmation showing symbol, side, volume, and SL/TP; terminal shutdown/restart also require explicit confirmation naming the target terminal and operation. Never invoke mutations on inferred intent. Do not use this skill for generic market-data, charting, or trading questions where the user hasn't named mt5-httpapi.",
+  "updated_at": 1787233532759,
+  "version": "4.12.2"
+}
