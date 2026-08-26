@@ -1,0 +1,43 @@
+{
+  "changelog": "**Major update\u2014Context Mode skill reimagined for coding session resilience:**\n\n- Complete rewrite of the skill to target Claude Code session longevity, focusing on output filtering, session logging, and auto-resume.\n- Added robust output filtering to strip verbose or redundant command output, keeping only errors and critical summary lines in context.\n- Introduced an automated session log (session.log) that tracks files edited, commands run, tasks in progress, and the last user prompt and action.\n- On reset, skill now resumes from the session log\u2014restoring state, listing pending tasks, and continuing work without user re-instruction.\n- New activation and output messages for clarity and consistent communication of session status.\n- Provided ready-to-copy CLAUDE.md installation snippet to make Context Mode permanent for any project.\n- Removed old documentation (skill-card.md); SKILL.md now fully documents usage, behavior, and installation.",
+  "created_at": 1784211986706,
+  "display_name": "Context Mode",
+  "fetched_at": 1787776513685,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784236873659,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mohitagw15856",
+    "handle": "mohitagw15856",
+    "user_id": "s17fnyjd25g4ww0htrqnwjzv818agy02"
+  },
+  "slug": "context-mode",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/context-mode",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=context-mode&ownerHandle=mohitagw15856",
+    "page_url": "https://clawhub.ai/mohitagw15856/skills/context-mode"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 59,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Keep Claude Code sessions productive across resets with output filtering, session logging, and auto-resume. Use when starting a long or complex coding sessio...",
+  "updated_at": 1784211986706,
+  "version": "1.0.0"
+}
