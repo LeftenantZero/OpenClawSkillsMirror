@@ -1,0 +1,33 @@
+{
+  "changelog": "- Major release introducing three-layer storage, four core mechanisms, and a P0\u2013P3 truth hierarchy for long-term memory management.\n- Centralized MEMORY.md index (max 200 lines/25KB) as entrypoint; structured core JSON files and local LanceDB vector store for semantic search.\n- Implements Engramory curation discipline, WAL protocol for write-ahead safety, context-aware working buffer, and automatic promotion of high-value memories.\n- Maintains a strict truth source hierarchy: real-time data (SQLite state.db) for decisions; historical/session/log layers for analysis and learning.\n- Maintenance scripts and deployment checklist updated to reflect new structure and core memory principles.\n- Fully local and offline operation\u2014no external APIs; pure filesystem, SQLite, and LanceDB.",
+  "created_at": 1785255182427,
+  "display_name": "dawn-memory-arch",
+  "fetched_at": 1787774457220,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "chen6896qqwee",
+    "handle": "chen6896qqwee",
+    "user_id": "s17d04jj6mht3atggbc0865zph83hbzy"
+  },
+  "slug": "dawn-memory-arch-v7",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dawn-memory-arch-v7",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dawn-memory-arch-v7&ownerHandle=chen6896qqwee",
+    "page_url": "https://clawhub.ai/chen6896qqwee/skills/dawn-memory-arch-v7"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 233,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Three-layer storage + four mechanisms + P0-P3 truth hierarchy for long-term agent memory. MEMORY.md central index, memory/core/ structured facts, local vector DB semantic search. Engramory curation, WAL protocol, context management. Zero external API, pure local filesystem + SQLite + LanceDB.",
+  "updated_at": 1785255653659,
+  "version": "8.0.0"
+}
