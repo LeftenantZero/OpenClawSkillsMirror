@@ -1,0 +1,38 @@
+{
+  "changelog": "- Removes the redundant skill-card.md file for simplification.\n- Clarifies workflow: image prompts are now internal and not a user review gate.\n- Adds explicit rule to never ask users to review/approve image prompts; prompt creation is automatic after content/style approval.\n- Introduces a dedicated single-page revision loop: reconfirm revised content before regenerating an image; never regenerate from raw feedback.\n- Updates change-handling: always require explicit content approval on single-page revisions and maintain existing style unless the user requests a change.\n- Tightens language to align the review points and workflow gates with internal-only prompt handling.",
+  "created_at": 1783591641055,
+  "display_name": "PPT \u56fe\u7247\u751f\u6210",
+  "fetched_at": 1787776714654,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/image-2-prompts.md",
+    "references/mckinsey-outline.md",
+    "references/workflow.md",
+    "scripts/generate-html-player.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "callmexhj",
+    "handle": "callmexhj",
+    "user_id": "s172f1v6gafam18018mzzfn9198a136e"
+  },
+  "slug": "image-ppt-maker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/image-ppt-maker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=image-ppt-maker&ownerHandle=callmexhj",
+    "page_url": "https://clawhub.ai/callmexhj/skills/image-ppt-maker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 977,
+    "installs": 0,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "Turns presentation ideas into McKinsey-style outlines, consistent 16:9 slide images, a playable HTML deck, and duration-aware speaker scripts. Supports staged content review, visual style guidance, optional logo space, batch generation, and structured single-slide revisions.",
+  "updated_at": 1784109486377,
+  "version": "0.1.3"
+}
