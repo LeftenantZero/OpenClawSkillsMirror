@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of the free-ride skill.\n\n- Adds core functionality for managing free OpenRouter AI models in OpenClaw.\n- Automatically ranks free models by quality and configures fallbacks for rate-limit resilience.\n- Writes only to relevant config keys, preserving existing user configuration.\n- Adds a watcher daemon for automatic recovery when all model fallbacks are rate-limited.\n- Documentation and usage instructions updated via SKILL.md; removed redundant skill-card.md.",
+  "created_at": 1783577518101,
+  "display_name": "Free Ride",
+  "fetched_at": 1787771213584,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "main.py",
+    "requirements.txt",
+    "setup.py",
+    "skill-card.md",
+    "skill.json",
+    "watcher.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783578270422,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mao",
+    "handle": "xiiang0529",
+    "user_id": "s177g2yecjnx0t9t4kqg9krpcn8a4f38"
+  },
+  "slug": "free-ride",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/free-ride",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=free-ride&ownerHandle=xiiang0529",
+    "page_url": "https://clawhub.ai/xiiang0529/skills/free-ride"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 336,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Manages free AI models from OpenRouter for OpenClaw. Automatically ranks models by quality, configures fallbacks for rate-limit handling, and updates opencla...",
+  "updated_at": 1783577518101,
+  "version": "1.0.0"
+}
