@@ -1,0 +1,73 @@
+{
+  "changelog": "Turnstile Spin 1.0.0 \u2013 Initial release\n\n- Provides an end-to-end Cloudflare Turnstile integration workflow: codebase scan, widget creation, managed siteverify Worker deploy, frontend wiring, validation, and persistent skill saving.\n- Supports multi-step, confirmation-driven setup with clear branching for authentication, domain selection, and code insertion plans.\n- Guides users through reusing or migrating from existing CAPTCHA solutions; ensures validation and prevents accidental data loss.\n- Mirrors canonical guidance from Cloudflare\u2019s Turnstile Spin documentation.\n- Strictly scopes actions to Turnstile widget integration; avoids unrelated Cloudflare or project modifications.",
+  "created_at": 1781157574622,
+  "display_name": "Turnstile Spin",
+  "fetched_at": 1787781181723,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/astro.md",
+    "references/hugo.md",
+    "references/nextjs-app.md",
+    "references/nextjs-pages.md",
+    "references/sveltekit.md",
+    "references/vanilla-html.md",
+    "scripts/auth-probe.sh",
+    "scripts/fetch-secret.sh",
+    "scripts/persist-skill.sh",
+    "scripts/validate.sh",
+    "scripts/widget-create.sh",
+    "scripts/worker-deploy.sh",
+    "skill-card.md",
+    "templates/worker/LICENSE",
+    "templates/worker/README.md",
+    "templates/worker/package.json",
+    "templates/worker/public/post-deploy.html",
+    "templates/worker/src/errors.ts",
+    "templates/worker/src/index.ts",
+    "templates/worker/src/observability.ts",
+    "templates/worker/src/types.ts",
+    "templates/worker/src/validate.ts",
+    "templates/worker/test/deploy.test.ts",
+    "templates/worker/test/integration.test.ts",
+    "templates/worker/test/unit.test.ts",
+    "templates/worker/test/validation.test.ts",
+    "templates/worker/tsconfig.json",
+    "templates/worker/vitest.config.ts",
+    "templates/worker/wrangler.toml",
+    "tests/validation.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781161466827,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Reza",
+    "handle": "creativerezz",
+    "user_id": "s17bc7kypy6tqd9rexm97ae8hd83mf3r"
+  },
+  "slug": "turnstile-spin",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/turnstile-spin",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=turnstile-spin&ownerHandle=creativerezz",
+    "page_url": "https://clawhub.ai/creativerezz/skills/turnstile-spin"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 372,
+    "installs": 5,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Set up Cloudflare Turnstile end-to-end in a project \u2014 scan the codebase, create the widget via the Cloudflare API, deploy the managed siteverify Worker, writ...",
+  "updated_at": 1781157574622,
+  "version": "1.0.0"
+}
