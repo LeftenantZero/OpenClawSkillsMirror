@@ -1,0 +1,48 @@
+{
+  "changelog": "Bilibili Digest 1.0.0 \u2014 Initial Release\n\n- Extracts and summarizes Bilibili videos/columns into structured, timestamped notes.\n- Supports single and batch processing of Bilibili URLs, including short links.\n- Outputs in multiple formats: Markdown, Obsidian, JSON, Notion, and Feishu.\n- Handles missing subtitles with fallback summary strategies using available metadata and danmaku.\n- Implements chapter segmentation, API rate limiting, error retry, and 24h local cache.\n- Provides options for summary detail, transcript inclusion, danmaku analysis, and cross-video merging.",
+  "created_at": 1781486666426,
+  "display_name": "Bilibili Digest",
+  "fetched_at": 1787780801201,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/README.md",
+    "references/presets.json",
+    "references/stopwords.txt",
+    "references/video-categories.json",
+    "schemas/input.schema.json",
+    "schemas/output.schema.json",
+    "scripts/__init__.py",
+    "scripts/api.py",
+    "scripts/cross_merge.py",
+    "scripts/danmaku.py",
+    "scripts/exporter.py",
+    "scripts/parser.py",
+    "scripts/segmenter.py",
+    "scripts/subtitle.py",
+    "scripts/summarizer.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "haidong",
+    "handle": "harrylabsj",
+    "user_id": "s17a8m9q4jybb46cv60h4fxard83hmsn"
+  },
+  "slug": "bilibili-digest",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bilibili-digest",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bilibili-digest&ownerHandle=harrylabsj",
+    "page_url": "https://clawhub.ai/harrylabsj/skills/bilibili-digest"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 419,
+    "installs": 4,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Extract, structure, and summarize Bilibili video/column content into structured notes with timestamps, key points, and chapter indexes.",
+  "updated_at": 1781486666426,
+  "version": "1.0.0"
+}
