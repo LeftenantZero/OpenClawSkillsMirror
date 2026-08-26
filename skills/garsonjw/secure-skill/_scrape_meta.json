@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release with comprehensive security auditing and skill management features.\n\n- Scans all skills in a project directory for code, prompt, and supply chain security issues, outputting a detailed markdown table report.\n- Supports static analysis of both code and markdown files, with special logic to skip fenced code blocks.\n- Allows installation of skills from a local registry into a project, preventing overwrites of existing skills.\n- Provides both markdown and JSON reporting formats, with configurable strictness.\n- Designed to operate fully offline, with no network connections during scanning or installation.\n- Clear instructions and flexible usage for both scanning and skill installation workflows.",
+  "created_at": 1784016148007,
+  "display_name": "secure-skill",
+  "fetched_at": 1787776805446,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/install_skills.py",
+    "scripts/patterns.json",
+    "scripts/scan_skills.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784016471982,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Garsonjw",
+    "handle": "garsonjw",
+    "user_id": "s178phgzzsd598q7epaknhz1kh8771jc"
+  },
+  "slug": "secure-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/secure-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=secure-skill&ownerHandle=garsonjw",
+    "page_url": "https://clawhub.ai/garsonjw/skills/secure-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 270,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Scan skills in a project directory for security issues and generate a markdown table report, then install skills from a local registry. Combines static analysis of code and markdown files with supply chain checks. Use when auditing a skills directory, generating a security summary table, or installi",
+  "updated_at": 1784016148007,
+  "version": "1.0.0"
+}
