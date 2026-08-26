@@ -1,0 +1,49 @@
+{
+  "changelog": "Fix portable paths, yfinance->local CSV fallback, graceful wacli degradation; add Feishu permission docs",
+  "created_at": 1781848212222,
+  "display_name": "Stock Alert (WhatsApp)",
+  "fetched_at": 1787778281922,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/wacli_config.yaml",
+    "data/nasdaq_stock_prices.csv",
+    "docs/PERMISSIONS.md",
+    "lib/finance_tools.py",
+    "requirements.txt",
+    "skill-card.md",
+    "stock_alert_workflow.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781969527345,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "terrycarter1985",
+    "handle": "terrycarter1985",
+    "user_id": "s17brwfrqyjhbjgadkvar20h8x8492g8"
+  },
+  "slug": "stock-alert",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/stock-alert",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=stock-alert&ownerHandle=terrycarter1985",
+    "page_url": "https://clawhub.ai/terrycarter1985/skills/stock-alert"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 88,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Generate a daily stock price watchlist alert and deliver it to a WhatsApp chat/group via the wacli (`wu`) CLI. Live quotes use yfinance with automatic fallba...",
+  "updated_at": 1781926981587,
+  "version": "1.0.1"
+}
