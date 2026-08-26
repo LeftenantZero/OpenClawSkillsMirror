@@ -1,0 +1,43 @@
+{
+  "changelog": "**Enhanced safety and accuracy by requiring lockstep between review and fix steps, and supporting optional verification overlays.**\n\n- Now requires findings to be \u201clocked\u201d by id from the review JSON; fixes only those explicitly present.\n- If a verification file exists, skips false positives and treats inconclusive findings as risky (requires confirmation).\n- Will not apply fixes unless pre/post safety checks, up-to-date review artifacts, and interactive approvals for risky changes are satisfied.\n- Added explicit logic to handle review/verification schema changes and missing/malformed artifacts.\n- Removed outdated skill-card.md; documentation is now consolidated in SKILL.md.",
+  "created_at": 1774911238157,
+  "display_name": "Fix Llm Artifacts",
+  "fetched_at": 1787783693491,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780281360968,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Kevin Anderson",
+    "handle": "anderskev",
+    "user_id": "s17b1fzefm8nj8j1sdkzrze7gn83pfrg"
+  },
+  "slug": "fix-llm-artifacts",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fix-llm-artifacts",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fix-llm-artifacts&ownerHandle=anderskev",
+    "page_url": "https://clawhub.ai/anderskev/skills/fix-llm-artifacts"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 782,
+    "installs": 18,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Applies fixes from a prior review-llm-artifacts run, with safe/risky classification. Respects verify-llm-artifacts output when present to skip false positives.",
+  "updated_at": 1780280559926,
+  "version": "1.1.5"
+}
