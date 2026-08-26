@@ -1,0 +1,36 @@
+{
+  "changelog": "- Initial release of the \"improve-codebase-architecture\" skill.\n- Surfaces architectural friction and proposes deepening opportunities based on the project\u2019s domain model, `CONTEXT.md` glossary, and architectural decision records.\n- Uses an Explore sub-agent to walk the codebase, applies the deletion test to suspected shallow modules, and presents evidence-backed refactoring candidates.\n- Outputs a clear, numbered list of candidates including files, problem, evidence, solution, and benefits; skips unsupported or purely theoretical suggestions.\n- Launches an interactive \"grilling loop\" for the user's chosen candidate: refines concepts inline, updates project vocabulary, and optionally creates ADRs for load-bearing rejections.\n- Always follows defined glossary and terminology for clarity and consistency.",
+  "created_at": 1786913507210,
+  "display_name": "improve-codebase-architecture",
+  "fetched_at": 1787771694058,
+  "files": [
+    "DEEPENING.md",
+    "INTERFACE-DESIGN.md",
+    "LANGUAGE.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "improve-codebase-architecture",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/improve-codebase-architecture",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=improve-codebase-architecture&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/improve-codebase-architecture"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 135,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Surface architectural friction in a codebase and propose **deepening opportunities** \u2014 refactors that turn shallow modules into deep ones, informed by the project's `CONTEXT.md` glossary and `docs/adr/` decisions. Walks the codebase with an Explore sub-agent, applies the **deletion test** to suspected pass-through modules, presents a numbered list of candidates with files / problem / solution / benefits, and drops into a grilling loop once the user picks one \u2014 naming new concepts into `CONTEXT.md` inline and offering an ADR only when a rejection is load-bearing. Writes no production code. Use this skill whenever the user says \"improve architecture\", \"improve the architecture\", \"architecture review\", \"find refactoring opportunities\", \"find deepening opportunities\", \"find shallow modules\", \"make this more testable\", \"this code is hard to navigate\", or invokes `/improve-codebase-architecture` \u2014 even if they don't name the skill.",
+  "updated_at": 1786913554983,
+  "version": "1.0.0"
+}
