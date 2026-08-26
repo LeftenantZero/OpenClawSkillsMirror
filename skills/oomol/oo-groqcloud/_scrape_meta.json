@@ -1,0 +1,33 @@
+{
+  "changelog": "- Provides a GroqCloud skill for working with the `groqcloud` connector through the `oo` CLI using an OOMOL-connected account.\n- Supports model discovery with `list_models` and `get_model` for checking available GroqCloud models and their metadata.\n- Adds `create_chat_completion` for non-streaming, OpenAI-compatible chat requests against GroqCloud.\n- Includes audio workflows with `create_audio_transcription` and `create_audio_translation` for Whisper-based transcription and English translation.\n- Documents a safe execution flow: inspect each action\u2019s live schema first, then run a JSON payload that matches it.\n\nSource: `oomol-lab/skills@46cfb3e`",
+  "created_at": 1780485231704,
+  "display_name": "GroqCloud",
+  "fetched_at": 1787772726872,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-groqcloud",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-groqcloud",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-groqcloud&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-groqcloud"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 627,
+    "installs": 7,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "GroqCloud (groq.com). Use this skill for ANY GroqCloud request \u2014 reading, creating, and updating data. Whenever a task involves GroqCloud, use this skill instead of calling the API directly.",
+  "updated_at": 1786436003666,
+  "version": "1.0.2"
+}
