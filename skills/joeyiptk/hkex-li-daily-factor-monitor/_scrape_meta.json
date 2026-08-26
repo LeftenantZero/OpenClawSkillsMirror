@@ -1,0 +1,39 @@
+{
+  "changelog": "Initial release \u2014 fetches and digests HKEX L&I daily leverage factors with agent-native PDF parsing.\n\n- Discovers latest \"Daily Targeted Leverage Factor\" announcements for HKEX L&I products and parses PDFs per-run.\n- Extracts product leverage factors and applicable trading dates, joining PDF data with HKEX metadata.\n- Emits a concise human-readable Telegram digest with product rows in a monospace code block, grouped by date, plus source URLs.\n- Ensures safe PDF handling: downloads per run, deletes all files after parsing.\n- Fully agent-native: uses curl, jq, and pdftotext (with python3 fallback) for robust extraction.\n- Portable, self-contained config and storage; no credentials or hard-coded paths.",
+  "created_at": 1786178639024,
+  "display_name": "HKEX L&I Daily Factor Monitor",
+  "fetched_at": 1787773130448,
+  "files": [
+    "CHANGELOG.md",
+    "SETUP.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.json",
+    "scripts/pdf_to_text.py",
+    "scripts/setup.sh",
+    "skill-card.md",
+    "version.txt"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "larryjoe",
+    "handle": "joeyiptk",
+    "user_id": "s17av7k4d5aq1pr3yswt5phdg985p5pm"
+  },
+  "slug": "hkex-li-daily-factor-monitor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hkex-li-daily-factor-monitor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hkex-li-daily-factor-monitor&ownerHandle=joeyiptk",
+    "page_url": "https://clawhub.ai/joeyiptk/skills/hkex-li-daily-factor-monitor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 169,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fetch the latest HKEXnews \"Daily Targeted Leverage Factor\" announcements, extract factors from PDFs, and emit a human-readable Telegram digest.",
+  "updated_at": 1786178717562,
+  "version": "1.0.0"
+}
