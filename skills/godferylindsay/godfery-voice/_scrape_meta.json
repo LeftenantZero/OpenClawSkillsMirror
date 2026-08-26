@@ -1,0 +1,61 @@
+{
+  "changelog": "Initial release of Discord Voice Plugin for Clawdbot:\n\n- Enables real-time voice conversations in Discord channels, transcribing speech, processing it with Claude, and playing back responses.\n- Supports multiple STT (OpenAI Whisper, Deepgram, Local Whisper) and TTS (OpenAI, ElevenLabs, Kokoro) providers.\n- Features voice activity detection, streaming STT, barge-in (interruptible bot speech), and automatic reconnect.\n- Provides flexible configuration, supports CLI, slash commands, and integration as an agent tool.\n- Requires Discord bot with voice permissions and system dependencies (ffmpeg, build tools).\n- Includes detailed setup, configuration, and troubleshooting guidance.",
+  "created_at": 1776238436925,
+  "display_name": "voice",
+  "fetched_at": 1787786004233,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "clawdbot.plugin.json",
+    "index.ts",
+    "openclaw.plugin.json",
+    "package-lock.json",
+    "package.json",
+    "scripts/smoke-test.mjs",
+    "skill-card.md",
+    "src/config.ts",
+    "src/constants.ts",
+    "src/core-bridge.ts",
+    "src/streaming-stt.ts",
+    "src/streaming-tts.ts",
+    "src/stt.ts",
+    "src/tts.ts",
+    "src/voice-connection.ts",
+    "tsconfig.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779962003618,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "GodferyLindsay",
+    "handle": "godferylindsay",
+    "user_id": "s17a951bn5kd166s6bqzsymbth84vq6t"
+  },
+  "slug": "godfery-voice",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/godfery-voice",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=godfery-voice&ownerHandle=godferylindsay",
+    "page_url": "https://clawhub.ai/godferylindsay/skills/godfery-voice"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 522,
+    "installs": 10,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Enables real-time voice chat in Discord channels with speech-to-text, Claude AI processing, and text-to-speech playback supporting barge-in and auto-reconnect.",
+  "updated_at": 1779219370882,
+  "version": "1.0.0"
+}
