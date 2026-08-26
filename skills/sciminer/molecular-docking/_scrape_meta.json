@@ -1,0 +1,33 @@
+{
+  "changelog": "- Switched from using an internal Python registry to relying on published Markdown API docs from https://sciminer.tech/tool_api_files/ as the single authoritative source for all docking engine parameters, submission details, and file upload instructions.\n- Removed all local registry code and references (including scripts/__init__.py and scripts/sciminer_registry.py).\n- Updated workflow and documentation to require agents to read and follow the selected tool's public Markdown file before every invocation; payloads and parameters must match the doc exactly.\n- Enforced stricter doc-driven parameter selection, upload field names, authentication, and error handling; agents must cite the Markdown doc used, never past internal registry data.\n- Added credential_files declaration to SKILL.md and removed the local skill-card.md file.",
+  "created_at": 1778067248496,
+  "display_name": "Molecular Docking",
+  "fetched_at": 1787783777286,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SciMiner",
+    "handle": "sciminer",
+    "user_id": "s170qp1q4twz35wa85ppa8894h83w461"
+  },
+  "slug": "molecular-docking",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/molecular-docking",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=molecular-docking&ownerHandle=sciminer",
+    "page_url": "https://clawhub.ai/sciminer/skills/molecular-docking"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 925,
+    "installs": 22,
+    "stars": 3,
+    "versions": 4
+  },
+  "summary": "Molecular docking workflows across Gnina, AutoDock Vina, PackDock, SurfDock, and DiffDock through SciMiner, with Gnina as the default engine.",
+  "updated_at": 1780221642516,
+  "version": "1.0.3"
+}
