@@ -1,0 +1,80 @@
+{
+  "changelog": "**Major update: Adds flexible permission handling, duplicate cleanup, dynamic patrols, and more triggers.**\n\n- Now handles owner permission responses (e.g. \"AI Mother: yes 756882\") for stuck AIs needing confirmation.\n- Added scripts for duplicate AI detection/cleanup and smarter patrol frequency management.\n- New triggers: listens for \"cleanup duplicates\" and owner responses in chat, not just status/dash.\n- Expanded agent support to include OpenCode, Aider, etc.; improved documentation and onboarding hints.\n- Additional scripts enhance health checks, stuck AI detection, and safe duplicate cleanup.",
+  "created_at": 1773549310186,
+  "display_name": "Ai Mother",
+  "fetched_at": 1787788631902,
+  "files": [
+    "CHANGELOG.md",
+    "CHECKLIST.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/commands.md",
+    "requirements.txt",
+    "scripts/analytics.py",
+    "scripts/approve-resume.sh",
+    "scripts/auto-heal.sh",
+    "scripts/check-tmux-waiting.sh",
+    "scripts/cleanup-conversations.sh",
+    "scripts/cleanup-duplicates.sh",
+    "scripts/dashboard.py",
+    "scripts/dashboard.sh",
+    "scripts/db.py",
+    "scripts/detect-comm-method.sh",
+    "scripts/detect-permission-format.sh",
+    "scripts/detect-stuck.sh",
+    "scripts/format-notification.sh",
+    "scripts/get-ai-context.sh",
+    "scripts/get-session-info.sh",
+    "scripts/handle-owner-response.sh",
+    "scripts/health-check.sh",
+    "scripts/manage-patrol-frequency.sh",
+    "scripts/notify-owner.sh",
+    "scripts/patrol.sh",
+    "scripts/read-state.sh",
+    "scripts/resume-ai.sh",
+    "scripts/send-to-ai.sh",
+    "scripts/send-via-tty.sh",
+    "scripts/setup.sh",
+    "scripts/smart-diagnose.sh",
+    "scripts/smart-send.sh",
+    "scripts/test-send.sh",
+    "scripts/test-suite.sh",
+    "scripts/track-conversation.sh",
+    "scripts/update-state.sh",
+    "scripts/verify-response.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089961149,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u5c06\u519b\u738b\u8c37",
+    "handle": "guguoyi",
+    "user_id": "s173z9v716amvgptffp12ym39n83gd3p"
+  },
+  "slug": "ai-mother",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-mother",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-mother&ownerHandle=guguoyi",
+    "page_url": "https://clawhub.ai/guguoyi/skills/ai-mother"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 966,
+    "installs": 27,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "AI Mother - Monitor and manage other AI agents (Claude Code, Codex, Gemini, etc.). Use when asked to check AI execution status, supervise AI agents, help stu...",
+  "updated_at": 1779078286023,
+  "version": "1.0.1"
+}
