@@ -1,0 +1,38 @@
+{
+  "changelog": "Initial release of Alibaba Cloud ECS snapshot-based cross-AZ disaster recovery skill.\n\n- Supports full instance backup or disk-level backup across availability zones using ECS snapshots.\n- Scenario A: Recover entire ECS instance (multi/single-disk) to a different AZ, preserving the original.\n- Scenario B: Backup specific disks and attach to another existing instance in a target AZ.\n- Enforces robust pre-checks: Aliyun CLI version compatibility, plugin updates, and secure credential verification without exposing AK/SK.\n- All API-driven CLI commands require a session-scoped user-agent for unified activity tracking.\n- Provides strict CLI usage guidelines and permission error handling protocols.",
+  "created_at": 1782216898833,
+  "display_name": "Alibabacloud Ecs Disaster Recovery Snapshot",
+  "fetched_at": 1787779405242,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/error-handling.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-ecs-disaster-recovery-snapshot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-ecs-disaster-recovery-snapshot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-ecs-disaster-recovery-snapshot&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-ecs-disaster-recovery-snapshot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 314,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Alibaba Cloud ECS snapshot-based cross-AZ disaster recovery skill. Two scenarios: Scenario A (Full Instance Recovery): Recover ECS instance to a different AZ...",
+  "updated_at": 1782216898833,
+  "version": "0.0.1"
+}
