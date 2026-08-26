@@ -1,0 +1,53 @@
+{
+  "changelog": "- Initial release of the Huawei Cloud CCE Environment Assessment skill.\n- Collects metrics and configurations from Huawei Cloud container environments and generates comprehensive assessment reports.\n- Provides step-by-step workflow: environment configuration, environment check, information collection, metric scoring, and report generation.\n- Strict execution rules for step confirmations, file storage, permission handling, and status tracking.\n- Emphasizes using Huawei Cloud KooCLI for all information collection.\n- Outputs actionable suggestions for aligning applications with cloud-native best practices.",
+  "created_at": 1781087735023,
+  "display_name": "huawei-cloud-cce-env-assessment",
+  "fetched_at": 1787771149846,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cloud-native-checklist.xlsx",
+    "references/koocli-installation-guide.md",
+    "references/requirements.txt",
+    "scripts/__init__.py",
+    "scripts/collect_all.py",
+    "scripts/make_charts.py",
+    "scripts/make_report_html.py",
+    "scripts/score_and_excel.py",
+    "skill-card.md",
+    "templates/cloud-native-assessment-template.md",
+    "templates/report_template.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787409280437,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweicloud-skills-team",
+    "handle": "huaweiclouddev",
+    "user_id": "s17axk041vxeamxj39r4dwvyts87wtza"
+  },
+  "slug": "huawei-cloud-cce-env-assessment",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-cce-env-assessment",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-cce-env-assessment&ownerHandle=huaweiclouddev",
+    "page_url": "https://clawhub.ai/huaweiclouddev/skills/huawei-cloud-cce-env-assessment"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 662,
+    "installs": 6,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "A skill for huawei cloud container(CCE) assessment. It automatically collects metrics and configurations from containerized application environments on Huawei Cloud to generate a comprehensive assessment report. Use this when users want to evaluate if their Huawei Cloud applications align with cloud-native best practices and identify areas for improvement.",
+  "updated_at": 1787408554023,
+  "version": "1.0.1"
+}
