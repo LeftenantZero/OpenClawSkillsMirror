@@ -1,0 +1,61 @@
+{
+  "changelog": "# Stock-analysis v1.0.0\n\nRedesigned as an AI-powered analytical tool distilling the styles of five major WeChat stock-investing influencers, with a focus on multi-mode, style-driven investment analysis.\n\n- distilled and structured over 200 articles from 5 key WeChat influencers into JSON style profiles for AI-driven analysis\n- supports single- or multi-influencer (\u5927V) analysis, daily/sector recaps, stock screening, portfolio review, earnings commentary, and view tracking across multiple analytical modes\n- integrates real-time market data via web search, ensuring all price/flow numbers are sourced and labeled (prohibits generated/guessed data)\n- enforces multi-phase execution with user-involved article syncing, environmental sanity checks, data source cross-verification, quality audits, and incremental style profile updates\n- output always discloses data sources and simulation nature, with built-in compliance and audit rules to prevent misleading or financial advice\n\n> Previous versions/commands/features have been fully replaced by the new influencer style analysis framework.",
+  "created_at": 1782986446284,
+  "display_name": "\u80a1\u7968\u5206\u6790\u4e13\u5bb6-\u516c\u4f17\u53f7\u80a1\u7968\u5927V\u84b8\u998f",
+  "fetched_at": 1787775774194,
+  "files": [
+    "README.en.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/article_template.md",
+    "profiles/\u6295\u8d44\u660e\u89c1_profile.json",
+    "profiles/\u683c\u5170\u6295\u7814_profile.json",
+    "profiles/\u732b\u7b14\u5200_profile.json",
+    "profiles/\u7ec8\u8eab\u9ed1\u767d_profile.json",
+    "profiles/\u8d22\u8eba\u5e73_profile.json",
+    "references/\u8d28\u91cf\u51c6\u51fa\u6807\u51c6.md",
+    "scripts/analyze.py",
+    "scripts/common.py",
+    "scripts/earnings.py",
+    "scripts/fetch_market_data.py",
+    "scripts/portfolio.py",
+    "scripts/quality_audit.py",
+    "scripts/stock_screen.py",
+    "scripts/sync_articles.py",
+    "scripts/validate_profile.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783581949419,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "RedFox",
+    "handle": "redfox-data",
+    "user_id": "s171kp1a76rjevha5b9m61sxv984vncz"
+  },
+  "slug": "stock-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/stock-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=stock-analysis&ownerHandle=redfox-data",
+    "page_url": "https://clawhub.ai/redfox-data/skills/stock-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 137,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u57fa\u4e8e5\u4f4d\u516c\u4f17\u53f7\u80a1\u7968\u6295\u8d44\u5927V\uff08\u732b\u7b14\u5200\u3001\u683c\u5170\u6295\u7814\u3001\u6295\u8d44\u660e\u89c1\u3001\u8d22\u8eba\u5e73\u3001\u7ec8\u8eab\u9ed1\u767d\uff09200+\u7bc7\u6587\u7ae0\u84b8\u998f\u5f62\u6210\u7684\u98ce\u683c\u753b\u50cf\uff0c \u901a\u8fc7 AI Agent \u5b9e\u73b0\u98ce\u683c\u5316\u6295\u8d44\u5206\u6790\uff0c\u652f\u6301\u5355\u5927V\u590d\u76d8\u3001\u591aV\u5e76\u884c\u5bf9\u6bd4\u3001\u677f\u5757\u6f0f\u6597\u7b5b\u9009\u3001\u77ed\u7ebf\u9009\u80a1\u3001\u7ec4\u5408\u590d\u76d8\u3001\u8d22\u62a5\u70b9\u8bc4\u3001 \u89c2\u70b9\u8ddf\u8e2a\u7b49\u591a\u6a21\u5f0f\u3002\u5f53\u7528\u6237\u8bf7\u6c42\u80a1\u7968\u590d\u76d8\u3001\u5927V\u98ce\u683c\u5206\u6790\u3001\u591aV\u5bf9\u6bd4\u3001\u677f\u5757\u5206\u6790\u3001\u77ed\u7ebf\u9009\u80a1\u3001\u7ec4\u5408\u590d\u76d8\u3001\u8d22\u62a5\u70b9\u8bc4\u65f6\u4f7f\u7528\u3002 \u89e6\u53d1\u8bcd\uff1a\u80a1\u7968\u590d\u76d8\u3001\u5927V\u5206\u6790\u3001\u6a21\u62df\u5927V\u3001\u98ce\u683c\u5316\u590d\u76d8\u3001\u591aV\u5bf9\u6bd4\u3001\u6bcf\u65e5\u590d\u76d8\u3001\u677f\u5757\u5206\u6790\u3001\u9009\u80a1\u3001\u7ec4\u5408\u590d\u76d8\u3001\u8d22\u62a5\u70b9\u8bc4\u3001\u5927V\u89c2\u70b9\u3002",
+  "updated_at": 1782986446284,
+  "version": "1.0.0"
+}
