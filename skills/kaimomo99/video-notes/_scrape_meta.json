@@ -1,0 +1,49 @@
+{
+  "changelog": "Version 1.1.0 brings Bilibili support, better subtitle extraction, and detailed language guidelines:\n\n- Added support for Bilibili videos: subtitle extraction and note generation now work for both YouTube and BiliBili URLs.\n- Enhanced YouTube subtitle script: supports browser cookie authentication for age-restricted/login-required videos, with clear usage instructions.\n- Improved fallback strategies for subtitle formats (VTT/SRT) and built-in heuristics for reliable extraction.\n- Updated documentation with detailed workflow for Chinese/English videos and clarified requirements for UI language matching the user's request.\n- No breaking changes to existing YouTube functionality; base workflow remains the same.",
+  "created_at": 1779358545423,
+  "display_name": "Video Notes",
+  "fetched_at": 1787784016430,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/note-template.html",
+    "scripts/capture_keyframes.py",
+    "scripts/extract_subtitles.py",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779958956215,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "KAImomo99",
+    "handle": "kaimomo99",
+    "user_id": "s170qqwf1etn89fqe8qwef10qx87410q"
+  },
+  "slug": "video-notes",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/video-notes",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=video-notes&ownerHandle=kaimomo99",
+    "page_url": "https://clawhub.ai/kaimomo99/skills/video-notes"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 927,
+    "installs": 20,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "\u628a YouTube / \u54d4\u54e9\u54d4\u54e9\u89c6\u9891\u53d8\u6210\u4e00\u4efd\u7cbe\u7f8e\u7684\u7ed3\u6784\u5316HTML\u7b14\u8bb0\u3002\u81ea\u52a8\u63d0\u53d6\u5b57\u5e55\u3001\u8bc6\u522b\u5173\u952e\u65f6\u523b\u5e76\u622a\u56fe\u3001\u751f\u6210\u6838\u5fc3\u8bba\u70b9\u603b\u7ed3\u548c SVG \u56fe\u8868\uff0c\u8f93\u51fa\u5e26\u4fa7\u8fb9\u5bfc\u822a\u548c\u5168\u6587\u641c\u7d22\u7684\u5355\u6587\u4ef6 HTML \u6587\u6863\u3002\u9002\u7528\u4e8e\u6280\u672f\u6f14\u8bb2\u3001\u516c\u5f00\u8bfe\u3001\u64ad\u5ba2\u3001\u4ea7\u54c1\u53d1\u5e03\u4f1a\u7b49\u573a\u666f\u3002This skill should be used when a user provi...",
+  "updated_at": 1780021788395,
+  "version": "1.1.0"
+}
