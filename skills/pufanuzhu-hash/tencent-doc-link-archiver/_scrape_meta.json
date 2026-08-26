@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release with full Tencent Docs link extraction, download, and archiving pipeline:\n\n- Automatically extracts docs.qq.com links from user input and filters out all other links.\n- Downloads each Tencent Doc one by one, saving files to Desktop/\u817e\u8baf\u6587\u6863/ with date-prefixed filenames.\n- Supports batch processing with failure logging; does not stop the process if some downloads fail.\n- Updates or creates an Excel ledger at Desktop/\u817e\u8baf\u6587\u6863/\u817e\u8baf\u6587\u6863\u94fe\u63a5\u53f0\u8d26.xlsx, recording download date and link.\n- Only processes Tencent Docs links; robust error handling and clear feedback report provided.",
+  "created_at": 1781262033933,
+  "display_name": "\u817e\u8baf\u6587\u6863\u94fe\u63a5\u89e3\u6790\u5f52\u6863",
+  "fetched_at": 1787781028947,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/update_ledger.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "pufanuzhu-hash",
+    "handle": "pufanuzhu-hash",
+    "user_id": "s17bwn9wctzn5yk835eb4tde1d83t55g"
+  },
+  "slug": "tencent-doc-link-archiver",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tencent-doc-link-archiver",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tencent-doc-link-archiver&ownerHandle=pufanuzhu-hash",
+    "page_url": "https://clawhub.ai/pufanuzhu-hash/skills/tencent-doc-link-archiver"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 442,
+    "installs": 5,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u817e\u8baf\u6587\u6863\u94fe\u63a5\u89e3\u6790\u3001\u4e0b\u8f7d\u3001\u5f52\u6863\u5165\u5e93\u3002\u5f53\u7528\u6237\u8f93\u5165\u5305\u542b docs.qq.com \u94fe\u63a5\u7684\u6587\u672c\uff0c\u81ea\u52a8\u63d0\u53d6\u817e\u8baf\u6587\u6863\u94fe\u63a5\u2192\u9010\u4e2a\u5bfc\u51fa\u4e0b\u8f7d\u2192\u4fdd\u5b58\u81f3\u684c\u9762/\u817e\u8baf\u6587\u6863/\u76ee\u5f55\u2192\u66f4\u65b0Excel\u53f0\u8d26\u3002\u89e6\u53d1\u8bcd\uff1a\u4e0b\u8f7d\u817e\u8baf\u6587\u6863\u3001\u5f52\u6863\u817e\u8baf\u6587\u6863\u3001\u4fdd\u5b58\u817e\u8baf\u6587\u6863\u3001\u5907\u4efd\u817e\u8baf\u6587\u6863\u3001\u6279\u91cf\u4e0b\u8f7d\u817e\u8baf\u6587\u6863\u3001\u89e3\u6790\u817e\u8baf\u6587\u6863\u94fe\u63a5\u3002\u53ea\u5904\u7406 docs.qq.com \u57df\u540d\u94fe\u63a5\uff0c\u5ffd...",
+  "updated_at": 1781262033933,
+  "version": "1.0.0"
+}
