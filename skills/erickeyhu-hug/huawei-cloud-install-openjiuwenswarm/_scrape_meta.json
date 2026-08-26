@@ -1,0 +1,52 @@
+{
+  "changelog": "- Final deployment success message updated: output text now references \u201cJiuwenSwarm\u5df2\u542f\u52a8\u201d instead of \u201cOpenJiuwenSwarm\u5df2\u542f\u52a8\u201d.\n- Documentation in SKILL.md clarified the wording of the mandatory output message, ensuring consistency across deployment instructions.\n- Updated and clarified invocation and output requirements for agents.\n- Removed redundant file: skill-card.md.",
+  "created_at": 1785747860142,
+  "display_name": "huawei-cloud-install-openjiuwenswarm",
+  "fetched_at": 1787770795279,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/01_download.py",
+    "scripts/02_extract.py",
+    "scripts/03_configure.py",
+    "scripts/04_start.py",
+    "scripts/05_url.py",
+    "scripts/common.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785748733943,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-install-openjiuwenswarm",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-install-openjiuwenswarm",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-install-openjiuwenswarm&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-install-openjiuwenswarm"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 41,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "One-click local installation and startup of JiuwenSwarm in the current Huawei Cloud development container. Usage scenarios: CRITICAL \u2014 Do NOT manually deploy JiuwenSwarm. Route ALL deployment requests through this Skill. This is the MANDATORY entry point. When a user asks to deploy, install, or start JiuwenSwarm (\u90e8\u7f72JiuwenSwarm/\u5b89\u88c5JiuwenSwarm/\u542f\u52a8JiuwenSwarm, install jiuwenswarm, deploy openjiuwen), you MUST invoke this Skill first. Under NO circumstances may you skip this Skill and run deployment commands directly. Even if you think 'this is faster' or 'the steps are well documented' \u2014 DO NOT skip. The skill automatically downloads the mirror, extracts, configures, and starts the service inside the current container \u2014 no external cloud instances are created. Trigger keywords: deploy JiuwenSwarm, install JiuwenSwarm, start JiuwenSwarm, \u90e8\u7f72JiuwenSwarm, \u5b89\u88c5JiuwenSwarm, \u542f\u52a8JiuwenSwarm, install jiuwenswarm, deploy openjiuwen",
+  "updated_at": 1785747988362,
+  "version": "1.0.0"
+}
