@@ -1,0 +1,52 @@
+{
+  "changelog": "videolink-to-article v1.0.0\n\n- Initial release for extracting clean Markdown transcripts from Bilibili and YouTube video URLs using platform subtitles.\n- Automates tool installation and registration (BBDown, yt-dlp) with persistent binary cache management.\n- Supports comprehensive metadata extraction and structured output per video and task.\n- Handles subtitle availability probing, authentication flows (browser cookies and manual cookies.txt), and proper selection of the highest-quality subtitle track.\n- Outputs organized transcript files and metadata with clear directory conventions and deterministic-cleanup pipeline.",
+  "created_at": 1779768127964,
+  "display_name": "videolink-to-article",
+  "fetched_at": 1787784664797,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/auth.md",
+    "references/cleanup_guide.md",
+    "references/install_tools.md",
+    "references/troubleshooting.md",
+    "references/worked_example.md",
+    "scripts/fetch_metadata.py",
+    "scripts/rename_with_title.py",
+    "scripts/srt_to_sentences.py",
+    "scripts/srv3_to_text.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966005546,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "HQWQF",
+    "handle": "hqwqf",
+    "user_id": "s175rq5mhw1j7hp9d29zqftwnd87ejas"
+  },
+  "slug": "videolink-to-article",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/videolink-to-article",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=videolink-to-article&ownerHandle=hqwqf",
+    "page_url": "https://clawhub.ai/hqwqf/skills/videolink-to-article"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 513,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when the user provides a Bilibili or YouTube URL and asks for a transcript, article, or subtitle extraction. Downloads platform subtitles via BBDown / yt...",
+  "updated_at": 1779768127964,
+  "version": "1.0.0"
+}
