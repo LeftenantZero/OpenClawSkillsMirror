@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial version providing strict, English-only guidance for Oracle traffic capture using standard tools.\n\n- Delivers mandatory step-by-step instructions for capturing Oracle workload with `DBMS_WORKLOAD_CAPTURE.START_CAPTURE` and `DBMS_WORKLOAD_CAPTURE.FINISH_CAPTURE`.\n- Covers environment preparation, sqla installation, WCR/wcr capture handling, and merge.json parsing/validation.\n- Enforces required command/SQL literals: `DBMS_WORKLOAD_CAPTURE.START_CAPTURE`, `DBMS_WORKLOAD_CAPTURE.FINISH_CAPTURE`, `wcr`, `capfiles`, `sqla`, and `merge.json`.\n- Absolutely forbids any Chinese output or alternative capture/parsing methods; all responses and scripts are English-only.\n- Complete runbook output for non-interactive environments, with strict compliance to all mandatory and forbidden rules.",
+  "created_at": 1785396811074,
+  "display_name": "alibabacloud-migration-dbm-oracle-traffic-capture",
+  "fetched_at": 1787774150482,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ram-policies.md",
+    "scripts/check_merge_json.py",
+    "scripts/fix_replay_json.py",
+    "scripts/requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-migration-dbm-oracle-traffic-capture",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-migration-dbm-oracle-traffic-capture",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-migration-dbm-oracle-traffic-capture&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-migration-dbm-oracle-traffic-capture"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 238,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Oracle traffic-capture guidance Skill. Guides the customer to run Workload Capture (DBMS_WORKLOAD_CAPTURE.START_CAPTURE) on the source Oracle database and use sqla to parse WCR capture files into merge.json for CMH traffic replay. Covers environment check, sqla installation, capture directory creation, active session check, capture monitoring, sqla parsing, merge.json validation, and deep quality check/repair. Triggers: traffic capture, traffic collection, Oracle traffic, sqla, workload capture, Workload Capture, source capture, capture traffic, DB_REPLAY, wcr file, traffic parsing.",
+  "updated_at": 1785408704488,
+  "version": "0.0.1"
+}
