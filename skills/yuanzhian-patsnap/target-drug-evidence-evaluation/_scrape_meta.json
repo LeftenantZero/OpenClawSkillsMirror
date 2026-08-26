@@ -1,0 +1,38 @@
+{
+  "changelog": "Initial release of target-drug-evidence-evaluation skill.\n\n- Supports multi-dimensional evidence matrix evaluation for target-drug project triage (Go/Watch/Niche Go/No-Go decisions).\n- Accepts target, optional disease/modality/country/user_type/stage_intent inputs; defaults used if missing.\n- Standardizes inputs, fetches target existence, drug landscape, milestone events, clinical activity/results, translational/biomarker evidence, guidelines, and FTO/patent status.\n- Outputs fixed four-part structure: Executive Verdict, Scorecard (six dimensions), Evidence Matrix, and Next Actions.\n- Includes clear guardrails: evidence-based scoring only, clear flag for insufficient evidence, no intelligence briefs or investment/clinical advice.",
+  "created_at": 1786609416568,
+  "display_name": "\u9776\u70b9\u836f\u7269\u8bc1\u636e\u8bc4\u4f30\uff08Target-Drug Evidence Evaluation\uff09",
+  "fetched_at": 1787772347971,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/mcp-tool-map.md",
+    "references/output-templates.md",
+    "references/scoring-rubric.md",
+    "skill-card.md",
+    "skill.manifest.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "yuanzhian-patsnap",
+    "handle": "yuanzhian-patsnap",
+    "user_id": "s17bvft5kywc2rr8r8df1ra0x589g677"
+  },
+  "slug": "target-drug-evidence-evaluation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/target-drug-evidence-evaluation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=target-drug-evidence-evaluation&ownerHandle=yuanzhian-patsnap",
+    "page_url": "https://clawhub.ai/yuanzhian-patsnap/skills/target-drug-evidence-evaluation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 137,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u901a\u8fc7\u591a\u7ef4\u8bc1\u636e\u77e9\u9635\u8bc4\u4f30\u9776\u70b9\u836f\u7269\u5e76\u652f\u6301\u7acb\u9879\u5224\u65ad",
+  "updated_at": 1786609484400,
+  "version": "1.0.0"
+}
