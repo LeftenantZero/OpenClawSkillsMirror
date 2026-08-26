@@ -1,0 +1,68 @@
+{
+  "changelog": "- Initial release with support for building and benchmarking R-tree (via shapely STRtree), self-implemented Quadtree, and GeoHash spatial indexes.\n- Validates all index query results against brute-force search to ensure consistency.\n- Outputs per-index performance metrics, hit counts, and speed-up ratios in JSON reports.\n- Includes synthetic data generation and full offline, local data processing to protect user privacy.\n- Provides detailed usage examples and supports POI data or synthetic datasets as input.",
+  "created_at": 1785851399342,
+  "display_name": "geoskill-spatial-index-builder",
+  "fetched_at": 1787773430396,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_run/output-manifest.json",
+    "_test_cli_run/spatial_index_report.json",
+    "e2e_test.py",
+    "geoskill-spatial-index-builder.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785852663195,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-spatial-index-builder",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-spatial-index-builder",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-spatial-index-builder&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-spatial-index-builder"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 189,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6784\u5efa R-tree / Quadtree / GeoHash \u7a7a\u95f4\u7d22\u5f15\u5e76\u7edf\u8ba1\u67e5\u8be2\u6027\u80fd\uff0c\u7ed3\u679c\u4e0e\u66b4\u529b\u641c\u7d22\u5bf9\u9f50\u3002Build R-tree / Quadtree / GeoHash spatial indexes, benchmark query performance and align results with brute-force search.",
+  "updated_at": 1785851849163,
+  "version": "1.0.0"
+}
