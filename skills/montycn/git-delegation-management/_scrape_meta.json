@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of git-delegation-management skill.\n\n- Allows Managers to execute any git operation on behalf of Workers who lack git credentials.\n- Handles `git-request:` messages to process git commands in shared workspaces.\n- Integrates with credential files and host `.gitconfig` for authenticated operations.\n- Uses processing markers to prevent workspace conflicts and ensures sync with MinIO storage.\n- Supports error handling and clear success/failure reporting to requesting Workers.",
+  "created_at": 1773997913523,
+  "display_name": "Git Delegation Management",
+  "fetched_at": 1787787983457,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089995675,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Monty",
+    "handle": "montycn",
+    "user_id": "s17fq3f5c7xm0qja9p4xz3px8h83hcxd"
+  },
+  "slug": "git-delegation-management",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/git-delegation-management",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=git-delegation-management&ownerHandle=montycn",
+    "page_url": "https://clawhub.ai/montycn/skills/git-delegation-management"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 861,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Execute any git command on behalf of Workers without credentials by processing their git-request messages and managing workspace synchronization safely.",
+  "updated_at": 1779078576175,
+  "version": "1.0.0"
+}
