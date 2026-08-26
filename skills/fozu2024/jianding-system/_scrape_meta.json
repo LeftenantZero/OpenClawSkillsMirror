@@ -1,0 +1,45 @@
+{
+  "changelog": "jianding-system 1.0.5\n\n- Added detailed boundary handling for all\u811a\u672c\u6d41\u7a0b steps, specifying user guidance for missing photos, file type errors, insufficient or excessive images, failed uploads, verification code issues, and more.\n- Clarified multi-modal vs text-only description collection, with explicit user confirmation and correction steps before submission.\n- Introduced automatic retry logic in scripts/submit.py for network errors (exponential backoff, max 3 attempts), with clear distinction from business logic errors.\n- Updated authentication, error fallback, and post-script reminder procedures, ensuring precise user prompts and fallback to the WeChat H5 pathway when needed.\n- Added data timeliness disclaimer regarding platform statistics and user guidance for information verification.",
+  "created_at": 1781838608865,
+  "display_name": "\u6536\u85cf\u96c5\u96c6\u7f51-\u53e4\u8463\u9274\u5b9a\u4f30\u4ef7",
+  "fetched_at": 1787779865147,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/about.md",
+    "scripts/submit.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782029392006,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fozu2024",
+    "handle": "fozu2024",
+    "user_id": "s17abbnb3w0fa5amjkxxaj0z1588yh53"
+  },
+  "slug": "jianding-system",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/jianding-system",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=jianding-system&ownerHandle=fozu2024",
+    "page_url": "https://clawhub.ai/fozu2024/skills/jianding-system"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 465,
+    "installs": 3,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "\u6536\u85cf\u96c5\u96c6\u7f51\u5728\u7ebf\u9274\u5b9a \u2014\u2014 \u5e2e\u7528\u6237\u63d0\u4ea4\u85cf\u54c1\u9274\u5b9a\u8ba2\u5355\u3001\u83b7\u53d6\u652f\u4ed8\u4e8c\u7ef4\u7801\u3001\u67e5\u770b\u9274\u5b9a\u7ed3\u679c\u3002\u652f\u6301\u5fae\u4fe1\u5c0f\u7a0b\u5e8f\u548c\u975e\u5fae\u4fe1\u7ec8\u7aef\u53cc\u73af\u5883\u3002Use when user mentions \"\u9274\u5b9a\", \"\u4f30\u4ef7\", \"\u85cf\u54c1\", \"\u53e4\u73a9\", \"\u5e2e\u6211\u770b\u770b\", \"\u503c\u591a\u5c11\u94b1\".",
+  "updated_at": 1782022661384,
+  "version": "1.0.5"
+}
