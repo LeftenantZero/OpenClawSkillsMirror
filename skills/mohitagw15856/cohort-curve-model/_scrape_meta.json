@@ -1,0 +1,33 @@
+{
+  "changelog": "- Initial release of the cohort-curve-model skill for fitting retention curves and projecting LTV from real cohort data.\n- Supports log-log least squares fitting of power curves (r(t) = a\u00b7t^(\u2212b)) to observed retention, with key outputs: parameters, R\u00b2, retention floor, and projection.\n- Generates a real Excel workbook (.xlsx) with live, editable ARPU \u2192 LTV calculations via a bundled zero-dependency Python script.\n- Enforces essential quality and anti-pattern checks: requires \u22654 periods, flags poor fits (R\u00b2 < 0.9), interprets parameters, and always states the LTV horizon.\n- Clear instructions for inputs, caveats, and responsible analysis \u2014 designed for transparency and real arithmetic, not estimates.",
+  "created_at": 1784211787654,
+  "display_name": "Cohort Curve Model",
+  "fetched_at": 1787776515181,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mohitagw15856",
+    "handle": "mohitagw15856",
+    "user_id": "s17fnyjd25g4ww0htrqnwjzv818agy02"
+  },
+  "slug": "cohort-curve-model",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cohort-curve-model",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cohort-curve-model&ownerHandle=mohitagw15856",
+    "page_url": "https://clawhub.ai/mohitagw15856/skills/cohort-curve-model"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 243,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fit a retention curve to observed cohort data and project LTV \u2014 computed, not estimated. Use when someone has real cohort retention numbers (month 0, 1, 2\u2026)...",
+  "updated_at": 1784211787654,
+  "version": "1.0.0"
+}
