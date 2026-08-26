@@ -1,0 +1,50 @@
+{
+  "changelog": "Fix critical bug: volume_24h=null was filtering all markets (0 candidates). Bot now correctly passes null-volume markets through. No edge found in current conditions \u2014 not a bug.",
+  "created_at": 1774836718154,
+  "display_name": "Polymarket Spread Sniper",
+  "fetched_at": 1787786894563,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "config.json",
+    "scripts/sim_redeem.py",
+    "scripts/spread_pnl.py",
+    "skill-card.md",
+    "spread_daily.json",
+    "spread_positions.json",
+    "spread_sniper.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966372294,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "PrYsM96",
+    "handle": "prysm96",
+    "user_id": "s1703nr4q012yfm2qp58khd9xx83wnmy"
+  },
+  "slug": "polymarket-spread-sniper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polymarket-spread-sniper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polymarket-spread-sniper&ownerHandle=prysm96",
+    "page_url": "https://clawhub.ai/prysm96/skills/polymarket-spread-sniper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 824,
+    "installs": 20,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Snipe mispriced Polymarket markets by comparing AMM price vs live CLOB orderbook midpoint. Buys the underpriced side when edge > 3% on liquid markets. Exits...",
+  "updated_at": 1779079194902,
+  "version": "1.3.2"
+}
