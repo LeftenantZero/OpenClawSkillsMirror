@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release of google-search-serp skill.\n- Extracts Google Search results page (SERP) data, including organic results, paid ads, related searches, People Also Ask questions, AI Overview text, and total result count.\n- Operates only on already loaded Google search pages; no authentication bypass.\n- Provides detailed usage instructions, URL parameterization, error handling for CAPTCHA, and pagination guidance.\n- Outlines field outputs and known limitations, such as AI Overview availability and Google anti-bot challenges.\n- Includes efficiency tips for batch keyword processing, error recovery, and session management.",
+  "created_at": 1782575953206,
+  "display_name": "Google Search Serp",
+  "fetched_at": 1787778874365,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/serp-extract.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782577371599,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "google-search-serp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/google-search-serp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=google-search-serp&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/google-search-serp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 253,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Extracts Google Search results page (SERP) data including organic results, paid ads, related searches, People Also Ask questions, AI Overview text, and total result count from google.com. Use when user mentions Google search results, SERP scraping, google search data, search engine results page, org",
+  "updated_at": 1782575953206,
+  "version": "1.0.0"
+}
