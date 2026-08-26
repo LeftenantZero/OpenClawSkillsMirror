@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of the review-fto-report-quality-ip skill.\n\n- Assesses the quality, reproducibility, legal reasoning, and usefulness of freedom-to-operate (FTO) and related IP risk reports.\n- Implements a three-layer evidence review and four-dimension scoring system.\n- Compares search coverage independently through multiple patent search routes and analyzes omissions.\n- Screens for fatal defects and supports remediation planning and report validation.\n- Does not generate new FTO reports or provide legal opinions; only audits supplied reports.\n- Includes localized workflow preserving advanced source capabilities (e.g., scenario matrix, fatal-defect override, and evidence-based scoring).",
+  "created_at": 1786609551160,
+  "display_name": "review-fto-report-quality-ip",
+  "fetched_at": 1787772335380,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/assessment-report-template.md",
+    "assets/fto_report.css",
+    "assets/harness_report.css",
+    "references/assessment-checklist.md",
+    "references/fto-quality-standards.md",
+    "references/harness-checks.md",
+    "references/independent-verification-guide.md",
+    "scripts/fto_independent_search.py",
+    "scripts/generate_report.py",
+    "scripts/validate_report.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "yuanzhian-patsnap",
+    "handle": "yuanzhian-patsnap",
+    "user_id": "s17bvft5kywc2rr8r8df1ra0x589g677"
+  },
+  "slug": "review-fto-report-quality-ip",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/review-fto-report-quality-ip",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=review-fto-report-quality-ip&ownerHandle=yuanzhian-patsnap",
+    "page_url": "https://clawhub.ai/yuanzhian-patsnap/skills/review-fto-report-quality-ip"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 141,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Review the quality, reproducibility, legal reasoning, and decision usefulness of an existing freedom-to-operate (FTO), patent-infringement-risk, or event IP risk report. Use for three-layer evidence review, four-dimension scoring, independent multi-route search comparison, omission analysis, fatal-defect screening, remediation planning, or HTML assessment generation. The skill audits a supplied report; it does not replace a jurisdiction-specific legal opinion.",
+  "updated_at": 1786609666899,
+  "version": "1.0.0"
+}
