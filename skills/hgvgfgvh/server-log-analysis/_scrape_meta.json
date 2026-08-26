@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of server-log-analysis.\n\n- Analyze service issues by connecting to remote servers via SSH and downloading targeted log segments based on config.yaml.\n- Prioritize minimal and relevant log data extraction, using remote filtering before transfer.\n- Follows a strict workflow: read config.yaml, identify services/hosts, remote log check, local download, and structured analysis output.\n- Provides clear safety constraints: avoid modifying remote files or downloading sensitive/unrelated logs without explicit user instruction.\n- Handles exceptions by reporting issues in connection or configuration, and asks for user input to resolve uncertainties.",
+  "created_at": 1773994656491,
+  "display_name": "server-log-analysis",
+  "fetched_at": 1787787978141,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.yaml",
+    "reference.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089995774,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "hgvgfgvh",
+    "handle": "hgvgfgvh",
+    "user_id": "s174x9jg32fvtnq226ytye9w3d83h6tm"
+  },
+  "slug": "server-log-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/server-log-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=server-log-analysis&ownerHandle=hgvgfgvh",
+    "page_url": "https://clawhub.ai/hgvgfgvh/skills/server-log-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1108,
+    "installs": 33,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u901a\u8fc7 SSH \u8fde\u63a5\u8fdc\u7a0b\u670d\u52a1\u5668\uff0c\u8bfb\u53d6\u540c\u7ea7 config.yaml \u7406\u89e3\u670d\u52a1\u4fe1\u606f\u4e0e\u65e5\u5fd7\u4f4d\u7f6e\uff0c\u6309\u9700\u4e0b\u8f7d\u76f8\u5173\u65e5\u5fd7\u7247\u6bb5\u5230\u672c\u5730 temp \u76ee\u5f55\uff0c\u5e76\u5206\u6790\u65e5\u5fd7\u5b9a\u4f4d\u95ee\u9898\u3002\u9002\u7528\u4e8e\u7528\u6237\u8981\u6c42\u6392\u67e5\u8fdc\u7a0b\u670d\u52a1\u65e5\u5fd7\u3001\u5206\u6790\u670d\u52a1\u7aef\u5f02\u5e38\u6216\u57fa\u4e8e SSH \u8bbf\u95ee\u8fdb\u884c\u65e5\u5fd7\u8bca\u65ad\u7684\u573a\u666f\u3002",
+  "updated_at": 1779078577925,
+  "version": "1.0.0"
+}
