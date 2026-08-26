@@ -1,0 +1,56 @@
+{
+  "changelog": "Initial release of npc-distill:  \n- Enables building local digital personas of specific individuals for practice, drafting, and decision simulation.  \n- Supports ingesting text, URLs, or user intentions (e.g., \u201c\u7ec3\u4e60\u6c47\u62a5\u201d, \u201c\u6a21\u62df NPC \u53cd\u5e94\u201d) to trigger actions.  \n- All data stored locally using anonymized codes (L001/L002), prioritizing privacy and open-source scenarios.  \n- Provides 5 core workflows: text ingestion, URL ingestion, pressure testing, dialogue rehearsal, and stylized drafting.  \n- Compatible with Claude Skills, Hermes Agent, LobsterAI, OpenClaw, and other agentskills.io-compliant platforms.  \n- Comprehensive troubleshooting and known limitations documented for user reference.",
+  "created_at": 1781685295184,
+  "display_name": "Npc Distill Main",
+  "fetched_at": 1787780403681,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/memory-L001-demo.md",
+    "references/agentskills-compat.md",
+    "references/memory-format.md",
+    "scripts/extract_segments.py",
+    "scripts/memory_io.py",
+    "scripts/requirements.txt",
+    "scripts/update_memory.py",
+    "skill-card.md",
+    "templates/draft-with-critique.md",
+    "templates/ingest-text.md",
+    "templates/ingest-url.md",
+    "templates/rehearse-dialogue.md",
+    "templates/rehearse-pressure.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781688326168,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "bangbangmao",
+    "handle": "bangbangmao666666",
+    "user_id": "s177adsxefe9bm9q02qvep9jbn83hgab"
+  },
+  "slug": "npc-distill-main",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/npc-distill-main",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=npc-distill-main&ownerHandle=bangbangmao666666",
+    "page_url": "https://clawhub.ai/bangbangmao666666/skills/npc-distill-main"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 286,
+    "installs": 3,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6784\u5efa\u7279\u5b9a\u4eba\u7269(\u4e0a\u7ea7/\u5408\u4f5c\u4f19\u4f34/\u5ba2\u6237)\u7684\u672c\u5730\u6570\u5b57\u5206\u8eab,\u8f85\u52a9\u6c47\u62a5\u6f14\u7ec3\u3001\u98ce\u683c\u5316\u8d77\u8349\u3001\u51b3\u7b56\u9884\u5224\u3002\u5f53\u7528\u6237\u7c98\u8d34\u67d0\u4eba\u7269\u7684\u53d1\u8a00\u3001\u90ae\u4ef6\u3001\u804a\u5929\u8bb0\u5f55\u3001\u4f1a\u8bae\u7eaa\u8981\u3001\u6279\u6ce8,\u6216\u63d0\u4f9b\u5305\u542b\u5176\u5185\u5bb9\u7684\u7f51\u9875URL,\u6216\u8bf4\u51fa\"\u6295\u5582\u8bed\u6599\"\"\u7ec3\u4e60\u6c47\u62a5\"\"\u6a21\u62df NPC \u53cd\u5e94\"\"\u6309X\u603b\u98ce\u683c\u8d77\u8349\"\"\u9884\u6f14\u4e00\u4e0b\"\"\u6570\u5b57\u5206\u8eab\"\"\u4eba\u683c\u753b\u50cf\"\"\u538b\u529b\u6d4b\u8bd5\u6211\u7684\u65b9\u6848\"\u7b49\u610f\u56fe\u65f6,\u81ea\u52a8...",
+  "updated_at": 1781685295184,
+  "version": "1.0.0"
+}
