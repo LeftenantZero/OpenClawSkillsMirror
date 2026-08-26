@@ -1,0 +1,53 @@
+{
+  "changelog": "- Major update: Formalizes workflow, activation, and reference structure for KWDB schema design.\n- Adds a tiered reference system for rules and examples, categorized by usage frequency.\n- Details comprehensive trigger/ignore keyword lists to clarify when the skill should activate.\n- Defines a strict 5-step workflow: classify workload, gather requirements, design schema, generate DDL, validate.\n- Includes robust guardrails: prohibits generating DDL before classification, enforcing assumption transparency, and validation.\n- Expands supported DDL operations list and outlines error handling practices.",
+  "created_at": 1778645013352,
+  "display_name": "KWDB Schema Design",
+  "fetched_at": 1787775525089,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/demo-prompts.md",
+    "assets/output-template.md",
+    "references/_contributing.md",
+    "references/_examples.md",
+    "references/_scope.md",
+    "references/_sections.md",
+    "references/constraint-ref.md",
+    "references/database-ref.md",
+    "references/disambiguation.md",
+    "references/index-ddl-ref.md",
+    "references/key-rules.md",
+    "references/partitioning-ref.md",
+    "references/privilege-ref.md",
+    "references/procedure-ref.md",
+    "references/retention-ref.md",
+    "references/sequence-ref.md",
+    "references/table-ddl-ref.md",
+    "references/trigger-ref.md",
+    "references/type-ref.md",
+    "references/view-ref.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "KWDB",
+    "handle": "kwdb",
+    "user_id": "s17e2f9k2hwm2p7q50y9wz03fs8445dh"
+  },
+  "slug": "kwdb-schema-design",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kwdb-schema-design",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kwdb-schema-design&ownerHandle=kwdb",
+    "page_url": "https://clawhub.ai/kwdb/skills/kwdb-schema-design"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 621,
+    "installs": 10,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Design KWDB schemas and generate DDL for relational, time-series, and mixed workloads. Covers: CREATE/ALTER/DROP TABLE, INDEX, VIEW, constraints, partitionin...",
+  "updated_at": 1784787897198,
+  "version": "1.2.0"
+}
