@@ -1,0 +1,56 @@
+{
+  "changelog": "clawbba-api 2.0.33\n\n- Improved troubleshooting guidance for handling cases where you are billed but do not receive image/video output, with clear instructions for recovery instead of regenerating.\n- Clarified expected agent behavior for incomplete media delivery: now emphasizes use of task recovery and prohibits unnecessary regeneration.\n- Added detailed step to redeliver local files if not visible to the user, instead of triggering recovery or regeneration.\n- Reference documentation updated: README.md and skill-card.md removed; core guidance consolidated in agent behavior and troubleshooting docs.",
+  "created_at": 1781036510303,
+  "display_name": "clawbba-api",
+  "fetched_at": 1787781235513,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/SKILL-troubleshooting.md",
+    "references/media-capabilities.json",
+    "references/media-capabilities.md",
+    "references/media-dispatch-spec.md",
+    "references/openclaw-agent-behavior.md",
+    "references/openclaw-integration-spec.md",
+    "references/openclaw-release-manifest.json",
+    "scripts/clawbba-debug-log.mjs",
+    "scripts/ensure-openclaw-patches.sh",
+    "scripts/install.sh",
+    "scripts/pack-release-zip.sh",
+    "scripts/repair-video-validate-runtime.mjs",
+    "scripts/verify-openclaw-runtime.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781129121387,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ClawBBA",
+    "handle": "clawbba-ux",
+    "user_id": "s171wb9kswe736pnkq9582swmd87dmky"
+  },
+  "slug": "clawbba-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawbba-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawbba-api&ownerHandle=clawbba-ux",
+    "page_url": "https://clawhub.ai/clawbba-ux/skills/clawbba-api"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 458,
+    "installs": 7,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "ClawBBA \u00d7 OpenClaw \u2014 One API key, 369+ models, supporting all instant messaging channels (web chat, WeChat, Telegram).",
+  "updated_at": 1781126688436,
+  "version": "2.0.33"
+}
