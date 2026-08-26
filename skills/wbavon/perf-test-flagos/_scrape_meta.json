@@ -1,0 +1,46 @@
+{
+  "changelog": "perf-test-flagos v1.0.0 changelog:\n\n- Initial release providing automated accuracy (placeholder/skip for now) and performance benchmarking for served models.\n- Runs vLLM server based on stack/model-verify outputs, tests 5 workload profiles via run_all_benchmarks.py.\n- Collects throughput, latency, TTFT, and TPOT metrics per profile; results summarized in JSON and markdown table.\n- Implements error handling for server, benchmark, and resource failures, with timeout rules and partial reporting. \n- Modular design; prompts for inputs if not fully configured/invoked standalone.",
+  "created_at": 1779174217661,
+  "display_name": "Perf Test Flagos",
+  "fetched_at": 1787786550797,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/benchmark-profiles.md",
+    "scripts/run_all_benchmarks.py",
+    "scripts/run_benchmark.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779956464436,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Flagos",
+    "handle": "wbavon",
+    "user_id": "s179mcxns07mhashdtzg4tbf6584wt8v"
+  },
+  "slug": "perf-test-flagos",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/perf-test-flagos",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=perf-test-flagos&ownerHandle=wbavon",
+    "page_url": "https://clawhub.ai/wbavon/skills/perf-test-flagos"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 587,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Run accuracy benchmarks (FlagEval, when available) and performance benchmarks (vllm bench serve) against a served model. Covers 5 workload profiles: short/lo...",
+  "updated_at": 1779174232084,
+  "version": "1.0.0"
+}
