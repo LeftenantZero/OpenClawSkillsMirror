@@ -1,0 +1,52 @@
+{
+  "changelog": "- Initial release of the UniFi network monitoring skill.\n- Added support for querying and monitoring UniFi networks via the local gateway API.\n- Provides commands for viewing device status, active clients, network health, topology, top applications (DPI), and recent alerts.\n- Setup instructions and command documentation included.\n- Safe, read-only GET operations for monitoring and reporting.\n- Removed the skill card documentation file and added metadata file.",
+  "created_at": 1782978164139,
+  "display_name": "Unifi",
+  "fetched_at": 1787778353624,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/unifi-readonly-endpoints.md",
+    "scripts/alerts.sh",
+    "scripts/clients.sh",
+    "scripts/dashboard.sh",
+    "scripts/devices.sh",
+    "scripts/health.sh",
+    "scripts/top-apps.sh",
+    "scripts/unifi-api.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783579740843,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Sean Ford",
+    "handle": "seanford",
+    "user_id": "s1789sb4jmdxm4cdhqr1j4rjq583j23c"
+  },
+  "slug": "unifi",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/unifi",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=unifi&ownerHandle=seanford",
+    "page_url": "https://clawhub.ai/seanford/skills/unifi"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 48,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query and monitor UniFi network via local gateway API (Cloud Gateway Max / UniFi OS). Use when the user asks to \"check UniFi\", \"list UniFi devices\", \"show wh...",
+  "updated_at": 1782978164139,
+  "version": "1.0.0"
+}
