@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release\u2014provides secure, read-only access to Huawei Cloud account balances and account change records using the official BSS API.\n\n- Query current cash or credit account balance, and outstanding debt, consistent with the Huawei Cloud Billing Center.\n- Retrieve account change records (recharge, consumption, refund, adjustment) over a configurable period (default: last 6 months).\n- Ensures secure authentication via environment variables or credentials file\u2014direct input of AK/SK in conversation is refused.\n- Validates all script parameters and provides clear error messages for invalid input or API errors.\n- Requires minimal, documented IAM permissions for account and billing queries.\n- Returns combined, easy-to-parse JSON output for both balance and change history.",
+  "created_at": 1786349182384,
+  "display_name": "huawei-cloud-bss-account-balance",
+  "fetched_at": 1787772957912,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/bss-account-balance-api.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/bss_balance_query.py",
+    "scripts/skill_quality_sdk.py",
+    "scripts/test-cli-commands.sh",
+    "skill-card.md",
+    "templates/test-vars.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786349971459,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-bss-account-balance",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-bss-account-balance",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-bss-account-balance&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-bss-account-balance"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 145,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query the Huawei Cloud account balance (cash/credit account available amount and debt) and the account change records (recharge/consume/refund/adjust) over a configurable time window, defaulting to the last 6 months. Uses the BSS (Business Support System) customer API via the huaweicloudsdkbss SDK, consistent with the console Billing Center. Use when the user wants to: (1) check the current Huawei Cloud account balance, (2) review income/expense records for the last ~half year, (3) verify recharge/consume history, (4) monitor account funds before deployments or renewals. Triggers include: \"\u534e\u4e3a\u4e91\u4f59\u989d\", \"\u8d26\u53f7\u4f59\u989d\", \"\u8d26\u6237\u4f59\u989d\", \"\u67e5\u8be2\u4f59\u989d\", \"\u4f59\u989d\u67e5\u8be2\", \"\u8fd1\u534a\u5e74\u6d41\u6c34\", \"\u6536\u652f\u660e\u7ec6\", \"\u5145\u503c\u8bb0\u5f55\", \"\u6d88\u8d39\u8bb0\u5f55\", \"account balance\", \"Huawei Cloud balance\", \"balance query\", \"change records\", \"spending history\", \"billing\", \"BSS\"",
+  "updated_at": 1786349280531,
+  "version": "1.0.0"
+}
