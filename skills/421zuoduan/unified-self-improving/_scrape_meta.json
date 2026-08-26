@@ -1,0 +1,57 @@
+{
+  "changelog": "unified-self-improving 1.0.4\n\n- Migrated all CLI and workflow documentation to the new unified `unified-self-improving <command>` interface, deprecating legacy skill-specific commands for clarity and consistency.\n- Updated storage model to consolidate three learning layers, clarifying directory structures for HOT, WARM, and COLD.\n- Improved configuration documentation (in SKILL.md) to describe core tunable environment variables and simplified the configuration path.\n- Added unified multi-purpose commands (log, move, recall, namespace, index, import, session, detect-pattern), merging previously separate abilities and triggers into concise subcommands.\n- Streamlined workflow and session management instructions; clarified command usage examples for logging, querying, moving, and importing data.",
+  "created_at": 1773552957859,
+  "display_name": "Unified Self Improving",
+  "fetched_at": 1787788738680,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/commands/detect-pattern.sh",
+    "scripts/commands/import.sh",
+    "scripts/commands/index.sh",
+    "scripts/commands/log.sh",
+    "scripts/commands/move.sh",
+    "scripts/commands/namespace.sh",
+    "scripts/commands/query.sh",
+    "scripts/commands/recall.sh",
+    "scripts/commands/session.sh",
+    "scripts/lib/config.sh",
+    "scripts/lib/index.sh",
+    "scripts/lib/namespace.sh",
+    "scripts/lib/storage.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089893626,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Cui Ruochen",
+    "handle": "421zuoduan",
+    "user_id": "s176bj2jj1gzfab6jqpmyfknt583gtdx"
+  },
+  "slug": "unified-self-improving",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/unified-self-improving",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=unified-self-improving&ownerHandle=421zuoduan",
+    "page_url": "https://clawhub.ai/421zuoduan/skills/unified-self-improving"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1013,
+    "installs": 29,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "\u7edf\u4e00\u81ea\u6211\u8fdb\u5316\u7cfb\u7edf\uff0c\u6574\u5408 self-improving-agent\u3001self-improving\u3001mulch \u4e09\u4e2a\u6280\u80fd\u7684\u4f18\u52bf\uff0c\u63d0\u4f9b\u7ed3\u6784\u5316\u65e5\u5fd7\u3001\u4e09\u5c42\u5b58\u50a8\u3001\u81ea\u52a8\u5347\u7ea7\u3001\u6a21\u5f0f\u68c0\u6d4b\u3001\u547d\u540d\u7a7a\u95f4\u9694\u79bb\u548c token \u9ad8\u6548\u7684 JSONL \u683c\u5f0f\u652f\u6301\u3002",
+  "updated_at": 1779078241355,
+  "version": "1.0.4"
+}
