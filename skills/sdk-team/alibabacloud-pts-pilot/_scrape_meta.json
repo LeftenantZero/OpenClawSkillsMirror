@@ -1,0 +1,44 @@
+{
+  "changelog": "alibabacloud-pts-pilot 0.0.1 \u2014 Initial Release\n\n- Introduces a router-only skill for Alibaba Cloud PTS (Performance Testing Service) operations.\n- Parses user intent, matches to the appropriate sub-skill, and delegates execution; does not perform any CLI/API actions itself.\n- Supports three sub-skills: alibabacloud-pts-task (CRUD operations), alibabacloud-pts-reporter (report analysis), and alibabacloud-find-skills (skill discovery).\n- Complies with Qoder loader requirements with dedicated SKILL.md at the ZIP root and sub-skills as peer directories.\n- Clearly documents trigger phrases, delegation rules, and input/output contracts for each sub-skill.",
+  "created_at": 1782216902834,
+  "display_name": "Alibabacloud Pts Pilot",
+  "fetched_at": 1787779402160,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/routing-rules.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782217815894,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-pts-pilot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-pts-pilot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-pts-pilot&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-pts-pilot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 307,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Router skill for Alibaba Cloud PTS (Performance Testing Service) operations. Resolves the user's PTS intent and delegates execution to the appropriate sub-sk...",
+  "updated_at": 1782216902834,
+  "version": "0.0.1"
+}
