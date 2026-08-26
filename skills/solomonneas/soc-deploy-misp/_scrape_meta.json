@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of soc-deploy-misp: deploy MISP threat intelligence platform via Docker with automatic MariaDB tuning.\n\n- Deploys MISP on any Docker-ready Linux host, using the official misp-docker project.\n- Automatically tunes MariaDB InnoDB buffer pool to avoid OOM on small VMs.\n- Handles admin account setup, credential generation, and API key creation with cake CLI.\n- Outputs all access details, API keys, and credentials upon completion.\n- Includes clear prerequisites, timeout strategy, and self-signed HTTPS warnings for API use.\n- Designed to work alongside infrastructure provisioning and related SOC automation skills.",
+  "created_at": 1774051271861,
+  "display_name": "Soc Deploy Misp",
+  "fetched_at": 1787787900377,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/env-template.env",
+    "references/gotchas.md",
+    "scripts/setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090011857,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Solomon Neas",
+    "handle": "solomonneas",
+    "user_id": "s175vcq9b774xbehtq2py4r5vn83f1k2"
+  },
+  "slug": "soc-deploy-misp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/soc-deploy-misp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=soc-deploy-misp&ownerHandle=solomonneas",
+    "page_url": "https://clawhub.ai/solomonneas/skills/soc-deploy-misp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 886,
+    "installs": 23,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Deploy MISP threat intelligence platform on any Docker-ready Linux host. Official misp-docker project with automatic MariaDB memory tuning (prevents OOM on s...",
+  "updated_at": 1779078607486,
+  "version": "1.0.0"
+}
