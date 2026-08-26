@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of Flux 2 Klein skill for RunComfy:\n\n- Generate images using Black Forest Labs' Flux 2 Klein (4B or 9B) via the local RunComfy CLI.\n- Bundles model-specific prompt patterns for sharper, more predictable output.\n- Documents step-count strategies, multi-reference image use, and how to choose between Klein, Pro, Seedream 5, or GPT Image 2.\n- Guides effective invocation, CLI commands, and the required environment/configuration.\n- Automatically triggers on relevant keywords like \"flux 2 klein,\" \"flux klein,\" or \"BFL flux 2.\"",
+  "created_at": 1785124833009,
+  "display_name": "Flux 2 Klein \u2014 Pro Pack on RunComfy",
+  "fetched_at": 1787774788650,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mew",
+    "handle": "permew",
+    "user_id": "s17af27kmxn6ac8n1m0wdx0drh8bb4gd"
+  },
+  "slug": "flux-2-klein",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/flux-2-klein",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=flux-2-klein&ownerHandle=permew",
+    "page_url": "https://clawhub.ai/permew/skills/flux-2-klein"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 299,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate images with Flux 2 Klein (Black Forest Labs' distilled fast variant of Flux 2) on RunComfy \u2014 bundled with the model's documented prompting patterns so the skill gets sharper output than naive prompting against the same model. Documents Flux 2 Klein's strengths (sub-second latency, multi-reference brand styling, declarative subject-first prompts), the step-count strategy (4\u20138 for fast iteration, ~25 for polish), the 9B vs 4B variant trade-off, and when to route to Flux 2 Pro / Seedream 5 / GPT Image 2 instead. Calls `runcomfy run blackforestlabs/flux-2-klein/9b/text-to-image` (or `/4b/`) through the local RunComfy CLI. Triggers on \"flux 2 klein\", \"flux-2-klein\", \"flux klein\", \"BFL flux 2\", or any explicit ask to generate with this model.",
+  "updated_at": 1785127168770,
+  "version": "1.0.0"
+}
