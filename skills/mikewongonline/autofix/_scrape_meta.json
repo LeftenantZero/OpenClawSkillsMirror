@@ -1,0 +1,68 @@
+{
+  "changelog": "**Gateway Watchdog reliability and notification pipeline improvements.**\n\n- Gateway Watchdog upgraded to v6.1 with several fixes and enhancements.\n- Feishu direct message (DM) is now the primary alert channel (instant delivery); WebChat moved to secondary (async, background thread with 60s timeout).\n- Fixed config cache bug causing `load_gateway_config()` to return `token=None` on cache hit.\n- Fixed async WebChat thread to prevent main process blocking during model loading.\n- Error notification now includes full stack traces in Feishu and WebChat alerts.\n- Updated deployment and prerequisites for easier setup and improved reliability.",
+  "created_at": 1779084069484,
+  "display_name": "OpenClaw Problem Solver\u81ea\u52a8\u4fee\u590d\u5c0f\u9f99\u867e",
+  "fetched_at": 1787785209539,
+  "files": [
+    "INSTALL.md",
+    "README.md",
+    "README_CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "docs/COMPLETENESS_SUMMARY.md",
+    "docs/MODULE_01_PreCheck.md",
+    "docs/MODULE_02_SearchChain.md",
+    "docs/MODULE_03_ValidationAction.md",
+    "docs/MODULE_04_Finalization.md",
+    "docs/enhancement/MODULE_03_Enhancement_Reports.md",
+    "docs/reports/AUTOFIX_V5.0_SUMMARY.md",
+    "docs/reports/AUTOFIX_V6.0_PROPOSAL.md",
+    "docs/reports/CHANGES_v5.0.md",
+    "docs/reports/CHANGES_v6.1.md",
+    "docs/reports/VERIFICATION_FINAL.md",
+    "docs/tutorials/EXAMPLE_usage.md",
+    "docs/tutorials/QUICK_START_v5.0.md",
+    "scripts/api_key_validator.py",
+    "scripts/auto_repair.py",
+    "scripts/canvas_report_generator.py",
+    "scripts/diagnosis_formatter.py",
+    "scripts/elis_helper.py",
+    "scripts/health_dashboard.py",
+    "scripts/requirements.txt",
+    "scripts/runtime_health_check.py",
+    "scripts/watchdog_monitor.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779954010005,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Mikewong",
+    "handle": "mikewongonline",
+    "user_id": "s17es3rrg0jybezhyzn66x6tyd83hv2p"
+  },
+  "slug": "autofix",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/autofix",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=autofix&ownerHandle=mikewongonline",
+    "page_url": "https://clawhub.ai/mikewongonline/skills/autofix"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 848,
+    "installs": 20,
+    "stars": 1,
+    "versions": 5
+  },
+  "summary": "A comprehensive, self-evolving skill designed to diagnose and solve OpenClaw issues by following a structured, multi-stage resolution cycle. It incorporates...",
+  "updated_at": 1779445458720,
+  "version": "6.1.0"
+}
