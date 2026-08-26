@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of boss-resume-crawler.\n\n- Supports batch crawling of Boss\u76f4\u8058 job details, including security_id and job description\n- Implements PUA salary decoding and incremental deduplication\n- Provides strict dependency checks (Python3, websocket-client, CDP connection via CloakBrowser)\n- Enforces manual login verification before crawling begins\n- Features resilient crawling logic: randomized delays, per-job CSV append, error logging and automatic retries\n- Includes detailed usage instructions, performance benchmarks, error handling, and anti-scraping precautions",
+  "created_at": 1787049958143,
+  "display_name": "boss-resume-crawler",
+  "fetched_at": 1787771417401,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/data-spec.md",
+    "references/error-handling.md",
+    "references/sop.md",
+    "scripts/boss_extract_cdp.py",
+    "scripts/boss_extract_final.py",
+    "scripts/boss_extract_pure.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787050873759,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "iichaner",
+    "handle": "iichaner",
+    "user_id": "s17evhyc3z1a82bvpm10c418p9849pg7"
+  },
+  "slug": "boss-resume-crawler",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/boss-resume-crawler",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=boss-resume-crawler&ownerHandle=iichaner",
+    "page_url": "https://clawhub.ai/iichaner/skills/boss-resume-crawler"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 437,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4ece Boss \u76f4\u8058\u6279\u91cf\u722c\u53d6\u804c\u4f4d\u8be6\u60c5\uff08\u542b security_id\u3001\u804c\u4f4d\u63cf\u8ff0\uff09\uff0c\u652f\u6301 PUA \u85aa\u8d44\u89e3\u7801\u548c\u589e\u91cf\u53bb\u91cd\u3002",
+  "updated_at": 1787050123557,
+  "version": "0.1.0"
+}
