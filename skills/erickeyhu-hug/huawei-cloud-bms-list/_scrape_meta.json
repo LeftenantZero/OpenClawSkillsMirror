@@ -1,0 +1,58 @@
+{
+  "changelog": "- Added full set of acceptance test cases, scenario explanations, and test reports in the `case-run/2026-08-06/` directory.\n- Introduced structured documentation for edge cases (invalid region, invalid status, missing credentials, paging, filters, and fallback to SDK).\n- Removed `skill-card.md`; now using a more comprehensive and organized directory-based test coverage.\n- Documentation and test assets now cover both positive (normal) and negative (error/exception) flows for the skill.",
+  "created_at": 1785990229203,
+  "display_name": "huawei-cloud-bms-list",
+  "fetched_at": 1787773265479,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "case-run/2026-08-06/N1_\u521b\u5efa_\u5220\u9664_BMS\uff08\u8d8a\u754c\u64cd\u4f5c\uff09_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-06/N2_\u67e5\u8be2\u5355\u53f0_BMS_\u8be6\u60c5\uff08show-by-id_\u8d8a\u754c\uff09_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-06/N3_\u65e0\u6548_region_\u53c2\u6570_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-06/N4_\u65e0\u6548_status_\u679a\u4e3e\u503c_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-06/N5_\u65e0_AK_SK_\u51ed\u8bc1_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-06/P1_\u67e5\u8be2\u5168\u90e8_BMS_\u88f8\u91d1\u5c5e\u670d\u52a1\u5668\u5217\u8868_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-06/P2_\u4ec5\u8f93\u51fa_BMS_\u540d\u79f0\u5217\u8868_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-06/P3_\u6309\u72b6\u6001\u8fc7\u6ee4\u67e5\u8be2_BMS_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-06/P4_\u6309\u540d\u79f0\u8fc7\u6ee4\u67e5\u8be2_BMS_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-06/P5_\u5206\u9875\u67e5\u8be2_BMS_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-06/P6_SDK_\u515c\u5e95\u67e5\u8be2\uff08CLI_\u4e0d\u53ef\u7528\u65f6\uff09_\u901a\u8fc7/\u7528\u4f8b\u8bf4\u660e.md",
+    "case-run/2026-08-06/huawei-cloud-bms-list_\u603b\u6d4b\u8bd5\u62a5\u544a.md",
+    "case-run/2026-08-06/huawei-cloud-bms-list_\u95ee\u9898\u5355.md",
+    "case-run/2026-08-06/\u6574\u5408\u6d4b\u8bd5\u62a5\u544a.md",
+    "case-run/2026-08-06/\u6b63\u53cd\u7528\u4f8b\u96c6.md",
+    "case-run/2026-08-06/\u89e6\u53d1\u8bcd\u5f52\u6863.md",
+    "case-run/2026-08-06/\u8d44\u6e90\u91ca\u653e\u62a5\u544a.md",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/test-cli-commands.sh",
+    "scripts/validate-skill.sh",
+    "skill-card.md",
+    "templates/test-vars.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-bms-list",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-bms-list",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-bms-list&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-bms-list"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 212,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Query the list of Huawei Cloud BMS (Bare Metal Server) instances under the current tenant / project, focused on the BMS NAME list. Returns each server's name, id and status; can also output a pure BMS name-only list. Supports filtering by status, name and pagination (limit/offset). Uses the KooCLI command `hcloud BMS ListBareMetalServers --cli-region={region}` (primary) against the v1 API, or the huaweicloudsdkbms Python SDK (fallback). Read-only \u2014 never creates, modifies or deletes any bare metal server. Use this skill whenever the user wants to list/inspect the BMS instances of the tenant or query the BMS name list, e.g. for BMS inventory, daily inspection, or cost review. Triggers include: \"list BMS\", \"BMS list\", \"query BMS names\", \"BMS name list\", \"\u88f8\u91d1\u5c5e\u670d\u52a1\u5668\u5217\u8868\", \"\u67e5\u8be2\u88f8\u91d1\u5c5e\u670d\u52a1\u5668\", \"BMS\u540d\u79f0\u5217\u8868\", \"\u88f8\u91d1\u5c5e\u670d\u52a1\u5668\u540d\u79f0\", \"list bare metal servers\", \"how many BMS\".",
+  "updated_at": 1786002336044,
+  "version": "1.0.1"
+}
