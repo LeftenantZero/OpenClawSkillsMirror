@@ -1,0 +1,43 @@
+{
+  "changelog": "Always-on logging directive + locked, sanitizing ledger writer (bin/log-resolution.py). Secret/PII redaction, hex-validated prompt_hash, flock concurrency fix, corruption-safe writes. Adds unit tests. (Claude+Codex adversarial review)",
+  "created_at": 1779605069173,
+  "display_name": "Coding Pronoun Prompt Resolver",
+  "fetched_at": 1787783746711,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "bin/detect-implicit.py",
+    "bin/detect-pronouns.sh",
+    "bin/log-resolution.py",
+    "bin/stats.py",
+    "evals/cases.json",
+    "evals/results.json",
+    "evals/run_evals.py",
+    "skill-card.md",
+    "tests/test_log_resolution.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Kai Cianflone",
+    "handle": "kaicianflone",
+    "user_id": "s173yh69sk2g7jzav29e74412s83qaga"
+  },
+  "slug": "pronoun-resolver",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pronoun-resolver",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pronoun-resolver&ownerHandle=kaicianflone",
+    "page_url": "https://clawhub.ai/kaicianflone/skills/pronoun-resolver"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 855,
+    "installs": 19,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Detects ambiguous pronouns, vague referents, and bare imperatives in user messages and flags them for resolution using conversation context. Zero-latency det...",
+  "updated_at": 1780243762001,
+  "version": "0.11.0"
+}
