@@ -1,0 +1,55 @@
+{
+  "changelog": "javis-brainstorming 0.5.0\n\n- Changed dispatcher behavior: The javis-server now invokes this skill directly on every completed unit (no classifier or route matching), relying on the skill agent to determine if action is needed.\n- Clarified agent discretion: The skill will only produce a to-do card if its own agent identifies a brainstorm-worthy request; otherwise, it remains silent.\n- Minor documentation adjustments: Updated SKILL.md to explain the new invocation flow and agent responsibility.\n- Removed the skill-card.md file.",
+  "created_at": 1781043858775,
+  "display_name": "Brainstorming",
+  "fetched_at": 1787778298559,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "references/todo-card-contract.md",
+    "scripts/brainstorming.js",
+    "scripts/data.js",
+    "scripts/lib.js",
+    "scripts/register.js",
+    "scripts/todo-card.js",
+    "skill-card.md",
+    "test/cli.test.js",
+    "test/data.test.js",
+    "test/lib.test.js",
+    "test/todo-card.test.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783589959859,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "SamuelWei",
+    "handle": "samuel-wei",
+    "user_id": "s1735yg3x5h8qgtpapgt8es6f9844ese"
+  },
+  "slug": "javis-brainstorming",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/javis-brainstorming",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=javis-brainstorming&ownerHandle=samuel-wei",
+    "page_url": "https://clawhub.ai/samuel-wei/skills/javis-brainstorming"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 625,
+    "installs": 8,
+    "stars": 1,
+    "versions": 6
+  },
+  "summary": "Creates a to-do card with a ready-to-paste prompt that hands off recent transcript data to Claude\u2019s content-brainstorming skill for idea organization.",
+  "updated_at": 1783017910028,
+  "version": "0.5.0"
+}
