@@ -1,0 +1,51 @@
+{
+  "changelog": "alibabacloud-website-probe 0.0.1\n\n- Initial release providing multi-region website probing using Alibaba Cloud's public probing platform (boce.aliyun.com).\n- Supports HTTP, DNS, Ping, MTR, and traceroute tests from nationwide probe nodes; includes optional mobile (4G/5G) perspective.\n- Operates fully anonymously\u2014no account or credentials needed.\n- User only provides the probe target; probe type, nodes, and perspective are inferred from context.\n- Results are saved to disk and interpreted solely by dedicated scripts, ensuring strict separation between probing and result analysis.",
+  "created_at": 1787278174596,
+  "display_name": "alibabacloud-website-probe",
+  "fetched_at": 1787770284577,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/diagnostic-rules.md",
+    "references/ram-policies.md",
+    "references/user-guide.md",
+    "scripts/analyze_boce_dns.py",
+    "scripts/analyze_boce_http.py",
+    "scripts/boce_tool.py",
+    "scripts/boce_wrapper.py",
+    "scripts/requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787279077534,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-website-probe",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-website-probe",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-website-probe&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-website-probe"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 95,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Multi-region website availability probing and nationwide multi-ISP network testing over a public probing platform (HTTP / Ping / DNS / MTR / traceroute), with an optional mobile 4G/5G perspective. Use when a site or API is unreachable from some regions or carriers, loads slowly, shows high latency or packet loss, returns HTTP 4xx/5xx unevenly across regions, resolves differently by region (DNS hijacking / pollution), misbehaves on mobile networks, or when CDN 5xx failures need regional isolation. Triggers: \"multi-region website availability probing\", \"nationwide multi-ISP HTTP/Ping/DNS/MTR/traceroute testing\", \"website unreachable from some regions or carriers\", \"slow page load / high latency / packet loss\", \"HTTP 4xx/5xx regional isolation\", \"DNS resolution differs by region / DNS hijack pollution\", \"mobile 4G/5G access issue\", \"CDN 5xx regional isolation\".",
+  "updated_at": 1787278287861,
+  "version": "0.0.1"
+}
