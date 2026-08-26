@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release for agentsmd-creator:\n\n- Generates AGENTS.md for project repositories to serve as an AI-facing project README.\n- Implements a 6-chapter template structure, covering project overview, quick start, architecture, coding style, local development, and documentation navigation.\n- Scans repository to tailor content based on project maturity (new/existing), primary tech stack, and existing documentation.\n- Analyzes project files to extract and/or generate coding standards and architecture docs; merges with existing files where applicable.\n- Outputs/update AGENTS.md, docs/CODING_STYLE.md, docs/ARCHITECTURE.md, and creates a CLAUDE.md symlink for compatibility.\n- Ensures concise, actionable documentation (\u2264 200 lines), with detailed sections linked externally.",
+  "created_at": 1781917830665,
+  "display_name": "Agentsmd Creator",
+  "fetched_at": 1787780036778,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/community-standards.md",
+    "references/examples.md",
+    "references/principles.md",
+    "references/template.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781969387164,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Aaron Zhang",
+    "handle": "linuxcer",
+    "user_id": "s170b198sx7fxdpgn8q574x8zh860yr1"
+  },
+  "slug": "agentsmd-creator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agentsmd-creator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agentsmd-creator&ownerHandle=linuxcer",
+    "page_url": "https://clawhub.ai/linuxcer/skills/agentsmd-creator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 286,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4e3a\u9879\u76ee\u4ed3\u5e93\u751f\u6210 AGENTS.md \u2014 AI \u9762\u5411\u7684\u9879\u76ee README\u3002\u544a\u8bc9 AI Coding Agent\uff1a\u9879\u76ee\u662f\u4ec0\u4e48\u3001\u600e\u4e48\u6784\u5efa\u548c\u6d4b\u8bd5\u3001\u4ee3\u7801\u89c4\u8303\u3001\u7f16\u7a0b\u539f\u5219\u7b49\u3002 \u89e6\u53d1\u573a\u666f\uff1a\u7528\u6237\u9700\u8981\u521b\u5efa AGENTS.md\u3001\u751f\u6210\u9879\u76ee AI \u6307\u5357\u3001\u4e3a\u4ed3\u5e93\u5199 AI \u4e0a\u4e0b\u6587\u6587\u4ef6\u3001\u6216\u63d0\u5230\u300c\u7ed9 AI \u770b\u7684 README\u300d\u3001agentsmd-...",
+  "updated_at": 1781917830665,
+  "version": "1.0.0"
+}
