@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release of run-advanced-patent-query-ip skill\n\n- Enables execution of advanced PatSnap patent queries using field operators for portfolio and competitor analysis.\n- Generates evidence-backed reports with portfolio counts, technical summaries, and hierarchical patent details.\n- Produces both Markdown and accessible HTML report outputs.\n- Supports optional integration of literature context when a verified connector is available.\n- Includes strict credential handling and configuration validation, with clear error reporting.\n- Requires explicit user request and validated PatSnap MCP or documented API access; does not collect credentials in chat.",
+  "created_at": 1786609610413,
+  "display_name": "run-advanced-patent-query-ip",
+  "fetched_at": 1787772333792,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "reports/images/a9a494dc-9fc6-44b6-8582-13f89e8fa099.png",
+    "reports/report_20260416_152606.html",
+    "reports/report_20260416_152606.md",
+    "scripts/config.py",
+    "scripts/fetch_competitor_report.py",
+    "scripts/fetch_literature.py",
+    "scripts/render_html.py",
+    "scripts/run.sh",
+    "scripts/token_manager.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786610505022,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yuanzhian-patsnap",
+    "handle": "yuanzhian-patsnap",
+    "user_id": "s17bvft5kywc2rr8r8df1ra0x589g677"
+  },
+  "slug": "run-advanced-patent-query-ip",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/run-advanced-patent-query-ip",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=run-advanced-patent-query-ip&ownerHandle=yuanzhian-patsnap",
+    "page_url": "https://clawhub.ai/yuanzhian-patsnap/skills/run-advanced-patent-query-ip"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 129,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Execute a user-supplied PatSnap advanced patent query containing field operators such as ANCS:, TAC_ALL:, DESC_B:, MAINF:, ALL_AN:, PN:, APD:, PBD:, APNO:, or PRNO:, then generate an evidence-backed competitor patent report with portfolio counts, company-level technical summaries, hierarchical patent details, optional literature context, Markdown output, and an accessible HTML rendering. Use when the user explicitly asks to run a PatSnap query or create a report from one; require verified PatSnap MCP or documented global API access and never collect credentials in chat.",
+  "updated_at": 1786609702574,
+  "version": "1.0.0"
+}
