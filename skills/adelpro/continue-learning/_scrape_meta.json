@@ -1,0 +1,35 @@
+{
+  "changelog": "Version 1.3.2 of continue-learning adds security and privacy controls for learning data.\n\n- Session analysis now requires explicit agent scoping (`--agent <name>` or `--all`); running with no scope is not allowed.\n- All session-derived data stored is redacted for secrets and Unicode/control stripped before saving.\n- Retention limits added: instincts, evidence, and patterns are capped to recent data; nothing is retained unbounded.\n- New `prune` command deletes all stored learning data (instincts, patterns, optimizations).\n- Raw transcripts are never persisted; only redacted and aggregated information is stored.\n- skill-card.md documentation file removed.",
+  "created_at": 1772011023763,
+  "display_name": "continue-learning",
+  "fetched_at": 1787770311750,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/analyze.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "adelpro",
+    "handle": "adelpro",
+    "user_id": "s177vajy8ffpjnym8evc1jcxr5877x59"
+  },
+  "slug": "continue-learning",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/continue-learning",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=continue-learning&ownerHandle=adelpro",
+    "page_url": "https://clawhub.ai/adelpro/skills/continue-learning"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1233,
+    "installs": 32,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Instinct-based learning system for OpenClaw. Analyzes sessions, detects patterns, creates atomic learnings with confidence scoring, and suggests optimizations for self-evolution. Works alongside agent-self-improvement for complete learning: internal session analysis + external user feedback. Use when: you want your AI agent to learn from its own behavior, improve over time, discover optimization opportunities, or build a self-improving automation system. Don't use when: static agent behavior is preferred.",
+  "updated_at": 1787254952691,
+  "version": "1.3.2"
+}
