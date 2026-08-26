@@ -1,0 +1,59 @@
+{
+  "changelog": "- Initial release of Hyperliquid BTC Auto Trader skill\n- Implements full autonomous BTC-USDC trading on Hyperliquid mainnet using a multi-timeframe anchored VWAP strategy\n- Advanced market regime detection, volume profile, and swing point analysis\n- Integrates six weighted signal components and performance-based anchor learning\n- Enforces strict risk management: position, loss, trade, balance, and cooldown limits\n- Live trading and status/output accessible by simple voice or text commands",
+  "created_at": 1774738613990,
+  "display_name": "hyperliquid-btc-auto-trader",
+  "fetched_at": 1787787033438,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "__init__.py",
+    "_meta.json",
+    "alerts/__init__.py",
+    "config.py",
+    "monitor/__init__.py",
+    "requirements.txt",
+    "safety/circuit_breaker.py",
+    "safety/limits.py",
+    "skill-card.md",
+    "skill.yaml",
+    "strategies/__init__.py",
+    "strategies/anchored_vwap.py",
+    "strategies/confluence.py",
+    "strategies/market_regime.py",
+    "strategies/swing_detector.py",
+    "strategies/volume_profile.py",
+    "trader.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090174170,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "davidm413",
+    "handle": "davidm413",
+    "user_id": "s172sv4sjxc4b7c8sxmbb3zans83sfy3"
+  },
+  "slug": "hyperliquid-btc-auto-trader",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hyperliquid-btc-auto-trader",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hyperliquid-btc-auto-trader&ownerHandle=davidm413",
+    "page_url": "https://clawhub.ai/davidm413/skills/hyperliquid-btc-auto-trader"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 617,
+    "installs": 16,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Autonomous BTC-USDC trading bot on Hyperliquid mainnet using multi-timeframe anchored VWAP and strict safety limits for live market execution.",
+  "updated_at": 1779079107702,
+  "version": "1.0.0"
+}
