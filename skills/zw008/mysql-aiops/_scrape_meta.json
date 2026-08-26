@@ -1,0 +1,37 @@
+{
+  "changelog": "- Removed the file: skill-card.md\n- No functional or behavioral changes to the skill itself; documentation file cleanup only.",
+  "created_at": 1784267832718,
+  "display_name": "mysql-aiops",
+  "fetched_at": 1787772459727,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agent-guardrails.md",
+    "references/capabilities.md",
+    "references/cli-reference.md",
+    "references/setup-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "wei zhou",
+    "handle": "zw008",
+    "user_id": "s171xgnmqse0nqvgqvqnaq5f9183kyre"
+  },
+  "slug": "mysql-aiops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mysql-aiops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mysql-aiops&ownerHandle=zw008",
+    "page_url": "https://clawhub.ai/zw008/skills/mysql-aiops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 850,
+    "installs": 0,
+    "stars": 0,
+    "versions": 11
+  },
+  "summary": "Use this skill whenever the user needs to operate or troubleshoot a MySQL 8.x or MariaDB 10.6+ server as a DBA \u2014 a one-shot server health overview (version + flavor, connection headroom, replica role); server reads (global variables, status counters, databases, storage engines); activity (sessions/processlist, long-running queries, open InnoDB transactions, lock waits); query stats (performance_schema statement-digest top-N, EXPLAIN FORMAT=JSON); index health (unused indexes, redundant/duplicate indexes, cardinality); table health (sizes, data_free fragmentation, engine/row-format status); replication (replica IO/SQL thread state and lag, binlog/GTID status); four flagship analyses \u2014 slow-query RCA (worst digest + EXPLAIN \u2192 cited cause/action incl. full-scan and lock-time-dominant classification), InnoDB lock-wait & deadlock chain RCA (wait-for tree, root blocker, last deadlock parsed from SHOW ENGINE INNODB STATUS), replication lag RCA (thread state/error fields \u2192 cause+action), and table fragmentation analysis (data_free \u2192 OPTIMIZE candidates); and guarded writes (kill a session or query, OPTIMIZE/ANALYZE TABLE, create/drop an index, SET GLOBAL a variable, reset digest stats). Always use this skill for \"mysql health check\", \"why is this query slow\", \"top queries by time\", \"EXPLAIN this\", \"table fragmentation\", \"which indexes are unused\", \"redundant index\", \"who is blocking whom\", \"deadlock\", \"kill the session holding the lock\", \"replication lag\", \"replica stopped\", \"seconds behind master/source\", \"OPTIMIZE this table\", \"create/drop an index\", or \"SET GLOBAL max_connections\" when the context is a MySQL or MariaDB database. Do NOT use for PostgreSQL \u2014 use postgres-aiops. Do NOT use when the target is OT / industrial equipment (use industrial-aiops), a hypervisor, a storage appliance, a backup product, or a container/cluster orchestrator (negative routing hints only). Common MySQL/MariaDB DBA operations with a built-in governance harness (audit, policy, token budget, undo, risk-tiers). Behaviour is validated by a mock-based test suite; see docs/VERIFICATION.md for the live-verification checklist.",
+  "updated_at": 1786580931014,
+  "version": "0.9.0"
+}
