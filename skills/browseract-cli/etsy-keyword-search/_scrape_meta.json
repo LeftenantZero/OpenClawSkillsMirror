@@ -1,0 +1,44 @@
+{
+  "changelog": "- Clarified anti-bot handling: if blocked by anti-bot verification, execution now stops with an explicit user notification instead of retrying indefinitely.\n- Updated batch execution advice: to process multiple keywords, use separate browser sessions for each keyword rather than distributing requests within one session.\n- No functional or code changes; only revised documentation for accuracy and clarity.",
+  "created_at": 1783526270296,
+  "display_name": "Etsy Keyword Search",
+  "fetched_at": 1787777341465,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-listings.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783651667901,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "etsy-keyword-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/etsy-keyword-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=etsy-keyword-search&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/etsy-keyword-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 449,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Etsy keyword search scraper: given a search keyword and optional page number, returns paginated product listings with listingId, shopId, title, url, image, salePrice, originalPrice, currency, rating, reviewCount, shopName, isAd, freeShipping, badge from etsy.com search results. Use when user mention",
+  "updated_at": 1783650981638,
+  "version": "1.0.1"
+}
