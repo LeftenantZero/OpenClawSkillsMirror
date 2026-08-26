@@ -1,0 +1,54 @@
+{
+  "changelog": "Initial release of Skill Guardian \u2013 automated, secure AI skill management.\n\n- Adds trust scoring and security vetting for new and existing skills.\n- Implements delayed auto-updates (10 days) for non-high-trust skills; immediate update for trust \u226590.\n- Introduces a 5-10 day pending period before new skills become active.\n- Provides CLI tools for listing, adding, updating, and processing skills with safety checks.\n- Supports automated scheduling via cron for hands-free operation.\n- Detailed documentation included for setup, workflows, and best practices.",
+  "created_at": 1773644944868,
+  "display_name": "Skill Guardian",
+  "fetched_at": 1787788558009,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/skill-registry.json",
+    "references/cron-setup.md",
+    "references/registry-format.md",
+    "references/trust-ratings.md",
+    "scripts/add_skill.py",
+    "scripts/apply_updates.py",
+    "scripts/auto_run.py",
+    "scripts/check_updates.py",
+    "scripts/list_skills.py",
+    "scripts/process_pending.py",
+    "scripts/show_skill.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089913693,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "liefqin",
+    "handle": "liefqin",
+    "user_id": "s179ybxfrrx5zndvkmjj6zkrbd83gg1x"
+  },
+  "slug": "skill-guardian",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-guardian",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-guardian&ownerHandle=liefqin",
+    "page_url": "https://clawhub.ai/liefqin/skills/skill-guardian"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 902,
+    "installs": 26,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Safely manage your AI skill collection with trust scoring, security vetting, delayed auto-updates, and pending periods for new skills. Use when adding new sk...",
+  "updated_at": 1779078309116,
+  "version": "1.0.0"
+}
