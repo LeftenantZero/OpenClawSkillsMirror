@@ -1,0 +1,33 @@
+{
+  "changelog": "- Clarified that the skill now covers only market-data tools (manifest + liq radar) and explicitly excludes fund movement and swaps.\n- Updated documentation to make it clear swap/bridging functionality is out of scope and should be handled by the related hypernatt-terminal skill.\n- Revised the description and usage instructions to emphasize market-data-only functionality and remove references to order execution or custody.\n- Updated tool list and tags to match the focused, read-only market-data scope.\n- Improved clarity and precision in the documentation on when and how to use the skill.",
+  "created_at": 1786144064733,
+  "display_name": "HyperNatt Liq Radar",
+  "fetched_at": 1787773149342,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "DIALLOUBE-RESEARCH",
+    "handle": "dialloube-research",
+    "user_id": "s172gm5j0yaj6w3fhwr6t3940588e4wt"
+  },
+  "slug": "hypernatt-liq-radar",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hypernatt-liq-radar",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hypernatt-liq-radar&ownerHandle=dialloube-research",
+    "page_url": "https://clawhub.ai/dialloube-research/skills/hypernatt-liq-radar"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 192,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Instructs the agent to call the remote HyperNatt MCP tool get_liq_radar (forced-order / liquidation map) before sizing any crypto perp - BTC ETH SOL and other whitelist assets, any venue. Docs + call order only - no local exec/shell/files. This skill covers market-data tools only (manifest + liq radar). Not trade advice. get_liq_radar = $0.001 USDC via x402.",
+  "updated_at": 1786145021982,
+  "version": "0.1.1"
+}
