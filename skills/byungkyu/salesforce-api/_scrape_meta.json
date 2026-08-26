@@ -1,0 +1,33 @@
+{
+  "changelog": "CLI-first rewrite: the maton CLI with OAuth login is the documented path, every example is a maton command, SDK examples added, and the raw HTTP fallback feeds the key on stdin instead of reading it from the environment",
+  "created_at": 1770023814266,
+  "display_name": "Salesforce",
+  "fetched_at": 1787768636787,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "byungkyu",
+    "handle": "byungkyu",
+    "user_id": "s174c3s2kc1ehqj1ytzntezj2983e2aj"
+  },
+  "slug": "salesforce-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/salesforce-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=salesforce-api&ownerHandle=byungkyu",
+    "page_url": "https://clawhub.ai/byungkyu/skills/salesforce-api"
+  },
+  "stats": {
+    "comments": 3,
+    "downloads": 19312,
+    "installs": 704,
+    "stars": 8,
+    "versions": 10
+  },
+  "summary": "Salesforce CRM API integration with managed OAuth. Install only if you need Salesforce CRM administration. Connect with the narrowest Salesforce permissions available, prefer sandbox orgs for destructive or batch work, verify the intended connection ID before each request, and revoke unused connections promptly. This integration can mutate CRM records \u2014 approve only specific write actions after checking the exact sObject, record IDs, and consequence. For other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway). Calls run through the `maton` CLI with OAuth login; default to read and list calls, and confirm every write or new connection with the user.",
+  "updated_at": 1787729761436,
+  "version": "1.1.0"
+}
