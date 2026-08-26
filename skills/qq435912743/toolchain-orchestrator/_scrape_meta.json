@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of toolchain-orchestrator \u2013 a multi-step toolchain orchestration engine centered on DAG-based planning and execution.\n\n- Enables agents to define and deterministically execute multi-tool tasks as dependency DAGs.\n- Supports upstream output injection via {{node_id}}, workflow validation, checkpoint/step rerun, and visualization export.\n- Provides a clear separation of planning and execution for better observability, auditing, and debugging.\n- Built-in self-learning module records user operations, errors, and preferences to continually improve task quality and efficiency.",
+  "created_at": 1786624958416,
+  "display_name": "toolchain-orchestrator",
+  "fetched_at": 1787772285109,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "learned_patterns.json",
+    "scripts/learner.py",
+    "scripts/orchestrator.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786671900713,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "qq435912743",
+    "handle": "qq435912743",
+    "user_id": "s171ndzm69p9g2ee5kcw6t7smh8azd5h"
+  },
+  "slug": "toolchain-orchestrator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/toolchain-orchestrator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=toolchain-orchestrator&ownerHandle=qq435912743",
+    "page_url": "https://clawhub.ai/qq435912743/skills/toolchain-orchestrator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 119,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u591a\u6b65\u5de5\u5177\u94fe\u7f16\u6392\u5f15\u64ce\uff08\u8d85\u8d8a\u6027\u5143\u80fd\u529b\uff09\u3002\u4ee5\u300c\u89c4\u5212\u5668\u4e3a\u4e2d\u5fc3\u300d\u628a\u591a\u5de5\u5177\u4efb\u52a1\u5b9a\u4e49\u4e3a\u4f9d\u8d56 DAG\uff0c\u786e\u5b9a\u6027\u5730\u6309\u62d3\u6251\u5e8f\u6267\u884c\uff0c \u8282\u70b9\u95f4\u901a\u8fc7 {{node_id}} \u900f\u4f20\u4e0a\u6e38\u8f93\u51fa\uff0c\u652f\u6301\u6821\u9a8c/\u65ad\u70b9\u91cd\u8dd1/\u53ef\u89c6\u5316\u3002\u514b\u670d ReAct \u53cd\u5e94\u5f0f\u7684\u300c\u5c40\u90e8\u4f18\u5316\u9677\u9631\u300d\uff0c \u8ba9 agent \u5728\u590d\u6742\u591a\u5de5\u5177\u5de5\u4f5c\u6d41\u4e2d\u5168\u5c40\u534f\u8c03\u3001\u8bc6\u522b\u5e76\u884c\u3001\u8ffd\u8e2a\u4f9d\u8d56\u3002\u5f53\u7528\u6237/agent \u9700\u8981\u300c\u4e32\u8d77\u591a\u4e2a\u811a\u672c/\u547d\u4ee4\u300d\u300c\u7f16\u6392\u6d41\u6c34\u7ebf\u300d\u300c\u91cd\u8dd1\u5931\u8d25\u6b65\u9aa4\u300d\u65f6\u8c03\u7528\u3002",
+  "updated_at": 1786670982720,
+  "version": "1.0.0"
+}
