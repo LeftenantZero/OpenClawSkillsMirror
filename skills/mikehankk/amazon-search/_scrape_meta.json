@@ -1,0 +1,52 @@
+{
+  "changelog": "- Initial release of amazon-search skill for structured Amazon product searches.\n- Supports keyword queries, price filters, paging, proxy configuration, image downloading, and incremental result output.\n- Provides output as structured JSON and saves results automatically to the results directory.\n- Includes robust caching, cache clearing commands, and deduplication for incremental searches.\n- Full documentation for installation, configuration, usage examples, and troubleshooting.",
+  "created_at": 1775472648518,
+  "display_name": "Amazon Search",
+  "fetched_at": 1787771160878,
+  "files": [
+    ".gitignore",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/amazon_search.ts",
+    "scripts/configure.ts",
+    "scripts/package.json",
+    "scripts/playwright_getcookie.ts",
+    "scripts/playwright_search.ts",
+    "scripts/vendors/image-cache/.gitignore",
+    "scripts/vendors/image-cache/package.json",
+    "scripts/vendors/image-cache/src/index.ts",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090316403,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Wei Han",
+    "handle": "mikehankk",
+    "user_id": "s17740h3taw84fgmg8d1t4m07n83g6y3"
+  },
+  "slug": "amazon-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/amazon-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=amazon-search&ownerHandle=mikehankk",
+    "page_url": "https://clawhub.ai/mikehankk/skills/amazon-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 736,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Search Amazon product listings for a keyword and return structured JSON results. Results are cached by ASIN/uuid for incremental searches and saved automatic...",
+  "updated_at": 1779075554066,
+  "version": "0.1.1"
+}
