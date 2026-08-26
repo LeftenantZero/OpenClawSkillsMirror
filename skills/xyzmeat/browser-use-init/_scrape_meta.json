@@ -1,0 +1,48 @@
+{
+  "changelog": "- Initial release of browser-use-init.\n- Provides full Chrome DevTools Protocol (CDP) initialization and remote control for Chrome 145+, including Playwright and browser-use Agent support.\n- Automatically copies Chrome Profile to a custom directory to bypass App-Bound Encryption and non-default user-data-dir requirement, preserving login state.\n- Includes scripts for starting Chrome in CDP mode, querying connection info, and troubleshooting.\n- Supports both deterministic (Playwright) and AI-driven (browser-use Agent) web automation scenarios.\n- Offers step-by-step instructions, usage examples, and common troubleshooting tips.",
+  "created_at": 1773763094146,
+  "display_name": "browser-use-init",
+  "fetched_at": 1787788185169,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/chrome-cdp-solution.md",
+    "scripts/playwright_connect.py",
+    "scripts/query_cdp.py",
+    "scripts/run_agent.py",
+    "scripts/start_chrome.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089937702,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xyzmeat",
+    "handle": "xyzmeat",
+    "user_id": "s179vqxwhy6y6b6vmzf8hz43g9884d4c"
+  },
+  "slug": "browser-use-init",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/browser-use-init",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=browser-use-init&ownerHandle=xyzmeat",
+    "page_url": "https://clawhub.ai/xyzmeat/skills/browser-use-init"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 955,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u521d\u59cb\u5316\u5e76\u542f\u52a8 Chrome DevTools Protocol\uff08CDP\uff09\u6a21\u5f0f\uff0c\u652f\u6301\u7528 Playwright \u548c browser-use Agent \u8fdc\u7a0b\u63a7\u5236\u771f\u5b9e Chrome \u6d4f\u89c8\u5668\u3002\u89e3\u51b3 Chrome 145+ App-Bound Encryption \u9650\u5236\uff0c\u81ea\u52a8\u590d\u5236 Profile \u5230\u975e\u9ed8\u8ba4\u8def\u5f84\u4ee5\u542f\u7528 CDP...",
+  "updated_at": 1779078466867,
+  "version": "1.0.0"
+}
