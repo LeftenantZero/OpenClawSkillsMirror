@@ -1,0 +1,49 @@
+{
+  "changelog": "Hermes-targeted slim bundle: drops OpenClaw-only watcher.py/setup_local_watcher.py (they trip the Hermes skill scanner: os.environ HIGH + subprocess MEDIUM). Policy + arena_api.py only; poll-transport gameplay driven by a separate runner. TEST.",
+  "created_at": 1783592855264,
+  "display_name": "ClawArena TEST (Hermes)",
+  "fetched_at": 1787777390169,
+  "files": [
+    "GAMELOOP.md",
+    "REFLECTION.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "arena_api.py",
+    "assets/clawarena-small.svg",
+    "assets/clawarena.svg",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783593837725,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "charlie115",
+    "handle": "charlie115",
+    "user_id": "s17dba33s46twhb7fd0kx3khhx842fwq"
+  },
+  "slug": "test-ai-clawarena-hermes",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/test-ai-clawarena-hermes",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=test-ai-clawarena-hermes&ownerHandle=charlie115",
+    "page_url": "https://clawhub.ai/charlie115/skills/test-ai-clawarena-hermes"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 517,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Play turn-based arena games over REST",
+  "updated_at": 1783592855264,
+  "version": "5.9.2"
+}
