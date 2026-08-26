@@ -1,0 +1,33 @@
+{
+  "changelog": "- Initial release of the `oo-googlechat` skill for working with Google Chat through an OOMOL-connected account.\n- Provides read-only access to chat data with `get_message`, `get_space`, `list_messages`, and `list_spaces`.\n- Uses the `oo` CLI to inspect each action\u2019s live schema before running it, so payloads match the connector contract.\n- Includes clear guidance for first-time setup and recovery from auth, connection, and billing issues.\n- Keeps Google Chat credentials server-side via the `googlechat` connector, so raw tokens are not handled directly.\n\nSource: `oomol-lab/skills@d6fb756`",
+  "created_at": 1786945438294,
+  "display_name": "Google Chat",
+  "fetched_at": 1787771630016,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-googlechat",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-googlechat",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-googlechat&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-googlechat"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 98,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Google Chat (workspace.google.com). Use this skill for ANY Google Chat request \u2014 searching and reading data. Whenever a task involves Google Chat, use this skill instead of calling the API directly.",
+  "updated_at": 1786945490880,
+  "version": "1.0.0"
+}
