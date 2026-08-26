@@ -1,0 +1,47 @@
+{
+  "changelog": "openclaw-daily-ops 1.0.0 \u2014 Initial release\n\n- Tracks daily OpenClaw per-session API costs and 7-day trends, posting nightly Discord reports\n- Wipes (\"resets\") zombie sessions older than 24h and larger than 1MB to prevent excessive context growth\n- Logs all actions to `state/cost-log.json` and `state/session-reset-log.json`\n- Zero personal info required; highly configurable for paths, Discord integration, thresholds, and naming\n- Designed for robust and friendly night-to-night operations via cron",
+  "created_at": 1773714625547,
+  "display_name": "Openclaw Daily Ops",
+  "fetched_at": 1787788567639,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.json",
+    "scripts/cost_report.py",
+    "scripts/zombie_killer.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089922791,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u4e91\u9f99",
+    "handle": "zylcold",
+    "user_id": "s174fzcthb4thwb3db0dhmgme984jdp1"
+  },
+  "slug": "openclaw-daily-ops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-daily-ops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-daily-ops&ownerHandle=zylcold",
+    "page_url": "https://clawhub.ai/zylcold/skills/openclaw-daily-ops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 893,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Daily cost reporting + session hygiene for OpenClaw deployments. Tracks per-session API spend, shows 7-day trend, and wipes zombie sessions >24h old to preve...",
+  "updated_at": 1779078308138,
+  "version": "1.0.0"
+}
