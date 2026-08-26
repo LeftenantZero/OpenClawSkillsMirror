@@ -1,0 +1,70 @@
+{
+  "changelog": "geoskill-climate-zone-classification 1.0.0\n\n- Initial release of climate zone classification from monthly temperature and precipitation rasters.\n- Supports K\u00f6ppen-Geiger and simplified Strahler classification schemes with detailed class codes.\n- Provides synthetic climate field generator for testing and validation.\n- Outputs include GeoTIFF climate class raster, JSON area statistics, and a complete manifest.\n- Offers optional change detection between two epochs.\n- Runs fully offline; no network or external data access required.",
+  "created_at": 1785843010734,
+  "display_name": "geoskill-climate-zone-classification",
+  "fetched_at": 1787773509979,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_koppen/area_statistics.json",
+    "_test_cli_koppen/output-manifest.json",
+    "_test_cli_strahler/area_statistics.json",
+    "_test_cli_strahler/output-manifest.json",
+    "e2e_test.py",
+    "geoskill-climate-zone-classification.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785843928897,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-climate-zone-classification",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-climate-zone-classification",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-climate-zone-classification&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-climate-zone-classification"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 182,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u57fa\u4e8e\u6708\u5747\u6e29\u4e0e\u6708\u964d\u6c34\u6805\u683c\u7684\u6c14\u5019\u533a\u5212\uff0c\u652f\u6301\u67ef\u672c-\u76d6\u683c\uff08K\u00f6ppen-Geiger\uff09\u89c4\u5219\u6811\u4e0e\u7b80\u5316 Strahler \u53d1\u751f\u5206\u7c7b\uff0c\u8f93\u51fa\u6c14\u5019\u7c7b\u522b\u7801 GeoTIFF + \u9762\u79ef\u7edf\u8ba1 JSON\uff0c\u53ef\u9009\u53cc\u671f\u53d8\u5316\u68c0\u6d4b\u3002Climate zone classification from monthly temperature/precipitation rasters (K\u00f6ppen-Geiger rule tree & simplified Strahler), with area statistics and optional change detection.",
+  "updated_at": 1785843158975,
+  "version": "1.0.0"
+}
