@@ -1,0 +1,41 @@
+{
+  "changelog": "Added\n  \u2022  q-naifu-a3b  text model \u2014 imgnAI fully uncensored Agentic Model (Private tier, 262K context, vision + file input)\n  \u2022 Audio output docs for video models\n  \u2022 Three-tier privacy documentation \u2014 Anonymized, Private, E2EE Private with attestation details\n  \u2022 Non-OpenClaw setup guide in README\n\nChanged\n  \u2022 Claude alias now points to  claude-opus-4-8 ; added  claude-fast  for  claude-opus-4-8-fast\n  \u2022 Poll timeout guard: 10 min for image/text, 100 min for video (matches API limits)\n  \u2022 Persistence file supports  KATANA_STATE_DIR  to separate state from credentials\n\nFixed\n  \u2022 Text submission auth: curl commands now use single  && -chained line (fixes failures on some agents)\n  \u2022 Payload temp files are now cleaned up after each request\n  \u2022 Header auth bug: submit and poll now use consistent two-header format\n  \u2022  gpt-image-2-max  reference image count: 12 \u2192 10\n  \u2022  ***  literal removed from header format strings",
+  "created_at": 1779146149575,
+  "display_name": "imgnAI Katana API",
+  "fetched_at": 1787781454843,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "models.md",
+    "skill-card.md",
+    "workflows/ffmpeg.md",
+    "workflows/image.md",
+    "workflows/post-process.md",
+    "workflows/text.md",
+    "workflows/video.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "imgnAI",
+    "handle": "imgn",
+    "user_id": "s17anvvj0ymwcrs43x8ga1q7k586qn73"
+  },
+  "slug": "katana",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/katana",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=katana&ownerHandle=imgn",
+    "page_url": "https://clawhub.ai/imgn/skills/katana"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 908,
+    "installs": 21,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "Generate images, videos, and text/LLM completions via the imgnAI Katana API. Supports end-to-end-encrypted (E2EE) and anonymized models. Priced highly compet...",
+  "updated_at": 1781008234455,
+  "version": "1.0.3"
+}
