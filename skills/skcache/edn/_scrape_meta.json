@@ -1,0 +1,38 @@
+{
+  "changelog": "- Initial release of edn, the Engineering Dashboard Notebook skill.\n- Synchronizes a local engineering notebook with repository changes to document and review architecture, ownership, flows, dependencies, tradeoffs, risks, decisions, and evidence.\n- Automatically manages creation and `.gitignore` rules for the notebook on first activation; avoids committing private notes unless explicitly requested.\n- Guides users to classify work as routine or architectural, prompting for Architecture Checks and owner input when necessary.\n- Enforces security and ownership checkpoints for changes affecting sensitive areas.\n- Supports explanation depth calibration for notebook updates, adapting technical language for different experience levels.",
+  "created_at": 1786160553796,
+  "display_name": "edn",
+  "fetched_at": 1787773145148,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/notebook.html",
+    "references/ARCHITECTURE-CHECK.md",
+    "references/NOTEBOOK-SECTIONS.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Siddhant Kuwar",
+    "handle": "skcache",
+    "user_id": "s17461z2mx5n1cftjtpx2gf3nd8c28yt"
+  },
+  "slug": "edn",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/edn",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=edn&ownerHandle=skcache",
+    "page_url": "https://clawhub.ai/skcache/skills/edn"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1399,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use before and after meaningful implementation work to keep a local engineering notebook synchronized with the repository. Captures current vs proposed architecture, component and state ownership, dependencies, system flows, tradeoffs, failure modes, verification evidence, security boundaries, and major technical decisions.",
+  "updated_at": 1786160631522,
+  "version": "0.1.0"
+}
