@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of UniFi Network Diagnostics skill.\n\n- Diagnose household UniFi networks for issues like Wi-Fi, internet, DNS, latency, packet loss, and device health.\n- Uses only read-only diagnostics and does not expose or log sensitive information.\n- Automatically discovers and uses a local UniFi helper configuration if not set.\n- Separates findings into observations, inferences, hypotheses, and conclusions for clarity.\n- Requires explicit owner approval before any state-changing action.\n- Provides structured markdown output for each diagnosis.",
+  "created_at": 1783979666349,
+  "display_name": "UniFi Network Diagnostics",
+  "fetched_at": 1787776839357,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/diagnostic-model.md",
+    "scripts/diagnose-network.sh",
+    "scripts/discover-unifi-config.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "catholicbeer",
+    "handle": "catholicbeer",
+    "user_id": "s178w67jrp9veqedtp4h5m2ajd85xcgx"
+  },
+  "slug": "unifi-network-diagnostics",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/unifi-network-diagnostics",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=unifi-network-diagnostics&ownerHandle=catholicbeer",
+    "page_url": "https://clawhub.ai/catholicbeer/skills/unifi-network-diagnostics"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 331,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Diagnose a private household UniFi network for Operator and discover non-secret local helper configuration. Use for Wi-Fi, internet, DNS, latency, packet los...",
+  "updated_at": 1783979666349,
+  "version": "1.0.0"
+}
