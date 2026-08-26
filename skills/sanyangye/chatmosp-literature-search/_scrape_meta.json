@@ -1,0 +1,34 @@
+{
+  "changelog": "chatmosp-literature-search v1.0.0\n\n- Initial release: Enables academic literature search as a fallback when critical parameters are missing from the MOSP_database.\n- Searches open-access journals (Nature Communications, Science Advances, PNAS, etc.) for MSR/KMC parameters like surface energy, adsorption energy, and interaction matrices.\n- Three-layered search priority: top journals, open-access journals, preprints.\n- Implements a detailed multi-stage workflow for article retrieval, parameter extraction, and validation.\n- Returns structured parameter tables with completeness scoring, supporting user review and selection.\n- Requires browser/web tool for document retrieval; prompts user to upload documents if retrieval tools are unavailable.",
+  "created_at": 1783492008589,
+  "display_name": "Chatmosp Literature Search",
+  "fetched_at": 1787777562021,
+  "files": [
+    "SKILL.md",
+    "SKILL_cn.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "sanyangye",
+    "handle": "sanyangye",
+    "user_id": "s171gdqgnbsa8sy3bf4qfk97618a0vbx"
+  },
+  "slug": "chatmosp-literature-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/chatmosp-literature-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=chatmosp-literature-search&ownerHandle=sanyangye",
+    "page_url": "https://clawhub.ai/sanyangye/skills/chatmosp-literature-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 255,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Academic literature searcher of the chatMOSP system. When MOSP_database lacks\nmatching parameters, searches open-access journals (Nature Communications,\nScience Advances, PNAS, etc.) and other academic resources to extract MSR/KMC\nparameters.",
+  "updated_at": 1783492008589,
+  "version": "1.0.0"
+}
