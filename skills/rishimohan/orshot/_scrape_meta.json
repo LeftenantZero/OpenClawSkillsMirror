@@ -1,0 +1,43 @@
+{
+  "changelog": "**Summary:**  \nImproved skill loading logic and added guidance for common render failures.\n\n- Updated the skill to always load for Orshot tasks, including simple ones, to prevent common user errors.\n- Added a detailed \"Common Gotchas\" section outlining frequent pitfalls (e.g. correct modifications keys, multi-page handling, template ID types, and video requirements).\n- Clarified use cases and explicitly stated when not to use the skill (not for pure AI image generation without Orshot/templates).\n- Expanded integration and migration guidance for AI agents, MCP clients, and Bannerbear/Placid/Creatomate alternatives.\n- Removed the obsolete skill card file (skill-card.md).",
+  "created_at": 1785579198450,
+  "display_name": "orshot",
+  "fetched_at": 1787773848358,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785663820285,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Rishi Mohan",
+    "handle": "rishimohan",
+    "user_id": "s174y1srzppqj00rb9xyjp60698bnwfj"
+  },
+  "slug": "orshot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/orshot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=orshot&ownerHandle=rishimohan",
+    "page_url": "https://clawhub.ai/rishimohan/skills/orshot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 278,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Generate images, PDFs, and videos from templates with Orshot \u2014 via the REST API, SDKs (Node/Python/PHP/Ruby), the remote MCP server, or no-code tools (Zapier, Make, n8n, Airtable), and wire those renders into a recurring automation. Use whenever the user mentions Orshot, connects Orshot to an AI age",
+  "updated_at": 1785663085646,
+  "version": "1.0.1"
+}
