@@ -1,0 +1,47 @@
+{
+  "changelog": "- Updated documentation to clearly describe skill features, outputs, limitations, trust model, and API usage.\n- Expanded explanation of supported project types (Python, Node, Docker, Go, Rust) and scaffolded file details.\n- Clarified that all file writes occur only inside the agent workspace, with strict environment name validation.\n- Explicitly documented that service and port tracking is metadata-only\u2014no process or network control.\n- Added full descriptions of programmatic API, CLI options, and data storage behavior.\n- Outlined security boundaries and risk surface for safer usage.",
+  "created_at": 1784659877598,
+  "display_name": "env-manager",
+  "fetched_at": 1787772517378,
+  "files": [
+    "README.md",
+    "SECURITY-AUDIT.md",
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.yaml",
+    "env-manager.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786539836660,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jlacroix82",
+    "handle": "jlacroix82",
+    "user_id": "s175p518b8g47fx6r9zyvs95ks876t4t"
+  },
+  "slug": "env-manager",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/env-manager",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=env-manager&ownerHandle=jlacroix82",
+    "page_url": "https://clawhub.ai/jlacroix82/skills/env-manager"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 155,
+    "installs": 0,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "Scaffolds dev project files (package.json, Dockerfile, Cargo.toml, etc.) for Python, Node, Docker, Go, and Rust, AND tracks project service/port inventory and runtime state (metadata only \u2014 no process control). Returns a list of toolchain commands for the calling agent to run. Writes scaffold files and JSON state (environments/ports/services) only inside the project workspace (repo root), or a descendant directory set via the ENV_MANAGER_WORKSPACE env var (confined to within the repo root).",
+  "updated_at": 1786539836660,
+  "version": "3.0.6"
+}
