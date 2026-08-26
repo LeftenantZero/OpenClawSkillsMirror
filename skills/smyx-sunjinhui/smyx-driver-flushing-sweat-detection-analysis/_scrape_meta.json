@@ -1,0 +1,71 @@
+{
+  "changelog": "- Updated SKILL.md to reflect version changes and documentation improvements.\n- Removed the skill-card.md file.\n- No changes to core functionality or user-facing features.\n- Adjusted the version number and made text cleanups for clarity.",
+  "created_at": 1779765072299,
+  "display_name": "Driver Facial Flushing / Sweat Abnormality Detection | \u9a7e\u9a76\u5458\u9762\u90e8\u6f6e\u7ea2/\u51fa\u6c57\u5f02\u5e38\u68c0\u6d4b",
+  "fetched_at": 1787768784202,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api_doc.md",
+    "scripts/__init__.py",
+    "scripts/config.py",
+    "scripts/config.yaml",
+    "scripts/skill.py",
+    "scripts/smyx_driver_flushing_sweat_detection_analysis.py",
+    "skill-card.md",
+    "skills/smyx_analysis/__init__.py",
+    "skills/smyx_analysis/references/api_doc.md",
+    "skills/smyx_analysis/requirements.txt",
+    "skills/smyx_analysis/scripts/__init__.py",
+    "skills/smyx_analysis/scripts/api_service.py",
+    "skills/smyx_analysis/scripts/config.py",
+    "skills/smyx_analysis/scripts/config.yaml",
+    "skills/smyx_analysis/scripts/skill.py",
+    "skills/smyx_analysis/scripts/smyx_analysis.py",
+    "skills/smyx_common/__init__.py",
+    "skills/smyx_common/requirements.txt",
+    "skills/smyx_common/scripts/__init__.py",
+    "skills/smyx_common/scripts/api_service.py",
+    "skills/smyx_common/scripts/base.py",
+    "skills/smyx_common/scripts/config-dev.yaml",
+    "skills/smyx_common/scripts/config-prod.yaml",
+    "skills/smyx_common/scripts/config-test.yaml",
+    "skills/smyx_common/scripts/config.py",
+    "skills/smyx_common/scripts/config.yaml",
+    "skills/smyx_common/scripts/dao.py",
+    "skills/smyx_common/scripts/skill.py",
+    "skills/smyx_common/scripts/util.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787675745810,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "smyx-sunjinhui",
+    "handle": "smyx-sunjinhui",
+    "user_id": "s17cfv2h26b7hq5w47tgfy23xx83z9x6"
+  },
+  "slug": "smyx-driver-flushing-sweat-detection-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/smyx-driver-flushing-sweat-detection-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=smyx-driver-flushing-sweat-detection-analysis&ownerHandle=smyx-sunjinhui",
+    "page_url": "https://clawhub.ai/smyx-sunjinhui/skills/smyx-driver-flushing-sweat-detection-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1575,
+    "installs": 9,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "Using an in-cabin DMS camera, the system analyzes the driver's facial video in real time, detecting skin color variation (flush index, derived from red-channel ratio in RGB or skin-color models) and sweat-droplet / reflective area (via image texture and reflection features). | \u901a\u8fc7\u8f66\u8f7dDMS\u6444\u50cf\u5934\u5b9e\u65f6\u5206\u6790\u9a7e\u9a76\u5458\u9762\u90e8\u89c6\u9891\uff0c\u68c0\u6d4b\u9762\u90e8\u80a4\u8272\u53d8\u5316\uff08\u6f6e\u7ea2\u6307\u6570\uff0c\u901a\u8fc7RGB\u8272\u7a7a\u95f4\u4e2d\u7684\u7ea2\u8272\u5206\u91cf\u6bd4\u4f8b\u6216\u80a4\u8272\u6a21\u578b\uff09\u4ee5\u53ca\u6c57\u73e0/\u53cd\u5149\u9762\u79ef\uff08\u901a\u8fc7\u56fe\u50cf\u7eb9\u7406\u548c\u53cd\u5c04\u7279\u5f81\uff09\u3002\u5f53\u6f6e\u7ea2\u6307\u6570\u663e\u8457\u5347\u9ad8\uff08\u53ef\u80fd\u63d0\u793a\u8840\u538b\u5347\u9ad8\u3001\u53d1\u70ed\u6216\u60c5\u7eea\u6fc0\u52a8\uff09\u6216\u51fa\u6c57\u533a\u57df\u9762\u79ef\u8d85\u8fc7\u9608\u503c\uff08\u53ef\u80fd\u63d0\u793a\u70ed\u5e94\u6fc0\u3001\u4f4e\u8840\u7cd6\u6216\u5fc3\u810f\u95ee\u9898\uff09\u65f6\uff0c\u8f93\u51fa\u5065\u5eb7\u98ce\u9669\u63d0\u9192\uff0c\u5efa\u8bae\u9a7e\u9a76\u5458\u505c\u8f66\u4f11\u606f\u6216\u5c31\u533b\u3002",
+  "updated_at": 1787674948402,
+  "version": "1.0.9"
+}
