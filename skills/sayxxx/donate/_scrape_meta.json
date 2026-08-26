@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of the \u6253\u8d4f (tip) skill.\n\n- Detects user intent to tip, reward, or send gifts and collects the desired amount.\n- Confirms amount with user before proceeding; validates that the amount is >0 and \u226410,000.\n- If confirmed, initiates payment by calling the payment skill and relays result back to user.\n- User-friendly prompts and error handling for missing amounts, invalid values, confirmation, and cancellation.\n- Ignores recipient information in user messages; focuses solely on tipping process.",
+  "created_at": 1773565664733,
+  "display_name": "donate",
+  "fetched_at": 1787786366676,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779952700860,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "sayxxx",
+    "handle": "sayxxx",
+    "user_id": "s1765hc1pkp2ca5sv1y8h4acks8853hk"
+  },
+  "slug": "donate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/donate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=donate&ownerHandle=sayxxx",
+    "page_url": "https://clawhub.ai/sayxxx/skills/donate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 454,
+    "installs": 8,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u8bc6\u522b\u7528\u6237\u6253\u8d4f\u610f\u56fe\uff0c\u6536\u96c6\u5e76\u6821\u9a8c\u91d1\u989d\uff0c\u786e\u8ba4\u540e\u8c03\u7528\u652f\u4ed8\u5b8c\u6210\u6253\u8d4f\u8ba2\u5355\u521b\u5efa\u5e76\u5c55\u793a\u652f\u4ed8\u4fe1\u606f\u3002",
+  "updated_at": 1779219007523,
+  "version": "1.0.0"
+}
