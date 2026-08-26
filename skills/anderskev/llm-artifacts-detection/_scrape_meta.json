@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of llm-artifacts-detection.\n\n- Detects code artifacts commonly introduced by LLM coding agents, including test issues, dead code, over-abstraction, and verbose/unnatural style patterns.\n- Provides focused agent prompts for identifying defects in tests, dead code, abstraction, and style.\n- Ensures findings are evidence-bound, using a reporting protocol with clear anchoring, titling, and deduplication requirements.\n- Supports both parallel (subagent) and sequential review processes.\n- Includes reference files for precise detection criteria and examples.",
+  "created_at": 1780280568847,
+  "display_name": "Llm Artifacts Detection",
+  "fetched_at": 1787783698195,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/abstraction-criteria.md",
+    "references/dead-code-criteria.md",
+    "references/style-criteria.md",
+    "references/tests-criteria.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Kevin Anderson",
+    "handle": "anderskev",
+    "user_id": "s17b1fzefm8nj8j1sdkzrze7gn83pfrg"
+  },
+  "slug": "llm-artifacts-detection",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/llm-artifacts-detection",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=llm-artifacts-detection&ownerHandle=anderskev",
+    "page_url": "https://clawhub.ai/anderskev/skills/llm-artifacts-detection"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 491,
+    "installs": 8,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Detects common LLM coding agent artifacts in codebases. Identifies test quality issues, dead code, over-abstraction, and verbose LLM style patterns. Use when...",
+  "updated_at": 1780280568847,
+  "version": "1.0.0"
+}
