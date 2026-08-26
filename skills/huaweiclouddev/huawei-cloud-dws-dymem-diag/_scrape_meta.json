@@ -1,0 +1,49 @@
+{
+  "changelog": "Huawei Cloud DWS Memory High Diagnosis Skill v1.0.0\n\n- Initial release supporting DWS cluster memory high/insufficient/OOM alarm diagnosis.\n- Automatically collects cluster memory metrics and analyzes root causes (customer/system-side).\n- Generates standardized diagnosis reports in HTML format.\n- Supports fallback to MCP Server if KooCLI (hcloud) is unavailable.\n- Provides clear rules for tool selection, error handling, and termination.\n- Designed for use in alarm-driven or user-initiated memory diagnosis scenarios.",
+  "created_at": 1782446834835,
+  "display_name": "huawei-cloud-dws-dymem-diag",
+  "fetched_at": 1787771006468,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cli-installation-guide.md",
+    "references/dws-mcp-installation-guide.md",
+    "references/iam-policies.md",
+    "references/memory-background.md",
+    "references/metric-reference.md",
+    "references/output-format.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787555636794,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweicloud-skills-team",
+    "handle": "huaweiclouddev",
+    "user_id": "s17axk041vxeamxj39r4dwvyts87wtza"
+  },
+  "slug": "huawei-cloud-dws-dymem-diag",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-dws-dymem-diag",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-dws-dymem-diag&ownerHandle=huaweiclouddev",
+    "page_url": "https://clawhub.ai/huaweiclouddev/skills/huawei-cloud-dws-dymem-diag"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 225,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "DWS cluster memory high root cause diagnosis skill, based on KooCLI v3.2.0+ and DWS Autopilot MCP Server. Automatically collects memory metrics, analyzes root causes (customer-side / system-side), and outputs a standardized diagnosis report. Applicable to DWS cluster memory usage too high, memory alarms, OOM scenarios. Trigger words: \"\u5185\u5b58\u9ad8\", \"\u5185\u5b58\u544a\u8b66\", \"\u5185\u5b58\u8bca\u65ad\", \"\u5185\u5b58\u4f7f\u7528\u7387\u8fc7\u9ad8\", \"\u5185\u5b58\u4e0d\u8db3\", \"OOM\", \"\u5185\u5b58\u6ea2\u51fa\", \"\u52a8\u6001\u5185\u5b58\u4f7f\u7528\u7387\u8d85\u9608\u503c\", \"high memory\", \"memory alarm\", \"memory diagnosis\"",
+  "updated_at": 1787554855939,
+  "version": "1.0.0"
+}
