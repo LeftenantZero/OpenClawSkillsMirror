@@ -1,0 +1,68 @@
+{
+  "changelog": "Initial release of the geoskill-snow-ice-mapping skill.\n\n- Supports snow/ice mapping using NDSI index and temperature thresholds.\n- Provides raster output (`result.tif`) and area statistics in manifest (`output-manifest.json`).\n- Works offline by default; synthetic test mode requires no network.\n- Includes basic usage and synthetic data example; real-data usage examples to be added.\n- MIT licensed, with strict local data processing for privacy.",
+  "created_at": 1785850904296,
+  "display_name": "geoskill-snow-ice-mapping",
+  "fetched_at": 1787773434705,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_bboxonly/output-manifest.json",
+    "_test_cli_bboxonly/snow_area_stats.json",
+    "e2e_test.py",
+    "geoskill-snow-ice-mapping.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785851970154,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-snow-ice-mapping",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-snow-ice-mapping",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-snow-ice-mapping&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-snow-ice-mapping"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 193,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5229\u7528 NDSI \u6307\u6570\u4e0e\u6e29\u5ea6\u9608\u503c\u63d0\u53d6\u79ef\u96ea/\u51b0\u4f53\u8986\u76d6\u8303\u56f4\uff0c\u8f93\u51fa\u79ef\u96ea\u6805\u683c\u4e0e\u9762\u79ef\u7edf\u8ba1",
+  "updated_at": 1785851051277,
+  "version": "1.0.0"
+}
