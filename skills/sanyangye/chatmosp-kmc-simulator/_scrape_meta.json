@@ -1,0 +1,34 @@
+{
+  "changelog": "chatmosp-kmc-simulator 1.0.0\n\n- Initial release of the KMC simulation engine for chatMOSP.\n- Runs Windows-based KMC engine (main.exe) via Wine; checks and manages Wine environment.\n- Prepares KMC input files and directory structure based on confirmed parameters.\n- Executes KMC simulation, warns users of large step counts (\u226520M) with estimated time.\n- Generates and sends four result plots (coverage and TOF, vs time and steps) as separate messages.\n- Automatically regenerates missing plots or on user request; ensures MSR task and parameter-builder prerequisites are met.",
+  "created_at": 1783463513497,
+  "display_name": "Chatmosp Kmc Simulator",
+  "fetched_at": 1787777555138,
+  "files": [
+    "SKILL.md",
+    "SKILL_cn.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "sanyangye",
+    "handle": "sanyangye",
+    "user_id": "s171gdqgnbsa8sy3bf4qfk97618a0vbx"
+  },
+  "slug": "chatmosp-kmc-simulator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/chatmosp-kmc-simulator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=chatmosp-kmc-simulator&ownerHandle=sanyangye",
+    "page_url": "https://clawhub.ai/sanyangye/skills/chatmosp-kmc-simulator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 238,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "KMC (Kinetic Monte Carlo) simulation engine of the chatMOSP system. Invokes\nkmc_standalone.py via Wine to run the Windows main.exe engine, executes\ncatalyst surface reaction kinetic simulations, and produces TOF / coverage\nresults.",
+  "updated_at": 1783492174055,
+  "version": "1.0.0"
+}
