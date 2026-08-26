@@ -1,0 +1,46 @@
+{
+  "changelog": "# Bilibili \u5b57\u5e55\u4e0b\u8f7d\u5206\u6790 Skill\n\n\u57fa\u4e8e [biliSub](https://github.com/lvusyy/biliSub) \u9879\u76ee\n\n## \u529f\u80fd\n\n1. **\u5b57\u5e55\u4e0b\u8f7d** - \u4e0b\u8f7d B \u7ad9\u89c6\u9891\u5b98\u65b9\u5b57\u5e55\u6216 ASR \u5b57\u5e55\n2. **\u5185\u5bb9\u5206\u6790** - \u8bcd\u9891\u3001\u60c5\u611f\u3001\u7edf\u8ba1\n3. **\u8be6\u7ec6\u603b\u7ed3** - \u751f\u6210\u7ed3\u6784\u5316\u603b\u7ed3\u62a5\u544a\n\n## \u5b89\u88c5\n\n```bash\n# \u5b89\u88c5 Python \u4f9d\u8d56\npip install -r requirements.txt\npip install bilibili-api-python==17.1.2\n```\n\n## B \u7ad9 Cookie \u914d\u7f6e\uff08\u91cd\u8981\uff01\uff09\n\n\u4e0b\u8f7d\u5b57\u5e55\u9700\u8981 B \u7ad9\u767b\u5f55\u51ed\u8bc1\uff0c\u8bf7\u6309\u4ee5\u4e0b\u6b65\u9aa4\u83b7\u53d6\uff1a\n\n### \u83b7\u53d6 Cookie\n\n1. \u767b\u5f55 [bilibili.com](https://bilibili.com)\n2. \u6309 `F12` \u6253\u5f00\u5f00\u53d1\u8005\u5de5\u5177 \u2192 \u5207\u6362\u5230 **Network** \u6807\u7b7e\n3. \u5de6\u4fa7\u627e\u5230 **Cookies** \u2192 \u9009\u62e9 `bilibili.com`\n4. \u627e\u5230\u5e76\u590d\u5236\u53d1\u7ed9openclaw\n\n### \u914d\u7f6e Cookie\n\n## \u4f7f\u7528\n\n\u76f4\u63a5\u53d1\u89c6\u9891\u94fe\u63a5\u8bf4\u4f7f\u7528\u6280\u80fdbilibili-subtitle-analysis\n```bash\n# \u4e0b\u8f7d\u5b57\u5e55\nnode index.js download \"https://www.bilibili.com/video/BV1xx411c79H\"\n\n# \u5206\u6790\u5b57\u5e55\nnode index.js analyze \"./subtitle.json\"\n\n# \u751f\u6210\u8be6\u7ec6\u603b\u7ed3\nnode index.js summary \"./subtitle.json\"\n\n# \u4e00\u952e\u4e0b\u8f7d+\u603b\u7ed3\nnode index.js full \"https://www.bilibili.com/video/BV1xx411c79H\"\n```\n\n## \u5e38\u89c1\u95ee\u9898\n\n### Q: \u5b57\u5e55\u4e0b\u8f7d\u5931\u8d25\uff0c\u63d0\u793a \"Credential \u672a\u63d0\u4f9b\"\uff1f\n**A:** \u9700\u8981\u914d\u7f6e B \u7ad9 Cookie\uff0c\u89c1\u4e0a\u65b9\u300cB \u7ad9 Cookie \u914d\u7f6e\u300d\n\n### Q: \u5b98\u65b9\u5b57\u5e55\u4e3a\u7a7a\u6216\u4e0b\u8f7d\u5931\u8d25\uff1f\n**A:** \u5927\u90e8\u5206\u89c6\u9891\u90fd\u6709\u5b98\u65b9\u5b57\u5e55\uff0c\u5982\u63d0\u793a\u65e0\u5b57\u5e55\uff0c\u53ef\u80fd\u9700\u8981\uff1a\n- \u786e\u8ba4 Cookie \u6709\u6548\n- \u6216\u89c6\u9891\u672c\u8eab\u6ca1\u6709\u5b57\u5e55\n\n### Q: ffmpeg \u662f\u4ec0\u4e48\uff1f\u9700\u8981\u5b89\u88c5\u5417\uff1f\n**A:** ffmpeg \u662f **\u53ef\u9009** \u7684\uff0c\u7528\u4e8e ASR \u8bed\u97f3\u8bc6\u522b\u751f\u6210\u5b57\u5e55\u3002\n- \u666e\u901a\u4e0b\u8f7d\u5b57\u5e55 **\u4e0d\u9700\u8981** ffmpeg\n- \u5982\u9700\u8bed\u97f3\u8bc6\u522b\u529f\u80fd\uff0c\u8bf7\u5b89\u88c5 [ffmpeg](https://ffmpeg.org/download.html)\n\n## \u76ee\u5f55\u7ed3\u6784\n\n```\nskills/\n\u251c\u2500\u2500 bilibili-subtitle-analysis/  \u2190 \u6280\u80fd\u4e3b\u76ee\u5f55\n\u2502   \u251c\u2500\u2500 index.js\n\u2502   \u2514\u2500\u2500 README.md\n\u2514\u2500\u2500 biliSub/                    \u2190 \u5df2\u5185\u7f6e\n    \u2514\u2500\u2500 enhanced_bilisub.py\n```\n\n## \u8bb8\u53ef\u8bc1\u58f0\u660e\n\n\u672c\u6280\u80fd\u57fa\u4e8e MIT \u8bb8\u53ef\u8bc1\u5f00\u6e90\u7684 [biliSub](https://github.com/lvusyy/biliSub) \u9879\u76ee\u6784\u5efa\u3002\nbiliSub License: Copyright (c) 2024 lvsyy",
+  "created_at": 1774019865388,
+  "display_name": "bilibili-subtitle-analysis",
+  "fetched_at": 1787787821953,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "index.js",
+    "package.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090005515,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "guige821",
+    "handle": "guige821",
+    "user_id": "s17c05bh259h0fyark22fzp3q183h28g"
+  },
+  "slug": "bilibili-subtitle-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bilibili-subtitle-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bilibili-subtitle-analysis&ownerHandle=guige821",
+    "page_url": "https://clawhub.ai/guige821/skills/bilibili-subtitle-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 840,
+    "installs": 23,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "B\u7ad9\u5b57\u5e55\u4e0b\u8f7d\u5206\u6790\u5de5\u5177\uff0c\u57fa\u4e8e biliSub \u9879\u76ee\u3002 \u652f\u6301\uff1a\u4e0b\u8f7d\u5b57\u5e55\u3001\u6279\u91cf\u4e0b\u8f7d\u3001\u5185\u5bb9\u5206\u6790\u3001\u5185\u5bb9\u5206\u6790\u62a5\u544a\u3002 \u89e6\u53d1\u6761\u4ef6\uff1a\u7528\u6237\u8981\u6c42\u4e0b\u8f7dB\u7ad9\u5b57\u5e55\u3001\u5206\u6790\u5b57\u5e55\u5185\u5bb9\u3001\u751f\u6210\u5185\u5bb9\u62a5\u544a\u3002",
+  "updated_at": 1779078661791,
+  "version": "1.0.3"
+}
