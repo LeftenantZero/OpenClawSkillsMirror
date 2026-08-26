@@ -1,0 +1,35 @@
+{
+  "changelog": "Correct chart timeframe behavior (invalid values return 400, no silent fallback) and request-count copy (five GETs, six for ETFs); CLI pin 0.47.1",
+  "created_at": 1787377502680,
+  "display_name": "expected-move-visualizer",
+  "fetched_at": 1787769780414,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/prepare_data.mjs",
+    "scripts/template.html",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Senti",
+    "handle": "thesentitrader",
+    "user_id": "s171aan38r2dn7ew5hddyscf1983x1h9"
+  },
+  "slug": "expected-move-visualizer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/expected-move-visualizer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=expected-move-visualizer&ownerHandle=thesentitrader",
+    "page_url": "https://clawhub.ai/thesentitrader/skills/expected-move-visualizer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 189,
+    "installs": 2,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Expected move visualizer for stocks and ETFs: turn implied volatility into a self-contained HTML chart showing the modeled 30, 60 and 90 day expected move cone around the current price, skewed by 25-delta put and call demand, with IV rank context and the next earnings date marked inside the cone. Renders offline from a bound data snapshot, no live call at view time. Use for expected move calculator, how much is this stock expected to move, implied volatility chart, options expected move, IV rank, earnings move visualizer, straddle move estimate. Read-only. No trading, no purchases, no write operations, no wallet access.",
+  "updated_at": 1787528607186,
+  "version": "1.0.3"
+}
