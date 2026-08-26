@@ -1,0 +1,68 @@
+{
+  "changelog": "Initial release of informal settlement detection skill.\n\n- Detects informal settlements by combining texture irregularity, building density, and spectral mixing (NDVI) into a classification score.\n- Provides both synthetic (offline) and real data processing options.\n- Outputs include GeoTIFF with score and classification mask, statistics JSON, and manifest.\n- Fully offline by default with strong local data privacy guarantees.\n- MIT licensed, with usage examples and detailed setup instructions.",
+  "created_at": 1785846240233,
+  "display_name": "geoskill-informal-settlement-detection",
+  "fetched_at": 1787773474069,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_synth/informal_stats.json",
+    "_test_cli_synth/output-manifest.json",
+    "e2e_test.py",
+    "geoskill-informal-settlement-detection.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785847224950,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-informal-settlement-detection",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-informal-settlement-detection",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-informal-settlement-detection&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-informal-settlement-detection"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 178,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Detect informal settlements by fusing texture irregularity, building morphology and spectral mixing into a classification score.",
+  "updated_at": 1785846421796,
+  "version": "1.0.0"
+}
