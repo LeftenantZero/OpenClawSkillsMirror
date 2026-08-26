@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of Threads Profile Search skill:\n\n- Enables discovery of Threads user accounts by keyword, extracting profile info including username, display name, verification status, and profile URL.\n- Supports optional enrichment per user to retrieve biography, follower count, and other profile details via the profile API.\n- Works without login (unauthenticated), limited to approximately 16 profiles per query with no pagination.\n- Provides specific error handling, rate limit guidance, and batch orchestration recommendations.\n- Documents pre-execution checks, known limitations, and actionable experience notes for reliable operation.",
+  "created_at": 1784550953489,
+  "display_name": "Threads Profile Search",
+  "fetched_at": 1787775889236,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-profile-search.py",
+    "scripts/get-profile-details.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "threads-profile-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/threads-profile-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=threads-profile-search&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/threads-profile-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 252,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Discovers Threads user accounts by keyword, extracting profile data including username, display name, verification status, biography, and follower count. Use when user asks to find Threads accounts, search Threads profiles, discover Threads users by keyword, look up Threads creators, find influencer",
+  "updated_at": 1784554207064,
+  "version": "1.0.0"
+}
