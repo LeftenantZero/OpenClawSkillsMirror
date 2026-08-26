@@ -1,0 +1,46 @@
+{
+  "changelog": "Clearer disclosure of what is stored and where",
+  "created_at": 1770933320934,
+  "display_name": "Analysis",
+  "fetched_at": 1787774769860,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agent-memory.md",
+    "cost.md",
+    "integrations.md",
+    "memory-template.md",
+    "performance.md",
+    "permissions.md",
+    "remediation.md",
+    "scheduled.md",
+    "secrets.md",
+    "sessions.md",
+    "skill-card.md",
+    "skills.md",
+    "tracking.md",
+    "workspace.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Iv\u00e1n",
+    "handle": "ivangdavila",
+    "user_id": "s178jdk12x4qj3gs2se3etxf3h83h7ft"
+  },
+  "slug": "analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=analysis&ownerHandle=ivangdavila",
+    "page_url": "https://clawhub.ai/ivangdavila/skills/analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2852,
+    "installs": 100,
+    "stars": 2,
+    "versions": 3
+  },
+  "summary": "Audits an AI agent's own setup \u2014 workspace, config, memory, skills, jobs, integrations \u2014 and reports what is broken, exposed, or wasteful. Use when asked to check the system, run a health check, or diagnose the setup, or when something feels off or the agent got slow or expensive; when a token, key, or .env may be exposed in a file, config, or git history; when permissions or auto-approve rules look too broad; when a scheduled job stops firing, runs twice, or fails silently; when sessions or subagents pile up or loop; when memory files bloat, go stale, contradict, or fall out of their index; when skills collide, never activate, or point at missing files; when an integration returns 401 or 429 or goes quiet; when token spend or context size jumps; and when the same finding keeps coming back. Not for vetting third-party skill code (`skill-audit`), workspace persona and proactivity tuning (`openclaw-workspace`), application monitoring (`monitoring`), or statistical analysis of a dataset.",
+  "updated_at": 1785141461861,
+  "version": "1.0.2"
+}
