@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release of Sentinel-1 GRD tile preprocessing pipeline.\n\n- Provides decibel (dB) conversion, pixel-aligned bbox clipping, and per-polarization processing (dual-pol for IW, optional for EW).\n- Implements physical range QA with customizable dB thresholds; flags out-of-range pixels.\n- Supports both synthetic (offline) and real-mode (local GeoTIFF) data processing.\n- Outputs preprocessed \u03c3\u2070(dB) GeoTIFF, processing log (steps/parameters/statistics), and manifest JSON.\n- Runs fully offline; no data uploads.",
+  "created_at": 1785850569840,
+  "display_name": "geoskill-sentinel1-tile-management",
+  "fetched_at": 1787773438704,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-sentinel1-tile-management.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785851433993,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-sentinel1-tile-management",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-sentinel1-tile-management",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-sentinel1-tile-management&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-sentinel1-tile-management"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 189,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6a21\u62dfSentinel-1 GRD\u9884\u5904\u7406\u6d41\u6c34\u7ebf\uff1a\u7ebf\u6027\u03c3\u2070\u5206\u8d1d\u8f6c\u6362(10\u00b7log10)\u3001bbox\u50cf\u7d20\u5bf9\u9f50\u88c1\u526a\u3001VV/VH\u53cc\u6781\u5316\u5904\u7406\u4e0e\u7269\u7406\u533a\u95f4QA\uff0c\u8f93\u51fa\u9884\u5904\u7406\u03c3\u2070(dB) GeoTIFF\u4e0e\u542b\u6b65\u9aa4/\u53c2\u6570/\u7edf\u8ba1\u7684\u5904\u7406\u65e5\u5fd7JSON\u3002Sentinel-1 GRD preprocessing pipeline: dB conversion, bbox clip, dual-pol QA.",
+  "updated_at": 1785850717722,
+  "version": "1.0.0"
+}
