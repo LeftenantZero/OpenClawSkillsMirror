@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of gcadclaw skill for natural language-driven GstarCAD 2D drawing automation.\n\n- Enables natural language creation, modification, validation, and repair of GstarCAD DWG files via the pygcadwin package.\n- Supports mechanical part, assembly, and engineering drawing generation, including mandatory before/after feedback and PNG screenshot evidence.\n- Defines strict defaults for units, drawing conventions, layers, and feedback artifacts to standardize output.\n- Details a required workflow with explicit steps for brief creation, geometry planning, drawing edits, validation, and automated repair.\n- Enforces non-negotiable requirements for validation, typed API usage, and feedback artifact output.\n- Runs on Windows with live GstarCAD via pygcadwin, installed directly from PyPI.",
+  "created_at": 1780473635739,
+  "display_name": "GcadClaw",
+  "fetched_at": 1787781339388,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "examples.md",
+    "references/2d-pygcadwin-workflow.md",
+    "references/feedback-loop.md",
+    "references/python_package_manifest.json",
+    "requirements.txt",
+    "scripts/capture_feedback.py",
+    "scripts/setup_python_env.py",
+    "scripts/validate_env.py",
+    "skill-card.md",
+    "skill.yaml",
+    "\u53d1\u5e03\u4e0a\u7ebf\u6307\u5357.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "gstarcad",
+    "handle": "gstarcad",
+    "user_id": "s178h8zz81ztb93wsewetv2n9s88c6dt"
+  },
+  "slug": "gcadclaw",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gcadclaw",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gcadclaw&ownerHandle=gstarcad",
+    "page_url": "https://clawhub.ai/gstarcad/skills/gcadclaw"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 599,
+    "installs": 9,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate 2D GstarCAD drawings with feedback.",
+  "updated_at": 1781056357141,
+  "version": "1.0.0"
+}
