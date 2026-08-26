@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of market-monitor.\n\n- Provides real-time monitoring of cryptocurrency market data via exchange APIs (Binance, OKX).\n- Supports user-triggered queries, scheduled polling, and price alert triggers.\n- Calculates key technical indicators: MA7/25/99, RSI(14), MACD(12,26,9), Bollinger Bands, and volume analysis.\n- Generates trading signals (strong_buy, buy, neutral, sell, strong_sell) based on indicator rules.\n- Standardized JSON output includes price, 24h change, indicators, signal, confidence, and key levels.\n- Implements robust error handling for rate limits, invalid parameters, and service issues.\n- Enforces security: read-only operations, access-restricted domains, and auditing of all API calls.",
+  "created_at": 1772796148813,
+  "display_name": "Market Monitor",
+  "fetched_at": 1787772105969,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "impl/binance.md",
+    "impl/okx.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Parker",
+    "handle": "patches429",
+    "user_id": "s171by77r8sahftxk2h3besw5s884a4c"
+  },
+  "slug": "market-monitor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/market-monitor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=market-monitor&ownerHandle=patches429",
+    "page_url": "https://clawhub.ai/patches429/skills/market-monitor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1587,
+    "installs": 50,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Monitor cryptocurrency and financial markets via exchange APIs (Binance, OKX). Track prices, analyze trends, and generate market reports.",
+  "updated_at": 1778491751707,
+  "version": "0.1.0"
+}
