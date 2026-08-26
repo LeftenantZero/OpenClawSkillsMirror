@@ -1,0 +1,42 @@
+{
+  "changelog": "Added declaration line ranges to code symbols: the TypeScript/JavaScript analyzer records `startLine`/`endLine` for functions, classes, and variables, the ranges travel through `CodeSymbol` onto graph symbol nodes, and `graph callers` scans only each caller's own declaration range so call sites are attributed to the correct caller even when several callers share a file. Symbols without ranges (other languages, older graphs) keep the previous per-file behavior.; Bumped OSS packages, viewer, Obsidian plugin metadata, MCP-facing version, ClawHub skill metadata, and desktop package metadata to `3.20.0`.",
+  "created_at": 1775519276698,
+  "display_name": "SwarmVault",
+  "fetched_at": 1787781023438,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "TROUBLESHOOTING.md",
+    "_meta.json",
+    "examples/graph-first-agent-workflow.md",
+    "examples/quickstart.md",
+    "examples/repo-workflow.md",
+    "examples/research-workflow.md",
+    "references/artifacts.md",
+    "references/commands.md",
+    "skill-card.md",
+    "validation/smoke-prompts.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Wayde",
+    "handle": "waydelyle",
+    "user_id": "s172jgfp1hrj42g10wkscjf0t583ttz6"
+  },
+  "slug": "swarmvault",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/swarmvault",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=swarmvault&ownerHandle=waydelyle",
+    "page_url": "https://clawhub.ai/waydelyle/skills/swarmvault"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2337,
+    "installs": 65,
+    "stars": 1,
+    "versions": 93
+  },
+  "summary": "Use SwarmVault when the user needs a local-first knowledge vault that writes durable markdown, graph, search, dashboard, review, chat-session, context-pack,...",
+  "updated_at": 1781263666062,
+  "version": "3.20.0"
+}
