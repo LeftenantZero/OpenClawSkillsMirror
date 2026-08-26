@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release of geoskill-service-area-analysis.\n\n- Computes facility service areas (isochrones) using multi-source Dijkstra over a network graph.\n- Supports multi-facility overlay, nearest-facility assignment, and multi-threshold coverage statistics.\n- Can run in fully offline mode and includes synthetic data generation for testing.\n- Outputs service areas in GeoJSON or JSON format, with stats and manifest files.\n- No external data or network requests required; all processing is done locally.\n- MIT licensed.",
+  "created_at": 1785850635512,
+  "display_name": "geoskill-service-area-analysis",
+  "fetched_at": 1787773440075,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-service-area-analysis.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785851585827,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-service-area-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-service-area-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-service-area-analysis&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-service-area-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 185,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7f51\u7edc\u7b49\u65f6\u5708\u5206\u6790+\u591a\u8bbe\u65bd\u670d\u52a1\u533a+\u8986\u76d6\u7edf\u8ba1\uff0c\u8f93\u51fa\u670d\u52a1\u533aGeoJSON",
+  "updated_at": 1785850787024,
+  "version": "1.0.0"
+}
