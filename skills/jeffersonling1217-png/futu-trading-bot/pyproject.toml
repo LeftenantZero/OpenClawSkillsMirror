@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "futu-trade-bot-skills"
+version = "1.0.9"
+description = "Futu Trade Bot Skills modules for account, trade, and quote services."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "futu-api==9.6.5608",
+  "pydantic==2.12.5",
+]
+
+[tool.setuptools]
+py-modules = ["account_manager", "config_manager", "trade_service", "quote_service", "preflight_check", "strategy_runtime", "strategy"]
+
+[tool.setuptools.package-dir]
+"" = "src"
