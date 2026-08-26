@@ -1,0 +1,68 @@
+{
+  "changelog": "- Initial release of audio2srt-localgen: a fully local Audio2SRT project generator for Apple Silicon Macs, requiring zero network access for source code.\n- Generates the entire frontend (Vite + React) and backend (Python aiohttp, MLX Whisper) from embedded templates instead of cloning from remote repositories.\n- Installs all necessary Python and Node.js dependencies, prepares model directories, and auto-downloads MLX models from ModelScope.\n- Provides a one-click startup script that launches both backend (port 8765) and frontend (port 3000).\n- Designed to be triggered by keywords/requests indicating the user wants a zero-clone, locally generated audio2srt deployment.",
+  "created_at": 1780879537336,
+  "display_name": "Audio2srtlocal",
+  "fetched_at": 1787782167542,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/file-mapping.md",
+    "references/index.html",
+    "references/package.json",
+    "references/postcss.config.js",
+    "references/requirements.txt",
+    "references/src/App.tsx",
+    "references/src/components/DropZone.tsx",
+    "references/src/components/FileCard.tsx",
+    "references/src/components/FileList.tsx",
+    "references/src/components/Header.tsx",
+    "references/src/components/ResultPanel.tsx",
+    "references/src/components/SrtTranslatePage.tsx",
+    "references/src/components/StatsBar.tsx",
+    "references/src/components/TranscriptionSettings.tsx",
+    "references/src/index.css",
+    "references/src/main.tsx",
+    "references/src/store/queueStore.ts",
+    "references/src/types/index.ts",
+    "references/src/utils/helpers.ts",
+    "references/start.sh",
+    "references/tailwind.config.js",
+    "references/transcribe_server.py",
+    "references/tsconfig.json",
+    "references/tsconfig.node.json",
+    "references/vite.config.ts",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780882258631,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yun520-1",
+    "handle": "yun520-1",
+    "user_id": "s17fp86r5vzwma7hpwwyj990q9887h76"
+  },
+  "slug": "audio2srtlocal",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/audio2srtlocal",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=audio2srtlocal&ownerHandle=yun520-1",
+    "page_url": "https://clawhub.ai/yun520-1/skills/audio2srtlocal"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 384,
+    "installs": 5,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Local-generate and deploy the Audio2SRT project \u2014 a MLX Whisper audio transcription and translation Web GUI for Apple Silicon Macs. Unlike audio2srt-deploy (...",
+  "updated_at": 1780879537336,
+  "version": "1.0.0"
+}
