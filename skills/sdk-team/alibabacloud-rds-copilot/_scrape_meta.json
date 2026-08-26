@@ -1,0 +1,47 @@
+{
+  "changelog": "alibabacloud-rds-copilot v0.0.5\n\n- Added support for advanced `chat-messages` options: `EnableThinking`, `ThinkEffort`, and `ModelId`, with notes on model verification using `get-chat-model`.\n- Stated that the auxiliary `aliyun rdsai get-chat-model` command must also include the custom `--user-agent` header.\n- Improved command parameter reference tables to document new parameters and clarify requirements.\n- Removed `skill-card.md` file as part of housekeeping.\n- Clarified documentation on safe handling and configuration of credentials.\n- Updated API reference and RAM permissions documentation.",
+  "created_at": 1775220716144,
+  "display_name": "alibabacloud-rds-copilot",
+  "fetched_at": 1787769700689,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/ram-policies.md",
+    "references/related-apis.md",
+    "references/verification-method.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787541728755,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-rds-copilot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-rds-copilot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-rds-copilot&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-rds-copilot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1291,
+    "installs": 33,
+    "stars": 1,
+    "versions": 5
+  },
+  "summary": "Alibaba Cloud RDS Copilot intelligent operations assistant skill. Used for RDS-related intelligent Q&A, SQL optimization, instance operations, and troubleshooting. Calls RdsAi OpenAPI through Alibaba Cloud CLI to get real-time RDS Copilot responses. Triggers: \"RDS Copilot\", \"RDS Assistant\", \"SQL optimization\", \"RDS troubleshooting\", \"RDS operations\", \"database diagnosis\"",
+  "updated_at": 1787541060776,
+  "version": "0.0.5"
+}
