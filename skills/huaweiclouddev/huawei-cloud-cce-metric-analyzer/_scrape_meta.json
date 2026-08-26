@@ -1,0 +1,64 @@
+{
+  "changelog": "**Major refactor: Switched to hcloud/KooCLI and direct Prometheus HTTP for metric queries; expanded metric coverage to include control-plane/addon telemetry.**\n\n- Replaced Huawei Cloud SDK with `hcloud` (KooCLI) for all supported resource queries (CCE, ECS, ELB, VPC, etc).  \n- Prometheus metric queries now use signed HTTP requests to AOM endpoints.  \n- Added support for CCE addon metrics: CoreDNS, nginx-ingress, autoscaler, control-plane (apiserver, etcd, controller-manager, scheduler), GPUs/xGPUs, and add-on certificate status.  \n- Added `kubectl` integration only for Pod label lookups and deep Kubernetes relationships where cloud APIs are insufficient.  \n- Updated security and runtime prerequisites, emphasizing credential handling and required CLI/plugin (kubectl-cce) setup.  \n- Cleaned up, merged, or removed scripts now obsolete due to new dispatcher and query model.  \n- Expanded documentation and command references for new resource types and query capabilities.",
+  "created_at": 1784650031081,
+  "display_name": "huawei-cloud-cce-metric-analyzer",
+  "fetched_at": 1787773644328,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/iam-policies.md",
+    "references/kubectl-cce.md",
+    "references/output-schema.md",
+    "references/risk-rules.md",
+    "references/verification-method.md",
+    "references/workflow.md",
+    "scripts/huawei-cloud.py",
+    "scripts/huawei_cloud/__init__.py",
+    "scripts/huawei_cloud/aom.py",
+    "scripts/huawei_cloud/cce.py",
+    "scripts/huawei_cloud/cce_cluster_monitoring.py",
+    "scripts/huawei_cloud/cce_metrics.py",
+    "scripts/huawei_cloud/common.py",
+    "scripts/huawei_cloud/dispatcher.py",
+    "scripts/huawei_cloud/ecs.py",
+    "scripts/huawei_cloud/elb.py",
+    "scripts/huawei_cloud/kubectl_client.py",
+    "scripts/huawei_cloud/network.py",
+    "skill-card.md",
+    "skill-profile.yaml"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784670987939,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweicloud-skills-team",
+    "handle": "huaweiclouddev",
+    "user_id": "s17axk041vxeamxj39r4dwvyts87wtza"
+  },
+  "slug": "huawei-cloud-cce-metric-analyzer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-cce-metric-analyzer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-cce-metric-analyzer&ownerHandle=huaweiclouddev",
+    "page_url": "https://clawhub.ai/huaweiclouddev/skills/huawei-cloud-cce-metric-analyzer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 85,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Huawei Cloud CCE Metric analysis skill using the Python dispatcher with hcloud-backed cloud service queries. Use this skill when the user wants to: (1) query...",
+  "updated_at": 1784669884294,
+  "version": "1.0.0"
+}
