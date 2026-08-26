@@ -1,0 +1,70 @@
+{
+  "changelog": "Initial release: Maps spatial species richness proxies from NDVI, texture, and terrain heterogeneity with flexible offline operation.\n\n- Calculates species richness using normalized NDVI productivity, local NDVI texture, and DEM-derived terrain heterogeneity as proxies\n- Supports both real multispectral GeoTIFF inputs and fully offline synthetic data\n- Outputs habitat quality and species richness as GeoTIFFs, plus a parameters JSON and manifest\n- Offers two weighting schemes (heterogeneity, productivity) for proxy fusion and multiple configuration options\n- Runs entirely offline by default; no user data is uploaded or sent externally",
+  "created_at": 1785842742076,
+  "display_name": "geoskill-biodiversity-mapping",
+  "fetched_at": 1787773514841,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_method_heterogeneity/output-manifest.json",
+    "_test_method_heterogeneity/richness_params.json",
+    "_test_method_productivity/output-manifest.json",
+    "_test_method_productivity/richness_params.json",
+    "e2e_test.py",
+    "geoskill-biodiversity-mapping.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785843647423,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-biodiversity-mapping",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-biodiversity-mapping",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-biodiversity-mapping&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-biodiversity-mapping"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 173,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u57fa\u4e8e\u751f\u5883\u5f02\u8d28\u6027\u5047\u8bf4\uff0c\u7528 NDVI \u751f\u4ea7\u529b\u3001\u7eb9\u7406\u7ed3\u6784\u5f02\u8d28\u6027\u4e0e\u5730\u5f62\u7c97\u7cd9\u5ea6\u4e09\u7c7b\u4ee3\u7406\u4f30\u7b97\u7269\u79cd\u4e30\u5bcc\u5ea6\u7a7a\u95f4\u5206\u5e03\u3002Maps species richness proxies from NDVI, texture and terrain heterogeneity. \u8f93\u51fa\u7269\u79cd\u4e30\u5bcc\u5ea6\u4e0e\u751f\u5883\u8d28\u91cf GeoTIFF + \u53c2\u6570 JSON\u3002",
+  "updated_at": 1785842906766,
+  "version": "1.0.0"
+}
