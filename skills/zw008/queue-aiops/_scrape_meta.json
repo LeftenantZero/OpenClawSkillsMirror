@@ -1,0 +1,47 @@
+{
+  "changelog": "- Removed the file: skill-card.md\n- No changes to functionality or features.\n- Housekeeping update; documentation file cleanup only.",
+  "created_at": 1784267854682,
+  "display_name": "queue-aiops",
+  "fetched_at": 1787772962040,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agent-guardrails.md",
+    "references/capabilities.md",
+    "references/cli-reference.md",
+    "references/setup-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786345629053,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wei zhou",
+    "handle": "zw008",
+    "user_id": "s171xgnmqse0nqvgqvqnaq5f9183kyre"
+  },
+  "slug": "queue-aiops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/queue-aiops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=queue-aiops&ownerHandle=zw008",
+    "page_url": "https://clawhub.ai/zw008/skills/queue-aiops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 808,
+    "installs": 0,
+    "stars": 0,
+    "versions": 11
+  },
+  "summary": "Use this skill whenever the user needs to operate a redis cache or a rabbitmq broker \u2014 a one-shot overview, redis memory posture (used vs maxmemory, eviction policy, fragmentation), SLOWLOG and a SCAN-budgeted big-key sample (never KEYS *), connected clients, CONFIG get/set, rabbitmq queues with backlog depth, connections/channels, policies and node watermark alarms, four flagship RCAs (redis memory pressure, redis latency/slowlog, rabbitmq queue backlog, connection churn on both platforms), and governed writes (set a config parameter, kill a client, declare/purge/delete a queue, set/delete a policy). Always use this skill for \"redis\", \"rabbitmq\", \"maxmemory\", \"eviction\", \"evicted keys\", \"big key\", \"slowlog\", \"why is my cache slow\", \"queue backlog\", \"messages piling up\", \"no consumers\", \"unacked messages\", \"memory watermark\", \"connection churn\", \"purge a queue\", \"rabbitmq policy\" when the context is a redis or rabbitmq deployment. Do NOT use when the target is something other than a redis/rabbitmq broker (a hypervisor, storage appliance, backup product, container-orchestration cluster, database server, monitoring stack, or OT/industrial equipment) \u2014 route those to the appropriate other AIops-tools skill. Managed cloud queue services and other broker products are out of scope. Governed broker operations with a built-in governance harness (audit, policy, token budget, undo, risk-tiers). Behaviour is validated by a mock-based test suite; see docs/VERIFICATION.md for the live-verification checklist.",
+  "updated_at": 1786344933947,
+  "version": "0.8.0"
+}
