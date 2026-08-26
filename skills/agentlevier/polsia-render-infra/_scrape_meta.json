@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of polsia-render-infra: platform requirements for deploying Polsia apps on Render.\n\n- Enforces /health endpoint with HTTP 200 response for health checks\n- Details correct migration strategy: run on server startup, not in buildCommand\n- Specifies required package.json scripts (\"build\" and \"start\") for successful deployment\n- Warns that Render's filesystem is ephemeral; prohibits use of local disk storage for files\n- Outlines structure for frontend build and serving static files from client/dist",
+  "created_at": 1782945092959,
+  "display_name": "Polsia Render Infrastructure",
+  "fetched_at": 1787778472782,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "agentlevier",
+    "handle": "agentlevier",
+    "user_id": "s179q980ad2hmywnenan0ng8kn85vpnj"
+  },
+  "slug": "polsia-render-infra",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polsia-render-infra",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polsia-render-infra&ownerHandle=agentlevier",
+    "page_url": "https://clawhub.ai/agentlevier/skills/polsia-render-infra"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 249,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Apply Render-specific deployment requirements for Polsia apps, including /health checks and migration strategy.",
+  "updated_at": 1782945092959,
+  "version": "1.0.0"
+}
