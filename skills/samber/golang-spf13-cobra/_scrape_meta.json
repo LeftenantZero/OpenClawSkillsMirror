@@ -1,0 +1,39 @@
+{
+  "changelog": "- Added explicit compatibility and navigation guidance for Go package and symbol documentation, referencing the `golang-pkg-go-dev` and `golang-gopls` skills.\n- Updated compatibility section to mention Codex and similar harnesses (not just Claude Code).\n- Expanded allowed tools, adding support for Bash(godig:*), Bash(gopls:*), LSP, and gopls MCP tools.\n- Introduced a `paths` section to scope skill application to `**/*.go`.\n- Bumped version to 1.1.0 and removed the obsolete `skill-card.md` file.",
+  "created_at": 1777636631150,
+  "display_name": "golang-spf13-cobra",
+  "fetched_at": 1787769901210,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/commands-and-args.md",
+    "references/completions.md",
+    "references/flags.md",
+    "references/generators.md",
+    "references/testing.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Samuel Berthe",
+    "handle": "samber",
+    "user_id": "s173arkhs3131fq5jf769qq75583hdgt"
+  },
+  "slug": "golang-spf13-cobra",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/golang-spf13-cobra",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=golang-spf13-cobra&ownerHandle=samber",
+    "page_url": "https://clawhub.ai/samber/skills/golang-spf13-cobra"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 806,
+    "installs": 17,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Golang CLI command tree library using spf13/cobra \u2014 cobra.Command, RunE vs Run, PersistentPreRunE hook chain, Args validators (NoArgs, ExactArgs, MatchAll, custom), persistent vs local flags, command groups, ValidArgsFunction, RegisterFlagCompletionFunc, ShellCompDirective, usage/help template customization, man-page and markdown doc generation, and testing with SetArgs/SetOut/SetErr. Apply when using or adopting spf13/cobra, or when the codebase imports `github.com/spf13/cobra`. For configuration layering alongside cobra, see the `samber/cc-skills-golang@golang-spf13-viper` skill. For general CLI architecture (project layout, exit codes, signal handling, I/O patterns), see `samber/cc-skills-golang@golang-cli`.",
+  "updated_at": 1787448869814,
+  "version": "1.1.0"
+}
