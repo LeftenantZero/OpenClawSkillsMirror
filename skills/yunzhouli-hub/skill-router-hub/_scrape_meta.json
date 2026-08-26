@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release: Centralized skill router with mandatory routing and reporting.\n\n- Introduces a centralized Skill Router to intelligently index and route all user questions to the appropriate specialized skills.\n- Enforces that every question is checked here first to determine which skills to load.\n- Establishes detailed routing rules, including keyword and combo-based matching.\n- Requires a Skill Usage Report at the end of every response, listing all loaded/matched skills.\n- Provides instructions for both auto-generated and manual maintenance of the skill index.",
+  "created_at": 1780380263746,
+  "display_name": "skill-router",
+  "fetched_at": 1787783439817,
+  "files": [
+    "README.md",
+    "README_CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/generate.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780384186598,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Yunzhou Li",
+    "handle": "yunzhouli-hub",
+    "user_id": "s17729nem1fxhngj91vn9arhes83kt1n"
+  },
+  "slug": "skill-router-hub",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-router-hub",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-router-hub&ownerHandle=yunzhouli-hub",
+    "page_url": "https://clawhub.ai/yunzhouli-hub/skills/skill-router-hub"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 424,
+    "installs": 7,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Skill Router \u2014 centralized index and intelligent router for all installed skills. Consult this FIRST before answering any question to determine which special...",
+  "updated_at": 1780380263746,
+  "version": "1.0.0"
+}
