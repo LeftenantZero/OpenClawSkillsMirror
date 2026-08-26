@@ -1,0 +1,56 @@
+{
+  "changelog": "Multi-Model Router 1.0.0 \u2013 Initial Release\n\n- Introduces an intelligent routing system that automatically chooses the best AI model based on context length, privacy, cost, and task complexity.\n- Supports cloud models (e.g., Qwen3-Max, Kimi), local models (e.g., Ollama Qwen3.5), and balanced options.\n- Key routing strategies: privacy first, context adaptation, cost optimization, and performance prioritization.\n- Features strict privacy safeguards: PII detection, logging, and configurable thresholds.\n- Offers custom configuration for routing rules and cost/privilege preferences.\n- Delivers faster response and lower API costs while protecting user privacy.",
+  "created_at": 1773701098814,
+  "display_name": "Multi-Model Router",
+  "fetched_at": 1787788467646,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/default.json",
+    "config/user-preferences.json",
+    "examples/usage.md",
+    "index.js",
+    "scripts/analyzer.js",
+    "scripts/audit-logger.js",
+    "scripts/error-handler.js",
+    "scripts/migrator.js",
+    "scripts/router-engine.js",
+    "scripts/router.js",
+    "skill-card.md",
+    "test/integration/router.test.js",
+    "test/performance/benchmark.js",
+    "test/unit/analyzer.test.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089921806,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "keven0706",
+    "handle": "keven0706",
+    "user_id": "s175w4p99gya0vjp032a65y829884s91"
+  },
+  "slug": "multi-model-router",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/multi-model-router",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=multi-model-router&ownerHandle=keven0706",
+    "page_url": "https://clawhub.ai/keven0706/skills/multi-model-router"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1041,
+    "installs": 29,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Automatically routes tasks to the most suitable local or cloud AI model based on privacy, context length, cost, and performance requirements.",
+  "updated_at": 1779078348482,
+  "version": "1.0.0"
+}
