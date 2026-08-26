@@ -1,0 +1,37 @@
+{
+  "changelog": "- Clarified CLI authentication and credential file handling: document now emphasizes the need to save API keys to both `~/.dex/api-key` and `~/.clihub/credentials.json`.\n- Added guidance to verify authentication by running a real command (e.g., `dex dex-list-tags`) instead of relying on `dex auth status`.\n- Noted that Cloudflare requires `User-Agent: dex-cli` for all requests; missing this header can result in error 1010.\n- Improved documentation for device code flow, error scenarios, and explicit credential storage steps.\n- Removed the file `skill-card.md` for simplification.",
+  "created_at": 1772576610182,
+  "display_name": "Dex",
+  "fetched_at": 1787771521804,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/cli-commands.md",
+    "references/crm-workflows.md",
+    "references/tools-reference.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Omar Cruz",
+    "handle": "ocruzv",
+    "user_id": "s17devrzypsx6fvyqpq80xt44h83g1fw"
+  },
+  "slug": "dex-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dex-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dex-skill&ownerHandle=ocruzv",
+    "page_url": "https://clawhub.ai/ocruzv/skills/dex-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1355,
+    "installs": 32,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Manage your Dex personal CRM \u2014 search, filter, create, archive, and update contacts; log notes; manage follow-ups, tags, groups, and custom fields; search connected email; and read or manage connected calendars. Use this skill to: (1) Find, add, or update contacts, (2) Log meetings and notes, (3) Ma",
+  "updated_at": 1787001337739,
+  "version": "2.1.1"
+}
