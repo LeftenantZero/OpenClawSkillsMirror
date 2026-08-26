@@ -1,0 +1,34 @@
+{
+  "changelog": "Forsy Trace Skill 1.0.0 \u2014 Initial Release\n\n- Introduces a skill for capturing authentic, structured traces of AI agent workflows across diverse environments.\n- Supports trace documentation of steps, tools, observations, outputs, retries, feedback, failures, and artifacts.\n- Provides strict rules for authenticity: traces must only reflect actual or reliably reconstructible agent activity.\n- Defines trace modes (live, retraced, hybrid) and validation levels (self_traced to client_validated).\n- Details scope, intended use, and trace boundaries; prohibits any fabrication of trace data or workflow steps.\n- Outlines causal linking of steps and clear handling of multi-surface workflows (APIs, CLI, files, databases, browsers, etc.).",
+  "created_at": 1780665816033,
+  "display_name": "Forsy Agent Trace",
+  "fetched_at": 1787782803818,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "schema/forsy_trace_schema_v0_1.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Forsy",
+    "handle": "forsy",
+    "user_id": "s17f8208fyhftq141yqp7227gd883z1d"
+  },
+  "slug": "forsy-agent-trace",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/forsy-agent-trace",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=forsy-agent-trace&ownerHandle=forsy",
+    "page_url": "https://clawhub.ai/forsy/skills/forsy-agent-trace"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 390,
+    "installs": 5,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Forsy Trace Skill captures AI agent workflows as structured traces: task context, steps, tool use, observations, feedback, failures, retries, artifacts, outcomes, and other learning signals.\n\nIt is designed for agent workflow inspection, tool-use trajectory analysis, process-supervision research, agent evaluation, and reusable agent work experience.\n\nThe skill includes a public trace format and schema for turning completed agent workflows into inspectable process data.",
+  "updated_at": 1780665854737,
+  "version": "1.0.0"
+}
