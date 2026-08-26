@@ -1,0 +1,56 @@
+{
+  "changelog": "States the data-flow and credential rules once instead of three times: Privacy & Data Flow is the single authoritative description and the config cheatsheets point at it. Adds a sensitivity note to tracker.py covering the local application log. No control or capability changed.",
+  "created_at": 1783178224254,
+  "display_name": "jobwatch",
+  "fetched_at": 1787774318838,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.default.json",
+    "profile.template.md",
+    "references/SKILL.zh.md",
+    "scripts/apply_judgments.py",
+    "scripts/common.py",
+    "scripts/daily_digest.py",
+    "scripts/discover_board.py",
+    "scripts/enrich_jd.py",
+    "scripts/fetch_jobs.py",
+    "scripts/judge.py",
+    "scripts/kb/__init__.py",
+    "scripts/kb/aidigest.py",
+    "scripts/kb/local.py",
+    "scripts/kb/twobrain.py",
+    "scripts/notify_telegram.py",
+    "scripts/outbox.py",
+    "scripts/pipeline.py",
+    "scripts/query.py",
+    "scripts/screen.py",
+    "scripts/setup_cron.py",
+    "scripts/tracker.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ywc668",
+    "handle": "ywc668",
+    "user_id": "s17b4vgkg8z2pmr9yz50qb7pgn89wwa5"
+  },
+  "slug": "jobwatch",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/jobwatch",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=jobwatch&ownerHandle=ywc668",
+    "page_url": "https://clawhub.ai/ywc668/skills/jobwatch"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 647,
+    "installs": 1,
+    "stars": 0,
+    "versions": 8
+  },
+  "summary": "Autonomous job-market watcher for OpenClaw. On a cron schedule it monitors the career pages of companies the user has EXPLICITLY configured, judges each posting against the user's own job profile (visa / seniority / red lines) with an LLM, pushes strong matches, digests the rest daily, and archives postings into a knowledge base; it also tracks the user's application status and answers questions about their own watched jobs. PRIVACY & CAPABILITIES (see the Privacy & Data Flow section): this skill collects and stores a personal job-seeking profile (resume text, visa needs, seniority, red lines); sends watched URLs and job-description text to third-party services (Firecrawl / Jina scrapers, an OpenAI-compatible LLM endpoint, and a 2brain knowledge base); reads host OpenClaw / Telegram credentials only when the user opts in (JOBWATCH_ALLOW_HOST_CREDS=1); and registers a recurring cron job \u2014 every autonomous action happens only after an explicit onboarding consent step. Use ONLY when the user clearly wants automated job monitoring for their own search \u2014 not on casual mention of jobs. Trigger when the user asks to set up or run job monitoring, to watch specific companies' careers pages, reports their own application update, or asks about their own watched/matched jobs. Triggers \u2014 imperative requests only; a bare mention of jobs, careers or \u6c42\u804c must NOT activate this skill: 'set up jobwatch for me', 'start job monitoring for my search', 'watch <company>'s careers page for me', 'I applied to <specific job>', 'jobwatch top jobs this week', '\u5e2e\u6211\u8bbe\u7f6e\u6c42\u804c\u76d1\u63a7', '\u5f00\u542f\u6c42\u804c\u76d1\u63a7', '\u5e2e\u6211\u76ef <\u516c\u53f8> \u7684\u5c97\u4f4d', '\u6211\u6295\u4e86 <\u804c\u4f4d>'. If the user is only discussing or asking about jobs in general, do not activate. Before the first onboarding question \u2014 and before any profile data is collected, any credential is read, or any cron job is registered \u2014 state what the skill will collect and send, and get an explicit yes.",
+  "updated_at": 1785317855746,
+  "version": "1.2.3"
+}
