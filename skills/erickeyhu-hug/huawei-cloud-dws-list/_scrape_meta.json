@@ -1,0 +1,52 @@
+{
+  "changelog": "Huawei Cloud DWS Cluster List Skill \u2013 Initial Release\n\n- Provides a quick list of DWS (Data Warehouse Service) cluster names under a Huawei Cloud tenant.\n- Supports filtering by region and enterprise project ID.\n- Uses hcloud (KooCLI) DWS ListClusters API with JSON extraction of cluster names.\n- Handles typical errors (invalid region, credential issues, permission errors) with detailed guidance.\n- Useful for daily inspection, resource inventory, and quick cluster overview.",
+  "created_at": 1786876770656,
+  "display_name": "huawei-cloud-dws-list",
+  "fetched_at": 1787771762249,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/list_dws_clusters.py",
+    "scripts/skill_quality_sdk.py",
+    "scripts/test-cli-commands.sh",
+    "skill-card.md",
+    "templates/test-vars.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786877549119,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-dws-list",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-dws-list",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-dws-list&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-dws-list"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 122,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "List DWS (Data Warehouse Service) clusters under a Huawei Cloud tenant and return only the cluster names. Based on KooCLI (hcloud) DWS ListClusters API. Useful for daily inspection, resource inventory, and quick cluster overview. Triggers include: \"\u67e5\u8be2DWS\u5217\u8868\", \"DWS\u96c6\u7fa4\u5217\u8868\", \"\u5217\u51faDWS\", \"DWS\u96c6\u7fa4\u540d\u79f0\", \"list DWS clusters\", \"DWS cluster list\", \"show DWS names\", \"DWS inventory\"",
+  "updated_at": 1786876873124,
+  "version": "1.0.0"
+}
