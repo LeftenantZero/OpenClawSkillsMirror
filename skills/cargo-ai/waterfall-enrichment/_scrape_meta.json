@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of waterfall-enrichment skill.\n\n- Enables cascading lookups through multiple data vendors to improve match rates and minimize data loss.\n- Powered by Cargo CLI; requires @cargo-ai/cli installation and sign-in.\n- Supports batch contact and company enrichment, and email verification, with clear pricing per record.\n- Provides guidance for setup, cost discipline, and sampling before running large batches.\n- Designed as a standalone slice; recommends using the full Cargo pack (cargo-gtm) for multi-step flows.\n- Includes instructions for user-driven GitHub starring as feedback, ensuring ethical engagement.",
+  "created_at": 1786862411598,
+  "display_name": "waterfall-enrichment",
+  "fetched_at": 1787771767634,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786863191563,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Cargo",
+    "handle": "cargo-ai",
+    "user_id": "s178dcd9wkfn0a2fqrygmt3jzn87j9e1"
+  },
+  "slug": "waterfall-enrichment",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/waterfall-enrichment",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=waterfall-enrichment&ownerHandle=cargo-ai",
+    "page_url": "https://clawhub.ai/cargo-ai/skills/waterfall-enrichment"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 126,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Cascade one lookup through several vendors in priority order, so a row the first source misses falls through to the next instead of being lost, powered by Cargo. Triggers: \"waterfall enrichment\", \"cascade through providers\", \"fallback chain\", \"my single vendor has bad coverage\", \"try another source when the first one misses\", \"improve my match rate\", \"multi-vendor fallback\". Providers: waterfall. Skip when: you want one address for one name and domain \u2014 use find-work-email, the cheaper single job; or you hold addresses and only want them checked \u2014 use verify-email-list.",
+  "updated_at": 1786862494087,
+  "version": "1.0.0"
+}
