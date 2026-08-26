@@ -1,0 +1,46 @@
+{
+  "changelog": "zdat-chat-skill v1.0.0\n\n- Initial release of the automated comment interaction skill for platforms like Zhihu, Xiaohongshu, and Weibo.\n- Supports intelligent reply matching using scenario-based keyword analysis.\n- High-intent comments are automatically logged to a clue ledger.\n- Integrates proactive interaction with built-in daily flow limits to prevent account restrictions.\n- Scheduled inspection and automatic reply at set times, with daily interaction report generation.\n- Command-line scripts provided for comment review, ledger management, and daily report generation.",
+  "created_at": 1780573993030,
+  "display_name": "ZDAT Chat Skill",
+  "fetched_at": 1787782989130,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/zd_chat_daily.py",
+    "scripts/zd_chat_ledger.py",
+    "scripts/zd_chat_reply.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780576327206,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "freemanyg",
+    "handle": "freemanyg",
+    "user_id": "s175kfce0hk0smne4gj9g2d6qd881jhs"
+  },
+  "slug": "zdat-chat-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/zdat-chat-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=zdat-chat-skill&ownerHandle=freemanyg",
+    "page_url": "https://clawhub.ai/freemanyg/skills/zdat-chat-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 406,
+    "installs": 7,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "ZDAT\u8bc4\u8bba\u4e92\u52a8\u6280\u80fd\u3002\u8bdd\u672f\u5e93\u667a\u80fd\u5339\u914d\u56de\u590d+\u7ebf\u7d22\u53f0\u8d26\u81ea\u52a8\u5199\u5165+\u4e3b\u52a8\u62d3\u6d41\u4e92\u52a8\u9650\u6d41\u3002\u652f\u6301\u77e5\u4e4e/\u5c0f\u7ea2\u4e66/\u5fae\u535a\u7b49\u5e73\u53f0\u8bc4\u8bba\u7ba1\u7406\u3002",
+  "updated_at": 1780573993030,
+  "version": "1.0.0"
+}
