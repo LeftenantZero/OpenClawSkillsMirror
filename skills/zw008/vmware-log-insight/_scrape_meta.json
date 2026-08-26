@@ -1,0 +1,37 @@
+{
+  "changelog": "Moved to vmware-skills GitHub org; MCP Registry namespace \u2192 io.github.vmware-skills. Links updated.",
+  "created_at": 1782259306897,
+  "display_name": "vmware-log-insight",
+  "fetched_at": 1787774000399,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agent-guardrails.md",
+    "references/capabilities.md",
+    "references/cli-reference.md",
+    "references/setup-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "wei zhou",
+    "handle": "zw008",
+    "user_id": "s171xgnmqse0nqvgqvqnaq5f9183kyre"
+  },
+  "slug": "vmware-log-insight",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/vmware-log-insight",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=vmware-log-insight&ownerHandle=zw008",
+    "page_url": "https://clawhub.ai/zw008/skills/vmware-log-insight"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1102,
+    "installs": 1,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "Use this skill whenever the user needs to search, aggregate, or investigate centralized logs in VMware Aria Operations for Logs (formerly vRealize Log Insight) \u2014 the appliance that collects syslog from ESXi hosts, vCenter, and VMs. It is the log data source of the VMware family: full-text event search over a time window, aggregation with spike detection, field discovery, and alert queries. Always use this skill for \"search the logs\", \"what did the host log\", \"find errors in Log Insight\", \"show me a log spike\", \"query vRealize Log Insight\", \"Aria Operations for Logs\" when the context is explicitly VMware/vSphere/ESXi. It is strictly READ-ONLY \u2014 it never ingests, edits, or deletes anything. Do NOT use it for vCenter events/alarms (use vmware-monitor) or for performance metrics and anomalies (use vmware-aria). To correlate logs with events from other sources into one root-cause timeline, hand results to vmware-debug.",
+  "updated_at": 1785553941316,
+  "version": "1.8.9"
+}
