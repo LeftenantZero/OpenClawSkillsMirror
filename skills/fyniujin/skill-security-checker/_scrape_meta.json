@@ -1,0 +1,71 @@
+{
+  "changelog": "skill-security-checker v3.3.0\n\n- \u65b0\u589e\u8f7b\u91cf SAST \u6c61\u70b9\u8ffd\u8e2a\uff08Python AST/JS \u8bcd\u6cd5\u7ea7\uff0csource\u2192sink \u8bc1\u636e\u94fe\uff0c\u964d\u8bef\u62a5\uff09\u3002\n- \u652f\u6301\u793e\u533a\u5b89\u5168\u89c4\u5219\u5305\uff08schema \u6821\u9a8c\u3001\u7b7e\u540d\u9a8c\u8bc1\u3001\u6765\u6e90\u8bb0\u5f55\uff09\uff0c\u547d\u4ee4\u884c\u53ef\u52a0 --community-rules\u3002\n- \u5065\u5eb7\u5ea6\u4e0e\u5408\u89c4\u68c0\u67e5\u5168\u65b0\u5408\u5e76\uff0c\u7ed3\u6784/\u8d28\u91cf/\u6743\u9650\u5408\u89c4\u7edf\u4e00\u51fa\u53e3\uff0c\u62a5\u544a\u7ed3\u6784\u66f4\u6e05\u6670\u3002\n- \u65b0\u589e scripts/community_rules.py\u3001scripts/taint_tracker.py\uff0c\u79fb\u9664 skill-card.md\u3002\n- \u89c4\u5219\u5f15\u64ce\u3001\u884c\u4e3a\u6355\u83b7\u3001ML\u68c0\u6d4b\u53ca\u4e3b\u529f\u80fd\u4fdd\u6301\u517c\u5bb9\uff0c\u5e38\u89c4\u53c2\u6570\u548c\u7528\u6cd5\u672a\u53d8\u3002",
+  "created_at": 1783950693990,
+  "display_name": "skill-security-checker",
+  "fetched_at": 1787769195246,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/scan-patterns.md",
+    "scripts/audit.py",
+    "scripts/ci_templates/gitlab-ci.yml",
+    "scripts/ci_templates/skill-scan.yml",
+    "scripts/community_rules.py",
+    "scripts/global_exclude.py",
+    "scripts/malicious_db.py",
+    "scripts/rules/__init__.py",
+    "scripts/rules/command_injection.yaml",
+    "scripts/rules/credential_leak.yaml",
+    "scripts/rules/dangerous_functions.yaml",
+    "scripts/rules/path_traversal.yaml",
+    "scripts/rules/prompt_injection.yaml",
+    "scripts/rules/ssrf.yaml",
+    "scripts/rules_engine.py",
+    "scripts/sandbox/__init__.py",
+    "scripts/sandbox/backends/__init__.py",
+    "scripts/sandbox/backends/degraded.py",
+    "scripts/sandbox/backends/docker_backend.py",
+    "scripts/sandbox/backends/winsandbox_backend.py",
+    "scripts/sandbox/ml_detect.py",
+    "scripts/sandbox/monitor.py",
+    "scripts/sandbox/report.py",
+    "scripts/sandbox/rules.py",
+    "scripts/sandbox/runner.py",
+    "scripts/sandbox/system_monitor.py",
+    "scripts/supply_chain.py",
+    "scripts/taint_tracker.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787588776693,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fyniujin",
+    "handle": "fyniujin",
+    "user_id": "s177r8w7p1d7cpbys9bn33kwhs89d0xw"
+  },
+  "slug": "skill-security-checker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-security-checker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-security-checker&ownerHandle=fyniujin",
+    "page_url": "https://clawhub.ai/fyniujin/skills/skill-security-checker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 723,
+    "installs": 1,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Skill Security \u2014 \u5b89\u5168\u5ba1\u8ba1\u626b\u63cf\u5668\uff0c\u5e2e\u52a9\u4f60\u5feb\u901f\u53d1\u73b0 Skill \u4e2d\u7684\u5b89\u5168\u98ce\u9669\u3002\u8f7b\u91cf SAST \u6c61\u70b9\u8ffd\u8e2a\uff08Python AST + JS \u8bcd\u6cd5\u8fd1\u4f3c\uff0csource\u2192sink \u8bc1\u636e\u94fe\u964d\u8bef\u62a5\uff09\u3001\u89c4\u5219\u5f15\u64ce\uff08YAML \u89c4\u5219\u5305\u70ed\u63d2\u62d4\u6269\u5c55\uff09\u3001\u793e\u533a\u89c4\u5219\uff08schema \u6821\u9a8c + \u6765\u6e90\u8bb0\u5f55 + \u7b7e\u540d\u9a8c\u8bc1\uff09\u3001\u63d0\u793a\u6ce8\u5165 ML \u8bed\u4e49\u68c0\u6d4b\uff08ONNX + \u6b63\u5219\u964d\u7ea7\uff09\u3001\u7cfb\u7edf\u7ea7\u884c\u4e3a\u6355\u83b7\uff08eBPF Linux / ETW Windows\uff09\u3001\u52a8\u6001\u6c99\u7bb1\u6267\u884c\u626b\u63cf\u3001\u4f9b\u5e94\u94fe\u98ce\u9669\u5206\u6790\u3001CVE \u79bb\u7ebf\u7f13\u5b58\u3001\u6076\u610f Skill \u6307\u7eb9\u5e93\u3001\u5065\u5eb7\u5ea6\u4e0e\u5408\u89c4\u68c0\u67e5\uff08\u8d28\u91cf+\u7ed3\u6784+\u6743\u9650\u5408\u5e76\uff09\u3001\u5168\u5c40\u6392\u9664\u914d\u7f6e\u3001CI/CD \u96c6\u6210\u3001JSON/HTML/SARIF \u62a5\u544a\u751f\u6210\u3002",
+  "updated_at": 1787588018294,
+  "version": "3.3.0"
+}
