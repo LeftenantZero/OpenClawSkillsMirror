@@ -1,0 +1,68 @@
+{
+  "changelog": "**Summary: Adds category onboarding and configuration isolation to ShowMeAI skill**\n\n- Requires a category-specific onboarding process before creative input, ensuring model selection is explicit and user-confirmed.\n- Introduces a mandatory readiness workflow: check readiness per category before prompt or style intake, and complete onboarding if required.\n- Forbids modifying or reading host application config files; config isolation is enforced and OS-native paths must be used.\n- Expands token budget configuration for richer, multi-level control.\n- Adds new commands and documentation for onboarding and config paths.\n- Includes a LICENSE and .gitignore file; removes the deprecated skill-card.md.",
+  "created_at": 1773221592954,
+  "display_name": "Showmeai",
+  "fetched_at": 1787776061997,
+  "files": [
+    "CHANGELOG.md",
+    "DESIGN.md",
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "data/model-catalog.json",
+    "references/audio.md",
+    "references/configuration.md",
+    "references/image-tools.md",
+    "references/image.md",
+    "references/polling.md",
+    "references/three-d.md",
+    "references/video.md",
+    "scripts/gen.py",
+    "scripts/image_to_3d.py",
+    "scripts/showmeai.py",
+    "scripts/showmeai_core/__init__.py",
+    "scripts/showmeai_core/catalog.py",
+    "scripts/showmeai_core/config.py",
+    "scripts/showmeai_core/errors.py",
+    "scripts/showmeai_core/http.py",
+    "scripts/showmeai_core/outputs.py",
+    "scripts/showmeai_core/paths.py",
+    "scripts/showmeai_core/tasks.py",
+    "scripts/video_gen.py",
+    "skill-card.md",
+    "tests/test.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784343269155,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u864e\u4e86\u5427\u5527",
+    "handle": "hulebaji",
+    "user_id": "s173qaevzy3h8gmhnc97mc5xpd83h896"
+  },
+  "slug": "showmeai",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/showmeai",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=showmeai&ownerHandle=hulebaji",
+    "page_url": "https://clawhub.ai/hulebaji/skills/showmeai"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1126,
+    "installs": 23,
+    "stars": 1,
+    "versions": 7
+  },
+  "summary": "Generate and edit images, create videos, convert images to 3D, synthesize speech or music, and process images through ShowMeAI. Use when a user asks an Agent to create media, configure ShowMeAI models, inspect token-group availability, or resume a generation task. Before creative intake, the Agent m",
+  "updated_at": 1784342966545,
+  "version": "2.1.0"
+}
