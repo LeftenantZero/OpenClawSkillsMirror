@@ -1,0 +1,45 @@
+{
+  "changelog": "coding-cli-management 1.0.0\n\n- Initial release: Enables Manager to execute AI coding CLI tools (Claude Code, Gemini CLI, or qodercli) for Workers.\n- Implements admin approval and configuration workflow for CLI delegation mode.\n- Automatically distributes the coding-cli skill to eligible Workers and updates task specs with CLI mode instructions.\n- Handles coding-request messages, running CLI tools in the Worker\u2019s workspace and synchronizing results.\n- Includes automated error reporting and logging for failed CLI runs, notifying both Worker and human admin.\n- Supports both Chinese and English notifications based on admin\u2019s language.",
+  "created_at": 1773997908851,
+  "display_name": "Coding Cli Management",
+  "fetched_at": 1787787967544,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/detect-available-cli.sh",
+    "scripts/run-coding-cli.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089995603,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Monty",
+    "handle": "montycn",
+    "user_id": "s17fq3f5c7xm0qja9p4xz3px8h83hcxd"
+  },
+  "slug": "coding-cli-management",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/coding-cli-management",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=coding-cli-management&ownerHandle=montycn",
+    "page_url": "https://clawhub.ai/montycn/skills/coding-cli-management"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1290,
+    "installs": 39,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Manage and execute AI coding CLI tools on behalf of Workers by running their coding prompts in the Worker\u2019s workspace and returning results.",
+  "updated_at": 1779078585648,
+  "version": "1.0.0"
+}
