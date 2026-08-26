@@ -1,0 +1,51 @@
+{
+  "changelog": "- Initial release of progress-selfcheck-skill for OpenClaw.\n- Sends periodic progress self-checks to Feishu (configurable DM target).\n- Exports self-check artifacts to `output/` for Webchat access.\n- Maintains an append-only task ledger for conversational tasks.\n- Automatically reactivates stale tasks locally with support for repeatable tasks.\n- Provides summaries covering running cron jobs, recent completions, alerts, and unfinished tasks.\n- Includes configuration options and ready-to-use cron job templates.",
+  "created_at": 1773651700055,
+  "display_name": "progress-selfcheck",
+  "fetched_at": 1787788362345,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/progress_selfcheck_config.json",
+    "scripts/_config.py",
+    "scripts/progress_event.py",
+    "scripts/progress_selfcheck_and_send.py",
+    "scripts/task_ledger.py",
+    "scripts/task_ledger_compact.py",
+    "scripts/task_reactivate.py",
+    "skill-card.md",
+    "templates/cron_jobs_snippet.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089914890,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Ulquoirra",
+    "handle": "ulquoirra",
+    "user_id": "s172weh3tdq8207q01ynxyt2cn885ab6"
+  },
+  "slug": "progress-selfcheck",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/progress-selfcheck",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=progress-selfcheck&ownerHandle=ulquoirra",
+    "page_url": "https://clawhub.ai/ulquoirra/skills/progress-selfcheck"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 870,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Provides periodic progress self-checks with Feishu notifications, task ledger management, auto-reactivation of stale tasks, and summary reporting for OpenClaw.",
+  "updated_at": 1779078394307,
+  "version": "1.0.0"
+}
