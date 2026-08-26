@@ -1,0 +1,58 @@
+{
+  "changelog": "- Refined usage restrictions: now only triggers when both a resume and a target job/JD are explicitly provided.\n- Updated scope: system is now explicitly for Chinese-language resumes and jobs; non-Chinese inputs should be translated first.\n- Adjusted matching algorithm: education matching now only considers degree and major, not the school; cultural fit is no longer counted toward the final matching score (only shown as interview reference).\n- Modified dimension weights: skill matching increased to 40%, experience to 30%, education to 18%, potential to 12%, culture as reference only.\n- Clarified allowed trigger phrases and stricter activation criteria.\n- Removed file: skill-card.md.",
+  "created_at": 1781321819995,
+  "display_name": "Talent Radar",
+  "fetched_at": 1787780807556,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/examples/sample_jd.md",
+    "assets/examples/sample_resume.md",
+    "assets/templates/hr_report_template.md",
+    "assets/templates/jobseeker_report_template.md",
+    "references/README.md",
+    "references/clawhub_audit_checklist.md",
+    "references/matching_algorithm.md",
+    "references/pcb_industry_analysis.md",
+    "references/pdf_extraction_guide.md",
+    "references/skill_matrix.md",
+    "references/windows_pdf_extraction.md",
+    "scripts/job_analyzer.py",
+    "scripts/matcher.py",
+    "scripts/report_generator.py",
+    "scripts/resume_parser.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781487588747,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "liu tao",
+    "handle": "taotao52",
+    "user_id": "s178bqn8swwezk7v885129gqdx83gvze"
+  },
+  "slug": "talent-radar",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/talent-radar",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=talent-radar&ownerHandle=taotao52",
+    "page_url": "https://clawhub.ai/taotao52/skills/talent-radar"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 495,
+    "installs": 6,
+    "stars": 1,
+    "versions": 5
+  },
+  "summary": "\u667a\u80fd\u4eba\u5c97\u5339\u914d\u8bca\u65ad\u7cfb\u7edf\uff0c\u9002\u7528\u4e8e\u4e2d\u6587\u62db\u8058\u573a\u666f\u3002\u5f53\u7528\u6237\u660e\u786e\u8981\u6c42\u5206\u6790\u7279\u5b9a\u7b80\u5386\u4e0e\u5177\u4f53\u5c97\u4f4d \u7684\u5339\u914d\u5ea6\u3001\u751f\u6210\u4eba\u624d\u7b5b\u9009\u62a5\u544a\u6216\u8bca\u65ad\u6c42\u804c\u5dee\u8ddd\u65f6\u4f7f\u7528\u3002 \u8bed\u8a00\u8303\u56f4\uff1a\u4e3b\u8981\u652f\u6301\u4e2d\u6587\u7b80\u5386\u548c\u5c97\u4f4d\u63cf\u8ff0\uff1b\u82f1\u6587\u6216\u5176\u4ed6\u8bed\u8a00\u8f93\u5165\u53ef\u80fd\u5bfc\u81f4\u5206\u6790\u7ed3\u679c\u4e0d\u51c6\u786e\uff0c \u5efa\u8bae\u5148\u7ffb\u8bd1\u4e3a\u4e2d\u6587\u540e\u4f7f\u7528\u3002 \u9002\u7528\u573a\u666f\uff1a\u4f01\u4e1a\u7aef\uff08\u62db\u8058\u7b5b\u9009\u3001\u4eba\u624d\u8bc4\u4f30\uff09\u548c\u4e2a\u4eba\u7aef\uff08\u6c42\u804c\u8bca\u65ad\u3001\u804c\u4e1a\u89c4\u5212\uff09\u3002 \u89e6\u53d1...",
+  "updated_at": 1781486171194,
+  "version": "1.0.4"
+}
