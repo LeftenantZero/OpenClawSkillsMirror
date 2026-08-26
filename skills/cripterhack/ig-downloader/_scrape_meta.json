@@ -1,0 +1,55 @@
+{
+  "changelog": "**Instagram Downloader 2.2.0 introduces improved session management and clarifies current authentication limitations.**\n\n- Adds comprehensive documentation for three operation modes: sessionid (recommended), Apify fallback, and a new interactive setup wizard (Playwright browser).\n- Deprecates standard login/password authentication; notes that `--login`, `--password`, and `--totp` options are broken due to Meta disabling login endpoints.\n- Sessionid authentication is now the primary and recommended method, with detailed instructions for obtaining and persisting the sessionid cookie.\n- Interactive setup (`--setup`) mode added for easier session cookie acquisition and config management.\n- Updates mode comparison and architecture details, clarifying feature support, caveats, and usage scenarios for each mode.\n- Documentation now reflects the current best practices for extracting media from Instagram profiles safely and efficiently.",
+  "created_at": 1783465301518,
+  "display_name": "Instagram Downloader",
+  "fetched_at": 1787777663666,
+  "files": [
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "instagram_downloader.py",
+    "install.ps1",
+    "install.sh",
+    "pyproject.toml",
+    "requirements.txt",
+    "scripts/auto_release.py",
+    "skill-card.md",
+    "tests/test_downloader.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783512539376,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Edgar Zorrilla",
+    "handle": "cripterhack",
+    "user_id": "s174daw50p7n6wfwbg7x4qz42n884hxp"
+  },
+  "slug": "ig-downloader",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ig-downloader",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ig-downloader&ownerHandle=cripterhack",
+    "page_url": "https://clawhub.ai/cripterhack/skills/ig-downloader"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 234,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Download Instagram profile media (reels MP4, photos JPG, full carousel multi-image JPG) via sessionid (instagrapi), Apify dataset fallback, or interactive se...",
+  "updated_at": 1783465385905,
+  "version": "2.2.0"
+}
