@@ -1,0 +1,45 @@
+{
+  "changelog": "- Removed the sample file skill-card.md.\n- Updated the workflow for selecting and preparing ligand poses:\n  - Now specifies to select and pass the top 3 docked poses per ligand, ranked by centroid deviation from the reference pose for both crystal-guided and PDB-retrieval cases.\n  - Added procedures for establishing reference poses, including consensus and cross-docking when multiple reference molecules or PDBs are present.\n- Added instructions to validate and preserve chemical bond orders when extracting ligands from PDB files for SDF export.\n- Made editorial and formatting adjustments for clarity and completeness.",
+  "created_at": 1781261555978,
+  "display_name": "FEP Alternative",
+  "fetched_at": 1787780985472,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "rcsb-pdb-skill/SKILL.md",
+    "rcsb-pdb-skill/scripts/rest_request.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781317917228,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "SciMiner",
+    "handle": "sciminer",
+    "user_id": "s170qp1q4twz35wa85ppa8894h83w461"
+  },
+  "slug": "fep-alternative",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fep-alternative",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fep-alternative&ownerHandle=sciminer",
+    "page_url": "https://clawhub.ai/sciminer/skills/fep-alternative"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 459,
+    "installs": 5,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Relative binding free-energy and activity-label prediction workflows using PBCNet 2.0 on SciMiner, with Gnina docking and PDB/database retrieval to complete...",
+  "updated_at": 1781316927948,
+  "version": "1.0.1"
+}
