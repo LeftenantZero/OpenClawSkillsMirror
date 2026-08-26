@@ -1,0 +1,33 @@
+{
+  "changelog": "**This update changes the authoritative source from a bundled local registry to the public SciMiner Markdown tool docs.**\n\n- Removed the internal scripts directory and skill-card documentation file.\n- The required source of truth for tool names, parameters, and invocation flow is now each tool's Markdown doc at `https://sciminer.tech/tool_api_files/`.\n- Agents must read and follow the relevant Markdown doc before every invocation, including parameter names, file upload instructions, and request format.\n- No internal registry or code-based payload templates should be used; only the public Markdown docs are authoritative.\n- Instructions on credential management and invocation flow have been updated for clarity and specificity.",
+  "created_at": 1774964921507,
+  "display_name": "ADMET PK/PD Predict",
+  "fetched_at": 1787783770070,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SciMiner",
+    "handle": "sciminer",
+    "user_id": "s170qp1q4twz35wa85ppa8894h83w461"
+  },
+  "slug": "admet-pkpd",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/admet-pkpd",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=admet-pkpd&ownerHandle=sciminer",
+    "page_url": "https://clawhub.ai/sciminer/skills/admet-pkpd"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1078,
+    "installs": 27,
+    "stars": 6,
+    "versions": 5
+  },
+  "summary": "ADMET and pharmacokinetic/pharmacodynamic property prediction workflows using ADMET Predictor, AOMP, OBA, Graph-pKa, DeepEsol, and Molecular Descriptors thro...",
+  "updated_at": 1780221885435,
+  "version": "1.0.4"
+}
