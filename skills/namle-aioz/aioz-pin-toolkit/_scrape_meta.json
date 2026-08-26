@@ -1,0 +1,56 @@
+{
+  "changelog": "**Security update: Prevent passing credentials as CLI arguments.**\n\n- Added prominent warning not to pass credentials (API key, secret, or JWT) as command-line arguments\u2014scripts must read these exclusively from environment variables.\n- Updated instructions and all script examples to reinforce the credential usage policy.\n- Clarified that providing credentials as script arguments is a security violation and increases exposure risk.\n- Adjusted documentation for greater emphasis on secure environment practices before running any scripts.\n- No changes to available features or functionality.",
+  "created_at": 1774536162448,
+  "display_name": "AIOZ Pin Toolkit",
+  "fetched_at": 1787787207371,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/api_reference.md",
+    "scripts/delete_api_key.sh",
+    "scripts/generate_api_key.sh",
+    "scripts/get_history_usage_data.sh",
+    "scripts/get_list_api_keys.sh",
+    "scripts/get_month_usage_data.sh",
+    "scripts/get_pin_details.sh",
+    "scripts/get_top_up.sh",
+    "scripts/list_pins.sh",
+    "scripts/pin_by_cid.sh",
+    "scripts/pin_files_or_directory.sh",
+    "scripts/unpin_file.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090148991,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "namle-aioz",
+    "handle": "namle-aioz",
+    "user_id": "s17fx03yhvaw8hjyb3p4mq5zz183j1x3"
+  },
+  "slug": "aioz-pin-toolkit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aioz-pin-toolkit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aioz-pin-toolkit&ownerHandle=namle-aioz",
+    "page_url": "https://clawhub.ai/namle-aioz/skills/aioz-pin-toolkit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 715,
+    "installs": 16,
+    "stars": 0,
+    "versions": 8
+  },
+  "summary": "Respond to user requests for AIOZ Pin API. Use provided scripts to manage API keys, pin files to IPFS, track usage, and more.",
+  "updated_at": 1779079008666,
+  "version": "1.0.7"
+}
