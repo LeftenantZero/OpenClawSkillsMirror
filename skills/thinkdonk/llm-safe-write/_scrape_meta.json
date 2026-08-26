@@ -1,0 +1,34 @@
+{
+  "changelog": "llm-safe-write v0.1.0\n\n- Introduces a skill for safe, incremental writing of large files or files containing CJK/special characters to avoid encoding and truncation errors.\n- Recommends using this skill instead of direct Write for: files >50 lines, files with CJK characters, multi-function Python/JS/TS files, and when Write fails with \"Unterminated string\" or JSON truncation.\n- Describes a robust \"skeleton + Edit\" strategy: first write an ASCII-only skeleton, then incrementally fill in content with Edit, especially for CJK or multi-line edits.\n- Provides clear routing rules\u2014when to use direct Write, when to prefer skeleton + Edit, and best practices for appending or editing existing files.\n- Details handling for code and non-code files, such as strategies for JSON, YAML, and Markdown with placeholder replacement.\n- Emphasizes not retrying failed Write operations and outlines anchor strategies for reliable edits.",
+  "created_at": 1780627598834,
+  "display_name": "Llm Safe Write",
+  "fetched_at": 1787782934881,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Chow",
+    "handle": "thinkdonk",
+    "user_id": "s17cy1a9wk1gn5p68e8m2enc1s8826h1"
+  },
+  "slug": "llm-safe-write",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/llm-safe-write",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=llm-safe-write&ownerHandle=thinkdonk",
+    "page_url": "https://clawhub.ai/thinkdonk/skills/llm-safe-write"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 370,
+    "installs": 5,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Safely write large files or files with CJK/special characters using incremental Edit strategy instead of direct Write. Use when: writing a file longer than 5...",
+  "updated_at": 1780627598834,
+  "version": "0.1.0"
+}
