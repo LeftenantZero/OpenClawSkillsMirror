@@ -1,0 +1,33 @@
+{
+  "changelog": "- Cloudflare R2 skill for operating buckets and objects through an OOMOL-connected account using the `oo` CLI.\n- Supports read actions for account and bucket discovery, including listing accounts, listing buckets, and fetching bucket details.\n- Supports object transfer via `download_object`, which stages a selected R2 object through connector transit storage.\n- Supports bucket administration, including create, update, and delete operations, plus bucket-level CORS policy management.\n- Encourages safe usage by requiring the live connector schema before building payloads and explicit confirmation for write and destructive actions.\n\nSource: `oomol-lab/skills@3e4b3ff`",
+  "created_at": 1780485246687,
+  "display_name": "Cloudflare R2",
+  "fetched_at": 1787769018659,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-cloudflare-r2",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-cloudflare-r2",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-cloudflare-r2&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-cloudflare-r2"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 643,
+    "installs": 9,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Cloudflare R2 (cloudflare.com). Use this skill for ANY Cloudflare R2 request \u2014 reading, creating, updating, and deleting data. Whenever a task involves Cloudflare R2, use this skill instead of calling the API directly.",
+  "updated_at": 1787633465663,
+  "version": "1.0.4"
+}
