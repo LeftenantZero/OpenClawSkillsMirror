@@ -1,0 +1,55 @@
+{
+  "changelog": "Initial release of generic-drug-scout V1.\n\n- Enables one-click screening for China small molecule polymorph patent expiry opportunities, generating pre-filled interactive HTML reports.\n- Outputs standalone, locally openable HTML files with built-in interactive UI\u2014no server required.\n- Exports only the report path after screening; does not display result tables or candidate lists in chat.\n- Enforces fixed screening criteria: China + small molecule + polymorph, with expiry window as the main adjustable parameter.\n- Provides fallback platform/server workflow and built-in sample data for UI preview as needed.\n- Requires prior MCP platform configuration; guides users if not configured.",
+  "created_at": 1786608773772,
+  "display_name": "generic-drug-scout",
+  "fetched_at": 1787772376721,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/platform-template/app/assets/hero-decoration-focus-xl.png",
+    "assets/platform-template/app/assets/scout-logo-header-transparent.png",
+    "assets/platform-template/app/assets/value-page.png",
+    "assets/platform-template/app/index.html",
+    "assets/platform-template/app/server.py",
+    "references/sample-report-data.json",
+    "references/v1-scope.md",
+    "scripts/create_seeded_screening_platform.py",
+    "scripts/create_static_report_html.py",
+    "scripts/generate_seeded_platform.py",
+    "scripts/materialize_platform.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786609880613,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yuanzhian-patsnap",
+    "handle": "yuanzhian-patsnap",
+    "user_id": "s17bvft5kywc2rr8r8df1ra0x589g677"
+  },
+  "slug": "generic-drug-scout",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/generic-drug-scout",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=generic-drug-scout&ownerHandle=yuanzhian-patsnap",
+    "page_url": "https://clawhub.ai/yuanzhian-patsnap/skills/generic-drug-scout"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 120,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u8fd0\u884c\u4eff\u836f\u901f\u63a2 V1\uff0c\u521b\u5efa\u7528\u4e8e\u4eff\u5236\u836f\u673a\u4f1a\u53d1\u73b0\u7684\u9759\u6001\u4ea4\u4e92\u5f0f HTML \u62a5\u544a\u6216\u9884\u7f6e\u7ed3\u679c\u7b5b\u67e5\u9875\u9762\u3002\u9002\u7528\u4e8e\u7528\u6237\u8981\u6c42\u7b5b\u9009\u4e2d\u56fd\u5c0f\u5206\u5b50\u6676\u578b\u4e13\u5229\u5230\u671f\u673a\u4f1a\u3001\u751f\u6210\u5e26\u7ed3\u679c\u7684\u4eff\u836f\u901f\u63a2 V1\uff0c\u6216\u521b\u5efa\u7531\u5df2\u914d\u7f6e\u667a\u6167\u82bd/PatSnap MCP \u652f\u6491\u7684\u672c\u5730\u62a5\u544a\u7684\u573a\u666f\u3002",
+  "updated_at": 1786608922890,
+  "version": "1.0.0"
+}
