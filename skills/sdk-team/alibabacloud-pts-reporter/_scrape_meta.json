@@ -1,0 +1,46 @@
+{
+  "changelog": "alibabacloud-pts-reporter 0.0.1 \u2014 initial release\n\n- Provides a read-only analyzer for Alibaba Cloud PTS stress-testing reports, identifying and ranking performance issues based strictly on report evidence.\n- Delivers actionable findings with evidence, severity, and suggestions; never creates/starts/stops PTS scenarios or diagnoses instance-level (CPU/memory/disk/network) bottlenecks.\n- Requires explicit user confirmation of all input parameters; enforces strict validation and scope boundaries.\n- Guides users through environment and permission checks, with clear process for handling missing credentials or insufficient permissions.\n- Integrates pre-checks for CLI version, plugin installation, and AI-mode lifecycle management, ensuring a secure and predictable workflow.\n- Intended to be called by the alibabacloud-pts-pilot router and only operates on historical report data (HistoryReportId + RegionId mandatory).",
+  "created_at": 1782096712172,
+  "display_name": "Alibabacloud Pts Reporter",
+  "fetched_at": 1787779791615,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cli-installation-guide.md",
+    "references/ram-policies.md",
+    "references/tuning-knowledge-base.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782108481731,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-pts-reporter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-pts-reporter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-pts-reporter&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-pts-reporter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 292,
+    "installs": 2,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Alibaba Cloud PTS report analyzer worker skill \u2014 analyzes past PTS stress-testing reports (HistoryReportId), identifies report-observable performance issues...",
+  "updated_at": 1782096712172,
+  "version": "0.0.1"
+}
