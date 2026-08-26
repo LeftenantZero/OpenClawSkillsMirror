@@ -1,0 +1,33 @@
+{
+  "changelog": "**State and trash/archive support for sessions**\n\n- Sessions now include a `state` field (`live`, `archived`, `trashed`) in all JSON outputs (`aoe list --json`, `aoe session show --json`)\n- Documented how `archived_at` and `trashed_at` timestamps are set and cleared, and that session `state` supersedes relying on timestamps\n- Added `aoe list --json --state=live` example to skip trashed/archived sessions; clarified that trashed sessions remain in lists but need to be checked by `state`\n- Clarified that session lifecycle/status and persist/state (live/archived/trashed) are separate concepts\n- Removed deprecated file: `skill-card.md`",
+  "created_at": 1773324409652,
+  "display_name": "Agent of Empires",
+  "fetched_at": 1787770101537,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Nathan Brake",
+    "handle": "njbrake",
+    "user_id": "s179e0v9trsnks4158v7cretm983g6xr"
+  },
+  "slug": "aoe",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aoe",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aoe&ownerHandle=njbrake",
+    "page_url": "https://clawhub.ai/njbrake/skills/aoe"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3832,
+    "installs": 77,
+    "stars": 1,
+    "versions": 47
+  },
+  "summary": "Manage AI coding agent sessions via Agent of Empires (aoe)",
+  "updated_at": 1787346692250,
+  "version": "1.15.0"
+}
