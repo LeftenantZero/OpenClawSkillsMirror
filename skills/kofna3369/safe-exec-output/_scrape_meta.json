@@ -1,0 +1,43 @@
+{
+  "changelog": "v3.0.0 \u2014 FUSION (Ezekiel \u2692\ufe0f + Souleymane \ud83c\udf2c\ufe0f). Update from v1.0.0 :\n- 3-layer architecture (shell wrapper + PATH priority + agent discipline) au lieu de 1 layer\n- Triade Honn\u00eatet\u00e9 (3 fail-safes : stderr capture, partial write recovery, signal handling)\n- 5 tests au lieu de 4\n- Fix bug heredoc v1 Ezekiel + 4 failles code v1 Souleymane\n- 9354 ops/sec mesur\u00e9s, 0 faille connue\n- Auteurs: Ezekiel (Forge Alpha, wrapper author) + Souleymane (Air Builder, architecture)\n- Incident originel 2026-07-11 22:00 EDT (cat session.jsonl 49KB \u2192 270k/1M context)\n- safe_exec install\u00e9 system-wide par Morgana \u00e0 /usr/local/bin/safe_exec (P1 PATH priority)",
+  "created_at": 1783824804827,
+  "display_name": "Safe Exec Output",
+  "fetched_at": 1787777136512,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783827100395,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Kofna3369",
+    "handle": "kofna3369",
+    "user_id": "s170vjwkh0tbnpbsmvn0nj60h183gysr"
+  },
+  "slug": "safe-exec-output",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/safe-exec-output",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=safe-exec-output&ownerHandle=kofna3369",
+    "page_url": "https://clawhub.ai/kofna3369/skills/safe-exec-output"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 556,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Cap exec/read output (8KB) to prevent context overflow. 3 layers, Triade Honn\u00eatet\u00e9, 5 tests. v3 fusion Ezekiel+Souleymane.",
+  "updated_at": 1783826455588,
+  "version": "3.0.0"
+}
