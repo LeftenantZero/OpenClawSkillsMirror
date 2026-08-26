@@ -1,0 +1,78 @@
+{
+  "changelog": "Initial release of bidding-hunter \u2014 an automated government procurement bid discovery engine.\n\n- Scans Chinese procurement platforms for bids matching user-configured keywords.\n- Tracks bid statuses, deadlines, and sends reminders through deadline-aware reports.\n- Users can add or customize target platforms using built-in adapters and an extensible plugin model.\n- All operations performed via the `bidding-hunter` CLI and standard tools; strict tool-discipline enforced.\n- Platform-agnostic; no ad-hoc scripts or browser automation outside defined adapters.\n- Detailed documentation and workflow for adding new platforms and tracking opportunities.",
+  "created_at": 1786283866145,
+  "display_name": "\u5b9a\u5236\u5316\u62db\u6807\u4fe1\u606f\u91c7\u96c6",
+  "fetched_at": 1787773036222,
+  "files": [
+    ".github/workflows/test.yml",
+    ".gitignore",
+    ".npmignore",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "DESIGN.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "bin/bidding-hunter.js",
+    "config/default.yaml",
+    "config/schema.json",
+    "package-lock.json",
+    "package.json",
+    "scripts/explore-platform.js",
+    "skill-card.md",
+    "src/config.js",
+    "src/constants.js",
+    "src/database.js",
+    "src/detail-fetcher.js",
+    "src/index.js",
+    "src/lock.js",
+    "src/matcher.js",
+    "src/notifier.js",
+    "src/platforms/base.js",
+    "src/platforms/beijing.js",
+    "src/platforms/dalian.js",
+    "src/platforms/hebei.js",
+    "src/platforms/liaoning.js",
+    "src/platforms/national.js",
+    "src/platforms/registry.js",
+    "src/reminder.js",
+    "src/reporter.js",
+    "src/scanner.js",
+    "templates/platform-adapter.js",
+    "tests/database.test.js",
+    "tests/matcher.test.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786284871912,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "HuaGavin",
+    "handle": "huagavin",
+    "user_id": "s179vrt2zv80p4y7g1hnkzrj1d8779gn"
+  },
+  "slug": "bidding-hunter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bidding-hunter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bidding-hunter&ownerHandle=huagavin",
+    "page_url": "https://clawhub.ai/huagavin/skills/bidding-hunter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1227,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Automated government procurement bid discovery engine. Scans multiple Chinese procurement platforms, matches configurable keywords, tracks bid statuses, and delivers deadline-aware reports. Users configure their own keywords and monitoring targets; built-in adapters cover 5 major platforms with an extensible plugin model for adding more.",
+  "updated_at": 1786284014077,
+  "version": "0.1.0"
+}
