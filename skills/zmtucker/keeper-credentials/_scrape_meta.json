@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of keeper-credentials: a secure skill for brokering scoped Keeper credentials between agents.\n\n- Allows a user-facing agent to access only user-authorized Keeper vault folders via Keeper Secrets Manager (KSM).\n- Supports one-time user bootstrap using a Keeper one-time token; persists config for silent future authentication.\n- Credential delivery supports One-Time Share (secure link), Keeper Notation reference, and direct (inline) sharing.\n- Promotes zero-knowledge, least-privilege by avoiding master password or whole-vault access.\n- Detailed environment variable and install guidance for configuration and optional delivery modes.",
+  "created_at": 1781751873790,
+  "display_name": "Keeper Credentials",
+  "fetched_at": 1787780327230,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/delivery_modes.md",
+    "references/ksm_auth_and_storage.md",
+    "scripts/keeper_creds.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781776192778,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zmtucker",
+    "handle": "zmtucker",
+    "user_id": "s17fq291581evd78xzn1930b0n87bfny"
+  },
+  "slug": "keeper-credentials",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/keeper-credentials",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=keeper-credentials&ownerHandle=zmtucker",
+    "page_url": "https://clawhub.ai/zmtucker/skills/keeper-credentials"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 291,
+    "installs": 3,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Securely broker user-authorized Keeper vault credentials into agent-to-agent conversations using scoped access and zero-knowledge encryption.",
+  "updated_at": 1781751873790,
+  "version": "0.1.0"
+}
