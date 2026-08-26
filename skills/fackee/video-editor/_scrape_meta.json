@@ -1,0 +1,43 @@
+{
+  "changelog": "**Major upgrade: Switched to JSON template-driven multi-layer video rendering with flexible compositing and audio features.**\n\n- Replaces shell scripts with a modular Python backend (`render.py` and per-feature scripts)\n- Introduces a JSON-based project template supporting z-index compositing, advanced FX (slide, zoom, ken_burns, etc.), and audio (narration, BGM, SFX)\n- Deep per-clip subtitle binding with granular style overrides\n- Global or auto-selected theming for fonts and visual style\n- All video, image, and audio assets referenced and managed via template schema\n- Removed legacy shell workflows; now render entire video projects with a single command",
+  "created_at": 1782463245670,
+  "display_name": "Video Editor",
+  "fetched_at": 1787778978186,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ffmpeg-filters.md",
+    "references/template-schema.md",
+    "requirement.md",
+    "scripts/audio.py",
+    "scripts/color.py",
+    "scripts/cut.py",
+    "scripts/pip.py",
+    "scripts/render.py",
+    "scripts/subtitle.py",
+    "scripts/transition.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "www",
+    "handle": "fackee",
+    "user_id": "s171em0ncwskvbc7c3q7spqtmh84wzdh"
+  },
+  "slug": "video-editor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/video-editor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=video-editor&ownerHandle=fackee",
+    "page_url": "https://clawhub.ai/fackee/skills/video-editor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 74,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use this skill when rendering a JSON project template into a video.",
+  "updated_at": 1782463245670,
+  "version": "1.0.0"
+}
