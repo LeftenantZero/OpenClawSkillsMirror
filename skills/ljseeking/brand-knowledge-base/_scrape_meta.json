@@ -1,0 +1,56 @@
+{
+  "changelog": "- Initial release of brand-knowledge-base skill, version 1.0.2.\n- Added all core templates, prompt files, and output formats for building a reusable brand knowledge package.\n- Provides intake templates (JSON, MD, YAML) and guides users to supply minimum required company information before knowledge extraction.\n- Generates standardized outputs: brand_knowledge_base (MD/JSON/YAML), FAQ, glossary, standard messaging, llms.txt, and analysis report.\n- Marks missing fields as \"\u5f85\u786e\u8ba4\" and provides follow-up questions in the analysis report if required data is not provided.\n- Enforces safety rules: no invention of facts, conservative wording, strong disclaimers for regulated industries, and human review before production use.",
+  "created_at": 1778429682046,
+  "display_name": "brand knowledge base",
+  "fetched_at": 1787785755894,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/example_input.md",
+    "examples/example_output.md",
+    "main.py",
+    "manifest.json",
+    "prompts/asset_generation.md",
+    "prompts/compliance_review.md",
+    "prompts/extraction.md",
+    "prompts/faq_generation.md",
+    "prompts/geo_summary.md",
+    "prompts/intake.md",
+    "prompts/normalization.md",
+    "requirements.txt",
+    "skill-card.md",
+    "templates/brand_knowledge_base.json",
+    "templates/brand_knowledge_base.md",
+    "templates/brand_knowledge_base.yaml",
+    "templates/faq.md",
+    "templates/glossary.md",
+    "templates/intake_form.json",
+    "templates/intake_form.md",
+    "templates/intake_form.yaml",
+    "templates/llms.txt",
+    "templates/standard_messaging.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "LJseeking",
+    "handle": "ljseeking",
+    "user_id": "s172qdnna7e9rmecem8tckdtd1845fvv"
+  },
+  "slug": "brand-knowledge-base",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/brand-knowledge-base",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=brand-knowledge-base&ownerHandle=ljseeking",
+    "page_url": "https://clawhub.ai/ljseeking/skills/brand-knowledge-base"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 685,
+    "installs": 17,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Build a reusable brand knowledge package from uploaded brand documents and/or a filled intake form. Use when the user wants a standardized brand SSOT contain...",
+  "updated_at": 1779221614858,
+  "version": "1.0.2"
+}
