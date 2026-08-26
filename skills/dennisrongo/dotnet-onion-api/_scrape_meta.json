@@ -1,0 +1,43 @@
+{
+  "changelog": "dotnet-onion-api v1.0.0\n\n- Initial release of the .NET Onion API scaffolding skill.\n- Supports full Onion-architecture solution scaffolding, end-to-end feature slice addition, and BackgroundService-based worker microservices.\n- Guides users to select latest stable .NET, EF Core, and ASP.NET Core versions at generation time, avoiding hard-coded or out-of-date dependencies.\n- Templates enforce best practices (layered separation, DI, DTO mapping, unified error handling) and avoid common .NET legacy pitfalls.\n- Flexible for new projects or incremental additions; prompts for key options and verifies build/test after scaffolding.",
+  "created_at": 1786913391601,
+  "display_name": "dotnet-onion-api",
+  "fetched_at": 1787771699044,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/anti-patterns.md",
+    "references/solution-layout.md",
+    "references/templates/appsettings.md",
+    "references/templates/base-controller.cs.md",
+    "references/templates/csproj-files.md",
+    "references/templates/dbcontext.cs.md",
+    "references/templates/exception-middleware.cs.md",
+    "references/templates/feature-slice.md",
+    "references/templates/program-cs.md",
+    "references/templates/worker-program.cs.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "dotnet-onion-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dotnet-onion-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dotnet-onion-api&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/dotnet-onion-api"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 120,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Scaffold a new .NET solution (Web API + Worker microservices) using ONION architecture and EF Core, codifying battle-tested layered patterns and explicitly avoiding the common pitfalls of legacy stored-procedure-centric codebases. Use this skill whenever the user asks to \"create a new dotnet project\", \"scaffold a .NET API\", \"new C# solution\", \"add a worker microservice\", \"add a feature end-to-end\", or mentions \"ONION\", \"Clean Architecture\", \"Onion Architecture\", or \"the layered .NET patterns I like\". Three modes \u2014 (1) full solution scaffold, (2) add a feature slice through all layers, (3) add a BackgroundService worker microservice.",
+  "updated_at": 1786913482096,
+  "version": "1.0.0"
+}
