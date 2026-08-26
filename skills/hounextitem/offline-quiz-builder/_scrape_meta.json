@@ -1,0 +1,57 @@
+{
+  "changelog": "Initial release of offline-quiz-builder.\n\n- Transform any study materials (handouts, notes, textbooks, PDFs, Word, Excel, or existing question banks) into a fully offline quiz and review website.\n- Supports adaptive Ebbinghaus forgetting curve scheduling, error notebook, favorites, study calendar, and automatic daily reminder setup.\n- Purely static site: double-click index.html to use; all data stored in browser localStorage.\n- Supports quick import, structured conversion, and manual question generation based on input type. No question rewriting for user-supplied banks.\n- Five question types included: single choice, multiple choice, true/false, fill-in-the-blank, and short answer.\n- Features subject icons, progress tracking, light/dark themes, review tempo adjustment, and detailed user instructions.\n- Rigid separation of application shell and data; no editing of shell\u2014branding and icons driven by data.\n- Provides full offline usage and strong local data privacy\u2014no internet required, no data transmission.",
+  "created_at": 1786264461050,
+  "display_name": "offline-quiz-builder",
+  "fetched_at": 1787773045150,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/app-template/assets/css/style.css",
+    "assets/app-template/assets/js/app.js",
+    "assets/app-template/assets/js/data.js",
+    "assets/app-template/assets/js/srs.js",
+    "assets/app-template/assets/js/storage.js",
+    "assets/app-template/assets/js/vendor/gsap.min.js",
+    "assets/app-template/index.html",
+    "assets/sample-bank/sample.json",
+    "manifest.yaml",
+    "references/automation-reminder.md",
+    "references/material-ingestion.md",
+    "references/question-schema.md",
+    "scripts/build_bank.py",
+    "scripts/open_quiz.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786265006345,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "HouNextItem",
+    "handle": "hounextitem",
+    "user_id": "s17arnc126e7bcwykhxyadm4898c45d8"
+  },
+  "slug": "offline-quiz-builder",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/offline-quiz-builder",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=offline-quiz-builder&ownerHandle=hounextitem",
+    "page_url": "https://clawhub.ai/hounextitem/skills/offline-quiz-builder"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 162,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u628a\u4efb\u610f\u5b66\u4e60\u8d44\u6599\uff08\u8bb2\u4e49\u3001\u7b14\u8bb0\u3001\u6559\u6750\u3001PDF\u3001Word\u3001Excel\u3001\u5df2\u6709\u9898\u5e93\uff09\u8f6c\u6362\u6210\u4e00\u4e2a\u7eaf\u79bb\u7ebf\u7684\u667a\u80fd\u590d\u4e60\u9898\u5e93\u7f51\u7ad9\uff0c\u53cc\u51fb\u5373\u53ef\u4f7f\u7528\uff0c\u5185\u7f6e\u827e\u5bbe\u6d69\u65af\u9057\u5fd8\u66f2\u7ebf\u81ea\u9002\u5e94\u6392\u7a0b\u3001\u9519\u9898\u672c\u3001\u6536\u85cf\u5939\u4e0e\u6253\u5361\u65e5\u5386\uff0c\u5e76\u53ef\u81ea\u52a8\u521b\u5efa\u6bcf\u65e5\u590d\u4e60\u63d0\u9192\u4efb\u52a1\u3002\u5f53\u7528\u6237\u60f3\u628a\u8d44\u6599\u53d8\u6210\u5237\u9898\u7f51\u7ad9\u3001\u505a\u590d\u4e60\u9898\u5e93\u3001\u751f\u6210\u7ec3\u4e60\u9898\u3001\u642d\u5efa\u79bb\u7ebf\u80cc\u9898\u5de5\u5177\u3001\u6216\u9700\u8981\u6309\u9057\u5fd8\u66f2\u7ebf\u5b89\u6392\u590d\u4e60\u65f6\uff0c\u5e94\u4f7f\u7528\u672c\u6280\u80fd\u3002",
+  "updated_at": 1786264629613,
+  "version": "1.0.0"
+}
