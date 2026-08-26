@@ -1,0 +1,39 @@
+{
+  "changelog": "- Initial release of cite-check, a citation verification tool.\n- Phase 1: Checks if every citation (URL or arXiv ID) in a draft actually resolves.\n- Phase 2: Optionally verifies if each citation's source supports the claim next to it, using a local NLI model.\n- Exits non-zero if any citation is unverified, enabling integration as a blocking step in publishing workflows.\n- Supports both human-readable and machine-readable output modes.\n- Designed for use before publishing drafts or documents containing citations.",
+  "created_at": 1782915448551,
+  "display_name": "cite-check",
+  "fetched_at": 1787778493366,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "cite_check.py",
+    "claim_check.py",
+    "clawhub.json",
+    "skill-card.md",
+    "test_cite_check.py",
+    "test_claim_check.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Workloft",
+    "handle": "workloftai",
+    "user_id": "s17b4msacv23kywbf6ssbhm5jd89qe0t"
+  },
+  "slug": "cite-check",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cite-check",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cite-check&ownerHandle=workloftai",
+    "page_url": "https://clawhub.ai/workloftai/skills/cite-check"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 190,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Confirm every citation in a draft is real before it ships \u2014 extract each URL and arXiv ID and fetch it to prove it resolves (phase 1), then optionally check...",
+  "updated_at": 1782915448551,
+  "version": "1.0.0"
+}
