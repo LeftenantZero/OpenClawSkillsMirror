@@ -1,0 +1,70 @@
+{
+  "changelog": "Initial release of the CHAMPRO API skill, extending PromoStandards coverage for CHAMPRO with new capabilities.\n\n- Adds per-warehouse inventory checks, including restock dates for Illinois, California, and drop-ship locations.\n- Supports order placement, order status, and package tracking, filling gaps left by CHAMPRO\u2019s limited PromoStandards endpoints.\n- Enables decorated team orders with roster, proof files, and team color support.\n- Provides MOQ increments, lead-time catalogs, and warehouse-routing with split-shipment suborders.\n- Integrates CHAMPRO Custom Builder for design sessions, proof downloads, and web-to-print ordering flows.\n- Features local pre-flight validation and hard escalation paths for partially-placed orders.\n- Requires Python 3 and `requests` (installed via uv); credential handling designed for security and flexibility.",
+  "created_at": 1787326481491,
+  "display_name": "champro-api",
+  "fetched_at": 1787770124123,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/cb_categories.json",
+    "assets/fixtures/auth_failures.json",
+    "assets/fixtures/cb_design.json",
+    "assets/fixtures/inventory.json",
+    "assets/fixtures/order_status.json",
+    "assets/fixtures/place_order_partial.json",
+    "assets/fixtures/product_info.json",
+    "assets/shipping_methods.json",
+    "references/api_reference.md",
+    "references/custom_builder.md",
+    "references/examples.md",
+    "references/promostandards_gaps.md",
+    "scripts/_cli.py",
+    "scripts/_selftest.py",
+    "scripts/catalog.py",
+    "scripts/champro.py",
+    "scripts/client.py",
+    "scripts/custom_builder.py",
+    "scripts/diagnostics.py",
+    "scripts/errors.py",
+    "scripts/inventory.py",
+    "scripts/order_status.py",
+    "scripts/orders.py",
+    "scripts/reference.py",
+    "scripts/schemas.py",
+    "scripts/shipping.py",
+    "scripts/validation.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787327362460,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zmtucker",
+    "handle": "zmtucker",
+    "user_id": "s17fq291581evd78xzn1930b0n87bfny"
+  },
+  "slug": "champro-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/champro-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=champro-api&ownerHandle=zmtucker",
+    "page_url": "https://clawhub.ai/zmtucker/skills/champro-api"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 94,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "CHAMPRO supplier toolkit covering everything CHAMPRO's PromoStandards services cannot reach \u2014 per-warehouse inventory (CHAMPRO publishes no INV endpoint at any version), order status and package tracking (no ODRSTAT, no OSN), ordering with a real sandbox (CHAMPRO registers no PromoStandards PO test endpoint, so the generic client refuses to send), decorated team orders with rosters and proof files, MOQ increments and lead-time catalogs, warehouse routing with split-shipment suborders, and the Custom Builder web-to-print flow (design sessions, proof/view downloads, order-from-design). JSON-in/JSON-out CLI actions over CHAMPRO's REST API and Custom Builder API, with local pre-flight that catches the documented rejections before an order is sent and a hard escalation path for partially-placed orders. Use for CHAMPRO stock or custom apparel sourcing, inventory, ordering, tracking, or Custom Builder embedding \u2014 and keep using the promostandards skill for CHAMPRO product data and pricing.",
+  "updated_at": 1787326622856,
+  "version": "0.1.0"
+}
