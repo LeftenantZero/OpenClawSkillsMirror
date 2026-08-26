@@ -1,0 +1,72 @@
+{
+  "changelog": "Initial release of hyperspectral mineral mapping skill.\n\n- Supports SAM spectral angle mapping and continuum removal for mineral identification from hyperspectral imagery.\n- Outputs mineral class/confidence raster (GeoTIFF) and processing report (JSON).\n- Offers offline synthetic data mode for secure, no-network processing.\n- All processing is performed locally; user data privacy is ensured.\n- Clear instructions and usage examples provided in both English and Chinese.",
+  "created_at": 1785845801577,
+  "display_name": "geoskill-hyperspectral-mineral-mapping",
+  "fetched_at": 1787773479486,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_aster/mineral_report.json",
+    "_test_cli_aster/output-manifest.json",
+    "_test_cli_cr/mineral_report.json",
+    "_test_cli_cr/output-manifest.json",
+    "_test_cli_out/mineral_report.json",
+    "_test_cli_out/output-manifest.json",
+    "e2e_test.py",
+    "geoskill-hyperspectral-mineral-mapping.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785846727915,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-hyperspectral-mineral-mapping",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-hyperspectral-mineral-mapping",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-hyperspectral-mineral-mapping&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-hyperspectral-mineral-mapping"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 170,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7528SAM\u5149\u8c31\u89d2\u5236\u56fe\u4e0e\u8fde\u7eed\u7edf\u53bb\u9664\u4ece\u9ad8\u4e2d\u5149\u8c31\u5f71\u50cf\u8bc6\u522b\u5e76\u7ed8\u5236\u77ff\u7269\u5206\u5e03\uff0c\u8f93\u51fa\u77ff\u7269\u7c7b\u522b/\u7f6e\u4fe1\u5ea6\u6805\u683c\u4e0e\u62a5\u544a",
+  "updated_at": 1785845982246,
+  "version": "1.0.0"
+}
