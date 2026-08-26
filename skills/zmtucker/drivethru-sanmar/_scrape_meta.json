@@ -1,0 +1,63 @@
+{
+  "changelog": "Version 0.3.1\n\n- Updated SKILL.md with the correct version number.\n- Removed the deprecated skill-card.md file.\n- No functional or interface changes; documentation and metadata housekeeping only.",
+  "created_at": 1781751671366,
+  "display_name": "drivethru-sanmar",
+  "fetched_at": 1787775044637,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/README.md",
+    "references/auth_and_patterns.md",
+    "references/examples.md",
+    "references/ftp_feeds.md",
+    "references/invoicing.md",
+    "references/purchase_orders.md",
+    "references/returns_flow_notes.md",
+    "references/shipment_status.md",
+    "references/web_services.md",
+    "scripts/_cli.py",
+    "scripts/_selftest.py",
+    "scripts/feed_parsers.py",
+    "scripts/ftp_resolver.py",
+    "scripts/pdf_parser.py",
+    "scripts/sanmar.py",
+    "scripts/sanmar_browser.py",
+    "scripts/sanmar_client.py",
+    "scripts/sanmar_ftp.py",
+    "scripts/sanmar_tools.py",
+    "scripts/schemas.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784993060890,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zmtucker",
+    "handle": "zmtucker",
+    "user_id": "s17fq291581evd78xzn1930b0n87bfny"
+  },
+  "slug": "drivethru-sanmar",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/drivethru-sanmar",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=drivethru-sanmar&ownerHandle=zmtucker",
+    "page_url": "https://clawhub.ai/zmtucker/skills/drivethru-sanmar"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 539,
+    "installs": 2,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Deterministic SanMar API toolkit covering the four order-lifecycle pillars \u2014 purchase orders, inventory, tracking, and invoicing \u2014 behind typed CLI tools over SanMar's SOAP web services, PromoStandards services, and SFTP data feeds. Submit and pre-validate POs; check real-time per-warehouse inventory (PromoStandards v2) or bulk FTP feeds; get package-level tracking (Order Shipment Notification) and parse the FTP Daily Shipment Status file; retrieve invoices (InvoicePort \u2014 by PO, invoice number, order date, date range, or unpaid) and parse the FTP Daily Invoice / EDI-810 files, all normalized to a common payables shape. Also search products, pull myPrice pricing, parse PO PDFs, resolve marketing colors to mainframe codes, and file portal returns. Use whenever the user needs to read from or write to SanMar for apparel sourcing, pricing, ordering, tracking, or accounts-payable.",
+  "updated_at": 1784992254544,
+  "version": "0.3.1"
+}
