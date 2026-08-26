@@ -1,0 +1,42 @@
+{
+  "changelog": "alibabacloud-maxframe-video-frame-pipeline 0.0.1 \u2013 Initial Release\n\n- Provides scaffolding for building video frame extraction, image labeling, and multi-modal embedding jobs using MaxFrame + OSS + ODPS.\n- Supports OSS manifest building (Stage 0), frame extraction, clip-to-keyframe labeling, and image embedding pipelines.\n- Offers guidance for required/optional inputs, runtime settings, and scenario selection based on user requests.\n- Adopts AI FUNC models for labeling/embedding; discourages custom UDF or direct API client use for these stages.\n- Includes comprehensive references and code skeleton patterns for rapid pipeline creation.",
+  "created_at": 1781523091171,
+  "display_name": "Alibabacloud Maxframe Video Frame Pipeline",
+  "fetched_at": 1787780706851,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ai_func_calls.md",
+    "references/build_video_meta.md",
+    "references/frame_extraction.md",
+    "references/output_contracts.md",
+    "references/runtime_config.md",
+    "references/safety.md",
+    "scripts/build_video_meta.py",
+    "scripts/frame_extraction_minimal.py",
+    "scripts/image_labeling_minimal.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-maxframe-video-frame-pipeline",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-maxframe-video-frame-pipeline",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-maxframe-video-frame-pipeline&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-maxframe-video-frame-pipeline"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 378,
+    "installs": 4,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "This skill should be used when the user asks to \"build a frame extraction job\" / \"\u89c6\u9891\u62bd\u5e27 / \u62bd\u5173\u952e\u5e27\", \"label driving images with a VLM\" / \"\u56fe\u50cf\u6253\u6807 / image labeling wi...",
+  "updated_at": 1781523091171,
+  "version": "0.0.1"
+}
