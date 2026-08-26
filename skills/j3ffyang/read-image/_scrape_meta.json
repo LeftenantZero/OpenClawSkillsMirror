@@ -1,0 +1,33 @@
+{
+  "changelog": "- Initial release of the read-image skill for generating textual descriptions of images via a delegated vision-capable model.\n- Allows users to describe images by dropping photos into folders or on request when the main session model lacks image input capability.\n- Integrates with opencode run to route images to a vision model using the --file flag (supports multiple images).\n- Provides recommendations for factual, neutral descriptions and handling of recognizable human faces for downstream video pipelines.\n- Offers step-by-step guidance for arranging image sets into compelling narrative orders for essays, infographics, or videos.\n- Includes troubleshooting tips for file handling and model selection.",
+  "created_at": 1786950295042,
+  "display_name": "read-image",
+  "fetched_at": 1787771602720,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jeff Yang",
+    "handle": "j3ffyang",
+    "user_id": "s1779e1n6evsf8stg77rena51983qpyd"
+  },
+  "slug": "read-image",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/read-image",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=read-image&ownerHandle=j3ffyang",
+    "page_url": "https://clawhub.ai/j3ffyang/skills/read-image"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 106,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate textual descriptions of one or more images when the current session model (e.g. opencode/big-pickle) has no image input, by delegating to a vision-capable model on OpenRouter via `opencode run` with --file. Use when the user drops photos into imgs/, asks \"can you read/describe these images\", or an image needs a description for an article, portfolio, infographic, or video pipeline. Related terms: \u770b\u56fe, \u63cf\u8ff0\u56fe\u7247, image description, vision model, glm-4.6v, --file.",
+  "updated_at": 1786950348045,
+  "version": "1.0.0"
+}
