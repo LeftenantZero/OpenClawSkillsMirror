@@ -1,0 +1,50 @@
+{
+  "changelog": "- Skill is now fully self-contained; all required core scripts have been added to the skill's own lib/ directory.\n- Dynamic product classification introduced: automatically fetches and manages product groups from Alibaba.\n- New configuration and mapping files for customizing product category logic: product-groups.js and product-mapping.js.\n- Installation steps simplified\u2014external dependencies are no longer required for standard usage.\n- Documentation updated to describe dynamic product group fetching, cache usage, and how to customize product mapping.",
+  "created_at": 1774844371330,
+  "display_name": "inquiry analyzer",
+  "fetched_at": 1787786859445,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "lib/inquiry-analyzer.js",
+    "lib/okki-background.js",
+    "lib/product-groups.js",
+    "lib/product-mapping.js",
+    "scripts/merge-reports.js",
+    "scripts/run-analysis.js",
+    "scripts/run-okki.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966741466,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "likem90is-cmd",
+    "handle": "likem90is-cmd",
+    "user_id": "s172k01fv7mmftjmxcrn7jnxsx83x268"
+  },
+  "slug": "inquiry-analyzer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/inquiry-analyzer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=inquiry-analyzer&ownerHandle=likem90is-cmd",
+    "page_url": "https://clawhub.ai/likem90is-cmd/skills/inquiry-analyzer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 699,
+    "installs": 17,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "\u963f\u91cc\u5df4\u5df4\u8be2\u76d8\u5206\u6790\u6280\u80fd - \u5206\u6790\u6307\u5b9a\u65f6\u95f4\u7a97\u53e3\u5185\u7684\u8be2\u76d8\u6570\u636e\uff0c\u63d0\u53d6\u4ea7\u54c1\u5206\u7c7b\u3001\u5ba2\u6237\u4fe1\u606f\u3001\u56fd\u5bb6\u7b49\u5173\u952e\u5b57\u6bb5\uff0c\u751f\u6210\u7ed3\u6784\u5316\u62a5\u544a\u3002\u5f53\u7528\u6237\u9700\u8981\u5206\u6790\u963f\u91cc\u5df4\u5df4\u8be2\u76d8\u3001\u751f\u6210\u8be2\u76d8\u62a5\u544a\u3001\u8fd0\u884c\u8be2\u76d8\u5206\u6790\u65f6\u4f7f\u7528\u3002",
+  "updated_at": 1779079230279,
+  "version": "1.0.2"
+}
