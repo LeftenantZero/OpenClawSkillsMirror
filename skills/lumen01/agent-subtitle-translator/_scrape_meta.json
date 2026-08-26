@@ -1,0 +1,63 @@
+{
+  "changelog": "agent-subtitle-translator 1.0.7\n\n- Initial release with core subtitle translation workflow and strict local validation.\n- Supports SRT, WebVTT/VTT, and ASS formats, preserving structure, styles, and timelines.\n- Provides deterministic batching, validation, and safe output composition with no external translation provider contact.\n- Includes optional local-only subtitle visualizer web service for progress observation.\n- Adds extensive documentation, fixtures for multiple formats, and foundational test directory.",
+  "created_at": 1784190154545,
+  "display_name": "Subtitle Translator",
+  "fetched_at": 1787773537089,
+  "files": [
+    ".clawhubignore",
+    ".github/workflows/clawhub-publish.yml",
+    ".gitignore",
+    ".impeccable.md",
+    "AGENTS.md",
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/icon-large.png",
+    "assets/icon-small.png",
+    "package-lock.json",
+    "package.json",
+    "requirements.txt",
+    "scripts/subtitle_tool.py",
+    "skill-card.md",
+    "src/agent-bridge.ts",
+    "src/common.ts",
+    "src/python-cli.ts",
+    "src/server.ts",
+    "src/task-manager.ts",
+    "tests/fixtures/basic.srt",
+    "tests/fixtures/basic.vtt",
+    "tests/fixtures/karaoke.ass",
+    "tests/fixtures/styled.ass",
+    "tests/test_subtitle_tool.py",
+    "tests/visualizer.test.ts",
+    "tsconfig.json",
+    "web/app.ts",
+    "web/icons.ts",
+    "web/index.html",
+    "web/styles.css"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u4e8c\u72d7\u5b50\u4f60\u53d8\u4e86",
+    "handle": "lumen01",
+    "user_id": "s17dv4tf5j8ta3eh6hph7m1hns8a6ts5"
+  },
+  "slug": "agent-subtitle-translator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-subtitle-translator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-subtitle-translator&ownerHandle=lumen01",
+    "page_url": "https://clawhub.ai/lumen01/skills/agent-subtitle-translator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1420,
+    "installs": 0,
+    "stars": 0,
+    "versions": 8
+  },
+  "summary": "Translate SRT, VTT, and ASS subtitles safely",
+  "updated_at": 1785829086794,
+  "version": "1.0.7"
+}
