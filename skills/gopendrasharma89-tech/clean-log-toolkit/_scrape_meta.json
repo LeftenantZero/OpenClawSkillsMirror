@@ -1,0 +1,40 @@
+{
+  "changelog": "v0.2.0: Add scripts/follow.py - tail -F equivalent for live log monitoring, log-aware. Streams new lines as they arrive with the same --pattern / --not-pattern / --level / --since filters as grep.py. Automatic log-rotation detection (inode change or file truncation triggers transparent reopen). --max-events N exits cleanly after N matched events (CI-friendly), --timeout SECONDS exits on inactivity, --json emits per-line JSON envelopes with extracted timestamp + level. Closes the only documented limitation from v0.1.x ('It does not tail/follow live log files').",
+  "created_at": 1779347816963,
+  "display_name": "Clean Log Toolkit",
+  "fetched_at": 1787782969496,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/_common.py",
+    "scripts/check_deps.sh",
+    "scripts/errors.py",
+    "scripts/follow.py",
+    "scripts/grep.py",
+    "scripts/parse.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Gopendra Sharma",
+    "handle": "gopendrasharma89-tech",
+    "user_id": "s17cp87fy279ggwne1mqcb6675843tdy"
+  },
+  "slug": "clean-log-toolkit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clean-log-toolkit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clean-log-toolkit&ownerHandle=gopendrasharma89-tech",
+    "page_url": "https://clawhub.ai/gopendrasharma89-tech/skills/clean-log-toolkit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 789,
+    "installs": 17,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Local log file inspection and analysis toolkit. Parse common log formats (apache-common, apache-combined, nginx-access, syslog, JSON-line) or custom regex wi...",
+  "updated_at": 1780595835710,
+  "version": "0.2.0"
+}
