@@ -1,0 +1,41 @@
+{
+  "changelog": "- Initial release of huawei-cloud-dcs-list skill.\n- Supports read-only queries for Huawei Cloud DCS (Distributed Cache Service) instances, including Redis and Memcached.\n- Allows listing all DCS instances in a region, filtering by name (fuzzy/exact), status, or instance ID.\n- Provides commands compatible with hcloud CLI, with Python SDK as fallback.\n- Enables easy inventory reporting, name lookups, and daily instance inspection.",
+  "created_at": 1785746648938,
+  "display_name": "huawei-cloud-dcs-list",
+  "fetched_at": 1787773668202,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/test-cli-commands.sh",
+    "scripts/validate-skill.sh",
+    "skill-card.md",
+    "templates/test-vars.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-dcs-list",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-dcs-list",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-dcs-list&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-dcs-list"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 182,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query Huawei Cloud DCS (Distributed Cache Service) instance names and list all managed Redis/Memcached instances across a region. Provides read-only name lookup, name filtering, status-based filtering, and instance ID lookup for inventory reporting and daily inspection. Triggers include: DCS list, list DCS instances, query DCS names, DCS instance name, find DCS instance, DCS name lookup, DCS instance list, Redis instance names, cache instance names, DCS inventory, \u67e5\u8be2DCS\u540d\u79f0, DCS\u5b9e\u4f8b\u540d\u79f0, \u7f13\u5b58\u5b9e\u4f8b\u540d\u79f0, DCS\u5217\u8868, DCS\u5b9e\u4f8b\u5217\u8868, \u67e5\u8be2\u7f13\u5b58\u5b9e\u4f8b\u540d\u79f0.",
+  "updated_at": 1785746728748,
+  "version": "1.0.0"
+}
