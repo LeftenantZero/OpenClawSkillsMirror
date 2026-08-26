@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release of the Fulcra personal concierge orchestration layer.\n\n- Introduces a seamless \"front door\" that stitches together all major concierge skills into a single, smooth daily flow.\n- Handles both morning (\"start my day\") and evening (\"wrap up my day\") sequences automatically, including special Sunday/Monday weekly insights.\n- Contextually routes mid-day requests to the appropriate sub-skill for individual tasks.\n- Performs graceful degradation: transparently skips unavailable skills while continuing the sequence and informing the user of any omissions.\n- Preserves privacy by avoiding exposure of sensitive data or secrets.",
+  "created_at": 1782475029486,
+  "display_name": "Personal Concierge",
+  "fetched_at": 1787778945294,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/concierge_bootstrap.py",
+    "scripts/lib/attio_client.py",
+    "scripts/lib/concierge_cli.py",
+    "scripts/lib/concierge_fulcra.py",
+    "scripts/lib/concierge_secrets.py",
+    "scripts/lib/fulcra_annotations.py",
+    "scripts/lib/fulcra_read.py",
+    "scripts/status.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782508677927,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "keng009",
+    "handle": "keng009",
+    "user_id": "s174qh534a121m8d29jk5kykz1874vzn"
+  },
+  "slug": "fulcra-concierge",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fulcra-concierge",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fulcra-concierge&ownerHandle=keng009",
+    "page_url": "https://clawhub.ai/keng009/skills/fulcra-concierge"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 205,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Orchestrate the full Fulcra personal-concierge experience as one seamless flow -- the main entry point that routes to the right sub-skill and runs the mornin...",
+  "updated_at": 1782475029486,
+  "version": "1.0.0"
+}
