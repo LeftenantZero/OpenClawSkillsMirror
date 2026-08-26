@@ -1,0 +1,56 @@
+{
+  "changelog": "- Dropped support for Python 3.9/3.10; now requires Python 3.11+.\n- Updated documentation for multi-chart mode: `cli.py` now supports generating multiple charts in one call via the `--charts` argument, with new output and error handling details.\n- Clarified and expanded documentation for multi-chart output structure and partial failure handling.\n- Removed `skill-card.md` file.",
+  "created_at": 1773996386239,
+  "display_name": "smart-charts",
+  "fetched_at": 1787768743303,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/echarts-wordcloud.min.js",
+    "assets/echarts.min.js",
+    "references/REFERENCE.md",
+    "requirements.txt",
+    "scripts/__init__.py",
+    "scripts/chart_generator.py",
+    "scripts/cli.py",
+    "scripts/data_parser.py",
+    "scripts/data_transformer.py",
+    "scripts/exceptions.py",
+    "scripts/renderers.py",
+    "scripts/template.py",
+    "scripts/ux_regression_check.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787704900260,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "hanli",
+    "handle": "neuhanli",
+    "user_id": "s170fra97dyryvewpm8k1555p983efvx"
+  },
+  "slug": "smart-charts",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/smart-charts",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=smart-charts&ownerHandle=neuhanli",
+    "page_url": "https://clawhub.ai/neuhanli/skills/smart-charts"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2257,
+    "installs": 29,
+    "stars": 2,
+    "versions": 20
+  },
+  "summary": "Intelligent chart generation and data analysis skill. Reads user-supplied data files (CSV/Excel/JSON), analyzes data characteristics with LLM assistance, auto-recommends and generates interactive ECharts visualizations. Use when the user asks to analyze data, generate charts, create visualizations,",
+  "updated_at": 1787704177791,
+  "version": "6.2.1"
+}
