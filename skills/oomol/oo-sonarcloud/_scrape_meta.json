@@ -1,0 +1,33 @@
+{
+  "changelog": "- Adds a SonarQube Cloud skill for working with projects, measures, and issues through an OOMOL-connected account.\n- Uses the `oo` CLI connector to inspect live action schemas before running requests, reducing payload drift.\n- Supports three read-focused actions: `get_component_measures`, `list_projects`, and `search_issues`.\n- Clarifies safe usage patterns for read vs. write/destructive operations and when user confirmation is required.\n- Includes first-time setup guidance for missing CLI, authentication, or connector connection failures.\n\nSource: `oomol-lab/skills@46cfb3e`",
+  "created_at": 1786455165761,
+  "display_name": "SonarQube Cloud",
+  "fetched_at": 1787772657973,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-sonarcloud",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-sonarcloud",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-sonarcloud&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-sonarcloud"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 158,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "SonarQube Cloud (sonarsource.com). Use this skill for ANY SonarQube Cloud request \u2014 searching and reading data. Whenever a task involves SonarQube Cloud, use this skill instead of calling the API directly.",
+  "updated_at": 1786455248704,
+  "version": "1.0.1"
+}
