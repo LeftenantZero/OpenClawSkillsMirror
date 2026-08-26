@@ -1,0 +1,78 @@
+{
+  "changelog": "Initial release of Alibaba Cloud EMR Serverless StarRocks Assistant.\n\n- Supports StarRocks day-to-day development and operations: cluster connection, schema design, data ingestion, SQL dev & tuning, and health diagnostics.\n- All cluster access via bundled `srsql` CLI; uses the user\u2019s StarRocks credentials.\n- Guides on table design, ingestion methods, query optimization, materialized views, and cluster health.\n- Explicitly out of scope for cluster instance lifecycle management and non-StarRocks products.\n- Safeguards for DML/DDL: requires user confirmation before running non-READ SQL.\n- Respects user\u2019s own StarRocks permissions; supports multi-cluster via profiles.",
+  "created_at": 1779259373850,
+  "display_name": "Alibabacloud Emr Starrocks Assistant",
+  "fetched_at": 1787785660993,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/connect.md",
+    "references/data-import.md",
+    "references/data-import/broker-load.md",
+    "references/data-import/connectors.md",
+    "references/data-import/insert-and-pipe.md",
+    "references/data-import/performance-tuning.md",
+    "references/data-import/primary-key-updates.md",
+    "references/data-import/routine-load.md",
+    "references/data-import/stream-load.md",
+    "references/diagnostics.md",
+    "references/ram-policies.md",
+    "references/schema.md",
+    "references/schema/bucketing.md",
+    "references/schema/partitioning.md",
+    "references/schema/sort-key-and-indexes.md",
+    "references/schema/storage-properties.md",
+    "references/schema/table-types.md",
+    "references/sql.md",
+    "references/sql/advanced-sql.md",
+    "references/sql/functions-guide.md",
+    "references/sql/materialized-views.md",
+    "references/sql/query-writing.md",
+    "references/sql/sql-tuning-checklist.md",
+    "references/sql/window-functions.md",
+    "scripts/sr_connect/__init__.py",
+    "scripts/sr_connect/classify.py",
+    "scripts/sr_connect/cli.py",
+    "scripts/sr_connect/config.py",
+    "scripts/sr_connect/connection.py",
+    "scripts/sr_connect/doctor.py",
+    "scripts/sr_connect/errors.py",
+    "scripts/sr_connect/login.py",
+    "scripts/sr_connect/logout.py",
+    "scripts/sr_connect/query.py",
+    "scripts/sr_connect/whoami.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779957594018,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-emr-starrocks-assistant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-emr-starrocks-assistant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-emr-starrocks-assistant&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-emr-starrocks-assistant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 621,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Alibaba Cloud EMR Serverless StarRocks development & operations assistant. Covers five scenarios: cluster connection, schema design, data ingestion, SQL deve...",
+  "updated_at": 1779259373850,
+  "version": "0.0.1"
+}
