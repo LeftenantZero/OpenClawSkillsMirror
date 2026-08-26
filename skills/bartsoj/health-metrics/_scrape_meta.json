@@ -1,0 +1,54 @@
+{
+  "changelog": "health-metrics 1.1.0 introduces a new runner script and improves reliability for iCloud users.\n\n- Added scripts/run.sh: a unified command to handle ingestion and report generation.\n- scripts/run.sh automatically materializes iCloud placeholder files to prevent ingest failures on macOS.\n- Included documentation for using the new runner and handling iCloud \"Optimize Storage\" issues.\n- README and SKILL.md updated to explain new workflows and configuration defaults.\n- No breaking changes to the underlying ingestion or reporting pipelines.",
+  "created_at": 1784705478422,
+  "display_name": "Health Metrics",
+  "fetched_at": 1787775674242,
+  "files": [
+    ".clawhubignore",
+    ".gitignore",
+    "CLAUDE.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/architecture.md",
+    "references/schema.md",
+    "scripts/ingest.py",
+    "scripts/ingest_health_metrics.py",
+    "scripts/ingest_workouts.py",
+    "scripts/lib/geo.py",
+    "scripts/lib/ichart.py",
+    "scripts/lib/metrics.py",
+    "scripts/lib/query.py",
+    "scripts/lib/svg.py",
+    "scripts/report.py",
+    "scripts/report_daily_summary.py",
+    "scripts/report_health_metrics.py",
+    "scripts/report_rings.py",
+    "scripts/report_training_load.py",
+    "scripts/report_workouts.py",
+    "scripts/run.sh"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Bartosz",
+    "handle": "bartsoj",
+    "user_id": "s17fh7c035hba497j017fat8rd88496r"
+  },
+  "slug": "health-metrics",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/health-metrics",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=health-metrics&ownerHandle=bartsoj",
+    "page_url": "https://clawhub.ai/bartsoj/skills/health-metrics"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2176,
+    "installs": 0,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Ingest Apple Health Auto Export JSON (HealthMetrics + Workouts) into a local DuckDB database and render offline HTML dashboards plus a Markdown daily summary...",
+  "updated_at": 1784715345733,
+  "version": "0.1.1"
+}
