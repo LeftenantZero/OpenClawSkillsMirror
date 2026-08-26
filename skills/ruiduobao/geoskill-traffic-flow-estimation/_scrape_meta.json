@@ -1,0 +1,68 @@
+{
+  "changelog": "- Initial release of geoskill-traffic-flow-estimation.\n- Estimates traffic flow and speed using multi-temporal high-resolution imagery.\n- Implements vehicle detection via threshold segmentation, connected-component labeling, and area filtering.\n- Calculates traffic flow from vehicle counts and derives speed by cross-correlation displacement between two epochs.\n- Outputs include spatial traffic flow maps (GeoTIFF) and statistics (JSON), with all processing performed locally for privacy.",
+  "created_at": 1785862760681,
+  "display_name": "geoskill-traffic-flow-estimation",
+  "fetched_at": 1787773417538,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_synth/output-manifest.json",
+    "_test_cli_synth/traffic_stats.json",
+    "e2e_test.py",
+    "geoskill-traffic-flow-estimation.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785863819096,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-traffic-flow-estimation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-traffic-flow-estimation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-traffic-flow-estimation&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-traffic-flow-estimation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 176,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Estimate traffic flow and speed from multi-temporal vehicle detection, counting and cross-correlation displacement.",
+  "updated_at": 1785862933292,
+  "version": "1.0.0"
+}
