@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of Xiaohongshu (XHS/RedNote) full keyword search skill.\n\n- Search Xiaohongshu notes by keyword, supporting all page filter options (sort order, note type, publish time, distance, etc).\n- Extracts comprehensive note data: title, body text, tags, images, video URL, publish timestamp, and engagement stats.\n- Requires user to manually provide a search keyword before proceeding.\n- Verifies browser-act tool availability and Xiaohongshu login status before executing searches.\n- Reads only on-screen data as visible to the user\u2014never bypasses authentication.",
+  "created_at": 1784544112219,
+  "display_name": "Xiaohongshu Search Full",
+  "fetched_at": 1787775899221,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-note-detail.py",
+    "scripts/extract-search-feeds.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784549170186,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "xiaohongshu-search-full",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/xiaohongshu-search-full",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=xiaohongshu-search-full&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/xiaohongshu-search-full"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 263,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Search Xiaohongshu (XHS / RedNote) notes by keyword with full field extraction including body text, topics/tags, image list URLs, video stream URL, publish timestamp, and all engagement stats (likes, collects, comments, shares). Supports all page filter options: sort order (general, latest, most lik",
+  "updated_at": 1784548263263,
+  "version": "1.0.0"
+}
