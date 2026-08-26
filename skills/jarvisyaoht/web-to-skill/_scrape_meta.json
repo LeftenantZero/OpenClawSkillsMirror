@@ -1,0 +1,53 @@
+{
+  "changelog": "web-to-skill 1.0.0\n\n- Initial release.\n- Converts a public website URL or a batch of URLs into a reusable skill zip with rendered HTML snapshots and a JSONL index.\n- Provides deterministic three-stage workflow: prepare URLs, crawl URLs with snapshotting and keyword extraction, and build a specialized skill with compact metadata.\n- Supports advanced handling for specific documentation sites (ChatWiki Docs, Yuque, KanCloud, and more).\n- Incorporates strict validation, bounded outputs, and deterministic logging throughout the process.\n- Keeps all agent-created intermediate files and enforces fixed script execution and output directory usage.",
+  "created_at": 1785115110394,
+  "display_name": "WebToSkill",
+  "fetched_at": 1787774804960,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/metadata.md",
+    "scripts/build_skill.py",
+    "scripts/crawl_urls.py",
+    "scripts/fetch_rendered_html.py",
+    "scripts/metadata_outline.py",
+    "scripts/prepare_urls.py",
+    "scripts/search_index.py",
+    "scripts/validate_crawl.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785116168473,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jarvisyaoht",
+    "handle": "jarvisyaoht",
+    "user_id": "s171bxf94jec4b51ygfjnshqsh83g1md"
+  },
+  "slug": "web-to-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/web-to-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=web-to-skill&ownerHandle=jarvisyaoht",
+    "page_url": "https://clawhub.ai/jarvisyaoht/skills/web-to-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 232,
+    "installs": 2,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06\u4f01\u4e1a\u53ef\u516c\u5f00\u8bbf\u95ee\u7684\u5728\u7ebf\u6587\u6863\uff08\u7f51\u9875\uff09\u4e00\u952e\u8f6c\u5316\u4e3a\u53ef\u590d\u7528\u7684\u6280\u80fd\u5305\uff08.zip\uff09\u3002\u6280\u80fd\u5305\u5185\u5305\u542b\u7edf\u4e00\u89c4\u8303\u7684 Markdown \u6b63\u6587\u3001\u63d0\u53d6\u7684\u56fe\u7247\u8d44\u6e90\uff0c\u4ee5\u53ca\u57fa\u4e8e JSONL \u683c\u5f0f\u7684\u7ed3\u6784\u5316\u77e5\u8bc6\u7d22\u5f15\uff0c\u53ef\u76f4\u63a5\u6302\u8f7d\u7ed9 AI Agent \u4f5c\u4e3a\u4e13\u5c5e\u77e5\u8bc6\u6e90\u4f7f\u7528\u3002",
+  "updated_at": 1785115485266,
+  "version": "1.0.0"
+}
