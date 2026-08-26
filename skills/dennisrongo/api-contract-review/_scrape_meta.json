@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of api-contract-review skill:\n\n- Detects breaking changes in API contracts by diffing consumer-visible surfaces before and after changes.\n- Judges API design consistency by referencing in-repo precedents for error handling, naming, pagination, and authentication patterns.\n- Covers versioning, idempotency for retryable writes, pagination on collections, and proper status-code usage.\n- Provides a ranked report with breaking changes (with migration paths), design consistency findings, and open questions.\n- Intended for reviewing API surfaces like HTTP APIs, webhooks, and event schemas\u2014not internal implementation details.",
+  "created_at": 1786913252683,
+  "display_name": "api-contract-review",
+  "fetched_at": 1787771701829,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "api-contract-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/api-contract-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=api-contract-review&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/api-contract-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 107,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Review an API's contract as a promise to consumers \u2014 detects breaking changes by diffing the before/after surface (removed/renamed fields, type changes, tightened requiredness, status-code changes), and judges design by the repo's OWN precedent (error envelope, naming, pagination, auth placement) with every consistency finding citing the in-repo convention being violated. Covers versioning, idempotency on retryable writes, pagination on collections, and status-code semantics. Use this skill whenever the user says \"review this API\", \"review the endpoint\", \"API design review\", \"is this a breaking change\", \"check backward compatibility\", \"review the contract\", \"review this OpenAPI/swagger spec\", or \"/api-contract-review\" \u2014 even if they don't name the skill. Distinct from code-review (implementation quality); this reviews the SURFACE consumers depend on.",
+  "updated_at": 1786913304858,
+  "version": "1.0.0"
+}
