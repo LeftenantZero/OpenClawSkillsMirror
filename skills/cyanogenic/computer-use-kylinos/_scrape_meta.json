@@ -1,0 +1,45 @@
+{
+  "changelog": "Expanded to support both KylinOS V11 (Wayland/wlcctrl) and V10SP1 (X11/xdotool):\n\n- Added OS detection script; backend is auto-selected for each platform.\n- Separated fast-path usage and command examples for V11 and V10SP1.\n- Introduced new scripts for X11 automation (click, drag, double-click, info).\n- Clarified coordinate calculations for both Wayland (scale-aware) and X11 (pixel).\n- Documented platform-specific command details, limitations, and required tools.",
+  "created_at": 1784624976505,
+  "display_name": "Computer Use Kylinos",
+  "fetched_at": 1787775701251,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/details.md",
+    "scripts/detect-os.sh",
+    "scripts/wlcctrl-drag.sh",
+    "scripts/wlcctrl-info.sh",
+    "scripts/wlcctrl-move-window.sh",
+    "scripts/wlcctrl-window-click.sh",
+    "scripts/wlcctrl-window-dblclick.sh",
+    "scripts/xdotool-drag.sh",
+    "scripts/xdotool-info.sh",
+    "scripts/xdotool-move-window.sh",
+    "scripts/xdotool-window-click.sh",
+    "scripts/xdotool-window-dblclick.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Cyanogenic",
+    "handle": "cyanogenic",
+    "user_id": "s171wvgqx6fa6vr3gpvwqjntan86btja"
+  },
+  "slug": "computer-use-kylinos",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/computer-use-kylinos",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=computer-use-kylinos&ownerHandle=cyanogenic",
+    "page_url": "https://clawhub.ai/cyanogenic/skills/computer-use-kylinos"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 455,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "GUI automation on KylinOS. V11 (Wayland/wlcom) uses wlcctrl; V10SP1 (X11) uses xdotool. Find/launch/focus windows, screenshot, click/type/drag with correct coordinates, and verify GUI results.",
+  "updated_at": 1784702680462,
+  "version": "1.1.0"
+}
