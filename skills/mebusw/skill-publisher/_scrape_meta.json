@@ -1,0 +1,51 @@
+{
+  "changelog": "- Major update: Adds multi-market publishing for SKILL.md-based skills with streamlined, automated workflow.\n- Supports 8 mainstream marketplaces (ClawHub, Tencent SkillHub, skills.sh, LobeHub, SkillsMP, Agensi, Coze, ClawMart), handling each CLI/API nuance and validation step.\n- Automatically verifies SKILL.md structure, generates bilingual README and RELEASE_NOTES, and cleans sensitive files before packaging.\n- Implements serial publishing with detailed per-market scripts, error handling, and result summaries.\n- Adds reference docs, release note templates, utility scripts, and multilingual support.\n- Simplifies user prompts, only requesting missing required info per marketplace.",
+  "created_at": 1782875043794,
+  "display_name": "skill-publisher",
+  "fetched_at": 1787772433059,
+  "files": [
+    "README.md",
+    "README.zh-cn.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/clawhub-bundle.md",
+    "references/clawhub.md",
+    "references/release-notes-template.md",
+    "references/skillhub.md",
+    "references/skills-sh-publish.md",
+    "scripts/strip_bundle.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786604975209,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jacky Shen",
+    "handle": "mebusw",
+    "user_id": "s17fqnnawywqwp37410y5w9r1h83pwab"
+  },
+  "slug": "skill-publisher",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-publisher",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-publisher&ownerHandle=mebusw",
+    "page_url": "https://clawhub.ai/mebusw/skills/skill-publisher"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 386,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "\u5c06\u672c\u5730\u5df2\u7f16\u5199\u5b8c\u6210\u7684 SKILL.md \u6280\u80fd\u76ee\u5f55\u4e00\u952e\u53d1\u5e03\u5230\u591a\u4e2a\u516c\u5f00\u5e02\u573a\uff08ClawHub\u3001\u817e\u8baf SkillHub\u3001 skills.sh\u3001LobeHub\u3001SkillsMP\u3001Agensi\u3001Coze\u3001ClawMart\uff09\uff0c\u81ea\u52a8\u5b8c\u6210\u683c\u5f0f\u6821\u9a8c\u3001\u53cc\u8bed README\u3001 \u654f\u611f\u6587\u4ef6\u6e05\u7406\u3001Git \u7248\u672c\u6253\u6807\u3001\u4e32\u884c\u53d1\u5e03\u4e0e\u7ed3\u679c\u6c47\u603b\u3002 \u5f53\u7528\u6237\u8981\u628a\u5df2\u7ecf\u5199\u597d\u7684 SKILL.md \u540c\u65f6\u5206\u53d1\u5230\u591a\u4e2a\u516c\u5f00\u5e02\u573a\u65f6\u4f7f\u7528\u2014\u2014\u5373\u4f7f\u4ed6\u4eec\u53ea\u8bf4 \"\u53d1\u5e03 skill\"\u3001\"publish to clawhub\"\u3001\"ship to marketplace\"\u3001\"\u4e00\u952e\u53d1\u5e03\"\u6216\"\u4e0a\u67b6 skill\"\u3002 \u4e0d\u7528\u4e8e\uff1a\u7eaf\u672c\u5730 skill \u7ba1\u7406\u3001\u672a\u5b8c\u6210 skill \u7684\u64b0\u5199\u3001\u5355\u4e2a\u5e02\u573a\u7684\u5355\u72ec\u53d1\u5e03\u6307\u5f15\u3002",
+  "updated_at": 1786604282641,
+  "version": "0.1.1"
+}
