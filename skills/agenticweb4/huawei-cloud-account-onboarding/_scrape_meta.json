@@ -1,0 +1,38 @@
+{
+  "changelog": "1.0.0: rewrite onto the real read-only BSS face-scan commands (ShowRealNameAuthStatus + ShowRealNameAuthQrCode); the skill owns the status gate the QR command lacks; concepts/commands reference split; TypeScript terminal QR renderer as the only script; --cli-waiter polling; local mock server removed",
+  "created_at": 1787575036080,
+  "display_name": "Huawei Cloud Account Onboarding \u2014 Real-Name Verification via Face-Scan QR",
+  "fetched_at": 1787769333449,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/commands.md",
+    "references/concepts.md",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "scripts/render-qr.ts",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Schema Anything  Labs",
+    "handle": "agenticweb4",
+    "user_id": "s173jzw12t701qf6vwe7ddnp6d8772ax"
+  },
+  "slug": "huawei-cloud-account-onboarding",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-account-onboarding",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-account-onboarding&ownerHandle=agenticweb4",
+    "page_url": "https://clawhub.ai/agenticweb4/skills/huawei-cloud-account-onboarding"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 62,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Checks Huawei Cloud real-name verification (\u5b9e\u540d\u8ba4\u8bc1) status and guides face-scan verification, read-only via hcloud: reads the account's verification state, and when unverified fetches the face-auth QR address, renders it in the terminal to scan by phone, then polls until verified. Use when the user mentions \u534e\u4e3a\u4e91 / Huawei Cloud plus \u5b9e\u540d\u8ba4\u8bc1/\u5b9e\u540d/\u8ba4\u8bc1\u72b6\u6001/real-name verification, or a Huawei Cloud flow reports verification is required. Face-scan channel only; refuses ID, document, bank-card and SMS-code intake, refuses write operations (enterprise and certificate channels are console-only), and refuses non-Huawei-Cloud identity flows.",
+  "updated_at": 1787575113582,
+  "version": "1.0.0"
+}
