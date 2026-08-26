@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release of alibabacloud-csas-user-device-ops \u2013 device management skill for Alibaba Cloud SASE.\n\n- Supports flexible querying of SASE devices with 20+ filters (department, device type, OS, feature status, etc.).\n- Enables user listing, app authorization queries, inactive device analysis, and device locking (no deletion or irreversible actions).\n- Includes clear permissions error handling and RAM policy guidance.\n- Requires Aliyun CLI >= 3.3.3 with csas plugin; validates CLI parameters before execution.\n- Provides detailed instructions for AI-Mode usage and session lifecycle.\n- Guides users to the SASE console for deletion and irreversible operations.",
+  "created_at": 1780306061427,
+  "display_name": "Alibabacloud Csas User Device Ops",
+  "fetched_at": 1787783602914,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/api-reference.md",
+    "references/cli-installation-guide.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "scripts/cleanup-inactive.sh",
+    "scripts/common.sh",
+    "scripts/inactive-analysis.sh",
+    "scripts/validate-cli.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780335842095,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-csas-user-device-ops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-csas-user-device-ops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-csas-user-device-ops&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-csas-user-device-ops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 503,
+    "installs": 8,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use this skill when users ask about SASE terminal device management, user account queries, inactive device analysis, or device locking on Alibaba Cloud SASE...",
+  "updated_at": 1780306061427,
+  "version": "0.0.1"
+}
