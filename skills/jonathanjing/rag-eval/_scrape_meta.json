@@ -1,0 +1,41 @@
+{
+  "changelog": "Honor explicit Ollama judge selection over ambient cloud keys, keep embeddings local for local judges, reject unsupported selectors, and add regression tests.",
+  "created_at": 1771877267441,
+  "display_name": "RAG Evaluation Toolkit",
+  "fetched_at": 1787773593782,
+  "files": [
+    "CHANGELOG.md",
+    "PRD.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/batch_eval.py",
+    "scripts/run_eval.py",
+    "scripts/setup.sh",
+    "scripts/test_selection.py",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jonathan Jing",
+    "handle": "jonathanjing",
+    "user_id": "s17aah0h06a3741dypyhe3a2xd85pgsx"
+  },
+  "slug": "rag-eval",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/rag-eval",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=rag-eval&ownerHandle=jonathanjing",
+    "page_url": "https://clawhub.ai/jonathanjing/skills/rag-eval"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1425,
+    "installs": 48,
+    "stars": 2,
+    "versions": 7
+  },
+  "summary": "Evaluate a specifically provided RAG question, answer, and retrieved contexts with Ragas metrics. Use when the user explicitly requests RAG evaluation or hallucination analysis and has chosen a local or cloud judge; do not persist raw content unless requested.",
+  "updated_at": 1785776277626,
+  "version": "1.2.3"
+}
