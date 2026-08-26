@@ -1,0 +1,66 @@
+{
+  "changelog": "- Added resources/block-pr-url-gate.sh (shell script for validating PR URLs in AskUserQuestion payloads).\n- pr topic doc updated: clarified that block-pr-url-gate.sh is not currently registered in any hook config; PR URL rule is author-enforced, not runtime-enforced.\n- Updated documentation in SKILL.md, merge.md, and CHANGELOG.md to reflect PR URL gate script and rule clarification.\n- Removed obsolete skill-card.md file.",
+  "created_at": 1776326994434,
+  "display_name": "github-flow",
+  "fetched_at": 1787768388895,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "account-switch-merge.md",
+    "auth-scope.md",
+    "commit-message-discipline.md",
+    "dependencies.md",
+    "epic-bundle.md",
+    "expand.md",
+    "identity-auth.md",
+    "merge.md",
+    "plan-to-issue.md",
+    "pr.md",
+    "publish.md",
+    "push-guards.md",
+    "register.md",
+    "resources/block-pr-url-gate.sh",
+    "review-apply.md",
+    "review.md",
+    "sanitize.md",
+    "scripts/check-test-plan.js",
+    "scripts/gh-as.sh",
+    "scripts/review-as.sh",
+    "skill-card.md",
+    "upstream-issue.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787766124815,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "es6kr",
+    "handle": "drumrobot",
+    "user_id": "s17ay1v6v88r2m102pvvc44gz183qcrm"
+  },
+  "slug": "github-flow",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/github-flow",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=github-flow&ownerHandle=drumrobot",
+    "page_url": "https://clawhub.ai/drumrobot/skills/github-flow"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1759,
+    "installs": 18,
+    "stars": 0,
+    "versions": 16
+  },
+  "summary": "GitHub issue/PR workflow automation. Topics \u2014 auth-scope (gh CLI priority + account mapping + batch scope refresh + 404 checklist), commit-message-discipline (commit message authoring + amend refresh + PUBLIC English enforcement), dependencies (blocked-by/sub-issues via GraphQL), epic-bundle (deferred findings \u2192 Epic + sub-issues), expand (expand-vs-split mid-work), identity-auth (gh account map + scope refresh + GH_TOKEN fallback), merge (CI/review gates + no autonomous push), plan-to-issue (MD \u2192 issue body), pr (PR with test plan), publish (branch + draft PR + CI watch + ready + merge, one topic), push-guards (branch/push-reject/force-push/main-push), register (dup check + strategy), review (structured comments), review-apply (deferred feedback apply), sanitize (PUBLIC repo personal data scan), upstream-issue (external OSS feature/bug). Use when: \"plan to issue\", \"issue register\", \"create PR\", \"PR body\", \"code review\", \"merge PR\", \"PR squash\", \"sanitize\", \"PII\", \"expand PR\", \"blocked by\", \"epic bundle\", \"upstream issue\", \"review apply\", \"sub-issue\", \"gh auth\", \"force push\", \"push reject\", \"branch change forbid\", \"auth scope\", \"account mapping\", \"scope refresh\", \"commit message\", \"PUBLIC repo English\".",
+  "updated_at": 1787765331218,
+  "version": "0.9.1"
+}
