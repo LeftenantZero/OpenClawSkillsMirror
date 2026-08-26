@@ -1,0 +1,71 @@
+{
+  "changelog": "- Updated SKILL.md: incremented version to \"1.0.12\" with no content changes except version number.\n- Removed file: skill-card.md.\n- No change to feature set or functionality.",
+  "created_at": 1779721563208,
+  "display_name": "Child Restless Sleep / Nightmare Detection | \u513f\u7ae5\u7761\u7720\u4e2d\u9891\u7e41\u7ffb\u8eab/\u5669\u68a6\u8bc6\u522b",
+  "fetched_at": 1787771517946,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api_doc.md",
+    "scripts/__init__.py",
+    "scripts/config.py",
+    "scripts/config.yaml",
+    "scripts/skill.py",
+    "scripts/smyx_child_nightmare_rollover_detection_analysis.py",
+    "skill-card.md",
+    "skills/smyx_analysis/__init__.py",
+    "skills/smyx_analysis/references/api_doc.md",
+    "skills/smyx_analysis/requirements.txt",
+    "skills/smyx_analysis/scripts/__init__.py",
+    "skills/smyx_analysis/scripts/api_service.py",
+    "skills/smyx_analysis/scripts/config.py",
+    "skills/smyx_analysis/scripts/config.yaml",
+    "skills/smyx_analysis/scripts/skill.py",
+    "skills/smyx_analysis/scripts/smyx_analysis.py",
+    "skills/smyx_common/__init__.py",
+    "skills/smyx_common/requirements.txt",
+    "skills/smyx_common/scripts/__init__.py",
+    "skills/smyx_common/scripts/api_service.py",
+    "skills/smyx_common/scripts/base.py",
+    "skills/smyx_common/scripts/config-dev.yaml",
+    "skills/smyx_common/scripts/config-prod.yaml",
+    "skills/smyx_common/scripts/config-test.yaml",
+    "skills/smyx_common/scripts/config.py",
+    "skills/smyx_common/scripts/config.yaml",
+    "skills/smyx_common/scripts/dao.py",
+    "skills/smyx_common/scripts/skill.py",
+    "skills/smyx_common/scripts/util.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787005576130,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "smyx-sunjinhui",
+    "handle": "smyx-sunjinhui",
+    "user_id": "s17cfv2h26b7hq5w47tgfy23xx83z9x6"
+  },
+  "slug": "smyx-child-nightmare-rollover-detection-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/smyx-child-nightmare-rollover-detection-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=smyx-child-nightmare-rollover-detection-analysis&ownerHandle=smyx-sunjinhui",
+    "page_url": "https://clawhub.ai/smyx-sunjinhui/skills/smyx-child-nightmare-rollover-detection-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1087,
+    "installs": 9,
+    "stars": 0,
+    "versions": 8
+  },
+  "summary": "Using a fixed camera in the child's bedroom (infrared night vision), the system continuously captures video and audio at night to analyze the child's sleep behavior. It detects rollover frequency (rollovers per minute), cries (recognizing specific cry-sound features), and sleep talk (speech during sleep), and generates a sleep-quality report. When rollovers occur too often (e.g., > 3 per hour), strong crying is detected, or sleep talk is observed, the system pushes 'possible nightmare' or 'restless sleep' alerts to the parents. Application scenarios: child bedrooms, infant rooms. The system relays night-time monitoring to help parents understand the child's sleep quality and provide timely comfort. Skill features: improve sleep. | \u901a\u8fc7\u513f\u7ae5\u5e8a\u6216\u5367\u5ba4\u7684\u56fa\u5b9a\u6444\u50cf\u5934\uff08\u7ea2\u5916\u591c\u89c6\uff09\uff0c\u5728\u591c\u95f4\u8fde\u7eed\u91c7\u96c6\u89c6\u9891\u53ca\u97f3\u9891\uff0c\u5206\u6790\u513f\u7ae5\u7684\u7761\u7720\u884c\u4e3a\u3002\u68c0\u6d4b\u7ffb\u8eab\u6b21\u6570\uff08\u6bcf\u5206\u949f\u7ffb\u8eab\u9891\u7387\uff09\u3001\u54ed\u58f0\uff08\u8bc6\u522b\u7279\u5b9a\u7684\u54ed\u58f0\u97f3\u9891\u7279\u5f81\uff09\u4ee5\u53ca\u68a6\u8bdd\uff08\u68c0\u6d4b\u7761\u7720\u4e2d\u7684\u8bed\u97f3\uff09\uff0c\u751f\u6210\u7761\u7720\u8d28\u91cf\u62a5\u544a\u3002\u5f53\u7ffb\u8eab\u8fc7\u4e8e\u9891\u7e41\uff08\u5982>3\u6b21/\u5c0f\u65f6\uff09\u3001\u51fa\u73b0\u5f3a\u70c8\u54ed\u58f0\u6216\u68a6\u8bdd\u65f6\uff0c\u63a8\u9001\u7ed9\u7236\u6bcd'\u53ef\u80fd\u505a\u5669\u68a6'\u6216'\u7761\u7720\u4e0d\u5b89'\u7684\u9884\u8b66\u3002\u5e94\u7528\u573a\u666f\uff1a\u513f\u7ae5\u5367\u5ba4\u3001\u5a74\u513f\u623f\u3002\u7cfb\u7edf\u591c\u95f4\u63a5\u529b\u76d1\u6d4b\uff0c\u5e2e\u52a9\u5bb6\u957f\u4e86\u89e3\u513f\u7ae5\u7761\u7720\u8d28\u91cf\uff0c\u53ca\u65f6\u5b89\u629a\u3002\u6280\u80fd\u7279\u70b9\uff1a\u6539\u5584\u7761\u7720\u3002",
+  "updated_at": 1787004766156,
+  "version": "1.0.7"
+}
