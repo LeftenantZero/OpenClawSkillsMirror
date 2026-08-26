@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of create-agent-app \u2013 a skill for rigorous, production-grade TypeScript agent app creation.\n\n- Requires gathering detailed requirements before scaffolding any code.\n- Enforces strict flow: structured questioning, architecture selection with tradeoffs, explicit user confirmation, then step-by-step generation and validation.\n- Mandates reference checks for architecture, provider integration, safety, and validation at every stage.\n- Prevents shortcuts: blocks fake/demo generation, silent fallbacks, unapproved tool access, and mishandling of credentials or validation.\n- Produces transparent outputs: architecture rationale, file changes, exact validation results, and reporting of unresolved risks.",
+  "created_at": 1785550762779,
+  "display_name": "Create Agent App",
+  "fetched_at": 1787774007422,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/architecture-patterns.md",
+    "references/generation-contract.md",
+    "references/grill-questions.md",
+    "references/harness-contract.md",
+    "references/industry-architecture-signals.md",
+    "references/modern-selection-policy.md",
+    "references/official-docs.md",
+    "references/provider-patterns.md",
+    "references/safety-policy.md",
+    "references/validation-policy.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Zhihao Wang",
+    "handle": "leogoat2004",
+    "user_id": "s17aqv0kfmdqqq7sdx0rkbx7dh83rbx7"
+  },
+  "slug": "create-agent-app",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/create-agent-app",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=create-agent-app&ownerHandle=leogoat2004",
+    "page_url": "https://clawhub.ai/leogoat2004/skills/create-agent-app"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 193,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Create or refactor production-grade TypeScript agent applications. Use when the user asks Codex to generate, scaffold, restructure, or harden a TypeScript agent app, including CLI agents, web agent apps, API services, internal tools, multi-agent harnesses, workflow-first systems, model provider wiri",
+  "updated_at": 1785550847045,
+  "version": "1.0.0"
+}
