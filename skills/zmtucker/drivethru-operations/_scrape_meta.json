@@ -1,0 +1,47 @@
+{
+  "changelog": "Version 0.5.0\n\n- Updated documentation in SKILL.md for clarity and alignment with the operations query surface.\n- references/field_reference.md updated to match current model and field guidance.\n- Removed skill-card.md to streamline skill documentation files.",
+  "created_at": 1784072685483,
+  "display_name": "drivethru-operations",
+  "fetched_at": 1787770314681,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/field_reference.md",
+    "references/query_patterns.md",
+    "references/routines.md",
+    "scripts/odoo_mcp.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787254662038,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zmtucker",
+    "handle": "zmtucker",
+    "user_id": "s17fq291581evd78xzn1930b0n87bfny"
+  },
+  "slug": "drivethru-operations",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/drivethru-operations",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=drivethru-operations&ownerHandle=zmtucker",
+    "page_url": "https://clawhub.ai/zmtucker/skills/drivethru-operations"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 592,
+    "installs": 0,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Internal operations agent for the purchasing\u2192manufacturing\u2192shipping side of the Odoo ERP, over the `drivethru_mcp` MCP server. Use whenever the user asks about purchase orders, RFQs, vendors, receipts, inbound/outbound shipments, deliveries, carriers & tracking, inventory moves/pickings, replenishment/reordering, product stock levels, or manufacturing (production batches, MOs, work orders, BOMs, production centers) \u2014 to query and analyze them, or to run the vendor replenishment\u2192purchasing loop. Query any field on purchase.order(.line), vendor.tracking, stock.picking, stock.move(.line), delivery.carrier, stock.warehouse.orderpoint, product.product, product.template, mrp.production.batch, mrp.production, mrp.workorder, mrp.bom, mrp.bom.line, and production.center; aggregate and analyze the results; and drive the replenishment\u2192PO\u2192confirm write flow. This is the agent that backs Drive Thru \"routines\" (scheduled operations sweeps). Especially when answering a person inside an Odoo Discuss conversation.",
+  "updated_at": 1787254482663,
+  "version": "0.5.0"
+}
