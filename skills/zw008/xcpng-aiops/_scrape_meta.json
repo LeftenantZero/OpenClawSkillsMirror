@@ -1,0 +1,47 @@
+{
+  "changelog": "- Removed the file: skill-card.md.\n- No changes to functionality or interfaces.\n- Documentation and core skill metadata remain unchanged.",
+  "created_at": 1784267875082,
+  "display_name": "xcpng-aiops",
+  "fetched_at": 1787772959646,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agent-guardrails.md",
+    "references/capabilities.md",
+    "references/cli-reference.md",
+    "references/setup-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786345720968,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wei zhou",
+    "handle": "zw008",
+    "user_id": "s171xgnmqse0nqvgqvqnaq5f9183kyre"
+  },
+  "slug": "xcpng-aiops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/xcpng-aiops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=xcpng-aiops&ownerHandle=zw008",
+    "page_url": "https://clawhub.ai/zw008/skills/xcpng-aiops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 758,
+    "installs": 0,
+    "stars": 0,
+    "versions": 8
+  },
+  "summary": "Use this skill whenever the user needs to operate an XCP-ng virtualization fleet through Xen Orchestra \u2014 a one-shot fleet health overview; VMs (list/get/RRD stats), hosts, pools, storage repositories (SRs) and VDIs, VM snapshots, backup jobs and run logs, XO tasks; four RCA analyses (VM health, SR usage, backup-job failures, pool patch & HA posture); and governed writes (VM start/stop/reboot/migrate, snapshot create/delete/revert, SR rescan). Always use this skill for \"xcp-ng vm\", \"xen orchestra\", \"xo backup failed\", \"sr full\", \"orphaned vdi\", \"xcp-ng snapshot\", \"migrate vm to another host\", \"xcp-ng patches\", or \"pool HA\" when the context is explicitly XCP-ng / Xen Orchestra / a Xen-based fleet. Do NOT use when the target is not an XCP-ng fleet managed by Xen Orchestra \u2014 other hypervisors (Do NOT use for Proxmox VE \u2014 use proxmox-aiops), NAS/storage appliances, backup software suites, container clusters, and network devices are out of scope (negative routing hints only). Common XCP-ng-via-XO operations with a built-in governance harness (audit, policy, token budget, undo, risk-tiers).",
+  "updated_at": 1786344961972,
+  "version": "0.7.0"
+}
