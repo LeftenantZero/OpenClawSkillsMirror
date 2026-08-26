@@ -1,0 +1,70 @@
+{
+  "changelog": "**Prime Agent and plugin/on-demand support added; 8 agents now covered.**\n\n- Added integration and unbinding support for Prime Agent via official TypeScript extension hooks.\n- Now supports 8 agents: CodeArts CLI, OpenCode, OpenClaw, Hermes, JiuwenSwarm, KimiCode, DeepSeek Harness, and Prime Agent, each using their native mechanisms.\n- On-demand, domestic-first plugin installation for OpenCode, OpenClaw, DeepSeek Harness, and Prime Agent; fallback sources included for reliability and ESM compatibility.\n- Enhanced unbinding to remove residual OpenViking config in settings.json and extensions for all agents.\n- Modularized agent logic: agent-specific scripts and shared libraries added for maintainability.\n- Documentation, agent config, and troubleshooting references updated to reflect significant workflow and mechanism changes.",
+  "created_at": 1786954795406,
+  "display_name": "huawei-cloud-openviking-agent-integration",
+  "fetched_at": 1787769637157,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "demo/example-input.json",
+    "references/acceptance-criteria.md",
+    "references/agent-configs.md",
+    "references/guardrails.md",
+    "references/iam-policies.md",
+    "references/related-commands.md",
+    "references/troubleshooting.md",
+    "references/verification-method.md",
+    "scripts/agents/codearts.sh",
+    "scripts/agents/deepseek_harness.sh",
+    "scripts/agents/hermes.sh",
+    "scripts/agents/jiuwenswarm.sh",
+    "scripts/agents/kimicode.sh",
+    "scripts/agents/openclaw.sh",
+    "scripts/agents/opencode.sh",
+    "scripts/agents/prime_agent.sh",
+    "scripts/common.sh",
+    "scripts/integrate.sh",
+    "scripts/lib/base.sh",
+    "scripts/lib/json.sh",
+    "scripts/lib/plugins.sh",
+    "scripts/lib/registry.sh",
+    "scripts/lib/ui.sh",
+    "scripts/status.sh",
+    "scripts/unbind.sh",
+    "scripts/unset.sh",
+    "scripts/verify_mcp.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787555704709,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweicloud-skills-team",
+    "handle": "huaweiclouddev",
+    "user_id": "s17axk041vxeamxj39r4dwvyts87wtza"
+  },
+  "slug": "huawei-cloud-openviking-agent-integration",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-openviking-agent-integration",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-openviking-agent-integration&ownerHandle=huaweiclouddev",
+    "page_url": "https://clawhub.ai/huaweiclouddev/skills/huawei-cloud-openviking-agent-integration"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 150,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Integrate and unbind OpenViking long-term memory with coding agents. Supports 8 agents (CodeArts CLI, OpenCode, OpenClaw, Hermes, JiuwenSwarm, KimiCode, DeepSeek Harness, Prime Agent) via their native mechanism \u2014 MCP, HTTP memory provider, TypeScript extension hooks, or settings.json config. Both integration and unbinding require explicit user authorization. Use this skill when the user wants to: (1) integrate OpenViking memory into a coding agent, (2) unbind OpenViking from a coding agent, (3) check the integration status of all agents, (4) verify the OpenViking MCP endpoint, (5) rebuild the OpenClaw sandbox to apply template changes. Trigger words: \"OpenViking integration\", \"agent memory binding\", \"MCP setup\", \"OpenViking MCP\", \"integrate OpenViking\", \"unbind OpenViking\", \"\u8bb0\u5fc6\u96c6\u6210\", \"\u8bb0\u5fc6\u89e3\u7ed1\", \"OpenViking \u96c6\u6210\", \"OpenViking \u89e3\u7ed1\", \"agent long-term memory\", \"context database\".",
+  "updated_at": 1787554915144,
+  "version": "1.0.1"
+}
