@@ -1,0 +1,35 @@
+{
+  "changelog": "- Initial release of the test-mysql-db skill.\n- Enables safe connection to test-environment MySQL databases for troubleshooting, validation, and schema inspection.\n- Enforces strict credential handling and limits write operations to explicitly confirmed, low-risk scenarios.\n- Provides a step-by-step workflow for querying, data validation, and test-data correction with rollback plans.\n- Includes a reusable helper script (`scripts/mysql_query.py`) for CLI-based database queries using environment variables.\n- Guides users to redact sensitive data and summarizes database findings in a safe, clear manner.",
+  "created_at": 1783595848857,
+  "display_name": "\u6d4b\u8bd5\u73af\u5883 MySQL",
+  "fetched_at": 1787777384702,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "scripts/mysql_query.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "extraskittles",
+    "handle": "extraskittles",
+    "user_id": "s170d4kr7e86mm6graje5ezwvx89why3"
+  },
+  "slug": "test-mysql-db",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/test-mysql-db",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=test-mysql-db&ownerHandle=extraskittles",
+    "page_url": "https://clawhub.ai/extraskittles/skills/test-mysql-db"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 493,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Connect to test-environment MySQL databases for troubleshooting, data verification, schema inspection, and controlled validation queries. Use when the user a...",
+  "updated_at": 1783595848857,
+  "version": "1.0.0"
+}
