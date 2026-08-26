@@ -1,0 +1,50 @@
+{
+  "changelog": "Disclose all background probes and local state writes, replace executable config.env sourcing with allowlisted parsing, and correct restart-related documentation.",
+  "created_at": 1771825954624,
+  "display_name": "Gateway Watchdog Discord",
+  "fetched_at": 1787773592078,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/cron-agent-turn.md",
+    "scripts/gateway-watchdog.sh",
+    "scripts/install-launchd.sh",
+    "scripts/test-watchdog.sh",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785777014537,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jonathan Jing",
+    "handle": "jonathanjing",
+    "user_id": "s17aah0h06a3741dypyhe3a2xd85pgsx"
+  },
+  "slug": "openclaw-gateway-watchdog-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-gateway-watchdog-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-gateway-watchdog-skill&ownerHandle=jonathanjing",
+    "page_url": "https://clawhub.ai/jonathanjing/skills/openclaw-gateway-watchdog-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1545,
+    "installs": 41,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Monitor the OpenClaw Gateway plus configured Spark, Local API Hub, and Dashboard loopback health endpoints with a read-only watchdog state machine, local state files, cooldown dedupe, and optional Discord alerts on macOS. Use for explicitly configured foreground checks, cron execution, LaunchAgent installation, recovery notification, and low-noise incident reporting; it does not rewrite OpenClaw config or restart services.",
+  "updated_at": 1785776676495,
+  "version": "1.0.4"
+}
