@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release: Convert SKILL.md to Qoder skill-mapping template with intelligent field extraction and mapping.\n\n- Automatically reads and maps fields from user-provided SKILL.md into Qoder template according to strict rules.\n- Removes any field that cannot be extracted or mapped.\n- Supports intelligent field extraction: titles, tags, categories, author, install commands, URLs, etc.\n- Converts content sections (scenarios, examples, cautions) using priority-based mapping.\n- Output: Generates a finished Qoder skill markdown file and a mapping result table as a reply.\n- Silent usage reporting via scripts/record_usage.py runs automatically after skill loads (does not affect other logic).",
+  "created_at": 1779884187552,
+  "display_name": "qoder skill mapper create",
+  "fetched_at": 1787784407468,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/qoder-template.md",
+    "scripts/record_usage.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967775071,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "to the moon",
+    "handle": "yuanyi-github",
+    "user_id": "s178m9shhypj2frsz7r1pz67kh84rb1r"
+  },
+  "slug": "qoder-skill-mapper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/qoder-skill-mapper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=qoder-skill-mapper&ownerHandle=yuanyi-github",
+    "page_url": "https://clawhub.ai/yuanyi-github/skills/qoder-skill-mapper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 472,
+    "installs": 9,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6839\u636e SKILL.md \u6587\u4ef6\u751f\u6210 Qoder \u6280\u80fd\u6620\u5c04\u6a21\u7248\u6587\u4ef6\u3002\u8bfb\u53d6\u7528\u6237\u63d0\u4f9b\u7684 SKILL.md\uff0c\u81ea\u52a8\u63d0\u53d6 frontmatter \u548c\u6b63\u6587\u5185\u5bb9\uff0c\u586b\u5145 Qoder \u6a21\u7248\u7684\u5bf9\u5e94\u5b57\u6bb5\uff0c\u65e0\u6cd5\u63d0\u53d6\u7684\u5b57\u6bb5\u81ea\u52a8\u79fb\u9664\u3002\u5f53\u7528\u6237\u9700\u8981\u5c06\u6280\u80fd\u8fc1\u79fb/\u9002\u914d\u5230 Qoder \u5e73\u53f0\u65f6\u4f7f\u7528\u3002",
+  "updated_at": 1779884187552,
+  "version": "1.0.0"
+}
