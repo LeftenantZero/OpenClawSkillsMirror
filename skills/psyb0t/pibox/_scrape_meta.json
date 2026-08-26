@@ -1,0 +1,34 @@
+{
+  "changelog": "No user-visible changes in this version.\n\n- Version bump with no detected file changes.\n- Existing features and behavior remain unchanged.",
+  "created_at": 1785016389879,
+  "display_name": "pibox",
+  "fetched_at": 1787772255550,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/setup.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ciprian Mandache",
+    "handle": "psyb0t",
+    "user_id": "s17fq93tmpky791n7516jcn08n83sfn2"
+  },
+  "slug": "pibox",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pibox",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pibox&ownerHandle=psyb0t",
+    "page_url": "https://clawhub.ai/psyb0t/skills/pibox"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 814,
+    "installs": 1,
+    "stars": 0,
+    "versions": 12
+  },
+  "summary": "pi-coding-agent (earendil-works) running on the network inside an aicodebox container. Exposes seven programmatic surfaces on one image \u2014 interactive shell, one-shot exec (`-p \"...\"`), an HTTP REST API (run/async/cancel, workspace file ops), an OpenAI-compatible `/openai/v1/chat/completions` endpoint (streaming, client-executed tool calling, response_format/JSON-schema), an MCP server at `/mcp` (mounted in API mode or as a sidecar), a Telegram bot, and a cron scheduler that fires pi on a schedule. Foreground modes (API/Telegram/Cron) are mutually exclusive except Telegram+Cron; MCP coexists with any of them. Bearer-token auth per surface (`PIBOX_API_MODE_TOKEN`, `PIBOX_MCP_MODE_TOKEN`), empty = no auth. Use when the user wants to drive pi-coding-agent programmatically over HTTP/MCP/Telegram/cron instead of a local terminal session, or needs to reason about which pibox mode/endpoint fits a given integration.",
+  "updated_at": 1786671123574,
+  "version": "0.15.11"
+}
