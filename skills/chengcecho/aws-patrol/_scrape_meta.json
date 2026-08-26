@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release \u2014 Automated AWS infrastructure patrol, security audit, cost analysis, and reporting.\n\n- Switched skill focus from 3D traffic monitoring (skyroute) to AWS infrastructure monitoring and reporting (aws-patrol).\n- Added scripts to collect resource metrics, security/cost data, generate visual HTML reports, and create screenshots.\n- New documentation covers automated data collection, report generation, and recommended scheduling for periodic AWS patrols.\n- Includes support for detecting high resource usage, underutilized resources, security risks, and cost inefficiencies.\n- Output is a shareable HTML and PNG report suitable for messaging and daily AWS health checks.",
+  "created_at": 1779344730848,
+  "display_name": "AWS Patrol",
+  "fetched_at": 1787785503833,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/report-template.html",
+    "scripts/gen-report.py",
+    "scripts/patrol-security-cost.py",
+    "scripts/patrol.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779958529827,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "chengcecho",
+    "handle": "chengcecho",
+    "user_id": "s17b8y2c2e726a85g7nmgm6kh58758j3"
+  },
+  "slug": "aws-patrol",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aws-patrol",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aws-patrol&ownerHandle=chengcecho",
+    "page_url": "https://clawhub.ai/chengcecho/skills/aws-patrol"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 374,
+    "installs": 12,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Automated AWS infrastructure patrol \u2014 collects EC2/RDS/ELB metrics, security posture (IAM MFA, SG, EBS encryption, S3), cost analysis (SP/RI coverage & utili...",
+  "updated_at": 1779346033752,
+  "version": "1.0.1"
+}
