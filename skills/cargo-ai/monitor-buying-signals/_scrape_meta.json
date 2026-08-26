@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release: skill to monitor target accounts for buying signals and market intent.\n\n- Detects key public events such as relevant new hires, company posts, and detection feed entries, each with timing and source link.\n- Guides setup, free and paid signal checks, and emphasizes separating timing from fit.\n- Supports watchlist and trigger-based queries; covers credit costs and usage guidance.\n- Requires @cargo-ai/cli (npm) for operation and authentication.\n- Includes sample code and best practices to maximize effectiveness and minimize unnecessary runs.",
+  "created_at": 1786779175112,
+  "display_name": "monitor-buying-signals",
+  "fetched_at": 1787771832177,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786779962177,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Cargo",
+    "handle": "cargo-ai",
+    "user_id": "s178dcd9wkfn0a2fqrygmt3jzn87j9e1"
+  },
+  "slug": "monitor-buying-signals",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/monitor-buying-signals",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=monitor-buying-signals&ownerHandle=cargo-ai",
+    "page_url": "https://clawhub.ai/cargo-ai/skills/monitor-buying-signals"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 130,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Watch a list of target accounts for the public events that mean someone is in market, powered by Cargo \u2014 hiring for the role you sell into, saying something new, or turning up in a detection feed, each with a date and a link. Triggers: \"tell me when these accounts do something\", \"what changed at my target accounts\", \"who is in market right now\", \"set up intent monitoring\", \"watch these companies for me\", \"any triggers on this list\". Intent, triggers, watchlist, timing, freshness. Skip when: you have no account list yet \u2014 use build-tam-list; or you want a verdict on fit rather than on timing \u2014 use score-leads.",
+  "updated_at": 1786779255570,
+  "version": "1.0.0"
+}
