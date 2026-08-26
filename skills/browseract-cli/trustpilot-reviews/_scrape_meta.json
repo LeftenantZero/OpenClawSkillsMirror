@@ -1,0 +1,44 @@
+{
+  "changelog": "trustpilot-reviews 1.0.0\n\n- Initial release of the Trustpilot review scraper skill.\n- Scrapes paginated customer reviews from any company page on trustpilot.com using a company domain and optional filters (page, star rating, language, verified-only, company reply, date range, keyword, reviewer country).\n- Outputs 20+ structured fields per review, including reviewer info, ratings, dates, company replies, extended metadata, and review photos.\n- Supports advanced usage for brand monitoring, competitor analysis, sentiment analysis training, fake review detection, and bulk export.\n- Filters and pagination align with Trustpilot\u2019s public website; no login or special access required.",
+  "created_at": 1782551341734,
+  "display_name": "Trustpilot Reviews",
+  "fetched_at": 1787778892914,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract-reviews.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782566782719,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "trustpilot-reviews",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/trustpilot-reviews",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=trustpilot-reviews&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/trustpilot-reviews"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 213,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Trustpilot customer reviews scraper for any company listed on trustpilot.com \u2014 given a company domain (e.g. shopify.com, apple.com, shopwagandtail.com) plus optional filters (page number, single star rating 1-5, single language ISO code, verified-only flag, has-company-reply flag, date period last30",
+  "updated_at": 1782551341734,
+  "version": "1.0.0"
+}
