@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release of Alibaba Cloud KVStore Health Inspection skill.\n\n- Provides automated health inspection and reporting for Alibaba Cloud Redis (ApsaraDB for Redis / Tair) instances.\n- Generates HTML reports across 7 key areas: instance info, sessions, resource usage, big/hot key analysis, slow logs, alert history, and recommendations.\n- Supports single-instance, multi-instance, and full-account batch inspection modes.\n- Supports standard, cluster, SplitRW architectures, including Tair PENA (persistent memory) and ESSD (disk) types.\n- Strictly requires all inspections to be executed via the provided Python script; direct aliyun CLI data collection is disallowed.\n- Includes hard rules for execution and clear mapping from user intent to script parameters for streamlined usage.",
+  "created_at": 1782367722732,
+  "display_name": "Alibabacloud Kvstore Health Inspection",
+  "fetched_at": 1787779105488,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cli-installation-guide.md",
+    "references/manual-workflow.md",
+    "references/ram-policies.md",
+    "references/report-format.md",
+    "scripts/check-write-operation.sh",
+    "scripts/find-instance-region.py",
+    "scripts/health-inspect.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782370150987,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-kvstore-health-inspection",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-kvstore-health-inspection",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-kvstore-health-inspection&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-kvstore-health-inspection"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 260,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Health inspection for Alibaba Cloud Redis (ApsaraDB for Redis / Tair) instances. Generates HTML reports across 7 dimensions: instance basic info, current ses...",
+  "updated_at": 1782367722732,
+  "version": "0.0.1"
+}
