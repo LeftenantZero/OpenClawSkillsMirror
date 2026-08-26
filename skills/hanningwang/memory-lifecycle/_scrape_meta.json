@@ -1,0 +1,47 @@
+{
+  "changelog": "**Major overhaul for structured, multi-layered memory management.**\n\n- Introduces a layered architecture (Daily, Longterm, Permanent) for memory files, with progressive context loading and project workspaces.\n- Adds explicit flows for memory initialization, durable user requests, compaction flushes, manual promotion, and workspace/project creation.\n- Defines rules for promoting, compacting, and managing entries in MEMORY.md, with detailed retention/compression logic.\n- Establishes audit logging and automatic backups for all memory-altering operations to ensure safety and reversibility.\n- Replaces task-oriented status workflow with system-level management for facts, preferences, rules, and research, guided by new workflow triggers and tools.\n- Provides new guidelines for verification, credential safety, context retrieval, and conflict resolution.",
+  "created_at": 1781764864486,
+  "display_name": "Memory Lifecycle",
+  "fetched_at": 1787780287864,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/flush-prompt.md",
+    "references/init.md",
+    "references/promote-compact.md",
+    "references/workspace-init.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781807664560,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "HanningWang",
+    "handle": "hanningwang",
+    "user_id": "s175nb9hv26h88dzxry3zcx61n83hzp4"
+  },
+  "slug": "memory-lifecycle",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memory-lifecycle",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memory-lifecycle&ownerHandle=hanningwang",
+    "page_url": "https://clawhub.ai/hanningwang/skills/memory-lifecycle"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 59,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Structured memory management to resolve cliff-edge forgetting, false persistence, context blowup, contradictions, hallucinated recall, and stale accumulation...",
+  "updated_at": 1781764864486,
+  "version": "1.0.0"
+}
