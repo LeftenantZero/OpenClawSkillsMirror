@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release: Sync LLM benchmarks and pricing from Artificial Analysis API to Feishu Bitable.\n\n- Fetches model specs, prices, and benchmark scores from Artificial Analysis free API.\n- Converts data for easy import into a Feishu Bitable table for sales/solution teams.\n- Supports table creation or update, including batch record operations and summary digests.\n- Protects API quota by caching results and avoids repeated full pulls.\n- Includes concise guidance for setup, table management, and data sharing.",
+  "created_at": 1779261483401,
+  "display_name": "Artificial Analysis Models",
+  "fetched_at": 1787785661857,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "bitable-config.example.json",
+    "bitable-config.json",
+    "credentials.example.json",
+    "references/bitable-setup.md",
+    "scripts/build-bitable-records.mjs",
+    "scripts/fetch-llms.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779957516143,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "neymar011ren",
+    "handle": "neymar011ren",
+    "user_id": "s178cbpzcb1qtcbjdj8ncx2zn9872zrn"
+  },
+  "slug": "artificial-analysis-models",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/artificial-analysis-models",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=artificial-analysis-models&ownerHandle=neymar011ren",
+    "page_url": "https://clawhub.ai/neymar011ren/skills/artificial-analysis-models"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 576,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fetch LLM benchmarks and pricing from Artificial Analysis API and sync to a Feishu Bitable table. Use when updating model specs, prices, benchmark scores, or...",
+  "updated_at": 1779261483401,
+  "version": "1.0.0"
+}
