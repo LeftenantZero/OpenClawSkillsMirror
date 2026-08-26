@@ -1,0 +1,51 @@
+{
+  "changelog": "- Initial release of ai-video-skills.\n- Provides a workflow to build and execute skills.video API calls from OpenAPI specs.\n- Supports SSE-first video generation requests with automatic polling fallback.\n- Adds robust error handling, including guidance for API key setup and credit issues.\n- Includes helper scripts for endpoint inspection, payload generation, and terminal result polling.\n- Documentation covers workflow steps, error classes, retry rules, and resource references.",
+  "created_at": 1773998967238,
+  "display_name": "ai-video-skills",
+  "fetched_at": 1787787857359,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/open-platform-api.md",
+    "references/video-model-endpoints.md",
+    "scripts/create_and_wait.py",
+    "scripts/ensure_api_key.py",
+    "scripts/handle_runtime_error.py",
+    "scripts/inspect_openapi.py",
+    "scripts/wait_generation.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089997952,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "chuyun",
+    "handle": "chuyun",
+    "user_id": "s17c9nqs0s9b2fy3dac7h30w0583gqr7"
+  },
+  "slug": "ai-video-skills",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-video-skills",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-video-skills&ownerHandle=chuyun",
+    "page_url": "https://clawhub.ai/chuyun/skills/ai-video-skills"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 906,
+    "installs": 25,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Build and execute skills.video video generation REST requests from OpenAPI specs. Use when user needs to create, debug, or document video generation calls on...",
+  "updated_at": 1779078634106,
+  "version": "0.1.0"
+}
