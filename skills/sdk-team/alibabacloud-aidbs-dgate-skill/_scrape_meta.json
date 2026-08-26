@@ -1,0 +1,41 @@
+{
+  "changelog": "Initial release: Alibaba Cloud Agent Data Gateway (Dgate) Skill \u2013 read-only access layer for enterprise data governance.\n\n- Provides guided installation, onboarding, and configuration of the Dgate CLI and Agent identity.\n- Supports discovery and inspection of enterprise data resources (catalogs, databases, tables, columns, indexes) and DataWiki semantics.\n- Allows policy-governed, read-only queries via MCP or CLI, with strict runtime selection and explicit steps for onboarding.\n- Clearly reports results, identity, permissions, and constraints; all operations enforced read-only with detailed policy rationale.\n- Designed with secure handling of credentials; never exposes sensitive tokens or allows data mutations.\n- Comprehensive error handling and ambiguity management per documented workflows.",
+  "created_at": 1787623517142,
+  "display_name": "alibabacloud-aidbs-dgate-skill",
+  "fetched_at": 1787769111374,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cli-routing.md",
+    "references/datawiki.md",
+    "references/error-recovery.md",
+    "references/getting-started.md",
+    "references/identity-and-security.md",
+    "references/mcp-tools.md",
+    "references/ram-policies.md",
+    "references/resource-discovery.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-aidbs-dgate-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-aidbs-dgate-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-aidbs-dgate-skill&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-aidbs-dgate-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 62,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Install and configure the Dgate CLI, onboard an Agent identity, discover enterprise data, and perform policy-governed read-only access through Alibaba Cloud Agent Data Gateway (Dgate). Use when an AI agent needs to connect Dgate; create or inspect its Dgate identity or real instance permissions; discover catalogs, databases, tables, columns, or indexes; retrieve DataWiki business semantics; inspect security policies, masking rules, or audit records; diagnose Dgate calls; or run an authorized read-only query through Dgate MCP or CLI. Do not use for DMS change orders, direct database connections, or data mutations.",
+  "updated_at": 1787623629814,
+  "version": "0.0.1"
+}
