@@ -1,0 +1,46 @@
+{
+  "changelog": "piaoin-invoice 1.0.0 \u2013 Initial Release\n\n- Provides integration with \u7968IN/Piaoin PAT invoice open API for downloading, syncing, and uploading invoices.\n- Supports both command-line and HTTP request tools, with auto-detection and fallback for various environments (Python, curl, PowerShell).\n- Manages local state, API key masking, and role-based access for scoped invoice operations, saved in `.piaoin_evn`.\n- Delivers user guidance with Markdown summaries and tables after operations, including prompts and reference images when API keys are missing.\n- Enforces key rules around data security, file structure, scope confirmation, and environment recording for every sync/upload action.",
+  "created_at": 1782885748115,
+  "display_name": "\u7968IN \u53d1\u7968",
+  "fetched_at": 1787778554619,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/pat-api.md",
+    "scripts/piaoin_invoice.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782888740667,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "workopilot",
+    "handle": "workopilot",
+    "user_id": "s173zcserkymxknwx11phn48b188xx00"
+  },
+  "slug": "piaoin-invoice",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/piaoin-invoice",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=piaoin-invoice&ownerHandle=workopilot",
+    "page_url": "https://clawhub.ai/workopilot/skills/piaoin-invoice"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 218,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7528\u4e8e\u4e0b\u8f7d/\u540c\u6b65\u5df2\u5f52\u96c6\u53d1\u7968\u3001\u5728\u672c\u5730\u4fdd\u5b58\u53d1\u7968\u6587\u4ef6\u4e0e\u7ed3\u6784\u5316\u6570\u636e\u3001\u4e0a\u4f20\u672c\u5730\u53d1\u7968\u56fe\u7247\u6216 PDF \u5230\u7968IN\u3002\u7528\u6237\u8981\u6c42\u4e0b\u8f7d\u7968IN\u53d1\u7968\u3001\u540c\u6b65\u53d1\u7968\u6587\u4ef6\u5939\u3001\u7ba1\u7406\u5458\u6279\u91cf\u4e0b\u8f7d\u79df\u6237\u53d1\u7968\u3001\u4e0a\u4f20\u672c\u5730\u53d1\u7968\u5230\u7968IN\u3001\u7ef4\u62a4\u672c\u5730 .piaoin_evn API key/\u540c\u6b65\u72b6\u6001\u6587\u4ef6\u3001\u67e5\u770b\u7968IN OCR/\u9a8c\u771f/\u521d\u5ba1\u7ed3\u679c\u65f6\u4f7f\u7528\u3002",
+  "updated_at": 1782885748115,
+  "version": "1.0.0"
+}
