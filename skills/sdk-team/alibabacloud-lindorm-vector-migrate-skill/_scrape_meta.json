@@ -1,0 +1,59 @@
+{
+  "changelog": "Initial beta release of the Alibaba Cloud Lindorm Vector Database Migration Assistant.\n\n- Enables migration of vector data from Milvus, Elasticsearch, Lindorm, or Qdrant to Alibaba Cloud Lindorm, with optional CSV export/import via OSS.\n- Guides users interactively through parameter collection, DDL preview/confirmation, and automated code/script execution for migration.\n- Supports checkpoint resume, exclusion of specified fields, and validation steps (including pre-checks, schema confirmation, and post-migration data checks).\n- Includes strict guardrails to enforce data safety, error reporting, credential security, and user confirmations for critical steps. \n- Provides detailed migration references, type mapping, and application code migration advice tailored to the source database.",
+  "created_at": 1782194177495,
+  "display_name": "Alibabacloud Lindorm Vector Migrate Skill",
+  "fetched_at": 1787779513026,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/01-dev/csv-export.md",
+    "references/01-dev/csv-import.md",
+    "references/01-dev/elasticsearch-migrate.md",
+    "references/01-dev/lindorm-migrate.md",
+    "references/01-dev/milvus-migrate.md",
+    "references/01-dev/qdrant-migrate.md",
+    "references/01-dev/workflow.md",
+    "references/02-ops/checkpoint-resume.md",
+    "references/02-ops/postcheck.md",
+    "references/02-ops/ttl-config.md",
+    "references/03-ref/bulk-write.md",
+    "references/03-ref/code-migration.md",
+    "references/03-ref/csv-format.md",
+    "references/03-ref/official-refs.md",
+    "references/03-ref/ram-policies.md",
+    "references/03-ref/type-mapping.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782195589298,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-lindorm-vector-migrate-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-lindorm-vector-migrate-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-lindorm-vector-migrate-skill&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-lindorm-vector-migrate-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 302,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5411\u91cf\u6570\u636e\u5e93\u8fc1\u79fb\u52a9\u624b \u2014 \u4ece Milvus\u3001Elasticsearch\u3001Lindorm \u6216 Qdrant \u8fc1\u79fb\u5411\u91cf\u6570\u636e\u81f3\u963f\u91cc\u4e91 Lindorm\u3002\u652f\u6301\u4ece\u6e90\u5e93\u5bfc\u51fa\u4e3a CSV \u6587\u4ef6\u540e\u4e0a\u4f20 OSS \u518d\u5bfc\u5165\u3002\u901a\u8fc7\u5bf9\u8bdd\u6536\u96c6\u53c2\u6570\uff0c\u76f4\u63a5\u751f\u6210\u5e76\u6267\u884c\u4ee3\u7801\u5b8c\u6210\u8fc1\u79fb\u3002\u652f\u6301\u65ad\u70b9\u7eed\u4f20\u3001\u5b57\u6bb5\u6392\u9664\u3001DDL \u9884\u89c8\u786e\u8ba4\u7b49\u3002 Triggers: \"\u8fc1\u79fb...",
+  "updated_at": 1782194177495,
+  "version": "0.0.1-beta.1"
+}
