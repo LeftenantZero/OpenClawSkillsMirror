@@ -1,0 +1,43 @@
+{
+  "changelog": "## PRECC v0.3.108\n\n### Compression routing: prefer lean-ctx over nushell in the cold-start fallback\nGround-truth measurement showed lean-ctx output compression is strongly\nnet-positive (~+49% on measured commands) while nushell is weak-to-negative\n(\u221220% to \u221230% net on some command classes). The static/cold-start fallback was\ntrying **nushell first**, so the weaker backend preempted lean-ctx for every\ncommand it could handle \u2014 dragging the default path net-negative on installs\nthat have no per-class measurements yet (the adaptive net-loss guard only\ngoverns the learned pick, not this fallback).\n\nFallback reordered to lean-ctx \u2192 nushell \u2192 lowfat \u2192 compression-prompt \u2192 rtk.\nVerbose commands (grep/find/ls/\u2026) now route to lean-ctx instead of nushell.\nCarries the v0.3.107 Windows console-window fix for anyone not yet on it.",
+  "created_at": 1773966931872,
+  "display_name": "PRECC",
+  "fetched_at": 1787779389343,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782229685897,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Yijun Yu",
+    "handle": "yijunyu",
+    "user_id": "s17bn41k1yjmhvhxfhm05b1t0d86thhy"
+  },
+  "slug": "precc",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/precc",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=precc&ownerHandle=yijunyu",
+    "page_url": "https://clawhub.ai/yijunyu/skills/precc"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1356,
+    "installs": 30,
+    "stars": 0,
+    "versions": 16
+  },
+  "summary": "Predictive Error Correction for Claude Code \u2014 corrects bash commands before execution, predicts token costs via a trained ML oracle, and captures opt-in coun...",
+  "updated_at": 1782229120971,
+  "version": "0.3.108"
+}
