@@ -1,0 +1,36 @@
+{
+  "changelog": "paypal-reconcile 1.0.1 includes significant improvements to lookup efficiency, protection, and reliability for reconciling PayPal transactions.\n\n- Implements strict read-only enforcement for reconciling PayPal-backed credit card charges.\n- Introduces a fast, narrow date-range lookup minimizing browser operations and round-trips.\n- Adds robust safety and authentication handling, with clear STOP codes for login or tool unavailability.\n- Provides detailed input requirements and explicit search/matching workflow to avoid accidental account changes.\n- Strongly prefers extracting structured transaction data over visual scanning for improved accuracy.",
+  "created_at": 1787397475791,
+  "display_name": "Paypal Reconcile to CC",
+  "fetched_at": 1787769970223,
+  "files": [
+    ".clawhubignore",
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "calibhden",
+    "handle": "calibhden",
+    "user_id": "s17cz8bbhqdjk21xnvrkmjsfed8cyb3t"
+  },
+  "slug": "reconcile-paypal",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/reconcile-paypal",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=reconcile-paypal&ownerHandle=calibhden",
+    "page_url": "https://clawhub.ai/calibhden/skills/reconcile-paypal"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 98,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read-only PayPal transaction reconciliation for OpenClaw. Finds a transaction by approximate date, amount, and currency using a narrow search window, identifies the downstream merchant, and captures accounting evidence with minimal browser round-trips.",
+  "updated_at": 1787397528901,
+  "version": "1.0.0"
+}
