@@ -1,0 +1,52 @@
+{
+  "changelog": "**Major update: Switch from legacy mopng.cn endpoints to MoPNG Agent OpenAPI workflow via qise-studio/motu-agent.**\n\n- Uses a new agent-based multi-step workflow (Brief \u2192 Plan \u2192 Approve/Revise \u2192 Execute) instead of direct feature commands.\n- Removes all legacy CLI commands (`remove-bg`, `text-to-image`, etc.). Only use `agent` subcommands.\n- API interaction is now via standardized OpenAPI endpoints (`/session`, `/plan`, `/models`, `/approve`, etc.).\n- Strict separation of file uploads: local images must be hosted and referenced by HTTPS URLs.\n- Adds new environment options for agent URL and cost auto-approval; updates authentication and safety guidance.\n- Simplifies dependencies (now only requires python3, not uv).\n- Documentation fully rewritten to reflect new workflow, safety policies, and agent protocols.",
+  "created_at": 1773996082710,
+  "display_name": "mopng-api",
+  "fetched_at": 1787771575131,
+  "files": [
+    ".github/workflows/ci.yml",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "pyproject.toml",
+    "scripts/mopng_agent.py",
+    "scripts/mopng_api.py",
+    "skill-card.md",
+    "tests/test_mopng_api.py",
+    "uv.lock"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786968392660,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jian",
+    "handle": "jkin8010",
+    "user_id": "s1720a0vz8zby0xwkev6yzmgbh83hrd7"
+  },
+  "slug": "mopng-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mopng-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mopng-api&ownerHandle=jkin8010",
+    "page_url": "https://clawhub.ai/jkin8010/skills/mopng-api"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 978,
+    "installs": 23,
+    "stars": 0,
+    "versions": 9
+  },
+  "summary": "\u901a\u8fc7 qise-studio/motu-agent \u7684 MoPNG Agent OpenAPI \u534f\u5546\u5b8c\u6210\u56fe\u7247\u751f\u6210\u4e0e\u4fee\u56fe\u3002\u9002\u7528\u4e8e\u6587\u751f\u56fe\u3001\u56fe\u751f\u56fe\u3001\u62a0\u56fe\u3001\u6362\u80cc\u666f\u3001\u6269\u56fe\u3001\u653e\u5927\u53ca\u591a\u6b65\u56fe\u50cf\u5de5\u4f5c\u6d41\uff1b\u6280\u80fd\u8d1f\u8d23\u628a\u7528\u6237\u9700\u6c42\u8f6c\u6210 Brief\u3001\u5ba1\u9605/\u4fee\u8ba2 Plan\u3001\u6279\u51c6\u6267\u884c\u5e76\u4ea4\u4ed8\u7ed3\u679c\u3002",
+  "updated_at": 1786967704127,
+  "version": "0.1.8"
+}
