@@ -1,0 +1,53 @@
+{
+  "changelog": "Initial release of Receipt & Expense Auditor.\n\n- Extracts and categorizes expenses from plain text, JSON, or file input.\n- Generates reimbursement-ready reports with category summaries and totals.\n- Detects duplicate, suspicious, or incomplete entries for anomaly auditing.\n- Supports group AA split: calculates per-person shares for shared expenses.\n- Provides monthly or yearly summary reports with spending breakdowns.\n- Sample prompts included for business, group, and personal accounting scenarios.",
+  "created_at": 1781616144776,
+  "display_name": "Receipt Auditor",
+  "fetched_at": 1787780516604,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/categories.json",
+    "references/last-prompt.txt",
+    "references/templates/aa-split-template.md",
+    "references/templates/audit-template.md",
+    "references/templates/report-template.md",
+    "schemas/input.schema.json",
+    "schemas/output.schema.json",
+    "scripts/audit.sh",
+    "scripts/validate-schema.js",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781655121715,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "haidong",
+    "handle": "harrylabsj",
+    "user_id": "s17a8m9q4jybb46cv60h4fxard83hmsn"
+  },
+  "slug": "receipt-auditor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/receipt-auditor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=receipt-auditor&ownerHandle=harrylabsj",
+    "page_url": "https://clawhub.ai/harrylabsj/skills/receipt-auditor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 310,
+    "installs": 3,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Extract, categorize, and audit receipts and bills to generate expense reports and spot discrepancies.",
+  "updated_at": 1781616144776,
+  "version": "1.0.0"
+}
