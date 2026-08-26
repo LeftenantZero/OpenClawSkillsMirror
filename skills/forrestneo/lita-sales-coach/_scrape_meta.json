@@ -1,0 +1,41 @@
+{
+  "changelog": "Initial release of lita-sales-coach: a conversational skill for altruistic sales mindset coaching.\n\n- Supports sales scenarios including scripting, persuasive communication, objection handling, mindset shifts, reporting, trust governance, and resilience.\n- Built around the Nonviolent Communication (NVC) framework and a four-layer capability model (philosophy, expression, thinking, communication, adversity).\n- Automatically identifies user intent and routes requests to the most relevant guidance and frameworks.\n- Features an audit mode to score and improve the \"altruistic degree\" of existing sales scripts, with actionable feedback.\n- Provides tailored sample scripts and transformation logic for finance (insurance, banking, etc.) and software/AI product contexts.\n- Emphasizes practical, actionable output\u2014always offering specific scripts or steps rather than generic motivation.",
+  "created_at": 1785583068206,
+  "display_name": "lita-sales-coach",
+  "fetched_at": 1787773927570,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/adversity_core.md",
+    "references/audit_scoring.md",
+    "references/domain_scenarios.md",
+    "references/intent_router.md",
+    "references/lita_speech.md",
+    "references/sales_champion.md",
+    "references/trust_governance.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "zsd",
+    "handle": "forrestneo",
+    "user_id": "s17fd8v89pwxzett0ka88gsq5h8bm7ca"
+  },
+  "slug": "lita-sales-coach",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/lita-sales-coach",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=lita-sales-coach&ownerHandle=forrestneo",
+    "page_url": "https://clawhub.ai/forrestneo/skills/lita-sales-coach"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1681,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5229\u4ed6\u9500\u552e\u601d\u7ef4\u6559\u7ec3\uff08Altruistic Sales Mindset Coach\uff09\u3002\u5f53\u7528\u6237\u9700\u8981\u9500\u552e\u8bdd\u672f\u3001\u5ba2\u6237\u6c9f\u901a\u6587\u6848\u3001\u8bf4\u670d\u8c08\u5224\u3001\u5229\u4ed6\u8868\u8fbe\u6539\u5199\u3001\u9500\u51a0\u601d\u7ef4\u8f6c\u6362\u3001\u4e22\u5355/\u88ab\u62d2\u590d\u76d8\u3001\u5411\u4e0a\u6216\u5ba2\u6237\u6c47\u62a5\uff08\u4fe1\u4efb\u6cbb\u7406\uff09\u3001\u6297\u632b\u53cd\u5f39\uff08\u9006\u5546\uff09\u65f6\u4f7f\u7528\uff0c\u5c24\u5176\u9002\u914d\u91d1\u878d\u573a\u666f\uff08\u4fdd\u9669\u3001\u94f6\u884c\u7406\u8d22\u3001\u4fe1\u7528\u5361\u3001\u8d37\u6b3e\u3001\u4fe1\u6258\uff09\u4e0e\u8f6f\u4ef6/AI \u4ea7\u54c1\u9500\u552e\uff08ERP\u3001SaaS\u3001AI \u4ea7\u54c1\uff09\u3002This skill should be used when the user asks for \u9500\u552e\u8bdd\u672f\u3001\u5229\u4ed6\u8868\u8fbe\u3001\u5ba2\u6237\u6c9f\u901a\u3001\u8bf4\u670d/\u8c08\u5224\u3001\u9500\u51a0\u601d\u7ef4\u3001\u62d2\u7edd\u5904\u7406\u3001\u9500\u552e\u590d\u76d8\u3001\u5411\u4e0a\u6c47\u62a5\u3001\u4fe1\u4efb\u6cbb\u7406\u3001\u9006\u5546/\u6297\u632b\u3001\u975e\u66b4\u529b\u6c9f\u901a/NVC\u3001\u4fdd\u9669/\u7406\u8d22/\u4fe1\u7528\u5361/\u8d37\u6b3e/\u4fe1\u6258\u8bdd\u672f\u3001ERP/\u8f6f\u4ef6/AI \u4ea7\u54c1\u9500\u552e\uff0c\u6216\u4efb\u4f55\"\u600e\u4e48\u8ba9\u5bf9\u65b9\u66f4\u5bb9\u6613\u505a\u51fa\u9002\u5408\u81ea\u5df1\u7684\u9009\u62e9\"\u7684\u6c9f\u901a\u6559\u7ec3\u573a\u666f\u3002\u8986\u76d6\u54f2\u5b66\u5e95\u76d8\uff08\u975e\u66b4\u529b\u6c9f\u901a NVC \u56db\u8981\u7d20\uff09+ \u56db\u5c42\u6846\u67b6\uff08\u8868\u8fbe\u5c42\u5229\u4ed6\u8bdd\u672f7\u539f\u5219+\u4e07\u80fd\u516c\u5f0f\u3001\u601d\u7ef4\u5c42\u9500\u51a0\u5938\u4eba\u6280\u672f+6\u5927\u601d\u7ef4\u8f6c\u6362+\u81ea\u6d4b\u3001\u6c9f\u901a\u5c42 GPS-R \u4fe1\u4efb\u6cbb\u7406\u3001\u6297\u632b\u5c42\u9006\u5546CORE\uff09\uff0c\u5e76\u9644\u91d1\u878d/\u8f6f\u4ef6/AI \u573a\u666f\u6539\u5199\u793a\u4f8b\u5e93\uff08\u542b\u5408\u89c4\u62a4\u680f\uff09\uff1b\u5177\u5907\u5ba2\u6237\u610f\u56fe\u81ea\u52a8\u8bc6\u522b\u4e0e\u8def\u7531\u80fd\u529b\u2014\u2014\u5148\u8bc6\u522b\u5ba2\u6237\u771f\u5b9e\u610f\u56fe\u4e0e NVC \u5e95\u5c42\u9700\u8981\uff0c\u518d\u81ea\u52a8\u9009\u5b9a\u6700\u4f73\u6846\u67b6\u4f5c\u7b54\uff1b\u5e76\u652f\u6301\u5bf9\u73b0\u6709\u8bdd\u672f\u505a\u5229\u4ed6\u5ea6\u5ba1\u8ba1\u4e0e\u6253\u5206\u2014\u2014\u5b9a\u4f4d\u4e0d\u5229\u4ed6\u5904\u3001\u516d\u7ef4\u6253\u5206\u3001\u7ed9\u5229\u4ed6\u6307\u6570\u4e0e\u4fee\u6539\u610f\u89c1\u3001\u8f93\u51fa\u66f4\u65b0\u540e\u8bdd\u672f\u3002",
+  "updated_at": 1785634871011,
+  "version": "0.1.0"
+}
