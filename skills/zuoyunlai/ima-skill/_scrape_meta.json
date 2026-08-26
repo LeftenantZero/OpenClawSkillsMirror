@@ -1,0 +1,51 @@
+{
+  "changelog": "ima-skill 1.0.0\n\n- Initial release of a unified IMA OpenAPI skill supporting notes management and knowledge-base operations.\n- Automatically routes user requests involving notes, knowledge base, file uploads, or content search to the appropriate module.\n- Enforces strict UTF-8 encoding for note content and handles file upload integrity; unsupported file types are clearly rejected.\n- Requires user-provided IMA OpenAPI credentials (Client ID and API Key) for all API interactions, with clear setup guidance.\n- Robust error handling distinguishes script execution issues from backend business logic errors, providing actionable messages.\n- Supports automatic skill update checks and clear cross-module routing for complex user intents.",
+  "created_at": 1786698313955,
+  "display_name": "ima-skill",
+  "fetched_at": 1787772118818,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "ima_api.cjs",
+    "knowledge-base/SKILL.md",
+    "knowledge-base/references/api.md",
+    "knowledge-base/scripts/cos-upload.cjs",
+    "knowledge-base/scripts/preflight-check.cjs",
+    "meta.json",
+    "notes/SKILL.md",
+    "notes/references/api.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786699242884,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zuoyunlai",
+    "handle": "zuoyunlai",
+    "user_id": "s172mdwjfennafd6dacwpbhzph83hqjc"
+  },
+  "slug": "ima-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ima-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ima-skill&ownerHandle=zuoyunlai",
+    "page_url": "https://clawhub.ai/zuoyunlai/skills/ima-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 24,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7edf\u4e00\u7684 IMA OpenAPI \u6280\u80fd\uff0c\u652f\u6301\u7b14\u8bb0\u7ba1\u7406\u548c\u77e5\u8bc6\u5e93\u64cd\u4f5c\u3002 \u5f53\u7528\u6237\u63d0\u5230\u77e5\u8bc6\u5e93\u3001\u8d44\u6599\u5e93\u3001\u7b14\u8bb0\u3001\u5907\u5fd8\u5f55\u3001\u8bb0\u4e8b\uff0c\u6216\u8005\u60f3\u8981\u4e0a\u4f20\u6587\u4ef6\u3001\u6dfb\u52a0\u7f51\u9875\u5230\u77e5\u8bc6\u5e93\u3001 \u641c\u7d22\u77e5\u8bc6\u5e93\u5185\u5bb9\u3001\u641c\u7d22/\u6d4f\u89c8/\u521b\u5efa/\u7f16\u8f91\u7b14\u8bb0\u65f6\uff0c\u4f7f\u7528\u6b64 skill\u3002 \u5373\u4f7f\u7528\u6237\u6ca1\u6709\u660e\u786e\u8bf4\"\u77e5\u8bc6\u5e93\"\u6216\"\u7b14\u8bb0\"\uff0c\u53ea\u8981\u610f\u56fe\u6d89\u53ca\u6587\u4ef6\u4e0a\u4f20\u5230\u77e5\u8bc6\u5e93\u3001\u7f51\u9875\u6536\u85cf\u3001 \u77e5\u8bc6\u641c\u7d22\u3001\u4e2a\u4eba\u6587\u6863\u5b58\u53d6\uff08\u5982\"\u5e2e\u6211\u8bb0\u4e00\u4e0b\"\u3001\"\u641c\u4e00\u4e0b\u77e5\u8bc6\u5e93\u91cc\u6709\u6ca1\u6709XX\"\uff09\uff0c\u4e5f\u5e94\u89e6\u53d1\u6b64 skill\u3002",
+  "updated_at": 1786698428011,
+  "version": "1.0.0"
+}
