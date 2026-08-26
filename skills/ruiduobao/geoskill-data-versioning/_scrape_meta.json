@@ -1,0 +1,69 @@
+{
+  "changelog": "Initial release of geoskill-data-versioning.\n\n- Provides lightweight versioning for spatial (vector) data using snapshot + change detection.\n- Supports commit (write version snapshot), diff (compare versions by key, show changes), and log (list version history) operations.\n- Outputs snapshots (GeoJSON), version logs, diff reports, and manifests.\n- Supports both real vector data (via --input) and offline synthetic workflows (--synthetic).\n- All processing is local and offline by default; no external network required.\n- Includes clear CLI usage examples and dependency list.",
+  "created_at": 1785843497131,
+  "display_name": "geoskill-data-versioning",
+  "fetched_at": 1787773497334,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "_test_cli_run/output-manifest.json",
+    "_test_cli_run/version_store/versions.json",
+    "_test_cli_run/versioning_report.json",
+    "e2e_test.py",
+    "geoskill-data-versioning.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785844383857,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-data-versioning",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-data-versioning",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-data-versioning&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-data-versioning"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 170,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5bf9\u77e2\u91cf\u6570\u636e\u505a\u53d8\u66f4\u68c0\u6d4b\u3001\u7248\u672c\u5feb\u7167\u4e0e\u5dee\u5f02\u6bd4\u8f83\uff0c\u652f\u6301 commit / diff / log \u64cd\u4f5c\u3002Change detection, version snapshots and diff comparison for vector data with commit / diff / log operations.",
+  "updated_at": 1785843642951,
+  "version": "1.0.0"
+}
