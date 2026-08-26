@@ -1,0 +1,50 @@
+{
+  "changelog": "v5.11.3 \u2013 Security Declaration Alignment\n\nThis release fixes security-scan findings caused by inconsistent runtime declarations in v5.11.2.\n\nWhat changed\n\n\u2022 Updated runtime declarations to match actual workflow behavior:\n\u2022 requires_binaries: true\n\u2022 requires_credentials: true\n\u2022 requires_network: true\n\u2022 Clarified package behavior:\n\u2022 The package itself remains documentation-only (no install-time executable payload).\n\u2022 Agent workflows may execute shell/network actions at runtime when invoked by the user.\n\u2022 Added explicit runtime transparency:\n\u2022 Required/optional runtime binaries\n\u2022 Optional credentials/environment expectations (e.g. GH_TOKEN, Claude auth, MCP configuration)\n\u2022 Refined security semantics to distinguish:\n\u2022 install-time safety\n\u2022 runtime agent capabilities\n\nWhy this release\n\nv5.11.2 could create a misleading security impression by claiming no network/credentials/code-execution requirements while documenting workflows that use shell, GitHub, Playwright, and web tools.\nv5.11.3 resolves that mismatch for clearer trust and more accurate scanner interpretation.\n\nCompatibility\n\n\u2022 No breaking workflow changes\n\u2022 Backward-compatible behavior\n\u2022 Metadata/security declaration update only",
+  "created_at": 1770210020925,
+  "display_name": "Openclaw Godmode Skill Repo",
+  "fetched_at": 1787773773615,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "clawdis.yaml",
+    "docs/AGENTS.md",
+    "docs/MIGRATION.md",
+    "docs/TROUBLESHOOTING.md",
+    "docs/WORKFLOWS.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783655262975,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "TonyNoScope",
+    "handle": "cubetribe",
+    "user_id": "s171k4sxt9y5znsp1jcrry0dnd885v12"
+  },
+  "slug": "cc-godmode",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cc-godmode",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cc-godmode&ownerHandle=cubetribe",
+    "page_url": "https://clawhub.ai/cubetribe/skills/cc-godmode"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 5955,
+    "installs": 210,
+    "stars": 12,
+    "versions": 3
+  },
+  "summary": "Self-orchestrating multi-agent development workflows. You say WHAT, the AI decides HOW.",
+  "updated_at": 1778988222549,
+  "version": "5.11.3"
+}
