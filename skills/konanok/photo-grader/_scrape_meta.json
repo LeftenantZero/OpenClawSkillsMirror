@@ -1,0 +1,39 @@
+{
+  "changelog": "Initial public release on [ClawHub](https://clawhub.ai).\n\n### Added\n\n- Apply Lightroom-style color grading to RAW / JPG / HEIC photos via RawTherapee CLI.\n- 13 LR\u2192RT auto-mappers covering exposure, contrast, HSL, tone curve, and effects.\n- Multi-format JSON input (nested array, single object, `{files: [...]}` wrapper, flat params).\n- Uniform mode (`--uniform-dir`) for timelapse / batch grading.\n- Cross-format file matching by stem name (`DSC_0001.NEF` matches `DSC_0001.CR2`).",
+  "created_at": 1779293090973,
+  "display_name": "Photo Grader",
+  "fetched_at": 1787785566141,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "VERSION",
+    "_meta.json",
+    "config.example.toml",
+    "requirements.txt",
+    "scripts/grade.py",
+    "scripts/setup_deps.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "konanok",
+    "handle": "konanok",
+    "user_id": "s17e70b5hx1sn3g9dm3b0sqand873gef"
+  },
+  "slug": "photo-grader",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/photo-grader",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=photo-grader&ownerHandle=konanok",
+    "page_url": "https://clawhub.ai/konanok/skills/photo-grader"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 745,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Apply professional-grade color grading to camera RAW/JPG/HEIC photos. Uses RawTherapee CLI as the sole processing engine. Driven by LLM-generated Lightroom-s...",
+  "updated_at": 1779293090973,
+  "version": "1.0.0"
+}
