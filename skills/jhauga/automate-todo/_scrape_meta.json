@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release \u2014 provides automation for managing and completing repository TODO items.\n\n- Processes TODO items under the \"Current\" header in TODO.md, applying updates as instructed.\n- Updates documentation, CHANGELOG.md, and manifest files based on completed TODOs and specified version increments.\n- Maintains a current road map in .github/current.roadmap.md, ensuring TODO item compatibility and order.\n- Bundles scripts/todo.mjs to archive completed TODO items to a \"Complete\" section in TODO.md.\n- Handles testing and rollback logic; restores files if automated updates fail.",
+  "created_at": 1786943975828,
+  "display_name": "automate-todo",
+  "fetched_at": 1787771634013,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/todo.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786944699989,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "John Haugabook",
+    "handle": "jhauga",
+    "user_id": "s17ch25466qc0g2bcymk2dr8zx83pfny"
+  },
+  "slug": "automate-todo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/automate-todo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=automate-todo&ownerHandle=jhauga",
+    "page_url": "https://clawhub.ai/jhauga/skills/automate-todo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 122,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Complete TODO.md items nested under the level 2 header \"Current\", then update documentation, CHANGELOG.md, and manifest files according to the version update each item indicates. Use when asked to automate TODO items, work through the Current section of TODO.md, apply the next version update, mainta",
+  "updated_at": 1786944041744,
+  "version": "1.0.0"
+}
