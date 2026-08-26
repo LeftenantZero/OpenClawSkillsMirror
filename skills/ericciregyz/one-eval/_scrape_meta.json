@@ -1,0 +1,55 @@
+{
+  "changelog": "One-Eval Skill 1.0.0: Initial release of an end-to-end evaluation workflow skill for pure-text LLMs.\n\n- Drives One-Eval's deterministic execution core to benchmark LLMs (API or local vLLM) and generate multi-metric, illustrated reports.\n- Handles environment detection/setup, model API/vLLM connectivity checks, benchmark/metric selection, full evaluation, scoring, and report rendering via a stepwise process.\n- Ensures all user interactions occur in the user's language, with clear confirmation and summarization at each step.\n- Requires One-Eval main repository pre-installed; guides users to avoid unnecessary heavy dependencies (like vLLM) unless needed.\n- Report process includes: environment check, model connectivity, explicit configuration confirmation, benchmark and metric selection, smoke/test verification, full evaluation, multi-metric scoring, and HTML report output.",
+  "created_at": 1782969337240,
+  "display_name": "One Eval",
+  "fetched_at": 1787778389281,
+  "files": [
+    ".gitignore",
+    "DEV_NOTES.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/custom_metric.template.py",
+    "assets/evalspec.template.yaml",
+    "assets/external_bench.entry.template.json",
+    "references/bench_gallery.md",
+    "references/eval_types.md",
+    "references/external_bench.md",
+    "references/leaderboard_scores.json",
+    "references/metric_registry.md",
+    "references/model_setup.md",
+    "references/report_template.md",
+    "scripts/_common.py",
+    "scripts/build_gallery_md.py",
+    "scripts/check_model.py",
+    "scripts/doctor.py",
+    "scripts/make_plots.py",
+    "scripts/prepare_bench.py",
+    "scripts/render_leaderboard.py",
+    "scripts/render_report.py",
+    "scripts/run_eval.py",
+    "scripts/run_metrics.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Eric Gao \u9ad8\u7fca\u4e4b",
+    "handle": "ericciregyz",
+    "user_id": "s1771gn7e71qrhexjhbnqhzxj983stfp"
+  },
+  "slug": "one-eval",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/one-eval",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=one-eval&ownerHandle=ericciregyz",
+    "page_url": "https://clawhub.ai/ericciregyz/skills/one-eval"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 256,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u9a71\u52a8 One-Eval \u5bf9\u300c\u7eaf\u6587\u672c LLM\u300d\u505a\u7aef\u5230\u7aef\u8bc4\u6d4b\u3002\u5f53\u7528\u6237\u60f3\u8bc4\u6d4b\u4e00\u4e2a\u6a21\u578b\uff08API \u6216\u672c\u5730 vLLM\uff09\u5728\u67d0\u4e9b benchmark \u4e0a\u7684\u8868\u73b0\u3001\u5bf9\u6bd4\u591a\u4e2a benchmark \u5206\u6570\u3001\u8865\u5145\u591a\u7ef4\u5ea6 metric\u3001\u6216\u751f\u6210\u56fe\u6587\u8bc4\u6d4b\u62a5\u544a\u65f6\u4f7f\u7528\u672c skill\u3002",
+  "updated_at": 1782969337240,
+  "version": "1.0.0"
+}
