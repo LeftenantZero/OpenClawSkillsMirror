@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of triskill: a bundle for fact-checking, self-healing command retries, and shared memory coordination.\n\n- Fact-check: Verifies factual claims against live sources with read-only web search, providing result snippets and URLs.\n- Self-healing retry loop: Diagnoses failed shell commands and suggests fixes within bounded, human-approved retries and strict safety limits.\n- Shared memory: Offers atomic read/write/increment/compare-and-swap operations for agents to coordinate through a JSON store with file-level locking.\n- All components are designed with hard safety limits to prevent destructive or insecure actions.",
+  "created_at": 1781837745478,
+  "display_name": "Triskill",
+  "fetched_at": 1787780163537,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/factcheck.py",
+    "scripts/selfheal.py",
+    "scripts/sharedmem.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "welove111",
+    "handle": "welove111",
+    "user_id": "s177qmrn6t8sf6q2ankzx6eg2988jrbq"
+  },
+  "slug": "triskill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/triskill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=triskill&ownerHandle=welove111",
+    "page_url": "https://clawhub.ai/welove111/skills/triskill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 294,
+    "installs": 2,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use this skill whenever the agent needs to (1) verify a factual claim against live sources before stating it with confidence, (2) recover from a failed shell...",
+  "updated_at": 1781837745478,
+  "version": "1.0.0"
+}
