@@ -1,0 +1,49 @@
+{
+  "changelog": "- Adds comprehensive documentation for skill usage, routing rules, output protocol, and action requirements in SKILL.md.\n- New features: guides HR teams through compensation reviews, band/market checks, and payroll filing prechecks with standardized outputs for each scenario.\n- Defines strict input extraction fields, judgment rules, and output content for both offer review and payroll precheck tasks.\n- Clarifies when to give formal, weak, or market-signal-only suggestions based on data completeness.\n- Introduces clear procedures for handling incomplete or messy user inputs and prioritizes compliance and risk warnings.",
+  "created_at": 1779136450308,
+  "display_name": "\u5b9a\u85aa\u4e0e\u7533\u62a5\u68c0\u67e5\u52a9\u624b / Compensation Decision Assistant",
+  "fetched_at": 1787786671243,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/band-offer-review-input.dynamic.sample.json",
+    "assets/band-offer-review-input.sample.json",
+    "assets/generated-band-dynamic-sample/band-offer-review-output.json",
+    "assets/generated-band-dynamic-sample/band-offer-review.csv",
+    "assets/generated-band-sample/band-offer-review-output.json",
+    "assets/generated-band-sample/band-offer-review.csv",
+    "assets/generated-sample/payroll-filing-precheck-output.json",
+    "assets/generated-sample/payroll-filing-precheck.csv",
+    "assets/payroll-precheck-input.sample.json",
+    "references/china-compensation-policy-kb-2026.md",
+    "references/compensation-workflows.md",
+    "references/dynamic-market-data-architecture.md",
+    "references/real-user-scenario.md",
+    "scripts/generate_band_offer_packet.js",
+    "scripts/generate_payroll_precheck_packet.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ashley",
+    "handle": "ashley-aihr",
+    "user_id": "s1709qwt8f7axz6nyace1xk5s5840gbe"
+  },
+  "slug": "compensation-repo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/compensation-repo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=compensation-repo&ownerHandle=ashley-aihr",
+    "page_url": "https://clawhub.ai/ashley-aihr/skills/compensation-repo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 612,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u505a\u5b9a\u85aa\u5224\u65ad\uff0c\u4e5f\u5148\u628a\u7533\u62a5\u524d\u98ce\u9669\u6311\u51fa\u6765 / Price offers and catch filing risks",
+  "updated_at": 1779136469242,
+  "version": "0.5.0"
+}
