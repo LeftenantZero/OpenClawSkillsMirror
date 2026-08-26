@@ -1,0 +1,40 @@
+{
+  "changelog": "Guardrail System v1.0.0 \u2013 Introduces a comprehensive three-layer security system for AI Agent input, output, and tool usage.\n\n- Input guard: Detects 14 types of prompt injection (Chinese/English), checks excessively long inputs (>10,000 characters).\n- Tool guard: Implements three-level (read/write/dangerous) permission control for tool usage.\n- Output guard: Automatically filters 10 types of sensitive information (API keys, passwords, emails, ID numbers, etc.).\n- Unified guardrail interface with standard result objects for seamless integration.\n- Includes hooks for integration points and example usage.\n- Easy extensibility for injection patterns, tool permissions, and sensitive information rules.",
+  "created_at": 1783467543601,
+  "display_name": "Guardrail System",
+  "fetched_at": 1787777633879,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/injection_patterns.md",
+    "references/permission_levels.md",
+    "scripts/guardrail.py",
+    "scripts/input_guard.py",
+    "scripts/output_guard.py",
+    "scripts/tool_guard.py",
+    "skill-card.md",
+    "test_guardrails.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "paudyyin",
+    "handle": "paudyyin",
+    "user_id": "s172x1s50dh0bgmm3yc9516nr586kk4b"
+  },
+  "slug": "guardrail-system",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/guardrail-system",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=guardrail-system&ownerHandle=paudyyin",
+    "page_url": "https://clawhub.ai/paudyyin/skills/guardrail-system"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 262,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4e09\u5c42\u62a4\u680f\u7cfb\u7edf\uff1a\u8f93\u5165\u62a4\u680f\uff08Prompt\u6ce8\u5165\u68c0\u6d4b\uff09\u3001\u5de5\u5177\u62a4\u680f\uff08\u6743\u9650\u5206\u7ea7\uff09\u3001\u8f93\u51fa\u62a4\u680f\uff08\u654f\u611f\u4fe1\u606f\u8fc7\u6ee4\uff09\u3002",
+  "updated_at": 1783467543601,
+  "version": "1.0.0"
+}
