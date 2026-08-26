@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release with detailed workflow for diagnosing and resolving exec allowlist misses.\n\n- Supports hybrid reload with automatic restarts for gateway and plugin changes.\n- Config patching requires hash from config.get and enforces rate limits.\n- Lists which config changes hot-apply versus require a restart.\n- Documents Minimax cron authentication: now uses system-level tokens, not session OAuth.\n- Details protected config patch paths and proper patch structure.",
+  "created_at": 1780029681778,
+  "display_name": "Fix Exec Allowlist Miss",
+  "fetched_at": 1787783997126,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780030732945,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Fazlay Rabby",
+    "handle": "rabbykst",
+    "user_id": "s171shwvqkrmtfbz3p3wsvv05183keqy"
+  },
+  "slug": "fix-exec-allowlist-miss",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fix-exec-allowlist-miss",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fix-exec-allowlist-miss&ownerHandle=rabbykst",
+    "page_url": "https://clawhub.ai/rabbykst/skills/fix-exec-allowlist-miss"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 510,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Hybrid reload mode auto-restarts for gateway/plugins changes. Config patching requires baseHash from config.get first. Minimax cron auth uses system-level to...",
+  "updated_at": 1780029681778,
+  "version": "1.0.0"
+}
