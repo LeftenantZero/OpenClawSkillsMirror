@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of web-to-wechat: streamline web article publishing to WeChat Official Accounts.\n\n- Scrapes any webpage content, intelligently reformats with AI, and generates cover/inline images automatically.\n- Supports a wide range of sites, including WeChat articles, news, tech blogs, Zhihu, and CSDN.\n- Publishes directly to the WeChat draft box with cleanly formatted HTML and compressed cover images.\n- Requires setup of related skills (anything-to-wechat, file-to-wechat), Python dependencies, and WeChat account credentials.\n- Handles both simple and JS-heavy web pages with fallback scraping methods and clear user guidance.",
+  "created_at": 1782893824848,
+  "display_name": "Web to WeChat",
+  "fetched_at": 1787778549486,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/compress_image.py",
+    "scripts/scrape_web.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782899017304,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "lutongsuo",
+    "handle": "lutongsuo",
+    "user_id": "s17bmrs73egtma72qx832g8p8d89k3bn"
+  },
+  "slug": "web-to-wechat",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/web-to-wechat",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=web-to-wechat&ownerHandle=lutongsuo",
+    "page_url": "https://clawhub.ai/lutongsuo/skills/web-to-wechat"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 213,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6293\u53d6\u4efb\u610f\u7f51\u9875\u5185\u5bb9\uff0cAI \u667a\u80fd\u6574\u7406\u683c\u5f0f\uff0c\u81ea\u52a8\u751f\u6210\u5c01\u9762\u56fe\u548c\u914d\u56fe\uff0c\u53d1\u5e03\u5230\u5fae\u4fe1\u516c\u4f17\u53f7\u8349\u7a3f\u7bb1\u3002\u652f\u6301\u5fae\u4fe1\u516c\u4f17\u53f7\u6587\u7ae0\u3001\u65b0\u95fb\u7f51\u7ad9\u3001\u6280\u672f\u535a\u5ba2\u3001\u77e5\u4e4e\u3001CSDN \u7b49\u3002Use when the user wants to scrape a web page and publish it to WeChat.",
+  "updated_at": 1782893824848,
+  "version": "1.0.0"
+}
