@@ -1,0 +1,55 @@
+{
+  "changelog": "v2.0.0: Multi-Account Enhancement by Matthew Gordon (matt@workandthrive.ai)\n\nMAJOR NEW FEATURES:\n\u2022 Multi-account support - Manage multiple Microsoft 365 identities (work, personal, consulting)\n\u2022 Per-account token isolation - Separate, secure token storage for each account\n\u2022 Account switching - Easy --account=name flag across all operations\n\u2022 Default account selection - Set preferred account for convenience\n\u2022 Account management CLI - Simple add/remove/list/default commands\n\u2022 Legacy import tool - Seamless migration from v1.0.0 single-account setups\n\nENHANCEMENTS:\n\u2022 Enhanced auth.js with multi-account authentication support\n\u2022 Updated email.js, calendar.js, send-email.js, cancel-event.js for multi-account\n\u2022 New accounts.js CLI for account management\n\u2022 Comprehensive MULTI-ACCOUNT.md usage guide\n\u2022 CHANGELOG.md and CREDITS.md for full attribution\n\nBACKWARD COMPATIBILITY:\n\u2022 \u2705 Full backward compatibility maintained\n\u2022 \u2705 Environment variable fallback preserved\n\u2022 \u2705 No breaking changes for existing single-account users\n\u2022 \u2705 All original functionality intact\n\nSECURITY:\n\u2022 Per-account token files with mode 0600\n\u2022 Account config stored with mode 0600\n\u2022 Directory permissions set to 0700\n\nCREDIT:\nMassive thank you to Matthew Gordon for this excellent contribution! This enhancement makes the skill significantly more useful for consultants, freelancers, and anyone managing multiple work identities.\n\nOriginal skill: office365-connector v1.0.0\nEnhanced by: Matthew Gordon (matt@workandthrive.ai)",
+  "created_at": 1770513326341,
+  "display_name": "Office 365 Connector",
+  "fetched_at": 1787772720016,
+  "files": [
+    "CHANGELOG.md",
+    "CREDITS.md",
+    "MULTI-ACCOUNT.md",
+    "SKILL.md",
+    "_meta.json",
+    "accounts.js",
+    "auth.js",
+    "calendar.js",
+    "cancel-event.js",
+    "email.js",
+    "filter-emails.js",
+    "references/permissions.md",
+    "references/setup-guide.md",
+    "send-email.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783656984203,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Tiran Dagan",
+    "handle": "tirandagan",
+    "user_id": "s1790acmcnk4qdxxf093dqbcd583vv25"
+  },
+  "slug": "office365-connector",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/office365-connector",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=office365-connector&ownerHandle=tirandagan",
+    "page_url": "https://clawhub.ai/tirandagan/skills/office365-connector"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4562,
+    "installs": 137,
+    "stars": 5,
+    "versions": 2
+  },
+  "summary": "Office 365 / Outlook connector for email (read/send), calendar (read/write), and contacts (read/write) using resilient OAuth authentication. NOW WITH MULTI-ACCOUNT SUPPORT! Manage multiple Microsoft 365 identities from a single skill. Solves the difficulty connecting to Office 365 email, calendar, and contacts. Uses Microsoft Graph API with comprehensive Azure App Registration setup guide. Perfect for accessing your Microsoft 365/Outlook data from OpenClaw.",
+  "updated_at": 1779076823684,
+  "version": "2.0.0"
+}
