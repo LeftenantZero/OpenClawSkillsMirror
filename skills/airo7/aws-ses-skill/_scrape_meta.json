@@ -1,0 +1,47 @@
+{
+  "changelog": "Portable Agent Skill packaging. Same playbook and scripts now documented for any harness that loads SKILL.md.\n\nAdded\n- AGENTS.md: project-context notes for Codex / Cursor / OpenCode / generic agents\n- skills.sh.json: Email & Messaging grouping sidecar\n- Install paths for Claude Code, Codex, Cursor, OpenCode, OpenClaw, and standalone python3\n- ClawHub install command: hermes skills install airo7/aws-ses-skill\ncompatibility + OpenClaw requires metadata on SKILL.md",
+  "created_at": 1787056329915,
+  "display_name": "AWS SES",
+  "fetched_at": 1787770558402,
+  "files": [
+    ".gitignore",
+    ".skillignore",
+    "AGENTS.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/bounce_stats.py",
+    "scripts/check_ses_status.py",
+    "scripts/gen_smtp_password.py",
+    "scripts/send_test_email.py",
+    "scripts/setup_domain.py",
+    "scripts/verify_dns.py",
+    "skill-card.md",
+    "skills.sh.json",
+    "templates/support-case-reply.md",
+    "tests/test_aws_ses.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Abebe",
+    "handle": "airo7",
+    "user_id": "s170k6j9hpdt9vjh2nh2esq9sn8cqrh4"
+  },
+  "slug": "aws-ses-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aws-ses-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aws-ses-skill&ownerHandle=airo7",
+    "page_url": "https://clawhub.ai/airo7/skills/aws-ses-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 215,
+    "installs": 0,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Amazon SES: sandbox -> production, domain/DKIM/SPF, SMTP creds, Sendy.",
+  "updated_at": 1787150626235,
+  "version": "0.1.1"
+}
