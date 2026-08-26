@@ -1,0 +1,53 @@
+{
+  "changelog": "Sensitive Data Purge\nDeleted: results/*.json (11 files), results/*.svg (9 files)\nDeleted: hybrid-search/FULL_INDEX_REPORT.md, hybrid-search/test_results.json, hybrid-search/agent_memory.db\nDeleted: hybrid-search-proto/ (entire prototype folder)\nDeleted: __pycache__/ (all .pyc files)\nAll PII removed: personal names, company names, secret paths, domain names, project names\n.gitignore Hardened\nAdded: *.svg, eval_output/, *.log, *.pyc, hybrid-search-proto/, .secrets/\nSubprocess.run Hardening\nPII query replaced with anonymized fixture (project alpha configuration)\nAll script paths validated with Path.resolve().is_relative_to(WORKSPACE) \u2014 prevents path traversal\nNo environment variable injection in subprocess calls \u2014 fixed argument lists only\nScope Confinement (anti skill enumeration)\nhybrid_search.py: no longer globs skills/*/SKILL.md \u2014 only indexes its own SKILL.md\nPersonal files excluded from search index: USER.md, IDENTITY.md, AGENTS.md, SOUL.md, HEARTBEAT.md\nscoring.py, auto_archive.py, consolidate_advisor.py: MEMORY_DIR.is_relative_to(WORKSPACE) validation with ALLOWED_SCAN_DIR\nmemory-health.py READ-ONLY by Default\nNo files written to disk without --output-dir <path> flag\nSVG trend charts, JSON reports, benchmark reports: all gated by the flag\ncheck_drift() no longer auto-creates RESULTS_DIR\nDocstring updated: documents read-only default, --output-dir, --fix as destructive mode\nAnonymized Test Fixtures\nrun_tests.py TEST_QUERIES: AstroCapture \u2192 project_alpha, leadership coaching Airbus \u2192 team leadership coaching session, 2026-08-17 \u2192 sample_note_01, etc.\nBranch Aligned: master \u2192 main\nDefault branch aligned to main on GitHub\nOld master branch deleted from remote\nFiles Modified (10)\n.gitignore, README.md, SKILL.md, auto_archive.py, consolidate_advisor.py, hybrid-search/hybrid_search.py, hybrid-search/run_tests.py, memory-health.py, scoring.py, deleted hybrid-search/FULL_INDEX_REPORT.md\nZero residual PII \u2014 verified with grep across the entire repo.\nFull changelog: https://github.com/MisterMiJarvis/openclaw-memory-toolkit/blob/main/CHANGELOG.md",
+  "created_at": 1787018421981,
+  "display_name": "Openclaw Memory Toolkit",
+  "fetched_at": 1787769923776,
+  "files": [
+    ".gitignore",
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "auto_archive.py",
+    "consolidate_advisor.py",
+    "hybrid-search/hybrid_search.py",
+    "hybrid-search/run_tests.py",
+    "hybrid-search/schema.sql",
+    "memory-health.py",
+    "scoring.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787421772485,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "MisterMiJarvis",
+    "handle": "mistermijarvis",
+    "user_id": "s17bzyvy2hqcrtqhsbxdpbrrf18cpw5t"
+  },
+  "slug": "memory-toolkit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memory-toolkit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memory-toolkit&ownerHandle=mistermijarvis",
+    "page_url": "https://clawhub.ai/mistermijarvis/skills/memory-toolkit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 327,
+    "installs": 0,
+    "stars": 1,
+    "versions": 8
+  },
+  "summary": "Hybrid memory pipeline for OpenClaw agents \u2014 extraction, archiving, temporal decay scoring, consolidation, and hybrid search (FTS5 + sqlite-vec + RRF). Six standalone Python scripts, local-first, zero external API dependencies. The only memory skill on ClawHub with R",
+  "updated_at": 1787421049999,
+  "version": "2.1.1"
+}
