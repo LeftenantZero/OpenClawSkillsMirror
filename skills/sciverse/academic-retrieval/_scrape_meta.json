@@ -1,0 +1,42 @@
+{
+  "changelog": "- Updated documentation to clarify that sort_by_year now defaults to auto (relevance with query, newest-first for pure filters).\n- Added guidance discouraging the use of sort order \"desc\" together with query, explaining it disables boosts and degrades to filter-match sorting.\n- Removed redundant/deprecated documentation file (skill-card.md).\n- Minor wording and formatting improvements for clarity in usage recipes and boost explanations.",
+  "created_at": 1778583187831,
+  "display_name": "sciverse academic retrieval",
+  "fetched_at": 1787771651980,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "scripts/_common.mjs",
+    "scripts/get_resource.mjs",
+    "scripts/list_catalog.mjs",
+    "scripts/list_paper_relations.mjs",
+    "scripts/read_content.mjs",
+    "scripts/search_papers.mjs",
+    "scripts/semantic_search.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Sciverse",
+    "handle": "sciverse",
+    "user_id": "s17cs0hvsmy3xp1z9jffmdc8rn86j73f"
+  },
+  "slug": "academic-retrieval",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/academic-retrieval",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=academic-retrieval&ownerHandle=sciverse",
+    "page_url": "https://clawhub.ai/sciverse/skills/academic-retrieval"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2164,
+    "installs": 41,
+    "stars": 4,
+    "versions": 25
+  },
+  "summary": "Retrieve academic papers by structured metadata, perform semantic chunk search for RAG, and read byte-range content for citation-grade scientific literature.",
+  "updated_at": 1786938351088,
+  "version": "0.14.0"
+}

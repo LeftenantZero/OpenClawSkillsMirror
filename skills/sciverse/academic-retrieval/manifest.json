@@ -1,0 +1,399 @@
+{
+  "name": "sciverse-academic-retrieval",
+  "version": "0.14.0",
+  "slug": "academic-retrieval",
+  "description": "Sciverse academic paper retrieval: structured metadata search, semantic chunk retrieval for RAG, and byte-range content reading. For agent workflows that need citation-grade scientific literature.",
+  "runtime": "node>=18",
+  "license": "Apache-2.0",
+  "homepage": "https://sciverse.space",
+  "env": [
+    {
+      "name": "SCIVERSE_API_TOKEN",
+      "required": true,
+      "description": "Sciverse API Token (obtain from https://sciverse.space)."
+    },
+    {
+      "name": "SCIVERSE_BASE_URL",
+      "required": false,
+      "default": "https://api.sciverse.space",
+      "description": "Override the default API base URL (for dev / self-hosted gateways)."
+    }
+  ],
+  "tools": [
+    {
+      "name": "search_papers",
+      "description": "Search academic papers by structured filters (title, authors, journal,\nyear, subjects, etc.).\nUse when: \"find Hinton's papers from 2020-2023\", \"Nature papers on\nCRISPR\".\nNot for: natural-language Q&A retrieval (use semantic_search) or\nfull-text snippets (use read_content).\nReturns: list of papers; each entry has unique_id (always present),\ndoc_id (only when full text exists), title, author, abstract,\npublication_venue_name_unified, publication_published_year.",
+      "script": "scripts/search_papers.mjs",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "collection": {
+            "type": "string",
+            "enum": [
+              "papers",
+              "authors",
+              "sources"
+            ],
+            "default": "papers",
+            "description": "检索的实体集合。papers（默认，论文）/ authors（作者）/ sources（来源期刊）。 各 collection 字段集不同，用 list_catalog（collection=<name>）学习对应 schema。 注意：本工具的便捷字段（authors/journals/year_from/subjects 等）只对 papers 有意义； 查 authors/sources 时改用 filters_advanced + 该 collection 的字段名（如 authors 的 summary_stats.h_index / orcid，sources 的 issn / is_oa）。authors 用 orcid、 sources 用 issn 与论文检索结果关联。",
+            "x-en-description": "Entity collection to search. papers (default) / authors / sources. Each collection has its own field schema — call list_catalog(collection=<name>). The convenience fields (authors/journals/year_from/subjects) apply to papers only; for authors/sources use filters_advanced with that collection's field names."
+          },
+          "query": {
+            "type": "string",
+            "description": "BM25 全文关键词，匹配标题/摘要/期刊名/关键词字段。留空则纯靠结构化过滤。"
+          },
+          "title_contains": {
+            "type": "string",
+            "description": "标题中必须包含的词（仅匹配 title 字段）。"
+          },
+          "abstract_contains": {
+            "type": "string",
+            "description": "摘要中必须包含的词（仅匹配 abstract 字段）。"
+          },
+          "authors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "作者名（任一命中即可）。SDK 内部映射到后端 `author` 字段（FILTER_OP_IN）。"
+          },
+          "year_from": {
+            "type": "integer",
+            "description": "起始发表年（含）。"
+          },
+          "year_to": {
+            "type": "integer",
+            "description": "结束发表年（含）。"
+          },
+          "journals": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "期刊名（任一命中即可）。SDK 内部映射到后端 `publication_venue_name_unified` 字段（FILTER_OP_IN，规范化后的载体名）。"
+          },
+          "subjects": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "学科分类，如 \"computer science\"、\"biology\"。"
+          },
+          "filters_advanced": {
+            "type": "array",
+            "description": "高级过滤逃生舱（仅当上述字段不够用时使用）。可用字段见 get_field_catalog。\n\n引文反查（常用）：field=\"references_unique_id\" 查「谁引用了某篇论文」，\nvalue 填目标论文的 unique_id。相比 list_paper_relations 的 CITATIONS，\n它支持深翻页与任意排序，适合超高被引论文。可叠加条件，\n例如「引用了 ResNet 且 2023 年后发表」：\n  [{\"field\":\"references_unique_id\",\"value\":\"paper:10.1109/cvpr.2016.90\"},\n   {\"field\":\"publication_published_year\",\"operator\":\"FILTER_OP_GTE\",\"value\":2023}]\n该字段仅支持过滤，不能排序/聚合，也不能放进 fields 返回。\n",
+            "items": {
+              "type": "object",
+              "required": [
+                "field",
+                "value"
+              ],
+              "properties": {
+                "field": {
+                  "type": "string"
+                },
+                "operator": {
+                  "type": "string",
+                  "description": "过滤操作符。MATCH（分词模糊）适用于 author、keywords（输入 \"Hinton\" 命中 \"Geoffrey Hinton\"）； MATCH_PHRASE（短语模糊）适用于 publication_venue_name_unified，整词连续匹配（\"Nature\" 命中 \"Nature Communications\"；非前缀匹配，\"Nature Comm\" 不会命中）； doi 用 EQ，服务端归一化（去 doi.org 前缀+转小写）后精确匹配。MATCH/MATCH_PHRASE 仅对配了 text 子字段的字段有效。",
+                  "enum": [
+                    "FILTER_OP_EQ",
+                    "FILTER_OP_NE",
+                    "FILTER_OP_GT",
+                    "FILTER_OP_GTE",
+                    "FILTER_OP_LT",
+                    "FILTER_OP_LTE",
+                    "FILTER_OP_IN",
+                    "FILTER_OP_NIN",
+                    "FILTER_OP_CONTAINS",
+                    "FILTER_OP_MATCH",
+                    "FILTER_OP_MATCH_PHRASE"
+                  ],
+                  "default": "FILTER_OP_EQ"
+                },
+                "value": {}
+              }
+            }
+          },
+          "sort_advanced": {
+            "type": "array",
+            "description": "高级排序逃生舱（按任意可排序字段）。papers 用 sort_by_year 即可； authors/sources 想按 h-index / 被引 / works_count 排序时用本字段。 与 query 互斥（query 走相关性排序）。",
+            "items": {
+              "type": "object",
+              "required": [
+                "field",
+                "order"
+              ],
+              "properties": {
+                "field": {
+                  "type": "string"
+                },
+                "order": {
+                  "type": "string",
+                  "enum": [
+                    "SORT_ORDER_DESC",
+                    "SORT_ORDER_ASC"
+                  ],
+                  "default": "SORT_ORDER_DESC"
+                }
+              }
+            }
+          },
+          "sort_by_year": {
+            "type": "string",
+            "enum": [
+              "auto",
+              "desc",
+              "asc",
+              "none"
+            ],
+            "default": "auto",
+            "description": "按发表年份排序。默认 auto：传了 query（或 sort_advanced）时不加年份排序\n——保留 BM25 相关性排序，且 freshness/impact/language_affinity 软加权可用；\n纯结构化筛选（无 query）时按年份降序（否则后端默认序是 unique_id，实质乱序）。\n⚠️ 不要用 query + desc 求「最相关且最新」：显式排序会让 query 退化为命中\n过滤（OR 语义、无相关性排序）、三个软加权全部失效——返回的是「含任一关键词\n的最新文档」。要「相关且偏新」请用 freshness_boost。\n"
+          },
+          "freshness_boost": {
+            "type": "string",
+            "enum": [
+              "NONE",
+              "MILD",
+              "STRONG"
+            ],
+            "default": "NONE",
+            "description": "模糊搜索新鲜度加权：结果偏向新文献（仅 query 非空时生效；传排序\n（sort_by_year 非 none / sort_advanced）时被忽略，硬排优先）。\nMILD: 近 10 年加权，适合日常查文献；STRONG: 近 3 年加权，适合跟踪\n研究方向 / 追最新进展。与 impact_boost / language_affinity 可叠加\n（均为乘法因子）。boost 生效时为浅翻页：不产 next_cursor、不支持\ncursor 深翻页。\n"
+          },
+          "impact_boost": {
+            "type": "string",
+            "enum": [
+              "NONE",
+              "MILD",
+              "STRONG"
+            ],
+            "default": "NONE",
+            "description": "模糊搜索影响力加权：高被引文献在保留相关性的前提下上浮（仅 query\n非空时生效；传排序时被忽略）。MILD: 轻度上浮，相关性仍主导；\nSTRONG: 明显偏向高被引。引用因子有界、零被引中性（不会归零）。\n与 freshness_boost / language_affinity 可叠加；boost 生效时为浅翻页。\n"
+          },
+          "language_affinity": {
+            "type": "string",
+            "enum": [
+              "NONE",
+              "MILD",
+              "STRONG"
+            ],
+            "default": "NONE",
+            "description": "模糊搜索语言亲和加权：非 query 语言的结果降序、但不排除（仅 query\n非空时生效；传排序时被忽略）。目标语言由服务端从 query 文本判定\n（假名→ja / 谚文→ko / 汉字→zh / 拉丁→en，其他书写系统不生效）；\n语言未知的文献保持中性不降权。MILD: 非目标语言 ×0.5，跨语言强相关\n结果仍可上浮；STRONG: ×0.2，几乎只看目标语言。与 freshness_boost /\nimpact_boost 可叠加；boost 生效时为浅翻页。要硬排除某语言请改用\nfilters_advanced 的 language 字段（如 {\"field\":\"language\",\"value\":\"en\"}，\n软硬两层语义不同：本参数只调序，filter 直接排除）。\n"
+          },
+          "page": {
+            "type": "integer",
+            "default": 1,
+            "minimum": 1
+          },
+          "page_size": {
+            "type": "integer",
+            "default": 10,
+            "minimum": 1,
+            "maximum": 50
+          }
+        }
+      }
+    },
+    {
+      "name": "semantic_search",
+      "description": "Natural-language semantic search returning relevant paper chunks for\nRAG-style answering.\nUse when: \"How does Transformer attention work?\", \"What are recent\nmethods for protein structure prediction?\".\nNot for: precise field filtering (use search_papers) or fetching full\noriginal text (use read_content).\nReturns: list of chunks; each entry has chunk_id, doc_id, abstract,\nchunk, score, title, offset.\nTypical chain: semantic_search → pick chunk → read_content(doc_id,\noffset).",
+      "script": "scripts/semantic_search.mjs",
+      "input_schema": {
+        "type": "object",
+        "required": [
+          "query"
+        ],
+        "properties": {
+          "query": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096,
+            "description": "自然语言查询，1-200 字最佳。"
+          },
+          "top_k": {
+            "type": "integer",
+            "default": 10,
+            "minimum": 1,
+            "maximum": 100,
+            "description": "返回命中条数上限，合法 1-100（服务端校验，超出报 400）。\n实际条数还受 mode 影响：balanced 单路混合召回在服务端固定截到约 50 条，\ntop_k 超过 50 时多出的部分不会返回；fast 与 quality 可取到 top_k。\n另外同一篇论文最多返回约 3 个 chunk，因此高 top_k 需要命中足够多的不同论文。\n"
+          },
+          "source_types": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "web",
+                "pdf"
+              ]
+            }
+          },
+          "filters": {
+            "type": "object",
+            "description": "结构化过滤（可选）。在召回阶段与语义检索同时生效（ES+Milvus 双引擎下推，\n不是结果后过滤）；多个字段之间 AND，同一字段传数组时数组内 OR。\n⚠️ 宽松（软）语义：chunk 侧元数据缺失的文档不会被排除——例如按年份过滤时，\n缺年份信息的 chunk 仍可能返回。需要严格范围保证时勿当硬约束使用，\n表述结论时注明范围为\"近似过滤\"。\n数值/日期字段支持区间：{\"gte\":2020,\"lte\":2025} 或 [min,max]（null 表示一侧不限）；\n日期接受 YYYY / YYYY-MM / YYYY-MM-DD。\n实际可用字段受账号字段权限约束；未知字段服务端返回 400。\n例：{\"author\":[\"Hinton\"],\"publication_published_year\":{\"gte\":2023},\n    \"topics\":{\"dimensions\":{\"primary_topic_domain\":\"Health Sciences\"}}}\n",
+            "properties": {
+              "lang": {
+                "description": "语言代码，如 \"en\"、\"zh\"；也接受别名 language。"
+              },
+              "metadata_type": {
+                "description": "资源类型，仅单值：\"paper\" 或 \"ebook\"。"
+              },
+              "author": {
+                "description": "作者名，string 或 string[]（数组=任一命中）。"
+              },
+              "publication_venue_name_unified": {
+                "description": "发表载体名称（期刊/会议，规范化名，适合精确匹配）。"
+              },
+              "publication_venue_type": {
+                "description": "载体类型：\"journal\"、\"conference\"、\"repository\"、\"book series\"、\"ebook platform\"、\"metadata\"、\"raidRegistry\"、\"igsnCatalog\"、\"other\"（不区分大小写）。"
+              },
+              "publication_published_year": {
+                "description": "发表年份，单值或区间（{\"gte\":..,\"lte\":..} / [min,max]）。"
+              },
+              "publication_published_date": {
+                "description": "发表日期，\"YYYY[-MM[-DD]]\" 单值或区间。"
+              },
+              "citation_count": {
+                "description": "被引次数，单值或区间。"
+              },
+              "influential_citation_count": {
+                "description": "高影响力被引次数，单值或区间。"
+              },
+              "title": {
+                "description": "标题精确匹配（标题检索一般更适合 search_papers）。"
+              },
+              "topics": {
+                "description": "主题组合过滤：{\"logic\":\"and|or\",\"dimensions\":{\"primary_topic\":\"...\",\"primary_topic_domain\":\"Physical Sciences|Social Sciences|Health Sciences|Life Sciences\"}}；logic 省略默认 or。"
+              },
+              "doc_id": {
+                "description": "唯一的硬约束字段（其余字段均为软语义）：命中绝不越出给定集合。\n值为 64 位小写 hex sha256（即 search_papers 返回的 doc_id；仅有全文的论文才有），\nstring 或 string[]，仅 eq/in。去重后上限默认 1000，超限返回 400 SCOPE_TOO_LARGE；\n显式传空数组返回 200 空 hits（候选集为空，不退化为全局检索）。\n典型用法：先 search_papers 圈定候选集合，再在集合内做受限语义检索。\n"
+              }
+            }
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "fast",
+              "balanced",
+              "quality"
+            ],
+            "default": "balanced",
+            "description": "fast = 仅关键词召回 (~200ms)；balanced = 混合检索 (~600ms)；quality = LLM 改写 + 混合 (~2-4s)。\n"
+          }
+        }
+      }
+    },
+    {
+      "name": "list_catalog",
+      "description": "Returns the schema catalog for search_papers: every field name, type,\nwhether it's filterable / sortable, default-return status, human\ndescription, and applicable FilterOperators.\nUse when: \"Which field do I filter by DOI?\", \"What values can\naccess_oa_status take?\", \"What's the right enum for metadata_type?\".\nNot for: actually searching papers (use search_papers / semantic_search).\nTypical pattern: call once when first encountering Sciverse or facing\nan ambiguous field need, then construct precise search_papers filters\nfrom the returned schema.\nPass include_sample_values=true to also fetch top-20 values for\nenum-like fields (OpenSearch terms aggregation, 24h cached).",
+      "script": "scripts/list_catalog.mjs",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "collection": {
+            "type": "string",
+            "enum": [
+              "papers",
+              "authors",
+              "sources"
+            ],
+            "default": "papers",
+            "description": "字段 catalog 所属实体集合。papers（默认）/ authors / sources，各 collection 字段不同。"
+          },
+          "include_sample_values": {
+            "type": "boolean",
+            "default": false,
+            "description": "是否拉取 enum-like 字段的取值样本。false 仅返回静态 schema（毫秒级）；true 触发 OpenSearch terms agg（首次几百毫秒，之后 24h 走缓存）。"
+          },
+          "include_field_stats": {
+            "type": "boolean",
+            "default": false,
+            "description": "是否返回字段统计（keyword 字段基数 + 数值字段 min/max/avg/p50/p95）。触发 OpenSearch 聚合，缓存 24h。"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "list_paper_relations",
+      "description": "Paginate the full relation list of a paper. citations/references/related_works\nare unbounded arrays (up to 340k entries for a single paper) and are NOT\nprojectable in search_papers, so this endpoint is the only way to read them.\nUse when: \"What does paper X cite?\" (relation=REFERENCES), \"Which papers cite\npaper X?\" (relation=CITATIONS), \"Works related to paper X\" (relation=RELATED_WORKS).\nNote: CITATIONS (incoming: who cites me) and REFERENCES (outgoing: who I cite)\nare opposite directions.\nTypical chain: get unique_id from search_papers / semantic_search, then paginate\nhere by relation.\nTwo limits (CITATIONS only; REFERENCES/RELATED_WORKS max out at 11833/20 in practice):\nmore than 10000 relations returns 429; page*page_size above 10000 returns 400.\nIn both cases switch to search_papers with filters_advanced on\nreferences_unique_id — it supports deep paging and arbitrary sorting.\ntotal_count counts in-corpus matches only, so it can differ from the paper's own\ncitation_count by about 1%.",
+      "script": "scripts/list_paper_relations.mjs",
+      "input_schema": {
+        "type": "object",
+        "required": [
+          "unique_id",
+          "relation"
+        ],
+        "properties": {
+          "unique_id": {
+            "type": "string",
+            "description": "目标论文 unique_id（如 paper:10.1038/xxx），来自 search_papers / semantic_search；勿传 doc_id。"
+          },
+          "relation": {
+            "type": "string",
+            "enum": [
+              "CITATIONS",
+              "REFERENCES",
+              "RELATED_WORKS"
+            ],
+            "description": "关系类型。CITATIONS=被引（谁引用了我）；REFERENCES=参考文献（我引用了谁）；RELATED_WORKS=相关工作。"
+          },
+          "page": {
+            "type": "integer",
+            "default": 1,
+            "minimum": 1
+          },
+          "page_size": {
+            "type": "integer",
+            "default": 25,
+            "minimum": 1,
+            "maximum": 200
+          }
+        }
+      }
+    },
+    {
+      "name": "read_content",
+      "description": "Read a UTF-8 byte range of a paper's original text. Typically used with\na doc_id/offset returned by semantic_search to expand context (read\nmore bytes before or after a chunk).\nReturns: text fragment, bytes_returned, next_offset, more (boolean).",
+      "script": "scripts/read_content.mjs",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "doc_id": {
+            "type": "string",
+            "description": "文献 ID（来自 search_papers / semantic_search）。"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int64",
+            "default": 0
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int64",
+            "default": 4096,
+            "maximum": 16384
+          }
+        },
+        "required": [
+          "doc_id"
+        ]
+      }
+    },
+    {
+      "name": "get_resource",
+      "description": "Returns the binary bytes of a paper figure / table image referenced\ninside read_content's Markdown via `![alt](file_name)` placeholders.\nUse when the user asks to see / display / describe a figure and\nread_content output contains an image reference.\nInput file_name comes from the Markdown URL part (relative path,\nno `\\\\` or `..`).\nReturns: raw image stream + image/* Content-Type. The SDK / MCP\nserver wraps the bytes as base64 + mimeType so Claude (multimodal)\ncan read the image directly.",
+      "script": "scripts/get_resource.mjs",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "file_name": {
+            "type": "string",
+            "description": "图片相对路径，来自 read_content Markdown 中的 `![alt](file_name)` 占位。禁止 `\\\\` 与 `..`，不能以 `/` 开头。"
+          }
+        },
+        "required": [
+          "file_name"
+        ]
+      }
+    }
+  ]
+}
