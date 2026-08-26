@@ -1,0 +1,42 @@
+{
+  "changelog": "Use portable watcher installation and persist bundled pricing versions with effective timestamps and official provider source URLs.",
+  "created_at": 1772865585068,
+  "display_name": "token-ledger",
+  "fetched_at": 1787773594328,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/import_claude_usage_csv.py",
+    "scripts/ledger_query.py",
+    "scripts/ledger_query_by_source.py",
+    "scripts/ledger_report_daily.py",
+    "scripts/ledger_schema.sql",
+    "scripts/ledger_watcher.py",
+    "scripts/reconcile_claude_csv.sql",
+    "scripts/render_plist.py",
+    "scripts/test_price_versions.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jonathan Jing",
+    "handle": "jonathanjing",
+    "user_id": "s17aah0h06a3741dypyhe3a2xd85pgsx"
+  },
+  "slug": "token-ledger",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/token-ledger",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=token-ledger&ownerHandle=jonathanjing",
+    "page_url": "https://clawhub.ai/jonathanjing/skills/token-ledger"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1103,
+    "installs": 28,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Audit-grade token and cost ledger for OpenClaw. Use when you need to (1) record every model call's usage (input/output/cache read/cache write/cost) into SQLite, (2) install/manage the ledger watcher LaunchAgent, (3) query ledger.db for daily usage/cost, fixed overhead, or historical billing reconciliation, or (4) generate low-token financial reports from SQL.",
+  "updated_at": 1785776300722,
+  "version": "0.1.2"
+}
