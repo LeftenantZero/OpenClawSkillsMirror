@@ -1,0 +1,43 @@
+{
+  "changelog": "- Initial release of yq-weixin-connect skill for connecting personal WeChat accounts (not WeCom).\n- Implements a strict, step-by-step workflow for user-initiated WeChat personal QR binding; not triggered by \"\u4f01\u4e1a\u5fae\u4fe1\"/\"\u4f01\u5fae\"/\"WeCom\".\n- Ensures installation of the legacy plugin version, QR code generation via the qrcode npm library, and secure upload/display methods.\n- Enforces QR image upload via upload_to_cdn with workspace fallback, QR code validity handling, and strict credential writing.\n- Prevents improper methods (e.g., direct download of QR URL, alternate image hosts, or skipping steps) to maximize connection success and user experience.",
+  "created_at": 1780794343818,
+  "display_name": "Yq Weixin Connect",
+  "fetched_at": 1787782396170,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780795845287,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "tianheihei002",
+    "handle": "tianheihei002",
+    "user_id": "s17c88m5zqx7a0c9r1deb71hq584d4qa"
+  },
+  "slug": "yq-weixin-connect",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/yq-weixin-connect",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=yq-weixin-connect&ownerHandle=tianheihei002",
+    "page_url": "https://clawhub.ai/tianheihei002/skills/yq-weixin-connect"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 410,
+    "installs": 5,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u8fde\u63a5\u4e2a\u4eba\u5fae\u4fe1\uff08\u4e0d\u662f\u4f01\u4e1a\u5fae\u4fe1\uff09\u3002\u7528\u6237\u8bf4\"\u8fde\u63a5\u4e2a\u4eba\u5fae\u4fe1\"\u3001\"\u63a5\u5165\u4e2a\u4eba\u5fae\u4fe1\"\u3001\"\u7ed1\u5b9a\u4e2a\u4eba\u5fae\u4fe1\"\u3001\"\u4e2a\u4eba\u5fae\u4fe1\u626b\u7801\"\u65f6\u4f7f\u7528\u672c skill\u3002\u6ce8\u610f\uff1a\u5982\u679c\u7528\u6237\u8bf4\u7684\u662f\"\u4f01\u4e1a\u5fae\u4fe1\"\u6216\"\u4f01\u5fae\"\uff0c\u672c skill \u4e0d\u9002\u7528\uff0c\u8bf7\u4f7f\u7528 wecom-connect skill\u3002\u4e00\u65e6\u5339\u914d\u672c skill\uff0c\u5fc5\u987b\u4e25\u683c\u6309\u6d41\u7a0b\u6267\u884c\u5230\u5e95\uff0c\u4e0d\u5f97\u8df3\u6b65\u6216\u81ea\u7531\u53d1\u6325\u3002",
+  "updated_at": 1780794343818,
+  "version": "1.0.0"
+}
