@@ -1,0 +1,35 @@
+{
+  "changelog": "- Major update: Robustness and new browser-based fallback for Douyin anti-crawling (2026-08).\n- Now uses multi-level video direct link extraction: iesdouyin API \u2192 CDP browser (Edge/Chrome headless) \u2192 yt-dlp, with automatic switching.\n- No API key, account login, or manual cookies needed for browser mode; launches isolated headless browser to handle anti-crawl and extract video/audio.\n- Improved \"\u91d1\u53e5\u5361\u7247\" (Golden Quotes) extraction algorithm: now up to 8 candidates, better for Chinese unscripted videos, with advanced sentence cutting and scoring for highlight selection.\n- Updated capability declarations for transparency: details on headless browser use, temporary file handling, and model management.\n- Documentation and usage help now clarify anti-crawling state, fallback process, environment checks, and safe handling; unused text & config files (README, LICENSE\u2026) removed.",
+  "created_at": 1786010414998,
+  "display_name": "douyin-video-parser",
+  "fetched_at": 1787770410235,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "_skillhub_meta.json",
+    "scripts/transcribe.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Black_Amico",
+    "handle": "zhouq2039-lang",
+    "user_id": "s173jzmh78tc2ynay38srspehs8734as"
+  },
+  "slug": "douyin-video-parser",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/douyin-video-parser",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=douyin-video-parser&ownerHandle=zhouq2039-lang",
+    "page_url": "https://clawhub.ai/zhouq2039-lang/skills/douyin-video-parser"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 417,
+    "installs": 0,
+    "stars": 1,
+    "versions": 5
+  },
+  "summary": "\u6296\u97f3\u89c6\u9891\u89e3\u6790-\u628a\u6296\u97f3\u89c6\u9891\u94fe\u63a5\u751f\u6210\u4ea4\u4e92\u5f0f HTML \u62a5\u544a\u3002\u514d\u8d39\uff0c\u4e0d\u4f9d\u8d56\u4efb\u4f55 API key\u3002\u4e00\u6761\u547d\u4ee4\u51fa\u9010\u5b57\u7a3f\uff08\u5e26\u65f6\u95f4\u6233\uff09+ \u8fde\u8d2f\u7a3f\uff08\u65e0\u65f6\u95f4\u6233\uff09+ \u53ef\u89c6\u5316 HTML \u62a5\u544a\uff08\u542b\u4e00\u53e5\u8bdd\u603b\u7ed3\u3001\u91d1\u53e5\u5361\u7247\u3001\u6838\u5fc3\u89c2\u70b9\u3001\u7ed3\u6784\u62c6\u89e3\u3001\u5185\u5bb9\u603b\u7ed3\u7b49\uff09",
+  "updated_at": 1787219747593,
+  "version": "1.0.4"
+}
