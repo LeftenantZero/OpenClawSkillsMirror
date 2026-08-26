@@ -1,0 +1,33 @@
+{
+  "changelog": "opencli-autofix 1.0.1\n\n- Switched from using diagnostic JSON (OPENCLI_DIAGNOSTIC) to analyzing new trace artifact (`summary.md`, `trace.jsonl`) generated with the `--trace retain-on-failure` flag.\n- Updated repair flow to start with a failure trace summary rather than requiring users to rerun with diagnostics.\n- Clarified that adapter source files should be referenced from `adapterSourcePath` in the trace summary front matter.\n- Removed mention of legacy diagnostic env variables and diagnostic extraction steps.\n- Deleted the outdated `skill-card.md` file.",
+  "created_at": 1785290480371,
+  "display_name": "opencli-autofix",
+  "fetched_at": 1787774453410,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Kevin Stone",
+    "handle": "chaoyang78",
+    "user_id": "s177bzvqf3s7ftyvws7t42cwd184taap"
+  },
+  "slug": "opencli-autofix",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/opencli-autofix",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=opencli-autofix&ownerHandle=chaoyang78",
+    "page_url": "https://clawhub.ai/chaoyang78/skills/opencli-autofix"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 58,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Automatically fix broken OpenCLI adapters when commands fail. Load this skill when an opencli command fails \u2014 it guides you through collecting a trace artifact, patching the adapter, retrying, and filing an upstream GitHub issue after a verified fix. Works with any AI agent.",
+  "updated_at": 1785291308789,
+  "version": "1.0.1"
+}
