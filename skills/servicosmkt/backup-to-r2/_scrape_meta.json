@@ -1,0 +1,38 @@
+{
+  "changelog": "Harden the non-destructive restore test: abort on any restic non-zero exit (native commands ignore PowerShell's ErrorActionPreference), validate that .env and .restic-pass exist before running, use 'restore latest --tag openclaw' so the test selects the exact snapshot the real restore would, and warn that the test folder contains decrypted secrets.",
+  "created_at": 1779659302472,
+  "display_name": "Openclaw Backup",
+  "fetched_at": 1787784700844,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "backup.ps1",
+    "portable/restore-portable.ps1",
+    "skill-card.md",
+    "skill.json",
+    "test-restore.ps1"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SIA - Servi\u00e7os IA & Automa\u00e7\u00f5es",
+    "handle": "servicosmkt",
+    "user_id": "s1738t7521ak0k2r4xk330h2cd87apm0"
+  },
+  "slug": "backup-to-r2",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/backup-to-r2",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=backup-to-r2&ownerHandle=servicosmkt",
+    "page_url": "https://clawhub.ai/servicosmkt/skills/backup-to-r2"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 611,
+    "installs": 13,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Set up and run complete, encrypted, off-site backups of an OpenClaw install to Cloudflare R2 via restic, plus portable restore. Use when the user wants to ba...",
+  "updated_at": 1779737749707,
+  "version": "1.1.1"
+}
