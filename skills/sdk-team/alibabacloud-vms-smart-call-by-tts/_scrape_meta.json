@@ -1,0 +1,53 @@
+{
+  "changelog": "Alibaba Cloud VMS Smart Voice Call (Initial Release)\n\n- Introduces AI-powered voice calling via Alibaba Cloud VMS, generating call content from natural language intent and matching the recipient from the address book.\n- Requires only a configured address book and a user-stated intent\u2014no enterprise verification, outbound number binding, or pre-approval of templates.\n- Details strict compliance, operational, and installation rules, including step-by-step CLI setup and fallback logic for network scenarios.\n- Enforces single-recipient calls per invocation, with rate and address book size limits.\n- Specifies environment-aware Aliyun CLI installation and path-selection order for plugin sourcing.\n- Outlines clear capability boundaries and regulatory constraints for lawful use.",
+  "created_at": 1779871071023,
+  "display_name": "Alibabacloud Vms Smart Call By Tts",
+  "fetched_at": 1787784463625,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/external-network-fallback.md",
+    "references/plugin-troubleshooting.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "scripts/dyvmsapi_rpc.py",
+    "scripts/install_aliyun_cli.sh",
+    "scripts/run_with_aliyun_creds.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967468850,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-vms-smart-call-by-tts",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-vms-smart-call-by-tts",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-vms-smart-call-by-tts&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-vms-smart-call-by-tts"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 527,
+    "installs": 10,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Alicloud VMS Smart Voice Call Skill. Use for making AI-powered voice calls with natural language intent. The system automatically matches contacts from the a...",
+  "updated_at": 1779871071023,
+  "version": "0.0.1"
+}
