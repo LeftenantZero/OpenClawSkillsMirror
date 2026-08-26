@@ -1,0 +1,43 @@
+{
+  "changelog": "- Modernizes detection of wallet password state: replaces probing with `nansen auth status` and `nansen doctor --offline`.\n- Removes guidance to use `nansen wallet export` for password probing, preventing accidental private key exposure.\n- Clarifies how to interpret the password source and migrate securely, especially with `.env` files.\n- Removes the unused skill-card.md file; simplifies documentation.\n- Updates and tightens agent rules and critical migration steps for improved security and clarity.",
+  "created_at": 1773937007820,
+  "display_name": "nansen-wallet-keychain-migration",
+  "fetched_at": 1787770683928,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787111018603,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Nansen AI",
+    "handle": "nansen-devops",
+    "user_id": "s174hnr0xtfypzan2x804p4me183nkqz"
+  },
+  "slug": "nansen-wallet-keychain-migration",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nansen-wallet-keychain-migration",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nansen-wallet-keychain-migration&ownerHandle=nansen-devops",
+    "page_url": "https://clawhub.ai/nansen-devops/skills/nansen-wallet-keychain-migration"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 940,
+    "installs": 24,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Migrate an existing nansen-cli wallet from insecure password storage (env files, .credentials) to the new secure keychain-backed flow.",
+  "updated_at": 1787110309673,
+  "version": "0.1.1"
+}
