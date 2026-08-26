@@ -1,0 +1,33 @@
+{
+  "changelog": "v4.5.2 \u2014 June 2026\n\nMulti-LLM routing: Elite modes now use Claude Sonnet 4.6 for superior analysis quality; standard modes use Claude Haiku for speed\nSources, confidence, and market_score promoted to root level of response for programmatic trust validation (M2M)\nM2M Trust Protocol added to mcp.json, agent-card, discovery resources, and llms-full.txt \u2014 includes agent decision pipeline and machine_trust_protocol\nTrial key endpoint: GET /api-keys/trial \u2014 5 free calls, no wallet required\nSecurity: removed test_valid payment bypass \u2014 all calls now require verified on-chain payment or valid key\nBatch endpoint now accepts X-SESSION and X-API-KEY in addition to x402\nPath-aware 422 handlers with exact schema examples per endpoint\nBudget guidance field added to market_entry_execution mode\nJSON truncation recovery \u2014 no more parse_error on large outputs\nData privacy warning added to skill description and documentation",
+  "created_at": 1780458281722,
+  "display_name": "Intelica \u2014 Competitive Intelligence",
+  "fetched_at": 1787780467210,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "teodorofodocrispin-cmyk",
+    "handle": "teodorofodocrispin-cmyk",
+    "user_id": "s174f8wsyybamj8bhwkwa7y5fh85h9zs"
+  },
+  "slug": "intelica-competitive-intelligence",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/intelica-competitive-intelligence",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=intelica-competitive-intelligence&ownerHandle=teodorofodocrispin-cmyk",
+    "page_url": "https://clawhub.ai/teodorofodocrispin-cmyk/skills/intelica-competitive-intelligence"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 636,
+    "installs": 10,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Competitive intelligence API for autonomous AI agents. Analyzes any URL or company description and returns structured JSON with market positioning, pain poin...",
+  "updated_at": 1781663348344,
+  "version": "4.5.2"
+}
