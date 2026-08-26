@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release: Enables inspection and monitoring of Alibaba Cloud API gateways.\n\n- Inspect Cloud-Native API Gateway, AI Gateway, or API Gateway instances for health and performance.\n- Query Cloud Monitor metrics such as CPU, memory, connections, network, and rate limiting.\n- Requires user confirmation of all key parameters (product type, region, instance ID, time range) before queries.\n- Enforces RAM read-only permissions and guides users through permission troubleshooting if needed.\n- Commands are executed via the aliyun CLI plugin, using a unique session ID in the user agent for observability.\n- Credentials and authentication handled securely through existing aliyun CLI configuration.",
+  "created_at": 1783921174147,
+  "display_name": "Alibabacloud Apigw Inspection",
+  "fetched_at": 1787776943753,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783921499956,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-apigw-inspection",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-apigw-inspection",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-apigw-inspection&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-apigw-inspection"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 303,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Perform instance inspection on Alibaba Cloud Cloud-Native API Gateway, AI Gateway, and API Gateway, and query Cloud Monitor metric data. Use when the user ne...",
+  "updated_at": 1783921174147,
+  "version": "0.0.1"
+}
