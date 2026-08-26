@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of codex-session-image-scrubber.\n\n- Locate and clean Codex session JSONL files by removing embedded image, screenshot, or base64 blobs.\n- Preserves all conversation text and structure while replacing images with small placeholders.\n- Backs up original session files before modification.\n- Provides both dry-run and write modes for safe operation.\n- Includes validation steps to confirm file integrity and successful image removal.\n- Adds user commands for specifying target session via thread id or search phrase.",
+  "created_at": 1780679652124,
+  "display_name": "Codex Session Image Scrubber",
+  "fetched_at": 1787782776243,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "scripts/scrub-codex-session-images.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Vyctor H. Brzezowski",
+    "handle": "vyctorbrzezowski",
+    "user_id": "s17c9msbnqsm3bvhp7r2b7mcxn844j71"
+  },
+  "slug": "codex-session-image-scrubber",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/codex-session-image-scrubber",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=codex-session-image-scrubber&ownerHandle=vyctorbrzezowski",
+    "page_url": "https://clawhub.ai/vyctorbrzezowski/skills/codex-session-image-scrubber"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 432,
+    "installs": 6,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when a Codex thread or local session is slow because prior turns contain heavy image, screenshot, or base64 payloads. Helps locate the session JSONL, bac...",
+  "updated_at": 1780679652124,
+  "version": "0.1.0"
+}
