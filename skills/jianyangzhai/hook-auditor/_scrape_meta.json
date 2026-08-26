@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release: enumerate all effective Claude Code hooks, distinguish real from cached sources, quantify per-turn token cost, and clean up unintended hooks after user confirmation.",
+  "created_at": 1785822898418,
+  "display_name": "hook-auditor",
+  "fetched_at": 1787773555684,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/hook-events.md",
+    "scripts/scan_hooks.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785827342086,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jianyang",
+    "handle": "jianyangzhai",
+    "user_id": "s17dpg1vsz13hgndzdpdfzj8xd83h6rs"
+  },
+  "slug": "hook-auditor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hook-auditor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hook-auditor&ownerHandle=jianyangzhai",
+    "page_url": "https://clawhub.ai/jianyangzhai/skills/hook-auditor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 188,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5ba1\u8ba1\u5e76\u6e05\u7406 Claude Code \u4e2d\u300c\u4f60\u4e0d\u77e5\u9053\u81ea\u5df1\u88c5\u4e86\u300d\u7684 hook\u3002\u5b89\u88c5 skill \u6216 plugin \u4f1a\u81ea\u5e26 hook\uff0c\u5b83\u4eec\u5b89\u88c5\u5373\u5e38\u9a7b\u3001\u6bcf\u8f6e\u5bf9\u8bdd\u90fd\u8dd1\u3001\u6301\u7eed\u70e7 token \u5e76\u53ef\u80fd\u62e6\u622a\u6216\u6539\u5199\u5de5\u5177\u8c03\u7528\u2014\u2014\u5373\u4f7f\u4f60\u4ece\u672a\u8c03\u7528\u8fc7\u90a3\u4e2a skill\u3002\u672c skill \u679a\u4e3e\u5168\u90e8\u771f\u6b63\u751f\u6548\u7684 hook\u3001\u6807\u6ce8\u6765\u6e90\u4e0e\u53ef\u4fe1\u5ea6\u3001\u91cf\u5316\u6bcf\u8f6e\u6210\u672c\uff0c\u5e76\u5728\u4f60\u786e\u8ba4\u540e\u6e05\u7406\u3002\u89e6\u53d1\u573a\u666f\uff1a\u7528\u6237\u8bf4\u300c\u6e05\u7406\u300d\u300c\u63d0\u901f\u300d\u300c\u7701 token\u300d\u300c\u53d8\u6162\u4e86\u300d\u300ctoken \u6d88\u8017\u592a\u5feb\u300d\u300c\u600e\u4e48\u8fd9\u4e48\u6162\u300d\u300c\u6e05\u7406\u914d\u7f6e\u300d\u300c\u68c0\u67e5 hook\u300d\u300c\u6709\u54ea\u4e9b hook\u300d\u300caudit hooks\u300d\u300c\u6e05\u7406\u63d2\u4ef6\u300d\u300c\u4e3a\u4ec0\u4e48\u4f1a\u81ea\u52a8\u89e6\u53d1\u300d\u300c\u83ab\u540d\u5176\u5999\u5f39\u51fa\u300d\u300c\u6211\u6ca1\u8ba9\u5b83\u8fd9\u4e48\u505a\u300d\uff0c\u6216\u7528\u6237\u62b1\u6028\u51fa\u73b0\u4e86\u672a\u9884\u671f\u7684\u81ea\u52a8\u884c\u4e3a\u3001\u6743\u9650\u8be2\u95ee\u3001\u6ce8\u5165\u6587\u5b57\u3002\u4e5f\u5728\u5b89\u88c5\u6765\u6e90\u4e0d\u660e\u7684 skill/plugin \u540e\u4e3b\u52a8\u5efa\u8bae\u8fd0\u884c\u3002",
+  "updated_at": 1785822980504,
+  "version": "1.0.0"
+}
