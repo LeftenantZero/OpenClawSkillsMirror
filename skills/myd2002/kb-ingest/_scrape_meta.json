@@ -1,0 +1,65 @@
+{
+  "changelog": "- Clarified skill responsibilities: only compiles backend-uploaded sources into Research KB Markdown and writes to Gitea; does not handle authentication, authorization, task creation, scanning, or user interaction.\n- Tightened task acceptance criteria: enforces single kbTarget, non-empty files list, and protocol checks.\n- Described stepwise compile flow from validation, source archiving, project structure recognition, multi-project (monorepo) handling, evidence-based content generation, to final output.\n- Specified required output schema and failure handling for partial or complete ingestion errors.\n- Listed mandatory page structure and content per type (paper, survey, project/codebase, etc.), with details for each.\n- Outlined directory layout for different page types and imposed team/individual repository rules.\n- Documented entry points and requirements for integration with external task runners.",
+  "created_at": 1782391562985,
+  "display_name": "Kb Ingest",
+  "fetched_at": 1787779038826,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "env-example.txt",
+    "main.js",
+    "requirements.txt",
+    "scripts/catalog.py",
+    "scripts/check_duplicate.py",
+    "scripts/compile_codebase.py",
+    "scripts/frontmatter.py",
+    "scripts/gitea_api.py",
+    "scripts/kb_schema.py",
+    "scripts/path_utils.py",
+    "scripts/render_summary_template.py",
+    "scripts/result_schema.py",
+    "scripts/run_task.py",
+    "scripts/save_document.py",
+    "scripts/save_import_report.py",
+    "scripts/save_page.py",
+    "scripts/summary_templates.py",
+    "scripts/task_schema.py",
+    "scripts/text_extractors.py",
+    "setup.sh",
+    "skill-card.md",
+    "tests/sample_ingest_result.json",
+    "tests/sample_ingest_task.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782421671317,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "myd2002",
+    "handle": "myd2002",
+    "user_id": "s175zrvz5m28epr76c6rt4dtex8474t6"
+  },
+  "slug": "kb-ingest",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kb-ingest",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kb-ingest&ownerHandle=myd2002",
+    "page_url": "https://clawhub.ai/myd2002/skills/kb-ingest"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 305,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Compile backend-uploaded source files into Research KB Markdown wiki pages, write them to Gitea, archive sources, and return structured JSON results.",
+  "updated_at": 1782415314010,
+  "version": "1.0.1"
+}
