@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of chameleon-ultra-cli-skill.\n\n- Enables scriptable, non-interactive control of Chameleon Ultra CLI via a PTY-wrapped chameleon_cli_main binary.\n- Supports device connection, card scanning (HF/LF), MIFARE Classic attacks, slot management, dump load/save, and device settings.\n- Guides initial executable path configuration with persistent storage in config.json.\n- Handles platform dependencies automatically (pywinpty for Windows, pty for POSIX).\n- Provides troubleshooting steps and attack strategy reference for various MIFARE Classic approaches.",
+  "created_at": 1784993095695,
+  "display_name": "Chameleon Ultra Cli",
+  "fetched_at": 1787775019919,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/cli_reference.md",
+    "scripts/chameleon_control.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784994506937,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "GeorgeChou17",
+    "handle": "georgechou17",
+    "user_id": "s176y064ps888173yfc6zmjp498b0fqn"
+  },
+  "slug": "chameleon-ultra-cli-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/chameleon-ultra-cli-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=chameleon-ultra-cli-skill&ownerHandle=georgechou17",
+    "page_url": "https://clawhub.ai/georgechou17/skills/chameleon-ultra-cli-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2281,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u63a7\u5236\u53d8\u8272\u9f99(Chameleon)Ultra \u8bfb\u5199\u5361\u5668\uff0c\u901a\u8fc7\u5176 chameleon_cli_main \u547d\u4ee4\u884c\u7a0b\u5e8f\u64cd\u4f5c\u8bbe\u5907\u3002\u5f53\u7528\u6237\u60f3\u7528\u547d\u4ee4\u884c\u64cd\u4f5c Chameleon Ultra \u8bbe\u5907\u65f6\u4f7f\u7528\u672c\u6280\u80fd\uff1a\u8fde\u63a5\u8bbe\u5907\u3001\u626b\u63cf/\u8bfb\u53d6\u9ad8\u9891(HF/NFC)\u6216\u4f4e\u9891(LF)\u5361\u7247\u3001\u8fd0\u884c MIFARE Classic \u653b\u51fb(nested/darkside/hardnested)\u3001\u7ba1\u7406\u6a21\u62df\u5361\u69fd\u3001\u8f7d\u5165/\u4fdd\u5b58 dump\u3001\u4fee\u6539\u8bbe\u5907\u8bbe\u7f6e\uff0c\u6216\u81ea\u52a8\u5316\u4efb\u610f chameleon_cli_main \u547d\u4ee4\u3002\u672c\u6280\u80fd\u4ee5\u975e\u4ea4\u4e92\u65b9\u5f0f\u9a71\u52a8\u4ea4\u4e92\u5f0f REPL\uff0c\u5e76\u5728\u9996\u6b21\u914d\u7f6e\u540e\u6301\u4e45\u4fdd\u5b58\u53ef\u6267\u884c\u6587\u4ef6\u8def\u5f84\u3002",
+  "updated_at": 1784993848477,
+  "version": "0.1.0"
+}
