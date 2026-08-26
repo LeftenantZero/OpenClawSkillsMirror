@@ -1,0 +1,38 @@
+{
+  "changelog": "- Initial release of the Strategy Backtester skill.\n- Enables reproducible backtesting of stock ranking, factor, and portfolio-selection strategies.\n- Provides benchmark comparison, turnover, drawdown, and bias warnings.\n- Requires only local CSVs for signals and price history; does not fetch live market data.\n- Outputs structured reports with setup, performance metrics, robustness warnings, and handoff bundle.\n- Includes a confidence rubric and clear guardrails on interpretation of results.",
+  "created_at": 1779409310679,
+  "display_name": "Strategy Backtester",
+  "fetched_at": 1787785330636,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "scripts/backtest_strategy.py",
+    "scripts/performance_metrics.py",
+    "skill-card.md",
+    "tests/fixtures/prices.csv",
+    "tests/fixtures/signals.csv"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Nguy\u1ec5n \u0110\u1ee9c Th\u00e0nh",
+    "handle": "teahann",
+    "user_id": "s172d4r9d0h6bvvd3mpq517yrn861np5"
+  },
+  "slug": "strategy-backtester",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/strategy-backtester",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=strategy-backtester&ownerHandle=teahann",
+    "page_url": "https://clawhub.ai/teahann/skills/strategy-backtester"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 649,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Validates historical behavior of stock ranking, factor, and portfolio-selection strategies using reproducible backtests, benchmark comparison, turnover, draw...",
+  "updated_at": 1779409310679,
+  "version": "1.0.0"
+}
