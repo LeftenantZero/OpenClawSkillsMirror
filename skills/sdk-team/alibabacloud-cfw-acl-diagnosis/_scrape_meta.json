@@ -1,0 +1,41 @@
+{
+  "changelog": "- Added a strict Observability section: all Alibaba Cloud API calls must use a session-specific User-Agent in a defined format, including a unique session ID per workflow.\n- Session-ID generation rule is now explicitly required and documented.\n- Updated all CLI example commands to use the User-Agent with session placeholder.\n- Minor wording and output conventions revised to clarify \"read-only\" scope and diagnostic constraints.\n- Removed or adjusted instructions related to engine mode enable/disable and deprecated the separate \"ai-mode\" setup step.\n- File structure updated; removed obsolete `skill-card.md`.",
+  "created_at": 1780303677529,
+  "display_name": "Alibabacloud Cfw Acl Diagnosis",
+  "fetched_at": 1787778338019,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cfw_acl_knowledge.md",
+    "references/cli_commands.md",
+    "references/cli_traps.md",
+    "references/configuration_guide.md",
+    "references/diagnosis.md",
+    "references/execution_standards.md",
+    "references/ram-policies.md",
+    "references/security_rules.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-cfw-acl-diagnosis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-cfw-acl-diagnosis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-cfw-acl-diagnosis&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-cfw-acl-diagnosis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 597,
+    "installs": 9,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Alibaba Cloud Cloud Firewall ACL rule read-only diagnostic assistant. **Trigger Scenarios**: Diagnose ACL rules not taking effect, troubleshoot Internet/NAT/...",
+  "updated_at": 1782981963506,
+  "version": "0.0.1"
+}
