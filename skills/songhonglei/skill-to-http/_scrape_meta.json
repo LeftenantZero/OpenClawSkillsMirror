@@ -1,0 +1,69 @@
+{
+  "changelog": "skill-to-http 1.0.2\n\n- Updated documentation in SKILL.md, README.md, and CHANGELOG.md for clarity and accuracy.\n- Removed obsolete file: skill-card.md.\n- No changes to code or functionality. This is a documentation update release.",
+  "created_at": 1784127906112,
+  "display_name": "skill-to-http",
+  "fetched_at": 1787774319144,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/config.example.json",
+    "references/https-deployment.md",
+    "references/params-schema.md",
+    "references/tls-auth-standard.md",
+    "requirements.txt",
+    "scripts/_paths.py",
+    "scripts/console.py",
+    "scripts/console_ui/app.js",
+    "scripts/console_ui/i18n.js",
+    "scripts/console_ui/index.html",
+    "scripts/console_ui/style.css",
+    "scripts/context_meta.py",
+    "scripts/dep_scanner.py",
+    "scripts/doctor.py",
+    "scripts/gen_cert.py",
+    "scripts/history_store.py",
+    "scripts/init_wizard.py",
+    "scripts/params_generator.py",
+    "scripts/server.py",
+    "scripts/skill_registry.py",
+    "scripts/skill_runner.py",
+    "scripts/speed_mode.py",
+    "scripts/start-console.sh",
+    "scripts/tls_auth.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785297171377,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Evan Song",
+    "handle": "songhonglei",
+    "user_id": "s17dz40vg2v0b4hy1e0jj91ny584egag"
+  },
+  "slug": "skill-to-http",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-to-http",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-to-http&ownerHandle=songhonglei",
+    "page_url": "https://clawhub.ai/songhonglei/skills/skill-to-http"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 449,
+    "installs": 0,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Expose installed agent Skills as HTTP(S) REST API services. Runs a persistent FastAPI server that auto-generates an API endpoint per Skill, with sync/async execution, webhook callbacks, and a multi-engine sub-agent executor (OpenClaw / Claude Code / Codex CLI / LLM fallback). Ships a bilingual (EN/ZH) web management console. HTTP by default (zero-friction), optional HTTPS with self-signed SAN certificates for production. Use when you need to serve Skills over HTTP, call Skills remotely, or expose Skill capabilities to external systems.",
+  "updated_at": 1785314814206,
+  "version": "1.0.2"
+}
