@@ -1,0 +1,46 @@
+{
+  "changelog": "- Initial release of fix-lifecycle-stages skill.\n- Audits and backfills missing lifecycle stage data for contacts and companies.\n- Fixes records stuck at disallowed or backwards stages using correct HubSpot progression logic.\n- Provides API scripts and manual list-based methods for context-aware stage assignment.\n- Includes guidance for creating prevention workflows to stop future lifecycle stage gaps.",
+  "created_at": 1774550548182,
+  "display_name": "Fix Lifecycle Stages",
+  "fetched_at": 1787787383326,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/after.py",
+    "scripts/before.py",
+    "scripts/execute.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090134082,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "TomGranot",
+    "handle": "tomgranot",
+    "user_id": "s17cmf9jxs7s60v7thhms9w09h83m293"
+  },
+  "slug": "fix-lifecycle-stages",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fix-lifecycle-stages",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fix-lifecycle-stages&ownerHandle=tomgranot",
+    "page_url": "https://clawhub.ai/tomgranot/skills/fix-lifecycle-stages"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 585,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Ensure all contacts and companies have appropriate lifecycle stages. Backfills missing stages via API, fixes records stuck at disallowed stages, and creates...",
+  "updated_at": 1779078918684,
+  "version": "1.0.0"
+}
