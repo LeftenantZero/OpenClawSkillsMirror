@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of patent application evaluation assistant skill.\n\n- Provides automated pre-evaluation of patent applications for corporate IPR, patent engineers, and patent attorneys.\n- Checks material completeness, performs prior art searches (patent and non-patent), and analyzes authorization feasibility in China, US, and Europe.\n- Outputs clear A/B/C rating, scoring breakdown by grant feasibility (60) and patent value (40), major risks, and actionable recommendations.\n- Strict mandatory rules for newness scoring: novelty is decisive; scoring model includes linkage and auto-downgrade logic.\n- Requires use of PatSnap (Zhihuiya) for patent literature search and structured referencing of prior art.\n- Delivers transparent, reproducible analyses with confidence grading, and stepwise reporting from completeness check to exportable HTML summaries.",
+  "created_at": 1786609272868,
+  "display_name": "patent-application-evaluation-assistant",
+  "fetched_at": 1787772355206,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/opening-message.md",
+    "references/user-input-template.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786610036171,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yuanzhian-patsnap",
+    "handle": "yuanzhian-patsnap",
+    "user_id": "s17bvft5kywc2rr8r8df1ra0x589g677"
+  },
+  "slug": "patent-application-evaluation-assistant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/patent-application-evaluation-assistant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=patent-application-evaluation-assistant&ownerHandle=yuanzhian-patsnap",
+    "page_url": "https://clawhub.ai/yuanzhian-patsnap/skills/patent-application-evaluation-assistant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 133,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u9762\u5411\u4f01\u4e1a IPR\u3001\u4e13\u5229\u5de5\u7a0b\u5e08\u3001\u4e13\u5229\u4ee3\u7406\u4eba\u7684\u4e13\u5229\u7533\u8bf7\u9884\u8bc4\u4f30\u667a\u80fd\u4f53\u3002\u5f53\u7528\u6237\u9700\u8981\u8bc4\u4f30\u4e13\u5229\u7533\u8bf7\u53ef\u884c\u6027\u3001\u5206\u6790\u6280\u672f\u4ea4\u5e95\u4e66\u3001\u8fdb\u884c\u4e13\u5229\u9884\u8bc4\u4f30\u6216\u67e5\u65b0\u68c0\u7d22\u65f6\u89e6\u53d1\u3002\u57fa\u4e8e\u6280\u672f\u4ea4\u5e95\u4e66\u6216\u7814\u53d1\u8d44\u6599\uff0c\u81ea\u52a8\u5b8c\u6210\u6750\u6599\u5b8c\u6574\u6027\u68c0\u67e5\u3001\u4e13\u5229\u53ca\u975e\u4e13\u5229\u6587\u732e\u67e5\u65b0\u3001\u4e2d\u7f8e\u6b27\u6388\u6743\u53ef\u884c\u6027\u5206\u6790\uff0c\u8f93\u51fa A/B/C \u8bc4\u7ea7\u3001\u8bc4\u5206\u4f9d\u636e\u3001\u4e3b\u8981\u98ce\u9669\u548c\u5904\u7406\u5efa\u8bae\u3002",
+  "updated_at": 1786609338616,
+  "version": "1.0.0"
+}
