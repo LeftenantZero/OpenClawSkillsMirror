@@ -1,0 +1,60 @@
+{
+  "changelog": "Version 2.0.0\n\n- Major overhaul: Shifted from lobster/shrimp card generation to strict, evidence-based agent selfie card and share-card workflows.\n- Enforced use of real, repeated agent evidence for public identity\u2014no placeholder data, skill-name branding, or invented owner info.\n- Added a full pipeline of scripts covering memory search, evidence validation, share-card construction, image generation, and HTML rendering, with explicit schema validation at each step.\n- Now requires an actual 8-bit pixel-art character image before final card rendering, removing fallback-icon logic.\n- Updated documentation and workflow guidance to emphasize single-language output, strict field limits, and accurate, evidence-backed intros.\n- Introduced fixture/example directories for testing only, with strong instructions never to use them as live inputs.",
+  "created_at": 1773229048185,
+  "display_name": "shrimpcard",
+  "fetched_at": 1787786737662,
+  "files": [
+    "CLAWHUB.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/card-template.html",
+    "examples/agent-evidence.sample.json",
+    "examples/agent-self-intro-submission.sample.json",
+    "examples/hermes-agent.public-evidence.json",
+    "examples/hermes-agent.public-submission.json",
+    "references/agent-self-extraction-guide.md",
+    "requirements.txt",
+    "schemas/agent-evidence-schema.json",
+    "schemas/agent-self-intro-submission-schema.json",
+    "schemas/share-card-schema.json",
+    "scripts/attach_generated_image.py",
+    "scripts/build_agent_workflow_prompt.py",
+    "scripts/build_image_task_prompt.py",
+    "scripts/build_memory_search_prompt.py",
+    "scripts/build_submission_prompt.py",
+    "scripts/identity_rules.py",
+    "scripts/render_card_html.py",
+    "scripts/selfie_styles.py",
+    "scripts/skill_paths.py",
+    "scripts/smoke_test_current_flow.sh",
+    "scripts/submission_to_share_card.py",
+    "scripts/validate_final_bundle.py",
+    "scripts/validate_json.py",
+    "scripts/validate_rendered_html.py",
+    "scripts/validate_self_intro_submission.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "chenghaofan1998",
+    "handle": "chenghaofan1998",
+    "user_id": "s17be3ghw0cbzntqjv3jra99n9847t8k"
+  },
+  "slug": "openclaw-shrimpcard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-shrimpcard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-shrimpcard&ownerHandle=chenghaofan1998",
+    "page_url": "https://clawhub.ai/chenghaofan1998/skills/openclaw-shrimpcard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1060,
+    "installs": 30,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Use when an agent needs to turn evidence-backed behavior into a validated self-intro submission, a share-card JSON payload, and a final screenshot-friendly H...",
+  "updated_at": 1779111171627,
+  "version": "2.0.0"
+}
