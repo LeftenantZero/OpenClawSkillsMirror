@@ -1,0 +1,48 @@
+{
+  "changelog": "Production version release with expanded Temu publishing features.\n\n- Declares this as the production (\"\u6b63\u5f0f\u751f\u4ea7\u73af\u5883\u7248\u672c\") release for the htyd MCP client for https://dz.shuaishou.com/mcp.\n- Adds and documents powerful new Temu-related tools and workflows: one-step collect + claim + publish (\"collect_and_publish\"), publish-and-track commands, and itemId-based publish record queries.\n- Enhances documentation with complete workflow explanations (\u91c7\u96c6\u2192\u8ba4\u9886\u2192\u53d1\u5e03), recommended usage, automatic result tracking, platform support matrix, default publishing settings, and environment variable configuration.\n- Clarifies that full automation (publish) currently only supports Temu (platId 68); other platforms stop at claim.\n- Provides both English and Chinese usage instructions and parameter references.",
+  "created_at": 1774494654330,
+  "display_name": "\u7529\u624b\u5e97\u957f\u4e00\u952e\u91c7\u96c6\uff0c\u520a\u767b",
+  "fetched_at": 1787787354927,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/README.md",
+    "scripts/htyd-mcp.mjs",
+    "scripts/node_modules/.package-lock.json",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090185682,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "WangJie",
+    "handle": "wang-jie-ss",
+    "user_id": "s172z0cyndfq0jqxmz9argd6rh83gz8w"
+  },
+  "slug": "shuaishou-mcp-client",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/shuaishou-mcp-client",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=shuaishou-mcp-client&ownerHandle=wang-jie-ss",
+    "page_url": "https://clawhub.ai/wang-jie-ss/skills/shuaishou-mcp-client"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 971,
+    "installs": 23,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Builds and uses an MCP client (Streamable HTTP transport) to connect to the htyd MCP server and invoke all available tools (including login). Use when connec...",
+  "updated_at": 1779078933008,
+  "version": "1.0.1"
+}
