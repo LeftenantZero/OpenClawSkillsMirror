@@ -1,0 +1,79 @@
+{
+  "changelog": "AlphaEar Signal Tracker v1.0.0\n\n- Updated SKILL.md with refined description, clearer input/output contracts, and precise workflow steps.\n- Clarified intended use: for signal evolution analysis only, not for general news or data lookups.\n- Added detailed guidance on dependencies, validation, and failure handling.\n- Introduced evals/evals.json for prompt-based skill evaluation.\n- Removed skill-card.md (was redundant or outdated).\n- Updated scripts/fin_agent.py for signal tracking logic consistency.",
+  "created_at": 1785145367540,
+  "display_name": "A\u80a1\u4fe1\u53f7\u8ffd\u8e2a",
+  "fetched_at": 1787774729621,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/PROMPTS.md",
+    "scripts/__init__.py",
+    "scripts/fin_agent.py",
+    "scripts/prompts/fin_agent.py",
+    "scripts/prompts/forecast_analyst.py",
+    "scripts/prompts/intent_agent.py",
+    "scripts/prompts/isq_prompt_generator.py",
+    "scripts/prompts/report_agent.py",
+    "scripts/prompts/trend_agent.py",
+    "scripts/prompts/visualizer.py",
+    "scripts/schema/isq_template.py",
+    "scripts/schema/models.py",
+    "scripts/tools/__init__.py",
+    "scripts/tools/toolkits.py",
+    "scripts/utils/__init__.py",
+    "scripts/utils/content_extractor.py",
+    "scripts/utils/database_manager.py",
+    "scripts/utils/hybrid_search.py",
+    "scripts/utils/json_utils.py",
+    "scripts/utils/llm/capability.py",
+    "scripts/utils/llm/factory.py",
+    "scripts/utils/llm/router.py",
+    "scripts/utils/logging_setup.py",
+    "scripts/utils/md_to_html.py",
+    "scripts/utils/news_tools.py",
+    "scripts/utils/predictor/evaluation.py",
+    "scripts/utils/predictor/kline_generate.py",
+    "scripts/utils/predictor/model/__init__.py",
+    "scripts/utils/predictor/model/kronos.py",
+    "scripts/utils/predictor/model/module.py",
+    "scripts/utils/predictor/training.py",
+    "scripts/utils/search_tools.py",
+    "scripts/utils/sentiment_tools.py",
+    "scripts/utils/stock_tools.py",
+    "skill-card.md",
+    "tests/test_tracker.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785151528840,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "LULI",
+    "handle": "zoeluli7459-dev",
+    "user_id": "s170ybr90x4fag61dg1z85svr9885tzc"
+  },
+  "slug": "alphaear-signal-tracker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alphaear-signal-tracker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alphaear-signal-tracker&ownerHandle=zoeluli7459-dev",
+    "page_url": "https://clawhub.ai/zoeluli7459-dev/skills/alphaear-signal-tracker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 38,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4f7f\u7528\u8fd9\u9879\u6280\u80fd\u6765\u8ddf\u8e2a\u73b0\u6709\u91d1\u878d\u6216\u6295\u8d44\u4fe1\u53f7\u7684\u6f14\u53d8\u60c5\u51b5\u3002\u5f53\u7528\u6237\u63d0\u4f9b\u73b0\u6709\u7684\u8bba\u70b9/\u4fe1\u53f7\u540e\uff0c\u53ef\u4ee5\u8be2\u95ee\u65b0\u7684\u5e02\u573a\u4fe1\u606f\u662f\u5bf9\u4fe1\u53f7\u7684\u652f\u6301\u3001\u524a\u5f31\u3001\u865a\u5047\u62a5\u9053\u3001\u8bc1\u5b9e\u8fd8\u662f\u6beb\u65e0\u5f71\u54cd\u3002\u9700\u8981\u5bf9\u6bd4\u57fa\u51c6\u903b\u8f91\u4e0e\u66f4\u65b0\u540e\u7684\u65b0\u95fb\u3001\u4ef7\u683c\u548c\u57fa\u672c\u9762\u6570\u636e\uff0c\u7136\u540e\u8f93\u51fa\u4e00\u4e2a\u7ed3\u6784\u5316\u7684\u4fe1\u53f7\u66f4\u65b0\u7ed3\u679c\u3002\u5982\u6709\u9700\u8981\uff0c\u53ef\u4ee5\u4f7f\u7528 mx-search \u548c mx-data \u6765\u83b7\u53d6\u6700\u65b0\u4fe1\u606f\uff1b\u4f46\u4e0d\u8981\u4ec5\u7528\u4e8e\u7b80\u5355\u7684\u65b0\u95fb\u67e5\u8be2\u3001\u539f\u59cb\u6570\u636e\u67e5\u8be2\u3001\u80a1\u7968\u7b5b\u9009\u6216\u4ec5\u67e5\u770b\u56fe\u8868\u7b49\u4efb\u52a1\u3002",
+  "updated_at": 1785150540717,
+  "version": "1.0.0"
+}
