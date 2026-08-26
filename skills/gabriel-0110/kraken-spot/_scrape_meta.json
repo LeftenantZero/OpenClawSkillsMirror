@@ -1,0 +1,62 @@
+{
+  "changelog": "Fix: include bin/openclaw-kraken and config/ that were dropped by clawhub publish bug; fix bash 4.2+ shebang for macOS",
+  "created_at": 1773507127634,
+  "display_name": "Kraken CLI",
+  "fetched_at": 1787788704733,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "bin/openclaw-kraken",
+    "config/endpoints.tsv",
+    "config/futures_endpoints.tsv",
+    "docs/configuration.md",
+    "docs/examples.md",
+    "docs/security.md",
+    "lib/kraken_auth.sh",
+    "lib/kraken_config.sh",
+    "lib/kraken_endpoints.sh",
+    "lib/kraken_futures.sh",
+    "lib/kraken_http.sh",
+    "lib/kraken_redact.sh",
+    "lib/kraken_validate.sh",
+    "scripts/release.sh",
+    "scripts/ws_client.mjs",
+    "skill-card.md",
+    "test/signature_example.sh",
+    "test/smoke.sh",
+    "test/support/fixed_nonce.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089888982,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Gabriel Chiappa",
+    "handle": "gabriel-0110",
+    "user_id": "s17ckptwvzdn7r2p912k1333eh884jx2"
+  },
+  "slug": "kraken-spot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kraken-spot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kraken-spot&ownerHandle=gabriel-0110",
+    "page_url": "https://clawhub.ai/gabriel-0110/skills/kraken-spot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 951,
+    "installs": 26,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Use a Bash CLI to query Kraken Spot and Futures APIs, inspect account state, run guarded trading and funding actions, and work with Kraken websocket payloads...",
+  "updated_at": 1779078254951,
+  "version": "1.2.0"
+}
