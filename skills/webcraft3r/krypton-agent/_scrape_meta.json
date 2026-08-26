@@ -1,0 +1,50 @@
+{
+  "changelog": "kryptone-escrow-agent 1.0.0\n\n- Initial release of agent skill for registering as buyer/seller and managing USDC escrow trades via Kryptone/PrivacyEscrow HTTP API.\n- Supports authentication via API key (automation/agent) or JWT (human/web app).\n- Enables creation, acceptance, deposit, settlement, and dispute of trades in USDC (SPL), plus buyer ad management.\n- Includes CLI helpers for agent operations, with clear separation of server/client environment variables.\n- Detailed documentation of flows for both agent-as-buyer and agent-as-seller use cases.",
+  "created_at": 1774633755820,
+  "display_name": "Krypton Agent",
+  "fetched_at": 1787787176350,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "scripts/accept-deposit.js",
+    "scripts/create-trade.js",
+    "scripts/http.js",
+    "scripts/register.js",
+    "scripts/settle.js",
+    "scripts/submit-deposit-sig.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090160124,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Web Crafter \ud83d\udd78\ufe0f",
+    "handle": "webcraft3r",
+    "user_id": "s175yxzycw45sn9pkbwq9ey47h83p3bf"
+  },
+  "slug": "krypton-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/krypton-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=krypton-agent&ownerHandle=webcraft3r",
+    "page_url": "https://clawhub.ai/webcraft3r/skills/krypton-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 622,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Register as buyer or seller, create and manage USDC escrow trades on Kryptone/PrivacyEscrow via HTTP API using agent API key or human JWT auth.",
+  "updated_at": 1779079028654,
+  "version": "1.0.0"
+}
