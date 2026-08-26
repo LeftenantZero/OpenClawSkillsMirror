@@ -1,0 +1,61 @@
+{
+  "changelog": "Garmin Connect Skill 1.0.0 introduces a major new architecture for OpenClaw fitness data synchronization:\n\n- All fitness data is now stored in a single SQLite database for fast, reliable access.\n- Supports comprehensive daily metrics, advanced workout fields, and time series data (HR, Body Battery, stress, etc.).\n- New sync logic: scheduled (systemd timer), on-demand via OpenClaw, or manual trigger.\n- Database schema expanded from 26 to 58 fields, plus dedicated tables for sequential data and events.\n- Major bug fixes and improved data accuracy (e.g., correct Body Battery handling).\n- Both garmin.com (global) and garmin.cn (China) regions are fully supported via OAuth.",
+  "created_at": 1774651277889,
+  "display_name": "Garmin Connect",
+  "fetched_at": 1787787317691,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/daily_health_report.py",
+    "scripts/daily_health_report_auto.py",
+    "scripts/daily_health_report_feishu.py",
+    "scripts/daily_health_report_openclaw.py",
+    "scripts/daily_health_report_simple.py",
+    "scripts/daily_health_report_webhook.py",
+    "scripts/garmin-auth.py",
+    "scripts/garmin-cron.sh",
+    "scripts/garmin-formatter.py",
+    "scripts/garmin-sync.py",
+    "scripts/garmin_db_reader.py",
+    "scripts/garmin_quick_response.py",
+    "scripts/garmin_status.py",
+    "scripts/init_db.py",
+    "scripts/sync_all.py",
+    "scripts/sync_daemon.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090160978,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "tcyxk",
+    "handle": "tcyxk",
+    "user_id": "s174eqg8qwh5t1hpeg18sg7sed83hwyq"
+  },
+  "slug": "garmin-connect-tcyxk",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/garmin-connect-tcyxk",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=garmin-connect-tcyxk&ownerHandle=tcyxk",
+    "page_url": "https://clawhub.ai/tcyxk/skills/garmin-connect-tcyxk"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 646,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Garmin Connect integration for OpenClaw: sync fitness data (steps, HR, calories, workouts, sleep) using OAuth. Supports China (garmin.cn) and Global (garmin....",
+  "updated_at": 1779078954675,
+  "version": "1.0.0"
+}
