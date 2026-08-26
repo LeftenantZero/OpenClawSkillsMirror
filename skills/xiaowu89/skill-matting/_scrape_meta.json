@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release of nx-matting skill for Windows x64:\n\n- Supports local image and video matting using BiRefNet GGUF models; outputs transparent PNG, MOV, or WebM.\n- No dependency on Python, PyTorch, or CUDA; works via C++ inference program managed by the skill.\n- Automatically downloads required models and runtime on first use.\n- Provides simple PowerShell command-line interface with intelligent parameter selection based on user requests.\n- Includes clear result and error reporting with progress via JSONL.\n- Displays contact info notice in user-facing replies upon completion or error.",
+  "created_at": 1786022542744,
+  "display_name": "Nx Matting",
+  "fetched_at": 1787773244004,
+  "files": [
+    ".gitignore",
+    "LICENSES/BiRefNet-LICENSE.txt",
+    "LICENSES/NOTICE.txt",
+    "LICENSES/ggml-LICENSE.txt",
+    "LICENSES/vision.cpp-LICENSE.txt",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/manifest.json",
+    "scripts/matting.ps1",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786024548843,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xiaowu89",
+    "handle": "xiaowu89",
+    "user_id": "s1738h3qy0atprgy30zk833psx8b24q6"
+  },
+  "slug": "skill-matting",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-matting",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-matting&ownerHandle=xiaowu89",
+    "page_url": "https://clawhub.ai/xiaowu89/skills/skill-matting"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1469,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u672c\u5730\u6267\u884c\u56fe\u7247\u548c\u89c6\u9891\u53bb\u80cc\u666f\uff0c\u8f93\u51fa\u900f\u660e PNG\u3001MOV \u6216 WebM",
+  "updated_at": 1786022656221,
+  "version": "0.1.0"
+}
