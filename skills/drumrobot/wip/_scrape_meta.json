@@ -1,0 +1,51 @@
+{
+  "changelog": "wip 0.5.1\n\n- Removed skill-card.md to streamline documentation.\n- Updated CHANGELOG.md, resources/block-wip-register-before-execute.py, and resume.md for improved workflow and clarity.\n- No changes to core task registration or resume logic\u2014documentation and organization improvements only.",
+  "created_at": 1775202910869,
+  "display_name": "wip",
+  "fetched_at": 1787768386959,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "antigravity.md",
+    "claude.md",
+    "resources/block-wip-register-before-execute.py",
+    "resources/block-wip-register-before-execute.sh",
+    "resources/wip-task-complete-detect.sh",
+    "resume.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787766072696,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "es6kr",
+    "handle": "drumrobot",
+    "user_id": "s17ay1v6v88r2m102pvvc44gz183qcrm"
+  },
+  "slug": "wip",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wip",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wip&ownerHandle=drumrobot",
+    "page_url": "https://clawhub.ai/drumrobot/skills/wip"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1560,
+    "installs": 23,
+    "stars": 0,
+    "versions": 14
+  },
+  "summary": "Track in-session work progress. Register steps for 3+ step tasks, update status per step, handle completion/abort. On /wip invocation, when remaining tasks exist, AskUserQuestion is required for the per-item direction (proceed / split / merge / hold / defer-to-checklist / delete) \u2014 asking only about start priority is forbidden. After a compact, show prior-work summary then AskUserQuestion(multiSelect) for restore selection and re-register via TodoWrite. antigravity - task.md artifact-based checklist (Antigravity environment) [antigravity.md], claude - TodoWrite/TaskCreate API guide (Claude Code environment) [claude.md], resume - environment-agnostic task cleanup + remaining-work workflow [resume.md]. \"wip\", \"track progress\", \"register tasks\", \"task register\", \"step tracking\", \"compact recovery\", \"task resume\", \"resume task\", \"cleanup + resume\" triggers.",
+  "updated_at": 1787765359281,
+  "version": "0.5.1"
+}
