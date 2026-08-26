@@ -1,0 +1,45 @@
+{
+  "changelog": "**Summary:** Simplified credential and SSH safety guidelines, focusing on approved variable use and SSH aliases.\n\n- Reduced and clarified the credential use policy to focus on safe API key, environment variable, and SSH management.\n- Consolidated domain-specific and multi-file credential rules into a single base.env file, removing domain mapping and per-domain launchers.\n- Mandated only reading variables explicitly required for the task, prohibiting enumeration, output, or copying of secrets.\n- Enforced strict use of SSH config aliases, disallowing direct host/IP/identity use and automated secret handling.\n- Removed legacy and auxiliary documentation and scripts, reflecting a unified, more practical workflow.\n- Provided concrete Python usage patterns and workspace learning record guidelines, emphasizing no secret value exposure.",
+  "created_at": 1784275476145,
+  "display_name": "Agent Credential Safety",
+  "fetched_at": 1787776072449,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/coding-agent-landscape.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784333715305,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "sirsws",
+    "handle": "sirsws",
+    "user_id": "s175qq486ya4r3ss70a41jr67983mn9v"
+  },
+  "slug": "agent-credential-safety",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-credential-safety",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-credential-safety&ownerHandle=sirsws",
+    "page_url": "https://clawhub.ai/sirsws/skills/agent-credential-safety"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 502,
+    "installs": 0,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "\u5b89\u5168\u5904\u7406\u672c\u673a API \u5bc6\u94a5\u3001\u73af\u5883\u53d8\u91cf\u3001\u5bc6\u7801\u3001SSH\u3001\u8fdc\u7a0b\u670d\u52a1\u5668\u548c\u8eab\u4efd\u8ba4\u8bc1\u3002\u4efb\u52a1\u6d89\u53ca\u51ed\u636e\u8bfb\u53d6\u3001\u8ba4\u8bc1\u64cd\u4f5c\u6216\u8fdc\u7a0b\u4e3b\u673a\u8fde\u63a5\u65f6\u4f7f\u7528\u3002\u9650\u5236\u79d8\u5bc6\u8bfb\u53d6\u4e0e\u8f93\u51fa\uff0c\u5f3a\u5236\u4f7f\u7528\u6279\u51c6\u7684 SSH \u522b\u540d\u3002",
+  "updated_at": 1784333025242,
+  "version": "1.0.0"
+}
