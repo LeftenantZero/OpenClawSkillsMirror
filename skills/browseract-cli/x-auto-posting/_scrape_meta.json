@@ -1,0 +1,58 @@
+{
+  "changelog": "x-auto-posting 1.0.0\n\n- Initial release supporting full X (Twitter) auto-posting workflow from keyword-driven topic collection to 24-hour performance tracking.\n- Includes browser-based login verification, configuration wizard, and account usage safety checks.\n- Automates keyword rotation, topic search, ranking, style extraction, and stores all session/config files.\n- Requires user topic confirmation and posting mode via AskUserQuestion tool\u2014no manual chat halt points.\n- Ensures all drafts receive user approval before posting or saving, and enforces posting quota/rate-limits by default.",
+  "created_at": 1783615738156,
+  "display_name": "X Auto Posting",
+  "fetched_at": 1787777363967,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/keywords.json",
+    "references/phase1-topic-collection.md",
+    "references/phase2-case-collection.md",
+    "references/phase4-writing.md",
+    "references/phase5-publish.md",
+    "references/phase6-tracking.md",
+    "scripts/check-login.py",
+    "scripts/clear-compose.py",
+    "scripts/click-post.py",
+    "scripts/fill-compose.py",
+    "scripts/inject-media.py",
+    "scripts/parse-create-tweet.py",
+    "scripts/parse-search-timeline.py",
+    "scripts/parse-tweet-detail.py",
+    "scripts/verify-post-ready.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783617208756,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "browser-act skill",
+    "handle": "browseract-cli",
+    "user_id": "s17e2j8ekf5wfppm182fczj35n88qxn5"
+  },
+  "slug": "x-auto-posting",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/x-auto-posting",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=x-auto-posting&ownerHandle=browseract-cli",
+    "page_url": "https://clawhub.ai/browseract-cli/skills/x-auto-posting"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 420,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "X (Twitter) auto-posting and content operations workflow: keyword-driven topic collection \u2192 case reference extraction \u2192 user topic confirmation \u2192 tweet drafting \u2192 publish to X \u2192 24-hour performance tracking. Executes the complete content cycle from keyword to published tweet in a single run. Use whe",
+  "updated_at": 1783615738156,
+  "version": "1.0.0"
+}
