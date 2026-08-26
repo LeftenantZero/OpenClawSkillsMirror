@@ -1,0 +1,38 @@
+{
+  "changelog": "Initial release of smart-search: a flexible, multi-engine search skill with auto language detection, fallback, and integrated result extraction.\n\n- Integrates DDGS local library for structured, high-quality search (brave/bing/yandex/yahoo backends).\n- Automatically detects query language and routes to optimal search engine (Chinese\u2192bing, English\u2192brave).\n- Auto-fallback: seamlessly switches engines on failure; includes web_fetch downgrade options.\n- One-step search and content extraction (markdown/fulltext) with script/API usage.\n- Supports advanced features: timeout protection, URL-only output, batch search, result type selection (text/news/images/videos/books).\n- Includes expert usage tips, best engine combinations, and troubleshooting guidance.",
+  "created_at": 1780674306910,
+  "display_name": "Smart Search",
+  "fetched_at": 1787782785497,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/advanced-syntax.md",
+    "references/credibility-assessment.md",
+    "references/search-apis.md",
+    "references/vertical-search.md",
+    "scripts/ddgs_search.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mayf3",
+    "handle": "mayf3",
+    "user_id": "s17fv8qs1xk21m0src5wx6qhdh86tz36"
+  },
+  "slug": "mayf3-smart-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mayf3-smart-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mayf3-smart-search&ownerHandle=mayf3",
+    "page_url": "https://clawhub.ai/mayf3/skills/mayf3-smart-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 408,
+    "installs": 6,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Multi-engine search with auto-fallback, result parsing, and quality scoring via DDGS local library. Use when: searching the web, gathering information, marke...",
+  "updated_at": 1780674306910,
+  "version": "1.0.0"
+}
