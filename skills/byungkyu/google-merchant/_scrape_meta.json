@@ -1,0 +1,33 @@
+{
+  "changelog": "CLI-first rewrite: the maton CLI with OAuth login is the documented path, every example is a maton command, SDK examples added, and the raw HTTP fallback feeds the key on stdin instead of reading it from the environment",
+  "created_at": 1770462881185,
+  "display_name": "Google Merchant Center",
+  "fetched_at": 1787768659737,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "byungkyu",
+    "handle": "byungkyu",
+    "user_id": "s174c3s2kc1ehqj1ytzntezj2983e2aj"
+  },
+  "slug": "google-merchant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/google-merchant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=google-merchant&ownerHandle=byungkyu",
+    "page_url": "https://clawhub.ai/byungkyu/skills/google-merchant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 6704,
+    "installs": 231,
+    "stars": 5,
+    "versions": 10
+  },
+  "summary": "Google Merchant Center API integration with managed OAuth. This is a write-capable integration \u2014 it can read, create, update, and delete products, inventories, data sources, promotions, account settings, and conversions in Google Shopping. Use this skill when users want to interact with their Merchant Center data. All write operations (creating/updating/deleting products, inventories, promotions, data sources, or account settings) require explicit user approval with specific resource identifiers before execution. For other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway). Requires network access and valid Maton API key. Calls run through the `maton` CLI with OAuth login; default to read and list calls, and confirm every write or new connection with the user.",
+  "updated_at": 1787728919812,
+  "version": "1.1.0"
+}
