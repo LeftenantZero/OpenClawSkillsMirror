@@ -1,0 +1,33 @@
+{
+  "changelog": "- Adds a new \"Phase 0: Exposure Risk Assessment\" that checks if the project actually needs a code security audit, preventing unnecessary scans for local or private repos.\n- Early-exits at Phase 0 for projects with no Git, no remote, or private remotes, giving the user a friendly reminder rather than a full report.\n- If remote visibility cannot be determined, the audit defaults to public repo standards and proceeds with full checks.\n- Workflow now consists of six phases instead of five, with the new risk gate up front.\n- No changes to the audit, reporting, or remediation logic\u2014these begin only if exposure risk is detected in Phase 0.",
+  "created_at": 1780888322902,
+  "display_name": "Code Security Check - \u4ee3\u7801\u4ed3\u5e93\u5b89\u5168\u5ba1\u8ba1",
+  "fetched_at": 1787782151942,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mate-matt",
+    "handle": "mate-matt",
+    "user_id": "s178pcx0vvw667g8c5bw6y52v985ftd6"
+  },
+  "slug": "code-security-check",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/code-security-check",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=code-security-check&ownerHandle=mate-matt",
+    "page_url": "https://clawhub.ai/mate-matt/skills/code-security-check"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 427,
+    "installs": 6,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Audit the current project for sensitive information leaks before pushing to public repositories. This skill should be used when the user asks to check for se...",
+  "updated_at": 1780889772311,
+  "version": "1.0.1"
+}
