@@ -1,0 +1,52 @@
+{
+  "changelog": "- Removed the skill-card.md file.\n- Updated scripts/list_sfsturbo_shares.py.\n- No user-facing feature or workflow changes.\n- Minor maintenance update; documentation and core behavior remain unchanged.",
+  "created_at": 1786700499359,
+  "display_name": "huawei-cloud-sfsturbo-list",
+  "fetched_at": 1787771596872,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/dataflow-diagram.md",
+    "references/iam-policies.md",
+    "references/verification-method.md",
+    "scripts/list_sfsturbo_shares.py",
+    "scripts/skill_quality_sdk.py",
+    "scripts/test-cli-commands.sh",
+    "skill-card.md",
+    "templates/test-vars.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786958271230,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-sfsturbo-list",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-sfsturbo-list",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-sfsturbo-list&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-sfsturbo-list"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 190,
+    "installs": 1,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Query the list of Huawei Cloud SFS (Scalable File Service, \u5f39\u6027\u6587\u4ef6\u670d\u52a1 / SFS Turbo) file systems under the current tenant / project, focused on the SFS NAME list. Returns each file system's name, id, status, size, protocol and region; can also output a pure SFS name-only list. Supports pagination (limit/offset). Uses the KooCLI command `hcloud SFSTurbo ListShares --cli-region={region}` (primary) against the v1 API, or the huaweicloudsdksfsturbo Python SDK (fallback). Read-only \u2014 never creates, modifies or deletes any file system. Use this skill whenever the user wants to list/inspect the SFS file systems of the tenant or query the SFS name list, e.g. for storage inventory, daily inspection, or cost review. Triggers include: \"list SFS\", \"SFS list\", \"query SFS names\", \"SFS name list\", \"\u5f39\u6027\u6587\u4ef6\u670d\u52a1\u5217\u8868\", \"\u67e5\u8be2SFS\", \"SFS\u540d\u79f0\", \"sfs \u5217\u8868\", \"list shares\", \"list file systems\", \"how many SFS\", \"SFS Turbo \u5217\u8868\".",
+  "updated_at": 1786957582650,
+  "version": "1.0.1"
+}
