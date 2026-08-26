@@ -1,0 +1,42 @@
+{
+  "changelog": "**Fix: `tg-reader auth` crashed at the `code_sent` stage.** The staged onboarding flow added in 0.11.0 derived the `code_type` field from the Pyrogram `SentCode.type` object, which could resolve to a non-serializable value \u2014 so emitting the stage raised `TypeError: Object of type type is not JSON serializable` and the process exited. Because the crash happened *after* `send_code`, 0.11.0 would send the login code but then die before sign-in, making the agent-driven login impossible to complete.\n\n`code_type` is now always emitted as a string. Verified live end-to-end (send code \u2192 sign in \u2192 `authorized`).",
+  "created_at": 1771769530638,
+  "display_name": "Telegram Channel Reader",
+  "fetched_at": 1787778264422,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "reader.py",
+    "reader_telethon.py",
+    "setup.py",
+    "skill-card.md",
+    "tg_check.py",
+    "tg_reader_unified.py",
+    "tg_session_guard.py",
+    "tg_state.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Sergey Mikhaylov",
+    "handle": "bzsega",
+    "user_id": "s17bgn6b0kyw7qyvtb4ctj4xa586vhag"
+  },
+  "slug": "sergei-mikhailov-tg-channel-reader",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sergei-mikhailov-tg-channel-reader",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sergei-mikhailov-tg-channel-reader&ownerHandle=bzsega",
+    "page_url": "https://clawhub.ai/bzsega/skills/sergei-mikhailov-tg-channel-reader"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2240,
+    "installs": 61,
+    "stars": 2,
+    "versions": 35
+  },
+  "summary": "Let your agent read and monitor Telegram channels \u2014 posts, captions, link previews, and comments from public or private channels \u2014 and turn them into digests, summaries, and alerts. Unread tracking, JSON or text output, SOCKS5-proxy support, and a guided login the agent can run for the user. MTProto",
+  "updated_at": 1783085418192,
+  "version": "0.11.1"
+}
