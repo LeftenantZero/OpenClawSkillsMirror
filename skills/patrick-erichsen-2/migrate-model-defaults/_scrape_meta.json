@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of migrate-model-defaults\n\n- Finds, classifies, and updates hardcoded model default references in a repository.\n- Guides users to identify an existing model string to replace and a new string to use.\n- Filters out noise (such as changelogs, tests, and docs examples) to focus on default-like references.\n- Groups candidate references semantically and presents a concise checklist for user selection\u2014no edits until review.\n- Centralizes workflow and source defaults using repository variables or shared modules when applicable.\n- Provides workflow-aware validation, including optional actionlint and repo-required checks, and scans for remaining old-model literals.",
+  "created_at": 1780155680977,
+  "display_name": "Migrate Model Defaults",
+  "fetched_at": 1787783845285,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Patrick Erichsen",
+    "handle": "patrick-erichsen-2",
+    "user_id": "s179jqny1cgx553xanb7mgrwz185p0c2"
+  },
+  "slug": "migrate-model-defaults",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/migrate-model-defaults",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=migrate-model-defaults&ownerHandle=patrick-erichsen-2",
+    "page_url": "https://clawhub.ai/patrick-erichsen-2/skills/migrate-model-defaults"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 517,
+    "installs": 9,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Find, classify, and update hardcoded default-like model references in a repo. Use when the user wants to replace model strings, audit model defaults, central...",
+  "updated_at": 1780155680977,
+  "version": "1.0.0"
+}
