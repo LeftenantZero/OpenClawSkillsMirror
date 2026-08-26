@@ -1,0 +1,49 @@
+{
+  "changelog": "alibabacloud-aes-sysom-pai-diagnosis 0.0.1 \u2014 Initial release\n\n- Enables deep SysOM diagnosis for Alibaba Cloud PAI EAS and DLC products, identifying root causes of common instance-level issues.\n- Enforces strong credential security by preventing display or input of sensitive keys and requiring configuration outside the session.\n- Implements strict parameter confirmation, including auto-inference and validation for `region`, `instance`, `product`, and time ranges.\n- Provides a two-phase workflow: environment setup (CLI version check, plugin update, credential verification) and guided diagnosis execution.\n- Includes built-in handling for RAM permission errors and special support for EAS service ID and DLC (Lingjun) job validation.\n- Requires all business CLI operations to use a custom User-Agent string for tracking.",
+  "created_at": 1780392812063,
+  "display_name": "Alibabacloud Aes Sysom Pai Diagnosis",
+  "fetched_at": 1787783387208,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/diagnose-workflow.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/verification-method.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780395897830,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-aes-sysom-pai-diagnosis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-aes-sysom-pai-diagnosis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-aes-sysom-pai-diagnosis&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-aes-sysom-pai-diagnosis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 435,
+    "installs": 7,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Perform SysOM deep diagnosis on Alibaba Cloud PAI products (EAS / DLC) to identify root causes of instance-level issues. Use when users report: - EAS instanc...",
+  "updated_at": 1780392812063,
+  "version": "0.0.1"
+}
