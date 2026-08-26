@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release \u2014 Kia Owners account integration for vehicle control and status\n\n- Provides vehicle status, location, and EV charge state using the user's Kia Access/Kia Owners credentials.\n- Supports secure, confirm-gated control commands: lock/unlock doors, climate, and charging, with explicit confirmation required for every command.\n- Includes a one-time multi-factor authentication (MFA) bootstrap for secure device registration.\n- Detailed safeguards: never guess vehicle keys or credentials, and never retry a rejected login to avoid account lockout.\n- Reads and commands clearly differentiate between dry runs, command acceptance, and confirmed state changes.\n- Setup and usage instructions provided for safe integration into existing MCP environments.",
+  "created_at": 1785200525086,
+  "display_name": "Tmp.DbhQ3VzvhJ",
+  "fetched_at": 1787774555004,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "chrischall",
+    "handle": "chrischall",
+    "user_id": "s17cjx1a349nz5apaqp02vgz4h85728z"
+  },
+  "slug": "kiaaccess-mcp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kiaaccess-mcp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kiaaccess-mcp&ownerHandle=chrischall",
+    "page_url": "https://clawhub.ai/chrischall/skills/kiaaccess-mcp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 236,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "This skill should be used when the user asks about their Kia vehicle through the Kia Access / Kia Owners account. Triggers on phrases like \"is the car locked\", \"unlock the Kia\", \"start the car's climate\", \"warm up the car\", \"where is my car\", \"what's the EV charge at\", \"check the car's battery\", \"lock the doors\", or any request to read or command a Kia vehicle.",
+  "updated_at": 1785202474926,
+  "version": "0.1.0"
+}
