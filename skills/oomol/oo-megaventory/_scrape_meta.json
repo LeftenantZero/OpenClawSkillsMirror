@@ -1,0 +1,33 @@
+{
+  "changelog": "- Initial release of the `oo-megaventory` skill for working with Megaventory through the OOMOL-connected `oo` CLI.\n- Supports safe read workflows for document types, inventory locations, products, suppliers/clients, sales orders, and purchase orders.\n- Adds structured `list_*` actions for querying Megaventory with documented filters instead of direct API calls.\n- Includes `upsert_product`, `upsert_purchase_order`, and `upsert_sales_order` for creating or updating records by SKU or order identity.\n- Enforces a cautious write model: read actions run directly, while write actions require explicit confirmation before execution.\n\nSource: `oomol-lab/skills@46cfb3e`",
+  "created_at": 1786435768200,
+  "display_name": "Megaventory",
+  "fetched_at": 1787772725289,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OOMOL",
+    "handle": "oomol",
+    "user_id": "s1790xw8jww1c6hgm8aqy9q25187t1rg"
+  },
+  "slug": "oo-megaventory",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oo-megaventory",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oo-megaventory&ownerHandle=oomol",
+    "page_url": "https://clawhub.ai/oomol/skills/oo-megaventory"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 139,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Megaventory (megaventory.com). Use this skill for ANY Megaventory request \u2014 reading, creating, and updating data. Whenever a task involves Megaventory, use this skill instead of calling the API directly.",
+  "updated_at": 1786436011304,
+  "version": "1.0.0"
+}
