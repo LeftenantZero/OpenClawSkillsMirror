@@ -1,0 +1,450 @@
+# 各识别类型的字段说明（elements 内容）
+
+根据 ocrType 不同，返回的 `elements` 对象包含以下字段：
+
+## VAT_INVOICE (增值税发票)
+- `title`: 发票名称
+- `invoiceCode`: 发票代码
+- `invoiceNo`: 发票号码
+- `printedCode`: 机打代码
+- `printedNo`: 机打号码
+- `checkCode`: 校验码
+- `machineCode`: 机器编号
+- `invoiceDate`: 开票日期
+- `passwordArea`: 密码区
+- `buyerName`: 购方名称
+- `buyerCode`: 购方纳税人识别号
+- `buyerAddressAndPhone`: 购方地址及电话
+- `buyerBankAndAccount`: 购方开户行及账号
+- `sellerName`: 销售方名称
+- `sellerCode`: 销售方纳税人识别号
+- `sellerAddressAndPhone`: 销售方地址及电话
+- `sellerBankAndAccount`: 销售方开户行及账号
+- `preTaxTotalAmount`: 税前合计金额
+- `totalTaxAmount`: 合计税额
+- `totalAmountUpper`: 价税合计(大写)
+- `totalAmountLower`: 价税合计(小写)
+- `invoiceForm`: 联次
+- `remarks`: 备注
+- `payee`: 收款人
+- `checker`: 复核
+- `drawer`: 开票人
+- `goodsDetails`: 发票商品明细
+  - `goodsName`: 货物服务名称
+  - `specification`: 规格
+  - `unit`: 单位
+  - `quantity`: 数量
+  - `unitPrice`: 单价
+  - `itemAmount`: 金额
+  - `taxRate`: 税率
+  - `taxAmount`: 税额
+
+## VAT_ROLL_INVOICE (增值税卷票)
+- `title`: 发票名称
+- `invoiceCode`: 发票代码
+- `invoiceNo`: 发票号码
+- `printedNo`: 机打号码
+- `machineCode`: 机器编号
+- `invoiceDate`: 开票日期
+- `payee`: 收款员
+- `buyerName`: 购方名称
+- `buyerCode`: 购方纳税人识别号
+- `sellerName`: 销售方名称
+- `sellerCode`: 销售方纳税人识别号
+- `totalAmountUpper`: 价税合计(大写)
+- `totalAmountLower`: 价税合计(小写)
+- `checkCode`: 校验码
+- `goodsDetails`: 发票商品明细
+  - `goodsName`: 项目
+  - `unitPrice`: 单价
+  - `quantity`: 数量
+  - `itemAmount`: 金额
+
+## TAXI_INVOICE (出租车发票)
+- `title`: 标题
+- `invoiceCode`: 发票代码
+- `invoiceNo`: 发票号码
+- `vehicleNo`: 车号
+- `certificateNo`: 证号
+- `date`: 日期
+- `boardingTime`: 上车时间
+- `alightingTime`: 下车时间
+- `amount`: 金额
+- `actualAmount`: 实收金额
+
+## TRAIN_TICKET (火车票)
+- `title`: 标题
+- `ticketNo`: 车票编号
+- `departStation`: 起始站
+- `destinationStation`: 终止站
+- `trainNo`: 车次
+- `departDate`: 发车日期
+- `departTime`: 发车时间
+- `seatPostion`: 座位号
+- `seatNo`: 座次
+- `ticketPrice`: 票价
+- `passengerName`: 旅客姓名
+- `identifyId`: 身份证号
+- `invoiceNo`: 发票号码
+- `invoiceDate`: 开票日期
+- `preTaxAmount`: 税前金额
+- `taxRate`: 税率
+- `taxAmount`: 税额
+- `elecTicketNo`: 电子客票号
+- `originInvoiceNo`: 原发票号码
+- `buyerName`: 购买方名称
+- `socialCreditCode`: 统一社会信用代码
+- `refundTag`: 退票标识
+- `replaceTag`: 换开标识
+- `otherInfo`: 其他信息
+
+## AIRPORT_TICKET (航空运输电子客票行程单)
+- `title`: 标题
+- `domesticTag`: 国内国际标识
+- `gpBillNo`: GP单号
+- `issueStatus`: 开具状态
+- `invoiceNo`: 发票号码
+- `serialNumber`: 印刷序号
+- `passengerName`: 旅客姓名
+- `identifyIdNo`: 身份证号码
+- `endorsement`: 签注
+- `openMark`: OPEN标示
+- `refundMark`: 退票费标示
+- `ticketPrice`: 票价
+- `fuleDischarge`: 燃油附加费
+- `civilAviationFund`: 民航发展基金
+- `taxRate`: 增值税税率
+- `taxAmount`: 增值税税额
+- `otherTaxes`: 其他税费
+- `totalAmount`: 合计金额
+- `ticketNo`: 电子客票号码
+- `checkCode`: 验证码
+- `reminderInfo`: 提示信息
+- `insuranceCharge`: 保险费
+- `salesOutletCode`: 销售网点代号
+- `issueUnit`: 填开单位
+- `issueDate`: 填开日期
+- `buyerName`: 购买方名称
+- `taxPayerCode`: 纳税人识别号
+- `airTransportRoutes`: 行程信息
+  - `departPlace`: 始发地
+  - `destinationPlace`: 目的地
+  - `carrier`: 承运人
+  - `flightNo`: 航班号
+  - `seatLevel`: 座位等级
+  - `departDate`: 航班日期
+  - `departTime`: 航班时间
+  - `ticketLevel`: 客票级别
+  - `ticketEffectiveDate`: 客票生效日期
+  - `ticketExpirationDate`: 客票失效日期
+  - `freeLuggage`: 免费行李
+
+## VEHICLE_SALE_INVOICE (机动车销售统一发票)
+- `title`: 发票名称
+- `invoiceForm`: 发票联次
+- `invoiceCode`: 发票代码
+- `invoiceNo`: 发票号码
+- `issueDate`: 开票日期
+- `printedCode`: 机打代码
+- `printedNo`: 机打号码
+- `machineCode`: 机器编号
+- `taxControlCode`: 税控码
+- `buyerName`: 购方名称
+- `buyerTaxId`: 购方纳税人识别号
+- `buyerCode`: 购买方身份证或组织机构代码
+- `vehicleType`: 车辆类型
+- `brandModel`: 厂牌型号
+- `originalPlace`: 产地
+- `qualifiedNo`: 合格证号
+- `importCertificateNo`: 进口证明书号
+- `commodityInspectionNo`: 商检单号
+- `engineNo`: 发动机号码
+- `vehicleIdentificationNo`: 车辆识别代号
+- `totalAmountUpper`: 价税合计(大写)
+- `totalAmountLower`: 价税合计(小写)
+- `sellerName`: 销售方名称
+- `sellerTaxId`: 销售方纳税人识别号
+- `sellerAddressAndPhone`: 销售方地址及电话
+- `sellerBankAndAccount`: 销售方开户行及账号
+- `taxRate`: 增值税税率
+- `taxAmount`: 增值税税额
+- `taxAuthorityName`: 主管税务机关名称
+- `taxAuthorityCode`: 主管税务机关代码
+- `preTaxAmount`: 不含税价
+- `taxPaymentVoucher`: 完税凭证号码
+- `tonnage`: 吨位
+- `maxCapacity`: 限乘人数
+- `drawer`: 开票人
+- `remark`: 备注
+
+## QUOTA_INVOICE (定额发票)
+- `title`: 发票名称
+- `invoiceCode`: 发票代码
+- `invoiceNo`: 发票代码
+- `amountUpper`: 发票号码
+- `amountLower`: 开票日期
+
+## TOLL_INVOICE (过路过桥费发票)
+- `title`: 标题
+- `invoiceCode`: 发票代码
+- `invoiceNo`: 发票代码
+- `invoiceDate`: 开票日期
+- `entranceLocation`: 入口
+- `exitLocation`: 出口
+- `exitTime`: 出口时间
+- `totalAmountLower`: 合计金额(小写)
+
+## MEDICAL_INVOICE (医疗发票)
+- `title`: 标题
+- `invoiceCode`: 发票代码
+- `invoiceNo`: 发票号码
+- `invoiceDate`: 开票日期
+- `checkCode`: 校验码
+- `payerName`: 交款人
+- `payerAccount`: 交款人统一社会信用代码
+- `payeeName`: 收款单位
+- `totalAmountUpper`: 合计金额(大写)
+- `totalAmountLower`: 合计金额(小写)
+
+## TAX_PAYMENT_CERTIFICATE (税收完税证明)
+- `title`: 标题
+- `verifyCode`: 验证码
+- `billNo`: 票据号码
+- `fillDate`: 填发日期
+- `taxAuthority`: 税务机关
+- `taxCode`: 纳税人识别号
+- `taxPayerName`: 纳税人名称
+- `totalAmountUpper`: 合计金额(大写)
+- `totalAmountLower`: 合计金额(小写)
+- `issuer`: 填票人
+- `remarks`: 备注
+- `taxItems`: 纳税明细
+  - `originBillNo`: 原凭证号
+  - `taxType`: 税种
+  - `itemName`: 品目名称
+  - `taxPeriod`: 税款所属时期
+  - `treasuryDate`: 入(退)库日期
+  - `actualPayAmount`: 实缴(退)金额
+
+## NON_TAX_INVOICE (非税票据)
+- `title`: 标题
+- `invoiceCode`: 发票代码
+- `invoiceNo`: 发票号码
+- `payerName`: 交款人
+- `payerSocialCreditCode`: 交款人统一社会信用代码
+- `checkCode`: 校验码
+- `invoiceDate`: 开票日期
+- `totalAmountUpper`: 合计金额(大写)
+- `totalAmountLower`: 合计金额(小写)
+- `payeeCompany`: 收款单位
+- `checker`: 复核人
+- `payee`: 收款人
+- `itemDetails`: 项目明细
+  - `itemCode`: 项目编码
+  - `itemName`: 项目名称
+  - `itemUnit`: 单位
+  - `itemCount`: 数量
+  - `itemCharge`: 标准
+  - `itemAmt`: 金额
+  - `itemRemark`: 备注
+
+## GENERAL_MACHINE_INVOICE (通用机打发票)
+- `title`: 标题
+- `invoiceCode`: 发票代码
+- `invoiceNo`: 发票号码
+- `invoiceDate`: 开票日期
+- `checkCode`: 验证码
+- `buyerName`: 购方名称
+- `buyerCode`: 购方纳税人识别号
+- `buyerAddressAndPhone`: 购方地址及电话
+- `buyerBankAndAccount`: 购方开户行及账号
+- `sellerName`: 销售方名称
+- `sellerCode`: 销售方纳税人识别号
+- `sellerAddressAndPhone`: 销售方地址及电话
+- `sellerBankAndAccount`: 销售方开户行及账号
+- `preTaxTotalAmount`: 税前合计金额
+- `totalTaxAmount`: 合计税额
+- `totalAmountUpper`: 价税合计(大写)
+- `totalAmountLower`: 价税合计(小写)
+- `remarks`: 备注
+- `payee`: 收款人
+- `checker`: 复核
+- `drawer`: 开票人
+- `goodsDetails`: 发票商品明细
+  - `goodsName`: 货物服务名称
+  - `specification`: 规格型号
+  - `unit`: 单位
+  - `quantity`: 数量
+  - `unitPrice`: 单价
+  - `itemAmount`: 金额
+  - `taxRate`: 税率
+  - `taxAmount`: 税额
+
+## SHIP_TICKET (船票)
+- `title`: 标题
+- `invoiceCode`: 发票代码
+- `invoiceNo`: 发票号码
+- `departureDate`: 开船日期
+- `departureTime`: 开船时间
+- `departStation`: 起始站
+- `destinationStation`: 终止站
+- `totalAmountLower`: 合计金额(小写)
+- `passengerName`: 旅客姓名
+
+## BUS_TICKET (汽车票)
+- `title`: 标题
+- `invoiceCode`: 发票代码
+- `invoiceNo`: 发票号码
+- `invoiceDate`: 开票日期
+- `departureDate`: 开车日期
+- `departureTime`: 开车时间
+- `departStation`: 起始站
+- `destinationStation`: 终止站
+- `totalAmountLower`: 合计金额(小写)
+- `passengerName`: 旅客姓名
+
+## VAT_TOLL_INVOICE (增值税通行费发票)
+- `title`: 发票名称
+- `invoiceCode`: 发票代码
+- `invoiceNo`: 发票号码
+- `printedCode`: 机打代码
+- `printedNo`: 机打号码
+- `checkCode`: 校验码
+- `machineCode`: 机器编号
+- `invoiceDate`: 开票日期
+- `passwordArea`: 密码区
+- `buyerName`: 购方名称
+- `buyerCode`: 购方纳税人识别号
+- `buyerAddressAndPhone`: 购方地址及电话
+- `buyerBankAndAccount`: 购方开户行及账号
+- `sellerName`: 销售方名称
+- `sellerCode`: 销售方纳税人识别号
+- `sellerAddressAndPhone`: 销售方地址及电话
+- `sellerBankAndAccount`: 销售方开户行及账号
+- `preTaxTotalAmount`: 税前合计金额
+- `totalTaxAmount`: 合计税额
+- `totalAmountUpper`: 价税合计(大写)
+- `totalAmountLower`: 价税合计(小写)
+- `invoiceForm`: 联次
+- `remarks`: 备注
+- `payee`: 收款人
+- `checker`: 复核
+- `drawer`: 开票人
+- `goodsDetails`: 发票商品明细
+  - `goodsName`: 货物服务名称
+  - `plateNo`: 车牌号
+  - `vehicleType`: 类型
+  - `passageDateBegin`: 通行日期起
+  - `passageDateEnd`: 通行日期止
+  - `itemAmount`: 金额
+  - `taxRate`: 税率
+  - `taxAmount`: 税额
+
+## RIDE_HAILING_ITINERARY (网约车行程单)
+- `title`: 标题
+- `applyTime`: 申请时间
+- `tripTime`: 行程时间
+- `passengerPhone`: 行程人手机号
+- `totalAmountLower`: 合计金额(小写)
+- `pageNo`: 页码
+- `tripDetails`: 行程明细
+  - `tripSerialNo`: 序号
+  - `tripServiceProvider`: 服务商
+  - `tripRideType`: 车型
+  - `tripPickupTime`: 上车时间
+  - `tripCity`: 城市
+  - `tripStartLocation`: 起点
+  - `tripEndLocation`: 终点
+  - `tripMileage`: 里程
+  - `tripAmt`: 金额
+  - `tripRemark`: 备注
+
+## UNIONPAY_POS_RECEIPT (银联POS签购单)
+- `billType`: 签单类型
+- `merchantName`: 商户名称
+- `merchantNo`: 商户编号
+- `issNo`: 发卡行
+- `transType`: 交易类型
+- `voucherNo`: 凭证号
+- `batchNo`: 批次号
+- `referNo`: 参考号
+- `dateTime`: 交易时间
+- `amount`: 交易金额
+
+## MEDICAL_INPATIENT_INVOICE (医疗住院发票)
+- `title`: 标题
+- `invoiceCode`: 票据代码
+- `invoiceNo`: 票据号码
+- `payerName`: 交款人
+- `payerAccount`: 交款人统一社会信用代码
+- `checkCode`: 校验码
+- `invoiceDate`: 开票日期
+- `totalAmountUpper`: 合计金额(大写)
+- `totalAmountLower`: 合计金额(小写)
+- `payeeName`: 收款单位
+- `checker`: 复核人
+- `payee`: 收款人
+- `businessSerialNo`: 业务流水号
+- `medicalRecordNo`: 病历号
+- `inpatientNo`: 住院号
+- `inpatientDept`: 住院科别
+- `admissionTime`: 住院时间
+- `medicalOrgType`: 医疗机构类型
+- `insuranceType`: 医保类型
+- `insuranceNo`: 医保编号
+- `gender`: 性别
+- `poolFundPay`: 医保统筹基金支付
+- `personalAccountPay`: 个人账户支付
+- `personalCashPay`: 个人现金支付
+- `personalSelfPay`: 个人自付
+- `personalSelfExpense`: 个人自费
+- `itemDetails`: 项目明细-多栏
+  - `itemName`: 项目名称
+  - `itemAmt`: 金额
+
+## MEDICAL_EXPENSE_SETTLEMENT (医疗费用结算单)
+- `title`: 标题
+- `institutionCode`: 机构编码
+- `institutionName`: 机构名称
+- `hospitalLevel`: 医院等级
+- `patientName`: 姓名
+- `gender`: 性别
+- `idNumber`: 身份证号
+- `personnelCategory`: 人员类别
+- `socialSecurityCardNumber`: 社保卡号
+- `settlementTime`: 结算时间
+- `printTime`: 打印时间
+- `insuranceType`: 险种类型
+- `insuredRegion`: 参保地
+- `medicalRegion`: 就医地
+- `settlementId`: 结算ID
+- `admissionNumber`: 住院号
+- `admissionMethod`: 入院方式
+- `dischargeDepartment`: 出院科室
+- `primaryDiagnosis`: 主要诊断
+- `secondaryDiagnosis`: 次要诊断
+- `admissionDate`: 入院日期
+- `dischargeDate`: 出院日期
+- `hospitalizationDays`: 住院天数
+- `totalAmountUpper`: 合计金额(大写)
+- `totalAmountLower`: 合计金额(小写)
+- `medicalCoveredAmount`: 医保范围内金额
+- `personalSelfExpense`: 自费金额
+- `aboveLimitSelfPayAmount`: 超限价自费金额
+- `deductible`: 起付线
+- `totalFundPay`: 基金支付合计
+- `pooledFundPay`: 统筹基金支付
+- `largeMutualAidFundPay`: 大额互助资金支付
+- `retireeSupplFundPay`: 退休人员补充基金支付
+- `employerSupplFundPay`: 单位补充基金支付
+- `disabledVeteranSubsidyPay`: 残疾军人医疗补助支付
+- `criticalIllnessPay`: 大病保障支付
+- `medicalAssistancePay`: 医疗救助支付
+- `civilServantSubsidyPay`: 公务员补助支付
+- `otherFundPay`: 其他基金支付
+- `selfPayCategoryOne`: 自付一金额
+- `selfPayCategoryTwo`: 自付二金额
+- `personalCashPay`: 个人现金支付
+- `personalAccountPay`: 个人账户支付
+
+## UNIFIED_IDENTIFICATION_OF_FINANC (财务票据统一识别)
