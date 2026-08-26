@@ -1,0 +1,34 @@
+{
+  "changelog": "Goal Runner 1.0.0 \u2014 Initial Release\n\n- Introduces autonomous orchestration over a roadmap or task file, processing one task at a time with sub-agents for coding, review, and testing.\n- Ensures only verified, observed-green tasks are marked complete; commits or pushes occur only if explicitly granted in the goal text.\n- Annotates and skips blocked tasks instead of faking updates; maintains clear separation of coordination and execution roles.\n- Provides robust guidance on when and how to use the skill, including strict handling of single tasks, batching, and parallelism.\n- Integrates optional model routing via model-inventory for agent selection, with clear gatekeeping and fallback logic.",
+  "created_at": 1786913447507,
+  "display_name": "goal-runner",
+  "fetched_at": 1787771696676,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agent-briefs.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dennis Rongo",
+    "handle": "dennisrongo",
+    "user_id": "s172fm9zqd2gefqxrvhc171s9d8cjc6g"
+  },
+  "slug": "goal-runner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/goal-runner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=goal-runner&ownerHandle=dennisrongo",
+    "page_url": "https://clawhub.ai/dennisrongo/skills/goal-runner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 128,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Autonomous multi-task orchestration loop over a roadmap file (ROADMAP.md, TODO.md, or any checkbox task list) \u2014 pairs with the built-in /goal Stop hook to work tasks ONE at a time until the file is done. The main agent orchestrates only; every task is delegated to sub-agents for coding, code review, and regression testing, with observed-green gates before the checkbox is ticked. No commits or pushes unless the goal text explicitly authorizes them \u2014 when it does, one commit per verified task, never red. Blocked tasks are annotated and skipped, never faked. Use this skill whenever the user says \"work on the roadmap tasks til completion\", \"work the roadmap until completion\", \"work on tasks until completion using sub agents\", \"launch sub agents to work the tasks\", \"/goal-runner\", or sets a /goal naming a roadmap/task file \u2014 even if they don't name the skill. Not for a single defined task (use autopilot or task-executor) and not for interval-scheduled reruns (use loop).",
+  "updated_at": 1786913502309,
+  "version": "1.0.0"
+}
