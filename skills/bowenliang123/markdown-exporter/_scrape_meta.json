@@ -1,0 +1,33 @@
+{
+  "changelog": "- Completely rewrite the `md_to_pdf` tool on Pandoc and Typst (a Rust-based markup language output generator), replacing xhtml2pdf for performace and more stable page output (#174)\n  - Bundle the full Noto Sans CJK font set in `md_to_pdf`, fixing blank/garbled output for Simplified Chinese, Traditional Chinese, Japanese, and Korean text, with paragraph-level regional font adaptation (#175)\n  - Introduce `md_to_svg` and `md_to_png` tools for converting Markdown to images (#179)\n  - Fix image display issues in README by unifying screenshot sizes and removing unreferenced assets (#180 #187)\n  - Fix PDF/PNG/SVG conversion failure on thematic breaks (`---`) by replacing `#horizontalrule` removed in Typst 0.13+ (#186)\n  - Fix emoji rendering failure (tofu boxes) in `md_to_pdf`, `md_to_png` and `md_to_svg` tools on systems without emoji fonts by bundling the Twemoji Mozilla emoji font (#191)\n  - Fix CJK bold text (headings, `**strong**`) rendering at regular weight in `md_to_pdf`, `md_to_png` and `md_to_svg` by bundling the Noto Sans CJK Bold weight (#193)\n  - Fix `<br>` line breaks being lost in table cells in `md_to_xlsx` tool (#183)",
+  "created_at": 1771596070222,
+  "display_name": "markdown-exporter",
+  "fetched_at": 1787772222197,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Bowen Liang",
+    "handle": "bowenliang123",
+    "user_id": "s173peytabgkrqczpkrb5sdt1x8819ew"
+  },
+  "slug": "markdown-exporter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/markdown-exporter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=markdown-exporter&ownerHandle=bowenliang123",
+    "page_url": "https://clawhub.ai/bowenliang123/skills/markdown-exporter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2733,
+    "installs": 87,
+    "stars": 3,
+    "versions": 18
+  },
+  "summary": "Convert Markdown text to DOCX, PPTX, XLSX, PDF, PNG, SVG, HTML, IPYNB, MD, CSV, JSON, JSONL, XML files, and extract code blocks in Markdown to Python, Bash,JS and etc files.",
+  "updated_at": 1786587213466,
+  "version": "4.0.0"
+}
