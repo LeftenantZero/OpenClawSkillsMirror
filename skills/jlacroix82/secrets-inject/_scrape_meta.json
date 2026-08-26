@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of secrets-inject, a companion to secrets-manager for high-risk secret injection into shell commands.\n\n- Injects decrypted secrets from secrets-manager into shell command templates.\n- Outputs executable temp scripts with secrets in plaintext (chmod 0600), or prints injected commands to stdout (with explicit confirmation).\n- Tracks and manages temporary injection files; provides manual cleanup functionality.\n- Requires elevated permissions for filesystem, environment, crypto, and command generation.\n- Clearly separates hazardous secret-materialization logic from secrets-manager for safe, opt-in use.",
+  "created_at": 1785756405703,
+  "display_name": "secrets-inject",
+  "fetched_at": 1787773626485,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.yaml",
+    "secrets-inject.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jlacroix82",
+    "handle": "jlacroix82",
+    "user_id": "s175p518b8g47fx6r9zyvs95ks876t4t"
+  },
+  "slug": "secrets-inject",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/secrets-inject",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=secrets-inject&ownerHandle=jlacroix82",
+    "page_url": "https://clawhub.ai/jlacroix82/skills/secrets-inject"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 189,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "HIGH-PRIVILEGE companion to secrets-manager. Substitutes encrypted secrets into command strings and materializes them as executable shell scripts (written to chmod 0600 temp files) or prints them to stdout. This is a secret-exfiltration-capable capability by design \u2014 it intentionally expands a secret store into command material. Use ONLY when you must hand secrets to a shell command. The core secrets-manager store deliberately does NOT do this; this lives in its own skill so the dangerous capability is opt-in and clearly labeled. Requires the secrets-manager store (memory/secrets).",
+  "updated_at": 1785756492673,
+  "version": "1.0.0"
+}
