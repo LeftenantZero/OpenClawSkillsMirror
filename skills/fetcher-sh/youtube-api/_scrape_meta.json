@@ -1,0 +1,33 @@
+{
+  "changelog": "Major upgrade: New YouTube API powered by fetcher.sh, offering credit and x402 payment options, expanded endpoints, and advanced search/filtering.\n\n- Replaced TranscriptAPI integration with fetcher.sh, dropping OAuth and Google quota constraints.\n- Added support for 15 endpoints, including filtered video/channel/playlist search, channel/video/shorts lookups, comments, hashtags, and trending feeds.\n- Authentication now via prepaid API key or x402 pay-per-call (USDC, multiple chains supported).\n- Plain HTTP GET interface, $0.005 per call, no daily quota or rate limits.\n- Comprehensive examples and usage scenarios included.\n- Removed deprecated documentation and references to old endpoints.",
+  "created_at": 1787305582290,
+  "display_name": "Youtube API",
+  "fetched_at": 1787771131858,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "fetcher-sh",
+    "handle": "fetcher-sh",
+    "user_id": "s17dcnrbn2f5qhk65dscfdycw98cw0kk"
+  },
+  "slug": "youtube-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/youtube-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=youtube-api&ownerHandle=fetcher-sh",
+    "page_url": "https://clawhub.ai/fetcher-sh/skills/youtube-api"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 404,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "A YouTube API alternative on fetcher.sh \u2014 pay-per-call in USDC via x402, or prepaid credits with a Bearer key, no OAuth and no daily quota. Use when the user wants to search YouTube videos with filters for upload date, duration, or sort order, search channels or playlists, look up a channel by ID, @handle, or custom URL path, list a channel's videos, shorts, or live streams, fetch a video's or short's details and comments, list a playlist's videos, pull posts under a hashtag, or check trending videos by region. Also covers YouTube data pipelines, channel monitoring, video analytics input, and trend tracking without the official YouTube Data API's daily quota limits.",
+  "updated_at": 1787305649254,
+  "version": "0.1.0"
+}
