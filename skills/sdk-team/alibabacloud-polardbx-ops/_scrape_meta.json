@@ -1,0 +1,70 @@
+{
+  "changelog": "Initial release of alibabacloud-polardbx-ops skill\n\n- Manage the full lifecycle of Alibaba Cloud PolarDB-X instances using the Aliyun CLI.\n- Supports operations including create, delete, restart, scale, parameter management, monitoring, and logs.\n- Uses intent routing: identifies user intent, performs pre-flight environment checks, and loads relevant documentation before generating CLI commands.\n- Ensures all API calls include a session-specific user-agent for observability.\n- Provides detailed module breakdown and step-by-step instructions for robust, compliant command generation.",
+  "created_at": 1786678765550,
+  "display_name": "alibabacloud-polardbx-ops",
+  "fetched_at": 1787772156280,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/account-management.md",
+    "references/backup-restore.md",
+    "references/cdc.md",
+    "references/cli-installation-guide.md",
+    "references/cold-storage.md",
+    "references/columnar.md",
+    "references/connection-endpoint.md",
+    "references/data-evaluate-migration.md",
+    "references/database-management.md",
+    "references/gdn.md",
+    "references/ha-migration.md",
+    "references/index.md",
+    "references/instance-lifecycle.md",
+    "references/mem0.md",
+    "references/metadata-query.md",
+    "references/monitoring-logs.md",
+    "references/operation-tasks.md",
+    "references/parameters.md",
+    "references/ram-policies.md",
+    "references/related_apis.yaml",
+    "references/scaling.md",
+    "references/security-access.md",
+    "references/sql-audit-compliance.md",
+    "references/sql-flashback.md",
+    "references/tags-resourcegroup.md",
+    "scripts/poll_task.sh",
+    "scripts/spec_lookup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786679788088,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-polardbx-ops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-polardbx-ops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-polardbx-ops&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-polardbx-ops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 131,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Manage Alibaba Cloud PolarDB-X instance lifecycle and routine operations via the Aliyun CLI. Use when the user asks to create, delete, restart, scale, modify, monitor, or inspect PolarDB-X instances. Triggers: \"polardb-x\", \"polardbx\", \"create polardb-x\", \"delete polardb-x\", \"restart polardb-x\", \"scale polardb-x\", \"upgrade polardb-x\", \"describe polardb-x\", \"polardb-x instance\", \"polardb-x parameters\", \"polardb-x slow log\", \"polardb-x performance\", \"polardb-x binlog\"",
+  "updated_at": 1786679075411,
+  "version": "0.0.1"
+}
