@@ -1,0 +1,64 @@
+{
+  "changelog": "Initial release of Huawei Cloud CCE Metric Analyzer.\n\n- Provides metric analysis for CCE clusters and related cloud resources (ECS, ELB, EIP, NAT).\n- Supports TopN rankings, anomaly detection, and resource usage aggregation for Pods, Nodes, CoreDNS, nginx-ingress, autoscaler, and control-plane components.\n- Integrates with hcloud (KooCLI) for service queries, AOM Prometheus for time-series metrics, and limited kubectl reads for resource relationships.\n- Includes threshold-based anomaly detection and status classification.\n- Offers guidance for required IAM permissions, runtime, and credential setup.",
+  "created_at": 1785748198619,
+  "display_name": "huawei-cloud-cce-metric-analyzer",
+  "fetched_at": 1787773650171,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/iam-policies.md",
+    "references/kubectl-cce.md",
+    "references/output-schema.md",
+    "references/risk-rules.md",
+    "references/verification-method.md",
+    "references/workflow.md",
+    "scripts/huawei-cloud.py",
+    "scripts/huawei_cloud/__init__.py",
+    "scripts/huawei_cloud/aom.py",
+    "scripts/huawei_cloud/cce.py",
+    "scripts/huawei_cloud/cce_cluster_monitoring.py",
+    "scripts/huawei_cloud/cce_metrics.py",
+    "scripts/huawei_cloud/common.py",
+    "scripts/huawei_cloud/dispatcher.py",
+    "scripts/huawei_cloud/ecs.py",
+    "scripts/huawei_cloud/elb.py",
+    "scripts/huawei_cloud/kubectl_client.py",
+    "scripts/huawei_cloud/network.py",
+    "skill-card.md",
+    "skill-profile.yaml"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785752292493,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweiclouddev-dev",
+    "handle": "erickeyhu-hug",
+    "user_id": "s1737vnexrppg2ta21w2j328th880sjc"
+  },
+  "slug": "huawei-cloud-cce-metric-analyzer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-cce-metric-analyzer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-cce-metric-analyzer&ownerHandle=erickeyhu-hug",
+    "page_url": "https://clawhub.ai/erickeyhu-hug/skills/huawei-cloud-cce-metric-analyzer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 46,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Huawei Cloud CCE Metric analysis skill using the Python dispatcher with hcloud-backed cloud service queries. Use this skill when the user wants to: (1) query Pod/Node/CoreDNS/nginx-ingress/autoscaler/control-plane CPU, memory, disk, QPS, latency, request, connection, certificate, scaling, or error-rate metrics, (2) get resource usage TopN rankings, (3) query ECS/ELB/EIP/NAT cloud resource metrics, (4) aggregate cluster monitoring data with anomaly detection, (5) detect threshold-based resource anomalies. Trigger: user mentions \"metric analysis\", \"\u6307\u6807\u5206\u6790\", \"CCE metrics\", \"CCE \u6307\u6807\", \"AOM metrics\", \"AOM \u6307\u6807\", \"CoreDNS metrics\", \"CoreDNS \u6307\u6807\", \"nginx ingress metrics\", \"nginx-ingress \u6307\u6807\", \"autoscaler metrics\", \"autoscaler \u6307\u6807\", \"HPA metrics\", \"HPA \u6307\u6807\", \"apiserver metrics\", \"etcd metrics\", \"controller manager metrics\", \"scheduler metrics\", \"control plane metrics\", \"\u63a7\u5236\u9762\u6307\u6807\", \"certificate expiration\", \"\u8bc1\u4e66\u8fc7\u671f\", \"resource metrics\", \"\u8d44\u6e90\u6307\u6807\", \"CPU usage\", \"CPU \u4f7f\u7528\u7387\", \"memory usage\", \"\u5185\u5b58\u4f7f\u7528\u7387\", \"performance monitoring\", \"\u6027\u80fd\u76d1\u63a7\", \"TopN\", \"resource ranking\", \"\u8d44\u6e90\u6392\u540d\"",
+  "updated_at": 1785751490533,
+  "version": "1.0.0"
+}
