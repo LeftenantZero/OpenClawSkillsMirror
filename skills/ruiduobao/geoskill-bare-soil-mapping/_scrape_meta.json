@@ -1,0 +1,66 @@
+{
+  "changelog": "Initial release of geoskill-bare-soil-mapping.\n\n- Maps bare soil by combining Bare Soil Index (BSI), brightness, and local texture, distinguishing it from vegetation, urban areas, and water.\n- Supports automatic thresholding with the Otsu method or manual threshold settings.\n- Outputs include bare soil mask GeoTIFF, BSI raster, area statistics (JSON), and run manifest.\n- Works with both synthetic and user-provided multi-band imagery; all computation runs offline.\n- Includes usage examples and full documentation in both English and Chinese.",
+  "created_at": 1785842665402,
+  "display_name": "geoskill-bare-soil-mapping",
+  "fetched_at": 1787773516488,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_geoskill_core/VENDORED.txt",
+    "_geoskill_core/__init__.py",
+    "_geoskill_core/aoi.py",
+    "_geoskill_core/checks.py",
+    "_geoskill_core/credentials.py",
+    "_geoskill_core/errors.py",
+    "_geoskill_core/manifest.py",
+    "_geoskill_core/safe_download.py",
+    "_geoskill_core/sensors.py",
+    "_meta.json",
+    "_place.py",
+    "e2e_test.py",
+    "geoskill-bare-soil-mapping.py",
+    "openai.yaml",
+    "pytest.ini",
+    "requirements.txt",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_cli.py",
+    "tests/test_core.py",
+    "tests/test_e2e.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1785843578755,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ruiduobao",
+    "handle": "ruiduobao",
+    "user_id": "s176n12ps0h5nrddqkyav159x183jbv6"
+  },
+  "slug": "geoskill-bare-soil-mapping",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geoskill-bare-soil-mapping",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geoskill-bare-soil-mapping&ownerHandle=ruiduobao",
+    "page_url": "https://clawhub.ai/ruiduobao/skills/geoskill-bare-soil-mapping"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 171,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u878d\u5408\u88f8\u571f\u6307\u6570 BSI\u3001\u4eae\u5ea6\u4e0e\u5c40\u90e8\u7eb9\u7406\uff08\u88f8\u571f\u4f4e\u5bf9\u6bd4\u5ea6\uff09\u9608\u503c\u63d0\u53d6\u88f8\u571f/\u88f8\u5730\u5206\u5e03\uff0c\u652f\u6301 Otsu \u81ea\u52a8\u9608\u503c\uff0c\u8f93\u51fa\u88f8\u571f GeoTIFF\u3001BSI \u6805\u683c\u4e0e\u9762\u79ef\u7edf\u8ba1\u3002Maps bare soil by fusing BSI, brightness and local texture.",
+  "updated_at": 1785842813864,
+  "version": "1.0.0"
+}
