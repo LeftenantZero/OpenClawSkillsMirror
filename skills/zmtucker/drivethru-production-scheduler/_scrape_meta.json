@@ -1,0 +1,46 @@
+{
+  "changelog": "drivethru-production-scheduler 0.4.0 introduces art readiness and improved deadline handling to production batch scheduling.\n\n- Adds prioritization based on art readiness; batches blocked by unfinished decals or unready artwork are deferred until they risk lateness, then are expedited.\n- Queue ranking now considers three main factors: manual pins, art readiness (with escalation for urgent jobs), and imminent deadlines (event or ship date).\n- Event date logic refined: only events within a set horizon (default 5 days) drive priority; far-off events no longer jump urgent ship dates.\n- Queue payload now identifies and reports art blockers and at-risk batches for clearer scheduling decisions.\n- Documentation updated to reflect the new art and deadline handling model.\n- Removes deprecated skill card documentation (skill-card.md).",
+  "created_at": 1783537390134,
+  "display_name": "drivethru-production-scheduler",
+  "fetched_at": 1787770314520,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/receipt_readiness.md",
+    "references/scheduling_algorithm.md",
+    "scripts/odoo_mcp.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787256084287,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zmtucker",
+    "handle": "zmtucker",
+    "user_id": "s17fq291581evd78xzn1930b0n87bfny"
+  },
+  "slug": "drivethru-production-scheduler",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/drivethru-production-scheduler",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=drivethru-production-scheduler&ownerHandle=zmtucker",
+    "page_url": "https://clawhub.ai/zmtucker/skills/drivethru-production-scheduler"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 369,
+    "installs": 0,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Schedule MRP production batches in Odoo (BaconCo) \u2014 the fluid shop-floor scheduler. Periodically read open `mrp.production.batch` records, rank them into a run order by the shop rule (manual pins first, then art readiness, then imminent event dates, then earliest governing deadline), write that order back to the floor, and refine it into machine + time slots where the picture is solid. Defers batches whose decals aren't printed or whose artwork isn't digitized below work that can actually run, and expedites them to the top once they're about to be late. Reads purchase orders + vendor tracking to know when goods will land, and uses receipt-readiness as guidance (jobs generally shouldn't start before their components are in) that it refines from human feedback. Handles rush orders dropped in mid-day by re-ranking. Talks to Odoo through the `drivethru_mcp` MCP server. Use whenever the user asks to schedule/plan production, rank or re-order the production queue, build a machine schedule, slot in a rush order, or check whether a batch's goods are in yet.",
+  "updated_at": 1787254487972,
+  "version": "0.4.0"
+}
