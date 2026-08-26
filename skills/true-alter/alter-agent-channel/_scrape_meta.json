@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of alter-agent-channel: coordinate your own agent sessions across restarts and concurrent instances.\n\n- Enables persistence and restoration of session state between agent runs.\n- Provides advisory locks over files and branches for coordination.\n- Supports issuing and claiming units of work between your own sessions and trusted daemons.\n- Allows structured questions and responses to your own principal.\n- Offers event stream subscribing and session roster visibility.\n- All actions rely on your unique ALTER_API_KEY for authentication.",
+  "created_at": 1786244929866,
+  "display_name": "~Alter Agent Channel",
+  "fetched_at": 1787773079387,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "~Alter",
+    "handle": "true-alter",
+    "user_id": "s1756s7xnhcpnt4ep9hrf4mhn184zd8r"
+  },
+  "slug": "alter-agent-channel",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alter-agent-channel",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alter-agent-channel&ownerHandle=true-alter",
+    "page_url": "https://clawhub.ai/true-alter/skills/alter-agent-channel"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 154,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Your last session knew things this one does not. Write a handover frame it can read, claim an advisory lock before you touch a shared file, and tell your other sessions what you are working on. Everything lands on your own event log, so the first call needs nobody's permission.",
+  "updated_at": 1786244979225,
+  "version": "1.0.0"
+}
