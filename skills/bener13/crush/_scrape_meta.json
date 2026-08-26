@@ -1,0 +1,65 @@
+{
+  "changelog": "**Major update: Transform from an online crush matchmaking API to a local, data-driven persona analysis and simulation tool.**\n\n- New purpose: Creates an AI \"skill\" of your crush using chat logs, photos, and social media, running Bayesian analysis and conversation simulation locally.\n- Added intake and evolution flows: Guides users through profile creation, data import, correction, and versioning.\n- Introduced multiple Python tools for parsing WeChat, QQ, social media, EXIF/photos, and Bayesian tagging.\n- Full workflow and safety guidelines detailed in SKILL.md.\n- Platform compatibility and local privacy emphasized\u2014no cloud API or external uploads.\n- API-based matchmaking features removed; replaced by local analysis and simulation.",
+  "created_at": 1787637600496,
+  "display_name": "XB",
+  "fetched_at": 1787770936146,
+  "files": [
+    "INSTALL.md",
+    "LICENSE",
+    "README.md",
+    "README_EN.md",
+    "SKILL.md",
+    "_meta.json",
+    "prompts/bayesian_analysis.md",
+    "prompts/correction_handler.md",
+    "prompts/intake.md",
+    "prompts/memory_analyzer.md",
+    "prompts/memory_builder.md",
+    "prompts/merger.md",
+    "prompts/persona_analyzer.md",
+    "prompts/persona_builder.md",
+    "requirements.txt",
+    "skill-card.md",
+    "tools/bayesian_tagger.py",
+    "tools/imessage_parser.py",
+    "tools/photo_analyzer.py",
+    "tools/qq_parser.py",
+    "tools/screenshot_parser.py",
+    "tools/skill_writer.py",
+    "tools/social_parser.py",
+    "tools/version_manager.py",
+    "tools/wechat_parser.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787638497701,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Bener13",
+    "handle": "bener13",
+    "user_id": "s17043d3shech8q3bwm3qt3rj18d44ct"
+  },
+  "slug": "crush",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/crush",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=crush&ownerHandle=bener13",
+    "page_url": "https://clawhub.ai/bener13/skills/crush"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 8,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Build a living AI model of your crush from chat logs, photos, and social media. Runs Bayesian memory tagging, attachment-style diagnosis, and generates a personalized Skill that talks like them. | \u628a\u4f60\u7684 crush \u84b8\u998f\u6210 AI Skill\uff0c\u5bfc\u5165\u804a\u5929\u8bb0\u5f55\uff0c\u8fd0\u884c\u8d1d\u53f6\u65af\u4fe1\u53f7\u5206\u6790\uff0c\u8bca\u65ad\u4f9d\u604b\u7c7b\u578b\uff0c\u5e76\u6a21\u62df\u5bf9\u8bdd\u6f14\u4e60\u3002",
+  "updated_at": 1787637749113,
+  "version": "1.0.0"
+}
