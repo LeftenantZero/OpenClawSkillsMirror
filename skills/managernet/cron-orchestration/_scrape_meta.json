@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of cron-orchestration with standardized scheduling and task separation.\n\n- Defines clear separation of duties for main coordinator, team broadcast, and side collection tasks.\n- Enforces single-task execution per round, with 5-minute intervals and lock files to prevent concurrency.\n- Implements sorting by dependency, priority, and deadline for task execution.\n- Adds rules for DingTalk notifications and strict context isolation for each cron run.\n- Validated core functions: topo/priority/deadline sorting, file locking, correct output paths, git pushes.\n- Known issues: DingTalk notification not yet configured; dependency waits need enforcement; legacy scripts still running alongside new cron.",
+  "created_at": 1786600370785,
+  "display_name": "cron-orchestration",
+  "fetched_at": 1787772438123,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786601136929,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Manager Net",
+    "handle": "managernet",
+    "user_id": "s1775470dbk2dgddbsbca0wg7583ha9k"
+  },
+  "slug": "cron-orchestration",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cron-orchestration",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cron-orchestration&ownerHandle=managernet",
+    "page_url": "https://clawhub.ai/managernet/skills/cron-orchestration"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 125,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Cron \u8c03\u5ea6\u4e0e\u4e92\u65a5\u89c4\u8303\uff1a\u4e3b\u534f\u8c03\u5668/\u56e2\u961f\u5e7f\u64ad/\u4fa7\u7ebf\u91c7\u96c6\u804c\u8d23\u5206\u79bb\uff0c\u6bcf\u8f6e\u5355\u4efb\u52a1\uff0c5\u5206\u949f\u95f4\u9694\uff0c\u9501\u6587\u4ef6\u9632\u5e76\u53d1\u3002",
+  "updated_at": 1786600432643,
+  "version": "1.0.0"
+}
