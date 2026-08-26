@@ -1,0 +1,63 @@
+{
+  "changelog": "- Initial release of arxiv-search.\n- Enables retrieval of arXiv paper metadata using keyword queries.\n- Supports both online (arXiv API) and offline (CSV/JSON/JSONL import) workflows.\n- Outputs normalized results to `papers/papers_raw.jsonl` with key metadata fields.\n- Provides optional field enrichment via arXiv `id_list` if network is available.\n- Includes troubleshooting and quality guidance for smooth integration.",
+  "created_at": 1773915798185,
+  "display_name": "Arxiv Search",
+  "fetched_at": 1787776930777,
+  "files": [
+    "AGENTS.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/domain_packs/embodied_ai.json",
+    "assets/domain_packs/llm_agents.json",
+    "pipelines/arxiv-survey-latex.pipeline.md",
+    "pipelines/arxiv-survey.pipeline.md",
+    "pipelines/graduate-paper-pipeline.md",
+    "pipelines/idea-brainstorm.pipeline.md",
+    "pipelines/lit-snapshot.pipeline.md",
+    "pipelines/peer-review.pipeline.md",
+    "pipelines/systematic-review.pipeline.md",
+    "pipelines/tutorial.pipeline.md",
+    "references/domain_pack_overview.md",
+    "scripts/run.py",
+    "skill-card.md",
+    "tooling/__init__.py",
+    "tooling/common.py",
+    "tooling/executor.py",
+    "tooling/ideation.py",
+    "tooling/pipeline_spec.py",
+    "tooling/pipeline_text.py",
+    "tooling/quality_gate.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089978590,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "WILLOSCAR",
+    "handle": "willoscar",
+    "user_id": "s170swmbgwf84dyyf8gmbm8h7d885agm"
+  },
+  "slug": "arxiv-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/arxiv-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=arxiv-search&ownerHandle=willoscar",
+    "page_url": "https://clawhub.ai/willoscar/skills/arxiv-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1328,
+    "installs": 43,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Retrieve paper metadata from arXiv using keyword queries and save results as JSONL (`papers/papers_raw.jsonl`). **Trigger**: arXiv, arxiv, paper search, meta...",
+  "updated_at": 1778492029687,
+  "version": "1.0.0"
+}
