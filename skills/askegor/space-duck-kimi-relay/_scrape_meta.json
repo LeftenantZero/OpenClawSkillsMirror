@@ -1,0 +1,35 @@
+{
+  "changelog": "0.8.7 \u2014 no-op lockstep bump with space-duck 0.8.7 (STATUS-087). No code changes.",
+  "created_at": 1785900921076,
+  "display_name": "space-duck-kimi-relay",
+  "fetched_at": 1787771356670,
+  "files": [
+    "SECURITY-MANIFEST.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/kimi_login.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "askegor",
+    "handle": "askegor",
+    "user_id": "s17e5znj81e7w3zawrsxqg06hn85qbfq"
+  },
+  "slug": "space-duck-kimi-relay",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/space-duck-kimi-relay",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=space-duck-kimi-relay&ownerHandle=askegor",
+    "page_url": "https://clawhub.ai/askegor/skills/space-duck-kimi-relay"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 713,
+    "installs": 1,
+    "stars": 0,
+    "versions": 13
+  },
+  "summary": "Optional Lane A / BYOB add-on for Space Duck \u2014 runs a local RFC 8628 device-code \"Sign in with Kimi\" flow (no password; browser-approved) so a self-hosted duck can use the owner's flat-rate Kimi membership for inference. Credentials (access + rotating refresh token) are stored locally at ~/.kimi-code/credentials/kimi.json (0600) and are NEVER sent to Spaceduckling. Contacts only auth.kimi.com and api.kimi.com; inference is processed by Moonshot AI in China (no Western data residency). Optional pay-per-token fallback to openrouter.ai when OPENROUTER_API_KEY is set (daily-capped). Runs a localhost-only proxy (127.0.0.1, default 8471) protected by an auto-generated 0600 bearer secret. Hosted (Lane B) ducks use the Mission Control card instead. Triggers on \"sign in with kimi\", \"kimi membership login\", \"clawhub space-duck kimi\", \"kimi relay login\".",
+  "updated_at": 1787104934982,
+  "version": "0.8.7"
+}
