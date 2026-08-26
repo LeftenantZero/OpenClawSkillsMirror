@@ -1,0 +1,42 @@
+{
+  "changelog": "Incremental sync and caching support added.\n\n- Added incremental synchronization for events and todos to improve sync speed and efficiency.\n- Introduced caching for sync state per account and calendar at `~/.config/mail-skills/caldav-cache/`.\n- New `--force-refresh` option to bypass cache and force a full sync.\n- Write operations now automatically invalidate the cache to ensure up-to-date data.\n- Added scripts/cache.js and scripts/sync.js to implement caching and sync logic.",
+  "created_at": 1779111743198,
+  "display_name": "caldav-sync",
+  "fetched_at": 1787785183737,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "package-lock.json",
+    "package.json",
+    "scripts/cache.js",
+    "scripts/caldav.js",
+    "scripts/config.js",
+    "scripts/ical.js",
+    "scripts/providers.js",
+    "scripts/sync.js",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "gzlicanyi",
+    "handle": "gzlicanyi",
+    "user_id": "s17en8axd9552m9fpmxvhkq9xd83gnb1"
+  },
+  "slug": "caldav-sync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/caldav-sync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=caldav-sync&ownerHandle=gzlicanyi",
+    "page_url": "https://clawhub.ai/gzlicanyi/skills/caldav-sync"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 891,
+    "installs": 20,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "Calendar and task management via CalDAV protocol. Query, create, edit, and delete calendar events and todos. Free/busy query, multi-account support.",
+  "updated_at": 1779460071449,
+  "version": "1.0.3"
+}
