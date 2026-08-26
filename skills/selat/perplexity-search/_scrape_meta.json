@@ -1,0 +1,33 @@
+{
+  "changelog": "Remove the synchronous Sonar endpoint (/v1/sonar), which was removed upstream; it was previously documented as temporarily unavailable. Web Search, Agent answer, and async deep-research escalations are unchanged.",
+  "created_at": 1785026637687,
+  "display_name": "perplexity-search",
+  "fetched_at": 1787774999104,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SELAT",
+    "handle": "selat",
+    "user_id": "s176aj6f6p6r9p9xgpk5hm7d3d8ayj6p"
+  },
+  "slug": "perplexity-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/perplexity-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=perplexity-search&ownerHandle=selat",
+    "page_url": "https://clawhub.ai/selat/skills/perplexity-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 78,
+    "installs": 0,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Grounded web search & research via Perplexity, keyless and pay-per-call over SELAT. Use when asked to \"search the web for <topic>\", \"what's the latest on <topic>\", \"research <topic> with sources\", \"do a deep-research report on <X>\", or \"give me a grounded answer with citations\". Runs Perplexity's cheap web Search by default, and can escalate to a one-shot Agent answer or an async deep-research report when a plain search isn't enough. Paid per call in USDC (on Base) from the user's own self-custody Circle Agent Wallet \u2014 no Perplexity API key, no signup. Dry-run first to see live prices; every price the CLI shows already includes SELAT's ~5% routing markup.",
+  "updated_at": 1785042293552,
+  "version": "1.1.2"
+}
