@@ -1,0 +1,44 @@
+{
+  "changelog": "sol-inbound-watcher 0.1.0 \u2013 Initial Release\n\n- Watches a Solana address for new inbound SOL or USDC transfers using a public RPC.\n- Filters for inbound payments above a configurable minimum amount.\n- Deduplicates transactions and emits payment details as JSON to stdout or a webhook.\n- No custody; does not require private keys or perform outgoing transactions.\n- Simple installation and direct usage instructions included.",
+  "created_at": 1786862710067,
+  "display_name": "Sol Inbound Watcher Pub",
+  "fetched_at": 1787771767782,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/watch_inbound.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1786863478765,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Kateryna Kovalenko",
+    "handle": "kateryna-sprintcx",
+    "user_id": "s17f138kg27e4x3508n10ve30x8cbxxv"
+  },
+  "slug": "sol-inbound-watcher",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sol-inbound-watcher",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sol-inbound-watcher&ownerHandle=kateryna-sprintcx",
+    "page_url": "https://clawhub.ai/kateryna-sprintcx/skills/sol-inbound-watcher"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 125,
+    "installs": 1,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Watch a Solana address for new inbound SOL/USDC transfers and alert via webhook or stdout. Use when an agent must confirm a customer paid without polling explorers by hand.",
+  "updated_at": 1786862779444,
+  "version": "0.1.0"
+}
