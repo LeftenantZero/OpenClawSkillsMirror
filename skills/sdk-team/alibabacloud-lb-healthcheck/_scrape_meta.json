@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of alibabacloud-lb-healthcheck.\n\n- Provides read-only health check diagnostics for Alibaba Cloud CLB, ALB, and NLB load balancers.\n- Automatically collects listener health-check configuration, forwarding rules, server groups, and backend server probe status.\n- Generates a structured diagnosis report, including per-server self-check commands.\n- Never modifies any configuration; strictly read-only (Describe/List/Get only).\n- Supports automatic input resolution for missing load balancer ID and region, always declaring auto-filled data sources.",
+  "created_at": 1787743929686,
+  "display_name": "alibabacloud-lb-healthcheck",
+  "fetched_at": 1787768529773,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/alb-guide.md",
+    "references/alb-reference.md",
+    "references/api-doc-links.md",
+    "references/clb-guide.md",
+    "references/clb-reference.md",
+    "references/nlb-guide.md",
+    "references/nlb-reference.md",
+    "references/ram-policies.md",
+    "scripts/_cli.py",
+    "scripts/diagnose_alb.py",
+    "scripts/diagnose_clb.py",
+    "scripts/diagnose_nlb.py",
+    "scripts/requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-lb-healthcheck",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-lb-healthcheck",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-lb-healthcheck&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-lb-healthcheck"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 18,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read-only health-check diagnostics for Alibaba Cloud load balancers (CLB/ALB/NLB). Collects listener health-check configuration, forwarding rules, server groups and backend server probe status, and produces a structured diagnosis report; never changes any configuration. Use when health checks fail, backend servers are marked unhealthy, or the customer asks about load balancer health-check configuration. Triggers: \"health check failed\", \"unhealthy backend server\", \"backend probe abnormal\", \"backend server unhealthy\", \"SLB health check diagnosis\", \"CLB health check diagnosis\", \"ALB health check diagnosis\", \"NLB health check diagnosis\", \"listener health check configuration query\", \"server group probe status\".",
+  "updated_at": 1787744172922,
+  "version": "0.0.1"
+}
