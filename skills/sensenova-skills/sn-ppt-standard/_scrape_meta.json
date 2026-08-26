@@ -1,0 +1,78 @@
+{
+  "changelog": "sn-ppt-standard 2026.8.19\n\n- Refined pipeline for standard and fast PPT generation, with all LLM/VLM/T2I calls handled via a single CLI entry.\n- Fast mode: autonomously drafts entire decks immediately, then provides structured, actionable refinement suggestions to guide user improvements.\n- Standard mode: plans thoroughly with a three-deck preview checkpoint, performs web/image research, and prompts user to choose the final deck style.\n- Clear division of responsibilities between agent and script; strict rules to avoid loops, prompt-writing, image placeholder use, silent failures, or data fabrication.\n- Language and output integrity strictly enforced: language matches user query, images are always local, and all data is document- or web-sourced.\n- Skill must be invoked via entrypoint (`/skill sn-ppt-entry`), never directly; missing prerequisites trigger halt with user guidance.",
+  "created_at": 1787108316140,
+  "display_name": "sn-ppt-standard",
+  "fetched_at": 1787770698784,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "lib/__init__.py",
+    "lib/model_client.py",
+    "prompts/asset_plan.md",
+    "prompts/asset_qc.md",
+    "prompts/deck_review.md",
+    "prompts/outline.md",
+    "prompts/page_html.md",
+    "prompts/page_html_rewrite.md",
+    "prompts/page_review.md",
+    "prompts/page_rewrite.md",
+    "prompts/refine_apply.md",
+    "prompts/refine_review.md",
+    "prompts/style_samples.md",
+    "prompts/style_spec.md",
+    "references/html_constraints.md",
+    "references/style_catalog.md",
+    "scripts/build_style_catalog.py",
+    "scripts/export_pptx/html_to_pdf.mjs",
+    "scripts/export_pptx/html_to_pptx.mjs",
+    "scripts/export_pptx/lib/browser_setup.mjs",
+    "scripts/export_pptx/lib/cli_guards.mjs",
+    "scripts/export_pptx/lib/dom_extractor.mjs",
+    "scripts/export_pptx/lib/echarts_to_pptx.mjs",
+    "scripts/export_pptx/lib/image_downloader.mjs",
+    "scripts/export_pptx/lib/postprocess_pptx.mjs",
+    "scripts/export_pptx/lib/pptx_builder.mjs",
+    "scripts/export_pptx/lib/style_parser.mjs",
+    "scripts/export_pptx/package-lock.json",
+    "scripts/export_pptx/package.json",
+    "scripts/export_pptx/screenshot.mjs",
+    "scripts/launch_workbench.py",
+    "scripts/progress_event.py",
+    "scripts/resume_scan.py",
+    "scripts/run_stage.py",
+    "scripts/run_stage_with_progress.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787109385488,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "SenseNova-Skills",
+    "handle": "sensenova-skills",
+    "user_id": "s17fzc6fnxkbqzh6z8jr5bcvhh8bw2vm"
+  },
+  "slug": "sn-ppt-standard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sn-ppt-standard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sn-ppt-standard&ownerHandle=sensenova-skills",
+    "page_url": "https://clawhub.ai/sensenova-skills/skills/sn-ppt-standard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 101,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Standard and fast PPT pipeline. All LLM / VLM / T2I calls are wrapped in a single CLI entry (scripts/run_stage.py). The main agent's job is simple: emit ONE shell command per stage, never write loops, never write prompts. Standard mode plans thoroughly with a three-sample deck preview checkpoint (three concatenated deck images plus a preview URL), web research, image search, and user-selected final output format (PPTX or PDF) for polished, delivery-ready presentations. Fast mode builds a complete draft immediately with autonomous decisions, then provides structured refinement suggestions so the user can iterate quickly. Supports AI-generated infographics (U1) for diagrams and flowcharts, web image search (Serper) for real photos, and ECharts for data charts.",
+  "updated_at": 1787108606817,
+  "version": "2026.8.19"
+}
