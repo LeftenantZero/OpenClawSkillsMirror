@@ -1,0 +1,49 @@
+{
+  "changelog": "alibabacloud-polardb-ai-assistant v0.0.3 changelog\n\n- Adds PolarDB-only scope, clarifying not to use for non-PolarDB products unless explicitly required.\n- Updates capability list: improved detail and expanded cluster management, inspection, diagnostics, version/event analysis, and security checks.\n- Switched to the Yaochi Agent v2 backend, explicitly describing the backend execution model and the workflow.\n- Introduces required observability: every CLI/SDK call now mandates a unique session ID in the User-Agent, with consistent session management guidelines.\n- Refined installation instructions for improved security (review CLI installer before running).\n- Updates core workflow, parameter confirmation, and documentation; removed obsolete files and streamlined Skill configuration.",
+  "created_at": 1775200462458,
+  "display_name": "Alibabacloud Polardb Ai Assistant",
+  "fetched_at": 1787776896689,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/ram-policies.md",
+    "references/related-apis.md",
+    "references/verification-method.md",
+    "scripts/call_yaochi_agent.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783938492734,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-polardb-ai-assistant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-polardb-ai-assistant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-polardb-ai-assistant&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-polardb-ai-assistant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 938,
+    "installs": 18,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Alibaba Cloud PolarDB Database AI Assistant. For PolarDB MySQL/PostgreSQL cluster management, instance inspection, performance diagnostics, parameter explana...",
+  "updated_at": 1783938316719,
+  "version": "0.0.3"
+}
