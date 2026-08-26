@@ -1,0 +1,41 @@
+{
+  "changelog": "**Smart Search v4.1.1 \u2014 Major refactor for opencli search routing**\n\n- Replaced previous search logic with a new skill focused on routing queries to the best opencli site based on topic and scenario.\n- Enforced strict pre-check steps and discourages hardcoding command signatures\u2014requires live help output before each search.\n- Introduced unified routing: user-specified sites take priority, otherwise select 1 AI site (grok, doubao, or gemini); supplement with vertical sites only when necessary.\n- Added per-site rate limiting and clear logging for search execution and frequency limits.\n- Outlined required search summary at the end of each answer for traceability.\n- Added modular reference files for different source types; removed legacy docs, workflow, and configuration scripts.",
+  "created_at": 1785290505833,
+  "display_name": "smart-search",
+  "fetched_at": 1787774454042,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/sources-ai.md",
+    "references/sources-info.md",
+    "references/sources-media.md",
+    "references/sources-other.md",
+    "references/sources-shopping.md",
+    "references/sources-social.md",
+    "references/sources-tech.md",
+    "references/sources-travel.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Kevin Stone",
+    "handle": "chaoyang78",
+    "user_id": "s177bzvqf3s7ftyvws7t42cwd184taap"
+  },
+  "slug": "smart-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/smart-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=smart-search&ownerHandle=chaoyang78",
+    "page_url": "https://clawhub.ai/chaoyang78/skills/smart-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 47,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u57fa\u4e8e opencli \u547d\u4ee4\u7684\u667a\u80fd\u641c\u7d22\u8def\u7531\u5668\u3002\u5f53\u7528\u6237\u60f3\u8981\u4f7f\u7528 OpenCLI\u3001CLI \u6216 API \u641c\u7d22\u3001\u67e5\u8be2\u3001\u67e5\u627e\u6216\u7814\u7a76\u4fe1\u606f\u65f6\uff0c\u5c24\u5176\u662f\u6d89\u53ca\u6307\u5b9a\u7f51\u7ad9\u3001\u793e\u4ea4\u5a92\u4f53\u3001\u6280\u672f\u8d44\u6599\u3001\u65b0\u95fb\u3001\u8d2d\u7269\u3001\u65c5\u6e38\u3001\u6c42\u804c\u3001\u91d1\u878d\u6216\u4e2d\u6587\u5185\u5bb9\u65f6\uff0c\u52a1\u5fc5\u4f7f\u7528\u6b64 skill",
+  "updated_at": 1785291343978,
+  "version": "4.1.1"
+}
