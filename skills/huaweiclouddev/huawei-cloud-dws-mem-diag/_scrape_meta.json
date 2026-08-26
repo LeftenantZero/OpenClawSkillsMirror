@@ -1,0 +1,49 @@
+{
+  "changelog": "Huawei Cloud DWS Memory High Diagnosis Skill v1.0.0\n\n- Initial release of the skill for diagnosing high memory usage in DWS clusters.\n- Automatically analyzes memory alarms, OOM issues, and high memory usage scenarios to produce standardized diagnosis reports.\n- Integrates with KooCLI (hcloud) v3.2.0+ and DWS Autopilot MCP Server, with automatic fallback based on availability.\n- Enforces strict diagnosis/reporting rules: output only reflects tool results; remediation suggestions and custom SQL outputs are not included.\n- Supports a comprehensive list of memory-related trigger words for flexible invocation.",
+  "created_at": 1784649691423,
+  "display_name": "huawei-cloud-dws-mem-diag",
+  "fetched_at": 1787775785254,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cli-installation-guide.md",
+    "references/dws-mcp-installation-guide.md",
+    "references/iam-policies.md",
+    "references/memory-background.md",
+    "references/metric-reference.md",
+    "references/output-format.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784669300143,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweicloud-skills-team",
+    "handle": "huaweiclouddev",
+    "user_id": "s17axk041vxeamxj39r4dwvyts87wtza"
+  },
+  "slug": "huawei-cloud-dws-mem-diag",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-dws-mem-diag",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-dws-mem-diag&ownerHandle=huaweiclouddev",
+    "page_url": "https://clawhub.ai/huaweiclouddev/skills/huawei-cloud-dws-mem-diag"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 241,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "DWS cluster memory high root cause diagnosis skill, based on KooCLI v3.2.0+ and DWS Autopilot MCP Server. Automatically collects memory metrics, analyzes roo...",
+  "updated_at": 1784669058933,
+  "version": "1.0.0"
+}
