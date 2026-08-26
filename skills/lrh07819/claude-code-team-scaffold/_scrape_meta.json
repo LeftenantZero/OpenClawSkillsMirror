@@ -1,0 +1,76 @@
+{
+  "changelog": "claude-code-team-scaffold 1.0.0 \u2013 Initial release for setting up structured Claude Code AI project teams.\n\n- Provides a multi-phase workflow to scaffold a Claude Code AI-assisted dev environment with code quality gates, lifecycle hooks, multi-agent support, and synchronized project discipline.\n- Collects key project information for tech stack, agent roles, and workflow features via user prompts.\n- Generates full .claude/ scaffolding: including settings.json with 6 event hooks, subagent definitions, slash commands, and planning-with-files support.\n- Sets up both per-project and global persistent memory for code style and execution habits.\n- Integrates CLAUDE.md as root discipline/spec file; entire framework enforces spec-flow, agent sync, and quality enforcement at each lifecycle stage.\n- Includes clear changelog of difference vs. original AGENTS.md workflows (e.g., hooks model, command templates, memory handling, and discipline enforcement via hooks).",
+  "created_at": 1782458903582,
+  "display_name": "Claude Code Team Scaffold",
+  "fetched_at": 1787778974858,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md",
+    "templates/TEMPLATE-CLAUDE.md",
+    "templates/agents/ai-engineer.md",
+    "templates/agents/architect.md",
+    "templates/agents/backend-developer.md",
+    "templates/agents/frontend-developer.md",
+    "templates/agents/requirements-analyst.md",
+    "templates/agents/test-engineer.md",
+    "templates/commands/run-task.md",
+    "templates/docs/sessions-README.md",
+    "templates/hooks/.claude/.runtime/edits.json",
+    "templates/hooks/.claude/.runtime/gate.json",
+    "templates/hooks/.claude/session-logs/2026-06-26_t1.md",
+    "templates/hooks/.claude/session-logs/2026-06-26_test.md",
+    "templates/hooks/agent-stop.js",
+    "templates/hooks/paths.js",
+    "templates/hooks/post-tool-use.js",
+    "templates/hooks/pre-tool-use.js",
+    "templates/hooks/session-log.js",
+    "templates/hooks/session-start.js",
+    "templates/hooks/subagent-start.js",
+    "templates/hooks/subagent-stop.js",
+    "templates/instructions/planning-with-files.md",
+    "templates/instructions/spec-flow-run-task.md",
+    "templates/instructions/testing.md",
+    "templates/memory/agent-principles.md",
+    "templates/memory/code-style.md",
+    "templates/memory/execution-discipline.md",
+    "templates/memory/hooks-config.md",
+    "templates/skills/planning-with-files/SKILL.md",
+    "templates/skills/planning-with-files/scripts/session-catchup.py",
+    "templates/skills/planning-with-files/templates/findings.md",
+    "templates/skills/planning-with-files/templates/progress.md",
+    "templates/skills/planning-with-files/templates/task_plan.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1782490611109,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "lrh",
+    "handle": "lrh07819",
+    "user_id": "s17dxrxrhf4ypt2evh67eefwbs85prdx"
+  },
+  "slug": "claude-code-team-scaffold",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claude-code-team-scaffold",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claude-code-team-scaffold&ownerHandle=lrh07819",
+    "page_url": "https://clawhub.ai/lrh07819/skills/claude-code-team-scaffold"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 214,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u8be5\u6307\u4ee4\u7528\u4e8e\u5728 Claude Code \u65b0\u9879\u76ee\u521d\u59cb\u5316\u591a\u667a\u80fd\u4f53 AI \u5f00\u53d1\u6846\u67b6\uff1a\u751f\u6210.claude \u76ee\u5f55\u3001\u542b 6 \u7c7b\u751f\u547d\u5468\u671f\u94a9\u5b50\u7684\u914d\u7f6e\u3001\u5b50\u667a\u80fd\u4f53\u3001\u659c\u6760\u547d\u4ee4\u4e0e\u6587\u4ef6\u89c4\u5212\u6280\u80fd\uff0c\u642d\u5efa\u89c4\u8303\u76ee\u5f55\u3001\u4e24\u7ea7\u8bb0\u5fc6\u4f53\u7cfb\uff0c\u914d\u5957\u4ee3\u7801\u8d28\u68c0\u3001\u6587\u6863\u540c\u6b65\u3001\u4efb\u52a1\u6d41\u6c34\u7ebf\uff1b\u89e6\u53d1\u77ed\u8bed\u542b\u4e2d\u82f1\u591a\u7ec4\u3002",
+  "updated_at": 1782458903582,
+  "version": "1.0.0"
+}
