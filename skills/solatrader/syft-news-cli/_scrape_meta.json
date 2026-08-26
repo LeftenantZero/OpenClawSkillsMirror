@@ -1,0 +1,34 @@
+{
+  "changelog": "Added more command parameters to enrich the output:\n- `--rich`\n  - returns richer story payloads, including `summary` and `refs`, not just titles\n  - verified from real CLI output on 2026-05-29\n- `--limit`\n  - controls returned item count\n  - default is `10` for `top`, `search`, and `global-search`\n- `--days`\n  - controls the recency window\n  - defaults:\n    - `top`: `1`\n    - `search`: `14`\n    - `global-search`: `3`\n- `--rerank`\n  - available on `search` and `global-search`\n  - requires a paid account\n  - represents final result size after rerank\n- `--topic-id`\n  - available on `top`\n  - use `syft following` first to fetch topic ids\n- `--page`\n  - available on `top`\n  - use it when `has_more` is `true`",
+  "created_at": 1779861728672,
+  "display_name": "Syft News Pool (CLI)",
+  "fetched_at": 1787783986521,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Solatrader",
+    "handle": "solatrader",
+    "user_id": "s17aeh8m29xd84s8gfbhekr5vx87g7cc"
+  },
+  "slug": "syft-news-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/syft-news-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=syft-news-cli&ownerHandle=solatrader",
+    "page_url": "https://clawhub.ai/solatrader/skills/syft-news-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 605,
+    "installs": 12,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Help users to access the global news pipeline of Syft News, which offers AI pre-recalled and summarized by-topic news pools, free keyword search and news ext...",
+  "updated_at": 1780034457629,
+  "version": "1.1.1"
+}
