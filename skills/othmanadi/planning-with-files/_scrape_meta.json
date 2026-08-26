@@ -1,0 +1,71 @@
+{
+  "changelog": "- Improved script and docs placement: added standalone examples.md, reference.md, and moved templates to a top-level /templates folder.\n- Added new analytics-specific templates: analytics_findings.md and analytics_task_plan.md.\n- Updated PowerShell and shell command logic to handle cross-platform stop hooks more robustly.\n- Clarified session restoration instructions in documentation.\n- Removed legacy/duplicative files from the references and root directory for cleaner structure.",
+  "created_at": 1769389713406,
+  "display_name": "Planning with files",
+  "fetched_at": 1787770533393,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "examples.md",
+    "reference.md",
+    "scripts/attest-plan.ps1",
+    "scripts/attest-plan.sh",
+    "scripts/check-complete.ps1",
+    "scripts/check-complete.sh",
+    "scripts/gate-stop.sh",
+    "scripts/init-session.ps1",
+    "scripts/init-session.sh",
+    "scripts/inject-plan.sh",
+    "scripts/ledger-append.ps1",
+    "scripts/ledger-append.sh",
+    "scripts/ledger-summary.ps1",
+    "scripts/ledger-summary.sh",
+    "scripts/phase-status.ps1",
+    "scripts/phase-status.sh",
+    "scripts/plan-doctor.sh",
+    "scripts/resolve-plan-dir.ps1",
+    "scripts/resolve-plan-dir.sh",
+    "scripts/session-catchup.py",
+    "scripts/set-active-plan.ps1",
+    "scripts/set-active-plan.sh",
+    "skill-card.md",
+    "templates/analytics_findings.md",
+    "templates/analytics_task_plan.md",
+    "templates/findings.md",
+    "templates/progress.md",
+    "templates/task_plan.md",
+    "templates/task_plan_autonomous.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787173167910,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Ahmad Othman Ammar Adi.",
+    "handle": "othmanadi",
+    "user_id": "s17ds6610wra1m85mmdwy4zja184wyga"
+  },
+  "slug": "planning-with-files",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/planning-with-files",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=planning-with-files&ownerHandle=othmanadi",
+    "page_url": "https://clawhub.ai/othmanadi/skills/planning-with-files"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 38917,
+    "installs": 868,
+    "stars": 53,
+    "versions": 17
+  },
+  "summary": "Manus-style persistent file-based planning for AI coding agents: keeps task_plan.md, findings.md, and progress.md on disk so work survives context loss and /clear. Use when asked to plan out, break down, or organize a multi-step project, research task, or any work requiring 5+ tool calls. Supports a",
+  "updated_at": 1787172347353,
+  "version": "3.10.2"
+}
