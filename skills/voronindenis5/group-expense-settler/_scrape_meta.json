@@ -1,0 +1,38 @@
+{
+  "changelog": "- Initial release of Group Expense Settler.\n- Splits group expenses fairly with support for equal or weighted shares, including non-even splits and shared vs personal items.\n- Computes the minimum number of money transfers (min-cash-flow algorithm) to settle all debts.\n- Provides a fairness audit: see what each person paid, their fair share, and their net position.\n- Supports ledger input (payer, amount, participants), weighted splits, JSON export, and audit-friendly output.\n- Suitable for trips, roommates, clubs, and other shared expense scenarios without dedicated apps.",
+  "created_at": 1787240178396,
+  "display_name": "group-expense-settler",
+  "fetched_at": 1787770339389,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/settlement-theory.md",
+    "scripts/settle_up.py",
+    "scripts/test_settle_up.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "voronindenis5",
+    "handle": "voronindenis5",
+    "user_id": "s17b6amkd3wzqgg640v03a9r1n83gxs1"
+  },
+  "slug": "group-expense-settler",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/group-expense-settler",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=group-expense-settler&ownerHandle=voronindenis5",
+    "page_url": "https://clawhub.ai/voronindenis5/skills/group-expense-settler"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 105,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Split group expenses fairly (equal or weighted shares) and compute the minimum number of money transfers to settle up. Reads a simple ledger of who paid for what, handles non-even splits, weights, and shared vs personal items, then produces an optimal settlement plan (who pays whom, how much) plus a fairness audit. Use when settling trip costs with friends, splitting rent and utilities among roommates, or running any shared-expense pool without a dedicated app.",
+  "updated_at": 1787240245998,
+  "version": "1.0.0"
+}
