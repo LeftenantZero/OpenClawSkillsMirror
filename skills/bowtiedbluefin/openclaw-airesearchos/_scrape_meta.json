@@ -1,0 +1,39 @@
+{
+  "changelog": "- Removed scripts/poll-research.mjs and all inline polling references; background status checks now require the cron tool exclusively.\n- Updated scripts/check-status.mjs to fully support environment-injected authentication, eliminating secrets in CLI arguments.\n- Changed manual research status checks to use the check-status script (not direct curl), standardized for both API key and x402 methods.\n- Clarified and reorganized documentation for workflows, especially around authentication, cron scheduling, and background operations.\n- README and SKILL.md updated for improved accuracy, emphasizing best practices and new script usage patterns.",
+  "created_at": 1770794118088,
+  "display_name": "AIresearchOS",
+  "fetched_at": 1787792605259,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SETUP.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/check-status.mjs",
+    "scripts/package.json",
+    "scripts/x402-request.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "bowtiedbluefin",
+    "handle": "bowtiedbluefin",
+    "user_id": "s17fnzxs8fg7srap18cs0jp1gd885cbr"
+  },
+  "slug": "openclaw-airesearchos",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-airesearchos",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-airesearchos&ownerHandle=bowtiedbluefin",
+    "page_url": "https://clawhub.ai/bowtiedbluefin/skills/openclaw-airesearchos"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1839,
+    "installs": 58,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Deep research powered by AIresearchOS. Submit, track, and retrieve research with clarifying questions. Supports API key auth and x402 USDC payments.",
+  "updated_at": 1779076870851,
+  "version": "1.0.2"
+}
