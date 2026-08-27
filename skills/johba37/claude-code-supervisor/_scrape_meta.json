@@ -1,0 +1,54 @@
+{
+  "changelog": "Initial release: hooks, bash pre-filter, LLM triage, watchdog, idle detection, env hints, notify script",
+  "created_at": 1770279279977,
+  "display_name": "Claude Code Supervisor",
+  "fetched_at": 1787805597173,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/supervisor-state.template.json",
+    "references/escalation-rules.md",
+    "references/state-patterns.md",
+    "scripts/hooks/on-error.sh",
+    "scripts/hooks/on-notify.sh",
+    "scripts/hooks/on-stop.sh",
+    "scripts/install-hooks.sh",
+    "scripts/lib.sh",
+    "scripts/triage.sh",
+    "scripts/watchdog.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783656345573,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "johba37",
+    "handle": "johba37",
+    "user_id": "s17779emay927trgx4fhj7zb5n83ntwj"
+  },
+  "slug": "claude-code-supervisor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claude-code-supervisor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claude-code-supervisor&ownerHandle=johba37",
+    "page_url": "https://clawhub.ai/johba37/skills/claude-code-supervisor"
+  },
+  "stats": {
+    "comments": 2,
+    "downloads": 4193,
+    "installs": 147,
+    "stars": 3,
+    "versions": 1
+  },
+  "summary": "Supervise Claude Code sessions running in tmux. Uses Claude Code hooks with bash pre-filtering (Option D) and fast LLM triage to detect errors, stuck agents, and task completion. Harness-agnostic \u2014 works with OpenClaw, webhooks, ntfy, or any notification backend. Use when: (1) launching long-running Claude Code tasks that need monitoring, (2) setting up automatic nudging for API errors or premature stops, (3) getting progress reports from background coding agents, (4) continuing work after session/context limits reset. Requires: tmux, claude CLI.",
+  "updated_at": 1778988394003,
+  "version": "1.0.0"
+}
