@@ -1,0 +1,45 @@
+{
+  "changelog": "**This version officially deprecates the kilocode-model-sync skill.**\n\n- Added prominent deprecation notice: Kilocode Gateway is now built-in to OpenClaw; do not run this skill.\n- Documentation updated to reflect end-of-life status and recommend against use.\n- All previous operational steps and usage details retained for reference, but strictly marked as deprecated.\n- No functional or code changes; this release is a documentation and process update only.",
+  "created_at": 1774369924552,
+  "display_name": "Kilocode Model Sync",
+  "fetched_at": 1787850988757,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/apply_patch.py",
+    "scripts/sync_models.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090081123,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Guillaume Maka",
+    "handle": "guillaumemaka",
+    "user_id": "s174f9wqrnnwgec1r4n3d76cws83gh2h"
+  },
+  "slug": "kilocode-model-sync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kilocode-model-sync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kilocode-model-sync&ownerHandle=guillaumemaka",
+    "page_url": "https://clawhub.ai/guillaumemaka/skills/kilocode-model-sync"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 550,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Sync the Kilocode provider model list in openclaw.json with the live Kilo AI API. Use when: running the weekly model sync job, checking for new/removed/updat...",
+  "updated_at": 1778492163021,
+  "version": "1.0.0"
+}
