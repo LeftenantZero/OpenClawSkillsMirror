@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of fit-device-id-modifier.\n\n- Modifies FIT file device IDs to `manufacturer: 1 (Garmin)` and `garmin_product: 1030 (Edge 500 China)`.\n- Supports batch processing within subdirectories, single file, or entire directory.\n- Outputs new files with `_GM.fit` suffix, preserving originals.\n- Skips files already processed and recalculates FIT file CRC for integrity.\n- Requires Python 3.x and `fitparse` library.",
+  "created_at": 1774199286342,
+  "display_name": "fit-device-id-modifier",
+  "fetched_at": 1787855538162,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/modify_fit.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u7801\u4ee3\u7801\u7684\u733f\u733f",
+    "handle": "ckboss",
+    "user_id": "s170f0mnwgvtecc358tqfxx0kd83rfps"
+  },
+  "slug": "fit-device-id-modifier",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fit-device-id-modifier",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fit-device-id-modifier&ownerHandle=ckboss",
+    "page_url": "https://clawhub.ai/ckboss/skills/fit-device-id-modifier"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 693,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Modify FIT files to set device manufacturer to Garmin (1) and product ID to Edge 500 China (1030) for proper recognition on Garmin Connect.",
+  "updated_at": 1778492115715,
+  "version": "1.0.0"
+}
