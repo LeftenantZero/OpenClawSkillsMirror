@@ -1,0 +1,66 @@
+{
+  "changelog": "Major update: skill structure and template system overhauled for saved.md publishing.\n\n- Introduced a new template-driven scaffold system: templates are now organized by content type (markdown, HTML, JSX) for easy starting points.\n- Content-type routing and template selection logic clarified; \"golden rule\": never invent content to fill sections.\n- Validation steps and publishing contract updated for clarity and consistency (content type required for HTML/JSX, strict content limits, chart formatting).\n- Enhanced workflows: explicit modes for one-shot, interactive, local-only, and markdown enhancement\u2014with distinct behaviors for each.\n- Public sharing intent is now the required trigger; private/local markdown editing is no longer handled.\n- Detailed template guides and validation checklists added to support structured, error-free publishing.",
+  "created_at": 1773913995822,
+  "display_name": "Saved Markdown",
+  "fetched_at": 1787863263357,
+  "files": [
+    "CLAUDE.md",
+    "SKILL.md",
+    "_meta.json",
+    "entries.json",
+    "skill-card.md",
+    "templates/INDEX.md",
+    "templates/charts.md",
+    "templates/create-template.md",
+    "templates/htmls/company-profile.md",
+    "templates/htmls/dashboard-metrics.md",
+    "templates/htmls/event-invitation.md",
+    "templates/htmls/product-launch-page.md",
+    "templates/htmls/report.md",
+    "templates/htmls/resume-cv.md",
+    "templates/jsx/analytics-explorer.md",
+    "templates/markdowns/company-profile.md",
+    "templates/markdowns/dashboard-metrics.md",
+    "templates/markdowns/documentation-guide.md",
+    "templates/markdowns/event-invitation.md",
+    "templates/markdowns/newsletter-update.md",
+    "templates/markdowns/portfolio-showcase.md",
+    "templates/markdowns/proposal-pitch.md",
+    "templates/markdowns/report.md",
+    "templates/markdowns/resume-cv.md",
+    "templates/markdowns/startup-metrics-dashboard.md",
+    "templates/validation.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090466504,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Anboias",
+    "handle": "anboias",
+    "user_id": "s17ederxnaaxqf1949jn80c6fx84cjj4"
+  },
+  "slug": "saved-markdown",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/saved-markdown",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=saved-markdown&ownerHandle=anboias",
+    "page_url": "https://clawhub.ai/anboias/skills/saved-markdown"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 877,
+    "installs": 24,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Publish content to saved.md and return a public shareable URL. Use when the user wants to publish, host, or share a Markdown, HTML, or JSX page via saved.md,...",
+  "updated_at": 1778492029687,
+  "version": "1.0.4"
+}
