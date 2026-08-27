@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of image-url-qiniu.\n\n- Downloads images from user-supplied HTTP(S) URLs and uploads them to Qiniu cloud storage.\n- Outputs a direct Qiniu image link (MEDIA_URL) suitable for backup, CDN, or Feishu/Outlook-safe sharing.\n- Supports file size limits, SSL verification toggling, and download timeouts.\n- Requires Qiniu credentials and bucket configuration set via environment variables.\n- Enforces public-read bucket and basic content-type/magic number validation for images.\n- Error messages are provided on failure for troubleshooting.",
+  "created_at": 1775397214799,
+  "display_name": "image-url-qiniu",
+  "fetched_at": 1787831373396,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/url_image_to_qiniu.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "lubin1127",
+    "handle": "lubin1127",
+    "user_id": "s170k8xpqg2qtankh1dfp1gyf98498q5"
+  },
+  "slug": "image-url-qiniu",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/image-url-qiniu",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=image-url-qiniu&ownerHandle=lubin1127",
+    "page_url": "https://clawhub.ai/lubin1127/skills/image-url-qiniu"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 515,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Download an image from a user-supplied HTTP(S) URL and upload it to Qiniu cloud. Use when the user gives an image link and wants it stored on Qiniu (backup,...",
+  "updated_at": 1778492423147,
+  "version": "1.0.0"
+}
