@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of github-helper for local GitHub repository management.\n\n- Provides workflows to search, clone, sync, and inspect issues/PRs for repositories at `/Users/liuchen/Documents/github`\n- Integrates local knowledge base using CLAUDE.md, updated via helper scripts (`scan_repos.py`, `update_kb.py`)\n- Uses GitHub CLI (`gh`) for searching repositories, issues, and PRs; falls back to MCP tools if needed\n- Supports user prompts for directory validation and repository downloads/cloning\n- Prioritizes local inspection for repository questions, with fallback to GitHub queries when needed",
+  "created_at": 1772522788992,
+  "display_name": "GitHub Helper",
+  "fetched_at": 1787800815801,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "scripts/scan_repos.py",
+    "scripts/update_kb.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089742843,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "dandandujie",
+    "handle": "dandandujie",
+    "user_id": "s17fpss1yz8pqpsvahjxydap598840fm"
+  },
+  "slug": "github-helper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/github-helper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=github-helper&ownerHandle=dandandujie",
+    "page_url": "https://clawhub.ai/dandandujie/skills/github-helper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1212,
+    "installs": 38,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Local GitHub repository helper for search, clone, sync, and issue/PR inspection workflows. Use when users mention github/repo/repository, ask to download or...",
+  "updated_at": 1778994754624,
+  "version": "1.0.0"
+}
