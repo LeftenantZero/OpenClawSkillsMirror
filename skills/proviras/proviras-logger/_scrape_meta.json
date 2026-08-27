@@ -1,0 +1,47 @@
+{
+  "changelog": "Version 1.0.5\n\n- Updated environment variable requirements: PROVIRAS_PARENT_ID and PROVIRAS_PLATFORM are now always required, while PROVIRAS_USER_ID is optional and injected only for tracking agent ownership.\n- Registration logic changed to always use PROVIRAS_PARENT_ID as the user identity and optionally include PROVIRAS_USER_ID for agent-spawned agents.\n- Added platform detection (PROVIRAS_PLATFORM) as required context during registration.\n- Expanded logging to always include model identifiers per task.\n- Clarified instructions for passing environment variables when spawning sub-agents for accurate parent\u2013child linkage.",
+  "created_at": 1775938535234,
+  "display_name": "Proviras Logger",
+  "fetched_at": 1787825043606,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/config.md",
+    "references/payload-schema.md",
+    "scripts/log.sh",
+    "scripts/register.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090734070,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "proviras",
+    "handle": "proviras",
+    "user_id": "s17779c7ex7zxt08hha4fnawt584mb68"
+  },
+  "slug": "proviras-logger",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/proviras-logger",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=proviras-logger&ownerHandle=proviras",
+    "page_url": "https://clawhub.ai/proviras/skills/proviras-logger"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1160,
+    "installs": 24,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Run on every heartbeat to summarize completed tasks and log them to your analytics dashboard. Triggers automatically during heartbeat cycles to track agent p...",
+  "updated_at": 1778492533961,
+  "version": "1.0.5"
+}
