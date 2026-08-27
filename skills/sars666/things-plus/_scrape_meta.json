@@ -1,0 +1,45 @@
+{
+  "changelog": "**Expanded personal capture logic and streamlined environment checks.**\n\n- Now triggers for natural planning phrases (e.g., \u201cI should\u2026\u201d, \u201cremind me to\u2026\u201d) and concrete future commitments, even when Things is not mentioned directly.\n- Only blocks writes or prompts for setup when a write action actually fails; no more mandatory pre-flight at session start.\n- Accepts and rewrites fuzzy action titles into clear next steps for better task management.\n- Adds duplicate prevention logic: checks for recent or existing tasks before adding new ones.\n- Clarifies token/auth handling\u2014guides setup only if a specific operation actually fails for missing auth.\n- Removes legacy/overly detailed setup flow in favor of more predictable, fail-fast behavior.",
+  "created_at": 1774329516476,
+  "display_name": "Things plus",
+  "fetched_at": 1787852568173,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/report.md",
+    "references/test_prompt.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090105616,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Sars666",
+    "handle": "sars666",
+    "user_id": "s17743q5tbjksrb7qjjq1njmah83h3be"
+  },
+  "slug": "things-plus",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/things-plus",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=things-plus&ownerHandle=sars666",
+    "page_url": "https://clawhub.ai/sars666/skills/things-plus"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 764,
+    "installs": 19,
+    "stars": 0,
+    "versions": 9
+  },
+  "summary": "Personal task manager powered by Things 3. Trigger when the user asks to add, capture, review, organize, reprioritize, search, or manage tasks in Things. Als...",
+  "updated_at": 1778492146803,
+  "version": "1.2.1"
+}
