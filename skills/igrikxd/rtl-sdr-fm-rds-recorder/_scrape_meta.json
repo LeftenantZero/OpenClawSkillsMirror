@@ -1,0 +1,40 @@
+{
+  "changelog": "Initial release of rtl-sdr-fm-rds-recorder.\n\n- Record broadcast FM stations from RTL-SDR with a reliable workflow: IQ capture, RDS station-name extraction, offline WBFM demodulation, and MP3 export.\n- Supports scanning the FM band, decoding station names, and automatic MP3 file naming (station/frequency/time).\n- Provides staged workflow: scan, decode RDS, then record.\n- Linux-only, requires rtl_sdr, redsea, ffmpeg, python3, numpy, and scipy.\n- Detailed stdout outputs (JSON or plain text) for each mode; integrates file delivery for platforms like Telegram.",
+  "created_at": 1775764033918,
+  "display_name": "RTL-SDR WFM RDS Decoder",
+  "fetched_at": 1787826352906,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/pipeline-notes.md",
+    "scripts/fm_config.py",
+    "scripts/fm_iq_pipeline.py",
+    "scripts/rds_observation.py",
+    "scripts/station_identity.py",
+    "scripts/station_identity_debug.py",
+    "scripts/test_station_name_heuristics.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ihar Yatsevich",
+    "handle": "igrikxd",
+    "user_id": "s173asvy0yggnvncc9zpq5q33984bw70"
+  },
+  "slug": "rtl-sdr-fm-rds-recorder",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/rtl-sdr-fm-rds-recorder",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=rtl-sdr-fm-rds-recorder&ownerHandle=igrikxd",
+    "page_url": "https://clawhub.ai/igrikxd/skills/rtl-sdr-fm-rds-recorder"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 672,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Record broadcast FM stations from an RTL-SDR using a reliable IQ-capture workflow with offline WBFM demodulation, RDS station-name extraction, and automatic...",
+  "updated_at": 1778492505206,
+  "version": "1.0.0"
+}
