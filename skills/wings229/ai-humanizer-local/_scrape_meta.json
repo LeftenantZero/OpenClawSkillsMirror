@@ -1,0 +1,63 @@
+{
+  "changelog": "Initial release of the humanizer skill.\n\n- Detects and removes 24 specific patterns common in AI-generated text.\n- Identifies 500+ AI vocabulary terms across three tiers for precise filtering.\n- Performs statistical analysis (burstiness, type-token ratio, sentence length variation, trigram repetition) to spot AI writing traits.\n- Provides rewrite suggestions to make text sound naturally human, with appropriate personality and varied sentence structure.\n- Supports analysis, scoring, reporting, and auto-humanization via command-line tools.\n- Includes guidelines for integrating the humanizer in always-on agent modes.",
+  "created_at": 1775231553764,
+  "display_name": "Ai Humanizer Local",
+  "fetched_at": 1787832936878,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "USAGE-GUIDE.md",
+    "_meta.json",
+    "assets/banner.md",
+    "docs/CONTRIBUTING.md",
+    "docs/EXAMPLES.md",
+    "docs/PATTERNS.md",
+    "eslint.config.js",
+    "package-lock.json",
+    "package.json",
+    "references/ai-vocabulary.md",
+    "references/patterns.md",
+    "references/style-guide.md",
+    "scripts/analyze.sh",
+    "scripts/humanize.sh",
+    "skill-card.md",
+    "src/analyzer.js",
+    "src/cli.js",
+    "src/humanizer.js",
+    "src/patterns.js",
+    "src/stats.js",
+    "src/vocabulary.js",
+    "tests/analyzer.test.js",
+    "tests/calibration.test.js",
+    "tests/edge-cases.test.js",
+    "tests/fixtures/ai-sample-1.txt",
+    "tests/fixtures/ai-sample-2.txt",
+    "tests/fixtures/human-sample-1.txt",
+    "tests/humanizer.test.js",
+    "tests/performance.test.js",
+    "tests/statistics.test.js",
+    "vitest.config.js"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Wings229",
+    "handle": "wings229",
+    "user_id": "s17f8z8ey46swj47mhrsb1ts21844b4n"
+  },
+  "slug": "ai-humanizer-local",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-humanizer-local",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-humanizer-local&ownerHandle=wings229",
+    "page_url": "https://clawhub.ai/wings229/skills/ai-humanizer-local"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 588,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Humanize AI-generated text by detecting and removing patterns typical of LLM output. Rewrites text to sound natural, specific, and human. Uses 24 pattern det...",
+  "updated_at": 1778492395372,
+  "version": "1.0.0"
+}
