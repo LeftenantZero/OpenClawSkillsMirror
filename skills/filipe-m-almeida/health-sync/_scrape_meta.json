@@ -1,0 +1,41 @@
+{
+  "changelog": "# v0.3.5\n\n## Compare Range\n- v0.3.4..v0.3.5\n\n## Highlights\n- Fixed sync fsck consistency behavior across providers.\n- Fixed Hevy delta watermark parsing for updated events.\n- Added/expanded regression tests for sync state, provider watermarks, and stale-row handling.\n\n## Diff Summary\n package-lock.json                |   4 +-\n package.json                     |   2 +-\n release-notes/v0.3.1.md          |  25 +++++\n release-notes/v0.3.2.md          |  39 ++++++++\n release-notes/v0.3.3.md          |  34 +++++++\n release-notes/v0.3.4.md          |  41 ++++++++\n src/db.js                        | 197 ++++++++++++++++++++++++++++++++-------\n src/providers/hevy.js            |  30 ++++--\n src/providers/strava.js          |  29 ++++--\n src/providers/whoop.js           |  29 ++++--\n tests/db.test.js                 |  98 +++++++++++++++++++\n tests/hevy-provider.test.js      |  38 ++++++++\n tests/provider-contracts.test.js |   2 +-\n tests/strava-provider.test.js    |  70 +++++++++++++-\n tests/whoop-provider.test.js     |  94 ++++++++++++++++++-\n 15 files changed, 667 insertions(+), 65 deletions(-)\n\n## Changed Files\n- package-lock.json\n- package.json\n- release-notes/v0.3.1.md\n- release-notes/v0.3.2.md\n- release-notes/v0.3.3.md\n- release-notes/v0.3.4.md\n- src/db.js\n- src/providers/hevy.js\n- src/providers/strava.js\n- src/providers/whoop.js\n- tests/db.test.js\n- tests/hevy-provider.test.js\n- tests/provider-contracts.test.js\n- tests/strava-provider.test.js\n- tests/whoop-provider.test.js\n\n## Full Changes\n- release: v0.3.5 (49d08d7)\n- Fix sync fsck consistency across providers (eadb00a)\n- Fix Hevy delta watermark parsing for updated events (e59df3c)",
+  "created_at": 1771476363903,
+  "display_name": "Health Sync",
+  "fetched_at": 1787791975629,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/eightsleep.md",
+    "references/hevy.md",
+    "references/oura.md",
+    "references/setup.md",
+    "references/strava.md",
+    "references/whoop.md",
+    "references/withings.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Filipe Almeida",
+    "handle": "filipe-m-almeida",
+    "user_id": "s174c48vp3w6rv2kcabdcng3ex83n0wn"
+  },
+  "slug": "health-sync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/health-sync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=health-sync&ownerHandle=filipe-m-almeida",
+    "page_url": "https://clawhub.ai/filipe-m-almeida/skills/health-sync"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2080,
+    "installs": 65,
+    "stars": 0,
+    "versions": 11
+  },
+  "summary": "Analyze your health across providers",
+  "updated_at": 1779077069364,
+  "version": "0.3.5"
+}
