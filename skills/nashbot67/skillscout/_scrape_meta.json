@@ -1,0 +1,72 @@
+{
+  "changelog": "SkillScout 0.1.0 \u2014 Initial release\n\n- Launches a centralized catalog to check trustworthiness of OpenClaw AI agent skills before installation.\n- Offers a simple curl+python command-line search for skills and trust ratings.\n- Provides detailed skill lookup and trust score breakdown (Safe, Caution, Avoid).\n- Describes multi-step review process: blocklist scan, AI code review, STRIDE threat analysis, human approval.\n- Includes full catalog and API endpoints for easy browsing and integration.",
+  "created_at": 1772261955314,
+  "display_name": "SkillScout",
+  "fetched_at": 1787801624236,
+  "files": [
+    "ARCHITECTURE.md",
+    "HARDENING_REVIEW.md",
+    "PLAN.md",
+    "README.md",
+    "REVIEW_TEMPLATE.md",
+    "SKILL.md",
+    "_meta.json",
+    "data/blocklist.json",
+    "data/categories.json",
+    "data/skill-queue.json",
+    "data/skills.json",
+    "docs/data/blocklist.json",
+    "docs/data/categories.json",
+    "docs/data/skills.json",
+    "docs/index.html",
+    "docs/reviews/rationality.html",
+    "mcp-server/index.js",
+    "mcp-server/package-lock.json",
+    "mcp-server/package.json",
+    "mcp/package.json",
+    "mcp/server.js",
+    "reviews/rationality.md",
+    "scripts/batch-review.sh",
+    "scripts/fetch-batch-from-file.sh",
+    "scripts/fetch-skill.sh",
+    "scripts/harden-skill.sh",
+    "scripts/hardening-prompt.md",
+    "scripts/merge-reviews.py",
+    "scripts/review-prompt.md",
+    "scripts/review-skill.sh",
+    "scripts/scan-blocklists.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966733701,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "nashbot67",
+    "handle": "nashbot67",
+    "user_id": "s17cc3e60kcper6w9dwe07tr3s884een"
+  },
+  "slug": "skillscout",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skillscout",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skillscout&ownerHandle=nashbot67",
+    "page_url": "https://clawhub.ai/nashbot67/skills/skillscout"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1033,
+    "installs": 32,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Find and evaluate OpenClaw AI skills by trust score and security reviews before installation or recommendation.",
+  "updated_at": 1778993861553,
+  "version": "0.1.0"
+}
