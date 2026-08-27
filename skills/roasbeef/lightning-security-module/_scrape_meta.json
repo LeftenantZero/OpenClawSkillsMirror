@@ -1,0 +1,53 @@
+{
+  "changelog": "Initial release: Secure remote signer for Lightning nodes\n\n- Provides a containerized lnd remote signer to hold private keys separately from agent nodes, supporting Docker (default) and native installations.\n- Exports a credentials bundle (accounts JSON, TLS cert, admin macaroon) for watch-only litd nodes, enabling firewalling of private key material from agent machines.\n- Includes setup, export/import scripts, and detailed workflow for secure and watch-only node operations.\n- Emphasizes strict separation: signer cannot route payments or open channels; it only signs transactions on request.\n- Production guidance: use scoped macaroons, restrict RPC access, and run signer on dedicated or hardened hardware for improved security.",
+  "created_at": 1770777416895,
+  "display_name": "Lightning Security Module",
+  "fetched_at": 1787792465111,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/architecture.md",
+    "scripts/docker-start.sh",
+    "scripts/docker-stop.sh",
+    "scripts/export-credentials.sh",
+    "scripts/install.sh",
+    "scripts/setup-signer.sh",
+    "scripts/start-signer.sh",
+    "scripts/stop-signer.sh",
+    "skill-card.md",
+    "templates/docker-compose-signer.yml",
+    "templates/signer-lnd-example.toml"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968994781,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Roasbeef",
+    "handle": "roasbeef",
+    "user_id": "s17ct3pzdm5xvjjh7x3qs5z3kn884ax4"
+  },
+  "slug": "lightning-security-module",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/lightning-security-module",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=lightning-security-module&ownerHandle=roasbeef",
+    "page_url": "https://clawhub.ai/roasbeef/skills/lightning-security-module"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2058,
+    "installs": 64,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Set up an lnd remote signer container that holds private keys separately from the agent. Exports a credentials bundle (accounts JSON, TLS cert, admin macaroon) for watch-only litd nodes. Container-first with Docker, native fallback. Use when firewalling private key material from AI agents.",
+  "updated_at": 1779076920148,
+  "version": "1.0.0"
+}
