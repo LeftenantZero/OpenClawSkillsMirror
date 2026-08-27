@@ -1,0 +1,47 @@
+{
+  "changelog": "**Major rework: Skill renamed and fully re-architected as a privacy-first, consent-based personal finance ethnographer.**\n\n- Replaces previous always-on observer and cron-script model with a structured, event-based UX ethnography approach (no background scripts, no PII handling).\n- Now requires explicit user consent before any logging; displays a detailed privacy/consent notice on first run.\n- Logs strictly abstracted, structured behavioral events with finance relevance tagging\u2014never raw PII or sensitive values.\n- Introduces separate, scheduled pulses (09:00, 13:00, 17:00 PT) for compiling sanitized reports, which are always reviewed by the participant first.\n- All redaction and PII scrubbing is handled exclusively by a Sanitizer subagent, never within the core skill.\n- Storage layout, runtime state, event schema, and behavioral abstraction rules completely revised to enforce strict privacy and user control.",
+  "created_at": 1773687602129,
+  "display_name": "finance-ethnographer 2",
+  "fetched_at": 1787869627555,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "example-output.md",
+    "sanitizer/SKILL.md",
+    "settings.schema.json",
+    "skill-card.md",
+    "test-plan.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089921114,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "dflam1",
+    "handle": "dflam1",
+    "user_id": "s170ze5ma2g75rqwhxyy9a36z98856rz"
+  },
+  "slug": "finance-ethnographer2",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/finance-ethnographer2",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=finance-ethnographer2&ownerHandle=dflam1",
+    "page_url": "https://clawhub.ai/dflam1/skills/finance-ethnographer2"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 743,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Privacy-first UX research ethnographer for OpenClaw with a personal-finance lens. Auto-invoked to observe and log structured behavioral events (no inference)...",
+  "updated_at": 1778491958089,
+  "version": "1.0.0"
+}
