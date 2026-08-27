@@ -1,0 +1,42 @@
+{
+  "changelog": "Initial release of \"contextloader\" for loading business knowledge network contexts via the Context Loader API.\n\n- Supports concept retrieval, object/action type recognition, instance querying, subgraph expansion, logical property parsing, action recall, and knowledge network job status checking.\n- Provides standard workflows for identifying and using core identifiers (`kn_id`, `ot_id`, `at_id`, `_instance_identity`), with strict extraction logic from `SOUL.md`.\n- Enforces key constraints: do not fabricate IDs/instances, and follows strict API parameter requirements.\n- Integrates with environment variables `CONTEXT_LOADER_BASE_URL` and `APP_USER_ID` for configurable and secure API access.\n- Includes comprehensive reference material and detailed usage instructions in the documentation.",
+  "created_at": 1774350140036,
+  "display_name": "contextloader",
+  "fetched_at": 1787851775583,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api-calling.md",
+    "references/examples.md",
+    "references/openapi/get_action_info.yaml",
+    "references/openapi/get_logic_properties_values.yaml",
+    "references/openapi/kn_schema_search.yaml",
+    "references/openapi/kn_search.yaml",
+    "references/openapi/ontology_job.yaml",
+    "references/openapi/query_instance_subgraph.yaml",
+    "references/openapi/query_object_instance.yaml",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u71d5\u6960 (Nan Yan)",
+    "handle": "yannan",
+    "user_id": "s177zv6k6s5afe9b75zh1krtx583h0ak"
+  },
+  "slug": "contextloader",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/contextloader",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=contextloader&ownerHandle=yannan",
+    "page_url": "https://clawhub.ai/yannan/skills/contextloader"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 666,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u57fa\u4e8e Context Loader API \u52a0\u8f7d\u4e1a\u52a1\u77e5\u8bc6\u7f51\u7edc\u4e0a\u4e0b\u6587\u3002\u9002\u7528\u4e8e\u6982\u5ff5\u68c0\u7d22\u3001\u5bf9\u8c61\u7c7b\u6216\u884c\u52a8\u7c7b\u8bc6\u522b\u3001\u5bf9\u8c61\u5b9e\u4f8b\u67e5\u8be2\u3001\u5b9e\u4f8b\u5b50\u56fe\u6269\u5c55\u3001\u903b\u8f91\u5c5e\u6027\u89e3\u6790\u3001\u52a8\u6001\u52a8\u4f5c\u5de5\u5177\u53ec\u56de\uff0c\u4ee5\u53ca\u77e5\u8bc6\u7f51\u7edc\u6784\u5efa\u4efb\u52a1\u72b6\u6001\u67e5\u8be2\u3002",
+  "updated_at": 1778492154873,
+  "version": "1.0.0"
+}
