@@ -1,0 +1,34 @@
+{
+  "changelog": "governed-delegation v1.0.0\n\n- Introduces a governance skill for policy-guided, auditable delegation decisions.\n- Provides a structured helper to determine allowed execution envelope before delegating tasks.\n- Standardizes task classification on risk and type axes (taskClass, deterministic, criticalWrite, requiresDeepReasoning).\n- Enforces separation between task decomposition (GPT), policy (governed delegation), and execution (OpenClaw runtime).\n- Strongly discourages unsafe delegation and mandates \u201cfail closed\u201d for critical or high-risk operations.\n- Clarifies when to use the skill versus other configuration, inspection, or mutation workflows.",
+  "created_at": 1774775085507,
+  "display_name": "Governed Delegation",
+  "fetched_at": 1787841553343,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/request.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Joao Driessen",
+    "handle": "joaodriessen",
+    "user_id": "s177f0p11chr0wge1x85vvkm5x83vp1n"
+  },
+  "slug": "governed-delegation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/governed-delegation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=governed-delegation&ownerHandle=joaodriessen",
+    "page_url": "https://clawhub.ai/joaodriessen/skills/governed-delegation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 739,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Policy-guided governed delegation for subagent use. Use when deciding whether to delegate, which model tier is allowed, whether execution must fail closed, o...",
+  "updated_at": 1778492275298,
+  "version": "1.0.0"
+}
