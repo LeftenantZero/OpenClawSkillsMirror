@@ -1,0 +1,40 @@
+{
+  "changelog": "Initial release for Taiwan civil court judgment ingestion to Qdrant\n\n- Supports ingestion of Taiwan civil court judgments (HTML and PDF) into Qdrant with Ollama embeddings.\n- Ensures traceability, deduplication, and safe incremental updates.\n- Enforces strict process: raw files never overwritten, deterministic IDs, and robust pre-flight checks.\n- Provides user-friendly reporting on processed, skipped, and errored files.\n- Explicit DO NOT rules to avoid accidental misuse or logic modifications.\n- Troubleshooting and testing instructions included for fast onboarding.",
+  "created_at": 1774777106864,
+  "display_name": "Civil Judgment Taiwan Vectorstore",
+  "fetched_at": 1787841555590,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/extraction-design.md",
+    "references/internals.md",
+    "references/judgment-rag-ingestion-plan.md",
+    "scripts/build_reasoning_collection.py",
+    "scripts/ingest.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alex02131926",
+    "handle": "alex02131926",
+    "user_id": "s1763bgrt9yvjny2nww2wef7ad83tws4"
+  },
+  "slug": "civil-judgment-taiwan-vectorstore",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/civil-judgment-taiwan-vectorstore",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=civil-judgment-taiwan-vectorstore&ownerHandle=alex02131926",
+    "page_url": "https://clawhub.ai/alex02131926/skills/civil-judgment-taiwan-vectorstore"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 670,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Ingest Taiwan civil court judgments (HTML or PDF) \u2014 exclusively covering Taiwan civil cases \u2014 into Qdrant with Ollama embeddings, preserving traceability, de...",
+  "updated_at": 1778492275298,
+  "version": "1.0.0"
+}
