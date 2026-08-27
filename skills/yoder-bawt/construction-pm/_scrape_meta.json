@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of the construction-pm skill \u2014 a toolkit for construction project management workflows.\n\n- Tracks construction jobs through all lifecycle stages (lead to paid) with append-only history.\n- Generates daily project manager briefings on job status, stale jobs, permits, and pipeline revenue.\n- Monitors permits for aging or pending status, with user-defined thresholds.\n- Parses emails from field staff to extract job updates, status changes, and permit info.\n- Provides command-line scripts for easy job management, updates, and pipeline summaries.\n- Data stored as JSON for auditability and easy integration; outputs formatted for Markdown delivery.",
+  "created_at": 1771439174769,
+  "display_name": "Construction PM",
+  "fetched_at": 1787791883184,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/add-job.sh",
+    "scripts/briefing.sh",
+    "scripts/init.sh",
+    "scripts/parse-email.sh",
+    "scripts/permit-check.sh",
+    "scripts/pipeline.sh",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779922430182,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yoder-bawt",
+    "handle": "yoder-bawt",
+    "user_id": "s170re0cxhj45s27ah5h37tc59885epn"
+  },
+  "slug": "construction-pm",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/construction-pm",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=construction-pm&ownerHandle=yoder-bawt",
+    "page_url": "https://clawhub.ai/yoder-bawt/skills/construction-pm"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 748,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Construction project management toolkit for AI agents. Use when: (1) Tracking construction jobs through the full lifecycle from lead to paid, (2) Generating...",
+  "updated_at": 1779077102558,
+  "version": "1.0.0"
+}
