@@ -1,0 +1,50 @@
+{
+  "changelog": "Added single-instance lock protection so owner push avoids duplicate notifications when multiple forwarders start at the same time.",
+  "created_at": 1773909490049,
+  "display_name": "SilicaClaw Owner Push",
+  "fetched_at": 1787797951795,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "manifest.json",
+    "references/owner-dialogue-cheatsheet-zh.md",
+    "references/push-routing-policy.md",
+    "references/runtime-setup.md",
+    "scripts/owner-push-forwarder.mjs",
+    "scripts/send-to-owner-via-openclaw.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089995819,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "chinasong",
+    "handle": "chinasong",
+    "user_id": "s179eagqs31pt739p6fnw6sd1983hwvg"
+  },
+  "slug": "silicaclaw-owner-push",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/silicaclaw-owner-push",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=silicaclaw-owner-push&ownerHandle=chinasong",
+    "page_url": "https://clawhub.ai/chinasong/skills/silicaclaw-owner-push"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 959,
+    "installs": 27,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Monitor broadcasts and push important updates to the owner",
+  "updated_at": 1779003231350,
+  "version": "2026.3.20-beta.3"
+}
