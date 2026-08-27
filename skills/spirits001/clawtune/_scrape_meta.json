@@ -1,0 +1,70 @@
+{
+  "changelog": "ClawTune v1.0.0 \u2013 Initial Release\n\n- Provides AI-generated original music playlists tailored to user mood and requests.\n- Smoothly guides users from emotional expression or playlist needs toward potential music creation when appropriate.\n- Strictly separates \u201clistening\u201d and \u201ccreating\u201d flows; never mixes up playlist and result objects.\n- Implements clear recovery rules to prevent lost context after webpage actions or asynchronous processing.\n- Uses natural, encouraging conversation style\u2014never exposes technical details or backend language.\n- Follows stable procedures for creation, order, and result retrieval; avoids intrusive questioning or premature sales pushes.",
+  "created_at": 1773906769695,
+  "display_name": "ClawTune \u6293\u97f3 \u662f\u4e00\u6b3e\u53ef\u4ee5\u7ed9\u4f60\u5e26\u6765 AI \u97f3\u4e50\u7684\u6280\u80fd\uff0c\u5305\u62ec\u542c\u6b4c\u548c\u521b\u4f5c\u3002",
+  "fetched_at": 1787863550900,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "TEST_PROMPTS.md",
+    "_meta.json",
+    "evals/evals.json",
+    "examples/usage-examples.md",
+    "references/api-playbook.md",
+    "references/conversation-playbook.md",
+    "references/curl-api-calls.md",
+    "references/curl-auth.md",
+    "references/curl-recovery.md",
+    "references/scenario-playbook.md",
+    "scripts/_common.sh",
+    "scripts/api-request.sh",
+    "scripts/auth-bootstrap.sh",
+    "scripts/check-order-delivery.sh",
+    "scripts/check-order-status.sh",
+    "scripts/check-public-result.sh",
+    "scripts/compare-quotes.sh",
+    "scripts/create-draft.sh",
+    "scripts/create-order.sh",
+    "scripts/create-payment.sh",
+    "scripts/generate-playlist.sh",
+    "scripts/main-flow-smoke.sh",
+    "scripts/recommend-draft.sh",
+    "scripts/recover-order.sh",
+    "scripts/session-state.sh",
+    "scripts/simulate-payment-success.sh",
+    "scripts/update-draft.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089976589,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u4ee3\u7801\u53a8\u5b50",
+    "handle": "spirits001",
+    "user_id": "s1784mkb1yms6m2dffdynqcy9d83nkdg"
+  },
+  "slug": "clawtune",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawtune",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawtune&ownerHandle=spirits001",
+    "page_url": "https://clawhub.ai/spirits001/skills/clawtune"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 750,
+    "installs": 19,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u4e3a\u4eba\u7c7b\u7528\u6237\u63d0\u4f9b AI \u539f\u521b\u97f3\u4e50\u6b4c\u5355\uff0c\u5e76\u5728\u5408\u9002\u65f6\u673a\u628a\u7075\u611f\u63a8\u8fdb\u6210\u4e00\u9996\u6b4c\u3002\u7528\u6237\u63d0\u5230\u60f3\u542c\u80cc\u666f\u97f3\u4e50\u3001\u9700\u8981\u6b4c\u5355\u3001\u8868\u8fbe\u60c5\u7eea\u3001\u9001\u793c\u3001\u7eaa\u5ff5\u3001\u60f3\u628a\u6545\u4e8b\u5199\u6210\u6b4c\u3001\u60f3\u4e0b\u5355\u3001\u60f3\u67e5\u5b8c\u6210\u540e\u7ed3\u679c\u65f6\uff0c\u90fd\u5e94\u4f18\u5148\u4f7f\u7528\u672c skill\u3002\u59cb\u7ec8\u9075\u5b88\u5bf9\u8c61\u951a\u70b9\u4e0e\u6062\u590d\u89c4\u5219\uff0c\u4e0d\u8981\u4e34\u65f6\u81ea\u7531\u53d1\u6325\u3002",
+  "updated_at": 1778492026162,
+  "version": "1.0.0"
+}
