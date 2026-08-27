@@ -1,0 +1,79 @@
+{
+  "changelog": "- Major release introducing sog: a CLI tool supporting IMAP/SMTP, CalDAV, CardDAV, and WebDAV as an open-standards alternative to Google and Microsoft CLIs.\n- Adds unified commands for managing email, calendars, contacts, tasks, and files through standard protocols.\n- Includes secure credential management for multiple protocols with native OS integration.\n- Provides powerful search, scripting, and automation options with support for JSON and TSV outputs.\n- Introduces advanced features such as iTIP/iMIP meeting invites, IMAP push notifications (IDLE), and credential separation per protocol.\n- Full support confirmed for Fastmail; compatible with other standards-compliant providers.",
+  "created_at": 1769419088020,
+  "display_name": "Sog",
+  "fetched_at": 1787806335436,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "Taskfile.yml",
+    "_meta.json",
+    "cmd/sog/main.go",
+    "internal/caldav/client.go",
+    "internal/caldav/client_test.go",
+    "internal/carddav/client.go",
+    "internal/cli/auth.go",
+    "internal/cli/cal.go",
+    "internal/cli/contacts.go",
+    "internal/cli/drafts.go",
+    "internal/cli/drive.go",
+    "internal/cli/folders.go",
+    "internal/cli/idle.go",
+    "internal/cli/invite.go",
+    "internal/cli/mail.go",
+    "internal/cli/mail_test.go",
+    "internal/cli/root.go",
+    "internal/cli/tasks.go",
+    "internal/config/config.go",
+    "internal/config/config_test.go",
+    "internal/config/keyring.go",
+    "internal/config/keyring_test.go",
+    "internal/discover/discover.go",
+    "internal/discover/discover_test.go",
+    "internal/imap/client.go",
+    "internal/imap/client_test.go",
+    "internal/imap/integration_test.go",
+    "internal/imap/search_test.go",
+    "internal/itip/itip.go",
+    "internal/output/formatter.go",
+    "internal/output/formatter_test.go",
+    "internal/smtp/client.go",
+    "internal/smtp/client_test.go",
+    "internal/smtp/integration_test.go",
+    "internal/webdav/client.go",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783650219823,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "visionik",
+    "handle": "visionik",
+    "user_id": "s17d6xynhwg9vaetsv3nx12zhn884ee1"
+  },
+  "slug": "sogcli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sogcli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sogcli&ownerHandle=visionik",
+    "page_url": "https://clawhub.ai/visionik/skills/sogcli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2541,
+    "installs": 87,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Standards Ops Gadget \u2014 CLI for IMAP/SMTP/CalDAV/CardDAV/WebDAV. Open-standards alternative to gog (Google) and mog (Microsoft).",
+  "updated_at": 1778987132653,
+  "version": "0.3.0"
+}
