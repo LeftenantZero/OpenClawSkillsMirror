@@ -1,0 +1,40 @@
+{
+  "changelog": "Version 1.1.1 introduces major compatibility and feature enhancements:\n\n- Added support for CSV, Markdown (.md), and WPS (.wps/.et) file extraction.\n- Improved extraction for merged Excel cells, scanned PDFs (OCR support), and Word documents with images.\n- Introduced --enable-ocr parameter for lightweight OCR on scanned PDFs.\n- Added automatic file type detection and new exclusion filter options (--exclude-keywords, --exclude-regex).\n- Supports context extraction with --context-length and filtering by line or paragraph (--filter-level).\n- Enhanced batch processing with detailed results and merged output options.\n- Updated dependencies, including optional support for tesseract and python-markdown.",
+  "created_at": 1774137960434,
+  "display_name": "doc-extract-filter",
+  "fetched_at": 1787857519412,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "core/__init__.py",
+    "core/converter.py",
+    "core/extractor.py",
+    "core/filter.py",
+    "core/utils.py",
+    "requirements.txt",
+    "scripts/doc-extract-filter.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "bigclawd",
+    "handle": "bigclawd",
+    "user_id": "s177a737jf2d2x98sjexp58tf183ghje"
+  },
+  "slug": "doc-extract-filter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/doc-extract-filter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=doc-extract-filter&ownerHandle=bigclawd",
+    "page_url": "https://clawhub.ai/bigclawd/skills/doc-extract-filter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 826,
+    "installs": 21,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "\u652f\u6301 PDF\u3001Word\u3001Excel \u6587\u4ef6\u7684\u6587\u672c\u63d0\u53d6\u548c\u6309\u5173\u952e\u8bcd\u7b5b\u9009\uff0c\u8fd4\u56de\u5b8c\u6574\u6216\u7b5b\u9009\u540e\u7684\u6587\u672c\u5185\u5bb9\u3002",
+  "updated_at": 1778492095714,
+  "version": "1.1.1"
+}
