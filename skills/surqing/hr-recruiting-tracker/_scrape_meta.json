@@ -1,0 +1,45 @@
+{
+  "changelog": "hr-recruiting-tracker v1.0.0 initial release:\n\n- Standardizes HR recruiting data processing with 3 main workflows: resume ingestion, candidate upload to Tencent Docs, and job management.\n- Supports local parsing of PDF/DOCX/TXT/Markdown resumes to structured Markdown/JSON bundles.\n- Enables candidate data upload to Tencent Docs smart sheets, with HR review steps and strict schema mapping.\n- Provides job posting table initialization/maintenance workflows, using unified schema definitions.\n- All processing prioritizes local, secure parsing and anonymizes outputs by default.\n- Comprehensive documentation included for setup, workflows, field standards, and key rules.",
+  "created_at": 1778405455876,
+  "display_name": "hr-recruiting-tracker",
+  "fetched_at": 1787808816800,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/schemas/candidate_draft.schema.json",
+    "assets/schemas/recruiting_tables.json",
+    "assets/templates/prompts/resume_extract_prompt.md",
+    "references/dependency_contracts.md",
+    "references/workflow_candidate_upload.md",
+    "references/workflow_job_management.md",
+    "references/workflow_resume_ingestion.md",
+    "scripts/dependency_check.py",
+    "scripts/manage_jobs.py",
+    "scripts/resume_extract.py",
+    "scripts/table_models.py",
+    "scripts/upload_to_smartsheet.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Surqing",
+    "handle": "surqing",
+    "user_id": "s178gm09ttaqwhnkbe74v67qes86fjzw"
+  },
+  "slug": "hr-recruiting-tracker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hr-recruiting-tracker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hr-recruiting-tracker&ownerHandle=surqing",
+    "page_url": "https://clawhub.ai/surqing/skills/hr-recruiting-tracker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 537,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "HR \u62db\u8058\u6570\u636e\u6574\u7406\u6280\u80fd\u3002\u7528\u4e8e\u672c\u5730\u89e3\u6790 PDF/DOCX/TXT/Markdown \u7b80\u5386\u4e3a Markdown/JSON \u7b80\u5386\u5305\u3001\u751f\u6210\u5019\u9009\u4eba\u8d44\u6599\u8349\u7a3f\u3001\u5c06\u786e\u5b9a\u6027\u5019\u9009\u4eba\u8349\u7a3f\u5f55\u5165\u817e\u8baf\u6587\u6863\u667a\u80fd\u8868\u683c\uff0c\u4ee5\u53ca\u521d\u59cb\u5316\u6216\u7ef4\u62a4\u5c97\u4f4d\u4fe1\u606f\u5e93\u3002 Use when: resume ingestion, candidate draft extra...",
+  "updated_at": 1778492892498,
+  "version": "1.0.0"
+}
