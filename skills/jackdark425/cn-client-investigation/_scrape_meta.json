@@ -1,0 +1,63 @@
+{
+  "changelog": "**Major update: Adds comprehensive banker-grade safeguards for China mainland client investigation workflows.**\n\n- Introduces strict Chinese text accuracy controls: disallows `\\uXXXX` escapes and mandates a hard-coded reference lexicon for all key terms.\n- Enforces multi-source data provenance: every financial figure must be cross-verified from at least two independent sources, tracked in an auditable provenance file.\n- Embeds mandatory typo and accuracy gates using Python scripts (`provenance_verify.py`, `cn_typo_scan.py`); deliverables cannot ship without passing these checks.\n- Specifies source-data prioritization hierarchy for China company research, with fallback rules if data is unavailable.\n- Requires English name primary, Chinese name secondary formatting on deck covers to reduce typo risk.\n- Clearly prohibits fabrication of missing data; outputs must flag gaps transparently.",
+  "created_at": 1776698377987,
+  "display_name": "Cn Client Investigation",
+  "fetched_at": 1787817997755,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cn-lexicon.js",
+    "references/compile_with_typo_gate.template.js.txt",
+    "references/data-sources.md",
+    "references/package.json",
+    "scripts/_shared.py",
+    "scripts/bj_nonlisted_v2.py",
+    "scripts/bj_smoke_v2.py",
+    "scripts/build_deck.py",
+    "scripts/build_deliverable.py",
+    "scripts/build_outline_deck.py",
+    "scripts/cn_typo_scan.py",
+    "scripts/docx_data_audit.py",
+    "scripts/extract_deck_numbers.py",
+    "scripts/provenance_verify.py",
+    "scripts/raw_data_check.py",
+    "scripts/slide_data_audit.py",
+    "scripts/source_authenticity_check.py",
+    "scripts/style_scan.py",
+    "scripts/sync_provenance.py",
+    "scripts/validate-delivery.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090491765,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jackdark",
+    "handle": "jackdark425",
+    "user_id": "s176mxzq3jzjv11d44t7jjr33x83rvkb"
+  },
+  "slug": "cn-client-investigation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cn-client-investigation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cn-client-investigation&ownerHandle=jackdark425",
+    "page_url": "https://clawhub.ai/jackdark425/skills/cn-client-investigation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 599,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "China mainland client investigation and banker-grade analysis with strict guards for Chinese text accuracy and data provenance. Use when the target is an A-s...",
+  "updated_at": 1778492680262,
+  "version": "0.9.6"
+}
