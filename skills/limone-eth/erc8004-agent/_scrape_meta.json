@@ -1,0 +1,51 @@
+{
+  "changelog": "No file changes detected since the previous release.\n\n- Version bumped to 0.0.2 with no functional or documentation updates.\n- No user-facing or internal changes; behavior is identical to v0.0.1.",
+  "created_at": 1770327049295,
+  "display_name": "ERC8004 Agent",
+  "fetched_at": 1787792950885,
+  "files": [
+    "CLAUDE.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/MEMORY.template.md",
+    "assets/registration-template.json",
+    "package.json",
+    "references/contract-addresses.md",
+    "references/registration-guide.md",
+    "references/security-model.md",
+    "references/siwa-spec.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783658152600,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "limone-eth",
+    "handle": "limone-eth",
+    "user_id": "s1767ajkr0fg78gv7akz7xzef188465j"
+  },
+  "slug": "erc8004-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/erc8004-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=erc8004-agent&ownerHandle=limone-eth",
+    "page_url": "https://clawhub.ai/limone-eth/skills/erc8004-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2201,
+    "installs": 71,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "8004 Agent Skill for registering AI agents on the ERC-8004 Trustless Agents standard and authenticating them via SIWA (Sign In With Agent). Use this skill when an agent needs to: (1) create or manage an Ethereum wallet for onchain identity, (2) register on the ERC-8004 Identity Registry as an NFT-based agent identity (SIGN UP), (3) authenticate with a server by proving ownership of an ERC-8004 identity using a signed challenge (SIGN IN / SIWA), (4) build or update an ERC-8004 registration file (metadata JSON with endpoints, trust models, services), (5) upload agent metadata to IPFS or base64 data URI, (6) look up or verify an agent's onchain registration. The agent persists public identity state in MEMORY.md. Private keys are held in a separate keyring proxy server \u2014 the agent can request signatures but never access the key itself. Triggers on: ERC-8004, trustless agents, agent registration, SIWA, Sign In With Agent, agent identity NFT, Agent0 SDK, agent wallet, agent keystore, keyring proxy.",
+  "updated_at": 1779076748590,
+  "version": "0.0.2"
+}
