@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release of the HR Workforce Dashboard skill.\n\n- Generates 5 fixed interactive HR dashboards from specific Excel attachment types (Active, Termination, Contingent Worker).\n- Outputs a self-contained HTML dashboard using ECharts, with one-click email and clipboard sharing.\n- Handles strict file format and field rules based on business logic; file type classified by row 1 content only.\n- Supports additional bundle outputs: PNG, Excel, PPT, and ZIP upon request.\n- Marks incomplete data sections clearly if source files are missing, with user prompts for re-upload.\n- Not a general BI or report builder; only produces the standardized dashboards unless custom views are requested.",
+  "created_at": 1775735025670,
+  "display_name": "HR Workforce Dashboard \u4eba\u529b\u770b\u677f",
+  "fetched_at": 1787826648357,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/dashboard_style.css",
+    "references/data_spec.md",
+    "references/field_mapping.md",
+    "references/install_and_examples.md",
+    "references/layout_spec.md",
+    "references/metric_definitions.md",
+    "scripts/build_dashboard_bundle.py",
+    "scripts/build_upload_templates.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090357796,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Aico233",
+    "handle": "aico233",
+    "user_id": "s170ebyn6y5rjzfzmref9xb7ax84ht8y"
+  },
+  "slug": "hr-workforce-dashboard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hr-workforce-dashboard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hr-workforce-dashboard&ownerHandle=aico233",
+    "page_url": "https://clawhub.ai/aico233/skills/hr-workforce-dashboard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 775,
+    "installs": 20,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Generate standardized HR workforce dashboards from Excel files: 5 fixed dashboards covering headcount trends, regional distribution, detailed breakdowns, att...",
+  "updated_at": 1778492500998,
+  "version": "1.0.0"
+}
