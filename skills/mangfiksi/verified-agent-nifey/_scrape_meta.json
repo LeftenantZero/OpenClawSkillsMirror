@@ -1,0 +1,64 @@
+{
+  "changelog": "- Initial release of the Billions decentralized identity skill for agents.\n- Enables agents to create and manage decentralized identities and link them to human owners using the Billions Network.\n- Provides scripts for creating identities, generating and signing challenges, linking human and agent identities, and verifying ownership.\n- Strict guardrails enforced for secure identity management\u2014only supported scripts may be used, with no manual cryptographic workarounds allowed.\n- Identity and key data are stored under $HOME/.openclaw/billions for plugin compatibility and security.",
+  "created_at": 1777645284858,
+  "display_name": "Verified Agent Nifey",
+  "fetched_at": 1787811383316,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/constants.js",
+    "scripts/createNewEthereumIdentity.js",
+    "scripts/generateChallenge.js",
+    "scripts/getDidDocument.js",
+    "scripts/getIdentities.js",
+    "scripts/linkHumanToAgent.js",
+    "scripts/manualLinkHumanToAgent.js",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "scripts/shared/attestation.js",
+    "scripts/shared/bootstrap.js",
+    "scripts/shared/storage/base.js",
+    "scripts/shared/storage/challenge.js",
+    "scripts/shared/storage/crypto.js",
+    "scripts/shared/storage/did.js",
+    "scripts/shared/storage/identities.js",
+    "scripts/shared/storage/keys.js",
+    "scripts/shared/utils.js",
+    "scripts/signChallenge.js",
+    "scripts/verifySignature.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090729428,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "NifeySncy",
+    "handle": "mangfiksi",
+    "user_id": "s173ncrwztkbnqy5wqk4zjj1m985s52p"
+  },
+  "slug": "verified-agent-nifey",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/verified-agent-nifey",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=verified-agent-nifey&ownerHandle=mangfiksi",
+    "page_url": "https://clawhub.ai/mangfiksi/skills/verified-agent-nifey"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 528,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Billions decentralized identity for agents. Link agents to human identities using Billions ERC-8004 and Attestation Registries. Verify and generate authentic...",
+  "updated_at": 1778492821950,
+  "version": "1.0.0"
+}
