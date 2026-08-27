@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of cross-platform-memory.\n\n- Injects recent Telegram and Discord user conversations into the OpenClaw gateway session context.\n- Enables agents to remember and reference conversations across Telegram, Discord, and other OpenClaw channels for improved context continuity.\n- Reads from session logs, local MEMORY.md, and daily notes; filters and tags messages by platform.\n- Limits to the most recent 8 messages per platform and filters out bot messages.\n- Configurable via environment variables and easy integration with mission-control and chat APIs.\n- Falls back to long-term and daily memory files if no session logs are present.",
+  "created_at": 1774652655300,
+  "display_name": "Cross-Platform Memory Bridge",
+  "fetched_at": 1787843589344,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/memory-bridge.ts",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090161684,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "dan",
+    "handle": "dq-stack",
+    "user_id": "s170w9afx6rn9f1ng4rze6g8fn83pjna"
+  },
+  "slug": "cross-platform-memory",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cross-platform-memory",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cross-platform-memory&ownerHandle=dq-stack",
+    "page_url": "https://clawhub.ai/dq-stack/skills/cross-platform-memory"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 609,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Injects recent conversations from Telegram and Discord into the OpenClaw gateway session context. Enables the agent to remember and reference cross-platform...",
+  "updated_at": 1778492251057,
+  "version": "1.0.0"
+}
