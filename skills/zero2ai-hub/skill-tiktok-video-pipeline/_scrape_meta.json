@@ -1,0 +1,48 @@
+{
+  "changelog": "**Major update: Pipeline now supports Veo3 video generation, enhanced caption overlay (v3), audio mixing, new `--audio` and `--slowmo` flags, and Node.js orchestration.**\n\n- Adds Node.js orchestrator (`scripts/generate.js`) for full automation and new scripting interface.\n- Integrates next-gen caption overlay engine (`tiktok_overlay_engine_v3.py`) using ffmpeg drawtext for improved pill captions and Arabic language support.\n- Supports background music mixing via ffmpeg (`--audio`), default audio auto-discovery, and volume adjustment.\n- Introduces new pipeline arguments for logo watermark, segment stitching, dry-run mode, and Arabic captions.\n- Updates Python pipeline to support overlay v3 engine, `--audio`, and `--slowmo` for slowed videos.\n- Documentation rewritten with detailed architecture diagram, usage examples, and full argument tables.",
+  "created_at": 1772327050673,
+  "display_name": "Skill Tiktok Video Pipeline",
+  "fetched_at": 1787790434817,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/README.md",
+    "config/products.json",
+    "scripts/generate.js",
+    "scripts/pipeline.py",
+    "scripts/tiktok_overlay_engine_v3.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968173699,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Zero2Ai",
+    "handle": "zero2ai-hub",
+    "user_id": "s17a1b8dv4hc6x68q9m057m67n83ryrt"
+  },
+  "slug": "skill-tiktok-video-pipeline",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-tiktok-video-pipeline",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-tiktok-video-pipeline&ownerHandle=zero2ai-hub",
+    "page_url": "https://clawhub.ai/zero2ai-hub/skills/skill-tiktok-video-pipeline"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1261,
+    "installs": 37,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "End-to-end TikTok ad video pipeline. Product script \u2192 Veo base video \u2192 animated caption overlay \u2192 audio mix \u2192 final MP4. One command, full automation.",
+  "updated_at": 1779077573408,
+  "version": "2.0.0"
+}
