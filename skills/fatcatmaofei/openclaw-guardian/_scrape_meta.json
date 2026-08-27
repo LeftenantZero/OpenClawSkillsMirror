@@ -1,0 +1,52 @@
+{
+  "changelog": "Fix: match actual implementation (blacklist + LLM voting, no scoring). Updated core code to PR #25480.",
+  "created_at": 1772012714143,
+  "display_name": "OpenClaw Guardian",
+  "fetched_at": 1787791093113,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/README.md",
+    "scripts/audit-log.ts",
+    "scripts/blacklist.ts",
+    "scripts/default-policies.json",
+    "scripts/index.ts",
+    "scripts/llm-voter.ts",
+    "scripts/openclaw.plugin.json",
+    "scripts/package.json",
+    "scripts/tsconfig.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779958910578,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fatcatMaoFei",
+    "handle": "fatcatmaofei",
+    "user_id": "s179myrw04sdsqgvmsyz7j961s884d1h"
+  },
+  "slug": "openclaw-guardian",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-guardian",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-guardian&ownerHandle=fatcatmaofei",
+    "page_url": "https://clawhub.ai/fatcatmaofei/skills/openclaw-guardian"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1549,
+    "installs": 49,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "A security layer plugin for OpenClaw that intercepts dangerous tool calls (exec, write, edit) through two-tier regex blacklist rules and LLM-based intent ver...",
+  "updated_at": 1779077363106,
+  "version": "1.0.1"
+}
