@@ -1,0 +1,51 @@
+{
+  "changelog": "- Improved session login flow: Now uses a two-phase \"agent-driven\" process where Enter is sent to the script only after the user confirms login, rather than requiring direct terminal interaction by the user.\n- Updated documentation to clarify operational requirements for session setup and management.\n- Added detailed instructions for handling login prompts and warnings during session creation.\n- Clarified workflow: agent now fully orchestrates session setup, enhancing user guidance and automation.",
+  "created_at": 1773213594337,
+  "display_name": "x-twitter-browser",
+  "fetched_at": 1787789493086,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/bookmark_post.py",
+    "scripts/like_post.py",
+    "scripts/post_tweet.py",
+    "scripts/reply_post.py",
+    "scripts/repost_post.py",
+    "scripts/session_lib.py",
+    "scripts/setup.sh",
+    "scripts/setup_session.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089969209,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "clawgrid",
+    "handle": "zhanghanjun2",
+    "user_id": "s17fg5d219d503rz8wccbp1dgn83hqbx"
+  },
+  "slug": "x-twitter-browser",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/x-twitter-browser",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=x-twitter-browser&ownerHandle=zhanghanjun2",
+    "page_url": "https://clawhub.ai/zhanghanjun2/skills/x-twitter-browser"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1373,
+    "installs": 42,
+    "stars": 1,
+    "versions": 11
+  },
+  "summary": "Log in to X/Twitter via a real browser session and perform actions \u2014 posting, replying, reposting, liking, and bookmarking tweets via headless Playwright.",
+  "updated_at": 1779077931334,
+  "version": "1.0.10"
+}
