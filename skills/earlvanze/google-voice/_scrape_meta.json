@@ -1,0 +1,51 @@
+{
+  "changelog": "Merge sanitized Google Voice caller workflow into google-voice: optional TTS/local-audio injection and call recording via private GV_COOKIE_PATH, plus CDP live-call mode.",
+  "created_at": 1778144073938,
+  "display_name": "Google Voice",
+  "fetched_at": 1787794173456,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/call-har-endpoints.md",
+    "references/har-endpoints.md",
+    "scripts/analyze_voice_har.py",
+    "scripts/google-voice-call-audio-engine.js",
+    "scripts/google-voice-call-audio.sh",
+    "scripts/google-voice-mcp.js",
+    "scripts/google-voice-sms-records.js",
+    "scripts/google-voice-start-call.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090757795,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Earl Co",
+    "handle": "earlvanze",
+    "user_id": "s17e9q72w7rrtswh8zeszvr87s8476ga"
+  },
+  "slug": "google-voice",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/google-voice",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=google-voice&ownerHandle=earlvanze",
+    "page_url": "https://clawhub.ai/earlvanze/skills/google-voice"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 638,
+    "installs": 14,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Google Voice web-client automation and MCP integration from HAR captures. Use when reverse-engineering voice.google.com.har or call_voice.google.com.har, lis...",
+  "updated_at": 1779076279969,
+  "version": "0.3.0"
+}
