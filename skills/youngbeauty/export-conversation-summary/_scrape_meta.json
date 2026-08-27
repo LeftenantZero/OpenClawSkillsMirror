@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release: Export Claude Code conversations to detailed markdown documents.\n\n- Extracts full dialogue with user questions, model responses, and associated tool operations from internal JSONL files.\n- Formats the conversation into a structured markdown file, including all turns, preserved formatting, and operation summaries.\n- Adds automatic statistics (total turns, duration, tokens used) and a dual performance evaluation (prompt quality, model performance, strengths/weaknesses, improvement suggestions).\n- Supports both English and Chinese; skips internal/system messages and this skill's own invocation.\n- Default output to `docs/{YYYY-MM-DD}-conversation.md`, with confirmation and file summary provided to the user.",
+  "created_at": 1772609323429,
+  "display_name": "export-conversation-summary",
+  "fetched_at": 1787800535624,
+  "files": [
+    "_meta.json",
+    "skill-card.md",
+    "skill.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Young23",
+    "handle": "youngbeauty",
+    "user_id": "s17ay6qssyjkbpm2jdrd0g4t5n8852e7"
+  },
+  "slug": "export-conversation-summary",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/export-conversation-summary",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=export-conversation-summary&ownerHandle=youngbeauty",
+    "page_url": "https://clawhub.ai/youngbeauty/skills/export-conversation-summary"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1177,
+    "installs": 32,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Export current Claude Code conversation to markdown document with full dialogue context and model operations",
+  "updated_at": 1778995106200,
+  "version": "1.0.0"
+}
