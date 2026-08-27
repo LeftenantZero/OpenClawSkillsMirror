@@ -1,0 +1,50 @@
+{
+  "changelog": "**VitaVault 1.3.0 \u2013 Major upgrade: Adds webhook-based Apple Health sync and auto-setup**\n\n- New webhook receiver script for direct iPhone-to-agent health data sync (no Mac or shared servers required)\n- Detailed, step-by-step agent setup guide to fully automate secure token generation, webhook launch, HTTPS exposure (Tailscale, Cloudflare, ngrok, or custom domain), and persistent service setup\n- Data now syncs directly to your agent every time VitaVault opens, storing files locally for privacy\n- Simplified user experience: agent handles all technical setup and hands user a ready-to-use URL and token\n- Previous export/analysis methods (JSON, CSV, AI-ready text) still supported, with updated instructions",
+  "created_at": 1771509973651,
+  "display_name": "Vitavault",
+  "fetched_at": 1787803370891,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/data-types.md",
+    "references/schema.md",
+    "scripts/briefing.py",
+    "scripts/import.py",
+    "scripts/query.py",
+    "scripts/summary.py",
+    "scripts/webhook.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779933682585,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Brandon Stewart",
+    "handle": "brandons7",
+    "user_id": "s17ctd9m7n9g71352ndh40fpen83mg3v"
+  },
+  "slug": "vitavault",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/vitavault",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=vitavault&ownerHandle=brandons7",
+    "page_url": "https://clawhub.ai/brandons7/skills/vitavault"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1585,
+    "installs": 47,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "VitaVault iOS app integration - sync Apple Health data directly to your AI agent. Auto-setup webhook, token generation, and HTTPS exposure. Works with any iP...",
+  "updated_at": 1778991669026,
+  "version": "1.3.0"
+}
