@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of the Jira skill.\n\n- Manage Jira issues, transitions, and worklogs via the Jira Cloud REST API.\n- Includes commands for searching, status changes, assignment, comments, creation, and logging work.\n- Provides worklog summaries and JSON-export for tracked hours.\n- Supports filtering by project, user, day, and issue.\n- Requires `curl`, `jq`, `bc`, and `python3`; environment variables for Jira Cloud credentials.",
+  "created_at": 1771685797098,
+  "display_name": "Jira Metric",
+  "fetched_at": 1787803002723,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/jira.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779947336951,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "whz",
+    "handle": "weihezhai",
+    "user_id": "s17863thfxxh47pj90a96xat1s8854w3"
+  },
+  "slug": "jirametric",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/jirametric",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=jirametric&ownerHandle=weihezhai",
+    "page_url": "https://clawhub.ai/weihezhai/skills/jirametric"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1193,
+    "installs": 37,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Retrieve and analyze Jira worklog metrics by user, issue, or date ranges through Jira Cloud REST API calls.",
+  "updated_at": 1778992105005,
+  "version": "1.0.0"
+}
