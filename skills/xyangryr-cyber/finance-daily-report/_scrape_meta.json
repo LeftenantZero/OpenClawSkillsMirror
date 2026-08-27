@@ -1,0 +1,58 @@
+{
+  "changelog": "finance-daily-report version 1.0.0\n\n- Initial release providing modular, configurable global finance daily report generation.\n- Supports interactive first-time setup for daily auto-push, including cron job registration and time parsing.\n- Handles chat-based module management: add, remove, enable, disable, list, and reorder report modules.\n- Integrates subagent workflow execution for report compilation and delivery.\n- Not intended for real-time trading, individual stock picks, or investment advice.",
+  "created_at": 1773481745106,
+  "display_name": "finance-daily-report",
+  "fetched_at": 1787874181311,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/default-config.yaml",
+    "references/collector-prompts.md",
+    "references/module-mgmt.md",
+    "references/module-schema.md",
+    "references/sources.md",
+    "references/template.md",
+    "references/verification.md",
+    "references/workflow.md",
+    "scripts/call_collector.py",
+    "scripts/collect_and_structure.py",
+    "scripts/fetch_market_data.py",
+    "scripts/manage_modules.py",
+    "scripts/preflight.py",
+    "scripts/render_report.py",
+    "scripts/setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089884890,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xyangryr-cyber",
+    "handle": "xyangryr-cyber",
+    "user_id": "s17f9cw65zv0ahvew7wssncw1h885svk"
+  },
+  "slug": "finance-daily-report",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/finance-daily-report",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=finance-daily-report&ownerHandle=xyangryr-cyber",
+    "page_url": "https://clawhub.ai/xyangryr-cyber/skills/finance-daily-report"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 774,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate a modular, configurable global finance daily report (\u5168\u7403\u8d22\u7ecf\u65e5\u62a5). Default 9 modules. External LLM collectors. Output to chat (auto-chunked). Use when: u...",
+  "updated_at": 1778491902083,
+  "version": "1.0.0"
+}
