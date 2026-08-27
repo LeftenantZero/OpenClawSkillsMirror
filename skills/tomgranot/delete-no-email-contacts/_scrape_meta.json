@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of the skill for cleaning HubSpot contacts with no email addresses.\n\n- Fully automates identification and deletion of contacts without email addresses in HubSpot CRM.\n- Includes 4-stage execution: Plan, Before State (count + sample), Execute (CSV export, batch delete), and After State (verification).\n- Safety features: explicit user confirmation, audit log CSV export, and abort threshold (default 500 contacts).\n- Requires HubSpot private app with proper contact access scopes.\n- Deleted contacts are recoverable for 90 days via HubSpot Settings.",
+  "created_at": 1774546601827,
+  "display_name": "Delete No Email Contacts",
+  "fetched_at": 1787846091820,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/after.py",
+    "scripts/before.py",
+    "scripts/execute.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "TomGranot",
+    "handle": "tomgranot",
+    "user_id": "s17cmf9jxs7s60v7thhms9w09h83m293"
+  },
+  "slug": "delete-no-email-contacts",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/delete-no-email-contacts",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=delete-no-email-contacts&ownerHandle=tomgranot",
+    "page_url": "https://clawhub.ai/tomgranot/skills/delete-no-email-contacts"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 539,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Delete contacts with no email address from a HubSpot CRM instance. These contacts cannot receive any communication and inflate billing. Fully automated via t...",
+  "updated_at": 1778492219006,
+  "version": "1.0.0"
+}
