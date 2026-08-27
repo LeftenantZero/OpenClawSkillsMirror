@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of kraken-openapi-skill.\n\n- Provides public market-data access to Kraken via curated OpenAPI schema and UXC tooling.\n- Supports key endpoints: server time, asset pair metadata, ticker reads, OHLC, and order book snapshots.\n- Excludes private/account functions and FIX; read-only, public-surface only.\n- Includes clear guidance for workflow, authentication, and recommended usage patterns.\n- Highlights Kraken-specific pair naming and focuses on automation-ready JSON output.",
+  "created_at": 1773622300073,
+  "display_name": "Kraken OpenAPI Skill",
+  "fetched_at": 1787871515589,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/kraken-public.openapi.json",
+    "references/kraken-spot-futures.openapi.json",
+    "references/usage-patterns.md",
+    "scripts/validate.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089909268,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jolestar",
+    "handle": "jolestar",
+    "user_id": "s1769rm50f8wvzw550m22hg10x83gkem"
+  },
+  "slug": "kraken-openapi-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kraken-openapi-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kraken-openapi-skill&ownerHandle=jolestar",
+    "page_url": "https://clawhub.ai/jolestar/skills/kraken-openapi-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 802,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Kraken public market data via curated REST endpoints",
+  "updated_at": 1778491933006,
+  "version": "1.0.0"
+}
