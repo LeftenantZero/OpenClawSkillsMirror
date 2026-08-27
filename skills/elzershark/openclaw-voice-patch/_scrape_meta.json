@@ -1,0 +1,43 @@
+{
+  "changelog": "- Voice input patch now uses a single mic button with smart dual-mode: short click for auto-send, or hold 3 seconds for continuous mode.\n- Tooltip adapts to state: shows \"Voice (hold 3s for continuous)\" when idle, and \"Stop voice auto\"/\"Stop voice continuous\" when recording.\n- Auto-send mode automatically stops after pause or 3 seconds of silence (acts as misclick safeguard).\n- Continuous mode restarts recognition after each message until manually stopped.\n- Live interim transcript appears above the input in both modes.\n- Documentation updated to reflect new hold-to-activate workflow; previous dual-button UI removed.",
+  "created_at": 1776583717054,
+  "display_name": "Voice Input Patch \u2013 Dual Mic Buttons",
+  "fetched_at": 1787818682251,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090481913,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ErForscht",
+    "handle": "elzershark",
+    "user_id": "s1769djxcxgh104h909vnt0v2n83rbzy"
+  },
+  "slug": "openclaw-voice-patch",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-voice-patch",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-voice-patch&ownerHandle=elzershark",
+    "page_url": "https://clawhub.ai/elzershark/skills/openclaw-voice-patch"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 628,
+    "installs": 16,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Patch OpenClaw Control UI to add dual voice input buttons (auto-send + continuous). Use when OpenClaw voice input needs patching, after OpenClaw updates (pat...",
+  "updated_at": 1778492662189,
+  "version": "1.0.1"
+}
