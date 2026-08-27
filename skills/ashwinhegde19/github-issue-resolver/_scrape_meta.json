@@ -1,0 +1,53 @@
+{
+  "changelog": "- Initial release of the GitHub Issue Resolver agent.\n- Automates the GitHub issue resolution workflow: discover, analyze, plan, fix, test, and submit PRs.\n- Implements a 5-layer guardrail system to prevent scope creep, unauthorized access, and dangerous operations.\n- Strictly enforces one-issue-at-a-time, approval gates for all critical actions, comprehensive logging, and never touches protected branches or sensitive files.\n- Includes utility scripts for safe execution, auditing, and guardrail checks, with detailed workflow documentation.",
+  "created_at": 1772316178970,
+  "display_name": "GitHub Issue Resolver",
+  "fetched_at": 1787790606987,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "guardrails.json",
+    "references/guardrails-guide.md",
+    "references/quick-reference.md",
+    "scripts/analyze_issue.py",
+    "scripts/audit.py",
+    "scripts/create_pr.py",
+    "scripts/fetch_issues.py",
+    "scripts/guardrails.py",
+    "scripts/recommend.py",
+    "scripts/sandbox.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968180696,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Ashwinhegde19",
+    "handle": "ashwinhegde19",
+    "user_id": "s1788gamkz40ek3s9cmwqqkkq987ewvy"
+  },
+  "slug": "github-issue-resolver",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/github-issue-resolver",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=github-issue-resolver&ownerHandle=ashwinhegde19",
+    "page_url": "https://clawhub.ai/ashwinhegde19/skills/github-issue-resolver"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2494,
+    "installs": 84,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Autonomous GitHub Issue Resolver Agent with guardrails. Use when the user wants to discover, analyze, and fix open issues in GitHub repositories. Triggers on...",
+  "updated_at": 1779077512908,
+  "version": "1.0.0"
+}
