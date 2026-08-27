@@ -1,0 +1,42 @@
+{
+  "changelog": "**Skill meta-ads-cli version 2.1.0**\n\n- Major simplification: trimmed documentation, focused on key workflows, and removed 23 reference and prompt files for a leaner, safer, and more agent-agnostic design.\n- Added clear install and credential instructions, now using requirements-meta-ads-cli.txt and specifying required/optional environment variables.\n- Updated operating rules to emphasize safe, auditable command execution with explicit approval gates for all mutations and spend-affecting changes.\n- Streamlined agent workflow and risk gating for reads vs. mutations, clarifying approval flows for write, budget, activation, and destructive actions.\n- Embedded provenance and template files for reproducibility and planning.",
+  "created_at": 1777576854350,
+  "display_name": "Meta Ads CLI - control your ad campaigns",
+  "fetched_at": 1787811663986,
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "requirements-meta-ads-cli.txt",
+    "resources/provenance.json",
+    "scripts/meta_ads_agent.py",
+    "skill-card.md",
+    "templates/agent-plan.schema.json",
+    "templates/read-report-plan.json",
+    "templates/single-write-plan.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Tristan Manchester",
+    "handle": "tristanmanchester",
+    "user_id": "s17c3xv8wvvzzbj84z9vcj498n83gnkp"
+  },
+  "slug": "meta-ads-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/meta-ads-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=meta-ads-cli&ownerHandle=tristanmanchester",
+    "page_url": "https://clawhub.ai/tristanmanchester/skills/meta-ads-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 623,
+    "installs": 14,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Control Meta/Facebook/Instagram ads through Meta's official `meta ads ...` CLI. Use for read-only audits, reporting, safe planning, and approved one-step mut...",
+  "updated_at": 1778492814510,
+  "version": "2.1.0"
+}
