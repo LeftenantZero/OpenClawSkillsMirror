@@ -1,0 +1,49 @@
+{
+  "changelog": "tg-channel-manager 0.0.3\n\n- Major refactor: new command-line tool `tgcm.py`, replacing previous interface.\n- Full CLI defined: standardized commands for channel management, token/env setup, and index rebuilding.\n- New startup preflight check for required tokens, env, and channels with automatic issue reporting and fixes.\n- Configuration is now persistent via `tgcm/.config.json`.\n- Added sample and startup files: channels config example and helper scripts.\n- Old README.md removed, documentation migrated to SKILL.md and improved with step-by-step usage and strict DOs/DON'Ts.",
+  "created_at": 1771691520621,
+  "display_name": "TG Channel Manager",
+  "fetched_at": 1787802976367,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/channels.example.json",
+    "references/cron-setup.md",
+    "references/publisher-prompt.md",
+    "references/scout-prompt.md",
+    "scripts/dedup-check.py",
+    "scripts/start-searxng.sh",
+    "scripts/tgcm.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779947367347,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "aivibe",
+    "handle": "axisrow",
+    "user_id": "s17d1epe9h78z9q1j01yd0yzt18856rc"
+  },
+  "slug": "tg-channel-manager",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tg-channel-manager",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tg-channel-manager&ownerHandle=axisrow",
+    "page_url": "https://clawhub.ai/axisrow/skills/tg-channel-manager"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 810,
+    "installs": 20,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Universal config-driven content pipeline engine for any Telegram channel: news search via SearXNG, drafts, scheduled publishing, deduplication. All channel s...",
+  "updated_at": 1778992127886,
+  "version": "0.0.3"
+}
