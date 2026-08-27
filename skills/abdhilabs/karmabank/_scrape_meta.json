@@ -1,0 +1,75 @@
+{
+  "changelog": "KarmaBank 1.0.0 \u2013 Initial Release\n\n- Launches a USDC credit system for AI agents, linked to Moltbook karma scores.\n- Introduces credit tiers from Bronze (50 USDC) to Diamond (1000 USDC) with 0% interest and a 14-day loan term.\n- Provides clear separation of roles: Admins manage the lending pool with Circle integration; agents borrow using only Moltbook credentials.\n- Includes CLI commands for registration, checking credit, borrowing/repaying USDC, viewing history, and managing Circle wallets.\n- Features a transparent credit scoring system factoring karma, activity, and reputation.\n- Full documentation and setup instructions for both Admins and Agents.",
+  "created_at": 1770274742052,
+  "display_name": "KarmaBank",
+  "fetched_at": 1787792879341,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "jest.config.cjs",
+    "package.json",
+    "skill-card.md",
+    "src/adapters/circle.test.ts",
+    "src/adapters/circle.ts",
+    "src/adapters/moltbook.test.ts",
+    "src/adapters/moltbook.ts",
+    "src/cli-simple.ts",
+    "src/cli.ts",
+    "src/cli/adapters/moltbook.ts",
+    "src/cli/commands/borrow.ts",
+    "src/cli/commands/check.ts",
+    "src/cli/commands/history.ts",
+    "src/cli/commands/list.ts",
+    "src/cli/commands/register.ts",
+    "src/cli/commands/repay.ts",
+    "src/cli/commands/wallet.ts",
+    "src/cli/help.ts",
+    "src/cli/main.ts",
+    "src/cli/services/ledger.ts",
+    "src/data/mockData.ts",
+    "src/data/storage.ts",
+    "src/models/agent.ts",
+    "src/models/loan.ts",
+    "src/scoring.test.ts",
+    "src/scoring.ts",
+    "src/services/credit.ts",
+    "src/services/ledger.ts",
+    "src/types.ts",
+    "tests/cli.test.ts",
+    "tests/ledger.test.ts",
+    "tsconfig.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783654633007,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "abdhilabs",
+    "handle": "abdhilabs",
+    "user_id": "s17fe5141n0se95wjda5rvaf998849bh"
+  },
+  "slug": "karmabank",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/karmabank",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=karmabank&ownerHandle=abdhilabs",
+    "page_url": "https://clawhub.ai/abdhilabs/skills/karmabank"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2056,
+    "installs": 67,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "AI agents borrow USDC based on their Moltbook karma score. Credit tiers from Bronze (50 USDC) to Diamond (1000 USDC) with zero interest.",
+  "updated_at": 1779076777306,
+  "version": "1.0.0"
+}
