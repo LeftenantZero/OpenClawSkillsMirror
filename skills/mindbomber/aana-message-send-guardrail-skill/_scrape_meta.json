@@ -1,0 +1,37 @@
+{
+  "changelog": "AANA Message Send Guardrail Skill 1.0.0 \u2013 Initial Release\n\n- Provides clear instructions for checking and approving messages before sending via channels like Slack, Teams, Discord, and SMS.\n- Outlines required pre-send checks, including channel, recipients, message tone, privacy, and explicit approval.\n- Defines risk classes for high-impact or sensitive messages and lists situations that require extra caution or confirmation.\n- Establishes rules to prevent sending when destination, audience, or privacy is unclear or risky.\n- Requires revision for hostile tone or unsupported claims; blocks unsafe or unauthorized sends.\n- Specifies a minimal, redacted review payload for external checkers to protect sensitive information.\n- Includes a standardized output pattern for summarizing send safety and recommendations.",
+  "created_at": 1777943311954,
+  "display_name": "AANA Message Send Guardrail Skill",
+  "fetched_at": 1787810263876,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/redacted-message-send-guardrail.json",
+    "manifest.json",
+    "schemas/message-send-guardrail.schema.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mindbomber",
+    "handle": "mindbomber",
+    "user_id": "s177cynx168hg36ac5nrkb9wdn85z9dq"
+  },
+  "slug": "aana-message-send-guardrail-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aana-message-send-guardrail-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aana-message-send-guardrail-skill&ownerHandle=mindbomber",
+    "page_url": "https://clawhub.ai/mindbomber/skills/aana-message-send-guardrail-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 621,
+    "installs": 13,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Validates message destination, audience, tone, privacy, and approval before sending or posting on Slack, Teams, Discord, SMS, or public channels.",
+  "updated_at": 1778492846193,
+  "version": "1.0.0"
+}
