@@ -1,0 +1,33 @@
+{
+  "changelog": "- Skill renamed to \"openclaw-security-audit\" with updated description and guidance.\n- Expanded audit workflow with clear, detailed step-by-step checks for OpenClaw/Clawdbot deployments.\n- Standardized output format: terminal-style report with unique check IDs, statuses (OK/VULNERABLE/UNKNOWN), evidence, impact, and specific fixes.\n- Strong emphasis on read-only, non-destructive auditing; secrets must be redacted and never exfiltrated.\n- Added guidance for handling gateway/UI exposure, control UI token risks, unsafe exec/tool policies, supply-chain/skills review, plaintext secrets detection, and privilege escalation risks.\n- Enhanced remediation guidance\u2014propose fixes only with explicit user approval.",
+  "created_at": 1776313791769,
+  "display_name": "Security Audit",
+  "fetched_at": 1787821009332,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "AlvisDunlop",
+    "handle": "alvisdunlop",
+    "user_id": "s17fq465rgqaeb4mjcdf3p9dkh84s6zy"
+  },
+  "slug": "alvisdunlop-security-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alvisdunlop-security-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alvisdunlop-security-audit&ownerHandle=alvisdunlop",
+    "page_url": "https://clawhub.ai/alvisdunlop/skills/alvisdunlop-security-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 681,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Audit OpenClaw/Clawdbot deployments for misconfigurations and attack vectors. Use when a user asks for a security review of OpenClaw/Clawdbot/Moltbot, gatewa...",
+  "updated_at": 1778492613600,
+  "version": "1.1.0"
+}
