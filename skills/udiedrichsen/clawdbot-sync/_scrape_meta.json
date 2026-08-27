@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release: Bi-directional sync between Clawdbot instances via SSH/Tailscale",
+  "created_at": 1769432138552,
+  "display_name": "Clawdbot Sync",
+  "fetched_at": 1787806320261,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/setup.md",
+    "scripts/handler.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783650220984,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "udiedrichsen",
+    "handle": "udiedrichsen",
+    "user_id": "s179t0qrm3e90wea1cjtkqwv55884gmn"
+  },
+  "slug": "clawdbot-sync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawdbot-sync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawdbot-sync&ownerHandle=udiedrichsen",
+    "page_url": "https://clawhub.ai/udiedrichsen/skills/clawdbot-sync"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3561,
+    "installs": 120,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Synchronize memory, preferences, and skills between multiple Clawdbot instances. Supports bi-directional sync via SSH/rsync over Tailscale. Use when asked to sync with another Clawdbot, share memory between instances, or keep multiple agents in sync. Triggers: /sync, 'sync with mac', 'update other clawdbot', 'share this with my other bot'.",
+  "updated_at": 1778987144739,
+  "version": "1.0.0"
+}
