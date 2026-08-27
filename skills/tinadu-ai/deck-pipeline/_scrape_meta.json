@@ -1,0 +1,47 @@
+{
+  "changelog": "Major rewrite from DeckGlobalizer v2.1.1:\n\n- Now a full 4-stage pipeline (Sense Pass \u2192 McKinsey Translation \u2192 Layout Audit \u2192 Handoff)\n- Swappable PROFILE block (palette, fonts, glossary, slide-offset)\n- Page-by-page execution with per-slide checkpoint\n- McKinsey style baseline + extensible reference samples\n- Font-name suffix audit, structural-anchor detection\n- Discrete -0.1pt font compression, line-spacing fallback\n- Bidirectional PPT \u2194 Excel sync\n- Companion-file lock detection\n- 10 standalone helper scripts\n- Polish-only mode for single-language decks\n\nRenamed from 'deckglobalizer' to 'deck-pipeline'; old slug redirects.",
+  "created_at": 1776834152467,
+  "display_name": "Deck Pipeline",
+  "fetched_at": 1787808110225,
+  "files": [
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/anchor_detect.py",
+    "scripts/apply.py",
+    "scripts/excel_sync.py",
+    "scripts/extract.py",
+    "scripts/glossary_audit.py",
+    "scripts/handoff.py",
+    "scripts/layout_audit.py",
+    "scripts/overflow_recheck.py",
+    "scripts/sense_pass.py",
+    "scripts/style_distill.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "NANA",
+    "handle": "tinadu-ai",
+    "user_id": "s178xc11mj68f9c018344m5xw183y7z8"
+  },
+  "slug": "deck-pipeline",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/deck-pipeline",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=deck-pipeline&ownerHandle=tinadu-ai",
+    "page_url": "https://clawhub.ai/tinadu-ai/skills/deck-pipeline"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 930,
+    "installs": 23,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Production-grade Claude Code system that takes presentation decks from raw Chinese draft to McKinsey-polished English \u2014 with full audit trail, layout integri...",
+  "updated_at": 1778604107501,
+  "version": "3.0.0"
+}
