@@ -1,0 +1,38 @@
+{
+  "changelog": "Initial release: Cloudflare Tunnel + Access pattern for OpenClaw WebUI; includes bundled DNS helper for least-privilege subdomain/record management.",
+  "created_at": 1770428172308,
+  "display_name": "OpenClaw Cloudflare Secure",
+  "fetched_at": 1787805401660,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/cf_dns.py",
+    "scripts/dns_create_record.sh",
+    "scripts/dns_point_hostname_to_tunnel.sh",
+    "scripts/install_cloudflared.sh",
+    "scripts/tunnel_service_install.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jskoiz",
+    "handle": "jskoiz",
+    "user_id": "s17726n685jt6gj2vxsx0yvkhn8850yh"
+  },
+  "slug": "openclaw-cloudflare-secure",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-cloudflare-secure",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-cloudflare-secure&ownerHandle=jskoiz",
+    "page_url": "https://clawhub.ai/jskoiz/skills/openclaw-cloudflare-secure"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2309,
+    "installs": 76,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Securely expose an OpenClaw Gateway WebUI on a VPS via Cloudflare Zero Trust Access + Cloudflare Tunnel (cloudflared), including DNS cutover for custom hostnames and optional cleanup of Tailscale Serve.",
+  "updated_at": 1778988791029,
+  "version": "1.0.0"
+}
