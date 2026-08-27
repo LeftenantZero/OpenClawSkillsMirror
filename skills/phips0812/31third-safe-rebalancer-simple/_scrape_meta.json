@@ -1,0 +1,74 @@
+{
+  "changelog": "**Summary:**  \nAdds price oracle support and improves deployment safety checks.\n\n- Added PriceOracle contract ABI and integration.\n- Safety checks now correctly validate executor address against ExecutorModule.executor.\n- Price oracle references (from StaticAllocation and Slippage) are now used for pricing.\n- Deployment verification output updated to include PriceOracle and Executor fields.\n- New tests and refactored CLI tools for expanded deployment and policy validation.",
+  "created_at": 1771606282295,
+  "display_name": "31Third Safe Rebalancer (Simple)",
+  "fetched_at": 1787791662941,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "abi/AssetUniversePolicy.json",
+    "abi/ExecutorModule.json",
+    "abi/PriceOracle.json",
+    "abi/SlippagePolicy.json",
+    "abi/StaticAllocationPolicy.json",
+    "dist/abi/AssetUniversePolicy.json",
+    "dist/abi/ExecutorModule.json",
+    "dist/abi/PriceOracle.json",
+    "dist/abi/SlippagePolicy.json",
+    "dist/abi/StaticAllocationPolicy.json",
+    "dist/index.js",
+    "dist/scripts/cli.js",
+    "dist/src/contracts.js",
+    "dist/src/rebalance-now.js",
+    "dist/src/verify-deployment-config.js",
+    "dist/tests/cli.test.js",
+    "dist/tests/rebalance-now.test.js",
+    "dist/tests/verify-deployment.test.js",
+    "index.ts",
+    "package-lock.json",
+    "package.json",
+    "scripts/cli.ts",
+    "skill-card.md",
+    "skill.json",
+    "skill.yaml",
+    "src/contracts.ts",
+    "src/rebalance-now.ts",
+    "src/verify-deployment-config.ts",
+    "tests/cli.test.ts",
+    "tests/rebalance-now.test.ts",
+    "tests/verify-deployment.test.ts",
+    "tsconfig.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779943209076,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Phips0812",
+    "handle": "phips0812",
+    "user_id": "s17a6xn4zrdnxymcat3m29kz458851jt"
+  },
+  "slug": "31third-safe-rebalancer-simple",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/31third-safe-rebalancer-simple",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=31third-safe-rebalancer-simple&ownerHandle=phips0812",
+    "page_url": "https://clawhub.ai/phips0812/skills/31third-safe-rebalancer-simple"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1991,
+    "installs": 57,
+    "stars": 1,
+    "versions": 7
+  },
+  "summary": "One-step Safe rebalancer using on-chain 31Third policies.",
+  "updated_at": 1779077177355,
+  "version": "0.2.0"
+}
