@@ -1,0 +1,60 @@
+{
+  "changelog": "Costco Inventory Monitor 1.1.0 introduces a safer, OpenClaw-ready workflow:\n\n- Adds shell scripts, Python utilities, and config templates for scheduling inventory checks by ZIP and product.\n- Enforces secret management best practices\u2014move all real credentials to a secure, ignored directory outside the skill folder.\n- Documents OpenClaw cron scheduling for automated, safe periodic monitoring.\n- Provides clear setup, output paths, and example usage.\n- Includes updated references and monitoring standard docs.",
+  "created_at": 1775114742888,
+  "display_name": "Costco Inventory Monitor",
+  "fetched_at": 1787834686334,
+  "files": [
+    "PaxHeader/SKILL.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/PaxHeader/openai.yaml",
+    "agents/openai.yaml",
+    "costco-inventory-monitor/SKILL.md",
+    "costco-inventory-monitor/agents/openai.yaml",
+    "costco-inventory-monitor/references/costco-inventory-standard.md",
+    "costco-inventory-monitor/scripts/build_monitor_config.py",
+    "costco-inventory-monitor/scripts/check_costco_inventory.py",
+    "costco-inventory-monitor/scripts/run_monitor.sh",
+    "references/PaxHeader/costco-inventory-standard.md",
+    "references/costco-inventory-standard.md",
+    "scripts/PaxHeader/build_monitor_config.py",
+    "scripts/PaxHeader/check_costco_inventory.py",
+    "scripts/PaxHeader/run_monitor.sh",
+    "scripts/build_monitor_config.py",
+    "scripts/check_costco_inventory.py",
+    "scripts/run_monitor.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090262987,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Weiping Cai",
+    "handle": "cweiping",
+    "user_id": "s1732y23tzcad4k0wjmkn1b2nh842d32"
+  },
+  "slug": "costco-inventory-monitor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/costco-inventory-monitor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=costco-inventory-monitor&ownerHandle=cweiping",
+    "page_url": "https://clawhub.ai/cweiping/skills/costco-inventory-monitor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 592,
+    "installs": 14,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Monitor Costco product stock by ZIP code with repeatable checks.",
+  "updated_at": 1778492366643,
+  "version": "1.1.0"
+}
