@@ -1,0 +1,45 @@
+{
+  "changelog": "- Initial release of the model-usage skill for CodexBar.\n- Summarizes AI model usage and cost per model (Codex, Claude) using local CLI data.\n- Provides real-time usage quota, remaining percentage, and next refresh time for each model.\n- Supports queries for both current model and full model breakdowns.\n- Only available to accounts using Google Antigravity OAuth login.",
+  "created_at": 1772797921175,
+  "display_name": "Ag Model Usage",
+  "fetched_at": 1787789934377,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/codexbar-cli.md",
+    "scripts/model_usage.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089782085,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Lian Junhong",
+    "handle": "t-atlas",
+    "user_id": "s177se8vpydfen2gpvjjjznpmn83tz4a"
+  },
+  "slug": "ag-model-usage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ag-model-usage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ag-model-usage&ownerHandle=t-atlas",
+    "page_url": "https://clawhub.ai/t-atlas/skills/ag-model-usage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1316,
+    "installs": 40,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use CodexBar CLI local cost usage to summarize per-model usage for Codex or Claude, including the current (most recent) model or a full model breakdown. Trig...",
+  "updated_at": 1779077765302,
+  "version": "1.0.0"
+}
