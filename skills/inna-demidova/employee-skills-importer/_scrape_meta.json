@@ -1,0 +1,45 @@
+{
+  "changelog": "Employee skills importer skill initial release\n\n- Added functionality to parse employee skills CSV files and identify skill categories and individual skills.\n- Generates idempotent SQL INSERT statements for skill_categories and skills tables, avoiding duplicates.\n- Includes fuzzy matching and correction of employee names for matching against the employees table.\n- Produces deduplicated employee_skills SQL insert scripts, using TRIM() and ON CONFLICT for data integrity.\n- Outputs a report of automatic name corrections and skipped employees/skills.",
+  "created_at": 1771537700666,
+  "display_name": "employee-skills-importer",
+  "fetched_at": 1787803284452,
+  "files": [
+    "EXAMPLE_OUTPUT.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779935979578,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "inna-demidova",
+    "handle": "inna-demidova",
+    "user_id": "s1798f0ed9j6gbmjxt5bztm4618854a2"
+  },
+  "slug": "employee-skills-importer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/employee-skills-importer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=employee-skills-importer&ownerHandle=inna-demidova",
+    "page_url": "https://clawhub.ai/inna-demidova/skills/employee-skills-importer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1520,
+    "installs": 47,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Parse employee skills CSV files, identify skill categories and individual skills, look up employee IDs from an employees table, and generate idempotent SQL I...",
+  "updated_at": 1778991764569,
+  "version": "1.0.0"
+}
