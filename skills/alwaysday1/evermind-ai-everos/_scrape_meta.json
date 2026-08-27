@@ -1,0 +1,59 @@
+{
+  "changelog": "evermind-ai-everos v1.4.0\n\n- Major internal refactor: replaced old core files with a new modular structure under `src/`, including separate modules for API, conversion, engine logic, HTTP, message handling, prompt construction, and subagent management.\n- Removed outdated files: assembler, formatter, http-client, memory-api, message-utils, and subagent modules, consolidating and reorganizing code for clarity and maintainability.\n- Updated documentation: SKILL.md and READMEs refreshed to reflect the new architecture and onboarding, improving guidance and accuracy.\n- Updated configuration and packaging files to support the new structure.",
+  "created_at": 1773831929178,
+  "display_name": "Evermemos Openclaw Plugin",
+  "fetched_at": 1787865582651,
+  "files": [
+    "README.md",
+    "README.zh.md",
+    "SKILL.md",
+    "_meta.json",
+    "bin/install.js",
+    "index.js",
+    "openclaw.plugin.json",
+    "package.json",
+    "skill-card.md",
+    "src/api.js",
+    "src/config.js",
+    "src/convert.js",
+    "src/engine.js",
+    "src/http.js",
+    "src/messages.js",
+    "src/prompt.js",
+    "src/subagent-assembler.js",
+    "src/subagent-tracker.js",
+    "src/types.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089960056,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alwaysday1",
+    "handle": "alwaysday1",
+    "user_id": "s17c6txayq6xsy1ma81ghtyv1d84jzz6"
+  },
+  "slug": "evermind-ai-everos",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/evermind-ai-everos",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=evermind-ai-everos&ownerHandle=alwaysday1",
+    "page_url": "https://clawhub.ai/alwaysday1/skills/evermind-ai-everos"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 870,
+    "installs": 25,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Install and configure EverOS for OpenClaw natural-language memory. Use when users say: - \"install everos\" - \"setup everos\" - \"install everos plugin\" - \"enabl...",
+  "updated_at": 1778492000690,
+  "version": "1.4.0"
+}
