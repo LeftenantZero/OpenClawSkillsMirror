@@ -1,0 +1,65 @@
+{
+  "changelog": "- Initial release of Qwen3-TTS skill for high-quality text-to-speech.\n- Features 10 built-in speakers, voice cloning from 3s+ audio, natural-language voice design, and emotional control.\n- Supports 10+ languages with persistent, named voices.\n- Audio can be delivered as native messages in Telegram and WhatsApp.\n- Auto-detects available GPU/CPU hardware for optimal performance.\n- Includes detailed setup instructions and usage guidelines for speech generation, voice design, and cloning.",
+  "created_at": 1771641605632,
+  "display_name": "Fully offline Qwen3 TTS for your agent",
+  "fetched_at": 1787803106746,
+  "files": [
+    ".config.json",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "install.sh",
+    "requirements/base.txt",
+    "requirements/cpu.txt",
+    "requirements/cuda.txt",
+    "requirements/intel.txt",
+    "requirements/rocm.txt",
+    "scripts/convert_to_ogg_opus.sh",
+    "scripts/detect_gpu.sh",
+    "scripts/health_check.sh",
+    "scripts/setup_env.sh",
+    "scripts/start_server.sh",
+    "scripts/stop_server.sh",
+    "server/audio_converter.py",
+    "server/messaging/__init__.py",
+    "server/messaging/telegram_sender.py",
+    "server/messaging/whatsapp_sender.py",
+    "server/model_loader.py",
+    "server/tts_server.py",
+    "server/voice_cloner.py",
+    "server/voice_designer.py",
+    "server/voice_manager.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779943861887,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Julian",
+    "handle": "damustermann",
+    "user_id": "s17dq6y70pdxjemzj90rprm4wd8857qp"
+  },
+  "slug": "claw-qwen3-tts",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claw-qwen3-tts",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claw-qwen3-tts&ownerHandle=damustermann",
+    "page_url": "https://clawhub.ai/damustermann/skills/claw-qwen3-tts"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 469,
+    "installs": 10,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "High-quality text-to-speech using Qwen3-TTS. 10 built-in speakers with emotional instruct control, voice cloning (3s of audio), natural-language voice design...",
+  "updated_at": 1778992002097,
+  "version": "1.0.0"
+}
