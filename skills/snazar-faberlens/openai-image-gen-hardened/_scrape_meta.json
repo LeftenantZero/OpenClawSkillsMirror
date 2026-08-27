@@ -1,0 +1,35 @@
+{
+  "changelog": "openai-image-gen-hardened v1.0.0\n\n- Initial release of a batch OpenAI image generation script with a prompt sampler and local HTML gallery output.\n- Supports multiple OpenAI image models (dall-e-2, dall-e-3, gpt-image models) with model-specific parameters for size, quality, and format.\n- Command-line interface enables custom prompts, output directories, and advanced model parameters.\n- Outputs images, prompt-to-file mapping (prompts.json), and an `index.html` gallery for browsing results locally.\n- Security: Enforces guardrails to prevent external uploads, restrict file access to output directory, and keep `OPENAI_API_KEY` secret in all logs and outputs.",
+  "created_at": 1776931222162,
+  "display_name": "Openai Image Gen Hardened",
+  "fetched_at": 1787816124638,
+  "files": [
+    "SAFETY.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/gen.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Faberlens",
+    "handle": "snazar-faberlens",
+    "user_id": "s17er0wp685j1z14w6vqrsnqrh83h5er"
+  },
+  "slug": "openai-image-gen-hardened",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openai-image-gen-hardened",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openai-image-gen-hardened&ownerHandle=snazar-faberlens",
+    "page_url": "https://clawhub.ai/snazar-faberlens/skills/openai-image-gen-hardened"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 536,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Batch-generate images via OpenAI Images API. Random prompt sampler + `index.html` gallery.",
+  "updated_at": 1778492727109,
+  "version": "1.0.0"
+}
