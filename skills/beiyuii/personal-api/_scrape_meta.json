@@ -1,0 +1,49 @@
+{
+  "changelog": "## Personal API 2.0.2\n\nStable engineering cleanup release.\n\n### Changed\n- Reworked `SKILL.md` into a lightweight routing layer.\n- Moved long-form architecture and operating guidance into `references/`.\n- Aligned setup behavior, documentation, changelog, and release package.\n- Default setup now clearly creates the full `30.knowledge/` Knowledge Palace v2 structure.\n- `--minimal` mode creates only the identity layer and does not create `30.knowledge/`.\n\n### Added\n- `CLAUDE.md` and `AGENTS.md` thin adapter templates.\n- `references/architecture.md`, `vault-layout.md`, `operation-boundaries.md`, and `maintenance.md`.\n- `scripts/validate_skill.py` for source/setup/package validation.\n- `scripts/package_skillhub.sh` for reproducible SkillHub packaging.\n- `agents/openai.yaml` package metadata.\n- Vault `.gitignore` privacy helper.\n\n### Verified\n- Full mode generates the complete `30.knowledge/` structure.\n- Full mode generates `30.knowledge/00.system/methodology.md`.\n- Minimal mode does not generate `30.knowledge/`.\n- Release package validation passed.",
+  "created_at": 1778228885208,
+  "display_name": "Personal API",
+  "fetched_at": 1787807338970,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/architecture.md",
+    "references/maintenance.md",
+    "references/operation-boundaries.md",
+    "references/vault-layout.md",
+    "scripts/package_skillhub.sh",
+    "scripts/setup.sh",
+    "scripts/validate_skill.py",
+    "skill-card.md",
+    "templates/AGENT.md",
+    "templates/AGENTS.md",
+    "templates/CLAUDE.md",
+    "templates/ME.md",
+    "templates/methodology.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "beiyuii",
+    "handle": "beiyuii",
+    "user_id": "s179whenw12q7k8236eq89espd86bhbp"
+  },
+  "slug": "personal-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/personal-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=personal-api&ownerHandle=beiyuii",
+    "page_url": "https://clawhub.ai/beiyuii/skills/personal-api"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 725,
+    "installs": 16,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Turn an Obsidian vault into an AI-readable personal identity layer. Use when setting up ME.md and AGENT.md, scaffolding the full Knowledge Palace v2 structur...",
+  "updated_at": 1778759208193,
+  "version": "2.0.2"
+}
