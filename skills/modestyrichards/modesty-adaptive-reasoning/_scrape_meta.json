@@ -1,0 +1,33 @@
+{
+  "changelog": "- Introduces adaptive reasoning: skill automatically assesses task complexity before responding.\n- Dynamically adjusts reasoning depth; activates advanced thinking for complex, ambiguous, or high-stakes queries.\n- Uses a scoring system (0\u201310) to decide whether to stay fast, deliberate lightly, or enable deep reasoning.\n- Visual indicator (`\ud83e\udde0` or `\ud83e\udde0\ud83d\udd25`) added to responses when advanced reasoning is active.\n- Automatically downgrades to fast mode after complex tasks if subsequent questions are simple.\n- Integration requires no external tools; can be controlled explicitly with simple commands.",
+  "created_at": 1777536040183,
+  "display_name": "Adaptive Reasoning",
+  "fetched_at": 1787811947695,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ModestyRichards",
+    "handle": "modestyrichards",
+    "user_id": "s17069c392wb17n1nvrdv0kq1h84qjrk"
+  },
+  "slug": "modesty-adaptive-reasoning",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/modesty-adaptive-reasoning",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=modesty-adaptive-reasoning&ownerHandle=modestyrichards",
+    "page_url": "https://clawhub.ai/modestyrichards/skills/modesty-adaptive-reasoning"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 580,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Automatically assess task complexity and adjust reasoning level. Triggers on every user message to evaluate whether extended thinking (reasoning mode) would...",
+  "updated_at": 1778492809868,
+  "version": "1.0.0"
+}
