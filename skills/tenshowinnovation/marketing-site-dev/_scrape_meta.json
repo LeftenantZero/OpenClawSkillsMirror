@@ -1,0 +1,57 @@
+{
+  "changelog": "Initial release. Bilingual (zh/en) static company marketing site workflow \u2014 Astro 6 + React 19 islands (mobile menu only) + Tailwind 4 build, Volcengine TOS + CDN + HTTPS hardening deploy via 5 idempotent Node scripts. Includes a SigV4 signer (volc-api.mjs) as escape hatch for CDN actions not in ve CLI 1.0.x. Ships landmines.md catalog of known gotchas (HTTPS_PROXY pollution, TOS SDK quirks, CDN vs DCDN verification, pnpm-deploy collision, free DV cert console-only). Skill explicitly self-deflects to GitHub Pages or Vercel for personal sites / international-only audiences that don't need mainland-China optimization or ICP filing.",
+  "created_at": 1779020700473,
+  "display_name": "Marketing Site Dev",
+  "fetched_at": 1787797607834,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/cdn-payloads/apex.json",
+    "assets/cdn-payloads/www.json",
+    "assets/scripts/cdn-refresh.mjs",
+    "assets/scripts/cdn-setup.mjs",
+    "assets/scripts/deploy.mjs",
+    "assets/scripts/lib/volc-api.mjs",
+    "assets/scripts/setup-bucket.mjs",
+    "assets/templates/astro.config.mjs",
+    "assets/templates/deploy.config.mjs",
+    "assets/templates/package.json",
+    "references/landmines.md",
+    "references/phase-1-static-site.md",
+    "references/phase-2-volcengine-deploy.md",
+    "references/verification.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090824079,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "tenshowinnovation",
+    "handle": "tenshowinnovation",
+    "user_id": "s17af4kbqtqtaw1zezmvcw27x586vvgd"
+  },
+  "slug": "marketing-site-dev",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/marketing-site-dev",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=marketing-site-dev&ownerHandle=tenshowinnovation",
+    "page_url": "https://clawhub.ai/tenshowinnovation/skills/marketing-site-dev"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 505,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Opinionated end-to-end workflow for shipping a bilingual (\u4e2d\u6587/English) static company marketing site to Volcengine \u2014 Astro 6 + React 19 islands + Tailwind 4,...",
+  "updated_at": 1779020807639,
+  "version": "0.1.0"
+}
