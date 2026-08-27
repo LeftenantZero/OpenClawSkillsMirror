@@ -1,0 +1,51 @@
+{
+  "changelog": "- Major update: skill system now supports an end-to-end auto-evolution feedback loop, enabling silent capture, structured graduation, and user-controlled rule/skill evolution.\n- Adds multilingual feedback signal detection (Chinese & English) with automated feedback entry on key user phrases.\n- Structures and accumulates user corrections into a feedback library, with de-duplication and occurrence tracking.\n- Automatically generates evolution suggestions, such as formalizing frequent feedback as new rules, optimizing low-performing skills, or proposing new skills for uncovered patterns.\n- Enforces user confirmation for all proposed rule or skill changes\u2014no silent rule updates.\n- Modular and portable: designed for integration with any project, not tied to a specific business domain.",
+  "created_at": 1776655395377,
+  "display_name": "Auto Evolution",
+  "fetched_at": 1787818422917,
+  "files": [
+    "EXAMPLES.md",
+    "README.md",
+    "README.zh-CN.md",
+    "REFERENCE_ARCHITECTURE.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/detect_feedback_signal.py",
+    "scripts/evolution_runner.py",
+    "skill-card.md",
+    "templates/feedback_index_template.md",
+    "templates/feedback_topic_template.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090486438,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "veezVg",
+    "handle": "veezvg",
+    "user_id": "s17852ervbnpeg1e5sf8abe7gs857gbr"
+  },
+  "slug": "veezvg-auto-evolution",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/veezvg-auto-evolution",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=veezvg-auto-evolution&ownerHandle=veezvg",
+    "page_url": "https://clawhub.ai/veezvg/skills/veezvg-auto-evolution"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 577,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Build and maintain a self-evolving skill system that silently captures feedback, graduates repeated feedback into formal rules, improves low-performing skill...",
+  "updated_at": 1778492672670,
+  "version": "2.0.1"
+}
