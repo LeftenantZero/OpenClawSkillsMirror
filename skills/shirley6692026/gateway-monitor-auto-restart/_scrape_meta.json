@@ -1,0 +1,47 @@
+{
+  "changelog": "- Adds automatic monitoring and smart restart for the OpenClaw gateway.\n- Checks gateway health every 3 hours and restarts if unresponsive.\n- Diagnoses issues if the gateway fails to start.\n- Implements 7-day log rotation and detailed logging.\n- Handles \"already running\" errors gracefully.\n- No manual configuration needed; setup is automatic.",
+  "created_at": 1770325276361,
+  "display_name": "Gateway Monitor Auto Restart",
+  "fetched_at": 1787805529893,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "gateway_monitor.sh",
+    "package.json",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783658094844,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "shirley6692026",
+    "handle": "shirley6692026",
+    "user_id": "s176z97fsw3qccqfrvhe4bbvk98848w7"
+  },
+  "slug": "gateway-monitor-auto-restart",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gateway-monitor-auto-restart",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gateway-monitor-auto-restart&ownerHandle=shirley6692026",
+    "page_url": "https://clawhub.ai/shirley6692026/skills/gateway-monitor-auto-restart"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2570,
+    "installs": 86,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Monitors OpenClaw gateway every 3 hours, auto-restarts if unresponsive, diagnoses startup issues, and rotates logs with 7-day retention.",
+  "updated_at": 1778988528413,
+  "version": "1.0.1"
+}
