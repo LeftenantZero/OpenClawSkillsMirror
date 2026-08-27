@@ -1,0 +1,47 @@
+{
+  "changelog": "Major refactor: agent process split into a 5-step modular script flow, new file structure, and clear technical/formatting standards.\n\n- Implemented modular 5-step flow: search, extract insights, content generation, optimization, and PPT output, each as an explicit script.\n- Reorganized codebase: added dedicated script and library directories; removed monolithic generate_insight_ppt.js.\n- Added configuration (lib/config.js), logging, and utility modules for maintainability.\n- Defined clear output folder structure for each workflow stage and session.\n- Updated and separated agent/internal operation guide (SKILL.md) from user-facing instructions (README.md).\n- Specified strict design and content standards for slide formatting, page structure, and PPT style.",
+  "created_at": 1775110052261,
+  "display_name": "Tech Report PPT Generator",
+  "fetched_at": 1787834840485,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "example_config.json",
+    "lib/config.js",
+    "lib/file_utils.js",
+    "lib/logger.js",
+    "run_gen.js",
+    "scripts/01_search_and_collect.js",
+    "scripts/02_extract_insights.js",
+    "scripts/03_generate_content.js",
+    "scripts/04_optimize_content.js",
+    "scripts/05_generate_ppt.js",
+    "scripts/05_generate_ppt_v2.py",
+    "scripts/README.md",
+    "scripts/run_all.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "DeepWater",
+    "handle": "xieyuantao7",
+    "user_id": "s174fxh08pa9jahvc0rj674xk1843r35"
+  },
+  "slug": "generate-insight-ppt",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/generate-insight-ppt",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=generate-insight-ppt&ownerHandle=xieyuantao7",
+    "page_url": "https://clawhub.ai/xieyuantao7/skills/generate-insight-ppt"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1177,
+    "installs": 36,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "AI \u9a71\u52a8\u7684\u6280\u672f\u6d1e\u5bdf PPT \u751f\u6210\u5668",
+  "updated_at": 1778492362797,
+  "version": "1.2.1"
+}
