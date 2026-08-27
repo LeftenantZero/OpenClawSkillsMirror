@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of Gemini Web Search skill:\n\n- Uses Gemini CLI to perform web search and fact-finding, producing concise, sourced summaries.\n- Optimized for up-to-date info requests such as latest news, daily events, data with sources/links.\n- Provides detailed workflow: query formulation, CLI execution with TTY/timeout, structured extraction, and strict source quality control.\n- Includes prompts for various search scenarios and troubleshooting for common failure modes.\n- Setup and CLI usage instructions included for local deployment.",
+  "created_at": 1770276413437,
+  "display_name": "Gemini Web Search",
+  "fetched_at": 1787793110467,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/gemini_prompt.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783654648175,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fengjiajie",
+    "handle": "fengjiajie",
+    "user_id": "s178n4090vf42rdqj32pcgbrah88440g"
+  },
+  "slug": "gemini-web-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gemini-web-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gemini-web-search&ownerHandle=fengjiajie",
+    "page_url": "https://clawhub.ai/fengjiajie/skills/gemini-web-search"
+  },
+  "stats": {
+    "comments": 3,
+    "downloads": 3985,
+    "installs": 138,
+    "stars": 5,
+    "versions": 1
+  },
+  "summary": "Use Gemini CLI (@google/gemini-cli) to do web search / fact-finding and return a sourced summary. Use when the user asks \u201cwhy did X happen today\u201d, \u201cwhat\u2019s the latest news\u201d, \u201csearch the web\u201d, \u201cfind sources/links\u201d, or any task requiring up-to-date info. Prefer this over other search tools when Gemini is available but slow; run it with a TTY, wait longer, and verify source quality.",
+  "updated_at": 1779076694471,
+  "version": "1.0.0"
+}
