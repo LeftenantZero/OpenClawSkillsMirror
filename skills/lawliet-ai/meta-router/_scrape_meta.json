@@ -1,0 +1,45 @@
+{
+  "changelog": "- Hardened core logic: Router now blocks all task processing until context-skill alignment is confirmed.\n- State integrity improved: Enforced atomic rescan on skill changes and compressed descriptions to prevent token bloat.\n- Routing updated: Explicit commands and shortcut IDs bypass analysis. No more than two skills can be mounted at once unless Hive-Commander is used.\n- Mounting made volatile: All metadata is pruned immediately at the end of a workflow.\n- Operational efficiency: Enforced sub-200ms scanning, MRU eviction if the index exceeds 4KB, and continued silent background tasks except for I/O errors.",
+  "created_at": 1773651289195,
+  "display_name": "Meta-Router",
+  "fetched_at": 1787870630546,
+  "files": [
+    "AGENT.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090000145,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Lawliet-ai",
+    "handle": "lawliet-ai",
+    "user_id": "s172j47366kee2r44s4x7w5f5h83v6et"
+  },
+  "slug": "meta-router",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/meta-router",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=meta-router&ownerHandle=lawliet-ai",
+    "page_url": "https://clawhub.ai/lawliet-ai/skills/meta-router"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 881,
+    "installs": 23,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Automatically indexes and routes user intents to installed OpenClaw skills by scanning SKILL.md files and dynamically injecting relevant skill contexts.",
+  "updated_at": 1778491943830,
+  "version": "1.0.1"
+}
