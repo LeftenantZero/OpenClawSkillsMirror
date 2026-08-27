@@ -1,0 +1,80 @@
+{
+  "changelog": "- Initial release of the Equity Research Analyst skill.\n- Supports nine institutional equity research workflows, each triggered by specific user requests and dispatched to dedicated workflow files.\n- Integrates TradingView API as the primary data source for financials, consensus, technicals, and calendar data.\n- Implements strict conventions for data citation, ticker resolution, and output formatting.\n- Defines a clear fallback strategy for missing data or ambiguous requests.\n- Enforces single-workflow discipline with detailed guidance for initiation reports and deliverable standards.",
+  "created_at": 1777243990435,
+  "display_name": "equity-research-analyst-skill",
+  "fetched_at": 1787814216911,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/initiating-coverage/report-template.md",
+    "references/earnings-analysis/best-practices.md",
+    "references/earnings-analysis/report-structure.md",
+    "references/earnings-analysis/workflow.md",
+    "references/initiating-coverage/quality-checklist.md",
+    "references/initiating-coverage/task1-company-research.md",
+    "references/initiating-coverage/task2-financial-modeling.md",
+    "references/initiating-coverage/task3-valuation.md",
+    "references/initiating-coverage/task4-chart-generation.md",
+    "references/initiating-coverage/task5-report-assembly.md",
+    "references/initiating-coverage/valuation-methodologies.md",
+    "references/tradingviewapi-docs/README.md",
+    "references/tradingviewapi-docs/examples/01-price-data.md",
+    "references/tradingviewapi-docs/examples/02-quote-data.md",
+    "references/tradingviewapi-docs/examples/03-market-search.md",
+    "references/tradingviewapi-docs/examples/04-technical-analysis.md",
+    "references/tradingviewapi-docs/examples/05-leaderboards.md",
+    "references/tradingviewapi-docs/examples/06-news.md",
+    "references/tradingviewapi-docs/examples/07-metadata.md",
+    "references/tradingviewapi-docs/examples/08-calendar.md",
+    "references/tradingviewapi-docs/examples/09-logo.md",
+    "references/tradingviewapi-docs/examples/10-market-data.md",
+    "references/tradingviewapi-docs/examples/11-ideas.md",
+    "references/tradingviewapi-docs/examples/12-world-economy.md",
+    "references/tradingviewapi-docs/openapi.json",
+    "references/tradingviewapi.md",
+    "references/workflows/catalyst-calendar.md",
+    "references/workflows/earnings-analysis.md",
+    "references/workflows/earnings-preview.md",
+    "references/workflows/idea-generation.md",
+    "references/workflows/initiating-coverage.md",
+    "references/workflows/model-update.md",
+    "references/workflows/morning-note.md",
+    "references/workflows/sector-overview.md",
+    "references/workflows/thesis-tracker.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090559939,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "hypier",
+    "handle": "hypier",
+    "user_id": "s1754he4gdd5c620m48ny4hff983mmqs"
+  },
+  "slug": "equity-research-analyst",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/equity-research-analyst",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=equity-research-analyst&ownerHandle=hypier",
+    "page_url": "https://clawhub.ai/hypier/skills/equity-research-analyst"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 606,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when the user asks for institutional-style equity research on a public company, ETF, or TradingView-resolvable ticker, including initiation reports, earn...",
+  "updated_at": 1778492765634,
+  "version": "1.0.0"
+}
