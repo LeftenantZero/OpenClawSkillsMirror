@@ -1,0 +1,62 @@
+{
+  "changelog": "- Major update: Adds cross-version alert management with workflow auto-selection.\n- Introduces CMS 2.0 (Prometheus, APM, UModel) alert rule create/query workflows alongside existing CMS 1.0.\n- Implements intent routing to select correct workflow and APIs based on monitoring target.\n- Adds extensive rules for CMS 2.0 parameter collection, mandatory user confirmation, and API usage.\n- Expands reference documentation: new files for CMS 2.0 workflows, Prometheus/APM/UModel metrics, and cross-version examples.\n- Institutes strict CLI setup and user-agent handling; network access and CLI command usage rules strengthened.",
+  "created_at": 1775642166239,
+  "display_name": "Alibabacloud Cms Alert Rule Create",
+  "fetched_at": 1787828000126,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/apm-metrics.md",
+    "references/cms2-step-query.md",
+    "references/cms2-step1-context-lock.md",
+    "references/cms2-step2-query-config.md",
+    "references/cms2-step3-detection-config.md",
+    "references/cms2-step5-preview-execute.md",
+    "references/critical-rules.md",
+    "references/metrics.md",
+    "references/prometheus-metrics.md",
+    "references/ram-policies.md",
+    "references/step-query.md",
+    "references/step0-intent-routing.md",
+    "references/step1-context-lock.md",
+    "references/step2-query-generation.md",
+    "references/step3-detection-config.md",
+    "references/step4-notification.md",
+    "references/step5-preview-execute.md",
+    "references/step6-verification.md",
+    "scripts/validate-params.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090580597,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-cms-alert-rule-create",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-cms-alert-rule-create",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-cms-alert-rule-create&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-cms-alert-rule-create"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 640,
+    "installs": 15,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Create and query Alibaba Cloud alert rules via CLI. Supports CMS 1.0 cloud resource monitoring (ECS, RDS, SLB, etc.) and CMS 2.0 advanced monitoring (Prometh...",
+  "updated_at": 1778492477474,
+  "version": "0.0.2"
+}
