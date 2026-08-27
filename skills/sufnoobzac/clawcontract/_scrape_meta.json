@@ -1,0 +1,44 @@
+{
+  "changelog": "Version 1.0.8\n\n- Updated safety documentation:\n  - Mainnet deployment now issues a warning but does not block on user prompt; deploy proceeds automatically, supporting agent-driven use cases.\n  - The `delete` command is now the only interactive prompt; use `--force` to bypass confirmation when deleting local deployment metadata.\n  - Clarified that automatic AI-powered security fixes only affect generated contract files and added instructions for disabling auto-fix or deployment.\n  - Explicitly described safeguards against accidental mainnet deployment\u2014both a funded key and manual mainnet selection are required.\n- Adjusted required environment variables; `CLAWCONTRACT_OPENROUTER_MODEL` is now optional.",
+  "created_at": 1771004675405,
+  "display_name": "clawcontract",
+  "fetched_at": 1787792250007,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/commands.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779973778995,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "cvpfus",
+    "handle": "sufnoobzac",
+    "user_id": "s1755hq5xs9gbbxcwskaf58exs8842m2"
+  },
+  "slug": "clawcontract",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawcontract",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawcontract&ownerHandle=sufnoobzac",
+    "page_url": "https://clawhub.ai/sufnoobzac/skills/clawcontract"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1473,
+    "installs": 46,
+    "stars": 0,
+    "versions": 9
+  },
+  "summary": "AI-powered smart contract generator, analyzer, and deployer for BNB Chain (BSC/opBNB). Use when you need to generate Solidity from natural language, run secu...",
+  "updated_at": 1779076977630,
+  "version": "1.0.8"
+}
