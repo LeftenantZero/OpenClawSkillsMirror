@@ -1,0 +1,44 @@
+{
+  "changelog": "Version 1.0.9\n\n- Added automatic bootstrap logic: checks for an install script and runs it if the `briefing` CLI is missing from PATH.\n- Improved fallback: attempts to run `briefing` using an absolute path inside the skill directory if not globally available.\n- Adjusted error messages to guide users on running/installing the CLI when missing.\n- Clarified and updated execution rules in SKILL.md for robustness.",
+  "created_at": 1772345203281,
+  "display_name": "briefing",
+  "fetched_at": 1787790791490,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "install.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968647502,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Yutai Gu",
+    "handle": "yutaigu",
+    "user_id": "s178vd508sjr0fr7pp5ma8bxch86b95p"
+  },
+  "slug": "briefing-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/briefing-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=briefing-skill&ownerHandle=yutaigu",
+    "page_url": "https://clawhub.ai/yutaigu/skills/briefing-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1366,
+    "installs": 37,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "Automatically track creator channels and transcribe new videos (YouTube, Bilibili, TikTok) with zero token cost during the pipeline. Use memory-based updates...",
+  "updated_at": 1779077462139,
+  "version": "1.0.9"
+}
