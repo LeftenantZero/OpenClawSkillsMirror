@@ -1,0 +1,45 @@
+{
+  "changelog": "**s2-universal-space-parser 2.0.1 changelog**\n\n- Introduced a local MCP server for direct LLM protocol integration (stdio-based communication).\n- Added Chronos Data Harvester: logs all spatiotemporal causal events to s2_swm_training_data.jsonl for S2-SWM world model training.\n- Updated permissions and dependencies: now requires Python 3.10+ and mcp>=1.0.0; requests disk write and local server run permissions.\n- Expanded description and documentation to clarify runtime components, security disclosures, and new data collection features.\n- Maintained all previous space parsing functionality while extending scope to include real-time world model data harvesting.",
+  "created_at": 1774836679054,
+  "display_name": "Universal Home Space Parser Engine \uff08\u667a\u80fd\u5bb6\u5c45\u7a7a\u95f4\u573a\u666f\u89e3\u6790\u5668\uff09",
+  "fetched_at": 1787840656277,
+  "files": [
+    "CHANGELOG.md",
+    "S2-UHSP-Whitepaper-V1.0.md",
+    "S2_SPACE_ARCHITECT_MANUAL.md",
+    "_meta.json",
+    "dict_01_residential_core.py",
+    "dict_02_leisure_outdoor.py",
+    "dict_03_commercial_hospitality.py",
+    "dict_04_office_industrial.py",
+    "dict_05_health_mobility.py",
+    "frontend_ui/page.tsx",
+    "s2_chronos_memzero.py",
+    "s2_mcp_server.py",
+    "s2_parser_engine.py",
+    "skill-card.md",
+    "skill.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "MilesXiang",
+    "handle": "spacesq",
+    "user_id": "s17c8pmv1e8tb2mcc5aset88e183hq1t"
+  },
+  "slug": "s2-universal-space-parser",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/s2-universal-space-parser",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=s2-universal-space-parser&ownerHandle=spacesq",
+    "page_url": "https://clawhub.ai/spacesq/skills/s2-universal-space-parser"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 811,
+    "installs": 19,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "S2 Official Smart Space Engine. Parses 62 spatial types into a 6-element hardware matrix. Includes a local MCP server and S2-SWM causality data harvester. /...",
+  "updated_at": 1778492287825,
+  "version": "2.0.1"
+}
