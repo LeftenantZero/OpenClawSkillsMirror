@@ -1,0 +1,56 @@
+{
+  "changelog": "**1.0.3 adds transparency and documents data sources and environment variables.**\n\n- Updated skill metadata to declare required/optional environment variables and data reads.\n- Added a new \"Data Access\" section describing exactly what files and APIs are read for verification.\n- Clarified that users should be informed when verification occurs to promote transparency.\n- No code changes; documentation and metadata only.",
+  "created_at": 1774364167058,
+  "display_name": "cove",
+  "fetched_at": 1787851286079,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "USAGE.md",
+    "_meta.json",
+    "config/default.yaml",
+    "package.json",
+    "plugin.json",
+    "skill-card.md",
+    "src/config.js",
+    "src/csm-logger.js",
+    "src/knowledge.js",
+    "src/vector_store.js",
+    "src/verifier.js",
+    "src/verify_claims.js",
+    "src/web_search.js",
+    "test_simulation.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090081244,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "bhawanakatiyar",
+    "handle": "bhawanakatiyar",
+    "user_id": "s172s5vfff3qrft9fgehdy7rw183h59p"
+  },
+  "slug": "cove-plugin",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cove-plugin",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cove-plugin&ownerHandle=bhawanakatiyar",
+    "page_url": "https://clawhub.ai/bhawanakatiyar/skills/cove-plugin"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 687,
+    "installs": 17,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Chain of Verification (CoVe) \u2014 fact-check your responses against the user's knowledge base, memory, and web search before presenting them.",
+  "updated_at": 1778492163021,
+  "version": "1.0.3"
+}
