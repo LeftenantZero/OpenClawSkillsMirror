@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release \u2014 structured decomposition and planning skill for code tasks.\n\n- Requires a step-by-step JSON plan (sub-problems, APIs, risks, files affected, implementation order, LOC estimate) before code generation.\n- Enforces schema: model must commit to specifics (file paths, API versions, risks, dependencies).\n- Auto-triggers for complex, multi-file, or high-LOC coding tasks; skips trivial requests.\n- Plan is used to guide focused code generation and downstream reflection, API RAG, and feedback.\n- Built-in checks for task size and plan validity, with automated escalation on repeated failure.",
+  "created_at": 1776779160365,
+  "display_name": "Decompose Plan",
+  "fetched_at": 1787817507498,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090504438,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Stephen Thorn",
+    "handle": "stephenlthorn",
+    "user_id": "s1781macwsy8b25gaqa558qrx5858x3k"
+  },
+  "slug": "decompose-plan",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/decompose-plan",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=decompose-plan&ownerHandle=stephenlthorn",
+    "page_url": "https://clawhub.ai/stephenlthorn/skills/decompose-plan"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 675,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Forces M2.7 to produce an explicit structured plan before writing code. This makes Tree-of-Thought reasoning explicit instead of implicit, which is how Sonne...",
+  "updated_at": 1778492695381,
+  "version": "1.0.0"
+}
