@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of Delivery Notifier:\n\n- Scans Gmail inbox for delivery notifications from major couriers.\n- Filters out marketing emails to focus on personal deliveries.\n- Extracts tracking numbers and key details when available.\n- Sends formatted WhatsApp alerts to a specified recipient.\n- Tracks sent notifications to prevent duplicates and manages notification history.",
+  "created_at": 1772779681824,
+  "display_name": "Delivery Notifier",
+  "fetched_at": 1787790051385,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/delivery_notifier.py",
+    "scripts/delivery_notifier_debug.py",
+    "scripts/state.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089778645,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "o0o-sp",
+    "handle": "o0o-sp",
+    "user_id": "s17d82shevhb40ey1kb69pd3k5884f1d"
+  },
+  "slug": "delivery-notifier",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/delivery-notifier",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=delivery-notifier&ownerHandle=o0o-sp",
+    "page_url": "https://clawhub.ai/o0o-sp/skills/delivery-notifier"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 967,
+    "installs": 28,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fetches delivery emails from Gmail, extracts tracking info from selected couriers, filters marketing messages, and sends WhatsApp alerts for personal deliver...",
+  "updated_at": 1779077712762,
+  "version": "1.0.0"
+}
