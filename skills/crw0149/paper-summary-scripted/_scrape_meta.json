@@ -1,0 +1,38 @@
+{
+  "changelog": "- Initial release of the \"paper-summary-scripted\" skill.\n- Supports deterministic preprocessing of arXiv PDF URLs or local paper files before summarization.\n- Runs a four-stage workflow: summary generation, detailed version, contribution extraction, and a final consistency/quality check.\n- Uses a bundled script to ensure text extraction and cleaning before generation.\n- Strictly avoids web page/HTML parsing; only works with PDFs.\n- Provides robust error handling and manifest awareness for incomplete or failed extractions.",
+  "created_at": 1776683205067,
+  "display_name": "\u5e26\u811a\u672c\u7684\u8bba\u6587\u6458\u8981\u751f\u6210",
+  "fetched_at": 1787818132202,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/output-template.md",
+    "references/prompts.md",
+    "references/script-usage.md",
+    "scripts/process_papers.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "CRW0149",
+    "handle": "crw0149",
+    "user_id": "s17ckavvarmhsxcagbbpj76tzx856ye2"
+  },
+  "slug": "paper-summary-scripted",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/paper-summary-scripted",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=paper-summary-scripted&ownerHandle=crw0149",
+    "page_url": "https://clawhub.ai/crw0149/skills/paper-summary-scripted"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 595,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "download arxiv paper pdfs or accept local paper files with a preprocessing script, then extract text, clean text, and generate a summary version, detailed ve...",
+  "updated_at": 1778492676634,
+  "version": "1.0.0"
+}
