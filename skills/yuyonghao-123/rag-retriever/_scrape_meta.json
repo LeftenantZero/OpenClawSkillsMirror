@@ -1,0 +1,62 @@
+{
+  "changelog": "Initial release of RAG 2.0 retrieval system for OpenClaw.\n\n- Implements document chunking with configurable size and overlap.\n- Supports simple text embedding (TF-based) and LanceDB vector storage.\n- Provides hybrid search: vector similarity plus BM25 keyword search (RRF fusion).\n- Enables source citation tracking and context-augmented RAG prompts.\n- Adds Chinese segmentation for multilingual search.\n- Includes CLI tool, JavaScript API, and basic tests.",
+  "created_at": 1774514871214,
+  "display_name": "Rag Retriever",
+  "fetched_at": 1787847010903,
+  "files": [
+    "RAG2-DESIGN.md",
+    "README.md",
+    "SKILL.md",
+    "TESTING.md",
+    "_meta.json",
+    "data/lancedb/vocabulary.json",
+    "data/model-cache/config.json",
+    "data/model-cache/special_tokens_map.json",
+    "data/model-cache/tokenizer.json",
+    "data/model-cache/tokenizer_config.json",
+    "data/models/all-MiniLM-L6-v2/config.json",
+    "data/models/all-MiniLM-L6-v2/special_tokens_map.json",
+    "data/models/all-MiniLM-L6-v2/tokenizer.json",
+    "data/models/all-MiniLM-L6-v2/tokenizer_config.json",
+    "data/test-lancedb/vocabulary.json",
+    "package-lock.json",
+    "package.json",
+    "skill-card.md",
+    "src/bm25.js",
+    "src/embeddings.js",
+    "src/hybrid-search.js",
+    "src/rag-skill.js",
+    "src/rag2.js",
+    "src/retriever.js",
+    "src/transformers-embedding.js",
+    "test/chinese-tokenizer.test.js",
+    "test/rag2-with-transformers.test.js",
+    "test/rag2.test.js",
+    "test/retriever.test.js",
+    "test/transformers-local.test.js",
+    "test/transformers-mirror.test.js",
+    "test/transformers.test.js"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "yuyonghao-123",
+    "handle": "yuyonghao-123",
+    "user_id": "s173qtadqbwthef9dwg283f54n83np6t"
+  },
+  "slug": "rag-retriever",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/rag-retriever",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=rag-retriever&ownerHandle=yuyonghao-123",
+    "page_url": "https://clawhub.ai/yuyonghao-123/skills/rag-retriever"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 627,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u63d0\u4f9b\u57fa\u4e8e\u6587\u6863\u5206\u5757\u3001\u7b80\u5355\u8bcd\u9891\u5d4c\u5165\u53ca\u6df7\u5408\u5411\u91cf+\u5173\u952e\u8bcd\u641c\u7d22\u7684RAG 2.0\u68c0\u7d22\u7cfb\u7edf\uff0c\u652f\u6301\u4e2d\u82f1\u6587\u672c\u548c\u6765\u6e90\u5f15\u7528\u3002",
+  "updated_at": 1778492209295,
+  "version": "0.1.0"
+}
