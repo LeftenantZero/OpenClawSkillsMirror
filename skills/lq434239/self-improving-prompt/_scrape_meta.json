@@ -1,0 +1,37 @@
+{
+  "changelog": "**Summary:** Improves clarity, selectivity, and decision structure for when and how prompt refinement is applied.\n\n- Refines ambiguous or high-risk user prompts only when material value (such as clearer scope or acceptance criteria) would result; skips clear or atomic instructions\n- Introduces a decision matrix (`references/decision-matrix.md`) to guide between direct execution, silent refinement, or compare-first modes\n- Adds concrete examples of cases that do NOT warrant refinement (`references/non-examples.md`)\n- Tightens the definition of \"substantial value\"\u2014now requires refinement to clarify at least two core aspects (goal, scope, output, etc.) to prompt user comparison\n- Clarifies integration with self-improving-session, with stricter event logging and privacy: never store full prompt text, only workflow choice signals\n- Streamlines output modes and preference event rules to minimize user interruption",
+  "created_at": 1775811587006,
+  "display_name": "Refines ambiguous or high-risk user requests before execution. Trigger when the request is underspecified, likely to benefit from clearer constraints or verification, or when the user explicitly asks to refine, improve, optimize, refactor, or compare approaches. Skip clear single-step instructions and already-well-scoped tasks.",
+  "fetched_at": 1787826075670,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/decision-matrix.md",
+    "references/details.md",
+    "references/non-examples.md",
+    "references/prompt-patterns.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "TaiChangXieBuWan",
+    "handle": "lq434239",
+    "user_id": "s1728p25v3hyr2n7qt74s00r7h84ecm4"
+  },
+  "slug": "self-improving-prompt",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/self-improving-prompt",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=self-improving-prompt&ownerHandle=lq434239",
+    "page_url": "https://clawhub.ai/lq434239/skills/self-improving-prompt"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1228,
+    "installs": 19,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Refines ambiguous or high-risk user requests before execution. Trigger when the request is underspecified, likely to benefit from clearer constraints or veri...",
+  "updated_at": 1778492510391,
+  "version": "1.0.3"
+}
