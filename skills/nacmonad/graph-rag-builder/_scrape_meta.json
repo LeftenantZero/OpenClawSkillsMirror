@@ -1,0 +1,56 @@
+{
+  "changelog": "GraphRAG Builder Skill 1.0.0\n\n- Initial release: build a full MCP knowledge server from any website or documentation URL in five local pipeline steps.\n- Includes scripts for crawling sites, extracting concepts with LLM (Opus, Sonnet, etc), constructing a knowledge graph, generating vector embeddings, and outputting a ready-to-run MCP server.\n- Supports semantic search and eight graph-based retrieval tools out of the box.\n- Guides users step-by-step, including setup, requirements, error handling, and sample command sequences.\n- Designed for easy integration with agent harnesses via generated config snippets.",
+  "created_at": 1776866819840,
+  "display_name": "GraphRAGBuilder",
+  "fetched_at": 1787816853511,
+  "files": [
+    ".env.example.txt",
+    "IDEA.md",
+    "LICENSE.md",
+    "PLAN.md",
+    "README.md",
+    "SKILL.md",
+    "TODO.md",
+    "_meta.json",
+    "evals/evals.json",
+    "requirements.txt",
+    "scripts/build_embeddings.py",
+    "scripts/build_graph.py",
+    "scripts/crawl.py",
+    "scripts/extract_concepts.py",
+    "scripts/generate_mcp_server.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090514103,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "nacmonad",
+    "handle": "nacmonad",
+    "user_id": "s174cnw9thghqmsadh32mfck3585bwv9"
+  },
+  "slug": "graph-rag-builder",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/graph-rag-builder",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=graph-rag-builder&ownerHandle=nacmonad",
+    "page_url": "https://clawhub.ai/nacmonad/skills/graph-rag-builder"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 610,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Builds a fully runnable MCP (Model Context Protocol) knowledge server from any website or documentation URL. Crawls the site, extracts concepts using Claude,...",
+  "updated_at": 1778492714881,
+  "version": "1.0.0"
+}
