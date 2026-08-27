@@ -1,0 +1,38 @@
+{
+  "changelog": "Version 1.0.1\n\n- Clarifies skill should only trigger on explicit conversion requests, not on bare file uploads.\n- Adds a required step for user confirmation before transmitting images to the vision API.\n- Documents new security practices: scripts install dependencies into an isolated temp directory, not the system Python.\n- Adds workflow/enforcement for vision extraction: prompt user if image-only pages detected, optionally skip vision if declined.\n- Updates description and edge cases to reflect these consent and security changes.",
+  "created_at": 1778143866095,
+  "display_name": "Office \u2192 Markdown Skill",
+  "fetched_at": 1787809547504,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/csv-to-md.py",
+    "scripts/docx-to-md.py",
+    "scripts/pdf-to-md.py",
+    "scripts/pptx-to-md.py",
+    "scripts/xlsx-to-md.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Naimal Salahuddin",
+    "handle": "naimalarain13",
+    "user_id": "s17b5cqnqj78aedy8p3fg28nvn8699y3"
+  },
+  "slug": "office-to-markdown",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/office-to-markdown",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=office-to-markdown&ownerHandle=naimalarain13",
+    "page_url": "https://clawhub.ai/naimalarain13/skills/office-to-markdown"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 680,
+    "installs": 17,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Converts office automation documents \u2014 PDF, PPTX, DOCX, XLSX, CSV \u2014 into clean, readable Markdown. Use this skill when a user explicitly asks to convert, ext...",
+  "updated_at": 1778492867743,
+  "version": "1.0.1"
+}
