@@ -1,0 +1,37 @@
+{
+  "changelog": "- Switched from a reminder-centric todo manager to a SQLite-based work and todo tracker.\n- Stores all tasks and work progress in `~/.work_report_summary/todo_list.db` via CLI, using explicit JSON output for all command results.\n- Dropped date-reminder, attachment, and project features; now focuses on planned work, progress, active/completed status, archiving, and deletion.\n- Added strict confirmation for permanent deletes; archiving is preferred for history.\n- User input is mapped more deterministically to CLI commands (see references/chat_reference.md) instead of using conversation memory.",
+  "created_at": 1774968613314,
+  "display_name": "TODO List Pro",
+  "fetched_at": 1787838046229,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/chat_reference.md",
+    "references/commands.md",
+    "references/storage.md",
+    "scripts/todo_list.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Xinhai Zou",
+    "handle": "seanmwx",
+    "user_id": "s172p33xvek7whzrfrhyrh33cn83tbn0"
+  },
+  "slug": "todo-list-pro",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/todo-list-pro",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=todo-list-pro&ownerHandle=seanmwx",
+    "page_url": "https://clawhub.ai/seanmwx/skills/todo-list-pro"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 721,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Track local todo or work-report items in a SQLite database, including planned work, progress amounts, completion status, deletion, and archiving. Use when Co...",
+  "updated_at": 1778492324164,
+  "version": "1.0.0"
+}
