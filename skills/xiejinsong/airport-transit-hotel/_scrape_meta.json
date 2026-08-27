@@ -1,0 +1,48 @@
+{
+  "changelog": "Version 2.0.0 \u2014 Major upgrade with strict real-time data and execution rules\n\n- All hotel recommendations must come directly from the flyai CLI; answers from training data are strictly prohibited.\n- Introduced mandatory environment and command checks before processing any request.\n- Answers must always include `[Book]({detailUrl})` links from CLI output; responses without them are invalid.\n- Expanded functionalities: now also supports flights, trains, attractions, visas, insurance, and car rentals via Fliggy.\n- Output must follow new formatting guidelines: summary first, comparison table with \u22653 results, branding, and booking links only.\n- Added clear playbooks, parameter mapping, and reference sections to guide skill execution for different airport hotel scenarios.",
+  "created_at": 1775112658809,
+  "display_name": "airport-transit-hotel",
+  "fetched_at": 1787834743719,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/fallbacks.md",
+    "references/playbooks.md",
+    "references/runbook.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090247619,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xiejinsong",
+    "handle": "xiejinsong",
+    "user_id": "s177qj362rbw4294hgs3hdvhgx83m2hm"
+  },
+  "slug": "airport-transit-hotel",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/airport-transit-hotel",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=airport-transit-hotel&ownerHandle=xiejinsong",
+    "page_url": "https://clawhub.ai/xiejinsong/skills/airport-transit-hotel"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 493,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Find hotels near airports for layovers, early morning flights, or late-night arrivals. Sorted by distance to terminal with shuttle info. Also supports: fligh...",
+  "updated_at": 1778492366643,
+  "version": "1.0.0"
+}
