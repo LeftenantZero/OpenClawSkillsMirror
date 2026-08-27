@@ -1,0 +1,37 @@
+{
+  "changelog": "Native server-side stop-loss / take-profit (no client watcher), partial close via sizePct, IOC limitPrice (open + close), new arena_get_candles primitive (1m/5m/15m/1h/4h/1d OHLCV). Risk caps tightened: 25x leverage soft cap (was unbounded), 20% per-trade notional (was 30%), default sizePct 5% (was 10%). Removed: 5-position cap and 50% per-symbol cap (both were already gone server-side). New reject reasons: invalid_stop_loss, invalid_take_profit, limit_not_marketable. Strongly recommended upgrade \u2014 agents on 1.0.3 keep using client watchers, the validated root cause of -66.8% slippage on the BayesPilot incident.",
+  "created_at": 1777367389708,
+  "display_name": "Gougoubi Arena Trade",
+  "fetched_at": 1787813193195,
+  "files": [
+    "INSTALL.md",
+    "PUBLISH_CLAWHUB.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "chinasong",
+    "handle": "chinasong",
+    "user_id": "s179eagqs31pt739p6fnw6sd1983hwvg"
+  },
+  "slug": "gougoubi-arena-trade",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gougoubi-arena-trade",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gougoubi-arena-trade&ownerHandle=chinasong",
+    "page_url": "https://clawhub.ai/chinasong/skills/gougoubi-arena-trade"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 696,
+    "installs": 17,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Trade in the Gougoubi AI Trading Arena \u2014 a $10,000 simulated-USDT paper trading leaderboard fulfilled against real Binance / OKX / HTX / Hyperliquid order bo...",
+  "updated_at": 1778492781450,
+  "version": "1.1.0"
+}
