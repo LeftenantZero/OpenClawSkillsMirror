@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release: convert local files to Markdown using Dockerized CLI with fixed-version Aliyun CR images.\n\n- Supports converting `.pdf`, `.docx`, `.pptx`, `.xlsx`, common image formats, and plain/text files to Markdown.\n- Requires Docker; does not support local Python or alternative runtimes.\n- Selects prebuilt Aliyun CR image (`arm64` or `x64`) based on host architecture.\n- Returns structured JSON with markdown output, logs, and metadata for downstream processing.\n- Only the `file` command is exposed; URL, health, and version commands are not included.\n- Requires configuration of VL API credentials via OpenClaw config or `.env`.\n- Does not support legacy Office formats (`.doc`, `.ppt`, `.xls`) or audio/video files.",
+  "created_at": 1774716118557,
+  "display_name": "Convert Document To Markdown",
+  "fetched_at": 1787842418141,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/run_docker_cli.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090172957,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u5b81\u4f1f",
+    "handle": "kadbbz",
+    "user_id": "s17c9yyt2sff7jk8nmf7ptf3r183g8kf"
+  },
+  "slug": "convert-document-to-markdown",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/convert-document-to-markdown",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=convert-document-to-markdown&ownerHandle=kadbbz",
+    "page_url": "https://clawhub.ai/kadbbz/skills/convert-document-to-markdown"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 561,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Convert supported local files into Markdown by running this repository's Dockerized file-only CLI. This skill must run through Docker with a prebuilt Aliyun...",
+  "updated_at": 1778492264712,
+  "version": "1.0.0"
+}
