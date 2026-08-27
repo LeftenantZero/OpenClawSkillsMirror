@@ -1,0 +1,33 @@
+{
+  "changelog": "- Adds secure login workflow: now uses `biznetgio login` to create a local credential file (`~/.biznetgio.json`), which is preferred over environment variables.\n- Introduces an explicit `whoami` check before any command, improving authentication flow and user guidance if not logged in.\n- Updates environment variable usage: API key now acts only as a fallback; `BIZNETGIO_PORTAL_URL` is added for portal host overrides.\n- Documents logout procedure to cleanly remove credentials.\n- Clarifies and prioritizes credential sources: CLI flag > credential file > environment variable.\n- Enhances user security by never asking for raw API keys, always guiding users through the CLI login flow.",
+  "created_at": 1774707893222,
+  "display_name": "Biznet GIO CLI",
+  "fetched_at": 1787842548252,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Biznet Gio",
+    "handle": "biznetgio",
+    "user_id": "s17cbzjqdyrva5fdvpnm33ww0983s2a7"
+  },
+  "slug": "biznetgio",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/biznetgio",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=biznetgio&ownerHandle=biznetgio",
+    "page_url": "https://clawhub.ai/biznetgio/skills/biznetgio"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 741,
+    "installs": 18,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Manage Biznet Gio cloud infrastructure (servers, VMs, storage, IPs) via CLI and MCP server",
+  "updated_at": 1778492261160,
+  "version": "1.0.5"
+}
