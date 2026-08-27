@@ -1,0 +1,54 @@
+{
+  "changelog": "Initial release as \"linux-command-guard-elite\" with expanded defense-in-depth features:\n\n- Renamed and rebranded the skill from \"linux-command-guard\" to \"linux-command-guard-elite\".\n- Introduced stricter allowlist-first enforcement, with detailed approval policies for high-risk commands and interpreters.\n- Added granular rule files: allowlist, denylist, approval-required, protected paths, and regex-based detection.\n- Implemented robust policy checks for protected system paths and command patterns.\n- Updated documentation for advanced security requirements, mandatory policy flow, and strong usage recommendations.\n- Added test suite and necessary project metadata for enhanced maintainability.",
+  "created_at": 1774941339716,
+  "display_name": "linux-command-guard",
+  "fetched_at": 1787838669905,
+  "files": [
+    ".github/workflows/test.yml",
+    ".pytest_cache/CACHEDIR.TAG",
+    ".pytest_cache/README.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "linux_command_guard/__init__.py",
+    "linux_command_guard/checker.py",
+    "linux_command_guard/cli.py",
+    "linux_command_guard/parser.py",
+    "linux_command_guard/policy.py",
+    "linux_command_guard/rules/allowlist.txt",
+    "linux_command_guard/rules/approval_required.txt",
+    "linux_command_guard/rules/blocked_binaries.txt",
+    "linux_command_guard/rules/denylist.txt",
+    "linux_command_guard/rules/protected_paths.txt",
+    "linux_command_guard/rules/regex_rules.txt",
+    "linux_command_guard_elite.egg-info/SOURCES.txt",
+    "linux_command_guard_elite.egg-info/dependency_links.txt",
+    "linux_command_guard_elite.egg-info/entry_points.txt",
+    "linux_command_guard_elite.egg-info/top_level.txt",
+    "pyproject.toml",
+    "skill-card.md",
+    "tests/test_checker.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jurgenw81",
+    "handle": "jurgenw81",
+    "user_id": "s175481d152rdg5dqq5ctjxkzs83kkre"
+  },
+  "slug": "llm-shell-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/llm-shell-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=llm-shell-guard&ownerHandle=jurgenw81",
+    "page_url": "https://clawhub.ai/jurgenw81/skills/llm-shell-guard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 662,
+    "installs": 16,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Blocks destructive Linux commands by enforcing allowlist execution, denylist checks, regex detection, protected paths, and approval for risky actions.",
+  "updated_at": 1778492313459,
+  "version": "1.0.1"
+}
