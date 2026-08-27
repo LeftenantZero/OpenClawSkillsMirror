@@ -1,0 +1,38 @@
+{
+  "changelog": "promptify-skill 3.1.0 \u2013 Adds agent dispatching, auto-detection, and unified prompt structure for better optimization.\n\n- Introduced smart agent routing for codebase research, clarifying questions, and web search based on prompt signals or user modifiers.\n- Ensures every prompt includes role, task, constraints, and output (core contract).\n- Improved output: always provides an optimized code-block prompt, clipboard copy command, and clear explanation.\n- Enhanced support for various prompt types (coding, writing, analysis, creative, data) with tailored contract elements and structure.\n- Now strips filler language and applies consistent formatting, including XML tags for complex prompts.",
+  "created_at": 1769725090539,
+  "display_name": "Promptify Skill",
+  "fetched_at": 1787806174062,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/clarifier.md",
+    "agents/codebase-researcher.md",
+    "agents/web-researcher.md",
+    "commands/promptify.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "tolibear",
+    "handle": "tolibear",
+    "user_id": "s17bjxdymea44bbva1m87h9c6d884n6x"
+  },
+  "slug": "promptify-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/promptify-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=promptify-skill&ownerHandle=tolibear",
+    "page_url": "https://clawhub.ai/tolibear/skills/promptify-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2960,
+    "installs": 99,
+    "stars": 4,
+    "versions": 1
+  },
+  "summary": "Optimize prompts for clarity and effectiveness. Use when user says \"improve this prompt\", \"optimize my prompt\", \"make this clearer\", or provides vague/unstructured prompts. Intelligently routes to sub-agents for codebase research, clarifying questions, or web search as needed.",
+  "updated_at": 1778987403004,
+  "version": "3.1.0"
+}
