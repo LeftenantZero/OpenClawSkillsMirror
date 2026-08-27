@@ -1,0 +1,46 @@
+{
+  "changelog": "Aionis Memory Policy Loop Skill 1.0.0\n\n- Initial release: Connects OpenClaw to Aionis using memory loop APIs (write, context, policy, feedback).\n- Provides configuration via environment variables for standalone/local use.\n- Includes safety rules for secret handling, scope, and memory usage.\n- Features connectivity checks and auto-bootstrap for local Aionis instances.\n- Documents default workflow and request templates for writing, context assembly, tool selection, and feedback.\n- Specifies required response fields (e.g., IDs, base_url, scope) for output consistency.",
+  "created_at": 1772621342791,
+  "display_name": "Aionis",
+  "fetched_at": 1787800488352,
+  "files": [
+    "AIONIS_ENV_TEMPLATE.txt",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "bootstrap-local-standalone.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089755167,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Cognary",
+    "handle": "cognary",
+    "user_id": "s17fjf4ajqrtxczq9ec987vmnn884f3e"
+  },
+  "slug": "aionis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aionis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aionis&ownerHandle=cognary",
+    "page_url": "https://clawhub.ai/cognary/skills/aionis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1822,
+    "installs": 60,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Connect OpenClaw to Aionis using write/context/policy/feedback memory loop APIs.",
+  "updated_at": 1778995173697,
+  "version": "1.0.0"
+}
