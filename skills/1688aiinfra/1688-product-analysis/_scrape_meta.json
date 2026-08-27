@@ -1,0 +1,60 @@
+{
+  "changelog": "Initial release of the 1688-product-analysis skill.\n\n- Provides comprehensive product diagnostics for 1688 listings, integrating multiple data sources.\n- Supports analysis scenarios such as performance review, traffic problem diagnosis, search ranking analysis, ad effectiveness, competition comparison, and actionable optimization advice.\n- Enforces strict data authenticity: only real CLI outputs may be used, with robust error and exception handling.\n- Includes structured multi-step user interactions for product selection, diagnosis, and follow-up optimization action selection.\n- Reference documents and templates are integrated for dimension analysis and report generation.\n- Outlines clear, actionable recommendations based on diagnoses, with priority handling for compliance, traffic, and conversion issues.",
+  "created_at": 1778663267901,
+  "display_name": "1688 Product Analysis",
+  "fetched_at": 1787807853657,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "cli.py",
+    "references/analysis-dimensions.md",
+    "references/interaction-specs.md",
+    "references/report-template-simple.md",
+    "scripts/_auth.py",
+    "scripts/_const.py",
+    "scripts/_errors.py",
+    "scripts/_http.py",
+    "scripts/_output.py",
+    "scripts/_tracker.py",
+    "scripts/capabilities/__init__.py",
+    "scripts/capabilities/get_abnormal_offers/__init__.py",
+    "scripts/capabilities/get_abnormal_offers/cmd.py",
+    "scripts/capabilities/get_abnormal_offers/service.py",
+    "scripts/capabilities/get_offer_data/__init__.py",
+    "scripts/capabilities/get_offer_data/cmd.py",
+    "scripts/capabilities/get_offer_data/service.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090798786,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "1688AiInfra",
+    "handle": "1688aiinfra",
+    "user_id": "s177df9srv6z2y0gd1kw90rern83hzxb"
+  },
+  "slug": "1688-product-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/1688-product-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=1688-product-analysis&ownerHandle=1688aiinfra",
+    "page_url": "https://clawhub.ai/1688aiinfra/skills/1688-product-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 666,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "1688 \u5546\u54c1\u5168\u65b9\u4f4d\u5206\u6790\u8bca\u65ad\u5de5\u5177\uff0c\u6574\u5408\u591a\u4e2a\u6570\u636e\u6e90\u5bf9\u6307\u5b9a\u5546\u54c1\u8fdb\u884c\u6df1\u5ea6\u5206\u6790\u3002\u5f53\u7528\u6237\u9700\u8981\u5206\u6790\u67d0\u4e2a\u6307\u5b9a\u5546\u54c1\u8868\u73b0\u3001\u8bca\u65ad\u6d41\u91cf\u95ee\u9898\u3001\u4f18\u5316\u5546\u54c1\u7b56\u7565\u65f6\u4f7f\u7528\u3002\u9002\u7528\u4e8e\u6307\u5b9a\u5546\u54c1\u7684\uff1a\u5546\u54c1\u6570\u636e\u5206\u6790\u3001\u9500\u552e\u8868\u73b0\u8bca\u65ad\u3001\u641c\u7d22\u6392\u540d\u95ee\u9898\u5206\u6790\u3001\u5e7f\u544a\u6548\u679c\u8bc4\u4f30\u3001\u5e02\u573a\u7ade\u4e89\u5206\u6790\u3001\u5546\u54c1\u4f18\u5316\u5efa\u8bae\u3002\u89e6\u53d1\u5173\u952e\u8bcd\u5305\u62ec\"\u5206\u6790\u8fd9\u4e2a\u5546\u54c1\"\u3001\"\u5546\u54c1\u8bca\u65ad\"\u3001\"\u5546\u54c1\u8868\u73b0\u5206\u6790\"\u3001\"\u4e3a\u4ec0...",
+  "updated_at": 1778663426649,
+  "version": "0.1.0"
+}
