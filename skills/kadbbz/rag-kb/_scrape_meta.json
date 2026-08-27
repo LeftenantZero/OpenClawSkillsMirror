@@ -1,0 +1,38 @@
+{
+  "changelog": "Version 1.0.1\n\n- Added BM25 \u652f\u6301\uff0c\u5b9e\u73b0\u7efc\u5408 (hybrid) \u68c0\u7d22\uff1b\u652f\u6301\u5173\u952e\u8bcd\u68c0\u7d22\uff08BM25\uff09\u4e0e\u8bed\u4e49\u68c0\u7d22\uff08FAISS\uff09\u3002\n- \u65b0\u589e\u77e5\u8bc6\u5e93\u4fdd\u62a4\u8bcd\uff08protected_terms.json\uff09\u673a\u5236\uff0c\u53ef\u901a\u8fc7 protect-add / protect-delete \u7ba1\u7406\u4fdd\u62a4\u8bcd\u5e76\u79bb\u7ebf\u5237\u65b0 BM25 \u5de5\u4ef6\u3002\n- \u652f\u6301\u5168\u91cf\u91cd\u5efa\u77e5\u8bc6\u5e93\u7d22\u5f15\uff08rebuild\uff09\uff0c\u540c\u65f6\u5237\u65b0\u8bed\u4e49\u4e0e BM25 \u7d22\u5f15\u3002\n- \u67e5\u8be2\u652f\u6301 retrieval-mode \u9009\u62e9\uff08hybrid/semantic/keyword\uff09\uff0c\u9ed8\u8ba4\u4f7f\u7528 hybrid \u3002\n- \u8fd0\u884c\u89c4\u5219\u7ec6\u5316\uff1a\u660e\u786e skill \u4ec5\u6d88\u8d39\u6587\u672c\u6587\u4ef6\uff0c\u4e0d\u518d\u8d1f\u8d23\u6587\u4ef6\u8f6c\u6587\u672c\u3002\n- \u6587\u6863\u4e0e\u76ee\u5f55\u7ed3\u6784\u8c03\u6574\uff0c\u7a81\u51fa\u201c\u5148\u8f6c\u6587\u672c\u3001\u540e\u7d22\u5f15\u201d\u7684\u89c4\u8303\u3002",
+  "created_at": 1775838044009,
+  "display_name": "Knowledge Base with Faiss and Bailian (embedding and rerank)",
+  "fetched_at": 1787825846412,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/content-rules.md",
+    "references/layout.md",
+    "references/runtime-notes.md",
+    "requirements.txt",
+    "scripts/bailian_faiss_kb.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u5b81\u4f1f",
+    "handle": "kadbbz",
+    "user_id": "s17c9yyt2sff7jk8nmf7ptf3r183g8kf"
+  },
+  "slug": "rag-kb",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/rag-kb",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=rag-kb&ownerHandle=kadbbz",
+    "page_url": "https://clawhub.ai/kadbbz/skills/rag-kb"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1094,
+    "installs": 30,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "\u4f7f\u7528 Python\u3001FAISS\u3001BM25\u3001\u963f\u91cc\u4e91\u767e\u70bc text-embedding-v4 \u4e0e\u53ef\u9009\u7684 qwen3-rerank\uff0c\u7ef4\u62a4\u57fa\u4e8e\u6587\u4ef6\u76ee\u5f55\u7684\u672c\u5730\u77e5\u8bc6\u5e93\uff1b\u9002\u7528\u4e8e\u5728 OpenClaw \u9884\u5148\u62bd\u53d6\u6587\u672c\u540e\uff0c\u904d\u5386 chunks \u4e0e T2Q \u5efa\u7acb\u7d22\u5f15\uff0c\u4ee5\u53ca\u5bf9\u6307\u5b9a\u77e5\u8bc6\u5e93\u6216\u5168\u90e8\u77e5\u8bc6\u5e93\u505a\u7efc\u5408\u3001\u8bed\u4e49\u6216\u5173\u952e\u8bcd\u67e5\u8be2\u3002",
+  "updated_at": 1778492514832,
+  "version": "1.0.1"
+}
