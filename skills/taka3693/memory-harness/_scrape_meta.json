@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release of memory-harness: a runtime-enforced, staged recall system for OpenClaw.\n\n- Implements 3-stage recall: session preflight, triggered recall, and pre-execution recall gate.\n- Includes intent classification, entity detection, memory compression, and status tracking.\n- Recall is automatically triggered based on user intent and entity references, keeping chat lightweight unless contextual memory is needed.\n- Enforces recall before all execution-like actions to ensure constraints and context are respected.\n- Outputs are always compressed, ranked, and deduplicated, with hard caps on memory injected.\n- Provides structured logs for monitoring recall behavior and outcomes.",
+  "created_at": 1773662518132,
+  "display_name": "Memory Harness",
+  "fetched_at": 1787870290804,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "readme.md",
+    "scripts/entity-detector.js",
+    "scripts/harness.js",
+    "scripts/intent-classifier.js",
+    "scripts/memory-compress.js",
+    "scripts/pre-execution-gate.js",
+    "scripts/should-recall.js",
+    "scripts/structured-log.js",
+    "scripts/targeted-recall.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089916366,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "taka3693",
+    "handle": "taka3693",
+    "user_id": "s17f3nq2cypbsabs73f8es2h6h86zxad"
+  },
+  "slug": "memory-harness",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memory-harness",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memory-harness&ownerHandle=taka3693",
+    "page_url": "https://clawhub.ai/taka3693/skills/memory-harness"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 809,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Runtime-enforced memory harness for OpenClaw. Implements 3-stage recall (session preflight, triggered recall, pre-execution gate) with intent classification,...",
+  "updated_at": 1778491948843,
+  "version": "1.0.0"
+}
