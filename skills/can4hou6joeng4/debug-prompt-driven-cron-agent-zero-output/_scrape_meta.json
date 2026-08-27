@@ -1,0 +1,36 @@
+{
+  "changelog": "debug-prompt-driven-cron-agent-zero-output 1.0.0\n\n- Initial release of a full diagnostic skill for cases where prompt-driven cron tasks succeed but produce empty (zero) results, particularly for Discord, Obsidian, agentTurn, and similar environments.\n- Provides a step-by-step framework to distinguish between \u201cno samples found\u201d vs. \u201cclassification zeroed out,\u201d and localize root causes in sampling vs. filtering.\n- Emphasizes the difference between explicit implementation (scripted, with API calls) and flexible prompt-only tasks, highlighting risks when no fixed retrieval code exists.\n- Lists common high-risk data loss scenarios (missed parent channel, thread starters, improper Snowflake handling, time window issues) and maps diagnostic boundaries.\n- Offers minimal actionable fix suggestions: switch prompt tasks to explicit scripts, lock in sample source logic, enforce string comparison on IDs, and audit retrieval steps.\n- Equips users with a practical troubleshooting checklist, key false assumptions to avoid, sample config/code snippets, and relevant environment prerequisites.",
+  "created_at": 1774195473605,
+  "display_name": "Debug Prompt Driven Cron Agent Zero Output",
+  "fetched_at": 1787855691302,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/discord-daily-sampling-contract.md",
+    "references/prompt-agentturn-cron-evidence-boundaries.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "can4hou6joeng4",
+    "handle": "can4hou6joeng4",
+    "user_id": "s17fzhes75mvxfh1xm1q519egh83y6gc"
+  },
+  "slug": "debug-prompt-driven-cron-agent-zero-output",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/debug-prompt-driven-cron-agent-zero-output",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=debug-prompt-driven-cron-agent-zero-output&ownerHandle=can4hou6joeng4",
+    "page_url": "https://clawhub.ai/can4hou6joeng4/skills/debug-prompt-driven-cron-agent-zero-output"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 606,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7528\u4e8e\u6392\u67e5\u201c\u5b9a\u65f6\u4efb\u52a1\u6210\u529f\u6267\u884c\u4f46\u7ed3\u679c\u5168\u4e3a 0 / \u672a\u68c0\u7d22\u5230\u6837\u672c / \u660e\u660e\u6709\u6570\u636e\u5374\u65e5\u62a5\u4e3a\u7a7a\u201d\u8fd9\u7c7b\u95ee\u9898\uff0c\u5c24\u5176\u9002\u5408 Discord\u3001Obsidian\u3001cron\u3001agentTurn\u3001prompt \u9a71\u52a8\u4efb\u52a1\u3001\u65e5\u6574\u7406\u3001\u590d\u76d8\u811a\u672c\u3001\u91c7\u6837\u6f0f\u626b\u3001thread starter \u6f0f\u8ba1\u3001\u4e3b\u9891\u9053\u6d88\u606f\u672a\u7eb3\u5165\u3001Snowflake \u5b57\u7b26\u4e32\u6bd4\u8f83\u3001\u65f6\u533a\u65f6...",
+  "updated_at": 1778492111768,
+  "version": "1.0.0"
+}
