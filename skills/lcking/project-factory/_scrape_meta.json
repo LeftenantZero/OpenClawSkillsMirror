@@ -1,0 +1,53 @@
+{
+  "changelog": "project-factory v0.1.0 \u2014 Initial Release\n\n- Introduces a four-phase workflow for bootstrapping OpenClaw automation projects: LLM reasoning, flowchart confirmation, node configuration, and full project scaffold generation.\n- Supports model selection based on project complexity, defaulting to MiniMax-M2.5 (FAST), with optional upgrade to GPT-4.1 (SMART) for complex flows.\n- Automatically parses plain-language project descriptions and synthesizes recommended flowchart and node details.\n- User can confirm, edit, or adjust the generated workflow and flowchart before proceeding.\n- Guided node-by-node configuration, including skill recommendations and credential checks.\n- Ensures outputs (flowcharts, JSON configs) are syntactically valid before progressing.",
+  "created_at": 1777476896860,
+  "display_name": "project-factory",
+  "fetched_at": 1787794700673,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/architecture.md",
+    "references/flow_design_language.md",
+    "references/onboarding_checklist.md",
+    "references/shared_routing_group_schema.md",
+    "scripts/allprojects_check.py",
+    "scripts/bootstrap_project.py",
+    "scripts/self_check.py",
+    "scripts/update_memory.py",
+    "scripts/upgrade_project.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090584777,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Alexck",
+    "handle": "lcking",
+    "user_id": "s170101magtqqn27t15vvet6dh85spk0"
+  },
+  "slug": "project-factory",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/project-factory",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=project-factory&ownerHandle=lcking",
+    "page_url": "https://clawhub.ai/lcking/skills/project-factory"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 572,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Bootstrap a new OpenClaw automation project using a four-phase workflow: Phase 0 \u2014 LLM reasoning: infer project type, flowchart structure, and node draft fro...",
+  "updated_at": 1779076121085,
+  "version": "0.1.0"
+}
