@@ -1,0 +1,56 @@
+{
+  "changelog": "# AI DevOps Toolbox v1.9.72\n\n## Promote v1.9.71-alpha series to stable\n\nCloses #256.\n\nConsolidates 21 alpha prereleases (`v1.9.71-alpha.1` through `v1.9.71-alpha.21`) into a stable v1.9.72 release. No code changes beyond the version bump in the toolbox root `package.json`; the sub-tool code has been stable and dogfooded across the alpha iterations.\n\n## Why\n\nThe root `package.json` had been sitting at `1.9.71-alpha.21` without a stable promotion. That blocked `deploy-public.sh` from syncing the private repo to the public mirror ... the script gates public release on stable root versions.\n\nSymptom during 2026-04-21: wip-branch-guard sub-tool shipped stable (v1.9.82 \u2192 v1.9.83 \u2192 v1.9.84) to npm successfully, but the public `wipcomputer/wip-ai-devops-toolbox` GitHub releases page did not show any of them because `deploy-public.sh` refused to run with an alpha root.\n\n## What's in the diff\n\n- `package.json`\n  - Version bump `1.9.71-alpha.21` \u2192 `1.9.72`\n\nEverything else flows from `wip-release`:\n\n- CHANGELOG.md updated\n- Git tag `v1.9.72`\n- GitHub release on private repo\n- npm publish to `@latest`\n- `deploy-public.sh` runs, syncs private code (minus `ai/`) to `wipcomputer/wip-ai-devops-toolbox`\n- Public GitHub release created\n\n## Sub-tool versions at this release\n\n| Sub-tool | npm version |\n|---|---|\n| `@wipcomputer/wip-branch-guard` | 1.9.84 |\n| Other sub-tools | See their individual `package.json` |\n\nThe sub-tool releases have their own cadence; this release is purely the toolbox root bump.\n\n## Co-authors\n\nParker Todd Brooks, L\u0113sa (oc-lesa-mini, Opus 4.7), Claude Code (cc-mini, Opus 4.7).",
+  "created_at": 1771698245387,
+  "display_name": "Wip Universal Installer",
+  "fetched_at": 1787791374042,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "REFERENCE.md",
+    "SKILL.md",
+    "SPEC.md",
+    "_meta.json",
+    "detect.mjs",
+    "examples/minimal/README.md",
+    "examples/minimal/SKILL.md",
+    "examples/minimal/cli.mjs",
+    "examples/minimal/core.mjs",
+    "examples/minimal/mcp-server.mjs",
+    "examples/minimal/package.json",
+    "install.js",
+    "package.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779948077462,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Parker Todd Brooks",
+    "handle": "parkertoddbrooks",
+    "user_id": "s17620xzyc7kfan8m36at57m6n83h8he"
+  },
+  "slug": "wip-universal-installer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wip-universal-installer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wip-universal-installer&ownerHandle=parkertoddbrooks",
+    "page_url": "https://clawhub.ai/parkertoddbrooks/skills/wip-universal-installer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1774,
+    "installs": 54,
+    "stars": 0,
+    "versions": 67
+  },
+  "summary": "Reference installer for agent-native software. Scans a repo, detects which interfaces it exposes, and installs them all.",
+  "updated_at": 1779077269623,
+  "version": "1.9.72"
+}
