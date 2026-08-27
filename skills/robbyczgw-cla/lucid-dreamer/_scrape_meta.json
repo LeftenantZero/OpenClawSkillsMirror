@@ -1,0 +1,57 @@
+{
+  "changelog": "- Updated metadata requirements: \"python3\" is now always required for trend detection.\n- Clarified that the `CLAWD_DIR` environment variable must be set before running.\n- Noted that auto-apply and aggressive cleanup are disabled by default.\n- Removed optional `env` entry from requirements in metadata.\n- No functional code changes; this update clarifies environment setup and requirements in documentation.",
+  "created_at": 1774218189597,
+  "display_name": "Lucid Dreamer",
+  "fetched_at": 1787855222892,
+  "files": [
+    "ARCHITECTURE.md",
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/auto-apply.md",
+    "config/lucid.config.json",
+    "examples/index-template.md",
+    "examples/review-sample.md",
+    "examples/state-sample.json",
+    "prompts/memory-loading-guidance.md",
+    "prompts/nightly-review.md",
+    "prompts/pre-flight-flush.md",
+    "prompts/session-debrief.md",
+    "scripts/migrate_memory.py",
+    "scripts/trend_detection.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090231676,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Robby",
+    "handle": "robbyczgw-cla",
+    "user_id": "s177f7tydbpq0gh2sctd8hqdjn83fnwv"
+  },
+  "slug": "lucid-dreamer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/lucid-dreamer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=lucid-dreamer&ownerHandle=robbyczgw-cla",
+    "page_url": "https://clawhub.ai/robbyczgw-cla/skills/lucid-dreamer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 970,
+    "installs": 26,
+    "stars": 0,
+    "versions": 29
+  },
+  "summary": "Nightly AI memory reasoning system. Lucid runs every night while you sleep \u2014 it reads your daily notes and memory files, detects stale facts, unresolved todo...",
+  "updated_at": 1778492119489,
+  "version": "0.7.8"
+}
