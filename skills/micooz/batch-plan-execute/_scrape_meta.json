@@ -1,0 +1,35 @@
+{
+  "changelog": "Batch Plan Execute v0.1.0 \u2013 Initial Release\n\n- Adds a skill for generating and executing dependency-ordered implementation plans from requirements and existing plan files.\n- Supports two explicit modes: `plan` (default) for creating/revising plans and `execute` for implementing plans after user command.\n- Handles input from requirement text, files, plan files, or `plans/` directories, following strict selection and validation rules.\n- Builds dependency graphs to model parallel and serial execution, conservatively sequencing modules where needed.\n- Maintains a consistent state in `.batch-plan-state.json`, capturing module lineage and plan status.\n- Only enters `execute` mode upon explicit user instruction; review or approval alone does not trigger execution.",
+  "created_at": 1775143432837,
+  "display_name": "Batch Plan Execute",
+  "fetched_at": 1787834097287,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "docs/execute.md",
+    "docs/plan.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "micooz",
+    "handle": "micooz",
+    "user_id": "s1744zrfwp0jpat3y37kw8dm6x842zy8"
+  },
+  "slug": "batch-plan-execute",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/batch-plan-execute",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=batch-plan-execute&ownerHandle=micooz",
+    "page_url": "https://clawhub.ai/micooz/skills/batch-plan-execute"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 527,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when the user wants AI to turn a requirement text, requirement document, and existing reviewed plan files into dependency-ordered implementation plans an...",
+  "updated_at": 1778492374831,
+  "version": "0.1.0"
+}
