@@ -1,0 +1,82 @@
+{
+  "changelog": "Security: Add runtime actions disclosure, change fake-tool setup to manual (no auto gateway restart or skill install).",
+  "created_at": 1773881513461,
+  "display_name": "Skill Eval",
+  "fetched_at": 1787798023638,
+  "files": [
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "README.md",
+    "SKILL.md",
+    "USAGE.md",
+    "_meta.json",
+    "agents/analyzer.md",
+    "agents/comparator.md",
+    "agents/grader.md",
+    "docs/ARCHITECTURE.md",
+    "evals/example-quality.json",
+    "evals/example-triggers.json",
+    "evals/weather/quality.json",
+    "evals/weather/triggers.json",
+    "requirements.txt",
+    "scripts/aggregate_benchmark.py",
+    "scripts/analyze_latency.py",
+    "scripts/analyze_model_compare.py",
+    "scripts/analyze_quality.py",
+    "scripts/analyze_triggers.py",
+    "scripts/build_evals_with_context.py",
+    "scripts/extract_session_history.py",
+    "scripts/legacy/README.md",
+    "scripts/legacy/run_compare.py",
+    "scripts/legacy/run_diagnostics.py",
+    "scripts/legacy/run_latency_profile.py",
+    "scripts/legacy/run_model_compare.py",
+    "scripts/legacy/run_orchestrator.py",
+    "scripts/legacy/run_trigger.py",
+    "scripts/resolve_paths.py",
+    "skill-card.md",
+    "templates/cli-wrapper/README.md",
+    "templates/cli-wrapper/quality.json",
+    "templates/cli-wrapper/triggers.json",
+    "test-skills/README.md",
+    "test-skills/fake-tool/SKILL.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_analyze_quality.py",
+    "tests/test_analyze_triggers.py",
+    "viewer/generate_review.py",
+    "viewer/viewer.html"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089967748,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Xiaoxing9",
+    "handle": "xiaoxing9",
+    "user_id": "s175njbc2pxg73ms7brk05a81985e24n"
+  },
+  "slug": "openclaw-skill-eval",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-skill-eval",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-skill-eval&ownerHandle=xiaoxing9",
+    "page_url": "https://clawhub.ai/xiaoxing9/skills/openclaw-skill-eval"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 928,
+    "installs": 25,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Skill evaluation framework. Use when: testing trigger rate, quality compare (with/without skill), or model comparison. Runs via sessions_spawn + sessions_his...",
+  "updated_at": 1779002889924,
+  "version": "1.1.1"
+}
