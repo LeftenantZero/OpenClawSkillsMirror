@@ -1,0 +1,39 @@
+{
+  "changelog": "**Security-focused release: Now enforces strict domain allowlists and improved safety for news fetching.**\n\n- Enforces TLS verification on all HTTP requests for news fetching.\n- Introduces a strict domain allowlist (`ALLOWED_DDG_DOMAINS`) for all DuckDuckGo news search results; only results from approved public news domains are accepted.\n- Updates documentation with prominent security notes, including advice for safe scheduling and isolating the skill from internal networks and services.\n- Requires auditing of pip dependencies before installation in sensitive or production environments.\n- No changes to the news gathering features or API; security improvements and documentation clarification only.",
+  "created_at": 1773749256993,
+  "display_name": "spotify-news-digest",
+  "fetched_at": 1787867944749,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/sources.json",
+    "references/sources_reference.md",
+    "requirements.txt",
+    "scripts/fetch_spotify_news.py",
+    "scripts/generate_digest.py",
+    "scripts/process_spotify_news.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Bill Xia",
+    "handle": "ibillxia",
+    "user_id": "s1724rhcp74qej595ajyp4mj6s85bras"
+  },
+  "slug": "spotify-news-digest",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/spotify-news-digest",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=spotify-news-digest&ownerHandle=ibillxia",
+    "page_url": "https://clawhub.ai/ibillxia/skills/spotify-news-digest"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 730,
+    "installs": 20,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Scrape and summarize Spotify-related news from multiple sources (Spotify official blogs, engineering/research/newsroom, TechCrunch, The Verge, Music Business...",
+  "updated_at": 1778491977901,
+  "version": "1.0.1"
+}
