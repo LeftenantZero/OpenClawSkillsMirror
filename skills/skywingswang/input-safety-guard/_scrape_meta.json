@@ -1,0 +1,39 @@
+{
+  "changelog": "Initial release of Input Safety Guard skill: a two-stage, profile-driven input screening system for agents.\n\n- Introduces deterministic stage 1 prefilter and semantic stage 2 review, ensuring thorough screening before agent responses.\n- Provides runtime entry points for standalone evaluation, structured handling, and final user replies.\n- Supports configurable strictness profiles (`default`, `strict`, `relaxed`) to balance safety and false positives.\n- Stage 1 covers normalization, allow/block rules, and prompt leakage checks; stage 2 performs semantic risk classification.\n- Integration guidance ensures interception of user input before any downstream processing.\n- Requires a clear flow: block or review/intercept risky requests, only respond when input is judged safe.",
+  "created_at": 1775022013639,
+  "display_name": "Input Safety Guard",
+  "fetched_at": 1787837097445,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/default_rules.relaxed.yaml",
+    "config/default_rules.strict.yaml",
+    "config/default_rules.yaml",
+    "skill-card.md",
+    "src/input_safety_guard/__init__.py",
+    "src/input_safety_guard/pipeline.py",
+    "src/input_safety_guard/prefilter.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SkywingsWang",
+    "handle": "skywingswang",
+    "user_id": "s1748h2hmywwh24dqxwvr7w46583z0xr"
+  },
+  "slug": "input-safety-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/input-safety-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=input-safety-guard&ownerHandle=skywingswang",
+    "page_url": "https://clawhub.ai/skywingswang/skills/input-safety-guard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 622,
+    "installs": 14,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Lightweight two-stage input safety guard for agents. Use this skill when an agent must screen user input before answering, block prompt injection or prompt l...",
+  "updated_at": 1778492335556,
+  "version": "1.0.0"
+}
