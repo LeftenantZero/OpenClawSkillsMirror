@@ -1,0 +1,50 @@
+{
+  "changelog": "Changes:\n\n1. \u274c Removed GATEWAY_HOOKS_URL/TOKEN entirely \u2014 no outbound network calls from bridge server. This was the \"potential data exfiltration\" flag.\n2. \ud83d\udd12 ACP_BRIDGE_TOKEN now mandatory \u2014 server refuses to start without it (was WARNING, now FATAL + sys.exit(1)). Fixes \"runs open if not set\" flag.\n3. \ud83d\udccb Description now declares all required env vars (ACP_BRIDGE_TOKEN, BRIDGE_TOKEN, BRIDGE_URL) + states \"no external network calls.\" Fixes metadata/code mismatch.\n4. \ud83d\udee1\ufe0f Added Security Model section to SKILL.md \u2014 documents trust boundary, credential setup, network exposure guidance.\n5. \u270f\ufe0f Narrowed cron template language \u2014 removed \"RUN the command and return results\" / \"execute arbitrary commands\" phrasing. Now says \"read workspace context files\" and \"look up in your workspace files or via configured tools.\"",
+  "created_at": 1774368549544,
+  "display_name": "Perfect Agent Comms",
+  "fetched_at": 1787797297415,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cron-templates.md",
+    "references/gotchas.md",
+    "references/monitoring.md",
+    "scripts/acp_bridge.py",
+    "scripts/bridge_prune.py",
+    "scripts/bridge_reply.py",
+    "scripts/save_bridge_ts.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090081104,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Joel Yi - DeployAIBots.com",
+    "handle": "joelsalespossible",
+    "user_id": "s17b0sq94ks1kwhv9gz1n05prx83h6qf"
+  },
+  "slug": "bridge-poll",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bridge-poll",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bridge-poll&ownerHandle=joelsalespossible",
+    "page_url": "https://clawhub.ai/joelsalespossible/skills/bridge-poll"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 592,
+    "installs": 14,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Agent-to-agent communication via HTTP bridge with cron-based polling. Use when: (1) two OpenClaw agents need to talk across instances, containers, or machine...",
+  "updated_at": 1779074471849,
+  "version": "1.0.1"
+}
