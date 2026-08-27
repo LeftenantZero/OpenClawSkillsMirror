@@ -1,0 +1,46 @@
+{
+  "changelog": "todolist-md-clawdbot 1.0.0 \u2014 Initial release\n\n- Provides bot-assisted review and editing of todolist-md Markdown todo files.\n- Uses only line-stable <!-- bot: ... --> markers for any write-back changes.\n- Integrates with storage backends like Google Drive, local folders, or S3, respecting file identity and change detection.\n- Ensures LLM operations only on changed files, reducing token usage and minimizing costs.\n- Allows opt-in/opt-out file-level control via config file or in-file marker.\n- Never marks tasks as complete without explicit user confirmation.",
+  "created_at": 1771095580621,
+  "display_name": "Todolist Md Clawdbot",
+  "fetched_at": 1787792179436,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/todolist_agent_entrypoint.mjs",
+    "scripts/todolist_drive_folder_agent.mjs",
+    "scripts/todolist_review_drive.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967443388,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "NitsujY",
+    "handle": "nitsujy",
+    "user_id": "s177fc08nk11eebpm7487aywx18859pj"
+  },
+  "slug": "todolist-md-clawdbot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/todolist-md-clawdbot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=todolist-md-clawdbot&ownerHandle=nitsujy",
+    "page_url": "https://clawhub.ai/nitsujy/skills/todolist-md-clawdbot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1397,
+    "installs": 44,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read, summarize, propose edits, and write back changes for Markdown todo files using line-stable bot markers without altering task identity.",
+  "updated_at": 1779077006232,
+  "version": "1.0.0"
+}
