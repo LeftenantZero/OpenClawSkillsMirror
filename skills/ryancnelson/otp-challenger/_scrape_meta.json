@@ -1,0 +1,63 @@
+{
+  "changelog": "Version 1.0.6\n\n- Expanded required binaries and environment variable documentation in SKILL.md.\n- Added details for privileged features and OTP failure hooks.\n- Noted `qrencode` requirement for `generate-secret.sh`.\n- Improved clarity of configuration, environment variables, and installation sections.",
+  "created_at": 1769900188599,
+  "display_name": "Otp Challenger",
+  "fetched_at": 1787806040491,
+  "files": [
+    "INSTALLATION.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "check-status.sh",
+    "config-template.yaml",
+    "docs/implementation-plans/2025-01-31-yubikey-support/phase_01.md",
+    "docs/implementation-plans/2025-01-31-yubikey-support/phase_02.md",
+    "docs/implementation-plans/2025-01-31-yubikey-support/phase_03.md",
+    "docs/plans/2025-01-31-yubikey-support-design.md",
+    "env-template.sh",
+    "examples/openclaw/README.md",
+    "examples/openclaw/cron-expire.sh",
+    "examples/openclaw/interceptor.sh",
+    "generate-secret.sh",
+    "get-current-code.sh",
+    "memory/README.md",
+    "otp-skill-summary.md",
+    "prepare-otp-challenger-for-update-and-upload.sh",
+    "skill-card.md",
+    "tests/openclaw_interceptor.test.sh",
+    "totp.mjs",
+    "verify.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783654303503,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Ryan Nelson",
+    "handle": "ryancnelson",
+    "user_id": "s17exr93c9x1ybe7y3q8q1wgc185s0t2"
+  },
+  "slug": "otp-challenger",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/otp-challenger",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=otp-challenger&ownerHandle=ryancnelson",
+    "page_url": "https://clawhub.ai/ryancnelson/skills/otp-challenger"
+  },
+  "stats": {
+    "comments": 4,
+    "downloads": 3617,
+    "installs": 125,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Enable agents and skills to challenge users for fresh two-factor authentication proof (TOTP or YubiKey) before executing sensitive actions. Use this for identity verification in approval workflows - deploy commands, financial operations, data access, admin operations, and change control.",
+  "updated_at": 1778987593975,
+  "version": "1.0.6"
+}
