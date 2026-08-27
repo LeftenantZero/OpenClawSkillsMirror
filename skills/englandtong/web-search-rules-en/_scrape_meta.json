@@ -1,0 +1,45 @@
+{
+  "changelog": "Version 3.0.0 introduces a safer, more auditable, and extensible approach to web search rule management across multiple knowledge platforms.\n\n- Adds support for new platforms: Feishu Wiki, DingTalk Docs, and custom adapters, alongside IMA, Tencent Docs, Obsidian, and NotebookLM.\n- Moves configuration and audit log storage to `~/.skill-config/web-search-rules-en/` with explicit migration guidance for legacy configs.\n- Implements a strict security model: local staging by default, no credential storage, and double-confirmation for risky operations (cloud upload, deletion, migration, browser automation).\n- Formalizes an audit log for all write, archive, migration, and deletion actions.\n- Provides a structured rule engine with conflict handling, normalization, prioritized classification, and user override checks.\n- Includes extensive reference guides for platform adapters, safe operations, and migration workflows.",
+  "created_at": 1777997082930,
+  "display_name": "Web Search Rules",
+  "fetched_at": 1787810119268,
+  "files": [
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/examples.md",
+    "references/feishu-dingtalk-operations.md",
+    "references/ima-operations.md",
+    "references/migration-and-testing.md",
+    "references/notebooklm-operations.md",
+    "references/obsidian-operations.md",
+    "references/platform-adapters.md",
+    "references/platform-comparison.md",
+    "references/rule-engine.md",
+    "references/tencent-docs-operations.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "EnglandTong",
+    "handle": "englandtong",
+    "user_id": "s1712yyvmw7t8z7nqxpz1ydfad8540a4"
+  },
+  "slug": "web-search-rules-en",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/web-search-rules-en",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=web-search-rules-en&ownerHandle=englandtong",
+    "page_url": "https://clawhub.ai/englandtong/skills/web-search-rules-en"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 707,
+    "installs": 17,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Manage web search result knowledge capture with safe URL rules, staging, user confirmation, archiving, audit logs, and multi-platform adapters for IMA, Tence...",
+  "updated_at": 1778492850251,
+  "version": "3.0.0"
+}
