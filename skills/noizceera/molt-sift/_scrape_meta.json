@@ -1,0 +1,63 @@
+{
+  "changelog": "Initial release of molt-sift: data validation and signal extraction with bounty micro-payment integration.\n\n- Validates raw data (JSON, text, data streams) against schemas and domain-specific rules.\n- Extracts high-confidence signals, cleans data, and outputs quality/reliability scores.\n- CLI, Python library, and HTTP API for validation and bounty processing.\n- Fully integrated with PayAClaw, MoltyGuild, and Clawslist; supports x402 Solana escrow micropayments.\n- Enables agents to auto-claim, process, and get paid for bounty validation jobs.\n- Predefined rule sets for crypto, trading, sentiment, and custom validation tasks.",
+  "created_at": 1772047883478,
+  "display_name": "Molt Sift",
+  "fetched_at": 1787791191882,
+  "files": [
+    "BUILD_PLAN.md",
+    "CLAWHUB_UPLOAD_GUIDE.md",
+    "DEPLOYMENT_GUIDE.md",
+    "IMPLEMENTATION_SUMMARY.md",
+    "PHASE1_COMPLETE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/crypto_schema.json",
+    "assets/sample_crypto.json",
+    "manifest.json",
+    "prepare_clawhub.py",
+    "references/rules.md",
+    "scripts/api_server.py",
+    "scripts/bounty_agent.py",
+    "scripts/molt_sift.py",
+    "scripts/payaclaw_client.py",
+    "scripts/sifter.py",
+    "scripts/solana_payment.py",
+    "setup.py",
+    "skill-card.md",
+    "test_bounty_flow.py",
+    "test_molt_sift.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779960510454,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "NoizceEra",
+    "handle": "noizceera",
+    "user_id": "s17dv7xajxbvnrypq2j2kxxqys88565h"
+  },
+  "slug": "molt-sift",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/molt-sift",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=molt-sift&ownerHandle=noizceera",
+    "page_url": "https://clawhub.ai/noizceera/skills/molt-sift"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 967,
+    "installs": 28,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Validate and extract high-confidence signals from JSON, text, or streams using customizable rules, with schema validation and integrated Solana bounty payments.",
+  "updated_at": 1779077331187,
+  "version": "0.1.0"
+}
