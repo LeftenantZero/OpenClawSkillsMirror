@@ -1,0 +1,56 @@
+{
+  "changelog": "Initial release of alibabacloud-bailian-image-creator skill.\n\n- Supports AI image generation, editing, and understanding using Alibaba Cloud DashScope API.\n- Strictly enforces all tasks via verified scripts; no custom code or third-party services allowed.\n- Automatically manages API keys and security with zero manual key handling required.\n- Provides detailed task-to-script and model selection mapping for different user requests.\n- Implements robust validation for API responses, output files, and security before reporting success.",
+  "created_at": 1778746925781,
+  "display_name": "Alibabacloud Bailian Image Creator",
+  "fetched_at": 1787793988437,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api-docs.md",
+    "references/error-codes.md",
+    "references/models.md",
+    "references/prompt-guide.md",
+    "references/ram-policies.md",
+    "scripts/api_key.py",
+    "scripts/base64_tool.py",
+    "scripts/image_edit.py",
+    "scripts/image_edit_base64.py",
+    "scripts/image_understanding.py",
+    "scripts/requirements.txt",
+    "scripts/text_to_image.py",
+    "scripts/wanx_generate.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090802729,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-bailian-image-creator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-bailian-image-creator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-bailian-image-creator&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-bailian-image-creator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 574,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generates, edits, and analyzes images using Alibaba Cloud DashScope API with supported qwen and wan2.7 models via predefined scripts.",
+  "updated_at": 1779076372157,
+  "version": "0.0.1"
+}
