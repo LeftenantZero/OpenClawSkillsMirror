@@ -1,0 +1,63 @@
+{
+  "changelog": "Initial release of alibabacloud-emas-apm-query \u2014 a troubleshooting skill for Alibaba Cloud EMAS APM (Application Performance Monitoring):\n\n- Supports root cause analysis for 6 issue types: crash, anr, lag, custom, memory_leak, memory_alloc\n- Integrates the 4 read-only OpenAPIs: get-issues, get-issue, get-errors, get-error\n- Covers native Android/iOS/HarmonyOS, Flutter, and Unity apps\n- Provides stack trace mapping against user source code for actionable fix suggestions\n- Enforces RAM permission checks and parameter confirmation for secure, user-guided operations",
+  "created_at": 1776827705803,
+  "display_name": "Alibabacloud Emas Apm Query",
+  "fetched_at": 1787817187821,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/system-filters/anr-android.json",
+    "assets/system-filters/crash-android.json",
+    "assets/system-filters/crash-harmony.json",
+    "assets/system-filters/crash-iphoneos.json",
+    "assets/system-filters/custom-android.json",
+    "assets/system-filters/custom-harmony.json",
+    "assets/system-filters/custom-iphoneos.json",
+    "assets/system-filters/index.json",
+    "assets/system-filters/lag-android.json",
+    "assets/system-filters/lag-harmony.json",
+    "assets/system-filters/lag-iphoneos.json",
+    "assets/system-filters/memory_alloc-android.json",
+    "assets/system-filters/memory_alloc-iphoneos.json",
+    "assets/system-filters/memory_leak-android.json",
+    "assets/system-filters/memory_leak-iphoneos.json",
+    "references/acceptance-criteria.md",
+    "references/appkey-detection.md",
+    "references/biz-module-reference.md",
+    "references/cli-installation-guide.md",
+    "references/filter-reference.md",
+    "references/get-error.md",
+    "references/get-errors.md",
+    "references/get-issue.md",
+    "references/get-issues.md",
+    "references/ram-policies.md",
+    "references/related-commands.md",
+    "references/troubleshoot-workflow.md",
+    "references/verification-method.md",
+    "scripts/dig_issue.sh",
+    "scripts/list_top_issues.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-emas-apm-query",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-emas-apm-query",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-emas-apm-query&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-emas-apm-query"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 627,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Alibaba Cloud EMAS APM (mobile Application Performance Monitoring) issue troubleshooting skill. Covers the 4 read-only OpenAPIs exposed by the `aliyun emas-a...",
+  "updated_at": 1778492702954,
+  "version": "0.0.1"
+}
