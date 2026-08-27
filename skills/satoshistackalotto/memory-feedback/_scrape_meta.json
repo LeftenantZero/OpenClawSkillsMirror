@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of memory-feedback skill introducing agent memory, pattern detection, and semi-automatic improvement proposals.\n\n- Logs all episodes and failures from skills, storing data locally by default.\n- Scans logs for repeating failure/action patterns and confidence thresholds.\n- Proposes skill improvements as GitHub pull requests (human review required).\n- Rate limits, storage management, and audit/report tools included.\n- GITHUB_TOKEN and GitHub CLI are optional, needed only for PR workflow; local learning works without them.",
+  "created_at": 1771696105552,
+  "display_name": "Memory Feedback",
+  "fetched_at": 1787802973056,
+  "files": [
+    "EVALS.json",
+    "SKILL.md",
+    "_meta.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779947362228,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Stems",
+    "handle": "satoshistackalotto",
+    "user_id": "s17c6w15frspgvmq81dpbnvckh884fcn"
+  },
+  "slug": "memory-feedback",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memory-feedback",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memory-feedback&ownerHandle=satoshistackalotto",
+    "page_url": "https://clawhub.ai/satoshistackalotto/skills/memory-feedback"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 550,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Agent memory and learning system. Logs actions/failures, detects patterns, proposes skill improvements via GitHub PRs. Human approval required.",
+  "updated_at": 1778992147480,
+  "version": "0.1.0"
+}
