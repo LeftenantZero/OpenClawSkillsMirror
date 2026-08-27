@@ -1,0 +1,81 @@
+{
+  "changelog": "- \u4f18\u5316\u4e86 L3 \u5c42\u7684\u5b9a\u65f6\u5408\u5e76\u4e0e\u626b\u63cf\u903b\u8f91\uff0c\u6539\u5584\u589e\u91cf\u5199\u5165\u548c\u5f52\u6863\u7684\u7a33\u5b9a\u6027\u3002\n- \u66f4\u65b0\u4e86 session \u626b\u63cf\u4e0e manifest \u6587\u4ef6\uff0c\u63d0\u5347\u4e86\u4efb\u52a1\u8fd0\u884c\u7684\u51c6\u786e\u6027\u548c\u4e00\u81f4\u6027\u3002\n- \u4fee\u590d\u4e86\u90e8\u5206\u8fb9\u7f18\u60c5\u51b5\u4e0b\u7684\u65f6\u95f4\u7a97\u53e3\u548c\u5f52\u6863\u8c03\u5ea6\u95ee\u9898\u3002",
+  "created_at": 1777104912300,
+  "display_name": "Vector Mind Map Fusion",
+  "fetched_at": 1787794685964,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/config.py",
+    "config/logger.yaml",
+    "config/settings.yaml",
+    "docs/fixes.md",
+    "docs/l1_flow.md",
+    "docs/l2_flow.md",
+    "docs/l3_flow.md",
+    "docs/recall_api.md",
+    "examples/demo.py",
+    "main.py",
+    "memory/_state/last_run_manifest.json",
+    "memory/_state/scan_sessions_incremental.json",
+    "requirements.txt",
+    "skill-card.md",
+    "src/infinitydb_lite.py",
+    "src/l1/__init__.py",
+    "src/l1/l1_classifier.py",
+    "src/l1/l1_cron.py",
+    "src/l1/scan_sessions_incremental.py",
+    "src/l2/__init__.py",
+    "src/l2/l2_checkpoint.py",
+    "src/l2/l2_cron.py",
+    "src/l2/l2_daily.py",
+    "src/l3/__init__.py",
+    "src/l3/l3_biweekly_consolidate.py",
+    "src/l3/l3_cron.py",
+    "src/l3/l3_manifest.py",
+    "src/recall/__init__.py",
+    "src/recall/fusion_recall_skill.py",
+    "src/recall/infinitydb_lite.py",
+    "src/recall/recall.py",
+    "src/utils/__init__.py",
+    "src/utils/cost_tracker.py",
+    "src/utils/file_utils.py",
+    "src/utils/log_utils.py",
+    "src/utils/vector_utils.py",
+    "start.sh",
+    "tests/__init__.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090559996,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "dxiaofeng0811-lgtm",
+    "handle": "dxiaofeng0811-lgtm",
+    "user_id": "s17atqadnqpa3am0hjznmvcev583sngm"
+  },
+  "slug": "vector-mind-map-fusion",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/vector-mind-map-fusion",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=vector-mind-map-fusion&ownerHandle=dxiaofeng0811-lgtm",
+    "page_url": "https://clawhub.ai/dxiaofeng0811-lgtm/skills/vector-mind-map-fusion"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 787,
+    "installs": 21,
+    "stars": 0,
+    "versions": 16
+  },
+  "summary": "L1\u2192L2\u2192L3 \u5411\u91cf\u8bb0\u5fc6\u878d\u5408\u7cfb\u7edf\u3002\u7528\u4e8e\u6784\u5efa\u3001\u67e5\u8be2\u548c\u7ba1\u7406\u8bed\u4e49\u8bb0\u5fc6\u56fe\u8c31\u3002\u5f53\u7528\u6237\u9700\u8981\u63d0\u53d6\u3001\u52a0\u5de5\u3001\u8bb0\u5fc6\u3001\u6216\u68c0\u7d22\u7ed3\u6784\u5316\u77e5\u8bc6\u65f6\u89e6\u53d1\u3002\u5177\u4f53\u573a\u666f\uff1a(1) \u7528\u6237\u8bf4\"\u8bb0\u4f4f\"\u3001\"\u5b58\u5165\u8bb0\u5fc6\"\u3001\"\u8fd9\u4e2a\u5f88\u91cd\u8981\" \u2192 L1 \u63d0\u53d6\uff1b(2) \u7528\u6237\u95ee\"\u4e4b\u524d\u6709\u6ca1\u6709\"\u3001\"\u6709\u6ca1\u6709\u8bb0\u5f55\u8fc7\"\u3001\"\u6211\u7684\u8bb0\u5fc6\u91cc\" \u2192 L2+L3 \u67e5\u8be2\uff1b(3) \u7528\u6237\u8981\u6c42\"\u6574\u7406\u4e00\u4e0b...",
+  "updated_at": 1779076123447,
+  "version": "1.2.4"
+}
