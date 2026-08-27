@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release of the keyswap skill.\n- Enables rotation of Claude Max API tokens for OpenClaw Anthropic profiles.\n- Responds to user requests such as \"swap key\" or when a new `sk-ant-` token is provided.\n- Guides users to supply a valid token if not already provided.\n- Automates execution of a shell script to update both profiles and restart the gateway.\n- Confirms success or reports error details based on script output.",
+  "created_at": 1772476266914,
+  "display_name": "Key Swap",
+  "fetched_at": 1787800932784,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/keyswap.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089741104,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jawaddxb",
+    "handle": "jawaddxb",
+    "user_id": "s173f37xhh3fbz5gha9ctxrn0n8855cz"
+  },
+  "slug": "keyswap",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/keyswap",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=keyswap&ownerHandle=jawaddxb",
+    "page_url": "https://clawhub.ai/jawaddxb/skills/keyswap"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 935,
+    "installs": 27,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Rotate Claude Max API token for OpenClaw Anthropic profiles. Use when the user says \"swap key\", \"rotate key\", \"new key\", \"keyswap\", or provides a new `sk-ant...",
+  "updated_at": 1778994608182,
+  "version": "1.0.0"
+}
