@@ -1,0 +1,35 @@
+{
+  "changelog": "- Introduced a pure Python triage script (`scripts/triage.py`)\u2014no external dependencies required.\n- Full migration from shell script to Python for PR triage logic; run via `python3 scripts/triage.py`.\n- Now supports concurrent scanning and reporting for multiple repositories in a single run.\n- Documentation updated to reflect Python usage, new requirements, and improved portability.\n- Architecture section added, clarifying standard library-only usage and cross-platform compatibility.",
+  "created_at": 1774641602221,
+  "display_name": "Fleet PR Agent",
+  "fetched_at": 1787843726876,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/triage.py",
+    "scripts/triage.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "lanxevo3",
+    "handle": "lanxevo3",
+    "user_id": "s177815d2cqzf9rjmm2fy9a82583hpt2"
+  },
+  "slug": "fleet-pr-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fleet-pr-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fleet-pr-agent&ownerHandle=lanxevo3",
+    "page_url": "https://clawhub.ai/lanxevo3/skills/fleet-pr-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 617,
+    "installs": 15,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Multi-repo PR monitoring and triage agent. Scans GitHub repos for open PRs, prioritizes by staleness/review status/CI state, and generates a structured Markd...",
+  "updated_at": 1778492247496,
+  "version": "1.1.0"
+}
