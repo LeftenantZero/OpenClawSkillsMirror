@@ -1,0 +1,58 @@
+{
+  "changelog": "## v1.0.0 - Initial Release\n\nYuque (\u8bed\u96c0) knowledge base management skill for AI agents.\n\n### Features\n- Search: Full-text search for documents and repos\n- Read: Get document content with markdown/HTML/lake format support\n- Create: Create documents in any repo with markdown format\n- Update: Edit document title, body, and visibility\n- Delete: Remove documents from repos\n- Repos: List and create knowledge bases (personal or group)\n- TOC: View and manage repo table of contents structure\n- Versions: Browse document version history with diff\n\n### Technical\n- Zero external dependencies (Python standard library only)\n- Cross-platform: works with Claude Code, opencode, openclaw, and any agent with shell access\n- Dual auth: config.json (preferred) or YUQUE_TOKEN env var\n- Quick setup via AI prompt: just tell your agent your API token\n- 13 independent scripts, each handling one operation\n- JSON output to stdout for easy agent parsing",
+  "created_at": 1774949764566,
+  "display_name": "Yuque \u8bed\u96c0\u77e5\u8bc6\u5e93\u7ba1\u7406",
+  "fetched_at": 1787838423775,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.example.json",
+    "references/api-reference.md",
+    "scripts/_client.py",
+    "scripts/create_doc.py",
+    "scripts/create_repo.py",
+    "scripts/delete_doc.py",
+    "scripts/doc_versions.py",
+    "scripts/get_doc.py",
+    "scripts/get_toc.py",
+    "scripts/get_user.py",
+    "scripts/list_docs.py",
+    "scripts/list_repos.py",
+    "scripts/search.py",
+    "scripts/update_doc.py",
+    "scripts/update_toc.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090206995,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "LEE",
+    "handle": "lt5227",
+    "user_id": "s17a0ma3mknqpt82kbx2d16jd583sh7h"
+  },
+  "slug": "yuque-knowledge-base",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/yuque-knowledge-base",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=yuque-knowledge-base&ownerHandle=lt5227",
+    "page_url": "https://clawhub.ai/lt5227/skills/yuque-knowledge-base"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 657,
+    "installs": 18,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u8bed\u96c0 (Yuque) \u77e5\u8bc6\u5e93\u7ba1\u7406\u3002\u641c\u7d22\u3001\u9605\u8bfb\u3001\u521b\u5efa\u3001\u7f16\u8f91\u8bed\u96c0\u6587\u6863\uff0c\u7ba1\u7406\u77e5\u8bc6\u5e93\u548c\u76ee\u5f55\u3002 Use when: user mentions \u8bed\u96c0/Yuque, or wants to search/read/create/edit documents, manage knowledge bases, organize...",
+  "updated_at": 1778492317172,
+  "version": "1.0.0"
+}
