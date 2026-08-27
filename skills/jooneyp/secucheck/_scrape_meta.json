@@ -1,0 +1,74 @@
+{
+  "changelog": "secucheck 2.8.0\n\n- Improved handling and documentation for failed security checks by adding platform-specific fallback commands.\n- Enhanced cross-platform compatibility with clearer instructions for Linux, macOS, WSL, Windows, and DSM environments.\n- Expanded agent instructions on fallback procedures for minimal environments and missing tools.\n- Documentation updates in SKILL.md for platform detection fields and fallback workflow.\n- No core features changed; this is a workflow and documentation enhancement release.",
+  "created_at": 1770527766190,
+  "display_name": "Secucheck",
+  "fetched_at": 1787805283513,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "checks/agents.md",
+    "checks/channels.md",
+    "checks/cron.md",
+    "checks/network.md",
+    "checks/runtime.md",
+    "checks/sessions.md",
+    "checks/skills.md",
+    "dashboard/template-en.html",
+    "dashboard/template-ja.html",
+    "dashboard/template-ko.html",
+    "dashboard/template-zh.html",
+    "dashboard/template.html",
+    "scenarios/credential-exposure.md",
+    "scenarios/privilege-escalation.md",
+    "scenarios/prompt-injection.md",
+    "scenarios/session-leak.md",
+    "scenarios/unauthorized-access.md",
+    "scripts/check_network.sh",
+    "scripts/full_audit.sh",
+    "scripts/gather_agents.sh",
+    "scripts/gather_config.sh",
+    "scripts/gather_cron.sh",
+    "scripts/gather_skills.sh",
+    "scripts/generate_dashboard.sh",
+    "scripts/runtime_check.sh",
+    "scripts/serve_dashboard.sh",
+    "skill-card.md",
+    "skill.json",
+    "templates/finding.md",
+    "templates/report.md",
+    "templates/summary.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783657073375,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Joonyoung Park",
+    "handle": "jooneyp",
+    "user_id": "s17ftfagztx5gdfjxjbn2snqhd8849fz"
+  },
+  "slug": "secucheck",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/secucheck",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=secucheck&ownerHandle=jooneyp",
+    "page_url": "https://clawhub.ai/jooneyp/skills/secucheck"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4271,
+    "installs": 147,
+    "stars": 4,
+    "versions": 15
+  },
+  "summary": "Comprehensive security audit for OpenClaw. Scans 7 domains (runtime, channels, agents, cron, skills, sessions, network), supports 3 expertise levels, context-aware analysis, and visual dashboard. Read-only with localized reports.",
+  "updated_at": 1778988980360,
+  "version": "2.8.0"
+}
