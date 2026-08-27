@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of the diet-tracker skill:\n\n- Tracks daily diet and calculates nutrition (calories, protein, carbs, fat) to support weight loss goals.\n- Logs meals and provides remaining calorie/macronutrient budgets, with clear estimation if nutrition data is missing.\n- Integrates with cron jobs to automatically remind users to log lunch and dinner.\n- Reads user calorie/macro targets and profile from USER.md; calculates TDEE based on activity.\n- Enforces strict data logging format including calories and macronutrient grams for each meal.\n- Handles errors gracefully, prompting for missing user/profile data or food nutrition info as needed.",
+  "created_at": 1776917390962,
+  "display_name": "abe-diet-tracker",
+  "fetched_at": 1787794757413,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/food_database.json",
+    "scripts/get_food_nutrition.py",
+    "scripts/update_memory.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090518247,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "AbelTennyson",
+    "handle": "abeltennyson",
+    "user_id": "s174gfyzm9cmcv1mx6226h2s3584rfxt"
+  },
+  "slug": "abe-diet-tracker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/abe-diet-tracker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=abe-diet-tracker&ownerHandle=abeltennyson",
+    "page_url": "https://clawhub.ai/abeltennyson/skills/abe-diet-tracker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 637,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Tracks daily diet and calculates nutrition information to help achieve weight loss goals. Use when user provides meal information, asks about calorie intake,...",
+  "updated_at": 1779076095834,
+  "version": "1.0.0"
+}
