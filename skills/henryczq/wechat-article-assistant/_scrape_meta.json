@@ -1,0 +1,77 @@
+{
+  "changelog": "**Expanded capabilities for WeChat article management and export:**\n\n- Added support for viewing public account lists, recent articles, and single account article lists.\n- Introduced `article-detail` and `fetch-account-details` for robust article detail and image fetching.\n- Image download is now required for article fetch success; failures prompt proxy troubleshooting.\n- Proxy configuration and inspection commands (`proxy-show`, `proxy-set`) are emphasized for troubleshooting.\n- New commands for exporting merged or single-account markdown reports of recent articles.\n- Enhanced documentation with recommended workflows and key parameters for all main scenarios.",
+  "created_at": 1774088416297,
+  "display_name": "\u591a\u4e2a\u5fae\u4fe1\u516c\u4f17\u53f7\u6587\u7ae0\u540c\u6b65\u548c\u4e0b\u8f7d",
+  "fetched_at": 1787858746257,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/account-classification-summary-design.md",
+    "references/design.md",
+    "references/interface-reference.md",
+    "references/operations.md",
+    "references/sqlite-schema.md",
+    "requirements.txt",
+    "scripts/account_helpers.py",
+    "scripts/account_management_service.py",
+    "scripts/account_query_service.py",
+    "scripts/account_service.py",
+    "scripts/article_detail_service.py",
+    "scripts/article_metadata_service.py",
+    "scripts/article_report_service.py",
+    "scripts/article_service.py",
+    "scripts/cli.py",
+    "scripts/cli_args.py",
+    "scripts/cli_handlers.py",
+    "scripts/config.py",
+    "scripts/database.py",
+    "scripts/dev/smoke_test.py",
+    "scripts/env_check.py",
+    "scripts/list_articles.py",
+    "scripts/log_utils.py",
+    "scripts/login_service.py",
+    "scripts/mp_client.py",
+    "scripts/openclaw_messaging.py",
+    "scripts/run_sync_all.sh",
+    "scripts/schema.py",
+    "scripts/session_store.py",
+    "scripts/sync_service.py",
+    "scripts/utils.py",
+    "scripts/wechat_article_assistant.py",
+    "scripts/wechat_article_openclaw.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090307797,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "henryczq",
+    "handle": "henryczq",
+    "user_id": "s17e8ps3zhwtzvkkyrkv0x5rs983gj2c"
+  },
+  "slug": "wechat-article-assistant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wechat-article-assistant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wechat-article-assistant&ownerHandle=henryczq",
+    "page_url": "https://clawhub.ai/henryczq/skills/wechat-article-assistant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 900,
+    "installs": 22,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "\u652f\u6301\u516c\u4f17\u53f7\u767b\u5f55\u3001\u8d26\u53f7\u7ba1\u7406\u3001\u6587\u7ae0\u540c\u6b65\u3001\u8be6\u60c5\u5bfc\u51fa\u4e0e\u4ee3\u7406\u914d\u7f6e",
+  "updated_at": 1778492083540,
+  "version": "0.3.2"
+}
