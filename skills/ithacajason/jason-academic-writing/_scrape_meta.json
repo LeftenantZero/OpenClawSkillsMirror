@@ -1,0 +1,54 @@
+{
+  "changelog": "- Added requirements.txt to specify required Python packages for installation.\n- Updated pipeline to require OPENAI_API_KEY and OPENAI_BASE_URL environment variables.\n- Removed the \"Finalize\" stage and now generate the process summary as the final step.\n- Updated SKILL.md to document new requirements and reflect the revised pipeline structure.\n- Minor fixes and enhancements to research, write, review, and revise script logic.",
+  "created_at": 1775654175589,
+  "display_name": "Jason Academic Writing",
+  "fetched_at": 1787827833626,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/example_asset.txt",
+    "references/api_reference.md",
+    "references/review_rubric.md",
+    "requirements.txt",
+    "scripts/integrity_check.py",
+    "scripts/main.py",
+    "scripts/research.py",
+    "scripts/review.py",
+    "scripts/revise.py",
+    "scripts/summary.py",
+    "scripts/write.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090344460,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ITHACAJASON",
+    "handle": "ithacajason",
+    "user_id": "s175axj98dj189n0x03wc0nxad84e2br"
+  },
+  "slug": "jason-academic-writing",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/jason-academic-writing",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=jason-academic-writing&ownerHandle=ithacajason",
+    "page_url": "https://clawhub.ai/ithacajason/skills/jason-academic-writing"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 747,
+    "installs": 17,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Complete academic paper writing pipeline with integrity checks and multi-agent review system. Optimized prompts for Methods/Results/Discussion sections. Feat...",
+  "updated_at": 1778492480808,
+  "version": "1.0.1"
+}
