@@ -1,0 +1,54 @@
+{
+  "changelog": "- Improved documentation, including clearer setup and workflow instructions in SKILL.md.\n- Example config and setup guides updated for easier onboarding.\n- Minor revisions to scripts (scan, draft, remind, dismiss) for consistency with new instructions.\n- Writing style guidance clarified to ensure consistent drafting tone.\n- No core workflow or behavioral changes\u2014functionality remains the same.",
+  "created_at": 1769870792116,
+  "display_name": "MS Outlook + Teams Assistant",
+  "fetched_at": 1787806118374,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/config.example.json",
+    "references/teams-graph-setup.md",
+    "references/writing-style.md",
+    "scripts/dismiss.py",
+    "scripts/draft_reply.py",
+    "scripts/remind.py",
+    "scripts/scan_all.py",
+    "scripts/scan_outlook.py",
+    "scripts/state.py",
+    "scripts/teams_scan.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783652760855,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "abhinavjp",
+    "handle": "abhinavjp",
+    "user_id": "s17e3df67hef3ccgmsjs6sj8sn884hst"
+  },
+  "slug": "ms-outlook-teams-assistant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ms-outlook-teams-assistant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ms-outlook-teams-assistant&ownerHandle=abhinavjp",
+    "page_url": "https://clawhub.ai/abhinavjp/skills/ms-outlook-teams-assistant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3342,
+    "installs": 113,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Track and nag about Microsoft Outlook email and (optionally) Microsoft Teams messages on a Windows machine, without relying on web versions. Use when the user asks to: (1) monitor inbox/mentions and remind them on Telegram/Teams until dismissed, (2) draft short, personable, low-jargon email replies from an existing Outlook thread, (3) surface action items from the last N days (default 7). Works via Outlook Desktop automation (COM) and optionally Microsoft Graph for Teams if configured.",
+  "updated_at": 1778987509346,
+  "version": "1.0.1"
+}
