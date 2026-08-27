@@ -1,0 +1,39 @@
+{
+  "changelog": "**Summary:**  \n1.0.1 introduces a dual-backup (\u53cc\u4fdd\u9669) reminder system and script-based architecture.\n\n- Added full script-based workflow with `install.mjs`, `create-reminder.mjs`, `reminder-backup.mjs`, and `daily-brief.mjs`.\n- Introduced dual reminder mechanism: uses OpenClaw cron as primary, with system-level crontab fallback for reliable delivery even if Gateway fails.\n- Added configurable options (via `default.json` and user config file) for primary channel, backup status, user/account IDs, and multi-channel support (WeChat, Telegram, Discord).\n- Provided step-by-step install, configuration, and troubleshooting instructions.\n- Overhauled documentation for concise operation and quick start, focusing on scripts and resilience.\n- Now requires both \"cron\" and \"message\" tools.",
+  "created_at": 1774527956764,
+  "display_name": "schedule-reminder",
+  "fetched_at": 1787846595203,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/default.json",
+    "package.json",
+    "scripts/create-reminder.mjs",
+    "scripts/daily-brief.mjs",
+    "scripts/install.mjs",
+    "scripts/reminder-backup.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "JayTing511",
+    "handle": "jayting511",
+    "user_id": "s17de85qfjecdke7vycq9ndjv983m3f7"
+  },
+  "slug": "schedule-reminder",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/schedule-reminder",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=schedule-reminder&ownerHandle=jayting511",
+    "page_url": "https://clawhub.ai/jayting511/skills/schedule-reminder"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1040,
+    "installs": 30,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "\u53cc\u4fdd\u9669\u667a\u80fd\u65e5\u7a0b\u63d0\u9192\u7cfb\u7edf\u3002\u89e6\u53d1\u8bcd: \u63d0\u9192\u6211\u3001\u8bb0\u5f97\u3001\u522b\u5fd8\u4e86\u3001\u660e\u5929\u3001\u540e\u5929\u3001\u4e0b\u5348\u3001\u4e0a\u5348\u3001\u51e0\u70b9\u3001\u4f1a\u8bae\u3001\u5f00\u4f1a\u3001\u622a\u6b62\u3001\u622a\u6b62\u65e5\u671f\u3001\u65e5\u7a0b\u3001\u5b89\u6392\u3001\u8ba1\u5212\u3002\u5373\u4f7fGateway\u5931\u6548\u4e5f\u80fd\u51c6\u65f6\u63d0\u9192\u3002\u4f7f\u7528\u573a\u666f\uff1a(1) \u7528\u6237\u8bf4'\u63d0\u9192\u6211XX'\u65f6\u521b\u5efa\u63d0\u9192, (2) \u4e3b\u52a8\u4ece\u5bf9\u8bdd\u4e2d\u6355\u6349\u65e5\u7a0b\u4fe1\u606f, (3) \u6bcf\u65e5\u5b9a\u65f6\u63a8\u9001\u65e5\u7a0b\u9884\u89c8\u3002\u652f\u6301\u5fae\u4fe1\u3001Telegram\u7b49...",
+  "updated_at": 1778492214207,
+  "version": "1.0.1"
+}
