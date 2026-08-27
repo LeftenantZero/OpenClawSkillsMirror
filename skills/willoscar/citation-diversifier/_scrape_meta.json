@@ -1,0 +1,60 @@
+{
+  "changelog": "Initial release of citation-diversifier.\n\n- Adds a tool to generate in-scope citation \"budget\" plans per subsection (H3) to increase citation diversity and density.\n- Produces a constraint-based report (output/CITATION_BUDGET_REPORT.md) without introducing new facts or inventing citations.\n- Ensures only existing, in-scope citation keys from citations/ref.bib are proposed, adhering to context pack constraints.\n- Designed to help drafts pass the global unique-citation gate and avoid under-cited sections.\n- Includes guidance for budget allocation, report structure, and workflow integration with citation-injector and draft-polisher.",
+  "created_at": 1773926975932,
+  "display_name": "Citation Diversifier",
+  "fetched_at": 1787862724523,
+  "files": [
+    "AGENTS.md",
+    "SKILL.md",
+    "_meta.json",
+    "pipelines/arxiv-survey-latex.pipeline.md",
+    "pipelines/arxiv-survey.pipeline.md",
+    "pipelines/graduate-paper-pipeline.md",
+    "pipelines/idea-brainstorm.pipeline.md",
+    "pipelines/lit-snapshot.pipeline.md",
+    "pipelines/peer-review.pipeline.md",
+    "pipelines/systematic-review.pipeline.md",
+    "pipelines/tutorial.pipeline.md",
+    "scripts/run.py",
+    "skill-card.md",
+    "tooling/__init__.py",
+    "tooling/common.py",
+    "tooling/executor.py",
+    "tooling/ideation.py",
+    "tooling/pipeline_spec.py",
+    "tooling/pipeline_text.py",
+    "tooling/quality_gate.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089980820,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "WILLOSCAR",
+    "handle": "willoscar",
+    "user_id": "s170swmbgwf84dyyf8gmbm8h7d885agm"
+  },
+  "slug": "citation-diversifier",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/citation-diversifier",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=citation-diversifier&ownerHandle=willoscar",
+    "page_url": "https://clawhub.ai/willoscar/skills/citation-diversifier"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 699,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Raise citation diversity/density (NO NEW FACTS): generate an in-scope \u201ccitation budget\u201d plan per H3 so drafts stop failing the global unique-citation gate an...",
+  "updated_at": 1778492033442,
+  "version": "1.0.0"
+}
