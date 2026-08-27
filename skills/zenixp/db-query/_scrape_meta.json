@@ -1,0 +1,46 @@
+{
+  "changelog": "- Credentials are now handled via environment variables (`MYSQL_PWD`, `SSHPASS`) for increased security; passwords are no longer visible in process lists.\n- Strongly recommends storing database and SSH passwords in environment variables instead of the config file.\n- Updated documentation with usage examples for environment variables and changes to configuration best practices.\n- All existing functionality and usage remain unchanged.",
+  "created_at": 1769857259065,
+  "display_name": "MYSQL QUERY",
+  "fetched_at": 1787793789501,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/INSTALL.md",
+    "scripts/config.example.json",
+    "scripts/db_query.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783652640984,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zenixp",
+    "handle": "zenixp",
+    "user_id": "s172ar96tgy8bpr4qghvhvwanh83mz14"
+  },
+  "slug": "db-query",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/db-query",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=db-query&ownerHandle=zenixp",
+    "page_url": "https://clawhub.ai/zenixp/skills/db-query"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4353,
+    "installs": 150,
+    "stars": 8,
+    "versions": 2
+  },
+  "summary": "Query project databases with automatic SSH tunnel management. Use when you need to execute SQL queries against configured databases, especially those accessi...",
+  "updated_at": 1779076461559,
+  "version": "1.0.1"
+}
