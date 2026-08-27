@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of auto-security-audit.\n\n- One-click automated security audit: combines nmap port/service scan, nuclei CVE/web vulnerability detection (12,000+ templates, internal+external), SSL/TLS and SSH checks, firewall and fail2ban status, plus patch and login audits.\n- Generates structured Markdown reports, including summaries for cron/Feishu (Lark) push notifications.\n- Supports scheduled scans via cron integration and Feishu notifications.\n- Results classified as CRITICAL, WARN, or SAFE for easy risk assessment.\n- Requires nmap, nuclei, and sslscan as dependencies.",
+  "created_at": 1772640273119,
+  "display_name": "Auto Security Audit",
+  "fetched_at": 1787800424077,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/security_scan.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "nashbuaa-ops",
+    "handle": "nashbuaa-ops",
+    "user_id": "s1724g0xcbv63npdhc7c0b6fgs8857fr"
+  },
+  "slug": "auto-security-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/auto-security-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=auto-security-audit&ownerHandle=nashbuaa-ops",
+    "page_url": "https://clawhub.ai/nashbuaa-ops/skills/auto-security-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1151,
+    "installs": 31,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4e00\u952e\u81ea\u52a8\u5316\u5b89\u5168\u5ba1\u8ba1\uff1anmap \u7aef\u53e3\u626b\u63cf + nuclei 12000+ CVE \u6f0f\u6d1e\u68c0\u6d4b\uff08\u5185\u5916\u7f51\u53cc\u626b\uff09+ SSL/TLS \u68c0\u67e5 + SSH/\u9632\u706b\u5899/fail2ban \u7cfb\u7edf\u5ba1\u8ba1 + Markdown \u62a5\u544a\u751f\u6210\u3002\u652f\u6301 cron \u5b9a\u65f6\u626b\u63cf + \u98de\u4e66\u63a8\u9001\u3002",
+  "updated_at": 1778995275999,
+  "version": "1.0.0"
+}
