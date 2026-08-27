@@ -1,0 +1,41 @@
+{
+  "changelog": "Initial release: Provides tools and guidance for stabilizing long-running OpenClaw deployments affected by stale sessions and resource exhaustion.\n\n- Diagnose and resolve high session and agent counts, browser-service timeouts, and gateway websocket closures.\n- Add step-by-step cleanup and escalation instructions to restore a healthy runtime.\n- Offer safe default configuration recommendations for low-resource VPS hosts.\n- Include scripts and commands for automating session pruning and watchdog installation.\n- Provide references to runbooks, config templates, and service files for further customization.",
+  "created_at": 1772888287832,
+  "display_name": "OpenClaw Session Cleanup",
+  "fetched_at": 1787800006652,
+  "files": [
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "docs/openclaw.session_cleanup_v1.md",
+    "scripts/install-cron-prune.sh",
+    "scripts/install-to-openclaw.sh",
+    "scripts/install-watchdog.sh",
+    "scripts/render-openclaw-config.sh",
+    "skill-card.md",
+    "templates/openclaw.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "NeoCh3n",
+    "handle": "neoch3n",
+    "user_id": "s17bhwzrjngxwx2pdknxpj02vd88506j"
+  },
+  "slug": "openclaw-session-cleanup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-session-cleanup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-session-cleanup&ownerHandle=neoch3n",
+    "page_url": "https://clawhub.ai/neoch3n/skills/openclaw-session-cleanup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1053,
+    "installs": 31,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Diagnose and stabilize long-running OpenClaw deployments that accumulate stale sessions, unreaped agents, browser-control timeouts, gateway websocket 1006 cl...",
+  "updated_at": 1778996334588,
+  "version": "1.0.0"
+}
