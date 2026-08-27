@@ -1,0 +1,47 @@
+{
+  "changelog": "**Major update: Adds automatic setup, cross-language source tracing, and enhanced dual-engine fact-checking.**\n\n- Introduced automatic setup on first use, guiding users to configure search engines and optional Tavily API.\n- Enhanced verification by combining Chinese (kimi_search + multi-search-engine) and English (Tavily + multi-search-engine) searches.\n- Added cross-language source tracing, earliest source detection, and path tracking for forwarded information.\n- Output now features structured verification reports with trust scores, sources, and step-by-step findings.\n- Manual (re)setup supported via setup commands.",
+  "created_at": 1775199820303,
+  "display_name": "Rumour Buster",
+  "fetched_at": 1787833432903,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/tavily_search.py",
+    "skill-card.md",
+    "sub-skills/setup/SKILL.md",
+    "sub-skills/setup/setup.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090281106,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "harry720320",
+    "handle": "harry720320",
+    "user_id": "s179jmvwtqbnssrx3d35h41w6h83xmb3"
+  },
+  "slug": "rumour-buster",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/rumour-buster",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=rumour-buster&ownerHandle=harry720320",
+    "page_url": "https://clawhub.ai/harry720320/skills/rumour-buster"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 489,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u8c23\u8a00\u7ec8\u7ed3\u8005\u3002\u53cc\u5f15\u64ce\u9a8c\u8bc1\u6d88\u606f\u771f\u5047\uff1a\u4e2d\u6587\u641c\u7d22\uff08kimi_search + multi-search-engine\uff09+ \u82f1\u6587\u641c\u7d22\uff08Tavily + multi-search-engine\uff09\uff0c\u4ea4\u53c9\u9a8c\u8bc1\uff0c\u6eaf\u6e90\u6d88\u606f\u6765\u6e90\u3002\u9996\u6b21\u4f7f\u7528\u81ea\u52a8\u8fd0\u884c setup \u914d\u7f6e\u3002",
+  "updated_at": 1778492386850,
+  "version": "0.3.0"
+}
