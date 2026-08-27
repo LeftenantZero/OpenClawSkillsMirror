@@ -1,0 +1,57 @@
+{
+  "changelog": "Initial release of the self-improvement skill for continuous learning and error logging.\n\n- Enables structured logging of errors, user corrections, feature requests, knowledge gaps, and best practices to markdown files.\n- Supports both OpenClaw and generic agent setups, with detailed instructions for file setup and promotion to project memory.\n- Introduces standardized formats for learnings, errors, and feature requests, including metadata for tracking and resolution.\n- Provides workflow to review and promote broadly applicable learnings to core project files (AGENTS.md, SOUL.md, TOOLS.md, CLAUDE.md).\n- Includes OpenClaw integration with hooks and workspace file structure for seamless adoption and inter-session communication.",
+  "created_at": 1773910949716,
+  "display_name": "Self Improvement Ai",
+  "fetched_at": 1787863294596,
+  "files": [
+    ".learnings/ERRORS.md",
+    ".learnings/FEATURE_REQUESTS.md",
+    ".learnings/LEARNINGS.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/LEARNINGS.md",
+    "assets/SKILL-TEMPLATE.md",
+    "hooks/openclaw/HOOK.md",
+    "hooks/openclaw/handler.js",
+    "hooks/openclaw/handler.ts",
+    "references/examples.md",
+    "references/hooks-setup.md",
+    "references/openclaw-integration.md",
+    "scripts/activator.sh",
+    "scripts/error-detector.sh",
+    "scripts/extract-skill.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089977326,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Fardeen Karim",
+    "handle": "fardeenkarim",
+    "user_id": "s177r42za8vqs7gcrmrm3ef09d84rsxs"
+  },
+  "slug": "self-improvement-ai",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/self-improvement-ai",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=self-improvement-ai&ownerHandle=fardeenkarim",
+    "page_url": "https://clawhub.ai/fardeenkarim/skills/self-improvement-ai"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 684,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Clau...",
+  "updated_at": 1778492029687,
+  "version": "1.0.0"
+}
