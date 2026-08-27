@@ -1,0 +1,47 @@
+{
+  "changelog": "OpenClaw Create Agent skill v1.0.0\n\n- Introduces a new skill to create and wire up OpenClaw agents for Feishu with a fixed workflow.\n- Supports two routing modes: new bot per agent (`account`), or multi-group/peer routing under one bot (`peer`).\n- Implements guided user flows for multi-group setups, including verification steps and log inspection.\n- Automates config file backup, runtime creation, config upsert, and gateway restart.\n- Ensures scenario alignment and collects only the required fields per routing mode.\n- Restricts usage to Feishu channels only.",
+  "created_at": 1776876678337,
+  "display_name": "OpenClaw Agent Creator",
+  "fetched_at": 1787794997858,
+  "files": [
+    "SKILL.json",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/routing-modes.md",
+    "scripts/upsert_openclaw_agent.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090515336,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "meichuanyi",
+    "handle": "meichuanyi",
+    "user_id": "s17fs80z5n1s94me082qqqyg9985a58e"
+  },
+  "slug": "feishu-agent-skills",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-agent-skills",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-agent-skills&ownerHandle=meichuanyi",
+    "page_url": "https://clawhub.ai/meichuanyi/skills/feishu-agent-skills"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 617,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Create and wire a new OpenClaw agent with a fixed workflow. Use when the user asks to create/add a new OpenClaw agent or says \u201c\u6211\u8981\u521b\u5efa\u4e00\u4e2a\u65b0\u7684 Agent\u201d, automate mult...",
+  "updated_at": 1779076004409,
+  "version": "1.0.0"
+}
