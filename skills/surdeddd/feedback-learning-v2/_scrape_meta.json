@@ -1,0 +1,39 @@
+{
+  "changelog": "Version 2.0.0 of feedback-learning introduces major upgrades to feedback detection, tracking, and learning:\n\n- Now tracks both positive and negative patterns\u2014positive triggers are analyzed and promoted alongside corrections.\n- Structured rules (genes) use a new detailed schema with condition, action, and context fields for clearer auto-promotion and diagnostics.\n- Adds lifecycle statuses for rules: active, stale, resolved, or wont-fix, with automatic resolution and stagnation checks.\n- Introduces a Behavioral Delta Test to ensure only meaningful rules are promoted.\n- Data files, cron integration, shell/Python automation, and Russian/English feedback detection are thoroughly documented and streamlined.\n- Weekly reporting and analysis are enhanced, including rule health and recurring pattern detection.",
+  "created_at": 1774023780939,
+  "display_name": "Feedback Learning V2",
+  "fetched_at": 1787860170926,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/analyze-patterns.py",
+    "scripts/check-genes.py",
+    "scripts/detect-feedback.py",
+    "scripts/error-catcher.sh",
+    "scripts/log-event.sh",
+    "scripts/weekly-report.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Maxim Kravtsov",
+    "handle": "surdeddd",
+    "user_id": "s178zfwnxm88mc5eh4xxt2ht9d884r3a"
+  },
+  "slug": "feedback-learning-v2",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feedback-learning-v2",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feedback-learning-v2&ownerHandle=surdeddd",
+    "page_url": "https://clawhub.ai/surdeddd/skills/feedback-learning-v2"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 660,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Zero-LLM feedback learning system for OpenClaw agents. Detects user feedback (emoji reactions, text signals like \"\u043f\u0435\u0440\u0435\u0434\u0435\u043b\u0430\u0439\"/\"\u043a\u0440\u0443\u0442\u043e\"), logs events, tracks po...",
+  "updated_at": 1778492068588,
+  "version": "2.0.0"
+}
