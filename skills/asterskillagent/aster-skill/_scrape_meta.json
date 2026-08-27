@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of crypto-news-trader skill:\n\n- Monitors Twitter and crypto media news via OpenNews MCP, focusing on BTC, ETH, SOL, and BNB.\n- Classifies news as bullish, bearish, or neutral using LLM with attention to credibility, importance, timeliness, and market sensitivity.\n- Automatically places long or short orders on Aster based on sentiment, confidence, and signal strength.\n- Supports per-coin trade cooldown and default leverage with stop-loss/take-profit management.\n- Requires installation of OpenNews MCP 6551 for news monitoring integration.",
+  "created_at": 1772885265569,
+  "display_name": "Aster-Skill",
+  "fetched_at": 1787789904515,
+  "files": [
+    "Skill.md",
+    "_meta.json",
+    "crypto-news-trader-index.js",
+    "crypto-news-trader-skill.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089793846,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "AsterSkill",
+    "handle": "asterskillagent",
+    "user_id": "s17066zk85rzswpw0q9hmqvz69884xr2"
+  },
+  "slug": "aster-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aster-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aster-skill&ownerHandle=asterskillagent",
+    "page_url": "https://clawhub.ai/asterskillagent/skills/aster-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1287,
+    "installs": 34,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Monitors crypto news for BTC, ETH, SOL, BNB; classifies sentiment; and executes leveraged long/short orders on Aster with risk controls.",
+  "updated_at": 1779077776844,
+  "version": "1.0.0"
+}
