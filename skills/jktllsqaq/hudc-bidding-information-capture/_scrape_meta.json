@@ -1,0 +1,47 @@
+{
+  "changelog": "hbdc v6.0.0 is a major update enhancing State Grid tender document analysis.\n\n- Adds prioritized multi-source extraction: Word/PDF tables, Excel supplement, and paragraph fallback.\n- Introduces PDF title extraction by font size for higher project name accuracy.\n- Automates placeholder (\"\u8be6\u89c1\u9644\u4ef6\") recognition and qualification refill from attachments.\n- Implements keyword deduplication for concise tagging.\n- Refines qualification merging strategy, separating essential clauses from templates.\n- Upgrades output to 23 columns with improved deadline coloring and new fields like evaluation method and bid bond.\n- Requires only fixed script execution\u2014no manual code modifications needed.\n- Custom keywords can be managed via a JSON config, not in the SKILL file.Bidding and tendering, information retrieval, data analysis, tools, efficiency",
+  "created_at": 1775716090311,
+  "display_name": "HUDC Bidding Information Capture",
+  "fetched_at": 1787827005743,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/keywords.json",
+    "samples/README.md",
+    "scripts/analyze.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090355154,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "JKTLLSQAQ",
+    "handle": "jktllsqaq",
+    "user_id": "s17ets44vetmeskwbgb7xaff9n84g4b8"
+  },
+  "slug": "hudc-bidding-information-capture",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hudc-bidding-information-capture",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hudc-bidding-information-capture&ownerHandle=jktllsqaq",
+    "page_url": "https://clawhub.ai/jktllsqaq/skills/hudc-bidding-information-capture"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 705,
+    "installs": 18,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Intelligently analyzes SGCC bidding documents in Word/PDF/Excel formats, extracting 23 key fields with automated qualification backfilling and deadline highl...",
+  "updated_at": 1778492492156,
+  "version": "6.0.0"
+}
