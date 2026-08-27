@@ -1,0 +1,43 @@
+{
+  "changelog": "**Summary: Restructured to use `umeng-cli` and native OpenAPI calls; legacy Python code fully removed.**\n\n- Migrated the skill to a pure `umeng-cli` wrapper\u2014removing all legacy Python and internal SDK scripts.\n- Now relies on the four official Umeng OpenAPI endpoints for event management (`event.create`, `batchCreateEvent`, events list), covering both App and MiniProgram scenarios.\n- Usage is unified around the `umeng-cli call` command and requires local installation of the CLI tool.\n- All manual scripts, helpers, and legacy SDK directories were deleted (74 files removed).\n- Updated and clarified documentation, detailing parameter validation, platform routing, usage guidelines, and key limitations.",
+  "created_at": 1775622670809,
+  "display_name": "\u81ea\u5b9a\u4e49\u4e8b\u4ef6\u7ba1\u7406",
+  "fetched_at": 1787828363333,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090583157,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Umeng+",
+    "handle": "squall0925",
+    "user_id": "s178qv5gja5sbh0bq8t6wbhq8x83rmg5"
+  },
+  "slug": "uapp-event-manage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/uapp-event-manage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=uapp-event-manage&ownerHandle=squall0925",
+    "page_url": "https://clawhub.ai/squall0925/skills/uapp-event-manage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 721,
+    "installs": 17,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "\u53cb\u76df\u81ea\u5b9a\u4e49\u4e8b\u4ef6\u7ba1\u7406\u6280\u80fd\uff0c\u652f\u6301\u901a\u8fc7 umeng-cli call \u8c03\u7528\u53cb\u76df OpenAPI\uff08gateway.open.umeng.com\uff09\u7684 4 \u4e2a\u4e8b\u4ef6\u7ba1\u7406\u63a5\u53e3\uff082 \u4e2a\u5199\u5165 + 2 \u4e2a\u53ea\u8bfb\uff09\uff0c\u8986\u76d6 App \u5355\u4e8b\u4ef6\u521b\u5efa\u3001\u5c0f\u7a0b\u5e8f\u6279\u91cf\u4e8b\u4ef6\u521b\u5efa\u3001App \u4e8b\u4ef6\u5217\u8868\u3001\u5c0f\u7a0b\u5e8f\u4e8b\u4ef6\u5217\u8868\u3002\u5f53\u7528\u6237\u9700\u8981\u521b\u5efa\u57cb\u70b9\u4e8b\u4ef6\u5b9a\u4e49\u3001\u6279\u91cf\u521b\u5efa\u5c0f\u7a0b\u5e8f\u4e8b...",
+  "updated_at": 1778492473647,
+  "version": "1.2.0"
+}
