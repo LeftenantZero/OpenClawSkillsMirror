@@ -1,0 +1,48 @@
+{
+  "changelog": "- Initial release of fast-response-optimizer.\n- Implements \"reply-first-then-process\" for sub-second acknowledgment of incoming requests.\n- Supports parallel execution of independent tool calls to reduce processing time.\n- Adds in-memory file caching with scheduled (every 1 minute), message-triggered, and manual refresh options.\n- Stores active cache in SESSION-STATE.md and related files for efficient state handling.\n- Provides CLI scripts for cache refresh, status, and message timestamp management.",
+  "created_at": 1774410861204,
+  "display_name": "Fast Response Optimizer",
+  "fetched_at": 1787850020498,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "bootstrap.js",
+    "locales/zh/SKILL.md",
+    "package.json",
+    "scripts/cache-manager.js",
+    "scripts/parallel-executor.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090086304,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jason-tiger",
+    "handle": "opendolph",
+    "user_id": "s170zcgka72kfpcxdav0wvf2x183h6hj"
+  },
+  "slug": "fast-response-optimizer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fast-response-optimizer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fast-response-optimizer&ownerHandle=opendolph",
+    "page_url": "https://clawhub.ai/opendolph/skills/fast-response-optimizer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 776,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Response speed optimizer - implements reply-first-then-process, parallel tool calls, and memory file caching",
+  "updated_at": 1778492175875,
+  "version": "1.0.0"
+}
