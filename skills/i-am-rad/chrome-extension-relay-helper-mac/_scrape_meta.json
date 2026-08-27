@@ -1,0 +1,44 @@
+{
+  "changelog": "What it does:\nWhen OpenClaw needs to control your real Chrome browser, it requires the OpenClaw Browser Relay extension to be active on a tab. Without a reliable attach method, agents fall back to pixel-coordinate clicking and screenshot-based targeting \u2014 both of which break across screen sizes and are expensive in tokens.\n\nThis skill solves that with a single script that:\n1) Launches Chrome to a known safe page\nUses Peekaboo (macOS accessibility API) to find the extension icon by its description \u2014 not coordinates\n2) Clicks it to attach\n3) Confirms the relay is live before returning\n\nThe result is a consistent, reproducible attach sequence that works regardless of screen resolution, window size, or where the icon happens to be in the toolbar.\n\nUse this skill as the first step in any workflow that needs browser(profile=\"chrome\").",
+  "created_at": 1772338468498,
+  "display_name": "Chrome Extension Relay Helper - Mac",
+  "fetched_at": 1787801349899,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/attach.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968608455,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jacob Radcliffe",
+    "handle": "i-am-rad",
+    "user_id": "s175r9dvxeap2ffkt58vq6kejd885b8w"
+  },
+  "slug": "chrome-extension-relay-helper-mac",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/chrome-extension-relay-helper-mac",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=chrome-extension-relay-helper-mac&ownerHandle=i-am-rad",
+    "page_url": "https://clawhub.ai/i-am-rad/skills/chrome-extension-relay-helper-mac"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1154,
+    "installs": 35,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Attach the OpenClaw Browser Relay Chrome extension to a live tab so the browser tool (profile=\"chrome\") works. Use this skill before any browser automation t...",
+  "updated_at": 1778994125305,
+  "version": "1.0.0"
+}
