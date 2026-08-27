@@ -1,0 +1,55 @@
+{
+  "changelog": "Initial release of aliyun-openapi-discovery.\n\n- Supports unified discovery of Alibaba Cloud products from Ticket System, Support & Service, and BSS OpenAPI sources.\n- Automates fetching and merging of product lists, and retrieving OpenAPI product/version/API metadata.\n- Provides scripts for mapping products to APIs, summarizing coverage, and generating gap/coverage reports.\n- All generated output and evidence files are saved under the dedicated output directory.\n- Includes validation steps and outlines required environment variables for secure, reproducible runs.",
+  "created_at": 1775100211554,
+  "display_name": "Alibaba Cloud Platform OpenAPI Product API Discovery",
+  "fetched_at": 1787835045451,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/openapi-meta.md",
+    "references/product-sources.md",
+    "scripts/analyze_products_vs_skills.py",
+    "scripts/apis_from_openapi_meta.py",
+    "scripts/join_products_with_api_meta.py",
+    "scripts/merge_product_sources.py",
+    "scripts/products_from_bssopenapi.py",
+    "scripts/products_from_openapi_meta.py",
+    "scripts/products_from_support_service.py",
+    "scripts/products_from_ticket_system.py",
+    "scripts/summarize_openapi_meta_products.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090245190,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "cinience",
+    "handle": "cinience",
+    "user_id": "s1707avh05gnzr3g6e3m9ka6fh840rtd"
+  },
+  "slug": "aliyun-openapi-discovery",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aliyun-openapi-discovery",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aliyun-openapi-discovery&ownerHandle=cinience",
+    "page_url": "https://clawhub.ai/cinience/skills/aliyun-openapi-discovery"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 500,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when discovering and reconciling Alibaba Cloud product catalogs from Ticket System, Support & Service, and BSS OpenAPI; fetch OpenAPI product/version/API...",
+  "updated_at": 1778492362797,
+  "version": "1.0.0"
+}
