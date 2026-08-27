@@ -1,0 +1,41 @@
+{
+  "changelog": "Initial release of run-command-safety-check skill:\n\n- Checks shell commands for dangerous patterns such as pipe-to-shell, destructive delete, risky redirection, or obfuscated execution before running.\n- Gives structured output: dangerous patterns, medium-risk patterns, background notes, alternative suggestions, manual review points, and final recommendations.\n- Prioritizes readable, audit-friendly, and dry-run approaches; avoids executing or suggesting aggressive, attack, or privilege-escalation commands.\n- Clearly states requirements and safe usage boundaries.\n- Supports review workflows for shell, security, and command-review scenarios.",
+  "created_at": 1773902162901,
+  "display_name": "Run Command Safety Check",
+  "fetched_at": 1787863658825,
+  "files": [
+    "README.md",
+    "SELF_CHECK.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/example-input.md",
+    "examples/example-output.md",
+    "resources/spec.json",
+    "resources/template.md",
+    "scripts/run.py",
+    "skill-card.md",
+    "tests/smoke-test.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "vx\uff1a17605205782",
+    "handle": "52yuanchangxing",
+    "user_id": "s178sqjkywrs4vbnfcrr7wx7f583gef5"
+  },
+  "slug": "run-command-safety-check",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/run-command-safety-check",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=run-command-safety-check&ownerHandle=52yuanchangxing",
+    "page_url": "https://clawhub.ai/52yuanchangxing/skills/run-command-safety-check"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 717,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5728\u6267\u884c shell \u65b9\u6848\u524d\u68c0\u67e5\u5371\u9669\u6a21\u5f0f\uff0c\u5982 pipe-to-shell\u3001\u8986\u76d6\u5f0f\u5220\u9664\u3001\u5371\u9669\u91cd\u5b9a\u5411\u6216\u6df7\u6dc6\u6267\u884c\u3002\uff1buse for shell, security, command-review workflows\uff1bdo not use for \u63d0\u4f9b\u653b\u51fb\u6027\u547d\u4ee4, \u5e2e\u7528\u6237\u7ed5\u8fc7\u9650\u5236.",
+  "updated_at": 1778492026162,
+  "version": "1.0.0"
+}
