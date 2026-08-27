@@ -1,0 +1,34 @@
+{
+  "changelog": "Security hardening: fix code injection via crafted filenames (env vars + spawnSync instead of string interpolation), resolve symlinks before scope check, declare node + POSIX deps, document env vars and destructive ops, add -- separators to all mv/cp/rm calls",
+  "created_at": 1773685915830,
+  "display_name": "Workspace Trash",
+  "fetched_at": 1787869694683,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/trash.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "CrewHaus",
+    "handle": "crewhaus",
+    "user_id": "s1719mrype24snhrfvby2bkyc983jyaj"
+  },
+  "slug": "workspace-trash",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/workspace-trash",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=workspace-trash&ownerHandle=crewhaus",
+    "page_url": "https://clawhub.ai/crewhaus/skills/workspace-trash"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 809,
+    "installs": 22,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Soft-delete protection for workspace files. Intercept file deletions and move them to a recoverable trash instead of permanent removal. Use when deleting, re...",
+  "updated_at": 1778491958089,
+  "version": "1.2.0"
+}
