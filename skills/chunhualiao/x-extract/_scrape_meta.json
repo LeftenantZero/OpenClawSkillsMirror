@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of x-extract skill.\n\n- Extracts tweet content (text, media, author, metadata) from x.com/twitter.com URLs without requiring Twitter API credentials.\n- Uses browser automation to fully load tweets and extract data from the rendered HTML.\n- Outputs results in structured markdown, including optional media download.\n- Handles single tweets, threads, and error situations (invalid URLs, restricted tweets, layout changes).\n- Does not support protected tweets or content requiring login.",
+  "created_at": 1771271795795,
+  "display_name": "X Extract",
+  "fetched_at": 1787803870848,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/selectors.md",
+    "scripts/extract.mjs",
+    "skill-card.md",
+    "skill.yml",
+    "tests/test-triggers.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779971420871,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Chunhua Liao",
+    "handle": "chunhualiao",
+    "user_id": "s17czb50cec363y7yz4cchy9p9848424"
+  },
+  "slug": "x-extract",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/x-extract",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=x-extract&ownerHandle=chunhualiao",
+    "page_url": "https://clawhub.ai/chunhualiao/skills/x-extract"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1659,
+    "installs": 51,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Extract tweet content from x.com URLs without credentials using browser automation. Use when user asks to \"extract tweet\", \"download x.com link\", \"get tweet...",
+  "updated_at": 1778991032844,
+  "version": "1.0.0"
+}
