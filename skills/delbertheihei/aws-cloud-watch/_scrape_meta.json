@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of aws-cloud-watch skill.\n\n- Query AWS CloudWatch metrics for ECS, EC2, and RDS resources.\n- Supports text-only summaries for queried metrics (no chart rendering).\n- Command-line interface for specifying service, metric, resource, and time window.\n- Allows configuration of metric aliases via config.json.\n- No AWS SDK or external packages; uses SigV4 signing with native crypto.\n- Defaults: region us-west-2, 5-minute period, 1-hour window.\n- Clear error messages if metrics are unavailable.",
+  "created_at": 1772247913910,
+  "display_name": "AWS CloudWatch",
+  "fetched_at": 1787801663063,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.json",
+    "skill-card.md",
+    "src/cli.mjs",
+    "src/skill.mjs"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966152551,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "delberthh",
+    "handle": "delbertheihei",
+    "user_id": "s1770479239ykm45bcjmg01y25842j07"
+  },
+  "slug": "aws-cloud-watch",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aws-cloud-watch",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aws-cloud-watch&ownerHandle=delbertheihei",
+    "page_url": "https://clawhub.ai/delbertheihei/skills/aws-cloud-watch"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1258,
+    "installs": 39,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query AWS CloudWatch metrics for ECS/EC2/RDS and return charts.",
+  "updated_at": 1778993806999,
+  "version": "0.0.1"
+}
