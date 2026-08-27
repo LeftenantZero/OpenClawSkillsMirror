@@ -1,0 +1,68 @@
+{
+  "changelog": "Initial release of the ClawReverse plugin for OpenClaw session management.\n\n- Enables checkpoint, rollback, and branching for OpenClaw sessions.\n- Allows session recovery from bad tool or file changes.\n- Supports lineage inspection, restoring from known-good states, and creating branches for alternate approaches.\n- Adds commands: checkpoint list/inspect, rollback, continue as branch, checkout, lineage tree, and report tools.\n- Not for general git history or non-OpenClaw workspace tasks.",
+  "created_at": 1774004256334,
+  "display_name": "Clawreverse",
+  "fetched_at": 1787797700756,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "dist/core/contracts.js",
+    "dist/core/errors.js",
+    "dist/core/persistence.js",
+    "dist/core/tooling.js",
+    "dist/core/utils.js",
+    "dist/index.js",
+    "dist/native-plugin.js",
+    "dist/native/cli.js",
+    "dist/native/runtime.js",
+    "dist/native/sessions.js",
+    "dist/native/shared.js",
+    "dist/plugin.js",
+    "dist/services/checkpoint-manager.js",
+    "dist/services/checkpoint-registry.js",
+    "dist/services/report-writer.js",
+    "dist/services/runtime-cursor-manager.js",
+    "dist/services/session-lock-manager.js",
+    "dist/usecases/checkout-flow.js",
+    "dist/usecases/checkpoint-flow.js",
+    "dist/usecases/continue-flow.js",
+    "dist/usecases/rollback-flow.js",
+    "dist/usecases/session-support.js",
+    "dist/usecases/session-tree.js",
+    "openclaw.plugin.json",
+    "package.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090000148,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "BinHuangPJLAB",
+    "handle": "binhuangpjlab",
+    "user_id": "s176bhafpwj13v32qy1ah9y0ds83g3x6"
+  },
+  "slug": "clawreverse-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawreverse-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawreverse-skill&ownerHandle=binhuangpjlab",
+    "page_url": "https://clawhub.ai/binhuangpjlab/skills/clawreverse-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 879,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Inspect, checkpoint, rollback, and branch OpenClaw sessions with the ClawReverse plugin. Use when a user wants to recover from bad tool or file changes, rest...",
+  "updated_at": 1779004189302,
+  "version": "0.1.0"
+}
