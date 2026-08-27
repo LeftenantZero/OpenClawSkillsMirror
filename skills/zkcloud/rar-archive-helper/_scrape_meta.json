@@ -1,0 +1,47 @@
+{
+  "changelog": "## rar-command-helper 1.0.1 Changelog\n\n- Renamed the skill from \"rar-archive-helper\" to \"rar-command-helper\".\n- Expanded and clarified descriptions to emphasize cross-platform (Windows and Linux) command-line support.\n- Updated execution flow: detection, PATH repair, command execution, and single evidence-based retry if failure cause is clear.\n- Standardized reporting with a clear `[Goal] \u2192 [Detect] \u2192 [Fix PATH] \u2192 [Run] \u2192 [Verify] \u2192 [Result]` template.\n- Improved platform detection logic and reinforced the use of official download links as a fallback.\n- Refined troubleshooting and retry rules, including encoding and multipart archive handling.\n- Focused instructions on operational reliability and minimized nonessential prose.",
+  "created_at": 1775651829532,
+  "display_name": "Unzip Files with WinRAR",
+  "fetched_at": 1787827895698,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/common-errors.md",
+    "references/execution-template.md",
+    "references/winrar-quick-reference.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090344538,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Mason",
+    "handle": "zkcloud",
+    "user_id": "s173dpzmt0n0q025b6e23sj6r983gwdz"
+  },
+  "slug": "rar-archive-helper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/rar-archive-helper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=rar-archive-helper&ownerHandle=zkcloud",
+    "page_url": "https://clawhub.ai/zkcloud/skills/rar-archive-helper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 596,
+    "installs": 15,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "cross-platform rar and winrar command-line archive handling for windows and linux. use when chatgpt needs to compress or extract archives with rar or winrar,...",
+  "updated_at": 1778492480808,
+  "version": "1.0.1"
+}
