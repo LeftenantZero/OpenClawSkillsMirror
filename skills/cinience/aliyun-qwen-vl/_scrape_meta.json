@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release: Qwen VL image understanding skill for Alibaba Cloud.\n\n- Supports image Q&A, visual analysis, OCR-like extraction, chart/table reading, and screenshot understanding workflows.\n- Uses Qwen3 VL models via DashScope compatible-mode API, with flexible model/version options.\n- Provides a normalized interface for multimodal (image + text) chat requests and structured extraction.\n- Includes quickstart examples, cURL usage, error handling guide, and operational tips.\n- Outputs results and evidence to local directory for traceability.",
+  "created_at": 1775058698046,
+  "display_name": "Alibaba Cloud AI Multimodal Qwen VL",
+  "fetched_at": 1787796834736,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/api_reference.md",
+    "references/examples/invoice.schema.json",
+    "references/sources.md",
+    "scripts/analyze_image.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090236101,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "cinience",
+    "handle": "cinience",
+    "user_id": "s1707avh05gnzr3g6e3m9ka6fh840rtd"
+  },
+  "slug": "aliyun-qwen-vl",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aliyun-qwen-vl",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aliyun-qwen-vl&ownerHandle=cinience",
+    "page_url": "https://clawhub.ai/cinience/skills/aliyun-qwen-vl"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 634,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when understanding images with Alibaba Cloud Model Studio Qwen VL models (qwen3-vl-plus/qwen3-vl-flash and latest aliases). Use when building image Q&A,...",
+  "updated_at": 1779075255855,
+  "version": "1.0.0"
+}
