@@ -1,0 +1,62 @@
+{
+  "changelog": "**v2.1.0 introduces project-scoped instincts and enhanced confidence scoring.**\n\n- Instincts now have project vs global scope, keeping tech-specific behaviors isolated to their projects.\n- Confidence-weighted instincts boost or drop based on user feedback, corrections, or recurring observations.\n- New `/instinct-status`, `/evolve`, `/promote`, and management commands for reviewing and evolving learned behaviors.\n- Supports both legacy v1 (markdown) and improved v2 (instinct/model-based) learning modes.\n- Enhanced auto-detection of project context using environment variables or git metadata.\n- Documented updated file structure and observation hook setup for consistent learning.",
+  "created_at": 1772936998425,
+  "display_name": "Self Improving Agent",
+  "fetched_at": 1787799961661,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/LEARNINGS.md",
+    "assets/SKILL-TEMPLATE.md",
+    "examples/commands/evolve.md",
+    "examples/commands/instinct-status.md",
+    "examples/commands/promote.md",
+    "examples/instincts/always-validate-input.yaml",
+    "examples/instincts/grep-before-edit.yaml",
+    "examples/instincts/use-react-hooks-pattern.yaml",
+    "hooks/observe.sh",
+    "hooks/openclaw/HOOK.md",
+    "hooks/openclaw/handler.js",
+    "hooks/openclaw/handler.ts",
+    "references/examples.md",
+    "references/hooks-setup.md",
+    "references/openclaw-integration.md",
+    "scripts/activator.sh",
+    "scripts/error-detector.sh",
+    "scripts/extract-skill.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089796402,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huamu668",
+    "handle": "huamu668",
+    "user_id": "s17e1xpgre78th3jf9p61ztyq5884zgm"
+  },
+  "slug": "self-improving-agent-ecc",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/self-improving-agent-ecc",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=self-improving-agent-ecc&ownerHandle=huamu668",
+    "page_url": "https://clawhub.ai/huamu668/skills/self-improving-agent-ecc"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1086,
+    "installs": 30,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Instinct-based continuous learning system. Captures atomic learnings (instincts) with confidence scoring, supports project-scoped vs global scope, and evolve...",
+  "updated_at": 1778996506674,
+  "version": "2.1.0"
+}
