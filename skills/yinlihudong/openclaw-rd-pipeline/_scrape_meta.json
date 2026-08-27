@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release of openclaw-rd-pipeline.\n- Provides a deterministic, Feishu-driven R&D workflow with strict role boundaries for PM, developer, reviewer, and tester subagents.\n- Automates requirement intake, structured parsing, project context enrichment, coding/PR flow, read-only review/testing gates, and bug handling.\n- Integrates Feishu and git tools for status management, context building, and notification.\n- Uses reference templates and a dedicated status validation script to ensure process consistency.",
+  "created_at": 1772599272718,
+  "display_name": "OpenClaw RD Pipeline",
+  "fetched_at": 1787800586907,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/feishu-fields.md",
+    "references/templates.md",
+    "scripts/validate_status_flow.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089753390,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yinlihudong",
+    "handle": "yinlihudong",
+    "user_id": "s17db9fv4cjynsn39r86p78ygs8858jt"
+  },
+  "slug": "openclaw-rd-pipeline",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-rd-pipeline",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-rd-pipeline&ownerHandle=yinlihudong",
+    "page_url": "https://clawhub.ai/yinlihudong/skills/openclaw-rd-pipeline"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 958,
+    "installs": 28,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Orchestrate OpenClaw end-to-end R&D delivery in Feishu from requirement intake to closure using PM, developer, reviewer, and tester subagents. Use when handl...",
+  "updated_at": 1778995045726,
+  "version": "1.0.0"
+}
