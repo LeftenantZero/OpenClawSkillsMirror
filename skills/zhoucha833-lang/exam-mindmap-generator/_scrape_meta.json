@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release: Quickly generates a printable, three-in-one static review plan from a knowledge map and guides for next steps.\n\n- Generates an HTML file with three sections: knowledge structure map, weak point alerts, and study plan, using a template.\n- Auto-triggers after exam-sprint-pipeline or on \u201c\u91cd\u65b0\u751f\u6210\u201d instruction.\n- Handles file read/validation, error fallback, and replaces all template placeholders.\n- After HTML output, automatically sends a user prompt asking whether to generate practice questions.\n- Strictly follows silent operation and platform/tooling limitations outlined in the SKILL.md.",
+  "created_at": 1778486261089,
+  "display_name": "exam-mindmap-generator",
+  "fetched_at": 1787808620622,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/template.html",
+    "references/design-spec.md",
+    "references/node-rules.md",
+    "scripts/generate.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090780611,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zhoucha833-lang",
+    "handle": "zhoucha833-lang",
+    "user_id": "s17b87qx14janve53g6m4mxwgs86g9n8"
+  },
+  "slug": "exam-mindmap-generator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/exam-mindmap-generator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=exam-mindmap-generator&ownerHandle=zhoucha833-lang",
+    "page_url": "https://clawhub.ai/zhoucha833-lang/skills/exam-mindmap-generator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 489,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u63a5\u6536 knowledge_map.json\uff0c\u751f\u6210\u4e09\u5408\u4e00\u9759\u6001\u590d\u4e60\u8ba1\u5212 HTML\uff1a \u77e5\u8bc6\u7ed3\u6784\u56fe + \u8584\u5f31\u70b9\u9884\u8b66 + \u590d\u4e60\u8ba1\u5212\uff0c\u4ee5\u5361\u7247\u5f62\u5f0f\u5448\u73b0\uff0c\u652f\u6301\u6253\u5370\u3002 \u751f\u6210\u540e\u4e3b\u52a8\u8be2\u95ee\u7528\u6237\u662f\u5426\u751f\u6210\u6a21\u62df\u9898\uff0c\u7b49\u5f85\u7528\u6237\u51b3\u7b56\u3002",
+  "updated_at": 1778492895889,
+  "version": "1.0.0"
+}
