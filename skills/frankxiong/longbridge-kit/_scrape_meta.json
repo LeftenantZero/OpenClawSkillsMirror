@@ -1,0 +1,56 @@
+{
+  "changelog": "- Added support for loading configuration from a .env file in the current or home directory (system environment variables take precedence).\n- Introduced multi-account switching via the --profile option to load different .env files (e.g., .paper.env, .live.env).\n- Added option to skip trade command confirmations with --yes or -y, enabling safer use for programmatic/AI agent workflows.\n- Maintenance: Removed requirements.txt file from package root and moved dependencies to standard requirements.txt location.\n- Updated documentation with usage details for new features and recommendations for programmatic access.",
+  "created_at": 1773517696613,
+  "display_name": "longbridge",
+  "fetched_at": 1787788842576,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "longbridge_cli/__init__.py",
+    "longbridge_cli/__main__.py",
+    "longbridge_cli/cli.py",
+    "longbridge_cli/commands/__init__.py",
+    "longbridge_cli/commands/account.py",
+    "longbridge_cli/commands/market.py",
+    "longbridge_cli/commands/order.py",
+    "longbridge_cli/commands/quote.py",
+    "longbridge_cli/config.py",
+    "longbridge_cli/formatters.py",
+    "pyproject.toml",
+    "requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1784053589541,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "lynx",
+    "handle": "frankxiong",
+    "user_id": "s17exm8ednvaeamkhdqgqm1w7183nzak"
+  },
+  "slug": "longbridge-kit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/longbridge-kit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=longbridge-kit&ownerHandle=frankxiong",
+    "page_url": "https://clawhub.ai/frankxiong/skills/longbridge-kit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1653,
+    "installs": 49,
+    "stars": 2,
+    "versions": 3
+  },
+  "summary": "\u957f\u6865 LongPort OpenAPI CLI \u5de5\u5177\uff0c\u63d0\u4f9b\u80a1\u7968\u884c\u60c5\u67e5\u8be2\u3001\u8d26\u6237\u6301\u4ed3\u3001\u8ba2\u5355\u7ba1\u7406\u3001\u5e02\u573a\u6570\u636e\u56db\u5927\u529f\u80fd\u3002 \u5f53\u7528\u6237\u63d0\u5230\"\u957f\u6865\"\u3001\"LongPort\"\u3001\"longbridge\"\uff0c\u6216\u8981\u6c42\u67e5\u770b\u80a1\u7968\u62a5\u4ef7\u3001\u5b9e\u65f6\u884c\u60c5\u3001K\u7ebf\u3001\u76d8\u53e3\u3001 \u9010\u7b14\u6210\u4ea4\u3001\u8d26\u6237\u4f59\u989d\u3001\u6301\u4ed3\u3001\u57fa\u91d1\u6301\u4ed3\u3001\u4e0b\u5355\u3001\u4e70\u5165\u3001\u5356\u51fa\u3001\u64a4\u5355\u3001\u4eca\u65e5\u8ba2\u5355\u3001\u5386\u53f2\u8ba2\u5355\u3001 \u8d44\u91d1\u6d41\u5411...",
+  "updated_at": 1779078194794,
+  "version": "1.0.2"
+}
