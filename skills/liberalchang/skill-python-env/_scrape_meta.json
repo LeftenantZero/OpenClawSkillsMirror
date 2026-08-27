@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of skill-python-env \u2013 internal Python virtual environment manager for other skills:\n\n- Provides shared Python virtual environments by version under ~/.python_env/<version> for other skills to reuse.\n- Automatically installs uv if not present; no manual intervention needed.\n- Includes both shell (ensure_python_env.sh) and Python (ensure_python_env.py) scripts for integration.\n- Outputs machine-readable environment details (activate path, dir, version) at completion.\n- Not directly user-facing; intended for invocation by other skills needing Python environments.",
+  "created_at": 1774933115329,
+  "display_name": "skill-python-env",
+  "fetched_at": 1787838855307,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/ensure_python_env.py",
+    "scripts/ensure_python_env.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090203328,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "chang",
+    "handle": "liberalchang",
+    "user_id": "s1711a251cb269zj1bjvwcffxh83kcjh"
+  },
+  "slug": "skill-python-env",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-python-env",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-python-env&ownerHandle=liberalchang",
+    "page_url": "https://clawhub.ai/liberalchang/skills/skill-python-env"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 870,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u3010OpenClaw \u5185\u90e8\u5de5\u5177 skill\u3011\u4e3a\u5176\u4ed6 skill \u63d0\u4f9b Python \u865a\u62df\u73af\u5883\u7ba1\u7406\u3002\u6309 Python \u7248\u672c\u53f7\u5728 ~/.python_env/<version> \u4e0b\u521b\u5efa\u5171\u4eab\u73af\u5883\uff0c\u591a\u4e2a skill \u53ef\u590d\u7528\u540c\u4e00\u7248\u672c\u73af\u5883\u3002\u81ea\u52a8\u5b89\u88c5 uv\uff08\u82e5\u672a\u5b89\u88c5\uff09\u3002\u4e0d\u76f4\u63a5\u9762\u5411\u7528\u6237\u3002",
+  "updated_at": 1778492313459,
+  "version": "1.0.0"
+}
