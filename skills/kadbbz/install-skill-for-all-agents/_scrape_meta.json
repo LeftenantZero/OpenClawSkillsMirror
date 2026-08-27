@@ -1,0 +1,47 @@
+{
+  "changelog": "install-global-skill-from-clawhub v1.0.0\n\n- Initial release of the skill for installing or upgrading ClawHub skills and promoting them to the global OpenClaw skills directory.\n- Ensures the global skill directory is the source of truth, with proper syncing and backup of previous versions.\n- Provides safe promotion from agent workspace staging directories, including origin/version verification.\n- Handles confirmations and backup for destructive actions.\n- Focuses workflow on a single skill per operation unless explicitly requested otherwise.",
+  "created_at": 1778567146042,
+  "display_name": "Install Skills from Clawhub for all Agents",
+  "fetched_at": 1787794126031,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/scripts.md",
+    "scripts/install-global-skill.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090787443,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u5b81\u4f1f",
+    "handle": "kadbbz",
+    "user_id": "s17c9yyt2sff7jk8nmf7ptf3r183g8kf"
+  },
+  "slug": "install-skill-for-all-agents",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/install-skill-for-all-agents",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=install-skill-for-all-agents&ownerHandle=kadbbz",
+    "page_url": "https://clawhub.ai/kadbbz/skills/install-skill-for-all-agents"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 580,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Install or upgrade a ClawHub skill, then make the global copy under the machine's OpenClaw home `skills/` directory the final source of truth. Use when the u...",
+  "updated_at": 1779076308190,
+  "version": "1.0.0"
+}
