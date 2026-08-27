@@ -1,0 +1,44 @@
+{
+  "changelog": "- Added critical data fetching guidelines: never truncate JSON, always filter with `jq`, always specify `symbol` and `limit` parameters to avoid huge/corrupted outputs.\n- Provided a layered safe querying strategy for broad user questions (summarize before fetching details).\n- Marked dangerous endpoints and default behaviors that can cause very large JSON responses.\n- Updated documentation with examples of safe vs unsafe API usage.\n- No changes to endpoints or parameters\u2014documentation and safety practices improved.",
+  "created_at": 1772574236191,
+  "display_name": "Aster Spot",
+  "fetched_at": 1787790436178,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/authentication.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089751447,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "a",
+    "handle": "yuandiaodiaodiao",
+    "user_id": "s1791r01dra7s3hhe1eb9kgmp183qr88"
+  },
+  "slug": "aster-spot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aster-spot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aster-spot&ownerHandle=yuandiaodiaodiao",
+    "page_url": "https://clawhub.ai/yuandiaodiaodiao/skills/aster-spot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1092,
+    "installs": 31,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Aster Spot request using the Aster API. Authentication requires API key and secret key (HMAC SHA256). Supports mainnet.",
+  "updated_at": 1779077573121,
+  "version": "0.1.1"
+}
