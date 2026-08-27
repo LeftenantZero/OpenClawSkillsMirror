@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of Sift execution governance skill for AI agents.\n\n- Enforces authorization via Sift before any consequential action (file writes, API calls, messages, browsing, financial transactions, sub-agent spawning).\n- Provides detailed instructions for obtaining and submitting signed authorization requests and challenge nonces.\n- Actions are only executed with cryptographically signed ALLOW receipts; any error or DENY response blocks the action (\"fail closed\").\n- Outlines risk tiers, audit requirements, and mandatory receipt storage.\n- Includes setup, pricing, and differences between the skill (probabilistic enforcement) and platform plugin (deterministic enforcement).",
+  "created_at": 1774047469395,
+  "display_name": "Sift",
+  "fetched_at": 1787859684839,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "walkojas-boop",
+    "handle": "walkojas-boop",
+    "user_id": "s17443jkk2hyffsnxjjnrar51d83gzt5"
+  },
+  "slug": "skill-sift",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-sift",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-sift&ownerHandle=walkojas-boop",
+    "page_url": "https://clawhub.ai/walkojas-boop/skills/skill-sift"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 659,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Sift execution governance for AI agents. Use this skill to authorize actions before executing them. Call sift_authorize before any consequential tool call \u2014...",
+  "updated_at": 1778492072793,
+  "version": "1.0.0"
+}
