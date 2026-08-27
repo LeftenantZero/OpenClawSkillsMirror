@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of skill-sentinel: Enforces strict auditing and safety rules for all OpenClaw skills.\n\n- Automatically audits new skills before first use; summarizes purpose and requests user approval.\n- Detects and blocks red-flag patterns (data exfiltration, stealth operations, scope creep, persistence, unauthorized authority).\n- Sets hard-floor rules forbidding exfiltration, unauthorized cron jobs, identity file edits, and static shell commands.\n- Binds skills' actions strictly to their stated triggers; skips unrelated instructions.\n- Requires transparency on all external actions and creates visible audit trails.\n- Allows users to request detailed manual audits of any installed skill.",
+  "created_at": 1778859689317,
+  "display_name": "Skill Sentinel",
+  "fetched_at": 1787806859242,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/audit-checklist.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "kimmi2ue",
+    "handle": "kimmi2ue",
+    "user_id": "s1781cp84knezaka46arfdnpwh86rtke"
+  },
+  "slug": "skill-hardfloor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-hardfloor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-hardfloor&ownerHandle=kimmi2ue",
+    "page_url": "https://clawhub.ai/kimmi2ue/skills/skill-hardfloor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 551,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Protects against malicious or compromised OpenClaw skills by auditing newly installed skills before first use, detecting red-flag patterns, and enforcing har...",
+  "updated_at": 1778860912174,
+  "version": "1.0.0"
+}
