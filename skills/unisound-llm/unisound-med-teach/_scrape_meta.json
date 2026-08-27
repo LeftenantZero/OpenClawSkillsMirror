@@ -1,0 +1,34 @@
+{
+  "changelog": "- Initial release of clinical teaching case generation skill.\n- Generates teaching cases based on key points provided in question text or structured input.\n- Supports flexible input methods: direct question string, input file (`.json`, `.jsonl`, plain text), or standard input.\n- Utilizes internal medical LLM (`u1-insuremed`) via configurable API.\n- Includes options for input selection, model parameters, and dry-run mode.\n- Outputs structured JSON with answer, input details, and metadata.\n- Emphasizes de-identification and compliance with patient data protocols.",
+  "created_at": 1778829127061,
+  "display_name": "unisound-med-teach",
+  "fetched_at": 1787807068262,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/run.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Unisound-LLM",
+    "handle": "unisound-llm",
+    "user_id": "s1770nyybxj4gn0vk38n6wr6k584x8ea"
+  },
+  "slug": "unisound-med-teach",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/unisound-med-teach",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=unisound-med-teach&ownerHandle=unisound-llm",
+    "page_url": "https://clawhub.ai/unisound-llm/skills/unisound-med-teach"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 514,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4e34\u5e8a\u6559\u5b66\u6848\u4f8b\u751f\u6210\u3002\u7531\u8c03\u7528\u65b9\u63d0\u4f9b\u9898\u76ee\u6587\u672c\u6216\u542b `question` \u5b57\u6bb5\u7684\u7ed3\u6784\u5316\u8f93\u5165\uff0c\u7ecf\u5185\u90e8\u533b\u7597\u5927\u6a21\u578b\u6309\u9898\u5e72\u7ea6\u675f\u751f\u6210\u4f5c\u7b54\uff1b\u4ec5\u542b `scripts/run.py`\uff0c\u53ef\u72ec\u7acb\u62f7\u8d1d\u90e8\u7f72\u3002",
+  "updated_at": 1778829707392,
+  "version": "1.0.0"
+}
