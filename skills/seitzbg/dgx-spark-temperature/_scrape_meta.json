@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of dgx-spark-temperature.\n\n- Reads hardware temperature sensors on the DGX Spark via SNMP.\n- Provides mappings for 16 sensors, including GPU, NIC ASICs, and generic thermal sensors.\n- Values are reported in milliCelsius; convert to \u00b0C by dividing by 1000.\n- Instructions provided for invoking the temperature check script.\n- Useful for hardware health and temperature checks on the DGX Spark.",
+  "created_at": 1777261318320,
+  "display_name": "Dgx Spark Temperature",
+  "fetched_at": 1787813985167,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "check_temperature.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090561536,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Bryan Seitz",
+    "handle": "seitzbg",
+    "user_id": "s171ana6cfhvd3vjh90r1td3z184a9vf"
+  },
+  "slug": "dgx-spark-temperature",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dgx-spark-temperature",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dgx-spark-temperature&ownerHandle=seitzbg",
+    "page_url": "https://clawhub.ai/seitzbg/skills/dgx-spark-temperature"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 560,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Reads and reports hardware temperature sensor values from the DGX Spark system via SNMP for hardware health monitoring.",
+  "updated_at": 1778492765634,
+  "version": "1.0.0"
+}
