@@ -1,0 +1,47 @@
+{
+  "changelog": "**Summary:**  \nMajor refactor for improved privacy, local data storage, and modularity.\n\n- All user data now stored in the Skill's own `./data/` directory (no access outside), ensuring strict local privacy.\n- Removed all hardcoded script calls and dependencies on external directories (e.g., OpenClaw workspace/scripts).\n- Voice (TTS) output is now fully optional\u2014only triggered if the user has set the appropriate environment variable; no forced or path-dependent scripts.\n- Simplified and modularized data structure: separate markdown files for user profile, reading library, and emotion logs.\n- All features are self-contained; no network requests or environment changes outside the Skill.\n- Reduced file set: unnecessary scripts and references removed to focus on core reading companion experience.",
+  "created_at": 1776114025765,
+  "display_name": "\u4e66\u642d\u5b50",
+  "fetched_at": 1787823317893,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "data/user_profile.md",
+    "references/knowledge_base.md",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090463217,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "AI-innopower",
+    "handle": "ai-innopower",
+    "user_id": "s172rttg8t6hmkhcy6pxk4bcrs83tawg"
+  },
+  "slug": "book-companion",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/book-companion",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=book-companion&ownerHandle=ai-innopower",
+    "page_url": "https://clawhub.ai/ai-innopower/skills/book-companion"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 756,
+    "installs": 18,
+    "stars": 0,
+    "versions": 8
+  },
+  "summary": "\u6700\u61c2\u4f60\u7684\u4e66\u642d\u5b50 - AI \u8bfb\u4e66\u4f34\u4fa3\u4e0e\u601d\u60f3\u4ea4\u6d41\u4f19\u4f34\u3002\u57fa\u4e8e\u672c\u5730 workspace \u7684\u9690\u79c1\u4fdd\u62a4\u578b\u5171\u8bfb Agent\uff0c\u652f\u6301\u8bed\u97f3\u6717\u8bfb\u3002",
+  "updated_at": 1778492572249,
+  "version": "2.0.7"
+}
