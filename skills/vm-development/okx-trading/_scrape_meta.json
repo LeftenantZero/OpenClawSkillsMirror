@@ -1,0 +1,67 @@
+{
+  "changelog": "v0.3.3 \u2014 Hotfix for v0.3.2 httpx patch. Patches httpx.Client.__init__ (and AsyncClient) instead of Client.send(), since send() doesn't accept timeout kwarg. The previous version crashed every OKX call with TypeError: Client.send() got an unexpected keyword argument 'timeout'. Verified locally with httpx 0.27.",
+  "created_at": 1777925773059,
+  "display_name": "OKX Trading with Permission Gate",
+  "fetched_at": 1787808246936,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/_audit.py",
+    "scripts/_guardrails.py",
+    "scripts/_okx_client.py",
+    "scripts/_pending.py",
+    "scripts/okx_cancel_pending.py",
+    "scripts/okx_dca_dip.py",
+    "scripts/okx_execute_trade.py",
+    "scripts/okx_get_balance.py",
+    "scripts/okx_get_candles.py",
+    "scripts/okx_get_ticker.py",
+    "scripts/okx_grid_apply.py",
+    "scripts/okx_grid_propose_stop.py",
+    "scripts/okx_grid_setup.py",
+    "scripts/okx_grid_step.py",
+    "scripts/okx_grid_stop.py",
+    "scripts/okx_list_pending.py",
+    "scripts/okx_open_orders.py",
+    "scripts/okx_pnl_summary.py",
+    "scripts/okx_positions.py",
+    "scripts/okx_propose_trade.py",
+    "scripts/okx_recent_fills.py",
+    "scripts/okx_snapshot.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090787714,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Vadym Malakhatko",
+    "handle": "vm-development",
+    "user_id": "s1723g8h7pbvgkmbxfg0x4qstn862p4s"
+  },
+  "slug": "okx-trading",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/okx-trading",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=okx-trading&ownerHandle=vm-development",
+    "page_url": "https://clawhub.ai/vm-development/skills/okx-trading"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 845,
+    "installs": 22,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Trade crypto on OKX with a strict human-in-the-loop confirmation gate. Use when the user asks to check OKX balances, look up prices, propose or execute trade...",
+  "updated_at": 1778567508175,
+  "version": "0.3.3"
+}
