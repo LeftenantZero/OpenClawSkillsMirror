@@ -1,0 +1,64 @@
+{
+  "changelog": "Initial public release with full agent identity functionality:\n\n- Implements creation and management of decentralized agent identities using Billions ERC-8004 and iden3 protocols.\n- Provides scripts to create identities, generate and verify authentication challenges, and link agents to human owners.\n- Includes strict guardrails to enforce secure key/identity handling and prevent unauthorized/manual cryptographic operations.\n- Stores all sensitive identity data in `$HOME/.openclaw/billions` for compatibility and security.\n- Offers example flows and usage instructions for identity linking and verification between agents and humans.",
+  "created_at": 1773803624336,
+  "display_name": "Verified Agent Identity",
+  "fetched_at": 1787866705938,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/constants.js",
+    "scripts/createNewEthereumIdentity.js",
+    "scripts/generateChallenge.js",
+    "scripts/getDidDocument.js",
+    "scripts/getIdentities.js",
+    "scripts/linkHumanToAgent.js",
+    "scripts/manualLinkHumanToAgent.js",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "scripts/shared/attestation.js",
+    "scripts/shared/bootstrap.js",
+    "scripts/shared/storage/base.js",
+    "scripts/shared/storage/challenge.js",
+    "scripts/shared/storage/crypto.js",
+    "scripts/shared/storage/did.js",
+    "scripts/shared/storage/identities.js",
+    "scripts/shared/storage/keys.js",
+    "scripts/shared/utils.js",
+    "scripts/signChallenge.js",
+    "scripts/verifySignature.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089946448,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ARMANMA0100",
+    "handle": "armanma0100",
+    "user_id": "s1780pc1nkgxgsy3a2zaxs4csh885jf4"
+  },
+  "slug": "verified-agent-identity-7",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/verified-agent-identity-7",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=verified-agent-identity-7&ownerHandle=armanma0100",
+    "page_url": "https://clawhub.ai/armanma0100/skills/verified-agent-identity-7"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 845,
+    "installs": 22,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Billions decentralized identity for agents. Link agents to human identities using Billions ERC-8004 and Attestation Registries. Verify and generate authentic...",
+  "updated_at": 1778491989335,
+  "version": "0.1.1"
+}
