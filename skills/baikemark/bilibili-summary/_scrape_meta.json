@@ -1,0 +1,47 @@
+{
+  "changelog": "bilibili-summary skill 1.0.0 \u2014 Initial release\n\n- Supports the complete workflow for handling Bilibili (\u54d4\u54e9\u54d4\u54e9) video subtitles, including user login via QR code, automatic subtitle fetching (AI/CC, with fallback), summary generation, and keyword time-stamp lookup.\n- Subtitles auto-cached locally; uses cache if available to save time and API calls.\n- Provides clear instructions and CLI scripts for cookie login, subtitle fetching, and time-stamp searching.\n- Designed to trigger for any request involving B \u7ad9\u89c6\u9891/bilibili subtitles, summaries, or keyword location queries.\n- Pure Python, minimally dependent (requests needed; qrcode optional).\n- Gracefully handles missing/invalid cookies, videos with no subtitles, and network errors, with user guidance for each case.",
+  "created_at": 1774262625627,
+  "display_name": "bilibili summary skill",
+  "fetched_at": 1787853652567,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/cookie_login.py",
+    "scripts/fetch_subtitle.py",
+    "scripts/search_timestamp.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090050173,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Mark",
+    "handle": "baikemark",
+    "user_id": "s174t9tps0jjtv9aatrb4hktzh83h3ar"
+  },
+  "slug": "bilibili-summary",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bilibili-summary",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bilibili-summary&ownerHandle=baikemark",
+    "page_url": "https://clawhub.ai/baikemark/skills/bilibili-summary"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 933,
+    "installs": 26,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u5904\u7406 B \u7ad9\uff08\u54d4\u54e9\u54d4\u54e9\uff09\u89c6\u9891\u5b57\u5e55\u7684\u5b8c\u6574\u5de5\u4f5c\u6d41\u3002\u80fd\u529b\u5305\u62ec\uff1a\uff081\uff09\u5f15\u5bfc\u7528\u6237\u626b\u7801\u767b\u5f55\u83b7\u53d6 Cookie\uff1b\uff082\uff09\u81ea\u52a8\u83b7\u53d6\u89c6\u9891\u5b57\u5e55\uff08\u4f18\u5148 AI \u5b57\u5e55\uff0c\u81ea\u52a8\u56de\u9000 CC \u5b57\u5e55\uff09\uff1b\uff083\uff09\u751f\u6210\u89c6\u9891\u5185\u5bb9\u6458\u8981\uff1b\uff084\uff09\u5f53\u7528\u6237\u8be2\u95ee\"\u67d0\u5185\u5bb9\u5728\u54ea\u4e2a\u65f6\u95f4\u6bb5\"\u65f6\uff0c\u4ece\u5b57\u5e55\u6587\u4ef6\u4e2d\u7cbe\u51c6\u5b9a\u4f4d\u65f6\u95f4\u6233\u3002\u5f53\u7528\u6237\u63d0\u4f9b B \u7ad9\u89c6\u9891\u94fe\u63a5\u3001BVID\uff0c\u6216\u63d0\u5230\"b\u7ad9\u5b57\u5e55\"...",
+  "updated_at": 1778492135193,
+  "version": "1.0.0"
+}
