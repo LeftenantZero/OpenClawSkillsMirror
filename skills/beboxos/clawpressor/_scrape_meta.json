@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release - Session context compression using Sumy NLP.\nReduces token usage by 84-96%, extends session lifetime by 400%.",
+  "created_at": 1770937388253,
+  "display_name": "Session Context Compressor",
+  "fetched_at": 1787804578173,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.yaml",
+    "scripts/compress.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779973042506,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "beboxos",
+    "handle": "beboxos",
+    "user_id": "s175qqq61mnk1acnczxd899wf1885eth"
+  },
+  "slug": "clawpressor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawpressor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawpressor&ownerHandle=beboxos",
+    "page_url": "https://clawhub.ai/beboxos/skills/clawpressor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1647,
+    "installs": 53,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Compress OpenClaw session context to reduce token usage and extend session lifetime. Uses NLP summarization (Sumy) to intelligently compact conversation history while preserving essential context. Triggers on mentions of session compression, token reduction, context cleanup, or when session size exceeds safe thresholds (~300KB). Use when (1) OpenClaw approaches 50% context limit, (2) Sessions are slowing down due to large context, (3) Reducing API costs from excessive token consumption, (4) Extending session lifetime without forced reboots.",
+  "updated_at": 1778990161472,
+  "version": "1.0.0"
+}
