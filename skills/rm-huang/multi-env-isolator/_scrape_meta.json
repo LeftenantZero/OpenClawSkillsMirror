@@ -1,0 +1,36 @@
+{
+  "changelog": "**v2.0.0 introduces frontend (Vue/React) isolation and Playwright E2E support for full-stack FastAPI projects.**\n\n- Adds support for generating separate backend and frontend (Vue/React) startup scripts for dev, test, and prod environments.\n- Integrates Playwright test environment, with generated config and scripts for E2E testing in the isolated test setup.\n- Supports isolated frontend ports/configs alongside backend for each environment (dev/test/prod).\n- Introduces new command-line options for customizing frontend directories and ports.\n- Team documentation now reflects both backend and frontend workflows, clearly outlining roles and parallel non-conflicting work.\n- Backwards compatible with Python-only (FastAPI/uvicorn) projects; added support is for full-stack teams.",
+  "created_at": 1774197184917,
+  "display_name": "Multi-Environment Isolator",
+  "fetched_at": 1787855637928,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/config-options.md",
+    "scripts/setup_envs.py",
+    "scripts/setup_envs_v2.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "RM-Huang",
+    "handle": "rm-huang",
+    "user_id": "s17daa0kygpph08ese1yhn56z583gvtc"
+  },
+  "slug": "multi-env-isolator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/multi-env-isolator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=multi-env-isolator&ownerHandle=rm-huang",
+    "page_url": "https://clawhub.ai/rm-huang/skills/multi-env-isolator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 647,
+    "installs": 16,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Generate isolated dev/test/prod environments for uvicorn/FastAPI Python web projects with frontend (Vue/React) support. Creates separate config files, startu...",
+  "updated_at": 1778492115715,
+  "version": "2.0.0"
+}
