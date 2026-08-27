@@ -1,0 +1,59 @@
+{
+  "changelog": "Initial release of django-claw-skill.\n\n- Provides a canonical interface for running Django management and database commands via strict command mapping.\n- Enforces strict dispatch rules: each user command maps exactly to one script, with no substitutions or paraphrasing.\n- Supports common Django commands: migrate, makemigrations, showmigrations, logs, check, version, settings inspection, and readonly mode toggling.\n- Includes strong safeguards for destructive actions and read-only mode; prevents unauthorized or simulated command execution.\n- Returns raw script output and a one-line plain-English summary for every command.",
+  "created_at": 1772084038761,
+  "display_name": "Django Claw",
+  "fetched_at": 1787791002408,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/db-stats.sh",
+    "scripts/django-logs.sh",
+    "scripts/list-apps.sh",
+    "scripts/list-models.sh",
+    "scripts/list-urls.sh",
+    "scripts/list-users.sh",
+    "scripts/load-config.sh",
+    "scripts/pending-migrations.sh",
+    "scripts/python-version.sh",
+    "scripts/readonly.sh",
+    "scripts/run-query.sh",
+    "scripts/run.sh",
+    "scripts/settings-check.sh",
+    "scripts/setup.sh",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779961774758,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "manoj kumar",
+    "handle": "manojrammurthy",
+    "user_id": "s172s0tvxn74mpcbg9tbn7w34x8424zp"
+  },
+  "slug": "django-claw-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/django-claw-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=django-claw-skill&ownerHandle=manojrammurthy",
+    "page_url": "https://clawhub.ai/manojrammurthy/skills/django-claw-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1129,
+    "installs": 34,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Run Django management commands (migrate, showmigrations, makemigrations, check, version, logs, readonly) or Django ORM queries on any configured Django project.",
+  "updated_at": 1779077391289,
+  "version": "0.1.0"
+}
