@@ -1,0 +1,33 @@
+{
+  "changelog": "analysis-report v1.0.0\n\n- Initial release of the skill for orchestrating and generating complete, structured data analysis reports.\n- Provides a report \"editor-in-chief\" function: determines required report sections, dispatches metric-query, anomaly-detection, metric-attribution, forecast-simulation skills for each part, and weaves results into a logical narrative.\n- Clarifies use case boundaries: use this skill for comprehensive, multi-section reports; not for one-off metric queries or simple anomaly checks.\n- Implements transparent report structuring: presents report outlines for user confirmation, customizes content depth, and adapts to audience and frequency needs.\n- Ensures context handover between report sections via a shared `report_context`, supporting logical flow and coherence in the final report.\n- Outputs in Markdown by default, supporting conversion to docx/pptx/xlsx if requested.",
+  "created_at": 1774966663174,
+  "display_name": "Aloudata CAN SKILLS - analysis-report",
+  "fetched_at": 1787838083810,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jackyujun",
+    "handle": "jackyujun",
+    "user_id": "s172qm3yezbbjev7q8rsxxbd1s83he2f"
+  },
+  "slug": "analysis-report",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/analysis-report",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=analysis-report&ownerHandle=jackyujun",
+    "page_url": "https://clawhub.ai/jackyujun/skills/analysis-report"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1088,
+    "installs": 28,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7f16\u6392\u5e76\u751f\u6210\u5b8c\u6574\u7684\u6570\u636e\u5206\u6790\u62a5\u544a\u3002\u5f53\u7528\u6237\u9700\u8981\u4e00\u4efd\u7ed3\u6784\u5316\u7684\u5206\u6790\u62a5\u544a\uff08\u800c\u975e\u5355\u4e2a\u6307\u6807\u67e5\u8be2\u6216\u5355\u70b9\u5206\u6790\uff09\u65f6\uff0c\u5fc5\u987b\u4f7f\u7528\u6b64 Skill\u3002\u672c Skill \u662f\u7f16\u6392\u5c42\u2014\u2014\u5b83\u4e0d\u5305\u542b\u5206\u6790\u903b\u8f91\uff0c\u800c\u662f\u77e5\u9053\"\u4e00\u4efd\u597d\u62a5\u544a\u8be5\u6709\u4ec0\u4e48\u5185\u5bb9\"\uff0c\u6309\u62a5\u544a\u6a21\u677f\u4f9d\u6b21\u8c03\u5ea6\u80fd\u529b\u5c42 Skill\uff08metric-query\u3001anomaly-detection\u3001metric-...",
+  "updated_at": 1778492324164,
+  "version": "1.0.0"
+}
