@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of aws-fis-experiment-execute.\n\n- Allows users to run a prepared AWS FIS (Fault Injection Simulator) experiment using an existing, already-deployed CloudFormation stack.\n- Supports both English and Chinese language detection for all output.\n- Verifies experiment directory and stack status before execution; does not deploy any infrastructure.\n- Performs pre-experiment health checks on all targeted AWS resources.\n- Integrates with the app-service-log-analysis sub-skill for application log collection and analysis.\n- Guides the user through monitoring the experiment, analyzing results, and generating a final report.",
+  "created_at": 1778412864348,
+  "display_name": "Aws Fis Experiment Execute",
+  "fetched_at": 1787794121140,
+  "files": [
+    "README.md",
+    "README_CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/cli-commands.md",
+    "references/report-template.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090776916,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "panlm",
+    "handle": "panlm",
+    "user_id": "s170tnbkqyrrzzgez8ybwx5vcs86edhj"
+  },
+  "slug": "aws-fis-experiment-execute",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aws-fis-experiment-execute",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aws-fis-experiment-execute&ownerHandle=panlm",
+    "page_url": "https://clawhub.ai/panlm/skills/aws-fis-experiment-execute"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 529,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when the user wants to run a prepared AWS FIS experiment where the CloudFormation stack has already been deployed. Triggers on \"execute FIS experiment\",...",
+  "updated_at": 1779076311569,
+  "version": "1.0.0"
+}
