@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of the Vestaboard skill.\n\n- Read and write messages to a Vestaboard using the Vestaboard Cloud API or legacy RW endpoint.\n- Supports displaying text, updating messages, showing short status, simple color pixel-art, and reading current board state.\n- Requires secure token via environment variables (`VESTABOARD_TOKEN`, optional legacy `VESTABOARD_RW_KEY`).\n- Automatically formats text input for Vestaboard\u2019s 6x22 layout (uppercase, word wrap, truncates overflow).\n- Includes CLI tools for previewing, reading, and writing board content.",
+  "created_at": 1769993405119,
+  "display_name": "Vestaboard",
+  "fetched_at": 1787805939528,
+  "files": [
+    "ENV.md",
+    "SKILL.md",
+    "_meta.json",
+    "content/layouts/chicken-silhouette.json",
+    "content/layouts/egg-nest.json",
+    "content/layouts/forest-depth.json",
+    "content/layouts/maple-fall.json",
+    "content/layouts/pine-night.json",
+    "content/layouts/sunrise-ridge.json",
+    "content/previews/chicken-silhouette.md",
+    "content/previews/egg-nest.md",
+    "content/previews/forest-depth.md",
+    "content/previews/maple-fall.md",
+    "content/previews/pine-night.md",
+    "content/previews/sunrise-ridge.md",
+    "package-lock.json",
+    "package.json",
+    "references/character-codes.md",
+    "references/formatting.md",
+    "scripts/vb.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SeidProjects",
+    "handle": "seidprojects",
+    "user_id": "s17dyvmvrw86phga7mbegyfhn1885byh"
+  },
+  "slug": "vestaboard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/vestaboard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=vestaboard&ownerHandle=seidprojects",
+    "page_url": "https://clawhub.ai/seidprojects/skills/vestaboard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2487,
+    "installs": 84,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Read and write messages on a Vestaboard using the Vestaboard Cloud API (cloud.vestaboard.com) and optional legacy RW endpoint. Use when asked to display text on a Vestaboard, update a sign/board, show a short status message, render simple pixel-art using color/filled character codes, or retrieve the current board message.",
+  "updated_at": 1778987788345,
+  "version": "1.0.0"
+}
