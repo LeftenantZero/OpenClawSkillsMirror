@@ -1,0 +1,38 @@
+{
+  "changelog": "safe-fuzzer 1.0.0 \u2014 Initial release\n\n- Introduces a sandbox-only, behavior-led gray-box fuzzer for installed skills.\n- Features a parent/worker model: the parent orchestrates, while a dedicated subagent executes probes against the target skill.\n- Deploys honeypot fixtures and reports all file, shell, and network activity in a structured JSON risk report.\n- Enforces strict sandbox preflight checks and never requests or exposes real credentials.\n- Supports configurable probe presets (`min`, `balanced`, `max`) with mandatory probe order and fixture deployment.\n- Requires explicit user invocation and does not auto-run in ordinary chat turns.",
+  "created_at": 1774823664099,
+  "display_name": "SAFE-Fuzzer",
+  "fetched_at": 1787840810893,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/presets/balanced.json",
+    "references/presets/max.json",
+    "references/presets/min.json",
+    "references/report-schema.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "agentsey",
+    "handle": "archidoge0",
+    "user_id": "s173mf1x61xg9r18f56set1mb183pq38"
+  },
+  "slug": "safe-fuzzer-deprecated",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/safe-fuzzer-deprecated",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=safe-fuzzer-deprecated&ownerHandle=archidoge0",
+    "page_url": "https://clawhub.ai/archidoge0/skills/safe-fuzzer-deprecated"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 524,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Sandbox-only behavior-led gray-box skill fuzzer. Spawns a worker subagent, probes an installed target skill, deploys honeypot fixtures, and returns a structu...",
+  "updated_at": 1778492283432,
+  "version": "1.0.0"
+}
