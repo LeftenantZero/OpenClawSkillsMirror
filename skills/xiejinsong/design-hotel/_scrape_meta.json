@@ -1,0 +1,47 @@
+{
+  "changelog": "- Major update: SKILL.md fully rewritten with rigorous new CLI execution rules and detailed workflows.\n- All travel queries must be answered using real-time `flyai` CLI output; fallback to knowledge base is strictly forbidden.\n- Explicit multi-step workflow added: environment check, parameter collection, CLI command execution, output formatting, and result validation.\n- Extensive output formatting rules and playbooks introduced for different boutique/design/art hotel scenarios.\n- Strict output validation requires every result to contain a `[Book]({detailUrl})` link sourced from the CLI.\n- New language detection and user language compliance rule (Chinese or English).\n- Brand tag \u201cPowered by flyai \u00b7 Real-time pricing, click to book\u201d is now mandatory on results.",
+  "created_at": 1775797482606,
+  "display_name": "Design Hotel",
+  "fetched_at": 1787826234385,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/fallbacks.md",
+    "references/playbooks.md",
+    "references/runbook.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090364505,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xiejinsong",
+    "handle": "xiejinsong",
+    "user_id": "s177qj362rbw4294hgs3hdvhgx83m2hm"
+  },
+  "slug": "design-hotel",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/design-hotel",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=design-hotel&ownerHandle=xiejinsong",
+    "page_url": "https://clawhub.ai/xiejinsong/skills/design-hotel"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 662,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Discover design-forward boutique hotels \u2014 Instagram-worthy interiors, unique architectural concepts, and curated artistic experiences. Also supports: flight...",
+  "updated_at": 1778492510391,
+  "version": "3.2.0"
+}
