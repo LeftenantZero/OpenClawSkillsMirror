@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of agent-securitysandbox (mass-sandbox):\n\n- Provides a secure, isolated environment for running untrusted code using Docker.\n- Drops all Linux capabilities, disables networking, and runs as a non-root user for strong isolation.\n- Uses a custom seccomp profile to block sensitive system calls.\n- Simple command-line workflow: wrap commands/scripts with the provided `mass` script for sandboxed execution.\n- Outputs results with clear indication when security policies block actions.\n- All changes within the sandbox are ephemeral and do not persist beyond execution.",
+  "created_at": 1778395877314,
+  "display_name": "Agent SecuritySandbox",
+  "fetched_at": 1787808840880,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/seccomp.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090776809,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Anthony Assi",
+    "handle": "assix",
+    "user_id": "s17bfvgwgfjf7wgnf57h1fpvcd83n5mq"
+  },
+  "slug": "agent-securitysandbox",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-securitysandbox",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-securitysandbox&ownerHandle=assix",
+    "page_url": "https://clawhub.ai/assix/skills/agent-securitysandbox"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 515,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Execute untrusted code or commands in a secure, isolated Docker environment. Use when asked to run unknown scripts, third-party skills, or any code that migh...",
+  "updated_at": 1778492892498,
+  "version": "1.0.0"
+}
