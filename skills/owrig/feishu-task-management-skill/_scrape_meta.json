@@ -1,0 +1,67 @@
+{
+  "changelog": "Initial release of feishu-task-management-skill.\n\n- Provides Feishu Task management via a local Python toolkit with app credentials and optional user token support.\n- Supports creating, updating, completing, reopening, deleting tasks, and managing task members.\n- Resolves members using a locally synced member table and alias mapping\u2014no ad hoc lookups.\n- Includes strict write-safety and command selection rules to avoid destructive or ambiguous operations.\n- Scope excludes reminders, tasklists, dependencies, repeat rules, custom complete, and attachments.",
+  "created_at": 1773197460312,
+  "display_name": "feishu-task-management-skill",
+  "fetched_at": 1787789521678,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/api-alignment.md",
+    "references/member-sync-troubleshooting.md",
+    "references/permission-errors.md",
+    "references/task-edge-cases.md",
+    "skill-card.md",
+    "toolkit/config/runtime.json",
+    "toolkit/data/feishu_members.json",
+    "toolkit/data/member_aliases.json",
+    "toolkit/data/sync_meta.json",
+    "toolkit/scripts/feishu_config.py",
+    "toolkit/scripts/feishu_members.py",
+    "toolkit/scripts/feishu_task.py",
+    "toolkit/src/feishu_task_toolkit/__init__.py",
+    "toolkit/src/feishu_task_toolkit/cli_config.py",
+    "toolkit/src/feishu_task_toolkit/cli_members.py",
+    "toolkit/src/feishu_task_toolkit/cli_tasks.py",
+    "toolkit/src/feishu_task_toolkit/config.py",
+    "toolkit/src/feishu_task_toolkit/http.py",
+    "toolkit/src/feishu_task_toolkit/members.py",
+    "toolkit/src/feishu_task_toolkit/tasks.py",
+    "toolkit/tests/test_config.py",
+    "toolkit/tests/test_http.py",
+    "toolkit/tests/test_member_directory.py",
+    "toolkit/tests/test_task_payloads.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089835483,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "@_@",
+    "handle": "owrig",
+    "user_id": "s176s3hsn45mf8efgq1tjcyvnd884c16"
+  },
+  "slug": "feishu-task-management-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-task-management-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-task-management-skill&ownerHandle=owrig",
+    "page_url": "https://clawhub.ai/owrig/skills/feishu-task-management-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 998,
+    "installs": 29,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Manage Feishu tasks through a local Python toolkit that always has app credentials and can optionally act as a user for task APIs when OAuth user tokens are...",
+  "updated_at": 1779077925551,
+  "version": "0.0.1"
+}
