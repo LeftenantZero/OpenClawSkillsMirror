@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of Workspace Anchor: a multi-agent workspace awareness and safety system.\n\n- Discovers, lists, switches, and validates project environments using `.project-lock` files.\n- Prevents agent drift by requiring environment-based naming for project anchors.\n- Provides CLI commands: `discover`, `list`, `create <path>`, `switch <name>`, and `validate <path>`.\n- Includes critical agent instruction to always locate correct absolute paths before use.",
+  "created_at": 1770159454745,
+  "display_name": "Workspace Anchor",
+  "fetched_at": 1787793015358,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "cli.js",
+    "config/defaults.json",
+    "lib/create.js",
+    "lib/discover.js",
+    "lib/list.js",
+    "lib/switch.js",
+    "lib/validate.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783656272916,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zenchantlive",
+    "handle": "zenchantlive",
+    "user_id": "s17ame7eb1g95gcsvt9x3x8me98846dz"
+  },
+  "slug": "workspace-anchor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/workspace-anchor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=workspace-anchor&ownerHandle=zenchantlive",
+    "page_url": "https://clawhub.ai/zenchantlive/skills/workspace-anchor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2491,
+    "installs": 82,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Manages multi-agent projects by discovering, listing, switching, and validating workspace anchors using environment paths to prevent context drift.",
+  "updated_at": 1779076725924,
+  "version": "1.0.0"
+}
