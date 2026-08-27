@@ -1,0 +1,50 @@
+{
+  "changelog": "feishu-senseaudio-persona 1.0.0 \u2013 Initial release\n\n- Enables a customizable persona-based voice companion skill for Feishu.\n- Guides users to set up a virtual character\u2019s profile (name, personality, style, voice) on first use.\n- Responds to user messages (text or voice) as the configured persona, generating replies via persona-specific prompts.\n- Synthesizes all voice replies using SenseAudio TTS, returning only Feishu-native OPUS audio messages (voice bars).\n- Handles user speech input by transcribing with SenseAudio ASR before generating persona replies.\n- Ensures strict compliance with using only SenseAudio for ASR/TTS and sending replies as voice messages, not text.",
+  "created_at": 1773722766274,
+  "display_name": "\u53ef\u63a5\u5165\u98de\u4e66\u7684senseaudio\u89d2\u8272\u626e\u6f14\u52a9\u624b",
+  "fetched_at": 1787868938540,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "data/persona.json",
+    "scripts/asr.py",
+    "scripts/feishu_api.py",
+    "scripts/main.py",
+    "scripts/persona_store.py",
+    "scripts/tts.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089924987,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "KLilyZ",
+    "handle": "klilyz",
+    "user_id": "s1722vtv476cm18sc2h967dygd85txnp"
+  },
+  "slug": "feishu-senseaudio-persona",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-senseaudio-persona",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-senseaudio-persona&ownerHandle=klilyz",
+    "page_url": "https://clawhub.ai/klilyz/skills/feishu-senseaudio-persona"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 775,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u98de\u4e66\u8bed\u97f3\u966a\u4f34\u6280\u80fd\u3002\u5f53\u7528\u6237\u5728\u98de\u4e66\u673a\u5668\u4eba\u4f1a\u8bdd\u4e2d\u53d1\u9001\u4efb\u4f55\u6587\u5b57\u6216\u8bed\u97f3\u6d88\u606f\u65f6\u89e6\u53d1\u6b64\u6280\u80fd\u3002 \u5927\u6a21\u578b\u6839\u636e\u7528\u6237\u81ea\u5b9a\u4e49\u7684\u865a\u62df\u89d2\u8272\u4eba\u8bbe\uff0c\u751f\u6210\u7b26\u5408\u89d2\u8272\u6027\u683c\u7684\u6587\u672c\u56de\u590d\uff0c \u5e76\u901a\u8fc7 SenseAudio TTS \u5408\u6210\u8bed\u97f3\uff0c\u4ee5\u98de\u4e66\u539f\u751f\u8bed\u97f3\u6761\u5f62\u5f0f\u56de\u590d\uff0c\u4e0d\u8981\u751f\u6210\u4efb\u4f55\u6587\u5b57\u6d88\u606f\u56de\u590d\u5230\u5bf9\u8bdd\u6846\u91cc\uff0c\u53ea\u9700\u8981\u7b26\u5408\u8be5\u4f34\u4fa3\u4eba\u8bbe\u7684\u5bf9\u8bdd\u5373\u53ef\u3002 \u9996\u6b21\u4f7f\u7528\u65f6\u5f15\u5bfc\u7528\u6237\u5b8c\u6210\u89d2...",
+  "updated_at": 1778491965619,
+  "version": "1.0.0"
+}
