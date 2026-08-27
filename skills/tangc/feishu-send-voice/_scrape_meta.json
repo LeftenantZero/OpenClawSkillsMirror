@@ -1,0 +1,34 @@
+{
+  "changelog": "- Initial release of feishu-voice-tts skill.\n- Converts text to speech using edge-tts and sends as Feishu audio message.\n- Avoids file downgrade to text by following Feishu's \"upload file then send audio message\" workflow.\n- Supports customizable voice, user open_id, and flexible configuration via environment variables.\n- Includes a shell script for full automation of TTS, file conversion, upload, and message sending.",
+  "created_at": 1772615484113,
+  "display_name": "Feishu Send Voice",
+  "fetched_at": 1787800509556,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/send_feishu_voice.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "tangzhan_aicoding",
+    "handle": "tangc",
+    "user_id": "s17bbh1k6bpcvf1h9bn47a710583g8sx"
+  },
+  "slug": "feishu-send-voice",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-send-voice",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-send-voice&ownerHandle=tangc",
+    "page_url": "https://clawhub.ai/tangc/skills/feishu-send-voice"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1210,
+    "installs": 35,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "\u5c06\u6587\u672c\u8f6c\u4e3a\u8bed\u97f3\u5e76\u901a\u8fc7\u98de\u4e66 audio \u6d88\u606f\u53d1\u9001\u7ed9\u6307\u5b9a\u7528\u6237\u3002\u7528\u4e8e\u201c\u7ed9\u7528\u6237\u53d1\u8bed\u97f3\u201d\u201c\u628a\u8fd9\u6bb5\u8bdd\u8f6c\u8bed\u97f3\u5e76\u53d1\u98de\u4e66\u201d\u201c\u8bed\u97f3\u64ad\u62a5\u7ed3\u679c\u201d\u7b49\u573a\u666f\uff0c\u5c24\u5176\u5f53\u666e\u901a\u6587\u4ef6\u53d1\u9001\u4f1a\u964d\u7ea7\u4e3a\u6587\u672c\u65f6\u4f7f\u7528\u3002\u4ec5\u5728\u6307\u5b9a channel=feishu \u65f6\u89e6\u53d1\u3002\u4f18\u5148\u5728\u9700\u8981\u9ad8\u53ef\u8fbe\u3001\u53ef\u542c\u64ad\u62a5\u65f6\u4f7f\u7528\u3002",
+  "updated_at": 1778995138337,
+  "version": "0.1.0"
+}
