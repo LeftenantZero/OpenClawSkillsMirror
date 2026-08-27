@@ -1,0 +1,58 @@
+{
+  "changelog": "Initial release: Local-first, privacy-first LLM inference plugin for OpenClaw.\n\n- Performs most queries locally via Ollama and Qwen2.5 7B; only complex questions are sent to the cloud.\n- Strips personal and contextual data before sending anything to cloud APIs, ensuring privacy.\n- Drastically reduces token usage and API cost (85%+ savings).\n- Cloud responses are cached locally; your agent learns from the cloud, the cloud does not learn from you.\n- Fully auditable with a privacy audit trail and transparent routing decisions.",
+  "created_at": 1777060474125,
+  "display_name": "Nirvana Plugin",
+  "fetched_at": 1787815093366,
+  "files": [
+    "DELIVERY-CHECKLIST.md",
+    "INSTALL.md",
+    "MIGRATION.md",
+    "PUBLISH.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.schema.json",
+    "plugin-manifest.json",
+    "skill-card.md",
+    "src/context-stripper.js",
+    "src/index.js",
+    "src/metrics-collector.js",
+    "src/ollama-manager.js",
+    "src/privacy-auditor.js",
+    "src/provider.js",
+    "src/response-integrator.js",
+    "src/router.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090544398,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Shiva&G",
+    "handle": "shivaclaw",
+    "user_id": "s17en5fpjwrkkkz2azf8m3akg983rtkm"
+  },
+  "slug": "project-nirvana-plugin",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/project-nirvana-plugin",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=project-nirvana-plugin&ownerHandle=shivaclaw",
+    "page_url": "https://clawhub.ai/shivaclaw/skills/project-nirvana-plugin"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 574,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Local-first privacy-first inference. Your OpenClaw agent thinks locally and asks the cloud intelligently. Saves 85%+ tokens, protects privacy, agent learns f...",
+  "updated_at": 1778492741073,
+  "version": "1.0.0"
+}
