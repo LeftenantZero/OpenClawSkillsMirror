@@ -1,0 +1,46 @@
+{
+  "changelog": "- Added support for language detection: agent display names and persona prompts now match the user's primary request language unless specified otherwise.\n- Changed parameter agent_name_cn to agent_display_name, allowing friendly names in any language.\n- Updated example values and descriptions to reflect multi-language support.\n- Updated SOP: now includes language detection and cross-platform execution scripts for Linux/macOS/WSL/Git Bash (bash) and Windows PowerShell.",
+  "created_at": 1773982036228,
+  "display_name": "agent-creator-skill",
+  "fetched_at": 1787797780058,
+  "files": [
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "create_agent.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090463244,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "freesaber",
+    "handle": "freesaber",
+    "user_id": "s17a24xybvef7x3tr0abax80jh83gfef"
+  },
+  "slug": "agent-creator-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-creator-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-creator-skill&ownerHandle=freesaber",
+    "page_url": "https://clawhub.ai/freesaber/skills/agent-creator-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1207,
+    "installs": 36,
+    "stars": 1,
+    "versions": 6
+  },
+  "summary": "Automatically create a new OpenClaw agent, translate its name, and initialize its persona/system prompt based on user requests.",
+  "updated_at": 1779003882747,
+  "version": "1.0.6"
+}
