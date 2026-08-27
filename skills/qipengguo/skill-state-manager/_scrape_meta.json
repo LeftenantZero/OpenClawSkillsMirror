@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of Skill State Manager (SSM), a meta skill for seamless API key and state management:\n\n- Enables native conversational prompts for secrets when third-party tools require authentication or fail with 401/403 errors.\n- Automatically detects platform (Claude Code, Codex, or other CLIs) and adapts credential storage path accordingly.\n- Securely saves user-provided tokens/keys in standard local directories for future reuse.\n- Eliminates the need for per-tool manual config, token pasting, or hardcoded secrets.\n- Only activates for third-party tools needing secrets, not for public or built-in tools.",
+  "created_at": 1775220180683,
+  "display_name": "skill-state-manager",
+  "fetched_at": 1787796691070,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090286889,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Guo Qipeng",
+    "handle": "qipengguo",
+    "user_id": "s170pr38p1397r6p2bxqgmp6p583hzq7"
+  },
+  "slug": "skill-state-manager",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-state-manager",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-state-manager&ownerHandle=qipengguo",
+    "page_url": "https://clawhub.ai/qipengguo/skills/skill-state-manager"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 544,
+    "installs": 14,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "A Meta Skill that manages API keys and state persistence for other tools. Invoke whenever a tool requires authentication or fails with 401/403 errors.",
+  "updated_at": 1779075331488,
+  "version": "0.0.1"
+}
