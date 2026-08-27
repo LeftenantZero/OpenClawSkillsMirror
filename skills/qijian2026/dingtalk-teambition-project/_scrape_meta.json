@@ -1,0 +1,75 @@
+{
+  "changelog": "Initial release of dingtalk-teambition-project skill.\n\n- Provides tools for managing Teambition tasks and projects: querying, creating, updating, commenting, uploading files, project and member lookup, and sprint management.\n- Triggers for common scenario prompts: \"check my todos,\" \"what tasks are due today/this week,\" \"create or update task,\" etc.\n- Includes strict display and naming conventions: all IDs must be resolved to human-readable names before showing to users; task titles shown instead of content for clarity.\n- Handles special cases for enterprise-specific configuration, time zone conversion, file attachments, and requires confirmation for destructive operations like archive/delete.\n- Offers concise scripts reference and operation rules for working efficiently with Teambition APIs through this skill.",
+  "created_at": 1773837937095,
+  "display_name": "Dingtalk Teambition Project",
+  "fetched_at": 1787865463995,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "pyproject.toml",
+    "references/error-handling.md",
+    "references/project-ops.md",
+    "references/project-tql.md",
+    "references/task-ops.md",
+    "references/tql.md",
+    "scripts/__init__.py",
+    "scripts/archive_task.py",
+    "scripts/call_api.py",
+    "scripts/create_comment.py",
+    "scripts/create_task.py",
+    "scripts/create_trace.py",
+    "scripts/get_current_user.py",
+    "scripts/get_custom_fields.py",
+    "scripts/get_priority_list.py",
+    "scripts/get_scenario_types.py",
+    "scripts/get_task_statuses.py",
+    "scripts/get_taskflow_statuses.py",
+    "scripts/manage_sprint.py",
+    "scripts/query_members.py",
+    "scripts/query_project_detail.py",
+    "scripts/query_projects.py",
+    "scripts/query_task_activity.py",
+    "scripts/query_task_detail.py",
+    "scripts/query_tasks.py",
+    "scripts/render_rtf.py",
+    "scripts/update_task.py",
+    "scripts/update_task_priority.py",
+    "scripts/upload_file.py",
+    "scripts/upload_file_to_customfield.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089960158,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "qijian",
+    "handle": "qijian2026",
+    "user_id": "s1774fjkhwhejjcbp6bsnhqv0n83ne8x"
+  },
+  "slug": "dingtalk-teambition-project",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dingtalk-teambition-project",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dingtalk-teambition-project&ownerHandle=qijian2026",
+    "page_url": "https://clawhub.ai/qijian2026/skills/dingtalk-teambition-project"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 905,
+    "installs": 25,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Use for anything related to Teambition tasks and projects. Triggers on: checking my todos, what tasks are due today or this week, create a task, update task...",
+  "updated_at": 1778492004868,
+  "version": "0.0.1"
+}
