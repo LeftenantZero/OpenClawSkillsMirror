@@ -1,0 +1,80 @@
+{
+  "changelog": "Initial release of the job-search skill for structured job hunting across Russian and international sources.\n\n- Search, evaluate, and manage job opportunities from hh.ru, Habr Career, Telegram, and LinkedIn.\n- Supports candidate profiling, custom filtering, vacancy scoring, application tracking, and workflow safety controls.\n- Provides clear safety rules, operating modes (research, assisted, auto-apply, outreach), and workspace best practices.\n- Includes vacancy normalization, tailored resume/cover letter outputs, and a full set of Python tools for automation and parsing.\n- Emphasizes user control: never contacts recruiters or auto-applies without explicit permission.",
+  "created_at": 1773981007665,
+  "display_name": "Skills for finding a job on hh",
+  "fetched_at": 1787797787720,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/templates/BLACKLIST.md",
+    "assets/templates/OUTREACH_RULES.md",
+    "assets/templates/PIPELINE.md",
+    "assets/templates/PROFILE.md",
+    "assets/templates/README-START.md",
+    "assets/templates/SEARCH_RULES.md",
+    "assets/templates/SOURCES.md",
+    "assets/templates/TARGET_ROLES.md",
+    "references/data-flow.md",
+    "references/file-formats.md",
+    "references/onboarding.md",
+    "references/project-layout.md",
+    "references/safety-rules.md",
+    "references/source-strategy.md",
+    "scripts/batch_normalize_vacancies.py",
+    "scripts/batch_parse_telegram_jobs.py",
+    "scripts/canonicalize_deduped.py",
+    "scripts/dedupe_vacancies.py",
+    "scripts/export_shortlist.py",
+    "scripts/hh_apply_batch.py",
+    "scripts/hh_browser_cli.py",
+    "scripts/hh_next_raise_at.py",
+    "scripts/hh_raise_resumes.py",
+    "scripts/init_job_search_project.py",
+    "scripts/job_match_score.py",
+    "scripts/job_models.py",
+    "scripts/job_search_probe.py",
+    "scripts/normalize_salary.py",
+    "scripts/normalize_vacancy.py",
+    "scripts/parse_telegram_job.py",
+    "scripts/pipeline_add.py",
+    "scripts/profile_to_json.py",
+    "scripts/render_delivery_delta.py",
+    "scripts/render_job_report.py",
+    "scripts/render_probe_summary.py",
+    "scripts/requirements.txt",
+    "scripts/score_vacancies_jsonl.py",
+    "scripts/score_vacancy_from_project.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089992295,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Nikolay Kuznetsov",
+    "handle": "naxofon",
+    "user_id": "s179c42qft8tp864spcs89eddd885pjy"
+  },
+  "slug": "hh-job-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hh-job-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hh-job-search&ownerHandle=naxofon",
+    "page_url": "https://clawhub.ai/naxofon/skills/hh-job-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 965,
+    "installs": 26,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Search, evaluate, and manage job opportunities for a candidate across the Russian market with hh.ru, Habr Career, Telegram vacancy channels/chats, and Linked...",
+  "updated_at": 1779003872596,
+  "version": "1.0.0"
+}
