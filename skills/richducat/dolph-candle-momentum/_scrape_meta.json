@@ -1,0 +1,45 @@
+{
+  "changelog": "- Initial release of Polymarket Candle Momentum skill.\n- Trades 5-minute Polymarket fast markets (BTC, ETH, SOL, XRP, BNB) using 1-minute Binance candle body analysis and volume surge detection.\n- Enters positions when last candle body >60% of range and volume >1.5x 3-candle average.\n- Backtested with 84\u201386%+ win rate over 3 months.\n- Dry-run by default; live trading enabled with --live flag and SIMMER_API_KEY.\n- Configurable thresholds and assets via CLI or environment variables.",
+  "created_at": 1775342059806,
+  "display_name": "Polymarket Candle Momentum",
+  "fetched_at": 1787796325911,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "candle_momentum.py",
+    "clawhub.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090304273,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "richducat",
+    "handle": "richducat",
+    "user_id": "s172pm13k2nd0gwew35ac7tnf9846t3e"
+  },
+  "slug": "dolph-candle-momentum",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dolph-candle-momentum",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dolph-candle-momentum&ownerHandle=richducat",
+    "page_url": "https://clawhub.ai/richducat/skills/dolph-candle-momentum"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 597,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Trade Polymarket 5-minute crypto fast markets using 1-minute candle body analysis and volume surge detection from Binance. Scans BTC, ETH, SOL, XRP, BNB simu...",
+  "updated_at": 1779075511219,
+  "version": "1.0.0"
+}
