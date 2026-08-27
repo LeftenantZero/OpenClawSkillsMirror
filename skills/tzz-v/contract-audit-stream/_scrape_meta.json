@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of contract-audit-stream.\n\n- Supports batch contract auditing via SSE, using either file links (JSON) or direct file upload (multipart).\n- Requires selection of audit perspective (\u7532\u65b9/PARTY_JIA or \u4e59\u65b9/PARTY_YI) and a valid api_key.\n- Enforces file count (\u22645) and size (\u22645MB for uploads) limits, with strict server-side validation.\n- SSE stream provides progress and result events, including error reporting.\n- Includes production-ready curl examples and clear prompt recommendations.\n- Implements pre-flight check: prevents real requests if api_key is missing or not configured in config.json, and prompts the user to update their api_key.",
+  "created_at": 1774248379386,
+  "display_name": "contract audit",
+  "fetched_at": 1787854208168,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "tzz",
+    "handle": "tzz-v",
+    "user_id": "s173k1pzm3jc44bz6fj1m6fwnh84c4q8"
+  },
+  "slug": "contract-audit-stream",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/contract-audit-stream",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=contract-audit-stream&ownerHandle=tzz-v",
+    "page_url": "https://clawhub.ai/tzz-v/skills/contract-audit-stream"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 750,
+    "installs": 20,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "\u4f7f\u7528\u5408\u540c\u5ba1\u6838\u6d41\u5f0f\u63a5\u53e3\uff08SSE\uff09\u6279\u91cf\u5ba1\u6838\u5408\u540c\uff08\u94fe\u63a5\u6216\u6587\u4ef6\u4e0a\u4f20\uff09\uff0c\u7532/\u4e59\u65b9\u89c6\u89d2\u53ef\u9009\uff0c\u9700\u643a\u5e26 api_key\uff1b\u90e8\u7f72\u57df\u540d https://dyinsight.cn\uff0c\u63a5\u53e3 /api/v1/skills/contract/audit\u3002Triggers on phrases like \"\u5ba1\u6838\u5408\u540c\", \"audit contra...",
+  "updated_at": 1778492127920,
+  "version": "1.0.0"
+}
