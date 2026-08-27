@@ -1,0 +1,48 @@
+{
+  "changelog": "- Initial release of real-time audio transcription skill with automatic summarization and archival.\n- Supports both system audio capture (via BlackHole on macOS) and microphone input.\n- On stop, generates a title and structured summary, saving outputs as dated Markdown files.\n- Automatic idle detection: stops recording after configurable seconds of silence.\n- Includes CLI for setup, direct operation, dependency management, and device selection.\n- Multi-language trigger phrases supported for starting/stopping transcription and checking status.",
+  "created_at": 1778996848476,
+  "display_name": "realtime-transcription",
+  "fetched_at": 1787789555574,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "archiver.py",
+    "realtime_asr.py",
+    "skill-card.md",
+    "skill.yaml",
+    "summary_prompt.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090822767,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Lee",
+    "handle": "leeleoo",
+    "user_id": "s175wft7svz5jep78g6z553jrn83ne11"
+  },
+  "slug": "realtime-transcription",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/realtime-transcription",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=realtime-transcription&ownerHandle=leeleoo",
+    "page_url": "https://clawhub.ai/leeleoo/skills/realtime-transcription"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 462,
+    "installs": 10,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Real-time transcription of system or microphone audio with automatic summary generation and date-based Markdown archival after stopping or idle timeout.",
+  "updated_at": 1779077912298,
+  "version": "1.0.0"
+}
