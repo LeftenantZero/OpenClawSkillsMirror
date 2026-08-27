@@ -1,0 +1,48 @@
+{
+  "changelog": "bybit-orderbook-backtester v1.0.0\n\n- Initial release with end-to-end pipeline: download ByBit derivatives order book data, process & filter order book snapshots, backtest 10 built-in trading strategies, and generate full performance reports.\n- Supports automated & manual data download, top-50 depth filtering, and optional downsampling for efficient processing.\n- Includes 10 strategies: Order Book Imbalance, Breakout, False Breakout, Scalping, Momentum, Reversal, Spoofing Detection, Optimal Execution, Market Making, Latency Arbitrage.\n- Generates detailed backtest reports: PnL, Sharpe ratio, win rate, drawdowns, equity curves, and strategy comparisons.\n- Extensible by editing strategy parameters or adding new strategies in `scripts/backtest.py`.",
+  "created_at": 1770481881141,
+  "display_name": "bybit-order-book",
+  "fetched_at": 1787805318461,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "backtest.py",
+    "bybit_data_format.md",
+    "download_orderbook.py",
+    "process_orderbook.py",
+    "skill-card.md",
+    "strategies.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783658960133,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "davidm413",
+    "handle": "davidm413",
+    "user_id": "s172sv4sjxc4b7c8sxmbb3zans83sfy3"
+  },
+  "slug": "bybit-order-book",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bybit-order-book",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bybit-order-book&ownerHandle=davidm413",
+    "page_url": "https://clawhub.ai/davidm413/skills/bybit-order-book"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2285,
+    "installs": 76,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Download, process, and backtest ByBit derivatives historical order book data. Use this skill when the user wants to: (1) download historical order book snapshots from ByBit's derivatives history-data page using Selenium automation, (2) process/unzip ob500 JSONL files and filter to depth 50, (3) run any of 10 order-book-based trading strategies (Order Book Imbalance, Breakout, False Breakout, Scalping, Momentum, Reversal, Spoofing Detection, Optimal Execution, Market Making, Latency Arbitrage) against the data, or (4) generate full backtest performance reports with PnL, Sharpe ratio, win rate, max drawdown, and strategy comparison. Triggers on: \"bybit order book\", \"order book backtest\", \"download bybit data\", \"ob500\", \"order book imbalance\", \"spoofing detection strategy\", \"market making backtest\", \"crypto order book\", \"depth of book backtest\", \"bybit historical data\".",
+  "updated_at": 1778988903936,
+  "version": "1.0.0"
+}
