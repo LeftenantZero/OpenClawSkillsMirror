@@ -1,0 +1,39 @@
+{
+  "changelog": "- Initial release of the Feishu English Game skill for group chats.\n- Supports three interactive modes: vocab (Wordle-like game), guess (definition-based guessing), and speaking (voice message practice with SenseASR transcription).\n- Handles mode selection, session management, scoring, hinting, and learning feedback directly in chat.\n- Integrates deterministic vocab guess scoring and ASR-based speaking feedback.\n- Uses chat-native language and concise prompts; avoids technical or raw JSON outputs.\n- Provides clear game commands (e.g., /english start, /english hint, /english stop) for easy use in Feishu/Lark groups.",
+  "created_at": 1773772174962,
+  "display_name": "english-game",
+  "fetched_at": 1787798290213,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/asr_provider_notes.md",
+    "references/integration_cn.md",
+    "references/modes_cn.md",
+    "scripts/asr_transcribe.py",
+    "scripts/english_game.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "HeiMaoM",
+    "handle": "hei-maom",
+    "user_id": "s179rsrtms4ea8wvxt0ezrn0ad885j3r"
+  },
+  "slug": "english-game",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/english-game",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=english-game&ownerHandle=hei-maom",
+    "page_url": "https://clawhub.ai/hei-maom/skills/english-game"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 916,
+    "installs": 26,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "run a feishu or lark english game with lightweight group-chat interaction. use when users want an english game, vocab challenge, wordle-like word guessing, d...",
+  "updated_at": 1779001906310,
+  "version": "1.0.0"
+}
