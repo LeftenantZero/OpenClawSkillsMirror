@@ -1,0 +1,67 @@
+{
+  "changelog": "- Expanded documentation for directory structure and command behaviors.\n- Added detailed sections on security model, concurrency, and storage format.\n- All destructive operations (`delete`, `archive --clear`) now require a `--force` flag for extra safety.\n- Command outputs are now standardized to JSON with `status`, `result`, and `message` fields.\n- Skill continues to extract only structural and keyword signals, delegating all interpretation to the caller.",
+  "created_at": 1775910278618,
+  "display_name": "OPC Journal",
+  "fetched_at": 1787825245617,
+  "files": [
+    "SKILL.md",
+    "__init__.py",
+    "_meta.json",
+    "config.yml",
+    "scripts/__init__.py",
+    "scripts/commands/__init__.py",
+    "scripts/commands/_meta.py",
+    "scripts/commands/analyze.py",
+    "scripts/commands/archive.py",
+    "scripts/commands/batch_task.py",
+    "scripts/commands/delete.py",
+    "scripts/commands/export.py",
+    "scripts/commands/init.py",
+    "scripts/commands/insights.py",
+    "scripts/commands/milestones.py",
+    "scripts/commands/record.py",
+    "scripts/commands/search.py",
+    "scripts/commands/status.py",
+    "scripts/commands/task.py",
+    "scripts/commands/update_meta.py",
+    "scripts/main.py",
+    "skill-card.md",
+    "utils/__init__.py",
+    "utils/parsing.py",
+    "utils/storage.py",
+    "utils/task_storage.py",
+    "utils/timezone.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090412029,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "coidea",
+    "handle": "coidea",
+    "user_id": "s176kgrrm3agn1bxwhkekk8bn983g60f"
+  },
+  "slug": "opc-journal",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/opc-journal",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=opc-journal&ownerHandle=coidea",
+    "page_url": "https://clawhub.ai/coidea/skills/opc-journal"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 630,
+    "installs": 15,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "OPC200 Journal - A CLI-style single skill for One Person Company growth tracking. Record entries, analyze patterns from dreams/memory, detect milestones, and...",
+  "updated_at": 1778492530120,
+  "version": "2.5.2"
+}
