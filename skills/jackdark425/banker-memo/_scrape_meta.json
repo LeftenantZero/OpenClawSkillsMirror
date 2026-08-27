@@ -1,0 +1,35 @@
+{
+  "changelog": "banker-memo v0.9.6\n\n- Switched from fixed Python templates to prompt-driven memo generation using agent reasoning, enabling richer, peer-benchmarked analysis.\n- Outputs now include analysis.md (8-section memo), slides-outline.md (PPT blueprint, 10\u201315 slides), and data-provenance.md (trace every number to raw source).\n- Hard constraints: every figure traced to raw-data, peer comps tagged as estimates, valuation covers multiple scenarios, and all outputs validated by strict audit gates.\n- Slide deck outlines are now flexible (not fixed at 8 slides), consumed by build_deck.py v0.9.6+ for custom layout.\n- Strict requirements on provenance, peer benchmarking, and 4C's credit view; not suitable for US-listed firms or quick fact-sheets.",
+  "created_at": 1776698292430,
+  "display_name": "Banker Memo",
+  "fetched_at": 1787817991940,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/banker_prompt_template.md",
+    "scripts/build_banker_prompt.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jackdark",
+    "handle": "jackdark425",
+    "user_id": "s176mxzq3jzjv11d44t7jjr33x83rvkb"
+  },
+  "slug": "banker-memo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/banker-memo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=banker-memo&ownerHandle=jackdark425",
+    "page_url": "https://clawhub.ai/jackdark425/skills/banker-memo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 655,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate an investment-banker-grade research memo (analysis.md + slides-outline.md + data-provenance.md) from CN raw-data/ snapshots. Use when the user asks...",
+  "updated_at": 1778492680262,
+  "version": "0.9.6"
+}
