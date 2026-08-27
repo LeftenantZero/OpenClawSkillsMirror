@@ -1,0 +1,47 @@
+{
+  "changelog": "Workshop \u2192 Miro Agent (OpenClaw Skill)\n\nTurn workshop whiteboard photos (or raw notes) into a clean, editable Miro diagram\u2014with real containers (Frames), grouped stickies, and smart connectors\u2014then push directly to Miro via API.\n\nWhat it does\n\nPhoto/notes \u2192 structured diagram\n\nDetects logical \u201careas\u201d (e.g., Product A, Product B, Easy Vision, Milestone) and creates Miro Frames as true containers.\n\nPlaces stickies inside the correct frame with a readable layout.\n\nClean relationships\n\nCreates connectors where they make sense.\n\nIf the diagram is clearly \u201ccontainer \u2192 container\u201d (e.g., Product A \u2192 Product B), it creates a frame-to-frame flow (not random sticky-to-sticky arrows).\n\nPrevents messy arrows by avoiding cross-frame sticky connectors when a container-level flow is detected.\n\nNo duplicates (idempotent)\n\nUses a stable sessionKey + a runId.\n\nRe-running the same session replaces the previous run automatically.\n\nUndo / rollback\n\nAutomatic rollback if a run fails.\n\nManual undo per session with a single command.\n\nKey technical improvements\n\nBulletproof frame creation\n\nIf the AI output misses frames, the script auto-generates frames using:\n\nTitle stickies (e.g., \u201cProduct A\u201d, \u201cProduct B\u201d), or\n\nX-axis clustering (left/right grouping) as fallback.\n\nFixed Miro parent-boundary errors\n\nCorrectly converts coordinates when parenting stickies into frames (avoids \u201cposition is outside parent boundaries\u201d).\n\nArrow-only sticky filtering\n\nRemoves \u201c\u2192 / ->\u201d as stickies (arrows are connectors, not post-its).\n\nHow it pushes to Miro\n\nUses only environment variables (no cookies, no browser session hacks):\n\nMIRO_ACCESS_TOKEN\n\nMIRO_BOARD_ID\n\nExecutes a local script:\n\nnode miro-push.mjs apply <miro-ready.json>\n\nnode miro-push.mjs undo <sessionKey>\n\nOutput format\n\nThe agent produces a Miro-ready JSON containing:\n\nframes[] (containers)\n\nstickies[] (notes inside frames)\n\nconnectors[] (relationships)\n\nmeta.sessionKey + meta.runId for idempotent updates\n\nBest for\n\nWorkshop facilitation\n\nArchitecture diagrams\n\nProduct mapping sessions\n\nBrainstorms that need to become clean, editable boards fast",
+  "created_at": 1770885992671,
+  "display_name": "Miro board",
+  "fetched_at": 1787804680871,
+  "files": [
+    "README.txt",
+    "SKILL.md",
+    "_meta.json",
+    "_out/.state.json",
+    "miro-push.mjs",
+    "miro-ready.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779971693269,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Simone Ferrario",
+    "handle": "simoneferrario",
+    "user_id": "s177nharevwjakjyp226bys69n85h75c"
+  },
+  "slug": "miro-workshop-assistant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/miro-workshop-assistant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=miro-workshop-assistant&ownerHandle=simoneferrario",
+    "page_url": "https://clawhub.ai/simoneferrario/skills/miro-workshop-assistant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1729,
+    "installs": 53,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Workshop photos/notes -> an editable Miro diagram (real FRAMES as containers + stickies + connectors) with idempotent dedupe, rollback, undo and change commands, using the local script miro-push.mjs and env vars.",
+  "updated_at": 1778990021560,
+  "version": "1.0.0"
+}
