@@ -1,0 +1,68 @@
+{
+  "changelog": "**Changelog for version 1.2.1**\n\n- Major simplification: The webhook is now provided only via the BITRIX24_WEBHOOK_URL environment variable; all local credential storage logic removed.\n- Security model updated in documentation to reflect no disk storage and clarify environment variable usage.\n- Removed scripts/save_webhook.py, as secure storage setup is no longer needed.\n- SKILL.md updated to clearly describe the new setup process, environment variable requirement, and cleaner cache handling.\n- All previous references to keyring, encrypted storage, and multi-level fallback have been eliminated for improved simplicity and security.",
+  "created_at": 1774539266872,
+  "display_name": "Bitrix24 REST API",
+  "fetched_at": 1787846259631,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/access.md",
+    "references/calendar.md",
+    "references/channels.md",
+    "references/chat.md",
+    "references/crm.md",
+    "references/drive.md",
+    "references/feed.md",
+    "references/files.md",
+    "references/mcp-workflow.md",
+    "references/openlines.md",
+    "references/products.md",
+    "references/projects.md",
+    "references/quotes.md",
+    "references/sites.md",
+    "references/smartprocess.md",
+    "references/tasks.md",
+    "references/timeman.md",
+    "references/troubleshooting.md",
+    "references/users.md",
+    "scripts/bitrix24_batch.py",
+    "scripts/bitrix24_call.py",
+    "scripts/bitrix24_config.py",
+    "scripts/check_webhook.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090228715,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Bitrix24",
+    "handle": "bitrix24",
+    "user_id": "s172b6r64hct4ba0ssswjb4fxs83n9fp"
+  },
+  "slug": "bitrix24-rest",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bitrix24-rest",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bitrix24-rest&ownerHandle=bitrix24",
+    "page_url": "https://clawhub.ai/bitrix24/skills/bitrix24-rest"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1121,
+    "installs": 30,
+    "stars": 1,
+    "versions": 14
+  },
+  "summary": "Work with Bitrix24 (\u0411\u0438\u0442\u0440\u0438\u043a\u044124) via REST API and MCP documentation server. Triggers on: CRM \u2014 \"\u0441\u0434\u0435\u043b\u043a\u0438\", \"\u043a\u043e\u043d\u0442\u0430\u043a\u0442\u044b\", \"\u043b\u0438\u0434\u044b\", \"\u0432\u043e\u0440\u043e\u043d\u043a\u0430\", \"\u043a\u043b\u0438\u0435\u043d\u0442\u044b\", \"deals\", \"co...",
+  "updated_at": 1778492219006,
+  "version": "1.2.1"
+}
