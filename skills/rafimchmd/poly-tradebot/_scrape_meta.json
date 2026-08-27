@@ -1,0 +1,37 @@
+{
+  "changelog": "- Added a new odds filter: only include Polymarket markets with Yes% probability below 70% (contrarian edge).\n- Updated requirements for the unified trading table: all markets must now pass both volume (> $1,000,000) and odds (<70%) filters.\n- Documentation updated to reflect odds filter and changed the skill version to 3.1.\n- No code changes, but clarifies market selection and summary output rules for trading recommendations.",
+  "created_at": 1773759229309,
+  "display_name": "Poly Tradebot",
+  "fetched_at": 1787867687910,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "output-2026-03-18.md",
+    "references/classification_rules.md",
+    "references/output_templates.md",
+    "scripts/fetch_cnbc.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Rafi Mochamad Fahreza",
+    "handle": "rafimchmd",
+    "user_id": "s1775mw7dmt8hgbttypekxk0518840mc"
+  },
+  "slug": "poly-tradebot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/poly-tradebot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=poly-tradebot&ownerHandle=rafimchmd",
+    "page_url": "https://clawhub.ai/rafimchmd/skills/poly-tradebot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 780,
+    "installs": 20,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Automated news analysis pipeline that fetches CNBC world news, classifies articles by topic (geopolitics vs macroeconomics), and invokes specialized skills (...",
+  "updated_at": 1778491977901,
+  "version": "1.0.4"
+}
