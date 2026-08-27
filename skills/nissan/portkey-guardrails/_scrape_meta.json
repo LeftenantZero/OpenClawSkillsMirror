@@ -1,0 +1,53 @@
+{
+  "changelog": "Initial release: G-01 prompt injection, G-02 PII redaction, G-03 off-scope filter, G-04 budget guard, G-05 context length. Declarative per-agent YAML config, semantic cache via local Ollama. Fail-open hook design. Live in production.",
+  "created_at": 1775179120098,
+  "display_name": "Portkey Guardrails",
+  "fetched_at": 1787796748113,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "hook/HOOK.md",
+    "hook/handler.ts",
+    "rules/G-01-prompt-injection.ts",
+    "rules/G-02-pii-leakage.ts",
+    "rules/G-03-off-scope-filter.ts",
+    "rules/G-04-budget-guard.ts",
+    "rules/G-05-context-length.ts",
+    "rules/config-schema.yaml",
+    "skill-card.md",
+    "tests/cases.yaml"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090274694,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Nissan Dookeran",
+    "handle": "nissan",
+    "user_id": "s17f2fw07zktjmcgagf5c29tbd83rt7v"
+  },
+  "slug": "portkey-guardrails",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/portkey-guardrails",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=portkey-guardrails&ownerHandle=nissan",
+    "page_url": "https://clawhub.ai/nissan/skills/portkey-guardrails"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 591,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Portkey-inspired guardrails for OpenClaw: 5 configurable rules that block prompt injection, redact PII, flag off-scope responses, enforce agent budgets, and...",
+  "updated_at": 1779075298447,
+  "version": "1.0.0"
+}
