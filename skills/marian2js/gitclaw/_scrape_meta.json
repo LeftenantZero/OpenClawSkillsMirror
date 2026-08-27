@@ -1,0 +1,43 @@
+{
+  "changelog": "GitClaw 1.0.0 \u2013 Initial release: automatic agent workspace backup to GitHub with cron-driven syncing.\n\n- Automates installation and setup of prerequisites: git, crontab, GitHub CLI (gh).\n- Guides user through repository creation (name, visibility) and configures GitHub authentication with gh (no personal access token needed).\n- Sets up a git repository in the agent workspace and connects to a user-chosen GitHub repo, avoiding accidental overwrites.\n- Installs a cron-based sync script to back up agent workspace at a user-defined interval.\n- Only notifies the user if input or action is required (repo details, permissions, or installation/authentication failures).",
+  "created_at": 1769940552129,
+  "display_name": "GitClaw",
+  "fetched_at": 1787793572473,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783653519219,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Mariano Pardo",
+    "handle": "marian2js",
+    "user_id": "s175ns6x6vt11vnjak7m2b2cj9884jvf"
+  },
+  "slug": "gitclaw",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gitclaw",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gitclaw&ownerHandle=marian2js",
+    "page_url": "https://clawhub.ai/marian2js/skills/gitclaw"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4681,
+    "installs": 162,
+    "stars": 6,
+    "versions": 1
+  },
+  "summary": "Back up the OpenClaw agent workspace to a GitHub repo and keep it synced via a cron-driven commit/push script.",
+  "updated_at": 1779076533610,
+  "version": "1.0.0"
+}
