@@ -1,0 +1,52 @@
+{
+  "changelog": "- Major upgrade: Feedback Loop skill is now self-contained and autodetects integration contexts for richer analysis.\n- New architecture: Modular scripts (`observer.py`, `analyzer.py`, `orchestrator.py`) replace previous pipeline, supporting fully standalone operation or enhanced modes with dark-factory and intent-engineering.\n- Simplified input system: Accepts any JSON log, plain text, or structured results; dynamically adjusts capabilities based on available files.\n- Improved outputs: Generates normalized observations, actionable suggestions, automatic regression tests, alignment checks, and a signed, independently verifiable improvement report.\n- Resources reorganized: Added new references and scripts; legacy pipeline scripts and configs removed to streamline workflow.",
+  "created_at": 1775395180263,
+  "display_name": "Feedback-Loop-v2",
+  "fetched_at": 1787796404740,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/alignment_values.json",
+    "references/operations_guide.md",
+    "references/scoring_weights.json",
+    "references/suggestion_rules.json",
+    "scripts/analyzer.py",
+    "scripts/observer.py",
+    "scripts/orchestrator.py",
+    "skill-card.md",
+    "templates/improvement_report_template.md",
+    "templates/observation_template.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090310372,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Daniel Foo Jun Wei",
+    "handle": "danielfoojunwei",
+    "user_id": "s17f1g01v1cvanvy5v2deneeh583v13t"
+  },
+  "slug": "auto-feedback",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/auto-feedback",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=auto-feedback&ownerHandle=danielfoojunwei",
+    "page_url": "https://clawhub.ai/danielfoojunwei/skills/auto-feedback"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 659,
+    "installs": 15,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "A self-improving feedback loop skill that works fully standalone OR integrates with intent-engineering and dark-factory when available. Observes any system o...",
+  "updated_at": 1779075465959,
+  "version": "1.0.1"
+}
