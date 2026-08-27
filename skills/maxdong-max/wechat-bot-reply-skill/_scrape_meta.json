@@ -1,0 +1,49 @@
+{
+  "changelog": "**Major cross-platform upgrade with step-by-step prerequisite checks and setup for WeChat auto-reply on both macOS and Windows.**\n\n- Now supports both macOS (Peekaboo CLI) and Windows (PeekabooWin), with platform-specific instructions.\n- Adds detailed, interactive prerequisite checks and clear guidance for missing setup (Python, Node.js, environment variables, permissions).\n- Prompts user for which WeChat contact to monitor and reply style/tone.\n- Automates screenshot-based detection of chat state and message verification.\n- Robust instructions for background monitoring, with support for multiple contacts and custom intervals.\n- Chinese messages provided for errors and guidance throughout the flow.",
+  "created_at": 1778914282196,
+  "display_name": "wechat-auto-reply-skill-v5",
+  "fetched_at": 1787806726889,
+  "files": [
+    "LICENSE.txt",
+    "README_v4.md",
+    "SKILL.md",
+    "USAGE.md",
+    "_meta.json",
+    "references/peekaboo-guide.md",
+    "scripts/wechat_monitor.py",
+    "skill-card.md",
+    "\u5fae\u4fe1\u81ea\u52a8\u56de\u590d\u4f7f\u7528\u8bf4\u660e_v5.txt"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090813516,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "max",
+    "handle": "maxdong-max",
+    "user_id": "s174x85nsc0k1zv2n8139y94q586v2bj"
+  },
+  "slug": "wechat-bot-reply-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wechat-bot-reply-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wechat-bot-reply-skill&ownerHandle=maxdong-max",
+    "page_url": "https://clawhub.ai/maxdong-max/skills/wechat-bot-reply-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 506,
+    "installs": 11,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Monitor WeChat for new messages from specific contacts and auto-reply. Supports macOS (Peekaboo CLI) and Windows (PeekabooWin). Requires Peekaboo CLI on macO...",
+  "updated_at": 1778914409753,
+  "version": "5.0.0"
+}
