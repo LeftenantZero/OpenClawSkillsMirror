@@ -1,0 +1,43 @@
+{
+  "changelog": "- Improved workflow to include Jidoka-validated loop for greater reliability.\n- Added verification steps: sub-agent output and calendar event creation are now checked for validity.\n- Implemented retry logic for failed classifications and event creation (up to 3 attempts).\n- Enhanced error handling: failures are reported and process stops if retries are exhausted.",
+  "created_at": 1777168476038,
+  "display_name": "Flow State Monitoring",
+  "fetched_at": 1787814607529,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090563503,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zvirb",
+    "handle": "zvirb",
+    "user_id": "s178ycq6n64frv7zswtx5rvyfd85kc2g"
+  },
+  "slug": "flow-state-monitoring",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/flow-state-monitoring",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=flow-state-monitoring&ownerHandle=zvirb",
+    "page_url": "https://clawhub.ai/zvirb/skills/flow-state-monitoring"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 734,
+    "installs": 19,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Workflow-driven skill that infers deep focus and autonomously mutes interruptions.",
+  "updated_at": 1778492754690,
+  "version": "1.0.3"
+}
