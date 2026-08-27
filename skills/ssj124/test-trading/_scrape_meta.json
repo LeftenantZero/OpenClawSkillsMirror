@@ -1,0 +1,45 @@
+{
+  "changelog": "AION Market Divergence Trader skill, initial release:\n\n- Publishes a trading template that acts on probability divergence between your estimate and live market price.\n- Safely executes trades on venues like Polymarket or Kalshi, defaulting to dry-run unless explicitly run live.\n- Enforces context checks, risk alerts, trade threshold, and operator-style output for every decision.\n- Supports customizable parameters (trade size, minimum edge, live/dry run, venue, reasoning tags).\n- Built-in logic for required credentials, market context validation, and avoiding flip-flop trades.",
+  "created_at": 1777100990587,
+  "display_name": "Test Trading",
+  "fetched_at": 1787794830457,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "divergence_trader.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090545684,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ssj124",
+    "handle": "ssj124",
+    "user_id": "s174p432zdjmq0szb7x7pvv8zx84s03q"
+  },
+  "slug": "test-trading",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/test-trading",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=test-trading&ownerHandle=ssj124",
+    "page_url": "https://clawhub.ai/ssj124/skills/test-trading"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 588,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Trades a market when your estimated probability diverges from the live market price, with dry-run by default, context checks, reasoning tags, and optional li...",
+  "updated_at": 1779076073782,
+  "version": "1.0.0"
+}
