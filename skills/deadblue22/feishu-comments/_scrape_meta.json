@@ -1,0 +1,45 @@
+{
+  "changelog": "Added orphan comment detection (marks comments whose anchor text no longer exists in document as \ud83d\udc7b Orphaned). Default now filters to Open + anchored comments only; use --all flag to include orphaned and resolved. Added summary statistics line.",
+  "created_at": 1772471330076,
+  "display_name": "Feishu Comments",
+  "fetched_at": 1787790773514,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/get_comments.sh",
+    "scripts/resolve_comments.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089820436,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "deadblue",
+    "handle": "deadblue22",
+    "user_id": "s17dp4k7kf43jx2arar9shhd218859yy"
+  },
+  "slug": "feishu-comments",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-comments",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-comments&ownerHandle=deadblue22",
+    "page_url": "https://clawhub.ai/deadblue22/skills/feishu-comments"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1163,
+    "installs": 33,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Read comments from Feishu documents. Use when: user asks to check/read/fetch comments on a Feishu doc, review feedback on a document, or collaborate on docum...",
+  "updated_at": 1779077466780,
+  "version": "1.2.0"
+}
