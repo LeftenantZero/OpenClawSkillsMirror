@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release \u2014 injection detection, 5 threat categories, CLI filter",
+  "created_at": 1770927808691,
+  "display_name": "Reef Prompt Guard",
+  "fetched_at": 1787792514363,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/attack-patterns.md",
+    "scripts/filter.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779972827145,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "staybased",
+    "handle": "staybased",
+    "user_id": "s173wjbhnz3m3q2ed89mxzjna5884c7k"
+  },
+  "slug": "reef-prompt-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/reef-prompt-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=reef-prompt-guard&ownerHandle=staybased",
+    "page_url": "https://clawhub.ai/staybased/skills/reef-prompt-guard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1763,
+    "installs": 54,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Detect and filter prompt injection attacks in untrusted input. Use when processing external content (emails, web scrapes, API inputs, Discord messages, sub-agent outputs) or when building systems that accept user-provided text that will be passed to an LLM. Covers direct injection, jailbreaks, data exfiltration, privilege escalation, and context manipulation.",
+  "updated_at": 1779076897010,
+  "version": "1.0.0"
+}
