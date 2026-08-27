@@ -1,0 +1,54 @@
+{
+  "changelog": "Initial release with onboarded configuration and structured workflow for tracking and analyzing arXiv papers.\n\n- Provides onboarding process for customizing search time window, keywords, and language (\u4e2d\u6587, English, Bilingual).\n- Supports daily arXiv paper tracking, summary generation, and in-depth analysis of selected papers.\n- All data processing and configuration handled locally via CLI commands, wrapped in a unified flow.\n- Allows flexible configuration management, including search area, language, report style, and result limits via CLI.\n- Facilitates full control over daily and deep analysis prompt templates, with reset and customization support.\n- Ensures secure, dependency-checked, and context-driven paper handling with clear user interaction steps.",
+  "created_at": 1776569684388,
+  "display_name": "follow-arxiv",
+  "fetched_at": 1787818746890,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "cli.py",
+    "config/default_config.json",
+    "prompts/daily_summary.md",
+    "prompts/deep_analysis.md",
+    "requirements.txt",
+    "skill-card.md",
+    "src/__init__.py",
+    "src/analyzer.py",
+    "src/pdf_processor.py",
+    "src/search.py",
+    "src/utils.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090479951,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u59dc\u4ea6\u6734",
+    "handle": "champagne315",
+    "user_id": "s1735vqsmht346mkbdtjpmaz5983h0vv"
+  },
+  "slug": "follow-arxiv",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/follow-arxiv",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=follow-arxiv&ownerHandle=champagne315",
+    "page_url": "https://clawhub.ai/champagne315/skills/follow-arxiv"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 620,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u641c\u7d22\u8fc7\u53bb\u4e00\u6bb5\u7528\u6237\u6307\u5b9a\u7684\u65f6\u95f4\u5185arxiv\u4e0a\u67d0\u9898\u6750\u7684\u8bba\u6587\uff0c\u5e76\u53ef\u4ee5\u4e0b\u8f7d\uff0c\u9605\u8bfb\uff0c\u6df1\u5ea6\u5206\u6790\u7279\u5b9a\u8bba\u6587\u3002\u5728\u7528\u6237\u8bf7\u6c42\u5904\u7406arxiv\u5e73\u53f0\u8bba\u6587\uff0c\u6216\u60f3\u8981\u5f97\u5230\u6700\u65b0\u7684\u8bba\u6587\u6982\u8981\u65f6\u4f7f\u7528",
+  "updated_at": 1778492662189,
+  "version": "1.0.0"
+}
