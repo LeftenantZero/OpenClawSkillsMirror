@@ -1,0 +1,47 @@
+{
+  "changelog": "**Enhanced security for all agent interactions with Zero-Trust authentication:**\n\n- Requires cryptographic authentication of peer agents before allowing right-of-way yielding or sensor data federation.\n- Agents must ignore all unverified or spoofed broadcasts; no braking or sensor integration from unauthenticated sources.\n- Protocol now clearly separates steps for authentication and right-of-way arbitration.\n- Adds PKI root environment dependency for cryptographic verification.\n- Updated communication examples to reflect secure decision-making and rejection of untrusted data.",
+  "created_at": 1775438526584,
+  "display_name": "S2-SWM Swarm Sync Protocol(\u7fa4\u4f53\u540c\u6b65\u4e0e\u8def\u6743\u535a\u5f08\u5f15\u64ce)",
+  "fetched_at": 1787830820615,
+  "files": [
+    "S2_SWM_Special_Protocol_Whitepaper.md",
+    "SKILL.md",
+    "_meta.json",
+    "handler.py",
+    "openclaw.plugin.json",
+    "package.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090313769,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "MilesXiang",
+    "handle": "spacesq",
+    "user_id": "s17c8pmv1e8tb2mcc5aset88e183hq1t"
+  },
+  "slug": "s2-swarm-sync-protocol",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/s2-swarm-sync-protocol",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=s2-swarm-sync-protocol&ownerHandle=spacesq",
+    "page_url": "https://clawhub.ai/spacesq/skills/s2-swarm-sync-protocol"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 725,
+    "installs": 18,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Instructs the OpenClaw Agent on how to interact securely with other agents. Enforces Cryptographic Authentication before any right-of-way yielding or sensor...",
+  "updated_at": 1778492429097,
+  "version": "1.1.0"
+}
