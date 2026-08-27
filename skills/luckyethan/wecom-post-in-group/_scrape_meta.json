@@ -1,0 +1,46 @@
+{
+  "changelog": "**Major update: Adds scheduled/recurring push and advanced scheduling features for WeChat Work webhooks.**\n\n- Redesigned skill for scheduled or recurring content pushes to WeChat Work (\u4f01\u4e1a\u5fae\u4fe1) group webhooks.\n- Flexible scheduling: daily, weekly, monthly (fixed date), plus advanced patterns (e.g., last Monday).\n- Automation workflow added: webhook validation, schedule parsing, testing, and automation creation.\n- New scripts: push_to_webhook.py and validate_webhook.py replace the previous wecom_send.py.\n- Reference documentation updated with schedule pattern mapping.\n- Improved content formatting and message type handling; security best practices (e.g., masking webhook keys).\nNow we can set schedule push by day\uff0cweek and month",
+  "created_at": 1773909180313,
+  "display_name": "WeCom post in group",
+  "fetched_at": 1787863445113,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/schedule_patterns.md",
+    "scripts/push_to_webhook.py",
+    "scripts/validate_webhook.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090153015,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "LuckyEthan",
+    "handle": "luckyethan",
+    "user_id": "s17994rg2rhqqb61z4dkxmc0b983nxbx"
+  },
+  "slug": "wecom-post-in-group",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wecom-post-in-group",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wecom-post-in-group&ownerHandle=luckyethan",
+    "page_url": "https://clawhub.ai/luckyethan/skills/wecom-post-in-group"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 946,
+    "installs": 25,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "This skill should be used when users want to set up scheduled or recurring content push to WeChat Work group webhooks. It supports flexible scheduling includ...",
+  "updated_at": 1778492029687,
+  "version": "1.0.1"
+}
