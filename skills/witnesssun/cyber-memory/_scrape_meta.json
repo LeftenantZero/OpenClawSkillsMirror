@@ -1,0 +1,45 @@
+{
+  "changelog": "v1.0.2 switches fact extraction to run locally using Ollama \u2014 no external API required.\n\n- Fact extraction now uses your local LLM (Ollama) for processing session transcripts, improving privacy and data control.\n- Default setup requires no API key or external service; configuration simplified for local use.\n- External OpenAI-compatible APIs are still supported via optional config.\n- Documentation updated to reflect local-first architecture and setup instructions.",
+  "created_at": 1775190637411,
+  "display_name": "Cyber Memory",
+  "fetched_at": 1787833565956,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "hooks/memory-flush/HOOK.md",
+    "hooks/memory-flush/handler.ts",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090277843,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "witnesssun",
+    "handle": "witnesssun",
+    "user_id": "s176cajtgh2ept4y0q46e7z1es845x88"
+  },
+  "slug": "cyber-memory",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cyber-memory",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cyber-memory&ownerHandle=witnesssun",
+    "page_url": "https://clawhub.ai/witnesssun/skills/cyber-memory"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 588,
+    "installs": 13,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Five-layer memory system with automatic fact extraction via local LLM (Ollama). Processes session transcripts locally \u2014 no external API required.",
+  "updated_at": 1778492383263,
+  "version": "1.0.2"
+}
