@@ -1,0 +1,43 @@
+{
+  "changelog": "AANA Guardrail Skill 1.0.0 - Initial Release\n\n- Introduces a guardrail system for OpenClaw-style agents to enforce hard constraints and safe decision-making.\n- Details specific scenarios when to invoke AANA before agent action (e.g., handling sensitive data, customer support, code commits).\n- Provides command-line usage instructions and JSON event schema for agent checks.\n- Outlines decision rules for agent actions based on AANA recommendations.\n- Includes default adapter mappings for common workflows and instructions for scaffolding new adapters.",
+  "created_at": 1777731724288,
+  "display_name": "AANA Guardrail Skill",
+  "fetched_at": 1787811010439,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090732857,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mindbomber",
+    "handle": "mindbomber",
+    "user_id": "s177cynx168hg36ac5nrkb9wdn85z9dq"
+  },
+  "slug": "aana-guardrail",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aana-guardrail",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aana-guardrail&ownerHandle=mindbomber",
+    "page_url": "https://clawhub.ai/mindbomber/skills/aana-guardrail"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 640,
+    "installs": 15,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Monitors agent actions for safety and compliance, preventing violations, private data leaks, or irreversible steps by enforcing predefined decision rules.",
+  "updated_at": 1778492830283,
+  "version": "1.0.0"
+}
