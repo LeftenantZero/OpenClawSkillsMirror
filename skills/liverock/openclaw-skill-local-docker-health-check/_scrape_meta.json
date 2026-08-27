@@ -1,0 +1,35 @@
+{
+  "changelog": "# Docker Medic\n\nAn OpenClaw skill that inspects Docker container health and suggests fixes for common errors.\n\n## Files\n\n| File | Purpose |\n|------|---------|\n| `skill.md` | OpenClaw skill definition \u2014 command interface and metadata |\n| `handler.js` | Diagnostic engine \u2014 scans containers, matches errors, generates reports |\n| `mock_docker.js` | Simulated Docker API for testing without a live daemon |\n\n## Commands\n\n### `check_containers`\n\nInspects container health using keyword-based log analysis.\n\n**Parameters:**\n\n| Parameter | Required | Description |\n|-----------|----------|-------------|\n| `name`    | No       | Specific container to check. Defaults to all containers. |\n\n## How It Works\n\n1. **List containers** \u2014 calls `listContainers()` to get all container statuses.\n2. **Scan logs** \u2014 each container's logs are tested against a set of keyword rules.\n3. **Match diagnostics** \u2014 matched keywords map to a diagnosis and a specific fix.\n4. **Generate output** \u2014 returns a text summary, a Markdown status table, and JSON prescriptions.\n\n## Supported Diagnostics\n\n| Keyword Pattern | Diagnosis | Suggested Fix |\n|-----------------|-----------|---------------|\n| `Timeout` | Connection timeout | Restart container; check network config |\n| `OOM` / `exit code 137` | Out of memory | Increase memory limit in compose file |\n| `Connection refused` | Port unreachable | Verify dependent service is running |\n\nAdding a new diagnostic is a single entry in the `DIAGNOSTICS` array in `handler.js`.\n\n## Quick Start\n\n```bash\nnode handler.js\n```\n\n## Output Format\n\n- **Summary** \u2014 plain text listing each flagged container and its diagnosis.\n- **Status Table** \u2014 Markdown table of all containers with diagnosis and action.\n- **Prescriptions** \u2014 JSON array of `{ action, target, reason }` objects.",
+  "created_at": 1775788687316,
+  "display_name": "Docker Medic",
+  "fetched_at": 1787826301767,
+  "files": [
+    "_meta.json",
+    "handler.js",
+    "mock_docker.js",
+    "skill-card.md",
+    "skill.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Peter Lum",
+    "handle": "liverock",
+    "user_id": "s175ewnhnmrjf1y1sxk9d8r89s83wbxr"
+  },
+  "slug": "openclaw-skill-local-docker-health-check",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-skill-local-docker-health-check",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-skill-local-docker-health-check&ownerHandle=liverock",
+    "page_url": "https://clawhub.ai/liverock/skills/openclaw-skill-local-docker-health-check"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 758,
+    "installs": 17,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Inspects container health and suggests fixes for common errors",
+  "updated_at": 1778492505206,
+  "version": "1.0.0"
+}
