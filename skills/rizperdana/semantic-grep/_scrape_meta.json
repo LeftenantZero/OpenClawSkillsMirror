@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of semgrepll \u2014 local, offline semantic code search.\n\n- Index and search code projects by meaning using embeddings with commands like `semgrep index` and `semgrep search`.\n- Supports multiple offline backends: llama.cpp, ONNX, and Ollama.\n- No external API calls; works fully offline and auto-selects the fastest backend.\n- Embeddings are cached to speed up re-indexing.\n- Easy project management: list or remove indexed projects with `semgrep ls` and `semgrep rm`.\n- Python 3.10+ required; install with optional ONNX support.",
+  "created_at": 1774304320419,
+  "display_name": "Semantic Grep",
+  "fetched_at": 1787853430390,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.yaml",
+    "installers/claude_code.md",
+    "installers/codex.json",
+    "installers/cursor.json",
+    "installers/kilo.json",
+    "installers/opencode.json",
+    "installers/windsurf.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090051456,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "rizperdana",
+    "handle": "rizperdana",
+    "user_id": "s17d026c7k8mc7catd2md1zvdd83f1kt"
+  },
+  "slug": "semantic-grep",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/semantic-grep",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=semantic-grep&ownerHandle=rizperdana",
+    "page_url": "https://clawhub.ai/rizperdana/skills/semantic-grep"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 545,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Offline local semantic code search using embeddings to find and index code by meaning with llama.cpp, ONNX, or Ollama backends.",
+  "updated_at": 1778492135193,
+  "version": "1.0.0"
+}
