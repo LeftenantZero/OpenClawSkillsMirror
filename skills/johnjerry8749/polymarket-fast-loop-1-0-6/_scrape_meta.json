@@ -1,0 +1,45 @@
+{
+  "changelog": "Polymarket FastLoop Trader v1.0.6\n\n- New skill to automate trading of Polymarket 5-minute and 15-minute BTC fast markets using Binance price momentum signals via Simmer API.\n- Dry-run by default; use --live for real trades with USDC on Polymarket.\n- Highly configurable: supports asset selection (BTC/ETH/SOL), entry thresholds, max trade size, custom market window, and multiple signal sources.\n- Designed for easy agent-driven customization\u2014layer on social sentiment, multi-exchange spreads, technicals, or news feeds for your edge.\n- Provides detailed setup, loop automation (cron/heartbeat), CLI options, and troubleshooting guidance.\n- All trades tagged by strategy to help monitor P&L and avoid overlap with other skills.",
+  "created_at": 1771184549210,
+  "display_name": "Polymarket Fast Loop",
+  "fetched_at": 1787792260750,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "fastloop_trader.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968703497,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "johnjerry8749",
+    "handle": "johnjerry8749",
+    "user_id": "s176svvkdjqdsfgzgyrm3jn51s884ztb"
+  },
+  "slug": "polymarket-fast-loop-1-0-6",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polymarket-fast-loop-1-0-6",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polymarket-fast-loop-1-0-6&ownerHandle=johnjerry8749",
+    "page_url": "https://clawhub.ai/johnjerry8749/skills/polymarket-fast-loop-1-0-6"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1360,
+    "installs": 42,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Trade Polymarket BTC 5-minute and 15-minute fast markets using CEX price momentum signals via Simmer API. Default signal is Binance BTC/USDT klines. Use when...",
+  "updated_at": 1779076976694,
+  "version": "0.1.0"
+}
