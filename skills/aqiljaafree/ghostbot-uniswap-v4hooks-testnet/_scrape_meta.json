@@ -1,0 +1,53 @@
+{
+  "changelog": "## v1.0.0 \u2014 Initial Release                                          \n                                                                       \n  ### Features                                                         \n  - Add liquidity to Uniswap v4 pool via AI-powered ACLM hook          \n  (auto-mint test tokens)                                              \n  - View liquidity positions with tick/price ranges and auto-rebalance \n  status                                                               \n  - Check oracle rebalance signals and dynamic fee recommendations     \n  - View pool statistics (volume, volatility, current fee, last tick)  \n  - Post oracle signals (rebalance + fee) for authorized bot operators \n  - Full Sepolia testnet deployment with verified contracts\n\n  ### Architecture\n  - OpenClawACLMHook (BaseCustomAccounting) \u2014 auto-rebalance, dynamic\n  fees, limit orders\n  - OpenClawOracle \u2014 confidence-scored signal bridge with 5min TTL\n  - 6 Node.js scripts using viem for all blockchain interactions\n  - Reference docs for architecture and contract ABIs\n\n  ### Contracts Deployed (Sepolia)\n  - Hook: 0xbD2802B7215530894d5696ab8450115f56b1fAC0\n  - Oracle: 0x300Fa0Af86201A410bEBD511Ca7FB81548a0f027\n  - Test tokens: GBB + GBA (free mint)",
+  "created_at": 1770554903950,
+  "display_name": "AI-powered Automated Concentrated Liquidity Manager for Uniswap v4. Manage liquidity positions, auto-rebalance out-of-range positions, optimize LP fees dynamically, execute limit orders (stop-loss, take-profit), and monitor oracle signals \u2014 all from chat. Deployed on Ethereum Sepolia with verified contracts. Use this skill when users ask about DeFi liquidity provision, Uniswap v4 hooks, pool management, LP positions, impermanent loss, or automated market making.",
+  "fetched_at": 1787805263585,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/architecture.md",
+    "references/contracts.md",
+    "scripts/add-liquidity.mjs",
+    "scripts/config.mjs",
+    "scripts/oracle-info.mjs",
+    "scripts/package.json",
+    "scripts/pool-stats.mjs",
+    "scripts/positions.mjs",
+    "scripts/post-signal.mjs",
+    "scripts/status.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783658611967,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "AqilJaafree",
+    "handle": "aqiljaafree",
+    "user_id": "s17ccdxdbfqxn2h47sqff9q7hs8848m8"
+  },
+  "slug": "ghostbot-uniswap-v4hooks-testnet",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ghostbot-uniswap-v4hooks-testnet",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ghostbot-uniswap-v4hooks-testnet&ownerHandle=aqiljaafree",
+    "page_url": "https://clawhub.ai/aqiljaafree/skills/ghostbot-uniswap-v4hooks-testnet"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2561,
+    "installs": 83,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "GhostBot ACLM \u2014 AI-powered Automated Concentrated Liquidity Manager for Uniswap v4. Manage liquidity positions, auto-rebalance out-of-range positions, optimize LP fees dynamically, execute limit orders (stop-loss, take-profit), and monitor oracle signals \u2014 all from chat. Deployed on Ethereum Sepolia with verified contracts. Use this skill when users ask about DeFi liquidity provision, Uniswap v4 hooks, pool management, LP positions, impermanent loss, or automated market making.",
+  "updated_at": 1778989022656,
+  "version": "1.0.0"
+}
