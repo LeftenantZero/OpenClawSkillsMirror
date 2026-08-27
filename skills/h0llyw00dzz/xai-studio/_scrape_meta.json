@@ -1,0 +1,35 @@
+{
+  "changelog": "Async concurrency restored for parallel style transfers and video edits.\n\nFeatures:\n  - Restore true async concurrency in concurrent command using AsyncClient\n    with asyncio.Semaphore (capped at 4 parallel requests) (#6)\n  - Add _save_async_image() helper with proper await for async .image property\n  - Apply same Semaphore + async-with pattern to video-concurrent command\n\nDocs:\n  - Add multi-turn chaining note clarifying unlimited --prompt steps on a\n    single source image (#5)",
+  "created_at": 1773727951582,
+  "display_name": "xAI Studio",
+  "fetched_at": 1787798375707,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/run.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "H0llyW00dzZ",
+    "handle": "h0llyw00dzz",
+    "user_id": "s174jw3p26hkgda2tdxk5t8x8h884h1f"
+  },
+  "slug": "xai-studio",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/xai-studio",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=xai-studio&ownerHandle=h0llyw00dzz",
+    "page_url": "https://clawhub.ai/h0llyw00dzz/skills/xai-studio"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 924,
+    "installs": 26,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "xAI Studio \u2014 generate and edit images and videos via the xAI API. Image: text-to-image, batch generation, multi-image editing, concurrent style transfers, mu...",
+  "updated_at": 1779001415305,
+  "version": "0.2.2"
+}
