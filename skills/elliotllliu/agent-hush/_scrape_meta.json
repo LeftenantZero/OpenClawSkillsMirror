@@ -1,0 +1,49 @@
+{
+  "changelog": "False positive rate reduced from 13.4% to 4.9%. Exclude .env.example files, enhanced code pattern heuristic.",
+  "created_at": 1773502969082,
+  "display_name": "Agent Hush",
+  "fetched_at": 1787873751510,
+  "files": [
+    "README.md",
+    "README_EN.md",
+    "SKILL.md",
+    "_meta.json",
+    "docs/install.md",
+    "package.json",
+    "scripts/convert_gitleaks.py",
+    "scripts/sanitize.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089893066,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Elliot Liu",
+    "handle": "elliotllliu",
+    "user_id": "s173wkxwtntcnbqjs1ffkn0ncn884mdn"
+  },
+  "slug": "agent-hush",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-hush",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-hush&ownerHandle=elliotllliu",
+    "page_url": "https://clawhub.ai/elliotllliu/skills/agent-hush"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 915,
+    "installs": 25,
+    "stars": 0,
+    "versions": 8
+  },
+  "summary": "Invisible privacy guardian for agent workspaces. Automatically intercepts outbound actions (git push, skill publish, file sharing) and checks for sensitive d...",
+  "updated_at": 1778491910241,
+  "version": "1.2.1"
+}
