@@ -1,0 +1,77 @@
+{
+  "changelog": "Version 1.0.1\n\n- Initial release of \"recall-tao\" skill.\n- Added 28 files including configuration, data storage, monitoring scripts, error handling, logging, rate limiter, scheduling, and browser automation scripts.\n- Supports monitoring Douyin Creator Center comments and auto-generating compliant replies.\n- Includes keyword rules, sensitive word filtering, rate limiting, multi-video monitoring, and robust error handling.",
+  "created_at": 1775037979259,
+  "display_name": "\u6843\u5657\u5657\u56de\u590d\u52a9\u624b",
+  "fetched_at": 1787796981016,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/accounts.json",
+    "config/ai_config.json",
+    "config/browser_config.json",
+    "config/error_handler_config.json",
+    "config/keyword_rules.json",
+    "config/log_config.json",
+    "config/login_guardian_config.json",
+    "config/monitor_state.json",
+    "config/rate_limit_config.json",
+    "config/schedule_config.json",
+    "config/sensitive_words.json",
+    "config/video_list_config.json",
+    "data/monitor_state.json",
+    "data/monitor_targets.json",
+    "data/pending_replies.json",
+    "data/processed_comments.json",
+    "references/monitoring_guide.md",
+    "scripts/batch_monitor.js",
+    "scripts/browser_manager.js",
+    "scripts/check_comments.js",
+    "scripts/check_comments_v2.js",
+    "scripts/check_messages.js",
+    "scripts/error_handler.js",
+    "scripts/intent_helper.js",
+    "scripts/intent_helper_v2.js",
+    "scripts/logger.js",
+    "scripts/login_guardian.js",
+    "scripts/persistence_manager.js",
+    "scripts/quick_check_comments.js",
+    "scripts/rate_limiter.js",
+    "scripts/schedule_manager.js",
+    "scripts/send_comment_reply.js",
+    "scripts/send_reply.js",
+    "scripts/video_list_fetcher.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090249048,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "hexiuqian",
+    "handle": "hexiuqian",
+    "user_id": "s170nb036ye4gcvj3x3w3bv31n840sdw"
+  },
+  "slug": "recall-tao",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/recall-tao",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=recall-tao&ownerHandle=hexiuqian",
+    "page_url": "https://clawhub.ai/hexiuqian/skills/recall-tao"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 575,
+    "installs": 14,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "\u6296\u97f3\u81ea\u52a8\u56de\u590d\u6280\u80fd\u3002\u901a\u8fc7\u6d4f\u89c8\u5668\u81ea\u52a8\u5316\u8fde\u63a5\u6296\u97f3\u521b\u4f5c\u8005\u4e2d\u5fc3\uff0c\u76d1\u63a7\u8bc4\u8bba\uff0c\u667a\u80fd\u5206\u6790\u540e\u81ea\u52a8\u751f\u6210\u79ef\u6781\u3001\u5927\u65b9\u3001\u70ed\u60c5\u3001\u5408\u6cd5\u7684\u56de\u590d\u3002\u652f\u6301\u5173\u952e\u8bcd\u5339\u914d\u3001\u654f\u611f\u8bcd\u8fc7\u6ee4\u3001\u8bc4\u8bba\u5206\u7c7b\u3001\u591a\u8d26\u53f7\u7ba1\u7406\u3002\u89e6\u53d1\u573a\u666f\uff1a\u7528\u6237\u63d0\u5230\"\u6296\u97f3\u81ea\u52a8\u56de\u590d\"\u3001\"\u6296\u97f3\u8bc4\u8bba\u56de\u590d\"\u3001\"\u6296\u97f3\u5ba2\u670d\"\u3001\"\u6296\u97f3\u667a\u80fd\u56de\u590d\"\u3001\"\u6296\u97f3\u673a\u5668\u4eba\"\u7b49\u5173\u952e\u8bcd\uff0c\u6216\u660e\u786e\u8981\u6c42\u5728\u6296\u97f3\u5e73\u53f0\u8fdb\u884c\u81ea\u52a8\u56de\u590d\u64cd\u4f5c\u3002",
+  "updated_at": 1779075189852,
+  "version": "1.0.1"
+}
