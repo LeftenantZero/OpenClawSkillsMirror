@@ -1,0 +1,33 @@
+{
+  "changelog": "Summary: Transitioned to a file-based, coordinator-focused accounting workflow skill, removing direct document processing, email, and API integration functions.\n\n- Now acts purely as a file-based coordinator: sets validation rules, workflow templates, and file routing logic for Greek accounting; does not perform OCR, email processing, or external API calls.\n- All data is processed via the local filesystem; no external credentials are required.\n- Direct OCR, email, and government filings must be handled by companion skills.\n- Added clear definitions for document validation rules (for invoices, receipts, statements) with Greek-specific compliance checks.\n- Expanded and clarified workflow templates (daily, monthly, quarterly) and included CLI command examples for routine operations.\n- Metadata updated: optional environment variables for QuickBooks/Xero export, and improved setup and directory structure documentation.",
+  "created_at": 1771534236308,
+  "display_name": "Accounting Workflows",
+  "fetched_at": 1787803306405,
+  "files": [
+    "EVALS.json",
+    "SKILL.md",
+    "_meta.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Stems",
+    "handle": "satoshistackalotto",
+    "user_id": "s17c6w15frspgvmq81dpbnvckh884fcn"
+  },
+  "slug": "accounting-workflows",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/accounting-workflows",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=accounting-workflows&ownerHandle=satoshistackalotto",
+    "page_url": "https://clawhub.ai/satoshistackalotto/skills/accounting-workflows"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 809,
+    "installs": 18,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "File-based workflow coordinator for Greek accounting. Defines processing pipelines, validation rules, and routine templates. No external APIs needed.",
+  "updated_at": 1778991752970,
+  "version": "0.1.1"
+}
