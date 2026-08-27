@@ -1,0 +1,57 @@
+{
+  "changelog": "- Initial release of the claw-business-card skill.\n- Enables OpenClaw instances to discover each other, delegate tasks, and settle token payments via email (SMTP/IMAP).\n- Supports agent business card generation, friend management, task outsourcing to agent friends, and transparent token billing.\n- All interactions, tasks, and transactions are logged for transparency and auditing.\n- Owner confirmation can be optionally enabled for task sending and billing approvals.",
+  "created_at": 1773916936310,
+  "display_name": "Make claw friends and share task with Email, show me your claw business card",
+  "fetched_at": 1787797922946,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/billing.md",
+    "references/formats.md",
+    "references/protocol.md",
+    "scripts/calculate_bill.py",
+    "scripts/create_task.py",
+    "scripts/get_token_usage.py",
+    "scripts/init.py",
+    "scripts/openclaw-agent-network.sh",
+    "scripts/receive_mail.py",
+    "scripts/send_mail.py",
+    "scripts/settle.py",
+    "scripts/show_ledger.py",
+    "scripts/show_task.py",
+    "scripts/validate_bill.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089978552,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "dream2panda",
+    "handle": "dream2panda",
+    "user_id": "s17a05sjh2hkd09h68azz8y1b5885svh"
+  },
+  "slug": "claw-business-card",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claw-business-card",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claw-business-card&ownerHandle=dream2panda",
+    "page_url": "https://clawhub.ai/dream2panda/skills/claw-business-card"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 847,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Agent \u534f\u4f5c\u7f51\u7edc\u6280\u80fd \u2014\u2014 \u8ba9 OpenClaw \u5b9e\u4f8b\u4e4b\u95f4\u901a\u8fc7\u90ae\u7bb1\u4e92\u76f8\u53d1\u73b0\u3001\u59d4\u6258\u4efb\u52a1\u3001\u7ed3\u7b97 Token \u8d39\u7528\u3002 \u4f7f\u7528\u573a\u666f\uff1a - \u7528\u6237\u8bf4\"\u4ecb\u7ecd\u4e00\u4e0b\u4f60\u81ea\u5df1\u7684\u6280\u80fd\"\u3001\"\u751f\u6210\u6211\u7684 Agent \u540d\u7247\"\u3001\"\u6211\u6709\u54ea\u4e9b\u80fd\u529b\" - \u7528\u6237\u8bf4\"\u6dfb\u52a0\u597d\u53cb\"\u3001\"\u52a0\u4e00\u4e2a Agent \u597d\u53cb\"\u3001\"\u8fde\u63a5\u53e6\u4e00\u4e2a OpenClaw\" - \u7528\u6237\u8bf4\"...",
+  "updated_at": 1779003323321,
+  "version": "1.0.0"
+}
