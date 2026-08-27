@@ -1,0 +1,45 @@
+{
+  "changelog": "coding-agent-backup 1.0.0\n\n- Initial release of the coding-agent skill.\n- Enables background delegation of coding tasks to Codex, Claude Code, or Pi agents using a bash-first workflow.\n- Strong emphasis on pty:true (pseudo-terminal) requirement for all interactive coding agent sessions.\n- Supports spawning agents in arbitrary work directories for tasks like building features, code review (in temp dirs), and refactoring.\n- Provides detailed CLI usage patterns, process monitoring actions, and parallel workflow strategies with git worktrees.\n- Includes clear usage boundaries: not for simple fixes, general code reading, or work in ~/clawd workspace.",
+  "created_at": 1772104830179,
+  "display_name": "Coding Agent Backup",
+  "fetched_at": 1787791095783,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "index.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779962125430,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "nickchan0412",
+    "handle": "nickchan0412",
+    "user_id": "s1764mxh3qdynbrzd126xfnzbs885wsz"
+  },
+  "slug": "coding-agent-backup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/coding-agent-backup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=coding-agent-backup&ownerHandle=nickchan0412",
+    "page_url": "https://clawhub.ai/nickchan0412/skills/coding-agent-backup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3613,
+    "installs": 122,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Delegate coding tasks to Codex, Claude Code, or Pi agents via background process. Use when: (1) building/creating new features or apps, (2) reviewing PRs (sp...",
+  "updated_at": 1779077358067,
+  "version": "1.0.0"
+}
