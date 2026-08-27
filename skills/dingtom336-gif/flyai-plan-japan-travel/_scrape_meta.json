@@ -1,0 +1,48 @@
+{
+  "changelog": "Major upgrade: Strictly enforces real-time CLI execution for all Japan travel planning \u2014 no training data allowed.\n\n- All hotels, flights, and attractions must come from flyai CLI (with booking URLs); no fabricated or static itinerary content permitted.\n- New orchestration: Handles single-point queries and complete multi-city itineraries by executing up to four specific CLI commands.\n- Parameter collection process added for full itineraries, with clear SOP for user input.\n- Strict validation: Outputs must include direct booking links, CLI-sourced prices, and be clearly marked as powered by flyai.\n- Enhanced output formatting and usage examples for clarity and compliance.\n- Domain knowledge now used only for context/tips\u2014not as a data source or to fill itinerary items.",
+  "created_at": 1774928802238,
+  "display_name": "FlyAI Plan Japan Travel",
+  "fetched_at": 1787797088946,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/fallbacks.md",
+    "references/playbooks.md",
+    "references/runbook.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090201517,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "dingtom336-gif",
+    "handle": "dingtom336-gif",
+    "user_id": "s17aepsh6v86z2ajsq3ng9tgm983g9pt"
+  },
+  "slug": "flyai-plan-japan-travel",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/flyai-plan-japan-travel",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=flyai-plan-japan-travel&ownerHandle=dingtom336-gif",
+    "page_url": "https://clawhub.ai/dingtom336-gif/skills/flyai-plan-japan-travel"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 593,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Plan your complete Japan trip \u2014 flights, hotels in Tokyo/Osaka/Kyoto/Hokkaido, shrine visits, cherry blossom spots, visa requirements, and JR Pass info. Hand...",
+  "updated_at": 1779074971678,
+  "version": "1.0.0"
+}
