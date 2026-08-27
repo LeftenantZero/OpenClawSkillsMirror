@@ -1,0 +1,54 @@
+{
+  "changelog": "- Refined execution and safety rules, focusing on direct operation and rollback-aware planning.\n- Removed install/upgrade implementation and instructions from core logic and references.\n- Added orchestration risk review reference (references/orchestration-risk-check.md); removed install reference.\n- Unified missing input prompts and clarified command execution order and confirmation policies.\n- Improved criteria for destructive actions and introduced pre-flight review step for orchestration.",
+  "created_at": 1773211815472,
+  "display_name": "Rauto Operator",
+  "fetched_at": 1787799557512,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/agent-execution.md",
+    "references/cli.md",
+    "references/examples.md",
+    "references/orchestration-json-template.md",
+    "references/orchestration-risk-check.md",
+    "references/paths.md",
+    "references/scenarios.md",
+    "references/troubleshooting.md",
+    "references/web.md",
+    "references/workflow-json-template.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089839271,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "demohiiiii",
+    "handle": "demohiiiii",
+    "user_id": "s170s5jqq8rd972bb5scatd69s884wt8"
+  },
+  "slug": "rauto-usage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/rauto-usage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=rauto-usage&ownerHandle=demohiiiii",
+    "page_url": "https://clawhub.ai/demohiiiii/skills/rauto-usage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 919,
+    "installs": 27,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Execute rauto directly for the user: run device commands, template execution, tx block, tx workflow, multi-device orchestration, replay, backup/restore, and...",
+  "updated_at": 1778997746681,
+  "version": "0.2.3"
+}
