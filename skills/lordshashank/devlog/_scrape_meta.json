@@ -1,0 +1,65 @@
+{
+  "changelog": "Initial release of DevLog Generator.\n\n- Generate narrative developer blog posts from coding session transcripts, narrated by the agent.\n- Automatically scans supported platforms for session data and filters relevant sessions based on project, topic, style, and time range.\n- Aggressively filters transcript data to highlight human-agent collaboration and technical decisions.\n- Adapts blog structure and style (builder\u2019s log, tutorial, or technical deep-dive) to match user preference and session content.\n- Supports publishing generated blogs to multiple online platforms with optional AI-generated cover images.\n- Includes detailed edge case handling for various data and publishing scenarios.",
+  "created_at": 1770535185871,
+  "display_name": "Devlog",
+  "fetched_at": 1787805288517,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/devlog-template.md",
+    "examples/builders-log.md",
+    "examples/technical.md",
+    "examples/tutorial.md",
+    "references/blog-writing-guide.md",
+    "references/platforms/claude-code/claude-code.md",
+    "references/platforms/claude-code/list-sessions.sh",
+    "references/platforms/claude-code/read-session.sh",
+    "references/platforms/codex/codex.md",
+    "references/platforms/codex/list-sessions.sh",
+    "references/platforms/codex/read-session.sh",
+    "references/platforms/gemini-cli/gemini-cli.md",
+    "references/platforms/gemini-cli/list-sessions.sh",
+    "references/platforms/gemini-cli/read-session.sh",
+    "references/platforms/openclaw/list-sessions.sh",
+    "references/platforms/openclaw/openclaw.md",
+    "references/platforms/openclaw/read-session.sh",
+    "references/platforms/opencode/list-sessions.sh",
+    "references/platforms/opencode/opencode.md",
+    "references/platforms/opencode/read-session.sh",
+    "references/publishing/hashnode/hashnode.md",
+    "references/publishing/hashnode/publish.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783658420868,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "lordshashank",
+    "handle": "lordshashank",
+    "user_id": "s175emcjh88fj2b49ctn35hdjn884jzg"
+  },
+  "slug": "devlog",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/devlog",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=devlog&ownerHandle=lordshashank",
+    "page_url": "https://clawhub.ai/lordshashank/skills/devlog"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2041,
+    "installs": 66,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate narrative blog posts from AI coding session transcripts. Reads session files, selects sessions relevant to a topic, and produces an agent-narrated blog post about the human-agent collaboration. Supports builder's log, tutorial, and technical deep-dive styles.",
+  "updated_at": 1778988987014,
+  "version": "1.0.0"
+}
