@@ -1,0 +1,72 @@
+{
+  "changelog": "omni-channel-agent v1.0.0\n\n- Initial release with full multi-channel trend and product research agent.\n- Integrates KOL trend radar, social media (TikTok, Instagram, YouTube, Reddit, Google Trends), SEO (Semrush API, sitemap, deduplication), and advertising (Facebook Ads) data sources.\n- Automated KOL monitoring, trend scoring, and comprehensive Slack-ready reports.\n- CLI tool supports full or single-channel pipelines, result limiting, and test mode.\n- Requires Apify, Semrush, and (optionally) Notion API credentials for full functionality.",
+  "created_at": 1774795722083,
+  "display_name": "Omni Channel Agent",
+  "fetched_at": 1787841180314,
+  "files": [
+    "SKILL.md",
+    "TREND_METHODOLOGY.md",
+    "_meta.json",
+    "apify_client.py",
+    "formatters/slack_formatter.py",
+    "output/ads_20260305_0255.json",
+    "output/all_data_20260305_0255.json",
+    "output/all_data_20260305_0313.json",
+    "output/all_data_20260305_0314.json",
+    "output/full_report_20260305_0255.txt",
+    "output/full_report_20260305_0313.txt",
+    "output/full_report_20260305_0314.txt",
+    "output/seo_20260305_0255.json",
+    "output/social_20260305_0255.json",
+    "output/social_20260305_0313.json",
+    "output/social_20260305_0314.json",
+    "run_all.py",
+    "run_multi_query.py",
+    "run_pipeline.py",
+    "skill-card.md",
+    "sources/ads_pipeline.py",
+    "sources/facebook_ads.py",
+    "sources/google_trends.py",
+    "sources/instagram.py",
+    "sources/kol_radar.py",
+    "sources/reddit.py",
+    "sources/seo_full_research.py",
+    "sources/seo_pipeline.py",
+    "sources/seo_semrush.py",
+    "sources/tiktok.py",
+    "sources/twitter.py",
+    "sources/youtube.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090180748,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "lygjoey",
+    "handle": "lygjoey",
+    "user_id": "s175wf0vsc41q23086cnaf6tj583t17x"
+  },
+  "slug": "omni-channel-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/omni-channel-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=omni-channel-agent&ownerHandle=lygjoey",
+    "page_url": "https://clawhub.ai/lygjoey/skills/omni-channel-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 531,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5168\u6e20\u9053\u9009\u54c1 Agent \u2014 \u62c9\u9f50\u793e\u5a92\u7aef\u3001SEO\u7aef\u3001\u6295\u653e\u7aef\u6570\u636e\uff0c\u5e2e\u52a9\u8fd0\u8425\u540c\u5b66\u786e\u5b9a\u5f85\u4e0a\u7ebf\u9700\u6c42\u3002\u89e6\u53d1\u8bcd\uff1a\u9009\u54c1\u3001\u793e\u5a92\u70ed\u70b9\u3001SEO\u8c03\u7814\u3001\u7ade\u54c1\u5e7f\u544a\u3001Facebook Ads\u3001TikTok\u8d8b\u52bf\u3002",
+  "updated_at": 1778492279313,
+  "version": "1.0.0"
+}
