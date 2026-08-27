@@ -1,0 +1,55 @@
+{
+  "changelog": "AlphaEar Search Skill v1.0.0\n\n- Introduces unified search for finance information via web (Jina, DDG, Baidu) and local document retrieval (RAG).\n- Supports engine selection for queries: web engines or local database.\n- Includes smart cache checking to avoid redundant searches.\n- Aggregates search results from multiple engines if needed.\n- Requires dependencies: duckduckgo-search, requests, and local script/database management.",
+  "created_at": 1775046167725,
+  "display_name": "alphaear-search",
+  "fetched_at": 1787836217138,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/PROMPTS.md",
+    "scripts/__init__.py",
+    "scripts/content_extractor.py",
+    "scripts/database_manager.py",
+    "scripts/hybrid_search.py",
+    "scripts/llm/__init__.py",
+    "scripts/llm/capability.py",
+    "scripts/llm/factory.py",
+    "scripts/llm/router.py",
+    "scripts/search_tools.py",
+    "scripts/sentiment_tools.py",
+    "skill-card.md",
+    "tests/test_search.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090234847,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zhouzhonglu8-png",
+    "handle": "zhouzhonglu8-png",
+    "user_id": "s17fc97saqx9w7mhqhm8bqe1ss840tq5"
+  },
+  "slug": "alphaear-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alphaear-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alphaear-search&ownerHandle=zhouzhonglu8-png",
+    "page_url": "https://clawhub.ai/zhouzhonglu8-png/skills/alphaear-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 587,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Perform finance web searches and local context searches. Use when the user needs general finance info from the web (Jina/DDG/Baidu) or needs to retrieve fina...",
+  "updated_at": 1778492348942,
+  "version": "1.0.0"
+}
