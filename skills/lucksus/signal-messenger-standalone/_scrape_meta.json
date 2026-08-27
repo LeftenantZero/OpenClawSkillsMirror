@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release: Full-featured Signal messenger integration for OpenClaw agents.\n\n- Send and receive text, image, and voice messages with role-based contact permissions (owner/trusted/untrusted).\n- Automatic voice message transcription (Whisper) and voice replies via TTS.\n- Secure new contact triage with owner approval workflow to prevent prompt injection.\n- Conversation history, typing indicators, read/viewed receipts, and UUID contact support.\n- Instant wake-on-message using OpenClaw\u2019s /hooks/wake API integration.\n- All messages are auto-logged per contact to conversation files.",
+  "created_at": 1771691289554,
+  "display_name": "Signal messaging for standalone bots/accounts",
+  "fetched_at": 1787791482513,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/permissions.md",
+    "references/troubleshooting.md",
+    "scripts/permissions.json.txt",
+    "scripts/signal-poll.sh",
+    "scripts/signal-send.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779947356153,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Nicolas Luck",
+    "handle": "lucksus",
+    "user_id": "s1760d1qjmc195mvvnkwva9275885ejh"
+  },
+  "slug": "signal-messenger-standalone",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/signal-messenger-standalone",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=signal-messenger-standalone&ownerHandle=lucksus",
+    "page_url": "https://clawhub.ai/lucksus/skills/signal-messenger-standalone"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1488,
+    "installs": 46,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Full Signal messenger integration for OpenClaw agents. Send/receive text and voice messages via signal-cli with role-based permissions (owner/trusted/untrust...",
+  "updated_at": 1779077225143,
+  "version": "1.0.0"
+}
