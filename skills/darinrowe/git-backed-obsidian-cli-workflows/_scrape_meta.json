@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of git-backed-obsidian-cli-workflows.\n\n- Supports read, search, backlinks, daily note, and lightweight write workflows using the official Obsidian CLI in a Git-backed vault.\n- Automatically runs Git-based backup/sync after successful write operations.\n- Falls back to direct file writing only if the CLI does not support a workflow and fallback is allowed.\n- Reports operation details: command or workflow used, target note, sync run status, and sync result.\n- Designed for any supported environment where the official Obsidian CLI already works. Use a dedicated skill for CLI installation or headless adaptation.",
+  "created_at": 1773368624027,
+  "display_name": "git-backed-obsidian-cli-workflows",
+  "fetched_at": 1787799212344,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/environment-note.md",
+    "references/fallbacks.md",
+    "references/query-vs-write.md",
+    "references/workflow-surface.md",
+    "scripts/backup.sh",
+    "scripts/notes_workflow.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089863008,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Darin Lo",
+    "handle": "darinrowe",
+    "user_id": "s176z8f7hbt9xnpjc8k8h36tsd885s1a"
+  },
+  "slug": "git-backed-obsidian-cli-workflows",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/git-backed-obsidian-cli-workflows",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=git-backed-obsidian-cli-workflows&ownerHandle=darinrowe",
+    "page_url": "https://clawhub.ai/darinrowe/skills/git-backed-obsidian-cli-workflows"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 899,
+    "installs": 26,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use the official Obsidian CLI for note workflows in a Git-backed vault, including search, read, links/backlinks-style queries, daily-note operations, and lig...",
+  "updated_at": 1778998690885,
+  "version": "1.0.0"
+}
