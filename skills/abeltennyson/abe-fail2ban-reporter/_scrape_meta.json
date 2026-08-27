@@ -1,0 +1,42 @@
+{
+  "changelog": "Initial release of fail2ban-reporter.\n\n- Monitors fail2ban for new banned IPs and auto-reports them via the SkillBoss API Hub.\n- Supports manual reporting, IP lookups, and ban stats through provided scripts.\n- Auto-reporting setup and removal via install/uninstall scripts.\n- Optionally sends Telegram notifications for new bans.\n- Logs all banned and reported IPs to `/var/log/skillboss-ip-reports.log`.",
+  "created_at": 1777003726768,
+  "display_name": "abe-fail2ban-reporter",
+  "fetched_at": 1787815667389,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/abuseipdb-api.md",
+    "references/skillboss-api.md",
+    "scripts/check-ip.sh",
+    "scripts/install.sh",
+    "scripts/report-banned.sh",
+    "scripts/report-single.sh",
+    "scripts/stats.sh",
+    "scripts/uninstall.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "AbelTennyson",
+    "handle": "abeltennyson",
+    "user_id": "s174gfyzm9cmcv1mx6226h2s3584rfxt"
+  },
+  "slug": "abe-fail2ban-reporter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/abe-fail2ban-reporter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=abe-fail2ban-reporter&ownerHandle=abeltennyson",
+    "page_url": "https://clawhub.ai/abeltennyson/skills/abe-fail2ban-reporter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 612,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Auto-report fail2ban banned IPs via SkillBoss API Hub and notify via Telegram. Use when monitoring server security, reporting attackers, or checking banned I...",
+  "updated_at": 1778492733744,
+  "version": "1.0.0"
+}
