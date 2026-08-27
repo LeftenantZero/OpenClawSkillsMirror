@@ -1,0 +1,45 @@
+{
+  "changelog": "preqstation-openclaw 0.1.6\n\n- Major update: comprehensive SKILL.md written to define task handling, project mapping, execution flows, and hard safety requirements.\n- Introduces detailed rules for project key/path resolution using MEMORY.md and user interaction when mappings are missing.\n- Defines strict execution isolation: all coding tasks run in per-project git worktrees, never in live checkouts.\n- Clearly documents bash interface and PTY-based engine invocation for Claude, Codex, and Gemini CLI.\n- Enforces project branch/worktree naming conventions and absolute path handling.\n- Details runtime prerequisites, environment variables, and strict safety gates for all engine commands.",
+  "created_at": 1771691054193,
+  "display_name": "Preqstation",
+  "fetched_at": 1787802986206,
+  "files": [
+    "MEMORY.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779947349008,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "sonim1",
+    "handle": "sonim1",
+    "user_id": "s176d4hx6h8wkhxsr8qedrrdcs8845w9"
+  },
+  "slug": "preqstation-openclaw",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/preqstation-openclaw",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=preqstation-openclaw&ownerHandle=sonim1",
+    "page_url": "https://clawhub.ai/sonim1/skills/preqstation-openclaw"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1112,
+    "installs": 32,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Delegate PREQSTATION coding tasks to Claude Code, Codex CLI, or Gemini CLI with PTY-safe execution (workdir + background + monitoring). Use when building, re...",
+  "updated_at": 1778992125306,
+  "version": "0.1.6"
+}
