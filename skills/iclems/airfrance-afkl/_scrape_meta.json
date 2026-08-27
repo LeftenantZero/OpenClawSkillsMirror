@@ -1,0 +1,39 @@
+{
+  "changelog": "- Added a comprehensive README.md with setup, usage, and implementation notes.\n- Clarified that the watcher script now prints no output when nothing changes, to reduce noise in cron jobs.\n- Updated documentation to detail input handling, polling strategies, and heuristic use of aircraft data.",
+  "created_at": 1769634832307,
+  "display_name": "Air France - KLM",
+  "fetched_at": 1787806215165,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/fields.md",
+    "scripts/afkl_flightstatus_query.mjs",
+    "scripts/afkl_http.mjs",
+    "scripts/afkl_watch_flight.mjs",
+    "scripts/aircraft_intel.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "iclems",
+    "handle": "iclems",
+    "user_id": "s171xn9tff2br4yfmebfk37k71885px7"
+  },
+  "slug": "airfrance-afkl",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/airfrance-afkl",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=airfrance-afkl&ownerHandle=iclems",
+    "page_url": "https://clawhub.ai/iclems/skills/airfrance-afkl"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3206,
+    "installs": 106,
+    "stars": 2,
+    "versions": 2
+  },
+  "summary": "Track Air France flights using the Air France\u2013KLM Open Data APIs (Flight Status). Use when the user gives a flight number/date (e.g., AF007 on 2026-01-29) and wants monitoring, alerts (delay/gate/aircraft changes), or analysis (previous-flight chain, aircraft tail number \u2192 cabin recency / Wi\u2011Fi). Also use when setting up or tuning polling schedules within API rate limits.",
+  "updated_at": 1778987321418,
+  "version": "1.0.1"
+}
