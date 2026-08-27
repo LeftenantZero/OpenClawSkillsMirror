@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of Autonomous Procurement Agent for enterprise quote parsing and fraud detection.\n\n- Parses supplier quotes from plain-text, OCR scans, or SAP exports into structured data.\n- Dual-engine parsing: fast regex (local) with optional GPT-4o fallback for messy formats.\n- Automated fraud/risk checks: F1 arithmetic error detection, F2 price spike alerts, F3 duplicate PO flagging.\n- Cross-currency reconciliation (CNY/USD/EUR) for B2B finance teams.\n- Circuit breaker and approval escalation for high-risk or high-value POs.\n- Full local processing unless external LLM is explicitly enabled (privacy safeguards included).\n- Integrated with Lemon Squeezy for license management and webhook-based activation.",
+  "created_at": 1775460459967,
+  "display_name": "Autonomous Procurement Agent",
+  "fetched_at": 1787830509524,
+  "files": [
+    "PRIVACY.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "auth-middleware.js",
+    "listing.json",
+    "manifest.json",
+    "package.json",
+    "self-healing-parser.js",
+    "skill-card.md",
+    "webhook-handler.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090316427,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "D-zhangz",
+    "handle": "d-zhangz",
+    "user_id": "s17f20yvnnh9710k7gck28t2xs84b30n"
+  },
+  "slug": "autonomous-procurement-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/autonomous-procurement-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=autonomous-procurement-agent&ownerHandle=d-zhangz",
+    "page_url": "https://clawhub.ai/d-zhangz/skills/autonomous-procurement-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 674,
+    "installs": 16,
+    "stars": 1,
+    "versions": 10
+  },
+  "summary": "Enterprise procurement quote parsing and fraud detection. Use when: (1) A supplier quote arrives as messy plain-text, OCR scan, or SAP export, (2) Cross-plat...",
+  "updated_at": 1778492436422,
+  "version": "1.0.0"
+}
