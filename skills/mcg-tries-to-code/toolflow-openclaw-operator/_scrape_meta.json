@@ -1,0 +1,60 @@
+{
+  "changelog": "Publish the flattened bundled OpenClaw installer after clean-host validation. Includes Bash-portable install/verify scripts, bundle-local example workflows, bundled runtime/plugin payload, and successful smoke tests on a clean Ubuntu VPS.",
+  "created_at": 1776959812078,
+  "display_name": "ToolFlow OpenClaw Operator",
+  "fetched_at": 1787815888593,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/install-toolflow-openclaw.sh",
+    "scripts/verify-toolflow-openclaw.sh",
+    "skill-card.md",
+    "skill.json",
+    "toolflow-bundle/README.md",
+    "toolflow-bundle/plugin/dist/entry.js",
+    "toolflow-bundle/plugin/dist/runtime-cli.js",
+    "toolflow-bundle/plugin/examples/workflows/bundled-install-smoke.json",
+    "toolflow-bundle/plugin/examples/workflows/native-taskflow-architecture.json",
+    "toolflow-bundle/plugin/examples/workflows/patch-after-approval.yaml",
+    "toolflow-bundle/plugin/examples/workflows/publication-readiness-smoke.json",
+    "toolflow-bundle/plugin/examples/workflows/repo-diagnostics.yaml",
+    "toolflow-bundle/plugin/examples/workflows/research-digest.yaml",
+    "toolflow-bundle/plugin/examples/workflows/safe-profile-mvp.json",
+    "toolflow-bundle/plugin/examples/workflows/session-fanout.yaml",
+    "toolflow-bundle/plugin/openclaw.plugin.json",
+    "toolflow-bundle/plugin/package.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090534363,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mcg-tries-to-code",
+    "handle": "mcg-tries-to-code",
+    "user_id": "s17ee9zgqb9x9wy0xvpse2pc3h858c76"
+  },
+  "slug": "toolflow-openclaw-operator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/toolflow-openclaw-operator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=toolflow-openclaw-operator&ownerHandle=mcg-tries-to-code",
+    "page_url": "https://clawhub.ai/mcg-tries-to-code/skills/toolflow-openclaw-operator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 693,
+    "installs": 17,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Enables running jobs as durable, stepwise ToolFlow workflows with approvals, recovery, and progress tracking via OpenClaw integration.",
+  "updated_at": 1778492730420,
+  "version": "0.3.0"
+}
