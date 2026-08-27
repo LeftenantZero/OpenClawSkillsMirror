@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release: Enables CRUD operations on live flomo memos via Chrome browser automation\u2014no official API required.\n\n- Supports querying, creating, editing (replace-only), and deleting memos in the flomo Web UI\n- Uses Chrome MCP tools to operate within an already logged-in browser session\n- Requires explicit confirmation for edits and deletions for safety\n- Automatically deep-scans up to 50 memos during search by default\n- Minimal logging and strict safety rules to prevent unintended actions",
+  "created_at": 1772177490010,
+  "display_name": "flomo-crud-skill",
+  "fetched_at": 1787801838100,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/safety.md",
+    "references/test-checklist.md",
+    "references/ui-locators.md",
+    "references/workflows.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779963933457,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Zeeland",
+    "handle": "undertone0809",
+    "user_id": "s17fage929r6re1jt54f24rqzd83ra69"
+  },
+  "slug": "flomo-crud-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/flomo-crud-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=flomo-crud-skill&ownerHandle=undertone0809",
+    "page_url": "https://clawhub.ai/undertone0809/skills/flomo-crud-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1078,
+    "installs": 33,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query, insert, edit, and delete flomo memos through the flomo Web UI using Chrome MCP tools (no official API required). Use when a user wants CRUD operations...",
+  "updated_at": 1778993612350,
+  "version": "1.0.0"
+}
