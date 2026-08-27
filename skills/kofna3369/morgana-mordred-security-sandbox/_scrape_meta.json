@@ -1,0 +1,56 @@
+{
+  "changelog": "**Major update: Adds prompt injection vulnerabilities and vaccines, revises system architecture, and expands documentation.**\n\n- Introduced a new `prompt_injection` system and corresponding `vaccine_prompt_injection.py`, increasing the vulnerable systems count to five.\n- Removed deprecated text input test files.\n- Refactored and updated core files and all system/vaccine modules for broader coverage and improved documentation.\n- Overhauled and expanded the documentation with clearer overviews, updated instructions, detailed vulnerability and patch explanations, and ethical use guidance.\n- Updated skill manifest (SKILL.md) with structured metadata, inputs, outputs, verification steps, and improved agent integration instructions.",
+  "created_at": 1775611427351,
+  "display_name": "Morgana Mordred Security Sandbox",
+  "fetched_at": 1787796176694,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "examples/demo.md",
+    "skill-card.md",
+    "skills/security-analysis.md",
+    "src/mordred_runner.py",
+    "src/systems/data_leak.py",
+    "src/systems/flawed_auth.py",
+    "src/systems/prompt_injection.py",
+    "src/systems/race_condition.py",
+    "src/systems/weak_sandbox.py",
+    "vaccines/vaccine_data_leak.py",
+    "vaccines/vaccine_flawed_auth.py",
+    "vaccines/vaccine_prompt_injection.py",
+    "vaccines/vaccine_race_condition.py",
+    "vaccines/vaccine_weak_sandbox.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090348181,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Kofna3369",
+    "handle": "kofna3369",
+    "user_id": "s170vjwkh0tbnpbsmvn0nj60h183gysr"
+  },
+  "slug": "morgana-mordred-security-sandbox",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/morgana-mordred-security-sandbox",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=morgana-mordred-security-sandbox&ownerHandle=kofna3369",
+    "page_url": "https://clawhub.ai/kofna3369/skills/morgana-mordred-security-sandbox"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 670,
+    "installs": 16,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Educational security training sandbox for AI agents. Contains 5 intentionally vulnerable systems with annotated vulnerability descriptions and tested patches...",
+  "updated_at": 1779075578232,
+  "version": "2.0.0"
+}
