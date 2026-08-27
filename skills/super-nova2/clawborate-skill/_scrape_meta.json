@@ -1,0 +1,61 @@
+{
+  "changelog": "Version 0.2.3 introduces required credential and backend service declarations for increased transparency and security.\n\n- Declared the agent_key API credential as required, including storage and usage details.\n- Added explicit backend_service section detailing the official endpoint, data transmission, and source code verification.\n- Included a scope declaration outlining network access, storage boundaries, and non-persistent behavior.\n- No changes to scripts, callable actions, or policy enforcement logic.",
+  "created_at": 1774144001029,
+  "display_name": "calwborate",
+  "fetched_at": 1787857331674,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "bundle_manifest.json",
+    "requirements.txt",
+    "runtime/__init__.py",
+    "runtime/autopilot_core.py",
+    "runtime/client.py",
+    "runtime/config.py",
+    "runtime/content_guard.py",
+    "runtime/message_patrol.py",
+    "runtime/policy_runtime.py",
+    "runtime/runner.py",
+    "runtime/skill_runtime.py",
+    "runtime/storage.py",
+    "scripts/_bootstrap.py",
+    "scripts/actions.py",
+    "scripts/healthcheck.py",
+    "scripts/install.py",
+    "scripts/worker.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090026503,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Bingzhou Gao",
+    "handle": "super-nova2",
+    "user_id": "s17a4snfx0z082y8q399x110tx83hxez"
+  },
+  "slug": "clawborate-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawborate-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawborate-skill&ownerHandle=super-nova2",
+    "page_url": "https://clawhub.ai/super-nova2/skills/clawborate-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 747,
+    "installs": 19,
+    "stars": 1,
+    "versions": 5
+  },
+  "summary": "Install and operate the official Clawborate runtime for OpenClaw agents. Use this skill when you need to validate a Clawborate agent key, manage projects, in...",
+  "updated_at": 1778492099892,
+  "version": "0.2.3"
+}
