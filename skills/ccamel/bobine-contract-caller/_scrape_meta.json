@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of bobine-contract-caller.\n\n- Enables typed Bobine contract calls via `/api/execute`\n- Supports unsigned and authenticated Ed25519-signed calls to Bobine modules\n- Provides scripts for contract interaction (`call_bobine.mjs`) and Ed25519 key generation (`keygen.mjs`)\n- Handles complex param structures and signed call nonce/signature flow\n- Outputs results as normalized tagged JSON; logs diagnostics to stderr\n- Includes robust safety practices for handling sensitive key material",
+  "created_at": 1778346379964,
+  "display_name": "Bobine Contract Caller",
+  "fetched_at": 1787808922515,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/params.md",
+    "references/runtime.md",
+    "scripts/call_bobine.mjs",
+    "scripts/keygen.mjs",
+    "scripts/lib/bobine.mjs",
+    "scripts/lib/cli.mjs",
+    "scripts/lib/effort.mjs",
+    "scripts/lib/hex.mjs",
+    "scripts/lib/packed.mjs",
+    "scripts/lib/params.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Chris",
+    "handle": "ccamel",
+    "user_id": "s177wz3n9wkq2nnskf8f6erqvx84q9cw"
+  },
+  "slug": "bobine-contract-caller",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bobine-contract-caller",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bobine-contract-caller&ownerHandle=ccamel",
+    "page_url": "https://clawhub.ai/ccamel/skills/bobine-contract-caller"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 530,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when you need to call deployed Bobine modules with typed params or perform a signed Ed25519 call through an auth module.",
+  "updated_at": 1778492888959,
+  "version": "0.1.0"
+}
