@@ -1,0 +1,49 @@
+{
+  "changelog": "- Initial release of android-adb skill for managing and debugging Android devices via ADB commands.\n- Supports natural language and direct command input for device/app management, debugging, automation, file transfer, performance profiling, and more.\n- Automatic ADB installation and resolution if not found, with safe sandboxing that does not alter system configurations.\n- Multi-device support with interactive device selection and session handling.\n- Implements safety guardrails with command risk levels (safe, moderate, dangerous) and explicit confirmation for risky operations.\n- Handles verbose log output by launching a new terminal window, ensuring non-blocking user experience.\n- Includes quick tasks, fallback strategies for common troubleshooting (crash log, UI dump), and robust command mapping.",
+  "created_at": 1775982356857,
+  "display_name": "Android Adb",
+  "fetched_at": 1787795703932,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/adb-commands.md",
+    "scripts/adb_env.sh",
+    "scripts/device_check.sh",
+    "scripts/install_adb.sh",
+    "scripts/logcat_capture.sh",
+    "scripts/screenshot.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090390248,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "cwener",
+    "handle": "cwener",
+    "user_id": "s17ayb31teq9nv2ss10xjv0mas84p1aw"
+  },
+  "slug": "android-adb-2",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/android-adb-2",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=android-adb-2&ownerHandle=cwener",
+    "page_url": "https://clawhub.ai/cwener/skills/android-adb-2"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 673,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Execute Android ADB (Android Debug Bridge) commands for device management, app management, debugging, and automation. Use when the user requests any ADB-rela...",
+  "updated_at": 1779075752980,
+  "version": "0.1.0"
+}
