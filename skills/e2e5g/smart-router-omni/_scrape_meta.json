@@ -1,0 +1,39 @@
+{
+  "changelog": "Version 2.0.0 introduces comprehensive universal and OpenClaw-aware routing logic for skill selection and chaining.\n\n- Automatically detects whether to use universal or OpenClaw-aware routing based on environment and installed skills.\n- Normalizes user requests into structured task cards and applies multi-phase, metadata-driven decision process for routing.\n- Introduces explicit policies for filtering, scoring, and output formatting, including confidence, prerequisites, fallbacks, and clarifications.\n- Provides strict guardrails to avoid unavailable or unsuitable skills and to handle ambiguous scenarios appropriately.\n- Adds detailed documentation and licensing terms.",
+  "created_at": 1775045136691,
+  "display_name": "Smart Router Omni",
+  "fetched_at": 1787836234652,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/ambiguity-and-fallbacks.md",
+    "references/chain-patterns.md",
+    "references/environment-detection.md",
+    "references/research-notes-2026-03.md",
+    "references/scoring-rubric.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "e2e5g",
+    "handle": "e2e5g",
+    "user_id": "s177nbcv26z7ksbd8gps9thykh83hgt3"
+  },
+  "slug": "smart-router-omni",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/smart-router-omni",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=smart-router-omni&ownerHandle=e2e5g",
+    "page_url": "https://clawhub.ai/e2e5g/skills/smart-router-omni"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 631,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Universal smart routing skill that chooses the best installed skill or skill chain across mixed environments, and automatically applies OpenClaw-aware routin...",
+  "updated_at": 1778492348942,
+  "version": "2.0.0"
+}
