@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release of the feedback-learning skill.\n- Provides a shell/Python-based feedback learning system for OpenClaw agents\u2014no LLMs or API keys required.\n- Detects user feedback (emoji and common Russian/English text signals), logs events, groups recurring patterns, promotes auto-learned rules, and generates weekly reports.\n- Includes setup guides for installation, agent workspace integration, and scheduled reporting/analysis.\n- Supports both Russian and English feedback, tracks event and pattern data, and exposes structured promotion of recurring user requests to agent rules.",
+  "created_at": 1774020821571,
+  "display_name": "Feedback Learning",
+  "fetched_at": 1787860093139,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/analyze-patterns.py",
+    "scripts/detect-feedback.py",
+    "scripts/log-event.sh",
+    "scripts/weekly-report.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090005415,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Maxim Kravtsov",
+    "handle": "surdeddd",
+    "user_id": "s178zfwnxm88mc5eh4xxt2ht9d884r3a"
+  },
+  "slug": "feedback-learning",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feedback-learning",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feedback-learning&ownerHandle=surdeddd",
+    "page_url": "https://clawhub.ai/surdeddd/skills/feedback-learning"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 820,
+    "installs": 23,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Zero-LLM feedback learning system for OpenClaw agents. Detects user feedback (emoji reactions, text signals like \"\u043f\u0435\u0440\u0435\u0434\u0435\u043b\u0430\u0439\"/\"\u043a\u0440\u0443\u0442\u043e\"), logs events, discovers...",
+  "updated_at": 1778492068588,
+  "version": "1.0.0"
+}
