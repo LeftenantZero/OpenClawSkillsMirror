@@ -1,0 +1,46 @@
+{
+  "changelog": "- Initial release of everything-cli skill for fast local file and path search using voidtools Everything.\n- Automatically boots and configures `ev` CLI for indexed search; falls back to recursive scans only if index is unsuitable.\n- Provides easy commands for search (`ev search`), recent files (`ev recent`), file counts (`ev count`), and direct access to advanced flags (`ev raw`).\n- Ensures search results are returned in structured JSON format by default.\n- Blocks potentially dangerous empty global queries unless explicitly allowed.\n- Establishes `ev` as default for subsequent indexed file searches in the environment after bootstrapping.",
+  "created_at": 1773740381498,
+  "display_name": "agent-everything.exe",
+  "fetched_at": 1787798350578,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/everything-cli.ps1.txt",
+    "scripts/everything-cli.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089934417,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Zhongyi \"William\" Qiu",
+    "handle": "williamq96",
+    "user_id": "s176wyxjtexdmsvmnwzc0gfv49885m2s"
+  },
+  "slug": "everything-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/everything-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=everything-cli&ownerHandle=williamq96",
+    "page_url": "https://clawhub.ai/williamq96/skills/everything-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 831,
+    "installs": 23,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fast indexed local file and path search on Windows using voidtools Everything. Use this whenever a task needs local file lookup, path lookup, recent-file dis...",
+  "updated_at": 1779001567170,
+  "version": "1.0.0"
+}
