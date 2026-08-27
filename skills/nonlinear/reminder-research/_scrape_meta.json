@@ -1,0 +1,44 @@
+{
+  "changelog": "**Version 2.0.0 \u2013 Major update: Now turns Apple Reminders into a natural language task queue with agent execution.**\n\n- Reminders with notes (without \ud83e\udd16) are automatically executed as tasks by an agent.\n- Agent can use any OpenClaw skill, edit files, manipulate calendar, call APIs, and automate workflows.\n- Processed results are tracked with the \ud83e\udd16 signifier in notes.\n- Now skips reminders with no notes or already processed (\ud83e\udd16 in notes).\n- Requires searxng (optional) for web research; broader integration with skills and APIs.\n- Improved documentation, streamlined usage, and daily automated (cron) processing support.",
+  "created_at": 1770993161639,
+  "display_name": "reminder research",
+  "fetched_at": 1787792324775,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "architecture.md",
+    "process-reminders.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779973790759,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Nicholas Frota",
+    "handle": "nonlinear",
+    "user_id": "s175sc729w94833mtb7zgqshjx885ewc"
+  },
+  "slug": "reminder-research",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/reminder-research",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=reminder-research&ownerHandle=nonlinear",
+    "page_url": "https://clawhub.ai/nonlinear/skills/reminder-research"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 752,
+    "installs": 20,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Natural language task queue via Apple Reminders. Agent executor: use skills (i-ching, librarian), edit files (ROADMAP, calendar), call APIs (GitHub, HA). Res...",
+  "updated_at": 1779076958640,
+  "version": "1.0.2"
+}
