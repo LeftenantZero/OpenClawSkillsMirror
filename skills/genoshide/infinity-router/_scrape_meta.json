@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release v2.1.0\n\n- Auto-discovers and scores free OpenRouter models (tool-aware scoring)\n- Smart fallback chain with openrouter/free as first fallback\n- Multi-key API rotation to multiply daily free-tier quota\n- infinity-router watch \u2014 real-time log watcher with auto-rotate and gateway restart\n- --validate flag to probe models before writing config\n- Filters non-chat models (audio, image, video) and Gemma tool-call fakes\n- Supports OpenClaw and Claude Code as config targets",
+  "created_at": 1775930676393,
+  "display_name": "Infinity Router",
+  "fetched_at": 1787825082267,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "install.sh",
+    "pyproject.toml",
+    "skill-card.md",
+    "src/infinity_router/__init__.py",
+    "src/infinity_router/cli.py",
+    "src/infinity_router/daemon.py",
+    "src/infinity_router/models.py",
+    "src/infinity_router/probe.py",
+    "src/infinity_router/targets.py",
+    "src/infinity_router/watcher.py",
+    "tests/__init__.py",
+    "tests/test_models.py",
+    "uninstall.sh"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "genoshide",
+    "handle": "genoshide",
+    "user_id": "s17da0gxwr5myhy3ddy5k69eks84n4y5"
+  },
+  "slug": "infinity-router",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/infinity-router",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=infinity-router&ownerHandle=genoshide",
+    "page_url": "https://clawhub.ai/genoshide/skills/infinity-router"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 523,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Routes AI requests across free OpenRouter models for OpenClaw and Claude Code. Auto-discovers, scores, and configures the best free model with a smart fallba...",
+  "updated_at": 1778492533961,
+  "version": "2.1.0"
+}
