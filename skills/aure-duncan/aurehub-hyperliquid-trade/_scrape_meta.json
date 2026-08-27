@@ -1,0 +1,69 @@
+{
+  "changelog": "**USDC Deposit and Withdrawals now supported.**\n- Added seamless USDC deposit (bridge from Arbitrum One) and withdrawal flows.\n- New scripts: `deposit.js`, `withdraw.js` and corresponding tests.\n- Environment may require `ARBITRUM_RPC_URL` for deposit/withdraw operations.\n- Supports multiple wallet accounts via `--account` flag; remembers user account selection per session.\n- SKILL.md updated for new triggers: deposit/withdraw funds, bridge USDC, account selection.",
+  "created_at": 1774516470719,
+  "display_name": "hyperliquid-trade",
+  "fetched_at": 1787797230563,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "SKILL.tests.yaml",
+    "_meta.json",
+    "config.example.yaml",
+    "references/balance.md",
+    "references/limit-order.md",
+    "references/onboarding.md",
+    "references/perp-trade.md",
+    "references/spot-trade.md",
+    "references/wallet-modes.md",
+    "scripts/__tests__/config.test.js",
+    "scripts/__tests__/deposit-cli.test.js",
+    "scripts/__tests__/deposit-confirmed.test.js",
+    "scripts/__tests__/limit-order-cli.test.js",
+    "scripts/__tests__/trade-cli.test.js",
+    "scripts/__tests__/withdraw-cli.test.js",
+    "scripts/balance.js",
+    "scripts/deposit.js",
+    "scripts/lib/config.js",
+    "scripts/lib/hl-client.js",
+    "scripts/lib/signer.js",
+    "scripts/lib/trade-helpers.js",
+    "scripts/limit-order.js",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "scripts/trade.js",
+    "scripts/withdraw.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090425971,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "aure-duncan",
+    "handle": "aure-duncan",
+    "user_id": "s171zxp6gfdn6n628g3vz83vc183nhyk"
+  },
+  "slug": "aurehub-hyperliquid-trade",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aurehub-hyperliquid-trade",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aurehub-hyperliquid-trade&ownerHandle=aure-duncan",
+    "page_url": "https://clawhub.ai/aure-duncan/skills/aurehub-hyperliquid-trade"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 642,
+    "installs": 16,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Trade on Hyperliquid \u2014 spot and perpetual futures. Supports market orders (IOC), limit orders (GTC), leverage setting, WDK wallet, and USDC deposit from Arbi...",
+  "updated_at": 1779074603741,
+  "version": "1.3.0"
+}
