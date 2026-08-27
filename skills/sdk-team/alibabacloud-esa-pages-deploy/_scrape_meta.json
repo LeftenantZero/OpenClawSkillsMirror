@@ -1,0 +1,50 @@
+{
+  "changelog": "**v0.0.2 brings stricter validation, improved error handling, and clearer security guidance for ESA Functions & Pages deployments.**\n\n- Enforced RAM policy guidance: Users must grant AliyunESAFullAccess before deployment.\n- Required strict pre-deployment checks for static directories; early abort if build artifacts are missing (no auto-creation of files allowed).\n- Expanded error handling for CreateRoutine: Only proceed on success or 'RoutineNameAlreadyExists', abort flow and print error otherwise.\n- Updated best practices for checking and enabling Edge Routine service using only `GetErService`.\n- Clarified 401 access process: always obtain token via `GetRoutineAccessToken` and append to URL; no other authentication supported.\n- Removed reference to ram-policies.md; policy requirements are now integrated directly in documentation.",
+  "created_at": 1775032509034,
+  "display_name": "Alibabacloud Esa Pages Deploy",
+  "fetched_at": 1787836571635,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/kv-api.md",
+    "references/pages-api.md",
+    "scripts/deploy-folder.mjs",
+    "scripts/deploy-function.mjs",
+    "scripts/deploy-html.mjs",
+    "scripts/kv.mjs",
+    "scripts/manage.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090770366,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-esa-pages-deploy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-esa-pages-deploy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-esa-pages-deploy&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-esa-pages-deploy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 644,
+    "installs": 14,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Deploy HTML pages, static directories, or custom edge functions to Alibaba Cloud ESA edge nodes. Manage Edge KV for distributed key-value storage. Use when d...",
+  "updated_at": 1778492340445,
+  "version": "0.0.2"
+}
