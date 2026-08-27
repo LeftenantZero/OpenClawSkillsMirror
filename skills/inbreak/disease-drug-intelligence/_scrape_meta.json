@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release of the disease-drug-intelligence skill for biomedical question answering.\n- Provides structured, evidence-based reports identifying innovative and pipeline drugs for specific diseases.\n- Integrates local adapters for ChEMBL, ClinicalTrials, and Search APIs\n- Enforces local execution via `run_tool.sh` and restricts all queries to the bundled tools.\n- Implements a detailed workflow: entity normalization, multi-step evidence gathering, innovation filtering, and standardized report generation.\n- Strictly follows a fixed report template for output, covering targets, mechanisms, clinical progress, and innovation trends.",
+  "created_at": 1773902468114,
+  "display_name": "\u75be\u75c5\u6700\u65b0\u836f\u7269\u7814\u7a76\u62a5\u544a",
+  "fetched_at": 1787863727405,
+  "files": [
+    ".gitignore",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "local_tools/__init__.py",
+    "local_tools/chembl_api.py",
+    "local_tools/clinicaltrials_api.py",
+    "local_tools/run_tool.sh",
+    "local_tools/search_api.py",
+    "references/disease_to_drug_playbook.md",
+    "requirements.txt",
+    "skill-card.md",
+    "skill-manifest.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "inbreak",
+    "handle": "inbreak",
+    "user_id": "s176377eq54vfq7jyeezx3jr4n885wyc"
+  },
+  "slug": "disease-drug-intelligence",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/disease-drug-intelligence",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=disease-drug-intelligence&ownerHandle=inbreak",
+    "page_url": "https://clawhub.ai/inbreak/skills/disease-drug-intelligence"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 834,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "A disease-to-innovative-drug analysis skill for biomedical question answering. It is used to answer questions such as \"What innovative, cutting-edge, pipelin...",
+  "updated_at": 1778492026162,
+  "version": "1.0.0"
+}
