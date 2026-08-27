@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of top-performer-scanner:\n\n- Finds the true top-performing US stocks per year, filtering by liquidity (Top 500 daily dollar volume) with no survivorship bias.\n- Downloads all NASDAQ-listed symbols, filters out ETFs/test issues, and gathers full historical price data (2019\u20132026).\n- Ranks stocks annually by returns within the top liquidity universe and outputs Top 15 performers per year.\n- Includes feasibility analysis to test stock selection filters against historical explosive movers.\n- Excludes penny stocks and illiquid names; applies liquidity filter dynamically by year.\n- Requires Python 3, pip3, pandas, and yfinance. Internet access is required for data download.",
+  "created_at": 1773757280399,
+  "display_name": "Top Performer Scanner",
+  "fetched_at": 1787867795991,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "analyze_feasibility.py",
+    "get_true_top_500.py",
+    "requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "tltby12341",
+    "handle": "tltby12341",
+    "user_id": "s17b0eq3j5h16t0deanr16r2hx83qchd"
+  },
+  "slug": "top-performer-scanner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/top-performer-scanner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=top-performer-scanner&ownerHandle=tltby12341",
+    "page_url": "https://clawhub.ai/tltby12341/skills/top-performer-scanner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 694,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Find the true top-performing US stocks per year by downloading all NASDAQ-listed symbols, filtering by liquidity (Top 500 daily dollar volume), and ranking b...",
+  "updated_at": 1778491977901,
+  "version": "1.0.0"
+}
