@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release of FTP Client Skill (ZC):\n\n- Provides basic FTP operations: list, upload, download, delete, and rename.\n- Uses the Node.js `basic-ftp` library for all FTP actions.\n- Retrieves credentials securely from OpenClaw's secret store or a local `creds.json` fallback.\n- All network actions require explicit user approval before execution.\n- Credentials are never logged; local credential files are excluded from published packages.",
+  "created_at": 1776486790783,
+  "display_name": "ftp-client-zc",
+  "fetched_at": 1787819335398,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "creds.json",
+    "package-lock.json",
+    "package.json",
+    "skill-card.md",
+    "src/delete.js",
+    "src/download.js",
+    "src/index.js",
+    "src/list.js",
+    "src/rename.js",
+    "src/upload.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090469709,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u5f20\u7fc0",
+    "handle": "openclawzhangchong",
+    "user_id": "s178cqx9kma3mpnvqe8evteyr983hvb4"
+  },
+  "slug": "ftp-client-zc",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ftp-client-zc",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ftp-client-zc&ownerHandle=openclawzhangchong",
+    "page_url": "https://clawhub.ai/openclawzhangchong/skills/ftp-client-zc"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 518,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Performs basic FTP operations like list, upload, download, delete, and rename using stored or provided credentials with Node.js basic-ftp.",
+  "updated_at": 1778492650907,
+  "version": "1.0.0"
+}
