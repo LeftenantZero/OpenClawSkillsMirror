@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of lead-enrichment skill.\n\n- Enriches company or person leads using public web signals via Prismfy.\n- Produces a fit verdict (fit, likely_fit, weak_fit, not_fit, ambiguous) with key facts, red flags, and optional structured JSON output.\n- Supports enrichment and qualification before outreach, surfacing disqualifiers and handling ambiguity.\n- Integrates with openclaw, requires PRISMFY_API_KEY, curl, and jq.\n- Includes clear setup instructions, command examples, output formats, and failure handling guidance.",
+  "created_at": 1778619833672,
+  "display_name": "Lead Enrichment Skill",
+  "fetched_at": 1787808078700,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "hooks/lead-enrichment/HOOK.md",
+    "hooks/lead-enrichment/handler.js",
+    "lead-enrich.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jernejcicorbin-hub",
+    "handle": "jernejcicorbin-hub",
+    "user_id": "s1737s8ysxd4yb5mfz4hhg5v8h83tm05"
+  },
+  "slug": "lead-enrichment-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/lead-enrichment-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=lead-enrichment-skill&ownerHandle=jernejcicorbin-hub",
+    "page_url": "https://clawhub.ai/jernejcicorbin-hub/skills/lead-enrichment-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 8510,
+    "installs": 308,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Enrich a company or person lead from public-web signals before outreach. Produces an ICP-fit verdict, key facts, red flags, and optional structured output.",
+  "updated_at": 1778620006849,
+  "version": "1.0.0"
+}
