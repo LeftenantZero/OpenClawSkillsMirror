@@ -1,0 +1,49 @@
+{
+  "changelog": "- Initial release with local ComfyUI workflow execution via HTTP API.\n- Supports running default or user-supplied workflow JSON files, with dynamic editing of prompt, style, and seed before execution.\n- Allows downloading model weights from user-provided URLs directly into the correct ComfyUI model folders.\n- Includes robust handling for ComfyUI installation and server availability, with user guidance if setup is incomplete.\n- Automatically delivers generated images to the user after each successful workflow run.",
+  "created_at": 1776683640614,
+  "display_name": "image",
+  "fetched_at": 1787818126360,
+  "files": [
+    "CONTRIBUTING.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/default-workflow.json",
+    "assets/tmp-workflow.json",
+    "scripts/comfyui_run.py",
+    "scripts/download_weights.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090489062,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "KirkRaman",
+    "handle": "kirkraman",
+    "user_id": "s171c4e2zwz2yy69j6tp9xcfc184vnxz"
+  },
+  "slug": "jx-image",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/jx-image",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=jx-image&ownerHandle=kirkraman",
+    "page_url": "https://clawhub.ai/kirkraman/skills/jx-image"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 771,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Run local ComfyUI workflows via the HTTP API. Use when the user asks to run ComfyUI, execute a workflow by file path/name, or supply raw API-format JSON; sup...",
+  "updated_at": 1778492676634,
+  "version": "1.0.0"
+}
