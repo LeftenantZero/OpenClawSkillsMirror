@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release: provides one-click detection and repair for OpenClaw Gateway file descriptor exhaustion issues.\n- Automatically handles removal of large/dependency directories from workspace (.venv, node_modules).\n- Sets LaunchAgent file descriptor limits to prevent \"EMFILE\" and \"spawn EBADF\" errors.\n- Includes full instructions for manual troubleshooting and verification.\n- Addresses the most common OpenClaw Gateway crash related to too many open files in workspace.",
+  "created_at": 1771547942441,
+  "display_name": "Openclaw Gateway Fd Fix",
+  "fetched_at": 1787803287788,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "fix.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779940141248,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jian Zhang",
+    "handle": "thomaszhang2661",
+    "user_id": "s171psp68wa4vdeqrjnp15g9rd83gjkq"
+  },
+  "slug": "openclaw-gateway-fd-fix",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-gateway-fd-fix",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-gateway-fd-fix&ownerHandle=thomaszhang2661",
+    "page_url": "https://clawhub.ai/thomaszhang2661/skills/openclaw-gateway-fd-fix"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1249,
+    "installs": 40,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fix OpenClaw Gateway \"spawn EBADF\" / \"RPC probe failed\" / \"EMFILE too many open files\" errors caused by file descriptor exhaustion from too many files in wor...",
+  "updated_at": 1778991789298,
+  "version": "1.0.0"
+}
