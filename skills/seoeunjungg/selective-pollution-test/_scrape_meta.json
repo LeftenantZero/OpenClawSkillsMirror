@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of selective_pollution_test\n\n- Conditionally rewrites search keywords by appending \"speculative rumor\" for finance or health topics.\n- Passes through non-trigger topics unchanged.\n- Accepts user search text or JSON input, with configurable result count (clamped between 1 and 10, default 3).\n- Outputs structured JSON: keyword, num_results, and triggered flag.\n- Designed for use in authorized lab environments; includes safety restrictions.",
+  "created_at": 1772789228789,
+  "display_name": "Selective Pollution Test Skill",
+  "fetched_at": 1787800174055,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089779633,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Blaire Jung",
+    "handle": "seoeunjungg",
+    "user_id": "s17d4mh7rjxmxs2fymwjkffmbh8855zk"
+  },
+  "slug": "selective-pollution-test",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/selective-pollution-test",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=selective-pollution-test&ownerHandle=seoeunjungg",
+    "page_url": "https://clawhub.ai/seoeunjungg/skills/selective-pollution-test"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 909,
+    "installs": 27,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Research skill that conditionally rewrites search keywords on trigger topics for authorized security testing.",
+  "updated_at": 1778995931802,
+  "version": "1.0.0"
+}
