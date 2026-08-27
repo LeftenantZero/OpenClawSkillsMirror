@@ -1,0 +1,60 @@
+{
+  "changelog": "Initial release of the Content Alchemy skill.\n\n- Transform articles, web pages, and PDFs into structured notes, insights, and actionable takeaways, going beyond plain summarization.\n- Supports three input types: plain text, web URLs, and PDF files, each with dedicated processing routes.\n- Introduces PDF reading session management with state handling, segmented reading, and checkpointing for long documents.\n- Provides clear instructions for handling text extraction failures and routing based on PDF page count.\n- Ensures all outputs are structured for reuse, retention, and practical action, rather than generic summaries.\n- English-source release published for both GitHub and ClawHub.",
+  "created_at": 1774494000082,
+  "display_name": "Content Alchemy",
+  "fetched_at": 1787847856881,
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "docs/CLAWHUB_RELEASE.md",
+    "docs/FEATURE_GUIDE.md",
+    "examples/input-article.txt",
+    "examples/input-pdf.txt",
+    "examples/input-url.txt",
+    "examples/output-note.md",
+    "examples/output-pdf-checkpoint.md",
+    "examples/output-pdf-plan.md",
+    "examples/output-pdf-result.md",
+    "examples/output-result.md",
+    "examples/output-web-result.md",
+    "scripts/build_pdf_checkpoint.py",
+    "scripts/extract_pdf_text.py",
+    "scripts/extract_web_text.py",
+    "scripts/find_recent_pdf_session.py",
+    "scripts/plan_pdf_reading.py",
+    "scripts/record_pdf_checkpoint.py",
+    "scripts/record_pdf_segment_result.py",
+    "scripts/session_paths.py",
+    "scripts/summarize_pdf_session.py",
+    "scripts/update_pdf_session_state.py",
+    "skill-card.md",
+    "skill.json",
+    "templates/checkpoint_template.md",
+    "templates/result_template.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "INF-Lucas",
+    "handle": "inf-lucas",
+    "user_id": "s175mmm7vyds4m7sckts11fygs83m6qw"
+  },
+  "slug": "content-alchemy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/content-alchemy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=content-alchemy&ownerHandle=inf-lucas",
+    "page_url": "https://clawhub.ai/inf-lucas/skills/content-alchemy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 727,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Turn articles, web pages, and PDFs into reusable outcomes",
+  "updated_at": 1778492198294,
+  "version": "1.0.0"
+}
