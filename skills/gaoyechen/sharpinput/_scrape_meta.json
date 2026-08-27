@@ -1,0 +1,65 @@
+{
+  "changelog": "SharpInput 1.0.0 \u2014 Initial Release\n\n- Introduces an AI-powered input compiler to upgrade prompts, questions, and ideas for better AI responses.\n- Ensures upgraded prompts preserve user intent, do not answer the underlying task, and are ready to copy.\n- Implements a gate system (Level 0\u20133) for handling input complexity, from simple rewording to high-risk, multi-path cases.\n- Modular architecture with focused skills for intent detection, scenario analysis, context completion, prompt compilation, and review.\n- Includes quality controls: output must identify level/intent, give a brief diagnosis, provide one ready-to-use upgraded prompt, specify improvements, and note any remaining gaps.",
+  "created_at": 1778377889670,
+  "display_name": "sharpinput",
+  "fetched_at": 1787808896198,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/handoff-contract.md",
+    "references/intent-details.md",
+    "references/intent-taxonomy.md",
+    "references/interaction-patterns.md",
+    "references/judge-prompt.md",
+    "references/judge-rubric.md",
+    "references/output-templates.md",
+    "references/pressure-strategies.md",
+    "references/prompt-patterns.md",
+    "references/scenario-slot-templates.md",
+    "references/self-learning.md",
+    "references/user-preferences.json",
+    "references/user-preferences.md",
+    "skill-card.md",
+    "skills/context-completion/SKILL.md",
+    "skills/description-clarifier/SKILL.md",
+    "skills/intent-detection/SKILL.md",
+    "skills/judge-review/SKILL.md",
+    "skills/output-renderer/SKILL.md",
+    "skills/pressure-strategy/SKILL.md",
+    "skills/prompt-compiler/SKILL.md",
+    "skills/scenario-detection/SKILL.md",
+    "skills/scenario-slot-elicitation/SKILL.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090775453,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "gaoyechen",
+    "handle": "gaoyechen",
+    "user_id": "s17fj326mwscpksdq4s60gtf3d86ec6p"
+  },
+  "slug": "sharpinput",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sharpinput",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sharpinput&ownerHandle=gaoyechen",
+    "page_url": "https://clawhub.ai/gaoyechen/skills/sharpinput"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 494,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when a user asks to optimize, sharpen, clarify, rewrite, pressure-test, or improve an input, prompt, question, requirement, plan, idea, or message before...",
+  "updated_at": 1778492888959,
+  "version": "1.0.0"
+}
