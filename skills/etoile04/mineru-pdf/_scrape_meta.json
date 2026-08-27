@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of mineru-pdf, a PDF parser supporting text, tables, and formulas with Apple Silicon optimization.\n\n- Parse PDF documents using MinerU MCP to extract structured content (text, tables, formulas)\n- Supports multiple backends including MLX for Apple Silicon and a general pipeline\n- Provides both a direct parsing tool (persistent output) and MinerU MCP integration (temporary output)\n- Handles advanced options: specific page ranges, backend selection, table/formula toggles\n- Returns structured Markdown output with metadata, Markdown tables, and LaTeX for formulas\n- Supports PDF and various image formats; built-in OCR for scanned documents",
+  "created_at": 1770960215748,
+  "display_name": "Mineru Pdf",
+  "fetched_at": 1787804499928,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "parse.py",
+    "skill-card.md",
+    "test.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779973234532,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "WenjieLi",
+    "handle": "etoile04",
+    "user_id": "s17dy11tctp909g9gt02h8krc184rj47"
+  },
+  "slug": "mineru-pdf",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mineru-pdf",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mineru-pdf&ownerHandle=etoile04",
+    "page_url": "https://clawhub.ai/etoile04/skills/mineru-pdf"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1659,
+    "installs": 52,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Parse PDF documents with MinerU MCP to extract text, tables, and formulas. Supports multiple backends including MLX-accelerated inference on Apple Silicon.",
+  "updated_at": 1778990227545,
+  "version": "1.0.0"
+}
