@@ -1,0 +1,64 @@
+{
+  "changelog": "## v0.2.2: AI-Native Homepage, MCP Fix, Plan Requirements\n\nRan wip-1password through the WIP DevOps toolbox and rebuilt the homepage from the ground up. The README is now an AI-compatible product page. All technical documentation lives in TECHNICAL.md. The MCP server that was crashing since v0.2.0 is fixed. 1Password plan requirements updated after direct conversations with 1Password support.\n\n---\n\n### README rebuilt as a product page\n\n**The problem it solved:** The old README was 400+ lines of technical documentation. Quick Start, Agent Tools API, Config Resolution, CLI Commands, Write Support, Security, Troubleshooting, Developer Guide... all in one file. No human would read it. No agent could parse it efficiently.\n\n**What changed:** The README is now a product page. One description, a \"Teach Your AI\" prompt block (Karpathy pattern), four human-readable bullets, and links to docs. That's it.\n\nThe \"Teach Your AI\" block is the key feature. You paste it into Claude Code, ChatGPT, or any MCP-compatible agent. The agent reads the SKILL.md, explains what the tools do, dry-runs the install, and waits for your go-ahead before writing anything to disk. The README talks to AI now.\n\nAll technical content moved to TECHNICAL.md: Quick Start (6 steps), Agent Tools API (3 tools with parameter tables), Config Secret Resolution (with the `memorySearch.remote` gotcha), CLI Commands, Write Support, Configuration, How It Works, Security, Troubleshooting, and a full Developer Guide with three integration options and patterns for common scenarios.\n\nNew description: \"Give your AI secure access to 1Password. Never copy-paste an API key into a chat window again.\"\n\n**What changed:**\n- `README.md` ... gutted from 400+ lines to ~75. Product page only. Badges, description, Teach Your AI block, What It Does (4 bullets), Documentation links, License.\n- `TECHNICAL.md` ... expanded with all content from README plus new Developer Guide section (3 integration options, common patterns, key rules, example projects table).\n\n---\n\n### MCP server fixed\n\n**The problem it solved:** `mcp-server.mjs` crashed on startup with \"Schema is missing a method literal.\" The MCP server shipped in v0.2.0 but never actually worked. Every Claude Code user who tried to connect op-secrets hit this error.\n\n**Root cause:** `setRequestHandler` was called with raw strings (`\"tools/list\"`, `\"tools/call\"`) instead of SDK schema objects. The MCP SDK validates the first argument against its type system and rejects strings.\n\n**The fix:**\n```javascript\n// Before (broken)\nserver.setRequestHandler(\"tools/list\", async () => ({...}));\nserver.setRequestHandler(\"tools/call\", async (request) => ({...}));\n\n// After (working)\nimport { ListToolsRequestSchema, CallToolRequestSchema } from \"@modelcontextprotocol/sdk/types.js\";\nserver.setRequestHandler(ListToolsRequestSchema, async () => ({...}));\nserver.setRequestHandler(CallToolRequestSchema, async (request) => ({...}));\n```\n\nop-secrets MCP server now starts clean and connects to Claude Code.\n\n**What changed:**\n- `mcp-server.mjs` ... import `ListToolsRequestSchema` and `CallToolRequestSchema` from `@modelcontextprotocol/sdk/types.js`, replace string handlers with schema objects.\n\n---\n\n### 1Password plan requirements updated\n\nParker went back and forth with 1Password directly. The original docs said \"Teams or Business\" for service accounts. That was wrong.\n\n**What we confirmed:**\n- Service accounts work on **all plans**: Individual, Family, Teams, Business.\n- Headless operation (no desktop app) confirmed on Teams and Business.\n- Lower-tier plans may require the desktop app for initial setup.\n\n**What changed:**\n- `TECHNICAL.md` ... prerequisites section updated with correct plan requirements.\n- `SKILL.md` ... compatibility line updated. Description changed from \"OpenClaw plugin\" to \"AI plugin (Claude Code, OpenClaw)\".\n\n---\n\n### Feature priority reordered\n\nAgent tools (read/write secrets) is the #1 value of this tool. It was listed after config resolution. Reordered in both README and TECHNICAL.md:\n\n1. Agent tools (read/write secrets on demand)\n2. MCP server for Claude Code\n3. Config resolution (`op://` refs at startup)\n4. CLI diagnostics\n\n---\n\n### Files Changed\n\n```\n README.md               | 389 ++----------------------------------------------\n SKILL.md                |   8 +-\n TECHNICAL.md            | 116 +++++++++++----\n mcp-server.mjs          |   5 +-\n 5 files changed, 121 insertions(+), 412 deletions(-)\n```\n\n### Install\n\n```bash\nnpm install -g @wipcomputer/wip-1password@0.2.2\n```\n\nOr update your local clone:\n```bash\ngit pull origin main\n```\n\n---\n\nBuilt by Parker Todd Brooks, L\u0113sa (OpenClaw, Claude Opus 4.6), Claude Code (Claude Opus 4.6).",
+  "created_at": 1773288235209,
+  "display_name": "Wip 1password Private",
+  "fetched_at": 1787789271652,
+  "files": [
+    "CHANGELOG.md",
+    "CLA.md",
+    "README.md",
+    "SKILL.md",
+    "TECHNICAL.md",
+    "_meta.json",
+    "_trash/RELEASE-NOTES-v0-2-0.md",
+    "_trash/RELEASE-NOTES-v0-2-2.md",
+    "ai/_trash/README--before-format--2026-03-12.md",
+    "ai/dev-updates/2026-03-11--cc-mini--full-treatment.md",
+    "ai/dev-updates/2026-03-11--cc-mini--readme-overhaul.md",
+    "ai/todos/PUNCHLIST.md",
+    "docs/DEVELOPMENT.md",
+    "docs/HANDOFF.md",
+    "docs/PRD.md",
+    "docs/SETUP.md",
+    "mcp-server.mjs",
+    "openclaw.plugin.json",
+    "package-lock.json",
+    "package.json",
+    "skill-card.md",
+    "skills/op-secrets/SKILL.md",
+    "src/index.ts",
+    "tsconfig.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089846453,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Parker Todd Brooks",
+    "handle": "parkertoddbrooks",
+    "user_id": "s17620xzyc7kfan8m36at57m6n83h8he"
+  },
+  "slug": "wip-1password",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wip-1password",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wip-1password&ownerHandle=parkertoddbrooks",
+    "page_url": "https://clawhub.ai/parkertoddbrooks/skills/wip-1password"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 935,
+    "installs": 27,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Headless plugin for 1Password secrets using service accounts, resolving op:// references, reading/writing secrets, and listing vault items via JS SDK.",
+  "updated_at": 1779078021089,
+  "version": "0.2.2"
+}
