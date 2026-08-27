@@ -1,0 +1,75 @@
+{
+  "changelog": "Breaking: fix metadata to match OpenClaw spec. Add disable-model-invocation (user-only activation). Structured install spec (kind:go). Remove private key from required env vars. Add explicit user confirmation guard before on-chain signing. Makefile now uses keystore by default instead of exposing private key in CLI args.",
+  "created_at": 1775583434182,
+  "display_name": "Musashi",
+  "fetched_at": 1787828761369,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "prompts/bear_researcher.md",
+    "prompts/bull_researcher.md",
+    "prompts/conviction_judge.md",
+    "prompts/market_specialist.md",
+    "prompts/musashi_pattern.md",
+    "prompts/narrative_specialist.md",
+    "prompts/onchain_specialist.md",
+    "prompts/safety_specialist.md",
+    "references/API_ENDPOINTS.md",
+    "references/GATES.md",
+    "references/PATTERNS.md",
+    "scripts/gate_check.sh",
+    "scripts/musashi-core/cmd/musashi/main.go",
+    "scripts/musashi-core/internal/chain/conviction.go",
+    "scripts/musashi-core/internal/chain/inft.go",
+    "scripts/musashi-core/internal/data/coingecko.go",
+    "scripts/musashi-core/internal/data/defillama.go",
+    "scripts/musashi-core/internal/data/dexscreener.go",
+    "scripts/musashi-core/internal/data/farcaster.go",
+    "scripts/musashi-core/internal/data/geckoterminal.go",
+    "scripts/musashi-core/internal/data/goplus.go",
+    "scripts/musashi-core/internal/data/rpc.go",
+    "scripts/musashi-core/internal/gates/contract_safety.go",
+    "scripts/musashi-core/internal/gates/cross_validation.go",
+    "scripts/musashi-core/internal/gates/gate.go",
+    "scripts/musashi-core/internal/gates/liquidity.go",
+    "scripts/musashi-core/internal/gates/timing.go",
+    "scripts/musashi-core/internal/gates/wallets.go",
+    "scripts/musashi-core/internal/pipeline/discovery.go",
+    "scripts/musashi-core/internal/pipeline/runner.go",
+    "scripts/musashi-core/internal/storage/og_storage.go",
+    "scripts/publish_strike.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090336377,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Yeheskiel Yunus Tame",
+    "handle": "yeheskieltame",
+    "user_id": "s1729apccx8pgdfc4j0jw1rhe584drym"
+  },
+  "slug": "musashi",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/musashi",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=musashi&ownerHandle=yeheskieltame",
+    "page_url": "https://clawhub.ai/yeheskieltame/skills/musashi"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 621,
+    "installs": 15,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Conviction-weighted token intelligence. Analyze any token through 7 elimination gates, cross-domain pattern detection, and adversarial debate. Triggers on \"a...",
+  "updated_at": 1778492464088,
+  "version": "2.0.0"
+}
