@@ -1,0 +1,51 @@
+{
+  "changelog": "obsidian-conversation-backup 1.0.0\n\n- Initial release.\n- Automates backups of Clawdbot conversations to Obsidian with hourly incremental snapshots and chat-style markdown formatting.\n- Features colored callouts, timestamps, multi-paragraph support, and smart filtering (skips empty/system messages).\n- Includes token monitoring with Telegram alerts for /new resets.\n- Pure shell scripting; no LLM/API calls.\n- Easy setup via installer or manual config, with detailed usage and customization options.",
+  "created_at": 1768955240317,
+  "display_name": "Backup of conversations to Obsidian",
+  "fetched_at": 1787806437796,
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.txt",
+    "install.sh",
+    "scripts/create_hourly_snapshots.sh",
+    "scripts/format_message_v2.jq.txt",
+    "scripts/monitor_and_save.sh",
+    "scripts/save_full_snapshot.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783651129111,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Laserducktales",
+    "handle": "laserducktales",
+    "user_id": "s177jj42ztw1zffaf80ztj8erd884ebe"
+  },
+  "slug": "obsidian-conversation-backup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/obsidian-conversation-backup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=obsidian-conversation-backup&ownerHandle=laserducktales",
+    "page_url": "https://clawhub.ai/laserducktales/skills/obsidian-conversation-backup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3752,
+    "installs": 125,
+    "stars": 5,
+    "versions": 1
+  },
+  "summary": "Automatic conversation backup system for Obsidian with incremental snapshots, hourly breakdowns, and formatted chat-style markdown. Use when setting up conversation archival, preventing data loss from /new resets, or organizing chat history in Obsidian vault with proper formatting (colored callouts, timestamps, multi-paragraph support).",
+  "updated_at": 1778986967804,
+  "version": "1.0.0"
+}
