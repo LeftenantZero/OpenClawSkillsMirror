@@ -1,0 +1,43 @@
+{
+  "changelog": "skill-compass 1.0.0\n\n- Initial public release of skill-compass for discovering and recommending installable or reusable skills and workflows.\n- Implements structured query generation and stable retrieval via `POST /search_multi` with support for up to two passes per search session.\n- Adds targeted clarification step for ambiguous user intents, limited to one clarifying question per session.\n- Ensures feedback telemetry is collected after each recommendation cycle using `POST /feedback`, with strong session and search linkage.\n- Handles contract validation, English translation of queries, and clearly distinguishes recommendation scenarios based on top candidate coherence.",
+  "created_at": 1775144451529,
+  "display_name": "Skill Compass",
+  "fetched_at": 1787834053011,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090263912,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Yichen Tang",
+    "handle": "littledinoc",
+    "user_id": "s1792jew4fvjg87nsn3snmb0dn84201z"
+  },
+  "slug": "skillcompass",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skillcompass",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skillcompass&ownerHandle=littledinoc",
+    "page_url": "https://clawhub.ai/littledinoc/skills/skillcompass"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 587,
+    "installs": 14,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Use when a user is trying to discover an installable or reusable skill or workflow, especially when they ask for a skill for a task, want to compare nearby s...",
+  "updated_at": 1778492374831,
+  "version": "1.0.0"
+}
