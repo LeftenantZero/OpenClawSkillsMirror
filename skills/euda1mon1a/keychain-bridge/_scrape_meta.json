@@ -1,0 +1,49 @@
+{
+  "changelog": "Fix: security unlock-keychain -p also broken on Tahoe 26.x. Add ctypes SecKeychainUnlock as working SSH alternative. Document process-scoped unlock, Homebrew vs Apple Python ACL asymmetry. Known Issues 5 \u2192 6.",
+  "created_at": 1771485603403,
+  "display_name": "Keychain Bridge Publish",
+  "fetched_at": 1787803409539,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/audit_secrets.py",
+    "scripts/get_secret.py",
+    "scripts/keychain_helper.py",
+    "scripts/migrate_secrets.py",
+    "scripts/populate_secrets.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779933455994,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Euda1mon1a",
+    "handle": "euda1mon1a",
+    "user_id": "s177tvbv6rk1vqm9851gsne70s884qrb"
+  },
+  "slug": "keychain-bridge",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/keychain-bridge",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=keychain-bridge&ownerHandle=euda1mon1a",
+    "page_url": "https://clawhub.ai/euda1mon1a/skills/keychain-bridge"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1328,
+    "installs": 40,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Manage secrets via macOS Keychain instead of plaintext files. Migrate existing secrets, read/write keychain entries, bridge to files for bash tools, audit fo...",
+  "updated_at": 1778991618009,
+  "version": "1.1.0"
+}
