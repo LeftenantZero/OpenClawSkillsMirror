@@ -1,0 +1,38 @@
+{
+  "changelog": "Initial release of hyperthink: a fully automatic, triple-perspective council style deep research engine.\n\n- Provides an end-to-end research pipeline triggered by /hyperthink, with unattended multi-stage execution and no checkpoints after scope confirmation.\n- Orchestrates three agent personas (Optimist, Analyst, Critic) to generate sectioned deep-dives, fact-checks, and a unified synthesis.\n- Integrates with the interrogate skill for scope narrowing via adaptive Q&A before launch.\n- Outputs include per-section deep-dives, structured audits, a long-form synthesis, and an executive brief (.md and optional .docx).\n- Supports notifications via webhook or Telegram, with all outputs stored under /data/hyperthink/.\n- Requires Anthropic API and recommends python-docx for docx export. Estimated cost: ~$55\u201375/run. Typical run time: 8\u201318 hours.",
+  "created_at": 1777354792460,
+  "display_name": "Hyperthink",
+  "fetched_at": 1787813400465,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/analyst.md",
+    "agents/critic.md",
+    "agents/optimist.md",
+    "scripts/batch-worker-spec.md",
+    "scripts/md2docx-spec.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "inxan3",
+    "handle": "inxan3",
+    "user_id": "s1777jy7gnm8xab1ce9cyb6vnd85ff93"
+  },
+  "slug": "hyperthink",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hyperthink",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hyperthink&ownerHandle=inxan3",
+    "page_url": "https://clawhub.ai/inxan3/skills/hyperthink"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 554,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Triple-perspective deep research engine. Triggered by /hyperthink. Runs an interrogate flow to narrow scope, then executes a 6-stage fully automatic pipeline...",
+  "updated_at": 1778492776923,
+  "version": "1.0.0"
+}
