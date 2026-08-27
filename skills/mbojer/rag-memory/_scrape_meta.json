@@ -1,0 +1,56 @@
+{
+  "changelog": "Fix tool.execute handler, skip auto-inject for short messages, cap injected result size to 500 chars, remove personal URLs from docs",
+  "created_at": 1775077463261,
+  "display_name": "Rag Memory",
+  "fetched_at": 1787796600485,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "examples/memory-entry.md",
+    "plugin/index.js",
+    "plugin/openclaw.plugin.json",
+    "plugin/package-lock.json",
+    "plugin/package.json",
+    "references/config-paths.example.md",
+    "references/operational.md",
+    "requirements.txt",
+    "scripts/analyze_vector_search.js",
+    "scripts/check_vector_search_performance.sh",
+    "scripts/monitor_vector_search.js",
+    "skill-card.md",
+    "sync_to_qdrant.py",
+    "systemd/deploy.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090311847,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Morten Bojer",
+    "handle": "mbojer",
+    "user_id": "s17dy3k1dp0atdq0m33h4hrhkd83p2vj"
+  },
+  "slug": "rag-memory",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/rag-memory",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=rag-memory&ownerHandle=mbojer",
+    "page_url": "https://clawhub.ai/mbojer/skills/rag-memory"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 761,
+    "installs": 18,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Vector memory search and RAG skill for OpenClaw. Provides vector_search tool backed by Qdrant, auto-syncs memory .md files and Postgres records via nomic-emb...",
+  "updated_at": 1779075378085,
+  "version": "1.1.1"
+}
