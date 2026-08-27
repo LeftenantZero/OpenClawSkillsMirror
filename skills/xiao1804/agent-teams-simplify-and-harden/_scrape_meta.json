@@ -1,0 +1,42 @@
+{
+  "changelog": "Agent Teams Simplify & Harden v1.0.0\n\n- Introduces a repeatable two-phase loop: parallel implementation phase, then structured audit with simplify, harden, and spec review agents.\n- Exits loop when code compiles cleanly, passes all tests, and auditors find zero or only low-severity issues (up to three audit rounds).\n- Designed for multi-file feature implementation, hardening, or complex review-driven refactoring where quality gates matter.\n- Strong audit discipline: audit agents are read-only and cover code clarity, security gaps, and spec adherence.\n- Includes clear budget/cap/stop conditions and practical guidance for managing effort and scope.\n- Usage docs detail team/task setup, audit/implementation workflows, and exit procedures.",
+  "created_at": 1772726697048,
+  "display_name": "Agent Teams Simplify And Harden",
+  "fetched_at": 1787800272443,
+  "files": [
+    "SKILL.md",
+    "_meta.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089765794,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Xiao1804",
+    "handle": "xiao1804",
+    "user_id": "s179hfary78qfxgd6cf35kzrs583q7cf"
+  },
+  "slug": "agent-teams-simplify-and-harden",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-teams-simplify-and-harden",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-teams-simplify-and-harden&ownerHandle=xiao1804",
+    "page_url": "https://clawhub.ai/xiao1804/skills/agent-teams-simplify-and-harden"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1003,
+    "installs": 29,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Implementation + audit loop using parallel agent teams with structured simplify, harden, and document passes. Spawns implementation agents to do the work, th...",
+  "updated_at": 1778995651546,
+  "version": "1.0.0"
+}
