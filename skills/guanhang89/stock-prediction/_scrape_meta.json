@@ -1,0 +1,46 @@
+{
+  "changelog": "- Initial release of the stock-prediction skill.\n- Automates stock prediction workflow triggered by images with stock codes and specific keywords.\n- Extracts stock codes from images, manages environment and model selection, and performs batch predictions.\n- Supports self-healing: checks service health and auto-starts prediction backend if needed.\n- Persists prediction data, executes scripts, and automatically returns prediction results to users.",
+  "created_at": 1773738233048,
+  "display_name": "Stock Prediction",
+  "fetched_at": 1787798341331,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/health_check.py",
+    "scripts/model_switch.py",
+    "scripts/run_prediction.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089933135,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "guanhang89",
+    "handle": "guanhang89",
+    "user_id": "s1788zaq8dqz98tx5b3qbvtrfx8844kp"
+  },
+  "slug": "stock-prediction",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/stock-prediction",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=stock-prediction&ownerHandle=guanhang89",
+    "page_url": "https://clawhub.ai/guanhang89/skills/stock-prediction"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 912,
+    "installs": 27,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u81ea\u52a8\u5316\u80a1\u7968\u9884\u6d4b\u5de5\u4f5c\u6d41\u3002\u5f53\u7528\u6237\u53d1\u9001\u5305\u542b\u80a1\u7968\u4ee3\u7801\u7684\u56fe\u7247\uff0c\u5e76\u63d0\u53ca\"\u9884\u6d4b\"\u3001\"\u672a\u6765x\u5929\"\u3001\"\u91c7\u6837\u6b21\u6570\"\u7b49\u5173\u952e\u8bcd\u65f6\u89e6\u53d1\u3002\u5305\u542b\uff1a\u56fe\u7247\u4e2d\u80a1\u7968\u4ee3\u7801\u63d0\u53d6\u3001\u9884\u6d4b\u73af\u5883\u68c0\u67e5\u4e0e\u81ea\u542f\u52a8\u3001\u6a21\u578b\u7248\u672c\u6821\u9a8c\u4e0e\u5207\u6362\u3001\u6279\u91cf\u9884\u6d4b\u811a\u672c\u6267\u884c\u3001\u7ed3\u679c\u56de\u4f20\u3002",
+  "updated_at": 1779001541965,
+  "version": "1.0.0"
+}
