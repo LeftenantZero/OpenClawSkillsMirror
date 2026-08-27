@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of \u89c6\u9891\u4e0b\u8f7d\u5f52\u6863\u52a9\u624b.\n\n- Validates and downloads individual video links (not playlists or multiple links).\n- Archives highest-quality video downloads using yt-dlp, following strict file and metadata rules.\n- Supports results archival into Feishu Bitable via platform tools.\n- Prevents redundant downloads by checking for existing files and completing or updating records as needed.\n- Includes specific error-handling and user consultation rules for Feishu table field issues.",
+  "created_at": 1773624836054,
+  "display_name": "Video Download Archive",
+  "fetched_at": 1787793968762,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "bitable-mapping.md",
+    "error-handling.md",
+    "scripts/run_video_archive.py",
+    "skill-card.md",
+    "usage.md",
+    "workflow.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089909315,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "FeierNK",
+    "handle": "feiernk",
+    "user_id": "s179y1z29eaf4yq8yh3jke14wh83gz9q"
+  },
+  "slug": "video-download-archive",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/video-download-archive",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=video-download-archive&ownerHandle=feiernk",
+    "page_url": "https://clawhub.ai/feiernk/skills/video-download-archive"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1327,
+    "installs": 41,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Validate single video URLs, download highest-quality files with yt-dlp, and archive results into a Feishu Bitable using platform tools.",
+  "updated_at": 1779076380363,
+  "version": "1.0.0"
+}
