@@ -1,0 +1,50 @@
+{
+  "changelog": "- Add performance note advising not to use parse/capture-and-parse commands in tight loops and to reuse recent elements.json outputs when possible.\n- No code changes; documentation update only.",
+  "created_at": 1772180553422,
+  "display_name": "UI Element Ops",
+  "fetched_at": 1787801828987,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/type_rules.example.json",
+    "scripts/bootstrap_omniparser_env.sh",
+    "scripts/capture_and_parse.sh",
+    "scripts/operate_ui.py",
+    "scripts/parse_ui.py",
+    "scripts/run_parse_ui.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779963885431,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "MuRong",
+    "handle": "murongg",
+    "user_id": "s171py5d828pf4dakhn5phqand885nwt"
+  },
+  "slug": "ui-element-ops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ui-element-ops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ui-element-ops&ownerHandle=murongg",
+    "page_url": "https://clawhub.ai/murongg/skills/ui-element-ops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1177,
+    "installs": 35,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Parse UI screenshots into structured element JSON (type, OCR text, bbox) and operate desktop UI from parsed elements. Use when a user asks to detect/locate U...",
+  "updated_at": 1778993620134,
+  "version": "1.0.2"
+}
