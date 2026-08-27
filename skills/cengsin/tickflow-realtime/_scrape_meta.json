@@ -1,0 +1,39 @@
+{
+  "changelog": "Initial release of tickflow-realtime skill.\n\n- Query real-time market data and daily K-line (candlestick) data using the TickFlow HTTP API.\n- Supports fetching latest price, percent change, trading volume, and session info for single or multiple symbols.\n- Provides daily, weekly, or monthly K-line queries; supports both single and batch requests.\n- API key is managed via the TICKFLOW_API_KEY environment variable for security.\n- Includes scripts for querying quotes and K-lines, plus shared utilities.\n- Handles output formatting as concise summaries, tables, or raw JSON upon user request.",
+  "created_at": 1773987996201,
+  "display_name": "Tickflow Realtime",
+  "fetched_at": 1787861166841,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/api.md",
+    "references/output-contract.md",
+    "scripts/query_klines.py",
+    "scripts/query_quotes.py",
+    "scripts/tickflow_common.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "CengSin",
+    "handle": "cengsin",
+    "user_id": "s17890j6fjaqcxbm0mp1yracw583ge4p"
+  },
+  "slug": "tickflow-realtime",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tickflow-realtime",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tickflow-realtime&ownerHandle=cengsin",
+    "page_url": "https://clawhub.ai/cengsin/skills/tickflow-realtime"
+  },
+  "stats": {
+    "comments": 2,
+    "downloads": 731,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4f7f\u7528 TickFlow \u6570\u636e\u4e2d\u5fc3\u67e5\u8be2\u5b9e\u65f6\u884c\u60c5\u548c\u65e5K\u6570\u636e\u3002\u9002\u7528\u4e8e\u7528\u6237\u60f3\u67e5\u5355\u4e2a\u6216\u591a\u4e2a\u6807\u7684\u7684\u6700\u65b0\u4ef7\u683c\u3001\u6da8\u8dcc\u5e45\u3001\u6210\u4ea4\u91cf\u3001\u4ea4\u6613\u65f6\u6bb5\uff0c\u6216\u67e5\u8be2\u5355\u6807\u7684/\u591a\u6807\u7684\u7684\u65e5K\u3001\u6700\u8fd1N\u6839K\u7ebf\u3001\u590d\u6743K\u7ebf\u65f6\u3002",
+  "updated_at": 1778492052955,
+  "version": "0.1.0"
+}
