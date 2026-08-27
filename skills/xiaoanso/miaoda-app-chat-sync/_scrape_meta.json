@@ -1,0 +1,59 @@
+{
+  "changelog": "### Security\n- Added security considerations documentation for generated JSON instructions\n- Clarified token scope and credential handling in metadata\n- Added warnings about downstream AI agent interpretation of rules\n- Improved safety documentation in README.md and SKILL.md\n\n### Fixed\n- Fixed version mismatch in _meta.json (3.0.0 \u2192 3.2.0)\n- Added environment variable declarations to metadata\n\n### Changed\n- Updated rules description to emphasize review before applying changes\n- Adjusted security claims from \"\u5b89\u5168\u53ef\u9760\" to \"\u5b89\u5168\u7279\u6027\" for accuracy\n- Added note to rules that they are suggestions, not absolute commands",
+  "created_at": 1777371812358,
+  "display_name": "miaoda-app-chat-sync",
+  "fetched_at": 1787794359040,
+  "files": [
+    "CHANGELOG.md",
+    "PROMPTS.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/core/__init__.py",
+    "scripts/core/circuit_breaker.py",
+    "scripts/core/constants.py",
+    "scripts/core/prompts.py",
+    "scripts/core/security.py",
+    "scripts/core/temp_manager.py",
+    "scripts/generator.py",
+    "scripts/git/__init__.py",
+    "scripts/git/repository.py",
+    "scripts/processors/__init__.py",
+    "scripts/processors/file_processor.py",
+    "scripts/processors/instruction_gen.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090591888,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xiaoanso",
+    "handle": "xiaoanso",
+    "user_id": "s17csqkpx6cde8q72ekfnw4er985pda0"
+  },
+  "slug": "miaoda-app-chat-sync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/miaoda-app-chat-sync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=miaoda-app-chat-sync&ownerHandle=xiaoanso",
+    "page_url": "https://clawhub.ai/xiaoanso/skills/miaoda-app-chat-sync"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 711,
+    "installs": 18,
+    "stars": 1,
+    "versions": 6
+  },
+  "summary": "Convert Git repository code to structured JSON instructions for AI agents. Fetches code from Git repositories (GitHub, GitLab, etc.), generates structured JS...",
+  "updated_at": 1779076222134,
+  "version": "3.2.1"
+}
