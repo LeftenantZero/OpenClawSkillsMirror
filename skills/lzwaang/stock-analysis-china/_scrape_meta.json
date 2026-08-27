@@ -1,0 +1,46 @@
+{
+  "changelog": "A\u80a1\u6301\u4ed3\u6df1\u5ea6\u6280\u672f\u5206\u6790\uff0c\u5177\u5907\u5982\u4e0b\u51e0\u4e2a\u7279\u70b9\uff1a\n1. \u4f7f\u7528\u7b80\u4fbf\uff1a\u53ea\u9700\u5c06\u5fae\u4fe1/\u98de\u4e66\u6301\u4ed3\u622a\u56fe\u53d1\u9001\u81f3Qclaw/openclaw\u5e76\u901a\u8fc7\u811a\u672c\u751f\u6210\u4e13\u5c5e\u6df1\u5ea6\u6280\u672f\u5206\u6790\u62a5\u544a\n2. \u6cdb\u7528\u6027\u5f3a\uff1a\u540c\u65f6\u652f\u6301Qclaw\u548copenclaw\uff0c\u5176\u4e2dQclaw\u4e3b\u8981\u652f\u6301\u5fae\u4fe1\uff0copenclaw\u652f\u6301\u4e00\u5207\u56fe\u7247\u6765\u6e90\n3. \u667a\u80fd\u8fd0\u884c\uff1a\u82e5\u73af\u5883\u7f3a\u5931\uff0c\u7b2c\u4e00\u6b21\u8fd0\u884c\u81ea\u52a8\u914d\u7f6e\u90e8\u5206\u73af\u5883\uff08OCR\u7b49\uff09\n\n\u4f7f\u7528\u6ce8\u610f\u4e8b\u9879\uff1a\u7b2c\u4e00\u6b21\u6267\u884c\u4f1a\u81ea\u52a8\u5b89\u88c5\u90e8\u5206\u73af\u5883\u914d\u7f6e\uff0c\u53ef\u80fd\u7b49\u5f85\u65f6\u95f4\u8f83\u957f\n\nInitial release of stock-analysis-china.\n\n- Provides A\u80a1\u6301\u4ed3\u6df1\u5ea6\u6280\u672f\u5206\u6790 via AI, activating on screenshots or investment-related intents.\n- Supports AI-based image recognition of WeChat/Feishu portfolio screenshots, with fallback to Tesseract OCR.\n- Manages portfolio data in positions_portfolio.json, auto-updating from images or user input.\n- Runs technical analysis with AKShare (RSI, MACD, KDJ, Bollinger Bands, moving averages) and generates operation suggestions.\n- Outputs structured analysis reports directly in chat, including market index overview and individual stock signals.\n- Includes detailed environment setup and troubleshooting guidance for common installation and runtime issues.",
+  "created_at": 1774782729575,
+  "display_name": "Stock Analysis China",
+  "fetched_at": 1787841459425,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/analysis_prompt_template.md",
+    "scripts/portfolio_update.py",
+    "scripts/stock_analysis_core.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090179660,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "lzwaang",
+    "handle": "lzwaang",
+    "user_id": "s17fyatqart2nz8brsjvepzeb183trzq"
+  },
+  "slug": "stock-analysis-china",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/stock-analysis-china",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=stock-analysis-china&ownerHandle=lzwaang",
+    "page_url": "https://clawhub.ai/lzwaang/skills/stock-analysis-china"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 667,
+    "installs": 16,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "A\u80a1\u6301\u4ed3\u6df1\u5ea6\u6280\u672f\u5206\u6790\u6280\u80fd\u3002\u5f53\u7528\u6237\u53d1\u9001\u6301\u4ed3\u622a\u56fe\u56fe\u7247\u3001\u6216\u63d0\u53ca\u6301\u4ed3/\u80a1\u7968/\u6295\u8d44\u5efa\u8bae\u76f8\u5173\u610f\u56fe\u65f6\uff0c\u672c\u6280\u80fd\u81ea\u52a8\u6fc0\u6d3b\u3002 \u6fc0\u6d3b\u6761\u4ef6\uff08\u6ee1\u8db3\u4efb\u4e00\u5373\u89e6\u53d1\uff09\uff1a - \u7528\u6237\u53d1\u9001\u4e86\u56fe\u7247\uff08\u6301\u4ed3\u622a\u56fe\u3001\u884c\u60c5\u622a\u56fe\u7b49\uff09 - \u7528\u6237\u8bf4\"\u5206\u6790\u6301\u4ed3\"\u3001\"\u6211\u7684\u6301\u4ed3\u600e\u4e48\u6837\"\u3001\"\u7ed9\u6295\u8d44\u5efa\u8bae\"\u3001\"\u6301\u4ed3\u8bca\u65ad\"\u3001\"\u6211\u7684\u80a1\u7968\"\u3001\"\u76ee\u524d\u6301\u4ed3\" - \u7528\u6237\u8bf4\"\u66f4\u65b0\u6301\u4ed3\"\u3001\"\u5f55\u5165\u6301...",
+  "updated_at": 1778492275298,
+  "version": "0.1.1"
+}
