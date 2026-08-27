@@ -1,0 +1,64 @@
+{
+  "changelog": "Version 1.0.0\n\n- Initial release of the verified-agent-identity skill.\n- Enables decentralized identity creation and management for agents using Billions ERC-8004 and Attestation Registries.\n- Supports linking agent identities to human owners, signing/verifying authentication challenges, and handling decentralized identifiers (DIDs).\n- Includes guardrails for key management, identity checks, and security best practices.\n- All sensitive identity data is stored within the user's $HOME/.openclaw/billions directory.",
+  "created_at": 1773809059233,
+  "display_name": "verified-agent-identity-0.0.15",
+  "fetched_at": 1787798204398,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/constants.js",
+    "scripts/createNewEthereumIdentity.js",
+    "scripts/generateChallenge.js",
+    "scripts/getDidDocument.js",
+    "scripts/getIdentities.js",
+    "scripts/linkHumanToAgent.js",
+    "scripts/manualLinkHumanToAgent.js",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "scripts/shared/attestation.js",
+    "scripts/shared/bootstrap.js",
+    "scripts/shared/storage/base.js",
+    "scripts/shared/storage/challenge.js",
+    "scripts/shared/storage/crypto.js",
+    "scripts/shared/storage/did.js",
+    "scripts/shared/storage/identities.js",
+    "scripts/shared/storage/keys.js",
+    "scripts/shared/utils.js",
+    "scripts/signChallenge.js",
+    "scripts/verifySignature.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089947417,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Kondifun",
+    "handle": "kondifun",
+    "user_id": "s1782ssaznxegrm320eh2jx0vh85r7ek"
+  },
+  "slug": "artefact-144794446",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/artefact-144794446",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=artefact-144794446&ownerHandle=kondifun",
+    "page_url": "https://clawhub.ai/kondifun/skills/artefact-144794446"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 882,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Billions decentralized identity for agents. Link agents to human identities using Billions ERC-8004 and Attestation Registries. Verify and generate authentic...",
+  "updated_at": 1779002239131,
+  "version": "1.0.0"
+}
