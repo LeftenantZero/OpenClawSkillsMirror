@@ -1,0 +1,35 @@
+{
+  "changelog": "- Expanded support for more languages and project types: now recognizes Go and Rust in addition to Node, Python, and Docker.\n- Improved detection logic: a repository can match multiple project types, choosing the canonical workflow based on documentation.\n- More detailed dependency installation instructions per language, including virtual environments for Python and tool-specific commands.\n- Docker instructions now prefer documented docker-compose paths when present.\n- Maintains strong safety and confirmation safeguards throughout the workflow.",
+  "created_at": 1772526127997,
+  "display_name": "repo runner",
+  "fetched_at": 1787800798228,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/detect_project.sh",
+    "scripts/suggest_node_commands.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "En",
+    "handle": "zyl-hub",
+    "user_id": "s17ag9b4nmr3kex3m9v98xxexn884jww"
+  },
+  "slug": "repo-runner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/repo-runner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=repo-runner&ownerHandle=zyl-hub",
+    "page_url": "https://clawhub.ai/zyl-hub/skills/repo-runner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1064,
+    "installs": 32,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Bootstrap and run a GitHub project by following its docs (README/docs), with safeguards for untrusted install/run steps. Use when the user gives a GitHub rep...",
+  "updated_at": 1778994770412,
+  "version": "1.0.2"
+}
