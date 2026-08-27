@@ -1,0 +1,56 @@
+{
+  "changelog": "Initial release with full email inquiry automation for medal customization business.\n\n- Automatically retrieves customer inquiry emails at configurable intervals (default every 30 minutes)\n- Detects and translates non-Chinese emails to Simplified Chinese using API\n- Saves original and translated email content to local storage, organized by type\n- Calculates quotes based on provided formulas and material parameter tables; applies tiered discounts\n- Auto-generates and saves professional quote reply templates\n- Fully configurable IMAP, translation, and pricing data paths via config file",
+  "created_at": 1778172831340,
+  "display_name": "email-quote-automation",
+  "fetched_at": 1787809429482,
+  "files": [
+    "README.md",
+    "README_zh.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/config.py",
+    "data/README.md",
+    "data/example/pricing_rules_example.md",
+    "references/email_template.html",
+    "requirements.txt",
+    "scripts/__init__.py",
+    "scripts/email_check.py",
+    "scripts/email_daemon.py",
+    "scripts/email_utils.py",
+    "scripts/quote_calculator.py",
+    "scripts/translator.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090759046,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fank",
+    "handle": "fankcoder",
+    "user_id": "s1713x6mpstmmd6g6e4by7qqb984svd8"
+  },
+  "slug": "email-quote-automation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/email-quote-automation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=email-quote-automation&ownerHandle=fankcoder",
+    "page_url": "https://clawhub.ai/fankcoder/skills/email-quote-automation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 522,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u81ea\u52a8\u6536\u53d6\u5956\u724c\u5b9a\u5236\u5ba2\u6237\u8be2\u4ef7\u90ae\u4ef6\uff0c\u7ffb\u8bd1\u975e\u4e2d\u6587\u5185\u5bb9\uff0c\u8ba1\u7b97\u62a5\u4ef7\u5e76\u751f\u6210\u4e13\u4e1a\u56de\u590d\u6a21\u677f\uff0c\u652f\u6301\u672c\u5730\u5b58\u6863\u548c\u5b9a\u65f6\u5904\u7406\u3002",
+  "updated_at": 1778492872010,
+  "version": "1.0.0"
+}
