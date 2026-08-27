@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of env-ops-standard for secure, policy-driven .env file management.\n\n- Enforces a key-first, secret-safe workflow for adding, updating, listing, and removing .env entries.\n- Never prints secret values; all set operations default to stdin-only and require explicit flags for value-in-argv or destructive changes.\n- Mandates comment and naming conventions, policy validation, and atomic writes with timestamped backups.\n- Includes commands for linting, health checks, dry-run previews, and policy inspection.\n- Ensures org-wide consistency and safety, especially when troubleshooting missing keys or configuration errors.",
+  "created_at": 1774440640134,
+  "display_name": "Safe .env Manager",
+  "fetched_at": 1787848918922,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/env-key-standard.md",
+    "references/policy.example.json",
+    "scripts/envsafe.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Pioneer",
+    "handle": "pioneer-weirdo",
+    "user_id": "s1740nb6xer4ybxtpqhb0vvjwh83gy1e"
+  },
+  "slug": "env-ops-standard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/env-ops-standard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=env-ops-standard&ownerHandle=pioneer-weirdo",
+    "page_url": "https://clawhub.ai/pioneer-weirdo/skills/env-ops-standard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 682,
+    "installs": 17,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Safe .env key-first operations (CRUD) with secret-safe defaults. Use when troubleshooting missing env keys, auth/config failures, or when asked to add/update...",
+  "updated_at": 1778492186671,
+  "version": "1.0.0"
+}
