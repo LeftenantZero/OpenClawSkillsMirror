@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release preventing infinite loops and repeated actions:\n\n- Detects and stops infinite/repetitive action loops by tracking history and enforcing termination conditions.\n- Supports progress and time tracking to ensure meaningful task advancement.\n- Exposes configuration: max retries/steps, progress thresholds, and time limits.\n- Provides clear usage example and watchdog status metrics (STC, SYN).\n- Lightweight: low latency, minimal memory/CPU usage, and low false alarm rate.",
+  "created_at": 1779053323880,
+  "display_name": "\u53cd\u65e0\u9650\u5faa\u73af\u5b88\u62a4",
+  "fetched_at": 1787797515883,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/anti_infinite_loop.py",
+    "scripts/main.py",
+    "scripts/utils.py",
+    "skill-card.md",
+    "tests/test_basic.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Kofna3369",
+    "handle": "kofna3369",
+    "user_id": "s170vjwkh0tbnpbsmvn0nj60h183gysr"
+  },
+  "slug": "anti-infinite-loop-zh",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/anti-infinite-loop-zh",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=anti-infinite-loop-zh&ownerHandle=kofna3369",
+    "page_url": "https://clawhub.ai/kofna3369/skills/anti-infinite-loop-zh"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 652,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u53cd\u65e0\u9650\u5faa\u73af\u5b88\u62a4 \u2014 \u9632\u6b62\u4ee3\u7406\u9677\u5165\u91cd\u590d\u6267\u884c\u5faa\u73af\u3002 \u4f7f\u7528\u573a\u666f\uff1a(1) \u68c0\u6d4b\u91cd\u590d\u64cd\u4f5c\uff0c(2) \u5f3a\u5236\u7ec8\u6b62\u6761\u4ef6\uff0c(3) \u8ddf\u8e2a\u8fdb\u5ea6\uff0c(4) \u9632\u6b62\u8d44\u6e90\u8017\u5c3d\u3002",
+  "updated_at": 1779055008009,
+  "version": "1.0.0"
+}
