@@ -1,0 +1,50 @@
+{
+  "changelog": "**Major update: Adds dual execution modes (headless bash and in-session hook), lightweight task support, explicit CLI, and more robust progress/completion tracking.**\n\n- Introduces both Headless (background bash loop) and Hook (in-session) execution modes\n- Supports two strategies: Structured decomposition with explicit task lists, and lightweight \"Ralph-style\" iteration\n- Adds new scripts and hooks for loop setup and stop handling\n- Enhances completion detection: supports both promise tags (e.g., `<promise>DONE</promise>`) and checkbox counting\n- Improves task isolation, progress logging, and concurrent run prevention (lock files)\n- Expands CLI options for task management, session control, and budget/model selection",
+  "created_at": 1772247942433,
+  "display_name": "Autonomous Skill",
+  "fetched_at": 1787790662202,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "hooks/hooks.json",
+    "hooks/stop-hook.sh",
+    "scripts/run-session.sh",
+    "scripts/setup-loop.sh",
+    "skill-card.md",
+    "templates/executor-prompt.md",
+    "templates/initializer-prompt.md",
+    "templates/task-list-template.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966157890,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Pengfei Ni",
+    "handle": "feiskyer",
+    "user_id": "s174q6bx170bf0qb9wjqhqfv6x83vv3e"
+  },
+  "slug": "autonomous-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/autonomous-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=autonomous-skill&ownerHandle=feiskyer",
+    "page_url": "https://clawhub.ai/feiskyer/skills/autonomous-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1275,
+    "installs": 37,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Execute long-running, multi-session tasks autonomously using Claude Code headless mode or in-session hook-based loops. Supports structured task decomposition...",
+  "updated_at": 1779077496412,
+  "version": "1.0.3"
+}
