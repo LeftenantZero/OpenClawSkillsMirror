@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release of the recovery ticket runner and delivery diagnosis agent.\n- Automatically scans all delivery lanes every 4 hours (and on-demand) to detect unresolved blockers, classify failure types, and attempt recovery actions.\n- Supports multiple trigger sources, layered lane checks, and detailed failure classification.\n- Executes lane-specific recovery actions with capped auto-retries and escalation to human intervention when required.\n- Logs actions, updates recovery tickets, and outputs diagnosis reports for each run.\n- Implements strict safety and publishing checks to prevent unauthorized or indefinite retries.",
+  "created_at": 1777022626777,
+  "display_name": "Ray Delivery Diagnosis",
+  "fetched_at": 1787794684535,
+  "files": [
+    "SKILL.md",
+    "TEMPLATE.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090542635,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "X-RayLuan",
+    "handle": "x-rayluan",
+    "user_id": "s17c0n0ce78mre7mrytgzehcwn83hkp1"
+  },
+  "slug": "ray-delivery-diagnosis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ray-delivery-diagnosis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ray-delivery-diagnosis&ownerHandle=x-rayluan",
+    "page_url": "https://clawhub.ai/x-rayluan/skills/ray-delivery-diagnosis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 576,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Automates delivery lane scans every 4 hours to detect failures, classify issues, update recovery tickets, and attempt specified recovery actions.",
+  "updated_at": 1779076123587,
+  "version": "1.0.0"
+}
