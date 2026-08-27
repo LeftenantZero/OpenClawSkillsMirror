@@ -1,0 +1,33 @@
+{
+  "changelog": "**Summary: Interview simulation flow now requires explicit room start.**\n\n- Added a new \"\u542f\u52a8\u7fa4\u9762\u623f\u95f4\" (Start Group Interview Room) API endpoint: /api/v2/agent/rooms/ROOM_ID/start.\n- Room is now created in `waiting` state; must be started by creator before interview begins.\n- Only the room creator can start the interview; this triggers host opening, AI introductions, and moves the room to `active`.\n- Documentation updated to clarify step-by-step group interview sequence and new required start action.\n- No other existing API or workflow changes.",
+  "created_at": 1771094793506,
+  "display_name": "AI Interview Simulator",
+  "fetched_at": 1787804257173,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "hangeaiagent",
+    "handle": "hangeaiagent",
+    "user_id": "s17ez6b64bhrgkst2yqt0n42y188467e"
+  },
+  "slug": "ai-interview-simulator-candaigo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-interview-simulator-candaigo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-interview-simulator-candaigo&ownerHandle=hangeaiagent",
+    "page_url": "https://clawhub.ai/hangeaiagent/skills/ai-interview-simulator-candaigo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2584,
+    "installs": 80,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Access and interact with AI group interview simulations: browse jobs, create/join rooms, speak, advance interviews, upload resumes, and view history and eval...",
+  "updated_at": 1778990570895,
+  "version": "1.0.2"
+}
