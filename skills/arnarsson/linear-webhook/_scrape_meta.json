@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release of linear-webhook skill.\n\n- Enables dispatching tasks to Clawdbot agents through @mentions in Linear issue comments.\n- Webhook listens for Linear comment events and routes tasks to the correct agent (e.g., @mason for implementation, @eureka for strategy).\n- Includes detailed setup and configuration instructions for webhooks, agent routing, and security.\n- Supports customization for adding more agents and changing response behavior.\n- Provides troubleshooting and Linear API integration guidance.",
+  "created_at": 1769691721565,
+  "display_name": "Linear Webhook",
+  "fetched_at": 1787793508123,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config-example.json5",
+    "example-payload.json",
+    "linear-transform.js",
+    "post-response.js",
+    "post-to-linear.sh",
+    "skill-card.md",
+    "test.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783654295841,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Arnarsson",
+    "handle": "arnarsson",
+    "user_id": "s1703vde870n8r5vvwnrs7xpg9884rg5"
+  },
+  "slug": "linear-webhook",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/linear-webhook",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=linear-webhook&ownerHandle=arnarsson",
+    "page_url": "https://clawhub.ai/arnarsson/skills/linear-webhook"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2419,
+    "installs": 83,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Comment @mason or @eureka in Linear issues to dispatch tasks to agents. Webhook receives Linear comments and routes to correct agent.",
+  "updated_at": 1779076559534,
+  "version": "1.0.0"
+}
