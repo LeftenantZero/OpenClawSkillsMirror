@@ -1,0 +1,41 @@
+{
+  "changelog": "docs-refresh is a portable documentation-refresh workflow packaged in a reusable prompt/skill layout. It treats the repository as the record system, starts from AGENTS.md as a map, inspects current workspace state, and uses progressive disclosure to load only the workflow branch that matches the repository's current docs maturity and foundation maturity.",
+  "created_at": 1775213543858,
+  "display_name": "Docs Refresh",
+  "fetched_at": 1787833149307,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "modes/bootstrap.md",
+    "modes/minimal.md",
+    "modes/repair.md",
+    "modes/structured.md",
+    "scripts/collect_changed_context.sh",
+    "scripts/test_collect_changed_context_routing.sh",
+    "scripts/test_skill_fallback_contract.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jzg-lab",
+    "handle": "jzg-lab",
+    "user_id": "s1701pcp5v067m3mn2q0hy6h6h83r0dt"
+  },
+  "slug": "docs-refresh",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/docs-refresh",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=docs-refresh&ownerHandle=jzg-lab",
+    "page_url": "https://clawhub.ai/jzg-lab/skills/docs-refresh"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 630,
+    "installs": 16,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Refresh authoritative docs through routed workflow modes",
+  "updated_at": 1778492391153,
+  "version": "1.0.0"
+}
