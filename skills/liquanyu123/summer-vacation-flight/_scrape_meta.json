@@ -1,0 +1,47 @@
+{
+  "changelog": "- Enforced strict CLI-only answers: all results must be sourced directly from flyai CLI, never from training data.\n- Mandated environment check for flyai CLI before any execution; automatic install attempt if missing.\n- Updated output rules: every flight result must include a booking link (`[Book]({detailUrl})`), results without links are omitted.\n- Expanded support for related vacation travel services: hotels, trains, attraction tickets, itinerary, visas, car rental, insurance.\n- Added activation and exclusion triggers for more precise skill invocation.\n- Refined playbooks for recommended, cheapest, fastest, and direct summer flights.",
+  "created_at": 1777016252864,
+  "display_name": "summer-vacation-flight",
+  "fetched_at": 1787815452572,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/fallbacks.md",
+    "references/playbooks.md",
+    "references/runbook.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090539870,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "liquanyu123",
+    "handle": "liquanyu123",
+    "user_id": "s173bh61f4yde29x5ddrjfa1qd844z4w"
+  },
+  "slug": "summer-vacation-flight",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/summer-vacation-flight",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=summer-vacation-flight&ownerHandle=liquanyu123",
+    "page_url": "https://clawhub.ai/liquanyu123/skills/summer-vacation-flight"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 514,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Book summer vacation flights for July and August holiday travel. Also supports: flight booking, hotel reservation, train tickets, attraction tickets, itinera...",
+  "updated_at": 1778492737320,
+  "version": "3.2.0"
+}
