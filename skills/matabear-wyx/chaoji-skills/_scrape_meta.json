@@ -1,0 +1,59 @@
+{
+  "changelog": "chaoji-skills 1.0.0\n\n- Initial release providing root routing for ChaoJi AI skills.\n- Routes user requests to scene-specific skills: chaoji-tryon, chaoji-tryon-fast, chaoji-tryon-shoes, chaoji-cutout, chaoji-img2img, and chaoji-tools.\n- Enforces minimal, routing-only permissions at the root level; scene skills handle their own broader permissions.\n- Implements detailed intent routing rules, explicit clarification questions for ambiguous \"try on\" requests, and method selection based on natural language.\n- Built-in security and instruction safety rules to prevent misuse or unauthorized disclosures.\n- Error handling offers actionable user guidance for credential or authorization problems.",
+  "created_at": 1775207065330,
+  "display_name": "Chaoji Skills",
+  "fetched_at": 1787833301456,
+  "files": [
+    ".gitignore",
+    "README.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "chaoji-tools/SKILL.md",
+    "chaoji-tools/scripts/lib/commands.py",
+    "chaoji-tools/scripts/lib/errors.py",
+    "chaoji-tools/scripts/lib/executor.py",
+    "chaoji-tools/scripts/run_command.py",
+    "references/credentials-guide.md",
+    "scripts/chaoji_client.py",
+    "scripts/chaoji_oss.py",
+    "scripts/chaoji_utils.py",
+    "skills/chaoji-cutout/SKILL.md",
+    "skills/chaoji-cutout/references/workflow.md",
+    "skills/chaoji-cutout/scripts/cutout.py",
+    "skills/chaoji-img2img/SKILL.md",
+    "skills/chaoji-img2img/references/workflow.md",
+    "skills/chaoji-img2img/scripts/img2img.py",
+    "skills/chaoji-tryon-fast/SKILL.md",
+    "skills/chaoji-tryon-fast/references/workflow.md",
+    "skills/chaoji-tryon-fast/scripts/tryon.py",
+    "skills/chaoji-tryon-shoes/SKILL.md",
+    "skills/chaoji-tryon-shoes/references/workflow.md",
+    "skills/chaoji-tryon-shoes/scripts/tryon_shoes.py",
+    "skills/chaoji-tryon/SKILL.md",
+    "skills/chaoji-tryon/references/workflow.md",
+    "skills/chaoji-tryon/scripts/tryon.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Yuxiong WU",
+    "handle": "matabear-wyx",
+    "user_id": "s1726rj4vnmwpf548xxa093dps83p0wh"
+  },
+  "slug": "chaoji-skills",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/chaoji-skills",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=chaoji-skills&ownerHandle=matabear-wyx",
+    "page_url": "https://clawhub.ai/matabear-wyx/skills/chaoji-skills"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 517,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Routes requests to appropriate Chaoji AI scene skills for virtual try-on, image cutout, image-to-image generation, or direct command execution.",
+  "updated_at": 1778492391153,
+  "version": "1.0.0"
+}
