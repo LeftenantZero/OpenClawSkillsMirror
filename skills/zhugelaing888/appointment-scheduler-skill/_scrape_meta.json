@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release: migrated to a simplified, phone-focused appointment scheduling system using PollyReach.\n\n- Major cleanup: replaced the previous specialized scripts and documentation with a new set of concise Bash scripts for phone-based scheduling (send.sh, query.sh, activation.sh, etc.).\n- Removed legacy code for parsing messages, calendar sync, reminders, no-show, and waitlists; all previous Node.js scripts and docs removed.\n- Added new integration with PollyReach API for outbound/inbound calls, phone activation, call summaries, and balance checking.\n- Switched to plain Bash/JQ/curl-based workflow for portability\u2014no Node.js or calendar integrations.\n- Documentation rewritten: now guides human activation, phone registration, and usage with a strong focus on enabling human users to schedule or receive calls with service providers via Polly.",
+  "created_at": 1776679298458,
+  "display_name": "Appointment Scheduler",
+  "fetched_at": 1787818166587,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/activation.sh",
+    "scripts/balance.sh",
+    "scripts/inbound.sh",
+    "scripts/prompt_update.sh",
+    "scripts/query.sh",
+    "scripts/send.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090489193,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zhugelaing888",
+    "handle": "zhugelaing888",
+    "user_id": "s173fpd1ymgq5p7vgjsyctnass83xby4"
+  },
+  "slug": "appointment-scheduler-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/appointment-scheduler-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=appointment-scheduler-skill&ownerHandle=zhugelaing888",
+    "page_url": "https://clawhub.ai/zhugelaing888/skills/appointment-scheduler-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 692,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Schedule appointments with doctors, salons, mechanics, or any service provider. Polly calls, finds available times, and books it for you.",
+  "updated_at": 1778492676634,
+  "version": "1.0.0"
+}
