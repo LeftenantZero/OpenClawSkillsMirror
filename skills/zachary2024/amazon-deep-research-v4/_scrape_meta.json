@@ -1,0 +1,52 @@
+{
+  "changelog": "amazon-deep-research-v4 1.0.0-beta.1 \u2014 Initial beta release\n\n- Provides end-to-end Amazon product research workflow with deep source cross-validation across AMZScout (fees), Xiyou Keyword, SellerSprite (BSR/metrics), Amazon official data, and 1688 image-based sourcing.\n- Real-time USD/CNY exchange rate fetched at every run for accurate cost conversion.\n- 7-item gross margin calculation with detailed cost breakdown; products under 20% margin or with HIGH IP risk are filtered out.\n- Automatic WIPO IP compliance audit for trademarks and patents; only LOW and MEDIUM risk included.\n- Generates comprehensive HTML report with all key metrics, sources, and margin analysis; all data sources are clearly labeled per value.\n- Strict enforcement: only live, cross-verified data, Amazon image-based 1688 match, and rejection of placeholder/estimated data and international 1688 links.",
+  "created_at": 1775733989413,
+  "display_name": "Amazon Deep Research V4",
+  "fetched_at": 1787826684079,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "package-lock.json",
+    "package.json",
+    "references/1688-image-search.md",
+    "references/filters.md",
+    "references/html-template.md",
+    "references/margin.md",
+    "references/multi-platform.md",
+    "references/sellersprite-api.md",
+    "references/wipo-ip.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090357815,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Zachary2024",
+    "handle": "zachary2024",
+    "user_id": "s17c7sk3xpv8nrmd693h6jhacs84hf61"
+  },
+  "slug": "amazon-deep-research-v4",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/amazon-deep-research-v4",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=amazon-deep-research-v4&ownerHandle=zachary2024",
+    "page_url": "https://clawhub.ai/zachary2024/skills/amazon-deep-research-v4"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 689,
+    "installs": 16,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "\u4e9a\u9a6c\u900a\u6df1\u5ea6\u9009\u54c1V4\uff1a\u591a\u5e73\u53f0\u4ea4\u53c9\u9a8c\u8bc1(AMZScout+\u897f\u67da\u627e\u8bcd+\u5356\u5bb6\u7cbe\u7075) \u2192 1688\u4ee5\u56fe\u641c\u56fe\u540c\u6b3e\u91c7\u8d2d \u2192 \u5b9e\u65f6\u6c47\u73877\u9879\u6bdb\u5229\u8ba1\u7b97 \u2192 WIPO IP\u5408\u89c4\u5ba1\u8ba1 \u2192 HTML\u53ef\u89c6\u5316\u62a5\u544a\u3002 \u89e6\u53d1\u8bcd\uff1a\u4e9a\u9a6c\u900a\u8c03\u7814/\u9009\u54c1/\u5e02\u573a\u8c03\u7814/Amazon research/\u6bdb\u5229\u5206\u6790/\u5feb\u901f\u8c03\u7814/\u4ea7\u54c1\u5206\u6790/\u7ade\u54c1\u5206\u6790/\u9009\u54c1\u62a5\u544a",
+  "updated_at": 1778492500998,
+  "version": "1.0.0-beta.1"
+}
