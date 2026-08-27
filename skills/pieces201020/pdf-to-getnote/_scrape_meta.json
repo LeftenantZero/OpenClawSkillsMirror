@@ -1,0 +1,46 @@
+{
+  "changelog": "- Initial release of the \"pdf-to-getnote\" skill.\n- Automatically converts PDFs to notes in GetNotes with AI-generated summaries and embedded images.\n- Supports user trigger phrases: \u300cPDF\u5b58\u5230GetNotes\u300d\u300cPDF\u5bfc\u5165GetNotes\u300d\u300c\u628a\u8fd9\u4e2aPDF\u5b58\u7b14\u8bb0\u91cc\u300d.\n- Implements full workflow: PDF to images (PyMuPDF, 2x zoom) \u2192 text extraction \u2192 AI summary (MiniMax-M2) \u2192 image upload \u2192 note creation.\n- Notes are created using \"plain_text\" type with Markdown-embedded images to work around API limitations.\n- Credentials are read securely from ~/.openclaw/openclaw.json; no hardcoded keys.",
+  "created_at": 1775403555422,
+  "display_name": "PDF \u8f6c GetNotes",
+  "fetched_at": 1787796253038,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api_behavior.md",
+    "references/full_sop.md",
+    "scripts/run_pdf_to_getnote.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090310838,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "pieces201020",
+    "handle": "pieces201020",
+    "user_id": "s17875rdtvmgwznfsrzh86qhh584906t"
+  },
+  "slug": "pdf-to-getnote",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pdf-to-getnote",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pdf-to-getnote&ownerHandle=pieces201020",
+    "page_url": "https://clawhub.ai/pieces201020/skills/pdf-to-getnote"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 558,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5f53\u7528\u6237\u53d1\u9001 PDF \u6587\u4ef6\u5e76\u8981\u6c42\u5b58\u5165 GetNotes \u65f6\u89e6\u53d1\u3002\u6267\u884c\u5b8c\u6574\u6d41\u7a0b\uff1aPDF \u8f6c\u56fe\u7247 \u2192 AI \u6458\u8981\u751f\u6210 \u2192 \u521b\u5efa\u542b\u6458\u8981\u548c\u5168\u56fe\u7247\u7684\u5355\u4e00\u7b14\u8bb0\u3002\u89e6\u53d1\u8bcd\u5305\u62ec\u300cPDF\u5b58\u5230GetNotes\u300d\u300cPDF\u5bfc\u5165GetNotes\u300d\u300c\u628a\u8fd9\u4e2aPDF\u5b58\u7b14\u8bb0\u91cc\u300d\u3002",
+  "updated_at": 1779075539766,
+  "version": "1.0.0"
+}
