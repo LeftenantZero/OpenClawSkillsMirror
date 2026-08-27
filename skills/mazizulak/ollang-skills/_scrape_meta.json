@@ -1,0 +1,56 @@
+{
+  "changelog": "- The .claude/settings.local.json file was removed.\n- Updated API key handling: the skill now reads the API key from the OLLANG_API_KEY environment variable instead of asking for it during the session.\n- SKILL.md guidance improved to tell users how to set the OLLANG_API_KEY variable if not configured.",
+  "created_at": 1774474201850,
+  "display_name": "Ollang SKILLS",
+  "fetched_at": 1787848208423,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "ollang-folder/SKILL.md",
+    "ollang-health/SKILL.md",
+    "ollang-human-review/SKILL.md",
+    "ollang-order-cancel/SKILL.md",
+    "ollang-order-create/SKILL.md",
+    "ollang-order-get/SKILL.md",
+    "ollang-order-rerun/SKILL.md",
+    "ollang-orders-list/SKILL.md",
+    "ollang-project/SKILL.md",
+    "ollang-qc-eval/SKILL.md",
+    "ollang-revision/SKILL.md",
+    "ollang-upload/SKILL.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090347087,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "M. Aziz Ulak",
+    "handle": "mazizulak",
+    "user_id": "s17d2m4ktsddt7wj34n52ggdzd83kvrh"
+  },
+  "slug": "ollang-skills",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ollang-skills",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ollang-skills&ownerHandle=mazizulak",
+    "page_url": "https://clawhub.ai/mazizulak/skills/ollang-skills"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 672,
+    "installs": 16,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Master skill for the Ollang translation platform. Routes to the right Ollang sub-skill based on intent \u2014 upload files, create orders, check status, manage re...",
+  "updated_at": 1778492195197,
+  "version": "1.0.3"
+}
