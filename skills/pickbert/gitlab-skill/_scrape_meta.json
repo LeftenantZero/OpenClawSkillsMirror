@@ -1,0 +1,50 @@
+{
+  "changelog": "**Improved credential management and configuration for GitLab skill.**\n\n- Added secure, layered credential loading (environment variables, user config, deprecated legacy config, runtime prompt).\n- Introduced `scripts/credential_loader.py` to show credential source and help with troubleshooting.\n- Provided a sample config file template: `scripts/config.example.json`.\n- Updated documentation with best practices, migration instructions, and troubleshooting tips.\n- Deprecated use of `scripts/config.json` for storing real credentials.",
+  "created_at": 1775230419328,
+  "display_name": "gitlab-skill",
+  "fetched_at": 1787796622367,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "scripts/config.example.json",
+    "scripts/config.json",
+    "scripts/credential_loader.py",
+    "scripts/fetch_repos.py",
+    "scripts/gitlab_api.py",
+    "scripts/list_repos.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090288229,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Albert",
+    "handle": "pickbert",
+    "user_id": "s17cr5qp8y0keb6waf62mr8ce5845bn6"
+  },
+  "slug": "gitlab-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gitlab-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gitlab-skill&ownerHandle=pickbert",
+    "page_url": "https://clawhub.ai/pickbert/skills/gitlab-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 658,
+    "installs": 17,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "GitLab operations including creating and cloning repositories, listing projects, managing issues, merge requests, branches, commits, and pipelines. Use this...",
+  "updated_at": 1779075358805,
+  "version": "1.0.1"
+}
