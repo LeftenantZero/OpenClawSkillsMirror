@@ -1,0 +1,55 @@
+{
+  "changelog": "arc-shield 1.0.0 initial release\n\n- Adds outbound message sanitization to block accidental leaks of secrets, API keys, passwords, tokens, wallet mnemonics, and PII.\n- Supports multiple scan modes: pass-through, strict blocking, redaction, and reporting.\n- Pattern-based detection for major secret types (1Password, GitHub, OpenAI, AWS, Slack, Discord, etc) plus high-entropy detection (Python).\n- Provides easy shell and Python integration for OpenClaw agents via wrappers and hooks.\n- Fully configurable patterns and severity in a single config file.\n- Includes comprehensive CLI, test suite, and best practices for safe agent messaging.",
+  "created_at": 1770642853017,
+  "display_name": "Arc Shield",
+  "fetched_at": 1787792466485,
+  "files": [
+    "COMPLETION_SUMMARY.md",
+    "INSTALLATION.md",
+    "QUICKREF.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/demo.sh",
+    "examples/integration-agent.sh",
+    "examples/send-safe-message.sh",
+    "scripts/arc-shield.sh",
+    "scripts/output-guard.py",
+    "skill-card.md",
+    "tests/quick-test.sh",
+    "tests/run-tests.sh",
+    "tests/test-samples.txt"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779982482880,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Arc from Fulcra.ai",
+    "handle": "arc-claw-bot",
+    "user_id": "s177v15fjt9pn5v99vms8sqkfn86vdwr"
+  },
+  "slug": "arc-shield",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/arc-shield",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=arc-shield&ownerHandle=arc-claw-bot",
+    "page_url": "https://clawhub.ai/arc-claw-bot/skills/arc-shield"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1673,
+    "installs": 55,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Output sanitization for agent responses - prevents accidental secret leaks",
+  "updated_at": 1779076916968,
+  "version": "1.0.0"
+}
