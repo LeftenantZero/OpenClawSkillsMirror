@@ -1,0 +1,40 @@
+{
+  "changelog": "`social-hotsearch` skill \u4f18\u5316\u7248\u672c:\u6269\u5c55\u80fd\u529b\u5b9a\u4f4d\u3001\u65b0\u589e\u529f\u80fd\u3001\u8865\u5168\u6587\u6863\u3002\n\n### Added\n- `analyze_topic.py` / `sample_posts.py` \u65b0\u589e `--search-fields` CLI \u53c2\u6570,\u652f\u6301\u663e\u5f0f\u6307\u5b9a\u641c\u7d22\u8303\u56f4(`title` / `content` / `video_asr` / `video_ocr` / `screenshot`),\u4fbf\u4e8e\u77ed\u89c6\u9891\u5185\u5bb9(ASR/OCR)\u548c\u5c0f\u7ea2\u4e66\u56fe\u6587(\u56fe\u7247 OCR)\u573a\u666f\u591a\u635e\u6570\u636e\n- `social_client.py` \u65b0\u589e\u5e73\u53f0\u540d\u81ea\u52a8\u5f52\u4e00\u5316(`\u6296\u97f3`/`\u5feb\u624b` \u2192 `\u77ed\u89c6\u9891`\u3001`B\u7ad9` \u2192 `\u89c6\u9891`\u3001`\u516c\u4f17\u53f7` \u2192 `\u5fae\u4fe1`),`analyze_topic` / `sample_posts` \u5bb9\u9519\u63a5\u53d7\u53e3\u8bed\u5316\u5e73\u53f0\u540d\n- SKILL.md \u65b0\u589e\"\u80fd\u529b\u8fb9\u754c\"\u6bb5(\u8bda\u5b9e\u544a\u77e5\u4e0d\u64c5\u957f\u7684\u573a\u666f)\u548c\"\u6570\u636e\u5c11\u65f6\u7684\u8bca\u65ad\u6d41\u7a0b\"\u6bb5(\u6307\u5f15 AI \u5728\u4f4e\u58f0\u91cf\u65f6\u4e3b\u52a8\u8c03\u6574\u53c2\u6570)\n- SKILL.md / README.md \u6309 **\u8425\u9500 / PR / \u6295\u653e / \u7814\u7a76** 4 \u7c7b\u89d2\u8272\u91cd\u5199\u573a\u666f\u4f8b\u5b50,\u8986\u76d6\u5934\u90e8\u6d88\u8d39\u54c1\u724c\u3001\u54c1\u7c7b\u8bcd\u3001\u7efc\u827a/\u5f71\u89c6\u3001\u8de8\u5e73\u53f0\u5bf9\u6bd4\n\n### Changed\n- `analyze_topic` / `sample_posts` \u9ed8\u8ba4 datasource \u4ece `[\"\u5fae\u535a\", \"\u77ed\u89c6\u9891\"]` \u6539\u4e3a `[\"\u5fae\u535a\", \"\u5c0f\u7ea2\u4e66\", \"\u77ed\u89c6\u9891\"]`(\u8986\u76d6\u8425\u9500/PR \u4e09\u5927\u4e3b\u529b\u5e73\u53f0)\n- SKILL.md \u7684 `description` \u52a0\u5165\u9ad8\u9891\u641c\u7d22\u8bcd(`\u8206\u60c5\u5206\u6790` / `\u9009\u9898` / `\u54c1\u724c\u8ba8\u8bba` / `\u8bdd\u9898\u5206\u6790` / `\u793e\u5a92\u8206\u60c5`),\u63d0\u5347 clawhub \u53ef\u53d1\u73b0\u6027\n- `agents/openai.yaml` \u7684 `short_description` \u540c\u6b65\u52a0\u5165\u5c0f\u7ea2\u4e66\u4e0e\u9ad8\u9891\u641c\u7d22\u8bcd;`default_prompt` \u6539\u5199\u4e3a\u66f4\u5177\u4f53\u7684\u53cc\u5e73\u53f0\u5206\u6790\u573a\u666f\n- \u5207\u6362\u53d1\u5e03\u6d41\u7a0b:\u4ece\u624b\u52a8 zip + clawhub \u7f51\u9875\u4e0a\u4f20,\u6539\u4e3a `clawhub` CLI(`clawhub skill publish`),`release.sh` \u91cd\u5199\u4e3a CLI \u6d41\u7a0b,\u7248\u672c\u53f7\u552f\u4e00\u6765\u6e90\u6539\u4e3a SKILL.md frontmatter\n\n### Removed\n- \u5220\u9664 `skills/social-hotsearch/_meta.json`(clawhub \u4ece SKILL.md frontmatter \u8bfb metadata,owner \u7531 `clawhub login` \u51b3\u5b9a,\u8fd9\u4e2a\u672c\u5730\u7c3f\u8bb0\u6587\u4ef6\u4e0d\u518d\u9700\u8981)\n\n### Fixed\n- \u4fee\u6b63 CLAUDE.md \u4e2d\"\u5c0f\u7ea2\u4e66\u6570\u636e\u4e0b\u7ebf\"\u7684\u8bef\u8ff0:\u5c0f\u7ea2\u4e66\u4ec5\u5728\u70ed\u641c\u699c\u4e0d\u63a5\u5165,\u5728 `social_statistic_*` / `query_raw_posts` \u4e2d\u662f**\u4e00\u7b49\u516c\u6c11 platform**,\u6570\u636e\u5b8c\u6574\u53ef\u67e5\n- \u5220\u9664 SKILL.md / \u811a\u672c docstring \u4e2d\u7684\u653f\u6cbb\u654f\u611f\u793a\u4f8b(\u5982\"\u7279\u6717\u666e\u8bbf\u534e\")\u548c\u5360\u4f4d\u7b26\u5f0f\u793a\u4f8b(`'XX'`)\n\n### \u9a8c\u8bc1\n- \u901a\u8fc7\u672c\u5730\u76f4\u8fde\u4ee3\u7406 curl \u9a8c\u8bc1:`\u5fae\u535a / 2026-05-13~14 / \u745e\u5e78 / search_fields=[\"content\"]` \u8fd4\u56de 26132 \u58f0\u91cf;\u540c\u6761\u4ef6\u4e0b `\u5c0f\u7ea2\u4e66` \u8fd4\u56de 6192 \u58f0\u91cf,\u6570\u636e\u5b8c\u6574",
+  "created_at": 1778755990818,
+  "display_name": "\u793e\u5a92\u70ed\u641c\u52a9\u624b",
+  "fetched_at": 1787807028790,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "scripts/analyze_topic.py",
+    "scripts/ensure_user.py",
+    "scripts/query_hot_list.py",
+    "scripts/sample_posts.py",
+    "scripts/social_client.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "supermalo",
+    "handle": "supermalo",
+    "user_id": "s177c9b8qyvmt8zq39r7db38b986p7yn"
+  },
+  "slug": "social-hotsearch",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/social-hotsearch",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=social-hotsearch&ownerHandle=supermalo",
+    "page_url": "https://clawhub.ai/supermalo/skills/social-hotsearch"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 635,
+    "installs": 14,
+    "stars": 2,
+    "versions": 2
+  },
+  "summary": "\u5fae\u535a/\u5c0f\u7ea2\u4e66/\u6296\u97f3/\u77e5\u4e4e/\u767e\u5ea6\u70ed\u641c\u4e0e\u8206\u60c5\u5206\u6790\u3002\u770b\u8bdd\u9898\u58f0\u91cf/\u60c5\u611f/\u5e73\u53f0\u5206\u5e03,\u9009\u9898\u3001\u54c1\u724c\u8ba8\u8bba\u3001\u4f20\u64ad\u590d\u76d8\u4e00\u7ad9\u641e\u5b9a\u3002\u514d\u8d39 200 \u6b21",
+  "updated_at": 1778832109265,
+  "version": "1.1.0"
+}
