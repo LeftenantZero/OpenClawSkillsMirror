@@ -1,0 +1,39 @@
+{
+  "changelog": "- Initial release of tour-booking sub-agent for outbound property showing calls.\n- Supports structured payload generation and consistent call scripting for listing-office interactions.\n- Integrates with ElevenLabs for live or dry-run outbound call execution.\n- Parses and normalizes call outcomes into standardized booking statuses.\n- Includes clear runbook workflows and caller guardrails for responsible AI communication.",
+  "created_at": 1771189089268,
+  "display_name": "Tour Booking",
+  "fetched_at": 1787804072414,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/call-script-template.md",
+    "references/elevenlabs-env.md",
+    "scripts/parse_call_result.py",
+    "scripts/place_outbound_call.py",
+    "scripts/prepare_call_payload.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "danielfoch",
+    "handle": "danielfoch",
+    "user_id": "s1709aqsm1ydr5bf0sfd19mwgn8841hg"
+  },
+  "slug": "tour-booking",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tour-booking",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tour-booking&ownerHandle=danielfoch",
+    "page_url": "https://clawhub.ai/danielfoch/skills/tour-booking"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1479,
+    "installs": 44,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Sub-agent for outbound listing-office calls to request and confirm property showing slots using a provided call script and structured payloads. Use when a pa...",
+  "updated_at": 1778990812865,
+  "version": "0.1.0"
+}
