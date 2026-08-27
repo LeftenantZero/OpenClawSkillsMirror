@@ -1,0 +1,47 @@
+{
+  "changelog": "- Now explicitly declares the required OS environment variable (S2_PRIVACY_CONSENT) in metadata for sandbox environments.\n- Clarifies pure, passive sensing only: the skill no longer assumes or executes any cross-device actions or triggers.\n- Updates documentation to stress that exact biometric data is destroyed at the hardware edge and only quantized data leaves the sensor.\n- Refines agent instructions: the skill outputs perceptual data only; all decisions and actions are now delegated to the agent.",
+  "created_at": 1774192141693,
+  "display_name": "S2-SP-OS Wave/Spectrum Radar",
+  "fetched_at": 1787855813626,
+  "files": [
+    "AGENT-EXAMPLES.md",
+    "S2-MEMZERO-PROTOCOL.md",
+    "SKILL.md",
+    "_meta.json",
+    "edge-setup-guide.md",
+    "skill-card.md",
+    "spectrum.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090038485,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "MilesXiang",
+    "handle": "spacesq",
+    "user_id": "s17c8pmv1e8tb2mcc5aset88e183hq1t"
+  },
+  "slug": "s2-spectrum-perception",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/s2-spectrum-perception",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=s2-spectrum-perception&ownerHandle=spacesq",
+    "page_url": "https://clawhub.ai/spacesq/skills/s2-spectrum-perception"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 637,
+    "installs": 16,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "S2-SP-OS Spectrum Radar. Pure, passive spatial perception using GPIO/UART with explicit OS environment consent (S2_PRIVACY_CONSENT) and quantized biometrics....",
+  "updated_at": 1778492111768,
+  "version": "2.0.3"
+}
