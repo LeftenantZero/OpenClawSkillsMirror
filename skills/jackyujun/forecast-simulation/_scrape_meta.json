@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release \u2014 introduces skill for simple, math-based forecasting, gap analysis, what-if simulation, and depletion/saturation prediction based on existing data.\n\n- Supports four scenarios: trend extrapolation, target gap analysis, what-if simulation, and depletion/saturation prediction.\n- Automatically triggers when user intentions relate to \"future\" or \"what-if,\" even if not explicitly stated.\n- Delegates all data queries to the metric-query skill; this skill only handles forecasting logic on returned data.\n- Includes standard Python code for local linear regression, moving average, and related calculations.\n- Emphasizes necessary caveats: all forecasts depend on recent trends and are not machine learning predictions. Results include uncertainty and assumption notes.\n- Provides clear guidelines distinguishing from metric-query, anomaly-detection, and metric-attribution skills.",
+  "created_at": 1774966710893,
+  "display_name": "Aloudata CAN SKILLS - forecast-simulation",
+  "fetched_at": 1787838081548,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jackyujun",
+    "handle": "jackyujun",
+    "user_id": "s172qm3yezbbjev7q8rsxxbd1s83he2f"
+  },
+  "slug": "forecast-simulation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/forecast-simulation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=forecast-simulation&ownerHandle=jackyujun",
+    "page_url": "https://clawhub.ai/jackyujun/skills/forecast-simulation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 934,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u57fa\u4e8e\u5df2\u6709\u6570\u636e\u8fdb\u884c\u8d8b\u52bf\u9884\u6d4b\u3001\u76ee\u6807\u7f3a\u53e3\u5206\u6790\u3001What-if \u6a21\u62df\u548c\u8017\u5c3d/\u9971\u548c\u9884\u6d4b\u3002\u5f53\u7528\u6237\u5e0c\u671b\u4e86\u89e3\u6307\u6807\u7684\u672a\u6765\u8d70\u52bf\u3001\u8bc4\u4f30\u76ee\u6807\u662f\u5426\u53ef\u8fbe\u3001\u6a21\u62df\u5047\u8bbe\u573a\u666f\u7684\u5f71\u54cd\u65f6\uff0c\u5fc5\u987b\u4f7f\u7528\u6b64 Skill\u3002 \u89e6\u53d1\u573a\u666f\u5305\u62ec\u4f46\u4e0d\u9650\u4e8e\uff1a\u7528\u6237\u63d0\u5230\"\u9884\u6d4b\"\"\u9884\u4f30\"\"\u6708\u5e95\u80fd\u5230\u591a\u5c11\"\"\u80fd\u4e0d\u80fd\u5b8c\u6210\u76ee\u6807\"\"\u8fd8\u5dee\u591a\u5c11\"\"\u5982\u679cXX\u4f1a\u600e\u6837\"\"\u63d0\u534710%\u4f1a\u600e\u6837\"\"\u5e93\u5b58\u8fd8\u80fd...",
+  "updated_at": 1778492324164,
+  "version": "1.0.0"
+}
