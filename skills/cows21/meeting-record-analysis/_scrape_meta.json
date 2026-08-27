@@ -1,0 +1,38 @@
+{
+  "changelog": "Initial release of AI Meeting Minutes Assistant.\n\n- Converts meeting audio to structured minutes using ASR and LLM, with optional TTS voice summary.\n- Inputs: `audio_file`, `need_voice_summary` (default: false), `language` (default: zh).\n- Outputs structured JSON with topic, discussion_points, decisions, action_items, cleaned_transcript, and optional voice_summary_path.\n- Includes cleaning of transcripts to remove filler words and repetitions, while preserving key facts and action items.\n- Robust error handling for short audio, ASR failures, and overly long transcripts.\n- Command line usage and API/workflow descriptions provided.",
+  "created_at": 1773734478556,
+  "display_name": "meeting record analysis",
+  "fetched_at": 1787868533533,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/output_schema.md",
+    "references/prompts.md",
+    "requirements.txt",
+    "scripts/run_meeting_minutes.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "cows21",
+    "handle": "cows21",
+    "user_id": "s178f5srdwmkw1cjkv998z66xd885q5h"
+  },
+  "slug": "meeting-record-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/meeting-record-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=meeting-record-analysis&ownerHandle=cows21",
+    "page_url": "https://clawhub.ai/cows21/skills/meeting-record-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 699,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06\u4f1a\u8bae\u5f55\u97f3\u8f6c\u6210\u7ed3\u6784\u5316\u4f1a\u8bae\u7eaa\u8981\u3002\u9002\u7528\u4e8e\u7528\u6237\u4e0a\u4f20\u4f1a\u8bae\u97f3\u9891\u540e\uff0c\u5e0c\u671b\u901a\u8fc7 ASR \u8f6c\u5199\u3001LLM \u603b\u7ed3\u548c\u53ef\u9009 TTS \u64ad\u62a5\uff0c\u81ea\u52a8\u63d0\u53d6\u4f1a\u8bae\u4e3b\u9898\u3001\u8ba8\u8bba\u8981\u70b9\u3001\u51b3\u7b56\u548c\u884c\u52a8\u9879\u7684\u573a\u666f\u3002\u8f93\u5165\u652f\u6301 `audio_file`\u3001`need_voice_summary`\u3001`language`\uff1b\u9ed8\u8ba4\u8f93\u51fa JSON \u7ed3\u6784\u5316\u7eaa\u8981\uff0c\u5e76\u53ef\u9644\u5e26\u8bed\u97f3\u6458\u8981\u6587\u4ef6\u8def\u5f84\u3002",
+  "updated_at": 1778491969082,
+  "version": "1.0.0"
+}
