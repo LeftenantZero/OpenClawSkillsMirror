@@ -1,0 +1,43 @@
+{
+  "changelog": "- Initial release of automation_runner skill.\n- Executes approved shell commands for OpenClaw, with strict security via the exec-approvals gate.\n- Safely retrieves secrets using the Bitwarden (`bws`) wrapper; API keys are never stored in plain text.\n- Restricts all script execution to a dedicated workspace directory.\n- Manages approved long-running tasks such as backups.\n- Logs command output by date for traceability.",
+  "created_at": 1771874626538,
+  "display_name": "Automation Runner",
+  "fetched_at": 1787791539826,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779953356586,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Paul Barnabas",
+    "handle": "barnyp",
+    "user_id": "s17capems5612xf7asvjdfbxyn884zg9"
+  },
+  "slug": "automation-runner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/automation-runner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=automation-runner&ownerHandle=barnyp",
+    "page_url": "https://clawhub.ai/barnyp/skills/automation-runner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2375,
+    "installs": 71,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Executes approved shell commands, manages backups, and safely retrieves secrets from Bitwarden.",
+  "updated_at": 1779077214832,
+  "version": "1.0.0"
+}
