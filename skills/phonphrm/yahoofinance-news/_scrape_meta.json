@@ -1,0 +1,35 @@
+{
+  "changelog": "- Skill renamed from \"finance-news\" to \"yahoofinance-news\".\n- Updated output formatting: each news item must include a URL (prefer \"url\" field; fallback to \"link\").\n- Explicit rule: do not return headlines without an accessible URL\u2014output \"URL not available\" if both fields are missing.\n- Clearer instructions for presenting per-item links and structured summaries in agent responses.\n- Minor cleanup of trigger phrases and provider wording.",
+  "created_at": 1774159908048,
+  "display_name": "Yahoo Finance News",
+  "fetched_at": 1787856788737,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/market_news.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "phonphrm",
+    "handle": "phonphrm",
+    "user_id": "s178a154e8tmb7k8sq6kqb2qyx84s861"
+  },
+  "slug": "yahoofinance-news",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/yahoofinance-news",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=yahoofinance-news&ownerHandle=phonphrm",
+    "page_url": "https://clawhub.ai/phonphrm/skills/yahoofinance-news"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 973,
+    "installs": 26,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Fetch recent finance news headlines for stock, ETF, and index symbols via Yahoo Finance (yfinance), with caching and structured JSON output.",
+  "updated_at": 1778492103506,
+  "version": "1.0.1"
+}
