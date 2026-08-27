@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of vector-store-shootout\n\n- Provides 8 interchangeable vector store backends under a unified Python interface: numpy, lancedb, qdrant, pgvector, weaviate, weaviate_hybrid, milvus, and lightrag.\n- Enables easy benchmarking, evaluation, and backend-switching for RAG and vector search applications.\n- Simple base class: implement add, search, and delete methods for consistency across backends.\n- Includes finding: weaviate hybrid search at alpha=0.1 delivers better results for technical/keyword-heavy content compared to default settings.\n- All backends can run locally; outbound network access depends on deployment configuration.",
+  "created_at": 1772855472664,
+  "display_name": "Vector Store Shootout",
+  "fetched_at": 1787800091943,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/base.py",
+    "scripts/lancedb_store.py",
+    "scripts/lightrag_store.py",
+    "scripts/milvus_store.py",
+    "scripts/numpy_store.py",
+    "scripts/pgvector_store.py",
+    "scripts/qdrant_store.py",
+    "scripts/weaviate_store.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089790394,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Nissan Dookeran",
+    "handle": "nissan",
+    "user_id": "s17f2fw07zktjmcgagf5c29tbd83rt7v"
+  },
+  "slug": "vector-store-shootout",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/vector-store-shootout",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=vector-store-shootout&ownerHandle=nissan",
+    "page_url": "https://clawhub.ai/nissan/skills/vector-store-shootout"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 988,
+    "installs": 30,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "8 vector store implementations behind a common interface \u2014 numpy, lancedb, qdrant, pgvector, weaviate, weaviate_hybrid, milvus, lightrag. Use when evaluating...",
+  "updated_at": 1778996198790,
+  "version": "1.0.0"
+}
