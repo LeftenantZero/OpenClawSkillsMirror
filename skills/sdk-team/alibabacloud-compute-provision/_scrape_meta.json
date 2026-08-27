@@ -1,0 +1,58 @@
+{
+  "changelog": "- Initial beta release of Alibaba Cloud Compute Provision skill.\n- Automatically selects and provisions Alibaba Cloud compute resources (ECS, FC, ACK, PAI) based on user intent and requirements.\n- Supports instance creation, pricing checks, budget control, script generation, and execution workflows.\n- Enforces product-lock and region selection rules for accurate and reliable resource deployment.\n- Requires explicit reading of reference docs before API calls to prevent misuse and resource leakage.\n- Includes guided, step-by-step workflow for parsing user intent, selecting resources, and running scripts.",
+  "created_at": 1778745551273,
+  "display_name": "Alibabacloud Compute Provision",
+  "fetched_at": 1787807411891,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ack.md",
+    "references/ecs.md",
+    "references/fc.md",
+    "references/pai.md",
+    "references/ram-policies.md",
+    "references/select-resource.md",
+    "references/vpc.md",
+    "scripts/ack.py",
+    "scripts/bootstrap.py",
+    "scripts/common.py",
+    "scripts/doc_search.py",
+    "scripts/ecs.py",
+    "scripts/fc.py",
+    "scripts/pai.py",
+    "scripts/vpc.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090802725,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-compute-provision",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-compute-provision",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-compute-provision&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-compute-provision"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 525,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Alibaba Cloud Compute Provision - Automatically selects an Alibaba Cloud compute resource (ECS, FC, ACK, PAI) based on user intent, then creates instances an...",
+  "updated_at": 1778745745440,
+  "version": "0.0.1-beta.1"
+}
