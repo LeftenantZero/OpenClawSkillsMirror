@@ -1,0 +1,54 @@
+{
+  "changelog": "Add auto-capture phase: replicates Claude Code auto memory. Haiku scans each turn for corrections/preferences/decisions and stages them in real time. Consolidation now also mines session JSONL transcripts. Added enableCapture, captureModel, intervalHours config fields.",
+  "created_at": 1774407866513,
+  "display_name": "Memory Dream",
+  "fetched_at": 1787850085750,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "index.ts",
+    "openclaw.plugin.json",
+    "package.json",
+    "skill-card.md",
+    "src/capture.ts",
+    "src/consolidate.ts",
+    "src/lock.ts",
+    "src/scheduler.ts",
+    "src/state.ts",
+    "src/transcript.ts",
+    "tsconfig.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090296231,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Mitch Davis",
+    "handle": "mitchelldavis44",
+    "user_id": "s17bnt8jz52xmnv7qptde7e06n83k15c"
+  },
+  "slug": "openclaw-memory-dream",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-memory-dream",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-memory-dream&ownerHandle=mitchelldavis44",
+    "page_url": "https://clawhub.ai/mitchelldavis44/skills/openclaw-memory-dream"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 827,
+    "installs": 21,
+    "stars": 1,
+    "versions": 6
+  },
+  "summary": "Auto-consolidates agent memory files after sessions \u2014 like REM sleep for AI agents. Prevents MEMORY.md from growing unbounded by using an LLM to prune stale...",
+  "updated_at": 1778492175875,
+  "version": "1.1.0"
+}
