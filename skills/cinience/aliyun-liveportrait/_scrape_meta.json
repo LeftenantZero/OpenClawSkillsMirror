@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of aliyun-liveportrait skill for generating lightweight talking-head videos with Alibaba Cloud LivePortrait.\n\n- Supports detection and animation of portrait images synced to speech audio for long-form or presenter-style videos.\n- Exposes a normalized interface for both detection and video generation, with key parameters like template, motion strength, and FPS.\n- Requires public image/audio URLs and API key setup for use in the Beijing region.\n- Outputs payloads and processing snapshots to the `output/aliyun-liveportrait/` directory for traceability.\n- Provides usage guidance: ideal for longer, broadcast-style clips and straightforward presenter motion.",
+  "created_at": 1775073734992,
+  "display_name": "Alibaba Cloud AI Video LivePortrait",
+  "fetched_at": 1787835510322,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/sources.md",
+    "scripts/prepare_liveportrait_request.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "cinience",
+    "handle": "cinience",
+    "user_id": "s1707avh05gnzr3g6e3m9ka6fh840rtd"
+  },
+  "slug": "aliyun-liveportrait",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aliyun-liveportrait",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aliyun-liveportrait&ownerHandle=cinience",
+    "page_url": "https://clawhub.ai/cinience/skills/aliyun-liveportrait"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 548,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when generating lightweight talking-head portrait videos with Alibaba Cloud Model Studio LivePortrait (`liveportrait`) from a detected portrait image and...",
+  "updated_at": 1778492356127,
+  "version": "1.0.0"
+}
