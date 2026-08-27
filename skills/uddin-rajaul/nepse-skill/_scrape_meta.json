@@ -1,0 +1,38 @@
+{
+  "changelog": "Initial release: Adaptive NEPSE stock analysis skill for Nepal.\n\n- Provides technical analysis, fundamentals, and market alerts for NEPSE stocks.\n- Adapts all indicators (EMA, RSI, ADX, OBV) to limited or new stock data; transparently notes data quality.\n- Offers watchlist management and price alerts, with instructions for cron-based daily alerting.\n- Returns structured, NEPSE-specific analysis with strong risk disclaimers.\n- Scrapes data from Merolagani; falls back to Sharesansar if needed.\n- Requires Python3 and installs dependencies automatically if missing.",
+  "created_at": 1776264797571,
+  "display_name": "Nepse Analyst",
+  "fetched_at": 1787821410902,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "data/rsi_history.json",
+    "data/watchlist.json",
+    "scripts/nepse_fetch.py",
+    "scripts/rsi_alert.py",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "uddin-rajaul",
+    "handle": "uddin-rajaul",
+    "user_id": "s172yxex7smeyq2bgdzgdnn8hn84x15x"
+  },
+  "slug": "nepse-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nepse-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nepse-skill&ownerHandle=uddin-rajaul",
+    "page_url": "https://clawhub.ai/uddin-rajaul/skills/nepse-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 674,
+    "installs": 16,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "NEPSE stock market analyst for Nepal. Use this skill whenever the user asks about NEPSE stocks, share prices, technical analysis, buy/sell signals, market al...",
+  "updated_at": 1778492606010,
+  "version": "1.0.0"
+}
