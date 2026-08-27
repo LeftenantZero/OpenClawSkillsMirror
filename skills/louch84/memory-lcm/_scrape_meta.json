@@ -1,0 +1,51 @@
+{
+  "changelog": "- Initial release of memory-lcm, a lossless context manager for OpenClaw agents\n- Stores every conversation message in a local SQLite database with zero truncation\n- Provides CLI commands for searching, recalling, compacting, summarizing, and syncing conversation history\n- Automatically syncs key decisions to MEMORY.md for easy reference\n- Supports full-text search and daily/chunk summaries while maintaining session isolation\n- No native dependencies; uses sql.js (WebAssembly), making it cross-platform",
+  "created_at": 1775792977776,
+  "display_name": "Memory Lcm",
+  "fetched_at": 1787826252441,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "bin/tony-lcm.js",
+    "package-lock.json",
+    "package.json",
+    "skill-card.md",
+    "src/db.js",
+    "src/index.js",
+    "src/memory-sync.js",
+    "src/messages.js",
+    "src/search.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090362965,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "luke",
+    "handle": "louch84",
+    "user_id": "s175b3977s1r0vtg1vdvm7s8z983pkng"
+  },
+  "slug": "memory-lcm",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memory-lcm",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memory-lcm&ownerHandle=louch84",
+    "page_url": "https://clawhub.ai/louch84/skills/memory-lcm"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 575,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Stores and manages complete conversation history with searchable SQLite storage, chunked and daily summaries, and auto-syncs key decisions to MEMORY.md.",
+  "updated_at": 1778492510391,
+  "version": "1.0.0"
+}
