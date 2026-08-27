@@ -1,0 +1,37 @@
+{
+  "changelog": "Version 2.2.0\n\n- Introduces backend agent data encryption using a MK\u2192KEK\u2192DEK key hierarchy for Node.js environments.\n- Encrypts and partitions all keys; never stores cleartext keys, boosting security.\n- Implements \"Local Manual Mode\" with persistent local metadata and no network requests.\n- Requires a user passphrase to unlock keys after every server reboot.\n- Ensures multi-user/channel cryptographic separation for secure, concurrent backend operations.",
+  "created_at": 1776522796451,
+  "display_name": "Backendenc",
+  "fetched_at": 1787819028035,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "metadata.json",
+    "references/storage-keys.md",
+    "scripts/encryption-service.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "anydefai",
+    "handle": "anydefai",
+    "user_id": "s17cgjhh2a0rwc756tgbr6yk41843g2b"
+  },
+  "slug": "backendenc",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/backendenc",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=backendenc&ownerHandle=anydefai",
+    "page_url": "https://clawhub.ai/anydefai/skills/backendenc"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 638,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Backend Agent Data Encryption. High-security MK->KEK->DEK hierarchy for backend environments.",
+  "updated_at": 1778492654490,
+  "version": "2.2.0"
+}
