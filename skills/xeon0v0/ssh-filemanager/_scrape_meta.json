@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of Tailnet SSH File Manager.\n\n- Enables file management on remote machines over Tailscale SSH (Tailnet) from OpenClaw Gateway to OpenClaw Nodes.\n- Supports listing, reading, writing, deleting, moving, copying, searching, permission changes, and file transfers via ssh/scp/sftp.\n- Automatically switches to scp for files larger than 3KB or binary data, addressing OpenClaw invoke payload limits.\n- Includes safety checks: always confirm destructive actions, enforce path sanitization, and provide connection diagnostics.\n- Handles common edge cases such as offline hosts, permission errors, and missing dependencies.",
+  "created_at": 1776237497766,
+  "display_name": "ssh_file_manager",
+  "fetched_at": 1787795172945,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/ssh_file_manager.py",
+    "scripts/ssh_tunnel.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090438372,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "XEON0v0",
+    "handle": "xeon0v0",
+    "user_id": "s1767nghgbm59yxkvdg5ph87v984e7ws"
+  },
+  "slug": "ssh-filemanager",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ssh-filemanager",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ssh-filemanager&ownerHandle=xeon0v0",
+    "page_url": "https://clawhub.ai/xeon0v0/skills/ssh-filemanager"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 577,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Manage files on remote machines over Tailscale SSH (Tailnet). Use this skill when the user needs to list, read, write, delete, move, copy, search, chmod, pus...",
+  "updated_at": 1779075934062,
+  "version": "1.0.0"
+}
