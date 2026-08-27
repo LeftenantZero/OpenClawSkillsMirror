@@ -1,0 +1,55 @@
+{
+  "changelog": "- Added TLS control: new TRUENAS_VERIFY_TLS environment variable lets you enforce or relax certificate validation for TrueNAS connections.\n- Declared required environment variables and system binaries in skill metadata for compatibility checks.\n- Updated documentation to clarify security posture and TLS/self-signed certificate handling.\n- Added homepage field to metadata.",
+  "created_at": 1770667293770,
+  "display_name": "Truenas Skill",
+  "fetched_at": 1787792929530,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "package-lock.json",
+    "package.json",
+    "references/app-installation.md",
+    "references/bookmarks.md",
+    "references/books-and-media.md",
+    "references/downloads.md",
+    "references/homelab-services.md",
+    "references/media-management.md",
+    "scripts/dockge-list.mjs",
+    "scripts/dockge-update.mjs",
+    "scripts/truenas-ws.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779963140940,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "anotb",
+    "handle": "anotb",
+    "user_id": "s17atnr1t0kk7477t45yeva22n8845aj"
+  },
+  "slug": "truenas-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/truenas-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=truenas-skill&ownerHandle=anotb",
+    "page_url": "https://clawhub.ai/anotb/skills/truenas-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2555,
+    "installs": 81,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "Manage TrueNAS SCALE via API. Check pool health, manage datasets and snapshots, monitor alerts, control services, manage apps, orchestrate Dockge container stacks, and manage bookmarks. Use when the user asks about their NAS, storage, backups, containers, bookmarks, or homelab services.",
+  "updated_at": 1779076757268,
+  "version": "1.2.0"
+}
