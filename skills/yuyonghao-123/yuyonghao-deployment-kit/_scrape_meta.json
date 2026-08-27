@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of Deployment Kit Skill.\n\n- Provides Docker-based containerization with multi-stage builds for optimal image size.\n- Supports one-click full stack deployment using Docker Compose.\n- Integrates CI/CD pipelines via GitHub Actions (build, test, deploy).\n- Includes health checks for gateway, disk, memory, and logs.\n- Features security scanning with Trivy.\n- Optional monitoring stack with Prometheus and Grafana.\n- Detailed setup instructions and configuration guidance.",
+  "created_at": 1774579465946,
+  "display_name": "Deployment Kit",
+  "fetched_at": 1787845642124,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "docker/docker-compose.yml",
+    "package.json",
+    "scripts/health-check.js",
+    "skill-card.md",
+    "src/deploy-manager.js",
+    "test/deploy-test.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090144982,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yuyonghao-123",
+    "handle": "yuyonghao-123",
+    "user_id": "s173qtadqbwthef9dwg283f54n83np6t"
+  },
+  "slug": "yuyonghao-deployment-kit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/yuyonghao-deployment-kit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=yuyonghao-deployment-kit&ownerHandle=yuyonghao-123",
+    "page_url": "https://clawhub.ai/yuyonghao-123/skills/yuyonghao-deployment-kit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 660,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u63d0\u4f9b\u57fa\u4e8e Docker \u548c GitHub Actions \u7684\u591a\u9636\u6bb5\u6784\u5efa\u3001CI/CD \u6d41\u6c34\u7ebf\u548c\u5065\u5eb7\u68c0\u67e5\u7684\u751f\u4ea7\u90e8\u7f72\u5957\u4ef6\u3002",
+  "updated_at": 1778492228204,
+  "version": "0.1.0"
+}
