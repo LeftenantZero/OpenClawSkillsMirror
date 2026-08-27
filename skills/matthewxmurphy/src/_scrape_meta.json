@@ -1,0 +1,49 @@
+{
+  "changelog": "- Initial public documentation for *mac-node-bridge*, enabling Linux OpenClaw gateways to securely run macOS-only tools through SSH wrappers on connected Mac nodes.\n- Details workflow for wrapper installation, verification, and publishing wrapper-aware skills without patching OpenClaw core.\n- Lists requirements, supported tools, and security rules for using Mac nodes as remote execution targets.\n- Provides common usage patterns and strong trust model recommendations.\n- Includes scripts for dynamic installation and verification of remote macOS binaries.",
+  "created_at": 1774039191638,
+  "display_name": "Mac Node Bridge",
+  "fetched_at": 1787859782776,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/publish-pattern.md",
+    "references/security-model.md",
+    "scripts/install-preset.sh",
+    "scripts/install-wrapper.sh",
+    "scripts/verify-node-tool.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090011835,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Matthew Murphy",
+    "handle": "matthewxmurphy",
+    "user_id": "s17e4vez0qmckg0a0a8j3sq4rd885nyq"
+  },
+  "slug": "src",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/src",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=src&ownerHandle=matthewxmurphy",
+    "page_url": "https://clawhub.ai/matthewxmurphy/skills/src"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 755,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Bridge macOS-only tools into a Linux OpenClaw gateway via SSH wrappers and connected Mac nodes. Use when a Linux gateway needs to run imsg, remindctl, memo,...",
+  "updated_at": 1778492072793,
+  "version": "0.6.1"
+}
