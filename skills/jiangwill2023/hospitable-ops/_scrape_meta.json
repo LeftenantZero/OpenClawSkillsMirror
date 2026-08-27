@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of hospitable-ops: unified operation and automation toolkit for Hospitable via public API.\n\n- Read-first, safe-write workflow for properties, reservations, calendar, and operational logic.\n- Supports only non-price calendar actions: blocking/unblocking dates, check-in/check-out restrictions.\n- MCP removed from workflow\u2014hospitable API v2 is now the sole automation path.\n- Operates via local scripts and persistent config; prefer `.env.local` for repeatable execution.\n- Price/money actions are human-only; writes may be asynchronous\u2014verify changes after delay.\n- CLI contract and API behavior strictly documented for reliable property/calendar management.",
+  "created_at": 1777188322489,
+  "display_name": "Hospitable Ops",
+  "fetched_at": 1787814510937,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/hospitable-read.js",
+    "scripts/hospitable-write-probe.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090556504,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jiangwill2023",
+    "handle": "jiangwill2023",
+    "user_id": "s176dmskg9f2420hgcd84mmpqx85j318"
+  },
+  "slug": "hospitable-ops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hospitable-ops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hospitable-ops&ownerHandle=jiangwill2023",
+    "page_url": "https://clawhub.ai/jiangwill2023/skills/hospitable-ops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 546,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Operate and automate Hospitable properties, reservations, and calendars with safe read-first API workflow, focusing on non-price calendar controls and write...",
+  "updated_at": 1778492758205,
+  "version": "1.0.0"
+}
