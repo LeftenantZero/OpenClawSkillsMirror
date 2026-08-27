@@ -1,0 +1,46 @@
+{
+  "changelog": "- Added SkillSentry v1.1.0 featuring OpenClaw security audits and prompt injection detection.\n- Produces a detailed JSON report on security posture and vulnerabilities.\n\n**Checks:**\n\u2705 Every line for PI + tool abuse\n\u2705 Exposed API keys\n\u2705 New files + ports\n\u2705 Plain logs\n\n**UI:**\n\ud83d\udd0d SCAN\n- Includes a local panel server for scan management, configuration, and log review.\n- Supports customizable scan frequency, alert types (e.g., Telegram), and detection sensitivity via config.\n- All operations are local; no external network calls.",
+  "created_at": 1770840235616,
+  "display_name": "SkillSentryOpenClaw's Always\u2011On Security Cop",
+  "fetched_at": 1787792625651,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/panel.html",
+    "references/threats.md",
+    "scripts/audit.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779971025597,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Poolguy24",
+    "handle": "poolguy24",
+    "user_id": "s178819y7gp5b4aw9bps2j8y5d885cwf"
+  },
+  "slug": "skillsentry",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skillsentry",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skillsentry&ownerHandle=poolguy24",
+    "page_url": "https://clawhub.ai/poolguy24/skills/skillsentry"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2123,
+    "installs": 67,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "OpenClaw security audit + prompt injection detector. Scans gateway/vulns/cron/PI patterns. Use for frenzy-proofing installs.",
+  "updated_at": 1779076863269,
+  "version": "1.1.0"
+}
