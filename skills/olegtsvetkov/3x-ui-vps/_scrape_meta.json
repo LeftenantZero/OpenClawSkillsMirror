@@ -1,0 +1,53 @@
+{
+  "changelog": "**Changelog for 1.1.0**\n\n- Added `disable-model-invocation: true` to skill metadata to prevent automatic invocation; now requires explicit user request before running.\n- Clarified that usage is manual-first and should only be invoked on explicit user action for deploy, repair, hardening, or update scenarios.\n- Updated compatibility and requirements section for clarity: now explicit about binaries required (`bash`, `python3`, `ssh`) and outbound internet access.\n- Streamlined and updated the description and metadata fields.\n- Minor improvements to skill documentation for accuracy and operator workflow guidance.",
+  "created_at": 1774262329017,
+  "display_name": "Deploy Xray VLESS using 3X UI on your VPS",
+  "fetched_at": 1787797338400,
+  "files": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/architecture.md",
+    "references/manual-bootstrap.md",
+    "scripts/add-inbound-client.py",
+    "scripts/bootstrap-host.sh",
+    "scripts/bootstrap-inbound.py",
+    "scripts/open-panel-tunnel.sh",
+    "scripts/ssh-with-password.sh",
+    "scripts/update-stack.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090090101,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "olegtsvetkov",
+    "handle": "olegtsvetkov",
+    "user_id": "s1735ep6mzsg3ytwtn2nbht87n83fz16"
+  },
+  "slug": "3x-ui-vps",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/3x-ui-vps",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=3x-ui-vps&ownerHandle=olegtsvetkov",
+    "page_url": "https://clawhub.ai/olegtsvetkov/skills/3x-ui-vps"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 927,
+    "installs": 22,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Deploy and manage 3X-UI on a root-managed Ubuntu or Debian VPS using Docker Compose, nginx, ACME certificates, SSH panel tunneling, UFW hardening, and Xray V...",
+  "updated_at": 1779074401288,
+  "version": "1.1.0"
+}
