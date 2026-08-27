@@ -1,0 +1,36 @@
+{
+  "changelog": "alibabacloud-dts-task-query v0.0.1\n\n- Initial release supporting comprehensive DTS task querying across all Alibaba Cloud regions.\n- Queries all 27 regions and 3 job types (Migration, Sync, Subscribe) with strict PayType filtering.\n- Outputs complete, grouped Chinese reports including every task (no truncation or summarization).\n- Enhanced reliability: API retry logic (up to 3 times), 10s timeout, exponential backoff (0.2s, 0.4s).\n- Parallel execution using configurable worker threads, achieving up to 8x faster results.",
+  "created_at": 1778033400865,
+  "display_name": "Alibabacloud Dts Task Query",
+  "fetched_at": 1787810030043,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ram-policies.md",
+    "scripts/query_dts_tasks.py",
+    "scripts/verify_compliance.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-dts-task-query",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-dts-task-query",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-dts-task-query&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-dts-task-query"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 595,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query DTS (Data Transmission Service) task status and details across all Alibaba Cloud regions. **v12.1: Enhanced reliability** - Timeout increased to 10s, e...",
+  "updated_at": 1778492854429,
+  "version": "0.0.1"
+}
