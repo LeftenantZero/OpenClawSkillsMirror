@@ -1,0 +1,42 @@
+{
+  "changelog": "# Changelog\n\nAll notable changes to `knowledge-health-checker` will be documented in this file.\n\n## [1.1.0] - 2026-04-25\n\n### Added\n\n- Added ClawHub-ready metadata and public-facing skill positioning.\n- Added a complete Markdown knowledge-base health audit workflow:\n  - confirm scan scope and safety\n  - build file and heading index\n  - detect hollow or low-value notes\n  - detect broken wiki and markdown links\n  - analyze content density and structure\n  - analyze knowledge graph connectivity\n  - calculate a health score\n  - generate a report and safe fix plan\n- Added support guidance for multiple knowledge-base formats:\n  - Obsidian vaults\n  - Logseq exports\n  - Notion Markdown exports\n  - documentation repositories\n  - plain Markdown wiki folders\n- Added a 0-100 knowledge health scoring model.\n- Added health labels:\n  - Excellent\n  - Healthy\n  - Needs maintenance\n  - Fragile\n  - Critical\n- Added a safe fix policy with three risk levels:\n  - Low-risk reporting and suggestions\n  - Medium-risk generated fix plans\n  - High-risk destructive or global changes requiring explicit confirmation\n- Added a standard output format for:\n  - health summary\n  - findings\n  - highest-impact fixes\n  - safe fix plan\n  - generated artifacts\n- Added Darwin-style regression prompts in `test-prompts.json`.\n\n### Improved\n\n- Reframed the skill as a general-purpose Markdown knowledge-base health auditor instead of an internal-only checker.\n- Improved safety guidance so the default behavior is now:\n\n  ```text\n  scan only \u2192 report only \u2192 generate fix plan \u2192 user reviews \u2192 user applies\nImproved audit clarity by separating knowledge-base health into four dimensions:\nhollow note rate\nbroken link rate\ncontent density\nnetwork connectivity\nImproved scalability guidance for large knowledge bases.\nImproved compatibility guidance for non-English filenames and mixed Markdown conventions.\nImproved output usefulness by requiring prioritized P0 / P1 / P2 repair suggestions.\nChanged\n\nReorganized the original long workflow into a cleaner ClawHub-friendly structure.\nChanged \u201cautomatic repair\u201d guidance into a safer reviewed fix-plan workflow.\nMoved the skill from a local archived copy into the active skills directory:\nCopy\n/Users/mac/.openclaw/skills/knowledge-health-checker\nVerified\n\nRan a smoke test using a temporary Markdown knowledge-base sample.\nVerified that the bundled scanner can process Markdown files and generate health output.\nCommand used:\nCopy\npython3 scripts/health_check.py <tmp-sample>\nResult:\nCopy\n\u626b\u63cf\u5b8c\u6210\uff1a\u53d1\u73b0 3 \u4e2aMarkdown\u6587\u4ef6\n\u68c0\u67e5\u5b8c\u6210\uff01\u5065\u5eb7\u5206\uff1a27.0\nFiles\n\nUpdated SKILL.md\nAdded CHANGELOG.md\nAdded test-prompts.json\nVerified scripts/health_check.py",
+  "created_at": 1777095896700,
+  "display_name": "knowledge-health-checker",
+  "fetched_at": 1787814940212,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "code-review-report.md",
+    "darwin-evaluation.md",
+    "evaluation.md",
+    "final-evaluation.md",
+    "scripts/auto_fix.py",
+    "scripts/health_check.py",
+    "scripts/report_generator.py",
+    "skill-card.md",
+    "test-prompts.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "xb19960921",
+    "handle": "xb19960921",
+    "user_id": "s172f3jjxf40vh438bf24d3cj983g86d"
+  },
+  "slug": "knowledge-health-checker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/knowledge-health-checker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=knowledge-health-checker&ownerHandle=xb19960921",
+    "page_url": "https://clawhub.ai/xb19960921/skills/knowledge-health-checker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 588,
+    "installs": 14,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Audit and improve Markdown knowledge-base health across Obsidian, Logseq, Notion exports, docs folders, and wiki repositories. Detect empty placeholder notes...",
+  "updated_at": 1778492746400,
+  "version": "1.0.1"
+}
