@@ -1,0 +1,47 @@
+{
+  "changelog": "- Added a dedicated reference file: references/mcp.md, clarifying MCP/runtime guidance and safety handling.\n- Updated SKILL.md to clarify trigger phrases and strictly separate workflow from runtime execution details.\n- Made API key requirements conditional, reflecting that providing the KYC portal link doesn't require authentication unless user-state queries are involved.\n- Instructs users and runtime to always follow references/mcp.md for execution logic and boundaries.",
+  "created_at": 1774685786920,
+  "display_name": "Gate Exchange KYC Portal Skill",
+  "fetched_at": 1787843014180,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/mcp.md",
+    "references/scenarios.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090247735,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Gate",
+    "handle": "gate-exchange",
+    "user_id": "s172g4d1dcv6ccs6desbb2xw1583qza9"
+  },
+  "slug": "gate-exchange-kyc",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gate-exchange-kyc",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gate-exchange-kyc&ownerHandle=gate-exchange",
+    "page_url": "https://clawhub.ai/gate-exchange/skills/gate-exchange-kyc"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 723,
+    "installs": 18,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Gate KYC portal routing skill. Use when the user asks to verify identity, complete KYC, or fix withdrawal blocks. Triggers on 'complete KYC', 'verify identit...",
+  "updated_at": 1778492258038,
+  "version": "1.0.1"
+}
