@@ -1,0 +1,47 @@
+{
+  "changelog": "v1.3.0 - adds scripts/compare-runs.sh, side-by-side comparison of two self-improvement runs. Reads key fields from each run's run-info.md, baseline.md, proposal.md, validation.md, and outcome.md, prints a row-per-field table that flags divergences with a '*' marker, computes an aggregate verdict (identical/diverged) and an outcome_progression (same/improved/regressed/changed/n/a) so CI can branch on whether the second iteration actually improved on the first. Supports --json for dashboards. Exit 0 identical, 1 diverged, 2 on argument errors or missing artifacts. 9 end-to-end tests cover divergence detection, identical-run case, JSON shape, progression direction (improved/regressed/same), missing args, non-existent dir, partial-artifact dir, --help. No breaking changes - every v1.2.0 CLI flag and contract preserved.",
+  "created_at": 1775124448823,
+  "display_name": "OpenClaw Self-Improve",
+  "fetched_at": 1787807722456,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/output-contract.md",
+    "references/playbooks.md",
+    "scripts/backup-repo.sh",
+    "scripts/compare-runs.sh",
+    "scripts/detect-validation-gate.sh",
+    "scripts/export-improvement-run-json.py",
+    "scripts/init-improvement-run.sh",
+    "scripts/list-runs.sh",
+    "scripts/logging-utils.sh",
+    "scripts/set-status.sh",
+    "scripts/summarize-run.sh",
+    "scripts/validate-improvement-run.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Gopendra Sharma",
+    "handle": "gopendrasharma89-tech",
+    "user_id": "s17cp87fy279ggwne1mqcb6675843tdy"
+  },
+  "slug": "openclaw-self-improve",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-self-improve",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-self-improve&ownerHandle=gopendrasharma89-tech",
+    "page_url": "https://clawhub.ai/gopendrasharma89-tech/skills/openclaw-self-improve"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1269,
+    "installs": 33,
+    "stars": 1,
+    "versions": 12
+  },
+  "summary": "Evidence-based, approval-gated self-improvement workflow for OpenClaw. Use when the user asks to make OpenClaw or any project more reliable, faster, cheaper,...",
+  "updated_at": 1778683606930,
+  "version": "1.3.0"
+}
