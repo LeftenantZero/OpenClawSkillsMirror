@@ -1,0 +1,63 @@
+{
+  "changelog": "Initial release for Gmail email reader skill:\n\n- Enables read-only access to Gmail inbox and labels via gog CLI (preferred) or Python scripts (fallback).\n- Supports searching, reading, and previewing emails; includes IMAP support.\n- Provides setup and usage instructions for both backends.\n- Returns results in JSON format, presenting sender, subject, date, and preview.\n- Includes error handling for missing dependencies, credentials, and expired tokens.\n- Conservatively returns a limited number of emails by default, with options to refine or expand queries.",
+  "created_at": 1772145654127,
+  "display_name": "gmailcleanerfall",
+  "fetched_at": 1787790868009,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "analyzer.py",
+    "auth.py",
+    "fetch_emails.py",
+    "fetch_thread.py",
+    "imap_fetch.py",
+    "list_folders.py",
+    "manage_labels.py",
+    "mnt/user-data/outputs/email-manager-v3/email-analyzer/SKILL.md",
+    "mnt/user-data/outputs/email-manager-v3/email-organizer/SKILL.md",
+    "mnt/user-data/outputs/email-manager-v3/email-reporter/SKILL.md",
+    "mnt/user-data/outputs/email-manager-v3/email-responder/SKILL.md",
+    "mnt/user-data/outputs/email-manager-v3/email-scheduler/SKILL.md",
+    "organizer.py",
+    "phishing_check.py",
+    "reporter.py",
+    "responder.py",
+    "rules_engine.py",
+    "scheduler.py",
+    "skill-card.md",
+    "summarize_thread.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779963185951,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Coorops25",
+    "handle": "coorops25",
+    "user_id": "s1781rdcmtg40a3s1knpex0xs9885ne3"
+  },
+  "slug": "gmailcleanerv2",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gmailcleanerv2",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gmailcleanerv2&ownerHandle=coorops25",
+    "page_url": "https://clawhub.ai/coorops25/skills/gmailcleanerv2"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1065,
+    "installs": 32,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read/search Gmail via gog CLI (preferred) or Python scripts (fallback). Inbox check, email search, content retrieval, IMAP support.",
+  "updated_at": 1779077438222,
+  "version": "1.0.0"
+}
