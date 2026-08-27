@@ -1,0 +1,54 @@
+{
+  "changelog": "**Summary:**\nThis version adds full documentation of all system accesses, config requirements, and background processes to the skill's metadata for greater security transparency.\n\n- Expanded metadata to detail all files read/written, background processes, and required gateway/tool permissions.\n- Added a new \"Security & Transparency\" section explaining every file, process, and permission the skill uses.\n- Now documents the use of `--dangerously-skip-permissions`, directory access boundaries, and rationale.\n- Lists required user-side config changes for OpenClaw integration, with JSON examples.\n- No code changes detected; all updates are to documentation and metadata for transparency and user clarity.",
+  "created_at": 1775451339820,
+  "display_name": "Claw2Claude",
+  "fetched_at": 1787796368506,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/check_token.py",
+    "scripts/find_session.py",
+    "scripts/heartbeat.py",
+    "scripts/launch.sh",
+    "scripts/log_entry.py",
+    "scripts/notifier.py",
+    "scripts/parse_stream.py",
+    "scripts/projects.py",
+    "scripts/read_session.py",
+    "scripts/write_session.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090333071,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u5c0f\u767d",
+    "handle": "is-xins-xiaobai",
+    "user_id": "s172tp4s5nf8cg185rj65rkxe984bht0"
+  },
+  "slug": "claw2claude",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claw2claude",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claw2claude&ownerHandle=is-xins-xiaobai",
+    "page_url": "https://clawhub.ai/is-xins-xiaobai/skills/claw2claude"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 699,
+    "installs": 17,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Delegates tasks to the local Claude Code CLI. Activate immediately when the user asks for Claude, requests a stronger model, or mentions an existing project...",
+  "updated_at": 1779075488890,
+  "version": "1.2.0"
+}
