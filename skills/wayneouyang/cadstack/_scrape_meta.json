@@ -1,0 +1,76 @@
+{
+  "changelog": "Initial release of CADStack: natural language CAD automation for multiple platforms.\n\n- Enables control of AutoCAD, SolidWorks, Fusion 360, and FreeCAD via plain language commands.\n- Includes core skills: `/cad` (create/modify/export), `/cad-plan`, `/cad-review`, `/cad-qa`, and `/cad-config`.\n- Features script safety validation, platform-agnostic commands, and output verification.\n- Supports headless mode for FreeCAD; requires installed/running software for others.\n- Quick setup guide and user journey provided for smooth onboarding.",
+  "created_at": 1774248286470,
+  "display_name": "CADStack - CAD Automation Skill Pack",
+  "fetched_at": 1787854224780,
+  "files": [
+    "DESIGN.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "lib/assembly.py",
+    "lib/backends/__init__.py",
+    "lib/backends/autocad.py",
+    "lib/backends/base.py",
+    "lib/backends/cadquery.py",
+    "lib/backends/freecad.py",
+    "lib/backends/fusion360.py",
+    "lib/backends/solidworks.py",
+    "lib/bridge/fusion360_bridge.py",
+    "lib/cad_executor.py",
+    "lib/drawing.py",
+    "lib/exceptions.py",
+    "lib/materials.py",
+    "lib/parts_library/__init__.py",
+    "lib/templates.py",
+    "lib/utils/__init__.py",
+    "lib/utils/helpers.py",
+    "skill-card.md",
+    "skills/cad-config.md",
+    "skills/cad-plan.md",
+    "skills/cad-qa.md",
+    "skills/cad-review.md",
+    "skills/cad.md",
+    "templates/autocad/basic_box.py",
+    "templates/cadquery/basic_box.py",
+    "templates/freecad/basic_box.py",
+    "templates/freecad/basic_cylinder.py",
+    "templates/freecad/enclosure.py",
+    "templates/freecad/gear.py",
+    "templates/freecad/mounting_bracket.py",
+    "templates/fusion360/basic_box.py",
+    "templates/solidworks/basic_box.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090046169,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "WayneOuyang",
+    "handle": "wayneouyang",
+    "user_id": "s178yfwttgfxmj0wec4gcdk9nh884km0"
+  },
+  "slug": "cadstack",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cadstack",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cadstack&ownerHandle=wayneouyang",
+    "page_url": "https://clawhub.ai/wayneouyang/skills/cadstack"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1436,
+    "installs": 38,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Generate, execute, and verify CAD scripts across FreeCAD, AutoCAD, SolidWorks, and Fusion 360 using natural language commands with safety checks.",
+  "updated_at": 1778492127920,
+  "version": "1.0.0"
+}
