@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of the \u201cgenerate-judgements\u201d skill for test config automation.\n\n- Analyzes a skill\u2019s SKILL.md and reference files to extract workflow steps, output rules, and behavior requirements.\n- Infers execution \u201cscopes\u201d (distinct behavioral paths) with user confirmation.\n- Generates detailed, one-per-requirement judge definitions per scope, following standardized naming and clarity guidelines.\n- Groups judgements by category (loading, workflow, output, scope-specific, compliance), including negative checks.\n- Interactive workflow ensures user review before finalizing judgements.",
+  "created_at": 1778416616441,
+  "display_name": "Generate Judgements",
+  "fetched_at": 1787808792658,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/judgement-patterns.md",
+    "references/yaml-config-spec.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "panlm",
+    "handle": "panlm",
+    "user_id": "s170tnbkqyrrzzgez8ybwx5vcs86edhj"
+  },
+  "slug": "generate-judgements",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/generate-judgements",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=generate-judgements&ownerHandle=panlm",
+    "page_url": "https://clawhub.ai/panlm/skills/generate-judgements"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 513,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when creating or updating test judgement definitions (judge_definitions) for an agent skill evaluation YAML config. Analyzes a skill's SKILL.md and refer...",
+  "updated_at": 1778492892498,
+  "version": "1.0.0"
+}
