@@ -1,0 +1,50 @@
+{
+  "changelog": "- Initial release of the \u98de\u4e66\u4efb\u52a1\u5bf9\u63a5\u96c6\u6210 skill.\n- Enables automatic two-way synchronization of local to-do tasks with Feishu Tasks.\n- Supports natural language time parsing for task deadlines (e.g., \"\u4eca\u5929\", \"\u660e\u5929\", \"\u4e0b\u53483\u70b9\").\n- Allows assignment of task owner and followers, supporting multi-user collaboration.\n- Synchronizes task completion status between local and Feishu platforms.\n- Detailed configuration and troubleshooting guidelines included.",
+  "created_at": 1772274205404,
+  "display_name": "feishu-task-integration-skill",
+  "fetched_at": 1787801552418,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/feishu_config_template.json",
+    "references/api_guide.md",
+    "references/configuration.md",
+    "scripts/feishu_task_integration.py",
+    "scripts/feishu_task_integration_clean.py",
+    "scripts/todo_handler.py",
+    "scripts/todo_handler_clean.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967055972,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "showdownagain",
+    "handle": "showdownagain",
+    "user_id": "s17dg06n5mj2ptx7sa1jbjq44h884srp"
+  },
+  "slug": "feishu-task-integration-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-task-integration-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-task-integration-skill&ownerHandle=showdownagain",
+    "page_url": "https://clawhub.ai/showdownagain/skills/feishu-task-integration-skill"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 1250,
+    "installs": 40,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u98de\u4e66\u4efb\u52a1\u5bf9\u63a5\u96c6\u6210\u6280\u80fd\uff0c\u5b9e\u73b0\u5f85\u529e\u4e8b\u9879\u4e0e\u98de\u4e66\u4efb\u52a1\u7684\u53cc\u5411\u540c\u6b65\u3002\u81ea\u52a8\u521b\u5efa\u98de\u4e66\u4efb\u52a1\u3001\u667a\u80fd\u89e3\u6790\u65f6\u95f4\u8868\u8fbe\u5f0f\u3001\u8bbe\u7f6e\u4efb\u52a1\u8d1f\u8d23\u4eba\uff0c\u652f\u6301\u4efb\u52a1\u72b6\u6001\u540c\u6b65\u548c\u5b8c\u6210\u7ba1\u7406\u3002\u4f7f\u7528\u573a\u666f\uff1a\u9700\u8981\u5c06\u672c\u5730\u5f85\u529e\u4e8b\u9879\u540c\u6b65\u5230\u98de\u4e66\u4efb\u52a1\u3001\u8bbe\u7f6e\u4efb\u52a1\u622a\u6b62\u65f6\u95f4\u3001\u6307\u6d3e\u4efb\u52a1\u8d1f\u8d23\u4eba\u3001\u8ddf\u8e2a\u4efb\u52a1\u5b8c\u6210\u72b6\u6001\u3002",
+  "updated_at": 1778993916179,
+  "version": "1.0.0"
+}
