@@ -1,0 +1,48 @@
+{
+  "changelog": "financeethnographer 1.0.0 \u2013 passive, privacy-first finance UX observation\n\n- Introduces an always-on observer for finance-related UX patterns in session transcripts, running locally every 30 minutes.\n- Automatically compiles daily finance usage and UX insight reports with enforced PII redaction; nothing is shared unless explicitly reviewed and approved by the user.\n- Tracks key finance topics (e.g., investing, budgeting, taxes) and UX signals (confusion, delight, friction, etc.) for improved experience insights.\n- Scripts are installed once via cron for automated logging, report synthesis, and redaction verification.\n- Provides clear troubleshooting instructions and enforces local-only data storage and sharing limits to protect user privacy.",
+  "created_at": 1772668144092,
+  "display_name": "finance-ethnographer",
+  "fetched_at": 1787790075470,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "data/finance_taxonomy.yml",
+    "scripts/daily_synthesize.py",
+    "scripts/observe_finance_usage.py",
+    "scripts/redact_reports.py",
+    "scripts/setup_cron.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089758420,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "dflam1",
+    "handle": "dflam1",
+    "user_id": "s170ze5ma2g75rqwhxyy9a36z98856rz"
+  },
+  "slug": "finance-ethnographer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/finance-ethnographer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=finance-ethnographer&ownerHandle=dflam1",
+    "page_url": "https://clawhub.ai/dflam1/skills/finance-ethnographer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 968,
+    "installs": 29,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Always-on finance UX research. Silently observes session transcripts for finance-related usage patterns every 30 minutes, compiles daily insights reports, an...",
+  "updated_at": 1779077698827,
+  "version": "1.0.0"
+}
