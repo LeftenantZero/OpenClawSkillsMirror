@@ -1,0 +1,40 @@
+{
+  "changelog": "Initial release of verify-matrix-device:\n\n- Verifies and cross-signs the active Matrix device for a specified OpenClaw-managed account.\n- Prompts user for missing inputs, manages dependencies, and uses secure recovery key entry.\n- Utilizes existing `openclaw.json` access token; does not generate or use temporary devices for OpenClaw.\n- Reports on device verification status, confirming if already cross-signed or newly signed.\n- Supports advanced options for local testing, including direct access token and password-based flows.",
+  "created_at": 1772464049802,
+  "display_name": "Verify Matrix device",
+  "fetched_at": 1787800955558,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "package-lock.json",
+    "package.json",
+    "scripts/matrix_sdk_helpers.mjs",
+    "scripts/verify_matrix_device.mjs",
+    "scripts/verify_matrix_device_sdk.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Maxime Lumeau",
+    "handle": "mlumeau",
+    "user_id": "s179jz8asgkdwtgs1n2va396eh83hfzp"
+  },
+  "slug": "verify-matrix-device",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/verify-matrix-device",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=verify-matrix-device&ownerHandle=mlumeau",
+    "page_url": "https://clawhub.ai/mlumeau/skills/verify-matrix-device"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1009,
+    "installs": 30,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Verify and cross-sign the active Matrix device for one OpenClaw-managed account. Use when a user needs to repair trust for an OpenClaw Matrix device, confirm...",
+  "updated_at": 1778994573164,
+  "version": "0.1.0"
+}
