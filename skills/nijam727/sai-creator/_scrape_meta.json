@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release of the SAI frontend builder skill for OJS/PKP journal pipelines.\n\n- Renders validated article briefs into three deliverables: semantic HTML article, 7-slide carousel (two dimensions), and optional social captions.\n- Enforces strict content and accessibility standards, including WCAG AA, alt text requirements, and maximum CSS budget.\n- Emits a unified handoff JSON with validation metrics for each output.\n- Integrates CTA rotation, hallucination guard, and explicit input contract from SENKU.\n- Supports only HTML5 with Tailwind CDN or plain CSS, prioritizing fast, accessible, and SEO-ready output.",
+  "created_at": 1778210717398,
+  "display_name": "sai creator ai",
+  "fetched_at": 1787809300854,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/article-template.html",
+    "assets/caption-templates.json",
+    "references/article-template-spec.md",
+    "references/carousel-spec.md",
+    "references/cta-variants.md",
+    "scripts/package_skill.py",
+    "scripts/quick_validate.py",
+    "scripts/render_carousel.py",
+    "scripts/validate_output.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090759592,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Nijam",
+    "handle": "nijam727",
+    "user_id": "s1741awkb2brhjsc3xg65tr7wd86avbg"
+  },
+  "slug": "sai-creator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sai-creator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sai-creator&ownerHandle=nijam727",
+    "page_url": "https://clawhub.ai/nijam727/skills/sai-creator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 488,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "SAI \u2014 frontend builder untuk pipeline intel OJS/PKP. Render candidate yang sudah PASS dari SENKU menjadi tiga deliverable. Pertama, halaman artikel HTML sema...",
+  "updated_at": 1778492876503,
+  "version": "1.0.0"
+}
