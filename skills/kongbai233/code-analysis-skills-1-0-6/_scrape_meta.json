@@ -1,0 +1,77 @@
+{
+  "changelog": "Initial release of the code-analysis skill.\n\n- Analyze Git repositories for developer commit patterns, work habits, efficiency, code style, code quality, and slacking behaviors.\n- Provides structured evaluations: generates scores, grades, strengths, weaknesses, and actionable suggestions for developers.\n- Triggered by natural language phrases in English, \u4e2d\u6587, \u65e5\u672c\u8a9e, \ud55c\uad6d\uc5b4, Espa\u00f1ol, Fran\u00e7ais, and Deutsch.\n- Outputs reports in Markdown, HTML, JSON, or PDF formats.\n- Supports scanning single repositories or all repos within a directory, as well as filtering by author, date range, and branch.\n- Includes a CLI for detailed and batch analyses with customizable output.",
+  "created_at": 1774445125995,
+  "display_name": "Code Analysis Skills 1.0.6",
+  "fetched_at": 1787848751511,
+  "files": [
+    "README.CN.md",
+    "README.EN.md",
+    "README.md",
+    "SKILL.cn.md",
+    "SKILL.md",
+    "_meta.json",
+    "pyproject.toml",
+    "pytest.ini",
+    "references/metrics-guide.md",
+    "report.md",
+    "requirements.txt",
+    "skill-card.md",
+    "skill.yaml",
+    "src/__init__.py",
+    "src/analyzers/__init__.py",
+    "src/analyzers/base_analyzer.py",
+    "src/analyzers/code_quality_analyzer.py",
+    "src/analyzers/code_style_analyzer.py",
+    "src/analyzers/commit_analyzer.py",
+    "src/analyzers/efficiency_analyzer.py",
+    "src/analyzers/slacking_analyzer.py",
+    "src/analyzers/work_habit_analyzer.py",
+    "src/evaluator/__init__.py",
+    "src/evaluator/developer_evaluator.py",
+    "src/main.py",
+    "src/reporters/__init__.py",
+    "src/reporters/base_reporter.py",
+    "src/reporters/html_reporter.py",
+    "src/reporters/json_reporter.py",
+    "src/reporters/markdown_reporter.py",
+    "src/reporters/pdf_reporter.py",
+    "src/scanner.py",
+    "src/utils/__init__.py",
+    "src/utils/helpers.py",
+    "tests/__init__.py",
+    "tests/test_analyzers.py",
+    "tests/test_scanner.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090104466,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "KongBai233",
+    "handle": "kongbai233",
+    "user_id": "s174kk80zryffgszdm9xf20r7h83g6m4"
+  },
+  "slug": "code-analysis-skills-1-0-6",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/code-analysis-skills-1-0-6",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=code-analysis-skills-1-0-6&ownerHandle=kongbai233",
+    "page_url": "https://clawhub.ai/kongbai233/skills/code-analysis-skills-1-0-6"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 663,
+    "installs": 16,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "This skill should be used when the user needs to analyze Git repositories, compare developer commit patterns, work habits, development efficiency, code style...",
+  "updated_at": 1778492186671,
+  "version": "1.0.0"
+}
