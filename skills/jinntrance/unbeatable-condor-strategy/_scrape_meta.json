@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of the unbeatable-condor-strategy skill.\n\n- Detects daily if specific stocks meet a 4% volatility threshold for triggering the Condor signal.\n- Uses LightGBM quantile regression on historic price data to predict safe and profitable short iron condor or strangle opportunities.\n- Provides recommended strike prices for selling options if a signal is triggered.\n- Advises risk management steps and allocation limits when a signal occurs.\n- Clearly informs users if the volatility threshold isn't met, suggesting no trade.",
+  "created_at": 1776613685162,
+  "display_name": "Unbeatable Condor Strategy",
+  "fetched_at": 1787818560817,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "condor_signals.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jinntrance",
+    "handle": "jinntrance",
+    "user_id": "s17e1wmadbdx8ccxwfheq13sc183fvb0"
+  },
+  "slug": "unbeatable-condor-strategy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/unbeatable-condor-strategy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=unbeatable-condor-strategy&ownerHandle=jinntrance",
+    "page_url": "https://clawhub.ai/jinntrance/skills/unbeatable-condor-strategy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 674,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Check daily if given stocks hit the 4% volatility threshold condor signal. \u65e0\u654c\u9e70\u5f0f\u7b56\u7565",
+  "updated_at": 1778492666182,
+  "version": "1.0.0"
+}
