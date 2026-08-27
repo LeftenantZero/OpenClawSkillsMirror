@@ -1,0 +1,62 @@
+{
+  "changelog": "Security fixes: remove wildcard CORS from dashboard server; add sync_hotlist config option to disable automatic hotlist download; fix documentation contradictions between auto-report and opt-in behavior; rewrite sync-trust-db.sh to use Node built-in fetch (eliminates undeclared curl/wget dependency)",
+  "created_at": 1774973135401,
+  "display_name": "Fraud Filter",
+  "fetched_at": 1787796957057,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "TECHNICAL.md",
+    "_meta.json",
+    "hooks/after-payment.sh",
+    "hooks/before-payment.sh",
+    "openclaw.plugin.json",
+    "package.json",
+    "references/signal-format.md",
+    "scripts/check-endpoint.sh",
+    "scripts/dashboard.sh",
+    "scripts/report.sh",
+    "scripts/status.sh",
+    "scripts/sync-trust-db.sh",
+    "server/hotlist-sync.js",
+    "server/index.html",
+    "server/plugin.js",
+    "server/reporter.js",
+    "server/server.js",
+    "server/trust-db.js",
+    "skill-card.md",
+    "test/test.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090485559,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mattpolly",
+    "handle": "mattpolly",
+    "user_id": "s17asmv1t6xwdrynazrs96kaj983y0fd"
+  },
+  "slug": "fraud-filter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fraud-filter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fraud-filter&ownerHandle=mattpolly",
+    "page_url": "https://clawhub.ai/mattpolly/skills/fraud-filter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 649,
+    "installs": 15,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Community trust scores for AI agent payment endpoints \u2014 checks endpoint reputation before payment and queues anonymous failure reports locally (network repor...",
+  "updated_at": 1779075205185,
+  "version": "0.4.0"
+}
