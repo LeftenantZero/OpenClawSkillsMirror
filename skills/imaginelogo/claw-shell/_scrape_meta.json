@@ -1,0 +1,44 @@
+{
+  "changelog": "claw-shell 1.0.0 initial release:\n\n- Provides an interface to run shell commands exclusively inside a tmux session named claw.\n- Always creates or attaches to the session, ensuring isolation from other tmux sessions.\n- Captures and returns command output to the agent.\n- Includes safety checks: blocks potentially dangerous commands (e.g., sudo, rm, shutdown) unless user confirms.\n- Simple, single-tool interface (`claw_shell_run`) with clear command input and safety guidance.",
+  "created_at": 1769948954608,
+  "display_name": "claw-shell",
+  "fetched_at": 1787793632712,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "handler.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783653503208,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "imaginelogo",
+    "handle": "imaginelogo",
+    "user_id": "s1712b5mb5v2nqax2rg7kvpvm98849qw"
+  },
+  "slug": "claw-shell",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claw-shell",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claw-shell&ownerHandle=imaginelogo",
+    "page_url": "https://clawhub.ai/imaginelogo/skills/claw-shell"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 14233,
+    "installs": 504,
+    "stars": 8,
+    "versions": 1
+  },
+  "summary": "Runs shell commands inside a dedicated tmux session named claw, captures, and returns the output, with safety checks for destructive commands.",
+  "updated_at": 1779076514319,
+  "version": "1.0.0"
+}
