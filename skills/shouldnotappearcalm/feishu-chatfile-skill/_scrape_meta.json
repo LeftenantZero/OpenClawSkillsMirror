@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of feishu-send-file skill \u2014 send images and files to Feishu chats with the recommended two-step API process.\n\n- Enables sending local images (JPEG, PNG, WEBP, etc.) and files (PDF, HTML, ZIP, etc.) to both private chats (ou_) and group chats (oc_) in Feishu.\n- Uses the official two-step method (upload to get key \u2192 send message) to ensure correct display in the client.\n- Automatically determines receive_id_type based on the receive_id prefix; no need to specify type manually.\n- Credentials (app_id, app_secret) are sourced from OpenClaw configuration.\n- Provides both script-based (recommended) and manual command-line instructions for sending images/files.\n- Includes troubleshooting tips and best practices for reliable file/image delivery.",
+  "created_at": 1774770419804,
+  "display_name": "feishu-chatfile-skill",
+  "fetched_at": 1787841635290,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/send_file.py",
+    "scripts/send_image.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090176933,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "calm",
+    "handle": "shouldnotappearcalm",
+    "user_id": "s1746yykccqhx5c0wye32wcx3183nm3h"
+  },
+  "slug": "feishu-chatfile-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-chatfile-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-chatfile-skill&ownerHandle=shouldnotappearcalm",
+    "page_url": "https://clawhub.ai/shouldnotappearcalm/skills/feishu-chatfile-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 524,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u98de\u4e66\u53d1\u9001\u672c\u5730\u56fe\u7247\u548c\u6587\u4ef6\u6280\u80fd\u3002\u652f\u6301\u5411\u98de\u4e66\u79c1\u804a\uff08ou_\uff09\u548c\u7fa4\u804a\uff08oc_\uff09\u53d1\u9001\u56fe\u7247\uff08JPEG/PNG/WEBP \u7b49\uff09\u53ca\u6587\u4ef6\uff08PDF/HTML/ZIP \u7b49\uff09\u3002\u91c7\u7528\u5b98\u65b9\u63a8\u8350\u7684\u4e24\u6b65\u6cd5\uff08\u4e0a\u4f20\u83b7\u53d6 key -> \u53d1\u9001\u6d88\u606f\uff09\uff0c\u786e\u4fdd\u5185\u5bb9\u5728\u98de\u4e66\u5ba2\u6237\u7aef\u6b63\u5e38\u663e\u793a\u5e76\u83b7\u5f97\u6700\u4f73\u4f53\u9a8c\u3002",
+  "updated_at": 1778492275298,
+  "version": "1.0.0"
+}
