@@ -1,0 +1,35 @@
+{
+  "changelog": "**Security hardening: Endpoint is now fixed to the official ModelScope API**\n\n- The API endpoint is now locked to `https://api-inference.modelscope.cn/` and cannot be customized.\n- All ability to set a custom base URL has been removed, eliminating risks of sending your API key or images to untrusted servers.\n- Documentation updated to clarify endpoint restrictions and reinforce user security.\n- All other usage, prerequisites, and prompt/filename conventions remain unchanged.",
+  "created_at": 1775191387717,
+  "display_name": "modelscope_img_generator",
+  "fetched_at": 1787833570269,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "manifest.yaml",
+    "scripts/generate_img.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ruifeng",
+    "handle": "windandliberty",
+    "user_id": "s17874063tbvjw67083vzb3bms845txn"
+  },
+  "slug": "modelscope-img-generator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/modelscope-img-generator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=modelscope-img-generator&ownerHandle=windandliberty",
+    "page_url": "https://clawhub.ai/windandliberty/skills/modelscope-img-generator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 652,
+    "installs": 16,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Generate images with ModelScope API. Use for image generation requests. Supports text-to-image + image-to-image; configurable models; use --input-image.",
+  "updated_at": 1778492383263,
+  "version": "1.2.0"
+}
