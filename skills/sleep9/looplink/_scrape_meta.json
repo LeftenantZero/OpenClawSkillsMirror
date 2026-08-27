@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of the Looplink skill, enabling dynamic integration with the Looplink social content organizer.\n\n- Dynamically loads and registers Looplink tools via the MCP manifest endpoint.\n- Securely creates and manages a permanent agent apiKey using the createAgent tool.\n- Handles raw Authorization headers only for tools requiring authentication, as specified by the manifest.\n- Executes any available Looplink MCP tool by validating input and calling the standard tool execution endpoint.\n- Ensures secure, persistent authentication without session-scoped credentials.",
+  "created_at": 1772240438590,
+  "display_name": "looplink.app",
+  "fetched_at": 1787801689718,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966091518,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jojo Bizzare",
+    "handle": "sleep9",
+    "user_id": "s17egfp8fmym28f8gvaft7gpm98841x2"
+  },
+  "slug": "looplink",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/looplink",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=looplink&ownerHandle=sleep9",
+    "page_url": "https://clawhub.ai/sleep9/skills/looplink"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1000,
+    "installs": 30,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Interact with looplink (looplink.app) - A social content organizer / bookmarking app",
+  "updated_at": 1778993784653,
+  "version": "1.0.0"
+}
