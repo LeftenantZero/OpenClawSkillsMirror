@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of MinerDetector skill.\n\n- Provides export of four miner signature libraries for a fee of 0.01 USDT.\n- Supports commands to check SkillPay balance, generate payment links, and export libraries (as files or JSON).\n- Does not perform scanning, detection, or remediation\u2014export only.\n- Requires user-supplied billing API key via environment variable.\n- Compatible with Linux, macOS, and Windows.",
+  "created_at": 1774004861222,
+  "display_name": "MinerDetector",
+  "fetched_at": 1787860672271,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "indicators/mining_pool_ports.txt",
+    "indicators/mining_pool_public_ips.txt",
+    "indicators/mining_pool_websites.txt",
+    "indicators/mining_software_filenames.txt",
+    "scripts/miner_detector.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090000153,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "gwjt1234",
+    "handle": "gwjt1234",
+    "user_id": "s171kaekxcbm2cj9sr90gxvgfh8851js"
+  },
+  "slug": "minerdetector",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/minerdetector",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=minerdetector&ownerHandle=gwjt1234",
+    "page_url": "https://clawhub.ai/gwjt1234/skills/minerdetector"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 766,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Charge 0.01 USDT to export 4 bundled miner signature libraries. No scanning or detection.",
+  "updated_at": 1778492060163,
+  "version": "1.0.0"
+}
