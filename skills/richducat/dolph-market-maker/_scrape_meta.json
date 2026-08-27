@@ -1,0 +1,46 @@
+{
+  "changelog": "- Renamed skill to \"Simmer Market Maker\" with updated display name and metadata.\n- Enhanced market selection criteria: now targets Polymarket markets with >$10k 24h volume, mid-range prices, sufficient time to resolve, and no taker fees.\n- GTC limit orders are now quoted at 2\u00a2 below the CLOB midpoint on both YES and NO sides, aiming to capture bid/ask spread.\n- Order management improved: cancels previous orders before placing new ones.\n- Added configurable environment variables for order size, market count, volume threshold, spread offset, and price/time filters.\n- Updated usage instructions and requirements for easier setup and paper trading mode.",
+  "created_at": 1775345717870,
+  "display_name": "Simmer Market Maker",
+  "fetched_at": 1787796528932,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "config.json",
+    "market_maker.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090304372,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "richducat",
+    "handle": "richducat",
+    "user_id": "s172pm13k2nd0gwew35ac7tnf9846t3e"
+  },
+  "slug": "dolph-market-maker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dolph-market-maker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dolph-market-maker&ownerHandle=richducat",
+    "page_url": "https://clawhub.ai/richducat/skills/dolph-market-maker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 594,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Places GTC limit orders on both sides (bid/ask) of liquid Polymarket markets. Finds active markets with >$10k 24h volume, mid-range prices, and ample time to...",
+  "updated_at": 1779075402220,
+  "version": "1.0.0"
+}
