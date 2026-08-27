@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of paytrigo-openclawbot\n\n- Provides OpenClawBot support for PayTrigo payments on Base/USDC via polling instead of webhooks.\n- Includes CLI scripts for both human-in-the-loop and direct bot payment scenarios.\n- Requires no environment setup\u2014platform API key is embedded for out-of-the-box usage.\n- Adds local wallet management features for recipient and payer addresses.\n- Supports full payment flow: invoice creation, intent retrieval, payment submission, and status polling.\n- Documents safe polling intervals, error handling, and common pitfalls for bot integration.",
+  "created_at": 1770049601169,
+  "display_name": "PayTrigo (OpenClawBot, Base/USDC)",
+  "fetched_at": 1787793475195,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "scripts/moltbot-bot-flow.mjs",
+    "scripts/moltbot-human-flow.mjs",
+    "scripts/moltbot-wallet-setup.mjs",
+    "scripts/paytrigo.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783652304786,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "paytrigo",
+    "handle": "paytrigo",
+    "user_id": "s1745g4c19w5f6mn0g0dk7mw4x885f5s"
+  },
+  "slug": "paytrigo-openclawbot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/paytrigo-openclawbot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=paytrigo-openclawbot&ownerHandle=paytrigo",
+    "page_url": "https://clawhub.ai/paytrigo/skills/paytrigo-openclawbot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2299,
+    "installs": 78,
+    "stars": 3,
+    "versions": 1
+  },
+  "summary": "Use when an OpenClawBot needs to create or verify PayTrigo payments on Base/USDC without webhooks.",
+  "updated_at": 1779076569702,
+  "version": "1.0.0"
+}
