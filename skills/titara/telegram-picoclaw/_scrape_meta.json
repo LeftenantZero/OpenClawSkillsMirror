@@ -1,0 +1,53 @@
+{
+  "changelog": "Lan\u00e7amento inicial: Permite o gerenciamento de troca  de mensagens de voz no Telegram nativo para Picoclaw.\n\n- Adiciona transcri\u00e7\u00e3o de \u00e1udio via GROQ Whisper (chave de API necess\u00e1ria).\n\n- Gera respostas de voz usando Edge TTS (pt-BR-FranciscaNeural).\n\n- Inclui scripts para reprodu\u00e7\u00e3o autom\u00e1tica de novos \u00e1udios, limpeza de arquivos antigos e finaliza\u00e7\u00e3o/resposta de mensagens de \u00e1udio.\n\n- Mant\u00e9m o canal nativo do Telegram ativo.\n\n- Projetado para um fluxo de trabalho simples: receber, transcrever e responder com \u00e1udio .\n\n\u2014 totalmente integrado ao Picoclaw.",
+  "created_at": 1775409586559,
+  "display_name": "Telegram - Conversa por \u00c1udio (PICOCLAW)",
+  "fetched_at": 1787831122525,
+  "files": [
+    "README-AUTO.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/implementation-plan.md",
+    "scripts/auto_runner.py",
+    "scripts/cleanup_old_files.py",
+    "scripts/finalize_reply.py",
+    "scripts/generate_audio.py",
+    "scripts/runner.py",
+    "scripts/semi_auto_watcher.py",
+    "scripts/telegram_media_watcher.py",
+    "scripts/transcribe_audio.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090312038,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Fabyano Titara",
+    "handle": "titara",
+    "user_id": "s17233dpg7dy5pj6v0888jb7jn8487ft"
+  },
+  "slug": "telegram-picoclaw",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/telegram-picoclaw",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=telegram-picoclaw&ownerHandle=titara",
+    "page_url": "https://clawhub.ai/titara/skills/telegram-picoclaw"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 593,
+    "installs": 15,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Processar conversas por \u00e1udio no Telegram nativo do Picoclaw, sem webhook. Use quando o usu\u00e1rio quiser receber mensagem de voz, transcrever \u00e1udio recebido, g...",
+  "updated_at": 1778492425999,
+  "version": "1.0.1"
+}
