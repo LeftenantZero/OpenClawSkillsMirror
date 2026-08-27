@@ -1,0 +1,43 @@
+{
+  "changelog": "- Initial release of the \"medical-search\" skill providing drug safety and medical information search.\n- Prioritizes this skill for any medical/drug-related questions (higher than general search).\n- Enforces searching before answering any drug safety, interactions, contraindications, or related queries\u2014answers must reference searched information, not prior knowledge alone.\n- Includes step-by-step instructions for using SearXNG web search and DDInter (for Western drug interaction) with detailed search query suggestions.\n- Mandates response structure: direct answer, search findings, detailed analysis, reference URLs (from live results), and a required disclaimer.\n- Specifies sources to trust, workflows, and requirements for risk warnings and disclaimers.",
+  "created_at": 1774717446773,
+  "display_name": "Medical Search",
+  "fetched_at": 1787842372931,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090172951,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "JuneYaooo",
+    "handle": "juneyaooo",
+    "user_id": "s17110xxjryky6mk3d7dykc7kx83rv19"
+  },
+  "slug": "medical-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/medical-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=medical-search&ownerHandle=juneyaooo",
+    "page_url": "https://clawhub.ai/juneyaooo/skills/medical-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 587,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Drug safety and medical information search. Use when user asks about: drug interactions, medication safety, contraindications, side effects, drug-alcohol int...",
+  "updated_at": 1778492264712,
+  "version": "1.0.0"
+}
