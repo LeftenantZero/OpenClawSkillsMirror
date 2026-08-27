@@ -1,0 +1,77 @@
+{
+  "changelog": "Initial public release\u2014introduces the garmer skill for extracting Garmin health and fitness data.\n\n- Added CLI and Python API for retrieving activities, sleep, heart rate, stress, steps, and body composition from Garmin Connect.\n- Included modular extractors and models for structured health data types (activities, daily summaries, sleep, heart rate, stress, steps, body composition, hydration, respiration).\n- Provided utility scripts and example integrations, including MoltBot compatibility.\n- Supplied comprehensive documentation, command reference, and usage examples in README.md and references.\n- Supports authentication, error handling, and environment variable configuration for flexible usage.",
+  "created_at": 1770180036972,
+  "display_name": "Garmer",
+  "fetched_at": 1787805755087,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/basic_usage.py",
+    "examples/moltbot_integration.py",
+    "pyproject.toml",
+    "references/REFERENCE.md",
+    "scripts/health_query.py",
+    "scripts/moltbot_integration.py",
+    "skill-card.md",
+    "src/garmer/__init__.py",
+    "src/garmer/auth.py",
+    "src/garmer/cli.py",
+    "src/garmer/client.py",
+    "src/garmer/config.py",
+    "src/garmer/extractors/__init__.py",
+    "src/garmer/extractors/activities.py",
+    "src/garmer/extractors/base.py",
+    "src/garmer/extractors/body.py",
+    "src/garmer/extractors/daily.py",
+    "src/garmer/extractors/heart_rate.py",
+    "src/garmer/extractors/sleep.py",
+    "src/garmer/extractors/steps.py",
+    "src/garmer/extractors/stress.py",
+    "src/garmer/extractors/user.py",
+    "src/garmer/models/__init__.py",
+    "src/garmer/models/activity.py",
+    "src/garmer/models/base.py",
+    "src/garmer/models/body_composition.py",
+    "src/garmer/models/daily.py",
+    "src/garmer/models/heart_rate.py",
+    "src/garmer/models/hydration.py",
+    "src/garmer/models/respiration.py",
+    "src/garmer/models/sleep.py",
+    "src/garmer/models/steps.py",
+    "src/garmer/models/stress.py",
+    "src/garmer/models/user.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783655536482,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "garrza",
+    "handle": "garrza",
+    "user_id": "s173gp6ktehyq2bdhr4gw47p9188559r"
+  },
+  "slug": "garmer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/garmer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=garmer&ownerHandle=garrza",
+    "page_url": "https://clawhub.ai/garrza/skills/garmer"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 3002,
+    "installs": 100,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Extract health and fitness data from Garmin Connect including activities, sleep, heart rate, stress, steps, and body composition. Use when the user asks about their Garmin data, fitness metrics, sleep analysis, or health insights.",
+  "updated_at": 1778988176526,
+  "version": "1.0.2"
+}
