@@ -1,0 +1,43 @@
+{
+  "changelog": "- Added context-loading instructions for local deployment, supporting use of environment variables like $OWNER_PHONE and $ADMIN_PHONE.\n- Clarified that routine billing checks and HTTP 200/OK results should be silent (no alerts sent).\n- Specified conditions for when NOT to alert the owner to avoid unnecessary notifications.\n- Noted that the billing-health-check cron is not relevant in production for Netanel due to proxy usage.\n- Rest of the detection, alerting, fallback handling, and recovery protocol are unchanged.",
+  "created_at": 1775042321857,
+  "display_name": "Billing Monitor",
+  "fetched_at": 1787836339605,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779980385645,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Netanel Abergel",
+    "handle": "netanel-abergel",
+    "user_id": "s17ber573ejk857tr938jb5dqs8413hk"
+  },
+  "slug": "billing-monitor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/billing-monitor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=billing-monitor&ownerHandle=netanel-abergel",
+    "page_url": "https://clawhub.ai/netanel-abergel/skills/billing-monitor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 616,
+    "installs": 14,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Monitor for API billing errors and alert the owner and admin immediately. Use when: an API billing error is detected, a peer PA reports a billing error, or d...",
+  "updated_at": 1778492345143,
+  "version": "1.0.2"
+}
