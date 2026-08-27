@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of amg-check-pg-flex: a comprehensive fleet-wide PostgreSQL Flexible Server health checker for Azure.\n\n- On-demand deep health scan: CPU, memory, storage, IOPS, disk bandwidth, and connection metrics across all servers.\n- Automated detection and persistent tracking of abnormal servers, with in-depth log correlation and known-issue management.\n- Distinct Tier 1 (pulse) and Tier 2 (deep dive) investigation phases using AMG-MCP and Azure Monitor.\n- Auto-discovers the Azure Monitor datasource UID and prompts user for subscription on first run.\n- Flexible time range and subscription overrides via arguments.\n- Safety features: parallel query caps, timeout handling, large result streaming, and robust progress tracking.",
+  "created_at": 1776405949562,
+  "display_name": "AMG PostgreSQL Flexible Server Health Check",
+  "fetched_at": 1787820132037,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "reference/analysis-patterns.md",
+    "reference/deep-dive-queries.md",
+    "reference/error-handling.md",
+    "reference/output-format.md",
+    "reference/phase3-deep-dive.md",
+    "reference/phase4-resource-logs.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090461749,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "1w2w3y",
+    "handle": "1w2w3y",
+    "user_id": "s17bx29aep342rsazs4qcwcch9850d3k"
+  },
+  "slug": "amg-check-pg-flex",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/amg-check-pg-flex",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=amg-check-pg-flex&ownerHandle=1w2w3y",
+    "page_url": "https://clawhub.ai/1w2w3y/skills/amg-check-pg-flex"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 614,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Run only when the user explicitly asks for a fleet-wide PostgreSQL Flexible Server health check \u2014 scans CPU, memory, storage, IOPS, disk bandwidth, and conne...",
+  "updated_at": 1778492635707,
+  "version": "1.0.0"
+}
