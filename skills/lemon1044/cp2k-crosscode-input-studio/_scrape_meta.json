@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release:\n\n- Generates practical CP2K input drafts from user requests using explicit assumptions and conservative defaults.\n- Provides automated normalization, draft input generation, and review reports for CP2K jobs.\n- Supports structure-aware input generation, task interpretation, and conservative handling of ambiguous or under-specified requests.\n- Enables cross-conversion of CP2K input files into Gaussian, VASP, ORCA, and Quantum ESPRESSO drafts.\n- Surfaces key assumptions, warnings, and required user reviews in outputs for reliability and transparency.",
+  "created_at": 1773651386629,
+  "display_name": "CP2K Cross-Code Input Studio",
+  "fetched_at": 1787870621653,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/report.md",
+    "examples/example-structures.md",
+    "examples/periodic_silicon_request.json",
+    "examples/water_request.json",
+    "references/ambiguity-policy.md",
+    "references/conversion-rules.md",
+    "references/cp2k-defaults.md",
+    "references/cp2k-kinds.md",
+    "references/cp2k-task-map.md",
+    "references/design-rules.md",
+    "references/job-spec-schema.md",
+    "references/structure-sources.md",
+    "scripts/convert-cp2k-input.py",
+    "scripts/generate_cp2k_bundle.py",
+    "scripts/normalize-request.py",
+    "scripts/render-cp2k-input.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "lemon1044",
+    "handle": "lemon1044",
+    "user_id": "s174revdvtjmfphw4ggd9rmr11884ngm"
+  },
+  "slug": "cp2k-crosscode-input-studio",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cp2k-crosscode-input-studio",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cp2k-crosscode-input-studio&ownerHandle=lemon1044",
+    "page_url": "https://clawhub.ai/lemon1044/skills/cp2k-crosscode-input-studio"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 800,
+    "installs": 20,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Generate, refine, explain, and cross-convert CP2K-centered input drafts for computational chemistry and materials workflows. Use when a user wants a CP2K .in...",
+  "updated_at": 1778491943830,
+  "version": "1.0.1"
+}
