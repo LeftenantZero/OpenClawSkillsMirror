@@ -1,0 +1,50 @@
+{
+  "changelog": "Tighten env var safety: reject OPENCLAW_HOME/WORKSPACE set to home root ($HOME) \u2014 must be a strict subdirectory. Clarify required vs optional: only python3 is hard required; env vars and shred are optional with documented defaults. Qualify 'files you create remain untouched' claim with env var scoping caveat.",
+  "created_at": 1777224850849,
+  "display_name": "Ghost Mode",
+  "fetched_at": 1787814275751,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ARCHITECTURE.md",
+    "scripts/ghost_archive.py",
+    "scripts/ghost_index_cleanup.py",
+    "scripts/ghost_mode.sh",
+    "scripts/ghost_registry.py",
+    "scripts/ghost_scrub.py",
+    "scripts/ghost_verify.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090563505,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "stelloxx",
+    "handle": "stelloxx",
+    "user_id": "s17bxx4hjjm90at5qs5sybg7ax83rnd1"
+  },
+  "slug": "ghost-mode",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ghost-mode",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ghost-mode&ownerHandle=stelloxx",
+    "page_url": "https://clawhub.ai/stelloxx/skills/ghost-mode"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 653,
+    "installs": 15,
+    "stars": 1,
+    "versions": 10
+  },
+  "summary": "Enables incognito mode to suppress and securely erase all agent memory writes and session traces upon deactivation, leaving no persistent record.",
+  "updated_at": 1778492761793,
+  "version": "1.2.7"
+}
