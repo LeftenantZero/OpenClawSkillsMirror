@@ -1,0 +1,54 @@
+{
+  "changelog": "Initial release of ai-news-pipeline skill.\n\n- Provides a complete AI news workflow for Chinese and international sources, runnable directly in the current workspace.\n- Adds high-frequency RSS capture (\"capture only\") and scheduled report delivery (\"report only\") modes, both generating cumulative Excel outputs and a merged Word brief.\n- Bundles all necessary scripts under scripts/, with entrypoints for capture, reporting, and full workflow.\n- No external local repository path required; all outputs, state, and configuration are managed inside the workspace.\n- Includes comprehensive instructions for setup, inputs, behavior, and troubleshooting in SKILL.md.",
+  "created_at": 1773746083398,
+  "display_name": "xinwencaiji",
+  "fetched_at": 1787868028281,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/commands.md",
+    "scripts/brief_writer.py",
+    "scripts/collect_feeds.py",
+    "scripts/generate_company_report.py",
+    "scripts/generate_international_report.py",
+    "scripts/requirements.txt",
+    "scripts/run_capture_only.py",
+    "scripts/run_full_workflow.py",
+    "scripts/run_report_only.py",
+    "scripts/time_window.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089935259,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Nighmat",
+    "handle": "nighmat1220",
+    "user_id": "s17da4x02zshcbrtw2pskyh9d9885373"
+  },
+  "slug": "ai-news-collection",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-news-collection",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-news-collection&ownerHandle=nighmat1220",
+    "page_url": "https://clawhub.ai/nighmat1220/skills/ai-news-collection"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 651,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Run a self-contained Chinese and international AI news workflow inside the current workspace. Use when the user wants either high-frequency RSS capture only...",
+  "updated_at": 1778491973688,
+  "version": "1.0.0"
+}
