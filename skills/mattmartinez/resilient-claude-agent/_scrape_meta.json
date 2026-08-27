@@ -1,0 +1,37 @@
+{
+  "changelog": "- Fix false-positive task abandonment: pane classifier was matching broad patterns (continue?, (y/n)) anywhere in the last 30 lines of output, killing healthy tasks whose output happened to contain those phrases.\n  Now matches only actual prompt shapes at end-of-line within the last 5 lines, and requires persistence across 2 consecutive polls before abandoning.\n  - Fix manifest data loss under concurrent writes: wrapper and monitor both update the manifest; previously they wrote to the same .tmp path and could clobber each other. Now uses mkdir-based locking and per-call\n  mktemp paths.\n  - Fix retry-budget escape for flapping tasks: RETRY_COUNT was reset on fresh output, so a crash-resume-work-crash loop never hit MONITOR_MAX_RETRIES. Added a separate TOTAL_RETRY_COUNT that never resets and drives\n  the cap.\n  - Fix resume dispatch on paths with spaces: tmux send-keys was passing bash $WRAPPER_PATH unquoted; any skill install path containing whitespace (common on macOS) broke the resume path. Now shell-quotes via printf\n  '%q'.",
+  "created_at": 1775328695903,
+  "display_name": "Resilient Claude Agent",
+  "fetched_at": 1787832024807,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/lib.sh",
+    "scripts/local-smoke-test.sh",
+    "scripts/monitor.sh",
+    "scripts/wrapper.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "matt martinez",
+    "handle": "mattmartinez",
+    "user_id": "s179sp490xpdpkbfzv2771720x846mqk"
+  },
+  "slug": "resilient-claude-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/resilient-claude-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=resilient-claude-agent&ownerHandle=mattmartinez",
+    "page_url": "https://clawhub.ai/mattmartinez/skills/resilient-claude-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 766,
+    "installs": 19,
+    "stars": 0,
+    "versions": 18
+  },
+  "summary": "Run Claude Code sessions in tmux for fire-and-forget execution with crash recovery, model routing, and structured task state.",
+  "updated_at": 1778492412046,
+  "version": "1.0.17"
+}
