@@ -1,0 +1,48 @@
+{
+  "changelog": "persona-voice v1.0.0\n\n- Reworked skill for integration with Feishu/Lark bots: generates persona-based voice replies and delivers as native Feishu voice messages.\n- Switched ASR and TTS exclusively to SenseAudio; removed AudioZen LLM dependency.\n- Simplified configuration: only Feishu and SenseAudio API keys required as environment variables.\n- New command-line workflow via scripts/main.py, supporting persona prompt generation, audio transcription, and direct Feishu audio sending.\n- Only 3 public/free personas and voice options retained for this version.\n- Removed previous install-time key setup and unrelated scripts.",
+  "created_at": 1773569912438,
+  "display_name": "Persona Voice",
+  "fetched_at": 1787872403779,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "presets/personas.json",
+    "references/feishu_integration.md",
+    "references/personas.md",
+    "references/provider_notes.md",
+    "scripts/asr.py",
+    "scripts/config.py",
+    "scripts/feishu_api.py",
+    "scripts/main.py",
+    "scripts/persona_store.py",
+    "scripts/persona_voice.py",
+    "scripts/requirements.txt",
+    "scripts/senseaudio_asr.py",
+    "scripts/senseaudio_tts.py",
+    "scripts/tts.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "HeiMaoM",
+    "handle": "hei-maom",
+    "user_id": "s179rsrtms4ea8wvxt0ezrn0ad885j3r"
+  },
+  "slug": "persona-voice",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/persona-voice",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=persona-voice&ownerHandle=hei-maom",
+    "page_url": "https://clawhub.ai/hei-maom/skills/persona-voice"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 800,
+    "installs": 23,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "\u5728 chatgpt / claw \u4e0e\u98de\u4e66 / lark \u673a\u5668\u4eba\u573a\u666f\u4e2d\uff0c\u6839\u636e\u968f\u673a\u6216\u6307\u5b9a\u4eba\u683c\u751f\u6210\u660e\u663e\u5e26\u6709\u4eba\u683c\u98ce\u683c\u7684\u77ed\u56de\u590d\uff0c\u5e76\u901a\u8fc7 senseaudio tts \u5408\u6210\u8bed\u97f3\uff0c\u518d\u4ee5\u98de\u4e66\u539f\u751f\u8bed\u97f3\u6761\u53d1\u9001\u3002\u652f\u6301\u6587\u5b57\u8f93\u5165\u548c\u97f3\u9891\u8f93\u5165\uff1b\u97f3\u9891\u8f93\u5165\u65f6\u5148\u8c03\u7528 senseaudio asr\u3002\u9002\u7528\u4e8e\u98de\u4e66\u4eba\u683c\u966a\u4f34\u3001\u968f\u673a\u4eba\u683c\u8bed\u97f3\u56de\u590d\u3001\u89d2\u8272\u5316\u8bed\u97f3\u673a\u5668...",
+  "updated_at": 1778491925219,
+  "version": "1.1.0"
+}
