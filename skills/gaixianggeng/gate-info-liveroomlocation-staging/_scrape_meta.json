@@ -1,0 +1,36 @@
+{
+  "changelog": "gate-info-liveroomlocation-staging 1.0.0\n\n- Initial release of Gate live stream and replay listing skill.\n- Supports user queries to find live rooms or replays by tag, coin, sort, or count.\n- Uses intent mapping to extract parameters from natural language (tag, coin, sort, limit).\n- Calls only the `GET /live/gate_ai/tag_coin_live_replay` MCP endpoint\u2014no other APIs.\n- Automatically applies default parameters (e.g., tag=empty, sort=hot, limit=10) if not provided.\n- Blocks API access and notifies the user when accessed from restricted regions (e.g., US, Canada, Japan).\n- Outputs results as a simple list with titles and links, labeling \"Live\" or \"Replay\" as needed.",
+  "created_at": 1775622830873,
+  "display_name": "Gate Info Liveroom Location (gate-info-liveroomlocation)",
+  "fetched_at": 1787828381189,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/gate-runtime-rules.md",
+    "references/info-news-runtime-rules.md",
+    "references/mcp.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "gaixg",
+    "handle": "gaixianggeng",
+    "user_id": "s17edzcx6za5g00fwmgwmkhrgd83yw5a"
+  },
+  "slug": "gate-info-liveroomlocation-staging",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gate-info-liveroomlocation-staging",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gate-info-liveroomlocation-staging&ownerHandle=gaixianggeng",
+    "page_url": "https://clawhub.ai/gaixianggeng/skills/gate-info-liveroomlocation-staging"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 628,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Gate live stream and replay listing skill. Use when the user asks to find live rooms or replays by tag, coin, or sort. Triggers on 'live room list', '\u6700\u70ed\u76f4\u64ad',...",
+  "updated_at": 1778492473647,
+  "version": "1.0.0"
+}
