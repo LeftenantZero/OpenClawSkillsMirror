@@ -1,0 +1,47 @@
+{
+  "changelog": "ski-resort 3.2.0 changelog:\n\n- Enforces CLI-only data sourcing: All answers must be generated from flyai CLI command output, never from pre-existing knowledge or training data.\n- Adds strict execution rules: Bookable links required in every response, with automatic self-check for compliance.\n- Expands support for additional travel services, including flights, hotels, trains, attraction tickets, itineraries, visas, insurance, and car rentals via Fliggy.\n- Formalizes parameter collection and output formatting steps, referencing SOP/playbook/template files.\n- Clearly segregates domain knowledge for parameter mapping only\u2014never for direct answers.\n- Strengthens bilingual handling (auto-detects and mirrors user language: Chinese/English).",
+  "created_at": 1775898321596,
+  "display_name": "Ski Resort",
+  "fetched_at": 1787825329009,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/fallbacks.md",
+    "references/playbooks.md",
+    "references/runbook.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090379957,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xiejinsong",
+    "handle": "xiejinsong",
+    "user_id": "s177qj362rbw4294hgs3hdvhgx83m2hm"
+  },
+  "slug": "ski-resort",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ski-resort",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ski-resort&ownerHandle=xiejinsong",
+    "page_url": "https://clawhub.ai/xiejinsong/skills/ski-resort"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 526,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Find ski resorts and snowboarding destinations \u2014 trail maps, difficulty levels, lift pass prices, equipment rental, and snow conditions. Also supports: fligh...",
+  "updated_at": 1778492530120,
+  "version": "3.2.0"
+}
