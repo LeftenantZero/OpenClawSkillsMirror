@@ -1,0 +1,34 @@
+{
+  "changelog": "- Initial release of the usage-tracker skill for tracking token usage.\n- Tracks input/output tokens per conversation turn, maintaining cumulative stats and budget controls.\n- Supports commands like \"token\u7edf\u8ba1\", \"\u7528\u91cf\u8ffd\u8e2a\", \"\u6d88\u8017\u4e86\u591a\u5c11\", and \"\u82b1\u4e86\u6211\u591a\u5c11token\" for usage reporting.\n- Provides cost estimation based on Claude API pricing and simple token estimation logic.\n- Emits warnings when usage approaches or exceeds defined budgets.",
+  "created_at": 1775482443996,
+  "display_name": "Token Usage Tracker",
+  "fetched_at": 1787830261665,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/usage-tracker.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "xhmqq616",
+    "handle": "xhmqq616",
+    "user_id": "s17evsy03dtqhcsv6fqy5yyqs184bmrr"
+  },
+  "slug": "token-usage-tracker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/token-usage-tracker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=token-usage-tracker&ownerHandle=xhmqq616",
+    "page_url": "https://clawhub.ai/xhmqq616/skills/token-usage-tracker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 716,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Token \u4f7f\u7528\u8ffd\u8e2a\u7cfb\u7edf\u3002\u8bb0\u5f55\u6bcf\u4e2a\u5bf9\u8bdd\u7684\u8f93\u5165/\u8f93\u51fa token \u6d88\u8017\uff0c\u7d2f\u8ba1\u7edf\u8ba1\uff0c\u9884\u7b97\u63a7\u5236\u3002 \u5f53\u7528\u6237\u8bf4\"token\u7edf\u8ba1\"\u3001\"\u7528\u91cf\u8ffd\u8e2a\"\u3001\"\u6d88\u8017\u4e86\u591a\u5c11\"\u3001\"\u82b1\u4e86\u6211\u591a\u5c11token\"\u65f6\u89e6\u53d1\u3002",
+  "updated_at": 1778492440806,
+  "version": "1.0.0"
+}
