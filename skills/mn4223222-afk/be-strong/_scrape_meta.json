@@ -1,0 +1,56 @@
+{
+  "changelog": "Initial release of the Self-Improvement skill for structured learning and error logging.\n\n- Captures errors, user corrections, missing features, and best practices into dedicated markdown logs for continuous project improvement.\n- Provides bash initialization steps to safely create the `.learnings/` directory and log files if missing, with clear separation for learnings, errors, and feature requests.\n- Defines detailed, privacy-aware templates for logging incidents and insights, ensuring actionable, categorized documentation without exposing secrets.\n- Outlines promotion workflow for important learnings to project-wide memory files (e.g., AGENTS.md, SOUL.md, TOOLS.md).\n- Includes instructions for integration into OpenClaw and other agent environments, with recommendations for optional hook-based reminders.",
+  "created_at": 1775125054058,
+  "display_name": "xiaowei-skill",
+  "fetched_at": 1787834401437,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/ERRORS.md",
+    "assets/FEATURE_REQUESTS.md",
+    "assets/LEARNINGS.md",
+    "assets/SKILL-TEMPLATE.md",
+    "hooks/openclaw/HOOK.md",
+    "hooks/openclaw/handler.js",
+    "hooks/openclaw/handler.ts",
+    "references/examples.md",
+    "references/hooks-setup.md",
+    "references/openclaw-integration.md",
+    "scripts/activator.sh",
+    "scripts/error-detector.sh",
+    "scripts/extract-skill.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090254786,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mn4223222-afk",
+    "handle": "mn4223222-afk",
+    "user_id": "s1790kqfbdmscx96vbs9ykdzvh843f71"
+  },
+  "slug": "be-strong",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/be-strong",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=be-strong&ownerHandle=mn4223222-afk",
+    "page_url": "https://clawhub.ai/mn4223222-afk/skills/be-strong"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 476,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Clau...",
+  "updated_at": 1778492370518,
+  "version": "1.0.0"
+}
