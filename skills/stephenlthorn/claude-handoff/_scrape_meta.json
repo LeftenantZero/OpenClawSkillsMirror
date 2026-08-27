@@ -1,0 +1,44 @@
+{
+  "changelog": "claude-handoff 1.0.0\n\n- Initial release of the Claude Handoff skill.\n- Generates a structured handoff package when local agent determines cloud Claude Code is needed.\n- Supports user review and manual approval before any Claude Code invocation; never auto-invokes Claude.\n- Triggers on hard gates (e.g. iOS .swift files), escalation score, build failure, low reflection confidence, or explicit user request.\n- Summarizes context, rationale, proposed plan, local attempts, and provides ready-to-run Claude commands.\n- Helps users control Claude Max quota usage with clear cost estimates.",
+  "created_at": 1776779195122,
+  "display_name": "Claude Handoff",
+  "fetched_at": 1787817484515,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "claude_handoff.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090504512,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Stephen Thorn",
+    "handle": "stephenlthorn",
+    "user_id": "s1781macwsy8b25gaqa558qrx5858x3k"
+  },
+  "slug": "claude-handoff",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claude-handoff",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claude-handoff&ownerHandle=stephenlthorn",
+    "page_url": "https://clawhub.ai/stephenlthorn/skills/claude-handoff"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 838,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Writes a structured handoff package when local agent determines cloud Claude Code is needed. This is the ONLY path from local pipeline to cloud \u2014 the agent n...",
+  "updated_at": 1778492695381,
+  "version": "1.0.0"
+}
