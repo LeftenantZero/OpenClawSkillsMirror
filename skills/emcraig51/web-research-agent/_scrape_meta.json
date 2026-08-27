@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of OpenMarlin skill for OpenClaw:\n\n- Supports account registration, API key setup, and native execution with `/v1/executions`\n- Handles asynchronous long-running jobs via `/v1/tasks`\n- Provides billing, balance checks, and payment flow recovery\n- Clearly defines activation triggers and detailed request/response models\n- Includes strict security and flow constraints for safe usage\n- Distributed as a directory with required scripts for registration, billing, and platform requests",
+  "created_at": 1776410337131,
+  "display_name": "Personal Assistant",
+  "fetched_at": 1787820060014,
+  "files": [
+    "AGENTS.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/billing.py",
+    "scripts/openclaw_billing_state.py",
+    "scripts/openclaw_platform_auth.py",
+    "scripts/openclaw_skill_config.py",
+    "scripts/platform_request.py",
+    "scripts/registration_session.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090463182,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "emcraig51",
+    "handle": "emcraig51",
+    "user_id": "s17470kqpmhrhp5fjrbzaer081851xnr"
+  },
+  "slug": "web-research-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/web-research-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=web-research-agent&ownerHandle=emcraig51",
+    "page_url": "https://clawhub.ai/emcraig51/skills/web-research-agent"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 576,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use OpenMarlin from OpenClaw to answer questions, run tasks, and manage OpenMarlin account setup and billing flows.",
+  "updated_at": 1778492635707,
+  "version": "1.0.0"
+}
