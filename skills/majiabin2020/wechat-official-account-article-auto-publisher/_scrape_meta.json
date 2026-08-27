@@ -1,0 +1,56 @@
+{
+  "changelog": "WeChat Official Account Article Auto Publisher 1.0.0 \u2013 Initial Release\n\n- Provides a complete workflow for automatic article creation, rewriting, cover generation, and publishing to WeChat Official Account draft box.\n- Supports title-based writing, rewriting reference articles, extracting content from mp.weixin links, and direct draft publishing.\n- Offers a layered structure: orchestration for creative logic, and Python tools for extraction, formatting, cover generation, image upload, and publishing.\n- Standardizes output structure (Markdown, 1200\u20131500 words, clear sections) and includes quality checks and creative rules.\n- Command-line interface supports one-click workflows, material upload, and covers both draft and publish stages.\n- All outputs and commands follow structured JSON conventions for easy integration.",
+  "created_at": 1775454732609,
+  "display_name": "\u5fae\u4fe1\u516c\u4f17\u53f7\u6587\u7ae0\u81ea\u52a8\u53d1\u5e03\u52a9\u624b",
+  "fetched_at": 1787830640789,
+  "files": [
+    "CREATION_GUIDE.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "config.json",
+    "scripts/publish_wechat.py",
+    "scripts/requirements.txt",
+    "scripts/wechat_skill/__init__.py",
+    "scripts/wechat_skill/cli.py",
+    "scripts/wechat_skill/config.py",
+    "scripts/wechat_skill/covers.py",
+    "scripts/wechat_skill/creation.py",
+    "scripts/wechat_skill/extractors.py",
+    "scripts/wechat_skill/markdown_tools.py",
+    "scripts/wechat_skill/models.py",
+    "scripts/wechat_skill/renderer.py",
+    "scripts/wechat_skill/utils.py",
+    "scripts/wechat_skill/wechat_api.py",
+    "skill-card.md",
+    "templates/conversation/final_article_contract.md",
+    "templates/conversation/publish_checklist.md",
+    "templates/conversation/request_to_brief.md",
+    "templates/conversation/system_prompt.md",
+    "templates/examples/good_wechat_article.md",
+    "templates/prompts/rewrite.md",
+    "templates/prompts/title_to_article.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "majiabin2020",
+    "handle": "majiabin2020",
+    "user_id": "s1781hdc7ay3q1sefvvp5evq8s83qhwd"
+  },
+  "slug": "wechat-official-account-article-auto-publisher",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wechat-official-account-article-auto-publisher",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wechat-official-account-article-auto-publisher&ownerHandle=majiabin2020",
+    "page_url": "https://clawhub.ai/majiabin2020/skills/wechat-official-account-article-auto-publisher"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 705,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u667a\u80fd\u521b\u4f5c\u3001\u63d0\u53d6\u516c\u4f17\u53f7\u6587\u7ae0\u3001\u751f\u6210\u5c01\u9762\u5e76\u81ea\u52a8\u53d1\u5e03\u5230\u5fae\u4fe1\u516c\u4f17\u53f7\u8349\u7a3f\u7bb1",
+  "updated_at": 1778492432806,
+  "version": "1.0.0"
+}
