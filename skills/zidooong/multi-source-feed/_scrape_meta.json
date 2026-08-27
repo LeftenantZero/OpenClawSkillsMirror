@@ -1,0 +1,71 @@
+{
+  "changelog": "- Added documentation for customizing X/Twitter Push via push/preferences.md  \n- Removed reference to push/user_profile.md in favor of new preferences.md for push module configuration  \n- Updated setup instructions to clarify push module shares authentication/session with main pipeline  \n- Improved guidance for real-time X highlights, including new OpenClaw cron job prompt  \n- Updated and expanded user customization and documentation files",
+  "created_at": 1773565961569,
+  "display_name": "Multi-Source Feed",
+  "fetched_at": 1787798799299,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/preferences.md",
+    "config/sources.yaml",
+    "config/user_profile.md",
+    "docs/architecture.md",
+    "login_save_session.py",
+    "push/preferences.md",
+    "push/push.py",
+    "push/run.sh",
+    "push/scrape_feed.py",
+    "requirements.txt",
+    "scrape_feed.py",
+    "skill-card.md",
+    "src/__init__.py",
+    "src/config.py",
+    "src/models.py",
+    "src/pipeline.py",
+    "src/sources/__init__.py",
+    "src/sources/anthropic_news.py",
+    "src/sources/github_trending.py",
+    "src/sources/hn.py",
+    "src/sources/producthunt.py",
+    "src/sources/reddit.py",
+    "src/sources/rss.py",
+    "src/sources/web_search.py",
+    "src/sources/x_feed.py",
+    "src/store.py",
+    "tests/__init__.py",
+    "tests/test_pipeline.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089896831,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zidooong",
+    "handle": "zidooong",
+    "user_id": "s17aamhdgvwbbrv3ze392zc4mh884f6q"
+  },
+  "slug": "multi-source-feed",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/multi-source-feed",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=multi-source-feed&ownerHandle=zidooong",
+    "page_url": "https://clawhub.ai/zidooong/skills/multi-source-feed"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 908,
+    "installs": 25,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Set up and manage an AI-curated daily tech brief from customizable sources. Use when user says \"set up multi-source-feed\", \"configure my daily brief\", or \"ms...",
+  "updated_at": 1779000108452,
+  "version": "1.0.1"
+}
