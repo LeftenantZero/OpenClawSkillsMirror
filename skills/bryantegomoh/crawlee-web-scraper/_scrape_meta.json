@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of crawlee-web-scraper.\n\n- Provides resilient web scraping with evasion for bot detection and rate limits using Crawlee.\n- Supports both single URLs and bulk file input for scraping.\n- Implements automatic fallback: tries regular requests, then uses Crawlee on 403/429/503 errors.\n- Returns standardized JSON output per URL with metadata and extracted content.\n- Drop-in replacement for web_fetch, with simple command-line and Python library usage.",
+  "created_at": 1774109660679,
+  "display_name": "Crawlee Web Scraper",
+  "fetched_at": 1787797465721,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/crawlee_fetch.py",
+    "scripts/crawlee_http.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090019785,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Bryan Tegomoh, MD, MPH",
+    "handle": "bryantegomoh",
+    "user_id": "s172jpve568dfnqpcddngz9d8s83sxnk"
+  },
+  "slug": "crawlee-web-scraper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/crawlee-web-scraper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=crawlee-web-scraper&ownerHandle=bryantegomoh",
+    "page_url": "https://clawhub.ai/bryantegomoh/skills/crawlee-web-scraper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 897,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Resilient web scraper with bot-detection evasion using the Crawlee library. Use when web_fetch is blocked by rate limits or bot detection. Supports single UR...",
+  "updated_at": 1779074093284,
+  "version": "1.0.0"
+}
