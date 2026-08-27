@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of tga-analyze: Log in, download, and analyze TGA reports.\n\n- Logs into TGA using credentials and cookies from `.env`, with token caching for efficiency.\n- Parses `projectId` and `dashboardId` from the TGA dashboard URL provided by the user.\n- Downloads report zip via TGA API, supporting resume (taskId) and robust progress polling.\n- Automatically unzips report into a dedicated directory for analysis.\n- Analyzes all `.xlsx` files in the extracted report using Python pandas, generating structured summaries.\n- Provides detailed workflow and usage instructions in SKILL.md for smooth operation.",
+  "created_at": 1775217771899,
+  "display_name": "TGA Analyze",
+  "fetched_at": 1787833101686,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/tga.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090285608,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xifengxi",
+    "handle": "xifengxi",
+    "user_id": "s17ef3s8xd36kfphpkkyvxx80n8456x1"
+  },
+  "slug": "tga-analyze",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tga-analyze",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tga-analyze&ownerHandle=xifengxi",
+    "page_url": "https://clawhub.ai/xifengxi/skills/tga-analyze"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 530,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Logs into TGA (hortorgames), parses projectId and dashboardId from panel URL, downloads report zip via API, unzips to tga-downloads/, and analyzes all xlsx f...",
+  "updated_at": 1778492391153,
+  "version": "1.0.0"
+}
