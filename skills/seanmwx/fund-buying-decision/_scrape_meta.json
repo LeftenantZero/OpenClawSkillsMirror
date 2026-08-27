@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release: Implements a parameterized Chinese mutual fund trading strategy with clear configuration boundaries and decision workflow.\n\n- Defines flexible buy, add, reduce, or hold rules based on price drawdown, DCA, cash management, and position limits.\n- All strategy rules and thresholds centralized in SKILL.md under editable and fixed parameter groups.\n- Provides explicit daily decision outputs (`buy_dca`, `buy_dip`, `sell_take_profit`, `hold`, `skip_data_missing`).\n- Separates live strategy state (in SQLite) from configuration (in SKILL.md).\n- Documents required runtime inputs and strategy application workflow.",
+  "created_at": 1775037863179,
+  "display_name": "Fund Buying Decision Pro",
+  "fetched_at": 1787836441423,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/data_inputs.md",
+    "references/strategy_parameters.md",
+    "scripts/check_fund_alert.py",
+    "scripts/confirm_strategy_action.py",
+    "scripts/evaluate_strategy.py",
+    "scripts/import_eastmoney_pingzhongdata.py",
+    "scripts/manage_strategy_account.py",
+    "scripts/record_strategy_trade.py",
+    "scripts/report_fund_details.py",
+    "scripts/strategy_engine.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Xinhai Zou",
+    "handle": "seanmwx",
+    "user_id": "s172p33xvek7whzrfrhyrh33cn83tbn0"
+  },
+  "slug": "fund-buying-decision",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fund-buying-decision",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fund-buying-decision&ownerHandle=seanmwx",
+    "page_url": "https://clawhub.ai/seanmwx/skills/fund-buying-decision"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 632,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Parameterize and apply a Chinese mutual-fund buy, add, reduce, or hold strategy driven by price drawdown, recurring DCA, cash-pool management, and position l...",
+  "updated_at": 1778492345143,
+  "version": "1.0.0"
+}
