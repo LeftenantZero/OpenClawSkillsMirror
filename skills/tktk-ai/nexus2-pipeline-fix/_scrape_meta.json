@@ -1,0 +1,33 @@
+{
+  "changelog": "Nexus2 Pipeline Fix 1.0.0 \u2014 Sports Prediction Engine\n\n- Fixed JSON serialization crash caused by pandas Timestamp objects by introducing a custom NexusEncoder.\n- Corrected bug where newly scraped fixtures were not properly ingested, eliminating phantom predictions from stale data.\n- Predictions now consistently match live bookmaker fixtures.\n- Patched files: publishing/publisher.py and nexus.py.\n- No more serialization or phantom match issues during prediction pipeline runs.",
+  "created_at": 1775763885436,
+  "display_name": "Nexus2 Pipeline Fix",
+  "fetched_at": 1787826363186,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "tktk-ai",
+    "handle": "tktk-ai",
+    "user_id": "s17dae0n2wkh65b6p2v4zvkbt184ey9h"
+  },
+  "slug": "nexus2-pipeline-fix",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nexus2-pipeline-fix",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nexus2-pipeline-fix&ownerHandle=tktk-ai",
+    "page_url": "https://clawhub.ai/tktk-ai/skills/nexus2-pipeline-fix"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 651,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fixes JSON serialization of pandas Timestamps and ensures fresh fixture ingestion for accurate Nexus2 sports predictions.",
+  "updated_at": 1778492505206,
+  "version": "1.0.0"
+}
