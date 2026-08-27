@@ -1,0 +1,48 @@
+{
+  "changelog": "Major update: Complete rework into an automated news briefing generator and delivery system with scheduled aggregation, dual-search support, and cross-channel delivery.\n\n- Fully automated daily news briefing generation and scheduled delivery via cron jobs.\n- Dual-search: Baidu API integration (preferred) with automatic fallback to DuckDuckGo (no API key needed).\n- Flexible multi-channel delivery: QQBot, Telegram, Discord supported via script configuration.\n- Modular scripts for news generation (with AI commentary) and robust delivery, with sample queries for tech and finance news in China and globally.\n- Easy environment-based customization: set user/channel, article count, queries, and delivery time.\n- Comprehensive setup guides (CONFIGURATION.md), API usage, and template samples included.",
+  "created_at": 1774686379982,
+  "display_name": "qqbot-daily-news-briefing",
+  "fetched_at": 1787797186897,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/CONFIGURATION.md",
+    "scripts/deliver-briefing.sh",
+    "scripts/generate-briefing.py",
+    "scripts/news-deliver-direct.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090164977,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "propn",
+    "handle": "propn",
+    "user_id": "s17f9vssb8jy3qzktx87bhqpcx83sbt4"
+  },
+  "slug": "qqbot-daily-news-briefing",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/qqbot-daily-news-briefing",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=qqbot-daily-news-briefing&ownerHandle=propn",
+    "page_url": "https://clawhub.ai/propn/skills/qqbot-daily-news-briefing"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 552,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generates and delivers automated daily tech and finance news briefings with AI commentary via QQ, Telegram, or Discord using Baidu API or DuckDuckGo search.",
+  "updated_at": 1779074692803,
+  "version": "1.0.0"
+}
