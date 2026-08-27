@@ -1,0 +1,56 @@
+{
+  "changelog": "- Initial public release with agent-driven, conversational setup guide for YouTube comment moderation.\n- Added full scripts for fetching, classifying, moderating, and storing YouTube comments.\n- Includes detailed OAuth setup instructions and environment variable documentation.\n- Moderation supports monitor, approval, and auto modes with AI-powered comment classification.\n- All major pipeline scripts (setup, fetch, classify, moderate, db) included.",
+  "created_at": 1773300220191,
+  "display_name": "YouTube Comment Moderator",
+  "fetched_at": 1787788996945,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/oauth-setup.md",
+    "scripts/classify_comments.py",
+    "scripts/db.py",
+    "scripts/fetch_comments.py",
+    "scripts/moderate.py",
+    "scripts/setup.py",
+    "skill-card.md",
+    "skills/youtube-comment-moderator/SKILL.md",
+    "skills/youtube-comment-moderator/references/oauth-setup.md",
+    "skills/youtube-comment-moderator/scripts/classify_comments.py",
+    "skills/youtube-comment-moderator/scripts/db.py",
+    "skills/youtube-comment-moderator/scripts/fetch_comments.py",
+    "skills/youtube-comment-moderator/scripts/moderate.py",
+    "skills/youtube-comment-moderator/scripts/setup.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089861974,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Dhruv Kar",
+    "handle": "dhruvkar",
+    "user_id": "s17anp6wbzvs2kt7kw5wvnaymx83qka9"
+  },
+  "slug": "youtube-comment-moderator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/youtube-comment-moderator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=youtube-comment-moderator&ownerHandle=dhruvkar",
+    "page_url": "https://clawhub.ai/dhruvkar/skills/youtube-comment-moderator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 981,
+    "installs": 28,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "AI-powered YouTube comment moderation. Fetches comments, classifies them (spam, question, praise, hate, neutral, constructive), drafts replies, and deletes s...",
+  "updated_at": 1779078127932,
+  "version": "1.0.1"
+}
