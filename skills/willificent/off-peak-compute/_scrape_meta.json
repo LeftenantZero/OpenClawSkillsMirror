@@ -1,0 +1,44 @@
+{
+  "changelog": "**Security model clarification and guidance update**\n\n- Added detailed explanation of the security and credential model for off-peak queued tasks.\n- Clarified that each task runs with full user privileges and agent sessions, with no sandboxing or credential isolation.\n- Provided new task template and safety checklist emphasizing credential scope and network actions.\n- Updated setup instructions to recommend owner-only permissions (chmod 700) on the script.\n- Improved documentation on manual task testing before scheduling and post-run cleanup.\n- Removed mention of subagent isolation, focusing on explicit user responsibility for task review and safety.",
+  "created_at": 1773165637544,
+  "display_name": "Compute during Off-Peak Hours for Complex Jobs",
+  "fetched_at": 1787789473947,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "off-peak-compute.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089832101,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "willificent",
+    "handle": "willificent",
+    "user_id": "s175vmge07jax9g56h30p8q4f984aats"
+  },
+  "slug": "off-peak-compute",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/off-peak-compute",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=off-peak-compute&ownerHandle=willificent",
+    "page_url": "https://clawhub.ai/willificent/skills/off-peak-compute"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 989,
+    "installs": 27,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Run heavy compute tasks overnight when GPU/cloud capacity is cheapest (spot pricing). Use when you have non-time-sensitive tasks that would benefit from off-...",
+  "updated_at": 1779077940430,
+  "version": "1.0.2"
+}
