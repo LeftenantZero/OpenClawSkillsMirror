@@ -1,0 +1,69 @@
+{
+  "changelog": "- Added default behavior for molecular factory: runs non-docking jobs unless docking is explicitly requested (`args.need_docking=false`, `args.pdb_use.*=false`).\n- Set default generation models for molecular factory: `args.molgen_algos=[\"Frag-GPT\",\"REINVENT\"]`.\n- No code changes; documentation updates only.",
+  "created_at": 1773804601035,
+  "display_name": "DrugFlow",
+  "fetched_at": 1787866568372,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/flows/admet/call-flow.md",
+    "references/flows/admet/payloads.md",
+    "references/flows/common-apis/call-flow.md",
+    "references/flows/common-apis/payloads.md",
+    "references/flows/docking/call-flow.md",
+    "references/flows/docking/payloads.md",
+    "references/flows/molecular-factory/call-flow.md",
+    "references/flows/molecular-factory/payloads.md",
+    "references/flows/rescoring/call-flow.md",
+    "references/flows/rescoring/payloads.md",
+    "references/flows/structure-extract/call-flow.md",
+    "references/flows/structure-extract/payloads.md",
+    "references/flows/virtual-screening/call-flow.md",
+    "references/flows/virtual-screening/payloads.md",
+    "references/index.md",
+    "scripts/admet/run_admet_flow.py",
+    "scripts/common/__init__.py",
+    "scripts/common/drugflow_api.py",
+    "scripts/common/pdb_parser.py",
+    "scripts/common/test_common_apis.py",
+    "scripts/docking/run_docking_flow.py",
+    "scripts/molecular-factory/run_molecular_factory_flow.py",
+    "scripts/rescoring/run_rescoring_flow.py",
+    "scripts/structure-extract/run_structure_extract_flow.py",
+    "scripts/virtual-screening/run_vs_flow.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089949996,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ashipiling",
+    "handle": "ashipiling",
+    "user_id": "s17ar3sm7avqb74400wfs7mxb1884914"
+  },
+  "slug": "drugflow-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/drugflow-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=drugflow-api&ownerHandle=ashipiling",
+    "page_url": "https://clawhub.ai/ashipiling/skills/drugflow-api"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 818,
+    "installs": 22,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Multi-flow API workflow skill for this DrugFlow Django repository. Use when an agent needs executable end-to-end API procedures such as login/register, works...",
+  "updated_at": 1778491989335,
+  "version": "1.0.2"
+}
