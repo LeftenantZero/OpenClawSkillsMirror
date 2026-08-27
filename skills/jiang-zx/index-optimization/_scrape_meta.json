@@ -1,0 +1,47 @@
+{
+  "changelog": "index-optimization v1.0.0\n\n- Initial release with end-to-end index optimization for single tables/collections, supporting both full (all queries) and single-query modes.\n- Two execution confirmation modes: require-confirmation and no-confirmation.\n- Includes detailed steps: query discovery (with clickable code location links), query pattern analysis, reusable index design per DB type, explain-based validation, and iterative improvement.\n- Provides clear output requirements, including explain results with actual index hit, change justification, and rollback SQL.\n- Emphasizes safety for index deletion, requiring evidence, replacement index, and non-regressing explain plan before drop.\n- Includes quick command-line scripts for query extraction and index checking.",
+  "created_at": 1773395769051,
+  "display_name": "Index Optimization",
+  "fetched_at": 1787789112170,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/index-rules.md",
+    "references/mysql-explain-guide.md",
+    "scripts/collect_table_queries.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089867526,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jiang-zx",
+    "handle": "jiang-zx",
+    "user_id": "s17dw269b0vgkw3d6kj4yb1kc183rv4j"
+  },
+  "slug": "index-optimization",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/index-optimization",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=index-optimization&ownerHandle=jiang-zx",
+    "page_url": "https://clawhub.ai/jiang-zx/skills/index-optimization"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 861,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Support full/single-query mode with index confirmation workflow",
+  "updated_at": 1779078084482,
+  "version": "1.0.0"
+}
