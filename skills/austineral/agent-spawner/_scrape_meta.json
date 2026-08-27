@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release: enables conversational deployment of new OpenClaw agents with minimal user input.\n\n- Gathers current agent's provider, API keys, plugins, and workspace skills automatically.\n- Asks user only for deployment target, agent name, and optional purpose.\n- Shows detailed deployment plan and waits for user confirmation.\n- Supports both Docker (local or remote) and bare metal installations.\n- Migrates relevant configs, tool keys, plugins, and custom skills to the new agent.\n- Presents final access URL and token upon successful agent creation.",
+  "created_at": 1771482478085,
+  "display_name": "Agent Spawner",
+  "fetched_at": 1787791753993,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779933042169,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "AustinEral",
+    "handle": "austineral",
+    "user_id": "s171vd51t7mxcey6m30f3nd5c18845jc"
+  },
+  "slug": "agent-spawner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-spawner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-spawner&ownerHandle=austineral",
+    "page_url": "https://clawhub.ai/austineral/skills/agent-spawner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2027,
+    "installs": 64,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Spawn a new OpenClaw agent through conversation. Uses official Docker setup and non-interactive onboarding, carries over API keys, tools, plugins, and skills...",
+  "updated_at": 1779077134851,
+  "version": "0.1.0"
+}
