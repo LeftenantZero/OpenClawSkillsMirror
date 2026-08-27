@@ -1,0 +1,40 @@
+{
+  "changelog": "- Clarified in documentation that mesh scripts are now \"read and insert only\"; anon key can no longer UPDATE or DELETE rows.\n- Updated security section: RLS policies strictly enforce SELECT and INSERT only, ensuring cleanup is manual via Supabase Dashboard.\n- Changed best practice: dedicated Supabase project is now required for mesh operation \u2014 do not reuse projects with sensitive data.\n- Minor documentation updates to script descriptions for greater clarity.",
+  "created_at": 1774404371624,
+  "display_name": "Elite Multi-Agent Comms Mesh",
+  "fetched_at": 1787850269821,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cron-templates.md",
+    "references/gotchas.md",
+    "references/supabase-setup.md",
+    "scripts/mesh-agents.sh",
+    "scripts/mesh-poll.sh",
+    "scripts/mesh-send.sh",
+    "scripts/mesh-status.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Joel Yi - DeployAIBots.com",
+    "handle": "joelsalespossible",
+    "user_id": "s17b0sq94ks1kwhv9gz1n05prx83h6qf"
+  },
+  "slug": "agent-mesh",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-mesh",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-mesh&ownerHandle=joelsalespossible",
+    "page_url": "https://clawhub.ai/joelsalespossible/skills/agent-mesh"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 641,
+    "installs": 18,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "Agent-to-agent communication via Supabase. Multiple OpenClaw agents on separate instances poll a shared Supabase table to send and receive messages asynchron...",
+  "updated_at": 1778492171908,
+  "version": "1.0.3"
+}
