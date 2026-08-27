@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of Screen Icon Finder\n\n- Find specified icons/images within a screenshot or picture using multi-scale OpenCV template matching and NMS deduplication.\n- Accepts a small target image from the user and locates all occurrences in a large screenshot.\n- Marks all matched icons with indexes and confidence scores; supports saving marked results.\n- Supports automated clicking of found icons by center coordinates.\n- Designed to handle varying screenshot resolutions and scales.\n- Usage examples and details provided in documentation.",
+  "created_at": 1776146614244,
+  "display_name": "Screen Icon Finder",
+  "fetched_at": 1787822984919,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/find_icon.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090417656,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "lieyingthh",
+    "handle": "lieyingthh",
+    "user_id": "s17cejv4kpw7whxzvatzy3dwmn83ktp1"
+  },
+  "slug": "screen-icon-finder",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/screen-icon-finder",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=screen-icon-finder&ownerHandle=lieyingthh",
+    "page_url": "https://clawhub.ai/lieyingthh/skills/screen-icon-finder"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 614,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5728\u5c4f\u5e55\u622a\u56fe\u6216\u56fe\u7247\u4e2d\uff0c\u901a\u8fc7 OpenCV \u6a21\u677f\u5339\u914d\u67e5\u627e\u6307\u5b9a\u56fe\u6807/\u56fe\u7247\u7684\u4f4d\u7f6e\uff0c\u652f\u6301\u591a\u5c3a\u5ea6\u5339\u914d\u53bb\u91cd\u3002 \u7528\u4e8e\uff1a(1) \u7528\u6237\u53d1\u6765\u4e00\u4e2a\u5c0f\u56fe\uff0c\u8ba9\u4f60\u5728\u5c4f\u5e55\u4e0a\u627e\uff1b(2) \u67e5\u627e\u6240\u6709\u5339\u914d\u56fe\u6807\u5e76\u6807\u53f7\uff1b(3) \u70b9\u51fb\u627e\u5230\u7684\u56fe\u6807\u3002 \u5173\u952e\u8bcd\uff1a\u627e\u56fe\u6807\u3001\u5b9a\u4f4d\u56fe\u6807\u3001\u6a21\u677f\u5339\u914d\u3001\u627e\u6309\u94ae\u3001\u70b9\u51fb\u56fe\u6807\u3001\u56fe\u7247\u641c\u7d22\u3002",
+  "updated_at": 1778492579583,
+  "version": "0.0.1"
+}
