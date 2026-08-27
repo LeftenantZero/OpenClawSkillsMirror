@@ -1,0 +1,65 @@
+{
+  "changelog": "Version 1.1.0 \u2014 Manual ComfyUI Server Management\n\n- Removed all ComfyUI server start/stop/ensure scripts; users must now start ComfyUI manually before use.\n- Updated documentation to eliminate references to `comfy_control.sh` and server management via shell scripts.\n- Revised setup steps: now clearly instruct users to manually launch and verify the ComfyUI server prior to running workflows.\n- Simplified configuration section; removed variables and examples related to server process control.\n- Clarified CLI usage and troubleshooting to reflect the new requirement of a running ComfyUI instance.",
+  "created_at": 1772247573145,
+  "display_name": "Comfyui Workflow",
+  "fetched_at": 1787801667886,
+  "files": [
+    "GENERATION_RULES.md",
+    "MODELS_INVENTORY.md",
+    "PRACTICAL_GUIDE.md",
+    "README.md",
+    "SKILL.md",
+    "WORKFLOWS_SUMMARY.md",
+    "_meta.json",
+    "references/architecture.md",
+    "references/maintenance.md",
+    "references/prompting-guide.md",
+    "scripts/comfy_api.py",
+    "scripts/comfy_run.py",
+    "scripts/config.example.json",
+    "scripts/config.example.sh",
+    "skill-card.md",
+    "skill.json",
+    "workflows/WAN 2.2 i2v FastFidelity C-AiO-52.json",
+    "workflows/format_json.py",
+    "workflows/image_flux2_t2i.json",
+    "workflows/image_qwen_edit_layered.json",
+    "workflows/image_qwen_t2i.json",
+    "workflows/image_z_t2i.json",
+    "workflows/video_extend_svi.json",
+    "workflows/video_hunyuan_i2v.json",
+    "workflows/video_wan_i2v.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966219568,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Yiqi Liu",
+    "handle": "yiqiliu2",
+    "user_id": "s17cq9wpa7te7krqh0csvk2nrd84fs9v"
+  },
+  "slug": "comfyui-workflow",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/comfyui-workflow",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=comfyui-workflow&ownerHandle=yiqiliu2",
+    "page_url": "https://clawhub.ai/yiqiliu2/skills/comfyui-workflow"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1841,
+    "installs": 58,
+    "stars": 2,
+    "versions": 4
+  },
+  "summary": "Universal ComfyUI workflow executor with 33+ workflow templates. Self-describing \u2014 use --inspect on ANY workflow to discover inputs and outputs automatically...",
+  "updated_at": 1778993804540,
+  "version": "1.1.0"
+}
