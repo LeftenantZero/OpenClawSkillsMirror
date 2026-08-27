@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of rag-ingest.\n\n- Writes pre-processed document content into Qdrant (kb_main collection) with chunking, embedding, and vector storage.\n- Does not handle fetching or refinement of content (expects already-processed input).\n- Accepts content via --content option or from stdin.\n- Supports key parameters: --doc-id, --topic-tags, optional --source, and --collection.\n- Designed for integration with tools like deep-research/summarize.",
+  "created_at": 1772671860212,
+  "display_name": "rag-ingest",
+  "fetched_at": 1787790242907,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/ingest.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089758383,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Seal-Re",
+    "handle": "seal-re",
+    "user_id": "s17cq8r1qmshf8ah7qsdjnmcjx885m87"
+  },
+  "slug": "rag-ingest",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/rag-ingest",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=rag-ingest&ownerHandle=seal-re",
+    "page_url": "https://clawhub.ai/seal-re/skills/rag-ingest"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1097,
+    "installs": 34,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06 Agent \u5df2\u89e3\u8bfb\u597d\u7684\u6b63\u6587\u5199\u5165 Qdrant\uff08kb_main\uff09\u3002\u4ec5\u505a chunk\u3001embedding \u548c\u5411\u91cf\u5199\u5165\uff0c\u4e0d\u8d1f\u8d23\u6293\u53d6\u4e0e\u7cbe\u70bc\u3002",
+  "updated_at": 1779077648379,
+  "version": "1.0.0"
+}
