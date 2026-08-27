@@ -1,0 +1,40 @@
+{
+  "changelog": "Initial release: provides structured workflows for creating and resuming session handoffs to prevent context loss in long-running tasks.\n\n- Introduces CREATE and RESUME workflows for saving and restoring project state.\n- Scripts for scaffold generation, validation, listing, and staleness checking included.\n- Defines handoff document quality criteria and automated validation with scoring.\n- Supports chained handoffs for projects requiring ongoing context preservation.\n- Adds clear guidance to prevent secrets leakage and enforce handoff completeness.",
+  "created_at": 1770730224592,
+  "display_name": "Session Handoff",
+  "fetched_at": 1787804996480,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/handoff-template.md",
+    "references/resume-checklist.md",
+    "scripts/check_staleness.py",
+    "scripts/create_handoff.py",
+    "scripts/list_handoffs.py",
+    "scripts/validate_handoff.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "wpank",
+    "handle": "wpank",
+    "user_id": "s17bjjbnm7xjckd29e1h2641ks8849md"
+  },
+  "slug": "session-handoff",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/session-handoff",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=session-handoff&ownerHandle=wpank",
+    "page_url": "https://clawhub.ai/wpank/skills/session-handoff"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1737,
+    "installs": 55,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "WHAT: Create comprehensive handoff documents that enable fresh AI agents to seamlessly continue work with zero ambiguity. Solves long-running agent context exhaustion problem.\n\nWHEN: (1) User requests handoff/memory/context save, (2) Context window approaches capacity, (3) Major task milestone completed, (4) Work session ending, (5) Resuming work with existing handoff.\n\nKEYWORDS: \"save state\", \"create handoff\", \"context is full\", \"I need to pause\", \"resume from\", \"continue where we left off\", \"load handoff\", \"save progress\", \"session transfer\", \"hand off\"",
+  "updated_at": 1778989525666,
+  "version": "0.1.0"
+}
