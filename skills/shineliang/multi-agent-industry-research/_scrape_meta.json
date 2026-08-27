@@ -1,0 +1,45 @@
+{
+  "changelog": "Add history cleanup check (Phase 0 step 1) to prevent old research outputs from polluting new runs; add model inheritance so sub-agents inherit the main session model instead of falling back to openclaw.json defaults; all sessions_spawn calls now require explicit model parameter",
+  "created_at": 1774442206238,
+  "display_name": "Openclaw",
+  "fetched_at": 1787848873871,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cross-validation.md",
+    "references/tool-mapping.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090104454,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "shineliang",
+    "handle": "shineliang",
+    "user_id": "s175hr3pc2nqkdvv12yqcmebyh83jkm7"
+  },
+  "slug": "multi-agent-industry-research",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/multi-agent-industry-research",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=multi-agent-industry-research&ownerHandle=shineliang",
+    "page_url": "https://clawhub.ai/shineliang/skills/multi-agent-industry-research"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 716,
+    "installs": 16,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Multi-agent collaborative industry research for OpenClaw. Dynamically assigns research roles, runs parallel research via sessions_spawn with codex/gemini/cla...",
+  "updated_at": 1778492186671,
+  "version": "1.2.0"
+}
