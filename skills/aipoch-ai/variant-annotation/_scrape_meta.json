@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of the variant-annotation skill for clinical variant interpretation.\n\n- Query and annotate variants using ClinVar, dbSNP, and population frequency data.\n- Supports multiple input formats: rsID, HGVS notation, genomic coordinates, VCF.\n- Provides clinical significance, ACMG guideline-based classification, allele frequencies, disease associations, and functional predictions.\n- Python API and CLI interfaces for individual and batch variant annotation.\n- Implements ACMG scoring and variant classification thresholds.\n- Integrates major datastores (ClinVar, dbSNP, gnomAD, Ensembl VEP, CADD) for comprehensive annotation.",
+  "created_at": 1772265678991,
+  "display_name": "Variant Annotation",
+  "fetched_at": 1787801601553,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acmg-guidelines.md",
+    "references/clinvar-guide.md",
+    "references/example-variants.md",
+    "references/hgvs-nomenclature.md",
+    "requirements.txt",
+    "scripts/main.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967064259,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "AIpoch",
+    "handle": "aipoch-ai",
+    "user_id": "s17fjw78yq6wtd4ep6zsaxwrn983hznr"
+  },
+  "slug": "variant-annotation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/variant-annotation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=variant-annotation&ownerHandle=aipoch-ai",
+    "page_url": "https://clawhub.ai/aipoch-ai/skills/variant-annotation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1111,
+    "installs": 32,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query and annotate gene variants from ClinVar and dbSNP databases. Trigger when: - User provides a variant identifier (rsID, HGVS notation, genomic coordinat...",
+  "updated_at": 1778993880194,
+  "version": "1.0.0"
+}
