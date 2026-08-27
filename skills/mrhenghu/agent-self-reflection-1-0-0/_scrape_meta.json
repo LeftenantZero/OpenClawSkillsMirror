@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release of the self-reflection skill\u2014enables periodic analysis of recent sessions to extract actionable insights.\n- Gathers recent Telegram, direct, and cron-triggered sessions, ignoring subagent and self-reflection sessions.\n- Reviews only the latest portion of session transcripts (with strict token and size limits) to identify what went well, what went wrong, and lessons learned.\n- Routes insights to appropriate files such as AGENTS.md, TOOLS.md, daily memory, about-user.md, skill docs, and memory index.\n- Emphasizes concise, specific, and non-redundant insights, avoiding vague, obvious, or duplicate notes.",
+  "created_at": 1773475553652,
+  "display_name": "Agent Self Reflection 1.0.0",
+  "fetched_at": 1787789013081,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/summarize-sessions.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089883508,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mrhenghu",
+    "handle": "mrhenghu",
+    "user_id": "s17dccqnar8wmxbgvymezd63r5885abb"
+  },
+  "slug": "agent-self-reflection-1-0-0",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-self-reflection-1-0-0",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-self-reflection-1-0-0&ownerHandle=mrhenghu",
+    "page_url": "https://clawhub.ai/mrhenghu/skills/agent-self-reflection-1-0-0"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1037,
+    "installs": 30,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Periodic self-reflection on recent sessions. Analyzes what went well, what went wrong, and writes concise, actionable insights to the appropriate workspace f...",
+  "updated_at": 1779078119273,
+  "version": "1.0.0"
+}
