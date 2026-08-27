@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of the nl2sql skill.\n\n- Converts natural language to SQL queries and executes them on MySQL databases.\n- Supports both local and remote MySQL database connections; users can provide host, port, user, and password.\n- Handles SELECT, INSERT, UPDATE, DELETE queries, as well as transaction operations.\n- Multiple output formats supported: table (default), CSV, and JSON.\n- Strict credential security enforced: never expose database passwords in any output or reply.\n- Includes safety checks for destructive operations (e.g., DELETE/DROP must be confirmed by user).",
+  "created_at": 1773315376070,
+  "display_name": "\u81ea\u7136\u8bed\u8a00\u8f6c SQL \u67e5\u8be2\u52a9\u624b",
+  "fetched_at": 1787789108726,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/guide.md",
+    "scripts/databases.sh",
+    "scripts/query.sh",
+    "scripts/schema.sh",
+    "scripts/transaction.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089857754,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u6ca7\u6d77\u4e00\u58f0\u7b11",
+    "handle": "cyesky",
+    "user_id": "s171kw1h5z7sqnr21sbzqx9tvh885zyy"
+  },
+  "slug": "nl2sql",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nl2sql",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nl2sql&ownerHandle=cyesky",
+    "page_url": "https://clawhub.ai/cyesky/skills/nl2sql"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1154,
+    "installs": 35,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u81ea\u7136\u8bed\u8a00\u8f6c SQL \u67e5\u8be2\u52a9\u624b\u3002\u5c06\u7528\u6237\u7684\u81ea\u7136\u8bed\u8a00\u63cf\u8ff0\u8f6c\u6362\u4e3a SQL \u8bed\u53e5\uff0c\u81ea\u52a8\u6267\u884c\u5e76\u8fd4\u56de\u7ed3\u679c\u3002 \u652f\u6301\u8fde\u63a5\u672c\u5730\u6216\u8fdc\u7a0b MySQL \u6570\u636e\u5e93\u3001\u7528\u6237\u81ea\u884c\u6307\u5b9a\u6570\u636e\u5e93\u8fde\u63a5\u4fe1\u606f\uff08host/port/user/password\uff09\u3001 \u589e\u5220\u6539\u67e5\uff08SELECT/INSERT/UPDATE/DELETE\uff09\u3001\u4e8b\u52a1\u64cd\u4f5c\u3001\u591a\u79cd\u8f93\u51fa\u683c\u5f0f\uff08tabl...",
+  "updated_at": 1779078081851,
+  "version": "1.0.0"
+}
