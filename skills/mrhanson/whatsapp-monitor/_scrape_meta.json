@@ -1,0 +1,61 @@
+{
+  "changelog": "whatsapp-monitor 0.0.1\n\n- Initial release of WhatsApp message monitoring skill.\n- Monitors specified WhatsApp chats or groups in real-time for keyword hits.\n- Aggregates and exports filtered messages to a Feishu (Lark) multi-dimensional table on a schedule.\n- Supports keyword filtering, batch collection, scheduled exports, and optional immediate alerts for high-priority keywords.\n- Includes setup guides, sample configuration files, and troubleshooting steps.",
+  "created_at": 1774249033896,
+  "display_name": "whatsapp-monitor",
+  "fetched_at": 1787854194046,
+  "files": [
+    "SKILL.md",
+    "USAGE.md",
+    "_meta.json",
+    "config/feishu-settings.json",
+    "config/whatsapp-targets.json",
+    "install_deps.sh",
+    "load_skill.py",
+    "openclaw_integration.md",
+    "references/openclaw_whatsapp_integration.md",
+    "references/port_configuration.md",
+    "requirements.txt",
+    "run_skill.sh",
+    "scripts/config_manager.py",
+    "scripts/feishu_client.py",
+    "scripts/message_processor.py",
+    "scripts/monitor.py",
+    "scripts/setup.py",
+    "scripts/whatsapp_client.py",
+    "skill-card.md",
+    "start_monitor.sh",
+    "test_skill.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090046838,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "MrHanson",
+    "handle": "mrhanson",
+    "user_id": "s172r1hkb9vqhwyb37nzmv7b4h83h0se"
+  },
+  "slug": "whatsapp-monitor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/whatsapp-monitor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=whatsapp-monitor&ownerHandle=mrhanson",
+    "page_url": "https://clawhub.ai/mrhanson/skills/whatsapp-monitor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 533,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Monitor specified WhatsApp chats for keywords in real time and batch export matched messages to Feishu multi-dimensional tables with optional alerts.",
+  "updated_at": 1778492127920,
+  "version": "0.0.1"
+}
