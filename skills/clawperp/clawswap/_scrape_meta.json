@@ -1,0 +1,62 @@
+{
+  "changelog": "- Major workspace refactor to new directory layout and packaging.\n- All agent, strategy, and tool scripts moved under `clawswap/`.\n- Expanded strategies with additional files for adaptive trend, Bollinger RSI, breakout volume, VWAP scalper, and more.\n- Added backtesting, data download, and packaging tools to `clawswap/tools/`.\n- Updated documentation to point to `clawswap/SKILL.md` as the canonical skill definition.\n- Legacy scripts and redundant files removed.",
+  "created_at": 1772309358322,
+  "display_name": "Clawswap",
+  "fetched_at": 1787790593982,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "clawswap/SKILL.md",
+    "clawswap/examples/rsi_macd_strategy.py",
+    "clawswap/runtime_client.py",
+    "clawswap/skill.json",
+    "clawswap/strategies/__init__.py",
+    "clawswap/strategies/adaptive_trend.py",
+    "clawswap/strategies/bollinger_rsi.py",
+    "clawswap/strategies/breakout_volume.py",
+    "clawswap/strategies/grid.py",
+    "clawswap/strategies/indicators.py",
+    "clawswap/strategies/mean_reversion.py",
+    "clawswap/strategies/momentum.py",
+    "clawswap/strategies/vwap_scalper.py",
+    "clawswap/tests/test_runtime_client.py",
+    "clawswap/tools/backtest.py",
+    "clawswap/tools/custom_backtest.py",
+    "clawswap/tools/download_data.py",
+    "clawswap/tools/package_skill.sh",
+    "clawswap/tools/prepublish_check.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967899098,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ClawSwap",
+    "handle": "clawperp",
+    "user_id": "s177jkbgt8ysr95gzgy0wxdjkn8859s5"
+  },
+  "slug": "clawswap",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawswap",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawswap&ownerHandle=clawperp",
+    "page_url": "https://clawhub.ai/clawperp/skills/clawswap"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1294,
+    "installs": 36,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Trade perpetual futures on ClawSwap DEX, check balances and positions, join competitions, and track points and leaderboard standings with AI authentication.",
+  "updated_at": 1779077514690,
+  "version": "0.2.1"
+}
