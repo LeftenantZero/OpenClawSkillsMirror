@@ -1,0 +1,54 @@
+{
+  "changelog": "**Initial release of intelligent-router-openclaw: Intelligent model routing for task delegation based on complexity, cost, and capability.**\n\n- Automatically classifies tasks and routes to the optimal model tier, reducing compute costs for simple jobs while preserving quality for complex and critical work.\n- Enforces mandatory routing protocol for all cron jobs and sub-agent spawns; direct model assignment is blocked without router approval.\n- Introduces `router_policy.py` for pre-submission validation, model blocklisting (e.g., `ollama-gpu-server`), enforced recommendations, audits, and critical task warnings.\n- Supports live model auto-discovery and configuration health checks via inference tests.\n- Implements a 15-factor task-scoring system for accurate tier assignment.\n- Integrates with installation script for seamless protocol enforcement.",
+  "created_at": 1775891103501,
+  "display_name": "Intelligent Router Openclaw",
+  "fetched_at": 1787825444148,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "install.sh",
+    "scripts/auto_refresh_models.sh",
+    "scripts/discover_models.py",
+    "scripts/fix_tiers.py",
+    "scripts/provider_health.py",
+    "scripts/router.py",
+    "scripts/router_policy.py",
+    "scripts/setup_discovery_cron.sh",
+    "scripts/spawn_helper.py",
+    "scripts/tier_classifier.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090374146,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Rene Cabrera",
+    "handle": "nicocabrerac",
+    "user_id": "s17dnpq3576gxa8q07zasr1vxx84ng67"
+  },
+  "slug": "intelligent-router-openclaw",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/intelligent-router-openclaw",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=intelligent-router-openclaw&ownerHandle=nicocabrerac",
+    "page_url": "https://clawhub.ai/nicocabrerac/skills/intelligent-router-openclaw"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 551,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Intelligent model routing for sub-agent task delegation. Choose the optimal model based on task complexity, cost, and capability requirements. Reduces costs...",
+  "updated_at": 1778492525637,
+  "version": "1.0.0"
+}
