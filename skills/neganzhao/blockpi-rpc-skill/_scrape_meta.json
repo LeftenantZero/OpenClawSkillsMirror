@@ -1,0 +1,40 @@
+{
+  "changelog": "- Endpoints in state are now encrypted at rest and automatically decrypted on use; local encryption key is stored in state/.endpoints.key.\n- Legacy plaintext endpoint state is automatically migrated to encrypted format on first access.\n- Do not commit or distribute real endpoints or key material; all persisted secrets are local-only.\n- User consent is emphasized for storing sensitive API keys or tokens.",
+  "created_at": 1775726277131,
+  "display_name": "blockpi-rpc.skill",
+  "fetched_at": 1787826812286,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/pricing_notes.md",
+    "references/protocol_matrix.md",
+    "references/rpc_catalog.json",
+    "references/rpc_summary.md",
+    "references/solana-yellowstone-design.md",
+    "scripts/call_blockpi.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "NeganZhao",
+    "handle": "neganzhao",
+    "user_id": "s17dg4w4sr13rbncvr7mn36k2d84hb2b"
+  },
+  "slug": "blockpi-rpc-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/blockpi-rpc-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=blockpi-rpc-skill&ownerHandle=neganzhao",
+    "page_url": "https://clawhub.ai/neganzhao/skills/blockpi-rpc-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 671,
+    "installs": 17,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Multi-protocol BlockPI access skill for discovering documented methods, routing requests by protocol, mapping RU pricing, and calling BlockPI endpoints acros...",
+  "updated_at": 1778492497331,
+  "version": "1.0.1"
+}
