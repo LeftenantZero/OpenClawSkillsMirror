@@ -1,0 +1,59 @@
+{
+  "changelog": "EvoClaw v1.0.1 \u2014 Major File Layout Overhaul\n\n- Significant simplification of file structure: removed 412 files, mainly deprecated fetchers, scripts, and maintenance utilities.\n- Technical JSON reflection artifacts are now stored in memory/pipeline/reflections/ (moved from memory/reflections/).\n- memory/reflections/ is now reserved strictly for human-readable diary files.\n- SKILL.md updated for strict file layout enforcement and new folder conventions.\n- Documentation and references updated for clarity on allowed/forbidden file patterns and locations.",
+  "created_at": 1771319574789,
+  "display_name": "Evoclaw",
+  "fetched_at": 1787792180783,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "configure.md",
+    "references/examples.md",
+    "references/heartbeat-debug.md",
+    "references/schema.md",
+    "references/sources.md",
+    "skill-card.md",
+    "tools/soul-viz.py",
+    "validators/check_pipeline_ran.py",
+    "validators/check_workspace.py",
+    "validators/run_all.py",
+    "validators/validate_experience.py",
+    "validators/validate_proposal.py",
+    "validators/validate_reflection.py",
+    "validators/validate_soul.py",
+    "validators/validate_state.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779972634168,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "eyedark",
+    "handle": "eyedark",
+    "user_id": "s17a8vdegd5e7k3d9septmha2s884ej1"
+  },
+  "slug": "evoclaw",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/evoclaw",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=evoclaw&ownerHandle=eyedark",
+    "page_url": "https://clawhub.ai/eyedark/skills/evoclaw"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1498,
+    "installs": 47,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Manages a self-evolving AI identity by logging experience, reflecting, proposing updates, and governing changes to maintain a structured SOUL.md file.",
+  "updated_at": 1779077005580,
+  "version": "1.0.1"
+}
