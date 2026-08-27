@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of the generic_drug skill:\n\n- Supports querying the generic name of a drug based on user-provided product names.\n- Uses a local SearXNG search service to find generic name information.\n- Returns original search results and lets the LLM analyze context for intelligent generic name extraction.\n- If no generic name is found, returns the original name as the generic name by default.\n- Outputs results in a structured JSON format for easy interpretation.\n- Handles drug names, excipients, and complex naming situations intelligently.",
+  "created_at": 1775349403674,
+  "display_name": "Generic Drug",
+  "fetched_at": 1787831911136,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md",
+    "tool.sh"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "DDDWinter",
+    "handle": "dddwinter",
+    "user_id": "s17fg9dr39d18g2d49zpzg8apd83g5mn"
+  },
+  "slug": "generic-drug",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/generic-drug",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=generic-drug&ownerHandle=dddwinter",
+    "page_url": "https://clawhub.ai/dddwinter/skills/generic-drug"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 550,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u67e5\u8be2\u836f\u54c1\u540d\u79f0\u5bf9\u5e94\u7684\u901a\u7528\u540d\uff0c\u82e5\u65e0\u7ed3\u679c\u5219\u8fd4\u56de\u539f\u540d\u79f0\uff0c\u57fa\u4e8e\u672c\u5730 SearXNG \u641c\u7d22\u7ed3\u679c\u667a\u80fd\u5206\u6790\u8bc6\u522b\u3002",
+  "updated_at": 1778492415940,
+  "version": "1.0.0"
+}
