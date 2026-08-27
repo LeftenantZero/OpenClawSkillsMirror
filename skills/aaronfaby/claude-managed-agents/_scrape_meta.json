@@ -1,0 +1,41 @@
+{
+  "changelog": "Initial release of the claude-managed-agents skill.\n\n- Provides a Python CLI helper to manage Claude Managed Agents, environments, sessions, and event streams.\n- Documents secondary support for the ant CLI and fallback to REST for debugging.\n- Includes commands for agent/environment/session lifecycle, session events, file management, configuration, and diagnostics.\n- Focuses on safety: uses archiving before deletion, strict event/tool result handling, and API key/environment validation.\n- Requires Python 3 and ANTHROPIC_API_KEY; supports optional config and SDK.\n- Extensive usage guidance and recommended command patterns included.",
+  "created_at": 1778389417881,
+  "display_name": "Claude Managed Agents",
+  "fetched_at": 1787806590486,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ant-cli-recipes.md",
+    "references/event-model.md",
+    "references/files-api.md",
+    "references/known-gaps.md",
+    "references/lifecycle-recipes.md",
+    "references/quickstart.md",
+    "scripts/managed_agents.py",
+    "skill-card.md",
+    "tests/test_managed_agents.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Aaron",
+    "handle": "aaronfaby",
+    "user_id": "s175dt5z0jxrdep6czzsrqkcyn854eyc"
+  },
+  "slug": "claude-managed-agents",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claude-managed-agents",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claude-managed-agents&ownerHandle=aaronfaby",
+    "page_url": "https://clawhub.ai/aaronfaby/skills/claude-managed-agents"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 660,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Manage Claude Managed Agents end to end through a Python helper CLI, with ant CLI equivalents documented as a secondary path. Use this whenever the user want...",
+  "updated_at": 1778945447278,
+  "version": "1.0.0"
+}
