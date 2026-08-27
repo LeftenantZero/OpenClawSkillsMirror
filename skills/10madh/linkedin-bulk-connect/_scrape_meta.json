@@ -1,0 +1,44 @@
+{
+  "changelog": "v1.1.0: mandatory feed navigation before every profile (anti-detection), pre-flight checklist (data file + browser setup confirmation), fixed tier order (Direct URL \u2192 Google \u2192 LinkedIn search), raised session cap to 20-25 requests, both Chrome Relay and openclaw isolated browser supported.",
+  "created_at": 1770978059445,
+  "display_name": "LinkedIn Bulk Connect",
+  "fetched_at": 1787792402678,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/browser-workflow.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779973471534,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "10Madh",
+    "handle": "10madh",
+    "user_id": "s1763w1ba1093k17skgwjn7fz5884ag4"
+  },
+  "slug": "linkedin-bulk-connect",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/linkedin-bulk-connect",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=linkedin-bulk-connect&ownerHandle=10madh",
+    "page_url": "https://clawhub.ai/10madh/skills/linkedin-bulk-connect"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2033,
+    "installs": 66,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Send LinkedIn connection requests to a list of people via browser automation and track status in a CSV/TSV file. Use when the user wants to bulk-connect with a list of people on LinkedIn (founders, speakers, leads, etc.) from a spreadsheet or list containing LinkedIn profile URLs. Handles Connect button, Follow-mode profiles, already-connected detection, stale URL fallback via LinkedIn search and Google search, and incremental status tracking.",
+  "updated_at": 1779076936564,
+  "version": "1.1.0"
+}
