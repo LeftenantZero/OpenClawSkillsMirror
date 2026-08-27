@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release of model-config-check skill.\n- Automatically verifies model configuration and connectivity after provider/model changes or updates.\n- Supports quick model addition by auto-detecting provider and filling configuration when only model name + API key are given.\n- Runs comprehensive checks: configuration integrity, network, API authentication, and response validation.\n- Provides users a detailed configuration report with results and troubleshooting advice.\n- Supports both automatic and manual triggering for model diagnostics.",
+  "created_at": 1774959287900,
+  "display_name": "Model Config Check",
+  "fetched_at": 1787838237998,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/check_models.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090209576,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "PL Uncle",
+    "handle": "jasonzhang2015",
+    "user_id": "s176m6r1kkv4wv92134rj0mw2h83k827"
+  },
+  "slug": "model-config-check",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/model-config-check",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=model-config-check&ownerHandle=jasonzhang2015",
+    "page_url": "https://clawhub.ai/jasonzhang2015/skills/model-config-check"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 605,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6821\u9a8c\u6a21\u578b\u914d\u7f6e\u662f\u5426\u6b63\u786e\u3001\u6a21\u578b\u662f\u5426\u53ef\u4ee5\u6b63\u5e38\u8fde\u63a5\u548c\u8fd4\u56de\u5185\u5bb9\u3002\u5f53\u7528\u6237\u8bf4\"\u68c0\u67e5\u6a21\u578b\"\u3001\"\u6d4b\u8bd5\u6a21\u578b\"\u3001\"\u6a21\u578b\u80fd\u4e0d\u80fd\u7528\"\u3001\"\u6a21\u578b\u914d\u7f6e\"\u3001\"\u8bca\u65ad\u6a21\u578b\u95ee\u9898\"\u65f6\u4f7f\u7528\u3002**\u6bcf\u6b21\u4fee\u6539\u6a21\u578b\u914d\u7f6e\uff08config.patch/config.apply\u6d89\u53camodels.providers\uff09\u540e\u5fc5\u987b\u81ea\u52a8\u6267\u884c\u6821\u9a8c\u3002** \u7528\u6237\u53ea\u7ed9\u6a21\u578b\u540d+API key\u65f6...",
+  "updated_at": 1778492320487,
+  "version": "1.0.0"
+}
