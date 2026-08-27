@@ -1,0 +1,58 @@
+{
+  "changelog": "Initial release of douyin-content-tracker.\n\n- Scrapes Douyin creator videos via MediaCrawler and downloads audio using Playwright + ffmpeg, with automatic fallback to yt-dlp if blocked.\n- Integrates Whisper for audio transcription, supporting quick and stable processing.\n- Includes setup instructions for dependency installation, environment configuration, and cookie management (WeChat, scan, or manual).\n- Provides step-by-step daily usage guide and detailed troubleshooting for common issues like cookie expiry, download failures, and Whisper/OpenMP errors.\n- Offers ready-to-use command examples, directory structure overview, and templated progress report output.",
+  "created_at": 1774067585077,
+  "display_name": "Douyin Content Tracker Skill",
+  "fetched_at": 1787859276581,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/pipeline.md",
+    "references/troubleshooting.md",
+    "scripts/clean_data.py",
+    "scripts/download_video.py",
+    "scripts/extract_subtitle.py",
+    "scripts/main.py",
+    "scripts/requirements.txt",
+    "scripts/run_state.py",
+    "scripts/scrape_profile.py",
+    "scripts/storage.py",
+    "scripts/track_latest.py",
+    "scripts/utils.py",
+    "scripts/utils_platform.py",
+    "scripts/whisper_simple.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090014261,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yibo",
+    "handle": "gpttang",
+    "user_id": "s1727d5rg1n0w49hq7dnkepnk9885ht0"
+  },
+  "slug": "douyin-content-tracker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/douyin-content-tracker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=douyin-content-tracker&ownerHandle=gpttang",
+    "page_url": "https://clawhub.ai/gpttang/skills/douyin-content-tracker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 560,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Scrapes Douyin creator videos, downloads audio (Playwright+ffmpeg with yt-dlp fallback), and transcribes with Whisper. Covers setup, daily tracking, cookie m...",
+  "updated_at": 1778492076651,
+  "version": "1.0.0"
+}
