@@ -1,0 +1,49 @@
+{
+  "changelog": "- Initial release: Intelligent Amazon keyword research and classification tool.\n- Automatic collection of 2000+ keywords via Sorftime MCP API covering product, competitor, and category keywords plus long-tail expansion.\n- Smart categorization using LLM Agent into 8 keyword dimensions: Negative, Brand, Material, Scenario, Attribute, Function, Core, and Other.\n- Generates markdown reports, structured CSV keyword libraries, and interactive HTML dashboards.\n- Simple command to trigger: `/keyword-research {ASIN} {SITE}`; supports both command and natural language requests.\n- Optional custom product info improves classification accuracy.",
+  "created_at": 1774337671513,
+  "display_name": "amazon-sorftime-research-keywords-skill",
+  "fetched_at": 1787852199356,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/api-tools-reference.md",
+    "references/report-management.md",
+    "references/sorftime-mcp-api.md",
+    "references/sorftime_mcp\u6587\u6863.txt",
+    "scripts/csv_generator.py",
+    "scripts/data_parser.py",
+    "scripts/generate_html_dashboard.py",
+    "scripts/generate_markdown_report.py",
+    "scripts/keyword_collector.py",
+    "scripts/regen_md_html.py",
+    "scripts/regenerate_reports.py",
+    "scripts/test_html_gen.py",
+    "scripts/test_load_classify.py",
+    "scripts/workflow.py",
+    "skill-card.md",
+    "templates/dashboard_template.html"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "liangdabiao",
+    "handle": "liangdabiao",
+    "user_id": "s1751q8y7zg7g4cphjx57122f183hzq4"
+  },
+  "slug": "amazon-sorftime-research-keywords-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/amazon-sorftime-research-keywords-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=amazon-sorftime-research-keywords-skill&ownerHandle=liangdabiao",
+    "page_url": "https://clawhub.ai/liangdabiao/skills/amazon-sorftime-research-keywords-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 560,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4e9a\u9a6c\u900a\u5173\u952e\u8bcd\u6df1\u5ea6\u8c03\u7814\u4e0e\u667a\u80fd\u5206\u7c7b\u5206\u6790\u3002\u57fa\u4e8e Sorftime MCP \u6570\u636e\u91c7\u96c6 2000+ \u5173\u952e\u8bcd\uff0c\u901a\u8fc7 LLM Agent \u6309 8 \u7ef4\u5ea6\u667a\u80fd\u5206\u7c7b\uff08\u5426\u5b9a\u8bcd\u3001\u54c1\u724c\u8bcd\u3001\u6750\u8d28\u8bcd\u3001\u573a\u666f\u8bcd\u3001\u5c5e\u6027\u8bcd\u3001\u529f\u80fd\u8bcd\u3001\u6838\u5fc3\u8bcd\u3001\u5176\u4ed6\uff09\uff0c\u751f\u6210 Markdown \u62a5\u544a\u3001CSV \u8bcd\u5e93\u548c HTML \u4eea\u8868\u677f\u3002\u89e6\u53d1\u65b9\u5f0f\uff1a/keyword-resear...",
+  "updated_at": 1778492151351,
+  "version": "1.0.0"
+}
