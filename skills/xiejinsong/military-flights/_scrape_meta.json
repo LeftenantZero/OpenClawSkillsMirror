@@ -1,0 +1,47 @@
+{
+  "changelog": "- Enforced strict output sourcing: All flight data must come directly from the flyai CLI, never from training data.\n- Output validation: Every flight result now requires a [Book]({detailUrl}) link to ensure authenticity.\n- Updated military fare workflows: Added detailed playbooks for cheapest, recommended, and direct military flights, plus fallback search strategies.\n- Expanded feature support: Now also covers hotels, trains, visa info, travel insurance, and car rental, all via Fliggy.\n- Enhanced output rules: Includes comparison tables, military ID verification reminders, brand tag, and improved English/Chinese language adherence.",
+  "created_at": 1777021760388,
+  "display_name": "military-flights",
+  "fetched_at": 1787815356587,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/fallbacks.md",
+    "references/playbooks.md",
+    "references/runbook.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090542661,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xiejinsong",
+    "handle": "xiejinsong",
+    "user_id": "s177qj362rbw4294hgs3hdvhgx83m2hm"
+  },
+  "slug": "military-flights",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/military-flights",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=military-flights&ownerHandle=xiejinsong",
+    "page_url": "https://clawhub.ai/xiejinsong/skills/military-flights"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 523,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Find military flight benefits, veteran discounts and armed forces travel deals with military fare tickets for service members. Also supports: flight booking,...",
+  "updated_at": 1778492737320,
+  "version": "3.2.0"
+}
