@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of skill-dreaming-extractor \u2014 automatically builds a persistent, searchable memory file from daily agent session history.\n\n- Scans and filters previous day's agent conversations to extract structured facts about decisions, problems solved, changes, and corrections.\n- Appends facts (with confidence scores and citations) to `memory/learned.md` for long-term recall.\n- Caps daily token/cost usage per configurable budget policy.\n- Designed for daily execution via cron and includes manual run instructions.\n- Fact extraction enforces strict quality gates to prevent noise and duplication.",
+  "created_at": 1776467571589,
+  "display_name": "Dreaming Extractor",
+  "fetched_at": 1787819457388,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/budget.py",
+    "scripts/collect.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Zero2Ai",
+    "handle": "zero2ai-hub",
+    "user_id": "s17a1b8dv4hc6x68q9m057m67n83ryrt"
+  },
+  "slug": "skill-dreaming-extractor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-dreaming-extractor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-dreaming-extractor&ownerHandle=zero2ai-hub",
+    "page_url": "https://clawhub.ai/zero2ai-hub/skills/skill-dreaming-extractor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 636,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Daily fact extraction from AI agent session history into a persistent learned.md memory file",
+  "updated_at": 1778492647488,
+  "version": "1.0.0"
+}
