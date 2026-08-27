@@ -1,0 +1,56 @@
+{
+  "changelog": "Add adaptive oversized-prompt submit detection and shorten/retry fallback; fix giant prompt transport via --file; expand mode-matrix coverage.",
+  "created_at": 1775095221539,
+  "display_name": "AI Orchestrator",
+  "fetched_at": 1787835229125,
+  "files": [
+    "PHASE1-MANUAL.md",
+    "REFERENCE.md",
+    "SKILL.md",
+    "_meta.json",
+    "ask-deepseek.sh",
+    "ask-puppeteer.js",
+    "auth-check.js",
+    "daemon-healthcheck.js",
+    "deepseek-daemon.js",
+    "diagnostics.js",
+    "package-lock.json",
+    "package.json",
+    "scripts/isolation-check.js",
+    "scripts/setup-daemon.sh",
+    "scripts/test-mode-matrix.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090368349,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ciklopentan",
+    "handle": "ciklopentan",
+    "user_id": "s170bzkafdeer9wznxg0rasry58402yp"
+  },
+  "slug": "ai-orchestrator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-orchestrator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-orchestrator&ownerHandle=ciklopentan",
+    "page_url": "https://clawhub.ai/ciklopentan/skills/ai-orchestrator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 832,
+    "installs": 22,
+    "stars": 1,
+    "versions": 19
+  },
+  "summary": "DeepSeek AI access via Puppeteer browser automation with CDP interceptor. Persistent daemon (~35ms startup), health checks, graceful shutdown, PM2 management...",
+  "updated_at": 1778492359131,
+  "version": "2.0.11"
+}
