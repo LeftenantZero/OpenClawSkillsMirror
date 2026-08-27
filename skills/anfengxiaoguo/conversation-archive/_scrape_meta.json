@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of Conversation Archive: a session-based conversation memory system.\n\n- Automatically archives sessions, preserving original conversation JSON and generating structured summaries.\n- Supports keyword-based search, retrieval of original sessions, and memory extraction for integration with memory-never-forget.\n- Includes auto-archiving rules (on session restart/compact, inactivity, and daily force-archive).\n- Prevents storage of sensitive data (API keys, passwords) via message scanning and redaction.\n- Designed for future upgrade to vector (semantic) search.",
+  "created_at": 1775556632623,
+  "display_name": "Conversation Archive",
+  "fetched_at": 1787829156964,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/archive_session.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090333012,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "AnFengxiaoGuo",
+    "handle": "anfengxiaoguo",
+    "user_id": "s177xhcj1xygxacxsb22g0cj4x84dma1"
+  },
+  "slug": "conversation-archive",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/conversation-archive",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=conversation-archive&ownerHandle=anfengxiaoguo",
+    "page_url": "https://clawhub.ai/anfengxiaoguo/skills/conversation-archive"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 577,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5bf9\u8bdd\u8bb0\u5fc6\u4ed3\u5e93\uff1a\u81ea\u52a8\u5f52\u6863 session \u5bf9\u8bdd\uff0c\u4fdd\u7559\u539f\u59cb\u8bb0\u5f55\uff0c\u652f\u6301\u68c0\u7d22\u548c\u8bef\u89e3\u7ea0\u6b63\u3002\u53ef\u4e0e memory-never-forget \u8054\u52a8\u5f62\u6210\u5b8c\u6574\u8bb0\u5fc6\u4f53\u7cfb\u3002",
+  "updated_at": 1778492456008,
+  "version": "1.0.0"
+}
