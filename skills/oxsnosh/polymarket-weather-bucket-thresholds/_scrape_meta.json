@@ -1,0 +1,45 @@
+{
+  "changelog": "- Initial release of the Global Temperature Bucket Thresholds (Simmer) strategy.\n- Buys YES when probability is under 15%, sells all at 45% or above.\n- Limits entries to ~$2 and a maximum of 5 trades per scan.\n- Strategies evaluated every 2 minutes with strict safeguards.\n- Dry-run mode by default; live trading enabled with `--live`.",
+  "created_at": 1772761100848,
+  "display_name": "Polymarket Weather Bucket Thresholds",
+  "fetched_at": 1787789983049,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "skill-card.md",
+    "trade.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089774870,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "OxSnosh",
+    "handle": "oxsnosh",
+    "user_id": "s17938vjhzh8h3j0bvzhfcxmrh885x66"
+  },
+  "slug": "polymarket-weather-bucket-thresholds",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polymarket-weather-bucket-thresholds",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polymarket-weather-bucket-thresholds&ownerHandle=oxsnosh",
+    "page_url": "https://clawhub.ai/oxsnosh/skills/polymarket-weather-bucket-thresholds"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 941,
+    "installs": 27,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Global temperature bucket threshold strategy via Simmer. Buy YES under 15%, sell full position at 45%, max ~$2 entries, max 5 trades/scan, every 2 minutes.",
+  "updated_at": 1779077750140,
+  "version": "1.0.0"
+}
