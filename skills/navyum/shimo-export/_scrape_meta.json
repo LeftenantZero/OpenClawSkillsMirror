@@ -1,0 +1,55 @@
+{
+  "changelog": "- Security and credential handling updated: credential files are now required to have 0600 permissions, and the config/ directory is added to .gitignore to prevent accidental commits.\n- Environment variable handling improved: all scripts now require credentials via the SHIMO_COOKIE environment variable only, never from files.\n- The certification preflight script now supports a --raw mode to output only the cookie value for downstream script use.\n- The README.md file was removed; a .gitignore file was added for sensitive configuration.\n- Documentation updated for improved security guidance and clearer step-by-step credential usage for both users and agents.",
+  "created_at": 1775183593033,
+  "display_name": "shimo-export",
+  "fetched_at": 1787796548806,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "auth/SKILL.md",
+    "auth/scripts/browser-login.cjs",
+    "auth/scripts/preflight-check.cjs",
+    "export/SKILL.md",
+    "export/references/api.md",
+    "export/scripts/batch-export.cjs",
+    "export/scripts/export-helper.cjs",
+    "file-management/SKILL.md",
+    "file-management/references/api.md",
+    "file-management/scripts/list-files.cjs",
+    "file-management/scripts/list-spaces.cjs",
+    "file-management/scripts/search.cjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090275560,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Navyum",
+    "handle": "navyum",
+    "user_id": "s171hw5xdzbt94fch66svfantx842vrs"
+  },
+  "slug": "shimo-export",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/shimo-export",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=shimo-export&ownerHandle=navyum",
+    "page_url": "https://clawhub.ai/navyum/skills/shimo-export"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 630,
+    "installs": 16,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "\u77f3\u58a8\u6587\u6863\u5bfc\u51fa AI Skill \u2014 \u901a\u8fc7 AI Agent \u4e0e\u77f3\u58a8\u6587\u6863 (shimo.im) API \u4ea4\u4e92\uff0c \u5b9e\u73b0\u81ea\u52a8\u767b\u5f55\u3001\u6587\u4ef6\u5217\u8868\u6d4f\u89c8\u3001\u56e2\u961f\u7a7a\u95f4\u626b\u63cf\u3001\u6279\u91cf\u5bfc\u51fa\uff08\u652f\u6301 Markdown\u3001PDF\u3001Word\u3001Excel\u3001PPT\u3001XMind\u3001\u56fe\u7247\u7b49\u683c\u5f0f\uff09\u3002 \u5f53\u7528\u6237\u63d0\u5230\u77f3\u58a8\u6587\u6863\u3001\u5bfc\u51fa\u6587\u4ef6\u3001\u4e0b\u8f7d\u6587\u6863\u3001\u6279\u91cf\u5bfc\u51fa\u3001\u56e2\u961f\u7a7a\u95f4\u3001\u6587...",
+  "updated_at": 1779075387282,
+  "version": "1.0.3"
+}
