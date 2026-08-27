@@ -1,0 +1,40 @@
+{
+  "changelog": "arxiv-daily-pusher 1.0.0\n\n- Initial release.\n- Automatically fetches and ranks yesterday's arXiv papers by keyword relevance.\n- Supports Feishu (Lark) webhook integration for daily paper pushes.\n- Multi-group support with independent keywords and scoring (title: 2x, abstract: 1x).\n- Dual-mode API with automatic fallback between arxiv library and HTTP.\n- Configurable scheduling and push strategies.",
+  "created_at": 1776150739180,
+  "display_name": "arXiv Daily Paper Pusher",
+  "fetched_at": 1787822959605,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.yaml",
+    "fetch_papers.py",
+    "main.py",
+    "push_feishu.py",
+    "rank_papers.py",
+    "requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "VentaoZzz",
+    "handle": "ventaozzz",
+    "user_id": "s17drhyx7ae4mxv70vdkn90aa984vk5t"
+  },
+  "slug": "arxiv-daily-pusher",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/arxiv-daily-pusher",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=arxiv-daily-pusher&ownerHandle=ventaozzz",
+    "page_url": "https://clawhub.ai/ventaozzz/skills/arxiv-daily-pusher"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 619,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fetches yesterday's arXiv papers, ranks by keyword relevance with weighted scoring, and pushes results to Feishu via webhook for multiple groups.",
+  "updated_at": 1778492579583,
+  "version": "1.0.0"
+}
