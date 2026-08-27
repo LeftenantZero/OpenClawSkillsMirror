@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of whatsapp-local-router, a skill for routing WhatsApp inputs to local HTTP endpoints.\n\n- Routes plain text messages to POST /process and QR image messages to POST /decode-qr on localhost.\n- Forwards backend JSON responses directly to the user without formatting changes.\n- Invokes backend via a shell script, returning stdout or raw error responses.\n- Prioritizes image (QR) decoding if both image and text are present.\n- Enforces a 20-second request timeout.\n- Preserves input text exactly as received.",
+  "created_at": 1771337125430,
+  "display_name": "WhatsApp Local Endpoints Router",
+  "fetched_at": 1787803754001,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/route_whatsapp.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779972600326,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Oleh Savchenko",
+    "handle": "olegqm",
+    "user_id": "s17f1qtxhhvmcesmndk8kyyf41884m1p"
+  },
+  "slug": "whatsapp-local-endpoints-router",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/whatsapp-local-endpoints-router",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=whatsapp-local-endpoints-router&ownerHandle=olegqm",
+    "page_url": "https://clawhub.ai/olegqm/skills/whatsapp-local-endpoints-router"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 449,
+    "installs": 10,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Route incoming WhatsApp content to local HTTP endpoints and return endpoint JSON directly to the user. Use when a WhatsApp message contains plain text/random...",
+  "updated_at": 1778991198813,
+  "version": "1.0.0"
+}
