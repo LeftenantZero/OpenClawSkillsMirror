@@ -1,0 +1,44 @@
+{
+  "changelog": "- Renamed skill from \"maestro-bitcoin\" to \"maestro-api\" to clarify broader API support.\n- Simplified and streamlined the client interaction flow; now emphasizes a fast step-by-step path for querying Maestro endpoints.\n- All details about signing, payment, and headers are now centralized in a separate reference file (`references/siwx-x402.md`).\n- Clarifies that the endpoint base URL and path come only from the docs operation page\u2014not the SIWX challenge.\n- Workflow now strictly reuses the latest 402 response for payment parameters and minimizes user prompts.\n- Improved doc navigation guidance and removed extraneous boilerplate.",
+  "created_at": 1769898506990,
+  "display_name": "Maestro Api",
+  "fetched_at": 1787793638375,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/siwx-x402.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783654159260,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Varderes",
+    "handle": "vardominator",
+    "user_id": "s17dw9gg4cynd2azh83exvaczn884khp"
+  },
+  "slug": "maestro-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/maestro-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=maestro-skill&ownerHandle=vardominator",
+    "page_url": "https://clawhub.ai/vardominator/skills/maestro-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2620,
+    "installs": 85,
+    "stars": 4,
+    "versions": 13
+  },
+  "summary": "Query Maestro APIs over HTTP using the SIWX + JWT + x402 credit purchase flow. Resolve the exact endpoint from docs.gomaestro.org before requesting or paying.",
+  "updated_at": 1779076515776,
+  "version": "0.2.4"
+}
