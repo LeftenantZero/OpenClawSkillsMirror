@@ -1,0 +1,33 @@
+{
+  "changelog": "**Summary:** Added safety and privacy restrictions for file/folder scanning and source edits. Default behavior is now read-only, requiring explicit approval before making any changes to project files.\n\n- Analysis now excludes secrets, private data, environment files, and common dependency/output folders by default.\n- Requires collaborator approval and diff review before making changes to any source files (edits are disabled unless explicitly confirmed).\n- Temporary analysis files are deleted after use unless the collaborator asks to persist them.\n- When analyzing multiple files/folders, only summary/report of inconsistencies are generated\u2014no file rewriting.\n- Default value for `fixInconsistencies` is now false; edits require explicit enablement and confirmation.\n- Clarified and expanded prompt parameter rules to favor explicit scoping and safety.",
+  "created_at": 1778622825383,
+  "display_name": "Write Coding Standards from File",
+  "fetched_at": 1787808039827,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "John Haugabook",
+    "handle": "jhauga",
+    "user_id": "s17ch25466qc0g2bcymk2dr8zx83pfny"
+  },
+  "slug": "write-coding-standards-from-file",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/write-coding-standards-from-file",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=write-coding-standards-from-file&ownerHandle=jhauga",
+    "page_url": "https://clawhub.ai/jhauga/skills/write-coding-standards-from-file"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 675,
+    "installs": 15,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Write a coding standards document for a project using the coding styles from the file(s) and/or folder(s) passed as arguments in the prompt, without modifyin...",
+  "updated_at": 1778628407574,
+  "version": "1.0.1"
+}
