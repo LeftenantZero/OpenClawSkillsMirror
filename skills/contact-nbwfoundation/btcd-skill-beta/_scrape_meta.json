@@ -1,0 +1,65 @@
+{
+  "changelog": "- Initial release of btcd-skill-beta, providing a complete Node.js project for running the BTCD collateralization flow on the PGP (Elastos) chain.\n- Supports full lifecycle: create/take orders, lock BTC, submit proofs, claim BTCD tokens, and repay loans.\n- Includes detailed, step-by-step instructions for setup, execution, and troubleshooting.\n- Manages flow progress and state via a persistent state file to ensure safety and resumability.\n- All contract addresses and network endpoints are preconfigured for the PGP chain.",
+  "created_at": 1771853060375,
+  "display_name": "BTCD Skill (NBW)",
+  "fetched_at": 1787791434616,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/.env.template.txt",
+    "scripts/00-create-order.js",
+    "scripts/01-take-order.js",
+    "scripts/02-lock-btc-collateral.js",
+    "scripts/03-submit-btc-proof.js",
+    "scripts/05-claim-btcd-tokens.js",
+    "scripts/06-repay-loan.js",
+    "scripts/abi/ArbitratorManager.json",
+    "scripts/abi/ERC20.json",
+    "scripts/abi/Issuer.json",
+    "scripts/abi/LoanContract.json",
+    "scripts/abi/Order.json",
+    "scripts/package.json",
+    "scripts/setup.js",
+    "scripts/utils/arbiter-client.js",
+    "scripts/utils/btc-client.js",
+    "scripts/utils/config.js",
+    "scripts/utils/evm-client.js",
+    "scripts/utils/logger.js",
+    "scripts/utils/proof-generator.js",
+    "scripts/utils/state-manager.js",
+    "scripts/utils/wallet-manager.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779952844640,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "contact-nbwfoundation",
+    "handle": "contact-nbwfoundation",
+    "user_id": "s1733gzg9s937ggne0j3fkanz1884ptg"
+  },
+  "slug": "btcd-skill-beta",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/btcd-skill-beta",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=btcd-skill-beta&ownerHandle=contact-nbwfoundation",
+    "page_url": "https://clawhub.ai/contact-nbwfoundation/skills/btcd-skill-beta"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1202,
+    "installs": 36,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Run the BTCD collateralization flow on PGP chain. Use when the user asks to run a BTCD loan, collateralization flow, create/take orders, lock BTC, submit pro...",
+  "updated_at": 1779077243707,
+  "version": "1.0.0"
+}
