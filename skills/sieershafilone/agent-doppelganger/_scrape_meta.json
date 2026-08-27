@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of agent-doppelganger.\n\n- Introduces a constrained autonomous delegate for identity-proxied communication across channels (Email, Discord, Slack, WhatsApp).\n- Analyzes message intent and authority, applying user-defined policies before responding.\n- Enforces strict boundaries to prevent overreach and ensure identity fidelity.\n- Automatically escalates messages if policies are violated or confidence is low.\n- Explicitly excludes handling of secrets, financial, legal, political, or sensitive/emotional domains.",
+  "created_at": 1770400997463,
+  "display_name": "Agent Doppelg\u00e4nger",
+  "fetched_at": 1787793072795,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "manifest.yaml",
+    "references/specification.md",
+    "scripts/adg.py",
+    "scripts/reanchor_style.py",
+    "scripts/test_adg.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783657255148,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Sieer Shafi Lone",
+    "handle": "sieershafilone",
+    "user_id": "s17b9jpzbn7a1kc5xzmcpdvjnn885pgc"
+  },
+  "slug": "agent-doppelganger",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-doppelganger",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-doppelganger&ownerHandle=sieershafilone",
+    "page_url": "https://clawhub.ai/sieershafilone/skills/agent-doppelganger"
+  },
+  "stats": {
+    "comments": 2,
+    "downloads": 2614,
+    "installs": 90,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Constrained autonomous delegate for identity-proxied communication. Handles incoming messages (Email, Discord, Slack, WhatsApp) by analyzing intent and applying declarative authority policies before generating responses. Use when the user wants to delegate communication tasks while maintaining identity fidelity and enforcing strict non-overreach boundaries.",
+  "updated_at": 1779076711510,
+  "version": "1.0.0"
+}
