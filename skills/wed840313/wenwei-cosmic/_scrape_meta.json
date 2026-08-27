@@ -1,0 +1,37 @@
+{
+  "changelog": "- Initial release of wenwei-cosmic: a COSMIC standard-based workflow for automated requirements decomposition and function point analysis.\n- Automatically splits requirements documents into functional points and subprocesses (E/R/W/X data movements), generating detailed breakdown tables and CSV export.\n- Supports multi-step workflow with Task tool and TodoWrite for progress tracking.\n- Enforces strict separation between main skill and subagent responsibilities; critical steps (workspace prep, module analysis, COSMIC decomposition) are strictly delegated to subagents.\n- Provides user-progress updates, clickable file links in responses, and handles incremental workflow resumption.\n- Includes user confirmation and feedback at key stages, with robust error/obstacle handling and retry guidance.",
+  "created_at": 1778812183943,
+  "display_name": "\u5de5\u4f5c\u91cf\u62c6\u5206-Cosmic",
+  "fetched_at": 1787807145575,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "prompts/decomposer.md",
+    "prompts/module-analyzer.md",
+    "prompts/workspace-prep.md",
+    "scripts/md2csv.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u8bfa\u5934",
+    "handle": "wed840313",
+    "user_id": "s170s4mvspy7p4h56gv8vx6k7h86rg61"
+  },
+  "slug": "wenwei-cosmic",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wenwei-cosmic",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wenwei-cosmic&ownerHandle=wed840313",
+    "page_url": "https://clawhub.ai/wed840313/skills/wenwei-cosmic"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 542,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u57fa\u4e8e COSMIC \u6807\u51c6\u7684\u5de5\u4f5c\u91cf\u62c6\u5206\u5de5\u4f5c\u6d41\u3002\u5c06\u9700\u6c42\u6587\u6863\u81ea\u52a8\u62c6\u89e3\u4e3a\u529f\u80fd\u70b9\u4e0e\u5b50\u8fc7\u7a0b\u660e\u7ec6\uff08E/R/W/X \u6570\u636e\u79fb\u52a8\uff09\uff0c\u751f\u6210\u62c6\u89e3\u8868\u683c\u4e0e CSV \u6587\u4ef6\u3002\u5f53\u7528\u6237\u8981\u6c42\u8fdb\u884c COSMIC \u62c6\u5206\u3001\u529f\u80fd\u70b9\u5206\u6790\u3001COSMIC \u5de5\u4f5c\u91cf\u62c6\u89e3\u65f6\u4f7f\u7528\u3002",
+  "updated_at": 1778812309782,
+  "version": "1.0.0"
+}
