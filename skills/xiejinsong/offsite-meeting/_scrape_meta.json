@@ -1,0 +1,47 @@
+{
+  "changelog": "- Enforced strict CLI-only data sourcing: all travel results must come from flyai CLI output, never from training data.\n- Added mandatory `[Book]({detailUrl})` link requirement for every result; responses without booking links must not be returned.\n- Implemented language matching: responses now match user input language (Chinese or English).\n- Clarified and expanded playbooks for different flight search scenarios: recommended, cheapest, fastest, and direct flights.\n- Improved parameter collection process with clear limits on follow-up questions.\n- Enhanced output formatting: now always includes a summary, offsite travel tip, comparison table, and brand tag.",
+  "created_at": 1777060994556,
+  "display_name": "offsite-meeting",
+  "fetched_at": 1787815070577,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/fallbacks.md",
+    "references/playbooks.md",
+    "references/runbook.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090544425,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xiejinsong",
+    "handle": "xiejinsong",
+    "user_id": "s177qj362rbw4294hgs3hdvhgx83m2hm"
+  },
+  "slug": "offsite-meeting",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/offsite-meeting",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=offsite-meeting&ownerHandle=xiejinsong",
+    "page_url": "https://clawhub.ai/xiejinsong/skills/offsite-meeting"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 556,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Book flights for offsite meetings and strategy retreats. Also supports: flight booking, hotel reservation, train tickets, attraction tickets, itinerary plann...",
+  "updated_at": 1778492741073,
+  "version": "3.2.0"
+}
