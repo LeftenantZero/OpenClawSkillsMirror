@@ -1,0 +1,57 @@
+{
+  "changelog": "Fix \"suspicious patterns detected\" by OpenClaw:\n- Added Dependencies: Added formal metadata.openclaw frontmatter declaring the python runtime requirement.\n- Auto-Discovery: Implemented a dynamic path-injector in the engine. Standard python will now automatically hunt for and bind to local FreeCAD installations (Windows/Mac/Linux) without crashing.\n- Security (Sandboxing): Enforced os.path.basename() on all file export operations to prevent path traversal attacks. The skill can no longer write files outside of its active workspace directory.\n- Clarified Scope: Updated the description to explicitly clarify the use of parametric JSON operations.",
+  "created_at": 1774733152230,
+  "display_name": "FreeCAD",
+  "fetched_at": 1787842164735,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "examples/array_linear.json",
+    "examples/batch_example.json",
+    "examples/batch_pipe.json",
+    "examples/batch_table.json",
+    "examples/batch_wheel.json",
+    "examples/export_stl.json",
+    "examples/modifier_fillet.json",
+    "examples/primitive_cone.json",
+    "examples/primitive_sphere.json",
+    "examples/primitive_torus.json",
+    "examples/profile_extrude.json",
+    "examples/transform_rotate.json",
+    "examples/transform_translate.json",
+    "scripts/cad_engine.py",
+    "scripts/ops/array.py",
+    "scripts/ops/boolean.py",
+    "scripts/ops/export.py",
+    "scripts/ops/inspect.py",
+    "scripts/ops/modifier.py",
+    "scripts/ops/primitive.py",
+    "scripts/ops/profile.py",
+    "scripts/ops/transform.py",
+    "scripts/ops/utils.py",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Luc",
+    "handle": "ninja7v",
+    "user_id": "s177bm4vp9tx2ehd5rj9texs1983sknh"
+  },
+  "slug": "skill-freecad",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-freecad",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-freecad&ownerHandle=ninja7v",
+    "page_url": "https://clawhub.ai/ninja7v/skills/skill-freecad"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1365,
+    "installs": 36,
+    "stars": 2,
+    "versions": 2
+  },
+  "summary": "Create or modify 3D CAD models in FreeCAD using parametric JSON operations.",
+  "updated_at": 1778492268009,
+  "version": "1.0.1"
+}
