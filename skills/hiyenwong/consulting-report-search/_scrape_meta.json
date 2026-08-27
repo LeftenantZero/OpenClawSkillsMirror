@@ -1,0 +1,35 @@
+{
+  "changelog": "- Initial release of consulting-report-search skill for consulting, industry, and market research reports.\n- Prioritizes iResearch free reports for both search and Q&A, with QuestMobile as secondary fallback.\n- Supports grouped output with iResearch results always shown before QuestMobile.\n- Implements advanced search logic: deeper iResearch pagination, grouped output, and custom ranking by year, relevance, and recency.\n- Default sort is newest-first; can switch to relevance or year-prioritization when the query contains a year.\n- Enforces report link requirement for all returned items; results without a valid public report link are filtered out.\n- Provides detailed usage examples and CLI flags for common workflows: searching, detail retrieval, direct Q&A, and grouped output.",
+  "created_at": 1773825632658,
+  "display_name": "consulting-report-search",
+  "fetched_at": 1787865830216,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/iresearch-api.md",
+    "scripts/iresearch_report_search.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Robin",
+    "handle": "hiyenwong",
+    "user_id": "s174xpg2aqktnt9f6wevams121866zjb"
+  },
+  "slug": "consulting-report-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/consulting-report-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=consulting-report-search&ownerHandle=hiyenwong",
+    "page_url": "https://clawhub.ai/hiyenwong/skills/consulting-report-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 769,
+    "installs": 19,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Consulting and industry report search and QA skill that prioritizes iResearch free reports. Use for consulting report search, industry report QA, iResearch r...",
+  "updated_at": 1778492000690,
+  "version": "1.0.0"
+}
