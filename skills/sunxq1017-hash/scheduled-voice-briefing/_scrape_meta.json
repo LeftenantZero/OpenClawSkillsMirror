@@ -1,0 +1,37 @@
+{
+  "changelog": "Security and generalization improvements for public release.\n\n- Remove local workspace assumptions and hard-coded paths\n- Eliminate user-specific language and private wake lines\n- Make content generation fully config-driven, with no implicit local data access\n- Change the config update script to preview-only by default, with explicit write required\n- Standardize tone and naming to general-purpose values such as gentle\n- Replace wake-up-specific wording with generic scheduled notification phrasing\n- Clarify runtime boundaries and data-provider responsibilities",
+  "created_at": 1774694419093,
+  "display_name": "Scheduled Voice Briefing",
+  "fetched_at": 1787842804063,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/briefing-templates.md",
+    "references/config-schema.md",
+    "scripts/build_briefing.py",
+    "scripts/update_schedule.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "sunxq1017",
+    "handle": "sunxq1017-hash",
+    "user_id": "s17cyk9xswwfv2weh29ahn6z7983fgp8"
+  },
+  "slug": "scheduled-voice-briefing",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/scheduled-voice-briefing",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=scheduled-voice-briefing&ownerHandle=sunxq1017-hash",
+    "page_url": "https://clawhub.ai/sunxq1017-hash/skills/scheduled-voice-briefing"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 750,
+    "installs": 18,
+    "stars": 1,
+    "versions": 5
+  },
+  "summary": "General-purpose skill for turning natural language requests into scheduled voice notifications and structured briefings. Use when the user wants to create, u...",
+  "updated_at": 1778492258038,
+  "version": "1.0.4"
+}
