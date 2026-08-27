@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of multi-search-fallback, an aggregated multi-source search skill.\n\n- Automatically triggers multiple search sources to cross-verify results, increasing accuracy for all search-related needs.\n- Dynamically chooses between quick single-source search and deep multi-source validation based on the complexity of user's query.\n- Implements a fallback search chain to ensure high availability: switches to backup sources if earlier ones fail or return empty.\n- Performs cross-verification of findings: tags as \"\u4e00\u81f4\", \"\u5206\u6b67\", or \"\u8865\u5145\", calculates an overall confidence score, and clearly displays the consensus level.\n- Structured output: provides confidence level, key findings, multi-source comparison, and collapsible raw results.\n- Custom strategies for research, fact-checking, academic, finance, and domestic search scenarios.",
+  "created_at": 1774916395002,
+  "display_name": "Multi-Search Fallback",
+  "fetched_at": 1787839179011,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ruogu1992",
+    "handle": "ruogu1992",
+    "user_id": "s177atrs72sfyqwpyfrgrhcvxn83ye9m"
+  },
+  "slug": "multi-search-fallback",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/multi-search-fallback",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=multi-search-fallback&ownerHandle=ruogu1992",
+    "page_url": "https://clawhub.ai/ruogu1992/skills/multi-search-fallback"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 555,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u591a\u6e90\u641c\u7d22\u805a\u5408\u6280\u80fd\u3002\u5f53\u7528\u6237\u9700\u8981\u641c\u7d22\u4fe1\u606f\u3001\u67e5\u8d44\u6599\u3001\u505a\u7814\u7a76\u65f6\uff0c\u81ea\u52a8\u8c03\u7528\u591a\u4e2a\u641c\u7d22\u6e90\u8fdb\u884c\u4ea4\u53c9\u9a8c\u8bc1\uff0c\u63d0\u9ad8\u7ed3\u679c\u51c6\u786e\u6027\u3002\u89e6\u53d1\u573a\u666f\uff1a\u641c\u7d22\u67d0\u4e8b\u3001\u67e5\u8bc1\u67d0\u4e2a\u8bf4\u6cd5\u3001\u505a\u7814\u7a76\u3001\u591a\u6e90\u9a8c\u8bc1\u3001compare multiple sources\u3001\u641c\u7d22\u7ed3\u679c\u4e0d\u4e00\u81f4\u65f6\u4e3b\u52a8\u590d\u6838\u3002**\u53ea\u8981\u662f\u641c\u7d22\u7c7b\u9700\u6c42\uff0c\u4e00\u5f8b\u4f18\u5148\u4f7f\u7528\u6b64\u6280\u80fd**\uff0c\u5b83\u4f1a\u81ea\u52a8\u51b3\u5b9a\u662f\u5355\u6e90\u5feb\u901f\u8fd4\u56de\u8fd8\u662f\u591a\u6e90\u6df1...",
+  "updated_at": 1778492305892,
+  "version": "1.0.0"
+}
