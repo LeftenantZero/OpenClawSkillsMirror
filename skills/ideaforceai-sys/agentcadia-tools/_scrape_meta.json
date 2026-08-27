@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of agentcadia-tools: unified upload and download workflows for Agentcadia agent workspaces.\n\n- Provides two main commands: `upload` (sync local workspace to Agentcadia) and `download` (fetch Agentcadia agent package locally).\n- Enforces full metadata writeback and reporting for uploads, including synthesized agent metadata and owner-facing summaries.\n- Requires explicit user approval before overwriting files on download.\n- Mandates that share images are delivered as separate image messages when available.\n- Offers deterministic, script-driven file transfer and metadata management for Agentcadia automation tasks.",
+  "created_at": 1775415497560,
+  "display_name": "agentcadia-tools",
+  "fetched_at": 1787831089160,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/openclaw-runtime.md",
+    "scripts/agentcadia_tools.py",
+    "scripts/download_agentcadia.py",
+    "scripts/upload_agentcadia.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090312272,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ideaforceai-sys",
+    "handle": "ideaforceai-sys",
+    "user_id": "s1777vysw8ga6aqvzy40s6e05x845j13"
+  },
+  "slug": "agentcadia-tools",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agentcadia-tools",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agentcadia-tools&ownerHandle=ideaforceai-sys",
+    "page_url": "https://clawhub.ai/ideaforceai-sys/skills/agentcadia-tools"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 522,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Upload or download Agentcadia agent workspaces with metadata writeback and detailed reporting using explicit upload and download commands.",
+  "updated_at": 1778492425999,
+  "version": "1.0.0"
+}
