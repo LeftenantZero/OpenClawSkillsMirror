@@ -1,0 +1,46 @@
+{
+  "changelog": "**Improved security and configuration management for device capture skill**\n\n- Enhanced security documentation, emphasizing minimal-permission credential usage and safe credential sources.\n- Now explicitly supports and documents reading Ezviz credentials from OpenClaw channels config files as a fallback if environment variables are not set.\n- Clarified the credentials acquisition priority: Environment Variables > OpenClaw config files > CLI parameters.\n- Added and documented options for disabling token cache and specifying token cache location and permissions.\n- Improved warnings and setup instructions to help prevent credential leaks and misconfigurations.\n- Removed redundant or obsolete documentation files for clarity.",
+  "created_at": 1773393101362,
+  "display_name": "Ezviz Open Picture",
+  "fetched_at": 1787799147535,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "lib/README_TOKEN_MANAGER.md",
+    "lib/token_manager.py",
+    "scripts/device_capture.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089959999,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "EzvizOpenTeam",
+    "handle": "ezviz-open",
+    "user_id": "s174s8a00r18xwt2q5p7j85f5183gavv"
+  },
+  "slug": "ezviz-open-picture",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ezviz-open-picture",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ezviz-open-picture&ownerHandle=ezviz-open",
+    "page_url": "https://clawhub.ai/ezviz-open/skills/ezviz-open-picture"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1139,
+    "installs": 33,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "\u8424\u77f3\u8bbe\u5907\u6279\u91cf\u6293\u56fe\u6280\u80fd\u3002\u652f\u6301\u591a\u8bbe\u5907\u540c\u65f6\u6293\u56fe\uff0c\u81ea\u52a8\u7ba1\u7406 Token \u5e76\u53ef\u9009\u4e0b\u8f7d\u56fe\u7247\u5230\u672c\u5730\u3002 Use when: \u9700\u8981\u83b7\u53d6\u591a\u4e2a\u6444\u50cf\u5934\u5b9e\u65f6\u753b\u9762\u3001\u6279\u91cf\u6293\u56fe\u5b58\u6863\u3001\u76d1\u63a7\u753b\u9762\u91c7\u96c6\u3001\u5b9a\u65f6\u6293\u56fe\u4efb\u52a1\u3002 \u26a0\ufe0f \u5b89\u5168\u8981\u6c42\uff1a\u5fc5\u987b\u8bbe\u7f6e EZVIZ_APP_KEY \u548c EZVIZ_APP_SECRET \u73af\u5883\u53d8\u91cf\uff0c\u4f7f\u7528\u6700\u5c0f\u6743\u9650\u51ed\u8bc1\u3002",
+  "updated_at": 1778998882136,
+  "version": "1.0.3"
+}
