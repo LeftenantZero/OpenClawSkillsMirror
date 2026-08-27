@@ -1,0 +1,82 @@
+{
+  "changelog": "Initial release of pdfagent: self-hosted PDF operations with usage metering.\n\n- Supports PDF merge, split, compression, conversion (including image to PDF), and OCR.\n- Designed for local file processing; inputs and outputs remain on disk.\n- Provides detailed, machine-readable output with usage statistics via --json.\n- Flexible agent mode for multi-step PDF instruction execution.\n- Includes dependency and system binary checking for robust setup.\n- Runs standalone from source with `uv run`; no PyPI publishing required.",
+  "created_at": 1772686413528,
+  "display_name": "PR's PDF Agent",
+  "fetched_at": 1787800383672,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "pdfagent/__init__.py",
+    "pdfagent/cli.py",
+    "pdfagent/core/__init__.py",
+    "pdfagent/core/agent.py",
+    "pdfagent/core/deps.py",
+    "pdfagent/core/exec.py",
+    "pdfagent/core/llm.py",
+    "pdfagent/core/output.py",
+    "pdfagent/core/overlay.py",
+    "pdfagent/core/pdf.py",
+    "pdfagent/core/ranges.py",
+    "pdfagent/core/usage.py",
+    "pdfagent/tools/__init__.py",
+    "pdfagent/tools/compare.py",
+    "pdfagent/tools/compress.py",
+    "pdfagent/tools/crop.py",
+    "pdfagent/tools/edit.py",
+    "pdfagent/tools/html_to_pdf.py",
+    "pdfagent/tools/images.py",
+    "pdfagent/tools/merge.py",
+    "pdfagent/tools/ocr.py",
+    "pdfagent/tools/office.py",
+    "pdfagent/tools/organize.py",
+    "pdfagent/tools/page_numbers.py",
+    "pdfagent/tools/pdf_to_docx.py",
+    "pdfagent/tools/pdf_to_pptx.py",
+    "pdfagent/tools/pdf_to_xlsx.py",
+    "pdfagent/tools/pdfa.py",
+    "pdfagent/tools/redact.py",
+    "pdfagent/tools/render.py",
+    "pdfagent/tools/repair.py",
+    "pdfagent/tools/rotate.py",
+    "pdfagent/tools/scan.py",
+    "pdfagent/tools/security.py",
+    "pdfagent/tools/sign.py",
+    "pdfagent/tools/split.py",
+    "pdfagent/tools/translate.py",
+    "pdfagent/tools/watermark.py",
+    "scripts/pdfagent_cli.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089759681,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "cap-txt",
+    "handle": "cap-txt",
+    "user_id": "s1737zvznatpgqat9jhmth1vzs885m5j"
+  },
+  "slug": "pdfagent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pdfagent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pdfagent&ownerHandle=cap-txt",
+    "page_url": "https://clawhub.ai/cap-txt/skills/pdfagent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 998,
+    "installs": 29,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Self-hosted PDF operations and conversions with metered usage output.",
+  "updated_at": 1778995432634,
+  "version": "0.1.0"
+}
