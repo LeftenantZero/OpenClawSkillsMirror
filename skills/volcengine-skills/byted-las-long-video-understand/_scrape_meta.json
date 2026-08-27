@@ -1,0 +1,50 @@
+{
+  "changelog": "Audio extraction and splitting skill, initial public release.\n\n- Extracts audio tracks from various video formats (mp4, wmv, avi, mkv, mov, flv).\n- Splits long audio into fixed-duration segments with customizable length and indexed file naming.\n- Implements a strict step-by-step workflow with environment and input checks, price estimation, and explicit user confirmation before processing.\n- Includes clear billing information and usage disclaimers referencing Volcengine LAS pricing.\n- Requires environment variables (`LAS_API_KEY`, `LAS_REGION`) and supports both local and TOS input/output handling.",
+  "created_at": 1776411386358,
+  "display_name": "Byted Las Long Video Understand",
+  "fetched_at": 1787820022320,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "checklist.md",
+    "evals/evals.json",
+    "references/api.md",
+    "references/prices.md",
+    "scripts/check_format.sh",
+    "scripts/env_init.sh",
+    "scripts/generate_result.md.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090463199,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "volcengine-skills",
+    "handle": "volcengine-skills",
+    "user_id": "s17bcxs73bckd3eercvtn6cmsx83g5kg"
+  },
+  "slug": "byted-las-long-video-understand",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/byted-las-long-video-understand",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=byted-las-long-video-understand&ownerHandle=volcengine-skills",
+    "page_url": "https://clawhub.ai/volcengine-skills/skills/byted-las-long-video-understand"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 543,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Extracts audio tracks from video files and splits long audio into timed segments using Volcengine LAS. Audio extraction and separation from video \u2014 pull audi...",
+  "updated_at": 1778492635707,
+  "version": "1.0.1"
+}
