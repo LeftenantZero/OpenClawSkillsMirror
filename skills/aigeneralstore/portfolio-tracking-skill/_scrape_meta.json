@@ -1,0 +1,67 @@
+{
+  "changelog": "Initial release of the local portfolio tracker skill:\n\n- Track and manage investment portfolios fully locally; all data stored in `~/.portfolio-tracker/`.\n- TypeScript CLI tools for data management, price fetching, and account syncing (Binance, IBKR, EVM wallets).\n- Modular architecture with clear data and config separation.\n- Supports asset price refresh, exchange rate updates, and historical data lookups.\n- Sync investment data from major crypto exchanges, brokers, and blockchain wallets.\n- User commands for portfolio viewing, price updates, account setup, syncing, and requesting investment advice.",
+  "created_at": 1771837200604,
+  "display_name": "portfolio tracking",
+  "fetched_at": 1787802635917,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "commands/advise.md",
+    "commands/portfolio.md",
+    "commands/prices.md",
+    "commands/setup.md",
+    "commands/sync-binance.md",
+    "commands/sync-ibkr.md",
+    "commands/sync-wallet.md",
+    "scripts/binance-sync.ts",
+    "scripts/blockchain-sync.ts",
+    "scripts/data-store.ts",
+    "scripts/fetch-prices.ts",
+    "scripts/ibkr-sync.ts",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "scripts/tsconfig.json",
+    "scripts/utils.ts",
+    "scripts/vitest.config.ts",
+    "skill-card.md",
+    "tests/binance-sync.test.ts",
+    "tests/blockchain-sync.test.ts",
+    "tests/data-store.test.ts",
+    "tests/fetch-prices.test.ts",
+    "tests/ibkr-sync.test.ts",
+    "tests/utils.test.ts"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779952184337,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "aigeneralstore",
+    "handle": "aigeneralstore",
+    "user_id": "s17ae5k9xfthgcxw1qzm2q4c49884k1e"
+  },
+  "slug": "portfolio-tracking-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/portfolio-tracking-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=portfolio-tracking-skill&ownerHandle=aigeneralstore",
+    "page_url": "https://clawhub.ai/aigeneralstore/skills/portfolio-tracking-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1182,
+    "installs": 36,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "An investment portfolio tracker that runs entirely locally. All data stays in ~/.portfolio-tracker/.",
+  "updated_at": 1778992583680,
+  "version": "1.0.0"
+}
