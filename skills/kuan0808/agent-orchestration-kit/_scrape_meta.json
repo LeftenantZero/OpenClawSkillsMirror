@@ -1,0 +1,61 @@
+{
+  "changelog": "## agent-orchestration-kit v0.2.0\n\n- Replaces legacy cron-based stale task detection with native OpenClaw Heartbeat (automatic task checks every 3 minutes).\n- Removes cron job configuration and files; adds a new HEARTBEAT.md template for leader workspace.\n- Updates setup and documentation to reflect heartbeat monitoring rather than a dedicated operations channel.\n- Improves scaffold and config patch scripts for heartbeat support and more flexible instance configuration.\n- Minor adjustments to onboarding, reducing required fields and clarifying user guidance.",
+  "created_at": 1775067080783,
+  "display_name": "Agent Orchestration Kit",
+  "fetched_at": 1787835589688,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/approval-workflow.md",
+    "references/architecture.md",
+    "references/brief-templates.md",
+    "references/signals.md",
+    "scripts/patch-config.js",
+    "scripts/scaffold.sh",
+    "skill-card.md",
+    "templates/agents/_template.md",
+    "templates/agents/code-reviewer.md",
+    "templates/agents/content-creator.md",
+    "templates/agents/orchestration-injection.md",
+    "templates/agents/researcher.md",
+    "templates/agents/senior-developer.md",
+    "templates/agents/software-architect.md",
+    "templates/executor/AGENTS.md",
+    "templates/executor/SOUL.md",
+    "templates/leader/AGENTS.md",
+    "templates/leader/HEARTBEAT.md",
+    "templates/leader/SOUL.md",
+    "templates/reviewer/AGENTS.md",
+    "templates/reviewer/SOUL.md",
+    "templates/shared/INSTANCE.md",
+    "templates/shared/operations/channel-map.md",
+    "templates/shared/operations/communication-signals.md",
+    "templates/shared/operations/team-roster.md",
+    "templates/teams/content-studio.md",
+    "templates/teams/minimal.md",
+    "templates/teams/research-analysis.md",
+    "templates/teams/software-dev.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "kuannnn",
+    "handle": "kuan0808",
+    "user_id": "s17cfx27f32syvvhdns17s4swn83kcdc"
+  },
+  "slug": "agent-orchestration-kit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-orchestration-kit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-orchestration-kit&ownerHandle=kuan0808",
+    "page_url": "https://clawhub.ai/kuan0808/skills/agent-orchestration-kit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 681,
+    "installs": 15,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Set up and manage multi-agent task orchestration on OpenClaw with async dispatch, leader coordination, real-time tracking, and approval workflows.",
+  "updated_at": 1778492352559,
+  "version": "0.2.0"
+}
