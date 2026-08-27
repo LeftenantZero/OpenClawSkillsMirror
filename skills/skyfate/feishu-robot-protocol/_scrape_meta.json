@@ -1,0 +1,43 @@
+{
+  "changelog": "v0.2.1 introduces a major update with a double-layer messaging protocol for Feishu robots.\n\n- Implements \"double message\" mechanism for robot-to-robot @mentions to reliably trigger mention events.\n- Adds dual-format sending: first message by robot account, second message by user account using feishu_im_user_message.\n- Updates reply and parsing logic to handle double-layer message recognition, always associating replies with correct sender.\n- Message protocol now requires explicit \ud83d\udccc/\u56fe\u9489 marker for parsing, supporting group and multi-person mention.\n- Enhances user ID mapping: adds ID expiration and refresh logic; mapping file records last updated timestamp for each user.\n- All examples clarified\u2014placeholders must be replaced by real mapping values, not used verbatim.",
+  "created_at": 1773406921996,
+  "display_name": "FeiShu Robot @ Protocol",
+  "fetched_at": 1787799095881,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089891531,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Leng<o(YoY)o>",
+    "handle": "skyfate",
+    "user_id": "s170g80r4r9f2bab6g5g7nd41s83wkhm"
+  },
+  "slug": "feishu-robot-protocol",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-robot-protocol",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-robot-protocol&ownerHandle=skyfate",
+    "page_url": "https://clawhub.ai/skyfate/skills/feishu-robot-protocol"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 940,
+    "installs": 26,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "\u5b9a\u4e49\u98de\u4e66\u673a\u5668\u4eba\u8eab\u4efd\u6d88\u606f\u534f\u8bae\uff0c\u5b9e\u73b0\u591a\u673a\u5668\u4eba\u95f4\u7edf\u4e00\u53d1\u9001\u8005\u8eab\u4efd\u8bc6\u522b\u548c\u7528\u6237\u8eab\u4efd\u6d88\u606f\u56de\u590d\uff0c\u652f\u6301\u7fa4\u7ec4\u7528\u6237\u6620\u5c04\u7ba1\u7406\u548c\u5b9a\u65f6\u66f4\u65b0\u3002",
+  "updated_at": 1778999028152,
+  "version": "0.2.1"
+}
