@@ -1,0 +1,54 @@
+{
+  "changelog": "**Initial release with complete codebase and documentation reorganization.**\n\n- Introduces a layered memory system focused on session state, daily logs, topic cards, durable objects, and reflection outputs.\n- Replaces monolithic script structure with clear scripts for event extraction, memory gating, classification, recall, reflection, and object/topic management.\n- Adds comprehensive reference documentation (architecture, models, retrieval strategy, openclaw integration).\n- Removes installation scripts, old workflow YAMLs, and legacy multi-modal/emotion tagging modules.\n- Provides new workflow: gate\u2192classify\u2192capture\u2192recall\u2192answer\u2192reflect, with scripts supporting each stage. \n- New plain-text directory structure and data shapes, focused on practicality and extensibility.",
+  "created_at": 1774811741827,
+  "display_name": "memory-orchestrator",
+  "fetched_at": 1787840926135,
+  "files": [
+    "ARCHITECTURE.md",
+    "EXAMPLES.md",
+    "README.md",
+    "ROADMAP.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/file-layout.md",
+    "references/object-models.md",
+    "references/openclaw-integration.md",
+    "references/reflection.md",
+    "references/retrieval-strategy.md",
+    "scripts/apply_memory_events.py",
+    "scripts/classify_memory_input.py",
+    "scripts/extract_memory_events.py",
+    "scripts/generate_memory_index.py",
+    "scripts/lib_memory.py",
+    "scripts/memory_cli.py",
+    "scripts/new_memory_object.py",
+    "scripts/new_topic_card.py",
+    "scripts/recall_memory.py",
+    "scripts/reflect_memory.py",
+    "scripts/setup_memory_system.py",
+    "scripts/should_trigger_memory.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jil",
+    "handle": "jl1914",
+    "user_id": "s174d2jy35jp4vmnw76mcgvtt183tdb3"
+  },
+  "slug": "mem-orchestrator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mem-orchestrator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mem-orchestrator&ownerHandle=jl1914",
+    "page_url": "https://clawhub.ai/jl1914/skills/mem-orchestrator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 547,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Layered memory orchestration for OpenClaw conversations. Use when implementing or maintaining a memory system that must classify user input by domain, captur...",
+  "updated_at": 1778492283432,
+  "version": "1.0.0"
+}
