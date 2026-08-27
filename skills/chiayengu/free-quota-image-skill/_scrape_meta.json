@@ -1,0 +1,46 @@
+{
+  "changelog": "- Initial release of free-quota-image-skill.\n- Supports text-to-image generation via multiple providers, using a free-quota-first routing system.\n- Includes token pooling and automatic rotation on quota/auth failures; supports public API fallback for Hugging Face.\n- Provides prompt optimization, provider/model fallback, and batch image generation in one command.\n- Outputs structured JSON with stable fields for successful or failed generations.\n- Includes a CLI with flexible provider/model selection and configurable output options.",
+  "created_at": 1772468919275,
+  "display_name": "free quota text to image",
+  "fetched_at": 1787800923190,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/config.example.yaml",
+    "references/model-matrix.md",
+    "references/openclaw-integration.md",
+    "references/prompt-optimization-policy.md",
+    "references/provider-endpoints.md",
+    "references/token-rotation-policy.md",
+    "scripts/models.py",
+    "scripts/prompt_tools.py",
+    "scripts/provider_clients.py",
+    "scripts/requirements.txt",
+    "scripts/run_text2img.py",
+    "scripts/token_pool.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ChiayenGu",
+    "handle": "chiayengu",
+    "user_id": "s17cnnj6jmt6f6wt1ddcqrcv39885yfk"
+  },
+  "slug": "free-quota-image-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/free-quota-image-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=free-quota-image-skill&ownerHandle=chiayengu",
+    "page_url": "https://clawhub.ai/chiayengu/skills/free-quota-image-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1056,
+    "installs": 33,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate images from text with a free-quota-first multi-provider workflow. Use this skill when a user asks for text-to-image generation that needs provider r...",
+  "updated_at": 1778994594964,
+  "version": "1.0.0"
+}
