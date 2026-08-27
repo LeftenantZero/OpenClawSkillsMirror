@@ -1,0 +1,64 @@
+{
+  "changelog": "**Reflexio v1.0.10 \u2014 Major re-architecture: now runs fully local, storing all memory in .reflexio/ using only OpenClaw primitives.**\n\n- Replaced previous server-based design and network-dependent hooks with a native, file-backed skill under the new reflexio-embedded name.\n- Adds agent-initialization logic: probes and, if approved, auto-configures active-memory and .reflexio/ path registration per agent.\n- Introduces `reflexio_write_profile`, `reflexio_write_playbook`, and `reflexio_search` tools for profile/playbook management and retrieval.\n- Documents strict signals and capture requirements (triggers, confirmation/patterns, safety, TTL handling).\n- Removes network hops, external LLM/service dependencies, and credential prompts: all operation is now fully local and transparent.\n- Expanded documentation for first-use setup, data safety, and degraded mode operation if configuration steps are declined.",
+  "created_at": 1776286105998,
+  "display_name": "Reflexio",
+  "fetched_at": 1787821264634,
+  "files": [
+    "HEARTBEAT.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/reflexio-extractor.md",
+    "hook/handler.ts",
+    "hook/setup.ts",
+    "index.ts",
+    "lib/consolidate.ts",
+    "lib/dedup.ts",
+    "lib/io.ts",
+    "lib/openclaw-cli.ts",
+    "lib/search.ts",
+    "lib/write-playbook.ts",
+    "lib/write-profile.ts",
+    "openclaw.plugin.json",
+    "package.json",
+    "prompts/README.md",
+    "prompts/full_consolidation.md",
+    "prompts/playbook_extraction.md",
+    "prompts/profile_extraction.md",
+    "skill-card.md",
+    "skills/reflexio-consolidate/SKILL.md",
+    "skills/reflexio-embedded/SKILL.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090510705,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Yi Lu",
+    "handle": "yyiilluu",
+    "user_id": "s1752wxw7gr3fp8fs91zp3thxn84w528"
+  },
+  "slug": "reflexio",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/reflexio",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=reflexio&ownerHandle=yyiilluu",
+    "page_url": "https://clawhub.ai/yyiilluu/skills/reflexio"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 826,
+    "installs": 21,
+    "stars": 2,
+    "versions": 11
+  },
+  "summary": "Captures user facts and procedural corrections into .reflexio/ so the agent learns across sessions. Use when: (1) user states a preference, fact, config, or...",
+  "updated_at": 1778492609704,
+  "version": "1.0.10"
+}
