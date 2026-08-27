@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release focused on agent prompt injection defense.\n\n- Adds layered defense scripts: content tagging, scanning, memory write guardrails, and canary pattern detection.\n- New scripts for tagging untrusted input, scanning for attack patterns, and safely writing to memory.\n- Includes comprehensive checklist, hardening rules for agents, and practical usage examples.\n- Provides reference detection patterns and strong usage guidance for handling any untrusted external content.\n- Replaces the earlier prompt skill with a security-focused module.",
+  "created_at": 1774666843714,
+  "display_name": "Prompt Injection Defense",
+  "fetched_at": 1787843511706,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/canary-patterns.md",
+    "scripts/safe-memory-write.sh",
+    "scripts/scan-content.py",
+    "scripts/tag-untrusted.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "AdrianTeng",
+    "handle": "adrianteng",
+    "user_id": "s171ayex7xgs1y9ggh92pfrnyx83scp4"
+  },
+  "slug": "prompt-injection-defense",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/prompt-injection-defense",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=prompt-injection-defense&ownerHandle=adrianteng",
+    "page_url": "https://clawhub.ai/adrianteng/skills/prompt-injection-defense"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 732,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Harden agent sessions against prompt injection from untrusted content. Use when the agent reads web search results, emails, downloaded files, PDFs, or any ex...",
+  "updated_at": 1778492251057,
+  "version": "1.0.0"
+}
