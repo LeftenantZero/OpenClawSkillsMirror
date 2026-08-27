@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release: Batch Swap skill for sequential multi-token trading with independent safety checks.\n\n- Execute multiple token swaps in a single workflow, ideal for rebalancing or multi-step trading plans.\n- Each swap is validated for safety and balance before execution.\n- Supports halting on the first failure or continuing batch execution.\n- Detailed summary reports outcomes and any partial failures.\n- Error messages guide users to resolve balance or safety issues.",
+  "created_at": 1770744792552,
+  "display_name": "Uniswap Batch Swap",
+  "fetched_at": 1787792886672,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966054514,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wpank",
+    "handle": "wpank",
+    "user_id": "s17bjjbnm7xjckd29e1h2641ks8849md"
+  },
+  "slug": "batch-swap",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/batch-swap",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=batch-swap&ownerHandle=wpank",
+    "page_url": "https://clawhub.ai/wpank/skills/batch-swap"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1580,
+    "installs": 51,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Execute multiple token swaps in sequence. Use when user wants to rebalance, swap into multiple tokens, or execute a multi-step trading plan. Each swap goes through full safety validation independently.",
+  "updated_at": 1779076770048,
+  "version": "0.1.0"
+}
