@@ -1,0 +1,49 @@
+{
+  "changelog": "- Added metadata block in SKILL.md with homepage and runtime requirements for better documentation and agent compatibility.\n- Added agents/openai.yaml for agent configuration support.\n- Expanded SKILL.md with a new \"Security And Runtime Requirements\" section outlining secret management, `curl` and `jq` dependencies, and endpoint security.\n- Clarified usage and tooling requirements for safer and more robust agentic trading workflows.",
+  "created_at": 1772211431267,
+  "display_name": "TAAPI CLI",
+  "fetched_at": 1787801735621,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "examples/bulk-multi-constructs.json",
+    "examples/bulk-single-construct.json",
+    "scripts/taapi-agent.sh",
+    "skill-card.md",
+    "tests/smoke-live.sh",
+    "tests/test-cli.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779965355002,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "oscraters",
+    "handle": "oscraters",
+    "user_id": "s17a8rwd0d7bwtj5bn5ay7d0t58847hs"
+  },
+  "slug": "taapi",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/taapi",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=taapi&ownerHandle=oscraters",
+    "page_url": "https://clawhub.ai/oscraters/skills/taapi"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1103,
+    "installs": 32,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Use this skill to fetch TAAPI.IO indicator data for crypto or stocks, including fast single-indicator requests and bulk/multi-construct queries for agentic t...",
+  "updated_at": 1778993719083,
+  "version": "1.0.1"
+}
