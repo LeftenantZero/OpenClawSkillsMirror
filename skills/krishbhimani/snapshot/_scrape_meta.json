@@ -1,0 +1,48 @@
+{
+  "changelog": "Version 1.2.0\nSecurity hardening and runtime compatibility fixes.\n\n- Exclude all .env files from backups (.env, .env.*, at any depth) \u2014 secrets never end up in archives\n- Removed requires.bins (gpg, gpg-agent, git) from frontmatter \u2014 these are installed by setup.py at runtime, declaring them as required prevented the skill from loading on fresh workspaces where they aren't yet installed\n- Flexible credential resolution: os.environ first, skill .env fallback\n- Strip trailing commas from env values (OpenClaw injection edge case)\n- openclaw.json only needs { \"snapshot\": { \"enabled\": true } }",
+  "created_at": 1774199118478,
+  "display_name": "OpenClaw Backup & Restore \u2014 Encrypted OpenClaw Snapshots",
+  "fetched_at": 1787855596068,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "env-example.txt",
+    "scripts/backup.py",
+    "scripts/config.py",
+    "scripts/restore.py",
+    "scripts/setup.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090039901,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "KrishBhimani",
+    "handle": "krishbhimani",
+    "user_id": "s177x6hk3mtf64ghrjvr20mb1583hrq5"
+  },
+  "slug": "snapshot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/snapshot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=snapshot&ownerHandle=krishbhimani",
+    "page_url": "https://clawhub.ai/krishbhimani/skills/snapshot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 833,
+    "installs": 21,
+    "stars": 1,
+    "versions": 7
+  },
+  "summary": "Backup and restore the .openclaw agent folder \u2014 encrypted snapshots pushed to a private GitHub repo. Use this skill whenever the user mentions backup, restor...",
+  "updated_at": 1778492115715,
+  "version": "1.2.0"
+}
