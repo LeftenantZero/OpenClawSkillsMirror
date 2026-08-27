@@ -1,0 +1,46 @@
+{
+  "changelog": "- Initial release of Daily News Collector skill.\n- Automates daily collection, curation, and distribution of tech industry news using scheduled cron jobs.\n- Separates news collection (cached to file) from fast distribution (read from file then pushed to chat).\n- Utilizes a multi-layered news search strategy combining AI search APIs (e.g., Tavily), direct blog crawls, and community aggregators for balanced coverage.\n- Prevents duplication with anti-duplication checks for both collection and distribution processes.\n- Includes report formatting guidelines, technical quality control tips, and integration scripts for API-based news discovery.",
+  "created_at": 1773922491838,
+  "display_name": "Daily News Collector",
+  "fetched_at": 1787862863966,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/sources.md",
+    "references/tavily-setup.md",
+    "references/usage-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089979461,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "lgy2020",
+    "handle": "lgy2020",
+    "user_id": "s176czm9q353k4nsah5bag0twx83h98f"
+  },
+  "slug": "info-stream",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/info-stream",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=info-stream&ownerHandle=lgy2020",
+    "page_url": "https://clawhub.ai/lgy2020/skills/info-stream"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 693,
+    "installs": 18,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Daily tech news collection and distribution system. Automated methodology for collecting, curating, and distributing industry news via scheduled cron jobs. U...",
+  "updated_at": 1778492033442,
+  "version": "1.0.0"
+}
