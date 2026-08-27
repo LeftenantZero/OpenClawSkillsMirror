@@ -1,0 +1,48 @@
+{
+  "changelog": "**Introduces ready-made examples, task-specific scripts, and practical verification playbooks for workbook handoff and shell roundtrips.**\n\n- Added new reference playbooks, usage examples, and gotchas docs to cover workbook import/export, handoff, and verification scenarios.\n- Included examples for handoff verification, shell roundtrip review-table creation, and template import anchor checks.\n- Added scripts for verifying CSV structure and cell values after shell processing.\n- Clarified task routing, verification requirements, and the use of entryId vs. unitId throughout.\n- Updated documentation to highlight safest shell-native paths and verification best practices.",
+  "created_at": 1773902570684,
+  "display_name": "Agent Sheet",
+  "fetched_at": 1787863724658,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "examples/handoff-verify.md",
+    "examples/roundtrip-awk-write-table.md",
+    "examples/template-import-anchor-check.md",
+    "playbooks/00-preflight.md",
+    "playbooks/10-read-analyze.md",
+    "playbooks/15-verify.md",
+    "playbooks/20-write-safe.md",
+    "playbooks/30-file-lifecycle.md",
+    "playbooks/40-script-fallback.md",
+    "references/command-selection-matrix.md",
+    "references/gotchas.md",
+    "references/js-api-minimal.md",
+    "references/shell-patterns.md",
+    "scripts/check_csv_cells.py",
+    "scripts/verify_csv_preview.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "yangluoshen",
+    "handle": "yangluoshen",
+    "user_id": "s173d4szn57qz81484std14twh83hze0"
+  },
+  "slug": "agent-sheet",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-sheet",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-sheet&ownerHandle=yangluoshen",
+    "page_url": "https://clawhub.ai/yangluoshen/skills/agent-sheet"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 847,
+    "installs": 21,
+    "stars": 2,
+    "versions": 7
+  },
+  "summary": "shell-native spreadsheet CLI for agent work. Use it for workbook inspection, sheet/range reads, precise writes, import/export handoff, review-table construct...",
+  "updated_at": 1778492026162,
+  "version": "0.1.6"
+}
