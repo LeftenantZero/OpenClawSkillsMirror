@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of iaworker: Intelligent Automation Worker for real-time physical task guidance.\n\n- Analyze images, videos, or live camera feeds to detect physical issues (repair, debug, assembly, inspection).\n- Generate structured, step-by-step operating instructions with estimated difficulty and tool requirements.\n- Delivers guidance both visually (markdown display) and audibly (TTS spoken aloud) with optional step-by-step confirmation.\n- Supports multiple task types, per-step safety warnings, and mistake avoidance tips.\n- Highly configurable TTS, display, and workflow settings via YAML config file.\n- Includes modular scripts: video/image analyzer, step generator, and TTS/display handler.",
+  "created_at": 1776846777752,
+  "display_name": "iaworker",
+  "fetched_at": 1787816978849,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/task-guide.md",
+    "scripts/config.yaml",
+    "scripts/speaker.py",
+    "scripts/step_engine.py",
+    "scripts/video_analyzer.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090512006,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yinleunglai",
+    "handle": "yinleunglai",
+    "user_id": "s17b2b8cmpqjn4fsm2s3ctcjbh8572q5"
+  },
+  "slug": "iaworker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/iaworker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=iaworker&ownerHandle=yinleunglai",
+    "page_url": "https://clawhub.ai/yinleunglai/skills/iaworker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 643,
+    "installs": 17,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Intelligent Automation Worker \u2014 analyzes video/image streams and generates structured, real-time operating steps for physical tasks (debug, repair, assembly,...",
+  "updated_at": 1778492706596,
+  "version": "1.0.0"
+}
