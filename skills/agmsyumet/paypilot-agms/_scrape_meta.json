@@ -1,0 +1,46 @@
+{
+  "changelog": "- Environment variable requirements removed; now only dependencies on curl and jq are needed.\n- Setup and authentication workflows updated to no longer request or require passwords or gateway keys via environment variables.\n- Login flow now prompts user for password only when needed\u2014credentials are never stored after use.\n- Updated documentation to clarify security practices regarding password handling.\n- No code or logic changes were made; update is documentation/security guidance only.",
+  "created_at": 1771966207899,
+  "display_name": "PayPilot by AGMS",
+  "fetched_at": 1787791378104,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/gateway-api.md",
+    "references/payment-flows.md",
+    "references/pci-compliance.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779957065817,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "agmsyumet",
+    "handle": "agmsyumet",
+    "user_id": "s178be0v1f32x576pdbyad3pwx884ec9"
+  },
+  "slug": "paypilot-agms",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/paypilot-agms",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=paypilot-agms&ownerHandle=agmsyumet",
+    "page_url": "https://clawhub.ai/agmsyumet/skills/paypilot-agms"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1484,
+    "installs": 44,
+    "stars": 0,
+    "versions": 9
+  },
+  "summary": "Process payments, send invoices, issue refunds, manage subscriptions, and detect fraud via a secure payment gateway proxy. Use when a user asks to charge som...",
+  "updated_at": 1779077268700,
+  "version": "1.3.5"
+}
