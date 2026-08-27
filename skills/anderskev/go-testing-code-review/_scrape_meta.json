@@ -1,0 +1,35 @@
+{
+  "changelog": "Major update: Introduces a strict review sequence and verification gates to standardize and improve review quality.\n\n- Added a required 4-step review workflow: baseline Go version, read full context, scope checklist, complete pre-report verification.\n- Introduced \u201cHard gates\u201d table summarizing mandatory review objectives.\n- Now mandates referencing and applying only checklist items relevant to the diff, with N/A reasoning for skipped items.\n- Requires use of an external \u201creview-verification-protocol\u201d before reporting findings.\n- Output reporting format is now specified and standardized.\n- Existing checklist and patterns retained, with new instructions for workflow discipline and compliance.",
+  "created_at": 1774201642991,
+  "display_name": "Go Testing Code Review",
+  "fetched_at": 1787855485366,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/mocking.md",
+    "references/structure.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Kevin Anderson",
+    "handle": "anderskev",
+    "user_id": "s17b1fzefm8nj8j1sdkzrze7gn83pfrg"
+  },
+  "slug": "go-testing-code-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/go-testing-code-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=go-testing-code-review&ownerHandle=anderskev",
+    "page_url": "https://clawhub.ai/anderskev/skills/go-testing-code-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 789,
+    "installs": 20,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Reviews Go test code for proper table-driven tests, assertions, and coverage patterns. Use when reviewing *_test.go files.",
+  "updated_at": 1778492115715,
+  "version": "2.3.1"
+}
