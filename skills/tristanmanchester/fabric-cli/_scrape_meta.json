@@ -1,0 +1,55 @@
+{
+  "changelog": "Initial release of the Fabric.so CLI agent skill.\n\n- Provides safe, guided workflows for using the Fabric.so command-line interface (CLI) via the fabric executable.\n- Covers searching and browsing libraries, saving notes/links/files, creating folders, asking the Fabric AI assistant, managing tasks/workspaces, and generating shell completion.\n- Explains what is and isn\u2019t covered (not for Microsoft Fabric, Power BI, Miessler\u2019s Fabric, Python SSH, Fabric.js, textiles, etc.).\n- Strong emphasis on consent, safety, and non-destructive actions: warns before state-changing commands, never installs or deletes without explicit approval.\n- Describes JSON output usage, environment checks, command mapping, and defensive error handling.\n- Includes practical tips for selecting commands, handling authentication, and parsing output.",
+  "created_at": 1777487466250,
+  "display_name": "Fabric CLI skill - Self-Organizing Personal Cloud",
+  "fetched_at": 1787812317767,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/templates/agent-memory-note.md",
+    "assets/templates/fabric-command-plan.json",
+    "assets/templates/search-summary.md",
+    "assets/templates/session-bootstrap.md",
+    "assets/templates/task-plan.md",
+    "evals/evals.json",
+    "evals/manual-test-plan.md",
+    "evals/trigger_queries_combined.json",
+    "evals/trigger_queries_train.json",
+    "evals/trigger_queries_validation.json",
+    "references/agent-memory.md",
+    "references/command-reference.md",
+    "references/security-and-consent.md",
+    "references/sources.md",
+    "references/troubleshooting.md",
+    "references/v2-critical-analysis.md",
+    "references/workflows.md",
+    "scripts/fabric_check.py",
+    "scripts/fabric_command_plan.py",
+    "scripts/fabric_help_cache.py",
+    "scripts/fabric_memory_note.py",
+    "scripts/validate_skill.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Tristan Manchester",
+    "handle": "tristanmanchester",
+    "user_id": "s17c3xv8wvvzzbj84z9vcj498n83gnkp"
+  },
+  "slug": "fabric-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fabric-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fabric-cli&ownerHandle=tristanmanchester",
+    "page_url": "https://clawhub.ai/tristanmanchester/skills/fabric-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 609,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use this skill for Fabric.so CLI workflows with the `fabric` terminal command: diagnose/install/login, search or browse a Fabric library, save notes/links/fi...",
+  "updated_at": 1778492801721,
+  "version": "1.0.0"
+}
