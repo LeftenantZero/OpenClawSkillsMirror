@@ -1,0 +1,78 @@
+{
+  "changelog": "Initial release of metals-desk-os \u2014 institutional automated trading OS for gold and silver:\n\n- Provides full desk-level trading automation for XAU/USD and XAG/USD with real-time analysis, execution, and risk management.\n- Features modular, event-driven architecture with specialized engines for market structure, liquidity, bias, macro, volatility, risk, execution, and performance tracking.\n- Offers multiple operational modes: advisory, semi-automated, fully-automated, and risk-off.\n- Enforces strict, non-negotiable institutional risk protocols for all trading activity.\n- Includes automated trade management logic (multi-targets, partial closes, trailing stops).\n- Integrates with MetaTrader 5 via MetaAPI and supports alerting via WhatsApp and Telegram.\n- Provides a detailed file structure and installation instructions for rapid deployment.",
+  "created_at": 1770815524922,
+  "display_name": "XAUUSD",
+  "fetched_at": 1787792506961,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "alerts/risk-alert.js",
+    "alerts/telegram-alert.js",
+    "alerts/whatsapp-alert.js",
+    "automation/event-bus.js",
+    "automation/news-monitor.js",
+    "automation/price-feed.js",
+    "automation/scheduler.js",
+    "automation/session-engine.js",
+    "broker/mt5-connector.js",
+    "broker/order-manager.js",
+    "broker/risk-guard.js",
+    "core/bias-engine.js",
+    "core/execution-engine.js",
+    "core/liquidity-engine.js",
+    "core/macro-engine.js",
+    "core/performance-engine.js",
+    "core/risk-engine.js",
+    "core/structure-engine.js",
+    "core/volatility-engine.js",
+    "dashboard/desk-dashboard.json",
+    "dashboard/metrics.json",
+    "dashboard/websocket-feed.js",
+    "data/bias-memory.json",
+    "data/performance.json",
+    "data/state.json",
+    "data/trade-log.json",
+    "index.js",
+    "manifest.json",
+    "package.json",
+    "prompts/execution.txt",
+    "prompts/intraday.txt",
+    "prompts/swing.txt",
+    "prompts/system.txt",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779970317186,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "cfilipemt",
+    "handle": "cfilipemt",
+    "user_id": "s1765gypn7f48xbvsjhj8v3chh8855cc"
+  },
+  "slug": "metals-desk-os",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/metals-desk-os",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=metals-desk-os&ownerHandle=cfilipemt",
+    "page_url": "https://clawhub.ai/cfilipemt/skills/metals-desk-os"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2403,
+    "installs": 77,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Institutional Desk-Level Fully Automated Trading OS for XAU/USD and XAG/USD. Event-driven, risk-first, multi-engine architecture that runs as a continuous analysis and execution pipeline inside OpenClaw's trader agent.",
+  "updated_at": 1779076899965,
+  "version": "1.0.0"
+}
