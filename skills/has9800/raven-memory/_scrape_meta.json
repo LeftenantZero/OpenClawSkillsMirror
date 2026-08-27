@@ -1,0 +1,59 @@
+{
+  "changelog": "- Updated OpenClaw system prompt instructions for clarity: now specifies to load summary/nodes into context before responding.\n- Minor improvements to the description for readability.\n- No functional or code changes; this version adds PKG-INFO for packaging.",
+  "created_at": 1774500153741,
+  "display_name": "Raven Memory",
+  "fetched_at": 1787847677101,
+  "files": [
+    "README.md",
+    "_meta.json",
+    "benchmark/causal_mem_bench.py",
+    "benchmark/test_openclaw_integration.py",
+    "benchmark/test_raven_features.py",
+    "benchmark/test_scale_v2.py",
+    "pyproject.toml",
+    "requirements.txt",
+    "skill-card.md",
+    "skill.md",
+    "tcc/__init__.py",
+    "tcc/core/__init__.py",
+    "tcc/core/dag.py",
+    "tcc/core/embedder.py",
+    "tcc/core/node.py",
+    "tcc/core/reconciler.py",
+    "tcc/core/store.py",
+    "tcc/integration/__init__.py",
+    "tcc/integration/mcp_server.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090118953,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "H.A",
+    "handle": "has9800",
+    "user_id": "s17bycjhrw999sdar2ajsjwdk183jknc"
+  },
+  "slug": "raven-memory",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/raven-memory",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=raven-memory&ownerHandle=has9800",
+    "page_url": "https://clawhub.ai/has9800/skills/raven-memory"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 694,
+    "installs": 16,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Persistent causal memory for AI agents. Raven records everything your agent does as a causally-linked chain, including decisions, tool calls, parallel work,...",
+  "updated_at": 1778492201574,
+  "version": "1.0.1"
+}
