@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of fred-navigator.\n\n- Enables navigation of FRED categories and series using direct IDs or natural-language queries.\n- Implements intent recognition and double validation for reliable category selection.\n- Returns Top-5 candidates when query confidence is low or validation fails.\n- Provides structured workflow for series lookup and metadata retrieval.\n- Requires external references and scripts for data lookup and path building; does not hardcode API keys.",
+  "created_at": 1771416662830,
+  "display_name": "FRED-Navigator",
+  "fetched_at": 1787803583702,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/category_paths.json",
+    "references/fred_categories_flat.json",
+    "references/fred_categories_tree.json",
+    "references/synonyms.json",
+    "requirements.txt",
+    "scripts/build_paths.py",
+    "scripts/fred_query.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779921930793,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "kiszly",
+    "handle": "kiszly",
+    "user_id": "s172gpxzj9hf32fzyrfesz208d8845gm"
+  },
+  "slug": "fred-navigator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fred-navigator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fred-navigator&ownerHandle=kiszly",
+    "page_url": "https://clawhub.ai/kiszly/skills/fred-navigator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1583,
+    "installs": 50,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Navigate FRED categories and series using fredapi, supporting natural-language queries with intent recognition and double validation.",
+  "updated_at": 1778991429662,
+  "version": "1.0.0"
+}
