@@ -1,0 +1,35 @@
+{
+  "changelog": "Version 1.0.1 - Changelog\n\n- Added scripts/reply.py to support generating voice message replies.\n- Updated documentation to reflect simplified usage: now reply generation is `python scripts/reply.py \"<\u6587\u5b57\u5185\u5bb9>\"`.\n- Documented support for both MiniMax T2A (mp3 \u2192 opus) and Edge TTS (ogg) as audio generation backends, with automatic fallback.\n- Explained how to insert MiniMax prosody tags and fillers to make synthesized speech more natural.\n- Revised environment variable requirements: MINIMAX_API_KEY is now optional; will use Edge TTS if unavailable.\n- Clarified sending method: produced `.opus` or `.ogg` should be sent as `audio/opus` via Feishu.",
+  "created_at": 1775241788656,
+  "display_name": "feishu-minimax-t2a-voice",
+  "fetched_at": 1787832857825,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/reply.py",
+    "scripts/send_voice.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "habitum",
+    "handle": "michelangelo-in-sistine",
+    "user_id": "s174kt6n4txq2cf0ez7nvc92c1845szh"
+  },
+  "slug": "feishu-minimax-t2a-voice",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-minimax-t2a-voice",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-minimax-t2a-voice&ownerHandle=michelangelo-in-sistine",
+    "page_url": "https://clawhub.ai/michelangelo-in-sistine/skills/feishu-minimax-t2a-voice"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 556,
+    "installs": 13,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "\u98de\u4e66\u8bed\u97f3\u6d88\u606f\u6536\u53d1\uff1a\u63a5\u6536\u8bed\u97f3\u81ea\u52a8\u8f6c\u6587\u5b57\uff08\u98de\u4e66\u539f\u751f Transcript + Whisper \u964d\u7ea7\uff09\uff0c\u56de\u590d\u8bed\u97f3\u7531 MiniMax T2A \u5408\u6210\u540e\u53d1\u9001\u3002",
+  "updated_at": 1778492399522,
+  "version": "1.0.1"
+}
