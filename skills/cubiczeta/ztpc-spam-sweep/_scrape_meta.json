@@ -1,0 +1,45 @@
+{
+  "changelog": "ztpc-spam-sweep v1.0.0\n\n- Initial release.\n- Scans unread emails in Aliyun Enterprise Mail using a persistent OpenClaw profile.\n- Conservatively identifies and marks obvious spam/phishing as spam (never deletes).\n- Human verification required for captcha/SMS/2FA; process depends on interactive_2fa input.\n- Supports allowlist/blocklist management for sender filtering.\n- Output is always a concise Chinese summary.",
+  "created_at": 1771034808678,
+  "display_name": "Ztpc Spam Sweep",
+  "fetched_at": 1787792395864,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "allowlist.txt",
+    "blocklist.txt",
+    "secrets.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779974342089,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "cubiczeta",
+    "handle": "cubiczeta",
+    "user_id": "s17fnw6qez6825bxqtqpbb1gbh8842bp"
+  },
+  "slug": "ztpc-spam-sweep",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ztpc-spam-sweep",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ztpc-spam-sweep&ownerHandle=cubiczeta",
+    "page_url": "https://clawhub.ai/cubiczeta/skills/ztpc-spam-sweep"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 622,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u626b\u63cf\u672a\u8bfbAliyun\u4f01\u4e1a\u90ae\u7bb1\u90ae\u4ef6\uff0c\u5224\u65ad\u5e76\u6807\u8bb0\u663e\u8457\u5783\u573e/\u9493\u9c7c\u90ae\u4ef6\u4e3a\u5783\u573e\u90ae\u4ef6\uff0c\u652f\u6301\u77ed\u4fe1\u4e8c\u6b21\u9a8c\u8bc1\uff0c\u62a5\u544a\u7b80\u77ed\u4e2d\u6587\u72b6\u6001\u3002",
+  "updated_at": 1779076940498,
+  "version": "1.0.0"
+}
