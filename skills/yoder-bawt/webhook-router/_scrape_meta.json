@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release: General-purpose webhook receiver and router for OpenClaw using Tailscale Funnel.\n\n- Secure public webhook endpoint integrated via Tailscale Funnel.\n- Automatic routing of incoming webhooks to handlers based on source.\n- Built-in handlers for GitHub, ClawHub, and generic sources.\n- Registration system enables adding new webhook sources and handler templates.\n- Audit logging of all received webhooks with support for smart alerts.\n- Example configurations and clear setup instructions for various services (GitHub, Stripe, custom).\n- Custom handler and environment variable support for flexible workflows.",
+  "created_at": 1771435088240,
+  "display_name": "Webhook Router",
+  "fetched_at": 1787791877736,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "handlers/custom.sh",
+    "handlers/generic.sh",
+    "handlers/github.sh",
+    "register.sh",
+    "router.sh",
+    "skill.json",
+    "test.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779922447189,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yoder-bawt",
+    "handle": "yoder-bawt",
+    "user_id": "s170re0cxhj45s27ah5h37tc59885epn"
+  },
+  "slug": "webhook-router",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/webhook-router",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=webhook-router&ownerHandle=yoder-bawt",
+    "page_url": "https://clawhub.ai/yoder-bawt/skills/webhook-router"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 665,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Routes incoming webhooks securely via Tailscale Funnel to source-specific handlers for GitHub, ClawHub, generic, or custom webhook processing and alerting.",
+  "updated_at": 1779077103085,
+  "version": "1.0.0"
+}
