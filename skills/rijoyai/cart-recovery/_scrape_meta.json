@@ -1,0 +1,40 @@
+{
+  "changelog": "cart-recovery v1.0.0 \u2014 Launch with step-based checkout abandonment diagnosis and required three-part recovery email sequence.\n\n- Maps any checkout to a standardized three-step model (contact/address, shipping, payment); handles mapping if user flow differs.\n- Diagnoses abandonment causes by step, and prescribes targeted compensation (shipping relief, shipping upgrade, BNPL/installment education).\n- Always outputs a detailed resistance classification and step \u00d7 tactic matrix\u2014including hypotheses when step data is missing.\n- Mandates generation of a three-part recovery email sequence: [Urgency], [Trust rebuild], [Ultimatum], each with A/B subject lines and compliant body skeletons\u2014even if not explicitly requested.\n- Distinguishes itself from generic approaches by requiring explicit branch logic and theming in recovery flows.\n- Clearly specifies when not to trigger (e.g., order tracking inquiries only, non-funnel contexts).",
+  "created_at": 1774333837632,
+  "display_name": "Cart Recovery",
+  "fetched_at": 1787852373827,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/README.md",
+    "evals/README.md",
+    "evals/evals.json",
+    "evals/files/README.md",
+    "references/README.md",
+    "references/checkout_recovery_playbook.md",
+    "scripts/README.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "RIJOY-AI",
+    "handle": "rijoyai",
+    "user_id": "s17968d4vetrx5cj2yx3105heh83hrb4"
+  },
+  "slug": "cart-recovery",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cart-recovery",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cart-recovery&ownerHandle=rijoyai",
+    "page_url": "https://clawhub.ai/rijoyai/skills/cart-recovery"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 540,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Analyzes three-step checkout abandonment by exit step, classifies shopper resistance, and generates tailored recovery tactics plus a mandatory three-part ema...",
+  "updated_at": 1778492146803,
+  "version": "1.0.0"
+}
