@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release\u2014automatically fixes missing WooCommerce shipping addresses and deduplicates order alerts.\n\n- Monitors WooCommerce 'processing' orders to ensure each has a shipping address, copying billing to shipping if needed.\n- Emits a signal (stdout) for each new qualifying order, designed for easy integration with downstream automations.\n- Prevents duplicate alerts using a local JSON deduplication store.\n- Simple command-line interface with optional credential and storage file configuration.\n- Suitable for scheduling via cron or webhooks.",
+  "created_at": 1774739634248,
+  "display_name": "WooCommerce Order Guard",
+  "fetched_at": 1787842105436,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/order-guard.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090174106,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Zero2Ai",
+    "handle": "zero2ai-hub",
+    "user_id": "s17a1b8dv4hc6x68q9m057m67n83ryrt"
+  },
+  "slug": "skill-woocommerce-order-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-woocommerce-order-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-woocommerce-order-guard&ownerHandle=zero2ai-hub",
+    "page_url": "https://clawhub.ai/zero2ai-hub/skills/skill-woocommerce-order-guard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 707,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Monitors new WooCommerce processing orders, auto-copies missing shipping addresses from billing, and emits one alert per new order for automation.",
+  "updated_at": 1778492268009,
+  "version": "1.0.0"
+}
