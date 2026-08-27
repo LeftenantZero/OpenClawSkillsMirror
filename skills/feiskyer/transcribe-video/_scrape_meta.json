@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release: transcribe-video skill extracts transcripts or subtitles from local video files.\n- Automatically checks for embedded subtitles first for fast, accurate results; uses speech-to-text API if none are found.\n- Supports popular video formats: mp4, mkv, mov, avi, webm, and others ffmpeg can read.\n- Guides user through dependencies for API transcription if required.\n- Outputs a text transcript file in the same folder as the video, and shows a preview with basic info.",
+  "created_at": 1776249141108,
+  "display_name": "transcribe-video",
+  "fetched_at": 1787821606731,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/transcribe.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090439427,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Pengfei Ni",
+    "handle": "feiskyer",
+    "user_id": "s174q6bx170bf0qb9wjqhqfv6x83vv3e"
+  },
+  "slug": "transcribe-video",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/transcribe-video",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=transcribe-video&ownerHandle=feiskyer",
+    "page_url": "https://clawhub.ai/feiskyer/skills/transcribe-video"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 549,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Extract transcript or subtitles from a local video file. Use this skill whenever the user asks to transcribe a video, extract speech-to-text, get subtitles,...",
+  "updated_at": 1778492602466,
+  "version": "1.0.0"
+}
