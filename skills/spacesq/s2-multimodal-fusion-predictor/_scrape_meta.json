@@ -1,0 +1,37 @@
+{
+  "changelog": "s2-multimodal-fusion-predictor 1.0.0\n\n- Initial release enabling embodied AI to fuse LiDAR, camera, and tactile inputs for robust physical reasoning.\n- Implements cross-validation to avoid visual illusions and bans reliance on single or pseudo-sensors (e.g., PIR).\n- Provides explicit guidance for temporal causal prediction (1-60s) and requires structured, multimodal output.\n- Introduces protocol for resolving sensor conflicts (e.g., vision vs. LiDAR on transparent objects).\n- Exposes `execute_multimodal_fusion` tool for raw sensor array processing.",
+  "created_at": 1775437615005,
+  "display_name": "S2 \u591a\u6a21\u6001\u878d\u5408\u4e0e\u7a7a\u95f4\u9884\u6d4b\u5f15\u64ce",
+  "fetched_at": 1787830839145,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "handler.py",
+    "openclaw.plugin.json",
+    "package.json",
+    "s2-swm-v3.1-multimodal-fusion.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "MilesXiang",
+    "handle": "spacesq",
+    "user_id": "s17c8pmv1e8tb2mcc5aset88e183hq1t"
+  },
+  "slug": "s2-multimodal-fusion-predictor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/s2-multimodal-fusion-predictor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=s2-multimodal-fusion-predictor&ownerHandle=spacesq",
+    "page_url": "https://clawhub.ai/spacesq/skills/s2-multimodal-fusion-predictor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 652,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Instructs the Embodied AI on how to process incoming multimodal sensor data (LiDAR, Camera, Tactile), avoid visual illusions, and output 1s-60s physical caus...",
+  "updated_at": 1778492429097,
+  "version": "1.0.0"
+}
