@@ -1,0 +1,35 @@
+{
+  "changelog": "Kalshi ETH Bin Distribution Trader v1.0.0\n\n- Initial release of the skill for trading ETH price bin markets on Kalshi.\n- Implements a trading strategy exploiting deviations from the 100% sum constraint on price bins.\n- Includes built-in risk controls and configurable parameters via the Simmer UI.\n- Defaults to safe paper trading mode; real trades only enabled with `--live`.\n- No external pricing data needed; uses internal market consistency for trade signals.",
+  "created_at": 1775151010014,
+  "display_name": "Kalshi ETH Bin Distribution Trader",
+  "fetched_at": 1787833937175,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "skill-card.md",
+    "trader.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "diagnostikon",
+    "handle": "diagnostikon",
+    "user_id": "s17bf2qvfsqakddyh674vczxqs83fcwb"
+  },
+  "slug": "kalshi-eth-bin-distribution-trader",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kalshi-eth-bin-distribution-trader",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kalshi-eth-bin-distribution-trader&ownerHandle=diagnostikon",
+    "page_url": "https://clawhub.ai/diagnostikon/skills/kalshi-eth-bin-distribution-trader"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 613,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Trades ETH price bin markets on Kalshi by exploiting the constraint that all bins must sum to 100%. When the sum deviates, identifies mispriced bins and trad...",
+  "updated_at": 1778492379127,
+  "version": "1.0.0"
+}
