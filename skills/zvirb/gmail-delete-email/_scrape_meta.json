@@ -1,0 +1,33 @@
+{
+  "changelog": "- Added explicit Jidoka-validated retry loop for error handling.\n- Now retries failed delete commands up to 3 times, waiting 3 seconds between attempts.\n- Reports error to the user and stops if deletion fails after all retries.\n- Documentation updated to clarify these new reliability and verification steps.",
+  "created_at": 1777187952699,
+  "display_name": "Gmail Delete Email",
+  "fetched_at": 1787814537223,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "zvirb",
+    "handle": "zvirb",
+    "user_id": "s178ycq6n64frv7zswtx5rvyfd85kc2g"
+  },
+  "slug": "gmail-delete-email",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gmail-delete-email",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gmail-delete-email&ownerHandle=zvirb",
+    "page_url": "https://clawhub.ai/zvirb/skills/gmail-delete-email"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 722,
+    "installs": 18,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Atomic node skill to delete an email via Gmail using the gog CLI.",
+  "updated_at": 1778492758205,
+  "version": "1.0.3"
+}
