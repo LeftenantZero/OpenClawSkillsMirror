@@ -1,0 +1,69 @@
+{
+  "changelog": "**CreditClaw Payment Skill 2.9.0 \u2014 Major Overhaul & Multi-Merchant Platform Support**\n\n- Reorganized the skill with modular guides for each supported merchant/platform (Amazon, Shopify, WooCommerce, Squarespace, BigCommerce, Wix, Magento, generic fallback).\n- Unified and simplified payment rails: now supports \"My Card\" (secure owner card checkout) and \"Stripe Wallet (x402)\" (USDC, on-chain), with clear status and setup flows.\n- Added merchant-specific guides and improved detection/checkout instructions for each platform.\n- Expanded documentation: new files for setup, agent management, shopping discovery, selling via storefronts, webhooks, and OpenClaw sub-agents.\n- Strengthened security and ephemeral checkout session design, with clear per-transaction encryption and agent isolation steps.\n- Removed and replaced previous monolithic docs with structured per-feature and per-rail guides for easier onboarding and extension.",
+  "created_at": 1773174327352,
+  "display_name": "Shopping Claw | Is your claw a shopaholic?",
+  "fetched_at": 1787799618750,
+  "files": [
+    "CHECKOUT-GUIDE.md",
+    "HEARTBEAT.md",
+    "MANAGEMENT.md",
+    "MY-STORE.md",
+    "SHOPPING-GUIDE.md",
+    "SKILL.md",
+    "STRIPE-X402-WALLET.md",
+    "WEBHOOK.md",
+    "_meta.json",
+    "agents/CLAUDE-PLUGIN.md",
+    "agents/OPENCLAW.md",
+    "amazon/AMAZON.md",
+    "amazon/_meta.json",
+    "bigcommerce/BIGCOMMERCE.md",
+    "bigcommerce/_meta.json",
+    "generic/GENERIC.md",
+    "generic/_meta.json",
+    "magento/MAGENTO.md",
+    "magento/_meta.json",
+    "shopify/SHOPIFY.md",
+    "shopify/_meta.json",
+    "skill-card.md",
+    "skill.json",
+    "squarespace/SQUARESPACE.md",
+    "squarespace/_meta.json",
+    "wix/WIX.md",
+    "wix/_meta.json",
+    "woocommerce/WOOCOMMERCE.md",
+    "woocommerce/_meta.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090051472,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "TripleHippo",
+    "handle": "triplehippo",
+    "user_id": "s171q9wjnctwwjjn7rjgjkwy2h83fayr"
+  },
+  "slug": "payment",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/payment",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=payment&ownerHandle=triplehippo",
+    "page_url": "https://clawhub.ai/triplehippo/skills/payment"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1253,
+    "installs": 37,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Shopping Claw | Give your agent spending power. Financial management for Agents and OpenClaw bots.",
+  "updated_at": 1778997522812,
+  "version": "2.9.0"
+}
