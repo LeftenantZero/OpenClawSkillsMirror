@@ -1,0 +1,46 @@
+{
+  "changelog": "Daily WeChat Article Writer Skill \u2013 First public release:\n\n- Automatically pitches 3 trending AI or human-interest topics daily at 10:00 AM, aggregating from major platforms.\n- Auto-generates a full article with context-aware AI images for selected topics and uploads drafts to WeChat.\n- Enforces a sincere, grounded, concise writing style; ensures Chinese title extraction.\n- Integrates Google Imagen 4 for custom image generation, with strict section-to-image matching protocol.\n- Supports both scheduled (cron-based) and manual operation via commands.\n- Refined workflow and lessons learned documented, including improved image/title matching and enhanced API/testing processes.",
+  "created_at": 1776188364438,
+  "display_name": "Daily Wechat Writer",
+  "fetched_at": 1787822426958,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/auto_writer.py",
+    "scripts/daily_topic_pitch.py",
+    "scripts/upload_to_wechat.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090425239,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "robertstarry-gif",
+    "handle": "robertstarry-gif",
+    "user_id": "s17a8f4am5nrjy4rg8qzv4ydhh83ghw0"
+  },
+  "slug": "daily-wechat-writer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/daily-wechat-writer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=daily-wechat-writer&ownerHandle=robertstarry-gif",
+    "page_url": "https://clawhub.ai/robertstarry-gif/skills/daily-wechat-writer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 574,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generates and uploads daily sincere, concise WeChat articles on trending AI/human topics with matched AI images, triggered at 10 AM or on command.",
+  "updated_at": 1778492590861,
+  "version": "1.0.0"
+}
