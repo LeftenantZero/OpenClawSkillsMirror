@@ -1,0 +1,36 @@
+{
+  "changelog": "## \ud83d\udce6 Skill \u5305\u6e05\u5355\n\n### 1. \ud83d\udddc\ufe0f Session Compact (v1.0.0)\n\n**\u6587\u4ef6\u540d**: `session-compact-1.0.0.tar.gz` (11KB)\n\n**\u7b80\u4ecb**:\n\u667a\u80fd\u4f1a\u8bdd\u538b\u7f29\u5de5\u5177\uff0c\u57fa\u4e8e Claude Code \u7684 Session Memory Compact \u673a\u5236\u3002\u81ea\u52a8\u5f52\u6863\u957f\u5bf9\u8bdd\u3001\u751f\u6210\u7ed3\u6784\u5316\u6458\u8981\u3001\u8282\u7701 90-98% tokens\uff0c\u96f6\u6210\u672c\u8fd0\u884c\uff08\u4e0d\u8c03\u7528 LLM\uff09\u3002\n\n**\u6838\u5fc3\u529f\u80fd**:\n- \u2705 \u81ea\u52a8\u5f52\u6863\u957f\u5bf9\u8bdd\uff0850k tokens \u9608\u503c\uff09\n- \u2705 \u751f\u6210\u7ed3\u6784\u5316\u6458\u8981\uff08\u5173\u952e\u51b3\u7b56\u3001\u9519\u8bef\u4fee\u590d\uff09\n- \u2705 \u5fae\u538b\u7f29\u6e05\u7406\u65e7\u5de5\u5177\u7ed3\u679c\n- \u2705 \u81ea\u52a8\u76d1\u63a7\u4f1a\u8bdd\u957f\u5ea6\n- \u2705 \u6301\u4e45\u5316\u8bb0\u5fc6\u5230 session-memory.md\n- \u2705 \u652f\u6301\u624b\u52a8 `/compact` \u547d\u4ee4\n\n**\u9002\u7528\u573a\u666f**:\n- \u5bf9\u8bdd\u592a\u957f\uff0c\u54cd\u5e94\u53d8\u6162\n- \u9700\u8981\u56de\u987e\u4e4b\u524d\u7684\u5173\u952e\u51b3\u7b56\n- \u8282\u7701 tokens \u6210\u672c\n- \u77e5\u8bc6\u6c89\u6dc0\u548c\u5f52\u6863\n\n**\u5b89\u88c5\u65b9\u5f0f**:\n```bash\nopenclaw skills install session-compact\n```\n\n**\u6587\u4ef6\u7ed3\u6784**:\n```\nsession-compact-1.0.0/\n\u251c\u2500\u2500 SKILL.md                 # \u4e3b\u6587\u6863\uff08\u8be6\u7ec6\u4f7f\u7528\u8bf4\u660e\uff09\n\u251c\u2500\u2500 README.md                # \u5feb\u901f\u5165\u95e8\n\u251c\u2500\u2500 scripts/\n\u2502   \u251c\u2500\u2500 compact-trigger.py   # \u624b\u52a8\u538b\u7f29\u811a\u672c\n\u2502   \u251c\u2500\u2500 micro-compact.py     # \u5fae\u538b\u7f29\u811a\u672c\n\u2502   \u2514\u2500\u2500 compact-monitor.py   # \u81ea\u52a8\u76d1\u63a7\u811a\u672c\n\u2514\u2500\u2500 docs/                    # \u6280\u672f\u6587\u6863\uff08\u53ef\u9009\uff09\n```\n\n**\u6027\u80fd\u6307\u6807**:\n- \u538b\u7f29\u7387: 90-98%\n- \u901f\u5ea6: 100ms (Micro) / 1-3s (Full)\n- \u6210\u672c: $0\uff08\u4e0d\u8c03\u7528 LLM\uff09\n- Token \u8282\u7701: 50k \u2192 1-5k",
+  "created_at": 1775381208221,
+  "display_name": "asclaude-compact",
+  "fetched_at": 1787831548359,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/compact-trigger.py",
+    "scripts/micro-compact.py",
+    "scripts/workspace_search.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Sherman Schulist",
+    "handle": "miaoxingjun",
+    "user_id": "s17ensy75qb9frw0e9a65xj3d183qzwa"
+  },
+  "slug": "asclaude-compact",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/asclaude-compact",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=asclaude-compact&ownerHandle=miaoxingjun",
+    "page_url": "https://clawhub.ai/miaoxingjun/skills/asclaude-compact"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 640,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Manage AI conversation memory with layered compression, archiving chats as JSONL, summarizing key info in markdown, and cleaning long outputs locally without...",
+  "updated_at": 1778492419682,
+  "version": "1.0.0"
+}
