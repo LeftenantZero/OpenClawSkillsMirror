@@ -1,0 +1,62 @@
+{
+  "changelog": "ClawExpert 1.0.0 \u2014 Initial release\n\n- Introduces a persistent local knowledge base for autonomous, citable domain learning.\n- Adds session start logic for auto-detecting and managing local knowledge, including proactive mode and interrupted learning detection.\n- Provides user-invocable slash commands for initialization, topic learning, and status checking.\n- Enforces use of local knowledge over model memory, with strict source citation and topic awareness.\n- Bundles deterministic scripts for filesystem operations, avoiding ad-hoc code and any git usage.",
+  "created_at": 1775052177420,
+  "display_name": "EverClaw",
+  "fetched_at": 1787836037315,
+  "files": [
+    "README-zh.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/subagent-prompt.md",
+    "scripts/analyze_gaps.py",
+    "scripts/clawexpert_common.py",
+    "scripts/cleanup_topic.py",
+    "scripts/init_topic.py",
+    "scripts/monitor_subtopics.py",
+    "scripts/plan_superlearn.py",
+    "scripts/prepare_merge.py",
+    "scripts/rebuild_index.py",
+    "scripts/resolve_query_nodes.py",
+    "scripts/resolve_topic.py",
+    "scripts/suggest_node_merges.py",
+    "scripts/update_meta.py",
+    "scripts/update_superlearn_meta.py",
+    "scripts/validate_kb.py",
+    "scripts/write_flag.py",
+    "scripts/write_progress.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090236072,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "EdgePro001",
+    "handle": "edgepro001",
+    "user_id": "s172r9t450wgy5a4a9wcmdcbzh83yn9a"
+  },
+  "slug": "clawexpert",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawexpert",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawexpert&ownerHandle=edgepro001",
+    "page_url": "https://clawhub.ai/edgepro001/skills/clawexpert"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 488,
+    "installs": 11,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Domain expert learning system with persistent local knowledge base. READ THIS SKILL FILE at the start of every session \u2014 learned topics are stored locally an...",
+  "updated_at": 1778492348942,
+  "version": "1.0.0"
+}
