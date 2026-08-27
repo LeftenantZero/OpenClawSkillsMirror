@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release \u2013 Convert Bilibili videos/channels into a structured text knowledge base.\n\n- Supports single videos and batch processing of entire UP\u4e3b channels.\n- Uses local whisper.cpp for transcription; no API key required.\n- Automated transcript cleaning with paragraph-level coverage to fix ASR errors.\n- Outputs cleaned transcripts, metadata, and an index; raw transcripts stored separately.\n- Handles large channels and includes resumable, concurrency-safe bash scripts.",
+  "created_at": 1772244300244,
+  "display_name": "Bilibili Up To Kb",
+  "fetched_at": 1787801674844,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/dependencies.md",
+    "scripts/batch_channel.sh",
+    "scripts/batch_clean.sh",
+    "scripts/clean_transcript.sh",
+    "scripts/generate_index.sh",
+    "scripts/transcribe.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966108604,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "shanjiaming",
+    "handle": "shanjiaming",
+    "user_id": "s17d3mf4hd28src97rx26qa7sh884fne"
+  },
+  "slug": "bilibili-up-to-kb",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bilibili-up-to-kb",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bilibili-up-to-kb&ownerHandle=shanjiaming",
+    "page_url": "https://clawhub.ai/shanjiaming/skills/bilibili-up-to-kb"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1056,
+    "installs": 31,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Convert Bilibili (B\u7ad9) videos into a searchable text knowledge base. Supports single videos and batch processing of entire UP\u4e3b channels. Uses local whisper.cp...",
+  "updated_at": 1778993797483,
+  "version": "0.1.0"
+}
