@@ -1,0 +1,45 @@
+{
+  "changelog": "- Initial release of the \"song-creation\" skill, enabling multi-agent workflow for full song generation.\n- Supports automatic task decomposition: lyric writing, music arrangement, and audio synthesis via distinct agent roles (\"\u58a8\u767d\", \"\u548c\u5f26\", \"\u5f15\u64ce\") without requiring preconfigured agents.\n- Integrates ComfyUI AceStep workflow for high-quality audio synthesis; compatible across OpenClaw deployments with suitable hardware.\n- Provides detailed process templates and directives for each agent to ensure end-to-end music creation based on user requests in Chinese.\n- Implements robust parameter and output management for consistent and stable music generation.",
+  "created_at": 1777726224206,
+  "display_name": "Song Creation",
+  "fetched_at": 1787811023295,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/submit_song.py",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090733090,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "qingshihuan",
+    "handle": "qingshihuan",
+    "user_id": "s17fdjybwdtejmcc82zrst5d4h85zcpn"
+  },
+  "slug": "song-creation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/song-creation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=song-creation&ownerHandle=qingshihuan",
+    "page_url": "https://clawhub.ai/qingshihuan/skills/song-creation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 605,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Multi-agent song creation workflow using \u62fe\u5149's agent architecture (writer \u2192 musician \u2192 programmer). Use when the user says '\u521b\u4f5c\u4e00\u9996\u6b4c', '\u5199\u4e00\u9996\u6b4c', '\u505a\u9996\u6b4c', '\u5199\u9996\u6b4c', '\u521b\u4f5c\u4e00...",
+  "updated_at": 1778492830283,
+  "version": "1.0.0"
+}
