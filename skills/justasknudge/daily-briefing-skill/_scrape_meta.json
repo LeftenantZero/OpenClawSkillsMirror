@@ -1,0 +1,55 @@
+{
+  "changelog": "- Initial release of daily-briefing: an automated daily morning briefing delivered via iMessage at 7am.\n- Compiles weather, calendar events, top 5 news headlines, 3\u20134 AI/tech updates, OpenClaw insights, and actionable workflow tips.\n- Highly customizable via `config.yaml` for location, news/AI sources, delivery time, and preferences.\n- Provides manual scripts for generating and sending the briefing, as well as full cron integration.\n- Troubleshooting and extension ideas documented for easy maintenance and future improvements.",
+  "created_at": 1771317306797,
+  "display_name": "Daily Briefing",
+  "fetched_at": 1787791804055,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/config.yaml",
+    "config/cron.yaml",
+    "scripts/generate-and-send.sh",
+    "scripts/generate-briefing.sh",
+    "scripts/lib/ai_pulse.py",
+    "scripts/lib/calendar.py",
+    "scripts/lib/cost_tracker.py",
+    "scripts/lib/news.py",
+    "scripts/lib/openclaw_dive.py",
+    "scripts/lib/suggestions.py",
+    "scripts/lib/weather.py",
+    "scripts/send-briefing.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779972327493,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "JustAskNudge",
+    "handle": "justasknudge",
+    "user_id": "s174qy9ar4p6grv32fwc6v1tdx884n74"
+  },
+  "slug": "daily-briefing-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/daily-briefing-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=daily-briefing-skill&ownerHandle=justasknudge",
+    "page_url": "https://clawhub.ai/justasknudge/skills/daily-briefing-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 551,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Automated daily morning briefing generator. Fetches weather, calendar, news, AI/tech updates, OpenClaw insights, and actionable tips. Delivers via iMessage a...",
+  "updated_at": 1779077124643,
+  "version": "0.1.0"
+}
