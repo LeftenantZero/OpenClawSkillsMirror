@@ -1,0 +1,55 @@
+{
+  "changelog": "bomb-dog-sniff v1.2.0 is a major security and detection upgrade for OpenClaw skill scanning.\n\n- Fixed command injection and added path traversal protection for safer downloads and scanning.\n- Quarantines skills in randomized, permission-locked directories before scanning.\n- Now detects and skips binary/oversized files and restricts regex processing to prevent resource attacks.\n- Smarter detection: reduced false positives, added entropy analysis for encoded threats, awareness of test files, and per-finding confidence scoring.\n- Expanded to 13 detection categories, now including supply chain attacks, prototype pollution, and new script-based threats.\n- New detection patterns target credential and SSH key theft, browser and system persistence, and more.\n- All commands (scan, safe-install, audit, batch) documented with clear examples and risk scoring explanations.",
+  "created_at": 1770530107924,
+  "display_name": "Bomb Dog Sniff",
+  "fetched_at": 1787792801957,
+  "files": [
+    ".guardianrc.example.json",
+    "PERFECTION_SUMMARY.md",
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "patterns.js",
+    "safe-download.js",
+    "scan.js",
+    "scripts/scan.js",
+    "scripts/sniff.sh",
+    "skill-card.md",
+    "test-malicious-skill/SKILL.md",
+    "test-malicious-skill/scripts/malicious.js",
+    "test/malicious-skill/SKILL.md",
+    "test/malicious-skill/index.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783658383558,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "LvcidPsyche",
+    "handle": "lvcidpsyche",
+    "user_id": "s17drrndmbstv09yka41s67hwh884zsh"
+  },
+  "slug": "skill-bomb-dog-sniff",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-bomb-dog-sniff",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-bomb-dog-sniff&ownerHandle=lvcidpsyche",
+    "page_url": "https://clawhub.ai/lvcidpsyche/skills/skill-bomb-dog-sniff"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2242,
+    "installs": 72,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Security-first skill management for OpenClaw - like a bomb-sniffing dog for skills.\nSniffs out malicious payloads (crypto stealers, keyloggers, reverse shells) before installation.\nQuarantine \u2192 Scan \u2192 Install only the safe ones.",
+  "updated_at": 1779076802779,
+  "version": "0.1.0"
+}
