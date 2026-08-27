@@ -1,0 +1,71 @@
+{
+  "changelog": "Version 1.1.0\n\n- Updated instructions for Codex/CLI/agent usage to prioritize invoking the imagegen skill for image generation.\n- Clarified that ChatGPT Images 2.0 / gpt-image-2 is now preferred for image tasks unless otherwise specified or a user-approved image API is provided.\n- Improved guidance on image/text separation, rendering, and image overlay workflow for defense visuals.\n- No code changes; documentation, process, and guidelines updated for integration and image generation flow.\n- Version bump to reflect significant workflow clarifications.",
+  "created_at": 1777637426969,
+  "display_name": "Paper Defense Q&A + Code Audit + Visual Answer Cards",
+  "fetched_at": 1787811427247,
+  "files": [
+    "CHANGES_CN.md",
+    "LICENSE.md",
+    "PUBLISH_PAGE_INFO_CN.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "schemas/answer_playbook_cn.md",
+    "schemas/code_training_audit.template.json",
+    "schemas/defense_focus_spec.template.json",
+    "schemas/defense_qa_bank.schema.json",
+    "schemas/defense_qa_bank.template.json",
+    "schemas/defense_report_contract.md",
+    "schemas/external_best_practices_sources.md",
+    "schemas/question_taxonomy_cn.md",
+    "schemas/visual_prompt_style_guide_cn.md",
+    "schemas/visual_qa_storyboard.schema.json",
+    "schemas/visual_qa_storyboard.template.json",
+    "scripts/build_defense_qa_bundle.py",
+    "scripts/generate_visual_qa_prompt_pack.py",
+    "scripts/init_paper_defense_qa_scaffold.py",
+    "scripts/package_clawhub_skill.py",
+    "scripts/validate_defense_qa_bundle.py",
+    "skill-card.md",
+    "workflow/01_intake_and_scope.md",
+    "workflow/02_claim_evidence_map.md",
+    "workflow/03_paper_attack_surface.md",
+    "workflow/04_code_training_attack_surface.md",
+    "workflow/05_answer_bank_generation.md",
+    "workflow/06_mock_defense_rehearsal.md",
+    "workflow/07_post_rehearsal_revision.md",
+    "workflow/08_visual_qa_storyboard.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090740576,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "c-narcissus",
+    "handle": "c-narcissus",
+    "user_id": "s177jw27anm32qt3dm1c7dq0jh851mjz"
+  },
+  "slug": "paper-defense-qa-code-training",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/paper-defense-qa-code-training",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=paper-defense-qa-code-training&ownerHandle=c-narcissus",
+    "page_url": "https://clawhub.ai/c-narcissus/skills/paper-defense-qa-code-training"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 605,
+    "installs": 14,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Prepare evidence-grounded computer science paper defense Q&A, code/training audit, reviewer-style attack surfaces, mock-defense scripts, backup-slide plans,...",
+  "updated_at": 1778492821950,
+  "version": "1.1.0"
+}
