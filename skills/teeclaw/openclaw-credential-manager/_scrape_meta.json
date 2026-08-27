@@ -1,0 +1,57 @@
+{
+  "changelog": "GPG encryption for high-value secrets, deep scanning for hardcoded credentials, rotation tracking with risk-based schedules, backup hardening, and comprehensive security validation",
+  "created_at": 1770781638826,
+  "display_name": "OpenClaw Credential Manager",
+  "fetched_at": 1787792583881,
+  "files": [
+    "CHANGELOG.md",
+    "CONSOLIDATION-RULE.md",
+    "CORE-PRINCIPLE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/security.md",
+    "references/supported-services.md",
+    "scripts/cleanup.py",
+    "scripts/consolidate.py",
+    "scripts/encrypt.py",
+    "scripts/enforce.py",
+    "scripts/rotation-check.py",
+    "scripts/scan.py",
+    "scripts/setup-gpg.sh",
+    "scripts/validate.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779969007145,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "TeeClaw",
+    "handle": "teeclaw",
+    "user_id": "s176kez20etvxkzt16d728dhds8850e5"
+  },
+  "slug": "openclaw-credential-manager",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-credential-manager",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-credential-manager&ownerHandle=teeclaw",
+    "page_url": "https://clawhub.ai/teeclaw/skills/openclaw-credential-manager"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2667,
+    "installs": 91,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "MANDATORY security foundation for OpenClaw. Consolidate scattered API keys and credentials into a secure .env file with proper permissions. Includes GPG encryption for high-value secrets, credential rotation tracking, deep scanning, and backup hardening. Use when setting up OpenClaw, migrating credentials, auditing security, or enforcing the .env standard. This is not optional \u2014 centralized credential management is a core requirement for secure OpenClaw deployments.",
+  "updated_at": 1779076877466,
+  "version": "2.0.0"
+}
