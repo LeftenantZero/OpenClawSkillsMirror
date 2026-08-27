@@ -1,0 +1,55 @@
+{
+  "changelog": "Fix stale platform detection: /tmp/openclaw-current-channel now ignored if >5min old. Prevents Discord memes being sent to Telegram when file has stale telegram context. OPENCLAW_CHANNEL env var takes priority over file.",
+  "created_at": 1775187701073,
+  "display_name": "Agent Memes",
+  "fetched_at": 1787796522818,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/discord-send-image.sh",
+    "scripts/feishu-send-image.mjs",
+    "scripts/get-credential.sh",
+    "scripts/line-send-image.sh",
+    "scripts/memes.sh",
+    "scripts/qq-send-image.sh",
+    "scripts/setup.sh",
+    "scripts/slack-send-image.sh",
+    "scripts/telegram-send-image.sh",
+    "scripts/wechat-send-image.sh",
+    "scripts/whatsapp-send-image.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090459932,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "kagura-agent",
+    "handle": "kagura-agent",
+    "user_id": "s172k10mer1e1pqnn7x0x5wmbd83xgrx"
+  },
+  "slug": "agent-memes",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-memes",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-memes&ownerHandle=kagura-agent",
+    "page_url": "https://clawhub.ai/kagura-agent/skills/agent-memes"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 964,
+    "installs": 26,
+    "stars": 0,
+    "versions": 24
+  },
+  "summary": "Send meme reaction images in chat. One command to pick & send. Multi-platform (Discord, Feishu, Telegram, etc). Use when the conversation calls for a visual...",
+  "updated_at": 1779075397938,
+  "version": "2.11.0"
+}
