@@ -1,0 +1,43 @@
+{
+  "changelog": "zown-gemini-governor 0.1.0 initial release:\n\n- Introduces a high-fidelity token management and model stabilization skill to prevent Gemini TPM rate limits.\n- Implements the \"Atomic Pipeline\" for breaking down tasks and enforcing single-step execution.\n- Adds protocols for aggressive context pruning, including file compacting and memory summarization.\n- Defines the 50% Rule: triggers cooldowns if TPM usage or prompt frequency thresholds are exceeded.\n- Provides collaboration guidelines for syncing memory and informing co-agents.\n- Recommends specialized workflows for both heavy engineering and Q&A tasks.",
+  "created_at": 1770864291658,
+  "display_name": "Zown Gemini Governor",
+  "fetched_at": 1787804703142,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779971675948,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "GTOVD",
+    "handle": "gtovd",
+    "user_id": "s17656kfmeev5qgt5dxnx4whb5885fme"
+  },
+  "slug": "zown-gemini-governor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/zown-gemini-governor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=zown-gemini-governor&ownerHandle=gtovd",
+    "page_url": "https://clawhub.ai/gtovd/skills/zown-gemini-governor"
+  },
+  "stats": {
+    "comments": 3,
+    "downloads": 1837,
+    "installs": 59,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "A high-fidelity token management and model stabilization skill. Implements the Zown \"Atomic Pipeline\" to prevent Gemini TPM (Tokens Per Minute) rate limits. Use when performing heavy engineering tasks, multi-step code generation, or when encountering 429 Rate Limit errors. Includes protocols for context pruning and forced cool-downs.",
+  "updated_at": 1778989981764,
+  "version": "0.1.0"
+}
