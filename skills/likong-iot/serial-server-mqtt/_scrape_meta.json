@@ -1,0 +1,51 @@
+{
+  "changelog": "sp501lw-mqtt v1.0.0 introduces initial support for SP501LW MQTT serial gateway management.\n\n- Supports two main modes: serial transparent transmission (mqtt_tcp) and Modbus RTU data acquisition.\n- Provides complete device management via MQTT, including custom topics and Broker.\n- Implements device add, list, remove, update, mode switching, serial/data send/listen, Modbus item management, and polling controls.\n- Documents all available and planned commands, with clear distinction between currently implemented and future features.\n- Includes detailed usage instructions, parameter explanations, and device registration/configuration flow.",
+  "created_at": 1775092671968,
+  "display_name": "Sp501lw Mqtt",
+  "fetched_at": 1787835280426,
+  "files": [
+    "ARCHITECTURE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/custom_broker.sh",
+    "examples/modbus_config.json",
+    "examples/modbus_rtu_example.sh",
+    "examples/mqtt_tcp_example.sh",
+    "requirements.txt",
+    "skill-card.md",
+    "sp501lw_mqtt.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090239932,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "likong-iot",
+    "handle": "likong-iot",
+    "user_id": "s1757s7zg0e4zcxpgtv0jke0r5842h2t"
+  },
+  "slug": "serial-server-mqtt",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/serial-server-mqtt",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=serial-server-mqtt&ownerHandle=likong-iot",
+    "page_url": "https://clawhub.ai/likong-iot/skills/serial-server-mqtt"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 503,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "SP501LW \u4e32\u53e3\u7f51\u5173\u7eaf MQTT \u7ba1\u7406\u6280\u80fd\u2014\u2014\u652f\u6301\u4e32\u53e3\u900f\u4f20\u548c Modbus RTU \u6570\u636e\u91c7\u96c6\u4e24\u79cd\u5de5\u4f5c\u6a21\u5f0f\uff0c\u901a\u8fc7 MQTT \u5b8c\u5168\u63a7\u5236\u8bbe\u5907\uff0c\u652f\u6301\u81ea\u5b9a\u4e49\u4e3b\u9898\u548c Broker\u3002",
+  "updated_at": 1778492359131,
+  "version": "0.1.0"
+}
