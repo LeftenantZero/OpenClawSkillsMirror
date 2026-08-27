@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of music-search.\n\n- Search for music resources (songs, albums, lossless formats) from Quark, Baidu, Aliyun, and UC Netdisks.\n- Supports filtering by netdisk type, audio format (FLAC, APE, WAV, DSD, Hi-Res, etc.), and result limit.\n- Two search engines: deep (web page crawling + extraction) and web (surface-level).\n- Includes commands to search resources, get popular recommendations, and resolve redirected links.\n- Outputs results in structured JSON with details like title, link, format, extraction code, and source.\n- Customizable preferences via .env file for netdisk priority, deep search settings, and concurrency.\n- Requires Python 3 and the web-search skill; dependencies install automatically on first use.",
+  "created_at": 1773052074285,
+  "display_name": "Music Search",
+  "fetched_at": 1787799822210,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/deep_extract.py",
+    "scripts/music-search.js",
+    "scripts/music-search.ps1",
+    "scripts/music-search.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089812211,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Parker",
+    "handle": "patches429",
+    "user_id": "s171by77r8sahftxk2h3besw5s884a4c"
+  },
+  "slug": "music-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/music-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=music-search&ownerHandle=patches429",
+    "page_url": "https://clawhub.ai/patches429/skills/music-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 610,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u641c\u7d22\u97f3\u4e50\u8d44\u6e90\uff08\u6b4c\u66f2\u3001\u4e13\u8f91\u3001\u65e0\u635f\u97f3\u4e50\uff09\uff0c\u4ece\u5938\u514b\u7f51\u76d8\u3001\u767e\u5ea6\u7f51\u76d8\u3001\u963f\u91cc\u4e91\u76d8\u3001UC\u7f51\u76d8\u83b7\u53d6\u8d44\u6e90\u94fe\u63a5\u3002\u89e6\u53d1\u8bcd\uff1a\u627e\u97f3\u4e50\u3001\u627e\u6b4c\u3001\u65e0\u635f\u97f3\u4e50\u3001FLAC\u4e0b\u8f7d\u3001\u97f3\u4e50\u7f51\u76d8\u3001\u6b4c\u66f2\u4e0b\u8f7d\u3001\u4e13\u8f91\u8d44\u6e90\u3001\u97f3\u4e50\u8d44\u6e90\u3001APE\u4e0b\u8f7d\u3001DSD\u97f3\u4e50\u3001Hi-Res\u3002",
+  "updated_at": 1778996908731,
+  "version": "0.1.0"
+}
