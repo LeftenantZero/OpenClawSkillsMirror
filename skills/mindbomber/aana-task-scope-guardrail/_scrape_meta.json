@@ -1,0 +1,37 @@
+{
+  "changelog": "- Initial release of the AANA Task Scope Guardrail Skill.\n- Provides detailed instructions and principles to prevent agents from exceeding user-requested task boundaries or using unrelated data.\n- Defines clear scope categories, required scope checks, data relevance and expansion rules, and agent completion rules.\n- Includes an output pattern for scope-sensitive actions to ensure decisions are well-documented and within authorized boundaries.\n- Emphasizes minimal data use and requires explicit user approval before expanding task scope or accessing sensitive information.",
+  "created_at": 1777769046241,
+  "display_name": "AANA Task Scope Guardrail Skill",
+  "fetched_at": 1787810878344,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/redacted-task-scope-gate.json",
+    "manifest.json",
+    "schemas/task-scope-gate.schema.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mindbomber",
+    "handle": "mindbomber",
+    "user_id": "s177cynx168hg36ac5nrkb9wdn85z9dq"
+  },
+  "slug": "aana-task-scope-guardrail",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aana-task-scope-guardrail",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aana-task-scope-guardrail&ownerHandle=mindbomber",
+    "page_url": "https://clawhub.ai/mindbomber/skills/aana-task-scope-guardrail"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 612,
+    "installs": 14,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Ensure the agent only performs requested tasks using relevant data, stops when complete, and avoids expanding beyond the user's original scope.",
+  "updated_at": 1778492833926,
+  "version": "1.0.0"
+}
