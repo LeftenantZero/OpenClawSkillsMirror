@@ -1,0 +1,52 @@
+{
+  "changelog": "- Adds a note in the description clarifying that on first run the skill will auto-manage DashScope API Keys (create/recycle) and may auto-install the Alibaba Cloud CLI ModelStudio plugin.\n- No other significant changes; all core security, API usage, and orchestration logic remain unchanged.",
+  "created_at": 1777514543470,
+  "display_name": "Alibabacloud Bailian Voice Creator",
+  "fetched_at": 1787794516525,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api-docs.md",
+    "references/error-codes.md",
+    "references/models.md",
+    "references/ram-policies.md",
+    "scripts/api_key.py",
+    "scripts/generate_livestream.py",
+    "scripts/requirements.txt",
+    "scripts/speech_recognition.py",
+    "scripts/speech_synthesis.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090771999,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-bailian-voice-creator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-bailian-voice-creator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-bailian-voice-creator&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-bailian-voice-creator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 634,
+    "installs": 14,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "AI voice creation skill supporting speech recognition (ASR) and text-to-speech (TTS). Uses qwen3-asr-flash-filetrans, qwen-tts and other models. Use this ski...",
+  "updated_at": 1779076166388,
+  "version": "0.0.2"
+}
