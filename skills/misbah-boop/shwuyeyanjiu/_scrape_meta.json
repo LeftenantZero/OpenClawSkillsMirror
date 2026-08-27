@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of shwuyeyanjiu: a research tool for Shanghai property bidding announcements (\u4e0a\u6d77\u7269\u4e1a\u62db\u6807\u516c\u544a\u7814\u7a76\u5de5\u5177).\n\n- Supports retrieval and OCR extraction of bidding, award, and evaluation result announcements from the \u4e0a\u6d77\u4f4f\u5b85\u7269\u4e1a\u7f51.\n- Extracts key project info (area, fees, parking spaces, etc.) and computes saturated income per month and year.\n- Implements robust logic for announcement prioritization (award > evaluation > bidding), info extraction across OCR line breaks, and maximum-value logic for critical fields like residential property fees.\n- Provides command-line instructions and code snippets for searching, downloading, OCR, and parsing PDF announcements.\n- Documents common issues (OCR errors, cross-line values, fee extraction) and key learnings for accurate results.",
+  "created_at": 1775582137562,
+  "display_name": "Shwuyeyanjiu",
+  "fetched_at": 1787828798637,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "scripts/batch_extract_dates.py",
+    "scripts/batch_extract_dates_v2.py",
+    "scripts/extract_contract_dates.py",
+    "scripts/extract_contract_dates_v2.py",
+    "scripts/fetch_project.py",
+    "scripts/find_expiring_contracts.py",
+    "scripts/find_expiring_contracts_v2.py",
+    "scripts/find_expiring_contracts_v3.py",
+    "scripts/find_expiring_contracts_v4.py",
+    "scripts/find_expiring_contracts_v5.py",
+    "scripts/process_jingan_light.py",
+    "scripts/process_jingan_pdfs.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "misbah-boop",
+    "handle": "misbah-boop",
+    "user_id": "s17c3vq1w9v7cxnntg40zrz35n83p21a"
+  },
+  "slug": "shwuyeyanjiu",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/shwuyeyanjiu",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=shwuyeyanjiu&ownerHandle=misbah-boop",
+    "page_url": "https://clawhub.ai/misbah-boop/skills/shwuyeyanjiu"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 604,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4e0a\u6d77\u7269\u4e1a\u62db\u6807\u516c\u544a\u7814\u7a76\u5de5\u5177\u3002\u4ece\u4e0a\u6d77\u4f4f\u5b85\u7269\u4e1a\u7f51(962121.fgj.sh.gov.cn)\u83b7\u53d6\u62db\u6807\u516c\u544a\u3001\u4e2d\u6807\u516c\u544a\u3001\u8bc4\u6807\u7ed3\u679c\u516c\u544a\uff0c\u4f7f\u7528 OCR \u63d0\u53d6\u9879\u76ee\u4fe1\u606f\uff08\u9879\u76ee\u9762\u79ef\u3001\u7269\u4e1a\u8d39\u6807\u51c6\u3001\u505c\u8f66\u4f4d\u6570\u91cf\u3001\u505c\u8f66\u7ba1\u7406\u8d39\u7b49\uff09\uff0c\u5e76\u8ba1\u7b97\u9971\u548c\u6536\u5165\u3002**\u5f53\u4ee5\u4e0b\u60c5\u51b5\u65f6\u4f7f\u7528\u6b64 Skill**\uff1a(1) \u7528\u6237\u8981\u6c42\u67e5\u627e\u67d0\u4e2a\u9879\u76ee\u7684\u7269\u4e1a\u4e2d\u6807\u4fe1\u606f\uff1b(2) \u7528\u6237...",
+  "updated_at": 1778492464088,
+  "version": "1.0.0"
+}
