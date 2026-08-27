@@ -1,0 +1,50 @@
+{
+  "changelog": "AlphaEar Sentiment Skill v1.0.0\n\n- Initial release providing sentiment analysis for financial texts.\n- Supports both local FinBERT-based and LLM/manual (agentic) analysis modes.\n- Returns sentiment score (-1.0 to 1.0), label (positive/negative/neutral), and reasoning.\n- Includes batch processing and manual update methods for database integration.\n- Provides clear scoring guidance and prompt templates for LLM/agentic analysis.",
+  "created_at": 1775046174721,
+  "display_name": "alphaear-sentiment",
+  "fetched_at": 1787836194372,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/__init__.py",
+    "scripts/database_manager.py",
+    "scripts/llm/capability.py",
+    "scripts/llm/factory.py",
+    "scripts/llm/router.py",
+    "scripts/sentiment_tools.py",
+    "skill-card.md",
+    "tests/test_sentiment.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090234718,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zhouzhonglu8-png",
+    "handle": "zhouzhonglu8-png",
+    "user_id": "s17fc97saqx9w7mhqhm8bqe1ss840tq5"
+  },
+  "slug": "alphaear-sentiment",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alphaear-sentiment",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alphaear-sentiment&ownerHandle=zhouzhonglu8-png",
+    "page_url": "https://clawhub.ai/zhouzhonglu8-png/skills/alphaear-sentiment"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 601,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Analyze finance text sentiment using FinBERT or LLM. Use when the user needs to determine the sentiment (positive/negative/neutral) and score of financial te...",
+  "updated_at": 1778492348942,
+  "version": "1.0.0"
+}
