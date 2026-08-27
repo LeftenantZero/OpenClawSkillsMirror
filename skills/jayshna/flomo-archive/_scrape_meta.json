@@ -1,0 +1,37 @@
+{
+  "changelog": "- Initial release of flomo-archive.\n- Fetches all Flomo notes from a specified month, bypassing API 50-notes-per-request limit via week\u2192day smart fallback.\n- Automatic note quality evaluation included, based on content length, tags, media, and keywords.\n- Outputs summary statistics, detailed quality report, and saves results as JSON to /tmp.\n- Console options for quality-only evaluation and JSON/verbose output.\n- Requires mcporter with flomo MCP server.\n- Handles duplicate entries and API rate limiting automatically.",
+  "created_at": 1774170886222,
+  "display_name": "flomo-archive",
+  "fetched_at": 1787856484657,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "scripts/evaluate_quality.py",
+    "scripts/fetch_month.py",
+    "scripts/fetch_month_wrapper.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "JayShna",
+    "handle": "jayshna",
+    "user_id": "s175mtcka5xacf87fm785jq7cx83hkmr"
+  },
+  "slug": "flomo-archive",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/flomo-archive",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=flomo-archive&ownerHandle=jayshna",
+    "page_url": "https://clawhub.ai/jayshna/skills/flomo-archive"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 639,
+    "installs": 14,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u83b7\u53d6 Flomo \u6307\u5b9a\u6708\u4efd\u7684\u5b8c\u6574\u7b14\u8bb0\u5e76\u8bc4\u4f30\u8d28\u91cf\u3002\u5f53\u7528\u6237\u8bf4\"\u67e5\u770bflomo XX\u5e74XX\u6708\u7684\u5168\u90e8\u7b14\u8bb0\"\u3001\"\u83b7\u53d6flomo\u67d0\u6708\u7b14\u8bb0\"\u3001\"\u62c9\u53d6flomo\u5386\u53f2\u8bb0\u5f55\"\u6216\"\u8bc4\u4f30flomo\u7b14\u8bb0\u8d28\u91cf\"\u65f6\u89e6\u53d1\u4f7f\u7528\u3002\u652f\u6301\u667a\u80fd\u4e09\u7ea7\u964d\u7ea7\u7b56\u7565\uff08\u5468\u2192\u5929\uff09\u786e\u4fdd\u5b8c\u6574\u8986\u76d6\uff0c\u5185\u7f6e\u8d28\u91cf\u8bc4\u4f30\u89c4\u5219\u81ea\u52a8\u6807\u8bb0\u4f4e\u8d28\u91cf\u7b14\u8bb0\u3002",
+  "updated_at": 1778492103506,
+  "version": "1.0.0"
+}
