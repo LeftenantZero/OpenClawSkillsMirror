@@ -1,0 +1,45 @@
+{
+  "changelog": "- Expanded skill description and usage instructions for broader scenarios, including sending files, credentials setup, environment switching (PROD/UAT), and attachment handling.\n- Enforced file type and size validation (accepts doc, docx, pdf, xls, xlsx, bmp, png, jpg, jpeg; size \u2264 100MB).\n- Added detailed credential management: requires new credentials for each environment, does not reuse between PROD/UAT.\n- Clear user-facing prompts for missing info; improved handling of uploaded files and signer details.\n- Runtime fallback now temporarily installs node@20 if local Node.js is below 18, ensuring compatibility.\n- Enhanced error reporting and summary responses on envelope send.",
+  "created_at": 1775035532515,
+  "display_name": "Nota Sign",
+  "fetched_at": 1787836488109,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/send_envelope.ts",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090231650,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "notasign",
+    "handle": "notasign",
+    "user_id": "s17a65xh6bvv4dypjqjwstq51x83m5y5"
+  },
+  "slug": "notasign",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/notasign",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=notasign&ownerHandle=notasign",
+    "page_url": "https://clawhub.ai/notasign/skills/notasign"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 548,
+    "installs": 12,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Send files for e-signature with Nota Sign. Use for requests to send an envelope, initiate signing, send a signing link, configure Nota Sign credentials, or s...",
+  "updated_at": 1778492345143,
+  "version": "1.0.1"
+}
