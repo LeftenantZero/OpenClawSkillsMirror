@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial public release of the links-to-pdfs skill.\n\n- Scrapes documents from Notion, DocSend, direct PDFs, and other web sources into local PDF files.\n- Supports authentication workflows and session persistence via profiles for protected documents.\n- Includes a command-line interface with profile and job management, daemon for faster scrapes, and automatic cleanup.\n- Provides fallback to LLM-based scraping for unsupported or dynamic websites.\n- Returns local file paths to downloaded PDFs.",
+  "created_at": 1770014693660,
+  "display_name": "Links to PDFs",
+  "fetched_at": 1787805920565,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783654013176,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Chris Ling",
+    "handle": "chrisling-dev",
+    "user_id": "s176xfrkcchrcc3sv6exjekf4d865p2s"
+  },
+  "slug": "links-to-pdfs",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/links-to-pdfs",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=links-to-pdfs&ownerHandle=chrisling-dev",
+    "page_url": "https://clawhub.ai/chrisling-dev/skills/links-to-pdfs"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3063,
+    "installs": 103,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Scrape documents from Notion, DocSend, PDFs, and other sources into local PDF files. Use when the user needs to download, archive, or convert web documents to PDF format. Supports authentication flows for protected documents and session persistence via profiles. Returns local file paths to downloaded PDFs.",
+  "updated_at": 1778987829088,
+  "version": "0.0.1"
+}
