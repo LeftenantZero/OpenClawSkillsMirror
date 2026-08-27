@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of the OpenMAIC-convert-pptx skill.\n\n- Export OpenMAIC course content to PPTX files, including speaker notes.\n- Supports command line usage with smart detection of the OpenMAIC installation path (configurable via parameter).\n- Converts course JSON to slides, transferring text, shapes, backgrounds, and basic styles.\n- Saves exported PPTX to the workspace directory; includes automatic cleanup of temporary files.\n- CLI parameters available for course ID/title, manual path specification, and optional speaker notes inclusion.",
+  "created_at": 1773755024769,
+  "display_name": "OpenMAIC Convert Pptx",
+  "fetched_at": 1787867756963,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "USAGE_EXAMPLE.md",
+    "_meta.json",
+    "export_ppt.js",
+    "skill-card.md",
+    "test_export.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089936441,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "taizhouchen",
+    "handle": "taizhouchen",
+    "user_id": "s17ffpmvqht3rsr3b5ewab08x5841017"
+  },
+  "slug": "openmaic-convert-pptx",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openmaic-convert-pptx",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openmaic-convert-pptx&ownerHandle=taizhouchen",
+    "page_url": "https://clawhub.ai/taizhouchen/skills/openmaic-convert-pptx"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 820,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06OpenMAIC\u8bfe\u7a0bJSON\u6587\u4ef6\u8f6c\u6362\u4e3a\u5305\u542b\u6f14\u8bb2\u7a3f\u7684PPT\uff0c\u652f\u6301\u667a\u80fd\u81ea\u52a8\u67e5\u627eOpenMAIC\u5b89\u88c5\u8def\u5f84\u548c\u547d\u4ee4\u884c\u53c2\u6570\u914d\u7f6e\u3002",
+  "updated_at": 1778491977901,
+  "version": "1.0.0"
+}
