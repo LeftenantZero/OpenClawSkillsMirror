@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of show-booking skill\u2014automates requesting and confirming real estate showings.\n\n- Parses free-form requests or emailed listing details to extract booking data.\n- Builds and manages per-listing outbound call jobs, including data quality checks.\n- Coordinates a calling sub-agent for live or dry-run outbound booking calls.\n- Generates calendar invites (.ics) for confirmed showings.\n- Returns concise confirmations and blocks incomplete requests (e.g., missing phone numbers).\n- Implements guardrails for legal compliance, caller identification, and audit trails.",
+  "created_at": 1771189091197,
+  "display_name": "Show Booking",
+  "fetched_at": 1787804055354,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/email-intake-template.md",
+    "references/integration-notes.md",
+    "scripts/create_invite_ics.py",
+    "scripts/intake_request.py",
+    "scripts/orchestrate_showings.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968698683,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "danielfoch",
+    "handle": "danielfoch",
+    "user_id": "s1709aqsm1ydr5bf0sfd19mwgn8841hg"
+  },
+  "slug": "show-booking",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/show-booking",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=show-booking&ownerHandle=danielfoch",
+    "page_url": "https://clawhub.ai/danielfoch/skills/show-booking"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1594,
+    "installs": 48,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Book real estate showing tours from emailed or pasted listing details, including extracting listing data, preparing outbound call jobs, coordinating a callin...",
+  "updated_at": 1778990813458,
+  "version": "0.1.0"
+}
