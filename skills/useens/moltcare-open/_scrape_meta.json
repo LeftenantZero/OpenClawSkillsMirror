@@ -1,0 +1,59 @@
+{
+  "changelog": "**MoltCare-Open v3.2.0 \u2013 Major update with token optimization and new audit features**\n\n- Added layered task execution and daily token optimization audit, reducing OpenClaw\u2019s routine token usage.\n- Introduced new config/assets files: BEST_PRACTICES.md, CONFIG_CHECKLIST.md, IDENTITY.md, TOKEN_AUDIT.md, TOOLS.md, and token-audit-template.md.\n- Updated AGENTS.md and documentation to include cost-efficient L0\u2013L3 task layering and automatic audit scheduling.\n- Installation and file-loading instructions clarified: templates must now be in the workspace root for auto-loading; memory/audit templates are loaded on demand.\n- Weekly token audit is now auto-configured (cron job); manual trigger supported.\n- Revised SKILL.md and install script to reflect new templates, audit workflow, and best practices guidance.",
+  "created_at": 1773584509214,
+  "display_name": "Skill",
+  "fetched_at": 1787872170842,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/AGENTS.md",
+    "assets/BEST_PRACTICES.md",
+    "assets/CONFIG_CHECKLIST.md",
+    "assets/HEARTBEAT.md",
+    "assets/IDENTITY.md",
+    "assets/MEMORY.md",
+    "assets/SOUL.md",
+    "assets/TOKEN_AUDIT.md",
+    "assets/TOOLS.md",
+    "assets/USER.md",
+    "assets/constraints.md",
+    "assets/learning-debt.md",
+    "assets/preferences.md",
+    "assets/token-audit-template.md",
+    "scripts/install.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089911727,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "useens",
+    "handle": "useens",
+    "user_id": "s1772d4aaryn7aapwkzzne7x2s83mq7e"
+  },
+  "slug": "moltcare-open",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/moltcare-open",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=moltcare-open&ownerHandle=useens",
+    "page_url": "https://clawhub.ai/useens/skills/moltcare-open"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1042,
+    "installs": 28,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Install and configure the MoltCare Agent Framework - a four-layer configuration system (SOUL/AGENTS/USER/MEMORY) with three-layer trigger architecture (Exact...",
+  "updated_at": 1778491928981,
+  "version": "3.2.0"
+}
