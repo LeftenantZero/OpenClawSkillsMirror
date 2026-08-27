@@ -1,0 +1,56 @@
+{
+  "changelog": "**Version 0.31.0**\n\n- Added support for `[PRIVATE] ... [/PRIVATE]` tags, preventing marked content from being sent to the API.\n- Updated skill documentation (SKILL.md) to clarify new private data protection and placeholder handling.\n- Refined the context preservation hierarchy to include explicit handling of private/sensitive information.\n- Added unit tests for private data detection and handling (`tests/test_activator_private.py`).\n- General improvements to clarity, structure, and quick reference examples in the documentation.",
+  "created_at": 1773672733712,
+  "display_name": "Trunkate AI",
+  "fetched_at": 1787869952062,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/TRUNKATE_RULES.md",
+    "hooks/openclaw/HOOK.md",
+    "hooks/openclaw/pre_request.py",
+    "references/examples.md",
+    "references/hooks-setup.md",
+    "references/openclaw-integration.md",
+    "requirements.txt",
+    "scripts/activator.py",
+    "scripts/error_detector.py",
+    "scripts/trunkate.py",
+    "skill-card.md",
+    "tests/test_activator_private.py",
+    "version.txt"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089938994,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "trunkate-ai",
+    "handle": "engineering-trunkate-ai",
+    "user_id": "s179x9586e4c3edpawrpexcvcn8848ab"
+  },
+  "slug": "trunkate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/trunkate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=trunkate&ownerHandle=engineering-trunkate-ai",
+    "page_url": "https://clawhub.ai/engineering-trunkate-ai/skills/trunkate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 851,
+    "installs": 23,
+    "stars": 0,
+    "versions": 9
+  },
+  "summary": "Semantically optimizes context history and large text blocks via the Trunkate AI API. Includes proactive context pruning hooks for automated token management.",
+  "updated_at": 1778491953611,
+  "version": "0.31.0"
+}
