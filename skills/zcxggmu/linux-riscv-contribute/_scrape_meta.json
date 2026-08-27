@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of linux-riscv-contribute skill\n\n- Automates Linux RISC-V kernel contribution workflow using a human-in-the-loop, multi-agent pipeline.\n- Supports gap discovery, GitHub issue management, design planning, implementation/testing, and patch email generation.\n- Integrates OpenClaw as orchestrator with Claude Code and Codex ACP agents.\n- Gate-based checks require human approval at triage, plan, and patch send steps.\n- Includes workspace bootstrapping instructions, file artifact auditing policy, and operator command prompts.",
+  "created_at": 1773195497151,
+  "display_name": "linux-riscv-contribute",
+  "fetched_at": 1787799578362,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/gate-checklist.md",
+    "references/issue-template.md",
+    "references/workflow-template.yaml",
+    "scripts/bootstrap_openclaw_workflow.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "zcxGGmu",
+    "handle": "zcxggmu",
+    "user_id": "s17bmg064gdczyb9egtp7vgr4x83wk0c"
+  },
+  "slug": "linux-riscv-contribute",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/linux-riscv-contribute",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=linux-riscv-contribute&ownerHandle=zcxggmu",
+    "page_url": "https://clawhub.ai/zcxggmu/skills/linux-riscv-contribute"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 963,
+    "installs": 28,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Orchestrate an OpenClaw multi-agent pipeline to close Linux RISC-V gaps versus ARM/x86 (Linux tree + KVM lore), create and manage GitHub issues, generate des...",
+  "updated_at": 1778997637837,
+  "version": "1.0.0"
+}
