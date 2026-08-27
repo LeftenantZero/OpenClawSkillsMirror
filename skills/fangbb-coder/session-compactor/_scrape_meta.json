@@ -1,0 +1,47 @@
+{
+  "changelog": "Session-compactor v1.0.0 \u2013 Initial Release\n\n- Introduces automated session compression to optimize token usage in long conversations.\n- Compresses early session history into structured summaries while preserving tool calls and key facts.\n- Features auto and manual trigger modes; configurable via `openclaw.config.json`.\n- Inspired by the compact.rs algorithm from the claw-code project.\n- Provides a compact_session tool for manual invocation.\n- Chinese documentation included for setup, usage, and key parameters.",
+  "created_at": 1775097447952,
+  "display_name": "session-compactor",
+  "fetched_at": 1787835154921,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "deploy.sh",
+    "package.json",
+    "references/architecture.md",
+    "scripts/compact_session.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090239959,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fangbb-coder",
+    "handle": "fangbb-coder",
+    "user_id": "s1785c5d9savzszf3ahrfcv00183m3g0"
+  },
+  "slug": "session-compactor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/session-compactor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=session-compactor&ownerHandle=fangbb-coder",
+    "page_url": "https://clawhub.ai/fangbb-coder/skills/session-compactor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 636,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u81ea\u52a8\u4f1a\u8bdd\u538b\u7f29\u4ee5\u4f18\u5316 token \u4f7f\u7528\u3002\u5f53\u4f1a\u8bdd\u6d88\u606f\u6570\u8d85\u8fc7\u9608\u503c\u65f6\uff0c\u5c06\u65e9\u671f\u5386\u53f2\u538b\u7f29\u4e3a\u7ed3\u6784\u5316\u6458\u8981\uff0c\u4fdd\u7559\u5de5\u5177\u8c03\u7528\u548c\u5173\u952e\u4e8b\u5b9e\u3002\u9002\u7528\u4e8e\u957f\u5bf9\u8bdd\u573a\u666f\u4ee5\u8282\u7701\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002\u6838\u5fc3\u7b97\u6cd5\u53c2\u8003 claw-code \u9879\u76ee\u7684 compact.rs \u8bbe\u8ba1\u3002",
+  "updated_at": 1778492359131,
+  "version": "1.0.0"
+}
