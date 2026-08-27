@@ -1,0 +1,47 @@
+{
+  "changelog": "**Major restructuring and transition to modular Python clients**\n\n- Replaced single Python client and manifest files with separate client modules: `send_code_client.py`, `login_client.py`, `chat_client.py`, and shared `client_common.py`.\n- Added `__pycache__` entries, .env sample configuration, and dropped previous documentation (README.md, OpenAPI definition, and manifest files).\n- SKILL.md rewritten: much more concise, action-oriented, and directly targeted to agent implementers, with API flows, security constraints, error handling, and debug command samples.\n- All usage guidance and API contracts (send code, login, HTML message) now included inline in SKILL.md instead of separate YAML files.\n- Designed for easier modular development and integration testing using dedicated small client scripts.",
+  "created_at": 1774772874451,
+  "display_name": "\u6307\u8fb9\u7f8e\u5986\u767b\u5f55\u4f1a\u8bdd HTML \u6865\u63a5",
+  "fetched_at": 1787841657401,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "chat_client.py",
+    "client_common.py",
+    "login_client.py",
+    "send_code_client.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090284305,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "RayLee",
+    "handle": "rayleethu",
+    "user_id": "s17ex3jqes13ph37smy4xpn2w583nh9z"
+  },
+  "slug": "pengleni-login-session-html-bridge",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pengleni-login-session-html-bridge",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pengleni-login-session-html-bridge&ownerHandle=rayleethu",
+    "page_url": "https://clawhub.ai/rayleethu/skills/pengleni-login-session-html-bridge"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 573,
+    "installs": 13,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Use when users need SMS code login, session creation, and HTML message exchange via /session/login and /session/message.",
+  "updated_at": 1778492275298,
+  "version": "0.0.2"
+}
