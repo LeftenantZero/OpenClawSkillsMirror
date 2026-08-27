@@ -1,0 +1,63 @@
+{
+  "changelog": "Initial release of the semantic-search skill.\n\n- Supports enterprise-level semantic search for tables, fields, files, and Text-to-SQL data generation.\n- Integrates with LanceDB (FlightSQL) for vector/BM25 hybrid search.\n- Provides rerank functionality, LLM-based intent recognition, and SQL generation.\n- Includes workflow orchestration via LangGraph.\n- Offers Python and OpenClaw invocation examples, performance indicators, and troubleshooting guidance.",
+  "created_at": 1772615136268,
+  "display_name": "semantic-search",
+  "fetched_at": 1787790174051,
+  "files": [
+    ".gitignore",
+    "CONFIG_GUIDE.md",
+    "EXAMPLES.md",
+    "PROJECT_CONFIG.md",
+    "PUBLISH_CHECKLIST.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "skill-card.md",
+    "src/__init__.py",
+    "src/_types.py",
+    "src/examples.py",
+    "src/graph/__init__.py",
+    "src/graph/base.py",
+    "src/graph/field.py",
+    "src/graph/structured.py",
+    "src/graph/unstructured.py",
+    "src/main.py",
+    "src/prompts.yaml",
+    "src/retriever.py",
+    "src/semantic_search.py",
+    "src/text2sql.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089754384,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Sevenal",
+    "handle": "sevenal",
+    "user_id": "s17cbngymq4dqsheybfkgcs80s884stc"
+  },
+  "slug": "semantic-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/semantic-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=semantic-search&ownerHandle=sevenal",
+    "page_url": "https://clawhub.ai/sevenal/skills/semantic-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1119,
+    "installs": 34,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u4f01\u4e1a\u7ea7\u8bed\u4e49\u68c0\u7d22\u6280\u80fd\uff0c\u652f\u6301\u8868\u683c/\u5b57\u6bb5/\u6587\u4ef6\u641c\u7d22\u548c Text-to-SQL \u6570\u636e\u751f\u6210",
+  "updated_at": 1779077667391,
+  "version": "1.0.0"
+}
