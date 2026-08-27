@@ -1,0 +1,46 @@
+{
+  "changelog": "locker-vault v1.0.0\n\n- Introduces secure credential and secrets management for OpenClaw agents via Locker Secrets Manager.\n- Provides both read-only and read-write vault access with fine-grained permission boundaries.\n- Implements in-memory caching layer with configurable TTL to reduce vault API/CLI calls and latency.\n- Enforces the use of vault references (`vault://SECRET_KEY_NAME`) instead of exposing raw values.\n- Ensures credential values are never leaked \u2014 secrets are masked in all outputs and logs.\n- Designed for easy setup and integration by wrapping the Locker CLI and requiring no external Node.js dependencies.",
+  "created_at": 1775682647453,
+  "display_name": "Locker Vault",
+  "fetched_at": 1787796011657,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cli-reference.md",
+    "references/vault-patterns.md",
+    "scripts/vault-client.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090347008,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Alan Mosko",
+    "handle": "moskoweb",
+    "user_id": "s173c87jrhz6e80efw6wddv4tx84e427"
+  },
+  "slug": "locker-vault",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/locker-vault",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=locker-vault&ownerHandle=moskoweb",
+    "page_url": "https://clawhub.ai/moskoweb/skills/locker-vault"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 568,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Secure credential and secrets management for OpenClaw agents using Locker Secrets Manager. Provides read-only and read-write vault access with in-memory cach...",
+  "updated_at": 1779075660009,
+  "version": "1.0.0"
+}
