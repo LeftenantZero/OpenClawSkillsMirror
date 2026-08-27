@@ -1,0 +1,43 @@
+{
+  "changelog": "- Initial release of project-nirvana-skill (v1.0.0) for OpenClaw 2026.3.24+.\n- Strips SOUL, USER, MEMORY, and chat history before any cloud API call, protecting privacy.\n- Supports routing: attempts local LLM inference first, only falls back to cloud with sanitized data.\n- Audit trail logs every instance of private data being stripped or sent for transparency.\n- Configurable support for various local LLM endpoints (Ollama, vLLM, LM Studio, etc.).\n- Achieves significant token and cost savings (85%+), ensuring private data never leaves your system.",
+  "created_at": 1777060457011,
+  "display_name": "Nirvana Skill",
+  "fetched_at": 1787815085696,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090544425,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Shiva&G",
+    "handle": "shivaclaw",
+    "user_id": "s17en5fpjwrkkkz2azf8m3akg983rtkm"
+  },
+  "slug": "project-nirvana-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/project-nirvana-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=project-nirvana-skill&ownerHandle=shivaclaw",
+    "page_url": "https://clawhub.ai/shivaclaw/skills/project-nirvana-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 553,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Privacy-preserving context stripper for OpenClaw. Strip SOUL/USER/MEMORY before cloud API calls. Assumes you have your own local LLM. Saves 85%+ tokens, prot...",
+  "updated_at": 1778492741073,
+  "version": "1.0.0"
+}
