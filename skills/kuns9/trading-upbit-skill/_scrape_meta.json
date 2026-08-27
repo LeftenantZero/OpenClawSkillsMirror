@@ -1,0 +1,60 @@
+{
+  "changelog": "- Added SECURITY.md with clear installation and API key security guidance.\n- Introduced scripts/security/securityCheck.js for easy repository URL self-checking.\n- Security section now included at the top of documentation with best practices and a quick check command.\n- No user-facing changes to trading logic or configuration.",
+  "created_at": 1771076345274,
+  "display_name": "Trading upbit skill",
+  "fetched_at": 1787792236859,
+  "files": [
+    ".gitignore",
+    "README.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.json",
+    "package.json",
+    "scripts/config/index.js",
+    "scripts/data/api-client.js",
+    "scripts/data/marketData.js",
+    "scripts/execution/orderService.js",
+    "scripts/execution/tradeExecutor.js",
+    "scripts/execution/upbitClient.js",
+    "scripts/indicators/indicators.js",
+    "scripts/risk/budgetPolicy.js",
+    "scripts/risk/riskManager.js",
+    "scripts/security/securityCheck.js",
+    "scripts/state/lock.js",
+    "scripts/state/positionsRepo.js",
+    "scripts/state/resources.js",
+    "scripts/strategies/strategies.js",
+    "scripts/tests/common.js",
+    "scripts/tests/inject_buy_signal.js",
+    "scripts/tests/inject_sell_signal.js",
+    "scripts/tests/run_worker_once.js",
+    "scripts/tests/set_position.js",
+    "scripts/workers/eventWorker.js",
+    "scripts/workers/monitor.js",
+    "skill-card.md",
+    "skill.js"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "kuns9",
+    "handle": "kuns9",
+    "user_id": "s17f6wa351hcng3hyeqmtnhs2988594q"
+  },
+  "slug": "trading-upbit-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/trading-upbit-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=trading-upbit-skill&ownerHandle=kuns9",
+    "page_url": "https://clawhub.ai/kuns9/skills/trading-upbit-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2320,
+    "installs": 74,
+    "stars": 0,
+    "versions": 14
+  },
+  "summary": "Upbit automated trading (aggressive breakout) with cron-friendly run-once commands, TopVolume monitoring, and percent-based budget splitting.",
+  "updated_at": 1779076989302,
+  "version": "1.0.14"
+}
