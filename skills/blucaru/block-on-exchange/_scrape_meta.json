@@ -1,0 +1,40 @@
+{
+  "changelog": "Initial release of calin: sync any ICS/iCal calendar to Microsoft Exchange as privacy-preserving blocked time slots.\n\n- Syncs events\u2014including recurring\u2014from any HTTPS ICS feed to Microsoft Exchange as blocked slots, supporting Google Calendar, iCloud, Outlook.com, and more.\n- Only time slots (start/end/all-day) are synced; event titles, descriptions, and attendees remain private.\n- Detects and applies changes efficiently: only adds, updates, or removes events that changed in source.\n- Requires Python 3.12+, minimal configuration, and a one-time Microsoft login (no client secret needed).\n- Supports automated sync (macOS launchd), manual commands (sync, status, clear), and local event tracking.",
+  "created_at": 1774213506822,
+  "display_name": "ics to exchange-blocker",
+  "fetched_at": 1787855255957,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.py",
+    "ics_source.py",
+    "install.sh",
+    "main.py",
+    "ms_auth.py",
+    "requirements.txt",
+    "skill-card.md",
+    "sync.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Blucaru",
+    "handle": "blucaru",
+    "user_id": "s17fcc5r61g9qv640yxgy5jwdh84a4z9"
+  },
+  "slug": "block-on-exchange",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/block-on-exchange",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=block-on-exchange&ownerHandle=blucaru",
+    "page_url": "https://clawhub.ai/blucaru/skills/block-on-exchange"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 669,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Sync any ICS/iCal calendar to Microsoft Exchange as blocked time slots \u2014 supports recurring events, change detection, and privacy-preserving sync",
+  "updated_at": 1778492115715,
+  "version": "1.0.0"
+}
