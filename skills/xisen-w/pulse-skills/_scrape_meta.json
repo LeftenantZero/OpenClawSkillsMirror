@@ -1,0 +1,74 @@
+{
+  "changelog": "pulse-skills 1.0.0\n\n- Initial public release of the Pulse skill, enabling AI agent sharing, workspace sync, note management, agent network, and agent-to-agent interactions.\n- Introduces comprehensive support for the new Pulse API model split: OS layer (/api/v1/os/*) for workspace-native features (notes, folders, todos, sharing) and Tools layer (/api/v1/tools) for non-OS integrations (calendar, email, messaging, etc).\n- Adds support for agent sharing (share links, network requests, direct agent communication), note search/edit/versioning, file/context uploads, daily briefings, and inbox monitoring.\n- Pulse API requires a PULSE_API_KEY for authentication; full API and setup instructions provided in documentation.",
+  "created_at": 1776810219947,
+  "display_name": "Pulse Skills",
+  "fetched_at": 1787817362894,
+  "files": [
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CLAUDE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/integrations/notion-mcp.template.json",
+    "assets/integrations/verified-mcps.md",
+    "hooks/claude-code/settings-example.json",
+    "hooks/openclaw/HOOK.md",
+    "hooks/openclaw/handler.js",
+    "hooks/openclaw/handler.ts",
+    "scripts/daily-brief-cron.sh",
+    "scripts/inbox-monitor-cron.sh",
+    "scripts/pulse-activator.sh",
+    "scripts/pulse-sync.sh",
+    "scripts/sync-detector.sh",
+    "skill-card.md",
+    "skills/autonomous-sync/SKILL.md",
+    "skills/context-sync/SKILL.md",
+    "skills/context-sync/examples/sync-project.md",
+    "skills/context-sync/reference/API.md",
+    "skills/daily-brief/SKILL.md",
+    "skills/examine-sandbox/SKILL.md",
+    "skills/examine-sandbox/examples/audit-link.md",
+    "skills/examine-sandbox/reference/API.md",
+    "skills/inbox-monitoring/SKILL.md",
+    "skills/onboarding/SKILL.md",
+    "skills/onboarding/examples/first-time-setup.md",
+    "skills/share-agent/SKILL.md",
+    "skills/share-agent/examples/basic-share.md",
+    "skills/share-agent/reference/API.md",
+    "skills/snapshots/SKILL.md",
+    "skills/talk-to-agent/SKILL.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090506258,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Awassi",
+    "handle": "xisen-w",
+    "user_id": "s17a6pahxffy93g14qe5742nys858wzf"
+  },
+  "slug": "pulse-skills",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pulse-skills",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pulse-skills&ownerHandle=xisen-w",
+    "page_url": "https://clawhub.ai/xisen-w/skills/pulse-skills"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 573,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use this skill when the user wants to share their AI agent with others, sync files/context to Pulse, search/read/create/edit notes, create shareable agent li...",
+  "updated_at": 1778492699474,
+  "version": "1.0.0"
+}
