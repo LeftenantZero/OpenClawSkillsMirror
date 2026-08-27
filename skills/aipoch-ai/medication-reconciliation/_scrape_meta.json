@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of the medication-reconciliation skill.\n\n- Automates comparison of pre-admission medication lists with inpatient orders to identify omissions and duplications.\n- Flags dose changes and highlights key warnings for critical drug classes (e.g., anticoagulants).\n- Generates structured reconciliation reports with separate sections for continued, discontinued, new, duplicate, and dose-changed medications.\n- Strictly scoped to input validation and error handling; does not interpret clinical appropriateness or interact with live systems.\n- Includes safety notices, scope limitations, and detailed workflow guidance for clinical users.",
+  "created_at": 1774575183397,
+  "display_name": "Medication Reconciliation",
+  "fetched_at": 1787845762936,
+  "files": [
+    "POLISH_CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "medication-reconciliation_audit_result_v2.json",
+    "requirements.txt",
+    "scripts/main.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "AIpoch",
+    "handle": "aipoch-ai",
+    "user_id": "s17fjw78yq6wtd4ep6zsaxwrn983hznr"
+  },
+  "slug": "medication-reconciliation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/medication-reconciliation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=medication-reconciliation&ownerHandle=aipoch-ai",
+    "page_url": "https://clawhub.ai/aipoch-ai/skills/medication-reconciliation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 764,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Compare patient pre-admission medication lists with inpatient orders to automatically identify omitted or duplicated medications and improve medication safety.",
+  "updated_at": 1778492223592,
+  "version": "1.0.0"
+}
