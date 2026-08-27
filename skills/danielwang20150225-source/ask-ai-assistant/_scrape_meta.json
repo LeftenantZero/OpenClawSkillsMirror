@@ -1,0 +1,43 @@
+{
+  "changelog": "- Initial release of ask-ai skill for automatic escalation to Doubao, Qianwen, Kimi, and DeepSeek AI when facing unsolvable problems.\n- Implements a 6-step forced execution checklist, including sending questions, result validation, polling, self-checks, multi-turn clarification, and final evaluation.\n- Features strict trigger and auto-escalation rules based on solution quality, confidence, and user input.\n- Includes prioritized AI selection with automatic fallback on failure, and robust handling for login/captcha requirements.\n- Provides a clear conversational template for querying external AIs and strict output requirements for every critical step.\n- Saves all AI responses, ensures solution execution and closure, and documents every attempt and outcome for future review.",
+  "created_at": 1774436760291,
+  "display_name": "AI\u52a9\u624b\u81ea\u52a8\u6c42\u52a9\u6280\u80fd",
+  "fetched_at": 1787849033654,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090102991,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "danielwang20150225-source",
+    "handle": "danielwang20150225-source",
+    "user_id": "s173fs3bz6hxcg4ttf0r4ae8b983kmg8"
+  },
+  "slug": "ask-ai-assistant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ask-ai-assistant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ask-ai-assistant&ownerHandle=danielwang20150225-source",
+    "page_url": "https://clawhub.ai/danielwang20150225-source/skills/ask-ai-assistant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 823,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u81ea\u52a8\u8bc6\u522b\u95ee\u9898\u590d\u6742\u5ea6\uff0c\u4f18\u5148\u4f7f\u7528\u8c46\u5305\u3001\u5343\u95ee\u7b49\u591aAI\u8f6e\u8be2\u83b7\u53d6\u5e76\u9a8c\u8bc1\u53ef\u6267\u884c\u89e3\u51b3\u65b9\u6848\uff0c\u9047\u9a8c\u8bc1\u7801\u9700\u7528\u6237\u534f\u52a9\u3002",
+  "updated_at": 1778492183196,
+  "version": "1.0.0"
+}
