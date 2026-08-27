@@ -1,0 +1,53 @@
+{
+  "changelog": "- Added explicit environment variable requirements for `CRYPTO_MASTER_MNEMONIC` and `CRON_SECRET` in the skill manifest.\n- Updated installation instructions to include `qrcode` and `@types/qrcode` as required dependencies.\n- No code changes; documentation and setup process are now more precise for easier onboarding and configuration.",
+  "created_at": 1775399050836,
+  "display_name": "Self-hosted Crypto Payment",
+  "fetched_at": 1787796315099,
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/integration-example.tsx",
+    "resources/005_crypto_payments.sql",
+    "resources/006_crypto_direct.sql",
+    "resources/check-crypto-payments-route.ts",
+    "resources/crypto-checkout-route.ts",
+    "resources/crypto-checkout-status-route.ts",
+    "resources/crypto-payment-modal.tsx",
+    "resources/crypto-wallets.ts",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090322312,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Flacko2048",
+    "handle": "flacko2048",
+    "user_id": "s1788p1tzmc9xnctbt1e96rgkn849vh9"
+  },
+  "slug": "self-hosted-crypto",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/self-hosted-crypto",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=self-hosted-crypto&ownerHandle=flacko2048",
+    "page_url": "https://clawhub.ai/flacko2048/skills/self-hosted-crypto"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 659,
+    "installs": 16,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Add self-custodied crypto payment checkout to a Next.js + Supabase app. Accepts ETH, BTC, SOL, USDC, USDT and 25+ coins across 9 chains. No payment processor...",
+  "updated_at": 1779075518064,
+  "version": "1.0.1"
+}
