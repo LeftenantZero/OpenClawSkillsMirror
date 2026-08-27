@@ -1,0 +1,65 @@
+{
+  "changelog": "- Adds multi-project natural-language routing for coding tasks, supporting serial execution and reporting failures per project without blocking others.\n- Introduces trigger shortcuts (e.g., `codex ...`) for fast Codex CLI instructions in the persistent terminal session.\n- Documents and enforces a strict start \u2192 send \u2192 read \u2192 decide execution model using standardized shell scripts and a `.pct-state.json` state file.\n- Codex-first workflow with codex CLI integration and safe defaults; offers explicit flags and safety policies (no force pushes, respect secrets).\n- Improves SSH/mobile friendliness by using persistent tmux sessions per project and robust script automation.",
+  "created_at": 1772192741391,
+  "display_name": "Persistent Code Terminal",
+  "fetched_at": 1787801784405,
+  "files": [
+    ".github/workflows/ci.yml",
+    "CHANGELOG.md",
+    "README.md",
+    "RELEASE.md",
+    "SKILL.md",
+    "_meta.json",
+    "bin/persistent-code-terminal-attach.sh",
+    "bin/persistent-code-terminal-auto.sh",
+    "bin/persistent-code-terminal-codex-exec.sh",
+    "bin/persistent-code-terminal-doctor.sh",
+    "bin/persistent-code-terminal-kill.sh",
+    "bin/persistent-code-terminal-lib.sh",
+    "bin/persistent-code-terminal-list.sh",
+    "bin/persistent-code-terminal-read.sh",
+    "bin/persistent-code-terminal-route.sh",
+    "bin/persistent-code-terminal-send.sh",
+    "bin/persistent-code-terminal-session-name.sh",
+    "bin/persistent-code-terminal-start.sh",
+    "bin/persistent-code-terminal-status.sh",
+    "bin/persistent-code-terminal-summary.sh",
+    "bin/persistent-code-terminal-switch.sh",
+    "examples/case-study-patch-to-push.md",
+    "examples/quickstart-manual.md",
+    "openclaw.config.dev.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779963917629,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Justinzhq",
+    "handle": "justinzhq",
+    "user_id": "s17bb2seeb6e0fm4y2h1me1t8x8856y2"
+  },
+  "slug": "persistent-code-terminal",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/persistent-code-terminal",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=persistent-code-terminal&ownerHandle=justinzhq",
+    "page_url": "https://clawhub.ai/justinzhq/skills/persistent-code-terminal"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2756,
+    "installs": 96,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Persistent per-project coding terminal (tmux). Run Codex CLI (codex exec) inside a stable session; mobile/SSH friendly.",
+  "updated_at": 1778993655537,
+  "version": "1.2.0"
+}
