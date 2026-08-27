@@ -1,0 +1,81 @@
+{
+  "changelog": "Initial release of appflowy-api skill.\n\n- Provides authentication and API invocation flows for AppFlowy Cloud/GoTrue, including obtaining tokens and accessing workspace, document, database, and search APIs.\n- Supports Python client scripts for automation, debugging, and troubleshooting AppFlowy API issues.\n- Compatible with AppFlowy Cloud version 0.12.3 (with health check and version warning in doctor.py).\n- Unified command-line and script entry points with configurable priority for parameters, config files, and environment variables.\n- Includes example scripts for token retrieval, workspace management, document generation, and grid/template operations.\n- Documentation covers required API request headers, handling of default empty rows, and troubleshooting tips.",
+  "created_at": 1772421037659,
+  "display_name": "AppFlowy API",
+  "fetched_at": 1787790694689,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "examples/README.md",
+    "references/appflowy_api_reference.md",
+    "references/config.example.json",
+    "references/payloads/add_db_field.json",
+    "references/payloads/append_block.json",
+    "references/payloads/create_page_view.json",
+    "references/payloads/upsert_row.json",
+    "references/templates/fitness_doc_blocks.json",
+    "references/templates/fitness_plan.example.json",
+    "references/templates/grid_plan.example.json",
+    "references/templates/user_management_doc.json",
+    "scripts/_common.py",
+    "scripts/add_db_field.py",
+    "scripts/append_block.py",
+    "scripts/appflowy_client.py",
+    "scripts/appflowy_skill.py",
+    "scripts/apply_grid_template.py",
+    "scripts/collab_delete_blocks.mjs",
+    "scripts/collab_delete_row_orders.mjs",
+    "scripts/collab_update_select_options.mjs",
+    "scripts/create_page_view.py",
+    "scripts/create_user_management_doc.py",
+    "scripts/doc_grid_lib.py",
+    "scripts/doctor.py",
+    "scripts/get_row_detail.py",
+    "scripts/get_token.py",
+    "scripts/list_databases.py",
+    "scripts/list_row_ids.py",
+    "scripts/list_workspaces.py",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "scripts/search.py",
+    "scripts/update_page_name.py",
+    "scripts/update_user_management_doc.py",
+    "scripts/upsert_row.py",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089735462,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "BaloneGit",
+    "handle": "balonegit",
+    "user_id": "s170phtydemyrdtnyvhbjd0ghd88510r"
+  },
+  "slug": "appflowy-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/appflowy-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=appflowy-skill&ownerHandle=balonegit",
+    "page_url": "https://clawhub.ai/balonegit/skills/appflowy-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 990,
+    "installs": 30,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "AppFlowy API \u8ba4\u8bc1\u4e0e\u8c03\u7528\uff08workspace/\u6587\u6863/\u6570\u636e\u5e93/\u641c\u7d22\uff09",
+  "updated_at": 1779077491715,
+  "version": "0.1.0"
+}
