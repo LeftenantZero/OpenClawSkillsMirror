@@ -1,0 +1,50 @@
+{
+  "changelog": "ride-insights 1.0.0 \u2014 Initial Release\n\n- Introduces a privacy-first ride receipt processing skill running entirely local, never sending raw data externally.\n- Fetches ride receipt emails from Gmail, stores them locally as JSON, and processes them using a loopback OpenClaw Gateway for extraction.\n- Supports major ride providers: Uber, Bolt, Lyft, Yandex, Free Now, Curb, and Via.\n- Extracts rides into SQLite, analyzes ride behavior and spending, and exports anonymized CSVs for DataHive.\n- Enforces strict requirement for local Gateway (localhost/127.0.0.1 only) and transparent handling of sensitive data.\n- Includes clear workflows for Gmail account selection, data retention, extraction caps, and user consent before handling raw receipt data.",
+  "created_at": 1775399146659,
+  "display_name": "nanyuu",
+  "fetched_at": 1787831329774,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/provider_queries.json",
+    "references/schema_rides.sql",
+    "scripts/export_anonymized_rides_csv.py",
+    "scripts/extract_rides_gateway.py",
+    "scripts/fetch_emails_json.py",
+    "scripts/init_db.py",
+    "scripts/insert_rides_json_sqlite.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090310506,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "nanda nyi aung",
+    "handle": "nandaniawug",
+    "user_id": "s175njmk60hn1tg65mwk41jjbs848gh3"
+  },
+  "slug": "nansui",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nansui",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nansui&ownerHandle=nandaniawug",
+    "page_url": "https://clawhub.ai/nandaniawug/skills/nansui"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 509,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Collect and locally extract ride-sharing receipt data from Gmail, store it in JSON/SQLite, and generate anonymized ride-behavior insights using a local OpenC...",
+  "updated_at": 1778492425999,
+  "version": "1.0.0"
+}
