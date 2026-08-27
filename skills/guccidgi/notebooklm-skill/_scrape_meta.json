@@ -1,0 +1,60 @@
+{
+  "changelog": "notebooklm-skill v0.1.0\n\n- Initial release introducing integration with Google NotebookLM for source-grounded, citation-backed research queries.\n- Provides persistent authentication, browser automation, and robust notebook/document management via a Python script interface.\n- Features Smart Discovery for notebook metadata, minimizing the need for manual data entry.\n- Strongly enforces use of a wrapper script (run.py) for consistent environment setup and dependency management.\n- Includes critical follow-up and synthesis workflow for comprehensive, accurate responses.\n- Stores all data locally with security in mind; configuration options via `.env` supported.",
+  "created_at": 1769506823210,
+  "display_name": "Notebooklm",
+  "fetched_at": 1787793819644,
+  "files": [
+    "AUTHENTICATION.md",
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/api_reference.md",
+    "references/troubleshooting.md",
+    "references/usage_patterns.md",
+    "requirements.txt",
+    "scripts/__init__.py",
+    "scripts/ask_question.py",
+    "scripts/auth_manager.py",
+    "scripts/browser_session.py",
+    "scripts/browser_utils.py",
+    "scripts/cleanup_manager.py",
+    "scripts/config.py",
+    "scripts/notebook_manager.py",
+    "scripts/run.py",
+    "scripts/setup_environment.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783651871999,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "guccidgi",
+    "handle": "guccidgi",
+    "user_id": "s172p0vgp7vr87wzqfm7vrwkt9885p5p"
+  },
+  "slug": "notebooklm-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/notebooklm-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=notebooklm-skill&ownerHandle=guccidgi",
+    "page_url": "https://clawhub.ai/guccidgi/skills/notebooklm-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 9203,
+    "installs": 281,
+    "stars": 16,
+    "versions": 1
+  },
+  "summary": "Use this skill to query your Google NotebookLM notebooks directly from Claude Code for source-grounded, citation-backed answers from Gemini. Browser automation, library management, persistent auth. Drastically reduced hallucinations through document-only responses.",
+  "updated_at": 1779076447247,
+  "version": "0.1.0"
+}
