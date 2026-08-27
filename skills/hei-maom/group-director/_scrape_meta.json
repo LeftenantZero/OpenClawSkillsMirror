@@ -1,0 +1,38 @@
+{
+  "changelog": "**Summary: This version simplifies group-director to a pure video execution layer, removing chat reading and summarization.**\n\n- Now requires Claw to provide a pre-written, finalized video prompt; does not read, summarize, or process group chat itself.\n- Redesigned workflow: only creates a video task and polls for completion, returning a plain video URL or error text.\n- Model fixed to Seedance-Pro-1.5 with audio generation always on; orientation only portrait/landscape.\n- Outputs to Feishu are always plain text; never sends JSON or structured/raw provider payloads.\n- Old scripts for chat reading, ASR, summarization, and Feishu API are removed; only video creation logic remains.\n- Adds Chinese integration and provider reference notes; updates documentation to clarify new contract and usage.",
+  "created_at": 1773753927676,
+  "display_name": "Group Director",
+  "fetched_at": 1787867762878,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/integration_cn.md",
+    "references/provider_notes.md",
+    "scripts/main.py",
+    "scripts/video_api.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "HeiMaoM",
+    "handle": "hei-maom",
+    "user_id": "s179rsrtms4ea8wvxt0ezrn0ad885j3r"
+  },
+  "slug": "group-director",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/group-director",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=group-director&ownerHandle=hei-maom",
+    "page_url": "https://clawhub.ai/hei-maom/skills/group-director"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 720,
+    "installs": 19,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "create short videos from claw-prepared prompts for feishu or lark group chat scenarios. use when claw already has the chat context in its own memory, has alr...",
+  "updated_at": 1778491977901,
+  "version": "1.0.2"
+}
