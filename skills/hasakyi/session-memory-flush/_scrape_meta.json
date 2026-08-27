@@ -1,0 +1,49 @@
+{
+  "changelog": "- Initial release of session-memory-flush skill for OpenClaw.\n- Automatically scans active sessions before idle/reset, summarizes valuable transcript context, and writes it to workspace memory files.\n- Ensures recent context is available for new sessions within the same workspace, reducing context loss.\n- Supports main, native subagent, cron, and dreaming sessions; detects session agentId for proper processing.\n- Output directory and timing can be configured via environment variables or openclaw.json.\n- Summaries follow a structured markdown format; avoids redundant context across agents with distinct agentIds.\n- Sensitive data is sanitized per company policy, and fallback to local summarization is provided if LLM is unavailable.",
+  "created_at": 1778218977080,
+  "display_name": "Session Memory Flush",
+  "fetched_at": 1787794065374,
+  "files": [
+    ".gitignore",
+    "SKILL.md",
+    "_meta.json",
+    "install.sh",
+    "skill-card.md",
+    "state/flushed_sessions.json",
+    "summarize_prompt.md",
+    "uninstall.sh",
+    "watcher.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090760241,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Kang Li",
+    "handle": "hasakyi",
+    "user_id": "s174yq63cn566g33nxhhk5ddwd86afgz"
+  },
+  "slug": "session-memory-flush",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/session-memory-flush",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=session-memory-flush&ownerHandle=hasakyi",
+    "page_url": "https://clawhub.ai/hasakyi/skills/session-memory-flush"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 591,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5728 OpenClaw session \u5373\u5c06\u56e0 idle/reset \u91ca\u653e\u524d\uff0c\u626b\u63cf `openclaw sessions --json` \u53ef\u89c1\u4f1a\u8bdd\uff0c\u8bfb\u53d6 transcript\uff0c\u63d0\u70bc\u9ad8\u4ef7\u503c\u4e0a\u4e0b\u6587\u5e76\u5199\u5165 workspace memory \u6587\u4ef6\uff0c\u964d\u4f4e\u65b0 session \u7684\u5931\u5fc6\u611f\u3002\u7528\u4e8e main\u3001native subage...",
+  "updated_at": 1779076337073,
+  "version": "1.0.0"
+}
