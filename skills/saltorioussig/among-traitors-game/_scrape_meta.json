@@ -1,0 +1,43 @@
+{
+  "changelog": "No code changes; added secrets and permissions blocks:\n\n- Declared required secrets (`WEBHOOK_TOKEN`, optionally `OPENCLAW_HOOKS_TOKEN`) for webhook authentication.\n- Added explicit permissions for HTTP webhooks (incoming game events) and HTTP REST calls (game actions) to among-traitors-api.fly.dev.\n- No functional changes to agent/game logic.",
+  "created_at": 1772603237996,
+  "display_name": "Among Traitors",
+  "fetched_at": 1787800567543,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089832151,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "saltoriousSIG",
+    "handle": "saltorioussig",
+    "user_id": "s17efjje6h0m5jhkjeb3fzf2ms885046"
+  },
+  "slug": "among-traitors-game",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/among-traitors-game",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=among-traitors-game&ownerHandle=saltorioussig",
+    "page_url": "https://clawhub.ai/saltorioussig/skills/among-traitors-game"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1077,
+    "installs": 31,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Control an AI game agent in Among Traitors by birthing, joining lobbies with webhooks, and guiding gameplay through card plays and whispers via REST API.",
+  "updated_at": 1778995063862,
+  "version": "1.0.3"
+}
