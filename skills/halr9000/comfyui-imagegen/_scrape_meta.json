@@ -1,0 +1,45 @@
+{
+  "changelog": "v1.5.0: Standalone structured-prompt fix; 1920x1080 workflow; live-tested async JSON generation + delivery. Full changelog in SKILL.md.",
+  "created_at": 1770780683998,
+  "display_name": "ComfyUI ImageGen (Flux2)",
+  "fetched_at": 1787792667483,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/generate.py",
+    "skill-card.md",
+    "workflows/flux2.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968927933,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "halr9000",
+    "handle": "halr9000",
+    "user_id": "s1793wxhq9mz0ejhd4kt0tpw01884ce1"
+  },
+  "slug": "comfyui-imagegen",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/comfyui-imagegen",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=comfyui-imagegen&ownerHandle=halr9000",
+    "page_url": "https://clawhub.ai/halr9000/skills/comfyui-imagegen"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2756,
+    "installs": 86,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Generate images via ComfyUI API (localhost:8188) using Flux2 workflow. Supports structured JSON prompts sent directly as positive prompt parameter, seed/steps customization. Async watcher via sub-agent for low-latency, token-efficient polling (every 5s).",
+  "updated_at": 1779076846720,
+  "version": "1.5.0"
+}
