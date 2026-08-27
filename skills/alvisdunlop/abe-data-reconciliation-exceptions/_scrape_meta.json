@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release: Provides data reconciliation with exception reporting and \"no silent failure\" checks.\n\n- Matches datasets using stable identifiers (e.g., Pay Number, driver card, licence numbers).\n- Flags and categorizes unmatched records, mismatches, duplicates, and invalid entries, each with explicit reason codes.\n- Always produces an exceptions report in a standardized CSV format.\n- Includes configurable normalization, matching criteria, and user-defined thresholds for quality gates.\n- Stops workflows or prompts for user input when data mapping or tolerances are ambiguous.",
+  "created_at": 1776917862290,
+  "display_name": "data-reconciliation-exceptions",
+  "fetched_at": 1787816349863,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/exceptions-report-template.csv",
+    "references/matching-rules.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "AlvisDunlop",
+    "handle": "alvisdunlop",
+    "user_id": "s17fq465rgqaeb4mjcdf3p9dkh84s6zy"
+  },
+  "slug": "abe-data-reconciliation-exceptions",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/abe-data-reconciliation-exceptions",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=abe-data-reconciliation-exceptions&ownerHandle=alvisdunlop",
+    "page_url": "https://clawhub.ai/alvisdunlop/skills/abe-data-reconciliation-exceptions"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 651,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Reconciles data sources using stable identifiers (Pay Number, driving licence, driver card, and driver qualification card numbers), producing exception repor...",
+  "updated_at": 1778492723258,
+  "version": "1.0.0"
+}
