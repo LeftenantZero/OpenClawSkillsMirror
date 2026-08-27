@@ -1,0 +1,61 @@
+{
+  "changelog": "- Initial release of the humanizer skill: rewrite AI-generated text to sound natural, specific, and human.\n- Detects 24 common AI patterns and over 500 AI vocabulary terms, grouped in 3 tiers.\n- Uses statistical analysis (burstiness, type-token ratio, sentence length variation, trigram repetition) to flag AI signals.\n- Provides rewrite suggestions, auto-fixes, and reports via CLI commands.\n- Designed for both on-demand humanization and always-on human-like writing.\n- Follows clear editorial principles to ensure output feels genuinely human, specific, and opinionated.",
+  "created_at": 1775750878431,
+  "display_name": "Ai Humanizer.Bak",
+  "fetched_at": 1787826450971,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/banner.md",
+    "docs/CONTRIBUTING.md",
+    "docs/EXAMPLES.md",
+    "docs/PATTERNS.md",
+    "eslint.config.js",
+    "package.json",
+    "references/ai-vocabulary.md",
+    "references/patterns.md",
+    "references/style-guide.md",
+    "scripts/analyze.sh",
+    "scripts/humanize.sh",
+    "skill-card.md",
+    "src/analyzer.js",
+    "src/cli.js",
+    "src/humanizer.js",
+    "src/patterns.js",
+    "src/stats.js",
+    "src/vocabulary.js",
+    "tests/analyzer.test.js",
+    "tests/calibration.test.js",
+    "tests/edge-cases.test.js",
+    "tests/fixtures/ai-sample-1.txt",
+    "tests/fixtures/ai-sample-2.txt",
+    "tests/fixtures/human-sample-1.txt",
+    "tests/humanizer.test.js",
+    "tests/performance.test.js",
+    "tests/statistics.test.js",
+    "vitest.config.js"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "sp012lk",
+    "handle": "sp012lk",
+    "user_id": "s17crn73j8t734nq8hthtje39s84grbr"
+  },
+  "slug": "ai-humanizer-bak",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-humanizer-bak",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-humanizer-bak&ownerHandle=sp012lk",
+    "page_url": "https://clawhub.ai/sp012lk/skills/ai-humanizer-bak"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 642,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Humanize AI-generated text by detecting and removing patterns typical of LLM output. Rewrites text to sound natural, specific, and human. Uses 24 pattern det...",
+  "updated_at": 1778492505206,
+  "version": "1.0.0"
+}
