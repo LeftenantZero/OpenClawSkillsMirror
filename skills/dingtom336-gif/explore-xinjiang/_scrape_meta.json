@@ -1,0 +1,48 @@
+{
+  "changelog": "- Major rewrite of skill architecture to fully enforce CLI-only data sourcing via flyai CLI; no knowledge-based answers allowed\n- New critical execution rules: never answer from training data or invent CLI parameters, ensure all results include [Book](...) links\n- Added strict step-by-step workflow: environment check, parameter collection, CLI execution, and mandatory output validation\n- Enhanced support for both English and Chinese inquiries, including destination and activity keywords\n- Expanded description, usability guidance, and scenario playbooks for Northern Xinjiang, Silk Road, and Kanas autumn trips\n- Detailed, plain-language markdown output rules and clear error handling for missing dependencies",
+  "created_at": 1775701914751,
+  "display_name": "Explore Xinjiang",
+  "fetched_at": 1787827242731,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/fallbacks.md",
+    "references/playbooks.md",
+    "references/runbook.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090348885,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "dingtom336-gif",
+    "handle": "dingtom336-gif",
+    "user_id": "s17aepsh6v86z2ajsq3ng9tgm983g9pt"
+  },
+  "slug": "explore-xinjiang",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/explore-xinjiang",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=explore-xinjiang&ownerHandle=dingtom336-gif",
+    "page_url": "https://clawhub.ai/dingtom336-gif/skills/explore-xinjiang"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 521,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Discover Xinjiang's vast landscapes \u2014 Silk Road heritage, Tianshan mountains, Kanas Lake in autumn, Taklamakan Desert, and Uyghur culture and cuisine. Also s...",
+  "updated_at": 1778492488127,
+  "version": "3.2.0"
+}
