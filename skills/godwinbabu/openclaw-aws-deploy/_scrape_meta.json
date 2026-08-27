@@ -1,0 +1,65 @@
+{
+  "changelog": "Initial release \u2014 one-shot OpenClaw deployment to AWS. Creates VPC, EC2 (ARM64), Telegram channel, and configurable AI model (Bedrock/Gemini/any provider). SSM-only access, no SSH, encrypted EBS, ~$30/mo. Includes deploy, teardown, IAM setup, preflight checks, and 5 personality presets. 22 real-world issues documented and baked into scripts.",
+  "created_at": 1771372986139,
+  "display_name": "OpenClaw AWS Deploy",
+  "fetched_at": 1787791762141,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "ROADMAP.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/agent-defaults/AGENTS.md",
+    "assets/agent-defaults/HEARTBEAT.md",
+    "assets/agent-defaults/SOUL.md",
+    "assets/agent-defaults/USER.md",
+    "assets/personalities/coder.md",
+    "assets/personalities/companion.md",
+    "assets/personalities/default.md",
+    "assets/personalities/researcher.md",
+    "assets/personalities/sentinel.md",
+    "references/TROUBLESHOOTING.md",
+    "references/config-templates/auth-profiles-gemini.json",
+    "references/config-templates/gemini-flash.json",
+    "references/config-templates/openclaw.service.txt",
+    "references/config-templates/startup.sh",
+    "scripts/deploy_minimal.sh",
+    "scripts/preflight.sh",
+    "scripts/setup_deployer_role.sh",
+    "scripts/smoke_test.sh",
+    "scripts/teardown.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779919427014,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Godwin Babu",
+    "handle": "godwinbabu",
+    "user_id": "s1748drexz2wdcmfwqs7xyn95183w27d"
+  },
+  "slug": "openclaw-aws-deploy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-aws-deploy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-aws-deploy&ownerHandle=godwinbabu",
+    "page_url": "https://clawhub.ai/godwinbabu/skills/openclaw-aws-deploy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1340,
+    "installs": 41,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Deploy OpenClaw securely on AWS with a single command. Creates VPC, EC2 (ARM64), Telegram channel, and configurable AI model (Bedrock, Gemini, or any provide...",
+  "updated_at": 1779077137425,
+  "version": "1.0.0"
+}
