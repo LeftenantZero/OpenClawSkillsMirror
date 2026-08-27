@@ -1,0 +1,52 @@
+{
+  "changelog": "Automated daily literature search for academic researchers\u2014initial release.\n\n- Searches PubMed, OpenAlex, and Semantic Scholar with configurable keywords\n- Automatic deduplication by DOI (within batch and against local library)\n- Detects and downloads open-access papers, using Unpaywall and PubMed Central integration\n- Smart, configurable topic categorization for collected papers\n- Generates daily Markdown reports and logs\n- Includes upload analyzer for organizing manually added papers",
+  "created_at": 1773821356112,
+  "display_name": "Daily Literature Search",
+  "fetched_at": 1787865949965,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.yaml",
+    "install.sh",
+    "requirements.txt",
+    "scripts/analyze_uploaded.py",
+    "scripts/classifier.py",
+    "scripts/daily_literature_search.py",
+    "scripts/utils.py",
+    "skill-card.md",
+    "tests/test_classifier.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089949925,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Wzr101622",
+    "handle": "wzr101622",
+    "user_id": "s17dx63vehe0nzkrmd5p3c961d850a0f"
+  },
+  "slug": "daily-literature-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/daily-literature-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=daily-literature-search&ownerHandle=wzr101622",
+    "page_url": "https://clawhub.ai/wzr101622/skills/daily-literature-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 861,
+    "installs": 23,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Automated daily literature search system for academic researchers. Performs scheduled searches across PubMed, OpenAlex, and Semantic Scholar with automatic d...",
+  "updated_at": 1778491997007,
+  "version": "1.0.0"
+}
