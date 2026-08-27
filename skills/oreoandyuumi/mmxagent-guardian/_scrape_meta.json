@@ -1,0 +1,35 @@
+{
+  "changelog": "mmxagent-guardian v1.0.3\n\n- Expanded the definition of \"important files\" for longer retention to cover more system and config directories.\n- Introduced automatic skipping for generated, vendored, and cache directories (e.g., __pycache__, node_modules, .git); skipped files are now reported to the user with a reason.\n- Added a binary file size warning (for files over 50 MB) requiring user confirmation before backup.\n- Updated user confirmation and notification flow to reflect skipped files and size warnings.\n- No behavior changes for core modification/delete/restore operations.",
+  "created_at": 1773913500914,
+  "display_name": "mmxagent-guardian",
+  "fetched_at": 1787797929137,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "file_guardian.DEPENDENCIES.md",
+    "scripts/minivcs/minivcs.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OreoAndYuumi",
+    "handle": "oreoandyuumi",
+    "user_id": "s17306q89d61k87b44tjdj867h8436v2"
+  },
+  "slug": "mmxagent-guardian",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mmxagent-guardian",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mmxagent-guardian&ownerHandle=oreoandyuumi",
+    "page_url": "https://clawhub.ai/oreoandyuumi/skills/mmxagent-guardian"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 9185,
+    "installs": 291,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Provide file protection while users work with openclaw. All file operations are version-indexed and support delete recovery and modification rollback.",
+  "updated_at": 1779003286738,
+  "version": "1.0.3"
+}
