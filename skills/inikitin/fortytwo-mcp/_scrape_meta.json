@@ -1,0 +1,49 @@
+{
+  "changelog": "Added\n\t\u2022\tWallet setup guide directly in the skill instructions\n\t\u2022\tAutomatic network selection based on where you have USDC\n\t\u2022\tSession lifetime info: 90 min total, 15 min idle timeout\nChanged\n\t\u2022\tSkill now asks for confirmation before making paid calls, except explicit \u201cAsk Fortytwo\u201d requests\n\t\u2022\tCleaner instructions with redundant sections removed\n\t\u2022\tQuery timeout raised to 10 minutes to match actual inference time\n\t\u2022\tPricing now links to the live page instead of hardcoded rates\n\t\u2022\tRequires Python 3.9+",
+  "created_at": 1774559593535,
+  "display_name": "Fortytwo MCP",
+  "fetched_at": 1787797220754,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/payment.md",
+    "references/session.md",
+    "references/setup.md",
+    "references/streaming.md",
+    "scripts/fortytwo_query.py",
+    "scripts/preflight.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090199031,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "inikitin",
+    "handle": "inikitin",
+    "user_id": "s171v2trz7qrey234tps7jbh3583n0z7"
+  },
+  "slug": "fortytwo-mcp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fortytwo-mcp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fortytwo-mcp&ownerHandle=inikitin",
+    "page_url": "https://clawhub.ai/inikitin/skills/fortytwo-mcp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 731,
+    "installs": 18,
+    "stars": 2,
+    "versions": 6
+  },
+  "summary": "Fortytwo Prime: collective multi-agent inference for high-stakes questions. ALWAYS use when the user says \"Ask Fortytwo\", \"Ask Prime\", \"ask Fortytwo Prime\",...",
+  "updated_at": 1779074635421,
+  "version": "1.1.0"
+}
