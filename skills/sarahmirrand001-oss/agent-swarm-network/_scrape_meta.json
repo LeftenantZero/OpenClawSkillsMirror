@@ -1,0 +1,46 @@
+{
+  "changelog": "Registry language fix: Removed all references to \"upstream registry operated by TeoSlayer\" across manifest.json, SKILL.md, README.md, and index.html. All text now states the registry defaults to localhost (127.0.0.1:9000) with zero external exposure.\nDependencies structure fix: Moved pilotctl and go into dependencies.binaries (the field ClawHub's parser actually reads). Removed orphaned required_binaries top-level key. This resolves the \"Required binaries: none\" mismatch.\nSupply chain: Source-only build instructions retained. No curl|bash anywhere.\nSnapshots: Data-at-Rest Vulnerability warning and chmod 700 mandate retained.",
+  "created_at": 1772119429394,
+  "display_name": "Agent Swarm Network",
+  "fetched_at": 1787791109902,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.json",
+    "manifest.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779962702335,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "KELIHAO",
+    "handle": "sarahmirrand001-oss",
+    "user_id": "s17eapcgn3tsvbsbk5ks616j75884v7n"
+  },
+  "slug": "agent-swarm-network",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-swarm-network",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-swarm-network&ownerHandle=sarahmirrand001-oss",
+    "page_url": "https://clawhub.ai/sarahmirrand001-oss/skills/agent-swarm-network"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1395,
+    "installs": 36,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Agent communication protocol skill. Provides: inter-agent messaging, context snapshot/restore, event-driven collaboration, model dispatch notifications, sub-...",
+  "updated_at": 1779077356825,
+  "version": "1.0.6"
+}
