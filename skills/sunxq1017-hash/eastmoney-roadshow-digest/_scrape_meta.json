@@ -1,0 +1,39 @@
+{
+  "changelog": "v0.1.2-rc1\n\nLLM Integration Fixed & Enabled\n\nFixed critical issue where LLM enhancement was detected but not actually executed\nImplemented real LLM call via OpenAI-compatible API\nAdded multi-provider support (OpenAI / OpenRouter / Moonshot-compatible endpoints)\nRemoved hard dependency on any single provider\nIntroduced unified call_llm() interface\n\nBehavior Improvements\n\nLLM enhancement is now only marked as enabled after successful execution\nAdded robust fallback when LLM is unavailable or fails\nImproved run report to clearly indicate LLM usage status\n\nArchitecture Alignment\n\nConverted from implicit external calls to explicit, documented LLM enhancement\nEnsured consistency between code behavior and documentation\nMaintained compatibility with environments without LLM configuration\n\n\nv0.1.2-rc1\n\nLLM \u80fd\u529b\u4fee\u590d\u5e76\u6b63\u5f0f\u63a5\u901a\n\n\u4fee\u590d\u201c\u68c0\u6d4b\u5230 LLM \u4f46\u5b9e\u9645\u672a\u6267\u884c\u201d\u7684\u6838\u5fc3\u95ee\u9898\n\u5b9e\u73b0\u57fa\u4e8e OpenAI-compatible API \u7684\u771f\u5b9e LLM \u8c03\u7528\n\u652f\u6301\u591a\u6a21\u578b\u63d0\u4f9b\u65b9\uff08OpenAI / OpenRouter / Moonshot \u7b49\u517c\u5bb9\u63a5\u53e3\uff09\n\u79fb\u9664\u5bf9\u5355\u4e00\u4f9b\u5e94\u5546\u7684\u7ed1\u5b9a\n\u5f15\u5165\u7edf\u4e00\u7684 call_llm() \u8c03\u7528\u63a5\u53e3\n\n\u884c\u4e3a\u6539\u8fdb\n\n\u4ec5\u5728 LLM \u5b9e\u9645\u6210\u529f\u6267\u884c\u540e\u624d\u6807\u8bb0\u4e3a\u542f\u7528\n\u589e\u5f3a\u5931\u8d25\u65f6\u81ea\u52a8\u964d\u7ea7\uff0c\u4e0d\u5f71\u54cd\u6574\u4f53\u6d41\u7a0b\nrun_report \u4e2d\u660e\u786e\u8bb0\u5f55 LLM \u662f\u5426\u542f\u7528\u53ca\u6267\u884c\u7ed3\u679c\n\n\u67b6\u6784\u4e0e\u89c4\u8303\u5bf9\u9f50\n\n\u4ece\u201c\u9690\u5f0f\u5916\u90e8\u8c03\u7528\u201d\u6539\u4e3a\u201c\u663e\u5f0f LLM \u589e\u5f3a\u80fd\u529b\u201d\n\u4fdd\u8bc1\u4ee3\u7801\u884c\u4e3a\u4e0e\u6587\u6863\u63cf\u8ff0\u5b8c\u5168\u4e00\u81f4\n\u5728\u672a\u914d\u7f6e\u6a21\u578b\u7684\u60c5\u51b5\u4e0b\u4ecd\u53ef\u964d\u7ea7\u8fd0\u884c",
+  "created_at": 1775541401883,
+  "display_name": "EastMoney Roadshow Digest (Transcript + Summary)\uff5c\u4e1c\u65b9\u8d22\u5bcc\u8def\u6f14\u7eaa\u8981\u751f\u6210",
+  "fetched_at": 1787829459917,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "main.py",
+    "manifest.json",
+    "providers/asr.py",
+    "providers/eastmoney.py",
+    "requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "sunxq1017",
+    "handle": "sunxq1017-hash",
+    "user_id": "s17cyk9xswwfv2weh29ahn6z7983fgp8"
+  },
+  "slug": "eastmoney-roadshow-digest",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/eastmoney-roadshow-digest",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=eastmoney-roadshow-digest&ownerHandle=sunxq1017-hash",
+    "page_url": "https://clawhub.ai/sunxq1017-hash/skills/eastmoney-roadshow-digest"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 843,
+    "installs": 22,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "EastMoney Roadshow Digest (Transcript + Summary)\uff5c\u4e1c\u65b9\u8d22\u5bcc\u8def\u6f14\u7eaa\u8981\u751f\u6210. A reliability-first transcript & summary skill for public EastMoney roadshow replays, focused on...",
+  "updated_at": 1778492452586,
+  "version": "v0.1.2-rc1"
+}
