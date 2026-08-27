@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of Cron Job Token Auditor \u2014 a READ-ONLY tool for optimizing OpenClaw Gateway cron jobs and reducing LLM token consumption.\n\n- Audits jobs.json or CLI-listed cron jobs, identifying recurring LLM-invoking workloads.\n- Classifies each job by token cost and migration confidence, highlighting opportunities to use OS timers plus scripts as alternatives.\n- Provides clear, per-job summaries and actionable migration steps without editing or migrating jobs automatically.\n- Helps users review, optimize, or reduce token usage for scheduled OpenClaw tasks.\n- Follows strict boundaries: no automatic changes, no guaranteed savings, and no assumption of user environment specifics.",
+  "created_at": 1775994464692,
+  "display_name": "Cron Job Token Auditor",
+  "fetched_at": 1787824521229,
+  "files": [
+    "PUBLISH.md",
+    "README.md",
+    "REFERENCE.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "x3r081",
+    "handle": "x3r081",
+    "user_id": "s172634z3sagmw4x143kbg78w984qp2h"
+  },
+  "slug": "cron-job-token-auditor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cron-job-token-auditor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cron-job-token-auditor&ownerHandle=x3r081",
+    "page_url": "https://clawhub.ai/x3r081/skills/cron-job-token-auditor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 676,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Audits OpenClaw Gateway cron jobs from jobs.json (or CLI), classifies scheduled workloads by token cost (agent turns vs deterministic work), and suggests whe...",
+  "updated_at": 1778492548178,
+  "version": "1.0.0"
+}
