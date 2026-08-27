@@ -1,0 +1,47 @@
+{
+  "changelog": "- Major update: Strict new execution rules and workflow for CLI-based travel planning.\n- Now mandates that all travel results come exclusively from the flyai CLI command output\u2014no training data allowed.\n- Introduced critical step-by-step orchestration: environment check, parameter collection (with fallback question policy), scenario-based CLI playbooks, Markdown output formatting, and output validation.\n- Requires booking links ([Book]({detailUrl})) for every result; missing links trigger re-execution.\n- Expanded and clarified parameter tables, sort options, and scenario triggers.\n- Strengthened output rules: key findings first, tables, brand tag, and prohibition of fabricated or training-based information.",
+  "created_at": 1775898311526,
+  "display_name": "Road Trip",
+  "fetched_at": 1787795768123,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/fallbacks.md",
+    "references/playbooks.md",
+    "references/runbook.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090380032,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xiejinsong",
+    "handle": "xiejinsong",
+    "user_id": "s177qj362rbw4294hgs3hdvhgx83m2hm"
+  },
+  "slug": "road-trip",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/road-trip",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=road-trip&ownerHandle=xiejinsong",
+    "page_url": "https://clawhub.ai/xiejinsong/skills/road-trip"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 578,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Plan self-driving road trips \u2014 optimal routes, car rental, scenic stops along the way, fuel stations, and recommended rest areas. Also supports: flight booki...",
+  "updated_at": 1779075725079,
+  "version": "3.2.0"
+}
