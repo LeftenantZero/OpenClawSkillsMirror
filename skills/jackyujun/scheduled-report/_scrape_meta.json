@@ -1,0 +1,33 @@
+{
+  "changelog": "- Initial release of the scheduled-report skill.\n- Enables users to convert a completed multi-step analysis in the current conversation into a scheduled (recurring) task, such as weekly or monthly reports.\n- Accurately extracts all executed analysis steps (from metric-query, metric-attribution, dataset-detail-query, etc.) and assembles them into a self-contained prompt for automated replay.\n- Distinguishes between \"on-demand report\" (analysis-report) and \"scheduled/periodic report\" intents, triggering only when clear recurring execution is requested and after analysis has been performed.\n- Guides users to complete necessary analysis steps if not already done, then seamlessly creates the scheduled task.\n- Automatic prompt generation includes time range normalization, comprehensive task configuration, and user confirmation before final creation.",
+  "created_at": 1774966759789,
+  "display_name": "Aloudata CAN SKILLS - scheduled-report",
+  "fetched_at": 1787838086034,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jackyujun",
+    "handle": "jackyujun",
+    "user_id": "s172qm3yezbbjev7q8rsxxbd1s83he2f"
+  },
+  "slug": "scheduled-report",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/scheduled-report",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=scheduled-report&ownerHandle=jackyujun",
+    "page_url": "https://clawhub.ai/jackyujun/skills/scheduled-report"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 779,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06\u5f53\u524d\u5bf9\u8bdd\u4e2d\u5df2\u5b8c\u6210\u7684\u5206\u6790\u6d41\u7a0b\uff0c\u63d0\u53d6\u5e76\u56fa\u5316\u4e3a\u5b9a\u65f6\u6267\u884c\u7684\u4efb\u52a1\uff08\u5468\u62a5/\u6708\u62a5/\u65e5\u5de1\u68c0\u7b49\uff09\u3002\u672c Skill \u662f\u4e00\u4e2a\u7eaf\u7cb9\u7684**\u7f16\u6392\u5c42**\u2014\u2014\u5b83\u4e0d\u8d1f\u8d23\u5b9a\u4e49\"\u600e\u4e48\u5206\u6790\"\uff0c\u53ea\u8d1f\u8d23\"\u628a\u4f60\u521a\u624d\u505a\u7684\u5206\u6790\u5f55\u4e0b\u6765\uff0c\u53d8\u6210\u80fd\u5b9a\u65f6\u91cd\u653e\u7684\u4efb\u52a1\"\u3002 \u89e6\u53d1\u573a\u666f\u5305\u62ec\u4f46\u4e0d\u9650\u4e8e\uff1a\u7528\u6237\u63d0\u5230\"\u5b9a\u65f6\u62a5\u544a\"\"\u5b9a\u65f6\u5206\u6790\"\"\u5b9a\u671f\u6267\u884c\"\"\u81ea\u52a8\u62a5\u544a\"\"\u628a\u8fd9\u4e2a\u5206\u6790\u53d8\u6210\u5468\u62a5\"\"...",
+  "updated_at": 1778492324164,
+  "version": "1.0.0"
+}
