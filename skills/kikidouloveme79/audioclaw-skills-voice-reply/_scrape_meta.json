@@ -1,0 +1,49 @@
+{
+  "changelog": "AudioClaw voice reply skill adds direct support for cloned voices, improved voice_id handling, and updates for API key management.\n\n- Supports direct use of cloned voice IDs (e.g., vc-...) without voice catalog fallback.\n- Adds clear workflow for registering and remembering cloned voices in AudioClaw.\n- Improves voice discovery: encourages local catalog lookup first, official web catalog for tier confirmation.\n- Clarifies Feishu/Lark delivery flow and confirmation message guideline.\n- Changes API key lookup: now defaults to SENSEAUDIO_API_KEY; integration with AudioClaw credential replacement is explained.\n- Workflow and rules updated for more robust handling of custom and package voice variants.",
+  "created_at": 1773720926425,
+  "display_name": "AudioClaw Skills Voice Reply",
+  "fetched_at": 1787798403982,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/openclaw_voice_switchboard.md",
+    "scripts/feishu_audio_sender.py",
+    "scripts/openclaw_voice_switchboard.py",
+    "scripts/picoclaw_voice_reply.py",
+    "scripts/senseaudio_tts_client.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090030124,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Wu Ruixiao",
+    "handle": "kikidouloveme79",
+    "user_id": "s1799r8kj1jk2d6bjcn61ycmx583hqp7"
+  },
+  "slug": "audioclaw-skills-voice-reply",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/audioclaw-skills-voice-reply",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=audioclaw-skills-voice-reply&ownerHandle=kikidouloveme79",
+    "page_url": "https://clawhub.ai/kikidouloveme79/skills/audioclaw-skills-voice-reply"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 923,
+    "installs": 26,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Use when AudioClaw Skills, Feishu, or Lark needs to send AudioClaw voice replies with runtime-switchable voice_id, emotion preset, or speaking style, includi...",
+  "updated_at": 1779001348854,
+  "version": "1.0.1"
+}
