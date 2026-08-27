@@ -1,0 +1,46 @@
+{
+  "changelog": "Version 1.0.3\n\n- Added troubleshooting guidance: clarify that cron prompt should have an explicit \"never re-review\" rule at highest priority to prevent duplicate reviews.\n- No code or functional changes; documentation update only.",
+  "created_at": 1775210818188,
+  "display_name": "GitLab MR Code Review",
+  "fetched_at": 1787796457179,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cron-setup.md",
+    "references/review-guidelines.md",
+    "scripts/gitlab-api.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090461632,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Hope1",
+    "handle": "gotoloops",
+    "user_id": "s17a1dd85z9g2xe1axhnprv86s83zwan"
+  },
+  "slug": "gitlab-auto-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gitlab-auto-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gitlab-auto-review&ownerHandle=gotoloops",
+    "page_url": "https://clawhub.ai/gotoloops/skills/gitlab-auto-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 703,
+    "installs": 17,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Automated AI code review for GitLab Merge Requests via polling. Periodically checks for open MRs, reviews code diffs for security vulnerabilities, bugs, and...",
+  "updated_at": 1779075439615,
+  "version": "1.0.3"
+}
