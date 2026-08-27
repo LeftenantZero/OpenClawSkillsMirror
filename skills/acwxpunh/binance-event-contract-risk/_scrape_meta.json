@@ -1,0 +1,33 @@
+{
+  "changelog": "Binance Event Contract Risk Manager 1.0.0 \u2014 Initial Release\n\n- Provides continuous, comprehensive risk checks for BTCUSDT & ETHUSDT Binance Event Contracts, validating every trading signal.\n- Enforces strict risk controls: max 5% capital per position, max 2% risk per trade, max 20% capital exposure, and 10% daily loss circuit breaker.\n- Auto-calculates position size based on capital, stop loss distance, and Binance\u2019s per-trade limits (5\u2013250 USDT).\n- Alerts and blocks trades if approaching daily loss, exceeding position/exposure limits, or near contract expiry.\n- Emergency circuit breaker activates on major losses, repeated failures, or critical errors, suspending all signals until reset.\n- Includes clear boundary definitions and examples for both successful and rejected risk checks.",
+  "created_at": 1773836483687,
+  "display_name": "Binance Event Contract Risk Manager",
+  "fetched_at": 1787865427388,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "acwxpunh",
+    "handle": "acwxpunh",
+    "user_id": "s17a2m51s5gm481kdk8pgsck0h885pk8"
+  },
+  "slug": "binance-event-contract-risk",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/binance-event-contract-risk",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=binance-event-contract-risk&ownerHandle=acwxpunh",
+    "page_url": "https://clawhub.ai/acwxpunh/skills/binance-event-contract-risk"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 877,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Continuously manages Binance BTCUSDT and ETHUSDT event contract risks by enforcing position sizing, daily loss limits, exposure caps, and emergency circuit b...",
+  "updated_at": 1778492004868,
+  "version": "1.0.0"
+}
