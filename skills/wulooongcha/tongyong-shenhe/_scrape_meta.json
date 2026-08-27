@@ -1,0 +1,48 @@
+{
+  "changelog": "- Initial release of \"tongyong-shenhe\" \u2013 a configurable, general-purpose content moderation skill for all d.php-based backend sites.\n- Built-in moderation rules for common violations; supports rule customization via `rules.json`.\n- Simple deployment: fill in site credentials to use; technical API integration (optional) for enhanced review.\n- Features dry-run safety mode; supports TOTP login and standard d.php interface formats.\n- Clear, real-time audit output and support for field-level configuration per site.",
+  "created_at": 1776420978659,
+  "display_name": "Tongyong Shenhe",
+  "fetched_at": 1787819879885,
+  "files": [
+    "DEPLOY.md",
+    "SKILL.md",
+    "USAGE.md",
+    "_meta.json",
+    "config.example.json",
+    "review.py",
+    "rules.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090464285,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wulooongcha",
+    "handle": "wulooongcha",
+    "user_id": "s177mcz2d80cq0dfhc1g6ykce983jz23"
+  },
+  "slug": "tongyong-shenhe",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tongyong-shenhe",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tongyong-shenhe&ownerHandle=wulooongcha",
+    "page_url": "https://clawhub.ai/wulooongcha/skills/tongyong-shenhe"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 504,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u901a\u7528\u5185\u5bb9\u5ba1\u6838 Skill\u3002\u914d\u7f6e\u9a71\u52a8\uff0c\u9002\u7528\u4e8e\u6240\u6709 d.php \u540e\u53f0\u7ad9\u70b9\u3002\u5185\u7f6e\u5ba1\u6838\u89c4\u5219\u81ea\u52a8\u5224\u65ad + \u53ef\u9009\u6280\u672f\u90e8API\u589e\u5f3a\u3002\u5176\u4ed6\u7ec4\u53ea\u9700\u586b\u5199\u7ad9\u70b9\u8d26\u53f7\u5bc6\u7801\u5373\u53ef\u4f7f\u7528\uff0c\u5ba1\u6838\u89c4\u5219\u53ef\u81ea\u884c\u4fee\u6539\u9002\u914d\u3002",
+  "updated_at": 1778492639760,
+  "version": "1.0.0"
+}
