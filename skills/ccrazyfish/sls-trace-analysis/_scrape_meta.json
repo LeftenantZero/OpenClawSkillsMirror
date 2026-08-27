@@ -1,0 +1,47 @@
+{
+  "changelog": "sls-trace-analysis v1.0.0\n\n- Initial release.\n- Enables full-link Alibaba Cloud SLS log and ARMS trace investigation, integrating source code and database troubleshooting.\n- Provides strict, template-driven user interactions for collecting trace parameters, querying, and presenting results.\n- Automates script execution based on user input for trace_id, wusid, or path, with flexible time range selection.\n- Ensures all logstore logs are grouped, unmerged, and fully output as per guidelines.\n- Implements strict error handling and user guidance for cases where no data is found.",
+  "created_at": 1774341168511,
+  "display_name": "SLS + ARMS \u5168\u94fe\u8def\u95ee\u9898\u6392\u67e5",
+  "fetched_at": 1787797372285,
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/query_trace.py",
+    "scripts/requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090068633,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Zhichao Lee",
+    "handle": "ccrazyfish",
+    "user_id": "s17cggvsf74paand5s1w72j50d83h9k8"
+  },
+  "slug": "sls-trace-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sls-trace-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sls-trace-analysis&ownerHandle=ccrazyfish",
+    "page_url": "https://clawhub.ai/ccrazyfish/skills/sls-trace-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 575,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u67e5\u8be2\u963f\u91cc\u4e91SLS\u65e5\u5fd7\u548cARMS\u8c03\u7528\u94fe\uff0c\u7ed3\u5408\u6e90\u7801\u548c\u6570\u636e\u5e93\u8fdb\u884c\u5168\u94fe\u8def\u95ee\u9898\u6392\u67e5\u3002 \u5b8c\u6574\u6d41\u7a0b\uff1a\u67e5\u65e5\u5fd7 \u2192 \u753b\u8c03\u7528\u94fe \u2192 \u5b9a\u4f4d\u6e90\u7801 \u2192 \u6392\u67e5\u6570\u636e\u5e93 \u2192 \u7ed9\u51fa\u4fee\u590d\u65b9\u6848\u3002 Use when: \u7528\u6237\u8bf4\u300c\u5206\u6790sls\u300d\u300c\u5206\u6790\u95ee\u9898\u300d\u6216\u60f3\u6392\u67e5\u4e1a\u52a1\u670d\u52a1/\u7ebf\u4e0a\u63a5\u53e3/\u7528\u6237\u8bf7\u6c42\u7684\u62a5\u9519\u6216\u5f02\u5e38\u3002 \u89e6\u53d1\u793a\u4f8b\uff1a\u300c\u5206\u6790sls\u300d\u300c\u5e2e\u6211\u67e5\u4e00\u4e0b\u8fd9\u4e2atrace_...",
+  "updated_at": 1779074352323,
+  "version": "1.0.0"
+}
