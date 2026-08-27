@@ -1,0 +1,36 @@
+{
+  "changelog": "CLI-Agent Architecture Skill 1.0.0\n\n- Introduces a comprehensive two-layer architecture for AI agents executing Unix shell commands.\n- Details why Unix CLI commands outperform typed function calls for LLM-based agents due to familiarity and pipeline semantics.\n- Defines a strict split between \"raw execution\" (lossless, metadata-free) and \"LLM presentation\" (truncation, binary guard, stderr attachment, metadata).\n- Describes four Layer 2 processing mechanisms: Binary Guard, Overflow Mode, Metadata Footer, and stderr Attachment, including detection heuristics and message formats.\n- Provides concrete examples of actionable, two-part error messages, and outlines best practices while avoiding anti-patterns.\n- Includes a progressive disclosure strategy for agent command documentation and gives an implementation guide with sample scripts and reference layout.",
+  "created_at": 1774824358738,
+  "display_name": "Cli Agent Architecture",
+  "fetched_at": 1787840787921,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/binary_guard.py",
+    "scripts/stderr_capture.py",
+    "scripts/truncator.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "1477009639zw-blip",
+    "handle": "1477009639zw-blip",
+    "user_id": "s17ezgebx1rdjg5v6ddseykg2183rt6j"
+  },
+  "slug": "cli-agent-architecture",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cli-agent-architecture",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cli-agent-architecture&ownerHandle=1477009639zw-blip",
+    "page_url": "https://clawhub.ai/1477009639zw-blip/skills/cli-agent-architecture"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 659,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Teach the two-layer CLI architecture enabling AI agents to run shell commands natively with lossless execution and adaptive LLM presentation.",
+  "updated_at": 1778492283432,
+  "version": "1.0.0"
+}
