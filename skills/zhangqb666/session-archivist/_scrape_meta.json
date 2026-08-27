@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of Session Archivist \u2013 automated session file compression and archival for Hermes.\n\n- Detects oversized session files and auto-archives when they exceed 1MB.\n- Scores message importance to retain only critical content during compression.\n- Flushes key memory to archive before trimming session files, preventing data loss.\n- Generates structured summaries and supports conflict/de-duplication handling.\n- Integrates with Hindsight memory if available, falls back to local markdown storage otherwise.\n- Includes safety checks to avoid race conditions and supports automated scheduling via cron.",
+  "created_at": 1778144135757,
+  "display_name": "session-archivist",
+  "fetched_at": 1787809540598,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/hindsight-integration.md",
+    "references/summary-template.md",
+    "scripts/session_archiver.py",
+    "scripts/setup_cron.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090756824,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zhangqb666",
+    "handle": "zhangqb666",
+    "user_id": "s17c0c9ng1e5br9wdbanfkj2sx83h1z0"
+  },
+  "slug": "session-archivist",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/session-archivist",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=session-archivist&ownerHandle=zhangqb666",
+    "page_url": "https://clawhub.ai/zhangqb666/skills/session-archivist"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 520,
+    "installs": 12,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Use when session files grow too large (>1MB), context compression fails to trigger, or you need to manage long-running session lifecycle. Auto-archives old s...",
+  "updated_at": 1778492867743,
+  "version": "1.0.0"
+}
