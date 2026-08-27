@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release with comprehensive token monitoring and reporting features:\n\n- Supports real-time querying of token usage and cost for OpenAI/other models.\n- Automatic daily and weekly bill reports at scheduled times.\n- Hourly quota check with threshold alert notifications.\n- Optional hook to auto-log token usage after each session.\n- Flexible configuration: models, pricing, thresholds, and time zone.\n- Command-line tools for querying, reporting, threshold checks, and manual data entry.\n- Installs easily with provided scripts and supports scheduled tasks.",
+  "created_at": 1774235463669,
+  "display_name": "Token Tracker",
+  "fetched_at": 1787854760648,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "cron-config.json",
+    "hooks/token-logger/HOOK.md",
+    "hooks/token-logger/handler.js",
+    "post-install.sh",
+    "skill-card.md",
+    "token_tracker.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090042912,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Mr-Lucky",
+    "handle": "mr-lucky",
+    "user_id": "s17db5qewkv6s1ydvja3han7qd83ghea"
+  },
+  "slug": "my-token-tracker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/my-token-tracker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=my-token-tracker&ownerHandle=mr-lucky",
+    "page_url": "https://clawhub.ai/mr-lucky/skills/my-token-tracker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 554,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u76d1\u63a7 OpenAI/\u5176\u4ed6\u6a21\u578b Token \u6d88\u8017\uff0c\u652f\u6301\u6bcf\u65e5/\u6bcf\u5468\u8d26\u5355\u63a8\u9001\u548c\u8d85\u989d\u8b66\u62a5",
+  "updated_at": 1778492123557,
+  "version": "1.0.0"
+}
