@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release of the QuantConnect backtest automation pipeline.\n\n- Submit local strategy files and auxiliary data to QuantConnect projects, replacing existing `main.py`.\n- Automatically compile, trigger, and monitor backtests, with early-stop support if drawdown exceeds a threshold.\n- Download full backtest statistics and all order records in structured formats (JSON/CSV).\n- Run the full workflow (submit, compile, monitor, download) in a single command.\n- List recent project backtests via command line.\n- Enforces environment variable credential checks and clean project file management.",
+  "created_at": 1773757236097,
+  "display_name": "Qc Backtest Master",
+  "fetched_at": 1787867817718,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "get_results.py",
+    "monitor_backtest.py",
+    "qc_api/__init__.py",
+    "qc_api/client.py",
+    "qc_api/config.py",
+    "requirements.txt",
+    "run_workflow.py",
+    "skill-card.md",
+    "submit_backtest.py",
+    "verify_connection.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089936504,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "tltby12341",
+    "handle": "tltby12341",
+    "user_id": "s17b0eq3j5h16t0deanr16r2hx83qchd"
+  },
+  "slug": "qc-backtest-master",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/qc-backtest-master",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=qc-backtest-master&ownerHandle=tltby12341",
+    "page_url": "https://clawhub.ai/tltby12341/skills/qc-backtest-master"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 885,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "QuantConnect automated backtest pipeline \u2014 submit local strategies, compile, execute, monitor with early-stop, and download results in one command.",
+  "updated_at": 1778491977901,
+  "version": "1.0.0"
+}
