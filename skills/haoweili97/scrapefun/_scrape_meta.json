@@ -1,0 +1,35 @@
+{
+  "changelog": "**Summary: Major authentication and endpoint policy update. Now strictly favors OpenClaw-facing APIs; legacy fallbacks tightly restricted.**\n\n- Prefers dedicated `/api/openclaw/*` endpoints for all main operations (listing, download, scan, media state).\n- Only uses generic scrapefun APIs in rare, clearly listed fallback cases\u2014never as silent replacements.\n- Explicitly details required OpenClaw permissions for each endpoint; halts if a permission or endpoint is missing.\n- Strictly prohibits previously allowed legacy endpoints for media browsing, download, and status checks.\n- Response style and examples rewritten to highlight new API order, fallback restrictions, and blockers.\n- Updates overview, workflow, and examples for clarity on allowed/disallowed behaviors.",
+  "created_at": 1773465228552,
+  "display_name": "ScrapeFun",
+  "fetched_at": 1787874521846,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/api.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Haowei Li",
+    "handle": "haoweili97",
+    "user_id": "s1792c3vg6zvg9xzfwrk03j5v183fgn6"
+  },
+  "slug": "scrapefun",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/scrapefun",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=scrapefun&ownerHandle=haoweili97",
+    "page_url": "https://clawhub.ai/haoweili97/skills/scrapefun"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 799,
+    "installs": 21,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Use this skill when OpenClaw needs to operate a scrapefun server through the dedicated OpenClaw-facing APIs. Prefer /api/openclaw/* query and download endpoi...",
+  "updated_at": 1778491898098,
+  "version": "0.0.2"
+}
