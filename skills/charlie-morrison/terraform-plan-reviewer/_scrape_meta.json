@@ -1,0 +1,33 @@
+{
+  "changelog": "- Initial release of terraform-plan-reviewer.\n- Reviews terraform plan outputs for risks including destructive changes, drift, secret exposure, IAM permission widening, and public exposure across AWS, GCP, and Azure.\n- Applies a severity matrix (P0/P1/P2) and gating rules to recommend blocking, approval-with-conditions, or allow on applies.\n- Provides PR-style reviews with line citations and suggested fixes for each finding.\n- Supports usage in CI/CD, PR gating, and manual review contexts.",
+  "created_at": 1777851316877,
+  "display_name": "Terraform Plan Reviewer",
+  "fetched_at": 1787810582387,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "charlie-morrison",
+    "handle": "charlie-morrison",
+    "user_id": "s17cttbdxry5kkyafjw983mq8s83p4y3"
+  },
+  "slug": "terraform-plan-reviewer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/terraform-plan-reviewer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=terraform-plan-reviewer&ownerHandle=charlie-morrison",
+    "page_url": "https://clawhub.ai/charlie-morrison/skills/terraform-plan-reviewer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 577,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Review terraform plan output for risk before apply. Detects destructive changes (force replace and destroy on stateful resources), drift from real state, mis...",
+  "updated_at": 1778492842520,
+  "version": "1.0.0"
+}
