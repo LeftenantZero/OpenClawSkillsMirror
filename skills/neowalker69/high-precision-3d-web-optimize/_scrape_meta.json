@@ -1,0 +1,36 @@
+{
+  "changelog": "**Major update: Introduces slot-based texture compression options and KTX2 support for Web 3D optimization workflows.**\n\n- Added support for per-slot texture compression: Normal/ORM use UASTC, BaseColor/Emissive use ETC1S, with differentiated resolution and encoding per LOD and slot.\n- Exposed user-selectable global texture encoding: choose between WebP (default, simple/fast) and KTX2 (GPU-native, zero CPU decode).\n- Updated default parameters to specify slot-resolution mapping, slot-specific compression quality, and detailed KTX2 options.\n- Expanded documentation and troubleshooting with slot-based compression rationale, KTX2 configuration guidance, and common pitfalls.\n- Clarified manifest outputs and LOD \u00d7 slot mappings for better front-end integration and lazy loading.",
+  "created_at": 1777822891114,
+  "display_name": "High-Precision 3D Web Optimize",
+  "fetched_at": 1787810652845,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/optimize-glb.mjs",
+    "references/package-template.json",
+    "references/threejs-load-lod.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Zavon",
+    "handle": "neowalker69",
+    "user_id": "s1715704tvnbebadwp19ppff7583kh9s"
+  },
+  "slug": "high-precision-3d-web-optimize",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/high-precision-3d-web-optimize",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=high-precision-3d-web-optimize&ownerHandle=neowalker69",
+    "page_url": "https://clawhub.ai/neowalker69/skills/high-precision-3d-web-optimize"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 709,
+    "installs": 17,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Optimize high-precision .glb/.gltf models for Web 3D and digital twin delivery. Use when preparing Three.js or Babylon.js assets that need UV-safe simplifica...",
+  "updated_at": 1778492838254,
+  "version": "1.2.0"
+}
