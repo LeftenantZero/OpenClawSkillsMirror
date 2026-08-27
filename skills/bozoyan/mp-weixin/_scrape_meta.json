@@ -1,0 +1,35 @@
+{
+  "changelog": "**Major update: Migrated skill to a self-contained Python extractor, focusing on reliability and ease of use.**\n\n- Switched to a pure Python implementation (scripts/wechat_extractor.py) without npm or JavaScript dependencies.\n- Removed auxiliary documentation and config files (README.md, CHANGELOG.md, skill.yml, tests).\n- Now uses modern libraries: BeautifulSoup, requests, lxml.\n- Supports direct metadata and content extraction from WeChat article URLs with structured JSON output.\n- Includes detailed usage instructions, error handling, and sample code in the updated documentation.\n- Batch extraction, proxy support, and timeout customization demonstrated in usage examples.",
+  "created_at": 1773839991156,
+  "display_name": "mp-weixin",
+  "fetched_at": 1787865312848,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract_wechat.py",
+    "scripts/wechat_extractor.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "bozoyan",
+    "handle": "bozoyan",
+    "user_id": "s177sfxjmcf9fr0s1w3k478s4x83h0ef"
+  },
+  "slug": "mp-weixin",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mp-weixin",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mp-weixin&ownerHandle=bozoyan",
+    "page_url": "https://clawhub.ai/bozoyan/skills/mp-weixin"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 808,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5229\u7528 Python \u4ece\u5fae\u4fe1\u516c\u4f17\u53f7\u6587\u7ae0\u4e2d\u63d0\u53d6\u5143\u6570\u636e\u4e0e\u6b63\u6587\u5185\u5bb9\u3002\u9002\u7528\u4e8e\u7528\u6237\u9700\u8981\u89e3\u6790\u5fae\u4fe1\u6587\u7ae0\u94fe\u63a5\uff08mp.weixin.qq.com\uff09\u3001\u63d0\u53d6\u6587\u7ae0\u4fe1\u606f\uff08\u6807\u9898\u3001\u4f5c\u8005\u3001\u6b63\u6587\u3001\u53d1\u5e03\u65f6\u95f4\u3001\u5c01\u9762\u56fe\uff09\uff0c\u6216\u5c06\u5fae\u4fe1\u6587\u7ae0\u8f6c\u6362\u4e3a\u7ed3\u6784\u5316\u6570\u636e\u7684\u60c5\u666f\u3002",
+  "updated_at": 1778492004868,
+  "version": "1.0.0"
+}
