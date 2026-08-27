@@ -1,0 +1,76 @@
+{
+  "changelog": "AlphaEar Predictor 1.0.0 - Initial Release\n\n- Added market prediction capabilities using the Kronos model for time-series forecasting.\n- Introduced workflow for base quantitative forecast and news-driven subjective adjustment.\n- Provided configurable support for custom and default Kronos model weights.\n- Added requirement for an embedding model, with customizable environment variables.\n- Documented required Python dependencies for operation.",
+  "created_at": 1775046142129,
+  "display_name": "alphaear-predictor",
+  "fetched_at": 1787796924806,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/PROMPTS.md",
+    "scripts/__init__.py",
+    "scripts/forecast_agent.py",
+    "scripts/json_utils.py",
+    "scripts/kronos_predictor.py",
+    "scripts/predictor/model/__init__.py",
+    "scripts/predictor/model/kronos.py",
+    "scripts/predictor/model/module.py",
+    "scripts/prompts/fin_agent.py",
+    "scripts/prompts/forecast_analyst.py",
+    "scripts/prompts/intent_agent.py",
+    "scripts/prompts/isq_prompt_generator.py",
+    "scripts/prompts/report_agent.py",
+    "scripts/prompts/trend_agent.py",
+    "scripts/prompts/visualizer.py",
+    "scripts/schema/isq_template.py",
+    "scripts/schema/models.py",
+    "scripts/utils/__init__.py",
+    "scripts/utils/database_manager.py",
+    "scripts/utils/json_utils.py",
+    "scripts/utils/llm/capability.py",
+    "scripts/utils/llm/factory.py",
+    "scripts/utils/llm/router.py",
+    "scripts/utils/logging_setup.py",
+    "scripts/utils/predictor/evaluation.py",
+    "scripts/utils/predictor/kline_generate.py",
+    "scripts/utils/predictor/model/__init__.py",
+    "scripts/utils/predictor/model/kronos.py",
+    "scripts/utils/predictor/model/module.py",
+    "scripts/utils/predictor/training.py",
+    "scripts/utils/search_tools.py",
+    "scripts/utils/stock_tools.py",
+    "skill-card.md",
+    "tests/test_predictor.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090234791,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zhouzhonglu8-png",
+    "handle": "zhouzhonglu8-png",
+    "user_id": "s17fc97saqx9w7mhqhm8bqe1ss840tq5"
+  },
+  "slug": "alphaear-predictor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alphaear-predictor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alphaear-predictor&ownerHandle=zhouzhonglu8-png",
+    "page_url": "https://clawhub.ai/zhouzhonglu8-png/skills/alphaear-predictor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 651,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Market prediction skill using Kronos. Use when user needs finance market time-series forecasting or news-aware finance market adjustments.",
+  "updated_at": 1779075212644,
+  "version": "1.0.0"
+}
