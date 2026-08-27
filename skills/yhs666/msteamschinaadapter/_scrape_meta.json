@@ -1,0 +1,62 @@
+{
+  "changelog": "**Big Change: Adds full auto-detection and repair workflow for Microsoft Teams China integration in OpenClaw.**\n\n- Introduced 18 new files including reference documentation, troubleshooting guides, and script utilities for diagnosis and auto-repair.\n- Added automatic version detection and one-click patch workflow to handle OpenClaw and plugin upgrades.\n- Implemented comprehensive diagnosis, patching, and verification phases (6 stages), including SDK and environment variable configuration for China endpoints.\n- Automated Gateway restarts post-patch, preserving active sessions.\n- Outputs standardized repair reports; supports both manual trigger and auto-run via heartbeat or cron.\n- Enhanced documentation and error scenario mapping for easier troubleshooting and user self-service.",
+  "created_at": 1773490430255,
+  "display_name": "msteams china adapter",
+  "fetched_at": 1787788941270,
+  "files": [
+    ".clawhub/origin.json",
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "SUMMARY.md",
+    "TROUBLESHOOTING.md",
+    "_meta.json",
+    "assets/checklist.md",
+    "assets/summary-template.md",
+    "references/endpoints.md",
+    "references/error-codes.md",
+    "references/output-standards.md",
+    "references/workflow.md",
+    "scripts/apply_patch.cjs",
+    "scripts/apply_patch.js",
+    "scripts/auto_detect.cjs",
+    "scripts/diagnose.cjs",
+    "scripts/diagnose.js",
+    "scripts/patch_all_v10.cjs",
+    "scripts/verify.cjs",
+    "scripts/verify.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090750745,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Max yang",
+    "handle": "yhs666",
+    "user_id": "s175z9f9bb5vqnc2czwtqja6q983k5xf"
+  },
+  "slug": "msteamschinaadapter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/msteamschinaadapter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=msteamschinaadapter&ownerHandle=yhs666",
+    "page_url": "https://clawhub.ai/yhs666/skills/msteamschinaadapter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 927,
+    "installs": 27,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Patch OpenClaw to support Microsoft Teams China (\u4e16\u7eaa\u4e92\u8054/21Vianet). \u89e6\u53d1\u573a\u666f: (1) msteams webhook 401/AADSTS90002/AADSTS500011 \u9519\u8bef; (2) JWT \u9a8c\u8bc1\u5931\u8d25/SigningKeyNotFoundEr...",
+  "updated_at": 1779078150258,
+  "version": "10.0.2"
+}
