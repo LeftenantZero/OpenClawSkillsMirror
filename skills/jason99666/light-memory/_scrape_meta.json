@@ -1,0 +1,58 @@
+{
+  "changelog": "light-memory v1.0.0\n\n- Introduces a three-layer LLM Agent memory architecture (L1/L2/L3) to address long-term context retention issues.\n- Fully prompt-driven, cross-platform, and does not depend on Python/Bash or vector databases.\n- Features atomic one-click installation with safety checks and automatic data backup.\n- Users can explicitly mark key information (\"\u51b3\u7b56:\", \"\u6d1e\u5bdf:\"); system extracts and archives asynchronously via Cron tasks.\n- Includes commands for installation, migration, and health checks, with detailed reports and data safety measures.\n- Integrates natively with OpenClaw, supporting long-term, robust, and auditable memory for agent workflows.",
+  "created_at": 1776092530231,
+  "display_name": "OpenClaw Memory System",
+  "fetched_at": 1787823507358,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "prompts/gc-cleanup-prompt.md",
+    "prompts/heartbeat-prompt.md",
+    "prompts/install-prompt.md",
+    "prompts/l1-hourly-prompt.md",
+    "prompts/l2-nightly-prompt.md",
+    "prompts/l3-weekly-prompt.md",
+    "prompts/migrate-prompt.md",
+    "references/architecture.md",
+    "references/car-format.md",
+    "references/troubleshooting.md",
+    "scripts/validate.sh",
+    "skill-card.md",
+    "templates/MEMORY.template.md",
+    "templates/SESSION-STATE.template.md",
+    "templates/daily-log.template.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090410161,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jason99666",
+    "handle": "jason99666",
+    "user_id": "s1748ws6j7xc1rhvrzhk1b05e584swy7"
+  },
+  "slug": "light-memory",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/light-memory",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=light-memory&ownerHandle=jason99666",
+    "page_url": "https://clawhub.ai/jason99666/skills/light-memory"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 608,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "A lightweight, prompt-driven three-layer memory system for long-term context retention in OpenClaw agents with secure, asynchronous data extraction and Markd...",
+  "updated_at": 1778492568090,
+  "version": "1.0.0"
+}
