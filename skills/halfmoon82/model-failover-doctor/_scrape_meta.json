@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of \"model-failover-doctor\" skill:\n\n- Diagnoses and fixes the \"All models failed\" error in OpenClaw.\n- Provides clear trigger conditions for when to use the tool (e.g., identical model ID failures across providers, post-restart message failures, improper manual edits).\n- Supports diagnosis-only, auto-fix with gateway restart, and dry-run preview modes.\n- Includes a root cause quick reference table for common issues and auto-fix availability.\n- Details most frequent root cause (MI-1) and its resolution.\n- Ensures all auto-fixes are backed up for safety and manual recovery.",
+  "created_at": 1772724890046,
+  "display_name": "Model Failover Doctor",
+  "fetched_at": 1787800280557,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "model_failover_doctor.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089765861,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "halfmoon82",
+    "handle": "halfmoon82",
+    "user_id": "s173a0sd7rjbb7s3bsayc8607s83n58t"
+  },
+  "slug": "model-failover-doctor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/model-failover-doctor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=model-failover-doctor&ownerHandle=halfmoon82",
+    "page_url": "https://clawhub.ai/halfmoon82/skills/model-failover-doctor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1089,
+    "installs": 31,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Diagnose and fix OpenClaw \"All models failed\" errors by detecting invalid model IDs, provider mismatches, and session fallback issues with optional auto-repair.",
+  "updated_at": 1778995641199,
+  "version": "1.0.0"
+}
