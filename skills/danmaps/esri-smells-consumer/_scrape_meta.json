@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial consumer skill for calling the paid x402 endpoint (Base) for Esri workflow smell detection. References arcgispro-cli project_snapshot output.",
+  "created_at": 1770163015481,
+  "display_name": "Esri Workflow Smell Detector (Consumer)",
+  "fetched_at": 1787793353676,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/call_smells.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783656288679,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "danmaps",
+    "handle": "danmaps",
+    "user_id": "s178d549w3ns2b3fmcschksc9n884szg"
+  },
+  "slug": "esri-smells-consumer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/esri-smells-consumer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=esri-smells-consumer&ownerHandle=danmaps",
+    "page_url": "https://clawhub.ai/danmaps/skills/esri-smells-consumer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2476,
+    "installs": 82,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Paid client skill for Esri Workflow Smell Detector via x402 (Base/USDC).\nUse when you want to run a deterministic automation preflight scan on an ArcGIS Pro project snapshot\nby calling https://api.x402layer.cc/e/esri-smells (HTTP 402 payment flow).",
+  "updated_at": 1779076607929,
+  "version": "1.0.0"
+}
