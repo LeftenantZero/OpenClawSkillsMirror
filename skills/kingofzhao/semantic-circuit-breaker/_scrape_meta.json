@@ -1,0 +1,33 @@
+{
+  "changelog": "Semantic Circuit Breaker 1.0.0\n\n- Initial release introducing a semantic-based circuit breaker for service protection.\n- Detects and reacts to issues like hallucinations, semantic drift, factual errors, and toxicity in API responses.\n- Utilizes \"semantic distance\" metrics (embedding comparison, variance, factuality) instead of traditional error rates.\n- Implements an extended three-state model (Closed, Open, Half-Open) driven by semantic quality, not just HTTP status codes.\n- Designed as a quality safeguard layer for LLM APIs and similar services.",
+  "created_at": 1775082091301,
+  "display_name": "Semantic Circuit Breaker",
+  "fetched_at": 1787835407794,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "KingOfZhao",
+    "handle": "kingofzhao",
+    "user_id": "s170jhyhajh4wd5e20y7r5mw2n83yyy9"
+  },
+  "slug": "semantic-circuit-breaker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/semantic-circuit-breaker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=semantic-circuit-breaker&ownerHandle=kingofzhao",
+    "page_url": "https://clawhub.ai/kingofzhao/skills/semantic-circuit-breaker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 524,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Protect downstream services by monitoring semantic content quality and triggering circuit breaks based on semantic drift, inconsistency, factual errors, or t...",
+  "updated_at": 1778492356127,
+  "version": "1.0.0"
+}
