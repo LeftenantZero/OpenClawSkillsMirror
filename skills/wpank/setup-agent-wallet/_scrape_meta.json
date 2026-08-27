@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of the setup-agent-wallet skill for Uniswap agents.\n\n- Supports provisioning agent wallets using Privy, Turnkey, or Safe, with clear guidance for provider selection.\n- Extracts key parameters (provider, chains, environment, spending limits) from user input, with sensible defaults.\n- Delegates full wallet lifecycle (provision, configure, fund, validate) to the wallet-provisioner agent.\n- Returns a clear wallet setup summary to the user on success.\n- Provides user-friendly error handling and suggested actions for common setup issues.",
+  "created_at": 1770745922046,
+  "display_name": "Uniswap Setup Agent Wallet",
+  "fetched_at": 1787792779234,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967787051,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wpank",
+    "handle": "wpank",
+    "user_id": "s17bjjbnm7xjckd29e1h2641ks8849md"
+  },
+  "slug": "setup-agent-wallet",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/setup-agent-wallet",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=setup-agent-wallet&ownerHandle=wpank",
+    "page_url": "https://clawhub.ai/wpank/skills/setup-agent-wallet"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1500,
+    "installs": 48,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Set up an agent wallet for Uniswap operations. Use when user needs to provision a wallet for an autonomous agent. Supports Privy (development), Turnkey (production), and Safe (maximum security). Configures spending limits, token allowlists, and funds the wallet for gas.",
+  "updated_at": 1779076804436,
+  "version": "0.1.0"
+}
