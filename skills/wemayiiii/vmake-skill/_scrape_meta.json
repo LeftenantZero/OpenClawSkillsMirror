@@ -1,0 +1,79 @@
+{
+  "changelog": "openclaw-vmake-ai 1.3.0\n\n- Expanded documentation with precise rules for watermark removal and quality restoration on images and videos.\n- Clarified billing: All processing uses paid Vmake API and consumes tenant quota\u2014never claim the service is free or guess pricing.\n- Outlined chaining logic for multi-stage pipelines (watermark removal \u2192 restoration), with clear task separation and execution paths.\n- Specified video task execution: always use spawn-run-task and sessions_spawn (never blocking run-task for video).\n- Detailed new pre-flight credential check with platform-specific user notifications (e.g., Feishu credential card).\n- Strict API usage: only submit jobs via the provided CLI, never direct HTTP.",
+  "created_at": 1776085314846,
+  "display_name": "VMake",
+  "fetched_at": 1787823635429,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "docs/errors-and-polling.md",
+    "docs/feishu-send-video.md",
+    "docs/im-attachments.md",
+    "docs/multi-platform.md",
+    "scripts/ai/__init__.py",
+    "scripts/ai/api.py",
+    "scripts/ai/gid_cache.py",
+    "scripts/client.py",
+    "scripts/config.py",
+    "scripts/feishu_send_image.py",
+    "scripts/feishu_send_video.py",
+    "scripts/requirements.txt",
+    "scripts/sign_sdk/__init__.py",
+    "scripts/sign_sdk/sign.py",
+    "scripts/telegram_send_image.py",
+    "scripts/telegram_send_video.py",
+    "scripts/vmake_ai.py",
+    "sdk/README.md",
+    "sdk/__init__.py",
+    "sdk/auth/__init__.py",
+    "sdk/auth/signer.py",
+    "sdk/cli.py",
+    "sdk/cli/__init__.py",
+    "sdk/cli/base.py",
+    "sdk/cli/runner.py",
+    "sdk/core/__init__.py",
+    "sdk/core/api.py",
+    "sdk/core/client.py",
+    "sdk/core/config.py",
+    "sdk/core/models.py",
+    "sdk/storage/__init__.py",
+    "sdk/storage/oss.py",
+    "sdk/utils/__init__.py",
+    "sdk/utils/cache.py",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090408391,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wemayiiii",
+    "handle": "wemayiiii",
+    "user_id": "s1710hf7tacs6gnap3pwee0ns983whfd"
+  },
+  "slug": "vmake-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/vmake-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=vmake-skill&ownerHandle=wemayiiii",
+    "page_url": "https://clawhub.ai/wemayiiii/skills/vmake-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 521,
+    "installs": 12,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Video file \u2192 videoscreenclear or hdvideoallinone + spawn-run-task and sessions_spawn (main session). Image \u2192 eraser_watermark or image_restoration + blocking...",
+  "updated_at": 1778492568090,
+  "version": "1.0.0"
+}
