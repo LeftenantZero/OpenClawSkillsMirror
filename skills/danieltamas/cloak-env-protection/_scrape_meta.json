@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of cloak-env-protection.\n\n- Introduces protection for .env secrets by encrypting real credentials in a vault and exposing only sandbox values on disk.\n- Provides clear agent rules for detecting Cloak usage, safe .env file handling, and proper commands for managing secrets.\n- Guides agents to use `cloak run` for processes needing real secret values, without manual injection.\n- Documents safe ways to add/update secrets and safeguards against accidental secret exposure.\n- Includes recovery steps for keychain or decryption errors and installation instructions.\n- Provides summary instructions for CLAUDE.md, .cursorrules, and .windsurfrules files.",
+  "created_at": 1773848607492,
+  "display_name": "Cloak \u2014 Protect .env Secrets from AI Agents",
+  "fetched_at": 1787865105033,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Daniel Tamas",
+    "handle": "danieltamas",
+    "user_id": "s17azbqcqav6ez6ebt6ccgc3gn884jsf"
+  },
+  "slug": "cloak-env-protection",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cloak-env-protection",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cloak-env-protection&ownerHandle=danieltamas",
+    "page_url": "https://clawhub.ai/danieltamas/skills/cloak-env-protection"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 785,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Protect .env secrets from AI agents. Real credentials encrypted in a vault \u2014 agents see structurally valid sandbox values on disk.",
+  "updated_at": 1778492009879,
+  "version": "0.1.0"
+}
