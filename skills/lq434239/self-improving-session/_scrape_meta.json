@@ -1,0 +1,36 @@
+{
+  "changelog": "self-improving-session 1.0.3: Major ruleset and scope tightening\n\n- Greatly clarifies what counts as a durable, reusable session rule versus noise.\n- Splits rules by confidence level with clear thresholds for `[tentative]`, `[stable]`, and correction markers.\n- Adds explicit rule budget guidance to reduce `CLAUDE.md` bloat (max ~20 global, ~15 project-specific rules).\n- Now prefers merging, replacing, or compressing over appending near-duplicates; often proposes zero net change.\n- New reference file `references/rule-quality.md` explains what should be learned or skipped.\n- Removes embedded session-end automation instructions from core docs (now in README only).\n- Stronger, briefer, and safer rule extraction and merge policies.",
+  "created_at": 1775811659724,
+  "display_name": "Extracts durable workflow preferences and project conventions from a session, then proposes the smallest valid update to global or project CLAUDE.md files. Trigger when the user asks to remember rules, when repeated preference patterns appear, or at session end for non-trivial sessions.",
+  "fetched_at": 1787826058262,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/details.md",
+    "references/learning-rules.md",
+    "references/rule-quality.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "TaiChangXieBuWan",
+    "handle": "lq434239",
+    "user_id": "s1728p25v3hyr2n7qt74s00r7h84ecm4"
+  },
+  "slug": "self-improving-session",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/self-improving-session",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=self-improving-session&ownerHandle=lq434239",
+    "page_url": "https://clawhub.ai/lq434239/skills/self-improving-session"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1006,
+    "installs": 20,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Extracts durable workflow preferences and project conventions from a session, then proposes the smallest valid update to global or project CLAUDE.md files. T...",
+  "updated_at": 1778492510391,
+  "version": "1.0.3"
+}
