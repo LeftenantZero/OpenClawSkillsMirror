@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of feishu-report-summary.\n\n- Adds ability to fetch and summarize Feishu work-report data via the Report v1 API.\n- Supports generating daily or weekly digests from `oa.feishu.cn/report/...` entries.\n- Provides CLI script for fetching reports with various filters and output formats (JSON, Markdown).\n- Summaries highlight themes, completed work, blockers, next actions, and follow-ups.\n- Designed to fill gaps in the default OpenClaw Feishu plugin, which lacks direct report tooling.",
+  "created_at": 1773494070043,
+  "display_name": "Feishu Report Summary",
+  "fetched_at": 1787873988617,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/summary-template.md",
+    "scripts/fetch_report_tasks.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089886197,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "taype",
+    "handle": "taype",
+    "user_id": "s177a7enqyx755jqs2pkqn3ah98857rc"
+  },
+  "slug": "feishu-report-summary",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-report-summary",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-report-summary&ownerHandle=taype",
+    "page_url": "https://clawhub.ai/taype/skills/feishu-report-summary"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 804,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read Feishu work-report data through the Report v1 API and turn it into daily or weekly summaries. Use when Codex needs to work with `oa.feishu.cn/report/......",
+  "updated_at": 1778491905918,
+  "version": "1.0.0"
+}
