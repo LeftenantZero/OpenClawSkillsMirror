@@ -1,0 +1,34 @@
+{
+  "changelog": "health-training-frontdoor v1.0.0\n\n- Introduced a typed front door for live Fitbit/health/training data retrieval using stable JSON actions.\n- Provides a simplified, read-only API over the canonical Fitbit connector, reducing the need for raw CLI command assembly.\n- Supports stable actions: `auth_status`, `latest_recovery`, `quality_flags`, `training_status`, `training_window`, and `unified_latest` with clear default behaviors and optional fields.\n- Ensures all programming advice is grounded in \"Practical Programming for Strength Training\" and references user-specific context before making recommendations.\n- Guarantees compact JSON outputs and direct mapping to backend tools, without bypassing authentication or allowing data writes.",
+  "created_at": 1774775090547,
+  "display_name": "Health Training Frontdoor",
+  "fetched_at": 1787841573568,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/request.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Joao Driessen",
+    "handle": "joaodriessen",
+    "user_id": "s177f0p11chr0wge1x85vvkm5x83vp1n"
+  },
+  "slug": "health-training-frontdoor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/health-training-frontdoor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=health-training-frontdoor&ownerHandle=joaodriessen",
+    "page_url": "https://clawhub.ai/joaodriessen/skills/health-training-frontdoor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 578,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Narrow first-class front door for live Fitbit/training retrieval via stable JSON actions.",
+  "updated_at": 1778492275298,
+  "version": "1.0.0"
+}
