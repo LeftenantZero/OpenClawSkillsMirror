@@ -1,0 +1,50 @@
+{
+  "changelog": "**Major update: Initial release of the agent-sentinel skill (Evaluate-before-Execute guardrail for OpenClaw agents).**\n\n- Introduces a mandatory evaluation layer (\"agent-sentinel\") enforcing safety and compliance before any high-stakes tool call.\n- Implements strict GO / NO-GO decisions (ALLOW, BLOCK, ADVISE) for critical actions\u2014booking, payment, web search, and shell commands\u2014based on user and safety policy specified in SENTINEL_CONFIG.md.\n- Provides a clear command-line interface and response schema; emits structured JSON decisions with severity and suggested alternatives.\n- Enforces robust child-safety, budget, and travel preferences via a configurable policy file.\n- Includes explicit user override and advisory protocols for handling preference and policy violations.\n- Complete documentation of configuration, invocation, and decision handling in the new SKILL.md.",
+  "created_at": 1774111209711,
+  "display_name": "Vigilance",
+  "fetched_at": 1787857857840,
+  "files": [
+    "SENTINEL_CONFIG.md",
+    "SKILL.md",
+    "_meta.json",
+    "eval_engine.py",
+    "requirements.txt",
+    "skill-card.md",
+    "skills/vigilance/SKILL.md",
+    "skills/vigilance/_meta.json",
+    "skills/vigilance/eval_engine.py",
+    "skills/vigilance/requirements.txt"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090024230,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "sanjeet-toosi",
+    "handle": "sanjeet-toosi",
+    "user_id": "s17bbe45jkphpd0sbc75rz11qn83h65f"
+  },
+  "slug": "vigilance",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/vigilance",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=vigilance&ownerHandle=sanjeet-toosi",
+    "page_url": "https://clawhub.ai/sanjeet-toosi/skills/vigilance"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 628,
+    "installs": 15,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Evaluate-before-Execute (EBE) guardrail for OpenClaw agents. Issues a mandatory GO / NO-GO decision before any high-stakes tool call. Enforces child-safety p...",
+  "updated_at": 1778492091613,
+  "version": "1.0.3"
+}
