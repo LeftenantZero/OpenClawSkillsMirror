@@ -1,0 +1,35 @@
+{
+  "changelog": "- Initial release: introduces a hierarchical memory system for OpenClaw agents, inspired by computer cache architecture.\n- Separates memory into three tiers: hot cache (MEMORY.md for behavioral/narrative context), warm storage (structured YAML fact store and lookup index), and cold storage (daily session logs).\n- Shifts factual data to `facts.yaml` for space and retrieval efficiency; keeps narrative and behavioral content in concise prose files.\n- Provides a detailed migration process for converting prose-based memories to the new format.\n- Includes templates and rules for structuring data, ensuring fast, unambiguous memory retrieval and reduced token usage.",
+  "created_at": 1778865778473,
+  "display_name": "Agent Memory Hierarchy",
+  "fetched_at": 1787806871297,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/facts-yaml-template.md",
+    "references/lookup-index-template.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "kimmi2ue",
+    "handle": "kimmi2ue",
+    "user_id": "s1781cp84knezaka46arfdnpwh86rtke"
+  },
+  "slug": "agent-memory-hierarchy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-memory-hierarchy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-memory-hierarchy&ownerHandle=kimmi2ue",
+    "page_url": "https://clawhub.ai/kimmi2ue/skills/agent-memory-hierarchy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 612,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Structure an OpenClaw agent's memory like a computer \u2014 using a cache hierarchy (hot/warm/cold), a YAML fact store for directly addressable data, a lookup ind...",
+  "updated_at": 1778866906745,
+  "version": "1.0.0"
+}
