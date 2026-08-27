@@ -1,0 +1,58 @@
+{
+  "changelog": "**alibabacloud-migrate 0.0.1-beta.2 Changelog**\n\n- Major rewrite: Refactored skill to focus only on migration code generation, assessment reports, and guides\u2014removes all deployment or runtime tasks.\n- Expanded multi-cloud support: Now accepts AWS **and** Azure sources (from Terraform or natural language descriptions).\n- New modular output: Generates `.migration-report/` with structured artifacts including detailed assessment, mapping, production-ready modular Terraform code, and a step-by-step guide.\n- Enforced strict phase gating: Migration now requires sequential phase execution with hard stops for approval and input method confirmation\u2014user must explicitly approve before code is generated (unless pre-approval is detected in initial prompt).\n- Removed all runtime/data migration details: No longer performs or describes actual deployment, data transfer, or DNS cutover\u2014skill output is for planning and IaC only.\n- Replaced and reorganized references, workflows, and mappings to match new output format and process.",
+  "created_at": 1775721414423,
+  "display_name": "Alibabacloud Migrate",
+  "fetched_at": 1787807052914,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/mappings/alicloud-provider-deprecations.md",
+    "references/mappings/aws/compute.md",
+    "references/mappings/aws/index.md",
+    "references/mappings/aws/networking.md",
+    "references/mappings/aws/security.md",
+    "references/mappings/aws/storage.md",
+    "references/mappings/azure/compute.md",
+    "references/mappings/azure/database.md",
+    "references/mappings/azure/index.md",
+    "references/mappings/azure/networking.md",
+    "references/workflows/assessment-report.md",
+    "references/workflows/code-migration.md",
+    "references/workflows/discovery-and-analysis.md",
+    "references/workflows/migration-guide.md",
+    "references/workflows/resource-mapping.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090810161,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-migrate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-migrate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-migrate&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-migrate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 707,
+    "installs": 18,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Migrate cloud resources from AWS/Azure to Alibaba Cloud. Use when users want to \"move to Alibaba Cloud\", ask what Alibaba Cloud services replace their AWS/Az...",
+  "updated_at": 1778830910815,
+  "version": "0.0.1-beta.2"
+}
