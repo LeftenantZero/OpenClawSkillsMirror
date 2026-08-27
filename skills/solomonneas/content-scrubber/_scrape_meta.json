@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of Content Scrubber for OpenClaw:\n\n- Redacts RFC 1918 IPs, loopback addresses, localhost ports, SSH/SCP targets, and custom hostnames from outgoing messages.\n- Uses fast and auditable regex-based rules, not LLM methods.\n- Configurable via `dryRun` mode and `allowedRecipients` for fine-grained control.\n- Integrates as a message interceptor for Discord, Telegram, Signal, and other messaging platforms.\n- Easy installation and setup in the OpenClaw extensions directory.",
+  "created_at": 1774055225860,
+  "display_name": "Content Scrubber",
+  "fetched_at": 1787859531124,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "index.ts",
+    "openclaw.plugin.json",
+    "package.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090011889,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Solomon Neas",
+    "handle": "solomonneas",
+    "user_id": "s175vcq9b774xbehtq2py4r5vn83f1k2"
+  },
+  "slug": "content-scrubber",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/content-scrubber",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=content-scrubber&ownerHandle=solomonneas",
+    "page_url": "https://clawhub.ai/solomonneas/skills/content-scrubber"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 691,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "OpenClaw plugin that scrubs private infrastructure details from outgoing messages. Regex-based redaction of RFC 1918 IPs, localhost ports, SSH targets, and h...",
+  "updated_at": 1778492076651,
+  "version": "1.0.0"
+}
