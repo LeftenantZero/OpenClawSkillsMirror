@@ -1,0 +1,65 @@
+{
+  "changelog": "copilot-team-scaffold 1.0.1\n\n- Enhanced AGENTS.md lifecycle enforcement: new gate and edit-tracking, AGENTS.md must be read/created before code changes, and synchronization is now validated after code edits.\n- Updated runtime lifecycle: strengthened AGENTS.md gating at SessionStart, PreToolUse, PostToolUse, and Stop events.\n- Improved hook scripts: added/clarified logic for AGENTS.md blocking/reminders, edit tracking, and mandatory per-module AGENTS.md creation.\n- Changelog: No file changes detected; the SKILL.md was updated for clearer AGENTS.md control and process detail.",
+  "created_at": 1777367100512,
+  "display_name": "copilot-team-scaffold",
+  "fetched_at": 1787813198781,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md",
+    "templates/docs/sessions/README.md",
+    "templates/hooks/planning-with-files.json",
+    "templates/hooks/post-tool-lint.js",
+    "templates/hooks/post-tool-lint.json",
+    "templates/hooks/scripts/agent-stop.js",
+    "templates/hooks/scripts/planning-paths.js",
+    "templates/hooks/scripts/post-tool-use.js",
+    "templates/hooks/scripts/pre-tool-use.js",
+    "templates/hooks/scripts/session-log.js",
+    "templates/hooks/scripts/session-start.js",
+    "templates/hooks/scripts/subagent-start.js",
+    "templates/hooks/scripts/subagent-stop.js",
+    "templates/instructions/planning-with-files.instructions.md",
+    "templates/instructions/spec-flow-run-task.instructions.md",
+    "templates/instructions/testing.instructions.md",
+    "templates/lessons-learned.md",
+    "templates/prompts/run-task.prompt.md",
+    "templates/skills/planning-with-files/SKILL.md",
+    "templates/skills/planning-with-files/scripts/session-catchup.py",
+    "templates/skills/planning-with-files/templates/findings.md",
+    "templates/skills/planning-with-files/templates/progress.md",
+    "templates/skills/planning-with-files/templates/task_plan.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090770667,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "lrh",
+    "handle": "lrh07819",
+    "user_id": "s17dxrxrhf4ypt2evh67eefwbs85prdx"
+  },
+  "slug": "copilot-team-scaffold",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/copilot-team-scaffold",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=copilot-team-scaffold&ownerHandle=lrh07819",
+    "page_url": "https://clawhub.ai/lrh07819/skills/copilot-team-scaffold"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 656,
+    "installs": 16,
+    "stars": 4,
+    "versions": 2
+  },
+  "summary": "Initialize a multi-agent AI development framework for any project. Creates .github/ structure with agents, hooks, instructions, prompts, and planning-with-fi...",
+  "updated_at": 1778492781450,
+  "version": "1.0.1"
+}
