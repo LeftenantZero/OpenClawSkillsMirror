@@ -1,0 +1,57 @@
+{
+  "changelog": "Initial release of comfyui-safe-connector, a safe ComfyUI image generation runner.\n\n- Supports saving and managing multiple ComfyUI server profiles.\n- Accepts workflows as pasted JSON, uploaded files, stdin, or built-in templates.\n- Submits and polls workflow jobs, downloading all output images to a local directory.\n- Provides output file paths and browser view URLs in the result JSON.\n- Prioritizes safe handling by parsing JSON only and not interpolating shell input.",
+  "created_at": 1776936816721,
+  "display_name": "Openclaw Comfyui Api Runner",
+  "fetched_at": 1787816083175,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "comfy.sh",
+    "references/CONFIG.md",
+    "references/ENDPOINTS.md",
+    "scripts/comfy_client.py",
+    "scripts/parse_workflow.py",
+    "scripts/run.py",
+    "scripts/serve_generated.py",
+    "scripts/serve_status.py",
+    "skill-card.md",
+    "workflows/IL-Ikastrious.json",
+    "workflows/IL-Ikastrious.meta.json",
+    "workflows/api-zturbo.json",
+    "workflows/api-zturbo.meta.json",
+    "workflows/sdxl-simple.json",
+    "workflows/sdxl-simple.meta.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090522350,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Krzysztof",
+    "handle": "genortg",
+    "user_id": "s172yhaxa2mvn5n0h9mgjxszyd83r09e"
+  },
+  "slug": "openclaw-comfyui-api-runner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-comfyui-api-runner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-comfyui-api-runner&ownerHandle=genortg",
+    "page_url": "https://clawhub.ai/genortg/skills/openclaw-comfyui-api-runner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 811,
+    "installs": 21,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Safe ComfyUI image generation. Use saved or ad-hoc server profiles, paste/upload raw workflow JSON, submit, poll, and serve downloaded outputs locally.",
+  "updated_at": 1778492727109,
+  "version": "1.0.0"
+}
