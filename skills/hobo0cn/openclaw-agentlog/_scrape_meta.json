@@ -1,0 +1,51 @@
+{
+  "changelog": "- Merged agentlog-auto and openclaw-agent into a unified openclaw-agentlog skill for session evidence and trace lifecycle management.\n- Introduced auto-logging via OpenClaw Hooks for session events, reasoning, tool calls, and agent responses.\n- Added trace handoff features, including automated and manual claim/complete APIs for task transfers.\n- Supports automatic Git commit binding and enhanced session management (no manual session_id required).\n- Replaces and deprecates previous skills agentlog-auto and openclaw-agent.",
+  "created_at": 1775662882538,
+  "display_name": "openclaw-agentlog",
+  "fetched_at": 1787795974248,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "install.sh",
+    "openclaw.plugin.json",
+    "package-lock.json",
+    "package.json",
+    "patch_dist.py",
+    "scripts/postinstall.js",
+    "skill-card.md",
+    "src/index.ts",
+    "src/types/openclaw-sdk.d.ts"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090345796,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "hobo0cn",
+    "handle": "hobo0cn",
+    "user_id": "s17e7qjg4haxvn9474x9q8ekkx84ebqa"
+  },
+  "slug": "openclaw-agentlog",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-agentlog",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-agentlog&ownerHandle=hobo0cn",
+    "page_url": "https://clawhub.ai/hobo0cn/skills/openclaw-agentlog"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 551,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "OpenClaw Agent \u81ea\u52a8\u5b58\u8bc1\u4e0e Trace \u751f\u547d\u5468\u671f\u7ba1\u7406 Skill\u3002 \u63d0\u4f9b\u7ed9 OpenClaw Agent \u4f7f\u7528\uff0c\u5b9e\u73b0\uff1a 1. \u81ea\u52a8\u4f1a\u8bdd\u5b58\u8bc1 - \u901a\u8fc7 OpenClaw Hooks \u81ea\u52a8\u8bb0\u5f55 agent \u6d3b\u52a8 2. Trace \u751f\u547d\u5468\u671f - \u7ba1\u7406 trace \u7684\u521b\u5efa\u3001\u8ba4\u9886\u3001\u5b8c\u6210\u6d41\u7a0b When to a...",
+  "updated_at": 1779075674301,
+  "version": "1.1.2"
+}
