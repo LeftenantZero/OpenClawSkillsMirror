@@ -1,0 +1,63 @@
+{
+  "changelog": "Security fixes and work directory rename",
+  "created_at": 1770450538575,
+  "display_name": "Restart Guard",
+  "fetched_at": 1787805403320,
+  "files": [
+    "CHANGELOG.md",
+    "ENHANCED_RESTART_IMPLEMENTATION_SPEC.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.yaml",
+    "references/troubleshooting.md",
+    "scripts/auto_restart.py",
+    "scripts/discover_channels.py",
+    "scripts/guardian.py",
+    "scripts/notify.py",
+    "scripts/postcheck.py",
+    "scripts/restart.py",
+    "scripts/write_context.py",
+    "skill-card.md",
+    "templates/restart-context.md",
+    "tests/test_discover_channels.py",
+    "tests/test_guardian_delivery.py",
+    "tests/test_guardian_state_machine.py",
+    "tests/test_restart_origin_selection.py",
+    "tests/test_restart_runtime_helpers.py",
+    "tests/test_security_fixes.py",
+    "tests/test_write_context_parser.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783657399974,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zjianru",
+    "handle": "zjianru",
+    "user_id": "s1792j95fyjdr7cxz6r21mqk3n83y22d"
+  },
+  "slug": "restart-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/restart-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=restart-guard&ownerHandle=zjianru",
+    "page_url": "https://clawhub.ai/zjianru/skills/restart-guard"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 3102,
+    "installs": 106,
+    "stars": 4,
+    "versions": 7
+  },
+  "summary": "Deterministic OpenClaw gateway restart with down/up state-machine verification, origin-session proactive ACK, and backward-compatible config.",
+  "updated_at": 1778988818849,
+  "version": "2.2.0"
+}
