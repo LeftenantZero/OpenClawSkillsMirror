@@ -1,0 +1,46 @@
+{
+  "changelog": "scut-review-monitor 1.0.3\n\n- Added explicit trigger phrase examples for common user requests to check or monitor SCUT thesis blind-review status.\n- Improved documentation to recommend `check-once` for ordinary queries and clarify when to use monitoring.\n- Enhanced login flow: now automatically extracts QQ login QR codes from the page, saves them as PNG and data URL, and supports optional image upload.\n- Login now runs Playwright Chromium in headless mode.\n- Clarified behavior for expired QR codes: helper auto-refreshes and extracts new QR codes.\n- All other instructions, usage, and constraints remain unchanged.",
+  "created_at": 1776462614097,
+  "display_name": "scut-review-monitor",
+  "fetched_at": 1787795038749,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "portal_monitor.py",
+    "requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090486352,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u5c0f\u950b\u5b66\u957f\u751f\u6d3b\u5927\u7206\u70b8",
+    "handle": "songxf1024",
+    "user_id": "s170pn6fx2zfkbvmt45x2928e983g69p"
+  },
+  "slug": "scut-review-monitor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/scut-review-monitor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=scut-review-monitor&ownerHandle=songxf1024",
+    "page_url": "https://clawhub.ai/songxf1024/skills/scut-review-monitor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 625,
+    "installs": 15,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Check or monitor the SCUT thesis blind-review status page through the graduate portal and refresh cookies through a local Python helper.",
+  "updated_at": 1779075984083,
+  "version": "1.0.3"
+}
