@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release for generate-model-ready-test-cases-cn\n\n- Outputs standardized, model-ready automated test case suites in JSON for Codex.\n- Accepts multiple input materials (requirements, prototypes, API docs, user stories, defect reports, etc.) to synthesize executable test cases.\n- Enforces a strict JSON schema defined in `references/test-suite-schema.md`; only structured, machine-consumable output is produced by default.\n- Features robust assumptions, placeholder management, prioritization, and safety for high-risk scenarios.\n- Includes workflow for normalization, action selection (UI/API), coverage design, and self-validation before delivery.\n- Prioritizes concise, actionable, and stable test cases; avoids human-oriented artifacts unless explicitly requested.",
+  "created_at": 1775612997836,
+  "display_name": "\u6a21\u578b\u53ef\u6267\u884c\u6d4b\u8bd5\u7528\u4f8b\u751f\u6210\u5668",
+  "fetched_at": 1787828547891,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/test-design-playbook.md",
+    "references/test-suite-schema.md",
+    "scripts/validate_test_suite_json.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "DeathKnightOrg",
+    "handle": "deathknightorg",
+    "user_id": "s17e4fcgva0h7aayh7xf5kkrvx84etyw"
+  },
+  "slug": "generate-model-ready-test-cases-cn",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/generate-model-ready-test-cases-cn",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=generate-model-ready-test-cases-cn&ownerHandle=deathknightorg",
+    "page_url": "https://clawhub.ai/deathknightorg/skills/generate-model-ready-test-cases-cn"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 622,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u751f\u6210\u6807\u51c6\u5316 JSON \u6d4b\u8bd5\u7528\u4f8b\uff0c\u53ef\u76f4\u63a5\u4ea4\u7ed9\u6a21\u578b\u6267\u884c\u81ea\u52a8\u5316\u6d4b\u8bd5",
+  "updated_at": 1778492468374,
+  "version": "1.0.0"
+}
