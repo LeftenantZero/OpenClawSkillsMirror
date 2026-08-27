@@ -1,0 +1,50 @@
+{
+  "changelog": "**Changelog for swarm-executor v1.1.0**\n\n- Skill rebranded to \"swarm-coordinator\", public wording generalized.\n- Introduced modular coordinator architecture: agent management, negotiation, token budget, and swarm protocol modules.\n- Shifted from file/batch parallelization to a protocol-driven swarm command workflow (standardized commands, status schemas, ownership, and boundaries).\n- Added Redis/in-memory Pub/Sub support for multi-agent orchestration.\n- New safety controls: token-budget governance, negotiation rules, failure handling, fallback, and completion-state validation.\n- Includes validation checklists, execution workflow guide, and a test suite for coordination primitives.",
+  "created_at": 1776490228833,
+  "display_name": "swarm-executor",
+  "fetched_at": 1787819301694,
+  "files": [
+    ".pytest_cache/README.md",
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "coordinator/__init__.py",
+    "coordinator/agent_manager.py",
+    "coordinator/negotiation.py",
+    "coordinator/pubsub.py",
+    "coordinator/swarm_protocol.py",
+    "coordinator/token_budget.py",
+    "docker-compose.yml",
+    "requirements.txt",
+    "schemas/agent_status.json",
+    "schemas/swarm_command.json",
+    "skill-card.md",
+    "test-prompts.json",
+    "tests/test_pubsub.py",
+    "tests/test_swarm_protocol.py",
+    "tests/test_token_budget.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "xb19960921",
+    "handle": "xb19960921",
+    "user_id": "s172f3jjxf40vh438bf24d3cj983g86d"
+  },
+  "slug": "swarm-executor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/swarm-executor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=swarm-executor&ownerHandle=xb19960921",
+    "page_url": "https://clawhub.ai/xb19960921/skills/swarm-executor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 621,
+    "installs": 15,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Coordinate multi-agent swarm execution with a lightweight Pub/Sub protocol, standardized SwarmCommand messages, token-budget control, agent status tracking,...",
+  "updated_at": 1778492650907,
+  "version": "1.1.0"
+}
