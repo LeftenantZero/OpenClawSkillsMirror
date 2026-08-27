@@ -1,0 +1,55 @@
+{
+  "changelog": "- Initial release of the Polymarket data access layer, providing a unified interface for market and trader intelligence.\n- Features automatic MCP session handshake and prioritizes the PredicTradar MCP Server as the primary data source, with fallbacks to polymarket-cli and Polymarket Data API.\n- Exposes high-level tools for trader positions, detailed market data, trade history, leaderboards, and SQL-based analytics.\n- Documents full MCP tool catalog, table schemas for `trades` and `positions`, and example usage patterns.\n- Introduces convenience wrappers for key operations and details recommended environment variables.\n- Provides example and helper scripts for integration and data exploration.",
+  "created_at": 1775119665327,
+  "display_name": "polymarket-predictradar-data-layer-skills",
+  "fetched_at": 1787834540401,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/fallback-queries.md",
+    "references/table-schema.md",
+    "scripts/cache.js",
+    "scripts/daily-report.js",
+    "scripts/gamma-client.js",
+    "scripts/init.js",
+    "scripts/mcp-client.js",
+    "scripts/mcp-examples.js",
+    "scripts/proxy-config.js",
+    "scripts/queries.js",
+    "scripts/query.js",
+    "scripts/smartmoney.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090250479,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Yeri",
+    "handle": "cnica",
+    "user_id": "s1712b9wmz7y6nf4c7d7jz5wb1841xmq"
+  },
+  "slug": "polymarket-predictradar-data-layer-skills",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polymarket-predictradar-data-layer-skills",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polymarket-predictradar-data-layer-skills&ownerHandle=cnica",
+    "page_url": "https://clawhub.ai/cnica/skills/polymarket-predictradar-data-layer-skills"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 482,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Shared Polymarket and prediction-market data access layer. Use this skill whenever another skill or task needs trader positions, trade history, market metada...",
+  "updated_at": 1778492366643,
+  "version": "1.0.0"
+}
