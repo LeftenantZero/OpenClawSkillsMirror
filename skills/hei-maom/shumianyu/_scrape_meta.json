@@ -1,0 +1,35 @@
+{
+  "changelog": "- Initial release of the asr-written-rewriter-stream skill.\n- Accepts segmented ASR text streams and outputs a single, fluent written result only after receiving an explicit end signal.\n- Optionally translates the finalized written result when a target_language is provided.\n- Designed for post-processing meeting transcripts, interviews, podcasts, and similar scenarios\u2014optimized for whole-segment finalization over real-time subtitle needs.\n- Keeps interfaces abstract and compatible with any upstream ASR provider; not tied to any specific API or service.\n- Respects and applies domain lexicons for consistent handling of names, technical terms, and abbreviations.",
+  "created_at": 1773464411417,
+  "display_name": "shumianyu",
+  "fetched_at": 1787874580709,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/interface-guide-zh.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "HeiMaoM",
+    "handle": "hei-maom",
+    "user_id": "s179rsrtms4ea8wvxt0ezrn0ad885j3r"
+  },
+  "slug": "shumianyu",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/shumianyu",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=shumianyu&ownerHandle=hei-maom",
+    "page_url": "https://clawhub.ai/hei-maom/skills/shumianyu"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 759,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06\u5206\u6bb5 asr \u6587\u672c\u6d41\u5728\u7ed3\u675f\u65f6\u7edf\u4e00\u6574\u7406\u6210\u6d41\u7545\u4e66\u9762\u8bed\uff0c\u5e76\u5728\u7528\u6237\u6307\u5b9a target_language \u65f6\u8f93\u51fa\u8bd1\u6587\u3002\u9002\u7528\u4e8e\u8bed\u97f3\u542c\u5199\u3001\u4f1a\u8bae\u8f6c\u5199\u3001\u91c7\u8bbf\u6574\u7406\u3001\u64ad\u5ba2\u6216\u89c6\u9891\u5b57\u5e55\u540e\u5904\u7406\u7b49\u573a\u666f\uff0c\u5c24\u5176\u9002\u5408\u4e0d\u9700\u8981\u5b9e\u65f6\u5b57\u5e55\u3001\u53ea\u9700\u8981\u5728\u6574\u6bb5\u7ed3\u675f\u540e\u5f97\u5230\u6700\u7ec8\u4e66\u9762\u7ed3\u679c\u7684\u4efb\u52a1\u3002\u4fdd\u6301\u63a5\u53e3\u62bd\u8c61\u3001\u53ef\u66ff\u6362\uff0c\u4e0d\u7ed1\u5b9a\u4efb\u4f55\u7279\u5b9a\u5382\u5546 api\u3002",
+  "updated_at": 1778491898098,
+  "version": "1.0.0"
+}
