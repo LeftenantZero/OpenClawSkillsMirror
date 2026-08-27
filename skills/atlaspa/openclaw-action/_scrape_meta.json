@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of openclaw-action: automated security scanning GitHub Action.\n\n- Scans agent workspaces for exposed secrets, injection, and data exfiltration patterns on PRs and commits.\n- Detects API keys, tokens, credentials, prompt/shell injections, and suspicious network calls using sentry, bastion, and egress scanners.\n- Provides configurable inputs for scan scope and failure conditions (`fail-on-findings`).\n- Outputs finding counts and critical issue flags for CI integration.\n- Action is alert-only\u2014does not modify code or files.",
+  "created_at": 1770891968038,
+  "display_name": "Openclaw Action",
+  "fetched_at": 1787792704811,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "action.yml",
+    "scripts/scan.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779972468614,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "AtlasPA",
+    "handle": "atlaspa",
+    "user_id": "s17cbdkg4hkk4m581rvtwd7t5x885p6e"
+  },
+  "slug": "openclaw-action",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-action",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-action&ownerHandle=atlaspa",
+    "page_url": "https://clawhub.ai/atlaspa/skills/openclaw-action"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1442,
+    "installs": 46,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "GitHub Action for automated security scanning of agent workspaces. Detects exposed secrets, prompt/shell injection, and data exfiltration patterns in PRs and commits.",
+  "updated_at": 1779076829523,
+  "version": "1.0.0"
+}
