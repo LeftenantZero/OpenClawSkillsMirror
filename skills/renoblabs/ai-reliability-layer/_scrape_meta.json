@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of AI Reliability Layer micro-services\n\n- Three pay-per-call endpoints: /fix-json, /validate-output, /generate-structured\n- /fix-json: Automatically corrects malformed JSON from LLMs (e.g., trailing commas, missing brackets)\n- /validate-output: Checks AI output for length, format, schema compliance, and blocked patterns\n- /generate-structured: Produces valid, typed JSON responses from prompts using any custom schema\n- All services require no API keys or subscriptions; payments handled via the x402 protocol (USDC on Base)\n- Part of Reno Labs\u2019 AEA Arena service fleet",
+  "created_at": 1775889728975,
+  "display_name": "AI Reliability Layer",
+  "fetched_at": 1787825458207,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "renoblabs",
+    "handle": "renoblabs",
+    "user_id": "s171c0pbnstpzzy52rsh3jvfp584eazr"
+  },
+  "slug": "ai-reliability-layer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-reliability-layer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-reliability-layer&ownerHandle=renoblabs",
+    "page_url": "https://clawhub.ai/renoblabs/skills/ai-reliability-layer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 587,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fix broken LLM output, validate AI responses, generate guaranteed structured JSON. Three micro-services for making AI output reliable. Use when LLM output is...",
+  "updated_at": 1778492525637,
+  "version": "1.0.0"
+}
