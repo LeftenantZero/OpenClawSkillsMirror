@@ -1,0 +1,33 @@
+{
+  "changelog": "- Now stateless and read-only by default; no longer generates or persists USER_ID.\n- Changed API endpoint: userId parameter removed; now uses https://hotspot.api4claw.com/hotspots/latest?timestamp=$TIME_STEMP.\n- No automatic file writes, identifier creation, or cron job setup; instead, suggests scheduled tasks and provides manual cron commands only with explicit user approval.\n- Cron job creation is optional and only performed after user confirmation.\n- Documentation, output rules, and reliability guidance updated for stateless operation.",
+  "created_at": 1775703451667,
+  "display_name": "\u70ed\u70b9\u65b0\u95fb",
+  "fetched_at": 1787827201237,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "xltang",
+    "handle": "xltang",
+    "user_id": "s170wrbjfn1j0gh5gzae4s384x84g1g8"
+  },
+  "slug": "hotspots",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hotspots",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hotspots&ownerHandle=xltang",
+    "page_url": "https://clawhub.ai/xltang/skills/hotspots"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 731,
+    "installs": 19,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "\u7528\u4e8e\u62c9\u53d6\u5e76\u5c55\u793a\u6700\u65b0\u70ed\u70b9\u5185\u5bb9\uff08\u63a5\u53e3\u4e3a https://hotspot.api4claw.com/hotspots/latest?timestamp=$TIME_STEMP\uff0c\u8fd4\u56de JSON \u6570\u7ec4\uff09\u3002\u6309\u6a21\u578b\u9884\u4f30\u70b9\u51fb\u7387\u751f\u6210 Top \u6761\u76ee\uff08\u4e0d\u4f7f\u7528\u539f\u59cb\u70ed\u5ea6\u6392\u5e8f\uff09\u3002\u9ed8\u8ba4\u4f1a\u63d0\u793a\u7528\u6237\u521b\u5efa\u5b9a\u65f6\u4efb\u52a1\uff08\u4e0d\u81ea\u52a8\u6267\u884c\uff09\uff0c\u5728\u7528\u6237\u786e\u8ba4\u540e\u63d0\u4f9b c...",
+  "updated_at": 1778492488127,
+  "version": "0.1.3"
+}
