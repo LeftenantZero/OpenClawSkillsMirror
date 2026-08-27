@@ -1,0 +1,56 @@
+{
+  "changelog": "Initial release of ecommerce-email-quote skill:\n\n- Automates fetching and processing of customer inquiry emails via IMAP.\n- Detects and translates email languages, storing both original and translated content.\n- Archives raw emails, parsed text, translations, and generated quotation drafts locally.\n- Generates structured quotation replies using configurable product and pricing rules.\n- Features flexible configuration for email, translation, storage, and pricing settings.",
+  "created_at": 1776064026887,
+  "display_name": "medal-email-quote",
+  "fetched_at": 1787823921393,
+  "files": [
+    "README.md",
+    "README_zh.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/config.py",
+    "data/README.md",
+    "data/example/pricing_rules_example.md",
+    "references/email_template.html",
+    "requirements.txt",
+    "scripts/__init__.py",
+    "scripts/email_check.py",
+    "scripts/email_daemon.py",
+    "scripts/email_utils.py",
+    "scripts/quote_calculator.py",
+    "scripts/translator.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090404963,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fank",
+    "handle": "fankcoder",
+    "user_id": "s1713x6mpstmmd6g6e4by7qqb984svd8"
+  },
+  "slug": "auto-quote-mailer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/auto-quote-mailer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=auto-quote-mailer&ownerHandle=fankcoder",
+    "page_url": "https://clawhub.ai/fankcoder/skills/auto-quote-mailer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 526,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "General-purpose ecommerce inquiry email automation skill. Periodically fetches customer inquiry emails, detects and translates languages, stores email data l...",
+  "updated_at": 1778492561009,
+  "version": "1.0.0"
+}
