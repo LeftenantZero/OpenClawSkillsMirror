@@ -1,0 +1,57 @@
+{
+  "changelog": "Initial release of clawcast-wallet: an interactive skill for managing EVM wallets and transactions with cast.\n\n- Guides users step-by-step through wallet onboarding, including creation/import, encryption, network, and token setup, all driven by user-supplied inputs.\n- Automatically checks for an existing wallet and shows address, network, and balance at session start.\n- Provides scripts for wallet health checks, network status, and safe wallet removal.\n- Logs transaction mentions for later reference in a dedicated log file.\n- Shares direct explorer URLs for manual transaction review when API access is unavailable.\n- Focuses on clarity and ease of use, avoiding technical jargon unless requested.",
+  "created_at": 1770314637413,
+  "display_name": "Clawcast - Cast Ethereum Wallet for Agents",
+  "fetched_at": 1787792837989,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/evm-network-tokens.json",
+    "assets/evm-networks.json",
+    "scripts/00_lib.sh",
+    "scripts/01_install_cast.sh",
+    "scripts/02_wallet.sh",
+    "scripts/03_password.sh",
+    "scripts/04_network.sh",
+    "scripts/05_tokens.sh",
+    "scripts/06_finish.sh",
+    "scripts/check_wallet.sh",
+    "scripts/remove_wallet.sh",
+    "scripts/run.sh",
+    "scripts/show_network.sh",
+    "scripts/state.env",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783658086364,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "te_za",
+    "handle": "tezatezaz",
+    "user_id": "s175jdv04s9d22s190s8qsxwz1855fec"
+  },
+  "slug": "clawcast-wallet",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawcast-wallet",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawcast-wallet&ownerHandle=tezatezaz",
+    "page_url": "https://clawhub.ai/tezatezaz/skills/clawcast-wallet"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2141,
+    "installs": 70,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Skill for managing EVM wallets, transactions, and network helpers via cast; covers onboarding, checks, and operating procedures.",
+  "updated_at": 1779076785121,
+  "version": "1.0.0"
+}
