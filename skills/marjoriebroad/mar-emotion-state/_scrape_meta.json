@@ -1,0 +1,45 @@
+{
+  "changelog": "- Initial release of Emotion State skill for OpenClaw.\n- Tracks user and agent emotions as natural-language phrases and persists per-user state.\n- Injects current emotion state and a trend line into the system prompt via a workspace hook.\n- Provides simple installation and configuration steps, including environment variables for customizing hook behavior.\n- Utilizes SkillBoss API Hub for automatic LLM-based emotion detection.\n- Ensures privacy by storing only inferred emotion summaries, not raw user text.",
+  "created_at": 1777009623465,
+  "display_name": "mar-emotion-state",
+  "fetched_at": 1787815600289,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "hooks/emotion-state/HOOK.md",
+    "hooks/emotion-state/handler.ts",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090536878,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "MarjorieBroad",
+    "handle": "marjoriebroad",
+    "user_id": "s17evr8hna69xbf4mv5z0nppgx84m26f"
+  },
+  "slug": "mar-emotion-state",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mar-emotion-state",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mar-emotion-state&ownerHandle=marjoriebroad",
+    "page_url": "https://clawhub.ai/marjoriebroad/skills/mar-emotion-state"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 536,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "NL emotion tracking + prompt injection via OpenClaw hook",
+  "updated_at": 1778492733744,
+  "version": "1.0.0"
+}
