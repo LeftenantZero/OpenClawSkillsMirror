@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of Risk Sentiment Scanner:\n\n- Supports batch scanning of enterprises for public sentiment and credit risk, triggered by direct input, file upload, or scheduled tasks.\n- Crawls up-to-date news, regulatory, and financial information from prioritized Chinese media sources.\n- Extracts relevant report content and summarizes enterprise risk factors with LLM-driven risk scoring (R1\u2013R4) and structured JSON output.\n- Generates aggregated and company-level risk reports, output to chat, file, or Feishu document as needed.\n- Automated high-risk (R4) alerts with actionable recommendations.\n- Includes tools for managing and updating enterprise monitoring lists.",
+  "created_at": 1773902616060,
+  "display_name": "risk-sentiment-scanner",
+  "fetched_at": 1787863709842,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/scan.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779971192270,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yukirang",
+    "handle": "yukirang",
+    "user_id": "s17ebzz3039ghna5c35head9w183jkz5"
+  },
+  "slug": "risk-sentiment-scanner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/risk-sentiment-scanner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=risk-sentiment-scanner&ownerHandle=yukirang",
+    "page_url": "https://clawhub.ai/yukirang/skills/risk-sentiment-scanner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 904,
+    "installs": 27,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "\u4f01\u4e1a\u8206\u60c5\u4fe1\u7528\u98ce\u9669\u626b\u63cf\u3002\u5f53\u7528\u6237\u63d0\u4f9b\u4f01\u4e1a\u540d\u79f0\u5217\u8868\u65f6\uff0c\u81ea\u52a8\u6293\u53d6\u5404\u4f01\u4e1a\u6700\u65b0\u516c\u5f00\u8206\u60c5\uff08\u65b0\u95fb\u3001\u516c\u544a\u3001\u76d1\u7ba1\u4fe1\u606f\uff09\uff0c\u7ed3\u5408\u98ce\u9669\u8bc4\u5206\u6a21\u578b\u8f93\u51fa\u7ed3\u6784\u5316\u4fe1\u7528\u98ce\u9669\u62a5\u544a\u3002\u89e6\u53d1\u573a\u666f\uff1a\uff081\uff09\u7528\u6237\u8bf4\"\u626b\u63cf\u98ce\u9669\"\u3001\"\u8206\u60c5\u5206\u6790\"\u3001\"\u4fe1\u7528\u98ce\u9669\u8bc4\u7ea7\"\uff1b\uff082\uff09\u7528\u6237\u63d0\u4f9b\u4e86\u4e00\u4efd\u4f01\u4e1a\u540d\u5355\u9700\u8981\u6279\u91cf\u8bc4\u4f30\uff1b\uff083\uff09\u7528\u6237\u4e0a\u4f20\u542b\u4f01\u4e1a\u540d\u79f0\u7684CSV/TXT\u6587\u4ef6\uff1b\uff084\uff09\u5b9a\u671f\u590d\u68c0\u63d0\u9192...",
+  "updated_at": 1778492026162,
+  "version": "1.0.0"
+}
