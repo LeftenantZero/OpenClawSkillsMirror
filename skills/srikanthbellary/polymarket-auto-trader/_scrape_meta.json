@@ -1,0 +1,49 @@
+{
+  "changelog": "Fix: added required env vars (PRIVATE_KEY, LLM_API_KEY) to metadata, pinned dependency versions, added security considerations section and homepage URL",
+  "created_at": 1770846640608,
+  "display_name": "Polymarket Auto-Trader",
+  "fetched_at": 1787792511074,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/contract-addresses.md",
+    "references/polymarket-api.md",
+    "scripts/approve_contracts.py",
+    "scripts/pnl_tracker.py",
+    "scripts/run_trade.py",
+    "scripts/setup_vps.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779971369207,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "srikanthbellary",
+    "handle": "srikanthbellary",
+    "user_id": "s172q2qa53rk9j8ypgw49xp8js884fyt"
+  },
+  "slug": "polymarket-auto-trader",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polymarket-auto-trader",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polymarket-auto-trader&ownerHandle=srikanthbellary",
+    "page_url": "https://clawhub.ai/srikanthbellary/skills/polymarket-auto-trader"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3683,
+    "installs": 126,
+    "stars": 10,
+    "versions": 2
+  },
+  "summary": "Autonomous Polymarket prediction market trading agent. Scans markets, evaluates probabilities with LLM, sizes positions with Kelly criterion, and executes trades via CLOB API. Use when user wants to trade on Polymarket, set up automated prediction market trading, or build a trading bot. Supports cron-based autonomous operation, P&L tracking, and budget management.",
+  "updated_at": 1779076899199,
+  "version": "1.0.1"
+}
