@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release \u2014 scans and audits hardcoded API keys and credentials in the skills directory, with optional migration to central config.\n\n- Scans all files in ~/.openclaw/workspace/skills for hardcoded API keys, tokens, and secrets.\n- Reports integration status: integrated in openclaw.json, managed by mcporter, or not yet integrated.\n- Supports read-only audit and --fix mode for automatic migration of unregistered credentials to openclaw.json env.vars.\n- Skips sample values and mcporter-managed keys to avoid false positives.\n- Clear instructions provided for manual replacement and integration workflow.",
+  "created_at": 1773913057232,
+  "display_name": "api-key-auditor",
+  "fetched_at": 1787863226261,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/audit.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089977292,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "lemonGGGit",
+    "handle": "lemongggit",
+    "user_id": "s17774rb2327c6ahsyntwfvwgh83hjjj"
+  },
+  "slug": "api-key-auditor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/api-key-auditor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=api-key-auditor&ownerHandle=lemongggit",
+    "page_url": "https://clawhub.ai/lemongggit/skills/api-key-auditor"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 753,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u626b\u63cf ~/.openclaw/workspace/skills \u76ee\u5f55\u4e0b\u6240\u6709\u6587\u4ef6\u4e2d\u7684\u786c\u7f16\u7801 API Key\u3001Token\u3001Secret\uff0c\u68c0\u67e5\u662f\u5426\u5df2\u96c6\u6210\u5230 openclaw.json env.vars\uff0c\u5e76\u53ef\u81ea\u52a8\u5c06\u672a\u96c6\u6210\u7684\u51ed\u8bc1\u8fc1\u79fb\u8fdb\u53bb\u3002Use when user asks to audit/check/scan for...",
+  "updated_at": 1778492029687,
+  "version": "1.0.0"
+}
