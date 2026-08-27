@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of daily-poster skill.\n\n- Generate \"\u6478\u9c7c\u65e5\u62a5\" and \"\u767e\u5ea6\u70ed\u70b9/\u70ed\u641c\" posters from minimal JSON with Python, outputting SVG and optional PNG/JPG/JPEG/WEBP.\n- Automatically maps user words in Chinese to poster type and infers export requirements (e.g., image format) from prompts.\n- Provides clear JSON templates and output format recommendations for mainstream image types, with sensible defaults for scale, quality, and background.\n- All input/output and usage examples included for both poster variants, covering minimal and multi-format outputs.\n- Built-in rules ensure only intended fields are customizable, with consistent output via unified scripts.",
+  "created_at": 1773233220991,
+  "display_name": "\u6478\u9c7c\u65e5\u62a5\u548c\u767e\u5ea6\u70ed\u641c\u7b49\u56fe\u7247\u751f\u6210\uff0c\u6301\u7eed\u5347\u7ea7\u4e2d",
+  "fetched_at": 1787799499971,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/baidu-hot-spec.json",
+    "references/daily-poster-spec.json",
+    "references/holiday-countdown-2026.json",
+    "references/input-schema.md",
+    "requirements.txt",
+    "scripts/generate_holiday_countdown.py",
+    "scripts/holiday_countdown.py",
+    "scripts/lunar_calendar.py",
+    "scripts/poster_runtime.py",
+    "scripts/render_baidu_hot.py",
+    "scripts/render_daily_poster.py",
+    "scripts/render_poster.py",
+    "scripts/svg_image_converter.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u9752\u8863\u5927\u9b54\u738b",
+    "handle": "321704933",
+    "user_id": "s17d3c3ryafymb2dpprdf65pad885cpm"
+  },
+  "slug": "daily-poster",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/daily-poster",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=daily-poster&ownerHandle=321704933",
+    "page_url": "https://clawhub.ai/321704933/skills/daily-poster"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1126,
+    "installs": 32,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Generate \"\u6478\u9c7c\u65e5\u62a5\" or \"\u767e\u5ea6\u70ed\u641c\" posters from minimal JSON input, output SVG by default with optional PNG/JPG/WEBP export formats.",
+  "updated_at": 1778997918690,
+  "version": "1.0.0"
+}
