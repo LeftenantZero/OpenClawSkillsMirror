@@ -1,0 +1,74 @@
+{
+  "changelog": "Visible Text Extractor 1.0.0 \u2013 Initial release\n\n- Initial public release with support for webpage, article, screenshot, long image, GIF, and image directory text extraction.\n- Adds dedicated scripts for WeChat article order reconstruction, high-accuracy OCR, and multi-stage cleanup.\n- Introduces specialized pipelines for clean, human-readable output (markdown/Word/JSON).\n- Provides workflow and reference documentation for usage, publishing, and release notes.\n- Includes multiple extraction and deliverable pipelines, especially tailored for WeChat articles and complex, image-heavy sources.",
+  "created_at": 1774339679370,
+  "display_name": "Visible Text Extractor",
+  "fetched_at": 1787852121480,
+  "files": [
+    "SKILL.md",
+    "USAGE.md",
+    "_meta.json",
+    "references/deliverable-workflow.md",
+    "references/generalization-plan.md",
+    "references/output-schema.md",
+    "references/product-positioning.md",
+    "references/publish-checklist.md",
+    "references/release-notes-1.0.0.md",
+    "references/troubleshooting.md",
+    "references/universal-article-extractor-spec.md",
+    "scripts/build_authorized_capture_docx.py",
+    "scripts/build_deliverable_docx.js",
+    "scripts/build_fulltext_transcript.py",
+    "scripts/build_reading_order_from_raw.py",
+    "scripts/build_reading_order_transcript.py",
+    "scripts/build_transcript_docx.js",
+    "scripts/build_wechat_image_enhanced_docx.py",
+    "scripts/build_wechat_image_two_pass_docx.py",
+    "scripts/build_wechat_interleaved_docx.py",
+    "scripts/build_wechat_interleaved_polished_docx.py",
+    "scripts/build_wechat_ordered_better_docx.py",
+    "scripts/build_wechat_ordered_clean_docx.py",
+    "scripts/build_wechat_ordered_precise_docx.py",
+    "scripts/extract_gif_frames.sh",
+    "scripts/extract_visible_text.py",
+    "scripts/extract_visible_text_deliverable.py",
+    "scripts/extract_visible_text_reading_order_deliverable.py",
+    "scripts/extract_visible_text_transcript_deliverable.py",
+    "scripts/extract_with_browser.js",
+    "scripts/ocr_high_accuracy.py",
+    "scripts/ocr_image_variants.py",
+    "scripts/postprocess_ocr_text.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090157279,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wunianze666-netizen",
+    "handle": "wunianze666-netizen",
+    "user_id": "s1757jqm8fsar1gjw9z1az50zx83ge2y"
+  },
+  "slug": "visible-text-extractor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/visible-text-extractor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=visible-text-extractor&ownerHandle=wunianze666-netizen",
+    "page_url": "https://clawhub.ai/wunianze666-netizen/skills/visible-text-extractor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 638,
+    "installs": 15,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Extract and reconstruct as much visible text as possible from webpage URLs, article pages, screenshots, long images, image directories, and GIFs. Use when th...",
+  "updated_at": 1778492151351,
+  "version": "1.2.0"
+}
