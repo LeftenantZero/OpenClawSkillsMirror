@@ -1,0 +1,35 @@
+{
+  "changelog": "v1.6.0: telemetry & per-wave timeline integration. Hooks gstack-orchestrate into the existing gstack telemetry/timeline infrastructure. Per-wave events (wave_dispatched, wave_completed) plus skill-level start/end. State.jsonl checkpoints enriched with duration_s, task_count, success/failed/fixup counts (additive \u2014 backward compatible with pre-1.6 resume). Hardened through 3 rounds of codex adversarial review.",
+  "created_at": 1778176084290,
+  "display_name": "Gstack Orchestrate",
+  "fetched_at": 1787809407702,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "metadata.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Kai Cianflone",
+    "handle": "kaicianflone",
+    "user_id": "s173yh69sk2g7jzav29e74412s83qaga"
+  },
+  "slug": "gstack-orchestrate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gstack-orchestrate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gstack-orchestrate&ownerHandle=kaicianflone",
+    "page_url": "https://clawhub.ai/kaicianflone/skills/gstack-orchestrate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 689,
+    "installs": 15,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Master orchestration skill that takes a gstack implementation plan and ships it via parallel Claude Code subagents in isolated git worktrees. Sits between /a...",
+  "updated_at": 1778492872010,
+  "version": "1.6.0"
+}
