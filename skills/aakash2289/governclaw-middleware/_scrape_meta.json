@@ -1,0 +1,44 @@
+{
+  "changelog": "GovernClaw Middleware 1.0.0 \u2013 initial release\n\n- Introduces governed wrappers for sensitive operations, starting with governedHttp (HTTP requests with policy checks).\n- Mediates HTTP requests through the GovernClaw policy engine, blocking or allowing each request.\n- Provides clear error signaling and standardized block reasons in responses.\n- Configuration via GOVERNCLAW_URL environment variable or openclaw.json.\n- Automatically forwards session context and agent identification with each request for governance.",
+  "created_at": 1774047293518,
+  "display_name": "GovernClaw Policy Enforcer",
+  "fetched_at": 1787859870322,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "index.ts",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090011835,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "aakash2289",
+    "handle": "aakash2289",
+    "user_id": "s17cb4fq6czbx3w2rnnmgdhc3186mksn"
+  },
+  "slug": "governclaw-middleware",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/governclaw-middleware",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=governclaw-middleware&ownerHandle=aakash2289",
+    "page_url": "https://clawhub.ai/aakash2289/skills/governclaw-middleware"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 631,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Governance middleware for OpenClaw agents. Wraps HTTP, shell, file, and browser actions with policy checks via GovernClaw before execution. Required tools -...",
+  "updated_at": 1778492072793,
+  "version": "1.0.0"
+}
