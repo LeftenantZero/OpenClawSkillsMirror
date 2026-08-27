@@ -1,0 +1,49 @@
+{
+  "changelog": "**Summary:**  \nThis release formalizes environment variables and credential handling, adds a machine-readable manifest, and aligns documentation to the manifest model.\n\n- Added manifest.yaml for machine-readable skill metadata and environment declarations.\n- Deprecated SKILL.md-specific credential/environment documentation in favor of single-source manifest.yaml.\n- Updated environment variable names to CHANJING_OPENAPI_CREDENTIALS_DIR and CHANJING_OPENAPI_BASE_URL (legacy names still accepted for backward compatibility).\n- Clarified in documentation that all credential, permission, and agentPolicy details are defined in manifest.yaml.\n- No changes to core script logic; scripts/_auth.py and scripts/_task_api.py are unchanged in function.\n- ffmpeg/ffprobe requirements remain unchanged (not required).",
+  "created_at": 1773883153860,
+  "display_name": "Chanjing Text To Digital Person",
+  "fetched_at": 1787864363468,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "examples.md",
+    "manifest.yaml",
+    "reference.md",
+    "scripts/_auth.py",
+    "scripts/_task_api.py",
+    "scripts/create_lora_task.py",
+    "scripts/create_motion_task.py",
+    "scripts/create_photo_task.py",
+    "scripts/download_result.py",
+    "scripts/get_lora_task.py",
+    "scripts/get_motion_task.py",
+    "scripts/get_photo_task.py",
+    "scripts/list_tasks.py",
+    "scripts/poll_lora_task.py",
+    "scripts/poll_motion_task.py",
+    "scripts/poll_photo_task.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "BinKes",
+    "handle": "binkes",
+    "user_id": "s17dzfw0aahqzz6dr91bzpma4h83gh5n"
+  },
+  "slug": "chanjing-text-to-digital-person",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/chanjing-text-to-digital-person",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=chanjing-text-to-digital-person&ownerHandle=binkes",
+    "page_url": "https://clawhub.ai/binkes/skills/chanjing-text-to-digital-person"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 856,
+    "installs": 23,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Use Chanjing text-to-digital-person APIs for AI portraits, talking videos, optional LoRA training, polling, and explicit downloads when requested.",
+  "updated_at": 1778492018600,
+  "version": "1.0.6"
+}
