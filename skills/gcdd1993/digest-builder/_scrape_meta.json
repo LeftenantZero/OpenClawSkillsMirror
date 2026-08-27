@@ -1,0 +1,40 @@
+{
+  "changelog": "- Initial release of digest-builder.\n- Aggregates FreshRSS unread feed items via Google Reader API and processes them through de-duplication, event clustering, noise filtering, content validation, summary generation, and preliminary sorting.\n- Ensures strict deduplication across URL, event, and summary levels, focusing on information gain and source reliability.\n- Outputs results in both JSON and Markdown formats, with summaries and required metadata such as tags and sorting rationale.\n- Designed for structured, clean candidate pool creation\u2014intended as a preprocessing step, not final daily digests.\n- Enforces clear handling of incomplete or inaccessible content and emphasizes transparent output formatting and configuration checks.",
+  "created_at": 1774782568093,
+  "display_name": "Digest Builder",
+  "fetched_at": 1787841470162,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/digest-spec.md",
+    "references/freshrss-google-reader.md",
+    "scripts/build_digest.py",
+    "scripts/fetch_freshrss_unread.py",
+    "scripts/freshrss.config.example.json",
+    "scripts/mark_freshrss_read.py",
+    "scripts/slice_freshrss_by_date.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u963f\u6668\u804a\u6280\u672f",
+    "handle": "gcdd1993",
+    "user_id": "s171sbbekcsr07shhkant5dyf583v0q1"
+  },
+  "slug": "digest-builder",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/digest-builder",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=digest-builder&ownerHandle=gcdd1993",
+    "page_url": "https://clawhub.ai/gcdd1993/skills/digest-builder"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 526,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06\u805a\u5408\u6c60\u4e2d\u7684\u539f\u59cb\u5019\u9009\u5185\u5bb9\u8f6c\u6362\u4e3a\u53ef\u5224\u65ad\u7684 Digest\uff1a\u4f18\u5148\u4ece FreshRSS \u7684\u672a\u8bfb\u5217\u8868\u7ecf Google Reader API \u62c9\u53d6\u5019\u9009\uff0c\u518d\u6267\u884c URL \u53bb\u91cd\u3001\u76f8\u4f3c\u4e8b\u4ef6\u805a\u7c7b\u3001\u6b63\u6587\u6293\u53d6\u68c0\u67e5\u3001\u566a\u97f3\u8fc7\u6ee4\u3001\u6458\u8981\u751f\u6210\u4e0e\u521d\u6b65\u6392\u5e8f\u3002\u7528\u4e8e\u9700\u8981\u628a\u4e00\u6279\u539f\u59cb feed \u6761\u76ee\u6216 FreshRSS \u672a\u8bfb\u6761\u76ee\u6574\u7406\u6210\u7ed3\u6784\u5316\u5019\u9009\u6587\u6863\u7684\u573a\u666f\u3002",
+  "updated_at": 1778492275298,
+  "version": "1.0.0"
+}
