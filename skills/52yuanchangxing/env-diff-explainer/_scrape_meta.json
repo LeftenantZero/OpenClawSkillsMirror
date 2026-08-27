@@ -1,0 +1,41 @@
+{
+  "changelog": "Initial release of env-diff-explainer.\n\n- Compares configuration differences between dev, staging, and prod environments.\n- Translates technical configuration differences into business risk explanations.\n- Outputs include: difference summary, high-risk differences, potential business impact, recommended alignments, acceptable differences, and verification steps.\n- Explicitly avoids outputting sensitive keys or directly overwriting configs; only review/dry-run suggestions are provided for high-risk actions.\n- Prioritizes structured, reviewable results and highlights unresolved or risky areas.\n- Supports both local script execution (via python3) and static file-based workflows.",
+  "created_at": 1773711452102,
+  "display_name": "Env Diff Explainer",
+  "fetched_at": 1787869372408,
+  "files": [
+    "README.md",
+    "SELF_CHECK.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/example-input.md",
+    "examples/example-output.md",
+    "resources/spec.json",
+    "resources/template.md",
+    "scripts/run.py",
+    "skill-card.md",
+    "tests/smoke-test.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "vx\uff1a17605205782",
+    "handle": "52yuanchangxing",
+    "user_id": "s178sqjkywrs4vbnfcrr7wx7f583gef5"
+  },
+  "slug": "env-diff-explainer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/env-diff-explainer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=env-diff-explainer&ownerHandle=52yuanchangxing",
+    "page_url": "https://clawhub.ai/52yuanchangxing/skills/env-diff-explainer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 748,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6bd4\u8f83 dev/staging/prod \u914d\u7f6e\u5dee\u5f02\uff0c\u5e76\u628a\u6280\u672f\u5dee\u5f02\u7ffb\u8bd1\u6210\u4e1a\u52a1\u98ce\u9669\u3002\uff1buse for env, config, diff workflows\uff1bdo not use for \u8f93\u51fa\u654f\u611f\u5bc6\u94a5\u503c, \u76f4\u63a5\u8986\u76d6\u914d\u7f6e.",
+  "updated_at": 1778491961785,
+  "version": "1.0.0"
+}
