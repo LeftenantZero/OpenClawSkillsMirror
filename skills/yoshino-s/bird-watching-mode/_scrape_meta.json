@@ -1,0 +1,45 @@
+{
+  "changelog": "bird-watching-mode 1.0.0\n\n- Initial release: enables a complete workflow for logging bird sightings.\n- Prompts user for location on enable and resolves the eBird region via superpicky-cli.\n- Stores region and observation data in workspace/bird.json using absolute paths.\n- Allows recording sightings via text entry or BirdID-based photo identification.\n- Exports sighting summaries or detailed CSV reports on request.\n- Requires all script, workspace, and file arguments to be passed as absolute paths for reliable operation.",
+  "created_at": 1774433037269,
+  "display_name": "Bird Watching Mode",
+  "fetched_at": 1787849144166,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/append_sighting.py",
+    "scripts/append_sighting_test.py",
+    "scripts/bird_json_util.py",
+    "scripts/bird_json_util_test.py",
+    "scripts/bird_log_schema.md",
+    "scripts/export_csv.py",
+    "scripts/export_csv_test.py",
+    "scripts/identify_photo.py",
+    "scripts/identify_photo_test.py",
+    "scripts/run_tests.sh",
+    "scripts/set_region.py",
+    "scripts/set_region_test.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "yoshino-s",
+    "handle": "yoshino-s",
+    "user_id": "s176tahf2fpvg7aass1txah18183jkmn"
+  },
+  "slug": "bird-watching-mode",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bird-watching-mode",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bird-watching-mode&ownerHandle=yoshino-s",
+    "page_url": "https://clawhub.ai/yoshino-s/skills/bird-watching-mode"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 614,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Bird-watching log workflow: ask for place on enable, resolve eBird region via superpicky-cli region-query, persist to workspace/bird.json; record sightings (...",
+  "updated_at": 1778492183196,
+  "version": "1.0.0"
+}
