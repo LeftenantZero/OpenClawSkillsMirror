@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of defi-sniper: orchestrated, high-speed token-launch detection and risk-evaluated entry workflow across Solana and Base.\n\n- Coordinates minara, torchmarket, and torchliquidationbot for launch detection, on-chain/state risk triage, and bounded rule-based execution.\n- Distinct chain-aware architecture: full stack for Solana, constrained for Base (no torch primitives).\n- Requires preflight checks (chain, funding, risk limits, mode); halts if unconfigured.\n- Social confirmation uses external search; not bundled within these skills.\n- Strict guardrails enforce bounded entry, slippage limits, and never act on hype alone.\n- Supports observe, paper, and live operational modes, with comprehensive output/audit contract.\n- Known limitations: no mempool scanner, no binary rug/honeypot verdict, torchliquidationbot is liquidation-focused, and social checks external to stack.",
+  "created_at": 1771077622807,
+  "display_name": "Defi Sniper",
+  "fetched_at": 1787792188849,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/inspected-skills.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966770231,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Hagen Hoferichter",
+    "handle": "h4gen",
+    "user_id": "s1789vg92zcrdcbajdp87fjxsh8487xv"
+  },
+  "slug": "defi-sniper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/defi-sniper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=defi-sniper&ownerHandle=h4gen",
+    "page_url": "https://clawhub.ai/h4gen/skills/defi-sniper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1421,
+    "installs": 44,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Orchestrates early token launch detection, on-chain risk analysis, social signal verification, and guarded swap execution on Solana and Base chains.",
+  "updated_at": 1779077000996,
+  "version": "1.0.0"
+}
