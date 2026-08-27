@@ -1,0 +1,49 @@
+{
+  "changelog": "epub-read 2.0.0 is a major update introducing task-mode-driven EPUB processing for safer and more flexible ebook analysis.\n\n- Adds explicit task selection (overview, targeted_read, full_read, extract, complex_content, batch) before any book loading.\n- Greatly improves safety for long books by never loading full-body text by default; uses chunked reading strategies.\n- Supports detailed structural overview, targeted or chunked reading, structured extraction, and complex content reporting.\n- Enables batch processing of multiple EPUBs or folders.\n- Enforces strict state and progress management for seamless sequential reading.\n- Includes clear, structured output and next-action suggestions for every task mode.",
+  "created_at": 1774493857592,
+  "display_name": "EPUB Read",
+  "fetched_at": 1787847865058,
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "chunk_book.py",
+    "docs/CLAWHUB_RELEASE.md",
+    "examples/sample_usage.md",
+    "parse_epub.py",
+    "requirements.txt",
+    "skill-card.md",
+    "task_router.py",
+    "templates/chapter_note_template.md",
+    "templates/extraction_template.md",
+    "templates/overview_template.md",
+    "templates/summary_template.md",
+    "test_integration.py",
+    "update_session_state.py",
+    "utils.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "INF-Lucas",
+    "handle": "inf-lucas",
+    "user_id": "s175mmm7vyds4m7sckts11fygs83m6qw"
+  },
+  "slug": "epub-read",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/epub-read",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=epub-read&ownerHandle=inf-lucas",
+    "page_url": "https://clawhub.ai/inf-lucas/skills/epub-read"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 821,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Task-mode-driven EPUB reading and analysis skill with overview, targeted reading, chunked full reading, extraction, complex-content inspection, and batch pro...",
+  "updated_at": 1778492198294,
+  "version": "2.0.0"
+}
