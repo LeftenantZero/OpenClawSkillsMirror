@@ -1,0 +1,49 @@
+{
+  "changelog": "Version 1.0.1 \u2013 Security improvements for private key handling and local data protection\n\n- Requires RUNSTR_NSEC to be set as an environment variable for all usage.\n- Nostr private key (nsec) is now handled exclusively via stdin for enhanced security\u2014never exposed on command line or process lists.\n- Local cache and database files are created with strict permissions (0700/0600) to improve data privacy.\n- Expanded \"Security Considerations\" and installation recommendations in documentation.\n- No file or code changes detected; changelog reflects documentation and operational requirements only.",
+  "created_at": 1773396017240,
+  "display_name": "Runstr analytics",
+  "fetched_at": 1787794005571,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "daily_update.sh",
+    "scripts/analyze.py",
+    "scripts/analyze_extended.py",
+    "scripts/analyze_light.py",
+    "setup_cron.sh",
+    "skill-card.md",
+    "view_report.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089885215,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Katla",
+    "handle": "katla50",
+    "user_id": "s170adyct6h0kbvpw131eceky183gy70"
+  },
+  "slug": "runstr-analytics",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/runstr-analytics",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=runstr-analytics&ownerHandle=katla50",
+    "page_url": "https://clawhub.ai/katla50/skills/runstr-analytics"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 857,
+    "installs": 24,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Advanced RUNSTR fitness analytics with trend analysis, performance insights, training recommendations, and correlation tracking. Analyzes workout history, ha...",
+  "updated_at": 1779076365644,
+  "version": "1.0.1"
+}
