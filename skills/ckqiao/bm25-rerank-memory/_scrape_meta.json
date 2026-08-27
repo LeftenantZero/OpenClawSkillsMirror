@@ -1,0 +1,43 @@
+{
+  "changelog": "- Initial release of bm25-rerank-memory skill.\n- Provides local memory retrieval using BM25, Embedding (BGE-M3), and reranking.\n- Searches Markdown memory files under /root/workspace/Remember.\n- Enables hybrid retrieval: keyword (BM25), semantic (BGE-M3), and rerank (BGE-Reranker-v2-m3).\n- Replaces mem0 for each memory search.\n- Includes command-line scripts for searching and reindexing memory files.",
+  "created_at": 1775979300970,
+  "display_name": "Bm25 Rerank Memory",
+  "fetched_at": 1787824697437,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090389435,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "CkQiao",
+    "handle": "ckqiao",
+    "user_id": "s179x0mkmvqmf1906vhf1wr6kx83gwph"
+  },
+  "slug": "bm25-rerank-memory",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bm25-rerank-memory",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bm25-rerank-memory&ownerHandle=ckqiao",
+    "page_url": "https://clawhub.ai/ckqiao/skills/bm25-rerank-memory"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 527,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u672c\u5730 BM25 + Embedding + Rerank \u6df7\u5408\u8bb0\u5fc6\u68c0\u7d22\u3002\u68c0\u7d22 /root/workspace/Remember \u4e0b\u7684 Markdown \u8bb0\u5fc6\u6587\u4ef6\uff0c\u652f\u6301\u5173\u952e\u8bcd+\u8bed\u4e49+\u91cd\u6392\u3002\u6bcf\u6b21\u8bb0\u5fc6\u641c\u7d22\u7528\u5b83\u66ff\u4ee3 mem0\u3002",
+  "updated_at": 1778492544359,
+  "version": "1.0.0"
+}
