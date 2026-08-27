@@ -1,0 +1,47 @@
+{
+  "changelog": "**Switched article illustration rendering engine to OpenCLI Gemini/Grok, with enhanced fault tolerance.**\n\n- Changed image generation source from DashScope Qwen-Image API to `opencli gemini image` with automatic fallback to `opencli grok image` if Gemini fails.\n- Added explicit 16:9 landscape output format for illustrations.\n- Introduced image generation retry logic and 300-second timeout per request.\n- Clarified dependencies on `opencli` and Chrome browser automation.\n- Improved documentation on image generation workflow and requirements.",
+  "created_at": 1774091399962,
+  "display_name": "article-images-gen",
+  "fetched_at": 1787791322749,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/article-analyzer.ts",
+    "scripts/illustrator.ts",
+    "scripts/image-generator.ts",
+    "scripts/main.ts",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090822770,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Alex Redisread",
+    "handle": "redisread",
+    "user_id": "s17ffnk8pb7a2h30mhqztqv6ns83m7fv"
+  },
+  "slug": "article-images-gen",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/article-images-gen",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=article-images-gen&ownerHandle=redisread",
+    "page_url": "https://clawhub.ai/redisread/skills/article-images-gen"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 876,
+    "installs": 23,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "\u6587\u6848\u63d2\u56fe\u4e13\u5bb6\uff0c\u4e3a\u6587\u7ae0\u751f\u6210\u624b\u7ed8\u98ce\u683c\u63d2\u56fe\u3002\u98ce\u683c\uff1a\u624b\u7ed8\u3001\u7b80\u7ea6\u3001\u6574\u6d01\u3001\u7559\u767d\u3001\u6784\u56fe\u5e73\u8861\u3001\u8272\u8c03\u7edf\u4e00\u3002Use when user asks to generate illustrations for articles, \"\u4e3a\u6587\u7ae0\u914d\u56fe\", \"\u751f\u6210\u63d2\u56fe\", or needs hand-drawn style images for...",
+  "updated_at": 1779077283438,
+  "version": "1.0.3"
+}
