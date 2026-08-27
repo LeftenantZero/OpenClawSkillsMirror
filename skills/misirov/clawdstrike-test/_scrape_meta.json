@@ -1,0 +1,62 @@
+{
+  "changelog": "clawdstrike-test 1.0.0\n\n- Initial release of the clawstrike skill for OpenClaw gateway security auditing.\n- Automates verified-mode evidence collection and threat model generation.\n- Enforces strict safety protocols: allowlist command execution, redaction of secrets, and no system changes by default.\n- Produces deterministic OK/VULNERABLE security reports with severity, evidence excerpts, and specific fixes.\n- Utilizes comprehensive reference files to ensure consistent report structure and vulnerability classification.",
+  "created_at": 1770286097479,
+  "display_name": "clawdstrike-test",
+  "fetched_at": 1787805583899,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/canvas-browser.md",
+    "references/channels.md",
+    "references/config-keys.md",
+    "references/discovery.md",
+    "references/evidence-template.md",
+    "references/filesystem.md",
+    "references/gateway.md",
+    "references/network.md",
+    "references/redaction.md",
+    "references/report-format.md",
+    "references/required-checks.md",
+    "references/supply-chain.md",
+    "references/threat-model.md",
+    "references/tools.md",
+    "references/verified-allowlist.md",
+    "references/version-risk.md",
+    "scripts/collect_verified.sh",
+    "scripts/config_summary.py",
+    "scripts/redact_helpers.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783656412195,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "misirov",
+    "handle": "misirov",
+    "user_id": "s172h3p1b0evpjqdzqpkmy2xk1884ns9"
+  },
+  "slug": "clawdstrike-test",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawdstrike-test",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawdstrike-test&ownerHandle=misirov",
+    "page_url": "https://clawhub.ai/misirov/skills/clawdstrike-test"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2881,
+    "installs": 100,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Security audit and threat model for OpenClaw gateway hosts. Use to verify OpenClaw configuration, exposure, skills/plugins, filesystem hygiene, and to produce an OK/VULNERABLE report with evidence and fixes.",
+  "updated_at": 1778988419739,
+  "version": "1.0.0"
+}
