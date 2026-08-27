@@ -1,0 +1,43 @@
+{
+  "changelog": "Fix: robust heartbeat cleanup (prefer in-run heartbeat); cron heartbeat deliver=false + dedupe + retry cleanup; document python3",
+  "created_at": 1770316685124,
+  "display_name": "Let Me Know",
+  "fetched_at": 1787805553623,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783658036148,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fogyoy",
+    "handle": "fogyoy",
+    "user_id": "s17c3sq62xy22dbe7a2dwx0s258841jf"
+  },
+  "slug": "let-me-know",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/let-me-know",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=let-me-know&ownerHandle=fogyoy",
+    "page_url": "https://clawhub.ai/fogyoy/skills/let-me-know"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2607,
+    "installs": 88,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Notify the user before starting any long-running task and keep them updated. Use when a task will take noticeable time (>2-3 minutes). Send a start message, schedule a 5\u2011minute heartbeat update, and send a completion message immediately when done.",
+  "updated_at": 1778988510449,
+  "version": "0.1.1"
+}
