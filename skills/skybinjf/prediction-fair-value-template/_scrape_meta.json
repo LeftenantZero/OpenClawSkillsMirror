@@ -1,0 +1,45 @@
+{
+  "changelog": "- Initial release of prediction-fair-value-template.\n- Scans Simmer markets for price vs. user-defined fair probability and trades if edge exceeds threshold.\n- Supports configurable market search query, fair probability, and risk controls via environment variables.\n- Default mode is dry-run for safety; live trading must be enabled explicitly.\n- Handles market discovery, sizing, context checks, and trade execution out of the box.\n- Includes clear instructions for customization and local use.",
+  "created_at": 1777517888850,
+  "display_name": "Prediction Fair Value Template",
+  "fetched_at": 1787812139629,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "skill-card.md",
+    "trade_skill.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090587825,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Sky",
+    "handle": "skybinjf",
+    "user_id": "s17d60gxzm0khfph1m86prw7fn85msga"
+  },
+  "slug": "prediction-fair-value-template",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/prediction-fair-value-template",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=prediction-fair-value-template&ownerHandle=skybinjf",
+    "page_url": "https://clawhub.ai/skybinjf/skills/prediction-fair-value-template"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 535,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Scan Simmer markets for a configurable fair-value edge and buy YES or NO when the market price diverges enough from your thesis.",
+  "updated_at": 1778492805944,
+  "version": "1.0.0"
+}
