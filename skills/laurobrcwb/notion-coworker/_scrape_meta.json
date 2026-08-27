@@ -1,0 +1,43 @@
+{
+  "changelog": "- Initial release of notion-coworker: an autonomous agent for handling Notion comment mentions via Gmail notifications.\n- Monitors Gmail for unread Notion mentions, understands the request, researches an answer using memory, Notion workspace, and the web if needed, then replies directly in the Notion discussion thread.\n- Documents all research in a subpage for each handled mention, providing an audit trail.\n- Summarizes all actions for the user, including processed emails and next steps for inbox management.\n- Handles edge cases gracefully, with clear reporting for parsing errors, inaccessible Notion pages, and unmatched discussion threads.",
+  "created_at": 1773788768861,
+  "display_name": "Notion co-worker",
+  "fetched_at": 1787867025423,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089943793,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Lauro",
+    "handle": "laurobrcwb",
+    "user_id": "s178n8edqf4znxgnfwsv386czh884d3e"
+  },
+  "slug": "notion-coworker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/notion-coworker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=notion-coworker&ownerHandle=laurobrcwb",
+    "page_url": "https://clawhub.ai/laurobrcwb/skills/notion-coworker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 731,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "An autonomous Notion coworker agent that monitors Gmail for Notion comment mentions (from notify@mail.notion.so), reads the comment to understand what's bein...",
+  "updated_at": 1778491985988,
+  "version": "1.0.0"
+}
