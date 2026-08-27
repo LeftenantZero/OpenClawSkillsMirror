@@ -1,0 +1,43 @@
+{
+  "changelog": "CAD Agent 1.0.0: Initial release \u2013 AI agents can visually iterate on 3D CAD models via a rendering server.\n\n- Provides HTTP endpoints for model creation, modification, multi-view/image rendering, export, and printability analysis\n- All CAD logic and rendering handled securely inside the container; agents use only build123d code and view images\n- Supports iterated visual workflow: send modeling commands, see results as images, modify as needed\n- Export models in common formats (STL, STEP, 3MF); design safety tools prevent accidental versioning of outputs\n- Full setup and usage instructions included for Docker and docker-compose environments",
+  "created_at": 1776128355314,
+  "display_name": "Cad Agent 1.0.0",
+  "fetched_at": 1787795574101,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090413903,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zhangyingzhuangk",
+    "handle": "zhangyingzhuangk",
+    "user_id": "s1745jre4s1dpyqce9y646s8gh84v3k6"
+  },
+  "slug": "cad-agent-1-0-0",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cad-agent-1-0-0",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cad-agent-1-0-0&ownerHandle=zhangyingzhuangk",
+    "page_url": "https://clawhub.ai/zhangyingzhuangk/skills/cad-agent-1-0-0"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 665,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Run build123d CAD code inside a container to create, render, and iteratively modify 3D models via HTTP with returned rendered images for visual feedback.",
+  "updated_at": 1779075796899,
+  "version": "1.0.0"
+}
