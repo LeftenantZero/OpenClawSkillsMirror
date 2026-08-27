@@ -1,0 +1,43 @@
+{
+  "changelog": "This is a major update: the skill has been completely redesigned from database diagnostics to database scheduling and task management.\n\n- Replaced all database\u8bca\u65ad\uff08diagnose\uff09features with new \u6570\u636e\u5e93\u8c03\u5ea6\uff08scheduler\uff09features.\n- Now supports database backup, scheduled task management, task execution logs, and workflow (DAG) automation.\n- Added commands for backup (full/incremental, compress, specific tables), task creation/enabling/disabling, manual task run, and log viewing (with filters).\n- Introduced scheduler daemon management for automatic background execution.\n- Added support for workflow (DAG) creation, management, and execution with task dependencies.\n- Updated all example scenarios, command references, and workflow explanations to match the new scheduler capabilities.",
+  "created_at": 1777363550031,
+  "display_name": "\u6570\u636e\u5e93\u8c03\u5ea6\u5de5\u5177",
+  "fetched_at": 1787813258249,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090568809,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "MagicCzc (AIOps\u6253\u5de5\u4eba)",
+    "handle": "magicczc",
+    "user_id": "s17fmn6kf70kp42wq962b8hacx84424n"
+  },
+  "slug": "dbskiter-db-scheduler",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dbskiter-db-scheduler",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dbskiter-db-scheduler&ownerHandle=magicczc",
+    "page_url": "https://clawhub.ai/magicczc/skills/dbskiter-db-scheduler"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 642,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6570\u636e\u5e93\u8c03\u5ea6\u5de5\u5177\uff0c\u652f\u6301\u5907\u4efd\u3001\u5b9a\u65f6\u4efb\u52a1\u7ba1\u7406\u3001\u4efb\u52a1\u6267\u884c\u65e5\u5fd7\u3002 \u4f7f\u7528\u573a\u666f\uff1a - \u7528\u6237\u8bf4\"\u5907\u4efd\u6570\u636e\u5e93\" \u2192 backup - \u7528\u6237\u8bf4\"\u5b9a\u65f6\u4efb\u52a1\" \u2192 task - \u7528\u6237\u8bf4\"\u67e5\u770b\u4efb\u52a1\u65e5\u5fd7\" \u2192 logs \u7528\u6cd5\uff1a - dbskiter --output-mode=ai --database=<name> scheduler b...",
+  "updated_at": 1778492781450,
+  "version": "1.0.0"
+}
