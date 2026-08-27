@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release: Comprehensive OpenClaw provider/model routing and fallback diagnostic tool.\n\n- Analyzes why a specific provider/model isn\u2019t used, including main and fallback chains, by correlating configuration with runtime logs.\n- Distinguishes between \u201cprovider registered\u201d and \u201cmodel bound to execution route,\u201d preventing common misunderstandings.\n- Diagnoses root causes for issues like \u201cno local-router traffic,\u201d untriggered fallbacks, ambiguous provider/model hits, and failed CLI collaborations.\n- Interprets fails, log absence, SIGTERM/143 exit codes, and recommends robust task exec practices (e.g., result-file output, agent health probes).\n- Summarizes common pitfalls and offers actionable, evidence-based solutions for configuration, fallback, and CLI exec issues.",
+  "created_at": 1774195481060,
+  "display_name": "Diagnose Openclaw Model Routing And Fallback Usage",
+  "fetched_at": 1787855702736,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/claudecodecli-exit-code-143-sigterm-reference.md",
+    "references/openclaw-fallback-log-interpretation-reference.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "can4hou6joeng4",
+    "handle": "can4hou6joeng4",
+    "user_id": "s17fzhes75mvxfh1xm1q519egh83y6gc"
+  },
+  "slug": "diagnose-openclaw-model-routing-and-fallback-usage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/diagnose-openclaw-model-routing-and-fallback-usage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=diagnose-openclaw-model-routing-and-fallback-usage&ownerHandle=can4hou6joeng4",
+    "page_url": "https://clawhub.ai/can4hou6joeng4/skills/diagnose-openclaw-model-routing-and-fallback-usage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 719,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7528\u4e8e\u5206\u6790 OpenClaw \u4e2d\u201c\u67d0\u4e2a provider/\u6a21\u578b\u4e3a\u4ec0\u4e48\u770b\u8d77\u6765\u6ca1\u88ab\u7528\u4e0a\u201d\u3001\u4e3b\u6a21\u578b\u4e0e fallback \u5b9e\u9645\u662f\u5426\u751f\u6548\u3001\u4ee5\u53ca ClaudeCodeCLI \u534f\u4f5c\u4efb\u52a1\u4e3a\u4f55\u4e2d\u65ad\u3002\u9047\u5230\u8fd9\u4e9b\u60c5\u51b5\u5c31\u5e94\u89e6\u53d1\uff1a\u7528\u6237\u63d0\u5230\u201c\u6ca1\u8bf7\u6c42\u6253\u5230 local-router\u201d\u201c\u660e\u660e\u6ce8\u518c\u4e86\u6a21\u578b\u5374\u6ca1\u6d41\u91cf\u201d\u201cAgent \u5230\u5e95\u5728\u7528\u54ea\u4e2a\u6a21\u578b\u201d\u201cfal...",
+  "updated_at": 1778492111768,
+  "version": "1.0.0"
+}
