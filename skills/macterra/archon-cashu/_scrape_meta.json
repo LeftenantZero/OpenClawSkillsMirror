@@ -1,0 +1,53 @@
+{
+  "changelog": "Initial release of archon-cashu: DID-integrated Cashu ecash skill.\n\n- Integrates Cashu ecash token operations with Archon DID for P2PK-locked (public key-locked) tokens.\n- Supports sending and receiving sats using DID-derived public keys, enabling DID-locked payments.\n- Provides wallet backup to vault and Nostr npub.cash integration for zaps.\n- Includes scripts for minting, locking/unlocking, sending (standard and DID-locked), and wallet management.\n- Requires Archon config, passphrase, and Cashu setup; supports LNBITS integration as optional feature.",
+  "created_at": 1772045060857,
+  "display_name": "Archon Cashu",
+  "fetched_at": 1787790918090,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/cashu/backup.sh",
+    "scripts/cashu/balance.sh",
+    "scripts/cashu/config.sh",
+    "scripts/cashu/lock.sh",
+    "scripts/cashu/mint.sh",
+    "scripts/cashu/npub-cash-setup.sh",
+    "scripts/cashu/receive.sh",
+    "scripts/cashu/send-unlocked.sh",
+    "scripts/cashu/send.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779960501957,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "macterra",
+    "handle": "macterra",
+    "user_id": "s172cfqmwx0gwmy1p1354n948s8854c3"
+  },
+  "slug": "archon-cashu",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/archon-cashu",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=archon-cashu&ownerHandle=macterra",
+    "page_url": "https://clawhub.ai/macterra/skills/archon-cashu"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1080,
+    "installs": 32,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Cashu ecash operations integrated with Archon DID for P2PK-locked tokens. Send and receive sats using DID-derived pubkeys, backup wallets to vault. Use for C...",
+  "updated_at": 1779077424984,
+  "version": "0.1.0"
+}
