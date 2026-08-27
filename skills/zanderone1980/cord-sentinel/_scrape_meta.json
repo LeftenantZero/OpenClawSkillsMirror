@@ -1,0 +1,45 @@
+{
+  "changelog": "- Added detailed guidance on mandatory pre-flight enforcement for high-risk tool calls and external data scanning.\n- Expanded documentation of decision rules, thresholds, and reporting protocol for blocked actions.\n- Clearly outlined use cases for CORD, including when to scan for prompt injection and handle intent locks.\n- Documented the full SENTINEL constitution and risk evaluation model.\n- Usage instructions provided for both shell and Python environments.",
+  "created_at": 1771829064360,
+  "display_name": "Openclaw Skill",
+  "fetched_at": 1787802662988,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cord-api.md",
+    "scripts/cord_status.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779952131539,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zander",
+    "handle": "zanderone1980",
+    "user_id": "s175ta312f16msxq54pew3dqvh8843n9"
+  },
+  "slug": "cord-sentinel",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cord-sentinel",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cord-sentinel&ownerHandle=zanderone1980",
+    "page_url": "https://clawhub.ai/zanderone1980/skills/cord-sentinel"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1312,
+    "installs": 39,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "SENTINEL/CORD governance engine \u2014 mandatory pre-flight enforcement for agent tool calls. Use when: (1) about to run exec/write/browser/network/message tool c...",
+  "updated_at": 1778992567694,
+  "version": "2.2.0"
+}
