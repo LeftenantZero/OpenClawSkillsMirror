@@ -1,0 +1,45 @@
+{
+  "changelog": "**Credential safety improvements and minor metadata changes.**\n\n- Environment variable configuration for credentials (`envVars` with descriptions) replaces `credentials` block.\n- Added additional binary requirements in metadata: `file`, `stat`, `date`.\n- Scripts no longer require user to inline secrets in command examples; recommend using `export` statements for keys.\n- Guidance emphasizes never exposing sensitive credentials in sample commands, logs, or responses.\n- Usage instructions, header mapping, and routing flows updated for better security and clarity.",
+  "created_at": 1774493969704,
+  "display_name": "AIOZ Stream Toolkit",
+  "fetched_at": 1787847867965,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api_reference.md",
+    "scripts/analytic_data.sh",
+    "scripts/create_livestream_key.sh",
+    "scripts/get_aggregate_metric.sh",
+    "scripts/get_balance.sh",
+    "scripts/get_breakdown_metric.sh",
+    "scripts/get_media_list.sh",
+    "scripts/get_total_media.sh",
+    "scripts/get_usage_data.sh",
+    "scripts/get_video_list.sh",
+    "scripts/get_video_url_by_name.sh",
+    "scripts/upload_video_file.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "namle-aioz",
+    "handle": "namle-aioz",
+    "user_id": "s17fx03yhvaw8hjyb3p4mq5zz183j1x3"
+  },
+  "slug": "aioz-stream-toolkit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aioz-stream-toolkit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aioz-stream-toolkit&ownerHandle=namle-aioz",
+    "page_url": "https://clawhub.ai/namle-aioz/skills/aioz-stream-toolkit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 675,
+    "installs": 16,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "Respond to user requests for AIOZ Stream API. Use provided scripts to upload videos, fetch analytics, manage media, and create livestreams.",
+  "updated_at": 1778492198294,
+  "version": "1.0.9"
+}
