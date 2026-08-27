@@ -1,0 +1,39 @@
+{
+  "changelog": "- Initial release of clawforage-knowledge-harvester for automated daily briefings.\n- Fetches trending articles via Google News RSS based on user-configured domains.\n- Summarizes each article and stores concise summaries for RAG (Retrieval-Augmented Generation) retrieval.\n- Deduplicates against previously harvested articles to avoid repeats.\n- Enforces source attribution, summary length, and privacy constraints.\n- Provides automatic domain configuration setup and clear output validation steps.",
+  "created_at": 1773825023888,
+  "display_name": "Knowledge Harvester",
+  "fetched_at": 1787798159561,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/dedup-articles.sh",
+    "scripts/fetch-articles.sh",
+    "scripts/validate-knowledge.sh",
+    "skill-card.md",
+    "templates/domains-example.md",
+    "templates/knowledge-article.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "InspireHub.ai",
+    "handle": "dainash",
+    "user_id": "s174rs7qcpsgx7drw23mjr5et58856d9"
+  },
+  "slug": "knowledge-harvester",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/knowledge-harvester",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=knowledge-harvester&ownerHandle=dainash",
+    "page_url": "https://clawhub.ai/dainash/skills/knowledge-harvester"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 944,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Daily automated briefings \u2014 fetches trending content via Google News RSS, summarizes into memory for RAG retrieval",
+  "updated_at": 1779002440277,
+  "version": "1.0.0"
+}
