@@ -1,0 +1,41 @@
+{
+  "changelog": "Initial release of skill-install-checker.\n\n- Adds pre-installation checks for binaries, environment variables, configuration, OS, and sandbox compatibility.\n- Explains why a skill may not be suitable for installation on the current machine.\n- Outputs include: environment overview, missing dependencies, OS and sandbox risks, configuration gaps, installation and rollback advice.\n- Designed for reviewable, read-only, and auditable operation\u2014will not alter system environment or simulate satisfied dependencies.\n- Includes boundaries for safe usage, requiring clear explanation for any risky or system-modifying actions.",
+  "created_at": 1773974456566,
+  "display_name": "Skill Install Checker",
+  "fetched_at": 1787861626453,
+  "files": [
+    "README.md",
+    "SELF_CHECK.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/example-input.md",
+    "examples/example-output.md",
+    "resources/spec.json",
+    "resources/template.md",
+    "scripts/run.py",
+    "skill-card.md",
+    "tests/smoke-test.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "vx\uff1a17605205782",
+    "handle": "52yuanchangxing",
+    "user_id": "s178sqjkywrs4vbnfcrr7wx7f583gef5"
+  },
+  "slug": "skill-install-checker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-install-checker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-install-checker&ownerHandle=52yuanchangxing",
+    "page_url": "https://clawhub.ai/52yuanchangxing/skills/skill-install-checker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 665,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5b89\u88c5\u524d\u9a8c\u8bc1\u4e8c\u8fdb\u5236\u3001\u73af\u5883\u53d8\u91cf\u3001\u914d\u7f6e\u3001OS \u4e0e sandbox \u6761\u4ef6\uff0c\u89e3\u91ca\u4e3a\u4ec0\u4e48\u6b64\u673a\u4e0d\u9002\u5408\u88c5\u3002\uff1buse for skills, install, preflight workflows\uff1bdo not use for \u5047\u88c5\u4f9d\u8d56\u5df2\u7ecf\u6ee1\u8db3, \u76f4\u63a5\u4fee\u6539\u7cfb\u7edf\u73af\u5883.",
+  "updated_at": 1778492049576,
+  "version": "1.0.0"
+}
