@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of control-host-browser skill:\n\n- Enables opening specific URLs in new tabs on the host machine's Chrome browser.\n- Triggered by user requests such as \"open a link\" or \"search in browser.\"\n- Not intended for agent-internal or headless browsing tasks.\n- Requires Chrome remote debugging enabled on the host machine.\n- Operates using a shell script and Chrome DevTools Protocol (CDP).",
+  "created_at": 1777748026467,
+  "display_name": "Control Host Browser",
+  "fetched_at": 1787810939388,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/cdp_navigate.py",
+    "scripts/control_host_browser.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "stevenxie66",
+    "handle": "stevenxie66",
+    "user_id": "s1721yzvnqvrtsdqjmgkbv7jts84ncgq"
+  },
+  "slug": "control-host-browser",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/control-host-browser",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=control-host-browser&ownerHandle=stevenxie66",
+    "page_url": "https://clawhub.ai/stevenxie66/skills/control-host-browser"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 612,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Control the host machine's Chrome browser to open specific URLs in new tabs. Use when: User explicitly asks to \"open a link\", \"show me this page\", or \"search...",
+  "updated_at": 1778492830283,
+  "version": "1.0.0"
+}
