@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of feishu-agent-add\n\n- Introduces a conversational skill for adding Feishu agents to OpenClaw without manual config editing.\n- Guides users through necessary input collection (agent name, purpose, app id/secret) with minimal questions.\n- Presents a summary preview before executing the setup script.\n- Runs a script to generate and update agent configuration, then summarizes results and next steps.\n- Supports both guided flows and ready-to-run terminal commands for advanced users.",
+  "created_at": 1773553168625,
+  "display_name": "feishuAgentAdd",
+  "fetched_at": 1787872840882,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/add_feishu_agent.py",
+    "skill-card.md",
+    "templates/BOOTSTRAP.template.md",
+    "templates/SOUL.template.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089893131,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "cyecho-io",
+    "handle": "cyecho-io",
+    "user_id": "s171h0p4vah5ddrf3shfbqftfx885aah"
+  },
+  "slug": "feishu-agent-add",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-agent-add",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-agent-add&ownerHandle=cyecho-io",
+    "page_url": "https://clawhub.ai/cyecho-io/skills/feishu-agent-add"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 870,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use this skill when users want to add a Feishu agent for OpenClaw, especially when they say things like \u201c\u5e2e\u6211\u589e\u52a0\u4e00\u4e2a\u540d\u5b57\u53ebxxx\uff0c\u7528\u6765\u505axxx\u7684\u98de\u4e66agent\u201d, want a guided prompt f...",
+  "updated_at": 1778491917527,
+  "version": "1.0.0"
+}
