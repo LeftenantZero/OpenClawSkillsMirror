@@ -1,0 +1,45 @@
+{
+  "changelog": "Version 2.0.0 \u2014 Major update with per-volume encryption and safer workflows\n\n- Encrypts and stores each Docker volume as a separate AES-256-CBC (PBKDF2) archive in the backup image.\n- Ensures secure \"zero-trust\" restores: restores never execute code from the backup image, only copying files out via `docker cp`.\n- Adds `--dry-run` mode to preview actions before performing backup or restore.\n- Improves backup consistency with optional exclusion of critical containers via `--exclude-stop`.\n- Updates argument handling: `--encrypt-password` is now required for all operations.\n- Images are now built from scratch to minimize attack surface and contain only encrypted data.",
+  "created_at": 1778371660020,
+  "display_name": "Docker Volume Backup Or Restore",
+  "fetched_at": 1787808894465,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/limitations.md",
+    "scripts/docker_volume_backup_or_restore.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090778525,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "HongWei Jiang",
+    "handle": "ugvfpdcuwfnh",
+    "user_id": "s17f1avpvveb0afnxcb94ckb6n83k7cg"
+  },
+  "slug": "docker-volume-backup-or-restore",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/docker-volume-backup-or-restore",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=docker-volume-backup-or-restore&ownerHandle=ugvfpdcuwfnh",
+    "page_url": "https://clawhub.ai/ugvfpdcuwfnh/skills/docker-volume-backup-or-restore"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 541,
+    "installs": 13,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Robust Docker volume migration and backup using per-volume encrypted archives and registry-based transport. Supports dry-runs, container exclusion, and safe...",
+  "updated_at": 1778492888959,
+  "version": "2.0.0"
+}
