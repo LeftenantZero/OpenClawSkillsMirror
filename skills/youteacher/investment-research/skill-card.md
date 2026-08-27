@@ -1,6 +1,6 @@
 ## Description:
 
-Investment Research helps agents query public filing and XBRL fact evidence, then produce cited risk analysis or investment research reports without investment instructions.
+Investment Research retrieves company filings and XBRL facts through the AI Skills service, then produces cited risk analysis or investment research reports without investment instructions.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and agents use this skill to retrieve company filings or XBRL facts from the AI Skills platform and create cited, informational research outputs. It is intended for evidence-based risk summaries and reports, not trading decisions or personalized investment advice.
+External users and developers use this skill to query company disclosure evidence, analyze disclosed risks, and create cited research reports. It is intended for information and research workflows, not trading instructions, target prices, guarantees, or personalized investment advice.
 
 ### Deployment Geography for Use:
 
@@ -22,40 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Company identifiers, filing filters, and query parameters are sent to the AI Skills platform.
+Risk: The required INVESTMENT_RESEARCH_API_KEY could be exposed through logs, shared shell history, reports, or copied configuration.
 
-Mitigation: Confirm the platform is trusted for the intended company research workflow before installation or use.
+Mitigation: Treat INVESTMENT_RESEARCH_API_KEY as a secret and keep it out of logs, JSON payloads, citations, reports, and shared command history.
 
-Risk: The skill requires an API key that could expose account access if shared in chats, logs, code, or reports.
+Risk: Changing AI_SKILLS_API_URL can route requests and credentials to an untrusted endpoint.
 
-Mitigation: Store INVESTMENT_RESEARCH_API_KEY in environment configuration and do not echo or persist the full key.
+Mitigation: Use the default AI Skills endpoint unless the exact alternate service endpoint is trusted.
 
-Risk: Generated research could be mistaken for personalized investment advice or a trading recommendation.
+Risk: Research outputs based on filings or XBRL facts can be mistaken for personalized investment advice or trading instructions.
 
-Mitigation: Treat outputs as informational, keep the required non-advisory disclaimer, and refuse buy, sell, hold, target-price, guaranteed-return, or automated-trading requests.
+Mitigation: Keep outputs informational, cite source task evidence, include the investment-advice disclaimer, and refuse buy, sell, hold, target-price, timing, guarantee, or return-assurance instructions.
 
 ## Reference(s):
 
 - [ClawHub Skill Page](https://clawhub.ai/youteacher/skills/investment-research)
-- [AI Skills Homepage](https://ai-skills.open-idea.net)
-- [API Key Configuration](references/API-KEY.md)
-- [Operations Contract](references/OPERATIONS.md)
-- [HTTP Requests and Task Polling](references/HTTP-REQUESTS.md)
-- [Evidence and Investment Safety Rules](references/BEHAVIOR-RULES.md)
+- [AI Skills Platform](https://ai-skills.open-idea.net)
+- [API Key Configuration](artifact/references/API-KEY.md)
+- [Operations Contract](artifact/references/OPERATIONS.md)
+- [HTTP Requests and Task Polling](artifact/references/HTTP-REQUESTS.md)
+- [Source, Evidence, and Investment Safety Rules](artifact/references/BEHAVIOR-RULES.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown with JSON and shell command examples]
+**Output Format:** [Markdown with inline shell commands and structured API response guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires INVESTMENT_RESEARCH_API_KEY; outputs must preserve source, timestamp, accession, filing date, period, and unit when available.]
+**Other Properties Related to Output:** [Requires INVESTMENT_RESEARCH_API_KEY and may call the hosted AI Skills investment-research API.]
 
 ## Skill Version(s):
 
-1.2.0 (source: server release evidence and skill metadata)
+1.3.0 (source: server release evidence and skill metadata)
 
 ## Ethical Considerations:
 
