@@ -1,0 +1,47 @@
+{
+  "changelog": "- Major update: Adds support for full Xiaohongshu video resource packs and AI-generated summaries.\n- Now produces downloadable bundles containing video, audio (mp3), subtitles, transcripts, and optional AI summaries.\n- New command-line flags: `--full` for resource packs, `--summary` for summary generation, and additional output/customization options.\n- Subtitle and transcript generation is now automatic, using a 3-tier fetching/fallback strategy.\n- Enhanced troubleshooting tips and detailed workflow instructions in documentation.\n- Backward compatibility: Basic video download remains unchanged for users preferring previous behavior.",
+  "created_at": 1771634815618,
+  "display_name": "\u5c0f\u7ea2\u4e66\u89c6\u9891\u4e0b\u8f7d\u5668",
+  "fetched_at": 1787803101753,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "reference/summary-prompt.md",
+    "scripts/download_xiaohongshu.py",
+    "scripts/parallel_transcribe.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779943634615,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Himly",
+    "handle": "smile7up",
+    "user_id": "s17escg7pxn333gmbtatkvx3a1845fve"
+  },
+  "slug": "xiaohongshu-downloader",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/xiaohongshu-downloader",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=xiaohongshu-downloader&ownerHandle=smile7up",
+    "page_url": "https://clawhub.ai/smile7up/skills/xiaohongshu-downloader"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1537,
+    "installs": 48,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Download and summarize Xiaohongshu (\u5c0f\u7ea2\u4e66/RedNote) videos. Produces a full resource pack with video, audio, subtitles, transcript, and AI summary. This skill s...",
+  "updated_at": 1778991992705,
+  "version": "1.0.0"
+}
