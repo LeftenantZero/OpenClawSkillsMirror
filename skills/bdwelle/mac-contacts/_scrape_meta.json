@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of mac-contacts CLI for managing macOS Contacts.\n\n- Search contacts by name, email, phone, city, or country, with support for list filtering.\n- Show all fields of a contact, including group (list) membership.\n- Create and update contacts with support for names, organization, email, phones, addresses, URLs, and birthdays.\n- Delete contacts with confirmation prompt.\n- Manage group/list membership: add or remove contacts from lists, with handling for iCloud-backed groups.\n- List all contact groups (lists).\n- Outputs results as YAML for integration and parsing.",
+  "created_at": 1772598328197,
+  "display_name": "Apple Contacts",
+  "fetched_at": 1787800591812,
+  "files": [
+    "SKILL-MCP.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/mac-contacts.py",
+    "skill-card.md",
+    "tests/run_tests.sh",
+    "tests/test_01_search.sh",
+    "tests/test_02_list_groups.sh",
+    "tests/test_03_create_contact.sh",
+    "tests/test_04_show_contact.sh",
+    "tests/test_05_add_to_list.sh",
+    "tests/test_06_remove_from_list.sh",
+    "tests/test_07_update_contact.sh",
+    "tests/test_08_delete_contact.sh"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Bowen Dwelle",
+    "handle": "bdwelle",
+    "user_id": "s178zm7nf3p2qn0pqswrrn8c6s8843zq"
+  },
+  "slug": "mac-contacts",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mac-contacts",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mac-contacts&ownerHandle=bdwelle",
+    "page_url": "https://clawhub.ai/bdwelle/skills/mac-contacts"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1192,
+    "installs": 35,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "CLI for reading and managing macOS Contacts (CNContactStore). Supports searching by name, email, phone number, city, or country; showing all fields for a con...",
+  "updated_at": 1778995041529,
+  "version": "1.0.0"
+}
