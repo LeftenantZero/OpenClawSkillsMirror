@@ -1,0 +1,40 @@
+{
+  "changelog": "- Initial release of the linux-installer skill.\n- Resolves and installs Linux desktop apps from the safest supported source, asking for user confirmation before any system change.\n- Supports a wide source priority (Flatpak, Snap, native package manager, etc.) with curated community workarounds and unreviewed suggestions as explicit opt-ins.\n- Provides exact install, launch, and uninstall commands, including handling of required tooling bootstraps.\n- Ensures unreviewed or community packages are clearly labeled and require additional user confirmation.\n- Never initiates any install or removal action without explicit user consent.",
+  "created_at": 1774558323311,
+  "display_name": "Linux installer",
+  "fetched_at": 1787845944682,
+  "files": [
+    "CATALOG_GUIDE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "catalog.json",
+    "main.py",
+    "setup.py",
+    "skill-card.md",
+    "skill.json",
+    "validate_catalog.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Baladoodle",
+    "handle": "baladoodle",
+    "user_id": "s17f265hb521mkx100bpn0ws1983na7y"
+  },
+  "slug": "linux-installer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/linux-installer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=linux-installer&ownerHandle=baladoodle",
+    "page_url": "https://clawhub.ai/baladoodle/skills/linux-installer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 833,
+    "installs": 23,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Installs, launches, and uninstalls Linux desktop apps by resolving the safest supported source first, then running a local helper CLI. Use when the user asks...",
+  "updated_at": 1778492223592,
+  "version": "1.0.0"
+}
