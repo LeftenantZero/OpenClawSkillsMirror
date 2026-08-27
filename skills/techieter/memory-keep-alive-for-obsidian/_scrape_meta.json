@@ -1,0 +1,44 @@
+{
+  "changelog": "Scope all prompts to vault path only. Each prompt now has an explicit Scope line restricting file access to VAULT_PATH/Tasks/. Removed broad context-gathering language that could cause the agent to access files outside the Obsidian vault during autonomous scheduled runs.",
+  "created_at": 1775228114114,
+  "display_name": "Memory Keep-Alive for Obsidian",
+  "fetched_at": 1787832991825,
+  "files": [
+    "INSTALL.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/WORKFLOW-INDEX.md",
+    "install.sh",
+    "prompts/escalator-prompt.md",
+    "prompts/replayer-prompt.md",
+    "prompts/smoke-test-prompt.md",
+    "prompts/validator-prompt.md",
+    "prompts/watchdog-prompt.md",
+    "skill-card.md",
+    "templates/LOOP-STATE.md",
+    "templates/TEMPLATE.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Terry Hundley",
+    "handle": "techieter",
+    "user_id": "s17589cfbycfwwx6m1njrg07t184432f"
+  },
+  "slug": "memory-keep-alive-for-obsidian",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memory-keep-alive-for-obsidian",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memory-keep-alive-for-obsidian&ownerHandle=techieter",
+    "page_url": "https://clawhub.ai/techieter/skills/memory-keep-alive-for-obsidian"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 668,
+    "installs": 16,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Automatic task memory and keep-alive loop for Obsidian-backed agents. Every task gets persistent notes. Arm the loop for long tasks, disarm when done.",
+  "updated_at": 1778492395372,
+  "version": "1.0.1"
+}
