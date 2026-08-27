@@ -1,0 +1,54 @@
+{
+  "changelog": "Initial release of Deepgram Discord Voice skill for Clawdbot/OpenClaw.\n\n- Enables real-time voice conversations in Discord voice channels using Deepgram streaming STT and low-latency TTS.\n- Configurable to listen only to a specified primary user, with optional voice-activated speaker switching.\n- Supports wake-word activated voice commands for controlling permissions.\n- Provides example configurations and clear setup instructions.\n- Requires DISCORD_TOKEN and DEEPGRAM_API_KEY environment variables.\n- Delivers agent replies via Deepgram Aura TTS, streamed directly to the channel for minimal latency.",
+  "created_at": 1770770145129,
+  "display_name": "Discord Voice Using Deepgram",
+  "fetched_at": 1787792456315,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "clawdbot.plugin.json",
+    "index.ts",
+    "package.json",
+    "skill-card.md",
+    "src/config.ts",
+    "src/core-bridge.ts",
+    "src/streaming-stt.ts",
+    "src/streaming-tts.ts",
+    "src/stt.ts",
+    "src/tts.ts",
+    "src/voice-connection.ts",
+    "tsconfig.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968647151,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "adriel1006",
+    "handle": "adriel1006",
+    "user_id": "s17ddkj6m6vw1280m6403h9vm1884fbc"
+  },
+  "slug": "discord-voice-deepgram",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/discord-voice-deepgram",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=discord-voice-deepgram&ownerHandle=adriel1006",
+    "page_url": "https://clawhub.ai/adriel1006/skills/discord-voice-deepgram"
+  },
+  "stats": {
+    "comments": 2,
+    "downloads": 2341,
+    "installs": 77,
+    "stars": 5,
+    "versions": 1
+  },
+  "summary": "Voice-channel conversations in Discord using Deepgram streaming STT + low-latency TTS",
+  "updated_at": 1779076922520,
+  "version": "1.0.0"
+}
