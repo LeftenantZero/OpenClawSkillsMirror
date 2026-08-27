@@ -1,0 +1,52 @@
+{
+  "changelog": "- Initial release of japanese-smart-home-command-normalizer.\n- Normalizes short Japanese smart-home voice transcripts (primarily lights and air conditioners) into safe, structured intents and slots.\n- Handles common STT transcription errors and device/action aliases (e.g., \u308c\u30fc\u307c\u30fc, \u3060\u3093\u307c\u30fc, \u96fb\u6c17, \u30a8\u30a2\u30b3\u30f3).\n- Supports confidence estimation, returning needsConfirmation when intent is ambiguous or incomplete.\n- Structured to safely extend supported devices and actions in the future.",
+  "created_at": 1774890331642,
+  "display_name": "Japanese Smart Home Command Normalizer",
+  "fetched_at": 1787839465737,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "fixtures/samples.json",
+    "lib/domains.js",
+    "lib/normalize.js",
+    "package.json",
+    "references/design.md",
+    "references/domains.md",
+    "references/openclaw-integration.md",
+    "scripts/demo.js",
+    "skill-card.md",
+    "tests/normalize.test.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090198922,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "t0yohei",
+    "handle": "t0yohei",
+    "user_id": "s17c261xde8sbktke4ddb9864d83x6w3"
+  },
+  "slug": "japanese-smart-home-command-normalizer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/japanese-smart-home-command-normalizer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=japanese-smart-home-command-normalizer&ownerHandle=t0yohei",
+    "page_url": "https://clawhub.ai/t0yohei/skills/japanese-smart-home-command-normalizer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 622,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Normalize short Japanese smart-home voice transcripts after STT into safe structured intents and slots. Use when handling Japanese commands for lights and ai...",
+  "updated_at": 1778492302579,
+  "version": "1.0.0"
+}
