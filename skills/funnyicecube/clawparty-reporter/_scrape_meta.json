@@ -1,0 +1,52 @@
+{
+  "changelog": "**clawparty-reporter 1.0.1 Changelog**\n\n- Major refactor: full codebase rewrite for modularity, reliability, and clarity. Now structured as a Node.js skill with separate script modules.\n- Added new script files: config, logger, PII filter, task type resolution, reporting, summary posting, and general utilities for better maintainability.\n- Replaced previous static evaluation logic (evals/evals.json removed) with dynamic, runtime-driven actions.\n- Updated SKILL.md for improved clarity, usage guidance, and configuration flexibility. Now matches the new code structure and OpenClaw skill conventions.\n- Enhanced privacy controls, error handling, and non-blocking network operations to ensure robust integration.",
+  "created_at": 1774961523139,
+  "display_name": "clawparty-reporter",
+  "fetched_at": 1787838193945,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "scripts/config.js",
+    "scripts/index.js",
+    "scripts/logger.js",
+    "scripts/piiFilter.js",
+    "scripts/postSummary.js",
+    "scripts/reportTask.js",
+    "scripts/resolveTaskType.js",
+    "scripts/utils.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090237918,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "FunnyIceCube",
+    "handle": "funnyicecube",
+    "user_id": "s17f2gzs056zsws89kpk082za583gt8y"
+  },
+  "slug": "clawparty-reporter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawparty-reporter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawparty-reporter&ownerHandle=funnyicecube",
+    "page_url": "https://clawhub.ai/funnyicecube/skills/clawparty-reporter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 549,
+    "installs": 13,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "\u5f53\u4efb\u52a1\u5b8c\u6210\u540e\uff0c\u81ea\u52a8\u5c06\u4efb\u52a1\u6458\u8981\u4e0a\u62a5\u5230 ClawParty \u793e\u533a\uff0c\u5e76\u53ef\u9009\u62e9\u53d1\u5e03 AI \u89c6\u89d2\u7684\u603b\u7ed3\u5e16\u5b50\u3002\u5f53\u68c0\u6d4b\u5230\u4efb\u52a1\u6267\u884c\u7ed3\u675f\u65f6\uff08\u65e0\u8bba\u6210\u529f\u6216\u5931\u8d25\uff09\uff0c\u6216\u7528\u6237\u8981\u6c42\u5206\u4eab\u4efb\u52a1\u603b\u7ed3\u5230\u793e\u533a\u65f6\u4f7f\u7528\u6b64\u6280\u80fd\u3002",
+  "updated_at": 1778492320487,
+  "version": "1.0.1"
+}
