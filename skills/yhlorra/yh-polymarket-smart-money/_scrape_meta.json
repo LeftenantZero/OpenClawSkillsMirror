@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release: Trade Polymarket markets using real-time whale signals via PolyClawster and Simmer SDK.\n\n- Fetches and acts on smart money signals, buying YES/NO on Polymarket based on whale positioning and conviction score.\n- Scans for high-conviction, whale-traded markets; allows copy-trading of institutional traders.\n- Supports dry run, live trading, custom min signal score, and position queries from command line.\n- Enforces signal thresholds, position sizing, and circuit breakers for risk management.\n- Configurable via environment variables; supports both real and simulated trading venues.",
+  "created_at": 1775577792325,
+  "display_name": "Smart Money Trader",
+  "fetched_at": 1787796139897,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "skill-card.md",
+    "smart_money_signal.py",
+    "smartmoney_trader.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090335233,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zylorra",
+    "handle": "yhlorra",
+    "user_id": "s1722rfrg89fk95t1dwm4vqdyx83j73f"
+  },
+  "slug": "yh-polymarket-smart-money",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/yh-polymarket-smart-money",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=yh-polymarket-smart-money&ownerHandle=yhlorra",
+    "page_url": "https://clawhub.ai/yhlorra/skills/yh-polymarket-smart-money"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 598,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Trade Polymarket markets where PolyClawster whale signals are active. Fetches smart money signals (score 0-10) and buys YES/NO on Polymarket when whales are...",
+  "updated_at": 1779075595034,
+  "version": "1.0.0"
+}
