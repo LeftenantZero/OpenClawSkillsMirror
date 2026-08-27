@@ -1,0 +1,57 @@
+{
+  "changelog": "- Introduced the clawcast skill for managing EVM wallets and transactions using cast, with step-by-step onboarding and clearer user guidance.\n- Added detailed step scripts for onboarding: install, wallet creation/import, password, network and token selection, and summary.\n- Enhanced automatic wallet readiness and status checks on each session, showing address, balance, and network details if a wallet is present.\n- Improved onboarding flow: simple language, one question at a time, explicit confirmation, and prevents skipping steps or inventing user input.\n- New transaction mention logging to keep a record of discussed transactions for later reference.\n- Updated resources include authoritative EVM network and token metadata files for accurate recommendations and validations.",
+  "created_at": 1770313618250,
+  "display_name": "Cast",
+  "fetched_at": 1787792807920,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/evm-network-tokens.json",
+    "assets/evm-networks.json",
+    "scripts/00_lib.sh",
+    "scripts/01_install_cast.sh",
+    "scripts/02_wallet.sh",
+    "scripts/03_password.sh",
+    "scripts/04_network.sh",
+    "scripts/05_tokens.sh",
+    "scripts/06_finish.sh",
+    "scripts/check_wallet.sh",
+    "scripts/remove_wallet.sh",
+    "scripts/run.sh",
+    "scripts/show_network.sh",
+    "scripts/state.env",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783655226288,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "te_za",
+    "handle": "tezatezaz",
+    "user_id": "s175jdv04s9d22s190s8qsxwz1855fec"
+  },
+  "slug": "cast",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cast",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cast&ownerHandle=tezatezaz",
+    "page_url": "https://clawhub.ai/tezatezaz/skills/cast"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2284,
+    "installs": 74,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Skill for managing EVM wallets, transactions, and network helpers via cast; covers onboarding, checks, and operating procedures.",
+  "updated_at": 1779076797816,
+  "version": "0.1.1"
+}
