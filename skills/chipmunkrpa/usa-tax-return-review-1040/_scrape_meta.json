@@ -1,0 +1,39 @@
+{
+  "changelog": "- Initial release of the Form 1040 Review skill for structured compliance and risk review of U.S. tax returns.\n- Validates current-year Form 1040/1040-SR data against tax law, checks multi-year consistency, and highlights major risk items.\n- Generates three outputs per run: detailed findings (JSON), a human-readable summary (Markdown), and a standalone DOCX risk register.\n- Includes audit likelihood estimation based on detected issues and return complexity.\n- Supports inputs in a normalized JSON schema with references to current-year law parameters and major 1040 items.",
+  "created_at": 1773434163145,
+  "display_name": "US Tax Return Review-1040",
+  "fetched_at": 1787875167036,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/current_tax_law_2025.json",
+    "references/example_returns.json",
+    "references/input_schema.json",
+    "references/major_items_reference.md",
+    "scripts/review_1040.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ChipmunkRPA",
+    "handle": "chipmunkrpa",
+    "user_id": "s17a5tjhzsvm3t7csfdjfh82z983f4g8"
+  },
+  "slug": "usa-tax-return-review-1040",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/usa-tax-return-review-1040",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=usa-tax-return-review-1040&ownerHandle=chipmunkrpa",
+    "page_url": "https://clawhub.ai/chipmunkrpa/skills/usa-tax-return-review-1040"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 811,
+    "installs": 21,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Review U.S. individual income tax returns (Form 1040/1040-SR) for the most recent tax year, compare major return items against current-year tax rules, check...",
+  "updated_at": 1778491890041,
+  "version": "1.0.0"
+}
