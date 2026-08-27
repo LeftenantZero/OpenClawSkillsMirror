@@ -1,0 +1,49 @@
+{
+  "changelog": "- Updated the model references: the default model is now airtap-1.0-flash instead of airtap-1.0-lite.\n- Model selection guidance revised: use airtap-1.0-flash for lower latency on shorter tasks; use airtap-1.0 for more complex or reliable tasks.\n- Model list command description updated to mention new model options and possible debug-only models.\n- Example commands and related text now refer to airtap-1.0-flash as the default.\n- No code or infrastructure changes; documentation only.",
+  "created_at": 1774936799063,
+  "display_name": "Airtap: Every claw now has a phone",
+  "fetched_at": 1787838764667,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/openclaw.md",
+    "requirements.txt",
+    "scripts/airtap.py",
+    "scripts/airtap_common.py",
+    "scripts/env.example.txt",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090421816,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "skills-airtap",
+    "handle": "skills-airtap",
+    "user_id": "s170e2agc9b68rj28bz3qt0ykd83zr8x"
+  },
+  "slug": "airtap",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/airtap",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=airtap&ownerHandle=skills-airtap",
+    "page_url": "https://clawhub.ai/skills-airtap/skills/airtap"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 893,
+    "installs": 23,
+    "stars": 4,
+    "versions": 8
+  },
+  "summary": "Use this skill when the user wants to operate Airtap or complete a request through a mobile app on an Airtap device. It lists receivers and models, creates A...",
+  "updated_at": 1778492313459,
+  "version": "1.0.7"
+}
