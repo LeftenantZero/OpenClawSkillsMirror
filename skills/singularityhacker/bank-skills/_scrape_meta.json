@@ -1,0 +1,70 @@
+{
+  "changelog": "Major update: Adds on-chain token operations on Base alongside Wise banking, with new wallet and token management features.\n\n- Added support for creating and managing Ethereum wallets on the Base network.\n- Introduced actions for buying, sending, and checking balances of ERC-20 tokens via Uniswap on Base.\n- Extended environment variable options for optional on-chain functionality.\n- Expanded documentation to cover new wallet/token actions and usage.\n- Existing Wise API banking functions (check balance, receive/send money) retained and clarified.",
+  "created_at": 1770593502950,
+  "display_name": "Bank Skills",
+  "fetched_at": 1787792677587,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "bankskills/__init__.py",
+    "bankskills/core/__init__.py",
+    "bankskills/core/bank/__init__.py",
+    "bankskills/core/bank/account_details.py",
+    "bankskills/core/bank/balances.py",
+    "bankskills/core/bank/client.py",
+    "bankskills/core/bank/credentials.py",
+    "bankskills/core/bank/handler.py",
+    "bankskills/core/bank/profiles.py",
+    "bankskills/core/bank/transfer.py",
+    "bankskills/core/base.py",
+    "bankskills/runtime/__init__.py",
+    "bankskills/runtime/registry.py",
+    "bankskills/runtime/runner.py",
+    "bankskills/sweeper.py",
+    "bankskills/wallet.py",
+    "examples/balance-input.json",
+    "examples/balance-output.json",
+    "examples/receive-details-input.json",
+    "examples/receive-details-output.json",
+    "examples/send-input.json",
+    "examples/send-output.json",
+    "pyproject.toml",
+    "run.sh",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779961517691,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "singularityhacker",
+    "handle": "singularityhacker",
+    "user_id": "s1781x0pa8wdxzf8w5npxc5ecd884egr"
+  },
+  "slug": "bank-skills",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bank-skills",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bank-skills&ownerHandle=singularityhacker",
+    "page_url": "https://clawhub.ai/singularityhacker/skills/bank-skills"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1785,
+    "installs": 57,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Traditional banking via Wise API + on-chain token swaps on Base",
+  "updated_at": 1779076836271,
+  "version": "1.0.1"
+}
