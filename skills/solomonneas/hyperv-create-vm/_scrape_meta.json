@@ -1,0 +1,50 @@
+{
+  "changelog": "Declared credential and tool requirements in frontmatter: SSH access, admin privileges, VM_PASSWORD env var, genisoimage, qemu-img. Fixes scanner flag for missing credential declarations.",
+  "created_at": 1774035694983,
+  "display_name": "Hyperv Create Vm",
+  "fetched_at": 1787859885378,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/defaults.md",
+    "references/gotchas.md",
+    "scripts/build-cidata-iso.sh",
+    "scripts/cloud-init-meta-data.yaml",
+    "scripts/cloud-init-network-config.yaml",
+    "scripts/cloud-init-user-data.yaml",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090018448,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Solomon Neas",
+    "handle": "solomonneas",
+    "user_id": "s175vcq9b774xbehtq2py4r5vn83f1k2"
+  },
+  "slug": "hyperv-create-vm",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hyperv-create-vm",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hyperv-create-vm&ownerHandle=solomonneas",
+    "page_url": "https://clawhub.ai/solomonneas/skills/hyperv-create-vm"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 775,
+    "installs": 20,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Create Ubuntu 24.04 VMs on Windows Hyper-V from cloud images with cloud-init. Handles all the gotchas: sparse VHDX fix, hv_netvsc network config, permissions...",
+  "updated_at": 1778492072793,
+  "version": "1.1.1"
+}
