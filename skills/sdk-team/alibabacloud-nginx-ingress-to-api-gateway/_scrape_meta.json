@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release of Alibaba Cloud Nginx Ingress to API Gateway migration skill.\n\n- Enables offline migration of Kubernetes nginx Ingress YAML to Alibaba Cloud API Gateway (APIG) format.\n- Automatically classifies all `nginx.ingress.kubernetes.io/*` annotations as Compatible, Ignorable, or Unsupported, and resolves Unsupported annotations using a decision tree (Higress native, safe-to-drop, built-in plugin, or custom WasmPlugin).\n- Generates migrated Ingress YAML and a full migration report with deployment guidance\u2014no cluster/cloud access needed.\n- Accepts input as pasted YAML, file, or directory (no cloud credentials or CLI required).\n- Guides users to provide YAML if migration is requested without input.",
+  "created_at": 1774953522723,
+  "display_name": "Alibabacloud Nginx Ingress To Api Gateway",
+  "fetched_at": 1787838342598,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/annotation-mapping.md",
+    "references/builtin-plugins.md",
+    "references/deployment-guide-template.md",
+    "references/migration-patterns.md",
+    "references/platform-oci-registry.md",
+    "references/plugin-deployment.md",
+    "references/ram-policies.md",
+    "references/snippet-patterns.md",
+    "references/verification-method.md",
+    "references/wasm-advanced-patterns.md",
+    "references/wasm-http-client.md",
+    "references/wasm-local-testing.md",
+    "references/wasm-plugin-sdk.md",
+    "references/wasm-redis-client.md",
+    "scripts/analyze-ingress-offline.sh",
+    "scripts/annotation-sets.sh",
+    "scripts/generate-migrated-ingress-offline.sh",
+    "scripts/generate-plugin-scaffold.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-nginx-ingress-to-api-gateway",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-nginx-ingress-to-api-gateway",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-nginx-ingress-to-api-gateway&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-nginx-ingress-to-api-gateway"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 586,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Alibaba Cloud APIG Migration Skill. Migrate Kubernetes nginx Ingress resources to Alibaba Cloud API Gateway (APIG, ingressClass: apig). Users provide Ingress...",
+  "updated_at": 1778492320487,
+  "version": "0.0.1"
+}
