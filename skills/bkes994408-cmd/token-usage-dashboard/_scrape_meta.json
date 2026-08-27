@@ -1,0 +1,55 @@
+{
+  "changelog": "- Initial release of the model-usage skill for summarizing per-model Codex or Claude usage via CodexBar CLI.\n- Provides both current and all-model breakdowns using local cost logs.\n- Supports output as plain text or pretty JSON, with scriptable CLI options and input flexibility.\n- Only available on macOS (Darwin) with brew-based installation of CodexBar CLI.\n- Offers clear guidance on usage, model selection logic, and references for further details.",
+  "created_at": 1773764750584,
+  "display_name": "Token Usage Dashboard",
+  "fetched_at": 1787867500431,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "docs/ALERT_CONFIG_EXAMPLE.json",
+    "docs/COST_CONTROL_CONFIG_EXAMPLE.json",
+    "docs/REPORT_SCHEDULER_EXAMPLE.json",
+    "docs/ROADMAP.md",
+    "docs/TENANT_CONFIG_EXAMPLE.json",
+    "references/codexbar-cli.md",
+    "run_dashboard.sh",
+    "scripts/model_usage.py",
+    "scripts/test_model_usage.py",
+    "scripts/test_token_usage_dashboard.py",
+    "scripts/token_usage_dashboard.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089939025,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "bkes994408-cmd",
+    "handle": "bkes994408-cmd",
+    "user_id": "s177kr6m7w2epsd36mrz17vq1x885hmm"
+  },
+  "slug": "token-usage-dashboard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/token-usage-dashboard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=token-usage-dashboard&ownerHandle=bkes994408-cmd",
+    "page_url": "https://clawhub.ai/bkes994408-cmd/skills/token-usage-dashboard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 697,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use CodexBar CLI local cost usage to summarize per-model usage for Codex or Claude, including the current (most recent) model or a full model breakdown. Trig...",
+  "updated_at": 1778491982228,
+  "version": "1.0.0"
+}
