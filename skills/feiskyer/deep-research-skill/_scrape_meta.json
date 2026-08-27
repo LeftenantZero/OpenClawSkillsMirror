@@ -1,0 +1,43 @@
+{
+  "changelog": "deep-research-skill v0.1.0\n\n- Initial release of a multi-Agent workflow for in-depth research tasks, supporting automated goal decomposition and parallel execution using Claude Code's non-interactive mode.\n- Enforces a step-by-step process: goal clarification, parallel subgoal scheduling, data collection/aggregation, section-based refinement, and structured report delivery as files.\n- Prioritizes internet access through installed skills, then MCP (firecrawl > exa), with fallback to basic web fetch/search only if necessary.\n- Implements strict logging, permission control, and mandatory user confirmation before task execution.\n- Requires all outputs to be saved as files; does not post complete reports in chat.\n- Designed for reproducible, systematized research use cases such as web/material analysis, competitive/industry analysis, bulk retrieval, and long-form evidence-integrated writing.",
+  "created_at": 1772248068670,
+  "display_name": "Deep Research",
+  "fetched_at": 1787801664674,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966112000,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Pengfei Ni",
+    "handle": "feiskyer",
+    "user_id": "s174q6bx170bf0qb9wjqhqfv6x83vv3e"
+  },
+  "slug": "deep-research-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/deep-research-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=deep-research-skill&ownerHandle=feiskyer",
+    "page_url": "https://clawhub.ai/feiskyer/skills/deep-research-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1876,
+    "installs": 40,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u6df1\u5ea6\u8c03\u7814\u7684\u591aAgent\u7f16\u6392\u5de5\u4f5c\u6d41\uff1a\u628a\u4e00\u4e2a\u8c03\u7814\u76ee\u6807\u62c6\u6210\u53ef\u5e76\u884c\u5b50\u76ee\u6807\uff0c\u7528 Claude Code \u975e\u4ea4\u4e92\u6a21\u5f0f\uff08`claude -p`\uff09\u8fd0\u884c\u5b50\u8fdb\u7a0b\uff1b\u8054\u7f51\u4e0e\u91c7\u96c6\u4f18\u5148\u4f7f\u7528\u5df2\u5b89\u88c5\u7684 skills\uff0c\u5176\u6b21\u4f7f\u7528 MCP \u5de5\u5177\uff1b\u7528\u811a\u672c\u805a\u5408\u5b50\u7ed3\u679c\u5e76\u5206\u7ae0\u7cbe\u4fee\uff0c\u6700\u7ec8\u4ea4\u4ed8\"\u6210\u54c1\u62a5\u544a\u6587\u4ef6\u8def\u5f84 + \u5173\u952e\u7ed3\u8bba/\u5efa\u8bae\u6458\u8981\"\u3002\u7528\u4e8e\uff1a\u7cfb\u7edf\u6027\u7f51\u9875/\u8d44\u6599\u8c03...",
+  "updated_at": 1778993809861,
+  "version": "0.1.0"
+}
