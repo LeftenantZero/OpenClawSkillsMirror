@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of the manage-secrets skill:\n\n- Enables setting or updating environment secrets through the set-secret GitHub Actions workflow.\n- Requires `AGENT_GITHUB_PAT` (PAT with Actions write permission) and `MANAGE_SECRETS_GITHUB_REPO` (target env repo).\n- Triggers a secure workflow to update SOPS-encrypted `secrets.yaml` and automatically deploy changes.\n- Enforces RBAC, allowing only permitted GitHub users to manage secrets for designated personas.\n- Includes guidance for monitoring workflow status and key validation rules.",
+  "created_at": 1775537935605,
+  "display_name": "Manage Secrets",
+  "fetched_at": 1787796010183,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Xin",
+    "handle": "aehrt55",
+    "user_id": "s17er36wzq1n7z5y17qwe150j983re3f"
+  },
+  "slug": "manage-secrets",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/manage-secrets",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=manage-secrets&ownerHandle=aehrt55",
+    "page_url": "https://clawhub.ai/aehrt55/skills/manage-secrets"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 591,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Set or update environment secrets via the set-secret GitHub Actions workflow. Use when the user asks to update, rotate, or set a secret/token/API key for thi...",
+  "updated_at": 1779075656972,
+  "version": "1.0.0"
+}
