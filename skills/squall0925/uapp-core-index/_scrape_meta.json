@@ -1,0 +1,43 @@
+{
+  "changelog": "**Skill version 1.2.0 changelog**\n\n- Major refactor: migrated from custom Python scripts and OpenAPI Python SDK to integrating the official `umeng-cli` tool.\n- Removed all legacy code and custom scripts; the skill now relies solely on `umeng-cli` for data access and queries.\n- SKILL.md extensively updated: now documents 9 supported umeng-cli queries, detailed parameter requirements, appkey usage, login flow, and new interface endpoints.\n- Added interface documentation for account statistics, daily snapshots, multi-day trends, and usage duration queries with clear field/parameter definitions.\n- Introduced umeng-cli trace (\u57cb\u70b9) logic for skill and appkey usage tracking.\n- New dependency requirement: umeng-cli must be installed on the host system.",
+  "created_at": 1775617766358,
+  "display_name": "App\u6838\u5fc3\u6307\u6807\u95ee\u7b54",
+  "fetched_at": 1787828464280,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090583126,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Umeng+",
+    "handle": "squall0925",
+    "user_id": "s178qv5gja5sbh0bq8t6wbhq8x83rmg5"
+  },
+  "slug": "uapp-core-index",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/uapp-core-index",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=uapp-core-index&ownerHandle=squall0925",
+    "page_url": "https://clawhub.ai/squall0925/skills/uapp-core-index"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 747,
+    "installs": 18,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "\u53cb\u76df U-App \u6838\u5fc3\u6307\u6807\u67e5\u8be2\u6280\u80fd\uff0c\u652f\u6301\u901a\u8fc7 umeng-cli call \u8c03\u7528\u53cb\u76df OpenAPI\uff08gateway.open.umeng.com\uff09\u7684 9 \u4e2a\u53ea\u8bfb\u67e5\u8be2\u63a5\u53e3\uff0c\u6db5\u76d6\u8d26\u6237\u7ef4\u5ea6\u6240\u6709 App \u5408\u8ba1\u3001\u5355\u65e5\u5feb\u7167\uff08DAU/\u65b0\u589e/\u542f\u52a8/\u603b\u7528\u6237\uff09\u3001\u6d3b\u8dc3/\u65b0\u589e/\u542f\u52a8\u8d8b\u52bf\u3001\u4f7f\u7528\u65f6\u957f\u3002\u5f53\u7528\u6237\u9700\u8981\u67e5\u8be2 DAU\u3001\u65e5\u6d3b\u3001\u65b0\u589e\u7528\u6237...",
+  "updated_at": 1778492468374,
+  "version": "1.2.0"
+}
