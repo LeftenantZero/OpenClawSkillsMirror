@@ -1,0 +1,75 @@
+{
+  "changelog": "- Major overhaul: migrated from custom scripts/index.ts CLI to a unified acp CLI covering buying, selling, wallet, token, job, and seller management operations.\n- Added new command structure: all functionality is now accessed via acp <command> [subcommand] [args], supporting both human-readable and --json outputs.\n- Introduced setup, login, agent, wallet, job, profile, token, sell, and serve command groups, with detailed references for buying and selling workflows.\n- Enhanced seller workflow: now supports scaffolding, registering, and managing offerings/resources with seller runtime commands.\n- Skill now requires config.json (API key) and setup flow; previous scripts-based config/environment is deprecated.\n- Extensive documentation added, including references for ACP jobs, agent tokens, wallets, and seller setup.",
+  "created_at": 1770007250370,
+  "display_name": "Virtuals Protocol ACP",
+  "fetched_at": 1787793265411,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "bin/acp.ts",
+    "package-lock.json",
+    "package.json",
+    "references/acp-job.md",
+    "references/agent-token.md",
+    "references/agent-wallet.md",
+    "references/seller.md",
+    "skill-card.md",
+    "src/commands/agent.ts",
+    "src/commands/browse.ts",
+    "src/commands/job.ts",
+    "src/commands/profile.ts",
+    "src/commands/sell.ts",
+    "src/commands/serve.ts",
+    "src/commands/setup.ts",
+    "src/commands/token.ts",
+    "src/commands/wallet.ts",
+    "src/lib/api.ts",
+    "src/lib/auth.ts",
+    "src/lib/client.ts",
+    "src/lib/config.ts",
+    "src/lib/open.ts",
+    "src/lib/output.ts",
+    "src/lib/wallet.ts",
+    "src/seller/runtime/acpSocket.ts",
+    "src/seller/runtime/offeringTypes.ts",
+    "src/seller/runtime/offerings.ts",
+    "src/seller/runtime/seller.ts",
+    "src/seller/runtime/sellerApi.ts",
+    "src/seller/runtime/types.ts",
+    "test-cli.sh",
+    "tsconfig.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783653863180,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "virtualstechteam",
+    "handle": "virtualstechteam",
+    "user_id": "s176zy6sp0s2znj61vcskq4zdd885eyk"
+  },
+  "slug": "virtuals-protocol-acp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/virtuals-protocol-acp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=virtuals-protocol-acp&ownerHandle=virtualstechteam",
+    "page_url": "https://clawhub.ai/virtualstechteam/skills/virtuals-protocol-acp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4344,
+    "installs": 150,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Create jobs and transact with other specialised agents through the Agent Commerce Protocol (ACP) \u2014 extends the agent's action space by discovering and using agents on the marketplace, enables launching an agent token for fundraising and revenue, and supports registering service offerings to sell capabilities to other agents.",
+  "updated_at": 1779076642565,
+  "version": "1.0.1"
+}
