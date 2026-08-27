@@ -1,0 +1,35 @@
+{
+  "changelog": "discord-thread-naming-backstop-workflow 1.0.0 \u2013 initial release\n\n- Provides a workflow for silently checking and correcting recent Discord thread names in a specific parent channel of a target guild.\n- Strictly limits scope: only targets new threads (created within 20 minutes or today with clearly abnormal titles) in channel `1478785965580357754`.\n- Skips threads already matching a preset naming convention (`^\u3010[^\u3011]+\u3011.+ - \\d{8}$`), avoids historical or unrelated threads.\n- Auto-generates compliant names using a fixed template and extracts thread intent/type based on whitelist and heuristics.\n- Handles Discord API retries, applies final consistency checks, and sends alert (P2) or resolved notifications only if needed\u2014normal runs remain silent.\n- Limits each run to at most three threads and ensures non-disruptive, traceable operation.",
+  "created_at": 1774195491731,
+  "display_name": "Discord Thread Naming Backstop Workflow",
+  "fetched_at": 1787855652235,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/dispatch-thread-rename-notification-templates.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "can4hou6joeng4",
+    "handle": "can4hou6joeng4",
+    "user_id": "s17fzhes75mvxfh1xm1q519egh83y6gc"
+  },
+  "slug": "discord-thread-naming-backstop-workflow",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/discord-thread-naming-backstop-workflow",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=discord-thread-naming-backstop-workflow&ownerHandle=can4hou6joeng4",
+    "page_url": "https://clawhub.ai/can4hou6joeng4/skills/discord-thread-naming-backstop-workflow"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 689,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7528\u4e8e\u6267\u884c Discord \u7ebf\u7a0b\u547d\u540d\u515c\u5e95\uff08backstop\uff09\u5de1\u68c0\u4e0e\u6539\u540d\uff0c\u4e13\u95e8\u5904\u7406\u67d0\u4e2a guild \u4e0b\u6307\u5b9a parent channel \u4e2d\u201c\u6700\u8fd1\u65b0\u5efa\u4f46\u672a\u547d\u540d\u89c4\u8303\u201d\u7684\u7ebf\u7a0b\uff0c\u8865\u4e0a prehook \u6f0f\u7f51\uff0c\u800c\u4e0d\u662f\u6279\u91cf\u56de\u626b\u5386\u53f2\u3002\u9047\u5230\u201c\u7ebf\u7a0b\u91cd\u547d\u540d\u515c\u5e95\u201d\u201cdispatch \u7ebf\u7a0b\u547d\u540d\u89c4\u8303\u201d\u201c\u53ea\u68c0\u67e5\u6700\u8fd1 20 \u5206\u949f\u7ebf\u7a0b\u201d\u201cJSON...",
+  "updated_at": 1778492111768,
+  "version": "1.0.0"
+}
