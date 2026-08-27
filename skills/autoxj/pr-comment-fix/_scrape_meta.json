@@ -1,0 +1,46 @@
+{
+  "changelog": "- Initial release of pr-comment-fix skill.\n- Enables users to update local code based on unresolved GitCode PR review comments, requiring a valid PR URL and GITCODE_TOKEN.\n- Provides a step-by-step workflow: fetch PR review context, summarize issues and confirm user selection, apply code fixes, perform local validation, and summarize changes.\n- Optional support for replying to and resolving PR comments on GitCode upon user request.\n- CLI tool relies on Python 3.7+ with no external dependencies.",
+  "created_at": 1774672833458,
+  "display_name": "GitCode PR comment fix",
+  "fetched_at": 1787843323530,
+  "files": [
+    ".gitignore",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/pr_comment_fix_tool.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090162887,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "do_while_true",
+    "handle": "autoxj",
+    "user_id": "s178rh9mw9vwnrg2m6bg7jh53183hv34"
+  },
+  "slug": "pr-comment-fix",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pr-comment-fix",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pr-comment-fix&ownerHandle=autoxj",
+    "page_url": "https://clawhub.ai/autoxj/skills/pr-comment-fix"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 623,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6309 GitCode PR \u68c0\u89c6\u610f\u89c1\u4fee\u6539\u4ee3\u7801\u3002\u9700 GITCODE_TOKEN\u3002Use when \u7528\u6237\u8981\u4fee\u6539 PR \u68c0\u89c6\u610f\u89c1\u3002",
+  "updated_at": 1778492254537,
+  "version": "1.0.0"
+}
