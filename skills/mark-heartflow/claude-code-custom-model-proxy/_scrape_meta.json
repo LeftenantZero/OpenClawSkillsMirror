@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release: Enables Claude Code integration with custom model providers using OpenAI-compatible APIs via a local proxy server.\n\n- Provides a Python proxy that converts Anthropic Messages API requests to OpenAI Chat Completions API and back.\n- Includes setup instructions for Claude Code and proxy configuration.\n- Adds solutions for common issues: model validation errors, query string handling, UTF-8 encoding, and connection troubles.\n- Supports easy customization for upstream API endpoints, model names, and listen ports.\n- Built-in retry logic for handling provider rate limits (HTTP 429).\n- Troubleshooting and advanced configuration guidance included.",
+  "created_at": 1778940918809,
+  "display_name": "Claude Code Custom Model Proxy",
+  "fetched_at": 1787793895426,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/claude_code_proxy.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090819849,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mark-HeartFlow",
+    "handle": "mark-heartflow",
+    "user_id": "s1725sy40ynkrcnw7mywx04sf9850epb"
+  },
+  "slug": "claude-code-custom-model-proxy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claude-code-custom-model-proxy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claude-code-custom-model-proxy&ownerHandle=mark-heartflow",
+    "page_url": "https://clawhub.ai/mark-heartflow/skills/claude-code-custom-model-proxy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 557,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Configure Claude Code to work with custom model providers (like MiniMax, OpenAI-compatible APIs). This skill should be used when users want to: use Claude Co...",
+  "updated_at": 1779076412403,
+  "version": "1.0.0"
+}
