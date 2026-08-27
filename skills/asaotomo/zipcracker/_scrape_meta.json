@@ -1,0 +1,60 @@
+{
+  "changelog": "**Summary:** Major refactor with new wrapper, expanded documentation, improved workflows, and added attack references.\n\n- Added `scripts/openclaw_zipcracker.py` as the preferred engine wrapper, superseding raw script calls.\n- Introduced extensive reference documentation and attack playbooks under `/references`.\n- Reworked documentation for clearer workflow guidance, usage scenarios, and decision trees.\n- Detailed new command-line flags and attack strategies, including CRC32, mask, template KPA, and `bkcrack` integrations.\n- Deprecated old main scripts and flattened legacy usage in favor of the OpenClaw skill wrapper.\n- Expanded multilingual trigger phrases and CTF challenge coverage.",
+  "created_at": 1773238468281,
+  "display_name": "ZipCracker",
+  "fetched_at": 1787799488554,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/attack-playbook.md",
+    "references/clawhub-bilingual-copy.md",
+    "references/clawhub-final-submission.md",
+    "references/clawhub-publishing-copy.md",
+    "references/competitive-ctf-prompts.md",
+    "references/ctf-techniques.md",
+    "references/forward-test-report.md",
+    "references/natural-language-command-examples.md",
+    "references/openclaw-workflow.md",
+    "references/release-checklist.md",
+    "scripts/ZipCracker.py",
+    "scripts/ZipCracker_en.py",
+    "scripts/openclaw_zipcracker.py",
+    "scripts/password_list.txt",
+    "scripts/zipcracker_core.py",
+    "scripts/zipcracker_inspect.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090381678,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "asaotomo",
+    "handle": "asaotomo",
+    "user_id": "s177penfc4z7re7mhvkqqmvskx83m9hg"
+  },
+  "slug": "zipcracker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/zipcracker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=zipcracker&ownerHandle=asaotomo",
+    "page_url": "https://clawhub.ai/asaotomo/skills/zipcracker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1422,
+    "installs": 40,
+    "stars": 1,
+    "versions": 7
+  },
+  "summary": "CTF-oriented ZIP cracking and recovery with the bundled ZipCracker engine. Use when Codex or OpenClaw needs to analyze or recover an encrypted ZIP in authori...",
+  "updated_at": 1778997946196,
+  "version": "2.0.1"
+}
