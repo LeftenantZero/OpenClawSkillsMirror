@@ -1,0 +1,49 @@
+{
+  "changelog": "promptfolio-summarize v0.1.0\n\n- Initial release of the promptfolio-summarize skill.\n- Analyzes local AI conversation history across multiple coding agents (Claude Code, Cursor, Codex, ChatGPT, Gemini CLI, Trae, OpenCode, Antigravity, Windsurf, OpenClaw, and others).\n- Detects user \"framework sentences\"\u2014moments where the user teaches AI how to think, not just commands.\n- Builds a personal \"portrait\" of the user for the promptfolio platform using these framework sentences and a 30-day activity heat map.\n- Ensures user privacy: all conversation parsing is local, and only structured summaries are uploaded with user confirmation.\n- Includes robust session discovery, authentication, and session analysis steps.",
+  "created_at": 1773334942666,
+  "display_name": "Promptfolio Summarize",
+  "fetched_at": 1787789200806,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "analysis-prompt.md",
+    "device-auth.sh",
+    "scripts/assemble-payload.py",
+    "scripts/compute-stats.py",
+    "scripts/discover-sessions.sh",
+    "scripts/post-sync.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089860792,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "chenchen",
+    "handle": "billc8128",
+    "user_id": "s17dh9wwvnfhg40q722txczd0h83php4"
+  },
+  "slug": "promptfolio-summarize",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/promptfolio-summarize",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=promptfolio-summarize&ownerHandle=billc8128",
+    "page_url": "https://clawhub.ai/billc8128/skills/promptfolio-summarize"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 952,
+    "installs": 27,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Analyze AI conversation history across Claude Code, Cursor, Codex, ChatGPT, Gemini CLI, Trae, OpenCode, Antigravity, Windsurf, OpenClaw and other coding agen...",
+  "updated_at": 1779078044606,
+  "version": "0.1.0"
+}
