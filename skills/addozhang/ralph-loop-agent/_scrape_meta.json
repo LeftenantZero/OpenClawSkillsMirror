@@ -1,0 +1,45 @@
+{
+  "changelog": "Version 1.1.0 summary: Expanded documentation and feature guidance for Ralph Loop agent orchestration.\n\n- Added comprehensive SKILL.md detailing agent workflows, tool usage, prompts, and best practices.\n- Documented support for interactive CLIs with proper TTY and background process management.\n- Outlined PLANNING vs BUILDING loop modes, completion condition detection, and sandboxing safeguards.\n- Included explicit input requirements, command templates for major AI coding agents, and troubleshooting guidance.\n- Emphasized use of exec+process tools for robust automation and session control.",
+  "created_at": 1770354202802,
+  "display_name": "Ralph Loop (Agent Mode)",
+  "fetched_at": 1787805503410,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783658741137,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Addo.Zhang",
+    "handle": "addozhang",
+    "user_id": "s17292626ewt0mmj5fmj13cegh84eqke"
+  },
+  "slug": "ralph-loop-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ralph-loop-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ralph-loop-agent&ownerHandle=addozhang",
+    "page_url": "https://clawhub.ai/addozhang/skills/ralph-loop-agent"
+  },
+  "stats": {
+    "comments": 2,
+    "downloads": 4123,
+    "installs": 142,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Guide OpenClaw agents to execute Ralph Wiggum loops using exec and process tools. Agent orchestrates coding agents (Codex, Claude Code, OpenCode, Goose) with proper TTY support via pty:true. Plans/builds code via PROMPT.md + AGENTS.md, SPECS and IMPLEMENTATION_PLAN.md. Includes PLANNING vs BUILDING modes, backpressure, sandboxing, and completion conditions. Users request loops, agents execute using tools.",
+  "updated_at": 1778988642394,
+  "version": "1.1.0"
+}
