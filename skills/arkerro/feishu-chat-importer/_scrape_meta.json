@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of feishu-chat-importer.\n\n- Converts Feishu chat history exports into OpenClaw episodic memory format.\n- Parses feishu_chat_YYYYMMDD.json files, normalizes messages, and groups them by date.\n- Writes daily episodic summaries to memory/episodic/ for use in Imported Insights and Memory Palace.\n- Supports dry run, date filtering, and verbose import options.\n- Maps user and app messages to user and assistant roles accordingly.\n- Ensures deduplication and proper content extraction for both text and post message types.",
+  "created_at": 1776395452211,
+  "display_name": "Feishu Chat Importer",
+  "fetched_at": 1787820271815,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/batch.py",
+    "scripts/parse_feishu.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "arkerro",
+    "handle": "arkerro",
+    "user_id": "s17f6zqchnb41z05c2wck9e9xd850wbt"
+  },
+  "slug": "feishu-chat-importer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-chat-importer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-chat-importer&ownerHandle=arkerro",
+    "page_url": "https://clawhub.ai/arkerro/skills/feishu-chat-importer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 605,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Convert Feishu chat history exports into OpenClaw episodic memory format. Parses feishu_chat_YYYYMMDD.json files, normalizes messages, and writes daily episo...",
+  "updated_at": 1778492631819,
+  "version": "1.0.0"
+}
