@@ -1,0 +1,44 @@
+{
+  "changelog": "Version 1.0.0 \u2014 Initial Release\n\n- Adds automated multi-agent code review for pull requests, focusing on bugs, CLAUDE.md compliance, git history, and previous PR comments.\n- Utilizes parallel agent architecture and confidence scoring to minimize false positives and avoid nitpicks.\n- Only flags significant, verifiable issues; issues must score at least 80/100 confidence to be reported.\n- Review process ignores pre-existing problems, stylistic nitpicks, and issues outside the scope of the modified code.\n- Provides concise, well-linked GitHub PR comments with clear and actionable feedback.",
+  "created_at": 1775516835572,
+  "display_name": "Code Review",
+  "fetched_at": 1787829810455,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/review-patterns.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090322953,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Emerson Braun",
+    "handle": "emersonbraun",
+    "user_id": "s17et1m19hdc751hkgrqtzjf6184b55r"
+  },
+  "slug": "eb-code-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/eb-code-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=eb-code-review&ownerHandle=emersonbraun",
+    "page_url": "https://clawhub.ai/emersonbraun/skills/eb-code-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 778,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Multi-agent code review for pull requests. Checks for bugs, CLAUDE.md compliance, git history context, and previous PR comments. Uses confidence scoring to f...",
+  "updated_at": 1778492448104,
+  "version": "1.0.0"
+}
