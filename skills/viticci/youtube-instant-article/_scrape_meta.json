@@ -1,0 +1,47 @@
+{
+  "changelog": "youtube-instant-article 0.1.0\n\n- Initial release of the skill for transforming YouTube videos into Telegraph Instant View articles with slides and timestamped summaries.\n- Automatically detects and processes all YouTube video requests (youtube.com or youtu.be URLs).\n- Generates visually rich articles: includes video link, interleaved slides, timestamped summaries, notable quotes, and proper YouTube title.\n- Uses OpenAI GPT-5.2 for fast, high-quality summaries and automatic timestamp extraction.\n- Handles image hosting via catbox.moe and publishes articles directly to Telegraph.\n- Requires zsh, summarize v0.10.0+, jq, and proper API keys (Telegraph and OpenAI).",
+  "created_at": 1769173161870,
+  "display_name": "Youtube Instant Article",
+  "fetched_at": 1787806409917,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "instant-article.sh",
+    "scripts/generate.sh",
+    "scripts/setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783651243696,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "viticci",
+    "handle": "viticci",
+    "user_id": "s170trceznc97ym333se9a26nx885n3f"
+  },
+  "slug": "youtube-instant-article",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/youtube-instant-article",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=youtube-instant-article&ownerHandle=viticci",
+    "page_url": "https://clawhub.ai/viticci/skills/youtube-instant-article"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2843,
+    "installs": 97,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Transform YouTube videos into Telegraph Instant View articles with visual slides and timestamped summaries. Use this skill whenever a user shares a YouTube URL (youtube.com or youtu.be) and asks to summarize, explain, or process the video. This is the DEFAULT skill for all YouTube video requests - do NOT use the generic summarize tool for YouTube.",
+  "updated_at": 1778986997519,
+  "version": "0.1.0"
+}
