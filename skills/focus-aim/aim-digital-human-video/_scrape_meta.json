@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of aim-digital-human-video.\n\n- Generate digital human talking videos from a user-provided image and audio or text.\n- Audio can be uploaded directly, synthesized from preset voices, or cloned from a sample.\n- Submits jobs to AEP via /video2 endpoint and polls for video readiness, returning a public video URL.\n- Offers intelligent polling based on estimated processing time, with a task history and status tracker.\n- All credentials must be configured in a local .env file; supports interactive self-check and guided setup flow.\n- Provides command-line scripts for different use cases, with straightforward JSON output.",
+  "created_at": 1777428310841,
+  "display_name": "aim-digital-human-video",
+  "fetched_at": 1787812759752,
+  "files": [
+    ".gitignore",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/gen_digital_human.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090580591,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "focus-aim",
+    "handle": "focus-aim",
+    "user_id": "s17dsk7h66d42r68vny38ggexs85pp9k"
+  },
+  "slug": "aim-digital-human-video",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aim-digital-human-video",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aim-digital-human-video&ownerHandle=focus-aim",
+    "page_url": "https://clawhub.ai/focus-aim/skills/aim-digital-human-video"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 544,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5f53\u7528\u6237\u60f3\u8981\u7528\u4e00\u5f20\u56fe\u7247\u751f\u6210\u6570\u5b57\u4eba\u8bf4\u8bdd\u89c6\u9891\u65f6\u4f7f\u7528\u6b64 skill\u3002\u7528\u6237\u9700\u63d0\u4f9b\u56fe\u7247\u548c\u97f3\u9891\uff08\u6216\u6587\u6848+\u514b\u9686\u8bed\u97f3/\u9884\u8bbe\u8bed\u97f3\uff09\uff0cskill \u901a\u8fc7 AEP \u63d0\u4ea4 /video2\uff0c\u667a\u80fd\u8f6e\u8be2 TOS URL \u7b49\u5f85\u7ed3\u679c\u5c31\u7eea\u540e\u8fd4\u56de\u89c6\u9891\u516c\u5f00\u94fe\u63a5\u3002",
+  "updated_at": 1778492789909,
+  "version": "1.0.0"
+}
