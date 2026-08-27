@@ -1,0 +1,43 @@
+{
+  "changelog": "- Initial release of the daily-recap skill.\n- Automatically generates a daily summary of all agent activity and saves it to Obsidian.\n- Reads today's memory log and (optionally) Discord messages to compile recaps of requests, research, builds, decisions, and notables.\n- Writes a structured journal entry with YAML frontmatter and appropriate topic tags to `vault/daily-recap/YYYY-MM-DD.md`.\n- Handles missing or empty logs gracefully by noting \"No activity logged\" in each section.\n- Prevents overwriting existing entries; appends an addendum if needed.\n- Designed for nightly, automated use via cron jobs.",
+  "created_at": 1774881322194,
+  "display_name": "Daily Recap",
+  "fetched_at": 1787839635321,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090197949,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "New Age Investments",
+    "handle": "newageinvestments25-byte",
+    "user_id": "s1750zbb4q7vnt30b4h3mhgarx83n6hn"
+  },
+  "slug": "nai-daily-recap",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nai-daily-recap",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nai-daily-recap&ownerHandle=newageinvestments25-byte",
+    "page_url": "https://clawhub.ai/newageinvestments25-byte/skills/nai-daily-recap"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 547,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate a daily recap/summary of all agent activity and save it to Obsidian. Use when asked to do a daily recap, end-of-day summary, or when a cron job fire...",
+  "updated_at": 1778492302579,
+  "version": "1.0.0"
+}
