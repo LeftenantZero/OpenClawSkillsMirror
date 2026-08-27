@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of model-deploy skill.\n\n- Deploy large language models (LLMs) like Qwen and DeepSeek on specified GPU servers.\n- Supports downloading models via ModelScope and launching the vLLM inference service.\n- Uses a deployment script with parameters for environment, port, GPU count, proxy, and model storage path.\n- Requires passwordless SSH and pre-installed Miniconda on the target server.\n- Provides troubleshooting tips for common deployment issues.",
+  "created_at": 1773492808864,
+  "display_name": "Model Deploy Skill",
+  "fetched_at": 1787798931011,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/deploy.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089886121,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Wang Wei",
+    "handle": "wangwei1237",
+    "user_id": "s1720re4ts26jyz6fexjgpe7s583g3gb"
+  },
+  "slug": "model-deploy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/model-deploy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=model-deploy&ownerHandle=wangwei1237",
+    "page_url": "https://clawhub.ai/wangwei1237/skills/model-deploy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 922,
+    "installs": 27,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use this skill when users request to deploy LLMs (Qwen, DeepSeek, etc.) on specified GPU servers and start the model service. This skill can Download models...",
+  "updated_at": 1778999561997,
+  "version": "1.0.0"
+}
