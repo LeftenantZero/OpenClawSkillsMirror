@@ -1,0 +1,48 @@
+{
+  "changelog": "Major upgrade: Switch to a native Python-based memory management system with smart install, typed multi-layer memory, and improved review/cleanup workflows.\n\n- Added scripts for smart installation, daily/weekly/monthly memory review, legacy migration, and cron template generation.\n- Introduced structured memory layers (L1 daily logs, L2 sidecar summaries, L3 rollups) and typed taxonomy (`experience`, `value`, `standard`).\n- Moved configuration and operations from JavaScript to Python; removed legacy JS files and configs.\n- Improved migration safety: preserves existing user data, generates reviews and editable plans instead of automatic changes.\n- Monthly review now produces non-destructive reports and actions for user-approved cleanup.\n- Updated documentation to detail new commands, installation options, and compatibility guidance.",
+  "created_at": 1774314690925,
+  "display_name": "Better Memory V2",
+  "fetched_at": 1787853216077,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/memory-schema.md",
+    "scripts/apply_monthly_cleanup.py",
+    "scripts/bootstrap_memory.py",
+    "scripts/capture_memory.py",
+    "scripts/emit_cron_template.py",
+    "scripts/install_heartbeat_memory_os.py",
+    "scripts/memory_os_common.py",
+    "scripts/promote_legacy_memory.py",
+    "scripts/refine_memory.py",
+    "scripts/run_daily_review.py",
+    "scripts/run_monthly_review.py",
+    "scripts/run_weekly_rollup.py",
+    "scripts/smart_install.py",
+    "scripts/uninstall_memory_os.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "fuuuuujichaos",
+    "handle": "fuuuuujichaos",
+    "user_id": "s17evsvse8hdv5eeq1m2sppkad83g2s5"
+  },
+  "slug": "better-memory",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/better-memory",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=better-memory&ownerHandle=fuuuuujichaos",
+    "page_url": "https://clawhub.ai/fuuuuujichaos/skills/better-memory"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 745,
+    "installs": 18,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "One-shot smart installation and ongoing maintenance for a native OpenClaw memory stack with L1 daily logs (`memory/YYYY-MM-DD.md`), L2 sidecar summaries, and...",
+  "updated_at": 1778492138838,
+  "version": "1.0.4"
+}
