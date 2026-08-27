@@ -1,0 +1,35 @@
+{
+  "changelog": "- Initial release of DGX Spark setup skill.\n- Provides a step-by-step guide for configuring an NVIDIA DGX Spark (GB10 Blackwell, 128GB unified memory) as a local LLM inference server using vLLM, LiteLLM, and OpenClaw.\n- Covers requirements and instructions for building custom PyTorch and Triton with sm_121 (Blackwell) GPU compatibility.\n- Includes guidance on setting up LiteLLM with per-user virtual keys, running as a systemd user service, and configuring Tailscale for secure remote access.\n- Offers troubleshooting information and pointers for resolving compatibility issues (torch, Triton, flashinfer).",
+  "created_at": 1774304761278,
+  "display_name": "Dgx Spark Setup",
+  "fetched_at": 1787853367830,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/litellm-config-template.yaml",
+    "references/troubleshooting.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jimmy Hernandez",
+    "handle": "jimmy-hernandez",
+    "user_id": "s17dy722gamp63azcmjwyx1md983efsw"
+  },
+  "slug": "dgx-spark-setup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dgx-spark-setup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dgx-spark-setup&ownerHandle=jimmy-hernandez",
+    "page_url": "https://clawhub.ai/jimmy-hernandez/skills/dgx-spark-setup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 601,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Set up and maintain an NVIDIA DGX Spark (GB10 Blackwell, 128GB unified memory) as a local LLM inference server running vLLM + LiteLLM + OpenClaw. Use when in...",
+  "updated_at": 1778492138838,
+  "version": "1.0.0"
+}
