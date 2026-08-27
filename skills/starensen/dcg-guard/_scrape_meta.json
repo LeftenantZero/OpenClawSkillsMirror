@@ -1,0 +1,49 @@
+{
+  "changelog": "Cross-platform: 30+ built-in rules for Windows (PowerShell/cmd) + Unix. No binary dependency required. DCG binary optional as fallback. execFileSync for injection safety.",
+  "created_at": 1771585773207,
+  "display_name": "DCG Guard",
+  "fetched_at": 1787791509276,
+  "files": [
+    "AGENT_INSTRUCTIONS.md",
+    "SKILL.md",
+    "_meta.json",
+    "index-windows-hybrid.ts",
+    "index.ts",
+    "install.sh",
+    "openclaw.plugin.json",
+    "package.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779942983368,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "StarenseN",
+    "handle": "starensen",
+    "user_id": "s178y8v8n8nmjdanwtfsyqz7rn885pfe"
+  },
+  "slug": "dcg-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dcg-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dcg-guard&ownerHandle=starensen",
+    "page_url": "https://clawhub.ai/starensen/skills/dcg-guard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1662,
+    "installs": 50,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Hard-blocks dangerous shell commands (rm -rf, git push --force, etc.) before execution via OpenClaw's before_tool_call plugin hook. Zero noise on safe comman...",
+  "updated_at": 1779077223654,
+  "version": "1.1.0"
+}
