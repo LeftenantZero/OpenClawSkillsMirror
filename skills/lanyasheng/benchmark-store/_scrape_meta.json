@@ -1,0 +1,50 @@
+{
+  "changelog": "v2.0: 9-dim evaluation (coverage/completeness split), 4-role weighted scoring with category modifiers (tool/knowledge/orchestration/rule), per-dim Pareto tolerances (security 2%, efficiency 10%, others 5%), LLM-as-Judge default, enriched SKILL.md docs, 11 test fixes, GEPA references removed.",
+  "created_at": 1775179756376,
+  "display_name": "Benchmark Store",
+  "fetched_at": 1787833758124,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "data/benchmark-database.md",
+    "data/evaluation-standards.md",
+    "data/fixtures/README.md",
+    "data/fixtures/level1-skill/SKILL.md",
+    "data/fixtures/level2-skill/SKILL.md",
+    "data/fixtures/level2-skill/scripts/main.py",
+    "data/fixtures/level3-skill/README.md",
+    "data/fixtures/level3-skill/SKILL.md",
+    "data/red-team-guide.md",
+    "data/test-cases.yaml",
+    "interfaces/__init__.py",
+    "interfaces/frozen_benchmark.py",
+    "interfaces/hidden_tests.py",
+    "scripts/benchmark_db.py",
+    "scripts/pareto.py",
+    "skill-card.md",
+    "tests/test_benchmarks.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "_silhouette",
+    "handle": "lanyasheng",
+    "user_id": "s179bk63dv96y90hw97xaay4fx83t7yr"
+  },
+  "slug": "benchmark-store",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/benchmark-store",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=benchmark-store&ownerHandle=lanyasheng",
+    "page_url": "https://clawhub.ai/lanyasheng/skills/benchmark-store"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 580,
+    "installs": 14,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "\u5f53\u9700\u8981\u521d\u59cb\u5316\u57fa\u51c6\u6570\u636e\u5e93\u3001\u5bf9\u6bd4 skill \u8bc4\u5206\u4e0e\u5386\u53f2\u57fa\u7ebf\u3001\u67e5\u770b Pareto front \u662f\u5426\u6709\u7ef4\u5ea6\u56de\u9000\u3001\u6216\u67e5\u9605\u8d28\u91cf\u5206\u7ea7\u6807\u51c6\u65f6\u4f7f\u7528\u3002\u4e0d\u7528\u4e8e\u7ed9\u5019\u9009\u6253\u5206\uff08\u7528 improvement-discriminator\uff09\u6216\u81ea\u52a8\u6539\u8fdb\uff08\u7528 improvement-learner\uff09\u3002",
+  "updated_at": 1778492383263,
+  "version": "1.1.1"
+}
