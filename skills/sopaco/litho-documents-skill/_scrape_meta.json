@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of the Litho Document Skill (Agent-only implementation):\n\n- Enables fully autonomous, agent-driven project documentation and codebase architecture analysis, including C4 model diagrams equivalent to deepwiki-rs, with no external binaries.\n- Implements a structured four-phase pipeline: preprocessing, research (multi-level C4 analysis), composition (markdown docs), and output (verification & delivery).\n- Features robust handling of context limits through persistent intermediate reports in a `.litho-agent/` directory.\n- Prioritizes narrative, human-readable documentation\u2014emphasizing explanations, rationale, and analogies over bare lists or tables.\n- Delivers comprehensive output: system overviews, architecture and workflow diagrams, module deep-dives, boundary interface descriptions, and conditional database documentation.\n- Adapts scanning and analysis depth dynamically based on project size and module importance, using a variety of tool-based strategies.",
+  "created_at": 1778918257142,
+  "display_name": "Litho Doc",
+  "fetched_at": 1787806694520,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/doc-templates.md",
+    "references/phase1-preprocessing.md",
+    "references/phase2-research.md",
+    "references/phase3-composition.md",
+    "references/phase4-output.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779949090094,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Sopaco",
+    "handle": "sopaco",
+    "user_id": "s17a75kt8fank19t6971cm2bs583jz3w"
+  },
+  "slug": "litho-documents-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/litho-documents-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=litho-documents-skill&ownerHandle=sopaco",
+    "page_url": "https://clawhub.ai/sopaco/skills/litho-documents-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 519,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "This skill should be used when the user asks to \"generate project documentation\", \"analyze codebase architecture\", \"create C4 architecture diagrams\", \"docume...",
+  "updated_at": 1778918807602,
+  "version": "1.0.0"
+}
