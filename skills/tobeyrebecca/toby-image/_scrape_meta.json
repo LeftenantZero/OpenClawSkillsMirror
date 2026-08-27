@@ -1,0 +1,49 @@
+{
+  "changelog": "- Initial release of the toby-image (ComfyUI) skill.\n- Enables running local ComfyUI workflows via the HTTP API, including user-supplied workflow files or raw JSON.\n- Supports editing workflow prompts, styles, and seeds before execution.\n- Allows downloading model weights from user-provided URLs directly into ComfyUI's model folders.\n- Sends generated images back to the user after every successful run.",
+  "created_at": 1776755187360,
+  "display_name": "image",
+  "fetched_at": 1787795010455,
+  "files": [
+    "CONTRIBUTING.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/default-workflow.json",
+    "assets/tmp-workflow.json",
+    "scripts/comfyui_run.py",
+    "scripts/download_weights.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090495667,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "TobeyRebecca",
+    "handle": "tobeyrebecca",
+    "user_id": "s17a4w4rxr2w5b31z6gnpnqg2184msz0"
+  },
+  "slug": "toby-image",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/toby-image",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=toby-image&ownerHandle=tobeyrebecca",
+    "page_url": "https://clawhub.ai/tobeyrebecca/skills/toby-image"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 762,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Run local ComfyUI workflows via the HTTP API. Use when the user asks to run ComfyUI, execute a workflow by file path/name, or supply raw API-format JSON; sup...",
+  "updated_at": 1779075990851,
+  "version": "1.0.0"
+}
