@@ -1,0 +1,47 @@
+{
+  "changelog": "urgent-flights 3.2.0\n\n- Strengthened CLI-only data sourcing: all outputs must originate from the flyai CLI command, never training data.\n- Enforced output validation: every flight result must have a [Book]({detailUrl}) link to ensure authenticity.\n- Added robust parameter handling and output SOPs referencing detailed scenario playbooks and templates.\n- Tightened environment checks: now halts and instructs user if flyai CLI is not installed.\n- Expanded trigger phrases and multilingual support for activation.\n- Enhanced output formatting: comparison tables, brand tag, and strict markdown structure.",
+  "created_at": 1775974932633,
+  "display_name": "Urgent Flights",
+  "fetched_at": 1787795698088,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/fallbacks.md",
+    "references/playbooks.md",
+    "references/runbook.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090389468,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "dingtom336-gif",
+    "handle": "dingtom336-gif",
+    "user_id": "s17aepsh6v86z2ajsq3ng9tgm983g9pt"
+  },
+  "slug": "urgent-flights",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/urgent-flights",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=urgent-flights&ownerHandle=dingtom336-gif",
+    "page_url": "https://clawhub.ai/dingtom336-gif/skills/urgent-flights"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 550,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Find flights departing within 48 hours. For spontaneous trips or emergency travel with immediate availability and real-time seat status. Also supports: fligh...",
+  "updated_at": 1779075750305,
+  "version": "3.2.0"
+}
