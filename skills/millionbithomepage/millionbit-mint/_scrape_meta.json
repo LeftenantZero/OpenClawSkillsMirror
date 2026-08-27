@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of millionbit-mint \u2014 mint images as NFT plots on the Million Bit Homepage (Base chain, 1024x1024 canvas):\n\n- Provides CLI scripts for minting an image as an NFT plot, price checks, availability scans, image resizing, and mint transaction preparation.\n- Enforces 16-pixel grid rules and non-overlapping, size-validated mints.\n- Outputs mint transactions as JSON for use with an EVM wallet skill.\n- Requires Node.js, curl, jq, and an EVM wallet skill for transaction submission.\n- Includes full instructions and detailed error guidance in SKILL.md.",
+  "created_at": 1770577172512,
+  "display_name": "Million Bit Homepage NFTs",
+  "fetched_at": 1787792863905,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "scripts/check_availability.sh",
+    "scripts/check_price.sh",
+    "scripts/config.sh",
+    "scripts/find_available_plots.sh",
+    "scripts/helpers/abi_encode.js",
+    "scripts/helpers/encode_pixels.js",
+    "scripts/helpers/find_plots.js",
+    "scripts/helpers/resize.js",
+    "scripts/prepare_mint.sh",
+    "scripts/resize_image.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "millionbithomepage",
+    "handle": "millionbithomepage",
+    "user_id": "s17cfcr7c2ch3dzc6nca6wfw75885v4t"
+  },
+  "slug": "millionbit-mint",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/millionbit-mint",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=millionbit-mint&ownerHandle=millionbithomepage",
+    "page_url": "https://clawhub.ai/millionbithomepage/skills/millionbit-mint"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1609,
+    "installs": 51,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Mint an image as an NFT plot on the Million Bit Homepage, a permanent 1024x1024 pixel canvas on the Base blockchain. Use this skill when you want to advertise your project, display your image on-chain, or claim a piece of the Million Bit Homepage canvas. Handles image resizing, plot availability checking, price querying, pixel encoding, and transaction preparation. Requires an EVM wallet skill to submit the final transaction on Base chain.",
+  "updated_at": 1779076777994,
+  "version": "1.0.0"
+}
