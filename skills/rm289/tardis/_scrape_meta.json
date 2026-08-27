@@ -1,0 +1,49 @@
+{
+  "changelog": "v1.2.0: Address security review - ACTION: triggers now opt-in with security docs, clarified .env loading and webhook behavior",
+  "created_at": 1770240923462,
+  "display_name": "TARDIS",
+  "fetched_at": 1787805672236,
+  "files": [
+    "MARKETPLACE.md",
+    "README.md",
+    "SKILL.md",
+    "WHITEPAPER.md",
+    "_meta.json",
+    "scripts/check-webhook-services.sh",
+    "scripts/meter.py",
+    "scripts/sendgrid_webhook.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783654927138,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "rm289",
+    "handle": "rm289",
+    "user_id": "s171bkz6zb1874j3n04e8zdwbx885whd"
+  },
+  "slug": "tardis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tardis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tardis&ownerHandle=rm289",
+    "page_url": "https://clawhub.ai/rm289/skills/tardis"
+  },
+  "stats": {
+    "comments": 5,
+    "downloads": 2822,
+    "installs": 96,
+    "stars": 2,
+    "versions": 4
+  },
+  "summary": "Track elapsed time from a set epoch with tamper-evident locking. Like an analog Hobbs meter but digital. Use for tracking uptime, service hours, time since events, sobriety counters, project duration, equipment runtime. Supports create, lock (seal), check, verify against external hash, list, and export operations.",
+  "updated_at": 1778988288359,
+  "version": "1.2.0"
+}
