@@ -1,0 +1,58 @@
+{
+  "changelog": "# Enterprise Knowledge Base Reader\n\nLightweight enterprise knowledge base query system that provides secure read-only knowledge retrieval capabilities for AI Agents.\n\n## \ud83d\udd0d Core Features\n\n- **Read-Only Query**: Strict read-only permissions, cannot modify data\n- **Multiple Search Modes**: Semantic search, keyword search, hybrid search\n- **Lightweight Design**: Minimal resource usage, focused on query functionality\n- **Security Isolation**: Code-level enforced read-only, prevents accidental operations\n- **Distributed Deployment**: Can be deployed across different applications or services\n\n## \ud83d\udca1 Use Cases\n\n- Customer service system knowledge queries\n- User-side document retrieval\n- Read-only knowledge base access\n- Distributed knowledge services\n- AI Agent knowledge enhancement\n\n## \ud83d\udd27 Quick Start\n\n1. Set API key: `export DASHSCOPE_API_KEY='your-key'`\n2. Query knowledge base: `python main.py query \"your question\"`\n3. View documents: `python main.py list`\n4. Statistics: `python main.py stats`\n\n## \ud83d\udd12 Security Features\n\n- Strict read-only permissions, cannot create or modify data\n- Automatic system environment detection, clear error reporting when missing\n- Local data access only, no network transmission involved\n- Permission separation design, completely isolated from manager\n- Fail-safe operation when system environment doesn't exist",
+  "created_at": 1778209144794,
+  "display_name": "Enterprise Knowledge Base Reader",
+  "fetched_at": 1787809320136,
+  "files": [
+    "QUICKSTART.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "example.py",
+    "main.py",
+    "quick_test.py",
+    "requirements.txt",
+    "skill-card.md",
+    "src/__init__.py",
+    "src/chroma_client.py",
+    "src/config_loader.py",
+    "src/embedder.py",
+    "src/reader_interface.py",
+    "src/retriever.py",
+    "src/system_config.py",
+    "test_reader.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090759136,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "apanghu",
+    "handle": "apanghu",
+    "user_id": "s176x9xhy66hr127pqkkqwjykd86ae5c"
+  },
+  "slug": "enterprise-kb-reader",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/enterprise-kb-reader",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=enterprise-kb-reader&ownerHandle=apanghu",
+    "page_url": "https://clawhub.ai/apanghu/skills/enterprise-kb-reader"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 529,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4f01\u4e1a\u77e5\u8bc6\u5e93\u67e5\u8be2\u3002\u7528\u6237\u63d0\u51fa\u4efb\u4f55\u4e1a\u52a1\u95ee\u9898\u3001\u4ea7\u54c1\u54a8\u8be2\u3001\u516c\u53f8\u653f\u7b56\u3001\u5458\u5de5\u624b\u518c\u3001\u64cd\u4f5c\u6d41\u7a0b\u3001\u89c4\u7ae0\u5236\u5ea6\u3001FAQ\u3001\u9879\u76ee\u4fe1\u606f\u7b49\u95ee\u9898\u65f6\uff0c\u5fc5\u987b\u4f18\u5148\u8c03\u7528\u672c\u77e5\u8bc6\u5e93\u68c0\u7d22\u76f8\u5173\u5185\u5bb9\uff0c\u518d\u7ed3\u5408\u7ed3\u679c\u56de\u7b54\u3002",
+  "updated_at": 1778492876503,
+  "version": "1.1.0"
+}
