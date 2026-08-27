@@ -1,0 +1,43 @@
+{
+  "changelog": "boxed_curl v1.0.0\n\n- Initial release providing sandboxed (WASM-based) execution of curl-like HTTP requests.\n- Supports GET, POST, HTTP headers, and request bodies, with per-host network isolation via allowedOutboundHosts.\n- Requires openclaw-wasm-sandbox plugin v0.2.0+ and a local boxed_curl_component.wasm file.\n- Includes automatic extraction of curl arguments and outbound host restriction based on the target URL.\n- Provides example usage patterns and options matrix; explicit documentation for setup and key usage tips.",
+  "created_at": 1774713434571,
+  "display_name": "Boxed Curl",
+  "fetched_at": 1787842454096,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090172947,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Guyoung Studio",
+    "handle": "guyoung",
+    "user_id": "s1791jtrp7z0s6h87f8f0twdk183pq6y"
+  },
+  "slug": "boxed-curl",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/boxed-curl",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=boxed-curl&ownerHandle=guyoung",
+    "page_url": "https://clawhub.ai/guyoung/skills/boxed-curl"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 543,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Run curl requests safely in a sandbox, supporting GET/POST/HTTP headers, with complete network isolation.",
+  "updated_at": 1778492264712,
+  "version": "1.0.0"
+}
