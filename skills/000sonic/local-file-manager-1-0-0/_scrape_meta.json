@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of local-file-manager skill.\n\n- Provides safe file I/O (read, write, append, list, delete, copy/move) within the session's working directory.\n- Supports text, JSON, CSV, and Markdown formats.\n- Enforces safety: sandboxed to cwd, protected files, and size limits.\n- Includes dry-run mode for simulated operations.\n- Logs all errors and supports environment-based configuration.\n- Designed for roles needing local file persistence and manipulation.",
+  "created_at": 1776434267018,
+  "display_name": "Local File Manager 1.0.0",
+  "fetched_at": 1787795252814,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "index.ts",
+    "scripts/file_manager.sh",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090467441,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "000Sonic",
+    "handle": "000sonic",
+    "user_id": "s177easfw891ych10mg9c6t0xx851wjs"
+  },
+  "slug": "local-file-manager-1-0-0",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/local-file-manager-1-0-0",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=local-file-manager-1-0-0&ownerHandle=000sonic",
+    "page_url": "https://clawhub.ai/000sonic/skills/local-file-manager-1-0-0"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 726,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read, write, append, and list local files in the session's working directory. Use when you need to persist output to disk, read input files, or manipulate fi...",
+  "updated_at": 1779075907389,
+  "version": "1.0.0"
+}
