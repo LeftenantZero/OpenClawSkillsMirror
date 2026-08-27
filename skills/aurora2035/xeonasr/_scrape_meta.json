@@ -1,0 +1,58 @@
+{
+  "changelog": "**xeonasr 0.1.4 Changelog**\n\n- Replaced ASR (speech-to-text) service scripts with new TTS (text-to-speech) service scripts and configuration files.\n- Added: `start_tts_service.sh`, `stop_tts.sh`, and `tts_config.example.json`.\n- Removed: `start_asr.sh`, `start_asr_service.sh`, and `stop_asr.sh`.\n- Updated documentation to reflect the transition from ASR (Qwen3-ASR) to TTS (Qwen3-TTS) with new usage instructions, service ports, and workflow details.\n- Ensured TTS and ASR services do not overlap or conflict in configuration.",
+  "created_at": 1773132298320,
+  "display_name": "xeon_asr",
+  "fetched_at": 1787789341270,
+  "files": [
+    ".clawhub.json",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.json",
+    "configure_openclaw_integration.sh",
+    "install.sh",
+    "install_systemd_services.sh",
+    "package-lock.json",
+    "package.json",
+    "self_check.sh",
+    "server.js",
+    "setup_env.sh",
+    "skill-card.md",
+    "start_all.sh",
+    "start_tts_service.sh",
+    "stop_tts.sh",
+    "tts_config.example.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089980574,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "aurora2035",
+    "handle": "aurora2035",
+    "user_id": "s17054dys3gp764br83f7af69n83ndwv"
+  },
+  "slug": "xeonasr",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/xeonasr",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=xeonasr&ownerHandle=aurora2035",
+    "page_url": "https://clawhub.ai/aurora2035/skills/xeonasr"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1180,
+    "installs": 35,
+    "stars": 0,
+    "versions": 11
+  },
+  "summary": "Automatically converts received voice messages to text via an external ASR service, supporting multiple audio formats and integrating with OpenClaw.",
+  "updated_at": 1779077982788,
+  "version": "0.1.4"
+}
