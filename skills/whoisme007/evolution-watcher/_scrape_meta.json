@@ -1,0 +1,78 @@
+{
+  "changelog": "evolution-watcher v0.6.2 introduces advanced adapter auto-fix, diff analysis, and user authorization enhancements.\n\n- Added sandbox verification for adapter auto-fix, ensuring changes are safe before applying.\n- Enhanced adapter fix support to cover 9 types of code change patterns.\n- Implemented a user authorization workflow: show diff, sandbox report, and await manual confirmation before applying changes.\n- Introduced code diff parsing from GitHub, highlighting change files, lines, and breaking changes.\n- Added batch conflict detection for multi-plugin upgrade dependencies.\n- New scripts: diff analyzer, email sender; new detailed update reports generated.",
+  "created_at": 1773788313925,
+  "display_name": "Evolution Watcher",
+  "fetched_at": 1787798273820,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/fix_templates.yaml",
+    "config/monitor_sources.json",
+    "reports/summary.json",
+    "reports/updates_20260317_222549.md",
+    "reports/updates_20260317_222850.md",
+    "reports/updates_20260317_235919.md",
+    "reports/updates_20260318_001141.md",
+    "reports/updates_20260318_001912.md",
+    "reports/updates_20260318_003257.md",
+    "reports/updates_20260318_005713.md",
+    "reports/updates_20260318_010915.md",
+    "reports/updates_20260318_014522.md",
+    "reports/updates_20260318_015842.md",
+    "reports/updates_20260318_021254.md",
+    "reports/updates_20260318_021408.md",
+    "reports/updates_20260318_024436.md",
+    "reports/updates_20260318_065840.md",
+    "reports/updates_20260318_071011.md",
+    "reports/updates_20260318_074256.md",
+    "reports/updates_20260318_103409.md",
+    "reports/updates_20260318_142158.md",
+    "reports/updates_20260318_143336.md",
+    "reports/updates_20260318_162350.md",
+    "reports/updates_20260318_172351.md",
+    "reports/updates_20260318_182333.md",
+    "reports/updates_20260318_192605.md",
+    "reports/updates_20260319_062644.md",
+    "reports/updates_20260319_071143.md",
+    "reports/updates_log.json",
+    "scripts/adapter_auto_fix.py",
+    "scripts/diff_analyzer.py",
+    "scripts/email_sender.py",
+    "scripts/monitor.py",
+    "scripts/test_end_to_end.py",
+    "skill-card.md",
+    "test_b4.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089992237,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "whoisme007",
+    "handle": "whoisme007",
+    "user_id": "s17fqq02tcx4erebjpdxkpfyfs83gnes"
+  },
+  "slug": "evolution-watcher",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/evolution-watcher",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=evolution-watcher&ownerHandle=whoisme007",
+    "page_url": "https://clawhub.ai/whoisme007/skills/evolution-watcher"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1356,
+    "installs": 26,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "\u81ea\u52a8\u76d1\u63a7\u5e76\u5bf9\u6bd4\u5df2\u5b89\u88c5\u63d2\u4ef6\u7248\u672c\uff0c\u751f\u6210\u5347\u7ea7\u62a5\u544a\uff0c\u652f\u6301\u661f\u578b\u8bb0\u5fc6\u67b6\u6784\u7684\u667a\u80fd\u8fdb\u5316\u51b3\u7b56\u3002",
+  "updated_at": 1779001982230,
+  "version": "0.6.2"
+}
