@@ -1,0 +1,55 @@
+{
+  "changelog": "claude-mem v1.0.1 changelog:\n\n- Initial public release of the claude-mem OpenClaw plugin and worker service.\n- Added full setup documentation and quick install script.\n- Included end-to-end tests, install scripts, and TypeScript sources for plugin logic.\n- Sample skills added: do-plan and make-plan, each with their own setup guides.\n- Provided automated and manual setup options for persistent agent memory with memory file sync and observation feed.",
+  "created_at": 1771701154213,
+  "display_name": "Official Claude-Mem OpenClaw Memory Plugin",
+  "fetched_at": 1787802959854,
+  "files": [
+    "SKILL.md",
+    "TESTING.md",
+    "_meta.json",
+    "e2e-verify.sh",
+    "install.sh",
+    "openclaw.plugin.json",
+    "package.json",
+    "skills/do-plan/SKILL.md",
+    "skills/make-plan/SKILL.md",
+    "src/index.test.ts",
+    "src/index.ts",
+    "test-e2e.sh",
+    "test-install.sh",
+    "test-sse-consumer.js",
+    "tsconfig.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779948140656,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Alex Newman",
+    "handle": "thedotmack",
+    "user_id": "s174ny4bp9ytckfs8hpf0ybpbd885eq7"
+  },
+  "slug": "claude-mem",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claude-mem",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claude-mem&ownerHandle=thedotmack",
+    "page_url": "https://clawhub.ai/thedotmack/skills/claude-mem"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1475,
+    "installs": 36,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Enables persistent agent memory with a live-updating MEMORY.md file and optional real-time observation feed streaming via OpenClaw.",
+  "updated_at": 1778992167714,
+  "version": "1.0.1"
+}
