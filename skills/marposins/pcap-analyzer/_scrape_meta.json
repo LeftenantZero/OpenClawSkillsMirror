@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of pcap-analyzer: A local PCAP/PCAPNG network-forensics summarizer using tshark.\n\n- Generates structured reports: talkers, conversations, ports, DNS, TLS, HTTP, and anomalies.\n- Requires tshark, awk, sed, and a local analysis script (pcap_summary.sh).\n- Designed for lab work, incident triage, and CPENT-style exercises.\n- No exfiltration of PCAPs; operates fully on the local machine.\n- Optional input: focus on specific IP addresses or time windows.",
+  "created_at": 1771278588698,
+  "display_name": "PCAP Analyzer",
+  "fetched_at": 1787803847017,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/analyze.sh",
+    "skill-card.md",
+    "skill.yaml"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779971732654,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "marposins",
+    "handle": "marposins",
+    "user_id": "s17eagbwezcwb0gaxxkfjwvr9x885cw7"
+  },
+  "slug": "pcap-analyzer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pcap-analyzer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pcap-analyzer&ownerHandle=marposins",
+    "page_url": "https://clawhub.ai/marposins/skills/pcap-analyzer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1519,
+    "installs": 47,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Analyze local PCAP/PCAPNG files with tshark to generate detailed network forensics reports including talkers, ports, DNS, TLS, HTTP, and anomaly summaries.",
+  "updated_at": 1778991055241,
+  "version": "0.1.0"
+}
