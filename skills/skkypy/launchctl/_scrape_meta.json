@@ -1,0 +1,44 @@
+{
+  "changelog": "macos-launchctl v1.0.0 \u2014 First Release\n\n- Initial release for managing macOS app timed launch/quit tasks via launchctl and launchd.\n- Supports natural language scheduling (\"daily at 9 AM\", \"Weekly on Monday at 8:00\", cron expression).\n- Automatically generates and loads launchd plist files for scheduled start/stop of apps.\n- Command line script with create/list/start/stop/restart/remove/info/status subcommands.\n- Safety-first: Operations require clear user preview and explicit confirmation before any write/load/remove action.\n- Supports dry-run preview of task plan and generated plist files to ensure full transparency.",
+  "created_at": 1777471513477,
+  "display_name": "MacOS  LaunchDaemon Scheduler",
+  "fetched_at": 1787812435501,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/macos_launchctl.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090585105,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "kongkong",
+    "handle": "skkypy",
+    "user_id": "s17808s1rrzpsx49qdgyb7avx185rn96"
+  },
+  "slug": "launchctl",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/launchctl",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=launchctl&ownerHandle=skkypy",
+    "page_url": "https://clawhub.ai/skkypy/skills/launchctl"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 577,
+    "installs": 13,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u5728 macOS \u73af\u5883\u4e0b\u4f7f\u7528 launchctl \u5b9a\u65f6\u542f\u52a8\u6216\u505c\u6b62\u5e94\u7528\u3002\u5f53\u7528\u6237\u8981\u6c42\u300c\u5b9a\u65f6\u542f\u52a8/\u505c\u6b62\u67d0\u4e2a\u5e94\u7528\u300d\u300c\u8bbe\u7f6e\u5b9a\u65f6\u4efb\u52a1\u300d\u300c\u7528 launchctl \u7ba1\u7406\u5e94\u7528\u300d\u300c\u6bcf\u5929\u51e0\u70b9\u81ea\u52a8\u6253\u5f00XX\u300d\u300c\u5b9a\u65f6\u5173\u95edXX\u300d\u65f6\u5e94\u4f7f\u7528\u672c Skill\u3002\u652f\u6301\u81ea\u7136\u8bed\u8a00\u65f6\u95f4\u63cf\u8ff0\uff08\u5982\u300c\u6bcf\u59299\u70b9\u300d\u300c\u6bcf2\u5c0f\u65f6\u300d\u300c\u6bcf\u5468\u4e00\u4e0a\u53488\u70b9\u300d\uff09\u548c\u6807\u51c6 cron \u8868\u8fbe\u5f0f\uff0c...",
+  "updated_at": 1778492801721,
+  "version": "1.0.0"
+}
