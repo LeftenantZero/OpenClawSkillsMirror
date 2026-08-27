@@ -1,0 +1,45 @@
+{
+  "changelog": "- Initial release of the Emotion State (NL) skill.\n- Adds a system prompt block summarizing user and agent emotions in short natural-language phrases.\n- Tracks and persists per-user emotion states across sessions.\n- Supports trend analysis with configurable decay and history settings.\n- Integrates via OpenClaw hook; easy installation and environment configuration supported.\n- Uses SkillBoss API Hub for accurate LLM-based emotion detection.",
+  "created_at": 1777002133107,
+  "display_name": "qui-emotion-state",
+  "fetched_at": 1787815686618,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "hooks/emotion-state/HOOK.md",
+    "hooks/emotion-state/handler.ts",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090535443,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "QuincyGunter",
+    "handle": "quincygunter",
+    "user_id": "s17d0tr1e37k04dr1j7gy5ff0584nmyw"
+  },
+  "slug": "qui-emotion-state",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/qui-emotion-state",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=qui-emotion-state&ownerHandle=quincygunter",
+    "page_url": "https://clawhub.ai/quincygunter/skills/qui-emotion-state"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 533,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "NL emotion tracking + prompt injection via OpenClaw hook",
+  "updated_at": 1778492733744,
+  "version": "1.0.0"
+}
