@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release of Facebook Page Manager skill.\n\n- Manage Facebook Pages through the Meta Graph API: post text, photos, links, list posts, and handle comments (list/reply/hide/delete).\n- Command line tool to list pages, create posts, view posts, and manage comments.\n- Guided setup for Meta App, OAuth configuration, and token retrieval.\n- Requires Meta API permissions: pages_show_list, pages_read_engagement, pages_manage_posts, pages_manage_engagement.\n- Setup and usage instructions included for a smooth start.",
+  "created_at": 1769952188351,
+  "display_name": "Skill to manage a facebook page",
+  "fetched_at": 1787793482155,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "env_example.md",
+    "references/graph-api.md",
+    "scripts/auth.js",
+    "scripts/cli.js",
+    "scripts/fb_post.js",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "scripts/x_digest_collect.js",
+    "scripts/x_digest_to_fb.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783653597875,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "longmaba",
+    "handle": "longmaba",
+    "user_id": "s172naarm8th1ta59h85qzrhcx8855pa"
+  },
+  "slug": "facebook-page-manager",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/facebook-page-manager",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=facebook-page-manager&ownerHandle=longmaba",
+    "page_url": "https://clawhub.ai/longmaba/skills/facebook-page-manager"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 5852,
+    "installs": 213,
+    "stars": 4,
+    "versions": 1
+  },
+  "summary": "Manage Facebook Pages via Meta Graph API. Post content (text, photos, links), list posts, manage comments (list/reply/hide/delete). Use when user wants to publish to Facebook Page, check Page posts, or handle comments.",
+  "updated_at": 1779076572612,
+  "version": "1.0.0"
+}
