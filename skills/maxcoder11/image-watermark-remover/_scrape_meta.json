@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of Image Watermark Remover skill.\n\n- Integrates with Nowatermark.info API for automated watermark removal from public image URLs.\n- Supports job submission, polling status, and resuming with existing `request_id`.\n- Enforces confirmation of image ownership and API key presence for secure use.\n- Requires direct public image URLs, rejecting local and non-direct links.\n- Provides clear privacy guidance\u2014public URLs are sent to nowatermark.info, and user consent is required before saving or downloading files.\n- Includes polling logic and helper script recommendations for efficient workflow.",
+  "created_at": 1776408612888,
+  "display_name": "Image Watermark Remover",
+  "fetched_at": 1787820077749,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api.md",
+    "scripts/remove_watermark.py",
+    "setup.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ai",
+    "handle": "maxcoder11",
+    "user_id": "s1738qefja9h7sv1x8rnaxhx2h84khpx"
+  },
+  "slug": "image-watermark-remover",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/image-watermark-remover",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=image-watermark-remover&ownerHandle=maxcoder11",
+    "page_url": "https://clawhub.ai/maxcoder11/skills/image-watermark-remover"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 762,
+    "installs": 19,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Remove image watermarks with the Nowatermark.info API, request polling, request_id resume, and public image URL validation.",
+  "updated_at": 1778492635707,
+  "version": "1.0.0"
+}
