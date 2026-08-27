@@ -1,0 +1,39 @@
+{
+  "changelog": "alibabacloud-terraform-code-generation v0.0.1\n\n- Initial release for generating validated Terraform HCL for Alibaba Cloud infrastructure.\n- Supports major Alicloud resources: VPC, ECS, ApsaraDB RDS, OSS, SLB/ALB, Function Compute v3, ACK, and any `alicloud_*` provider resource.\n- Pulls up-to-date resource docs from provider documentation at generation time\u2014no local gold HCL examples maintained.\n- Enforces strict rules: never requests/prints credentials, never runs `terraform apply`, never fakes command output.\n- Follows a detailed step-by-step workflow with catalog lookups, required attribute verification, and proof-of-read before generating HCL.\n- Multi-language triggers supported, including English and Chinese queries.",
+  "created_at": 1778839294286,
+  "display_name": "Alibabacloud Terraform Code Generation",
+  "fetched_at": 1787806972521,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/alicloud-providers.md",
+    "references/auth-and-network.md",
+    "references/deprecated-fields.md",
+    "references/resource-patterns.md",
+    "scripts/build_alicloud_providers.py",
+    "scripts/build_deprecated_fields.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-terraform-code-generation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-terraform-code-generation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-terraform-code-generation&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-terraform-code-generation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 612,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when the user wants Terraform HCL for Alibaba Cloud (Alicloud) infrastructure \u2014 new project or extending an existing one. Covers VPC, ECS, ApsaraDB RDS,...",
+  "updated_at": 1778841706791,
+  "version": "0.0.1"
+}
