@@ -1,0 +1,60 @@
+{
+  "changelog": "Initial release with AssemblyAI integration and extensive audio/video transcription features.\n\n- Transcribes, diarises, translates, and structures audio/video using AssemblyAI, supporting both local files and URLs.\n- Supports high-quality speech-to-text, language detection, automatic model selection, and speaker labeling, including manual and AssemblyAI-based name/role mapping.\n- Provides agent-friendly outputs: Markdown, normalized JSON, subtitle formats, sentence/paragraph segmentation, topic/entity/sentiment extraction, and bundle manifests.\n- Includes CLI commands for transcription, post-processing (Speech Understanding), LLM-based extraction, and built-in reference data for models and languages.\n- Designed for easy integration by AI agents and downstream workflows, with clear guidance on command selection and output use.",
+  "created_at": 1776394041962,
+  "display_name": "Audio Transcribe",
+  "fetched_at": 1787795300194,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assemblyai.mjs",
+    "assets/custom-spelling.example.json",
+    "assets/example-prompt.txt",
+    "assets/language-codes.json",
+    "assets/llm-json-schema.example.json",
+    "assets/model-capabilities.json",
+    "assets/speaker-map.example.json",
+    "assets/speaker-profiles-name.example.json",
+    "assets/speaker-profiles-role.example.json",
+    "assets/transcript-agent-json-schema.json",
+    "references/capabilities.md",
+    "references/llm-gateway.md",
+    "references/output-formats.md",
+    "references/speaker-mapping.md",
+    "references/troubleshooting.md",
+    "references/workflows.md",
+    "scripts/assemblyai.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090460062,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "AbelTennyson",
+    "handle": "abeltennyson",
+    "user_id": "s174gfyzm9cmcv1mx6226h2s3584rfxt"
+  },
+  "slug": "abe-audio-transcribe",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/abe-audio-transcribe",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=abe-audio-transcribe&ownerHandle=abeltennyson",
+    "page_url": "https://clawhub.ai/abeltennyson/skills/abe-audio-transcribe"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 632,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Transcribe, diarise, translate, post-process, and structure audio/video with AssemblyAI. Use this skill when the user wants AssemblyAI specifically, needs hi...",
+  "updated_at": 1779075886197,
+  "version": "1.0.0"
+}
