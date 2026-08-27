@@ -1,0 +1,33 @@
+{
+  "changelog": "## WristClaw v0.1.2 \u2192 v0.2.0 changelog\n\nThis release tightens security for pairing, switches to an auditable install path, and clarifies delivery rules.\n\n- Explicit user confirmation is now required before pairing any new WristClaw session.\n- The default install path is via npm (`@wristclaw/openclaw`); curl/bash script is fallback only, with manual review.\n- Added an allowlist for safe relay URLs; custom relays prompt explicit user approval.\n- Each pairing now binds the watch's X25519 public key, ensuring only the correct watch resumes the session.\n- Documentation clarified for safer pairing, deactivation, and reply delivery practices.\n- License, homepage, repository, and category metadata added.",
+  "created_at": 1778941521574,
+  "display_name": "WristClaw - Smartwatch control channel for OpenClaw",
+  "fetched_at": 1787797659578,
+  "files": [
+    "_meta.json",
+    "skill-card.md",
+    "skill.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Matthias Sala",
+    "handle": "salam",
+    "user_id": "s172zsps8vv2b2stp6f1ags73h86vmaf"
+  },
+  "slug": "wristclaw",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wristclaw",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wristclaw&ownerHandle=salam",
+    "page_url": "https://clawhub.ai/salam/skills/wristclaw"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 772,
+    "installs": 18,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Bridges the WristClaw watch \u2194 OpenClaw agent. Recognizes pairing payloads sent via any inbound channel, registers the native WristClaw OpenClaw channel after...",
+  "updated_at": 1779006107580,
+  "version": "0.1.2"
+}
