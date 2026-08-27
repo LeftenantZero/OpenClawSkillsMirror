@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of **process-output**: a skill that standardizes process reporting via machine-parseable JSON blocks.\n\n- Introduces the `openclaw-process` fenced JSON protocol as the default output format for replies.\n- Progress is reported through a sequence: `start` \u2192 (optional `step` updates) \u2192 `final` JSON blocks.\n- Lightweight mode for simple queries uses only `start` and `final` blocks (or a single `done` step).\n- Strict opt-out: skip process blocks only if the user explicitly requests a final answer with no intermediate process.\n- Tools are not invoked unless explicitly required by user instruction.",
+  "created_at": 1775112069875,
+  "display_name": "Process Output",
+  "fetched_at": 1787834752253,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "2719040953",
+    "handle": "2719040953",
+    "user_id": "s174k01awhsqabws1xqtj6bss583h9yv"
+  },
+  "slug": "process-output",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/process-output",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=process-output&ownerHandle=2719040953",
+    "page_url": "https://clawhub.ai/2719040953/skills/process-output"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 638,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "DEFAULT OUTPUT MODE: Always emit machine-parseable `openclaw-process` fenced JSON blocks in your assistant reply so a custom web client can render a live pro...",
+  "updated_at": 1778492362797,
+  "version": "1.0.0"
+}
