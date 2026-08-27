@@ -1,0 +1,52 @@
+{
+  "changelog": "- Initial release of codex-swarm.\n- Enables multi-agent orchestration for parallel coding using OpenAI Codex models.\n- Supports spawning and coordinating multiple Codex CLI agents (architect, builder, reviewer, integrator) via batch scripts.\n- Integrates with git worktrees, tmux sessions, endorsement gates, native code review, and automated merging.\n- Includes scripts for agent management, status checking, notifications, and automated review/integration.\n- Simple setup with modular scripts and configuration files.",
+  "created_at": 1775317636234,
+  "display_name": "Codex Swarm",
+  "fetched_at": 1787796344380,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/duty-table.json",
+    "scripts/check-agents.sh",
+    "scripts/cleanup.sh",
+    "scripts/endorse-task.sh",
+    "scripts/integration-watcher.sh",
+    "scripts/notify-on-complete.sh",
+    "scripts/notify.sh",
+    "scripts/spawn-agent.sh",
+    "scripts/spawn-batch.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090303492,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "linkbag",
+    "handle": "linkbag",
+    "user_id": "s17a122hqxcf57e9gczk0db71s83g8n8"
+  },
+  "slug": "codex-swarm",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/codex-swarm",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=codex-swarm&ownerHandle=linkbag",
+    "page_url": "https://clawhub.ai/linkbag/skills/codex-swarm"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 584,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "OpenAI Codex-native multi-agent swarm orchestration for parallel coding. Use when spawning multiple Codex CLI agents to work in parallel with git worktrees,...",
+  "updated_at": 1779075509201,
+  "version": "1.0.0"
+}
