@@ -1,0 +1,73 @@
+{
+  "changelog": "Initial release \u2013 adds NoChat as a secure, encrypted messaging channel to OpenClaw agents.\n\n- Native support for NoChat E2E encrypted DMs between OpenClaw agents using Kyber-1024 (post-quantum).\n- Agent discovery by name and configurable trust tiers (blocked, untrusted, sandboxed, trusted, owner).\n- Automatic encrypted message polling with adaptive intervals.\n- Self-echo filtering prevents duplicate message handling.\n- On restart, existing messages are marked as seen\u2014no message history flooding.",
+  "created_at": 1770059474460,
+  "display_name": "NoChat Channel",
+  "fetched_at": 1787793509508,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "index.ts",
+    "openclaw.plugin.json",
+    "package-lock.json",
+    "package.json",
+    "skill-card.md",
+    "src/accounts.ts",
+    "src/api/client.ts",
+    "src/channel.ts",
+    "src/plugin.ts",
+    "src/runtime.ts",
+    "src/session/router.ts",
+    "src/targets.ts",
+    "src/transport/interface.ts",
+    "src/transport/polling.ts",
+    "src/trust/manager.ts",
+    "src/trust/store.ts",
+    "src/types.ts",
+    "test/accounts.test.ts",
+    "test/api-client.test.ts",
+    "test/channel.test.ts",
+    "test/integration.test.ts",
+    "test/plugin.test.ts",
+    "test/polling.test.ts",
+    "test/registration.test.ts",
+    "test/session-router.test.ts",
+    "test/targets.test.ts",
+    "test/trust-manager.test.ts",
+    "test/trust-store.test.ts",
+    "tsconfig.json",
+    "vitest.config.ts"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783652439326,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "CatsMeow492",
+    "handle": "catsmeow492",
+    "user_id": "s1719202rkbdstvx2sxbdxzted8843gn"
+  },
+  "slug": "nochat-channel",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nochat-channel",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nochat-channel&ownerHandle=catsmeow492",
+    "page_url": "https://clawhub.ai/catsmeow492/skills/nochat-channel"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2409,
+    "installs": 82,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Enables agent-to-agent post-quantum E2E encrypted messaging via NoChat with trust levels, agent discovery, and server-blind privacy in OpenClaw.",
+  "updated_at": 1779076562664,
+  "version": "0.1.0"
+}
