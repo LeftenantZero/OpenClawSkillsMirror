@@ -1,0 +1,48 @@
+{
+  "changelog": "alibabacloud-odps-quota-manage v0.0.3\n\n- Added mandatory use of Aliyun CLI \"ai-mode\" for skill execution; requires enabling/disabling at session start/end.\n- Updated installation requirements: Aliyun CLI >= 3.3.3 and explicit maxcompute plugin version management.\n- All CLI commands must include a custom User-Agent: \"AlibabaCloud-Agent-Skills/alibabacloud-odps-quota-manage\".\n- Improved parameter confirmation rules: every user-customizable parameter must be explicitly confirmed before running commands.\n- Command naming standardized\u2014use kebab-case (e.g., create-quota, list-quotas, query-quota); deprecated/incorrect commands forbidden.\n- Documentation and references updated for new setup and workflow.",
+  "created_at": 1775045848983,
+  "display_name": "Alibabacloud Odps Quota Manage",
+  "fetched_at": 1787836239037,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/ram-policies.md",
+    "references/related-apis.md",
+    "references/verification-method.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090518247,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-odps-quota-manage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-odps-quota-manage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-odps-quota-manage&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-odps-quota-manage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 709,
+    "installs": 16,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "MaxCompute Quota Management Skill. Use for managing MaxCompute/ODPS quota resources including pay-as-you-go quota creation, query, and listing operations. Tr...",
+  "updated_at": 1778492348942,
+  "version": "0.0.3"
+}
