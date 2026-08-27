@@ -1,0 +1,54 @@
+{
+  "changelog": "- Added `/api/blob/upload-file` as a fallback upload endpoint for `file_path` inputs when `@vercel/blob/client` is unavailable.\n- Enhanced `portal.skill.presentation` to render output files and return `visual.files.assets`, including overlay, mask, and cutout URLs.\n- Audio outputs now normalize to `output.media_files.assets` with uploaded file URLs when blob storage is available.\n- No breaking changes.",
+  "created_at": 1773022088397,
+  "display_name": "Skill Hub Gateway",
+  "fetched_at": 1787793991248,
+  "files": [
+    "SKILL.md",
+    "SKILL.zh-CN.md",
+    "_meta.json",
+    "references/capabilities.json",
+    "references/openapi.json",
+    "scripts/attachment-normalize.mjs",
+    "scripts/execute.mjs",
+    "scripts/feedback.mjs",
+    "scripts/poll.mjs",
+    "scripts/portal-action.mjs",
+    "scripts/portal-auth.mjs",
+    "scripts/runtime-auth.mjs",
+    "scripts/telemetry.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089858967,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "chinasilva",
+    "handle": "chinasilva",
+    "user_id": "s1702gacd3xqn76t52dae61n9983gzxk"
+  },
+  "slug": "skill-hub-gateway",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-hub-gateway",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-hub-gateway&ownerHandle=chinasilva",
+    "page_url": "https://clawhub.ai/chinasilva/skills/skill-hub-gateway"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1158,
+    "installs": 34,
+    "stars": 1,
+    "versions": 13
+  },
+  "summary": "Unified gateway skill for async execute/poll, portal user closure, and telemetry feedback workflows.",
+  "updated_at": 1779076369545,
+  "version": "2.4.2"
+}
