@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of seedance-story-orchestrator.\n\n- Implements a strict stage-gated workflow: outline \u2192 episode_plan \u2192 storyboard \u2192 storyboard_images \u2192 render.\n- Supports checkpoint-based confirmation and resuming, requiring explicit confirmation before advancing stages.\n- Integrates Seedream for image generation and Seedance for multi-shot video rendering.\n- Offers optional FFmpeg concatenation for final merged mp4 output.\n- Provides CLI scripts for running, confirming, and monitoring the production process.\n- Supports various input modes including raw text, JSON, and staged artifacts.",
+  "created_at": 1772009247653,
+  "display_name": "Seedance Video Generation Extension",
+  "fetched_at": 1787802223467,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "docs/design-doc-v0.2.0-phase1.md",
+    "docs/logic-flow-v0.2.0-phase1.md",
+    "examples/resume-summary-sample.json",
+    "examples/storyboard-demo.v1.json",
+    "examples/subagent-output-sample.json",
+    "references/assets-v1.schema.json",
+    "references/staged-artifacts-v1.schema.json",
+    "references/storyboard-v1.schema.json",
+    "references/subagent-parser-contract.md",
+    "scripts/build_subagent_task.py",
+    "scripts/concat_videos.py",
+    "scripts/orchestrate_story.py",
+    "scripts/prepare_storyboard.py",
+    "scripts/run_story.py",
+    "scripts/seedream_image.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "KennyWu",
+    "handle": "kkenny0",
+    "user_id": "s17e5sm9mfd2xfq0bhb9w9bd9n840vsx"
+  },
+  "slug": "seedance-story-orchestrator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/seedance-story-orchestrator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=seedance-story-orchestrator&ownerHandle=kkenny0",
+    "page_url": "https://clawhub.ai/kkenny0/skills/seedance-story-orchestrator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1533,
+    "installs": 46,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Orchestrate script-to-final-video production with a strict stage-gated workflow (outline \u2192 episode_plan \u2192 storyboard \u2192 storyboard_images \u2192 render), using See...",
+  "updated_at": 1778993096424,
+  "version": "1.0.0"
+}
