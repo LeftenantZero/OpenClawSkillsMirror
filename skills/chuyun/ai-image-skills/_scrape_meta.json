@@ -1,0 +1,51 @@
+{
+  "changelog": "ai-image-skills v0.1.0 \u2013 Initial Release\n\n- Provides a workflow to generate image API calls for skills.video based on OpenAPI specs.\n- Includes scripts for API key setup, endpoint discovery, schema extraction, SSE creation, fallback polling, and error handling.\n- Returns only terminal job results and includes robust retry and error classification logic.\n- Extracts request templates deterministically from OpenAPI, avoiding field guessing.\n- Offers explicit guidance for insufficient credits and first-use setup.",
+  "created_at": 1773998936244,
+  "display_name": "ai-image-skills",
+  "fetched_at": 1787860709083,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/image-model-endpoints.md",
+    "references/open-platform-api.md",
+    "scripts/create_and_wait.py",
+    "scripts/ensure_api_key.py",
+    "scripts/handle_runtime_error.py",
+    "scripts/inspect_openapi.py",
+    "scripts/wait_generation.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089997591,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "chuyun",
+    "handle": "chuyun",
+    "user_id": "s17c9nqs0s9b2fy3dac7h30w0583gqr7"
+  },
+  "slug": "ai-image-skills",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-image-skills",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-image-skills&ownerHandle=chuyun",
+    "page_url": "https://clawhub.ai/chuyun/skills/ai-image-skills"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 710,
+    "installs": 19,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Build and execute skills.video image generation REST requests from OpenAPI specs. Use when user needs to create, debug, or document image generation calls on...",
+  "updated_at": 1778492060163,
+  "version": "0.1.0"
+}
