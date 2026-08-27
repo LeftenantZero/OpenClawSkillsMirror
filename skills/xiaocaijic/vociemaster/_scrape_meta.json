@@ -1,0 +1,44 @@
+{
+  "changelog": "VoiceMaster v1.0.1 Changelog\n\n- Added \"draft dialogue\" workflow: now supports generating editable short video scripts before TTS when user input is incomplete, only provides a theme, or requests a draft first.\n- Introduced multiple short video dialogue templates for various scenarios (story, chat, pitch, knowledge, suspense, monologue), with clear rules and recommended editing steps.\n- Changed API key environment variable from TTS_API_KEY to SENSEAUDIO_API_KEY; startup check updated accordingly.\n- Updated execution flow: will not synthesize audio until user confirms or edits the draft script.\n- Improved input handling: detects non-script/unclear inputs, generates dialogue structure, and guides user confirmation.\n- Removed sample and documentation files (README.MD, smoke-test.txt) for a cleaner project structure.",
+  "created_at": 1773662759843,
+  "display_name": "vociemaster",
+  "fetched_at": 1787870341339,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "helper.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089924971,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u66f9\u5e7f\u96e8",
+    "handle": "xiaocaijic",
+    "user_id": "s1782xj4xp3pc16zqqcftks0bh83kx34"
+  },
+  "slug": "vociemaster",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/vociemaster",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=vociemaster&ownerHandle=xiaocaijic",
+    "page_url": "https://clawhub.ai/xiaocaijic/skills/vociemaster"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 728,
+    "installs": 19,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "\u4e13\u4e1a\u7ea7 AI \u77ed\u89c6\u9891\u914d\u97f3\u52a9\u624b\uff0c\u652f\u6301\u591a\u89d2\u8272\u97f3\u8272\u6620\u5c04\u3001\u81ea\u52a8\u8bed\u901f\u8c03\u8282\u53ca BGM \u5efa\u8bae\u3002",
+  "updated_at": 1778491948843,
+  "version": "1.0.1"
+}
