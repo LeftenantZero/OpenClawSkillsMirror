@@ -1,0 +1,54 @@
+{
+  "changelog": "AudioClaw/branding and API support updates.\n\n- Updated branding: renamed all documentation and references from SenseAudio to AudioClaw.\n- Adjusted TTS-related scripts to default to using SENSEAUDIO_API_KEY for AudioClaw API calls.\n- Improved API key handling: TTS scripts now auto-replace public tokens with the actual key for synthesis.\n- Updated documentation to reflect new naming, platform steps, and authentication rules.\n- No major API or core workflow logic changes; workflows and commands remain compatible.",
+  "created_at": 1773734603240,
+  "display_name": "Voice AB Lab",
+  "fetched_at": 1787868524547,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/asr_brief_pipeline.md",
+    "references/commercial_ab_patterns.md",
+    "scripts/batch_tts_variants.py",
+    "scripts/build_voice_ab_variants.py",
+    "scripts/export_ab_review_csv.py",
+    "scripts/extract_spoken_brief.py",
+    "scripts/run_spoken_brief_pipeline.py",
+    "scripts/run_typed_brief_pipeline.py",
+    "scripts/send_ab_variants_to_feishu.py",
+    "scripts/senseaudio_asr.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090029435,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Wu Ruixiao",
+    "handle": "kikidouloveme79",
+    "user_id": "s1799r8kj1jk2d6bjcn61ycmx583hqp7"
+  },
+  "slug": "senseaudio-voice-ab-lab",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/senseaudio-voice-ab-lab",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=senseaudio-voice-ab-lab&ownerHandle=kikidouloveme79",
+    "page_url": "https://clawhub.ai/kikidouloveme79/skills/senseaudio-voice-ab-lab"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 770,
+    "installs": 21,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Use when a team wants to generate multiple ad, spoken-copy, sales, or promo voice variants from one typed or spoken creative brief, transcribe voice memos wi...",
+  "updated_at": 1778491969082,
+  "version": "1.0.1"
+}
