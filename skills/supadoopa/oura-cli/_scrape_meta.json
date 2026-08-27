@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release: Adds CLI integration for Oura Ring biometric data access and querying.\n\n- Enables retrieval of sleep, activity, readiness, heart rate, and more from the Oura API v2 via command-line.\n- Supports flexible date range arguments with absolute date resolution for user-friendly queries.\n- Returns JSON data, which should be parsed and summarized in natural language.\n- Includes extensive data category support (e.g., sleep-details, workout, vo2-max, stress, resilience).\n- Notifies users about authentication requirements on auth errors.\n- Provides clear usage examples for common queries.",
+  "created_at": 1770882499934,
+  "display_name": "Oura Cli",
+  "fetched_at": 1787804693210,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "cmd/oura/main.go",
+    "internal/api/client.go",
+    "internal/api/endpoints.go",
+    "internal/auth/oauth.go",
+    "internal/config/config.go",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779971714224,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Danielle",
+    "handle": "supadoopa",
+    "user_id": "s170nyr7jc9ccxgmnj313w9xad83ms82"
+  },
+  "slug": "oura-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oura-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oura-cli&ownerHandle=supadoopa",
+    "page_url": "https://clawhub.ai/supadoopa/skills/oura-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1538,
+    "installs": 49,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Retrieve health and biometric data from your Oura Ring via CLI commands for sleep, activity, readiness, heart rate, and more using specified dates.",
+  "updated_at": 1778990008996,
+  "version": "1.0.0"
+}
