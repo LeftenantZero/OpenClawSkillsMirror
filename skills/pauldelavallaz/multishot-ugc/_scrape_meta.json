@@ -1,0 +1,45 @@
+{
+  "changelog": "Improved routing: added negative examples and pipeline info",
+  "created_at": 1770844729407,
+  "display_name": "Multishot UGC",
+  "fetched_at": 1787804751234,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/generate.py",
+    "scripts/pyproject.toml",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779971363892,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Paul de Lavallaz",
+    "handle": "pauldelavallaz",
+    "user_id": "s17es8yqc61443cxz7kbvr73rs884ggf"
+  },
+  "slug": "multishot-ugc",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/multishot-ugc",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=multishot-ugc&ownerHandle=pauldelavallaz",
+    "page_url": "https://clawhub.ai/pauldelavallaz/skills/multishot-ugc"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2003,
+    "installs": 61,
+    "stars": 5,
+    "versions": 2
+  },
+  "summary": "Generate 10 perspective/angle variations from a single image for multi-shot UGC videos.\n\n\u2705 USE WHEN:\n- Have a hero image and need camera angle variations\n- Creating multi-scene UGC videos (need different shots)\n- Want close-ups, wide shots, side angles from one source\n- Building a video with scene changes\n\n\u274c DON'T USE WHEN:\n- Don't have a hero image yet \u2192 use morpheus-fashion-design first\n- Need completely different scenes/locations \u2192 use Morpheus multiple times\n- Just need one image \u2192 skip this step\n- Want to edit images manually \u2192 use nano-banana-pro\n\nINPUT: Single image (person with product)\nOUTPUT: 10 PNG variations with different perspectives\n\nTYPICAL PIPELINE: Morpheus \u2192 multishot-ugc \u2192 select best 4 \u2192 veed-ugc each \u2192 Remotion edit",
+  "updated_at": 1778989926569,
+  "version": "1.0.1"
+}
