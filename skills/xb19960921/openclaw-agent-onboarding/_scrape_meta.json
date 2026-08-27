@@ -1,0 +1,46 @@
+{
+  "changelog": "# CHANGELOG\n\n## v0.1.0 - 2026-04-27\n\n### Added\n\n- Initial release of `openclaw-agent-onboarding`, an OpenClaw AgentOS Bootstrapper skill.\n- Added safe onboarding workflow for turning a fresh OpenClaw setup into a personal AgentOS.\n- Added Stage 0 bootstrap flow for users who lack skill discovery, skill installation, or web search capabilities.\n- Added baseline skill packages:\n  - `bootstrap-minimal`\n  - `bootstrap-search`\n  - `bootstrap-docs`\n  - `bootstrap-agentos-core`\n  - `bootstrap-engineering`\n  - `bootstrap-design`\n  - `bootstrap-creator`\n  - `bootstrap-skill-lab`\n- Added detailed skill recommendation reference, including:\n  - Skill discovery: `clawhub`, `find-skill`, `openclawmp`\n  - Web search and research skills\n  - Document processing skills: `docx`, `pdf`, `excel`, `pptx`\n  - Summary and humanized writing skills\n  - System and self-evolution skills\n  - Programming and engineering skills\n  - Frontend/UI/design skills\n  - Skill creation and optimization skills\n- Added non-ClawHub installation guidance for:\n  - `nuwa-skill`: https://github.com/alchaincyf/nuwa-skill\n  - `darwin-skill`: https://github.com/alchaincyf/darwin-skill\n- Added HOT/WARM/COLD memory architecture guide.\n- Added Obsidian-friendly Markdown knowledge base setup.\n- Added Karpathy-style knowledge flow:\n  - Capture\n  - Distill\n  - Link\n  - Operationalize\n  - Archive\n- Added Agent team profiles:\n  - Single-agent mode\n  - Three-agent mode\n  - Six-agent mode\n- Added self-evolution workflow:\n  - Task Note\n  - SOP\n  - Skill Draft\n  - Skill vetting\n  - Formal Skill installation\n- Added health check framework for:\n  - Skills\n  - Memory\n  - Knowledge base\n  - Context hygiene\n  - Agent team configuration\n  - Cron / heartbeat\n  - OpenClaw service state\n  - Git state\n- Added context pollution governance rules.\n- Added safety policy for protected files:\n  - `AGENTS.md`\n  - `MEMORY.md`\n  - `SOUL.md`\n  - `TOOLS.md`\n  - `USER.md`\n  - `DREAMS.md`\n- Added `scripts/diagnose.py` for lightweight OpenClaw AgentOS environment diagnostics.\n- Added starter templates:\n  - `KNOWLEDGE_BASE_README.md`\n  - `MEMORY_POLICY.md`\n- Added Darwin-style test prompts in `test-prompts.json`.\n- Added Darwin dry-run score record in `results.tsv`.\n\n### Improved\n\n- Refined `SKILL.md` into a concise progressive-disclosure structure.\n- Moved detailed implementation guidance into `references/` to reduce context bloat.\n- Added decision matrix to map user intent to the correct onboarding mode.\n- Added required output formats for:\n  - Change plans\n  - Final reports\n- Added explicit verification gate before claiming successful initialization.\n- Clarified installation flow for users without web search or skill discovery capabilities.\n\n### Validation\n\n- YAML frontmatter validated successfully.\n- `test-prompts.json` validated successfully.\n- `scripts/diagnose.py` outputs valid JSON.\n- Darwin dry-run score improved from `82` to `91`.\n\n### Notes\n\n- This is the first safe MVP version.\n- Current Darwin score is based on dry-run evaluation, not full with-skill vs baseline sub-agent testing.\n- Future versions should add more automation scripts for install, repair, upgrade, and health checks.",
+  "created_at": 1777280159865,
+  "display_name": "openclaw-agent-onboarding",
+  "fetched_at": 1787813854869,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/templates/KNOWLEDGE_BASE_README.md",
+    "assets/templates/MEMORY_POLICY.md",
+    "references/agent-team.md",
+    "references/context-hygiene.md",
+    "references/health-checks.md",
+    "references/knowledge-base.md",
+    "references/memory-architecture.md",
+    "references/safety-policy.md",
+    "references/self-evolution.md",
+    "references/skill-baseline.md",
+    "results.tsv",
+    "scripts/diagnose.py",
+    "skill-card.md",
+    "test-prompts.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "xb19960921",
+    "handle": "xb19960921",
+    "user_id": "s172f3jjxf40vh438bf24d3cj983g86d"
+  },
+  "slug": "openclaw-agent-onboarding",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-agent-onboarding",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-agent-onboarding&ownerHandle=xb19960921",
+    "page_url": "https://clawhub.ai/xb19960921/skills/openclaw-agent-onboarding"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 581,
+    "installs": 14,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "OpenClaw \u4e2a\u4eba AgentOS \u521d\u59cb\u5316\u5411\u5bfc / Bootstrapper\u3002Use when a user wants to initialize, diagnose, upgrade, repair, or health-check a new or existing OpenClaw setup; in...",
+  "updated_at": 1778492769481,
+  "version": "1.1.0"
+}
