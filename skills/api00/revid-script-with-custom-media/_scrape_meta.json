@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release: Render branded videos using only user-provided media assets.\n\n- Requires script text and at least 3 public media asset URLs (image/video/audio).\n- Ensures no stock visuals are used by setting both `media.useOnlyProvided: true` and `options.useOnlyProvidedMedia: true`.\n- Suitable for cases where every frame must reflect brand visuals.\n- Step-by-step instructions, failure modes, and API template included.\n- Fallback to [`revid-script-to-video`] skill if stock/fill visuals are desired.",
+  "created_at": 1777220138546,
+  "display_name": "Script + Custom Media",
+  "fetched_at": 1787814312147,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "examples/branded-script.json",
+    "examples/run.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "api00",
+    "handle": "api00",
+    "user_id": "s1728d1rdp70wm5hvmk61q153h85kp8x"
+  },
+  "slug": "revid-script-with-custom-media",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/revid-script-with-custom-media",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=revid-script-with-custom-media&ownerHandle=api00",
+    "page_url": "https://clawhub.ai/api00/skills/revid-script-with-custom-media"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 560,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Render a video from a script using only the media assets the caller provides (no stock visuals). Use for branded content where every frame must be on-brand \u2014...",
+  "updated_at": 1778492761793,
+  "version": "1.0.0"
+}
