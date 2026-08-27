@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release introducing a TDD-driven E2E PR workflow powered by Playwright screenshots as PR proof.\n\n- Define a strict \"One issue \u2192 One PR\" process with visual before/after proof for every code change.\n- Mandate studying passing tests and prohibit direct DOM modification via page.setContent().\n- Require Playwright E2E tests using real browser, capturing BEFORE and AFTER screenshots.\n- Document setup, worktree isolation, screenshot management, and strict PR requirements.\n- Outline fallback strategies for backend-only changes by connecting code to observable UI outcomes.\n- Enforce a hard gate: both BEFORE/AFTER screenshots and passing tests required before opening a PR.",
+  "created_at": 1775325968841,
+  "display_name": "PR-Proof-of-Work",
+  "fetched_at": 1787832045602,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/screenshot-reporter.ts",
+    "references/testing-patterns.md",
+    "scripts/pr-comment-screenshots.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Haoming Yan",
+    "handle": "newtontech",
+    "user_id": "s1716wabpmr3crsq4me8mq801x846s60"
+  },
+  "slug": "pr-proof-of-work",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pr-proof-of-work",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pr-proof-of-work&ownerHandle=newtontech",
+    "page_url": "https://clawhub.ai/newtontech/skills/pr-proof-of-work"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 517,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "TDD-driven E2E workflow with real Playwright browser screenshots as PR proof. Use when: (1) fix bugs or implement features with test-first approach, (2) crea...",
+  "updated_at": 1778492412046,
+  "version": "1.0.0"
+}
