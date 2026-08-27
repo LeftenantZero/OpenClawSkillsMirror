@@ -1,0 +1,45 @@
+{
+  "changelog": "Remove Todoist sections/groups entirely; keep Shopping list flat. Update docs accordingly.",
+  "created_at": 1769253152321,
+  "display_name": "Recipe to List",
+  "fetched_at": 1787806390237,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/recipe-to-list.sh",
+    "scripts/recipe_to_list.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783651441491,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Borahm",
+    "handle": "borahm",
+    "user_id": "s178h6tnctyzdm2zjbrcq3fdpd83fnyk"
+  },
+  "slug": "recipe-to-list",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/recipe-to-list",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=recipe-to-list&ownerHandle=borahm",
+    "page_url": "https://clawhub.ai/borahm/skills/recipe-to-list"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3305,
+    "installs": 111,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "Turn recipes into a Todoist Shopping list. Extract ingredients from recipe photos (Gemini Flash vision) or recipe web pages (search + fetch), then compare against the existing Shopping project with conservative synonym/overlap rules, skip pantry staples (salt/pepper), and sum quantities when units match. Also saves each cooked recipe into the workspace cookbook (recipes/).",
+  "updated_at": 1778987017324,
+  "version": "0.1.3"
+}
