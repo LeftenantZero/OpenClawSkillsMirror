@@ -1,0 +1,44 @@
+{
+  "changelog": "Smart Compact v1.0.0 \u2014 Progressive context compaction with memory preservation\n\n- Implements a 4-phase \"Scan, Extract, Check, Compact\" workflow to prevent data loss before context compression.\n- Automatically reviews large tool outputs, extracts key information, and writes it into dedicated memory files.\n- Generates a detailed pre-compaction checklist highlighting what has been saved or still needs attention.\n- Only proceeds to compacting when user confirms; never overwrites existing memory.\n- Triggered by context nearing limit, user command, or pre-compact actions; fully transparent with users.",
+  "created_at": 1775066295303,
+  "display_name": "Compact Test A",
+  "fetched_at": 1787835594018,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090237945,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wavmson",
+    "handle": "wavmson",
+    "user_id": "s1757c42efs3j405hc00csdrxs840yj8"
+  },
+  "slug": "compact-test-a",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/compact-test-a",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=compact-test-a&ownerHandle=wavmson",
+    "page_url": "https://clawhub.ai/wavmson/skills/compact-test-a"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 529,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Smart context compaction for OpenClaw agents. 4-phase progressive strategy: Scan, Extract, Check, Compact. Before running /compact, this skill scans tool out...",
+  "updated_at": 1778492352559,
+  "version": "1.0.0"
+}
