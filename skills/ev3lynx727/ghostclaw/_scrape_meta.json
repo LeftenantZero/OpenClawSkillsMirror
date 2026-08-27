@@ -1,0 +1,67 @@
+{
+  "changelog": "Ghostclaw 1.0.1 \u2014 Major refactor with modular Python architecture and CLI support\n\n- Migrates core logic and CLI to a new `ghostclaw/` Python package, removing shell scripts.\n- Adds command-line interfaces for ad-hoc review, repo watching, and codebase comparison.\n- Introduces modular core analyzers and tech stack\u2013specific modules (Node, Python, Go).\n- Switches to generating in-repo Markdown reports and optional automated GitHub PRs.\n- Centralizes stack heuristics and documentation under `ghostclaw/references/`.\n- Updates documentation in SKILL.md to reflect new usage and improved setup.",
+  "created_at": 1771825160104,
+  "display_name": "Ghostclaw",
+  "fetched_at": 1787802669480,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "ghostclaw/HOOK.md",
+    "ghostclaw/__init__.py",
+    "ghostclaw/cli/__init__.py",
+    "ghostclaw/cli/compare.py",
+    "ghostclaw/cli/ghostclaw.py",
+    "ghostclaw/cli/watcher.py",
+    "ghostclaw/core/__init__.py",
+    "ghostclaw/core/ai_codeindex_wrapper.py",
+    "ghostclaw/core/analyzer.py",
+    "ghostclaw/core/cache.py",
+    "ghostclaw/core/coupling.py",
+    "ghostclaw/core/detector.py",
+    "ghostclaw/core/graph.py",
+    "ghostclaw/core/metrics.py",
+    "ghostclaw/core/node_coupling.py",
+    "ghostclaw/core/pyscn_wrapper.py",
+    "ghostclaw/core/validator.py",
+    "ghostclaw/references/stack-patterns.md",
+    "ghostclaw/references/stack-patterns.yaml",
+    "ghostclaw/stacks/__init__.py",
+    "ghostclaw/stacks/base.py",
+    "ghostclaw/stacks/go.py",
+    "ghostclaw/stacks/node.py",
+    "ghostclaw/stacks/python.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779952201414,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Ev3lynx727",
+    "handle": "ev3lynx727",
+    "user_id": "s17ad9gvnqb3za6jdnxbdmw5vx884qsy"
+  },
+  "slug": "ghostclaw",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ghostclaw",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ghostclaw&ownerHandle=ev3lynx727",
+    "page_url": "https://clawhub.ai/ev3lynx727/skills/ghostclaw"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1242,
+    "installs": 37,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Architectural code review and refactoring assistant that perceives code vibes and system-level flow issues. Use for analyzing code quality and architecture,...",
+  "updated_at": 1778992561774,
+  "version": "1.0.1"
+}
