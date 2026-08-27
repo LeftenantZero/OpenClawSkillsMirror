@@ -1,0 +1,47 @@
+{
+  "changelog": "- Security improvements: scraping step now explicitly blocks all HTTP(S) redirects, adding another layer of SSRF protection.\n- Documentation updates to clarify that all 3xx responses are blocked\u2014no redirects are ever followed during web scraping.\n- Minor clarification in Cloudinary instructions (no default credentials used).\n- Added mention that public email and phone extraction may occur where available.",
+  "created_at": 1775284194669,
+  "display_name": "AI Instagram Auto Poster",
+  "fetched_at": 1787832498697,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/generate_course_promo.py",
+    "scripts/post_to_instagram.py",
+    "scripts/scrape_business.py",
+    "scripts/upload_cloudinary.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090316577,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Pawan Shekhawat",
+    "handle": "pawanshekhawat",
+    "user_id": "s171qgb0n6b0191y2hqd5vpb118446ga"
+  },
+  "slug": "instagram-auto-posting",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/instagram-auto-posting",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=instagram-auto-posting&ownerHandle=pawanshekhawat",
+    "page_url": "https://clawhub.ai/pawanshekhawat/skills/instagram-auto-posting"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 782,
+    "installs": 17,
+    "stars": 1,
+    "versions": 8
+  },
+  "summary": "Automate creation and direct posting of promotional images to Instagram Business accounts using Meta Graph API without third-party schedulers or paid tools.",
+  "updated_at": 1778492403242,
+  "version": "1.0.7"
+}
