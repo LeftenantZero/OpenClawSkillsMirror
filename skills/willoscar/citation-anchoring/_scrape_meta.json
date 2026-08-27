@@ -1,0 +1,49 @@
+{
+  "changelog": "- Initial release of citation-anchoring skill to detect and report citation drift across `###` subsections during editing/polishing.\n- Compares baseline citation anchors with current draft to ensure claim\u2192evidence alignment is preserved.\n- Outputs a PASS/FAIL report with details of any drift, but does not modify content.\n- Requires a baseline anchor file generated from a previous `draft-polisher` run.\n- Designed as an analysis-only networkless tool; safe for audit use.",
+  "created_at": 1773926965599,
+  "display_name": "Citation Anchoring",
+  "fetched_at": 1787862648374,
+  "files": [
+    "AGENTS.md",
+    "SKILL.md",
+    "_meta.json",
+    "pipelines/arxiv-survey-latex.pipeline.md",
+    "pipelines/arxiv-survey.pipeline.md",
+    "pipelines/graduate-paper-pipeline.md",
+    "pipelines/idea-brainstorm.pipeline.md",
+    "pipelines/lit-snapshot.pipeline.md",
+    "pipelines/peer-review.pipeline.md",
+    "pipelines/systematic-review.pipeline.md",
+    "pipelines/tutorial.pipeline.md",
+    "skill-card.md",
+    "tooling/__init__.py",
+    "tooling/common.py",
+    "tooling/executor.py",
+    "tooling/ideation.py",
+    "tooling/pipeline_spec.py",
+    "tooling/pipeline_text.py",
+    "tooling/quality_gate.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "WILLOSCAR",
+    "handle": "willoscar",
+    "user_id": "s170swmbgwf84dyyf8gmbm8h7d885agm"
+  },
+  "slug": "citation-anchoring",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/citation-anchoring",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=citation-anchoring&ownerHandle=willoscar",
+    "page_url": "https://clawhub.ai/willoscar/skills/citation-anchoring"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 755,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Regression-check citation anchoring (citations stay in the same subsection) to prevent \u201cpolish drift\u201d that breaks claim\u2192evidence alignment. **Trigger**: cita...",
+  "updated_at": 1778492033442,
+  "version": "1.0.0"
+}
