@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release with automated LinkedIn candidate search and structured pre-check process.\n\n- Automates LinkedIn candidate search using Chrome DevTools and Google/LinkedIn dual search.\n- Separates parameters into \"search\" (for query) and \"LLM analysis\" (profile post-processing) layers.\n- Implements a strict pre-check sequence: Chrome session, LinkedIn login, save directory, and workspace validation.\n- Prevents duplicate scans by saving profiles per role in organized local folders.\n- Profiles are parsed, scored (A/B/C) based on hard and soft conditions, and saved as Markdown files.\n- Step-by-step operation with automatic fixes and clear user prompts for missing prerequisites.",
+  "created_at": 1777448590719,
+  "display_name": "linkedin-candidate-search",
+  "fetched_at": 1787794556911,
+  "files": [
+    "_meta.json",
+    "skill-card.md",
+    "skill.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090582460,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "qianjunye",
+    "handle": "qianjunye",
+    "user_id": "s178x03n0v7kt6nmv474ewqe8983kmk2"
+  },
+  "slug": "linkedin-candidate-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/linkedin-candidate-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=linkedin-candidate-search&ownerHandle=qianjunye",
+    "page_url": "https://clawhub.ai/qianjunye/skills/linkedin-candidate-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 706,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u81ea\u52a8\u4f7f\u7528 Chrome \u8c03\u8bd5\u5728 LinkedIn \u641c\u7d22\u6307\u5b9a\u804c\u4f4d\u548c\u5730\u70b9\u7684\u5019\u9009\u4eba\uff0c\u63d0\u53d6\u5e76\u57fa\u4e8e\u4e91\u7ecf\u9a8c\u7b49\u786c\u6027\u6761\u4ef6\u667a\u80fd\u7b5b\u9009\uff0c\u907f\u514d\u91cd\u590d\u626b\u63cf\u3002",
+  "updated_at": 1779076153000,
+  "version": "1.0.0"
+}
