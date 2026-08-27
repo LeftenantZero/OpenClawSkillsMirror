@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of the bilibili-subtitle-downloader skill.\n\n- Supports downloading and chunking Bilibili video subtitles using Python scripts.\n- Handles both regular videos (BV ID) and Bilibili courses/episodes (SS/EP ID).\n- Provides QR code-based login for authentication when required.\n- Outputs chunked subtitle files for easy processing and summarization.\n- Includes recommended prompt template for generating accurate and structured summaries from subtitle chunks.",
+  "created_at": 1771605379570,
+  "display_name": "Bilibili Subtitle Downloader",
+  "fetched_at": 1787803188074,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/cheese_downloader.py",
+    "scripts/download_and_chunk.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779943176836,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u8fbe\u82ac\u5947_Davinci",
+    "handle": "davincievans",
+    "user_id": "s17drk9x4jwww1nejpmsrkv109884edh"
+  },
+  "slug": "bilibili-subtitle-download-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bilibili-subtitle-download-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bilibili-subtitle-download-skill&ownerHandle=davincievans",
+    "page_url": "https://clawhub.ai/davincievans/skills/bilibili-subtitle-download-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4840,
+    "installs": 154,
+    "stars": 4,
+    "versions": 1
+  },
+  "summary": "\u4e0b\u8f7d Bilibili \u89c6\u9891\u5b57\u5e55\uff0c\u5c06\u5176\u8fdb\u884c\u5206\u5757\u4ee5\u4f9b LLM\uff08\u5927\u8bed\u8a00\u6a21\u578b\uff09\u5904\u7406\uff0c\u5e76\u751f\u6210\u9ad8\u8d28\u91cf\u7684\u603b\u7ed3\u3002\u5f53\u7528\u6237\u63d0\u4f9b Bilibili BV \u53f7\u6216 URL\uff0c\u5e76\u5e0c\u671b\u83b7\u53d6\u89c6\u9891\u5185\u5bb9\u7684\u603b\u7ed3\u3001\u6838\u5fc3\u8981\u70b9\u6216\u8be6\u7ec6\u7684\u5206\u89e3\u65f6\u4f7f\u7528\u3002",
+  "updated_at": 1778991902825,
+  "version": "1.0.0"
+}
