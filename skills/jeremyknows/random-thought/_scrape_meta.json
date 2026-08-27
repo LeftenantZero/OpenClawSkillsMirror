@@ -1,0 +1,48 @@
+{
+  "changelog": "- Initial release of the autonomous workspace reflection engine.\n- Introduces two main stages: Writer (hourly, file-based reflection) and Curator (periodic synthesis of patterns and actions).\n- Configurable via `random-thought.config.json` for corpus selection, file freshness, action tags, and output formatting.\n- Provides scripts for random file selection and freshness management.\n- Supports both cron-driven automation and manual invocation for flexible setup.\n- Outputs scannable digests highlighting actionable insights and recurring themes.",
+  "created_at": 1773260238874,
+  "display_name": "Random Thought",
+  "fetched_at": 1787789245945,
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/architecture.md",
+    "scripts/corpus-pick.sh",
+    "scripts/freshness-gate.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089843904,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jeremy Knows",
+    "handle": "jeremyknows",
+    "user_id": "s17d0jemwtgnzyzdsxa0xkp4v183sy11"
+  },
+  "slug": "random-thought",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/random-thought",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=random-thought&ownerHandle=jeremyknows",
+    "page_url": "https://clawhub.ai/jeremyknows/skills/random-thought"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 892,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Autonomous workspace reflection engine. Picks a random file from a configurable corpus, writes a reflective observation about what's unresolved, half-finishe...",
+  "updated_at": 1779078031281,
+  "version": "1.0.0"
+}
