@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of Slack Lead Scanner \u2014 automate lead extraction, enrichment, and syncing between Slack, Apollo, and HubSpot.\n\n- Monitors #leadscanner for lead images/text, extracts and enriches contact info, and syncs to HubSpot.\n- Sends Slack DM summaries with HubSpot links, enabling in-thread updates to contacts.\n- Handles user replies in Slack DMs to update HubSpot fields (e.g., title, email, notes).\n- Maintains local state for tracking processed messages and pending replies.\n- Includes full setup guide, state schema, field mappings, and robust error handling.",
+  "created_at": 1775071515562,
+  "display_name": "badgebot",
+  "fetched_at": 1787835544788,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/apollo.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090238675,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Mark Chen",
+    "handle": "mchensf",
+    "user_id": "s17ame59rkznhzfp3yb27g7051841qrr"
+  },
+  "slug": "badgebot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/badgebot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=badgebot&ownerHandle=mchensf",
+    "page_url": "https://clawhub.ai/mchensf/skills/badgebot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 486,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Monitor a Slack channel for images/text of leads (badges, business cards), extract data, enrich with Apollo.io API, let Apollo auto-sync to HubSpot, search H...",
+  "updated_at": 1778492356127,
+  "version": "1.0.0"
+}
