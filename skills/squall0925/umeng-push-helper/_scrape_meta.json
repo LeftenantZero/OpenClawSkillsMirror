@@ -1,0 +1,72 @@
+{
+  "changelog": "Umeng Push Helper 1.0.0 - Initial Release\n\n- Provides read-only tools for querying Umeng Push backend data, including app lists, push summaries, weekly reports, push trace analysis, switch statistics, and push closure attribution.\n- Strictly blocks all write or modification APIs for security; only read/query APIs are enabled.\n- Requires users to supply their own Umeng Cookie for all operations, with detailed step-by-step guidance for obtaining and saving the Cookie.\n- Offers command-line scripts for Cookie validation, management, and for fetching core push data.\n- Supports paginated queries and detailed field explanations for all listed functionalities.",
+  "created_at": 1776743854064,
+  "display_name": "\u63a8\u9001\u6d88\u606f\u6570\u636e\u52a9\u624b\uff08\u53cb\u76dfU-Push\uff09",
+  "fetched_at": 1787795017712,
+  "files": [
+    "CHANGELOG_COOKIE_UPDATE.md",
+    "COOKIE_VALIDATION_UPDATE.md",
+    "EXAMPLES.md",
+    "README.md",
+    "SECURITY_UPDATE.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/api_request.py",
+    "scripts/auto_get_cookie.py",
+    "scripts/browser_cookie.py",
+    "scripts/check_auth.py",
+    "scripts/clear_cookie.py",
+    "scripts/close_attribution_template.html",
+    "scripts/get_app_list.py",
+    "scripts/manage_cookie.py",
+    "scripts/overview_stats_template.html",
+    "scripts/query_api_statistics.py",
+    "scripts/query_app_data.py",
+    "scripts/query_close_attribution.py",
+    "scripts/query_close_attribution_v2.py",
+    "scripts/query_daily_api_stats.py",
+    "scripts/query_device_messages.py",
+    "scripts/query_msg_detail.py",
+    "scripts/query_msg_list.py",
+    "scripts/query_overview_stats.py",
+    "scripts/query_push_trace.py",
+    "scripts/query_switch_statistics.py",
+    "scripts/save_cookie.py",
+    "scripts/security_interceptor.py",
+    "scripts/switch_chart_template.html",
+    "scripts/view_switch_report.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090494308,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Umeng+",
+    "handle": "squall0925",
+    "user_id": "s178qv5gja5sbh0bq8t6wbhq8x83rmg5"
+  },
+  "slug": "umeng-push-helper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/umeng-push-helper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=umeng-push-helper&ownerHandle=squall0925",
+    "page_url": "https://clawhub.ai/squall0925/skills/umeng-push-helper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 654,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u53cb\u76df\u63a8\u9001\u540e\u53f0\u7ba1\u7406\u52a9\u624b\uff08\u53ea\u8bfb\u67e5\u8be2\uff09\u3002\u5e2e\u52a9\u83b7\u53d6\u5e94\u7528\u5217\u8868\u3001\u67e5\u8be2\u63a8\u9001\u6570\u636e\u7b49\u3002**\u4f7f\u7528\u524d\u9700\u7528\u6237\u63d0\u4f9b Cookie**\uff1a\u8bf7\u8bbf\u95ee https://upush.umeng.com \u767b\u5f55\u540e\uff0c\u5728\u6d4f\u89c8\u5668\u5f00\u53d1\u8005\u5de5\u5177\u7684 Network \u6807\u7b7e\u4e2d\u590d\u5236 Cookie \u5e76\u63d0\u4f9b\u7ed9\u7cfb\u7edf\u3002Use when working with Umeng push...",
+  "updated_at": 1779075993580,
+  "version": "1.0.0"
+}
