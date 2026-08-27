@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release",
+  "created_at": 1770903090988,
+  "display_name": "Signet Guardian",
+  "fetched_at": 1787804643997,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "docs/DASHBOARD_TEST.md",
+    "openclaw-extension/README.md",
+    "openclaw-extension/signet-guardian/index.ts",
+    "package.json",
+    "pnpm-lock.yaml",
+    "references/policy.json",
+    "scripts/signet-cli.ts",
+    "skill-card.md",
+    "test-guardian.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779972496147,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "rafalzacher1",
+    "handle": "rafalzacher1",
+    "user_id": "s175whs6m86t45myqe9mryb1ts8840nv"
+  },
+  "slug": "signet-guardian",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/signet-guardian",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=signet-guardian&ownerHandle=rafalzacher1",
+    "page_url": "https://clawhub.ai/rafalzacher1/skills/signet-guardian"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1614,
+    "installs": 51,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Payment guard middleware for AI agents. Use whenever any skill is about to initiate a payment. Runs a preflight check against the user's policy (payments enabled, per-transaction limit, monthly cap). Returns ALLOW, DENY, or CONFIRM_REQUIRED. Other payment-capable skills must call signet-preflight before proceeding and signet-record after a successful payment.",
+  "updated_at": 1778990066064,
+  "version": "0.1.0"
+}
