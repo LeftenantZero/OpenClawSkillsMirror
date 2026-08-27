@@ -1,0 +1,67 @@
+{
+  "changelog": "Summary: Adds an explicit, safe local Python environment setup for all bot scripts.\n\n- Added `scripts/setup_env.py` for managing a dedicated local Python virtual environment and dependencies.\n- Skill now asks for user confirmation before installing Python packages into `{baseDir}/.venv`.\n- All bot and data scripts prefer the `.venv` Python interpreter to ensure isolation from the system environment.\n- Updated documentation with a new \"One-Time Local Setup\" section and revised backtest command samples to use the new Python environment.",
+  "created_at": 1773887383420,
+  "display_name": "moss-trade-bot-factory-en",
+  "fetched_at": 1787864315605,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "data_cache/binanceusdm_BTC_USDT:USDT_15m_2025-10-06_148d.csv",
+    "knowledge/evolution_guide.md",
+    "knowledge/params_reference.md",
+    "knowledge/platform_ops.md",
+    "scripts/core/__init__.py",
+    "scripts/core/backtest.py",
+    "scripts/core/decision.py",
+    "scripts/core/engine.py",
+    "scripts/core/fetcher.py",
+    "scripts/core/indicators.py",
+    "scripts/core/regime.py",
+    "scripts/data_BTC_USDT_15m_148d.csv",
+    "scripts/fetch_data.py",
+    "scripts/live_runner.py",
+    "scripts/live_trade.py",
+    "scripts/package_upload.py",
+    "scripts/params_schema.json",
+    "scripts/requirements.txt",
+    "scripts/run_backtest.py",
+    "scripts/run_evolve_backtest.py",
+    "scripts/setup_env.py",
+    "scripts/text_i18n.py",
+    "scripts/trading_client.py",
+    "skill-card.md",
+    "skill.yaml"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089971265,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fei-moss",
+    "handle": "fei-moss",
+    "user_id": "s1756w641jh09pbnr8r88wbh1h83n2rw"
+  },
+  "slug": "moss-trade-bot-factory-en",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/moss-trade-bot-factory-en",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=moss-trade-bot-factory-en&ownerHandle=fei-moss",
+    "page_url": "https://clawhub.ai/fei-moss/skills/moss-trade-bot-factory-en"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 869,
+    "installs": 23,
+    "stars": 3,
+    "versions": 4
+  },
+  "summary": "Users describe a trading style in natural language, and the skill creates a crypto trading bot, runs local backtests, supports periodic reflection-driven evo...",
+  "updated_at": 1778492018600,
+  "version": "1.0.3"
+}
