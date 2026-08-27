@@ -1,0 +1,50 @@
+{
+  "changelog": "Redact config-derived evidence in heuristic findings so the skill no longer echoes raw config values in reports.",
+  "created_at": 1773766285622,
+  "display_name": "Openclaw Security Audit",
+  "fetched_at": 1787867458615,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "resources/run_audit.sh",
+    "resources/runtime/openclaw_sec/__init__.py",
+    "resources/runtime/openclaw_sec/__main__.py",
+    "resources/runtime/openclaw_sec/audit.py",
+    "resources/runtime/openclaw_sec/cli.py",
+    "resources/runtime/openclaw_sec/data/__init__.py",
+    "resources/runtime/openclaw_sec/data/secret_patterns.py",
+    "resources/runtime/openclaw_sec/detectors/__init__.py",
+    "resources/runtime/openclaw_sec/detectors/config_scan.py",
+    "resources/runtime/openclaw_sec/detectors/fs_scan.py",
+    "resources/runtime/openclaw_sec/detectors/git_scan.py",
+    "resources/runtime/openclaw_sec/detectors/host_scan.py",
+    "resources/runtime/openclaw_sec/detectors/network_scan.py",
+    "resources/runtime/openclaw_sec/detectors/secret_scan.py",
+    "resources/runtime/openclaw_sec/models.py",
+    "resources/runtime/openclaw_sec/report.py",
+    "resources/runtime/openclaw_sec/utils.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "haooyi",
+    "handle": "haooyi",
+    "user_id": "s172d3d1xredqan48ehgtbp0rn88458r"
+  },
+  "slug": "openclaw-sec-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-sec-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-sec-audit&ownerHandle=haooyi",
+    "page_url": "https://clawhub.ai/haooyi/skills/openclaw-sec-audit"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 768,
+    "installs": 20,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Run a local security audit on the OpenClaw environment, identifying risks, affected files, and prioritized remediation steps without exposing secrets.",
+  "updated_at": 1778491982228,
+  "version": "0.1.3"
+}
