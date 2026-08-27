@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of Yandex SpeechKit STT skill:\n\n- Enables speech recognition for Telegram voice messages via Yandex SpeechKit API.\n- Supports OggOpus, WAV, and MP3 audio formats.\n- Automatically trims audio to 28 seconds to comply with Yandex limits.\n- Handles IAM token generation and refresh using service account credentials.\n- Usable both from command line and as a Python module.",
+  "created_at": 1772294296306,
+  "display_name": "Yandex Speechkit STT via Telegram Gateway",
+  "fetched_at": 1787790721865,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "example.config.json",
+    "scripts/voice_processor.py",
+    "scripts/yandex_stt.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967462709,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "strydex",
+    "handle": "strydex",
+    "user_id": "s170fm4j2h9azjgtmqn182yv7d8843m5"
+  },
+  "slug": "yandex-speechkit-stt",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/yandex-speechkit-stt",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=yandex-speechkit-stt&ownerHandle=strydex",
+    "page_url": "https://clawhub.ai/strydex/skills/yandex-speechkit-stt"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1033,
+    "installs": 31,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u0420\u0430\u0441\u043f\u043e\u0437\u043d\u0430\u0432\u0430\u043d\u0438\u0435 \u0440\u0435\u0447\u0438 \u0447\u0435\u0440\u0435\u0437 Yandex SpeechKit API \u0434\u043b\u044f \u0433\u043e\u043b\u043e\u0441\u043e\u0432\u044b\u0445 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0439 \u0432 Telegram. \u0418\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0439 \u043a\u043e\u0433\u0434\u0430 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u044f\u0435\u0442 \u0433\u043e\u043b\u043e\u0441\u043e\u0432\u044b\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f \u0438 \u0445\u043e\u0447\u0435\u0442, \u0447\u0442\u043e\u0431\u044b...",
+  "updated_at": 1779077477522,
+  "version": "1.0.0"
+}
