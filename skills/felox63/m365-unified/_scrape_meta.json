@@ -1,0 +1,81 @@
+{
+  "changelog": "**Major update:** Adds extensive webhook and automation tooling, granular modularity, and improved configuration guidance.\n\n- Introduced multiple new scripts for automating webhook management, email testing, invoice processing, and notifications.\n- Added detailed documentation for webhooks and shared mailbox setup.\n- New environment template and security policy files included.\n- Completely rewritten SKILL.md for improved setup, configuration, and usage instructions with module breakdowns.\n- Deprecated and removed outdated .clawhub/config.json configuration file.",
+  "created_at": 1776624836004,
+  "display_name": "M365 Unified",
+  "fetched_at": 1787794892723,
+  "files": [
+    "README.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/template.env",
+    "docs/webhooks.md",
+    "package.json",
+    "scripts/auto-renew-webhooks.js",
+    "scripts/check-inbox.js",
+    "scripts/create-inbox-webhook.js",
+    "scripts/find-test-email.js",
+    "scripts/list-all-folders.js",
+    "scripts/list-sharepoint-sites.js",
+    "scripts/manage-webhooks.js",
+    "scripts/prepare-test-email.js",
+    "scripts/process-invoice-email.js",
+    "scripts/process-invoice-with-ocr.js",
+    "scripts/reset-test-email.js",
+    "scripts/send-telegram-notification.js",
+    "scripts/send-test-email.js",
+    "scripts/setup-webhook-integration.sh",
+    "scripts/setup-wizard.js",
+    "scripts/start-webhook.sh",
+    "scripts/test-attachment-download.js",
+    "scripts/test-connection.js",
+    "scripts/test-email.js",
+    "scripts/test-invoice-flow.js",
+    "scripts/test-planner.js",
+    "scripts/test-sharepoint.js",
+    "scripts/test-webhook-post.js",
+    "scripts/test-webhook.js",
+    "scripts/webhook-handler.js",
+    "skill-card.md",
+    "src/auth/graph-client.js",
+    "src/email/folders.js",
+    "src/email/mail.js",
+    "src/index.js",
+    "src/onedrive/files.js",
+    "src/planner/tasks.js",
+    "src/sharepoint/files.js",
+    "src/webhooks/subscriptions.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090490997,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Felix M.",
+    "handle": "felox63",
+    "user_id": "s171gk0y8ds0jr7dg5f05ap4p183pb80"
+  },
+  "slug": "m365-unified",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/m365-unified",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=m365-unified&ownerHandle=felox63",
+    "page_url": "https://clawhub.ai/felox63/skills/m365-unified"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 780,
+    "installs": 20,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Unified Microsoft 365 skill for OpenClaw with modular features for Exchange Online (Email), SharePoint, OneDrive, and Planner. Supports webhooks for real-tim...",
+  "updated_at": 1779076048713,
+  "version": "2.0.0"
+}
