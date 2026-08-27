@@ -1,0 +1,39 @@
+{
+  "changelog": "Security policy improvements and stricter endpoint controls:\n\n- Clarified: Default security policy requires HTTPS endpoints and allowlisted LLM hosts.\n- Added: SSL verification now enabled by default; insecure connection fallback requires explicit flag.\n- Added: Custom LLM endpoints are blocked unless explicitly allowed with `--allow-custom-llm-endpoint`.\n- Added: `LLM_ALLOWED_HOSTS` environment variable to extend trusted LLM hosts.\n- Noted: Webhook notifications are now restricted to HTTPS and official Feishu/Lark/DingTalk domains.",
+  "created_at": 1774260472351,
+  "display_name": "ai news weekly agent",
+  "fetched_at": 1787853714753,
+  "files": [
+    "AI_Weekly_Agent_Plan_EN.md",
+    "AI\u8d44\u8baf\u63a8\u9001Agent\u8ba1\u5212.md",
+    "README.md",
+    "_meta.json",
+    "daily_docs/ai_weekly_20260323.md",
+    "run_daily_digest.py",
+    "skill-card.md",
+    "skill.md",
+    "sources.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Matilda-Grifin",
+    "handle": "matilda-grifin",
+    "user_id": "s1747nbzyjfdjk1dhndw0nmq91841zne"
+  },
+  "slug": "ai-news-weekly-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-news-weekly-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-news-weekly-agent&ownerHandle=matilda-grifin",
+    "page_url": "https://clawhub.ai/matilda-grifin/skills/ai-news-weekly-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 744,
+    "installs": 17,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Generate a weekly AI report with OpenClaw top skills, official announcements, industry news, and capped paper ratio in Markdown format.",
+  "updated_at": 1778492131891,
+  "version": "1.0.2"
+}
