@@ -1,0 +1,61 @@
+{
+  "changelog": "restaurant-crosscheck-v2 now cross-references restaurant recommendations from Xiaohongshu (\u5c0f\u7ea2\u4e66) and Dianping (\u5927\u4f17\u70b9\u8bc4) for higher-confidence results.\n\n- Fetches and analyzes ratings, review counts, and sentiment from both platforms\n- Matches restaurants using fuzzy matching and address proximity\n- Calculates a platform consistency score and outputs confidence-based recommendations (0\u201310 scale)\n- Supports custom filtering by location, cuisine, rating, and review count\n- Integrates error handling, advanced NLP sentiment analysis, and proxy management for scraping robustness",
+  "created_at": 1771218861551,
+  "display_name": "Clean Skill",
+  "fetched_at": 1787803983156,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "examples/example_usage.py",
+    "examples/test_high_consistency.py",
+    "references/api_limitations.md",
+    "references/data_schema.md",
+    "references/sentiment_analysis.md",
+    "scripts/__init__.py",
+    "scripts/config.py",
+    "scripts/crosscheck.py",
+    "scripts/crosscheck_base.py",
+    "scripts/crosscheck_real.py",
+    "scripts/crosscheck_simple.py",
+    "scripts/fetch_dianping.py",
+    "scripts/fetch_dianping_real.py",
+    "scripts/fetch_xiaohongshu.py",
+    "scripts/fetch_xiaohongshu_real.py",
+    "scripts/match_restaurants.py",
+    "scripts/requirements.txt",
+    "scripts/session_manager.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779969043036,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "RenfeiZhong",
+    "handle": "zhongrenfei1-hub",
+    "user_id": "s172t1veky0ejmk17gxzs6jq7h885se7"
+  },
+  "slug": "clean-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clean-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clean-skill&ownerHandle=zhongrenfei1-hub",
+    "page_url": "https://clawhub.ai/zhongrenfei1-hub/skills/clean-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1299,
+    "installs": 40,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Cross-reference restaurant recommendations from Xiaohongshu (\u5c0f\u7ea2\u4e66) and Dianping (\u5927\u4f17\u70b9\u8bc4) to validate restaurant quality and consistency. Use when querying resta...",
+  "updated_at": 1778990886243,
+  "version": "1.1.0"
+}
