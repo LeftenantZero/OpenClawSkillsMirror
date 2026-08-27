@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of INR Sender Skill:\n\n- Permet d\u2019envoyer la valeur INR de l\u2019utilisateur par e-mail \u00e0 un centre de t\u00e9l\u00e9m\u00e9decine sp\u00e9cialis\u00e9 ou pour un test.\n- Commande simple\u202f: `inr-sender <valeur_inr> [--test]`.\n- En mode test, envoi \u00e0 `harpoutian@gmail.com`\u202f; sinon, \u00e0 `creatif.lrb@aphp.fr`.\n- Format de message standardis\u00e9 incluant valeur INR, date, et informations personnelles pour identification.\n- Utilise un script d\u00e9di\u00e9 (`scripts/send_inr.sh`) pour l\u2019envoi des e-mails.",
+  "created_at": 1774552428414,
+  "display_name": "Inr Sender",
+  "fetched_at": 1787846026457,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/send_inr.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090134067,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "gillesCV",
+    "handle": "gillescv",
+    "user_id": "s1763c7k9nb0rg7xm7qybwjgtd83e5zv"
+  },
+  "slug": "inr-sender",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/inr-sender",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=inr-sender&ownerHandle=gillescv",
+    "page_url": "https://clawhub.ai/gillescv/skills/inr-sender"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 510,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Envoie le r\u00e9sultat de l'INR (International Normalized Ratio) \u00e0 un centre de t\u00e9l\u00e9m\u00e9decine sp\u00e9cialis\u00e9 ou pour un test. Utilise ce skill lorsque Gilles souhaite...",
+  "updated_at": 1778492219006,
+  "version": "1.0.0"
+}
