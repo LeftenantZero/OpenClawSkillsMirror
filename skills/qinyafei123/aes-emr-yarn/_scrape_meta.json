@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of YARN resource analysis skill.\n\n- Supports in-depth analysis of YARN cluster resource consumption using SSH and EMR API.\n- Provides overall resource trend, queue usage, idle/overprovisioned risk, fragmentation analysis, and health/capacity recommendations.\n- Fully decoupled and configuration-driven; data/config/logs are isolated within skill directory.\n- Parallel data collection, timeout control, and fast-failure mechanisms for efficiency.\n- Outputs markdown-formatted analysis report, with clear logs and error troubleshooting guidance.",
+  "created_at": 1777442519260,
+  "display_name": "AES EMR YARN Analyzer",
+  "fetched_at": 1787794644579,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/config.yaml",
+    "data/cookies.json",
+    "scripts/analyze_yarn.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090581485,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "qinyafei",
+    "handle": "qinyafei123",
+    "user_id": "s175dhqxfrytp7s0ghemqqxzcd83q367"
+  },
+  "slug": "aes-emr-yarn",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aes-emr-yarn",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aes-emr-yarn&ownerHandle=qinyafei123",
+    "page_url": "https://clawhub.ai/qinyafei123/skills/aes-emr-yarn"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 549,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "YARN \u6574\u4f53\u8d44\u6e90\u6d88\u8017\u5206\u6790\u4e13\u5bb6\u3002\u57fa\u4e8e SSH \u548c EMR API\uff0c\u6df1\u5ea6\u89e3\u6790 YARN \u96c6\u7fa4\u6574\u4f53\u8d44\u6e90\u6d88\u8017\u8d8b\u52bf\u3001\u961f\u5217\u5229\u7528\u7387\u5206\u5e03\u3001\u8d44\u6e90\u95f2\u7f6e/\u8d85\u914d\u98ce\u9669\u53ca\u8c03\u5ea6\u788e\u7247\u5316\u7279\u5f81\uff0c\u8f93\u51fa\u8d44\u6e90\u5065\u5eb7\u5ea6\u8bc4\u4f30\u4e0e\u5bb9\u91cf\u89c4\u5212\u5efa\u8bae\u3002\u89e6\u53d1\u8bcd\uff1a\u5206\u6790yarn\u8d1f\u8f7d\u3001\u67e5yarn\u4f7f\u7528\u60c5\u51b5\u3001yarn\u8fd1\u671f\u8d1f\u8f7d\u3001yarn\u8d44\u6e90\u5206\u6790\u3002",
+  "updated_at": 1779076130766,
+  "version": "1.0.0"
+}
