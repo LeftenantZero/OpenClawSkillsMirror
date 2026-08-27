@@ -1,0 +1,76 @@
+{
+  "changelog": "Initial public release of smart-accountant skill.\n\n- Introduces a structured AI accountant knowledge base with detailed guides for each core file.\n- Covers foundational topics: audit rules, closing processes, chart of accounts, database handling, ledgers, journal entries, rectification, reporting, source documents, and transaction language mapping.\n- Provides step-by-step installation and setup instructions for the toolchain using Node.js and better-sqlite3.\n- Defines a complete onboarding interview flow for initializing a new business or workspace.\n- Emphasizes best practices such as the Maker-Checker protocol, immutable audit trail, and attachment of supporting evidence before transaction entry.",
+  "created_at": 1777572122335,
+  "display_name": "Smart Accountant with GST Understanding",
+  "fetched_at": 1787811673351,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "audit_rule.md",
+    "closing.md",
+    "coa.md",
+    "db.md",
+    "db_tool.md",
+    "general_ledger.md",
+    "gst_guard.md",
+    "gst_posting_workflow.md",
+    "gst_validation_example.md",
+    "journal_entry.md",
+    "missed_gst_rule.md",
+    "rectification.md",
+    "report_manual.md",
+    "skill-card.md",
+    "source_document.md",
+    "tool/lib/db.js",
+    "tool/lib/gst-engine.js",
+    "tool/lib/interpreter.js",
+    "tool/lib/posting-engine.js",
+    "tool/lib/validators.js",
+    "tool/package-lock.json",
+    "tool/package.json",
+    "tool/scripts/close-period.js",
+    "tool/scripts/db-maintenance.js",
+    "tool/scripts/generate-report.js",
+    "tool/scripts/integrity-check.js",
+    "tool/scripts/ledger-query.js",
+    "tool/scripts/migrate-schema.js",
+    "tool/scripts/post-voucher.js",
+    "tool/scripts/preview-voucher.js",
+    "tool/scripts/reconcile.js",
+    "tool/scripts/rectify-entry.js",
+    "tool/scripts/reverse-voucher.js",
+    "transaction_language.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090722916,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Daksh Mehta",
+    "handle": "dakshhmehta",
+    "user_id": "s172bbrx169wm8qyz0yrztz97d85t3aw"
+  },
+  "slug": "smart-accountant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/smart-accountant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=smart-accountant&ownerHandle=dakshhmehta",
+    "page_url": "https://clawhub.ai/dakshhmehta/skills/smart-accountant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 538,
+    "installs": 13,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Provides expert double-entry accounting support including GST compliance, audit controls, period closing, journal entries, and financial reporting.",
+  "updated_at": 1778492814510,
+  "version": "1.0.0"
+}
