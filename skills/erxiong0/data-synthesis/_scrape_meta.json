@@ -1,0 +1,35 @@
+{
+  "changelog": "- Initial release of \"data-synthesis\": generates QA training data by splitting CSV text into chunks, then using an LLM to create questions and answers for each chunk.\n- Supports both OpenAI-compatible APIs and internal Qwen services.\n- Implements a dry-run mode (no API calls) and flexible environment configuration.\n- Provides scripts for CSV parsing and full QA data synthesis, outputting JSONL with key metadata.\n- Designed for efficient document/table data QA synthesis, with clear input/output formats and usage instructions.",
+  "created_at": 1776050570611,
+  "display_name": "data-synthesis",
+  "fetched_at": 1787824071220,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/parse_file.py",
+    "scripts/synthesize_qa.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "chichisyun",
+    "handle": "erxiong0",
+    "user_id": "s17cc7sd69341dzvpnas4mz9as83gj7m"
+  },
+  "slug": "data-synthesis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/data-synthesis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=data-synthesis&ownerHandle=erxiong0",
+    "page_url": "https://clawhub.ai/erxiong0/skills/data-synthesis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 673,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4ece CSV \u8bed\u6599\u5207\u5757\u540e\uff0c\u7528\u540c\u4e00\u5957 LLM \u63a5\u53e3\u4f9d\u6b21\u751f\u6210\u95ee\u9898\u4e0e\u7b54\u6848\uff0c\u8f93\u51fa JSONL \u8bad\u7ec3\u6570\u636e\u3002 \u9002\u7528\u4e8e\u6587\u6863/\u8868\u683c\u8bed\u6599\u5408\u6210 QA\u3001\u5fae\u8c03\u6570\u636e\u51c6\u5907\uff1b\u652f\u6301 OpenAI \u517c\u5bb9\u7f51\u5173\u4e0e\u5185\u7f51 Qwen \u7b49\u670d\u52a1\u3002",
+  "updated_at": 1778492556614,
+  "version": "1.0.0"
+}
