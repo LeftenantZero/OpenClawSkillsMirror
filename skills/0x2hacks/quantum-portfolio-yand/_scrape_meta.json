@@ -1,0 +1,44 @@
+{
+  "changelog": "**Initial release of quantum-portfolio-yand skill**:\n\n- Introduces a quantum-inspired portfolio optimization assistant that integrates classical, QUBO (quantum-unconstrained binary optimization) via simulated annealing, and geometric (YAND) solvers.\n- Cross-validates all portfolio outputs among three diverse solver paradigms (SLSQP, QUBO+neal, YAND/YAND-MVSK) and visualizes discrepancies.\n- Provides scripts for synthetic or user-supplied data loading, QUBO encoding/solving, YAND-MVSK geometric optimization, and a full pipeline driver with figure outputs.\n- Enforces strong data validation, risk diagnostics, and reference-based correction by consulting provided domain-specific patterns and validation rules.\n- Supports higher-moment portfolio optimization (mean, variance, skewness, kurtosis) and robust handling of challenging optimization cases.",
+  "created_at": 1777603847756,
+  "display_name": "quantum-portfolio-yand",
+  "fetched_at": 1787811592027,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/demo_synthetic.md",
+    "references/patterns.md",
+    "references/sharp_edges.md",
+    "references/validations.md",
+    "requirements.txt",
+    "scripts/data_loader.py",
+    "scripts/qubo_solver.py",
+    "scripts/run_pipeline.py",
+    "scripts/yand_solver.py",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "0x2Hacks",
+    "handle": "0x2hacks",
+    "user_id": "s1704gatdk4h5wzqx7bqvvdttn85wjrh"
+  },
+  "slug": "quantum-portfolio-yand",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/quantum-portfolio-yand",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=quantum-portfolio-yand&ownerHandle=0x2hacks",
+    "page_url": "https://clawhub.ai/0x2hacks/skills/quantum-portfolio-yand"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 588,
+    "installs": 14,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Quantum-inspired portfolio optimizer using classical, QUBO-simulated, and YAND geometric solvers to optimize mean-variance-skewness-kurtosis portfolios on th...",
+  "updated_at": 1778492818233,
+  "version": "1.0.0"
+}
