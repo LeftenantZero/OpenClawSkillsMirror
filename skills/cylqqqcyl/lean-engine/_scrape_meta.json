@@ -1,0 +1,47 @@
+{
+  "changelog": "Security hardening: run_backtest.sh no longer modifies original config.json \u2014 uses temp copy with trap-based restore. Extracted config editor into standalone configure_algo.py (no inline heredoc). Added PYTHONNET_PYDLL to requires.env. All 3 required env vars now declared in metadata. Added detailed Security Notes section.",
+  "created_at": 1773348710338,
+  "display_name": "LEAN Engine \u2014 Algorithmic Trading",
+  "fetched_at": 1787794143521,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/data-download.md",
+    "scripts/configure_algo.py",
+    "scripts/download_us_universe.py",
+    "scripts/run_backtest.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089861916,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Yinliang Chen",
+    "handle": "cylqqqcyl",
+    "user_id": "s17d19w0k5z2m6ss5bjf57b0p583hp25"
+  },
+  "slug": "lean-engine",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/lean-engine",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=lean-engine&ownerHandle=cylqqqcyl",
+    "page_url": "https://clawhub.ai/cylqqqcyl/skills/lean-engine"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1047,
+    "installs": 27,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Run QuantConnect LEAN backtests and manage US equity algorithm development. Use when asked to backtest a trading strategy, run a LEAN algorithm, analyze back...",
+  "updated_at": 1779076304448,
+  "version": "1.1.0"
+}
