@@ -1,0 +1,53 @@
+{
+  "changelog": "Major upgrade: Adds multi-source fallback, EPUB\u2192PDF conversion, Anna's Archive support, and new scripts.\n\n- Introduced automatic multi-source (A\u2192B\u2192C) download fallback with `multi_source_download.py`\n- Added direct Anna's Archive (libgen.li) search and download as last-resort source\n- Implemented EPUB to PDF auto-conversion using `epub_to_pdf.py` and weasyprint\n- Deprecated Z-Library due to strict download limits; Anna's Archive replaces as tertiary source\n- Added new scripts: `multi_source_download.py`, `epub_to_pdf.py`, `search_source_c.py`, `anna_async_download.py`, `anna_batch_download.py`, `anna_iso_batch.sh`\n- Updated documentation: streamlined workflows, expanded troubleshooting, and modernized usage instructions",
+  "created_at": 1774321299915,
+  "display_name": "Chinese Ebook Downloader",
+  "fetched_at": 1787852927780,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/anna_async_download.py",
+    "scripts/anna_batch_download.py",
+    "scripts/anna_iso_batch.sh",
+    "scripts/batch_download.py",
+    "scripts/download_book.py",
+    "scripts/epub_to_pdf.py",
+    "scripts/multi_source_download.py",
+    "scripts/search_secondary_source.py",
+    "scripts/search_source_c.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090090169,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "lb1121",
+    "handle": "lb1121",
+    "user_id": "s17e13xn9xcw4jzk4ecp8ymx3n83hfh7"
+  },
+  "slug": "chinese-ebook-downloader",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/chinese-ebook-downloader",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=chinese-ebook-downloader&ownerHandle=lb1121",
+    "page_url": "https://clawhub.ai/lb1121/skills/chinese-ebook-downloader"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 724,
+    "installs": 19,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Download Chinese-language ebooks from multiple sources with automatic A\u2192B\u2192C fallback. Primary source: online book library with ~100% coverage, no daily limit...",
+  "updated_at": 1778492143015,
+  "version": "2.0.0"
+}
