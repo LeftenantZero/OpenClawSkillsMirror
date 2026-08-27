@@ -1,0 +1,43 @@
+{
+  "changelog": "Lesch Stil-Layer v2\n\nDer Lesch-Stil-Layer f\u00fcr den deutschen Humanizer wurde grundlegend \u00fcberarbeitet. Statt einer kleinen fixen Liste gibt es jetzt 36 Lesch-ismen nach Hut gruppiert (Vision\u00e4r, Mahner, Erkl\u00e4rer) plus 8 Analogie-Dom\u00e4nen aus denen das Modell sch\u00f6pft, ohne dieselben Bilder zu wiederholen.\n\nWas neu ist:\n- 36 Lesch-ismen statt 9, nach Tonlage sortiert \u2014 das Modell wei\u00df welche Phrase zu welchem Hut passt\n- 8 Analogie-Dom\u00e4nen (Handwerk, K\u00fcche, Reise, Natur, Medizin, Musik, Schule, Sport) \u2014 aus einer Welt viele Variationen, ohne Wiederholung\n- 5 Einstiegstypen statt 3 \u2014 Rhetorische Frage, Historischer Bogen, Provokation, Alltagsszene, Paradox\n- Anti-KI-Guardrails: wenn das Modell selbst erfindet, gelten harte Regeln \u2014 max. 6 W\u00f6rter, kein Adjektiv, Handwerker-Probe f\u00fcr Analogien\n- Score-Bonus belohnt Vielfalt: Lesch-ismen aus min. 2 H\u00fcten n\u00f6tig f\u00fcr vollen Bonus",
+  "created_at": 1773940396452,
+  "display_name": "Humanizer-DE",
+  "fetched_at": 1787862237265,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_dev/SESSION-LOG.md",
+    "_meta.json",
+    "references/examples.md",
+    "references/ki-muster.md",
+    "references/personality-injection.md",
+    "references/statistische-signale.md",
+    "references/stil-layer/basis.md",
+    "references/stil-layer/lesch.md",
+    "references/vokabeln.md",
+    "scripts/humanize-de.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Tikitackr",
+    "handle": "tikitackr",
+    "user_id": "s172swddddh0zqm3rehfs3cvxh84a9ya"
+  },
+  "slug": "humanizer-de",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/humanizer-de",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=humanizer-de&ownerHandle=tikitackr",
+    "page_url": "https://clawhub.ai/tikitackr/skills/humanizer-de"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 829,
+    "installs": 22,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Analysiert deutsche Texte auf KI-Muster, markiert problematische Stellen, bewertet die KI-Wahrscheinlichkeit (0\u2013100) und bietet konkrete Verbesserungsvorschl...",
+  "updated_at": 1778492042294,
+  "version": "1.3.0"
+}
