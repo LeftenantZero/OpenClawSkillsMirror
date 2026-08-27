@@ -1,0 +1,64 @@
+{
+  "changelog": "- Now checks if SENSEAUDIO_API_KEY is present in the environment before prompting the user for a SenseAudio API key.\n- Standardizes usage of SENSEAUDIO_API_KEY across all Python-related calls in the skill.\n- Added several test and cache files to improve coverage and stability.\n- Removed unused files, including README.md and a temporary meeting text file.",
+  "created_at": 1773662677797,
+  "display_name": "Meeting QA To Audio",
+  "fetched_at": 1787870330367,
+  "files": [
+    "PRD.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "memory/current_meeting.json",
+    "memory/latest_meeting.json",
+    "scripts/answer_meeting_question_audio.py",
+    "scripts/create_meeting_answer_audio.py",
+    "scripts/create_meeting_summary_audio_session.py",
+    "scripts/generate_meeting_audio.py",
+    "scripts/generate_summary_audio.py",
+    "scripts/meeting_memory.py",
+    "scripts/read_meeting_minutes_aloud.py",
+    "scripts/read_meeting_text.py",
+    "scripts/save_meeting_memory.py",
+    "skill-card.md",
+    "tests/fixtures/sample_meeting.txt",
+    "tests/test_answer_meeting_question_audio.py",
+    "tests/test_create_meeting_audio_flows.py",
+    "tests/test_generate_summary_audio.py",
+    "tests/test_meeting_memory.py",
+    "tests/test_read_meeting_minutes_aloud.py",
+    "tests/test_read_meeting_text.py",
+    "tests/test_senseaudio_api_key_resolution.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089924989,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u66f9\u5e7f\u96e8",
+    "handle": "xiaocaijic",
+    "user_id": "s1782xj4xp3pc16zqqcftks0bh83kx34"
+  },
+  "slug": "meeting-minutes-qa-tts",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/meeting-minutes-qa-tts",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=meeting-minutes-qa-tts&ownerHandle=xiaocaijic",
+    "page_url": "https://clawhub.ai/xiaocaijic/skills/meeting-minutes-qa-tts"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 819,
+    "installs": 22,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Read meeting minutes, produce a short summary with the current conversation model, save the meeting text and summary into local memory, answer follow-up ques...",
+  "updated_at": 1778491948843,
+  "version": "1.0.1"
+}
