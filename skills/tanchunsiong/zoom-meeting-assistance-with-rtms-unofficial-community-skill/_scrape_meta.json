@@ -1,0 +1,61 @@
+{
+  "changelog": "- Replaced all references to Clawdbot with OpenClaw for AI-powered analysis and notifications.\n- Changed environment variable names from CLAWDBOT_NOTIFY_CHANNEL / CLAWDBOT_NOTIFY_TARGET to OPENCLAW_NOTIFY_CHANNEL / OPENCLAW_NOTIFY_TARGET.\n- Updated documentation and configuration details to match the new OpenClaw integration.\n- No changes to meeting recording or processing behavior.",
+  "created_at": 1769596271729,
+  "display_name": "Zoom Meeting Assistance Rtms Unofficial Community",
+  "fetched_at": 1787793590840,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "chatWithClawdbot.js",
+    "convertMeetingMedia.js",
+    "index.js",
+    "muxMixedAudioAndActiveSpeakerVideo.js",
+    "package-lock.json",
+    "package.json",
+    "query_prompt.md",
+    "query_prompt_current_meeting.md",
+    "query_prompt_dialog_suggestions.md",
+    "query_prompt_sentiment_analysis.md",
+    "saveRawAudioAdvance.js",
+    "saveRawVideoAdvance.js",
+    "saveSharescreen.js",
+    "skill-card.md",
+    "skill.json",
+    "summary_prompt.md",
+    "tool.js",
+    "writeTranscriptToVtt.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783651074198,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Tan Chun Siong",
+    "handle": "tanchunsiong",
+    "user_id": "s17bnhhtv9vw4xn0yqny741xgd885qnj"
+  },
+  "slug": "zoom-meeting-assistance-with-rtms-unofficial-community-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/zoom-meeting-assistance-with-rtms-unofficial-community-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=zoom-meeting-assistance-with-rtms-unofficial-community-skill&ownerHandle=tanchunsiong",
+    "page_url": "https://clawhub.ai/tanchunsiong/skills/zoom-meeting-assistance-with-rtms-unofficial-community-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3210,
+    "installs": 108,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "Zoom RTMS Meeting Assistant \u2014 start on-demand to capture meeting audio, video, transcript, screenshare, and chat via Zoom Real-Time Media Streams. Handles meeting.rtms_started and meeting.rtms_stopped webhook events. Provides AI-powered dialog suggestions, sentiment analysis, and live summaries with WhatsApp notifications. Use when a Zoom RTMS webhook fires or the user asks to record/analyze a meeting.",
+  "updated_at": 1779076532526,
+  "version": "0.1.3"
+}
