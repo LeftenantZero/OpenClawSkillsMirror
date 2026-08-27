@@ -1,0 +1,43 @@
+{
+  "changelog": "claude-authenticity v1.0.0\n\n- Initial release of the claude-authenticity skill.\n- Verifies if an API endpoint serves genuine Claude (not a wrapper or proxy) using 9 weighted, rule-based checks.\n- Supports detection of injected system prompts from providers overriding Claude's identity.\n- Self-contained Python script requires only the httpx package; no additional dependencies or setup.\n- Useful for verifying Claude API keys/endpoints, auditing API providers, and extracting provider-injected system prompts.",
+  "created_at": 1773653491146,
+  "display_name": "claude-authenticity",
+  "fetched_at": 1787798524516,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779961123302,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "helloml0326",
+    "handle": "helloml0326",
+    "user_id": "s1717yfzsw4pwnmnj95v5nvtms83gr77"
+  },
+  "slug": "claude-authenticity",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claude-authenticity",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claude-authenticity&ownerHandle=helloml0326",
+    "page_url": "https://clawhub.ai/helloml0326/skills/claude-authenticity"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 923,
+    "installs": 26,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Detect whether an API endpoint is backed by genuine Claude (not a wrapper, proxy, or impersonator) using 9 weighted rule-based checks that mirror the claude-...",
+  "updated_at": 1779000837057,
+  "version": "1.0.0"
+}
