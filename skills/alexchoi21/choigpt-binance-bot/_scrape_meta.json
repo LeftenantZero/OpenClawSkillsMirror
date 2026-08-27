@@ -1,0 +1,71 @@
+{
+  "changelog": "Initial release of the ChoiGPT Binance Trading Bot Skill.\n\n- Implements Sweepzone V1 strategy for high-probability trade entries using Ichimoku Cloud breakout and 20MA confirmation.\n- Real-time multi-symbol market scanning for trading opportunities.\n- Integrated risk management: dynamic position sizing, trailing stop, and Kimchi Premium Shield.\n- Sends trading signals and daily profit reports via Telegram.\n- Supports live trading, backtesting, market scanning, and dashboard monitoring through command-line tools.",
+  "created_at": 1778475633173,
+  "display_name": "ChoiGPT Binance Trading Bot",
+  "fetched_at": 1787793999629,
+  "files": [
+    ".gitignore",
+    "SKILL.md",
+    "_meta.json",
+    "config/config.py",
+    "docker-compose.yml",
+    "manifest.json",
+    "scripts/backtester.py",
+    "scripts/dashboard.py",
+    "scripts/market_scanner_service.py",
+    "scripts/run_bot.py",
+    "skill-card.md",
+    "skill.json",
+    "src/ai_analyzer.py",
+    "src/ai_signal_parser.py",
+    "src/chart_generator.py",
+    "src/data_fetcher.py",
+    "src/exchange_utils.py",
+    "src/indicators.py",
+    "src/live_trader.py",
+    "src/logger_utils.py",
+    "src/main.py",
+    "src/main_strategy_handler.py",
+    "src/position_risk_manager.py",
+    "src/scheduler.py",
+    "src/strategy.py",
+    "src/technical_analyzer.py",
+    "src/telegram_bot.py",
+    "src/trade_integration.py",
+    "src/trade_journal.py",
+    "src/trade_logger.py",
+    "src/trade_review.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090779774,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ALEXCHOI21",
+    "handle": "alexchoi21",
+    "user_id": "s176jfaqn9gfwqrenj4yxgfqfd85k1s1"
+  },
+  "slug": "choigpt-binance-bot",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/choigpt-binance-bot",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=choigpt-binance-bot&ownerHandle=alexchoi21",
+    "page_url": "https://clawhub.ai/alexchoi21/skills/choigpt-binance-bot"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 493,
+    "installs": 10,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Automates Binance futures trading using Sweepzone V1 strategy with real-time market scanning, dynamic risk management, and Telegram notifications.",
+  "updated_at": 1779076369599,
+  "version": "1.0.0"
+}
