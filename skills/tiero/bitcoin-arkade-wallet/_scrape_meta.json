@@ -1,0 +1,57 @@
+{
+  "changelog": "- Wallet initialization (`init` command) now always requires user confirmation and cannot run implicitly; all other commands require a wallet to be initialized first.\n- Updated documentation to clarify the `init` requirement and proper user confirmation before first-time wallet setup.\n- Minor clarifications to agent safety rules.",
+  "created_at": 1770857584824,
+  "display_name": "Bitcoin Wallet for Agents using Arkade",
+  "fetched_at": 1787792469228,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "cli/arkade.mjs",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "skill-card.md",
+    "src/index.ts",
+    "src/skills/arkadeBitcoin.ts",
+    "src/skills/index.ts",
+    "src/skills/lendaswap.ts",
+    "src/skills/lightning.ts",
+    "src/skills/types.ts",
+    "tsconfig.cjs.json",
+    "tsconfig.esm.json",
+    "tsconfig.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779971410809,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "tiero",
+    "handle": "tiero",
+    "user_id": "s17dg1d4xh06w3rqgqpn2yg2398850kz"
+  },
+  "slug": "bitcoin-arkade-wallet",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bitcoin-arkade-wallet",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bitcoin-arkade-wallet&ownerHandle=tiero",
+    "page_url": "https://clawhub.ai/tiero/skills/bitcoin-arkade-wallet"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1942,
+    "installs": 62,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Send and receive Bitcoin over Arkade (offchain), onchain (via onboard/offboard), and Lightning. Swap USDC/USDT stablecoins.",
+  "updated_at": 1779076916745,
+  "version": "1.0.5"
+}
