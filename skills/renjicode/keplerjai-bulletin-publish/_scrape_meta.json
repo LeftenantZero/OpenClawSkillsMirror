@@ -1,0 +1,56 @@
+{
+  "changelog": "Initial release of keplerjai-bulletin-publish:\n\n- Provides a workflow for collecting AI news, validating stage1 JSON, publishing KeplerJAI bulletins, and generating final summaries.\n- Designed for agent workspace compatibility and easy migration to new environments without manual path edits.\n- Separates responsibilities between news collection (by OpenClaw) and publishing/validation (by Python scripts).\n- All outputs are written to `<agent_workspace>/keplerjai-bulletin-publish`, including logs and final messages.\n- Supports API key authentication via `KEPLERAI_API_KEY` or `KEPLERJAI_BEARER_TOKEN`.\n- Enforces strict workflow boundaries to ensure transparency, traceability, and suitable automation practices.",
+  "created_at": 1776436255775,
+  "display_name": "KeplerJAI Bulletin Publish",
+  "fetched_at": 1787795158811,
+  "files": [
+    "CRON_SETUP.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "requirements.txt",
+    "scripts/append_pipeline_log.py",
+    "scripts/format_bulletins.py",
+    "scripts/publish_bulletins.py",
+    "scripts/run_saved_pipeline.py",
+    "scripts/validate_stage1_json.py",
+    "skill-card.md",
+    "stage1-task-prompt.txt",
+    "stage2-task-prompt.txt",
+    "stage3-task-prompt.txt",
+    "web-integration-task-prompt.txt"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090467440,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u4efb\u4f76",
+    "handle": "renjicode",
+    "user_id": "s178njqm941dre5tdfeyrjm93183t8xd"
+  },
+  "slug": "keplerjai-bulletin-publish",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/keplerjai-bulletin-publish",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=keplerjai-bulletin-publish&ownerHandle=renjicode",
+    "page_url": "https://clawhub.ai/renjicode/skills/keplerjai-bulletin-publish"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 571,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7528\u4e8e KeplerJAI \u7b80\u8baf\u91c7\u96c6\u3001\u53d1\u5e03\u4e0e\u6c47\u603b\u7684\u6280\u80fd\u5305\u3002",
+  "updated_at": 1779075928078,
+  "version": "1.0.0"
+}
