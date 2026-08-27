@@ -1,0 +1,52 @@
+{
+  "changelog": "Version 1.1.0 2026-05-15\n\n- Added support for authentication via the Ark Skill API proxy with `ARK_SKILL_API_BASE` and `ARK_SKILL_API_KEY` environment variables; Volcengine AK/SK is now a fallback method.\n- Introduced options for screen recording and TOS (object storage) configuration: `--is-screen-record`, `--tos-bucket`, `--tos-endpoint`, and `--tos-region`.\n- Required CLI arguments have been updated; authentication arguments are now mostly inferred from environment variables.\n- Updated documentation to reflect new authentication methods and input parameters.\n- No code changes detected, documentation only.",
+  "created_at": 1775563348247,
+  "display_name": "Byted Ai Mobileuse Agent",
+  "fetched_at": 1787806963819,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/MUA_Agent_Instructions.md",
+    "references/mobile_use.md",
+    "references/requirements.txt",
+    "scripts/cancel_task.py",
+    "scripts/console_help.py",
+    "scripts/get_agent_result.py",
+    "scripts/list_agent_run_current_step.py",
+    "scripts/run_agent_task_one_step.py",
+    "scripts/sdk_client.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090811466,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "volcengine-skills",
+    "handle": "volcengine-skills",
+    "user_id": "s17bcxs73bckd3eercvtn6cmsx83g5kg"
+  },
+  "slug": "byted-ai-mobileuse-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/byted-ai-mobileuse-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=byted-ai-mobileuse-agent&ownerHandle=volcengine-skills",
+    "page_url": "https://clawhub.ai/volcengine-skills/skills/byted-ai-mobileuse-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 977,
+    "installs": 27,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Executes mobile automation tasks on Volcengine Cloud Phone using natural language commands, returning run IDs and progress in JSONL format.",
+  "updated_at": 1778845007190,
+  "version": "1.1.1"
+}
