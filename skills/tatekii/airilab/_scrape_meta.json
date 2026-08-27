@@ -1,0 +1,58 @@
+{
+  "changelog": "AiriLab Skill v1.0.0\n\n- Unified entry for AiriLab\u2019s image workflows: creative MJ rendering, 4K upscale, and atmosphere/season conversion, all with integrated login, project management, and task state tracking.\n- Automatic login and project context handling before any operation; only minimal user input (phone/code) is ever requested.\n- Asynchronous tasks are submitted, status is polled in the background, and user is notified automatically when complete.\n- Strong trigger rules based on user intent and keywords for image generation, upscaling, atmosphere conversion, and workflow operations (login, project, job status).\n- Robust error handling, separation of polling and record-fetching functions, and clear user feedback on missing tokens, projects, or task failures.\n- Command-line tools and scripts included for setup, health checks, and worker management, with clear execution responsibilities for agents.",
+  "created_at": 1775096917458,
+  "display_name": "AIRILAB",
+  "fetched_at": 1787835135295,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "core/__init__.py",
+    "core/api.py",
+    "core/auth.py",
+    "core/config.py",
+    "core/paths.py",
+    "core/project.py",
+    "core/upload.py",
+    "requirements.txt",
+    "scheduler/worker.py",
+    "scripts/check_status.py",
+    "scripts/fetch.py",
+    "scripts/health.sh",
+    "scripts/post-install.sh",
+    "scripts/setup-autostart.sh",
+    "scripts/start-worker.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090239966,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Siyn Ma",
+    "handle": "tatekii",
+    "user_id": "s170kzhe6bg1qtrbhxp3kqqmxn841wc7"
+  },
+  "slug": "airilab",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/airilab",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=airilab&ownerHandle=tatekii",
+    "page_url": "https://clawhub.ai/tatekii/skills/airilab"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 593,
+    "installs": 14,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u7edf\u4e00\u8c03\u7528 AiriLab \u56fe\u50cf\u751f\u6210\u4e0e\u4efb\u52a1\u7ba1\u7406\u80fd\u529b\uff08MJ \u521b\u610f\u6e32\u67d3 workflowId=0\u3001\u521b\u610f\u653e\u5927 workflowId=16\u3001\u6c1b\u56f4\u8f6c\u6362 workflowId=13\uff09\uff0c\u5e76\u81ea\u52a8\u5904\u7406\u767b\u5f55\u9274\u6743\u3001\u9879\u76ee\u9009\u62e9\u3001\u4efb\u52a1\u63d0\u4ea4\u3001\u72b6\u6001\u8f6e\u8be2\u4e0e\u7ed3\u679c\u56de\u63a8\u3002\u7528\u6237\u63d0\u5230 Midjourney/MJ \u6587\u751f\u56fe\u3001\u53c2\u8003\u56fe\u751f\u6210\u3001\u653e\u5927\u8d85\u5206/4K\u3001\u5929\u6c14\u5b63\u8282\u663c...",
+  "updated_at": 1778492359131,
+  "version": "0.0.1"
+}
