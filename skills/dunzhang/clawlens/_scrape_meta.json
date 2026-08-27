@@ -1,0 +1,45 @@
+{
+  "changelog": "Clawlens 1.0.5 introduces auto-detection of the LLM model and improved integration with OpenClaw configuration:\n\n- Adds automatic model and API key resolution from `openclaw.json` and `auth-profiles.json` when `--model` is not specified.\n- Updates required environment variable logic: env vars are only needed if the user sets `--model` manually.\n- Expands file access: now also reads `openclaw.json` and `auth-profiles.json` for agent configuration and credentials.\n- On user invocation, if no model is specified, prompts the user whether to use the model from OpenClaw config or supply a custom one.\n- Retains all previous features for report generation and data privacy.",
+  "created_at": 1773672592036,
+  "display_name": "clawlens",
+  "fetched_at": 1787798479431,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/report-format.md",
+    "scripts/clawlens.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090143318,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "DunZhang",
+    "handle": "dunzhang",
+    "user_id": "s17crad49ssjwm13vrdjb7ym3183jgs3"
+  },
+  "slug": "clawlens",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawlens",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawlens&ownerHandle=dunzhang",
+    "page_url": "https://clawhub.ai/dunzhang/skills/clawlens"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 966,
+    "installs": 28,
+    "stars": 2,
+    "versions": 5
+  },
+  "summary": "What do you use Claw for most? Where do you get stuck? Clawlens analyzes your conversation history to surface usage patterns, friction points, and skill effe...",
+  "updated_at": 1779001003000,
+  "version": "1.0.5"
+}
