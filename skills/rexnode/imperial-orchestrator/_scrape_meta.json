@@ -1,0 +1,60 @@
+{
+  "changelog": "Initial release of imperial-orchestrator: a robust multi-role model routing and fallback system for OpenClaw.\n\n- Discovers and benchmarks available models, routing tasks by role, complexity, and provider health.\n- Maps requests to detailed department/role prompts, enforcing forbidden actions and quality reviews.\n- Handles authentication failures gracefully with circuit breaker logic and cross-provider fallback.\n- Provides CLI scripts for health checks, validation, benchmarking, and routing.\n- Degrades output intelligently when specialist models are unavailable, ensuring continued operation.\n- Supplies machine-readable routing state for integration with OpenClaw and external automation.",
+  "created_at": 1774005327905,
+  "display_name": "Imperial Orchestrator",
+  "fetched_at": 1787797705385,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/agent_prompts.yaml",
+    "config/agent_roles.yaml",
+    "config/benchmark_tasks.yaml",
+    "config/failure_policies.yaml",
+    "config/i18n.yaml",
+    "config/model_registry.yaml",
+    "config/routing_rules.yaml",
+    "docs/README.de.md",
+    "docs/README.en.md",
+    "docs/README.es.md",
+    "docs/README.fr.md",
+    "docs/README.ja.md",
+    "docs/README.ko.md",
+    "examples/install.md",
+    "examples/openclaw_config_patch.json",
+    "references/ARCHITECTURE.md",
+    "scripts/benchmark.py",
+    "scripts/emit_openclaw_status.py",
+    "scripts/executor.py",
+    "scripts/health_check.py",
+    "scripts/lib.py",
+    "scripts/model_validator.py",
+    "scripts/orchestrator.py",
+    "scripts/route_and_update.sh",
+    "scripts/router.py",
+    "skill-card.md",
+    "tests/smoke_test.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Rex Node",
+    "handle": "rexnode",
+    "user_id": "s1777qt45b0axn3ftcv2w8v7hx83prqv"
+  },
+  "slug": "imperial-orchestrator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/imperial-orchestrator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=imperial-orchestrator&ownerHandle=rexnode",
+    "page_url": "https://clawhub.ai/rexnode/skills/imperial-orchestrator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 953,
+    "installs": 26,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "High-availability multi-role model router for OpenClaw. Discovers available models, maps them to role-based departments, routes tasks by complexity and domai...",
+  "updated_at": 1779004199563,
+  "version": "1.0.0"
+}
