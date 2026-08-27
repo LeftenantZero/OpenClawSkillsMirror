@@ -1,0 +1,53 @@
+{
+  "changelog": "Initial release of PopMart Stock Monitor.\n\n- Monitor PopMart product availability across WeChat Mini Program, Taobao, JD.com, and Tmall.\n- Configurable product watch list, check intervals, and platform priorities via `popmart_config.json`.\n- Notifies via Feishu, email, SMS, or desktop when items are restocked.\n- Supports official APIs (when available) and web scraping with rate limit and anti-bot considerations.\n- Flexible stock detection with false positive filtering and troubleshooting guidance.",
+  "created_at": 1776388057321,
+  "display_name": "Popmart Stock Monitor",
+  "fetched_at": 1787820400527,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "popmart_config.json",
+    "references/OPENCLAW_INTEGRATION.md",
+    "references/SETUP_GUIDE.md",
+    "references/example_config.json",
+    "scripts/monitor_popmart.py",
+    "scripts/monitor_stars_series.py",
+    "scripts/notifier.py",
+    "scripts/platforms/__init__.py",
+    "scripts/platforms/taobao.py",
+    "scripts/platforms/wechat.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090461016,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "IIustrator",
+    "handle": "iiustrator",
+    "user_id": "s1782wc2pedcq26xjgynw8c5ah84fht1"
+  },
+  "slug": "popmart-stock-monitor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/popmart-stock-monitor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=popmart-stock-monitor&ownerHandle=iiustrator",
+    "page_url": "https://clawhub.ai/iiustrator/skills/popmart-stock-monitor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 501,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Monitor PopMart product restock status across multiple channels including WeChat Mini Programs, Taobao, JD.com, and Tmall. Use when user wants to track avail...",
+  "updated_at": 1778492631819,
+  "version": "1.0.0"
+}
