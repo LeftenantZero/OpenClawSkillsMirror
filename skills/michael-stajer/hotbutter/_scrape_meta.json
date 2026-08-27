@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial public release of the Hotbutter voice chat skill (hosted relay):\n\n- Connects local agents to voice chat via the hotbutter.ai relay.\n- Transcribes speech in the browser and sends only text (not audio) through the relay.\n- Runs the openclaw agent CLI locally in response to each message.\n- Configurable relay URL and agent display name for privacy/personalization.\n- On first run, optionally collects email for setup; all data except transcripts and responses stays local.",
+  "created_at": 1772129456587,
+  "display_name": "hotbutter voice chat",
+  "fetched_at": 1787801957529,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "bin/voice-bridge.js",
+    "index.html",
+    "lib/agent-bridge.js",
+    "lib/relay-client.js",
+    "package.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779962717166,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Michael Stajer",
+    "handle": "michael-stajer",
+    "user_id": "s172t58a60czg9dns9ws6vy64d884ze7"
+  },
+  "slug": "hotbutter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hotbutter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hotbutter&ownerHandle=michael-stajer",
+    "page_url": "https://clawhub.ai/michael-stajer/skills/hotbutter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1138,
+    "installs": 34,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Enables local voice chat by embedding Hotbutter relay server and PWA, providing speech-to-text and text-to-speech via a secure, self-hosted connection.",
+  "updated_at": 1778993481641,
+  "version": "1.0.6"
+}
