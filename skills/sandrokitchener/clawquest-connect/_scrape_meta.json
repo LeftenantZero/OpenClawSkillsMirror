@@ -1,0 +1,43 @@
+{
+  "changelog": "**Switched Claw Quest connection to manual URL+token flow with WhatsApp handoff and limited auto-approve.**\n\n- Uses the manual gateway URL and token/password for Claw Quest Android pairing, not QR/setup code.\n- Attempts to send connection details via WhatsApp for easier mobile copy/paste; falls back to chat if unavailable.\n- Provides clear instructions for manual setup in Claw Quest Android.\n- Offers an optional, one-time, watch-and-approve flow for the next matching Android pairing request.\n- Includes improved checks for gateway config and device-pair plugin status.\n- Restricts secret exposure to only the needed URL and token/password for pairing.",
+  "created_at": 1775356310324,
+  "display_name": "Claw Quest Connect",
+  "fetched_at": 1787831857837,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090335178,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "sandrokitchener",
+    "handle": "sandrokitchener",
+    "user_id": "s177a3h7q9e5b7sc32k4p1wfen8497jv"
+  },
+  "slug": "clawquest-connect",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawquest-connect",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawquest-connect&ownerHandle=sandrokitchener",
+    "page_url": "https://clawhub.ai/sandrokitchener/skills/clawquest-connect"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 621,
+    "installs": 15,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Use when the user wants to connect Claw Quest Android to this OpenClaw gateway with the manual URL+token flow, send those details over WhatsApp, and optional...",
+  "updated_at": 1778492415940,
+  "version": "0.1.3"
+}
