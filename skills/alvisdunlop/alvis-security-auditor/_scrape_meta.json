@@ -1,0 +1,33 @@
+{
+  "changelog": "**Skill renamed and documentation majorly expanded to focus on read-only, actionable security audits of OpenClaw/Clawdbot environments.**\n\n- Skill name changed to `openclaw-security-audit`, focusing specifically on OpenClaw, Clawdbot, and Moltbot deployments.\n- Comprehensive, step-by-step audit workflow added, detailing required commands and types of findings for 10 specific security domains (e.g., network exposure, credential leakage, privilege escalation, skill risks).\n- Mandates read-only mode by default: no config changes or secret exfiltration, with clear instructions to redact secrets from reports.\n- Standardized, terminal-style audit report format introduced, with explicit reporting for every check (OK/VULNERABLE/UNKNOWN) and actionable fixes for each vulnerability.\n- Includes summary report section and guidance on only performing remediation after explicit user request.",
+  "created_at": 1776317761224,
+  "display_name": "Alvis Security Auditor",
+  "fetched_at": 1787820945205,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "AlvisDunlop",
+    "handle": "alvisdunlop",
+    "user_id": "s17fq465rgqaeb4mjcdf3p9dkh84s6zy"
+  },
+  "slug": "alvis-security-auditor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alvis-security-auditor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alvis-security-auditor&ownerHandle=alvisdunlop",
+    "page_url": "https://clawhub.ai/alvisdunlop/skills/alvis-security-auditor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 664,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Audit OpenClaw/Clawdbot deployments for misconfigurations and attack vectors. Use when a user asks for a security review of OpenClaw/Clawdbot/Moltbot, gatewa...",
+  "updated_at": 1778492618017,
+  "version": "1.0.5"
+}
