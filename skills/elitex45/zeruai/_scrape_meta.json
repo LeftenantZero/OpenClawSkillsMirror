@@ -1,0 +1,47 @@
+{
+  "changelog": "- Added Base Mainnet support; registration now defaults to mainnet (0.0025 ETH fee), with the option to use Base Sepolia testnet via `--chain 84532`.\n- Introduced `--json` registration: allows registering rich agents using a full JSON file describing services, capabilities, wallet, and more.\n- Updated documentation with new agent JSON schema, full/partial examples, and details on all supported service types.\n- Expanded contract information with addresses and fees for both Base Mainnet and Base Sepolia.\n- Clarified environment/config options and provided more detailed setup instructions.\n- Previous commands remain supported; backwards-compatible with existing Sepolia workflows.",
+  "created_at": 1770401234347,
+  "display_name": "zeruai",
+  "fetched_at": 1787793123066,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "lib/abi.js",
+    "lib/agent-wallet.js",
+    "lib/config.js",
+    "lib/create-agent-uri.js",
+    "lib/errors.js",
+    "lib/get-agent.js",
+    "lib/get-reputation.js",
+    "lib/index.js",
+    "lib/metadata.js",
+    "lib/register-agent.js",
+    "lib/schema.js",
+    "lib/search-agents.js",
+    "package.json",
+    "scripts/zeru.ts",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "elitex45",
+    "handle": "elitex45",
+    "user_id": "s171gp5bf8wsjtdfcse4xwynn1885sx7"
+  },
+  "slug": "zeruai",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/zeruai",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=zeruai&ownerHandle=elitex45",
+    "page_url": "https://clawhub.ai/elitex45/skills/zeruai"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2299,
+    "installs": 77,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Register agents on the Zeru ERC-8004 Identity Registry, manage wallets and metadata, and read on-chain state. Use when an agent needs to register on-chain, check fees, read agent info, set metadata, or manage agent wallets on Base Mainnet or Base Sepolia.",
+  "updated_at": 1779076696637,
+  "version": "1.0.2"
+}
