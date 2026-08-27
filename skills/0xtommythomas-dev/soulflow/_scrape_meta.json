@@ -1,0 +1,60 @@
+{
+  "changelog": "soulflow 1.1.2\n\n- Updated permissions metadata to explicitly list required file access, including read/write to `~/.openclaw/openclaw.json` and workspace directories.\n- Clarified that the `soulflow-worker` agent inherits `authProfiles` from existing agents, granting access to external services (e.g., GitHub, cloud providers).\n- Strengthened security notes: worker agent inherits credentials; operations require local permissions; installation is recommended only if you trust the skill author.\n- No changes to functionality or workflow handling; documentation updates to reflect security and permission details.",
+  "created_at": 1770917173233,
+  "display_name": "SoulFlow \u2014 Agent Teams Workflow Skill",
+  "fetched_at": 1787792419452,
+  "files": [
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "PUBLICATION_CHECKLIST.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "lib/gateway.js",
+    "lib/nl-handler.js",
+    "lib/runner.js",
+    "lib/state.js",
+    "lib/workflow-builder.js",
+    "package.json",
+    "skill-card.md",
+    "soulflow.js",
+    "workflows/bug-fix.workflow.json",
+    "workflows/bug-scan-fix.workflow.json",
+    "workflows/content-pipeline.workflow.json",
+    "workflows/deploy-pipeline.workflow.json",
+    "workflows/feature-dev.workflow.json",
+    "workflows/security-audit.workflow.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779972854908,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "0xtommythomas-dev",
+    "handle": "0xtommythomas-dev",
+    "user_id": "s17bwbd5y7ac5cwy73r63dkx6x884gxn"
+  },
+  "slug": "soulflow",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/soulflow",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=soulflow&ownerHandle=0xtommythomas-dev",
+    "page_url": "https://clawhub.ai/0xtommythomas-dev/skills/soulflow"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1768,
+    "installs": 52,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "General-purpose AI workflow framework for OpenClaw. Build custom multi-step workflows for any task \u2014 dev, ops, research, content, or automation. Ships with dev workflow examples.",
+  "updated_at": 1779076931337,
+  "version": "1.1.2"
+}
