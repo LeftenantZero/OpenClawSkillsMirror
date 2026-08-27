@@ -1,0 +1,43 @@
+{
+  "changelog": "aws-secrets-scanner 1.0.0 - Initial Release\n\n- Detects hardcoded secrets, API keys, and credential misconfigurations in IaC and config files.\n- Instruction-only: analyzes exported data provided by the user; does not access AWS accounts or run AWS CLI commands directly.\n- Supports scanning Terraform, CloudFormation, CDK, and extracted environment variable names from Lambda/ECS.\n- Identifies various secret types including AWS keys, API tokens, SSH keys, connection strings, and hardcoded passwords.\n- Produces actionable findings, risk assessment, and migration/remediation guidance (including AWS Secrets Manager integration and Git history cleanup).\n- Protects sensitive data\u2014never outputs raw credentials, only their locations and recommended next steps.",
+  "created_at": 1772419935347,
+  "display_name": "Secrets Scanner",
+  "fetched_at": 1787790783194,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089734109,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Anmol Nagpal",
+    "handle": "anmolnagpal",
+    "user_id": "s1743ht18ezy217y47byd9bda1884nqd"
+  },
+  "slug": "secrets-scanner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/secrets-scanner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=secrets-scanner&ownerHandle=anmolnagpal",
+    "page_url": "https://clawhub.ai/anmolnagpal/skills/secrets-scanner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1158,
+    "installs": 33,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Detect hardcoded secrets, exposed API keys, and credential misconfigurations in IaC and config files",
+  "updated_at": 1779077462330,
+  "version": "1.0.0"
+}
