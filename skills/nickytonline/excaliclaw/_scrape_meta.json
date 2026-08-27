@@ -1,0 +1,33 @@
+{
+  "changelog": "**Improved export workflow and correctness safeguards for Excalidraw diagrams in OpenClaw.**\n\n- Now requires a diagram preview via `excalidraw__create_view` as a quality check before any export, unless the user explicitly requests JSON/link only.\n- Full-scene export flow enforced: export always uses the complete, previewed Excalidraw scene, including all app state and files.\n- Editable link verification: verifies that the exported excalidraw.com link is non-empty and matches the preview; blank exports trigger a retry or fallback, never silent failure.\n- Explicit arrow and label binding rules: arrows and labels must always be semantically bound in both preview and export (with full `startBinding`, `endBinding`, and reciprocal `boundElements`), preventing accidental flattening or loss of editability.\n- On failure, clear user messaging: fallback/simplified exports are labeled as such; failed exports are explained and alternatives are offered, without silently shifting strategies.",
+  "created_at": 1777121880830,
+  "display_name": "Excaliclaw",
+  "fetched_at": 1787814815358,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Nick Taylor",
+    "handle": "nickytonline",
+    "user_id": "s17dk2gcnd1h5ezcdyfg0txe1h85g1vv"
+  },
+  "slug": "excaliclaw",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/excaliclaw",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=excaliclaw&ownerHandle=nickytonline",
+    "page_url": "https://clawhub.ai/nickytonline/skills/excaliclaw"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 913,
+    "installs": 22,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Create reliable Excalidraw diagrams in OpenClaw using the Excalidraw MCP, with export-safe labels, Excalifont text, and clear system-diagram structure. Use w...",
+  "updated_at": 1778492750658,
+  "version": "1.0.2"
+}
