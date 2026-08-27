@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of SafeSkills \u2013 secure secret management for AI agents.\n\n- Provides secure, server-side secret management (initially for EVM wallets), ensuring agents never access raw secret values.\n- Supports wallet creation, checking balances (native and ERC-20), transferring tokens, and sending arbitrary transactions via API.\n- API Keys are required for all calls and must be securely stored after wallet creation.\n- Introduces a claim URL for users to manage wallet policies and monitor activity.\n- Supports environment variable configuration for API endpoints.\n- Security reminder: never request or access raw secret values; all operations run server-side.",
+  "created_at": 1769848152330,
+  "display_name": "Safe Skills",
+  "fetched_at": 1787793757283,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783653147325,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Chris Cassano",
+    "handle": "glitch003",
+    "user_id": "s173aadqv5xdar8hm4yg2jb52d83fv08"
+  },
+  "slug": "safe-skills",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/safe-skills",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=safe-skills&ownerHandle=glitch003",
+    "page_url": "https://clawhub.ai/glitch003/skills/safe-skills"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2492,
+    "installs": 85,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Securely create and manage EVM wallets; perform token transfers, check balances, and send transactions without exposing raw secret keys.",
+  "updated_at": 1779076473578,
+  "version": "1.0.0"
+}
