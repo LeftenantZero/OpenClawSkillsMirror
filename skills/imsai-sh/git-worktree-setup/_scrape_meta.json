@@ -1,0 +1,38 @@
+{
+  "changelog": "Initial release of git-worktree-setup.\n\n- Introduces an agent skill to generate or update a tailored git worktree auto-setup script (`setup-worktree.sh`) and agent tool hook config for the current repo.\n- Audits project structure to infer which resources should be shared or copied in new worktrees; proposes a concrete draft plan and only asks the user for information that can't be automatically determined.\n- Supports multiple agent tools (Claude Code, Codex, Cursor, OpenCode, Gemini CLI, etc.) and provides both auto and manual invocation options.\n- Designed to update the setup script as the project evolves, not to run on every new worktree\u2014only on explicit user request.",
+  "created_at": 1777803845958,
+  "display_name": "git-worktree-setup",
+  "fetched_at": 1787810761253,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "SKILL.zh.md",
+    "_meta.json",
+    "assets/hook-config.json",
+    "references/recipes.md",
+    "scripts/setup-worktree.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "sai",
+    "handle": "imsai-sh",
+    "user_id": "s17eqbjgx2nbbdxmvpv1akjmbx83hrnc"
+  },
+  "slug": "git-worktree-setup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/git-worktree-setup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=git-worktree-setup&ownerHandle=imsai-sh",
+    "page_url": "https://clawhub.ai/imsai-sh/skills/git-worktree-setup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 557,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when the user explicitly asks to \"generate / update a git worktree auto-setup script for this repo.\" Note this skill is NOT triggered when a new worktree...",
+  "updated_at": 1778492833926,
+  "version": "1.0.0"
+}
