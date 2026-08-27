@@ -1,0 +1,57 @@
+{
+  "changelog": "agent-registry v2.0.1\n\n- Migrated all CLI scripts from Python to faster Bun/JavaScript implementations.\n- Introduced user prompt hook for agent search (integrated with Claude's plugin system).\n- Enhanced install process: optional dependency install for improved UI, Bun-first workflow, Python no longer required.\n- Added modern interactive migration UI using @clack/prompts (with fallback to basic text selection).\n- Updated docs and commands to reflect new Bun-based CLI; all registry operations via `bun bin/*.js`.",
+  "created_at": 1769032962117,
+  "display_name": "Agent Registry",
+  "fetched_at": 1787806425073,
+  "files": [
+    "CLAUDE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "bin/build-release-artifact.sh",
+    "bin/cli.js",
+    "bin/get.js",
+    "bin/init.js",
+    "bin/list.js",
+    "bin/rebuild.js",
+    "bin/search-paged.js",
+    "bin/search.js",
+    "docs/releases/v2.0.1.md",
+    "hooks/user_prompt_search.js",
+    "install.sh",
+    "lib/parse.js",
+    "lib/registry.js",
+    "lib/search.js",
+    "lib/telemetry.js",
+    "package-lock.json",
+    "package.json",
+    "skill-card.md",
+    "tests/cli.test.js",
+    "tests/parse.test.js",
+    "tests/registry.test.js",
+    "tests/search.test.js",
+    "tests/telemetry.test.js"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "MaTriXy",
+    "handle": "matrixy",
+    "user_id": "s17e24j3hd5g35an84aqwke9px88507e"
+  },
+  "slug": "agent-registry",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-registry",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-registry&ownerHandle=matrixy",
+    "page_url": "https://clawhub.ai/matrixy/skills/agent-registry"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4018,
+    "installs": 132,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "MANDATORY agent discovery system for token-efficient agent loading. Claude MUST use this skill instead of loading agents directly from ~/.claude/agents/ or ....",
+  "updated_at": 1778986977006,
+  "version": "2.0.1"
+}
