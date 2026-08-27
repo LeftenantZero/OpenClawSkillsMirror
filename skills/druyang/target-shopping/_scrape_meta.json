@@ -1,0 +1,61 @@
+{
+  "changelog": "- Initial public release of the Target.com shopping skill (target-com-shopper).\n- Search for products, look up details, and check per-store stock and pickup ETAs by ZIP code.\n- Build deep links that pre-populate a guest cart; supports multiple items and specific quantities.\n- Browse Target.com data without requiring login or checkout\u2014read-only with unauthenticated guest-cart builder.\n- Emphasizes privacy, responsible use, and limitations: unofficial, no guarantee of price/availability, no checkout or order history.\n- Includes CLI scripts for searching, store lookup, product details, fulfillment, and cart link creation.",
+  "created_at": 1778999496155,
+  "display_name": "Target Shopping",
+  "fetched_at": 1787797761533,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "pyproject.toml",
+    "references/categories.md",
+    "references/endpoints.md",
+    "references/status-codes.md",
+    "references/tos-and-etiquette.md",
+    "scripts/__init__.py",
+    "scripts/_auth.py",
+    "scripts/_common.py",
+    "scripts/cart_link.py",
+    "scripts/fulfillment.py",
+    "scripts/pdp.py",
+    "scripts/reviews.py",
+    "scripts/search.py",
+    "scripts/stores.py",
+    "scripts/summary.py",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/fixtures/fulfillment.json",
+    "tests/fixtures/pdp.json",
+    "tests/fixtures/reviews.json",
+    "tests/fixtures/search.json",
+    "tests/fixtures/stores.json",
+    "tests/fixtures/summary.json",
+    "tests/test_cart_link.py",
+    "tests/test_live_smoke.py",
+    "tests/test_offline.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "druyang",
+    "handle": "druyang",
+    "user_id": "s175dgaqbmt7e5tyvjqdtrjv9986wb9v"
+  },
+  "slug": "target-shopping",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/target-shopping",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=target-shopping&ownerHandle=druyang",
+    "page_url": "https://clawhub.ai/druyang/skills/target-shopping"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 552,
+    "installs": 12,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Search Target.com, look up products, check per-store stock and pickup ETAs near a ZIP, and build a deep link that pre-populates a guest cart. Read-only brows...",
+  "updated_at": 1779004007812,
+  "version": "0.1.1"
+}
