@@ -1,0 +1,71 @@
+{
+  "changelog": "Initial release of 1688-sourcing-inquiry skill:\n\n- Enables users to submit sourcing inquiries based on product name, quantity, and requirements when no specific product is selected.\n- Transforms vague procurement intent into structured inquiries to match suppliers and get quotations from the 1688 platform.\n- Skill triggers only for explicit sourcing, inquiry, or quote requests with vague needs and no specific product or supplier chosen.\n- Strict boundaries and integration with related skills: browsing triggers 1688-product-find, order placement triggers 1688-order, supplier search triggers 1688-source-suppliers.\n- Provides clear parameter extraction and prompts users to fill missing fields (product name, quantity, requirements) before submitting an inquiry.\n- Includes robust error handling and strict prohibitions on fabricating sourcing info or misusing the skill outside its defined scope.",
+  "created_at": 1778034528077,
+  "display_name": "1688 Sourcing Inquiry",
+  "fetched_at": 1787794216106,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "cli.py",
+    "references/capabilities/configure.md",
+    "references/capabilities/procurement.md",
+    "references/common/error-handling.md",
+    "references/skill\u57cb\u70b9\u8bf4\u660e.md",
+    "requirements.txt",
+    "scripts/_auth.py",
+    "scripts/_const.py",
+    "scripts/_errors.py",
+    "scripts/_http.py",
+    "scripts/_output.py",
+    "scripts/_tracker.py",
+    "scripts/authorize.py",
+    "scripts/callback_server.py",
+    "scripts/capabilities/__init__.py",
+    "scripts/capabilities/configure/__init__.py",
+    "scripts/capabilities/configure/cmd.py",
+    "scripts/capabilities/configure/service.py",
+    "scripts/capabilities/procurement/__init__.py",
+    "scripts/capabilities/procurement/cmd.py",
+    "scripts/capabilities/procurement/service.py",
+    "scripts/encrypted_store.py",
+    "scripts/env_writer.py",
+    "scripts/pkce.py",
+    "scripts/scope_manager.py",
+    "scripts/secure_store.py",
+    "scripts/token_manager.py",
+    "skill-card.md",
+    "templates/callback.html"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090750772,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "1688AiInfra",
+    "handle": "1688aiinfra",
+    "user_id": "s177df9srv6z2y0gd1kw90rern83hzxb"
+  },
+  "slug": "1688-sourcing-inquiry",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/1688-sourcing-inquiry",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=1688-sourcing-inquiry&ownerHandle=1688aiinfra",
+    "page_url": "https://clawhub.ai/1688aiinfra/skills/1688-sourcing-inquiry"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1031,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "1688\u91c7\u8d2d\u8be2\u76d8\u5bfb\u6e90\u80fd\u529b\u3002\u5f53\u7528\u6237\u6709\u6a21\u7cca\u7684\u91c7\u8d2d\u9700\u6c42\u4f46\u5c1a\u672a\u9009\u5b9a\u5177\u4f53\u5546\u54c1\u65f6\uff0c\u901a\u8fc7\u63cf\u8ff0\u5546\u54c1\u540d\u79f0\u3001\u6570\u91cf\u548c\u9700\u6c42\uff0c\u53d1\u8d77\u91c7\u8d2d\u8be2\u76d8\u4efb\u52a1\uff0c\u7531\u5e73\u53f0\u5339\u914d\u5408\u9002\u7684\u4f9b\u5e94\u5546\u548c\u62a5\u4ef7\u65b9\u6848\u3002 \u6838\u5fc3\u5b9a\u4f4d\uff1a\u91c7\u8d2d\u524d\u7684\u8be2\u76d8\u5bfb\u6e90\u9636\u6bb5\uff0c\u5e2e\u52a9\u7528\u6237\u5c06\u6a21\u7cca\u7684\u91c7\u8d2d\u610f\u5411\u8f6c\u5316\u4e3a\u7ed3\u6784\u5316\u8be2\u76d8\uff0c\u83b7\u53d6\u4f9b\u5e94\u5546\u62a5\u4ef7\u3002 \u89e6\u53d1\u8bcd\uff1a\u8be2\u76d8\u3001\u8be2\u4ef7\u3001\u5bfb\u6e90\u3001\u91c7\u8d2d\u54a8\u8be2\u3001\u53d1\u5e03\u91c7\u8d2d\u9700\u6c42\u3001\u6211\u6709\u4e00\u6279XX\u8981\u91c7\u8d2d...",
+  "updated_at": 1779076264483,
+  "version": "0.1.0"
+}
