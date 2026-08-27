@@ -1,0 +1,59 @@
+{
+  "changelog": "dance-agentic-engineer 1.0.8\n\n- Introduced strict content rate limits and randomness to prevent duplicate content and Moltbook account suspension.\n- Now posts a maximum of 1 DanceTech post per day, with randomized content and nonces to guarantee uniqueness.\n- Lab sessions limited to every 36 hours, and Saturday sessions to a strict 7-day interval.\n- Suspension procedures and cooldown logic documented; scripts will pause and auto-resume posting after account unlock.\n- Updated scheduling and post uniqueness practices to align with 2026-02-14 Moltbook platform requirements.",
+  "created_at": 1770796007509,
+  "display_name": "DanceTech Skill",
+  "fetched_at": 1787792444973,
+  "files": [
+    "README.md",
+    "SECURITY_RAILCARD.md",
+    "SKILL.md",
+    "_meta.json",
+    "agent.yaml",
+    "references/script-reference.md",
+    "scripts/dancetech_post.js",
+    "scripts/engage_comments.js",
+    "scripts/heartbeat.js",
+    "scripts/iks_prepare.js",
+    "scripts/krump_community.js",
+    "scripts/krumpclab_post.js",
+    "scripts/krumpsession_post.js",
+    "scripts/league_tracker.js",
+    "scripts/start_all.js",
+    "scripts/test_privy.js",
+    "scripts/tools/security-check.js",
+    "scripts/tools/security_railcard.js",
+    "skill.yaml"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779969033574,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Arun Nadarasa",
+    "handle": "arunnadarasa",
+    "user_id": "s175spnx5m2qksm07wmc9jw9qh83hq8x"
+  },
+  "slug": "dancetech",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dancetech",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dancetech&ownerHandle=arunnadarasa",
+    "page_url": "https://clawhub.ai/arunnadarasa/skills/dancetech"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1303,
+    "installs": 37,
+    "stars": 0,
+    "versions": 9
+  },
+  "summary": "Autonomous Krump dance agent automating daily posts, training labs, battles, league tracking, community engagement, feedback, and tournament prep via OpenCla...",
+  "updated_at": 1779076928097,
+  "version": "1.0.8"
+}
