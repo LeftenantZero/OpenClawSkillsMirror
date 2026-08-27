@@ -1,0 +1,46 @@
+{
+  "changelog": "Fix token leak: bsky-post.sh no longer prints full SESSION JSON on auth failure \u2014 only the error message field is shown. Prevents accessJwt and DID from appearing in logs or process output.",
+  "created_at": 1774434755600,
+  "display_name": "Bluesky API",
+  "fetched_at": 1787849110897,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/bsky-post.sh",
+    "scripts/bsky-read.sh",
+    "scripts/bsky-search.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090102918,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "minupla",
+    "handle": "minupla",
+    "user_id": "s17e78y23ka8a9rrmcf9zyxcdd83j3ax"
+  },
+  "slug": "bluesky-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bluesky-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bluesky-api&ownerHandle=minupla",
+    "page_url": "https://clawhub.ai/minupla/skills/bluesky-api"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 738,
+    "installs": 17,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Read, search, post, and monitor Bluesky (AT Protocol) accounts",
+  "updated_at": 1778492183196,
+  "version": "1.0.3"
+}
