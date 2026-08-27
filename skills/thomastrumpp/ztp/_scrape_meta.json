@@ -1,0 +1,47 @@
+{
+  "changelog": "ZTP 2.0.0 introduces a comprehensive mandatory security audit skill based on the SEP-2026 Zero Trust protocol.\n\n- Enforces static code analysis and supply chain security checks for all new Skills, MCP Servers, and scripts.\n- Provides step-by-step audit workflow and clear criteria for accept/reject decisions.\n- Integrates the Shield Pro 2.0 analyzer, with optional support for SOTA tools (Bandit, Safety, npm audit, Trivy, Garak).\n- Ensures all code is scanned before use or execution, prioritizing Zero Trust and non-execution principles.\n- Supplies clear usage instructions and actionable output thresholds for manual review or rejection.\n\nInspired by https://www.youtube.com/watch?v=AGxcQ-j64Ms&t=2s",
+  "created_at": 1771192134776,
+  "display_name": "ztp",
+  "fetched_at": 1787792213668,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/audit_utils.py",
+    "scripts/shield_pro.py",
+    "tests/test_integration.py",
+    "tests/test_shield.py",
+    "tests/test_utils.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968699830,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "thomastrumpp",
+    "handle": "thomastrumpp",
+    "user_id": "s179mvtbgsamcdwpt2sdbf04hd885k4c"
+  },
+  "slug": "ztp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ztp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ztp&ownerHandle=thomastrumpp",
+    "page_url": "https://clawhub.ai/thomastrumpp/skills/ztp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1303,
+    "installs": 39,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "A mandatory security audit skill for validating new code, skills, and MCP servers against the SEP-2026 Zero Trust protocol.",
+  "updated_at": 1779076991446,
+  "version": "2.0.0"
+}
