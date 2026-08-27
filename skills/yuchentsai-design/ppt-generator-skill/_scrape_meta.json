@@ -1,0 +1,54 @@
+{
+  "changelog": "**Changelog for ppt-generator-skill v4.3.0**\n\n- Added detailed multi-phase workflow documentation for generating PPTs from user input or files.\n- Introduced environment check script (`scripts/check_env.py`) with clear output, optional auto-fix, and CI-friendly modes.\n- Clarified requirements gathering: outlined fast-path logic to skip redundant questions when enough info is provided.\n- Expanded style and template selection phase, including style category suggestions, color palettes, and font pairing.\n- Documented robust content analysis and token optimization strategy before LLM processing, enabling efficient handling of large files.\n- Added references to new or improved scripts (e.g., `analyze_content.py`, `suggest_style.py`, `analyze_template.py`).\n- Delivered full user-facing prompts, selection tables, and confirmation steps for a guided, user-friendly conversational flow.",
+  "created_at": 1775628358119,
+  "display_name": "1\u3001\u4e0d\u4f9d\u8d56\u4efb\u4f55\u7b2c\u4e09\u65b9 PPT \u670d\u52a1\uff1b  2\u3001\u7ed9\u53ef\u4ee5\u81ea\u884c\u4e0a\u4f20ppt\u6a21\u677f\u548c\u5185\u5bb9\u8d44\u6599\uff0c\u7ea6\u675f\u8ba9\u5927\u6a21\u578b\u6839\u636e\u4e0a\u4f20\u7684\u5185\u5bb9\u751f\u6210\u6700\u7ec8\u7684\u6210\u54c1   3.\u81ea\u52a8\u5bfc\u51fa\u751f\u6210.pptx\u683c\u5f0f\u7684\u6587\u4ef6",
+  "fetched_at": 1787828284335,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "data/colors.csv",
+    "data/fonts.csv",
+    "scripts/analyze_content.py",
+    "scripts/analyze_template.py",
+    "scripts/chart_builder.py",
+    "scripts/check_env.py",
+    "scripts/generate_ppt.py",
+    "scripts/style_renderers.py",
+    "scripts/suggest_style.py",
+    "scripts/template_builder.py",
+    "scripts/validator.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090339150,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "YuchenTsai-design",
+    "handle": "yuchentsai-design",
+    "user_id": "s1738g48aacbj185gdn342x78d84ctfp"
+  },
+  "slug": "ppt-generator-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ppt-generator-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ppt-generator-skill&ownerHandle=yuchentsai-design",
+    "page_url": "https://clawhub.ai/yuchentsai-design/skills/ppt-generator-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1606,
+    "installs": 33,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate professional .pptx presentations from any topic, uploaded documents, or reference materials. Supports custom PPT templates (filled via python-pptx,...",
+  "updated_at": 1778492473647,
+  "version": "4.3.0"
+}
