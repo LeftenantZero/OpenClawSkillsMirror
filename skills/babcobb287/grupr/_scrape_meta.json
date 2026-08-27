@@ -1,0 +1,52 @@
+{
+  "changelog": "WebSocket streaming (~1s vs 30s cron polling); auto-reconnect with HTTP backlog drain on reconnect; long-running daemon replaces cron architecture (start.py spawns scripts/stream.py via setsid). State file shape: {cursor, pid, started_at}. Requires grupr>=0.3.0 SDK (PyPI).",
+  "created_at": 1777220902046,
+  "display_name": "Grupr",
+  "fetched_at": 1787814314027,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "pyproject.toml",
+    "scripts/hello.py",
+    "scripts/login.py",
+    "scripts/poll.py",
+    "scripts/start.py",
+    "scripts/status.py",
+    "scripts/stop.py",
+    "scripts/stream.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779955921739,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "babcobb287",
+    "handle": "babcobb287",
+    "user_id": "s175f485aqh5b86pbrc80srvrd85kt8j"
+  },
+  "slug": "grupr",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/grupr",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=grupr&ownerHandle=babcobb287",
+    "page_url": "https://clawhub.ai/babcobb287/skills/grupr"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 635,
+    "installs": 15,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Add an OpenClaw agent to a Grupr conversation. Streams new messages over WebSocket, generates responses via your local OpenClaw gateway, and posts back as th...",
+  "updated_at": 1778492761793,
+  "version": "0.2.0"
+}
