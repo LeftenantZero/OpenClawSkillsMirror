@@ -1,0 +1,43 @@
+{
+  "changelog": "**Major architecture update: macro-pipeline v3 introduces a robust, dual-file workflow for managing autonomous, multi-step project pipelines.**\n\n- PIPELINE.md now lives in the project repo and stores all pipeline state, enabling subagents to track progress via Git.\n- HEARTBEAT.md is read-only in the agent workspace, delivering locked operational instructions and preventing accidental modification.\n- Clear, enforced patterns for status handling, parallel step execution, step verification, cron scheduling, and Git tagging.\n- Enhanced zombie step detection, cross-path reliability, and multiple pipeline support per project.\n- Strict separation and immutability rules between pipeline states and agent instructions for safer, traceable automation.",
+  "created_at": 1772523056279,
+  "display_name": "Macro Pipeline",
+  "fetched_at": 1787790543745,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089742808,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "santacruzg282-cyber",
+    "handle": "santacruzg282-cyber",
+    "user_id": "s179md6vp7ccd1hksass294eed885k4c"
+  },
+  "slug": "macro-pipeline",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/macro-pipeline",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=macro-pipeline&ownerHandle=santacruzg282-cyber",
+    "page_url": "https://clawhub.ai/santacruzg282-cyber/skills/macro-pipeline"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1064,
+    "installs": 31,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Create and manage macro-task pipelines (QA, roadmaps, feature rollouts) using PIPELINE.md + HEARTBEAT.md pattern. Use when building multi-step project plans...",
+  "updated_at": 1779077535178,
+  "version": "3.0.0"
+}
