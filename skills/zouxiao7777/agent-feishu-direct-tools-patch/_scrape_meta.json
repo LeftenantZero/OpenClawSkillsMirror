@@ -1,0 +1,36 @@
+{
+  "changelog": "agent-feishu-direct-tools-patch 1.0.0\n\n- Introduces a patch for openclaw-lark to enable Feishu tool direct calls without webhook tickets.\n- Implements agent-session-context, session-key-feishu parsing, ticket synthesis and ALS context sync.\n- Adds support for a toolCallId argument in createToolClient and tool client hooks, including calendar senderOpenId logic and tool client sweeping.\n- Enforces a strict, stepwise patching protocol: agent must fully brief the user before code changes, await explicit confirmation, and provide a summary (including file changes and usage instructions) once finished.\n- Reminds the user to restart the OpenClaw Gateway after making changes for them to take effect. If patching fails or Feishu tools break, users can restore the original state via npx -y @larksuite/openclaw-lark install.\n- Designed for one-time/temporary use\u2014should not remain enabled in skills.entries after patching is complete.",
+  "created_at": 1774704868476,
+  "display_name": "Feishu(Lark)Multi-Agent Tool-Use Patch",
+  "fetched_at": 1787842628768,
+  "files": [
+    "SKILL.en.md",
+    "SKILL.md",
+    "_meta.json",
+    "doc/OpenClaw-Multi-Agent-Feishu-Direct-Tools-Patch-Guide-(openclaw-lark).en.md",
+    "doc/OpenClaw\u591aAgent\u98de\u4e66\u5de5\u5177\u76f4\u8c03\u8865\u4e01\u8bf4\u660e\uff08openclaw-lark\uff09.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "HardCoreDragon",
+    "handle": "zouxiao7777",
+    "user_id": "s17bpdhej3jk7rgvvr6exvje8h83nf7w"
+  },
+  "slug": "agent-feishu-direct-tools-patch",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-feishu-direct-tools-patch",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-feishu-direct-tools-patch&ownerHandle=zouxiao7777",
+    "page_url": "https://clawhub.ai/zouxiao7777/skills/agent-feishu-direct-tools-patch"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 784,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "One-time/on-demand patch for openclaw-lark (no webhook LarkTicket paths). Implements agent-session-context, session-key-feishu, syncTicketContextForToolClien...",
+  "updated_at": 1778492261160,
+  "version": "1.0.0"
+}
