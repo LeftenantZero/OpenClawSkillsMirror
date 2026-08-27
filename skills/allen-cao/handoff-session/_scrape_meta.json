@@ -1,0 +1,37 @@
+{
+  "changelog": "- Initial release of the handoff-session skill, implementing the Handoff Protocol V2.\n- Supports three core actions: handoff out (freeze current session), handoff in (restore session), and handoff list (view recent handoffs).\n- Each handoff stores a minimal execution state in a standardized handoff.md file with eight required fields, enabling seamless workflow transfer across sessions.\n- Ensures next sessions can resume work immediately, without re-collecting background or user restatement.\n- Includes strict protocols for output, field filling, error handling, and session recovery to maintain consistency and reliability.",
+  "created_at": 1773617792364,
+  "display_name": "A cross-session handoff protocol for Claude Code and other AI agents.  handoff is not a summarization tool. It's a protocol for freezing your work context, packaging it, and resuming execution \u2014 in any session, any agent, any device.",
+  "fetched_at": 1787871642499,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/templates.md",
+    "scripts/handoff_file.sh",
+    "skill-card.md",
+    "\u4f7f\u7528\u6587\u6863.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Allen-Cao",
+    "handle": "allen-cao",
+    "user_id": "s176ngf429xmj1ykhgy0ay60z183jpv2"
+  },
+  "slug": "handoff-session",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/handoff-session",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=handoff-session&ownerHandle=allen-cao",
+    "page_url": "https://clawhub.ai/allen-cao/skills/handoff-session"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 908,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u8de8\u4f1a\u8bdd\u4ea4\u63a5\u534f\u8bae\u3002\u7528\u6237\u53ea\u8981\u8868\u73b0\u51fa\u201c\u73b0\u5728\u5148\u505c\u4e00\u4e0b\uff0c\u4e0b\u4e00\u4f1a\u8bdd\u63a5\u7740\u5e72\u201d\u201c\u7ee7\u7eed\u521a\u624d\u90a3\u4e00\u8f6e\u201d\u201c\u4e0a\u4e0b\u6587\u592a\u957f\u8981\u8fc1\u79fb\u5de5\u4f5c\u73b0\u573a\u201d\u7b49\u610f\u56fe\uff0c\u5c31\u5fc5\u987b\u4f7f\u7528\u6b64 skill\u3002 `handoff out` \u751f\u6210\u4e00\u4e2a\u6700\u5c0f\u53ef\u6267\u884c\u7684 handoff \u5305\uff1b`handoff in <id|latest>` \u5148\u8bfb\u53d6 handoff \u5305\u5e76\u7ed9\u51fa\u6062\u590d\u9884\u89c8\uff0c\u83b7\u5f97\u7528\u6237...",
+  "updated_at": 1778491933006,
+  "version": "1.0.0"
+}
