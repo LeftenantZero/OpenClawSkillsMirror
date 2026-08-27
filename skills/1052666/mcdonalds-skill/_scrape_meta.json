@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of mcdonalds-skill.\n\n- Provides a local CLI (`scripts/mcd_cli.py`) for interacting with McDonalds MCP at https://mcp.mcd.cn.\n- Supports MCP handshake, authentication check, listing available tools, and tool invocation with JSON parameters.\n- Includes a one-command smoke test (initialize \u2192 list tools \u2192 real invocation) and automatic output to JSON file.\n- Automatically resolves Chinese encoding issues; forces UTF-8 output on Windows.\n- Pure Python standard library implementation, no third-party dependencies required.\n- Credentials are passed via environment variable or CLI flag for security.",
+  "created_at": 1775456865140,
+  "display_name": "mcdonalds-skill",
+  "fetched_at": 1787796258982,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/mcd_cli.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090315600,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "1052",
+    "handle": "1052666",
+    "user_id": "s172qad8c9hebdc43agdvfam6s84bsra"
+  },
+  "slug": "mcdonalds-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mcdonalds-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mcdonalds-skill&ownerHandle=1052666",
+    "page_url": "https://clawhub.ai/1052666/skills/mcdonalds-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 525,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when the user wants to connect to, test, or use the McDonalds service at mcp.mcd.cn, including checking authentication, probing MCP endpoints, listing to...",
+  "updated_at": 1779075547749,
+  "version": "1.0.0"
+}
