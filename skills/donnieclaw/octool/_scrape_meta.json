@@ -1,0 +1,44 @@
+{
+  "changelog": "**v1.0.17 Changelog**\n\n- Security: The GitHub Personal Access Token (PAT) is now stored in `sessionStorage` instead of `localStorage` for enhanced privacy; the token is automatically cleared when you close the browser tab.\n- Security: All shell command user inputs (paths, tags, commit messages, exclude patterns) are now strictly validated. Inputs containing shell metacharacters are rejected with an error.\n- Safety: The bash profile write command now includes an idempotent marker to guard against repeated execution.\n- Documentation: Updated privacy and security sections to reflect sessionStorage usage, more precise credential handling, and removal of all background file access outside of explicit user actions.\n- Usability: Proxy detection command improved; no longer uses dynamic code execution\u2014ensuring only safe, read-only syscalls are generated.",
+  "created_at": 1774365459581,
+  "display_name": "OCTOOL for  backup",
+  "fetched_at": 1787851217975,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "oc-tool.html",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090356400,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Donnieclaw",
+    "handle": "donnieclaw",
+    "user_id": "s17b3kpd0nje3dm2hs0p1kqjf983hnbb"
+  },
+  "slug": "octool",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/octool",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=octool&ownerHandle=donnieclaw",
+    "page_url": "https://clawhub.ai/donnieclaw/skills/octool"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 909,
+    "installs": 24,
+    "stars": 1,
+    "versions": 18
+  },
+  "summary": "Openclaw Visual Configuration Assistant. Provides secure wizard for local/Git backup and workspace migration.",
+  "updated_at": 1778492163021,
+  "version": "1.0.17"
+}
