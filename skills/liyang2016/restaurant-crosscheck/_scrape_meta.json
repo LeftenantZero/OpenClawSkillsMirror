@@ -1,0 +1,69 @@
+{
+  "changelog": "Initial release\n\nFeatures:\n- Cross-platform validation (Dianping + Xiaohongshu)\n- Location-based search by city/district\n- Cuisine type filtering\n- Consistency analysis between platforms\n- Recommendation scoring (0-10)\n- Server-friendly command-line tool\n- Full documentation (Chinese + English)",
+  "created_at": 1770642257502,
+  "display_name": "\u9910\u5385\u63a8\u8350\u4ea4\u53c9\u9a8c\u8bc1",
+  "fetched_at": 1787805170607,
+  "files": [
+    "IMPLEMENTATION.md",
+    "INTEGRATION_COMPLETE.md",
+    "PUBLISH_GUIDE.md",
+    "QUICKSTART.md",
+    "QUICK_PUBLISH.md",
+    "README.md",
+    "SERVER_GUIDE.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/example_usage.py",
+    "examples/test_high_consistency.py",
+    "publish.sh",
+    "references/api_limitations.md",
+    "references/data_schema.md",
+    "references/sentiment_analysis.md",
+    "scripts/__init__.py",
+    "scripts/config.py",
+    "scripts/crosscheck.py",
+    "scripts/crosscheck_real.py",
+    "scripts/crosscheck_simple.py",
+    "scripts/fetch_dianping.py",
+    "scripts/fetch_dianping_real.py",
+    "scripts/fetch_xiaohongshu.py",
+    "scripts/fetch_xiaohongshu_real.py",
+    "scripts/match_restaurants.py",
+    "scripts/requirements.txt",
+    "scripts/session_manager.py",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779962635376,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "leon",
+    "handle": "liyang2016",
+    "user_id": "s1744dj57vggr5cdv54k17zvan885ctt"
+  },
+  "slug": "restaurant-crosscheck",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/restaurant-crosscheck",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=restaurant-crosscheck&ownerHandle=liyang2016",
+    "page_url": "https://clawhub.ai/liyang2016/skills/restaurant-crosscheck"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2077,
+    "installs": 66,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Cross-reference restaurant recommendations from Xiaohongshu (\u5c0f\u7ea2\u4e66) and Dianping (\u5927\u4f17\u70b9\u8bc4) to validate restaurant quality and consistency. Use when querying restaurant recommendations by geographic location (city/district) to get validated insights from both platforms. Automatically fetches ratings, review counts, and analyzes consistency across platforms to provide trustworthy recommendations with confidence scores.",
+  "updated_at": 1778989220865,
+  "version": "1.0.0"
+}
