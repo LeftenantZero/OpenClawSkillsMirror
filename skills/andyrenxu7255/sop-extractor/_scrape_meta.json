@@ -1,0 +1,51 @@
+{
+  "changelog": "## 1.2.0 - Language Cleanup for LLM Review\n\n1. Changed '\u540e\u53f0\u81ea\u884c\u8c03\u7814' \u2192 '\u8bc4\u4f30' (transparent evaluation)\n2. Changed '\u81ea\u52a8\u5224\u65ad\u8def\u5f84\uff0c\u4e0d\u95ee\u7528\u6237' \u2192 '\u5206\u6790\u540e\u5411\u7528\u6237\u8bf4\u660e'\n3. Changed '\u9759\u9ed8\u751f\u6210' \u2192 '\u5c55\u793a\u7ed9\u7528\u6237\u786e\u8ba4\u540e\u5199\u5165'\n4. Changed '\u81ea\u52a8\u88c5' \u2192 '\u6309\u9700\u5b89\u88c5'\n5. All user-facing actions now require explicit confirmation\n\nClawScan Compliance: softened language patterns that could trigger LLM suspicion",
+  "created_at": 1778823876990,
+  "display_name": "Sop Extractor",
+  "fetched_at": 1787806477170,
+  "files": [
+    "DESCRIPTION.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/credential-setup-guide.md",
+    "references/dialogue-examples.md",
+    "references/examples/expense-approval-skill.md",
+    "references/questioning-guide.md",
+    "references/skill-template.md",
+    "references/sop-parsing-guide.md",
+    "references/tool-discovery-guide.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090822751,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Andy Ren",
+    "handle": "andyrenxu7255",
+    "user_id": "s1721fhgyy0yf38f9gfpbjxrn984fcz0"
+  },
+  "slug": "sop-extractor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sop-extractor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sop-extractor&ownerHandle=andyrenxu7255",
+    "page_url": "https://clawhub.ai/andyrenxu7255/skills/sop-extractor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 621,
+    "installs": 13,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "\u77e5\u8bc6\u8403\u53d6\u5de5\u5e8fSkill\u751f\u6210\u5668\uff1a\u901a\u8fc7\u7ed3\u6784\u5316\u5bf9\u8bdd\uff0c\u5c06\u65e5\u5e38\u5de5\u4f5c\u5de5\u5e8f\u63d0\u70bc\u4e3a\u53ef\u590d\u7528\u7684AI Skill\u3002 \u652f\u6301\u6587\u6863\u89e3\u6790\u548c\u53e3\u8ff0\u8ffd\u95ee\u4e24\u79cd\u8def\u5f84\u3002\u4f9d\u8d56\u968f\u7528\u968f\u53d6\uff0c\u8403\u53d6\u9636\u6bb5\u96f6\u5b89\u88c5\u3002 \u89e6\u53d1\u8bcd\uff1a\u300c\u521b\u5efa\u5de5\u5e8fSkill\u300d\u300c\u63d0\u70bcSOP\u300d\u300c\u5e2e\u6211\u628a\u5de5\u4f5c\u53d8\u6210Skill\u300d\u300csop-extractor\u300d\u3002",
+  "updated_at": 1778976422766,
+  "version": "1.2.0"
+}
