@@ -1,0 +1,43 @@
+{
+  "changelog": "youtube-transcribe-skill v0.1.0\n\n- Initial release: Extracts subtitles/transcripts from YouTube videos via CLI or browser automation.\n- Supports multiple triggers, including English and Chinese phrases.\n- Primary extraction uses `yt-dlp`; if unavailable or fails, falls back to browser automation via `chrome-devtools-mcp`.\n- Handles common issues (missing tools, browser restrictions) with user prompts and fallbacks.\n- Saves extracted subtitles to the current directory with timestamp and subtitle text per line.\n- Reports file path, subtitle language, and total subtitle lines upon completion.",
+  "created_at": 1772247889664,
+  "display_name": "Youtube Transcribe Skill",
+  "fetched_at": 1787801659801,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966112699,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Pengfei Ni",
+    "handle": "feiskyer",
+    "user_id": "s174q6bx170bf0qb9wjqhqfv6x83vv3e"
+  },
+  "slug": "youtube-transcribe-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/youtube-transcribe-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=youtube-transcribe-skill&ownerHandle=feiskyer",
+    "page_url": "https://clawhub.ai/feiskyer/skills/youtube-transcribe-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1124,
+    "installs": 34,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Extract subtitles/transcripts from YouTube videos. Triggers: \"youtube transcript\", \"extract subtitles\", \"video captions\", \"\u89c6\u9891\u5b57\u5e55\", \"\u5b57\u5e55\u63d0\u53d6\", \"YouTube\u8f6c\u6587\u5b57\", \"\u63d0\u53d6\u5b57\u5e55\".",
+  "updated_at": 1778993806372,
+  "version": "0.1.0"
+}
