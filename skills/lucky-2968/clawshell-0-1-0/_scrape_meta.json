@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of ClawShell: Human-in-the-loop security layer for shell command execution.\n\n- Intercepts shell commands, analyzes risk, and enforces push notification approval for high-risk operations.\n- Categorizes commands into Critical (blocked), High (approval required), Medium (logged), and Low (allowed).\n- Provides three main tools: `clawshell_bash` (secure command exec), `clawshell_status` (view pending/recent approvals), and `clawshell_logs` (audit logs).\n- Supports push notifications via Pushover or Telegram.\n- Highly configurable through environment variables and `config.yaml`.\n- Enforces all decisions via a persistent JSONL audit log.",
+  "created_at": 1770211907063,
+  "display_name": "Clawshell 0.1.0",
+  "fetched_at": 1787805681027,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "package-lock.json",
+    "package.json",
+    "pnpm-lock.yaml",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783655227544,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Lucky-2968",
+    "handle": "lucky-2968",
+    "user_id": "s17e71x65bv9vme9yfnrwht151884tv9"
+  },
+  "slug": "clawshell-0-1-0",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawshell-0-1-0",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawshell-0-1-0&ownerHandle=lucky-2968",
+    "page_url": "https://clawhub.ai/lucky-2968/skills/clawshell-0-1-0"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2517,
+    "installs": 85,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Human-in-the-loop security layer. Intercepts high-risk commands and requires push notification approval.",
+  "updated_at": 1778988226199,
+  "version": "1.0.0"
+}
