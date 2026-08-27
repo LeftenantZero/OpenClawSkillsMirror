@@ -1,0 +1,46 @@
+{
+  "changelog": "**Major update: Introducing AI\u81ea\u6211\u5b89\u5168\u9632\u62a4\u7cfb\u7edf v2 with multi-layered defense and comprehensive protection modules.**\n\n- Upgraded to version 2.0.0 with 8 independent defense modules covering prompt injection, identity verification, system prompt protection, supply chain attacks, credential theft, malicious code, sensitive data, and abnormal behaviors.\n- Implements a 4-layer boundary check (input, tool call, memory, output) for deep protection\u2014each layer can intercept risky requests.\n- Introduces a 5-level risk assessment with adjustable scoring and tailored response protocols for each threat.\n- Clearly separates core responsibilities between self-safety-guard (runtime request blocking) and SX-security-audit (environment file/config scan).\n- Enhances user interaction with context-aware warnings, confirmation flows, and explanatory responses matched to risk levels.\n- Comprehensive detection and response logic for evolving attack patterns such as multi-turn attacks, privilege escalation, and cross-channel social engineering.",
+  "created_at": 1773639434381,
+  "display_name": "sx-self-safety-guard",
+  "fetched_at": 1787871225713,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/identity-verification.md",
+    "references/prompt-injection-patterns.md",
+    "references/threat-catalog.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089912705,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zhuxiaobao-y",
+    "handle": "zhuxiaobao-y",
+    "user_id": "s1774e43yxa5gkkmr4h3ts1z4h884r8n"
+  },
+  "slug": "sx-self-safety-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sx-self-safety-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sx-self-safety-guard&ownerHandle=zhuxiaobao-y",
+    "page_url": "https://clawhub.ai/zhuxiaobao-y/skills/sx-self-safety-guard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 733,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "AI\u81ea\u6211\u5b89\u5168\u9632\u62a4\u7cfb\u7edfv2\u3002\u591a\u5c42\u9632\u5fa1\uff1a\u63d0\u793a\u6ce8\u5165\u3001\u8eab\u4efd\u5192\u5145\u3001\u7cfb\u7edf\u63d0\u793a\u6cc4\u9732\u3001 \u8fc7\u5ea6\u4ee3\u7406\u3001\u4f9b\u5e94\u94fe\u653b\u51fb\u3001\u51ed\u8bc1\u7a83\u53d6\u3001\u6076\u610f\u4ee3\u7801\u3001\u654f\u611f\u6570\u636e\u6cc4\u9732\u3001\u884c\u4e3a\u5f02\u5e38\u68c0\u6d4b\u3002 \u89e6\u53d1\u8bcd\uff1a\u5b89\u5168\u9632\u62a4\u3001\u8eab\u4efd\u9a8c\u8bc1\u3001prompt injection\u3001system prompt\u3001 \u6743\u9650\u5347\u7ea7\u3001MCP\u5b89\u5168\u3001self-safety-guard\u3001\u5b89\u5168\u68c0\u67e5\u3002",
+  "updated_at": 1778491940346,
+  "version": "1.0.0"
+}
