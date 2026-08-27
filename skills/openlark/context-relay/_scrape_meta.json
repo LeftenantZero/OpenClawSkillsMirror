@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release of context-relay, solving agent memory fragmentation during session restarts, sub-agent boundaries, and task isolation.\n- Introduces a three-layer context architecture: PROJECT.md (identity), state.json (current state), decisions.md (decision records), and todos.json (cross-session task management).\n- Files serve as the single source of truth; agents read all context from files at startup, ensuring persistent continuity across sessions.\n- Provides clear workflows for cold start initialization and end-of-session state synchronization.\n- Adds sub-agent communication protocol via state files and includes script to initialize file structure.\n- Comprehensive documentation and file templates included for immediate adoption.",
+  "created_at": 1776825212836,
+  "display_name": "Context Relay",
+  "fetched_at": 1787817211193,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cold-start-guide.md",
+    "references/project-template.md",
+    "references/todos-system.md",
+    "scripts/init_context.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090509979,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "OpenLark",
+    "handle": "openlark",
+    "user_id": "s1727wv2g20pc729snzcm4nf8183hy72"
+  },
+  "slug": "context-relay",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/context-relay",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=context-relay&ownerHandle=openlark",
+    "page_url": "https://clawhub.ai/openlark/skills/context-relay"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 801,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Solves the memory fragmentation problem for Agents during session restarts, sub-agent boundaries, and cron/heartbeat isolation.",
+  "updated_at": 1778492702954,
+  "version": "1.0.0"
+}
