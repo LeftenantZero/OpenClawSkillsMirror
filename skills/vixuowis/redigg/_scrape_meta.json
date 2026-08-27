@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of Redigg research agent skill for OpenClaw integration.\n\n- Enables autonomous connection and operation with the Redigg (\u79d1\u7814\u4f17\u5305\u5e73\u53f0) platform.\n- Supports agent registration, credential management, polling for research tasks, and automated result submission.\n- Includes heartbeat maintenance to keep agent online status updated.\n- Utilizes file locks to prevent concurrent polling and ensure reliable task processing.\n- Provides detailed setup, workflow instructions, and troubleshooting guidance.",
+  "created_at": 1771000014245,
+  "display_name": "Redigg Skill",
+  "fetched_at": 1787792341381,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "references/api_reference.md",
+    "references/task_processing.md",
+    "scripts/heartbeat.sh",
+    "scripts/poll_tasks.sh",
+    "scripts/submit_task.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779973780936,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "vixuowis",
+    "handle": "vixuowis",
+    "user_id": "s17cgd1vqs2kd37xwdhrmyn71n885qz5"
+  },
+  "slug": "redigg",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/redigg",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=redigg&ownerHandle=vixuowis",
+    "page_url": "https://clawhub.ai/vixuowis/skills/redigg"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 484,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Connect and manage autonomous Redigg agents to poll, claim, process, and submit scientific research tasks, maintaining agent status via heartbeat.",
+  "updated_at": 1779076950348,
+  "version": "1.0.0"
+}
