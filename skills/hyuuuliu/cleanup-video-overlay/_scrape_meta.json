@@ -1,0 +1,47 @@
+{
+  "changelog": "**This update adds explicit runtime requirements and metadata for easier installation and compatibility checks.**\n\n- Declares required binaries (bash, ffmpeg, ffprobe, python3) and Python packages (google-genai, Pillow) in metadata.\n- Documents environment variables needed for Gemini Nano Banana 2 editing, including a required API key.\n- Specifies homepage and tool permissions (Read, Write, Edit, Bash, Glob, Grep).\n- No code or workflow logic was changed.",
+  "created_at": 1775984797551,
+  "display_name": "video-overlay-cleanup-agent",
+  "fetched_at": 1787824646863,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "persistent_learnings.json",
+    "references/gemini-provider.md",
+    "references/mask-strategies.md",
+    "references/pipeline.md",
+    "references/provider-integration.md",
+    "scripts/clean_video.sh",
+    "scripts/extract_frames.sh",
+    "scripts/gemini_nano_banana_edit.py",
+    "scripts/make_mask.py",
+    "scripts/prepare_run_advice.py",
+    "scripts/rebuild_video.sh",
+    "scripts/restore_frames.py",
+    "scripts/summarize_run.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Haroldle",
+    "handle": "hyuuuliu",
+    "user_id": "s172dvv9g6y1xdxeebwnbbmpfh84pvy2"
+  },
+  "slug": "cleanup-video-overlay",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cleanup-video-overlay",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cleanup-video-overlay&ownerHandle=hyuuuliu",
+    "page_url": "https://clawhub.ai/hyuuuliu/skills/cleanup-video-overlay"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 656,
+    "installs": 17,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Use this skill when the user wants to clean a video or screen recording by removing overlays such as status bars, notification banners, floating controls, su...",
+  "updated_at": 1778492544359,
+  "version": "1.0.1"
+}
