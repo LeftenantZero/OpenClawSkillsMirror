@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of git-pushing skill.\n\n- Automates staging, committing (with conventional commit messages), and pushing git changes.\n- Activates when users request to push, commit, or save work to remote repositories using common workflow phrases.\n- Provides a standardized bash script for the entire workflow, including staging, commit, and push steps.\n- Supports custom commit messages and ensures use of the -u flag when pushing.\n- Script adds a Claude footer to commits automatically.",
+  "created_at": 1770953894050,
+  "display_name": "Git Pushing",
+  "fetched_at": 1787792627075,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/smart_commit.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779973221000,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Tianyi-Billy-Ma",
+    "handle": "tianyi-billy-ma",
+    "user_id": "s171h33xxzy12336xjjs4j41kn88401r"
+  },
+  "slug": "git-pushing",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/git-pushing",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=git-pushing&ownerHandle=tianyi-billy-ma",
+    "page_url": "https://clawhub.ai/tianyi-billy-ma/skills/git-pushing"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1982,
+    "installs": 64,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Stage, commit, and push git changes with conventional commit messages. Use when user wants to commit and push changes, mentions pushing to remote, or asks to save and push their work. Also activates when user says \"push changes\", \"commit and push\", \"push this\", \"push to github\", or similar git workflow requests.",
+  "updated_at": 1779076862142,
+  "version": "1.0.0"
+}
