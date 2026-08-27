@@ -1,0 +1,39 @@
+{
+  "changelog": "- Initial release of the china-rental-price skill.\n- Provides reference prices and booking links for China domestic self-drive rentals using live queries to OneHai via a logged-in Chrome session on macOS.\n- Distinguishes between genuine no-car inventory and policy-based booking restrictions during peak periods.\n- Guides users to target the correct pickup store (train station or airport) for accurate queries.\n- Outputs results as structured JSON with clear fields for easy interpretation and reporting.",
+  "created_at": 1776003682214,
+  "display_name": "\u83b7\u53d6\u4e00\u55e8\u79df\u8f66\u7684\u79df\u8f66\u4ef7\u683c",
+  "fetched_at": 1787795511245,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "scripts/extract.mjs",
+    "scripts/onehai-policy.mjs",
+    "scripts/query-onehai-live-chrome.mjs",
+    "scripts/query.mjs",
+    "scripts/utils.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "tengjiaozhai",
+    "handle": "tengjiaozhai",
+    "user_id": "s17d3z3a7wsgs7c4dy9b9eaf7184pz6s"
+  },
+  "slug": "china-rental-price",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/china-rental-price",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=china-rental-price&ownerHandle=tengjiaozhai",
+    "page_url": "https://clawhub.ai/tengjiaozhai/skills/china-rental-price"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 567,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when the user needs a China domestic rental-car reference price, especially for same-day or holiday travel where train-station or airport store choice ma...",
+  "updated_at": 1779075816873,
+  "version": "1.0.0"
+}
