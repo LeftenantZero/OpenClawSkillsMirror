@@ -1,0 +1,52 @@
+{
+  "changelog": "- Added two new commands: install-local (install skill to local codex/openclaw directories) and rollback (restore local skill files from a GitHub release).\n- Introduced --parallel-publish and --sequential-publish options to control parallel or sequential multi-platform publishing.\n- The publish flow now fetches and summarizes remote platform status and diffs before packaging and publishing.\n- Structured JSON result files now include extra fields (local_version, remote_version, platform_adjusted, blocking).\n- Docs and usage instructions updated to reflect new features and workflows.",
+  "created_at": 1774353977785,
+  "display_name": "SkillUp",
+  "fetched_at": 1787851660567,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.example.toml",
+    "manifest.toml",
+    "scripts/lib/clawhub.sh",
+    "scripts/lib/common.sh",
+    "scripts/lib/github.sh",
+    "scripts/lib/openclaw.sh",
+    "scripts/lib/xiaping.sh",
+    "scripts/publish.sh",
+    "skill-card.md",
+    "templates/manifest.example.toml"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090104385,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Biu",
+    "handle": "cjke84",
+    "user_id": "s1775q36xrk1nbvfv7740t5m6983hmxz"
+  },
+  "slug": "skillup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skillup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skillup&ownerHandle=cjke84",
+    "page_url": "https://clawhub.ai/cjke84/skills/skillup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 744,
+    "installs": 20,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "SkillUp is a cross-platform skill publishing tool for packaging and syncing custom skills to GitHub, Xiaping Skill, OpenClaw CN, and ClawHub.",
+  "updated_at": 1778492158429,
+  "version": "0.1.9"
+}
