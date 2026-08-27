@@ -1,0 +1,49 @@
+{
+  "changelog": "**Summary:** This version updates credential handling and enforces increased security and precision for runtime operations.\n\n- Credentials are now always loaded from a fixed user-home path (`~/.coinpilot/coinpilot.json`), removing support for environment path overrides.\n- Skill and CLI require exactly 1 primary and 9 follower wallets for operation.\n- Adds a redacted credentials template (`coinpilot.template.json`) and removes the former example file.\n- All API base URLs must be allowlisted and resolved only from `coinpilot.json` (not from environment variables).\n- Documentation and workflow were rewritten and clarified, including setup steps, credential bootstrapping, and security guardrails.\n- Minor updates to CLI and references for improved consistency and credential flow.",
+  "created_at": 1771240174890,
+  "display_name": "Coinpilot Hyperliquid Copy Trade",
+  "fetched_at": 1787792162385,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/coinpilot.template.json",
+    "references/coinpilot-api.md",
+    "references/coinpilot-json.md",
+    "references/hyperliquid-api.md",
+    "scripts/coinpilot_cli.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779971131085,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Alan Ng",
+    "handle": "alannkl",
+    "user_id": "s1764rs3kww271nsvztv47q1qn8422gf"
+  },
+  "slug": "coinpilot-hyperliquid-copy-trade",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/coinpilot-hyperliquid-copy-trade",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=coinpilot-hyperliquid-copy-trade&ownerHandle=alannkl",
+    "page_url": "https://clawhub.ai/alannkl/skills/coinpilot-hyperliquid-copy-trade"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1649,
+    "installs": 50,
+    "stars": 4,
+    "versions": 7
+  },
+  "summary": "Automate copy trading on Hyperliquid via Coinpilot to discover, investigate, and mirror top on-chain traders in real time with low execution latency. Runtime...",
+  "updated_at": 1779077015727,
+  "version": "1.0.7"
+}
