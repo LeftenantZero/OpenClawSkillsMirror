@@ -1,0 +1,50 @@
+{
+  "changelog": "Eat What Today Skill 1.0.0\n\n- Initial release: smart dish recommendation for \"What to eat today\" scenarios.\n- Instantly recommends 3 dishes with reasons, price range, dining mode, and image paths.\n- Extracts user preferences (location, weather, mood, budget, dine/takeaway/cook) to minimize follow-up questions.\n- Strict message/image sending rules for Feishu/OpenClaw: text and one image in sequence, no Markdown local paths, always include images.\n- Includes fallback and concise options for users wishing for immediate, single-choice recommendations.",
+  "created_at": 1773293301541,
+  "display_name": "What to Eat Today | \u4eca\u5929\u5403\u4ec0\u4e48",
+  "fetched_at": 1787799423475,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/menu_db.json",
+    "scripts/eat_what_today.py",
+    "scripts/expand_menu_by_market.py",
+    "scripts/expand_menu_db.py",
+    "scripts/hydrate_food_images.py",
+    "scripts/skill_cli.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089846668,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Pancat009",
+    "handle": "pancat009",
+    "user_id": "s173a92ayjhgwt471pkwdv7efx841c3n"
+  },
+  "slug": "eat-what-today-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/eat-what-today-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=eat-what-today-skill&ownerHandle=pancat009",
+    "page_url": "https://clawhub.ai/pancat009/skills/eat-what-today-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 873,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u667a\u80fd\u89e3\u51b3\u201d\u4eca\u5929\u5403\u4ec0\u4e48\u201d\u96be\u9898\u3002\u6839\u636e\u7528\u6237\u5730\u70b9\u3001\u5929\u6c14\u3001\u5fc3\u60c5\u3001\u9884\u7b97\u3001\u5c31\u9910\u65b9\u5f0f\uff08\u5916\u5356/\u5802\u98df/\u81ea\u5df1\u505a\uff09\u5feb\u901f\u63a8\u8350\u83dc\u54c1\uff0c \u5e76\u9644\u56fe\u7247\u53c2\u8003\u3002**\u5f53\u7528\u6237\u8bf4\u201d\u4eca\u5929\u5403\u4ec0\u4e48\u201d\u3001\u201d\u4e0d\u77e5\u9053\u5403\u5565\u201d\u3001\u201d\u5e2e\u6211\u63a8\u8350\u201d\u3001\u201d\u60f3\u5403XX\u201d\u6216\u8868\u8fbe\u4efb\u4f55\u9910\u996e\u9700\u6c42\u65f6\uff0c\u5fc5\u987b\u4f7f\u7528\u6b64\u6280\u80fd\u3002** \u76ee\u6807\u662f\u5c11\u95ee\u95ee\u9898\u3001\u5feb\u7ed9\u7ed3\u679c\uff0c\u5fc5\u8981\u65f6\u6700\u591a\u8865\u95ee 1-2 \u4e2a\u5173\u952e\u95ee\u9898\u3002",
+  "updated_at": 1778998226444,
+  "version": "1.0.0"
+}
