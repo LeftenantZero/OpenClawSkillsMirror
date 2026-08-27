@@ -1,0 +1,47 @@
+{
+  "changelog": "taku-plan 1.0.0\n`/taku-plan` does more than write bullets. It forces scope review, architecture review, and UI design review (only when there is actually UI), then produces spec-based tasks with dependency annotations, TDD anchors, and execution hints.\n\nReview artifacts go to DESIGN.md. PLAN.md stays pure execution \u2014 goal, tasks, dependency graph. The build agent reads the plan's contract header and knows exactly what's required vs. optional.\n\n- Initial release introducing a three-step pipeline: scope + architecture review, design review (UI only), and implementation plan writing.\n- Automatically detects the correct starting step based on project state and approved DESIGN.md.\n- Outputs reviews to DESIGN.md; outputs execution plans to PLAN.md.\n- Offers tiered plan templates (Lightweight, Standard, Deep) based on project scope and file impact.\n- Includes clear task structures and execution hints for build agents.\n- Triggers on multiple natural language phrases and workflow completions.",
+  "created_at": 1778495223240,
+  "display_name": "Taku Plan",
+  "fetched_at": 1787808571652,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/design-review.md",
+    "references/plan-review.md",
+    "references/plan.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090781698,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "KennyWu",
+    "handle": "kkenny0",
+    "user_id": "s17e5sm9mfd2xfq0bhb9w9bd9n840vsx"
+  },
+  "slug": "taku-plan",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/taku-plan",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=taku-plan&ownerHandle=kkenny0",
+    "page_url": "https://clawhub.ai/kkenny0/skills/taku-plan"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 484,
+    "installs": 10,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Turn an approved design into an executable implementation plan. Three-step pipeline: scope + architecture review \u2192 design review (UI only) \u2192 plan writing. Au...",
+  "updated_at": 1778495808126,
+  "version": "1.0.0"
+}
