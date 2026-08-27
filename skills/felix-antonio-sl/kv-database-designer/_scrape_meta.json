@@ -1,0 +1,40 @@
+{
+  "changelog": "Initial release of kv-database-designer skill.\n\n- Designs, analyzes, and optimizes database schemas for SQL and NoSQL.\n- Supports schema normalization checks, naming, constraints, and data type analysis.\n- Includes index strategy planning, migration script generation with rollback, and EXPLAIN plan interpretation.\n- Outputs one main artifact per response (DDL, ERD, Prisma, or JSON Schema), with annotations on key choices.\n- Defaults: PostgreSQL engine, 3NF normalization, and scripts with `down` migrations.\n- Adds guardrails against over-indexing, missing constraints, and improper normalization.",
+  "created_at": 1774973708111,
+  "display_name": "Dise\u00f1ador base de datos",
+  "fetched_at": 1787837965769,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/database-design-reference.md",
+    "references/database_selection_decision_tree.md",
+    "references/index_strategy_patterns.md",
+    "references/normalization_guide.md",
+    "scripts/index_optimizer.py",
+    "scripts/migration_generator.py",
+    "scripts/schema_analyzer.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "felix-antonio-sl",
+    "handle": "felix-antonio-sl",
+    "user_id": "s17301x2y8n5dbvbsbv42fvgxx83n922"
+  },
+  "slug": "kv-database-designer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kv-database-designer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kv-database-designer&ownerHandle=felix-antonio-sl",
+    "page_url": "https://clawhub.ai/felix-antonio-sl/skills/kv-database-designer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 614,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Design, analyze, optimize and evolve database schemas. Use when the user asks to design schemas from scratch, choose between SQL and NoSQL engines, analyze o...",
+  "updated_at": 1778492324164,
+  "version": "1.0.0"
+}
