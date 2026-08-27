@@ -1,0 +1,51 @@
+{
+  "changelog": "v1.0.1 \u2014 Onboarding and identity linking flow updated; improved clarity and requirements\n\n- Onboarding flow clarified: new accounts are created via X or GitHub OAuth (no email registration).\n- DNS can now only be linked as an additional identity, not for primary account creation.\n- Under-the-hood, message verification now occurs against VouchHub over direct RPC, not subgraph.\n- Documentation updated to accurately describe the new onboarding and account creation process.\n- Minor improvements and clarifications throughout the skill documentation.",
+  "created_at": 1771868564995,
+  "display_name": "Vouch",
+  "fetched_at": 1787802573349,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "examples/account-usage.json",
+    "examples/lookup-output.json",
+    "examples/receive-input.json",
+    "examples/send-output.json",
+    "examples/sign-output.json",
+    "examples/verify-output.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779953377475,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jack Morgan",
+    "handle": "jackpmorgan",
+    "user_id": "s17dkc1vw9nhe6yb37v6fnbrqx884y2r"
+  },
+  "slug": "vouch-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/vouch-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=vouch-cli&ownerHandle=jackpmorgan",
+    "page_url": "https://clawhub.ai/jackpmorgan/skills/vouch-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1153,
+    "installs": 35,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Signs, verifies, and manages cryptographic identity for AI agents using the Vouch CLI on Base. Use when an agent needs to: set up identity and register an ac...",
+  "updated_at": 1778992676545,
+  "version": "1.0.1"
+}
