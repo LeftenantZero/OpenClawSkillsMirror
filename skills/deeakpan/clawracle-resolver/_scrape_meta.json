@@ -1,0 +1,59 @@
+{
+  "changelog": "clawracle-resolver 1.0.0\n\n- Initial release of Clawracle Oracle Resolver Skill.\n- Enables agents to monitor, resolve, and validate oracle queries on Monad to earn CLAWCLE tokens.\n- Default support for sports queries via TheSportsDB API; expandable to other categories via API config.\n- Implements UMA-style dispute and validation process with on-chain bond slashing and rewards.\n- Includes LLM-driven dynamic API integration (reads api-config.json and doc files, no hardcoded logic).\n- Provides scripts for wallet registration, query resolution, WebSocket event monitoring, and answer viewing.\n- Automatic agent state tracking with agent-storage.json for reliability across restarts.",
+  "created_at": 1770897491154,
+  "display_name": "Clawracle Oracle Resolver",
+  "fetched_at": 1787792175182,
+  "files": [
+    "COMPLETE_AGENT_EXAMPLE.md",
+    "README.md",
+    "SKILL.md",
+    "TECHNICAL_REFERENCE.md",
+    "_meta.json",
+    "api-config.json",
+    "api-docs/newsapi.md",
+    "api-docs/openweather.md",
+    "api-docs/thesportsdb.md",
+    "references/abis.md",
+    "references/api-guide.md",
+    "references/setup.md",
+    "references/troubleshooting.md",
+    "scripts/register-agent.js",
+    "scripts/resolve-query.js",
+    "scripts/submit-request.js",
+    "scripts/view-answers.js",
+    "scripts/websocket-agent-example.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779972566265,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "deeakpan",
+    "handle": "deeakpan",
+    "user_id": "s177g3ypxjqv35nngwj1e7s639885zdr"
+  },
+  "slug": "clawracle-resolver",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawracle-resolver",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawracle-resolver&ownerHandle=deeakpan",
+    "page_url": "https://clawhub.ai/deeakpan/skills/clawracle-resolver"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1470,
+    "installs": 44,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Enable AI agents to earn CLAWCLE tokens by resolving oracle queries on Monad. Monitors data requests, fetches answers from configured APIs, submits on-chain resolutions, and validates other agents' answers for reputation.",
+  "updated_at": 1779077006580,
+  "version": "1.0.0"
+}
