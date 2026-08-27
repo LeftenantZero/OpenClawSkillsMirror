@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release of the email-news-digest skill.\n- Automates summarizing recent emails, generating a thematic image, and sending a formatted HTML email report.\n- Supports customizable recipient lists, email search queries, and image prompts.\n- Uses modular Python script for structured summarization; currently features placeholder summaries with future LLM integration planned.\n- Constructs and sends dynamic HTML emails with image attachments, ensuring safe handling of complex content.\n- Adheres to defined summarization standards for clarity, accuracy, and professionalism.",
+  "created_at": 1770370521536,
+  "display_name": "Email News Digest",
+  "fetched_at": 1787805453631,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/email-filters.md",
+    "references/html-template.html",
+    "scripts/process_and_send.sh",
+    "scripts/summarize_content.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783658844132,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "matthewxfz3",
+    "handle": "matthewxfz3",
+    "user_id": "s17cvve004m4j38jw0g5fcqzh5885162"
+  },
+  "slug": "email-news-digest",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/email-news-digest",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=email-news-digest&ownerHandle=matthewxfz3",
+    "page_url": "https://clawhub.ai/matthewxfz3/skills/email-news-digest"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2271,
+    "installs": 77,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Summarize recent emails, generate a thematic image, and send a formatted HTML email report with the summary and image. Use for daily news digests, project updates, or any email-based reporting that needs visual enhancement and rich formatting.",
+  "updated_at": 1778988681989,
+  "version": "1.0.0"
+}
