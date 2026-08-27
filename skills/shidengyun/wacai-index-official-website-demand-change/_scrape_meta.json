@@ -1,0 +1,49 @@
+{
+  "changelog": "- Initial release of \"index-official-website-demand-change\" skill for automating Wacai\u5b98\u7f51\u9700\u6c42\u53d8\u66f4\u5168\u6d41\u7a0b\u3002\n- Supports one-click execution: checks git workspace, writes/backs up demand file, modifies code, runs checks, commits, pushes, and notifies via \u4f01\u4e1a\u5fae\u4fe1 webhook.\n- Requires explicit project path, branch, and demand file from user input or context\u2014refuses to proceed if missing.\n- Includes detailed enterprise WeChat notification with time, path, branch, commit info, and code changes after successful push.\n- Handles and reports all error cases: missing input, dirty workspace, git pull/check failures, push/notification failures.\n- Scripts for notification and git operations now parameterized by project path and branch, no hardcoded paths.",
+  "created_at": 1773131035369,
+  "display_name": "wacai-index-official-website-demand-change",
+  "fetched_at": 1787789606353,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/git_commit_and_push.sh",
+    "scripts/git_prepare_branch.sh",
+    "scripts/preflight_and_save_demand.sh",
+    "scripts/push_wecom_push_notice.py",
+    "scripts/run_workflow_example.sh",
+    "scripts/save_product_demand.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089821525,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "shidengyun",
+    "handle": "shidengyun",
+    "user_id": "s17dgmxpd9y90vmr70daq4casd84qwap"
+  },
+  "slug": "wacai-index-official-website-demand-change",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wacai-index-official-website-demand-change",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wacai-index-official-website-demand-change&ownerHandle=shidengyun",
+    "page_url": "https://clawhub.ai/shidengyun/skills/wacai-index-official-website-demand-change"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 920,
+    "installs": 27,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4e00\u952e\u6267\u884c\u5b98\u7f51\u9879\u76ee\u9700\u6c42\u53d8\u66f4\u3002\u7528\u4e8e\u7528\u6237\u7c98\u8d34\u4e00\u5927\u6bb5\u65b0\u9700\u6c42\u5e76\u540c\u65f6\u63d0\u4f9b\u9879\u76ee\u8def\u5f84\u540e\uff0c\u81ea\u52a8\u5728\u6307\u5b9a\u9879\u76ee\u76ee\u5f55\u4e0a\u5b8c\u6210\uff1a\u68c0\u67e5\u76ee\u6807\u5206\u652f\u5de5\u4f5c\u533a\u662f\u5426\u5e72\u51c0\u3001\u62c9\u53d6\u6700\u65b0\u4ee3\u7801\u3001\u628a\u9700\u6c42\u5199\u5165 productdemand.md \u5e76\u505a\u5c0f\u65f6\u7ea7\u5907\u4efd\u3001\u6839\u636e\u9700\u6c42\u4fee\u6539\u4ee3\u7801\u3001\u8fd0\u884c\u5fc5\u8981\u68c0\u67e5\u3001git commit\u3001push\uff0c\u5e76\u5728 push \u6210\u529f\u540e\u901a\u8fc7\u4f01\u4e1a\u5fae\u4fe1 webhoo...",
+  "updated_at": 1779077891146,
+  "version": "1.0.0"
+}
