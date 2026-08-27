@@ -1,0 +1,57 @@
+{
+  "changelog": "Initial public release of institutional-tracker-ai.\n\n- Implements institutional buy signal detection for A-share AI-chain stocks using a five-dimensional scoring system (Fund Flow, Volume-Price, Position, Northbound/Margin, Events).\n- Integrates Tushare structured data and 5-min intraday analysis; supports auto market regime judgement (bull/bear/neutral).\n- Provides signal backtesting and statistical validation (10-day win rate 55.3%, P=0.007; out-of-sample 59.0%, P=0.006).\n- Features daily automated scans, customizable watchlist, and HTML reporting.\n- Requires user-supplied Tushare proxy Token; local-only processing, no external upload.",
+  "created_at": 1777548332500,
+  "display_name": "Institutional Tracker Ai",
+  "fetched_at": 1787811799461,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/algorithm_methodology.md",
+    "references/backtest_framework.md",
+    "references/install_guide.md",
+    "references/paper_citations.md",
+    "scripts/backtest_v2.py",
+    "scripts/config.py",
+    "scripts/data_fetcher.py",
+    "scripts/install.sh",
+    "scripts/main.py",
+    "scripts/market_regime.py",
+    "scripts/sentiment_aggregator.py",
+    "scripts/signal_engine.py",
+    "scripts/state_tracker.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090590488,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "casparzhong-cloud",
+    "handle": "casparzhong-cloud",
+    "user_id": "s17cpmnc6dbc4z378q5kbm37gn85vexv"
+  },
+  "slug": "institutional-tracker-ai",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/institutional-tracker-ai",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=institutional-tracker-ai&ownerHandle=casparzhong-cloud",
+    "page_url": "https://clawhub.ai/casparzhong-cloud/skills/institutional-tracker-ai"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 561,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "AI\u94fe\u6761\u673a\u6784\u5efa\u4ed3\u63a2\u6d4b\u7b97\u6cd5\u3002\u57fa\u4e8eTushare\u7ed3\u6784\u5316\u6570\u636e\uff0c\u901a\u8fc75\u7ef4\u4fe1\u53f7\u8bc4\u5206\u4f53\u7cfb\uff08\u8d44\u91d1\u6d41+\u91cf\u4ef7+\u7b79\u7801+\u5317\u5411+\u4e8b\u4ef6\uff09 \u8bc6\u522bA\u80a1AI\u94fe\u6761\uff08\u7b97\u529b/\u82af\u7247/\u5927\u6a21\u578b/\u5e94\u7528\uff09\u673a\u6784\u5efa\u4ed3\u884c\u4e3a\uff0c\u751f\u6210\u4e70\u5165\u4fe1\u53f7\uff0810\u65e5\u6301\u6709\u671f\u3001-15%\u6b62\u635f\uff09\u3002 \u542b\u5e02\u573a\u73af\u5883\u5224\u65ad\uff0811\u6307\u6807\uff09\u3001\u5916\u90e8\u60c5\u7eea\u805a\u5408\uff085\u6e90\uff09\u3001\u65e5\u5185\u5206\u949f\u7ebf\u5206\u6790\u3001\u5927\u89c4\u6a21\u56de\u6d4b\u6846\u67b6\u3002 \u56de\u6d4b\u7ed3\u679c\uff1a54...",
+  "updated_at": 1778492809868,
+  "version": "0.1.0"
+}
