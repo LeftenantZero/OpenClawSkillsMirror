@@ -1,0 +1,54 @@
+{
+  "changelog": "**Major update: The skill is now strictly limited to create and query operations for Alibaba Cloud Flink VVP instances and namespaces, rejecting update/delete and unrelated tasks.**\n\n- Restricted all operations to run only via `scripts/instance_ops.py` with a limited set of commands: create, create_namespace, describe, describe_regions, describe_zones, describe_namespaces, and list_tags.\n- Significantly tightened scope\u2014exclude all update/delete actions, Flink SQL/job execution, and other cloud services (ECS, Kafka, OSS, DataWorks, etc.).\n- Enforced mandatory confirmation (`--confirm`) for create commands, plus evidence requirements in outputs. No secret exposure, no parameter invention, no partial lifecycle completions allowed.\n- Introduced stricter intent detection, clear parameter validation steps, and robust output/result verification requirements.\n- Added or updated extensive reference documents for validation, typical failures, output handling, and command templates.\n- Split execution protocol into simple, auditable steps with strict retry policy, lifecycle chain locking, and clear failure guidance.",
+  "created_at": 1775095132962,
+  "display_name": "Alibabacloud Flink Instance Manage",
+  "fetched_at": 1787835222564,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/requirements.txt",
+    "references/README.md",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/command-templates.md",
+    "references/common-failures.md",
+    "references/core-execution-flow.md",
+    "references/e2e-playbooks.md",
+    "references/evaluation-deliverables.md",
+    "references/instance-state-management.md",
+    "references/output-handling.md",
+    "references/parameter-validation.md",
+    "references/python-environment-setup.md",
+    "references/quick-start.md",
+    "references/ram-policies.md",
+    "references/related-apis.md",
+    "references/required-confirmation-model.md",
+    "references/trigger-recognition-guide.md",
+    "references/verification-method.md",
+    "scripts/instance_ops.py",
+    "scripts/prepare_trigger_batch.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-flink-instance-manage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-flink-instance-manage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-flink-instance-manage&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-flink-instance-manage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 599,
+    "installs": 14,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Manage Alibaba Cloud Flink VVP instances and namespaces through create/query operations only. Use when user asks to create or query Flink instances, namespac...",
+  "updated_at": 1778492359131,
+  "version": "0.0.2"
+}
