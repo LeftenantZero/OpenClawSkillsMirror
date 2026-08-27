@@ -1,0 +1,33 @@
+{
+  "changelog": "info-common 2.0.0 is a major update to the shared PKU authentication library crate, featuring restructured modules and enhanced credential management:\n\n- Provides unified IAAA authentication, TOTP/OTP, session & cookie storage, OS keyring credential resolution, and terminal QR rendering for CLI tools (treehole, course, campuscard, elective, info-auth).\n- Introduces detailed credential resolution priority: keyring, environment variables, then interactive entry, with passwords never stored on disk.\n- Expands session persistence with error context and structured storage under `~/.config/info/<name>/`.\n- All user-facing strings are now in Chinese and error handling improved.\n- Adds comprehensive guidelines for building and integrating new CLI tools with shared authentication logic.",
+  "created_at": 1775725588571,
+  "display_name": "PKU Info Common",
+  "fetched_at": 1787826819769,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "wjsoj",
+    "handle": "wjsoj",
+    "user_id": "s170ksphbtrkq0sghjqcwn5v3s83v5ew"
+  },
+  "slug": "pku-info-common",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pku-info-common",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pku-info-common&ownerHandle=wjsoj",
+    "page_url": "https://clawhub.ai/wjsoj/skills/pku-info-common"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 582,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Shared library crate (info-common) providing IAAA authentication, OTP, session persistence, credential resolution, and QR rendering for PKU CLI tools. Use th...",
+  "updated_at": 1778492497331,
+  "version": "1.0.0"
+}
