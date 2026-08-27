@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of adb-controller skill:\n\n- Enables control of Android devices using ADB commands executed via a provided Python script.\n- Automatically captures and returns a screenshot after each command.\n- Reads ADB server/device info from openclaw.json for automatic configuration.\n- Requires sending the screenshot result to the user after each action.",
+  "created_at": 1772634913911,
+  "display_name": "adb controller",
+  "fetched_at": 1787790397672,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/run_adb.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089756362,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Yang Feng",
+    "handle": "fengyang0317",
+    "user_id": "s17bd277ewsgcst8x78c20wxen885yzs"
+  },
+  "slug": "adb-controller",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/adb-controller",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=adb-controller&ownerHandle=fengyang0317",
+    "page_url": "https://clawhub.ai/fengyang0317/skills/adb-controller"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1168,
+    "installs": 35,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Control an Android device via ADB. Use when the user asks to control an Android device, tap, swipe, input text, or perform actions via adb. Automatically use...",
+  "updated_at": 1779077587811,
+  "version": "1.0.0"
+}
