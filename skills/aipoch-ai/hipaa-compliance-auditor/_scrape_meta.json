@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release: HIPAA Compliance Auditor skill introduced.\n\n- Automatically detects and de-identifies PII and PHI in clinical/medical text for HIPAA compliance.\n- Supports 18 HIPAA identifier categories, with context-aware detection and NLP.\n- Provides audit logs for all redactions and confidence scoring for manual review.\n- Usable via command line and Python API with customizable parameters.\n- Includes detailed technical documentation, output formats, and risk assessment.\n- Requires manual QA before use in compliance workflows.",
+  "created_at": 1774242807464,
+  "display_name": "Hipaa Compliance Auditor",
+  "fetched_at": 1787854463346,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/hipaa_safe_harbor_guide.md",
+    "references/pii_patterns.json",
+    "references/requirements.txt",
+    "requirements.txt",
+    "scripts/main.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090045158,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "AIpoch",
+    "handle": "aipoch-ai",
+    "user_id": "s17fjw78yq6wtd4ep6zsaxwrn983hznr"
+  },
+  "slug": "hipaa-compliance-auditor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hipaa-compliance-auditor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hipaa-compliance-auditor&ownerHandle=aipoch-ai",
+    "page_url": "https://clawhub.ai/aipoch-ai/skills/hipaa-compliance-auditor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 719,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Automatically detect and de-identify PII (Personal Identifiable Information) and PHI (Protected Health Information) from clinical/medical text to ensure HIPA...",
+  "updated_at": 1778492127920,
+  "version": "0.1.0"
+}
