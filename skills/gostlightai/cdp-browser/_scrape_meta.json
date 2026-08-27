@@ -1,0 +1,52 @@
+{
+  "changelog": "cdp-browser v2.0.1 (Security + Reliability Patch)\n\nSecurity hardening:\n- Blocked unsafe URL schemes in browser navigation (javascript:, data:, file:)\n- Strict URL validation (http/https only) in pw.js goto, cdp.js newTab/gotoTab\n\nPost confirmation safety:\n- tweet-post requires explicit --confirm, fails fast without it\n\nX compose/post flow:\n- Updated selectors for current X UI, tweetButton/tweetButtonInline preference\n\nCommand improvements:\n- query ops: getUrl, getText, getHtml\n- tweet-draft --save-pending for confirm-button workflows",
+  "created_at": 1771625283756,
+  "display_name": "Cdp Browser",
+  "fetched_at": 1787791505313,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "cdp.js",
+    "package-lock.json",
+    "package.json",
+    "pw.js",
+    "scripts/cdp.js",
+    "scripts/send-tweet-confirm.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779943650439,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "gostlight",
+    "handle": "gostlightai",
+    "user_id": "s172g9xhvf9935ycqf0gaeh7gs83sav2"
+  },
+  "slug": "cdp-browser",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cdp-browser",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cdp-browser&ownerHandle=gostlightai",
+    "page_url": "https://clawhub.ai/gostlightai/skills/cdp-browser"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2045,
+    "installs": 63,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "CDP browser control at localhost:9222. Use when you need to inspect tabs, take screenshots, navigate, scroll, post to X, or run JS in a persistent browser se...",
+  "updated_at": 1779077224289,
+  "version": "2.0.1"
+}
