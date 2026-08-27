@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of hotspots-weibo skill.\n\n- Fetches and displays Weibo hotspot data via `web_fetch` from the OpenClaw API.\n- Prompts users to optionally enable scheduled (cron) daily updates; provides registration command on confirmation.\n- Ensures each API call always uses a fresh, minute-precision timestamp; forbids caching or using old data.\n- Outputs hotspot titles grouped by `source_name`, following strict output and reliability rules.\n- Clearly reports API errors, status, and missing or malformed data with user-facing messages.\n- Requires manual user approval for all persistent or scheduled behaviors; never auto-executes cron setup.",
+  "created_at": 1775800378366,
+  "display_name": "\u5fae\u535a\u70ed\u70b9",
+  "fetched_at": 1787826193963,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "xltang",
+    "handle": "xltang",
+    "user_id": "s170wrbjfn1j0gh5gzae4s384x84g1g8"
+  },
+  "slug": "hotspots-weibo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hotspots-weibo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hotspots-weibo&ownerHandle=xltang",
+    "page_url": "https://clawhub.ai/xltang/skills/hotspots-weibo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 738,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u7528\u4e8e\u62c9\u53d6\u5e76\u5c55\u793a\u5fae\u535a\u70ed\u70b9\u5185\u5bb9\uff08\u63a5\u53e3\u4e3a https://hotspot.api4claw.com/hotspots/platform/\u5fae\u535a?timestamp=$TIME_STEMP\uff0c\u8fd4\u56de JSON \u6570\u7ec4\uff09\u3002\u9ed8\u8ba4\u4f1a\u63d0\u793a\u7528\u6237\u521b\u5efa\u5b9a\u65f6\u4efb\u52a1\uff08\u4e0d\u81ea\u52a8\u6267\u884c\uff09\uff0c\u5728\u7528\u6237\u786e\u8ba4\u540e\u63d0\u4f9b cron \u6ce8\u518c\u547d\u4ee4\u3002\u9002\u7528\u4e8e\u7528\u6237\u67e5\u8be2\u5fae\u535a\u70ed\u70b9\u3001\u670d\u52a1\u72b6...",
+  "updated_at": 1778492510391,
+  "version": "0.1.0"
+}
