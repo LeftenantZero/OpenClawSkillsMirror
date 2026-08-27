@@ -1,0 +1,48 @@
+{
+  "changelog": "multi-stop v3.2.0\n\n- Enforces strict CLI-only execution: all answers must originate from flyai CLI output, never from prior knowledge.\n- Adds critical booking link validation: every result must include a [Book]({detailUrl}) link from CLI JSON, or the skill must re-execute.\n- Formalizes environment check: always confirm flyai-cli is installed before proceeding; provide exact user instructions if not found.\n- Clarifies parameter collection, output formatting, and scenario-specific playbooks.\n- Expands and documents output/activation rules for multi-city trips, including English and Chinese triggers.\n- Strongly prohibits use of training data for travel answers.",
+  "created_at": 1775735228363,
+  "display_name": "Multi Stop",
+  "fetched_at": 1787826646334,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/fallbacks.md",
+    "references/playbooks.md",
+    "references/runbook.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090357842,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xiejinsong",
+    "handle": "xiejinsong",
+    "user_id": "s177qj362rbw4294hgs3hdvhgx83m2hm"
+  },
+  "slug": "multi-stop",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/multi-stop",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=multi-stop&ownerHandle=xiejinsong",
+    "page_url": "https://clawhub.ai/xiejinsong/skills/multi-stop"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 527,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Plan complex multi-city flight itineraries \u2014 A to B to C to D. Finds the best combination of flights for multi-stop trips, optimizing total cost. Also suppor...",
+  "updated_at": 1778492500998,
+  "version": "3.2.0"
+}
