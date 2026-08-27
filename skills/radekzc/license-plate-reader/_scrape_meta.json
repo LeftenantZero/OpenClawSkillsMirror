@@ -1,0 +1,35 @@
+{
+  "changelog": "- Improved response parsing: now supports alternative response shapes (`combinations[].roadUsers[].plates[]`, `roadUsers[].plates[]`, top-level `plates[]`, and recursive search for nested plates).\n- Added explicit instructions to set the `TRAFFICEYE_API_KEY` environment variable before running commands.\n- No logic or API changes; documentation and input handling robustness enhanced",
+  "created_at": 1774003787282,
+  "display_name": "License Plate Reader",
+  "fetched_at": 1787860620504,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "examples/sample_response.json",
+    "recognize_plate.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "radekzc",
+    "handle": "radekzc",
+    "user_id": "s17cmecd7nqbfwpn54v18kfph1885qt7"
+  },
+  "slug": "license-plate-reader",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/license-plate-reader",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=license-plate-reader&ownerHandle=radekzc",
+    "page_url": "https://clawhub.ai/radekzc/skills/license-plate-reader"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 719,
+    "installs": 17,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Detect and read the largest license plate from an image using the TrafficEye REST API. Use when the user wants ANPR, ALPR, license plate OCR, number plate re...",
+  "updated_at": 1778492060163,
+  "version": "1.0.1"
+}
