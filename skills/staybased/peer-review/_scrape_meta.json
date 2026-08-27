@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release \u2014 multi-model consensus layer using local LLMs via Ollama",
+  "created_at": 1770927797485,
+  "display_name": "Peer Review",
+  "fetched_at": 1787804613107,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779972827962,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "staybased",
+    "handle": "staybased",
+    "user_id": "s173wjbhnz3m3q2ed89mxzjna5884c7k"
+  },
+  "slug": "peer-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/peer-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=peer-review&ownerHandle=staybased",
+    "page_url": "https://clawhub.ai/staybased/skills/peer-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1962,
+    "installs": 61,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Multi-model peer review layer using local LLMs via Ollama to catch errors in cloud model output.\nFan-out critiques to 2-3 local models, aggregate flags, synthesize consensus.\n\nUse when: validating trade analyses, reviewing agent output quality, testing local model accuracy,\nchecking any high-stakes Claude output before publishing or acting on it.\n\nDon't use when: simple fact-checking (just search the web), tasks that don't benefit from\nmulti-model consensus, time-critical decisions where 60s latency is unacceptable,\nreviewing trivial or low-stakes content.\n\nNegative examples:\n- \"Check if this date is correct\" \u2192 No. Just web search it.\n- \"Review my grocery list\" \u2192 No. Not worth multi-model inference.\n- \"I need this answer in 5 seconds\" \u2192 No. Peer review adds 30-60s latency.\n\nEdge cases:\n- Short text (<50 words) \u2192 Models may not find meaningful issues. Consider skipping.\n- Highly technical domain \u2192 Local models may lack domain knowledge. Weight flags lower.\n- Creative writing \u2192 Factual review doesn't apply well. Use only for logical consistency.",
+  "updated_at": 1778990125672,
+  "version": "1.0.0"
+}
