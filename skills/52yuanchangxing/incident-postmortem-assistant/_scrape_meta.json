@@ -1,0 +1,41 @@
+{
+  "changelog": "Initial release of the Incident Postmortem Assistant skill.\n\n- Automatically organizes incident clues into structured postmortem drafts, distinguishing root cause, contributing factors, amplifiers, impacts, and remediation actions.\n- Emphasizes reviewable drafts and improvement checklists, prioritizing accuracy and transparency.\n- Explicitly separates suitable use cases (incident summarization, timeline drafting, etc.) from unsuitable ones (blame assignment, timeline tampering, direct writes to external systems).\n- Responds with tasks and clarifies missing information instead of speculating.\n- Includes strict safety boundaries against executing high-risk actions or fabricating details; adopts a collaborative \u201cblameless\u201d review language.",
+  "created_at": 1773800276679,
+  "display_name": "Incident Postmortem Assistant",
+  "fetched_at": 1787866808911,
+  "files": [
+    "README.md",
+    "SELF_CHECK.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/example-input.md",
+    "examples/example-output.md",
+    "resources/spec.json",
+    "resources/template.md",
+    "scripts/run.py",
+    "skill-card.md",
+    "tests/smoke-test.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "vx\uff1a17605205782",
+    "handle": "52yuanchangxing",
+    "user_id": "s178sqjkywrs4vbnfcrr7wx7f583gef5"
+  },
+  "slug": "incident-postmortem-assistant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/incident-postmortem-assistant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=incident-postmortem-assistant&ownerHandle=52yuanchangxing",
+    "page_url": "https://clawhub.ai/52yuanchangxing/skills/incident-postmortem-assistant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 711,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06\u4e8b\u6545\u7ebf\u7d22\u6574\u7406\u6210\u590d\u76d8\u8349\u6848\uff0c\u533a\u5206\u6839\u56e0\u3001\u8bf1\u56e0\u3001\u653e\u5927\u5668\u3001\u5f71\u54cd\u4e0e\u4fee\u590d\u52a8\u4f5c\u3002\uff1buse for incident, postmortem, sre workflows\uff1bdo not use for \u5f52\u8d23\u4e2a\u4eba, \u7be1\u6539\u65f6\u95f4\u7ebf.",
+  "updated_at": 1778491989335,
+  "version": "1.0.0"
+}
