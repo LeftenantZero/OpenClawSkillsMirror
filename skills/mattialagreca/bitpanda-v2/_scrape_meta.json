@@ -1,0 +1,34 @@
+{
+  "changelog": "**Stable and accurate rebuild of the Bitpanda portfolio management skill.**\n\n- Uses official `/v1/asset-wallets` endpoint for `balances` and `data` (replaces non-existent endpoints from previous version)\n- Returns unprocessed raw data directly from Bitpanda\u2014no automatic aggregations\n- Implements correct and automatic pagination (especially for trade history)\n- Improved error handling with clear messages for authentication, rate limits, and missing tools\n- Designed for reliability and transparency: minimal internal logic and full user control of the data",
+  "created_at": 1773854425203,
+  "display_name": "Bitpanda V2",
+  "fetched_at": 1787864914394,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/bitpanda.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "MattiaLaGreca",
+    "handle": "mattialagreca",
+    "user_id": "s1773t0fbevyafxsssbfhwbh15885hg9"
+  },
+  "slug": "bitpanda-v2",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bitpanda-v2",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bitpanda-v2&ownerHandle=mattialagreca",
+    "page_url": "https://clawhub.ai/mattialagreca/skills/bitpanda-v2"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 681,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Interagisci con l'API Bitpanda per ottenere dati grezzi di portafoglio, trade e prezzi senza aggregazioni, con gestione completa di pagination ed errori.",
+  "updated_at": 1778492009879,
+  "version": "1.0.0"
+}
