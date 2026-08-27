@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release of goodsclassify-a skill:\n\n- Provides automated classification and code lookup for \u5546\u54c1\u7f16\u7801, \u5546\u54c1\u5f52\u7c7b, \u6d77\u5173\u7f16\u7801, HS\u7f16\u7801, \u7a0e\u53f7, and related product codes (e.g., \u84dd\u7259\u8033\u673a, \u624b\u673a\u58f3, \u5145\u7535\u5668).\n- Ensures reliable results by always running the local script (run_goodsclassify.py) for all queries.\n- Strictly prohibits simulated or estimated results; results must come from executed script.\n- Prompts user for phone number if script requires it, then re-executes as necessary.\n- Applies automatically to any user query involving product classification or relevant codes.",
+  "created_at": 1777009042817,
+  "display_name": "\u5546\u54c1\u5f52\u7c7bskill",
+  "fetched_at": 1787794849189,
+  "files": [
+    ".env",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.py",
+    "db.py",
+    "fastgpt_client.py",
+    "requirements.txt",
+    "skill-card.md",
+    "skill.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090536955,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "orangeboo",
+    "handle": "orangeboo",
+    "user_id": "s17dp912rd6f2fr51v6arts04s85epb7"
+  },
+  "slug": "goodsclassify",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/goodsclassify",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=goodsclassify&ownerHandle=orangeboo",
+    "page_url": "https://clawhub.ai/orangeboo/skills/goodsclassify"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 588,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u63d0\u4f9b\u51c6\u786e\u7684\u5546\u54c1\u7f16\u7801\u3001\u5f52\u7c7b\u3001\u6d77\u5173\u7f16\u7801\u3001HS\u7f16\u7801\u548c\u7a0e\u53f7\u67e5\u8be2\u670d\u52a1\uff0c\u4e13\u6ce8\u84dd\u7259\u8033\u673a\u3001\u624b\u673a\u58f3\u548c\u5145\u7535\u5668\u7b49\u4ea7\u54c1\u3002",
+  "updated_at": 1779076060210,
+  "version": "0.1.0"
+}
