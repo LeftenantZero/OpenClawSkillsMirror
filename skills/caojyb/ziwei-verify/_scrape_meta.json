@@ -1,0 +1,58 @@
+{
+  "changelog": "Initial release of the ziwei-verify skill for \u751f\u65f6\u6821\u6b63\u4e0e\u547d\u76d8\u9a8c\u8bc1.\n\n- Provides an engine to calibrate birth time using verification points, searching within \u00b12 Chinese \"\u65f6\u8fb0\" for optimal results.\n- Supports three main actions: calibrate (auto/interactively adjusts birth time), suggest (generates candidate times), and validate (checks input packets).\n- Outputs follow a standardized data packet format, indicating calibration status, confidence, and detailed calibration results or need for verification.\n- Requires the ziwei skill for chart calculation and zhdate for lunar date conversion.\n- Includes specific error codes and performance targets for efficient operation.",
+  "created_at": 1777895672305,
+  "display_name": "Ziwei Verify",
+  "fetched_at": 1787810398963,
+  "files": [
+    "API\u6587\u6863.md",
+    "DELIVERY.md",
+    "README.md",
+    "SKILL.md",
+    "__init__.py",
+    "_meta.json",
+    "birth_time_corrector.py",
+    "calibrator.py",
+    "config.py",
+    "dialogue_handler.py",
+    "e2e_test.py",
+    "main.py",
+    "output_formatter.py",
+    "prompt_generator.py",
+    "prompt_generator_demo.py",
+    "prompts/correction_prompts.txt",
+    "prompts/summary_templates.txt",
+    "schemas.py",
+    "skill-card.md",
+    "standalone_test.py",
+    "tests/__init__.py",
+    "tests/run_tests.py",
+    "tests/test_cases.json",
+    "tests/test_cases.py",
+    "tests/test_prompt_generator.py",
+    "utils.py",
+    "\u4f7f\u7528\u793a\u4f8b.md",
+    "\u914d\u7f6e\u8bf4\u660e.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "caojyb",
+    "handle": "caojyb",
+    "user_id": "s178jh2w7vf0x2mjz1b88mnt8d83mc6q"
+  },
+  "slug": "ziwei-verify",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ziwei-verify",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ziwei-verify&ownerHandle=caojyb",
+    "page_url": "https://clawhub.ai/caojyb/skills/ziwei-verify"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 574,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u57fa\u4e8e verification_points \u901a\u8fc7 \u00b11\u3001\u00b12 \u65f6\u8fb0\u504f\u79fb\u81ea\u52a8\u6821\u6b63\u51fa\u751f\u65f6\u95f4\uff0c\u63d0\u5347\u7d2b\u5fae\u6597\u6570\u547d\u76d8\u7f6e\u4fe1\u5ea6\u548c\u51c6\u786e\u6027\u3002",
+  "updated_at": 1778492846193,
+  "version": "1.0.0"
+}
