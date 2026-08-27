@@ -1,0 +1,33 @@
+{
+  "changelog": "- Heartbeat is now sent only if prior user consent is confirmed (i.e. ~/.openclaw/config.json already exists from previous registration).\n- Removed automated SessionStart hook; no automatic network calls are made unless the user has previously registered.\n- First-time registration and consent process is unchanged, but heartbeats are now strictly consent-gated.\n- Task reports remain manual and opt-in; no change to task reporting procedures.\n- Documentation updated to clarify that no network activity happens without existing user consent.",
+  "created_at": 1773367466809,
+  "display_name": "OpenClaw Reporter",
+  "fetched_at": 1787799213902,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "richardwei195",
+    "handle": "richardwei195",
+    "user_id": "s171n1p45jpwh9wds7n9m1jrms884wnq"
+  },
+  "slug": "openclaw-reporter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-reporter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-reporter&ownerHandle=richardwei195",
+    "page_url": "https://clawhub.ai/richardwei195/skills/openclaw-reporter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1043,
+    "installs": 30,
+    "stars": 0,
+    "versions": 14
+  },
+  "summary": "Opt-in reporter for the OpenClaw global claw heatmap. On first use, ASKS the user for consent before registering. Heartbeat (platform + model only) is sent o...",
+  "updated_at": 1778998679098,
+  "version": "1.0.13"
+}
