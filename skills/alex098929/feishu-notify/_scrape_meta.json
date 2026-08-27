@@ -1,0 +1,40 @@
+{
+  "changelog": "feishu-notify 1.0.1 changelog:\n\n- Clarified that configuration is only loaded from the user's config.json; removed mentions of platform environment variables and default values.\n- Added detailed security guidance: emphasized that webhook URLs are secrets, not to be committed to version control, and should have restricted file permissions.\n- Documented that template loading is strictly restricted to the templates/ directory for security; arbitrary JSON files cannot be used as templates.\n- Updated notes to clarify that the agent may send messages autonomously using this skill.\n- Improved and tightened instructions regarding error handling and secret management.",
+  "created_at": 1773902505035,
+  "display_name": "Feishu Notify",
+  "fetched_at": 1787863695146,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api_documentation.md",
+    "scripts/send_message.py",
+    "skill-card.md",
+    "templates/card_alert.json",
+    "templates/card_notification.json",
+    "templates/card_task.json",
+    "templates/post_rich.json",
+    "templates/text_simple.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alex098929",
+    "handle": "alex098929",
+    "user_id": "s17c65pthhzjm0nzpxc61ry2td83jbvp"
+  },
+  "slug": "feishu-notify",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-notify",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-notify&ownerHandle=alex098929",
+    "page_url": "https://clawhub.ai/alex098929/skills/feishu-notify"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 921,
+    "installs": 25,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "This skill should be used when users need to send notifications to Feishu (Lark) via webhook. It supports multiple message types including text, rich text, i...",
+  "updated_at": 1778492026162,
+  "version": "1.0.1"
+}
