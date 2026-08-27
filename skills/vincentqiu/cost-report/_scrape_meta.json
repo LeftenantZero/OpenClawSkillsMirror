@@ -1,0 +1,50 @@
+{
+  "changelog": "Big change: Cost tracking and reporting system fully refactored for OpenClaw, with easier automation and Discord-ready reporting.\n\n- Renamed skill to openclaw-cost-tracker with new OpenClaw-compatible file paths and model details.\n- Replaced old token-based scripts with shell scripts (cost_report.sh, report_discord.sh) using jq for accurate cost parsing.\n- Added CLI entry point and configuration/examples for scheduling and formatting reports.\n- Removed deprecated/inaccurate scripts for legacy Clawdbot.\n- Supports daily, weekly, monthly, and custom date-range cost summaries, including model breakdown.\n- Outputs results in formats ready for Discord and other messaging platforms.",
+  "created_at": 1769688716609,
+  "display_name": "Cost Tracking for Models",
+  "fetched_at": 1787793767209,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "cli.js",
+    "config/cron-examples.json",
+    "package.json",
+    "references/JSONL_FORMAT.md",
+    "scripts/cost_report.sh",
+    "scripts/report_discord.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783654282231,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "vincentqiu",
+    "handle": "vincentqiu",
+    "user_id": "s173tye8fpxavn20g5fjx0e22n885h60"
+  },
+  "slug": "cost-report",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cost-report",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cost-report&ownerHandle=vincentqiu",
+    "page_url": "https://clawhub.ai/vincentqiu/skills/cost-report"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 5778,
+    "installs": 204,
+    "stars": 11,
+    "versions": 3
+  },
+  "summary": "Track OpenClaw usage costs and provide detailed reports by date and model. Supports daily, weekly, and monthly report formats for Discord and other messaging channels.",
+  "updated_at": 1779076472049,
+  "version": "1.0.2"
+}
