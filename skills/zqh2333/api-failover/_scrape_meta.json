@@ -1,0 +1,59 @@
+{
+  "changelog": "Add model-aware downgrade routing, auto/hinted/body controls, cleaner failure UX, secondary activation flow, delivery docs",
+  "created_at": 1775069720571,
+  "display_name": "API Failover",
+  "fetched_at": 1787835572028,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/activation-checklist.md",
+    "references/config-example.yaml",
+    "references/config-forced-failover-drill.yaml",
+    "references/config-model-downgrade-drill.yaml",
+    "references/config-production.yaml",
+    "references/config-realworld-example.yaml",
+    "references/delivery-summary.md",
+    "references/realworld-notes.md",
+    "references/test-scenarios.md",
+    "scripts/activate_secondary.py",
+    "scripts/bootstrap_failover.py",
+    "scripts/discover_env.py",
+    "scripts/failover_proxy.py",
+    "scripts/generate_config.py",
+    "scripts/http_proxy.py",
+    "scripts/selfcheck.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090238645,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Qihong",
+    "handle": "zqh2333",
+    "user_id": "s17dq27qynd9j1cwkrxvc2qzfd83z6x1"
+  },
+  "slug": "api-failover",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/api-failover",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=api-failover&ownerHandle=zqh2333",
+    "page_url": "https://clawhub.ai/zqh2333/skills/api-failover"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 557,
+    "installs": 13,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Detect AI API/provider/model failures and route requests to healthy fallback providers or downgraded models. Use when creating or maintaining automatic failo...",
+  "updated_at": 1778492352559,
+  "version": "1.0.1"
+}
