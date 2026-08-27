@@ -1,0 +1,43 @@
+{
+  "changelog": "coding-agent 1.0.0\n\n- Initial release of the coding-agent skill.\n- Enables delegation of coding tasks to Codex, Claude Code, Pi, or OpenCode agents via background processes.\n- Supports interactive and background modes with session monitoring, input, and cleanup.\n- Distinct execution rules and flags for each agent (e.g., PTY required for Codex/Pi/OpenCode, not for Claude Code).\n- Guides included for safe reviewing, parallel work using git worktrees, and agent orchestration patterns.\n- Emphasizes safe workspace practices\u2014never spawn agents in OpenClaw or on live branches.",
+  "created_at": 1773142453998,
+  "display_name": "coding-agent",
+  "fetched_at": 1787789520341,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089822339,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Shiwen Han",
+    "handle": "tshogx",
+    "user_id": "s1722xhyx4j96ddq9xrtev27cx885jqv"
+  },
+  "slug": "tshogx-coding-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tshogx-coding-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tshogx-coding-agent&ownerHandle=tshogx",
+    "page_url": "https://clawhub.ai/tshogx/skills/tshogx-coding-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1538,
+    "installs": 48,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Delegate coding tasks to Codex, Claude Code, or Pi agents via background process. Use when: (1) building/creating new features or apps, (2) reviewing PRs (sp...",
+  "updated_at": 1779077926107,
+  "version": "1.0.0"
+}
