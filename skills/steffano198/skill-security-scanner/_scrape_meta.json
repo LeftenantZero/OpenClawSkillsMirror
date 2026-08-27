@@ -1,0 +1,46 @@
+{
+  "changelog": "- Removed always-on flag (`always: true`) from skill metadata, making the scanner no longer run by default in all cases.\n- Updated documentation to clarify and simplify examples of high-risk patterns, replacing real domains and paths with generic examples.\n- No changes to core functionality; update is documentation and configuration only.",
+  "created_at": 1771276810655,
+  "display_name": "Skill Security Scanner",
+  "fetched_at": 1787803848689,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/scan-output.md",
+    "scripts/scan-skill.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779971755394,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "DevSef",
+    "handle": "steffano198",
+    "user_id": "s1789m0j4rm648a1dtt4jzmz01885t37"
+  },
+  "slug": "skill-security-scanner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-security-scanner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-security-scanner&ownerHandle=steffano198",
+    "page_url": "https://clawhub.ai/steffano198/skills/skill-security-scanner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1902,
+    "installs": 61,
+    "stars": 2,
+    "versions": 2
+  },
+  "summary": "Scan OpenClaw skills for security risks, suspicious permissions, and provide a trust score to help evaluate skill safety before use or installation.",
+  "updated_at": 1778991049667,
+  "version": "1.0.1"
+}
