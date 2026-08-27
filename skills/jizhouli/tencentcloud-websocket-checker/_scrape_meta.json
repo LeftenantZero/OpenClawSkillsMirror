@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of Tencent Cloud WebSocket connection latency checker.\n\n- Provides precise detection of WebSocket (ws/wss) connection stages: DNS lookup, TCP handshake, TLS handshake, WS Upgrade.\n- Core shell script (ws_check.sh) with support for protocol switching, multiple test rounds, and detailed performance analysis.\n- Includes batch testing, structured CSV/JSON report generation, and automated dependency installation.\n- Allows custom configuration for thresholds, request headers, and DNS servers via config.env.\n- Detailed documentation, troubleshooting guide, and practical usage examples included.",
+  "created_at": 1773889676099,
+  "display_name": "TencentCloud Websocket Checker",
+  "fetched_at": 1787864133872,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.env",
+    "docs/EXAMPLES.md",
+    "docs/README.md",
+    "docs/TROUBLESHOOTING.md",
+    "evals/evals.json",
+    "install_dependencies.sh",
+    "references/examples.md",
+    "references/troubleshooting.md",
+    "run.sh",
+    "skill-card.md",
+    "test_cases.sh",
+    "utils/batch_check.sh",
+    "utils/report_generator.sh",
+    "ws_check.sh"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jizhouli",
+    "handle": "jizhouli",
+    "user_id": "s17dwv7mde9hajnddb2d3yaxqx884h1z"
+  },
+  "slug": "tencentcloud-websocket-checker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tencentcloud-websocket-checker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tencentcloud-websocket-checker&ownerHandle=jizhouli",
+    "page_url": "https://clawhub.ai/jizhouli/skills/tencentcloud-websocket-checker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 738,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u817e\u8baf\u4e91 WebSocket \u8fde\u63a5\u5ef6\u8fdf\u68c0\u6d4b\u4e0e\u6027\u80fd\u8bca\u65ad\u5de5\u5177\u3002\u5f53\u7528\u6237\u9700\u8981\u68c0\u6d4b WebSocket \u5efa\u8fde\u5ef6\u8fdf\u3001\u5206\u6790 ws/wss \u8fde\u63a5\u5404\u9636\u6bb5\u8017\u65f6\uff08DNS\u89e3\u6790\u3001TCP\u63e1\u624b\u3001TLS\u63e1\u624b\u3001WebSocket Upgrade\uff09\u3001\u6392\u67e5\u8fde\u63a5\u6162\u7684\u95ee\u9898\u3001\u5bf9\u6bd4\u4e0d\u540c\u534f\u8bae/\u5730\u57df\u7684\u8fde\u63a5\u6027\u80fd\u3001\u6216\u8005\u8fdb\u884c WebSocket \u76f8\u5173\u7684\u7f51\u7edc\u8bca\u65ad\u65f6\uff0c\u4f7f\u7528\u6b64...",
+  "updated_at": 1778492018600,
+  "version": "1.0.0"
+}
