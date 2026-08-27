@@ -1,0 +1,46 @@
+{
+  "changelog": "finishing-branch 0.1.0 \u2013 Initial Release\n\n- Introduces skill for structured finishing of completed development branches.\n- Guides users to verify tests and select from four integration options: merge locally, create PR, keep branch, or discard work.\n- Ensures tests must pass before proceeding.\n- Provides clear confirmation for destructive actions like deletion.\n- Integrates worktree cleanup steps for relevant options.\n- Prevents open-ended prompts, always presenting exact choices.",
+  "created_at": 1770730068695,
+  "display_name": "Finishing Branch",
+  "fetched_at": 1787805010114,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/cleanup_branches.py",
+    "scripts/finish_branch.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779965569144,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wpank",
+    "handle": "wpank",
+    "user_id": "s17bjjbnm7xjckd29e1h2641ks8849md"
+  },
+  "slug": "finishing-branch",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/finishing-branch",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=finishing-branch&ownerHandle=wpank",
+    "page_url": "https://clawhub.ai/wpank/skills/finishing-branch"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1501,
+    "installs": 48,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Complete development work by presenting structured options for merge, PR, or cleanup. Use when implementation is complete, all tests pass, and you need to decide how to integrate work. Triggers on finish branch, complete branch, merge branch, create PR, done with feature, implementation complete.",
+  "updated_at": 1778989523633,
+  "version": "0.1.0"
+}
