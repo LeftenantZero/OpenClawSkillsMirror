@@ -1,0 +1,42 @@
+{
+  "changelog": "Annual Insurance Word Report v1.0.0\n\n- Initial release: Generate annual insurance welfare Word reports in OpenClaw format.\n- Automatically extracts the target year from input or natural-language request.\n- Queries MySQL table `gh_hg_bscyearall_dues` and reads column comments for field mapping.\n- Fills and exports yearly business data into a bundled Word `.docx` template without Word COM.\n- Supports flexible configuration for database connection, template, and output paths.\n- Falls back to `mysql` CLI if `PyMySQL` is unavailable.",
+  "created_at": 1775099395691,
+  "display_name": "lin",
+  "fetched_at": 1787835085787,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/beijing_office_annual_template.docx.base64.txt",
+    "references/annual-insurance-config.json",
+    "references/placeholder-enums.json",
+    "references/schema-comment-query.sql",
+    "references/word-template-mapping.md",
+    "requirements.txt",
+    "run.sh",
+    "skill-card.md",
+    "skill.json",
+    "src/main.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u756a\u8304\u756a\u8304\u756a\u8304\u8303",
+    "handle": "lin-shiwu",
+    "user_id": "s178j5066w5qf5w91k6sw37jcd83kws6"
+  },
+  "slug": "annual-insurance-word-report",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/annual-insurance-word-report",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=annual-insurance-word-report&ownerHandle=lin-shiwu",
+    "page_url": "https://clawhub.ai/lin-shiwu/skills/annual-insurance-word-report"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 587,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate annual insurance welfare Word reports from `gh_hg_bscyearall_dues` in OpenClaw format. The packaged Python entry extracts the target year, inspects...",
+  "updated_at": 1778492359131,
+  "version": "1.0.0"
+}
