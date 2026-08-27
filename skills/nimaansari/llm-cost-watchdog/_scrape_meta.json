@@ -1,0 +1,59 @@
+{
+  "changelog": "Cost Watchdog v1.0.0 \u2014 Initial Release\n\n- Tracks real-time LLM spending across 2600+ models and 30+ providers, enforcing budget ceilings to prevent runaway costs.\n- Detects runaway agent loops and unbounded API calls with AST-based code auditing.\n- Supports live model pricing, usage tracking, and budget enforcement via CLI and SDK wrappers.\n- Aggregates and reports spend by session, time window, and top models; provides alerts for silent errors and budgeting breaches.\n- Offers multi-layer detection of active models and robust offline/static fallbacks for pricing.\n- Includes unified CLI with commands for session tracking, auditing, pricing, alternatives, reporting, error review, and more.",
+  "created_at": 1776765741240,
+  "display_name": "LLM Cost Watchdog",
+  "fetched_at": 1787817614482,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/calculators.md",
+    "references/optimization.md",
+    "references/patterns.md",
+    "references/pricing.md",
+    "scripts/_pricing.py",
+    "scripts/_sources.py",
+    "scripts/code_audit.py",
+    "scripts/cost-visualizer.py",
+    "scripts/cost_watchdog.py",
+    "scripts/detect_model.py",
+    "scripts/errors.py",
+    "scripts/http_capture.py",
+    "scripts/io_utils.py",
+    "scripts/model_canon.py",
+    "scripts/openclaw_tailer.py",
+    "scripts/optimized-calculator.py",
+    "scripts/refresh_pricing.py",
+    "scripts/smart-budget.py",
+    "scripts/tokenizer.py",
+    "scripts/tracker.py",
+    "scripts/usage_log.py",
+    "skill-card.md",
+    "test_risky_code.py",
+    "tests/fixtures/litellm_sample.json",
+    "tests/fixtures/openrouter_sample.json",
+    "tests/test_cost_watchdog.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Nima Ansari",
+    "handle": "nimaansari",
+    "user_id": "s174r0htpq7skja1v1n3b0z0zn83e8x4"
+  },
+  "slug": "llm-cost-watchdog",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/llm-cost-watchdog",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=llm-cost-watchdog&ownerHandle=nimaansari",
+    "page_url": "https://clawhub.ai/nimaansari/skills/llm-cost-watchdog"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 603,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Monitors real-time LLM API costs, detects runaway loops, enforces budgets, audits code risk, and reports usage across multiple providers and models.",
+  "updated_at": 1778492691895,
+  "version": "1.0.0"
+}
