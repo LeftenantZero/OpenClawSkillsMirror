@@ -1,0 +1,43 @@
+{
+  "changelog": "**Summary: Improved and clarified the heartbeat workflow; restricts model use and adds resilience to failures.**\n\nUpdated to work with the Openclaw Projects and Build a dev team skills more cohesively   |   https://clawhub.ai/encryptshawn/openclaw-projects   |  https://clawhub.ai/encryptshawn/build-dev-team\n\n- Heartbeat scheduling and model selection are now explicitly defined, using the cheapest available model for scheduled runs.\n- Clarifies that heartbeat is platform-triggered and never self-invoked or persistent.\n- All heartbeat actions must use project and queue GIDs stored in `HEARTBEAT.md`; only perform discovery if missing or invalid.\n- If the heartbeat fails for any reason, it immediately stops without retrying, troubleshooting, or escalating.\n- Queue checks now also require reading `queues/to-engineer.md` for escalations, not just Asana tasks.\n- Updated protocol to clarify that `sessions_send` should never be sent to self and is only a nudge, not the record.\n- Added notes for projects using ClickUp instead of Asana.",
+  "created_at": 1776019599385,
+  "display_name": "Software Engineer for projects",
+  "fetched_at": 1787824326883,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/architecture_decisions.md",
+    "references/asana_task_guide.md",
+    "references/backend_spec.md",
+    "references/code_analysis.md",
+    "references/db_schema_spec.md",
+    "references/escalation_protocols.md",
+    "references/frontend_spec.md",
+    "references/implementation_spec.md",
+    "references/qa_spec.md",
+    "references/repo_operations.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "EncryptShawn",
+    "handle": "encryptshawn",
+    "user_id": "s17acjjwshpqj4xkbngejj57nx83zbcy"
+  },
+  "slug": "dev-project-engineer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dev-project-engineer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dev-project-engineer&ownerHandle=encryptshawn",
+    "page_url": "https://clawhub.ai/encryptshawn/skills/dev-project-engineer"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 797,
+    "installs": 21,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Project Engineer skill \u2014 the technical authority for software development agent teams. Use this skill whenever an engineering agent needs to: analyze or audi...",
+  "updated_at": 1778492552850,
+  "version": "1.0.3"
+}
