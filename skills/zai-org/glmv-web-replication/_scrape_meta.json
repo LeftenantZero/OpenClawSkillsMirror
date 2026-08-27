@@ -1,0 +1,33 @@
+{
+  "changelog": "**Major clarification and tightening of scope, focusing on lawful frontend visual replication only.**\n\n- Added a mandatory authorization check: user must confirm ownership or explicit permission to replicate the target website, or the skill will not proceed.\n- Clarified that the skill only replicates the frontend visual presentation (layout, styling, navigation, public assets); backend logic, authentication, and non-public content are explicitly out of scope.\n- Introduced strict data handling guidelines: never scrape behind login, never collect credentials, and always respect copyright and robots.txt.\n- Updated documentation and workflow to emphasize static/mockup frontend outputs intended for lawful and reference use only.\n- Detailed included vs. excluded features for user clarity.",
+  "created_at": 1774774846207,
+  "display_name": "web-replication",
+  "fetched_at": 1787841606226,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Z.ai",
+    "handle": "zai-org",
+    "user_id": "s173sh1fb6z7xwvxgf5n3z6sdd83sddy"
+  },
+  "slug": "glmv-web-replication",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/glmv-web-replication",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=glmv-web-replication&ownerHandle=zai-org",
+    "page_url": "https://clawhub.ai/zai-org/skills/glmv-web-replication"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1179,
+    "installs": 36,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Frontend visual replication skill. Explores a target website\u2019s publicly visible pages via Playwright MCP or agent-browser, captures screenshots and layout in...",
+  "updated_at": 1778492275298,
+  "version": "1.0.2"
+}
