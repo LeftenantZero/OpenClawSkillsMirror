@@ -1,0 +1,42 @@
+{
+  "changelog": "- Initial release of the openapi-parser skill.\n- Parses complex OpenAPI 3.x specs and generates Drift test cases, supporting advanced patterns like anyOf, oneOf, allOf, discriminators, polymorphism, inheritance, $ref chains, regex patterns, enums, and optional fields.\n- Provides a clear workflow: extracting endpoint definitions, resolving $refs, enumerating schema combinations, and generating ready-to-paste Drift YAML for maximal test coverage.\n- Includes detailed guides and references for mapping OpenAPI schema variants to Drift operations and datasets.\n- Outputs include analysis, operations YAML, datasets (if needed), and notes on intentionally excluded schema combinations.",
+  "created_at": 1776194249055,
+  "display_name": "openapi-parser",
+  "fetched_at": 1787822345038,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/01-anyof-parameter-variants.json",
+    "evals/02-discriminator-with-allof.json",
+    "evals/03-regex-pattern-field.json",
+    "evals/fixtures/anyof-parameter-variants.yaml",
+    "evals/fixtures/discriminator-with-allof.yaml",
+    "evals/fixtures/regex-pattern-field.yaml",
+    "references/drift-mapping.md",
+    "references/example-repos.md",
+    "references/schema-patterns.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Kevin Rohan Vaz",
+    "handle": "kevinrvaz",
+    "user_id": "s17d26vzq6j3bkdvf2xsdqayad83gyp1"
+  },
+  "slug": "openapi-parser",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openapi-parser",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openapi-parser&ownerHandle=kevinrvaz",
+    "page_url": "https://clawhub.ai/kevinrvaz/skills/openapi-parser"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 514,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Parses complex OpenAPI specs and generates Drift test cases from them. Use whenever the user wants to generate, write, or scaffold Drift tests from an OpenAP...",
+  "updated_at": 1778492590861,
+  "version": "1.0.0"
+}
