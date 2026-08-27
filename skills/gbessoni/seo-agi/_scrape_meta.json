@@ -1,0 +1,53 @@
+{
+  "changelog": "Initial release of seo-agi \u2014 a skill for generating high-quality, research-driven SEO pages optimized for Google and LLMs.\n\n- Integrates competitive intelligence workflows, sourcing real SERP and keyword data using research scripts and multiple APIs (DataForSEO, Ahrefs MCP, SEMRush MCP, GSC).\n- Enforces content architecture optimized for both search engines and LLMs: 500-token chunks, question-based headings, answer-first style, clean HTML tables.\n- Core belief system prioritizes information gain, entity consensus, and genuine expertise; specifically avoids generic or AI-detectable content patterns.\n- Includes operational guidance for API key setup, competitive data prioritization, and integration with MCP tools.\n- Provides detailed instructions for using research scripts to inform every aspect of page creation.",
+  "created_at": 1773848939143,
+  "display_name": "SEO AGI (Multi-Agent SEO: Research \u2192 Gap Analysis \u2192 Write \u2192 Validate \u2192 Ship)",
+  "fetched_at": 1787865064943,
+  "files": [
+    "CLAUDE.md",
+    "README.md",
+    "SKILL.md",
+    "SPEC.md",
+    "_meta.json",
+    "fixtures/keywords_sample.json",
+    "fixtures/serp_sample.json",
+    "references/page-templates.md",
+    "references/quality-checklist.md",
+    "references/schema-patterns.md",
+    "requirements.txt",
+    "scripts/gsc_pull.py",
+    "scripts/lib/__init__.py",
+    "scripts/lib/dataforseo.py",
+    "scripts/lib/env.py",
+    "scripts/lib/gsc_client.py",
+    "scripts/lib/serp_analyze.py",
+    "scripts/research.py",
+    "scripts/setup.py",
+    "skill-card.md",
+    "tests/test_dataforseo.py",
+    "tests/test_env.py",
+    "tests/test_serp_analyze.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ringbot",
+    "handle": "gbessoni",
+    "user_id": "s17fdxw3djp6kxqcracnheszv583fxmc"
+  },
+  "slug": "seo-agi",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/seo-agi",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=seo-agi&ownerHandle=gbessoni",
+    "page_url": "https://clawhub.ai/gbessoni/skills/seo-agi"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 717,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Write SEO pages that rank in Google AND get cited by LLMs (ChatGPT, Perplexity, Claude). Use when creating airport parking pages, local service pages, listic...",
+  "updated_at": 1778492009879,
+  "version": "0.1.0"
+}
