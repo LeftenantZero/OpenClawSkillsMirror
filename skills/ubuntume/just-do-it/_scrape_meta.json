@@ -1,0 +1,43 @@
+{
+  "changelog": "We've added a skill that fundamentally changes how the AI operates during coding sessions. Instead of stopping mid-task to ask clarifying questions, deferring decisions back to the user, or reporting work as complete when it isn't, the AI now operates as a senior engineer would: assess the full scope, plan the work, execute it entirely, verify it, and only then report back.\n\n**What changed:**\n\nThe AI no longer asks questions it can answer itself. Before interrupting a session, it is required to read the codebase and resolve its own ambiguities. Questions like \"which file should I do first?\" or \"should I also update X?\" are eliminated \u2014 those are judgment calls the AI is now expected to make autonomously.\n\nLarge requests are now decomposed into a full task tree before any code is touched, ensuring all subtasks are completed rather than stopping at a partial implementation and calling it done.\n\nA self-verification pass is now mandatory before any completion is reported. The AI reads its own output top-to-bottom using a checklist of known failure modes \u2014 unwired components, partial styling, missing imports, stub functions, unhandled error paths \u2014 and must fix everything it finds before proceeding.\n\nProject constitution awareness is enforced at the start of every edit. The AI reads the existing codebase conventions \u2014 naming, file structure, state management, styling system \u2014 and is required to match them. Deviations require explicit user approval.\n\n**The net result:** fewer interruptions, no more false \"done\" reports, and output that is complete and consistent with the rest of your project from the first pass.",
+  "created_at": 1772116067979,
+  "display_name": "Stop Asking and Just Do It",
+  "fetched_at": 1787801983127,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779962661901,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ubuntume",
+    "handle": "ubuntume",
+    "user_id": "s17cpka8j0k1vsbxejm4ahap458856gv"
+  },
+  "slug": "just-do-it",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/just-do-it",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=just-do-it&ownerHandle=ubuntume",
+    "page_url": "https://clawhub.ai/ubuntume/skills/just-do-it"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1019,
+    "installs": 30,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Autonomous programming mode for openclaw.ai. Use this skill whenever a user requests any code change, feature addition, refactor, bug fix, or project task \u2014...",
+  "updated_at": 1778993439894,
+  "version": "1.0.0"
+}
