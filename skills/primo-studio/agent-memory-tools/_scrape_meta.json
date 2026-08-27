@@ -1,0 +1,59 @@
+{
+  "changelog": "agent-memory-tools 1.0.0 \u2014 first release\n\n- Search, store, and manage workspace knowledge across four local sources: fact store (Convex/JSON), vector embeddings, BM25 full-text, and knowledge graph.\n- 100% local operation via Ollama; no API keys or cloud dependency required.\n- Includes unified search, multi-hop reasoning, fact extraction with contradiction checks, auto-ingest from file changes, and knowledge graph building.\n- Modular Python scripts for recall, extraction, ingestion, time-weighted search, and entity graph management.\n- Flexible configuration for storage backend, LLM, and embeddings provider.\n- Designed for privacy, extensibility, and easy local setup.",
+  "created_at": 1774318180331,
+  "display_name": "Agent Memory Tools",
+  "fetched_at": 1787853082794,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/benchmark-results.json",
+    "references/configuration.md",
+    "scripts/auto_ingest.py",
+    "scripts/benchmark.py",
+    "scripts/config.json",
+    "scripts/decay_search.py",
+    "scripts/extract_facts.py",
+    "scripts/fact_store.py",
+    "scripts/knowledge_graph.py",
+    "scripts/llm_client.py",
+    "scripts/multihop_search.py",
+    "scripts/selftest.py",
+    "scripts/tests.py",
+    "scripts/unified_recall.py",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779972091291,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Primo-Studio",
+    "handle": "primo-studio",
+    "user_id": "s1759mmcbs0k8efcjjtg0swbvd83gqhk"
+  },
+  "slug": "agent-memory-tools",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-memory-tools",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-memory-tools&ownerHandle=primo-studio",
+    "page_url": "https://clawhub.ai/primo-studio/skills/agent-memory-tools"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 678,
+    "installs": 16,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Searches, stores, and manages agent memory across 4 sources (fact store, vector embeddings, BM25, knowledge graph). Runs 100% local via Ollama \u2014 no API keys,...",
+  "updated_at": 1778492138838,
+  "version": "1.0.0"
+}
