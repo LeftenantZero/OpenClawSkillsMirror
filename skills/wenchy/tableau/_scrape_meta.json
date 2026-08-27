@@ -1,0 +1,53 @@
+{
+  "changelog": "- Initial release of the tableau skill: modern configuration converter for structured config generation from Excel/CSV/XML/YAML to Protobuf-backed JSON/Text/Bin files.\n- Provides expert guidance on using the full protogen + confgen pipeline, including correct workflow, file structure, notation, and required `@TABLEAU` metasheet.\n- Enforces use of the actual `tableauc` CLI for all output\u2014never handwrite `.proto` or JSON. All input file changes are followed by immediate regeneration of outputs.\n- Details mandatory Excel styling, noterow rules, working directory (`temp/`), and minimal `config.yaml` setup.\n- Covers table structure conventions, CLI usage, and links to official documentation and test case references for accurate operation.",
+  "created_at": 1774537578052,
+  "display_name": "tableau",
+  "fetched_at": 1787846306165,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "evals/trigger_eval.json",
+    "references/config.md",
+    "references/csv/index.md",
+    "references/excel/enum.md",
+    "references/excel/field-property.md",
+    "references/excel/index.md",
+    "references/excel/keyedlist.md",
+    "references/excel/list.md",
+    "references/excel/map.md",
+    "references/excel/nesting.md",
+    "references/excel/struct.md",
+    "references/excel/styling.md",
+    "references/excel/union.md",
+    "references/excel/wellknown-types.md",
+    "references/metasheet.md",
+    "references/protoconf.md",
+    "references/types.md",
+    "references/xml/index.md",
+    "references/yaml/index.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "wenchy",
+    "handle": "wenchy",
+    "user_id": "s17ea9xg8nb59egd4773g15e4h83m3v1"
+  },
+  "slug": "tableau",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tableau",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tableau&ownerHandle=wenchy",
+    "page_url": "https://clawhub.ai/wenchy/skills/tableau"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 756,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Expert on modern configuration converter \u2014 converts Excel/CSV/XML/YAML into Protobuf-backed JSON/Text/Bin configs via protogen + confgen pipeline. Trigger wh...",
+  "updated_at": 1778492219006,
+  "version": "0.1.0"
+}
