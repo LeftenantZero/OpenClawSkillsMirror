@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of hwc-infra 1.0.0:\n\n- Provides a Huawei Cloud infrastructure management assistant based on KooCLI (hcloud).\n- Supports querying, auditing, and monitoring ECS, VPC, and RDS resources.\n- Default operations are read-only; all write or destructive actions require explicit user confirmation.\n- Automatically checks for KooCLI installation and guides the user through setup if missing.\n- Ensures security by never exposing AK/SK keys and requiring user confirmation for any changes.",
+  "created_at": 1775208289228,
+  "display_name": "Huawei Cloud Infra",
+  "fetched_at": 1787833276233,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/hcloud-queries.md",
+    "scripts/install_koocli.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090284828,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "chen_xuanwen",
+    "handle": "5xuanwen",
+    "user_id": "s172w1zcd57gvj2599zxd3v7f5845ae5"
+  },
+  "slug": "hwc-infra",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hwc-infra",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hwc-infra&ownerHandle=5xuanwen",
+    "page_url": "https://clawhub.ai/5xuanwen/skills/hwc-infra"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 632,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u534e\u4e3a\u4e91\u57fa\u7840\u8bbe\u65bd\u7ba1\u7406\u52a9\u624b\uff0c\u57fa\u4e8e KooCLI (hcloud)\u3002 \u652f\u6301\u67e5\u8be2\u3001\u5ba1\u8ba1\u548c\u76d1\u63a7\u534e\u4e3a\u4e91\u8d44\u6e90\uff1aECS\uff08\u5f39\u6027\u4e91\u670d\u52a1\u5668\uff09\u3001VPC\uff08\u865a\u62df\u79c1\u6709\u4e91\uff09\u3001RDS\uff08\u5173\u7cfb\u578b\u6570\u636e\u5e93\u670d\u52a1\uff09\u3002 \u89e6\u53d1\u6761\u4ef6\uff1a\u7528\u6237\u8be2\u95ee\u534e\u4e3a\u4e91\u8d44\u6e90\u3001ECS \u670d\u52a1\u5668\u3001VPC \u7f51\u7edc\u3001RDS \u6570\u636e\u5e93\u3001\u4e91\u8d44\u6e90\u6e05\u5355\u3001\u5b89\u5168\u5ba1\u8ba1\u3001\u8d44\u6e90\u72b6\u6001\u68c0\u67e5\u7b49\u3002 \u5199\u64cd\u4f5c/\u7834\u574f\u6027\u64cd\u4f5c\u9700\u8981\u7528\u6237...",
+  "updated_at": 1778492391153,
+  "version": "1.0.0"
+}
