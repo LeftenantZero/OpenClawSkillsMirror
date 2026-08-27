@@ -1,0 +1,35 @@
+{
+  "changelog": "- Expanded the skill\u2019s trigger conditions to always activate when a GitHub PR URL or number is provided, ensuring consistent PR description generation for PR links.\n- Clarified instructions for checking user permission to edit PRs, including guidance for unauthenticated GitHub CLI situations.\n- Updated process for updating PR descriptions: requires user approval, and mandates the PR title be excluded from the body text file when updating via GitHub CLI.\n- Ensured output of the PR description even when the user lacks edit permission, with clearer prompts for the next action.\n- No file changes; documentation and behavioral logic only.",
+  "created_at": 1775120317104,
+  "display_name": "PR Description",
+  "fetched_at": 1787834510003,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Xudong Guo",
+    "handle": "sunny0826",
+    "user_id": "s1771ge6btfxw88pj48v2asgbs83zeqa"
+  },
+  "slug": "pr-description",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pr-description",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pr-description&ownerHandle=sunny0826",
+    "page_url": "https://clawhub.ai/sunny0826/skills/pr-description"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 618,
+    "installs": 15,
+    "stars": 1,
+    "versions": 5
+  },
+  "summary": "Automatically generate a structured, high-quality Pull Request (PR) description based on the provided git diff or code changes. Trigger when the user asks to...",
+  "updated_at": 1778492366643,
+  "version": "1.1.3"
+}
