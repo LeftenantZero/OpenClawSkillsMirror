@@ -1,0 +1,40 @@
+{
+  "changelog": "Initial release of ppt-task-orchestrator.\n\n- Orchestrates the extraction of tasks from PPTX files for batch image editing workflows.\n- Parses each PPTX page for structured fields; uses OCR if fields are missing.\n- Integrates with main-image-editor and psd-automator for editing and automation.\n- Supports transactional execution with rollback on errors.\n- Aggregates and delivers batch results as a directory and a ZIP archive.\n- Provides flexible execution and fallback policies via configurable request payloads.",
+  "created_at": 1774428428350,
+  "display_name": "Ppt Task Orchestrator",
+  "fetched_at": 1787849316487,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "command-tool.ts",
+    "examples/request.bench.dryrun.json",
+    "examples/request.sample.json",
+    "lib/delivery.js",
+    "lib/ppt-parser.js",
+    "lib/task-builder.js",
+    "scripts/run-ppt-task-orchestrator.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "dhrxy",
+    "handle": "dhrxy",
+    "user_id": "s17ep23tvtyn3spbjjbf8j6zj183jznd"
+  },
+  "slug": "ppt-task-orchestrator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ppt-task-orchestrator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ppt-task-orchestrator&ownerHandle=dhrxy",
+    "page_url": "https://clawhub.ai/dhrxy/skills/ppt-task-orchestrator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 534,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Production orchestration for pptx page task extraction and batch image delivery by reusing main-image-editor + psd-automator.",
+  "updated_at": 1778492183196,
+  "version": "1.0.0"
+}
