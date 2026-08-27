@@ -1,0 +1,37 @@
+{
+  "changelog": "Binance Square Signal Agent v1.0.0\n\n- Provides an end-to-end pipeline for detecting crypto trade signals based on Binance Square narrative tracking and on-chain confirmation.\n- Scrapes 200+ Binance Square posts using Puppeteer with multi-method bot detection.\n- Runs on-chain confirmation steps for each coin via user-supplied Coinglass API/proxy (OI, funding rates, liquidations).\n- Combines four signal sources (liquidation, funding, OI/price, Square sentiment) for actionable LONG/SHORT/AVOID/WATCH calls.\n- Generates detailed markdown reports and optionally pushes summary signals to Telegram (configurable via environment variables).\n- Supports multiple modes: full scan, Telegram push, deep coin drill, and keyword/article summary.",
+  "created_at": 1776087233514,
+  "display_name": "binance-square-skill",
+  "fetched_at": 1787823574546,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "scrape-square.mjs",
+    "send-telegram.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "RU7superbeauty",
+    "handle": "ru7superbeauty",
+    "user_id": "s17btjxx0yk80a3agywsxk1st184stfd"
+  },
+  "slug": "binance-square-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/binance-square-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=binance-square-skill&ownerHandle=ru7superbeauty",
+    "page_url": "https://clawhub.ai/ru7superbeauty/skills/binance-square-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 677,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Binance Square (\u5e01\u5b89\u5e7f\u573a) signal agent. Scrapes 200+ posts via Puppeteer + API interception, detects bot-pushed narratives, runs on-chain confirmation (OI/fundin...",
+  "updated_at": 1778492568090,
+  "version": "1.0.0"
+}
