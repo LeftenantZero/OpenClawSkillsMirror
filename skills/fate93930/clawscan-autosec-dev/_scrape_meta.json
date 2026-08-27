@@ -1,0 +1,38 @@
+{
+  "changelog": "Initial release of the ClawScan skill for OpenClaw security assessment.\n\n- Provides a suite of first-pass security checks: version vulnerability, installed skills hash, and port exposure detection.\n- Enables local client registration and periodic scheduled scans with results reported only if risk is detected.\n- Implements minimal, privacy-respecting data collection for each check.\n- Delivers clear, structured risk reports with actionable recommendations and explicit scope notes.\n- User-invocable for targeted checks or full scans; configurable schedule.",
+  "created_at": 1773113610799,
+  "display_name": "clawscan",
+  "fetched_at": 1787799738101,
+  "files": [
+    "README.md",
+    "README_zh.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/api-contract.md",
+    "scripts/collect_skill_hashes.py",
+    "scripts/list_listeners.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "fate93930",
+    "handle": "fate93930",
+    "user_id": "s175ggzh2naw9keqk3fnbkfscx884fzp"
+  },
+  "slug": "clawscan-autosec-dev",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawscan-autosec-dev",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawscan-autosec-dev&ownerHandle=fate93930",
+    "page_url": "https://clawhub.ai/fate93930/skills/clawscan-autosec-dev"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 956,
+    "installs": 27,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "perform first-pass security checks for openclaw deployments by registering the client, checking whether the installed clawscan package is outdated, checking...",
+  "updated_at": 1778997195067,
+  "version": "1.0.0"
+}
