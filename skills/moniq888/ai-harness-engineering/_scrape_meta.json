@@ -1,0 +1,60 @@
+{
+  "changelog": "Initial release with automated error and learning tracking, supporting self-improving AI governance.\n\n- Added comprehensive scripts for recording, querying, summarizing, and promoting errors, feature requests, and learning events.\n- New ledger files: `error_ledger.jsonl`, `feature_ledger.jsonl`, `learnings_ledger.jsonl` for structured tracking.\n- Implemented auto-promotion of frequent learnings to workspace artifacts (SOUL.md, AGENTS.md, TOOLS.md, MEMORY.md) via scheduled tasks.\n- Automated error summary injection and pre-answer checks to avoid repeated mistakes.\n- Removed legacy README and obsolete reference/checklist files; fully revised documentation in SKILL.md with updated workflow and mechanisms.",
+  "created_at": 1775041292581,
+  "display_name": "AI Harness Engineering",
+  "fetched_at": 1787796929466,
+  "files": [
+    "PACKAGE.md",
+    "SKILL.md",
+    "_meta.json",
+    "data/error_index.json",
+    "references/error_patterns.md",
+    "scripts/export_report.py",
+    "scripts/inject_summary.py",
+    "scripts/pre_answer_check.py",
+    "scripts/promote.py",
+    "scripts/query.py",
+    "scripts/query_errors.py",
+    "scripts/record_error.py",
+    "scripts/record_feature.py",
+    "scripts/record_learning.py",
+    "scripts/review.py",
+    "scripts/stats_panel.py",
+    "scripts/update_status.py",
+    "skill-card.md",
+    "\u6d4b\u8bd5\u62a5\u544a.md",
+    "\u793a\u4f8b\u62a5\u544a.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090233436,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "moniq888",
+    "handle": "moniq888",
+    "user_id": "s1774kyr593ezfy7qtq3g4k9t983g3a1"
+  },
+  "slug": "ai-harness-engineering",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-harness-engineering",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-harness-engineering&ownerHandle=moniq888",
+    "page_url": "https://clawhub.ai/moniq888/skills/ai-harness-engineering"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 566,
+    "installs": 13,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "AI\u9a7e\u9a6d\u5de5\u7a0b\u9519\u9898\u672c\uff1a\u8bb0\u5f55OpenClaw\u6240\u6709\u88ab\u9a8c\u8bc1\u7684\u9519\u8bef\u3001\u5e7b\u89c9\u3001\u7f3a\u9677\u3001\u5931\u8bef\uff0c\u5f62\u6210\u53ef\u8ffd\u6eaf\u9519\u8bef\u53f0\u8d26\uff0c\u9a71\u52a8\u6a21\u578b\u81ea\u7701\u4e0e\u8fdb\u5316\u3002 \u89e6\u53d1\u573a\u666f\uff1a (1) \u7528\u6237\u7ea0\u6b63OpenClaw\u7684\u56de\u7b54\uff08\"\u4e0d\u5bf9\"/\"\u9519\u4e86\"/\"\u5e94\u8be5\u662f\"/\"Actually\"\u7b49\uff09 (2) OpenClaw\u56de\u7b54\u4e0e\u4e8b\u5b9e\u4e0d\u7b26\uff0c\u88ab\u7528\u6237\u6307\u51fa (3) \u4ee3\u7801\u9519\u8bef\u3001\u903b\u8f91\u9519\u8bef\u88ab\u9a8c\u8bc1...",
+  "updated_at": 1779075207691,
+  "version": "1.0.0"
+}
