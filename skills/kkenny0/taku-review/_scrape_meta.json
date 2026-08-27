@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of taku-review, a concise code review and delivery gate tool.\n\n`/taku-review` reads the actual diff, checks base branch drift, and looks for failure patterns tests often miss: unsafe query construction, trust-boundary mistakes, conditional side effects, missing error handling, and scope drift.\n\n- Analyzes code diffs for security issues, bugs, and code quality after implementation is complete.\n- Distinguishes between blocking (hard stops) and non-blocking (concerns) findings.\n- Compares delivered changes to approved intent and requirements.\n- Requires visible verification evidence (tests, build output) before approving changes.\n- Flags risks like injection vulnerabilities, missing auth, races, and resource leaks.\n- Provides a structured, three-section output: HARD STOPS, CONCERNS, and SUMMARY.",
+  "created_at": 1778555489107,
+  "display_name": "Taku Review",
+  "fetched_at": 1787808269722,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "KennyWu",
+    "handle": "kkenny0",
+    "user_id": "s17e5sm9mfd2xfq0bhb9w9bd9n840vsx"
+  },
+  "slug": "taku-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/taku-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=taku-review&ownerHandle=kkenny0",
+    "page_url": "https://clawhub.ai/kkenny0/skills/taku-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 483,
+    "installs": 10,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use after implementation is complete. Triggers after /taku-build. Analyzes diffs for security issues, bugs, and code quality. Run when asked to \"review this\"...",
+  "updated_at": 1778556107174,
+  "version": "1.0.0"
+}
