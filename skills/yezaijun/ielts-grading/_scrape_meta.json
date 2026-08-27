@@ -1,0 +1,45 @@
+{
+  "changelog": "v1.0.0\n- Added an IELTS grading skill for Writing and Speaking based on local official-style band descriptors.\n- Enforced workflow: identify task type, collect prompt info (writing required), verify prompt online (writing mandatory), then score.\n- Added robust handling for prompt/version conflicts (use prompt text and data points as source of truth).\n- Improved evidence-based scoring: each criterion requires supporting text evidence and confidence calibration.\n- Added concise Chinese output template with score breakdown, loss points, and actionable improvement suggestions.",
+  "created_at": 1776440771129,
+  "display_name": "IELTS Grading Skill",
+  "fetched_at": 1787819616460,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md",
+    "\u5199\u4f5c\u8bc4\u5206\u6807\u51c6.md",
+    "\u53e3\u8bed\u8bc4\u5206\u6807\u51c6.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090468197,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Zaijun Ye",
+    "handle": "yezaijun",
+    "user_id": "s1705adayqm2gnebr2jz05x88h851201"
+  },
+  "slug": "ielts-grading",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ielts-grading",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ielts-grading&ownerHandle=yezaijun",
+    "page_url": "https://clawhub.ai/yezaijun/skills/ielts-grading"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 688,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6839\u636e\u7528\u6237\u63d0\u4f9b\u7684\u96c5\u601d\u5199\u4f5c\u6216\u53e3\u8bed\u56de\u7b54\u8fdb\u884c\u5b98\u65b9\u6807\u51c6\u8bc4\u5206\u3002\u4f7f\u7528\u524d\u5148\u8054\u7f51\u68c0\u7d22\u5e76\u786e\u8ba4\u539f\u59cb\u9898\u76ee\uff0c\u518d\u6309\u672c\u9879\u76ee\u5185\u8bc4\u5206\u6807\u51c6\u9010\u7ef4\u5ea6\u6253\u5206\u3001\u7ed9\u51fa\u603b\u5206\u4e0e\u53ef\u6267\u884c\u6539\u8fdb\u5efa\u8bae\u3002\u9002\u7528\u4e8e\u7528\u6237\u63d0\u5230 IELTS/\u96c5\u601d\u3001\u4f5c\u6587\u6279\u6539\u3001\u53e3\u8bed\u8bc4\u5206\u3001band \u5206\u6570\u3001Task 1/Task 2\u3001speaking mock \u7b49\u573a\u666f\u3002",
+  "updated_at": 1778492643938,
+  "version": "1.0.0"
+}
