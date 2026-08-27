@@ -1,0 +1,45 @@
+{
+  "changelog": "**memory-sync v1.0.0 Changelog**\n\n- Added secure backup and restore via AES-256-GCM encryption for OpenClaw agent memory.\n- Introduced restore script (`scripts/restore_secure.py`) and encryption utilities (`scripts/crypto_utils.py`).\n- Removed previous session log analysis and local memory reconstruction functionality.\n- Now synchronizes memory via encrypted blobs downloaded from remote URLs.\n- Requires Python libraries: `cryptography`, `requests`, and `argon2-cffi`.\nInitial release of EternalClaw Memory Sync with AES-256-GCM encryption support.",
+  "created_at": 1774350917626,
+  "display_name": "EternalClaw Memory Sync",
+  "fetched_at": 1787851751040,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/crypto_utils.py",
+    "scripts/restore_secure.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090072640,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Applied-Energetic",
+    "handle": "applied-energetic",
+    "user_id": "s170r610saj6nnth6vzeew0e7n83he78"
+  },
+  "slug": "eternalmemory-sync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/eternalmemory-sync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=eternalmemory-sync&ownerHandle=applied-energetic",
+    "page_url": "https://clawhub.ai/applied-energetic/skills/eternalmemory-sync"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 515,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Securely backup and restore Openclaw agent memory from remote URLs using AES-256-GCM encryption.",
+  "updated_at": 1778492154873,
+  "version": "1.0.0"
+}
