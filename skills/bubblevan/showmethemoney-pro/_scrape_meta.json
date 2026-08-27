@@ -1,0 +1,33 @@
+{
+  "changelog": "**ShowMeTheMoney Pro 1.1.0**\n\n- Updated x402 payment handling: now parses payment parameters from the first item in the backend's accepts array (accepts[0]) and performs required unit conversion for price.\n- Clarified that all payment values (`skill_did`, `price`, `currency`, `facilitator_url`) must be extracted from backend response; hardcoded or fallback values are never used.\n- Added guidance to present the `unlocked_store` from backend 200 responses and offer research report browsing/purchase to the user; each report requires a separate x402 payment flow.\n- Simplified and refocused documentation to highlight the main workflow and remove redundant configuration/precondition sections.\n- Reiterated that the backend is the sole authority for access and payment requirements; local state or guesses must not be used.",
+  "created_at": 1776000115345,
+  "display_name": "showmethemoney-pro",
+  "fetched_at": 1787824497093,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Bubblevan",
+    "handle": "bubblevan",
+    "user_id": "s1752nbybn39bye7hqb66b0bgh83rftj"
+  },
+  "slug": "showmethemoney-pro",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/showmethemoney-pro",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=showmethemoney-pro&ownerHandle=bubblevan",
+    "page_url": "https://clawhub.ai/bubblevan/skills/showmethemoney-pro"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 738,
+    "installs": 20,
+    "stars": 0,
+    "versions": 8
+  },
+  "summary": "execute the paid showmethemoney premium action through the merchant backend. use when the user wants to unlock or run the protected showmethemoney capability...",
+  "updated_at": 1778492548178,
+  "version": "1.1.0"
+}
