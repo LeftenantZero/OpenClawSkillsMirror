@@ -1,0 +1,53 @@
+{
+  "changelog": "- Initial release of the OpenKrill skill enabling agents to make micropayments via the x402 protocol.\n- Automates wallet management, funding, and payment flows for APIs requiring 402 Payment Required responses.\n- Supports purchasing services on Browserbase (true x402) and outlines compatibility status for Firecrawl (non-standard x402).\n- Includes guidance for discovering x402-compatible APIs via the Bazaar discovery endpoint.\n- Details usage with thirdweb's fetchWithPayment API, including wallet creation and payment handling.\n- Documentation covers supported endpoints, known limitations, and best practices for agents.",
+  "created_at": 1769886991607,
+  "display_name": "openkrill",
+  "fetched_at": 1787793517206,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/config-template.json",
+    "references/API-REFERENCE.md",
+    "references/SERVICES.md",
+    "scripts/check-balance.ts",
+    "scripts/create-email.ts",
+    "scripts/create-wallet.ts",
+    "scripts/discover-services.ts",
+    "scripts/fetch-with-payment.ts",
+    "scripts/fund-wallet.ts",
+    "scripts/list-services.ts",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783654103252,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "emilankerwiik",
+    "handle": "emilankerwiik",
+    "user_id": "s17ezv5pc0y1wn51mt2te8br89885n8b"
+  },
+  "slug": "openkrill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openkrill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openkrill&ownerHandle=emilankerwiik",
+    "page_url": "https://clawhub.ai/emilankerwiik/skills/openkrill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2184,
+    "installs": 73,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Enable AI agents to make micropayments via x402 protocol. Use when purchasing browser sessions on Browserbase, scraping with Firecrawl, or any x402-compatible API. Handles wallet creation, funding, and automatic payment flows.",
+  "updated_at": 1779076555633,
+  "version": "1.0.0"
+}
