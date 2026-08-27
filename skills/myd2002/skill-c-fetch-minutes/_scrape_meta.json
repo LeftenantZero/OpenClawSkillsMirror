@@ -1,0 +1,53 @@
+{
+  "changelog": "- Adds a mandatory 20-minute grace period after meeting end before post-processing starts; only meetings ended for over 20 minutes are processed.\n- `scan` now includes a `ready_for_postprocess` flag and only returns eligible meetings; `set-waiting` requires this condition and returns `skipped=true` if not met.\n- B and C class meeting scanning fields enhanced (`meeting_end_time`, `ready_after_time`, etc.) for improved timing and retry logic.\n- Workflow and error handling updated: meetings not past the 20-minute waiting window are skipped until eligible, ensuring accurate status transitions.\n- No code or file logic changes; documentation and workflow are aligned for stricter, safer meeting post-processing.",
+  "created_at": 1776571555687,
+  "display_name": "skill-c-fetch-minutes",
+  "fetched_at": 1787818741030,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "env-example.txt",
+    "main.js",
+    "requirements.txt",
+    "scripts/commit_content.py",
+    "scripts/gitea_utils.py",
+    "scripts/log_utils.py",
+    "scripts/scan.py",
+    "scripts/set_failed.py",
+    "scripts/set_waiting.py",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090586781,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "myd2002",
+    "handle": "myd2002",
+    "user_id": "s175zrvz5m28epr76c6rt4dtex8474t6"
+  },
+  "slug": "skill-c-fetch-minutes",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-c-fetch-minutes",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-c-fetch-minutes&ownerHandle=myd2002",
+    "page_url": "https://clawhub.ai/myd2002/skills/skill-c-fetch-minutes"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 661,
+    "installs": 16,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "\u3010\u4f1a\u540e\u7eaa\u8981\u6293\u53d6\u4e0eissue\u8349\u7a3f\u751f\u6210\u3011\u6bcf10\u5206\u949f\u7531 OpenClaw cron \u89e6\u53d1\u4e00\u6b21\u3002\u8d1f\u8d23\u5728\u4f1a\u8bae\u7ed3\u675f\u540e\u4ece\u817e\u8baf\u4f1a\u8bae\u62c9\u53d6\u8f6c\u5f55\u4e0eAI\u667a\u80fd\u7eaa\u8981\uff0c\u7531 OpenClaw \u505a\u4e24\u9636\u6bb5issue\u62bd\u53d6\uff0c\u751f\u6210 draft_issue.md \u7b49\u56db\u4e2a\u6587\u4ef6\u5e76\u63d0\u4ea4\u5230 Gitea\uff0c\u6700\u540e\u901a\u77e5\u7ec4\u7ec7\u8005\u5ba1\u6838\u3002\u4e0d\u5904\u7406\u4f1a\u8bae\u521b\u5efa\u3001\u4f1a\u524d\u7b80\u62a5\u3001issue\u843d\u5730\u7b49\u573a\u666f\u3002",
+  "updated_at": 1778492662189,
+  "version": "1.0.2"
+}
