@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release \u2013 automate whiteboard video creation from SRT subtitles:\n\n- Fully automated end-to-end workflow: parses SRT to storyboard, generates images, and compiles video segments.\n- Robust environment check with clear user guidance for missing dependencies or API keys; auto-installs fixable items.\n- Modular step-based process; key phases (storyboard parsing, image generation, animation video creation) handled by subagents.\n- Strict sequence and file order validation to ensure accurate video output matching the SRT structure.\n- Unified intermediate data and result reporting in JSON for clarity and downstream use.",
+  "created_at": 1775287099284,
+  "display_name": "Whiteboard Video Workflow",
+  "fetched_at": 1787832473503,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/image-generator.md",
+    "references/storyboard-parser.md",
+    "scripts/banana_prompt_template.py",
+    "scripts/check_env.py",
+    "scripts/generate-image.py",
+    "scripts/generate-storyboard.py",
+    "scripts/workflow_helper.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090296131,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "YangAgent",
+    "handle": "yangagent",
+    "user_id": "s172zj4d0p6hg4d1r4w2ymmqxs847211"
+  },
+  "slug": "whiteboard-video-workflow",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/whiteboard-video-workflow",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=whiteboard-video-workflow&ownerHandle=yangagent",
+    "page_url": "https://clawhub.ai/yangagent/skills/whiteboard-video-workflow"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 500,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4ece SRT \u5b57\u5e55\u6587\u4ef6\u81ea\u52a8\u751f\u6210\u5b8c\u6574\u767d\u677f\u52a8\u753b\u89c6\u9891\u7684\u7aef\u5230\u7aef\u5de5\u4f5c\u6d41\u3002\u4f9d\u6b21\u5b8c\u6210\u5206\u955c\u89e3\u6790\u3001\u56fe\u7247\u751f\u6210\u3001\u89c6\u9891\u751f\u6210\u4e09\u4e2a\u9636\u6bb5\u3002\u5f53\u7528\u6237\u63d0\u4f9b SRT \u6587\u4ef6\u5e76\u8981\u6c42\u751f\u6210\u767d\u677f\u52a8\u753b\u89c6\u9891\uff0c\u6216\u8bf4\"\u4ece\u5b57\u5e55\u751f\u6210\u767d\u677f\u89c6\u9891\"\u3001\"\u767d\u677f\u89c6\u9891\u5de5\u4f5c\u6d41\"\u65f6\u89e6\u53d1\u3002",
+  "updated_at": 1778492403242,
+  "version": "0.1.0"
+}
