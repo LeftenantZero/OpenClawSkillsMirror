@@ -1,0 +1,75 @@
+{
+  "changelog": "Major upgrade introducing quantitative regime detection, volatility forecasting, robust position sizing, and backtesting.\n\n- Added VIX-based regime detection to adapt strategies to market conditions.\n- Integrated GARCH volatility forecasting for improved IV and risk estimation.\n- Introduced drawdown-constrained Kelly position sizing for smarter, risk-aware contract sizing.\n- Implemented walk-forward backtesting tools to validate scoring and position sizing models.\n- New scripts and tests: regime detection, volatility forecasting, enhanced Kelly sizing, integration and backtest validators.\n- Updated documentation to reflect quantitative enhancements and methodology changes.",
+  "created_at": 1770661940379,
+  "display_name": "Options Spread Conviction Engine",
+  "fetched_at": 1787805109505,
+  "files": [
+    "CODE_REVIEW_REPORT.md",
+    "MULTI_LEG_REPORT.md",
+    "QUANT_SCANNER.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "data/ndx100_tickers.txt",
+    "data/sp500_tickers.txt",
+    "data/test_tickers.txt",
+    "scripts/backtest_validator.py",
+    "scripts/calculator.py",
+    "scripts/chain_analyzer.py",
+    "scripts/enhanced_kelly.py",
+    "scripts/find_qqq_play.py",
+    "scripts/leg_optimizer.py",
+    "scripts/market_scanner.py",
+    "scripts/multi_leg_strategies.py",
+    "scripts/numba.py",
+    "scripts/options_math.py",
+    "scripts/position_sizer.py",
+    "scripts/quant_scanner.py",
+    "scripts/quantitative_integration.py",
+    "scripts/regime_detector.py",
+    "scripts/setup-venv.sh",
+    "scripts/spread_conviction_engine.py",
+    "scripts/test_integration.py",
+    "scripts/test_risk_validation.py",
+    "scripts/test_user_trade.py",
+    "scripts/vol_forecaster.py",
+    "skill-card.md",
+    "tests/run_tests.py",
+    "tests/test_backtest_validator.py",
+    "tests/test_enhanced_kelly.py",
+    "tests/test_regime_detector.py",
+    "tests/test_vol_forecaster.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779963221397,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "AdamNaghs",
+    "handle": "adamnaghs",
+    "user_id": "s171pakk9stg0nd05bpss3yrqs884c0c"
+  },
+  "slug": "options-spread-conviction-engine",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/options-spread-conviction-engine",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=options-spread-conviction-engine&ownerHandle=adamnaghs",
+    "page_url": "https://clawhub.ai/adamnaghs/skills/options-spread-conviction-engine"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3126,
+    "installs": 104,
+    "stars": 2,
+    "versions": 13
+  },
+  "summary": "Multi-regime options spread analysis engine with Kelly Criterion Position Sizing. Scores vertical spreads (bull put, bear call, bull call, bear put) and mult...",
+  "updated_at": 1778989280807,
+  "version": "2.2.1"
+}
