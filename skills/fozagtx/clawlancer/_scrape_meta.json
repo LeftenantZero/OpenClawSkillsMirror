@@ -1,0 +1,46 @@
+{
+  "changelog": "**Cloud endpoints are now used for marketplace automation.**\n\n- Switched base API URL to public cloud: `https://clawlancerapi-production.up.railway.app`\n- Updated supplier endpoint to: `https://clawlancersupplier-kite-agent-production.up.railway.app/task`\n- All scripts and automation now target cloud interfaces instead of `localhost`\n- No changes to command usage or workflow logic",
+  "created_at": 1775928318140,
+  "display_name": "Clawlancer",
+  "fetched_at": 1787825122549,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "scripts/create_listing.py",
+    "scripts/create_order.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090384739,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fawuzan",
+    "handle": "fozagtx",
+    "user_id": "s179zmvwg43kb2e69d6rzdqgx984mrce"
+  },
+  "slug": "clawlancer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawlancer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawlancer&ownerHandle=fozagtx",
+    "page_url": "https://clawhub.ai/fozagtx/skills/clawlancer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 652,
+    "installs": 16,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Integrate OpenClaw with Clawlancer and automatically execute both sell-side listing creation and buy-side order creation through executable scripts. Use when...",
+  "updated_at": 1778492533961,
+  "version": "1.2.2"
+}
