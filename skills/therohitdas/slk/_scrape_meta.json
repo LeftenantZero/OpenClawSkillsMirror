@@ -1,0 +1,52 @@
+{
+  "changelog": "- Initial release of the Slack CLI skill for macOS.\n- Read, send, search, and manage Slack messages and DMs directly via the slk CLI.\n- Supports Slack channel and DM reading, sending messages, searching, checking unreads, managing drafts, saved items, and viewing threads.\n- Session-based authentication: auto-extracts user session from Slack desktop app using macOS Keychain (no tokens or OAuth required).\n- Designed for personal agent workflows and heartbeat checks with extensive command options.\n- macOS only; acts with user's permissions and session.",
+  "created_at": 1770793103563,
+  "display_name": "Slk",
+  "fetched_at": 1787792477730,
+  "files": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "bin/slk.js",
+    "package.json",
+    "skill-card.md",
+    "src/api.js",
+    "src/auth.js",
+    "src/commands.js",
+    "src/drafts.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968994426,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Rohit Das",
+    "handle": "therohitdas",
+    "user_id": "s172eaks33v7ygg504kv93sdf584gqev"
+  },
+  "slug": "slk",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/slk",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=slk&ownerHandle=therohitdas",
+    "page_url": "https://clawhub.ai/therohitdas/skills/slk"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2185,
+    "installs": 70,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read, send, search, and manage Slack messages and DMs via the slk CLI. Use when the user asks to check Slack, read channels or DMs, send Slack messages, search Slack, check unreads, manage drafts, view saved items, or interact with Slack workspace. Also use for heartbeat Slack checks. Triggers on \"check slack\", \"any slack messages\", \"send on slack\", \"slack unreads\", \"search slack\", \"slack threads\", \"draft on slack\", \"read slack dms\", \"message on slack\".",
+  "updated_at": 1779076910869,
+  "version": "1.0.0"
+}
