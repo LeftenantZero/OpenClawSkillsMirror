@@ -1,0 +1,75 @@
+{
+  "changelog": "Initial release of Visual Explainer skill \u2014 generates visually rich HTML explanations for technical content.\n\n- Automatically creates self-contained HTML pages for diagrams, architecture overviews, data tables, and visual technical explanations, replacing ASCII art.\n- Proactively renders tables as HTML when they have 4+ rows or 3+ columns, instead of ASCII.\n- Offers multiple design aesthetics (Blueprint, Editorial, Paper/ink, Monochrome terminal, IDE-inspired, Data-dense); certain generic or \"AI-slop\" styles are forbidden.\n- Integrates Mermaid.js for flowcharts, diagrams, and connects visuals with matching page themes.\n- Provides workflow guidance and references for choosing layout types and aesthetics.\n- Ensures output is always viewable in a browser and communicates file paths to users.",
+  "created_at": 1773679715132,
+  "display_name": "Visual Explainer",
+  "fetched_at": 1787869871428,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SERVING-FIXED.md",
+    "SERVING.md",
+    "SKILL.md",
+    "_meta.json",
+    "commands/_server.md",
+    "commands/_visual-explainer-serve.md",
+    "package.json",
+    "prompts/diff-review.md",
+    "prompts/fact-check.md",
+    "prompts/generate-slides.md",
+    "prompts/generate-visual-plan.md",
+    "prompts/generate-web-diagram.md",
+    "prompts/plan-review.md",
+    "prompts/project-recap.md",
+    "references/css-patterns.md",
+    "references/libraries.md",
+    "references/responsive-nav.md",
+    "references/slide-patterns.md",
+    "scripts/README.md",
+    "scripts/clean-server.sh",
+    "scripts/serve-report-alt-port.sh",
+    "scripts/serve-report-auto.sh",
+    "scripts/serve-report-best-port.sh",
+    "scripts/serve-report.sh",
+    "scripts/server-port.txt",
+    "scripts/stop-server.sh",
+    "services-dependency-mapping.html",
+    "skill-card.md",
+    "templates/architecture.html",
+    "templates/data-table.html",
+    "templates/mermaid-flowchart.html",
+    "templates/slide-deck.html",
+    "templates/visual-explainer-skill-report.html"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089919528,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "bengii",
+    "handle": "bengii",
+    "user_id": "s171fb6yfp8ms1bz5rh4102zb183gs5j"
+  },
+  "slug": "visual-explainer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/visual-explainer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=visual-explainer&ownerHandle=bengii",
+    "page_url": "https://clawhub.ai/bengii/skills/visual-explainer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 862,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate beautiful, self-contained HTML pages that visually explain systems, code changes, plans, and data. Use when the user asks for a diagram, architectur...",
+  "updated_at": 1778491953611,
+  "version": "1.0.0"
+}
