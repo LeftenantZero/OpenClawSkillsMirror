@@ -1,0 +1,65 @@
+{
+  "changelog": "### v1.0.1 \u2014 Restart command auto-detection introduced\n\n- Added `scripts/detect-restart-command.mjs` for automatic detection of the appropriate OpenClaw gateway restart command.\n- Updated setup instructions and documentation to emphasize detection (not asking) of the restart method, improving reliability across environments.\n- Ensures safer recovery by probing for systemd, Docker, and container PID 1 before prompting the user.\n- No changes to existing snapshot, restore, or watchdog operation.",
+  "created_at": 1776962853467,
+  "display_name": "OpenClaw Configuration Management & Emergency Recovery",
+  "fetched_at": 1787815866176,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "hooks/watchdog-recovery/HOOK.md",
+    "hooks/watchdog-recovery/handler.ts",
+    "references/RESTORE.md",
+    "references/SETUP.md",
+    "references/TESTING.md",
+    "scripts/detect-restart-command.mjs",
+    "scripts/projects-list.mjs",
+    "scripts/projects-restore.mjs",
+    "scripts/projects-snapshot.mjs",
+    "scripts/recovery-test.mjs",
+    "scripts/restore-if-armed.mjs",
+    "scripts/restore.mjs",
+    "scripts/skills-list.mjs",
+    "scripts/skills-restore.mjs",
+    "scripts/skills-snapshot.mjs",
+    "scripts/snapshot.mjs",
+    "scripts/utils.mjs",
+    "scripts/watchdog-clear.mjs",
+    "scripts/watchdog-extend.mjs",
+    "scripts/watchdog-set.mjs",
+    "scripts/watchdog-status.mjs",
+    "scripts/watchdog-timer.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090532887,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "EncryptShawn",
+    "handle": "encryptshawn",
+    "user_id": "s17acjjwshpqj4xkbngejj57nx83zbcy"
+  },
+  "slug": "openclaw-recovery-manager",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-recovery-manager",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-recovery-manager&ownerHandle=encryptshawn",
+    "page_url": "https://clawhub.ai/encryptshawn/skills/openclaw-recovery-manager"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 711,
+    "installs": 18,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "OpenClaw Configuration Management & Emergency Recovery \u2014 configuration, skills, and projects snapshot &recovery for OpenClaw. Use this skill whenever the use...",
+  "updated_at": 1778492730420,
+  "version": "1.0.1"
+}
