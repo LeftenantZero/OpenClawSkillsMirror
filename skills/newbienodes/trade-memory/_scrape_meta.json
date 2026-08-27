@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of trade-memory skill.\n\n- Enables saving confirmed trade events or signals to a persistent local JSONL log file (trades.jsonl).\n- Accepts and validates structured JSON trade data input, with auto-generated timestamp if missing.\n- Safely appends each trade as one JSON line, auto-creating files/directories if needed.\n- Returns a JSON confirmation on success or error on invalid input.\n- Designed for easy integration with trade bots, agents, or manual logging.",
+  "created_at": 1771784948352,
+  "display_name": "Trade Memory",
+  "fetched_at": 1787802738929,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779950224008,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Indra Riswana",
+    "handle": "newbienodes",
+    "user_id": "s177wn1tdwrpbhhedmwjs9xf5x884h43"
+  },
+  "slug": "trade-memory",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/trade-memory",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=trade-memory&ownerHandle=newbienodes",
+    "page_url": "https://clawhub.ai/newbienodes/skills/trade-memory"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1227,
+    "installs": 38,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Save a trade or signal event to local memory log file (trades.jsonl). Use when a trade signal is confirmed and needs to be recorded, saved, or logged for fut...",
+  "updated_at": 1778992438823,
+  "version": "1.0.0"
+}
