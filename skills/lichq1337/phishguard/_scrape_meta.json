@@ -1,0 +1,51 @@
+{
+  "changelog": "- Primera versi\u00f3n de PhishGuard.\n- Monitorea autom\u00e1ticamente bandejas de Gmail y Outlook en busca de correos de phishing.\n- Analiza cada correo usando reglas est\u00e1ticas e IA (Claude API) para asignar niveles de riesgo (BAJO/MEDIO/ALTO/CR\u00cdTICO).\n- Act\u00faa autom\u00e1ticamente: pone en cuarentena, etiqueta, y alerta seg\u00fan el riesgo; puede notificar por Slack/Teams.\n- Dise\u00f1ado para organizaciones de 20 a 200 usuarios, con configuraci\u00f3n y comandos simples.",
+  "created_at": 1773635959700,
+  "display_name": "phishguard",
+  "fetched_at": 1787798613078,
+  "files": [
+    "INSTALACION.md",
+    "SKILL.md",
+    "_meta.json",
+    "ai-analyzer.js",
+    "gmail-adapter.js",
+    "notifier.js",
+    "package.json",
+    "phishguard.js",
+    "rules-engine.js",
+    "score-calculator.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089911837,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "lichq1337",
+    "handle": "lichq1337",
+    "user_id": "s17ej11krqy0wvv78d4zdcb01h884k2a"
+  },
+  "slug": "phishguard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/phishguard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=phishguard&ownerHandle=lichq1337",
+    "page_url": "https://clawhub.ai/lichq1337/skills/phishguard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 881,
+    "installs": 26,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Monitorea las bandejas de Gmail y Outlook en busca de correos de phishing. Analiza cada correo entrante usando reglas estaticas e IA (Claude API). Asigna un...",
+  "updated_at": 1779000612726,
+  "version": "1.0.0"
+}
