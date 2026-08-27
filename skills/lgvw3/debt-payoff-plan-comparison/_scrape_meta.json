@@ -1,0 +1,39 @@
+{
+  "changelog": "**Version 1.1.0 \u2013 Adds privacy, security, and inference improvements**\n\n- Requires explicit user consent before sending financial data to API.\n- Clarifies required/optional debt fields; adds enum validation for debt types.\n- Supports script-side inference of missing rates/payments with new flags (`--infer-missing-rate`, `--infer-missing-payment`).\n- Enforces strict marketing URL validation\u2014only shows HTTPS URLs from allowed hosts.\n- Documents new script flags and privacy/consent workflow.",
+  "created_at": 1772567825285,
+  "display_name": "Debt payoff plan comparison",
+  "fetched_at": 1787800630438,
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/api-contract.md",
+    "scripts/call_get_plans.mjs",
+    "scripts/call_get_plans.test.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Logan Van Wagoner",
+    "handle": "lgvw3",
+    "user_id": "s17187zag0wvvr10myj2210fbx8509rx"
+  },
+  "slug": "debt-payoff-plan-comparison",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/debt-payoff-plan-comparison",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=debt-payoff-plan-comparison&ownerHandle=lgvw3",
+    "page_url": "https://clawhub.ai/lgvw3/skills/debt-payoff-plan-comparison"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 1053,
+    "installs": 31,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Collect debt and mortgage inputs, call a plans API, and return payoff strategy comparisons (snowball, avalanche, refinance) with concise recommendations and...",
+  "updated_at": 1778994954678,
+  "version": "1.1.0"
+}
