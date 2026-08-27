@@ -1,0 +1,45 @@
+{
+  "changelog": "- Initial release of polymarket-fee-aware-divergence.\n- Only trades AI-market divergences that clear all costs: fees, spread, and a configurable safety margin.\n- Restricts trades to Polymarket-imported markets resolving in 30 min\u201312 hours.\n- Skips trades when costs or market conditions (e.g., wide spread, active position, or high slippage) make a positive net edge impossible.\n- Adds config options for trade size, required edge, safety margin, max spread, time-to-resolution window, and venue.\n- Each trade includes a clear reasoning string with divergence, fee, spread, and net edge calculations for transparency.",
+  "created_at": 1777399186779,
+  "display_name": "Polymarket Fee Aware Divergence",
+  "fetched_at": 1787794485988,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "fee_aware_divergence.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090573367,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Chase Webb",
+    "handle": "chasewebb",
+    "user_id": "s176yq1qj6wp0md7d8t7a1mrj583f0t8"
+  },
+  "slug": "polymarket-fee-aware-divergence",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polymarket-fee-aware-divergence",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polymarket-fee-aware-divergence&ownerHandle=chasewebb",
+    "page_url": "https://clawhub.ai/chasewebb/skills/polymarket-fee-aware-divergence"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 581,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Trades AI-vs-market divergence on Polymarket only when the gap clears fees, spread, and a configurable safety margin. Skips every trade where the math doesn'...",
+  "updated_at": 1779076173909,
+  "version": "0.1.0"
+}
