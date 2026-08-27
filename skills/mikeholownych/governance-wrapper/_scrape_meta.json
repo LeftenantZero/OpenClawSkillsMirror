@@ -1,0 +1,42 @@
+{
+  "changelog": "Initial release introducing mandatory strict-mode execution for autonomous operations with robust policy enforcement and evidence logging:\n\n- Enforces execution of all autonomous operations through a governance wrapper.\n- Implements model lock (opencode/big-pickle, no fallback, temp 0.0).\n- Enforces skill and network allowlists.\n- Controls concurrent subagents via semaphore.\n- Emits mandatory execution evidence and maintains hash-chained, append-only logs.\n- Blocks any policy violation and records evidence.",
+  "created_at": 1771937979007,
+  "display_name": "Governance.Wrapper",
+  "fetched_at": 1787791404673,
+  "files": [
+    "SKILL.md",
+    "_meta.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779956053104,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Mike Holownych",
+    "handle": "mikeholownych",
+    "user_id": "s17fq8yhnjkywhpvxxy21kz42588425e"
+  },
+  "slug": "governance-wrapper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/governance-wrapper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=governance-wrapper&ownerHandle=mikeholownych",
+    "page_url": "https://clawhub.ai/mikeholownych/skills/governance-wrapper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 690,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Mandatory strict-mode execution wrapper for autonomous operations with evidence logging and policy enforcement",
+  "updated_at": 1779077253879,
+  "version": "1.0.0"
+}
