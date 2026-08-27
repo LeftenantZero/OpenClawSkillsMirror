@@ -1,0 +1,48 @@
+{
+  "changelog": "aliyun-sls-openclaw-integration v1.0.0\n\n- Initial release of OpenClaw integration with Alibaba Cloud SLS/Observability on Linux.\n- Automates setup: installs aliyun CLI and LoongCollector, provisions machine groups, creates logstore, indexes, dashboards, collection configs, and binds them.\n- Ensures idempotent, safe reruns, and checks all key inputs (PROJECT, LOGSTORE, credentials, sudo).\n- Requires Linux host access and AK/SK environment variables already set.\n- Uses strict template mode for SLS payloads (reads from reference files, supports placeholder replacement).",
+  "created_at": 1775096428193,
+  "display_name": "Aliyun Sls Openclaw Integration",
+  "fetched_at": 1787796697158,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cli-commands.md",
+    "references/collector-config.json",
+    "references/dashboard-audit.json",
+    "references/dashboard-gateway.json",
+    "references/index.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090239797,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "cinience",
+    "handle": "cinience",
+    "user_id": "s1707avh05gnzr3g6e3m9ka6fh840rtd"
+  },
+  "slug": "aliyun-sls-openclaw-integration",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aliyun-sls-openclaw-integration",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aliyun-sls-openclaw-integration&ownerHandle=cinience",
+    "page_url": "https://clawhub.ai/cinience/skills/aliyun-sls-openclaw-integration"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 547,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when the user needs to integrate OpenClaw with Alibaba Cloud SLS/Observability, including collector setup, machine groups, indexes, dashboards, collectio...",
+  "updated_at": 1779075325928,
+  "version": "1.0.0"
+}
