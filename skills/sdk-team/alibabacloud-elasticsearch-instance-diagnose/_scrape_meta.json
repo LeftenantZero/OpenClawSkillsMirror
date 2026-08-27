@@ -1,0 +1,67 @@
+{
+  "changelog": "alibabacloud-elasticsearch-instance-diagnose 0.0.1\n\n- Initial release of the Alibaba Cloud Elasticsearch instance diagnosis skill.\n- Provides integrated analysis via Aliyun OpenAPI, CloudMonitor (CMS), and Elasticsearch REST API.\n- Includes detailed security and credential handling guidelines for both Alibaba Cloud and Elasticsearch APIs.\n- Diagnostic workflows now reference structured SOP guides under references/ for root-cause analysis and remediation.\n- Standardizes CLI usage to Aliyun CLI plugin subcommands (kebab-case), discouraging legacy invocations.\n- Scripts and guides added for verification methods and open API troubleshooting.",
+  "created_at": 1776314650506,
+  "display_name": "Alibabacloud Elasticsearch Instance Diagnose",
+  "fetched_at": 1787820978341,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/README.md",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/es-api-call-failures.md",
+    "references/es-api-catalog.md",
+    "references/es-api-diagnosis-strategy.md",
+    "references/health-events-catalog.md",
+    "references/ram-policies.md",
+    "references/related-apis.md",
+    "references/report-template.md",
+    "references/sop-activating-change-stuck.md",
+    "references/sop-cluster-health.md",
+    "references/sop-configuration.md",
+    "references/sop-cpu-load.md",
+    "references/sop-disk-storage.md",
+    "references/sop-memory-gc.md",
+    "references/sop-node-load-imbalance.md",
+    "references/sop-query-thread-pool.md",
+    "references/sop-service-avalanche.md",
+    "references/sop-write-performance.md",
+    "references/verification-method.md",
+    "scripts/_common.py",
+    "scripts/check_es_instance_health.py",
+    "scripts/openapi_cli_collect.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090567209,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-elasticsearch-instance-diagnose",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-elasticsearch-instance-diagnose",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-elasticsearch-instance-diagnose&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-elasticsearch-instance-diagnose"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 667,
+    "installs": 16,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Alibaba Cloud Elasticsearch instance diagnosis skill. Use for cluster health checks, troubleshooting, and performance analysis on Elasticsearch instances. Tr...",
+  "updated_at": 1778492613600,
+  "version": "0.0.1"
+}
