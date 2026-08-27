@@ -1,0 +1,77 @@
+{
+  "changelog": "- Initial release of the skill for 1688 \u5546\u5bb6\u91cd\u70b9\u54c1\u5708\u9009 (1688-item-selection).\n- Supports intelligent identification and layered scoring of key products based on five dimensions: sales contribution, traffic efficiency, growth potential, marketing ROI, and product health.\n- Provides CLI commands to retrieve shop data, product overview, comprehensive product scoring and selection, and keyword-based product search.\n- Enforces output of product lists without displaying scores or optimization actions; recommendations are limited (default 3, user-selectable 1\u201310).\n- Integrates interactive table selection components for multi-product scenarios, enhancing user experience.\n- Includes robust error handling and safety guidelines; only performs read-only operations, with clear environmental and output format specifications.",
+  "created_at": 1778504838617,
+  "display_name": "1688 Item Select",
+  "fetched_at": 1787808533225,
+  "files": [
+    "SKILL.md",
+    "__init__.py",
+    "_meta.json",
+    "cli.py",
+    "references/capabilities/get_item_overview.md",
+    "references/capabilities/get_shop_data.md",
+    "references/capabilities/score_and_select.md",
+    "references/capabilities/search_offer_by_keyword.md",
+    "references/interaction-specs.md",
+    "references/scoring_rules.md",
+    "references/skill_interaction_guide.md",
+    "references/table_schema.md",
+    "requirements.txt",
+    "scripts/__init__.py",
+    "scripts/_auth.py",
+    "scripts/_const.py",
+    "scripts/_errors.py",
+    "scripts/_http.py",
+    "scripts/_output.py",
+    "scripts/_tracker.py",
+    "scripts/capabilities/__init__.py",
+    "scripts/capabilities/configure/__init__.py",
+    "scripts/capabilities/configure/cmd.py",
+    "scripts/capabilities/configure/service.py",
+    "scripts/capabilities/get_item_overview/__init__.py",
+    "scripts/capabilities/get_item_overview/cmd.py",
+    "scripts/capabilities/get_item_overview/service.py",
+    "scripts/capabilities/get_shop_data/__init__.py",
+    "scripts/capabilities/get_shop_data/cmd.py",
+    "scripts/capabilities/get_shop_data/service.py",
+    "scripts/capabilities/score_and_select/__init__.py",
+    "scripts/capabilities/score_and_select/cmd.py",
+    "scripts/capabilities/score_and_select/service.py",
+    "scripts/capabilities/search_offer_by_keyword/__init__.py",
+    "scripts/capabilities/search_offer_by_keyword/cmd.py",
+    "scripts/capabilities/search_offer_by_keyword/service.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090781735,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "1688AiInfra",
+    "handle": "1688aiinfra",
+    "user_id": "s177df9srv6z2y0gd1kw90rern83hzxb"
+  },
+  "slug": "1688-item-select",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/1688-item-select",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=1688-item-select&ownerHandle=1688aiinfra",
+    "page_url": "https://clawhub.ai/1688aiinfra/skills/1688-item-select"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 631,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "1688 \u5546\u5bb6\u91cd\u70b9\u54c1\u5708\u9009 \u2014\u2014 \u57fa\u4e8e\u591a\u7ef4\u5ea6\u5546\u54c1\u8bc4\u5206\u667a\u80fd\u8bc6\u522b\u503c\u5f97\u91cd\u70b9\u8fd0\u8425\u7684\u5546\u54c1\u6216\u641c\u7d22\u5546\u54c1\u3002 \u5de5\u5177\u80fd\u529b\uff1a\u4e94\u7ef4\u5ea6\u8bc4\u5206\uff08\u9500\u552e\u8d21\u732e\u3001\u6d41\u91cf\u6548\u7387\u3001\u6210\u957f\u6f5c\u529b\u3001\u8425\u9500ROI\u3001\u5546\u54c1\u5065\u5eb7\u5ea6\uff09\uff0c\u5546\u54c1\u5206\u5c42\uff08S/A/B/C\u7ea7\uff09\uff0c\u641c\u7d22\u5546\u54c1\u3002 \u89e6\u53d1\u8bcd\uff1a\u91cd\u70b9\u54c1\u67e5\u770b\u3001\u5708\u9009\u91cd\u70b9\u54c1\u3001\u5708\u9009\u8fd0\u8425\u5546\u54c1\u3001\u4eca\u65e5\u8fd0\u8425\u91cd\u70b9\u3001\u9009\u54c1\u3001\u63a8\u8350\u5546\u54c1\u3001\u5546\u54c1\u5206\u5c42\u3001\u5546\u54c1\u4f18\u5148\u7ea7\u3001\u641c\u7d22\u5546\u54c1\u3002",
+  "updated_at": 1778505112218,
+  "version": "0.1.0"
+}
