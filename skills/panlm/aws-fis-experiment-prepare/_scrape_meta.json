@@ -1,0 +1,55 @@
+{
+  "changelog": "Initial release of aws-fis-experiment-prepare\n\n- Generate, validate, and deploy AWS FIS experiment templates (including Scenario Library scenarios and custom FIS/SSM faults).\n- Outputs a self-contained directory with all configuration and documentation, using the user's preferred language (English or Chinese).\n- Ensures resource-action compatibility before generating files; deploys via CloudFormation with self-healing retries.\n- Supports pre-built scenarios (AZ Power Interruption, App Slowdown, Cross-AZ/Region Connectivity) and custom single-action faults (including ElastiCache/Redis and MSK SSM Automation).\n- Loads and processes detailed scenario-specific references and scripts for accurate, reliable deployments.",
+  "created_at": 1778412858005,
+  "display_name": "Aws Fis Experiment Prepare",
+  "fetched_at": 1787794150589,
+  "files": [
+    "README.md",
+    "README_CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/az-power-interruption-guide.md",
+    "references/cfn-base-template.md",
+    "references/eks-pod-action-guide.md",
+    "references/elasticache-redis-guide.md",
+    "references/msk-guide.md",
+    "references/output-format.md",
+    "references/slug-conventions.md",
+    "scripts/deploy-with-retry.sh",
+    "scripts/precheck-cfn-permissions.sh",
+    "scripts/rename-output-dir.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090776929,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "panlm",
+    "handle": "panlm",
+    "user_id": "s170tnbkqyrrzzgez8ybwx5vcs86edhj"
+  },
+  "slug": "aws-fis-experiment-prepare",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aws-fis-experiment-prepare",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aws-fis-experiment-prepare&ownerHandle=panlm",
+    "page_url": "https://clawhub.ai/panlm/skills/aws-fis-experiment-prepare"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 516,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when the user wants to prepare, create, or generate an AWS FIS (Fault Injection Service) experiment configuration. Triggers on \"prepare FIS experiment\",...",
+  "updated_at": 1779076297810,
+  "version": "1.0.0"
+}
