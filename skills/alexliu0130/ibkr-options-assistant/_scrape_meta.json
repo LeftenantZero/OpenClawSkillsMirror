@@ -1,0 +1,72 @@
+{
+  "changelog": "New status_dashboard.py \u2014 one IBKR snapshot, three output formats (ANSI for terminal / Telegram-friendly Markdown / JSON for agents). Same builder feeds all three renderers. Default mode covers portfolio + positions with ITM flags + this-week expiries + Wheel stages in ~5s. --full adds IV env + recent P&L. Reviewed by independent reviewer before release; 3 critical interface-mismatch bugs caught and fixed in the same commit. ClientId offset 20.",
+  "created_at": 1778763147077,
+  "display_name": "Ibkr Options Assistant",
+  "fetched_at": 1787807004115,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/greeks_primer.md",
+    "references/options_book_summary.md",
+    "references/strategies.md",
+    "references/trading.md",
+    "references/troubleshooting.md",
+    "references/wheel_strategy.md",
+    "requirements.txt",
+    "scripts/alerts_monitor.py",
+    "scripts/concentration.py",
+    "scripts/contracts.py",
+    "scripts/cost_basis.py",
+    "scripts/earnings_calendar.py",
+    "scripts/flex_import.py",
+    "scripts/ib_client.py",
+    "scripts/market_quote.py",
+    "scripts/options_analyzer.py",
+    "scripts/options_chain.py",
+    "scripts/options_daily.py",
+    "scripts/pnl_analytics.py",
+    "scripts/portfolio_positions.py",
+    "scripts/risk_simulator.py",
+    "scripts/status_dashboard.py",
+    "scripts/technical_indicators.py",
+    "scripts/trade.py",
+    "scripts/wheel_tracker.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090810161,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "AlexLiu0130",
+    "handle": "alexliu0130",
+    "user_id": "s1795h15v46ekgqsyhrf8r6wcn83z8mk"
+  },
+  "slug": "ibkr-options-assistant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ibkr-options-assistant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ibkr-options-assistant&ownerHandle=alexliu0130",
+    "page_url": "https://clawhub.ai/alexliu0130/skills/ibkr-options-assistant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1002,
+    "installs": 21,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Interactive Brokers options & stock trading assistant. Provides real-time portfolio Greeks, option chain analysis, McMillan/Overby strategy recommendations,...",
+  "updated_at": 1778836308137,
+  "version": "0.2.6"
+}
