@@ -1,0 +1,40 @@
+{
+  "changelog": "Deep Research Pro v2.2.0 introduces strict full-text extraction, structured data requirements, and enforced source verification:\n\n- Mandatory full-text parsing and structured data extraction for all sources; sources without full text are excluded from conclusions.\n- New planning step: users must confirm at least 5 concrete search queries (`research/plan.md`) before proceeding.\n- Only sources with confirmed full-text extraction (\u226510) count towards results; each must include copied quotes, concrete data, and scoring.\n- Automatic provenance check script is now required before report generation; reports with untraceable data are blocked.\n- Enhanced cross-analysis: find and document at least 3 sets of conflicting data, clearly citing source cards.\n- Strengthened quality gates: rejects incomplete extractions, missing provenance, or insufficient card count.",
+  "created_at": 1773917853115,
+  "display_name": "Deep Research Pro v2.2",
+  "fetched_at": 1787863059142,
+  "files": [
+    "QUALITY_CRITERIA.md",
+    "RESEARCH_PROTOCOL.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/check-sourcing.sh",
+    "scripts/extract-from-pdf.py",
+    "scripts/quality-score.py",
+    "skill-card.md",
+    "templates/report-template.md",
+    "templates/source-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "xueylee-dotcom",
+    "handle": "xueylee-dotcom",
+    "user_id": "s17cfbpghyxeebsx1t64sx4ck583q0e9"
+  },
+  "slug": "deep-research-v22",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/deep-research-v22",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=deep-research-v22&ownerHandle=xueylee-dotcom",
+    "page_url": "https://clawhub.ai/xueylee-dotcom/skills/deep-research-v22"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 717,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Conducts thorough research by downloading full PDFs, extracting structured data with original text quotes, verifying sources, and generating cross-validated...",
+  "updated_at": 1778492029687,
+  "version": "2.2.0"
+}
