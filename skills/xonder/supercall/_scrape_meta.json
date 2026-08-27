@@ -1,0 +1,65 @@
+{
+  "changelog": "SuperCall 2.0.0 \u2014 adds AI-powered DTMF/IVR phone menu navigation\n\n- AI can now generate and inject DTMF (touch-tone) digits to autonomously navigate automated phone menus (IVR systems).\n- New DTMF/IVR navigation feature is fully automatic; no extra setup required for agents or users.\n- Updated documentation to reflect DTMF/IVR support and explain character/code options.\n- Significant internal refactor: removed core-bridge.ts/provider index, added dtmf.ts module.\n- No breaking changes to existing persona calling or realtime features.",
+  "created_at": 1770425466040,
+  "display_name": "Supercall",
+  "fetched_at": 1787792771687,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "index.ts",
+    "openclaw.plugin.json",
+    "package.json",
+    "skill-card.md",
+    "src/config.ts",
+    "src/dtmf.ts",
+    "src/manager.ts",
+    "src/media-stream.ts",
+    "src/providers/base.ts",
+    "src/providers/mock.ts",
+    "src/providers/openai-realtime-conversation.ts",
+    "src/providers/twilio.ts",
+    "src/providers/twilio/api.ts",
+    "src/providers/twilio/webhook.ts",
+    "src/runtime.ts",
+    "src/tunnel.ts",
+    "src/types.ts",
+    "src/utils.ts",
+    "src/voice-mapping.ts",
+    "src/webhook-security.ts",
+    "src/webhook.ts"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783658048297,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xonder",
+    "handle": "xonder",
+    "user_id": "s171f10q2hx732taz2z97njkpd8854v4"
+  },
+  "slug": "supercall",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/supercall",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=supercall&ownerHandle=xonder",
+    "page_url": "https://clawhub.ai/xonder/skills/supercall"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4507,
+    "installs": 97,
+    "stars": 6,
+    "versions": 5
+  },
+  "summary": "Make AI-powered phone calls with custom personas and goals. Uses OpenAI Realtime API + Twilio for ultra-low latency voice conversations. Supports DTMF/IVR na...",
+  "updated_at": 1779076811729,
+  "version": "2.0.0"
+}
