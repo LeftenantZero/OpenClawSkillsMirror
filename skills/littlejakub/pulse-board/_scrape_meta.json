@@ -1,0 +1,40 @@
+{
+  "changelog": "- `digest-agent.sh` and `deliver.sh` rewritten for clarity and compactness \u2014 same behaviour, less code. Single-letter internal helpers, config reads collapsed to one line each, mechanical fallback simplified.\n- `deliver.sh` Telegram payload now has `parse_mode: Markdown` baked in \u2014 header `*Pulse Board Digest*` renders bold; LLM body stays plain text.\n- LLM prompt tightened: explicit instruction against asterisks, backticks, underscores, and all Markdown.",
+  "created_at": 1773051990932,
+  "display_name": "Pulse Board",
+  "fetched_at": 1787799825406,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "deliver.sh",
+    "digest-agent.sh",
+    "install.sh",
+    "log-append.sh",
+    "plug.sh",
+    "skill-card.md",
+    "unplug.sh"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "LittleJakub",
+    "handle": "littlejakub",
+    "user_id": "s177x99cm2ge3ymq8wtbnqf6t1885c8a"
+  },
+  "slug": "pulse-board",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pulse-board",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pulse-board&ownerHandle=littlejakub",
+    "page_url": "https://clawhub.ai/littlejakub/skills/pulse-board"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1132,
+    "installs": 32,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Universal operational digest for agent skill stacks. Every scheduled skill logs its outcome with log-append.sh. Twice daily, digest-agent.sh reads the log, c...",
+  "updated_at": 1778996906117,
+  "version": "1.1.3"
+}
