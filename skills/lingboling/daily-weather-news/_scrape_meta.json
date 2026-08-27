@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of daily-weather-news, providing automated daily weather and news updates with Feishu push.\n\n- Fetches accurate weather info via Open-Meteo API using city coordinates, with Chinese weather descriptions.\n- Searches and summarizes Chinese international news using Tavily API, prioritizing major trusted news sites.\n- Generates intelligent clothing advice based on weather data.\n- Supports Feishu message push with formatted content and emoji.\n- Enables both scheduled automatic push and on-demand manual query.\n- Provides robust configuration and error handling with logging support.",
+  "created_at": 1772418837864,
+  "display_name": "Daily Weather News",
+  "fetched_at": 1787790693344,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/config.sh",
+    "references/feishu-config.md",
+    "references/tavily-api.md",
+    "references/weather-api.md",
+    "references/workflow.md",
+    "scripts/daily_push.sh",
+    "scripts/daily_push_backup_final.sh",
+    "scripts/debug_news.sh",
+    "scripts/simple_news_test.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089733994,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Alan.Chan",
+    "handle": "lingboling",
+    "user_id": "s174ft92ac1yrcb32575cpwayd8857dd"
+  },
+  "slug": "daily-weather-news",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/daily-weather-news",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=daily-weather-news&ownerHandle=lingboling",
+    "page_url": "https://clawhub.ai/lingboling/skills/daily-weather-news"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 525,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6bcf\u65e5\u5929\u6c14\u548c\u65b0\u95fb\u63a8\u9001\u6280\u80fd\uff0c\u4f7f\u7528Open-Meteo API\u83b7\u53d6\u7cbe\u786e\u5929\u6c14\u4fe1\u606f\u3001\u4e2d\u6587\u56fd\u9645\u65b0\u95fb\u641c\u7d22\u3001\u667a\u80fd\u7a7f\u8863\u5efa\u8bae\u548c\u98de\u4e66\u6d88\u606f\u63a8\u9001\u529f\u80fd\u3002\u9002\u7528\u4e8e\u9700\u8981\u6bcf\u65e5\u81ea\u52a8\u63a8\u9001\u5929\u6c14\u548c\u65b0\u95fb\u5230\u98de\u4e66\u804a\u5929\u573a\u666f\uff0c\u652f\u6301\u5b9a\u65f6\u63a8\u9001\u548c\u624b\u52a8\u67e5\u8be2\u4e24\u79cd\u6a21\u5f0f\u3002",
+  "updated_at": 1779077491109,
+  "version": "1.0.0"
+}
