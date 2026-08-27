@@ -1,0 +1,38 @@
+{
+  "changelog": "- Added explicit credential model details (`metadata.openclaw.credentialModel`), including sensitive fields and default path, for improved registry compatibility.\n- Clarified that `access_token` and `expire_in` are written to disk and overwritten on refresh; users should not commit the credentials file to version control.\n- Declared sibling skill dependency on `chanjing-credentials-guard`.\n- Updated security and credential documentation to emphasize file-based persistence and agent policy, in line with OpenClaw conventions.\n- No code or API interface changes; documentation and manifest only.",
+  "created_at": 1773884890304,
+  "display_name": "Chanjing Tts Voice Clone",
+  "fetched_at": 1787864360587,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/_auth.py",
+    "scripts/create_task.py",
+    "scripts/create_voice.py",
+    "scripts/poll_task.py",
+    "scripts/poll_voice.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "IAMZn",
+    "handle": "iamzn1018",
+    "user_id": "s174j65y6gke3t6ev7f9w23nax83qpk9"
+  },
+  "slug": "chanjing-tts-voice-clone",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/chanjing-tts-voice-clone",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=chanjing-tts-voice-clone&ownerHandle=iamzn1018",
+    "page_url": "https://clawhub.ai/iamzn1018/skills/chanjing-tts-voice-clone"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 798,
+    "installs": 21,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Use Chanjing TTS API to synthesize speech from text, using user-provided voice. Primary credential: credentials.json (app_id/secret_key; access_token and exp...",
+  "updated_at": 1778492018600,
+  "version": "1.0.3"
+}
