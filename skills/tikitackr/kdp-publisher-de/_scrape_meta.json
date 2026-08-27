@@ -1,0 +1,47 @@
+{
+  "changelog": "Erstes Release.\n\nDer kdp-publisher baut KDP-fertige PDFs aus Markdown-Kapiteln im OpenClaw-Buchstil.\n\nFeatures:\n- Typst-basiert, Inter-Font, 6x9 inch (KDP-Standard)\n- Markdown \u2192 Typst \u2192 PDF Pipeline (build-book.py, md2typ.py, compile.py)\n- QR-Code-Integration mit konfigurierbaren Links via links.json\n- Box-Styles: TIPP, WARNUNG, HINWEIS, ERFOLG\n- Einzelne Kapitel oder komplettes Buch in einem Durchlauf\n- Fonts werden von der TypeTex API bereitgestellt \u2014 kein lokales Font-Install n\u00f6tig\n\nVoraussetzungen: Python >= 3.9, Pakete `requests` und `qrcode`.",
+  "created_at": 1776910533940,
+  "display_name": "KDP Publisher DE",
+  "fetched_at": 1787816503516,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/build-book.py",
+    "scripts/compile.py",
+    "scripts/kdp-book.typ.txt",
+    "scripts/md2typ.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090516285,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Tikitackr",
+    "handle": "tikitackr",
+    "user_id": "s172swddddh0zqm3rehfs3cvxh84a9ya"
+  },
+  "slug": "kdp-publisher-de",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kdp-publisher-de",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kdp-publisher-de&ownerHandle=tikitackr",
+    "page_url": "https://clawhub.ai/tikitackr/skills/kdp-publisher-de"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 620,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "KDP Publisher DE konvertiert Markdown-Kapitel in professionell formatierte, KDP-f\u00e4hige PDFs im OpenClaw-Buchstil mit QR-Codes.",
+  "updated_at": 1778492719009,
+  "version": "1.0.0"
+}
