@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release with AWS service-specific chaos engineering research workflow:\n\n- Supports user queries for chaos testing, fault injection, resilience, or HA of specific AWS services (e.g., RDS, EKS, MSK, S3, Lambda).\n- Scenario-Library-first approach: fetches and summarizes AWS FIS Scenario Library documentation for relevant built-in scenarios.\n- Dynamically discovers available FIS actions per region, supporting region detection through explicit mention, context, or CLI default.\n- Handles both directly and indirectly relevant scenarios, with clear extraction of prerequisites, resource tags, and stop conditions.\n- All AWS documentation and action discovery workflows are strictly sequential, with robust retry logic to handle rate limits and transient errors.\n- Multilingual output: responds in the user's input language (English, Chinese, or mixed), following user preference.",
+  "created_at": 1778412848261,
+  "display_name": "Aws Service Chaos Research",
+  "fetched_at": 1787808820291,
+  "files": [
+    "README.md",
+    "README_CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/output-template.md",
+    "references/search-queries.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "panlm",
+    "handle": "panlm",
+    "user_id": "s170tnbkqyrrzzgez8ybwx5vcs86edhj"
+  },
+  "slug": "aws-service-chaos-research",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aws-service-chaos-research",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aws-service-chaos-research&ownerHandle=panlm",
+    "page_url": "https://clawhub.ai/panlm/skills/aws-service-chaos-research"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 543,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when the user asks about chaos engineering, fault injection, resilience testing, or HA verification for a SPECIFIC AWS service (e.g., RDS, EKS, MSK, Elas...",
+  "updated_at": 1778492892498,
+  "version": "1.0.0"
+}
