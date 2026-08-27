@@ -1,0 +1,34 @@
+{
+  "changelog": "Self-preserve 1.0.0\n\n- Initial release providing backup readiness and disaster recovery assessment for OpenClaw agents.\n- Checks existence and backup status of agent config, memory, identity, workspace, and skills files.\n- Detects local backups, surfaces offsite backup marker file if present, and inspects recent backup history.\n- Advises on best practices for offsite disaster recovery and version control (advisory only, does not implement).\n- Supports user-gated creation and management of automated backup cron jobs via Claude-native tools.\n- Strictly read-only for critical files; never reads contents or accesses credential directories.",
+  "created_at": 1775086818922,
+  "display_name": "Self Preserve",
+  "fetched_at": 1787835373714,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Gavin Lin",
+    "handle": "gavinlinasd",
+    "user_id": "s17f5xsp0mvmqfa2rzbj8e7vrn8401dh"
+  },
+  "slug": "self-preserve",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/self-preserve",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=self-preserve&ownerHandle=gavinlinasd",
+    "page_url": "https://clawhub.ai/gavinlinasd/skills/self-preserve"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 863,
+    "installs": 23,
+    "stars": 1,
+    "versions": 8
+  },
+  "summary": "Backup readiness and disaster recovery for your OpenClaw agent. Checks whether your memory, identity, config, skills, and workspace files are covered by a re...",
+  "updated_at": 1778492356127,
+  "version": "1.0.0"
+}
