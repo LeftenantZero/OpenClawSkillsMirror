@@ -1,0 +1,40 @@
+{
+  "changelog": "Initial release.\n\n- status:   POST /v1/status   \u2014 \uc0ac\uc5c5\uc790 \uc0c1\ud0dc\uc870\ud68c (\uacc4\uc18d/\ud734\uc5c5/\ud3d0\uc5c5, \uacfc\uc138\uc720\ud615). Up to 100 b_no per call.\n- validate: POST /v1/validate \u2014 \uc9c4\uc704\ud655\uc778 (b_no + \uac1c\uc5c5\uc77c + \ub300\ud45c\uc790\uba85 NTS match).\n- format:   local checksum + XXX-XX-XXXXX formatter. No API key required.\n- bulk:     file-driven sweep with checksum pre-filter, auto-batched 100/req.\n\nPure bash + curl + jq. JSONL output for jq pipelines.\nPairs with unified-invoice, opendart-cli, juso-address-cli.",
+  "created_at": 1777162138639,
+  "display_name": "NTS BizNo CLI",
+  "fetched_at": 1787814649464,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/supplier-audit.md",
+    "scripts/_common.sh",
+    "scripts/bulk.sh",
+    "scripts/format.sh",
+    "scripts/status.sh",
+    "scripts/validate.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Chloe Park",
+    "handle": "chloepark85",
+    "user_id": "s176h4kgd3ahcdsgj48g3epf1584a12v"
+  },
+  "slug": "nts-bizno-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nts-bizno-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nts-bizno-cli&ownerHandle=chloepark85",
+    "page_url": "https://clawhub.ai/chloepark85/skills/nts-bizno-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 568,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Verify Korean business registration numbers (\uc0ac\uc5c5\uc790\ub4f1\ub85d\ubc88\ud638) via the official NTS (\uad6d\uc138\uccad) public API. Operating-status lookup (\uacc4\uc18d/\ud734\uc5c5/\ud3d0\uc5c5), full authenticity check (b_n...",
+  "updated_at": 1778492754690,
+  "version": "0.1.0"
+}
