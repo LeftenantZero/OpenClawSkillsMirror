@@ -1,0 +1,49 @@
+{
+  "changelog": "- Added Node.js support for environment setup, artifact export, and tool invocation (`scripts/setup_env.mjs`, `scripts/export_artifact.mjs`, `scripts/invoke_artifact.mjs`)\n- Introduced standalone tool invoker scripts for both Node.js and Python environments\n- Updated usage and examples to prefer Node.js (`.mjs` scripts), with Python as a fallback\n- Expanded documentation: how to invoke exported tools with an args JSON file, normalized output structure, and runtime selection rules\n- Emphasized not constructing raw HTTP requests manually\u2014use script-based invocation with artifact metadata",
+  "created_at": 1774023609502,
+  "display_name": "ai-payment-token",
+  "fetched_at": 1787797467246,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/export_artifact.mjs",
+    "scripts/export_artifact.py",
+    "scripts/invoke_artifact.mjs",
+    "scripts/invoke_artifact.py",
+    "scripts/setup_env.mjs",
+    "scripts/setup_env.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090014267,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "shifenghu",
+    "handle": "shifenghu",
+    "user_id": "s175dmd8yq41r7b16tyqg4g13583rqyd"
+  },
+  "slug": "aicade-galaxy-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aicade-galaxy-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aicade-galaxy-skill&ownerHandle=shifenghu",
+    "page_url": "https://clawhub.ai/shifenghu/skills/aicade-galaxy-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 741,
+    "installs": 19,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Use this skill when the user wants to configure, export, or validate AICADE Galaxy dynamic services for AI use, including setting AICADE_GALAXY_* environment...",
+  "updated_at": 1779074031091,
+  "version": "1.0.1"
+}
