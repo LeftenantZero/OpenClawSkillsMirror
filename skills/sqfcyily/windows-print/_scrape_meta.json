@@ -1,0 +1,45 @@
+{
+  "changelog": "- Initial release of windows-print skill.\n- Allows printing of files on Windows only upon clear, explicit user instruction (e.g. \"print\", \"\u6253\u5370\").\n- Supports selection of printer, multiple copies, and optional wait for print job.\n- Files are printed via bundled PowerShell scripts, accepting inbound attachments or local file paths.\n- Enforces strict safety: never prints files automatically or based on inferred intent; always confirms with user before printing.",
+  "created_at": 1773579988403,
+  "display_name": "Windows Print",
+  "fetched_at": 1787872248241,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/Get-InstalledPrinters.ps1.txt",
+    "scripts/Invoke-WindowsPrint.ps1.txt",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089897850,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "sqfcyily",
+    "handle": "sqfcyily",
+    "user_id": "s17ekd9hpkjbxh6jz05rwzkx6n83p7b4"
+  },
+  "slug": "windows-print",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/windows-print",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=windows-print&ownerHandle=sqfcyily",
+    "page_url": "https://clawhub.ai/sqfcyily/skills/windows-print"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 909,
+    "installs": 23,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Print files (often inbound attachments from chat apps like Feishu/Lark, or any local file path) on Windows. Use ONLY when the user explicitly asks to print (...",
+  "updated_at": 1778491925219,
+  "version": "1.0.0"
+}
