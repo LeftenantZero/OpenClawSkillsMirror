@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of visnote-image-creator skill: automate XiaoHongShu-style image generation.\n\n- Analyzes user input, extracts relevant information, and selects suitable templates from a live registry.\n- Merges user-provided content with template defaults to generate highly contextual images.\n- Fetches and caches template lists using API, with smart cache reuse or refresh based on user request flow.\n- Prerequisite check for API Key in config.json before processing any generation requests, with clear user messaging if missing.\n- Supports advanced template selection logic based on content type, tags, and user intent.\n- Facilitates seamless, automated production of social media cover images and content visuals.",
+  "created_at": 1775315898360,
+  "display_name": "Visnote Image Creator",
+  "fetched_at": 1787832175102,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "claw.config.json",
+    "example-config.json",
+    "package.json",
+    "scripts/generate-image.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090303340,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "katherine0325",
+    "handle": "katherine0325",
+    "user_id": "s1767vtscq1p94r82q06scj65d847qta"
+  },
+  "slug": "visnote-image-creator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/visnote-image-creator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=visnote-image-creator&ownerHandle=katherine0325",
+    "page_url": "https://clawhub.ai/katherine0325/skills/visnote-image-creator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 579,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "This skill should be used when generating XiaoHongShu (\u5c0f\u7ea2\u4e66) style images. The AI analyzes user requirements, reads template registry to select appropriate te...",
+  "updated_at": 1778492412046,
+  "version": "0.1.0"
+}
