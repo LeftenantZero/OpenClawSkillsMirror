@@ -1,0 +1,63 @@
+{
+  "changelog": "Initial release of Hostinger VPS MCP Tools skill for setting up AI agent workstations.\n\n- Automates deployment and configuration of Hostinger VPS servers as AI assistant workstations with GUI, Docker, and OpenClaw support.\n- Integrates with Hostinger API MCP tools for provisioning, OS selection, server hardening, and remote access setup.\n- Includes step-by-step scripts for full server setup, GUI installation (XFCE + XRDP), Docker install, and OpenClaw deployment.\n- Provides a dedicated UI tab for managing API tokens, viewing tools, and initiating deployments.\n- Emphasizes secure token storage and post-deployment hardening options (e.g., VPN, SSH keys, firewall).\n- Features clear documentation for both automated and manual deployment workflows.",
+  "created_at": 1772404703176,
+  "display_name": "Hostinger VPS MCP Tools",
+  "fetched_at": 1787790541892,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/hostinger-backend.ts",
+    "references/hostinger-controller.ts",
+    "references/hostinger-notes.md",
+    "references/hostinger-views.ts",
+    "references/identity-setup.md",
+    "references/security-options.md",
+    "scripts/01-server-setup.sh",
+    "scripts/02-install-gui.sh",
+    "scripts/03-install-docker.sh",
+    "scripts/04-deploy-koda.sh",
+    "scripts/05-configure-identity.sh",
+    "scripts/deploy-all.sh",
+    "scripts/security/harden-server.sh",
+    "scripts/security/lockdown-public.sh",
+    "scripts/security/setup-cloudflare-tunnel.sh",
+    "scripts/security/setup-https.sh",
+    "scripts/security/setup-ssh-keys.sh",
+    "scripts/security/setup-tailscale.sh",
+    "scripts/security/setup-wireguard.sh",
+    "scripts/setup-mcp-integrations.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089733953,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "maverick-software",
+    "handle": "maverick-software",
+    "user_id": "s172zy52hz8d9fxcmyr9padghd842s7c"
+  },
+  "slug": "hostinger-vps-mcp-tools",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hostinger-vps-mcp-tools",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hostinger-vps-mcp-tools&ownerHandle=maverick-software",
+    "page_url": "https://clawhub.ai/maverick-software/skills/hostinger-vps-mcp-tools"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1097,
+    "installs": 31,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Set up Hostinger VPS servers as AI virtual employees with GUI and Koda (OpenClaw). Use when deploying new VPS instances, setting up remote desktops, installi...",
+  "updated_at": 1779077536070,
+  "version": "1.0.0"
+}
