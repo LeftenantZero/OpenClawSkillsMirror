@@ -1,0 +1,59 @@
+{
+  "changelog": "Initial release of the check-user-fraud skill:\n\n- Analyzes user fraud/shuadan behaviors by querying a MySQL database.\n- Detects suspicious patterns via time intervals, publisher concentration, task duplication, and top refresh status.\n- Provides a structured fraud risk assessment (high, medium, low) with clear output format.\n- Includes practical usage scenarios, database configuration notes, and example SQL references.\n- Requires pymysql and appropriate database credentials.",
+  "created_at": 1772946016857,
+  "display_name": "Check User Fraud",
+  "fetched_at": 1787789833025,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/fraud_analysis_guide.md",
+    "references/query_account_trans.sql",
+    "references/query_top_refresh.sql",
+    "references/query_user_records.sql",
+    "scripts/analyze_task_completers.py",
+    "scripts/analyze_user_publisher_tasks.py",
+    "scripts/analyze_user_tasks_completers.py",
+    "scripts/check_fraud.py",
+    "scripts/check_fraud_enhanced.py",
+    "scripts/fraud_analyzer.py",
+    "scripts/query_user_detail.py",
+    "scripts/query_user_login_logs.py",
+    "scripts/query_user_task_ops.py",
+    "scripts/query_user_visit_logs.py",
+    "scripts/query_users_by_ip.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089797944,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "star1986c",
+    "handle": "star1986c",
+    "user_id": "s17egt680pqxs5bj86w62p1knn83nr9y"
+  },
+  "slug": "check-user-fraud",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/check-user-fraud",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=check-user-fraud&ownerHandle=star1986c",
+    "page_url": "https://clawhub.ai/star1986c/skills/check-user-fraud"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 919,
+    "installs": 26,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query MySQL database to analyze user fraud/shuadan behavior. Use when user asks to check if a user is engaging in fraudulent task completion. Analyzes time i...",
+  "updated_at": 1779077797312,
+  "version": "1.0.0"
+}
