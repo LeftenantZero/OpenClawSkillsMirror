@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of gemini-worker: headless Gemini CLI agent for background or parallel tasks.\n\n- Run Gemini CLI non-interactively for automation, fallback, or parallel batch jobs.\n- Designed for scenarios where Anthropic API is overloaded (529 errors), deep analysis, or validation outside the main agent loop.\n- Supports prompt-as-argument mode with `-p \"...\" --yolo` and custom directory access via `--include-directories`.\n- CLI authentication managed once interactively; subsequent runs use cached credentials.\n- Known limitations: no OpenClaw integration, unreliable headless WebFetchTool, workspace directory restrictions.\n- Includes bash, PowerShell, and CMD wrapper scripts and extensive usage guides and troubleshooting docs.",
+  "created_at": 1775482634900,
+  "display_name": "Gemini Worker",
+  "fetched_at": 1787830238629,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/acp-vs-headless.md",
+    "references/prompt-patterns.md",
+    "references/troubleshooting.md",
+    "scripts/gemini-run.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090319958,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Trip",
+    "handle": "cl0ckt0wer",
+    "user_id": "s176aj9sdydcgzxpwqjwgt9tb184a9dz"
+  },
+  "slug": "gemini-worker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gemini-worker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gemini-worker&ownerHandle=cl0ckt0wer",
+    "page_url": "https://clawhub.ai/cl0ckt0wer/skills/gemini-worker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 601,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Run Gemini CLI as a headless worker agent for long-running or parallelizable tasks. Use when: (1) Anthropic API is overloaded/unavailable (529 errors) and yo...",
+  "updated_at": 1778492440806,
+  "version": "1.0.0"
+}
