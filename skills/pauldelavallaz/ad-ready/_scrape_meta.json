@@ -1,0 +1,55 @@
+{
+  "changelog": "Improved routing: URL-based vs file-based differentiation",
+  "created_at": 1770269846186,
+  "display_name": "Ad-Ready",
+  "fetched_at": 1787805633253,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "configs/Brief_Generator/brief_prompt.json",
+    "configs/Product_to_Ads/Master_prompt_01_Awareness.json",
+    "configs/Product_to_Ads/Master_prompt_02_Interest.json",
+    "configs/Product_to_Ads/Master_prompt_03_Consideration.json",
+    "configs/Product_to_Ads/Master_prompt_04_Evaluation.json",
+    "configs/Product_to_Ads/Master_prompt_05_Conversion.json",
+    "configs/Product_to_Ads/Master_prompt_06_Retention.json",
+    "configs/Product_to_Ads/Master_prompt_07_Loyalty.json",
+    "configs/Product_to_Ads/Master_prompt_08_Advocacy.json",
+    "configs/Product_to_Ads/Master_prompt_09_Morfeo_Creative.json",
+    "configs/Reference_Analyzer/reference_analysis_prompt.txt",
+    "scripts/generate.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783654557082,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Paul de Lavallaz",
+    "handle": "pauldelavallaz",
+    "user_id": "s17es8yqc61443cxz7kbvr73rs884ggf"
+  },
+  "slug": "ad-ready",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ad-ready",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ad-ready&ownerHandle=pauldelavallaz",
+    "page_url": "https://clawhub.ai/pauldelavallaz/skills/ad-ready"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4057,
+    "installs": 134,
+    "stars": 4,
+    "versions": 7
+  },
+  "summary": "Generate advertising images automatically from a product URL + brand profile.\n\n\u2705 USE WHEN:\n- User provides a product URL (e-commerce link)\n- Want automated product scraping + image generation\n- Have a brand profile to apply (70+ brands available)\n- Need funnel-stage targeting (awareness/consideration/conversion)\n- Want AI to auto-select model, scene, lighting based on brand\n\n\u274c DON'T USE WHEN:\n- User provides local product image file \u2192 use morpheus-fashion-design\n- Don't need a person in the image \u2192 use nano-banana-pro\n- Want manual control over model, scene, packs \u2192 use morpheus-fashion-design\n- Already have hero image, need variations \u2192 use multishot-ugc\n- Need video output \u2192 use veed-ugc after image generation\n\nINPUT: Product URL + brand name (optional) + funnel stage (optional)\nOUTPUT: PNG advertising image with product + model",
+  "updated_at": 1778988347418,
+  "version": "1.0.2"
+}
