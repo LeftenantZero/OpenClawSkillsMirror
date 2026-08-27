@@ -1,0 +1,52 @@
+{
+  "changelog": "- Improves handling of Zeplin screen links: extracts valid screen URLs and prompts users for correct links if needed.\n- Adds per-project token management, including automated token lookup, masked prompts for missing tokens, and secure storage.\n- Supports exporting multiple Zeplin screens in one command and packages local assets and metadata into a zip file.\n- Replies with clear export status and usage instructions, including a summary of successes and failures.\n- Includes real-time progress updates when exporting multiple screens.",
+  "created_at": 1773490775882,
+  "display_name": "Zeplin to Prompt",
+  "fetched_at": 1787873958245,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "export_project.mjs",
+    "export_screen.mjs",
+    "lib/assets.mjs",
+    "lib/fsHelpers.mjs",
+    "lib/htmlDocument.mjs",
+    "lib/layerTree.mjs",
+    "lib/logger.mjs",
+    "lib/minifyLayout.mjs",
+    "lib/previewClient.js",
+    "lib/previewStyles.css",
+    "lib/renderHtml.mjs",
+    "lib/renderIndex.mjs",
+    "lib/renderLayer.mjs",
+    "lib/renderTree.mjs",
+    "lib/styleMapping.mjs",
+    "lib/zeplinClient.mjs",
+    "package-lock.json",
+    "package.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "sullivangu89",
+    "handle": "sullivangu",
+    "user_id": "s174e9kv2zc706qdx9r9yb5jb583g75q"
+  },
+  "slug": "zeplin-to-prompt",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/zeplin-to-prompt",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=zeplin-to-prompt&ownerHandle=sullivangu",
+    "page_url": "https://clawhub.ai/sullivangu/skills/zeplin-to-prompt"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 736,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Export one or more Zeplin screen URLs into a structured layer tree with local assets and package the result as a zip file. Use when a user shares an app.zepl...",
+  "updated_at": 1778491905918,
+  "version": "1.0.1"
+}
