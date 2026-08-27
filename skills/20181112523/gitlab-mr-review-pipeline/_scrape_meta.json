@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release of gitlab-mr-review-pipeline.\n\n- Automates GitLab Merge Request (MR) code review using AI, generates detailed reports, and emails them to authors.\n- Integrates with code-review, md-to-pdf-advanced, and email-mail-master skills for AI audit, PDF report generation, and email delivery.\n- Provides configuration, initialization scripts, and step-by-step processing of MRs to avoid duplicate reviews.\n- Includes troubleshooting and security recommendations.\n- Supports output of markdown and PDF audit reports, with customizable templates and cleanup scripts.",
+  "created_at": 1774795801463,
+  "display_name": "Gitlab Mr Review Pipeline",
+  "fetched_at": 1787797120751,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.yaml",
+    "references/review-report-template.md",
+    "scripts/cleanup.py",
+    "scripts/gitlab-api.py",
+    "scripts/init-config.py",
+    "scripts/mr-records.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090180726,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "20181112523",
+    "handle": "20181112523",
+    "user_id": "s176trqke3gyp7zm80320gnpm183hbfs"
+  },
+  "slug": "gitlab-mr-review-pipeline",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gitlab-mr-review-pipeline",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gitlab-mr-review-pipeline&ownerHandle=20181112523",
+    "page_url": "https://clawhub.ai/20181112523/skills/gitlab-mr-review-pipeline"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 703,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u81ea\u52a8\u5316 GitLab MR \u4ee3\u7801\u5ba1\u6838\u6d41\u6c34\u7ebf\u3002\u4f7f\u7528 AI \u5bf9 MR \u8fdb\u884c\u4ee3\u7801\u5ba1\u67e5\uff0c\u751f\u6210\u62a5\u544a\u5e76\u90ae\u4ef6\u53d1\u9001\u7ed9\u63d0\u4ea4\u4eba\u3002",
+  "updated_at": 1779074924525,
+  "version": "1.0.0"
+}
