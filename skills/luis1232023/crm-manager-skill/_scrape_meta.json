@@ -1,0 +1,57 @@
+{
+  "changelog": "crm-manager-skill 4.0.0 introduces service record management and analytics:\n\n- Added structured service record functionality, including support for progress tracking, types, attendance, and outcome.\n- Extended data model: customer YAML now supports `email`, `wechat_id`, and nested `service_records`.\n- Introduced sales and service analytics, including sales funnel/statistics reporting (`analyze_sales_funnel.py`).\n- New scripts: add sales activity, add service record, auto-tagger, industry fields, NLP support.\n- Expanded search: now supports search by email and WeChat ID.\n- Updated documentation to reflect all new and extended features.",
+  "created_at": 1775196578097,
+  "display_name": "Crm Manager Skill",
+  "fetched_at": 1787833487418,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "data/customers/\u793a\u4f8b\u5ba2\u6237.yaml",
+    "references/design_reference.md",
+    "scripts/add_note.py",
+    "scripts/add_sales_activity.py",
+    "scripts/add_service_record.py",
+    "scripts/analyze_sales_funnel.py",
+    "scripts/auto_tagger.py",
+    "scripts/create_customer.py",
+    "scripts/industry_fields.py",
+    "scripts/nlp_parser.py",
+    "scripts/nlp_service_record.py",
+    "scripts/query_customer.py",
+    "scripts/search_customers.py",
+    "scripts/update_customer.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090284130,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "joinliu",
+    "handle": "luis1232023",
+    "user_id": "s17a3v02cm416w18vpcxxck3xd8458tc"
+  },
+  "slug": "crm-manager-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/crm-manager-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=crm-manager-skill&ownerHandle=luis1232023",
+    "page_url": "https://clawhub.ai/luis1232023/skills/crm-manager-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 658,
+    "installs": 15,
+    "stars": 2,
+    "versions": 5
+  },
+  "summary": "\u4e00\u4e2a\u57fa\u4e8e\u5bf9\u8bdd\u7684\u5ba2\u6237\u5173\u7cfb\u7ba1\u7406\u6280\u80fd\u3002\u7ba1\u7406\u5458\u901a\u8fc7\u81ea\u7136\u8bed\u8a00\u5f55\u5165\u5ba2\u6237\u4fe1\u606f\uff0c \u7cfb\u7edf\u81ea\u52a8\u5c06\u5ba2\u6237\u8d44\u6599\u5b58\u50a8\u4e3a YAML \u6587\u4ef6\uff0c\u5e76\u652f\u6301\u67e5\u8be2\u3001\u66f4\u65b0\u3001\u8ddf\u8e2a\u7b49\u529f\u80fd\u3002 \u7528\u4e8e\uff1a - \u65b0\u589e\u5ba2\u6237\u5e76\u4fdd\u5b58\u4e3a YAML \u6587\u4ef6 - \u66f4\u65b0\u5ba2\u6237\u4fe1\u606f - \u6dfb\u52a0\u8ddf\u8fdb\u8bb0\u5f55 - \u6dfb\u52a0\u9500\u552e\u884c\u4e3a\u8bb0\u5f55\uff08\u652f\u6301\u9500\u552e\u6f0f\u6597\u5206\u6790\uff09 - \u67e5\u8be2\u5ba2\u6237\u8d44\u6599 - \u6761\u4ef6\u641c\u7d22\u5ba2\u6237 - \u9500\u552e\u6f0f\u6597\u5206\u6790\u62a5\u8868",
+  "updated_at": 1778492386850,
+  "version": "4.0.0"
+}
