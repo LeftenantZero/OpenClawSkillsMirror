@@ -1,0 +1,47 @@
+{
+  "changelog": "- Implemented a working OCR scanner skill using a local Bash script (`ocr.sh`) that utilizes `tesseract` for text extraction from image files.\n- Updated documentation in SKILL.md to reflect actual usage, options, and integration steps with system aliases.\n- Removed placeholder and structuring guidance from documentation, providing concrete, ready-to-use instructions.\n- The skill now provides immediate OCR capability for JPG, PNG, BMP, GIF, and TIFF files using a local Tesseract installation.",
+  "created_at": 1773970810123,
+  "display_name": "Ocr Scanner Image",
+  "fetched_at": 1787861768961,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/example_asset.txt",
+    "references/api_reference.md",
+    "scripts/example.py",
+    "scripts/ocr.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090000984,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "kaarl92",
+    "handle": "kaarl92",
+    "user_id": "s17bbhwaayxcmtz9x0evdzybcx83ngbr"
+  },
+  "slug": "ocr-scanner-image",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ocr-scanner-image",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ocr-scanner-image&ownerHandle=kaarl92",
+    "page_url": "https://clawhub.ai/kaarl92/skills/ocr-scanner-image"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 940,
+    "installs": 26,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Perform OCR on image files (jpg, png, bmp, gif, tiff) using the system's `tesseract` binary and return extracted plain text.",
+  "updated_at": 1778492046141,
+  "version": "1.0.1"
+}
