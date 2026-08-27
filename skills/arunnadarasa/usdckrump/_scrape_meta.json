@@ -1,0 +1,56 @@
+{
+  "changelog": "**Initial public release with full code and documentation.**\n\n- Added core logic and utilities for USDC Krump (USDC.k) payment over x402 on Story Aeneid EVVM.\n- Includes support for both Privy server wallet integration and legacy private key signing.\n- Provides reference implementation, parameter documentation, and example agent flows (single and two-agent).\n- Includes scripts for EVVM deposit, payment status checks, and policy-based security using Privy.\n- Example usage and required configuration included in examples and README.\n- Credentials (Privy or private key) are always user-supplied; never stored in the skill.",
+  "created_at": 1771711392561,
+  "display_name": "USDC Krump EVVM x402 Payment",
+  "fetched_at": 1787791534527,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/README-two-agents-x402.md",
+    "examples/agent-payment-example.ts",
+    "examples/agent-payment-privy-example.ts",
+    "examples/two-agents-x402-direct.ts",
+    "examples/two-agents-x402-native.ts",
+    "examples/two-agents-x402-simulation.ts",
+    "package.json",
+    "src/evvm-signer.ts",
+    "src/index.ts",
+    "src/payment-adapter.ts",
+    "src/privy-signer.ts",
+    "src/x402-signer.ts",
+    "tsconfig.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779948110449,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Arun Nadarasa",
+    "handle": "arunnadarasa",
+    "user_id": "s175spnx5m2qksm07wmc9jw9qh83hq8x"
+  },
+  "slug": "usdckrump",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/usdckrump",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=usdckrump&ownerHandle=arunnadarasa",
+    "page_url": "https://clawhub.ai/arunnadarasa/skills/usdckrump"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 703,
+    "installs": 15,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Pay with USDC Krump (USDC.k) via x402 on Story Aeneid EVVM. Supports EVVM Native adapter (no EIP-3009 on token) and legacy Bridge adapter. Requires PRIVY_APP...",
+  "updated_at": 1779077215828,
+  "version": "0.1.2"
+}
