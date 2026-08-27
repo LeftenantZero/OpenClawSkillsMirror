@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release of the self-improvement logging skill for OpenClaw and generic agent workflows.\n\n- Enables structured logging of errors, user corrections, learning, and feature requests via markdown files (`.learnings/LEARNINGS.md`, `ERRORS.md`, `FEATURE_REQUESTS.md`).\n- Provides clear quick-reference table for when and how to log learnings, including categorization and escalation guidance.\n- Outlines promotion of important learnings to project memory files (e.g., `CLAUDE.md`, `AGENTS.md`, `.github/copilot-instructions.md`).\n- Includes setup instructions for OpenClaw integration (workspace structure, automated hooks) and generic agents.\n- Defines standardized templates for logging learnings, errors, and feature requests with metadata and resolution tracking.\n- Facilitates inter-session sharing and promotion of broadly applicable knowledge within agent environments.",
+  "created_at": 1777312535296,
+  "display_name": "Feihong Self Improving Agent",
+  "fetched_at": 1787813672198,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/LEARNINGS.md",
+    "assets/SKILL-TEMPLATE.md",
+    "references/examples.md",
+    "references/hooks-setup.md",
+    "scripts/activator.sh",
+    "scripts/error-detector.sh",
+    "scripts/extract-skill.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090565839,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "SunYue1977",
+    "handle": "sunyue1977",
+    "user_id": "s175rt0962sq081rw8jpv65xmx83f1e9"
+  },
+  "slug": "feihong-self-improving-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feihong-self-improving-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feihong-self-improving-agent&ownerHandle=sunyue1977",
+    "page_url": "https://clawhub.ai/sunyue1977/skills/feihong-self-improving-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 556,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Clau...",
+  "updated_at": 1778492773271,
+  "version": "1.0.0"
+}
