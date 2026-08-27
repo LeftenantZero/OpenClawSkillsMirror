@@ -1,0 +1,64 @@
+{
+  "changelog": "- Initial release of the verified-agent-identity skill for the Billions decentralized identity network.\n- Enables agents to create, manage, and link decentralized identities to human owners using Billions ERC-8004 and Attestation Registries.\n- Provides scripts for creating identities, generating/signing/verifying challenges, and linking agents to humans.\n- Strict guardrails enforce safe identity operations and prohibit manual cryptographic key handling or unauthorized file modifications.\n- All identity data is securely managed in $HOME/.openclaw/billions, with support for encrypted key storage.\n- Comprehensive documentation and command-line usage examples included for identity linking and verification workflows.",
+  "created_at": 1777529885855,
+  "display_name": "Verified Agent Identity",
+  "fetched_at": 1787812041874,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/constants.js",
+    "scripts/createNewEthereumIdentity.js",
+    "scripts/generateChallenge.js",
+    "scripts/getDidDocument.js",
+    "scripts/getIdentities.js",
+    "scripts/linkHumanToAgent.js",
+    "scripts/manualLinkHumanToAgent.js",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "scripts/shared/attestation.js",
+    "scripts/shared/bootstrap.js",
+    "scripts/shared/storage/base.js",
+    "scripts/shared/storage/challenge.js",
+    "scripts/shared/storage/crypto.js",
+    "scripts/shared/storage/did.js",
+    "scripts/shared/storage/identities.js",
+    "scripts/shared/storage/keys.js",
+    "scripts/shared/utils.js",
+    "scripts/signChallenge.js",
+    "scripts/verifySignature.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090588812,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Sahilkhan6006",
+    "handle": "sahilkhan6006",
+    "user_id": "s179zmedz6497e0qp4w0q21d6185vf1k"
+  },
+  "slug": "sahil-agent-unique-1777529868",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sahil-agent-unique-1777529868",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sahil-agent-unique-1777529868&ownerHandle=sahilkhan6006",
+    "page_url": "https://clawhub.ai/sahilkhan6006/skills/sahil-agent-unique-1777529868"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 539,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Billions decentralized identity for agents. Link agents to human identities using Billions ERC-8004 and Attestation Registries. Verify and generate authentic...",
+  "updated_at": 1778492805944,
+  "version": "1.0.0"
+}
