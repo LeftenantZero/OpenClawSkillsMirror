@@ -1,0 +1,64 @@
+{
+  "changelog": "Initial release of the docx skill for working with Word documents.\n\n- Enables creation, reading, editing, and manipulation of .docx files, including handling formatting, tables of contents, letterheads, images, and tracked changes.\n- Supports automated and manual editing via JavaScript (`docx` library), raw XML, and conversion tools.\n- Provides detailed best practices for page size, styles, numbered/bulleted lists, and table widths for consistent, professional output.\n- Includes guidance for tracked changes, accepting revisions, and converting legacy Office files.\n- Emphasizes compatibility with Google Docs and Office platforms (e.g., margin and width rules).\n- Triggers on user requests related to Word documents, reports, memos, templates, or professional document formatting.",
+  "created_at": 1772934525071,
+  "display_name": "Docx",
+  "fetched_at": 1787799968270,
+  "files": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/__init__.py",
+    "scripts/accept_changes.py",
+    "scripts/comment.py",
+    "scripts/office/helpers/__init__.py",
+    "scripts/office/helpers/merge_runs.py",
+    "scripts/office/helpers/simplify_redlines.py",
+    "scripts/office/pack.py",
+    "scripts/office/soffice.py",
+    "scripts/office/unpack.py",
+    "scripts/office/validate.py",
+    "scripts/office/validators/__init__.py",
+    "scripts/office/validators/base.py",
+    "scripts/office/validators/docx.py",
+    "scripts/office/validators/pptx.py",
+    "scripts/office/validators/redlining.py",
+    "scripts/templates/comments.xml",
+    "scripts/templates/commentsExtended.xml",
+    "scripts/templates/commentsExtensible.xml",
+    "scripts/templates/commentsIds.xml",
+    "scripts/templates/people.xml",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089796879,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zda2019",
+    "handle": "zda2019",
+    "user_id": "s17cswtwh520nev1n2ag0qxd8d8850jt"
+  },
+  "slug": "docx-2",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/docx-2",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=docx-2&ownerHandle=zda2019",
+    "page_url": "https://clawhub.ai/zda2019/skills/docx-2"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2563,
+    "installs": 66,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of 'Word doc', 'word...",
+  "updated_at": 1778996491250,
+  "version": "0.1.0"
+}
