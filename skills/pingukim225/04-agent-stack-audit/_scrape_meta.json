@@ -1,0 +1,44 @@
+{
+  "changelog": "agent-stack-audit v1.0.0\n\n- Initial release for comprehensive monthly agent stack audits.\n- Automatically checks for zombie crons, unused scripts, inactive API keys, redundant skills, stale memory files, and outdated tools/subscriptions.\n- Classifies findings into categories: ZOMBIE (delete), REDUNDANT (replace/merge), OUTDATED (upgrade), HEALTHY (no action), or UNKNOWN (needs input).\n- Outputs a ranked, actionable cleanup report for user review.\n- Includes a weekly lightweight cron health scan.\n- Designed to prevent \"automation debt\" and improve stack reliability.",
+  "created_at": 1778730957070,
+  "display_name": "04 Agent Stack Audit",
+  "fetched_at": 1787807510503,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090801683,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "pingukim225",
+    "handle": "pingukim225",
+    "user_id": "s17bjw8xpdhrjw0ds9vq7j8pxx86kd6m"
+  },
+  "slug": "04-agent-stack-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/04-agent-stack-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=04-agent-stack-audit&ownerHandle=pingukim225",
+    "page_url": "https://clawhub.ai/pingukim225/skills/04-agent-stack-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 525,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Monthly health check for your agent stack \u2014 hunts for zombie crons, dead scripts, unused API keys, superseded tools, and stale subscriptions. Classifies each...",
+  "updated_at": 1778731039589,
+  "version": "1.0.0"
+}
