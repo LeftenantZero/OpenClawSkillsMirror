@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release of the \"gateway-restore\" skill.\n- Allows fast rollback of gateway configuration to the last known-good state via slash command or natural language.\n- Supports tagging the current config as known-good for future restores.\n- Automatically restarts the gateway with health checks and can roll back again if restart fails.\n- Slash command `/restore` is handled automatically; natural language requests execute the restore script directly.",
+  "created_at": 1776279931525,
+  "display_name": "Gateway Restore",
+  "fetched_at": 1787795464974,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/gateway-restore.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090443018,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "halfdeadcat",
+    "handle": "halfdeadcat",
+    "user_id": "s175ws1903zk4kgz0r3wqpxzd984a47y"
+  },
+  "slug": "gateway-restore",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gateway-restore",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gateway-restore&ownerHandle=halfdeadcat",
+    "page_url": "https://clawhub.ai/halfdeadcat/skills/gateway-restore"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 564,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Restore a gateway to its last known-good configuration, or tag the current config as known-good. Use when a gateway config change breaks something and you ne...",
+  "updated_at": 1779075827660,
+  "version": "1.0.0"
+}
