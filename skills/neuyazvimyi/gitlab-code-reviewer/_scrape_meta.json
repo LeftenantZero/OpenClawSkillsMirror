@@ -1,0 +1,47 @@
+{
+  "changelog": "- Overhauled workflow to use new modular scripts: gitlab_client.py (API access), ignore_matcher.py (file filtering), and post_comments.py (posting review feedback).\n- Adds comprehensive, step-by-step review process: credential check, diff fetch, ignore filtering, diff analysis, structured summary grouping, and conditional comment posting.\n- Comment format, severity criteria, and review rules are now externalized in references/review-guidelines.md for consistency.\n- Stronger engineering constraints: analyzes only diff changes, enforces strict ignore patterns, no generic praise, no speculative feedback.\n- Removed old monolithic scripts (gitlab_code_review.py, diff_parser.py, security_scanner.py) in favor of single-responsibility modules.\n- Now supports granular token capability detection and graceful error handling for API scope and diff-posting issues.",
+  "created_at": 1772362609738,
+  "display_name": "gitlab-code-reviewer",
+  "fetched_at": 1787790738496,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/review-guidelines.md",
+    "scripts/gitlab_client.py",
+    "scripts/ignore_matcher.py",
+    "scripts/post_comments.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779969183713,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Alibek Beldinov",
+    "handle": "neuyazvimyi",
+    "user_id": "s175pefdb3jebfx9jhpbcg06f983y98y"
+  },
+  "slug": "gitlab-code-reviewer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gitlab-code-reviewer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gitlab-code-reviewer&ownerHandle=neuyazvimyi",
+    "page_url": "https://clawhub.ai/neuyazvimyi/skills/gitlab-code-reviewer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1104,
+    "installs": 31,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Senior-level code review for GitLab merge requests. Use when: reviewing MRs, providing feedback on code quality, security, performance, maintainability, or p...",
+  "updated_at": 1779077473894,
+  "version": "1.0.2"
+}
