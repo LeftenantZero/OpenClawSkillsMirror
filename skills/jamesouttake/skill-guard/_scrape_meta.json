@@ -1,0 +1,44 @@
+{
+  "changelog": "Added competitive comparison table. Emphasizes what skill-guard catches that VirusTotal and skillscanner miss: prompt injections, data exfiltration, hidden instructions, AI-specific threats.",
+  "created_at": 1770330893373,
+  "display_name": "skill-guard",
+  "fetched_at": 1787792865292,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/safe-install.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783658137448,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "hola",
+    "handle": "jamesouttake",
+    "user_id": "s173g2qzy7b0vgg7gd3zaw9y3h83j1re"
+  },
+  "slug": "skill-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-guard&ownerHandle=jamesouttake",
+    "page_url": "https://clawhub.ai/jamesouttake/skills/skill-guard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 14449,
+    "installs": 465,
+    "stars": 5,
+    "versions": 3
+  },
+  "summary": "Scan ClawHub skills for security vulnerabilities BEFORE installing. Use when installing new skills from ClawHub to detect prompt injections, malware payloads, hardcoded secrets, and other threats. Wraps clawhub install with mcp-scan pre-flight checks.",
+  "updated_at": 1779076777610,
+  "version": "1.0.2"
+}
