@@ -1,0 +1,46 @@
+{
+  "changelog": "Crustacean Email Gateway Skill v1.0.0\n\n- Initial release for managing OpenClaw identity mailboxes via the Crustacean Email Gateway API.\n- Supports mailbox registration, bearer token recovery, status updates, forwarding configuration, inbox/outbox management, and outbound mail sending.\n- Includes clear API usage defaults, behavior rules, and error handling protocols.\n- Documents strict rate limits, usage caps, and security constraints.\n- No support for attachments; only one mailbox per OpenClaw instance; crustacean.email domain only.",
+  "created_at": 1775310429544,
+  "display_name": "Create And Use New Agent Email Address",
+  "fetched_at": 1787832261063,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/api.md",
+    "references/examples.md",
+    "scripts/common.py",
+    "scripts/configure_forwarding.py",
+    "scripts/get_inbox.py",
+    "scripts/get_mailbox.py",
+    "scripts/get_outbox.py",
+    "scripts/recover_token.py",
+    "scripts/register_mailbox.py",
+    "scripts/send_message.py",
+    "scripts/update_message_status.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Omar",
+    "handle": "nycomar",
+    "user_id": "s17dcwmkv3n3m6p7c70bjjvdnh8477vq"
+  },
+  "slug": "create-email-address",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/create-email-address",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=create-email-address&ownerHandle=nycomar",
+    "page_url": "https://clawhub.ai/nycomar/skills/create-email-address"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 520,
+    "installs": 12,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "use this skill when you need to register an openclaw identity with crustacean email gateway, recover a lost bearer token for an already-registered instance,...",
+  "updated_at": 1778492407928,
+  "version": "1.0.0"
+}
