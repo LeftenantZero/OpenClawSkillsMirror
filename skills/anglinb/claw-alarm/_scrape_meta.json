@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of ClawAlarm skill for managing iPhone alarms via cloud sync.\n\n- Set, update, snooze, and delete alarms on a paired iPhone running ClawAlarm.\n- Pairing uses a secure, one-time code handshake to authenticate and link the device.\n- All alarm changes sync via the ClawAlarm cloud API and reconcile to the phone automatically (no app foregrounding required).\n- Supports setting alarms with flexible recurrence (daily, weekdays, weekends, custom week masks, or one-off).\n- CLI uses a live OpenAPI spec for up-to-date API routes and payloads.\n- Token scope is device-limited and safe for personal project environments.",
+  "created_at": 1777953333105,
+  "display_name": "Claw Alarm",
+  "fetched_at": 1787810230066,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/alarm-api.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090748078,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Brian Anglin",
+    "handle": "anglinb",
+    "user_id": "s17fa59xs5e5q8qtkc4vqnar7h863wk2"
+  },
+  "slug": "claw-alarm",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claw-alarm",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claw-alarm&ownerHandle=anglinb",
+    "page_url": "https://clawhub.ai/anglinb/skills/claw-alarm"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 518,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read, create, update, snooze, and delete alarms on a user's iPhone running ClawAlarm. Use when the user asks to set an alarm, change an existing alarm's time...",
+  "updated_at": 1778492850251,
+  "version": "1.0.0"
+}
