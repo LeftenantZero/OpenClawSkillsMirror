@@ -1,0 +1,46 @@
+{
+  "changelog": "- Major update: Skill renamed to \"edrawmax-diagram\" and now exclusively uses EdrawMax AI APIs for diagram generation.\n- Supports four diagram types: flowchart, infographic, Gantt chart, and mind map, each mapped to a dedicated API endpoint.\n- Comprehensive step-by-step workflow documented: select diagram type, call the appropriate API, download images locally, and present results.\n- Enhanced guidance on error handling, including specific actions and retry logic for known error codes.\n- Clear instructions for presenting results, with emphasis on local file paths and source code for user editing.\n- Language support expanded; mapping table provided for API parameterization.",
+  "created_at": 1773408949839,
+  "display_name": "An AI skill for OpenClaw that generates professional diagrams from natural language descriptions using EdrawMax AI APIs.",
+  "fetched_at": 1787799097420,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "license.txt",
+    "references/api-reference.md",
+    "scripts/download_diagram.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089870322,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "EdrawMax-AI",
+    "handle": "xkweimeng",
+    "user_id": "s177fkhmxc00e89gkhqjn1gcd983n3cs"
+  },
+  "slug": "build-diagram",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/build-diagram",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=build-diagram&ownerHandle=xkweimeng",
+    "page_url": "https://clawhub.ai/xkweimeng/skills/build-diagram"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 921,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate diagrams from natural language using EdrawMax AI APIs. Supports four diagram types: flowchart (\u6d41\u7a0b\u56fe), infographic (\u4fe1\u606f\u56fe), Gantt chart (\u7518\u7279\u56fe), and mind...",
+  "updated_at": 1778999040846,
+  "version": "1.0.2"
+}
