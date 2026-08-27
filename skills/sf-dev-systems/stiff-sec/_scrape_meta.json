@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of Stiff-Sec: a hardening and audit tool for OpenClaw setups.\n\n- Aggressively audits for common weaknesses (plaintext keys, file permissions, dangerous endpoints).\n- Harden routines auto-backup configuration and restrict file and network settings.\n- Every change is logged with undo instructions; simple restore command included.\n- Safe default policies\u2014limits elevated tool use, locks down proxies, and marks secured state with a lockfile.\n- Easy CLI usage: audit risks, apply hardening, or restore backups with single commands.",
+  "created_at": 1774734178418,
+  "display_name": "Stiff-Sec \u2014 OpenClaw Security Hardener",
+  "fetched_at": 1787842169240,
+  "files": [
+    ".gitignore",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/audit.py",
+    "scripts/stiffen.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090174488,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "sf-dev-systems",
+    "handle": "sf-dev-systems",
+    "user_id": "s176dsfr7kh2p8nf3ehw1hes5h83rhzv"
+  },
+  "slug": "stiff-sec",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/stiff-sec",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=stiff-sec&ownerHandle=sf-dev-systems",
+    "page_url": "https://clawhub.ai/sf-dev-systems/skills/stiff-sec"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 524,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Audit and securely harden OpenClaw setups by enforcing strict permissions, disabling elevated access, fixing proxy warnings, and backing up configs automatic...",
+  "updated_at": 1778492268009,
+  "version": "1.0.0"
+}
