@@ -1,0 +1,41 @@
+{
+  "changelog": "Initial release of kosis-cli: command-line access to Korean national statistics via KOSIS OpenAPI.\n\n- Supports title search, topic/agency browsing, table metadata, and direct data download (including bulk/user-saved slices).\n- Outputs line-delimited JSON for easy use with tools like jq.\n- Covers major national statistics: population, employment, CPI, business, income, regional indicators, etc.\n- Five main commands: search, list, meta, data, and bulk.\n- Designed to integrate with related data tools: bank-of-korea-ecos-cli (macro) and opendart-cli (corporate filings).\n- Requires a KOSIS OpenAPI key and basic CLI tools (bash, curl, jq).",
+  "created_at": 1777075668732,
+  "display_name": "Kosis Cli",
+  "fetched_at": 1787815040767,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/monthly-cpi.md",
+    "scripts/_common.sh",
+    "scripts/bulk.sh",
+    "scripts/data.sh",
+    "scripts/list.sh",
+    "scripts/meta.sh",
+    "scripts/search.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Chloe Park",
+    "handle": "chloepark85",
+    "user_id": "s176h4kgd3ahcdsgj48g3epf1584a12v"
+  },
+  "slug": "kosis-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kosis-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kosis-cli&ownerHandle=chloepark85",
+    "page_url": "https://clawhub.ai/chloepark85/skills/kosis-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 611,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query Korea's national statistics portal (KOSIS, kosis.kr) via the official OpenAPI. Title search, category browsing, table metadata (items + dimensions + pe...",
+  "updated_at": 1778492746400,
+  "version": "0.1.0"
+}
