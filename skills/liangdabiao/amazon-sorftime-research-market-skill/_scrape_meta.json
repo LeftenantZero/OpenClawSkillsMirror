@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release of the amazon-sorftime-research-market-skill (Version 1.0.0)\n- Enables interactive, in-depth product research based on Sorftime MCP with an LLM agent for multi-stage analysis.\n- Splits research workflow into two phases: automated data collection (via scripts) and LLM-driven stepwise analysis (property annotation, cross analysis, VOC, barriers, final evaluation).\n- Outputs both structured Markdown reports and a web dashboard; scripts handle only data gathering and rendering.\n- Includes dashboard completeness checks and clear API usage documentation for robust, repeatable workflows.",
+  "created_at": 1774337710626,
+  "display_name": "amazon-sorftime-research-market-skill",
+  "fetched_at": 1787852190959,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/api-quick-reference.md",
+    "references/api-reference.md",
+    "references/prompt_templates.md",
+    "references/sorftime-mcp-api.md",
+    "references/troubleshooting.md",
+    "scripts/api_client.py",
+    "scripts/collect_data.py",
+    "scripts/fix_data_json.py",
+    "scripts/get_reviews.py",
+    "scripts/render_dashboard.py",
+    "scripts/run_analysis.py",
+    "scripts/validate_data.py",
+    "scripts/verify_reviews.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "liangdabiao",
+    "handle": "liangdabiao",
+    "user_id": "s1751q8y7zg7g4cphjx57122f183hzq4"
+  },
+  "slug": "amazon-sorftime-research-market-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/amazon-sorftime-research-market-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=amazon-sorftime-research-market-skill&ownerHandle=liangdabiao",
+    "page_url": "https://clawhub.ai/liangdabiao/skills/amazon-sorftime-research-market-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 652,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u57fa\u4e8eSorftime MCP\u7684\u6df1\u5ea6\u9009\u54c1\u8c03\u7814\u3002\u901a\u8fc7LLM Agent\u6267\u884c\u591a\u7ef4\u5ea6\u5206\u6790\uff1a\u6570\u636e\u91c7\u96c6\u2192\u5c5e\u6027\u6807\u6ce8\u2192\u4ea4\u53c9\u5206\u6790\u2192\u7ade\u54c1VOC\u2192\u58c1\u5792\u8bc4\u4f30\u2192\u9009\u54c1\u51b3\u7b56\u8bc4\u4f30\u3002\u4ea4\u4e92\u5f0f\u6267\u884c\uff0c\u8f93\u51faMarkdown\u62a5\u544a\u548cDashboard\u770b\u677f\u3002",
+  "updated_at": 1778492151351,
+  "version": "1.0.0"
+}
