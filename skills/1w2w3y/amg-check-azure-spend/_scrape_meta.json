@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release \u2014 provides monthly Azure subscription cost analysis with strict rate-limit handling.\n\n- Lists all accessible Azure subscriptions and lets users select analysis targets.\n- Fetches last billing month's cost breakdown by resource type, region, and service category for each subscription.\n- Uses a mandatory 1-minute wait between billing queries to prevent rate limiting; includes robust 429 (Too Many Requests) backoff logic.\n- Sequential processing only; recommends analyzing up to 5 subscriptions per run.\n- Outputs summary and detailed breakdowns, and saves a full report for reference.",
+  "created_at": 1776405395245,
+  "display_name": "AMG Azure Subscription Cost Analysis",
+  "fetched_at": 1787820153727,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "reference/error-handling.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "1w2w3y",
+    "handle": "1w2w3y",
+    "user_id": "s17bx29aep342rsazs4qcwcch9850d3k"
+  },
+  "slug": "amg-check-azure-spend",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/amg-check-azure-spend",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=amg-check-azure-spend&ownerHandle=1w2w3y",
+    "page_url": "https://clawhub.ai/1w2w3y/skills/amg-check-azure-spend"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 565,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Run only when the user explicitly asks for a monthly Azure subscription cost analysis \u2014 lists all accessible subscriptions, lets the user choose which to ana...",
+  "updated_at": 1778492635707,
+  "version": "1.0.0"
+}
