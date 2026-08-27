@@ -1,0 +1,57 @@
+{
+  "changelog": "Initial release of reddit-spy for stealth subreddit analysis:\n\n- Enables browsing, reading, and analyzing any subreddit without getting blocked, using a multi-layer fallback system (OAuth API \u2192 Tor \u2192 Stealth HTTP \u2192 Browser Stealth \u2192 PullPush archive).\n- Provides comprehensive commands including spy (full subreddit scan), deep-read (posts + comments), bulk-scan (multi-subreddit sweep), strategy extraction, keyword search, user-intel, and health-check.\n- Designed for reliability and anti-blocking: auto-rotates IPs with Tor, caches layer health, and respects API/Reddit rate limits.\n- Returns detailed analytics: content types, hook patterns, timing, post rankings, and actionable recommendations.\n- Read-only operation with safety limits and optional OAuth/Proxy support for higher reliability.",
+  "created_at": 1771635840390,
+  "display_name": "Reddit Spy",
+  "fetched_at": 1787803096556,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/lib/__init__.py",
+    "scripts/lib/browser_stealth.py",
+    "scripts/lib/cascade_fetcher.py",
+    "scripts/lib/deep_reader.py",
+    "scripts/lib/pullpush_client.py",
+    "scripts/lib/rate_limiter.py",
+    "scripts/lib/reddit_auth.py",
+    "scripts/lib/stealth_http.py",
+    "scripts/lib/strategy_extractor.py",
+    "scripts/lib/subreddit_scanner.py",
+    "scripts/lib/tor_client.py",
+    "scripts/lib/ua_pool.py",
+    "scripts/reddit_spy.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779943816242,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "oh-coder",
+    "handle": "hioliver933",
+    "user_id": "s176w6wtrrv4azary28fr8dfz5884skc"
+  },
+  "slug": "reddit-spy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/reddit-spy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=reddit-spy&ownerHandle=hioliver933",
+    "page_url": "https://clawhub.ai/hioliver933/skills/reddit-spy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1225,
+    "installs": 38,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Stealth Reddit intelligence -- browse, read, and analyze any subreddit without getting blocked. Multi-layer fallback (OAuth API -> Stealth HTTP -> Browser St...",
+  "updated_at": 1778991994672,
+  "version": "1.0.0"
+}
