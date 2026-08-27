@@ -1,0 +1,62 @@
+{
+  "changelog": "- Initial release with core podcast workflow scripts: speakers lookup, text submission, audio generation, and end-to-end waiting.\n- Added vendor core utility modules for WeryAI podcast, music, and general API support.\n- Supports `WERYAI_API_KEY` and new optional `WERYAI_BASE_URL` environment overrides.\n- Documentation and examples updated for clarity, including new environment prerequisites and safer verification steps.\n- All user-facing audio URLs rendered as Markdown links with helpful summaries.",
+  "created_at": 1774198918988,
+  "display_name": "Weryai Podcast Generator",
+  "fetched_at": 1787855624553,
+  "files": [
+    "AGENTS.md",
+    "SKILL.md",
+    "_meta.json",
+    "eval.yaml",
+    "references/podcast-api.md",
+    "scripts/generate-audio.js",
+    "scripts/speakers.js",
+    "scripts/status.js",
+    "scripts/submit-text.js",
+    "scripts/vendor/weryai-core/balance.js",
+    "scripts/vendor/weryai-core/client.js",
+    "scripts/vendor/weryai-core/errors.js",
+    "scripts/vendor/weryai-core/model-display.js",
+    "scripts/vendor/weryai-core/normalize.js",
+    "scripts/vendor/weryai-core/status.js",
+    "scripts/vendor/weryai-core/upload.js",
+    "scripts/vendor/weryai-core/wait.js",
+    "scripts/vendor/weryai-music/README.md",
+    "scripts/vendor/weryai-music/normalize-input.js",
+    "scripts/vendor/weryai-music/submit.js",
+    "scripts/vendor/weryai-music/validators.js",
+    "scripts/vendor/weryai-podcast/README.md",
+    "scripts/vendor/weryai-podcast/cli.js",
+    "scripts/vendor/weryai-podcast/generate-audio.js",
+    "scripts/vendor/weryai-podcast/normalize.js",
+    "scripts/vendor/weryai-podcast/speakers.js",
+    "scripts/vendor/weryai-podcast/status.js",
+    "scripts/vendor/weryai-podcast/submit-text.js",
+    "scripts/vendor/weryai-podcast/validators.js",
+    "scripts/vendor/weryai-podcast/wait.js",
+    "scripts/wait.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "WeryAI-Developer",
+    "handle": "weryai-developer",
+    "user_id": "s17csvx4ax7kyjt70t862cpp4d83h5hh"
+  },
+  "slug": "weryai-podcast-generator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/weryai-podcast-generator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=weryai-podcast-generator&ownerHandle=weryai-developer",
+    "page_url": "https://clawhub.ai/weryai-developer/skills/weryai-podcast-generator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 636,
+    "installs": 16,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Generate, query, and deliver WeryAI podcasts through the official podcast generation API. Use when the user needs podcast speaker lookup, podcast text genera...",
+  "updated_at": 1778492115715,
+  "version": "0.1.2"
+}
