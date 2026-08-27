@@ -1,0 +1,44 @@
+{
+  "changelog": "**Initial release of MedCrypt: End-to-End Encryption for Medical Messaging**\n- Encrypts patient data (labs, images, clinical notes) using AES-256-GCM before sending over messaging apps.\n- Ensures compliance with HIPAA, LFPDPPP, and GDPR standards.\n- Exchange keys via QR code using PBKDF2-derived shared secrets.\n- Implements regular key rotation (monthly) with 7-day backward compatibility.\n- Emergency access via 2-of-3 multisig \"break-glass\" protocol.\n- Designed to mitigate risks from compromised servers, devices, group members, and subpoenas through client-side encryption and crypto-shredding.",
+  "created_at": 1774194487600,
+  "display_name": "MedCrypt: End-to-End Encryption for Medical Messaging",
+  "fetched_at": 1787855708317,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "medcrypt.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090038490,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "CryptoReuMD",
+    "handle": "cryptoreumd",
+    "user_id": "s17eqbxywkpvty6wd41vrrznds884462"
+  },
+  "slug": "medcrypt",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/medcrypt",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=medcrypt&ownerHandle=cryptoreumd",
+    "page_url": "https://clawhub.ai/cryptoreumd/skills/medcrypt"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 594,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Encrypts medical data client-side with AES-256-GCM for secure messaging on Telegram/WhatsApp, ensuring HIPAA, GDPR, and LFPDPPP compliance.",
+  "updated_at": 1778492111768,
+  "version": "1.0.0"
+}
