@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of wan-video-gen skill\n\n- Provides a CLI to generate videos using Alibaba Cloud Wan text-to-video APIs, supporting async job submission, polling, and download.\n- Flexible configuration via environment variables or config.json; supports API key setup and custom model/tier mappings.\n- Supports various video generation parameters: prompt, negative prompt, custom audio, goal, tier, model, resolution, ratio, duration, advanced options like shot type and seed.\n- Cost estimation and preflight checks built-in, warning users about expected pricing based on official China mainland rates.\n- Offers complete documentation for CLI usage, default models, resolution/duration mapping, override priorities, and troubleshooting steps for failures.\n- Requires Node.js \u2265 18.",
+  "created_at": 1774422237187,
+  "display_name": "wan-video-gen",
+  "fetched_at": 1787849613537,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.example.json",
+    "package.json",
+    "references/api.md",
+    "scripts/wan-video-gen.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Wei Zhou",
+    "handle": "zhouweico",
+    "user_id": "s17ap9f1exnb5yh0k65q8gft0x83kntw"
+  },
+  "slug": "wan-video-gen",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wan-video-gen",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wan-video-gen&ownerHandle=zhouweico",
+    "page_url": "https://clawhub.ai/zhouweico/skills/wan-video-gen"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 586,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u57fa\u4e8e\u963f\u91cc\u4e91\u767e\u70bc Wan \u6587\u751f\u89c6\u9891\u6a21\u578b\u7684\u89c6\u9891\u751f\u6210 skill\u3002\u652f\u6301\u63d0\u4ea4\u89c6\u9891\u751f\u6210\u4efb\u52a1\u3001\u8f6e\u8be2\u4efb\u52a1\u72b6\u6001\u3001\u4e0b\u8f7d\u751f\u6210\u89c6\u9891\u5230\u672c\u5730\u3002 \u5f53\u7528\u6237\u9700\u8981\u6839\u636e\u63d0\u793a\u8bcd\u751f\u6210\u89c6\u9891\u3001\u7ee7\u7eed\u67e5\u8be2\u5df2\u6709\u89c6\u9891\u751f\u6210\u4efb\u52a1\uff0c\u6216\u7528 Wan \u7cfb\u5217\u6a21\u578b\u751f\u6210\u5e26\u58f0/\u65e0\u58f0\u89c6\u9891\u65f6\uff0c\u4f7f\u7528\u6b64 skill\u3002",
+  "updated_at": 1778492179546,
+  "version": "0.1.0"
+}
