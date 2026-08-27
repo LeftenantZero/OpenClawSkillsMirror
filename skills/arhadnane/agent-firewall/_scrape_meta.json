@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of agent-firewall: real-time input/output filtering for agent communications.\n\n- Blocks prompt injections, data exfiltration, and unauthorized commands before reaching the model.\n- Includes layered input filters: injection detection, Unicode sanitization, encoding checks, rate/size limits, and role confusion detection.\n- Adds output filters: secret scanning, PII redaction, internal path scrubbing, malicious URL blocking, and consistency checks.\n- YAML-based configuration with clear, customizable rules for both input and output.\n- Built-in guardrails: append-only rules, logging for all blocks, human approval for rules deletion, and resistance to agent tampering.",
+  "created_at": 1775253080558,
+  "display_name": "Agent Firewall",
+  "fetched_at": 1787796647065,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "index.js",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779948098759,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Adnane Arharbi",
+    "handle": "arhadnane",
+    "user_id": "s17atsjv2c1a86fqvanj1x35as83yc1w"
+  },
+  "slug": "agent-firewall",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-firewall",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-firewall&ownerHandle=arhadnane",
+    "page_url": "https://clawhub.ai/arhadnane/skills/agent-firewall"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 694,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Real-time input/output filtering for agent communications. Block prompt injection, data exfiltration, and unauthorized commands before they reach the model.",
+  "updated_at": 1779075348037,
+  "version": "1.0.0"
+}
