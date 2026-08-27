@@ -1,0 +1,43 @@
+{
+  "changelog": "- New context-cleaner skill automatically compresses large contexts and cleans up expired sessions, sub-agents, and temporary files.\n- Runs in the background during heartbeat checks or can be triggered manually.\n- Monitors session context size, archives old sessions, and terminates sub-agents idle for over 30 minutes.\n- Ensures safety by never deleting active sessions, preserving recent history, and archiving before deletion.\n- Provides cleanup reports summarizing actions and token savings.",
+  "created_at": 1776395810019,
+  "display_name": "Context Cleaner",
+  "fetched_at": 1787795359907,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090460084,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "liujc007",
+    "handle": "liujc007",
+    "user_id": "s17anmqxcwyva50qwjz9dffjs584yrgg"
+  },
+  "slug": "context-cleaner-1",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/context-cleaner-1",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=context-cleaner-1&ownerHandle=liujc007",
+    "page_url": "https://clawhub.ai/liujc007/skills/context-cleaner-1"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 607,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Automatically compress large contexts and clean up expired sessions, sub-agents, and temporary files.",
+  "updated_at": 1779075861473,
+  "version": "1.0.0"
+}
