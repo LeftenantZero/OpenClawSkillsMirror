@@ -1,0 +1,46 @@
+{
+  "changelog": "DS-160 autofill skill initial release.\n\n- Automates US DS-160 visa form filling using Chrome DevTools, LLM assistance, and CSV data source.\n- Supports session saving and resuming interrupted applications.\n- Handles captchas, missing elements, and Chinese input with built-in or LLM-based translation to English.\n- Reports progress after each completed page and prompts for missing data as needed.",
+  "created_at": 1770495869150,
+  "display_name": "ds160-autofill",
+  "fetched_at": 1787792756352,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ds160-elements.yaml",
+    "references/ds160-user-info.csv",
+    "scripts/ds160-filler.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783659031816,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "clulessboy",
+    "handle": "clulessboy",
+    "user_id": "s177jfyv6tcgd3epwrvvpkz98d8841pt"
+  },
+  "slug": "ds160-autofill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ds160-autofill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ds160-autofill&ownerHandle=clulessboy",
+    "page_url": "https://clawhub.ai/clulessboy/skills/ds160-autofill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2109,
+    "installs": 68,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Automates filling and resuming US DS-160 visa forms using CSV data, browser scripting, LLM for captchas, translations, missing data, and session persistence.",
+  "updated_at": 1779076816994,
+  "version": "1.0.0"
+}
