@@ -1,0 +1,43 @@
+{
+  "changelog": "https://github.com/ooxtcoo/openclaw-tuya-lights\n\n\nopenclaw-tuya-lights\nLocal Tuya lights control for OpenClaw with two controller variants in one repo:\n\nPython controller (Python variant of the Tuya light controllers)\nGo CLI controller (standalone binary, no Python runtime needed for control)\nProject layout\nShared files\ntuya_lamps.json \u2013 local device/group registry (commit only sanitized local_key values like xxxx)\ntuya_lamps.example.json \u2013 sanitized example registry for git\ntuya_device_catalog.json \u2013 capability/type metadata used by GUI\ngui-v1/ \u2013 web GUI + local API backend\nstart-gui.bat \u2013 convenience starter\nPython variant\nlamp_control.py \u2013 Python Tuya controller\ndiscover_lamps.py \u2013 Python LAN discovery\ntuya_test_lamp.py \u2013 low-level lamp test\nGo CLI variant\nmain.go\ngo.mod\ninternal/ \u2013 CLI + Tuya LAN protocol implementation\nprebuilt binaries can be used directly as lampctl.exe (Windows) or lampctl (Linux/Android-Termux)\nHow backend mode is selected\nThe GUI backend auto-detects what is available in the project root:\n\nif CLI binary exists (lampctl.exe on Windows / lampctl on Linux) \u2192 CLI available\nif lamp_control.py + discover_lamps.py exist \u2192 Python available\nif both exist \u2192 both can be selected in GUI\nif only one exists \u2192 that one is used\nThe GUI shows only backend options that are actually available.\n\nQuick start (Windows)\ncd C:\\Users\\1111\\.openclaw\\workspace\\tuya-lights\\gui-v1\nnpm install\nnpm start\nOpen: http://127.0.0.1:5173\n\nAPI backend runs on: http://127.0.0.1:4890\n\nQuick start (Linux / Android / Termux)\nRecommended: work from a normal Linux/Termux home directory such as ~/src/tuya-lights, not from /sdcard/..., because Go builds and some tooling can fail on Android shared storage.\n\nGo CLI\nIf the lampctl binary is already present, you can use it directly without rebuilding:\n\ncd ~/src/tuya-lights\n./lampctl stehlampe status\n./lampctl stehlampe on\n./lampctl stehlampe brightness --value 50\n./lampctl discover\nIf you want to compile it yourself:\n\ncd ~/src/tuya-lights\ngo build -o lampctl\nGUI + API together\ncd ~/src/tuya-lights/gui-v1\nnpm install\nnode start-all.mjs\nGUI: http://127.0.0.1:5173\nAPI: http://127.0.0.1:4890\nAPI only\ncd ~/src/tuya-lights/gui-v1\nnpm install\nnpm run api\nGUI / dev frontend only\ncd ~/src/tuya-lights/gui-v1\nnpm install\nnpm run dev\nQuick API test\ncurl http://127.0.0.1:4890/api/health\ncurl -X POST http://127.0.0.1:4890/api/status \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"target\":\"stehlampe\"}'\nScreenshot\nTuya Lights GUI\n\nPython CLI examples\npython .\\lamp_control.py stehlampe on\npython .\\lamp_control.py stehlampe off\npython .\\lamp_control.py stehlampe brightness --value 50\npython .\\lamp_control.py stehlampe color --value red\npython .\\lamp_control.py all off\nGo CLI examples\ngo build -o lampctl.exe .\n.\\lampctl.exe stehlampe status\n.\\lampctl.exe stehlampe on\n.\\lampctl.exe stehlampe brightness --value 50\n.\\lampctl.exe stehlampe hue --value 180\n.\\lampctl.exe discover\nSecurity / keys\ntuya_lamps.json is required by the project, but committed versions must have local_key values sanitized (for example xxxx).\nKeep real keys local only.\ntuya_lamps.example.json is included as an additional sanitized example.\nFRIDA_HOOK/ contains the files and instructions users need to extract their own local keys for their devices.\nWithout a valid local_key, local Tuya control will not work.\nNotes\nThe Go CLI variant is the better default choice for most users because it is standalone and does not require Python, extra libraries, or dependency setup. In real use, the Go CLI version also switches lamps noticeably faster than the Python variant and can feel close to instant. The Python variant stays in the repo because it is easier to inspect and modify, but it requires Python and the tinytuya module.\n\nThe included OpenClaw skill should prefer lampctl.exe on Windows and lampctl on Linux/Android via relative project paths. If an installation uses a different layout, adjust the paths in skills/tuya-lights/SKILL.md to match the local project root.\n\nAfter re-pairing / network repair, local keys can change. If control suddenly fails, refresh local_key values in local tuya_lamps.json.",
+  "created_at": 1776370381409,
+  "display_name": "Local Tuya Light Control",
+  "fetched_at": 1787820456061,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090458652,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ooxtcoo",
+    "handle": "ooxtcoo",
+    "user_id": "s1725ewrywbrh8knj0cr93d10s84ye0r"
+  },
+  "slug": "fully-local-tuya-light-control-skill-lsc-connect-app-devices",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fully-local-tuya-light-control-skill-lsc-connect-app-devices",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fully-local-tuya-light-control-skill-lsc-connect-app-devices&ownerHandle=ooxtcoo",
+    "page_url": "https://clawhub.ai/ooxtcoo/skills/fully-local-tuya-light-control-skill-lsc-connect-app-devices"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 511,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Control local LSC/Tuya lamps and groups to turn on/off, set brightness, colors, white modes, query status, or onboard after repair or network changes.",
+  "updated_at": 1778492628979,
+  "version": "1.0.0"
+}
