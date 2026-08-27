@@ -1,0 +1,48 @@
+{
+  "changelog": "**Summary: Adds MCP server support and enhances CLI integration for multi-tool editorial workflows.**\n\n- Introduced optional Wyckoff MCP server setup for integration with Claude Code, Cursor, and other MCP clients (supports 14 direct Wyckoff tools).\n- Expanded setup flow with an interactive prompt for registering the MCP server, including configuration guidance for MCP clients.\n- Updated CLI operational commands to cover more workflows: screening, backtest, reporting, dashboard, chat log viewing, memory management, data sync/cleanup, and MCP server registration.\n- Changed recommended web registration URL to https://wyckoff-analysis.pages.dev/.\n- Updated documentation to reflect MCP integration and richer command set; clarified that MCP server auto-loads saved API credentials.",
+  "created_at": 1776826560227,
+  "display_name": "Wyckoff Trading Agent",
+  "fetched_at": 1787817195978,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "rules/alpha-system-prompt.md",
+    "rules/cli-setup-guide.md",
+    "rules/source-fallbacks.md",
+    "rules/system-capability-playbook.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090739832,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "YoungCan-Wang",
+    "handle": "youngcan-wang",
+    "user_id": "s174z9s1sbky3r2bdxfwys6n9s83h5py"
+  },
+  "slug": "wyckoff-agent-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wyckoff-agent-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wyckoff-agent-skill&ownerHandle=youngcan-wang",
+    "page_url": "https://clawhub.ai/youngcan-wang/skills/wyckoff-agent-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 637,
+    "installs": 16,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Wyckoff A-share analysis agent with full CLI + MCP integration. Detects local CLI installation, guides users through setup (install \u2192 register \u2192 configure da...",
+  "updated_at": 1778492702954,
+  "version": "1.0.2"
+}
