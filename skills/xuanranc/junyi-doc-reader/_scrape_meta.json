@@ -1,0 +1,50 @@
+{
+  "changelog": "v1.1.1: Security & Privacy documentation (no functional changes)\nThis release adds explicit security and privacy disclosures to address how the\nSkill handles two capabilities flagged as high-risk by automated security scans:\nlocal credential access (Feishu) and optional external LLM communication.\nWhat's new:\n- scripts/feishu_fetcher.py: Added SECURITY & PRIVACY DISCLOSURE block\n  explaining credential scope (only channels.feishu.accounts[].appId/appSecret),\n  in-memory-only usage, and the network egress allowlist (open.feishu.cn only).\n- scripts/enricher.py: Added SECURITY & PRIVACY DISCLOSURE block clarifying\n  that LLM enrichment is OPT-IN and OFF BY DEFAULT, requires four explicit\n  env vars to activate, has no hardcoded production endpoint, and that the\n  base archive+index pipeline runs entirely offline.\n- SKILL.md: Added a new \"Security & Privacy\" section documenting the three\n  capability classes (local credential access / external LLM egress / file\n  system writes) with a summary table of default behaviors and how to enable\n  each one.\nWhat did NOT change:\n- No code logic changes. No new dependencies. No new network endpoints.\n- All existing CLI arguments, env vars, output formats, and behavior are\n  preserved. v1.1.1 is a drop-in replacement for v1.1.0.\nBackward compatibility: 100%. Users on v1.1.0 can upgrade safely.",
+  "created_at": 1773418753079,
+  "display_name": "Junyi Doc Reader",
+  "fetched_at": 1787799067733,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/assembler.py",
+    "scripts/chunker.py",
+    "scripts/converter.py",
+    "scripts/enricher.py",
+    "scripts/feishu_fetcher.py",
+    "scripts/pipeline.py",
+    "scripts/worklog_splitter.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090755629,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "XuanranC",
+    "handle": "xuanranc",
+    "user_id": "s17af5873bwadys51t8kxprvwh8572s7"
+  },
+  "slug": "junyi-doc-reader",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/junyi-doc-reader",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=junyi-doc-reader&ownerHandle=xuanranc",
+    "page_url": "https://clawhub.ai/xuanranc/skills/junyi-doc-reader"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1050,
+    "installs": 29,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "\u5927\u6587\u6863\u5f52\u6863\u4e0e\u68c0\u7d22\u7ba1\u7ebf\uff08v5\uff09\u3002\u652f\u6301\u672c\u5730\u6587\u4ef6\uff08Word/PDF/TXT/Markdown\uff09\u548c\u98de\u4e66\u4e91\u6587\u6863\uff0c\u8f6c\u6362\u3001\u5206\u5757\u3001\u53ef\u9009 LLM \u589e\u5f3a\uff0c\u8f93\u51fa\u7ed3\u6784\u5316 Markdown \u548c\u7d22\u5f15\uff0c\u5b58\u5165 Obsidian\u3002\u89e6\u53d1\u8bcd\uff1a\u8bfb\u5927\u6587\u6863\u3001\u5f52\u6863\u6587\u6863\u3001junyi-doc-reader\u3001doc-reader\u3001\u6587\u6863\u7d22\u5f15\u3001\u5e2e\u6211\u8bfb\u8fd9\u4e2aPDF\u3001\u628a\u6587\u6863...",
+  "updated_at": 1778999121944,
+  "version": "1.1.1"
+}
