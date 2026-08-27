@@ -1,0 +1,58 @@
+{
+  "changelog": "Fix managed exec approvals for /audit, /optimize, /preflight, and purge sessions; setup now writes required script allowlist entries and verify fails when they are missing.",
+  "created_at": 1772471669171,
+  "display_name": "Inference Optimizer",
+  "fetched_at": 1787800928006,
+  "files": [
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "README.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "docs/release-notes/0.3.0.md",
+    "docs/release-notes/0.3.1.md",
+    "docs/release-notes/0.3.2.md",
+    "docs/release-notes/0.3.3.md",
+    "docs/release-notes/0.3.4.md",
+    "optimization-agent.md",
+    "scripts/openclaw-audit.sh",
+    "scripts/preflight.sh",
+    "scripts/purge-stale-sessions.sh",
+    "scripts/setup.sh",
+    "scripts/verify.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090264954,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Vitaly Matveev",
+    "handle": "vitalyis",
+    "user_id": "s17cvcvbybkhf3zjhqyx753qb183febw"
+  },
+  "slug": "inference-optimizer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/inference-optimizer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=inference-optimizer&ownerHandle=vitalyis",
+    "page_url": "https://clawhub.ai/vitalyis/skills/inference-optimizer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1408,
+    "installs": 40,
+    "stars": 0,
+    "versions": 11
+  },
+  "summary": "Audit OpenClaw runtime health first, then optimize inference speed and token usage with approval. Use /audit for analyze-only and /optimize for analyze + act...",
+  "updated_at": 1778994598699,
+  "version": "0.3.4"
+}
