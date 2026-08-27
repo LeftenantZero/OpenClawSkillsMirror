@@ -1,0 +1,49 @@
+{
+  "changelog": "**Security and stability update \u2013 adds strict argument handling for chart CLI calls.**\n\n- Enforces argv-style argument passing for CLI invocations; prohibits shell-built command strings.\n- Prevents interpolation of user-influenced data, labels, or content into shell commands.\n- Only allows inline JSON for `data` and `variant` when passed as structured argv arguments.\n- Improves clarity that all CLI execution must follow strict, structured argument usage.",
+  "created_at": 1775801660851,
+  "display_name": "Lightweight charting skill: powerful styling & direct PNG export",
+  "fetched_at": 1787826202260,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "config/README.md",
+    "config/area_style.json",
+    "config/bar_style.json",
+    "config/dual_axis_style.json",
+    "config/funnel_style.json",
+    "config/gauge_style.json",
+    "config/line_style.json",
+    "config/pie_style.json",
+    "config/radar_style.json",
+    "config/scatter_style.json",
+    "package.json",
+    "references/chart-selection-and-variants.md",
+    "references/cli-and-config.md",
+    "references/config-page-handoff.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "yankang",
+    "handle": "ykforerlang",
+    "user_id": "s17696c0kq94vncvy0ge7x6cdx83jth6"
+  },
+  "slug": "data-charts-visualization",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/data-charts-visualization",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=data-charts-visualization&ownerHandle=ykforerlang",
+    "page_url": "https://clawhub.ai/ykforerlang/skills/data-charts-visualization"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 2902,
+    "installs": 65,
+    "stars": 1,
+    "versions": 12
+  },
+  "summary": "Default skill for structured-data visualization, chart generation, and dashboard-style reporting. Use when the user asks to create charts, graphs, plots, das...",
+  "updated_at": 1778492510391,
+  "version": "1.0.13"
+}
