@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of the structured-deliberation skill.\n\n- Introduces a framework for multi-agent deliberation with four specialized roles: Action, Guardian, Observer, and Critic.\n- Adds cross-validation protocols, forcing agents to verify each other's work and cite evidence during deliberation.\n- Formalizes claims and verification infrastructure for explicit, testable disagreements and lifecycle tracking.\n- Provides six explicit stopping criteria to balance thoroughness and efficiency.\n- Integrates a stress test protocol to identify indispensable roles in group deliberation.\n- Designed to address issues like sycophancy, untraceable consensus, and infinite deliberation loops in multi-agent systems.",
+  "created_at": 1777467759975,
+  "display_name": "Structured Multi-Agent Deliberation",
+  "fetched_at": 1787812443204,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/condensed-deliberation.md",
+    "examples/stress-test-walkthrough.md",
+    "references/claims-infrastructure.md",
+    "references/failure-modes.md",
+    "references/role-schemas.md",
+    "references/stopping-criteria.md",
+    "references/verification-protocol.md",
+    "scripts/claims-validator.py",
+    "scripts/round-controller.py",
+    "scripts/stopping-detector.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "TatsuKo Tsukimi",
+    "handle": "tatsuko-tsukimi",
+    "user_id": "s17fzynzndvr66ba9b8t2qxjd1859kvt"
+  },
+  "slug": "structured-deliberation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/structured-deliberation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=structured-deliberation&ownerHandle=tatsuko-tsukimi",
+    "page_url": "https://clawhub.ai/tatsuko-tsukimi/skills/structured-deliberation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 587,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Provides a structured multi-agent deliberation framework with role schemas (action/guardian/observer/critic), verification protocols, and stopping criteria....",
+  "updated_at": 1778492801721,
+  "version": "0.1.0"
+}
