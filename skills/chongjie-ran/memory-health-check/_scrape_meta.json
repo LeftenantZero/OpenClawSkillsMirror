@@ -1,0 +1,56 @@
+{
+  "changelog": "Initial release of memory-health-check\u2014comprehensive memory health diagnostics tool.\n\n- Provides 6-dimensional health checks: integrity, freshness, bloat, orphans, deduplication, and coverage.\n- Includes main script (`health_check.sh`) with modular detectors and reporters.\n- Supports auto-repair for orphaned entries on user approval.\n- Offers aggregate health scoring and clear report outputs.\n- Compatible with OpenClaw v2026.4.9+ and sqlite3.",
+  "created_at": 1776396788149,
+  "display_name": "\ud83e\ude7a memory-health-check",
+  "fetched_at": 1787795139117,
+  "files": [
+    "DESIGN.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "bin/bloat_detector.py",
+    "bin/dedup_scanner.py",
+    "bin/freshness_report.py",
+    "bin/health_check.sh",
+    "bin/health_score.py",
+    "bin/integrity_scan.py",
+    "bin/orphan_finder.py",
+    "config/thresholds.yaml",
+    "lib/__init__.py",
+    "lib/config_loader.py",
+    "lib/file_scanner.py",
+    "lib/health_models.py",
+    "lib/log_utils.py",
+    "lib/sqlite_scanner.py",
+    "scripts/auto_repair.py",
+    "scripts/generate_report.py",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/fixtures/__init__.py",
+    "tests/run_tests.sh",
+    "tests/test_memory_health_check.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "chongjie-ran",
+    "handle": "chongjie-ran",
+    "user_id": "s1707y5b73c4ws6mf3t4wppz6583w17d"
+  },
+  "slug": "memory-health-check",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memory-health-check",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memory-health-check&ownerHandle=chongjie-ran",
+    "page_url": "https://clawhub.ai/chongjie-ran/skills/memory-health-check"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 602,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Performs a 6-dimension memory health check assessing integrity, freshness, bloat, orphans, duplicates, and coverage with optional auto-repair.",
+  "updated_at": 1779075942580,
+  "version": "1.0.0"
+}
