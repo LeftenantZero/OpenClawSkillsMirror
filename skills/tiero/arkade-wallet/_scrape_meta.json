@@ -1,0 +1,56 @@
+{
+  "changelog": "- Private key and API key requirements removed; wallet now autogenerates and stores keys locally.\n- CLI simplified: No need to provide or expose private keys; initialization is automatic.\n- LendaSwap API is now publicly accessible; no environment variables required.\n- Updated documentation reflecting these usability and security improvements.\n- Internal refactoring to support the new configuration and key management model.",
+  "created_at": 1770518252053,
+  "display_name": "Bitcoin and Tether on Arkade",
+  "fetched_at": 1787792683942,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "cli/arkade.mjs",
+    "package.json",
+    "pnpm-lock.yaml",
+    "skill-card.md",
+    "src/index.ts",
+    "src/skills/arkadeBitcoin.ts",
+    "src/skills/index.ts",
+    "src/skills/lendaswap.ts",
+    "src/skills/lightning.ts",
+    "src/skills/types.ts",
+    "tsconfig.cjs.json",
+    "tsconfig.esm.json",
+    "tsconfig.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783656976403,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "tiero",
+    "handle": "tiero",
+    "user_id": "s17dg1d4xh06w3rqgqpn2yg2398850kz"
+  },
+  "slug": "arkade-wallet",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/arkade-wallet",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=arkade-wallet&ownerHandle=tiero",
+    "page_url": "https://clawhub.ai/tiero/skills/arkade-wallet"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2194,
+    "installs": 70,
+    "stars": 3,
+    "versions": 3
+  },
+  "summary": "Send and receive Bitcoin over Arkade (offchain), onchain (via onboard/offboard), and Lightning. Swap USDC/USDT stablecoins.",
+  "updated_at": 1779076837686,
+  "version": "1.0.2"
+}
