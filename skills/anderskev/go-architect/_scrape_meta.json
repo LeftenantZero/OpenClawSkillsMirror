@@ -1,0 +1,36 @@
+{
+  "changelog": "go-architect v2.3.1 changelog:\n\n- Added an explicit \"Hard gates\" section to enforce step-by-step architecture checks for code reviews.\n- Now specifies pass/fail criteria for Go version requirements, composition root, shutdown pattern, and dependency injection.\n- Ensures that usage of Go 1.22+ ServeMux features requires go1.22+ toolchain, with review instructions.\n- Clarifies handling of configuration: handlers must not access env/globals directly, and all shared dependencies must be injected.\n- No functional/code logic changes outside of expanded review documentation and instructions.",
+  "created_at": 1774183330348,
+  "display_name": "Go Architect",
+  "fetched_at": 1787856095941,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/dependency-injection.md",
+    "references/graceful-shutdown.md",
+    "references/project-structure.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Kevin Anderson",
+    "handle": "anderskev",
+    "user_id": "s17b1fzefm8nj8j1sdkzrze7gn83pfrg"
+  },
+  "slug": "go-architect",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/go-architect",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=go-architect&ownerHandle=anderskev",
+    "page_url": "https://clawhub.ai/anderskev/skills/go-architect"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 753,
+    "installs": 20,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Go application architecture with net/http 1.22+ routing, project structure patterns, graceful shutdown, and dependency injection. Use when building Go web se...",
+  "updated_at": 1778492107800,
+  "version": "2.3.1"
+}
