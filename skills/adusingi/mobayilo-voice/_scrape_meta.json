@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial public beta release of Mobayilo Voice for OpenClaw.\n\n- Added readiness checks (auth, balance, caller ID verification)\n- Added a safe calling flow: by default it prepares/checks the call without dialing, and only places a real call when live mode is explicitly enabled.\n- Added optional callback and fallback callback controls\n- Added optional approval gate support\n- Added masked logging/telemetry behavior for phone numbers\n- Added docs/runbook and workflow-oriented integration guidance\n\nKnown limitation:\n- Desktop agent-mode call progression messaging is still being refined for fully human-friendly UX in all environments.",
+  "created_at": 1772359579271,
+  "display_name": "Mobayilo Voice (Beta)",
+  "fetched_at": 1787801289531,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "actions/check_status.py",
+    "actions/start_call.py",
+    "config/defaults.yaml",
+    "docs/runbook.md",
+    "examples/workflow.yaml",
+    "lib/adapter.py",
+    "lib/cli_runner.py",
+    "scripts/verify.sh",
+    "skill-card.md",
+    "skill/skill.yaml",
+    "tests/README.md",
+    "tests/test_adapter.py",
+    "tests/test_cli_runner.py",
+    "tests/test_start_call_output.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "adusingi",
+    "handle": "adusingi",
+    "user_id": "s1729smydwkf9th1m7teke5f3h83kq3v"
+  },
+  "slug": "mobayilo-voice",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mobayilo-voice",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mobayilo-voice&ownerHandle=adusingi",
+    "page_url": "https://clawhub.ai/adusingi/skills/mobayilo-voice"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1011,
+    "installs": 29,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Place outbound phone calls via Mobayilo with safe defaults (preview mode by default) and explicit live execution.",
+  "updated_at": 1778994201526,
+  "version": "0.2.0-beta.1"
+}
