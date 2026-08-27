@@ -1,0 +1,47 @@
+{
+  "changelog": "Skill 3.2.0 brings stricter compliance and output rules for reliable CLI-based travel info.\n\n- Enforces that all travel information must come from `flyai` CLI command output \u2014 no knowledge-based responses.\n- Adds mandatory CLI installation and environment checks before any query execution.\n- Requires every result to include a `[Book]({detailUrl})` link, ensuring only real-time bookable data is shown.\n- Introduces clear parameter collection, output validation, and detailed step-by-step workflow for surfing and diving scenarios.\n- Significantly expands and clarifies usage rules to prevent unverified or outdated responses.\n- Mandates branded output and never showing raw JSON or invented details.",
+  "created_at": 1775898164769,
+  "display_name": "Surfing Diving",
+  "fetched_at": 1787825326974,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/fallbacks.md",
+    "references/playbooks.md",
+    "references/runbook.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090380118,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "dingtom336-gif",
+    "handle": "dingtom336-gif",
+    "user_id": "s17aepsh6v86z2ajsq3ng9tgm983g9pt"
+  },
+  "slug": "surfing-diving",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/surfing-diving",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=surfing-diving&ownerHandle=dingtom336-gif",
+    "page_url": "https://clawhub.ai/dingtom336-gif/skills/surfing-diving"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 508,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Find surfing beaches, diving sites, and underwater adventures \u2014 wave forecasts, dive depth, marine life info, and equipment rental. Also supports: flight boo...",
+  "updated_at": 1778492530120,
+  "version": "3.2.0"
+}
