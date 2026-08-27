@@ -1,0 +1,51 @@
+{
+  "changelog": "Risk management overhaul: added configurable daily trade limits, position caps, and drawdown protection. Fixed critical misalignment where max_daily_trades (4) didn't match max_active_positions (8) \u2014 bot was hitting its daily cap before filling available slots, leaving capital idle while valid signals passed. Both now default to 8 for full capital efficiency.",
+  "created_at": 1773461757495,
+  "display_name": "DEX Agent",
+  "fetched_at": 1787789019908,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/README.md",
+    "scripts/agent.py",
+    "scripts/config.py",
+    "scripts/price_monitor.py",
+    "scripts/rpc.py",
+    "scripts/swap.py",
+    "scripts/wallet.py",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089907870,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Elway Botty",
+    "handle": "avmw2025",
+    "user_id": "s17egj3n0bkjmcbp94en1t8jb5884m8x"
+  },
+  "slug": "dex-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dex-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dex-agent&ownerHandle=avmw2025",
+    "page_url": "https://clawhub.ai/avmw2025/skills/dex-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 918,
+    "installs": 25,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Execute zero-fee direct token swaps and manage stop-loss, take-profit, and portfolio tracking on Base chain via Uniswap V3 with self-custodial security.",
+  "updated_at": 1779078119628,
+  "version": "1.1.0"
+}
