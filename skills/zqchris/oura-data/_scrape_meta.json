@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release.\n\nFeatures:\n- Full Oura API v2 coverage: sleep (score, deep/REM/light, efficiency, HRV, HR), readiness (score, temperature deviation, contributors), activity (steps, calories, distance), heart rate, workouts, SpO2, stress, ring config, personal info\n- Date-range queries (single day or arbitrary ranges)\n- Score interpretation guide (0-100 bands, temperature deviation thresholds, HRV reading)\n- Real sample outputs for every subcommand\n- Companion API reference covering all v2 endpoints, OAuth scopes, rate limits, and date-semantics gotchas\n- Privacy-first critical rules (never echo tokens.json / config.json; respect health data)\n\nPairs with the oura-cli companion tool at https://github.com/zqchris/oura-cli.",
+  "created_at": 1778685380487,
+  "display_name": "Oura Ring",
+  "fetched_at": 1787807715587,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api-reference.md",
+    "references/example-outputs.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090800700,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Chris Zhang",
+    "handle": "zqchris",
+    "user_id": "s17b6ty2xqhk1zbextwx37en1n83nrmq"
+  },
+  "slug": "oura-data",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oura-data",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oura-data&ownerHandle=zqchris",
+    "page_url": "https://clawhub.ai/zqchris/skills/oura-data"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 489,
+    "installs": 10,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Fetch the user's personal Oura Ring health data via the official Oura API v2, using the zero-dependency `oura-cli` Python tool. Use this skill when the user...",
+  "updated_at": 1778685492307,
+  "version": "1.0.0"
+}
