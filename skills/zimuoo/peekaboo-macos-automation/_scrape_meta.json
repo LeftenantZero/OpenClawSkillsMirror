@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of peekaboo-macos-automation.\n\n- Provides desktop GUI automation for macOS native apps using Peekaboo.\n- Automatically detects and installs Peekaboo via Homebrew if missing.\n- Checks and prompts for required permissions (Screen Recording, Accessibility) before automation.\n- Follows a preferred sequence: detect/install, check permissions, focus app, inspect, act, and verify.\n- Includes clear troubleshooting steps and safety guidance for high-impact native UI actions.",
+  "created_at": 1778720359178,
+  "display_name": "PeekabooV3 open claw\u7684\u684c\u9762\u81ea\u52a8\u5316skill",
+  "fetched_at": 1787807563760,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/check_install.sh",
+    "scripts/check_permissions.sh",
+    "scripts/doctor.sh",
+    "scripts/focus_app_then_see.sh",
+    "scripts/install_if_needed.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090801503,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u5b50\u6cab",
+    "handle": "zimuoo",
+    "user_id": "s17f3he19v8b83h56t09qrsw7n83kj3k"
+  },
+  "slug": "peekaboo-macos-automation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/peekaboo-macos-automation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=peekaboo-macos-automation&ownerHandle=zimuoo",
+    "page_url": "https://clawhub.ai/zimuoo/skills/peekaboo-macos-automation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1206,
+    "installs": 34,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use Peekaboo for macOS desktop GUI automation, screen understanding, and MCP-backed local app control. Trigger when the user wants to inspect or control nati...",
+  "updated_at": 1778720506853,
+  "version": "1.0.0"
+}
