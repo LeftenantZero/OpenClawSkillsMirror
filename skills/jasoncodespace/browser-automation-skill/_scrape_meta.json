@@ -1,0 +1,45 @@
+{
+  "changelog": "- Major rewrite: Skill rebranded from generic \"browser\" automation to \"browser-relay\" focused on local, real Chrome control via Browser Relay CLI and extension.\n- Updated usage guidance to require the user to run browser-relay-cli and load the unpacked extension.\n- Clarified intended use cases: controlling a signed-in local browser, screenshot-guided actions, tab reuse, and working around unreliable DOM selectors.\n- Explicitly cautioned against using the skill for stealth automation, CAPTCHA bypass, or anti-bot circumvention.\n- Deprecated old setup and command references; added commands summary in references/commands.md.\n- Removed sample, setup, and legacy reference/example documentation to match new workflow.",
+  "created_at": 1776161652315,
+  "display_name": "Browser Automation",
+  "fetched_at": 1787795462014,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/commands.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090420990,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jason",
+    "handle": "jasoncodespace",
+    "user_id": "s17bkj506r10zrrgqpv69nv5ns84skh6"
+  },
+  "slug": "browser-automation-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/browser-automation-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=browser-automation-skill&ownerHandle=jasoncodespace",
+    "page_url": "https://clawhub.ai/jasoncodespace/skills/browser-automation-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 747,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use Browser Relay when the user wants to control a real signed-in Chrome or Chromium browser through the published browser-relay-cli package and unpacked Bro...",
+  "updated_at": 1779075833510,
+  "version": "1.0.0"
+}
