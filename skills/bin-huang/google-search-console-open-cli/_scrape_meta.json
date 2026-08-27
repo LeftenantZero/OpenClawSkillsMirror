@@ -1,0 +1,33 @@
+{
+  "changelog": "**Major breaking change: CLI has been reworked for a new interface, authentication method, output, and workflow.**\n\n- Switches from `gsc` to `google-search-console-cli` command, with a new command structure and argument format.\n- Changes authentication: now uses Google service account credentials (preferred via env var, supports ADC and per-command flag).\n- Updates all subcommands (`query`, `sites`, `site`, `sitemaps`, `inspect`, batching, etc.) and parameters to the new CLI interface.\n- Simplifies output: JSON by default, with optional compact NDJSON for batch/pipe use.\n- Adds auto-pagination support for large query exports using the `--all` flag.\n- Introduces richer documentation for filters (dimension filter groups), country/device codes, and practical CLI examples.\n\nThis release is **not backward-compatible** with the previous version (`gsc`). Please follow the new setup, authentication, and usage guidelines.",
+  "created_at": 1775552161864,
+  "display_name": "Google Search Console CLI",
+  "fetched_at": 1787829234039,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Bin-Huang",
+    "handle": "bin-huang",
+    "user_id": "s1739hnztbtdx615kbwmdfzz6x84d57g"
+  },
+  "slug": "google-search-console-open-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/google-search-console-open-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=google-search-console-open-cli&ownerHandle=bin-huang",
+    "page_url": "https://clawhub.ai/bin-huang/skills/google-search-console-open-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 545,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Google Search Console data analysis and site management via google-search-console-cli. Use when the user wants to check search performance, analyze queries,...",
+  "updated_at": 1778492456008,
+  "version": "1.0.0"
+}
