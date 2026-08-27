@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of spearman-correlation skill:\n\n- Calculates Spearman correlation between two tables, tailored for microbiome data (e.g., family abundance vs. environmental factors).\n- Supports both single file and batch (folder) analysis, matching files by name and handling subfolders.\n- Automatically recognizes file formats (.txt, .tsv, .xlsx) and verifies matched sample columns.\n- Performs FDR (Benjamini-Hochberg) correction on p-values.\n- Outputs results in Excel (.xlsx) files with separate sheets for correlation coefficients, raw p-values, and FDR-adjusted p-values.\n- Summarizes significant correlations (both raw and FDR < 0.05) and reports the Top 10 positive/negative associations.",
+  "created_at": 1774235463607,
+  "display_name": "spearman-correlation",
+  "fetched_at": 1787854757958,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dong Zhao",
+    "handle": "zd200572",
+    "user_id": "s174x28nza5s7ej2xavf0yehpd83pbq7"
+  },
+  "slug": "spearman-correlation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/spearman-correlation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=spearman-correlation&ownerHandle=zd200572",
+    "page_url": "https://clawhub.ai/zd200572/skills/spearman-correlation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 693,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u8ba1\u7b97\u4e24\u4e2a\u8868\u683c\u4e4b\u95f4\u7684 Spearman \u76f8\u5173\u6027\uff0c\u5e76\u8f93\u51fa FDR \u6821\u6b63\u540e\u7684\u7ed3\u679c\u3002\u9002\u7528\u4e8e\u5fae\u751f\u7269\u7ec4\u6570\u636e\uff08\u5982 Family \u4e30\u5ea6\u8868\u4e0e\u73af\u5883\u56e0\u5b50/\u529f\u80fd\u57fa\u56e0\u8868\uff09\u7684\u76f8\u5173\u6027\u5206\u6790\u3002",
+  "updated_at": 1778492123557,
+  "version": "1.0.0"
+}
