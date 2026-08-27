@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of Planning Validator \u2014 prevents agent execution failures from hallucinated plans.\n\n- Validates multi-step plans for tool availability, permissions, dependencies, and feasibility.\n- Explicit tool schemas define capabilities and limitations for safe planning.\n- Enforces constraint verification on resource use and retry limits.\n- Requires user clarification on ambiguous or unchecked assumptions.\n- Implements watchdogs for plan integrity, pattern detection, and execution tension.\n- Ensures user approval for complex or risky plans.",
+  "created_at": 1779051916947,
+  "display_name": "Planning Validator",
+  "fetched_at": 1787797544318,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/main.py",
+    "scripts/planning_validator.py",
+    "scripts/utils.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090826786,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Kofna3369",
+    "handle": "kofna3369",
+    "user_id": "s170vjwkh0tbnpbsmvn0nj60h183gysr"
+  },
+  "slug": "planning-validator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/planning-validator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=planning-validator&ownerHandle=kofna3369",
+    "page_url": "https://clawhub.ai/kofna3369/skills/planning-validator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 665,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Planning Validator \u2014 Validates agent plans before execution to prevent hallucinated planning failures. Use when: (1) validating multi-step plans, (2) checkin...",
+  "updated_at": 1779051940262,
+  "version": "1.0.0"
+}
