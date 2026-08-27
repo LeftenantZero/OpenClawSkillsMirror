@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of the \u56fa\u6536+ daily review skill:\n\n- Generates daily 21:30 report for 87 fixed-income+ products, including full data review, top/bottom 3 attribution analysis, and track rankings.\n- Pulls product data from authoritative lists with strict code validation.\n- Integrates Wind API queries (NAV returns, 1-year yield, 2-year max drawdown, drawdown period).\n- Produces Markdown reports: data dashboards per track, detailed attribution for top/bottom 3, and overall summary.\n- Includes cron job for automated periodic reporting and session isolation handling.\n- Emphasizes data completeness, accurate rankings per track, and formatted output without product codes.",
+  "created_at": 1774366688020,
+  "display_name": "xqant daily gushouplus report",
+  "fetched_at": 1787851150458,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/product_codes.md",
+    "references/wind_functions.md",
+    "scripts/query_wind_data.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090081372,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "wesdaliang",
+    "handle": "wesdaliang",
+    "user_id": "s171wvhk6kszhmj6qvw55npmf583hfrs"
+  },
+  "slug": "xqant-daily-gushouplus-report",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/xqant-daily-gushouplus-report",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=xqant-daily-gushouplus-report&ownerHandle=wesdaliang",
+    "page_url": "https://clawhub.ai/wesdaliang/skills/xqant-daily-gushouplus-report"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 488,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u81ea\u52a8\u751f\u6210\u6bcf\u65e521:30\u53d1\u5e03\u768487\u53ea\u56fa\u6536+\u4ea7\u54c1\u5168\u91cf\u8868\u73b0\u53ca\u8d5b\u9053\u524d\u540e3\u540d\u5f52\u56e0\u5206\u6790\u590d\u76d8\u62a5\u544a\u3002",
+  "updated_at": 1778492163021,
+  "version": "1.0.0"
+}
