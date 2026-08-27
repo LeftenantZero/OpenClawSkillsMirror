@@ -1,0 +1,79 @@
+{
+  "changelog": "Version 1.0.1: Major update \u2014 local Python skill, multi-LLM, slides & poster image generation.\n\n- Renamed and refactored skill to \"postergen-parser\" for local Python usage (not Docker-only).\n- Added support for multiple LLM APIs: OpenAI, Gemini, and Qwen (MAAS).\n- New features: generate poster images and slides images using Gemini's image generation API.\n- Added PPTX export and improved multi-modal conversion options (PDF/PNG/DOCX/PPTX).\n- New comprehensive setup scripts and dependency management (UV, install.sh, playwright).\n- Expanded documentation: detailed configuration, usage examples, and troubleshooting instructions.",
+  "created_at": 1773738969519,
+  "display_name": "mm-output",
+  "fetched_at": 1787868309302,
+  "files": [
+    ".env.txt",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/sigma1209-1.md",
+    "examples/sigma1209-2.md",
+    "examples/sigma1209-3.md",
+    "examples/tusen_1210.md",
+    "install.sh",
+    "mm_output/README.md",
+    "mm_output/__init__.py",
+    "mm_output/cli.py",
+    "mm_output/converter.py",
+    "mm_output/example.py",
+    "mm_output/integrate.py",
+    "mm_output/pptx_converter.py",
+    "mm_output/run_mm_output.py",
+    "paper2slides/__init__.py",
+    "paper2slides/content_planner.py",
+    "paper2slides/image_generator.py",
+    "paper2slides/models.py",
+    "paper2slides/prompts.py",
+    "paper2slides/xhs_generator.py",
+    "parser_unit.py",
+    "pyproject.toml",
+    "renderer_unit.py",
+    "requirements.txt",
+    "run.py",
+    "run.sh",
+    "skill-card.md",
+    "templates/doubao.txt",
+    "templates/doubao_dark.txt",
+    "templates/doubao_enterprise_blue.txt",
+    "templates/doubao_minimal.txt",
+    "templates/doubao_newspaper.txt",
+    "templates/doubao_refine.txt",
+    "templates/report_web.txt",
+    "templates/report_web_reduced.txt",
+    "uv.lock.txt"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090091929,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yuriYanZeXuan",
+    "handle": "yuriyanzexuan",
+    "user_id": "s172r46c3b0h5yrkpqgrdxeb4183h7ek"
+  },
+  "slug": "mm-output",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mm-output",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mm-output&ownerHandle=yuriyanzexuan",
+    "page_url": "https://clawhub.ai/yuriyanzexuan/skills/mm-output"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 737,
+    "installs": 20,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Parse PDF/Markdown files into structured HTML posters with multi-modal output (PDF, PNG, DOCX, PPTX), or generate poster/slides images via Gemini image gener...",
+  "updated_at": 1778491973688,
+  "version": "1.0.1"
+}
