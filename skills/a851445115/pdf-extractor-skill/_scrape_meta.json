@@ -1,0 +1,47 @@
+{
+  "changelog": "PDF Extractor Skill 1.0.0 \u2013 Initial Release\n\n- Provides extraction of text and LaTeX math formulas from academic PDF papers in both English and Chinese.\n- Supports two tools: Marker (recommended for mixed/Chinese documents) and Nougat (for English/arXiv papers).\n- Outputs Markdown with preserved formulas, tables, images (Marker), and references.\n- Fully self-contained: runs in a pre-configured conda environment\u2014no runtime installations allowed.\n- Detailed command-line and Python API examples, usage tips for long PDFs, and troubleshooting guidance included.",
+  "created_at": 1771913646779,
+  "display_name": "Pdf Extractor Skill",
+  "fetched_at": 1787791430572,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/marker_llm_antigravity.py",
+    "scripts/marker_openai_compat_service.py",
+    "scripts/pdf2latex.py",
+    "scripts/pdf2md_marker.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779955504287,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Rui Chen",
+    "handle": "a851445115",
+    "user_id": "s178pfv7rsgfxnsafyhxym896x885m60"
+  },
+  "slug": "pdf-extractor-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pdf-extractor-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pdf-extractor-skill&ownerHandle=a851445115",
+    "page_url": "https://clawhub.ai/a851445115/skills/pdf-extractor-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 516,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Extract text and LaTeX formulas from academic PDFs in English and Chinese, outputting structured Markdown with math, tables, and images preserved.",
+  "updated_at": 1779077244995,
+  "version": "1.0.0"
+}
