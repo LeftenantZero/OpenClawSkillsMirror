@@ -1,0 +1,50 @@
+{
+  "changelog": "**Summary:**  \nThis version introduces a unified and dynamic provider system, a persistent credentials mechanism, and better security/compliance for the market insight agent Skill.\n\n- Abstracted Gateway and SDK logic into providers, with dynamic selection based on environment and runtime state.\n- Added automatic credential detection from environment, shell RC files, and a private persist directory, minimizing interruptions for credential requests.\n- Now persists provider status and credentials for cross-session reuse, using `persist/auth.json`.\n- Stronger security: no hardcoded credentials, no auto-upload/deploy logic, and logs are auto-masked for sensitive data.\n- Self-check script `scripts/quick_validate.py` is included for static environment validation.\n- Substantial refactor: Deprecated old scripts/APIs, added new provider-agnostic client code and updated documentation for usage and credential flow.",
+  "created_at": 1775649422816,
+  "display_name": "Byted Market Insight Agent",
+  "fetched_at": 1787827919959,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api-diff.md",
+    "references/usage.md",
+    "scripts/auth_resolver.py",
+    "scripts/client.py",
+    "scripts/providers/gateway_provider.py",
+    "scripts/providers/sdk_provider.py",
+    "scripts/quick_validate.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090496419,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "volcengine-skills",
+    "handle": "volcengine-skills",
+    "user_id": "s17bcxs73bckd3eercvtn6cmsx83g5kg"
+  },
+  "slug": "byted-market-insight-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/byted-market-insight-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=byted-market-insight-agent&ownerHandle=volcengine-skills",
+    "page_url": "https://clawhub.ai/volcengine-skills/skills/byted-market-insight-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 869,
+    "installs": 22,
+    "stars": 14,
+    "versions": 2
+  },
+  "summary": "\u706b\u5c71\u5f15\u64ce\u5e02\u573a\u6d1e\u5bdf\u52a9\u624b\u3002\u5e2e\u52a9\u7528\u6237\u83b7\u53d6\u54c1\u724c\u5728\u5404\u5927\u793e\u4ea4\u5e73\u53f0\u548c\u5a92\u4f53\u6e20\u9053\u4e0a\u7684\u516c\u5f00\u5185\u5bb9\u6570\u636e\uff0c\u901a\u8fc7 AI \u7b5b\u9009\u51fa\u771f\u6b63\u503c\u5f97\u5173\u6ce8\u7684\u4fe1\u606f\uff0c\u5e76\u53d1\u73b0\u6f5c\u5728\u5546\u673a\u7ebf\u7d22\u3002\u5f53\u7528\u6237\u63d0\u5230\u4ee5\u4e0b\u4efb\u4f55\u573a\u666f\u65f6\u4f7f\u7528\u6b64\u6280\u80fd\uff1a\u60f3\u77e5\u9053\u6700\u8fd1\u7f51\u4e0a\u6709\u6ca1\u6709\u4eba\u5728\u8ba8\u8bba\u81ea\u5df1\u7684\u54c1\u724c\u6216\u4ea7\u54c1\u3001\u60f3\u770b\u770b\u7ade\u54c1\u6700\u8fd1\u5728\u793e\u4ea4\u5a92\u4f53\u4e0a\u6709\u4ec0\u4e48\u52a8\u6001\u3001\u60f3\u4e86\u89e3\u67d0\u4e2a\u8bdd\u9898\u6216\u4e8b\u4ef6\u5728\u7f51\u4e0a\u7684\u8ba8\u8bba\u70ed\u5ea6\u548c\u8d8b\u52bf\u3001\u60f3\u5b9a\u671f\u83b7\u53d6\u548c...",
+  "updated_at": 1778492480808,
+  "version": "1.0.1"
+}
