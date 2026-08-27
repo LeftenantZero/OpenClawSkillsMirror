@@ -1,0 +1,57 @@
+{
+  "changelog": "- Require Alibaba Cloud CLI >= 3.3.3 with AI-Mode support and plugin updates for all executions.\n- All cloud service calls now use explicit AI-Mode user agent labeling for responsible traceability.\n- Add ability to update (replace/restore) HTTPS listener certificates, including automatic detection and rollback to the correct certificate.\n- Expand RAM permissions: now includes `UpdateListenerAttribute` and `DeleteUserCertificate`.\n- Add new `scripts/update_listener.sh` for automation of listener certificate changes.\n- Update documentation: more precise prerequisites, expanded workflows, and new step-by-step procedures reflecting the above changes.",
+  "created_at": 1774945295220,
+  "display_name": "Alibabacloud Network Alb Http To Https",
+  "fetched_at": 1787838540663,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cli-installation-guide.md",
+    "references/ram-policies.md",
+    "scripts/common.sh",
+    "scripts/create_listener.sh",
+    "scripts/create_rule.sh",
+    "scripts/create_server_group.sh",
+    "scripts/generate_test_cert.sh",
+    "scripts/get_listener.sh",
+    "scripts/get_load_balancer.sh",
+    "scripts/list_listeners.sh",
+    "scripts/list_load_balancers.sh",
+    "scripts/list_rules.sh",
+    "scripts/update_listener.sh",
+    "scripts/upload_cert.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090510741,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-network-alb-http-to-https",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-network-alb-http-to-https",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-network-alb-http-to-https&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-network-alb-http-to-https"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 706,
+    "installs": 16,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Configure HTTP-to-HTTPS redirects on Alibaba Cloud ALB, including inspecting the current listener and rule setup, creating missing HTTP or HTTPS listeners, a...",
+  "updated_at": 1778492317172,
+  "version": "0.0.1-beta.2"
+}
