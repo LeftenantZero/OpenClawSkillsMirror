@@ -1,0 +1,57 @@
+{
+  "changelog": "Initial public release of MovieFetch with movie downloading via Radarr and qBittorrent, Plex library checks, download progress tracking, and removal workflows.",
+  "created_at": 1775734428333,
+  "display_name": "MovieFetch",
+  "fetched_at": 1787795827786,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/check_download.py",
+    "scripts/check_ott.py",
+    "scripts/check_plex.py",
+    "scripts/list_torrents.py",
+    "scripts/remove_movie.py",
+    "scripts/request_movie.py",
+    "skill-card.md",
+    "skill.yaml",
+    "tests/conftest.py",
+    "tests/integration/test_pipeline.py",
+    "tests/unit/test_check_download.py",
+    "tests/unit/test_check_plex.py",
+    "tests/unit/test_remove_movie.py",
+    "tests/unit/test_request_movie.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090357963,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Serial Lazer",
+    "handle": "seriallazer",
+    "user_id": "s17e0j8yv39hh2ean66j8rn14d83z0hj"
+  },
+  "slug": "moviefetch",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/moviefetch",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=moviefetch&ownerHandle=seriallazer",
+    "page_url": "https://clawhub.ai/seriallazer/skills/moviefetch"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 660,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Download, track, and remove movies across Plex, Radarr, and qBittorrent from chat. Triggers on user requests like \"get <movie>\", \"status of <movie>\", or \"rem...",
+  "updated_at": 1779075712146,
+  "version": "0.1.0"
+}
