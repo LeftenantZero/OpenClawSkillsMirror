@@ -1,0 +1,33 @@
+{
+  "changelog": "- Adds support for converting HAR files, Claude Code JSONL logs, and Copilot CLI JSONL logs to ATIF v1.6 trajectory JSON using the atifact CLI.\n- Introduces auto-detection of input file format, with options to force CLAUDE or Copilot format if needed.\n- Allows specifying an output file prefix; handles writing main and subagent trajectories with clear file naming.\n- Provides options to output a combined JSON array to stdout and suppress diagnostics for streamlined scripting.\n- Documents complete CLI usage, options, workflow, and important notes about deduplication, tool calls, and timestamp preservation.",
+  "created_at": 1778921571110,
+  "display_name": "atifact",
+  "fetched_at": 1787806670558,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Waldek Mastykarz",
+    "handle": "waldekmastykarz",
+    "user_id": "s177jvzxj0t9846btxv4j1b1x585feqv"
+  },
+  "slug": "atifact",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/atifact",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=atifact&ownerHandle=waldekmastykarz",
+    "page_url": "https://clawhub.ai/waldekmastykarz/skills/atifact"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 541,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "This skill should be used when the user asks to \"extract agent trajectory\", \"convert HAR to trajectory\", \"get trajectory from session\", \"parse agent session\"...",
+  "updated_at": 1778922409039,
+  "version": "0.7.0"
+}
