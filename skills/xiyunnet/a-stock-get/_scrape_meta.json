@@ -1,0 +1,49 @@
+{
+  "changelog": "A-share stock data collector initial release:\n\n- Automatically fetches and stores daily, weekly, and monthly historical K-line data for all A-share stocks in a local SQLite database.\n- Supports automated stock list management, multi-frequency data collection, and incremental updates.\n- Excludes delisted and pre-IPO stocks; tracks last fetch timestamps for each frequency.\n- Uses multiple data sources (EastMoney, Sina, Tencent) with automatic failover.\n- Includes parallel fetching, data validation, data repair tools, and OpenClaw scheduling support.",
+  "created_at": 1773469612301,
+  "display_name": "A\u80a1\u6570\u636e\u83b7\u53d6 A specialized data collection tool for Chinese A-share market",
+  "fetched_at": 1787874440661,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/README.md",
+    "scripts/data_repair.py",
+    "scripts/data_validation.py",
+    "scripts/day.py",
+    "scripts/day_original.py",
+    "scripts/day_parallel.py",
+    "scripts/db_reset.py",
+    "scripts/fetch_stocks.py",
+    "scripts/init_db.py",
+    "scripts/month.py",
+    "scripts/month_original.py",
+    "scripts/month_parallel.py",
+    "scripts/schedule_config.py",
+    "scripts/week.py",
+    "scripts/week_original.py",
+    "scripts/week_parallel.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u5c0f\u6f74",
+    "handle": "xiyunnet",
+    "user_id": "s17829vbh5h7ghkadt0zctk20583jxyd"
+  },
+  "slug": "a-stock-get",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/a-stock-get",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=a-stock-get&ownerHandle=xiyunnet",
+    "page_url": "https://clawhub.ai/xiyunnet/skills/a-stock-get"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1142,
+    "installs": 32,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Specialized A-share stock data collector. Automatically fetch and store daily/weekly/monthly historical K-line data for all A-share stocks in SQLite database.",
+  "updated_at": 1778491902083,
+  "version": "1.0.0"
+}
