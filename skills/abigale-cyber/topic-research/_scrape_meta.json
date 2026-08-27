@@ -1,0 +1,46 @@
+{
+  "changelog": "- Initial release of the `topic-research` skill for deep research on selected topics.\n- Runs a second-hop investigation using Tavily CLI, following an initial scan or news collection.\n- Normalizes reports into a local `research.md` contract, including a writing decision layer to guide content follow-up.\n- Requires a markdown input with YAML fields (topic, question, model, etc.).\n- Outputs structured research reports and saves raw source data for traceability.\n- Ensures strict dependency handling and consistent output format.",
+  "created_at": 1775575139546,
+  "display_name": "Topic Research",
+  "fetched_at": 1787828890216,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "runtime.py",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090335233,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Abigale-cyber",
+    "handle": "abigale-cyber",
+    "user_id": "s177gvvwbgtc3ew8annt8ph3gx84c2xt"
+  },
+  "slug": "topic-research",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/topic-research",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=topic-research&ownerHandle=abigale-cyber",
+    "page_url": "https://clawhub.ai/abigale-cyber/skills/topic-research"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 592,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Run a second-hop deep research pass through the Tavily CLI after an initial scan, then normalize the result into a local `research.md` contract. Use when Cod...",
+  "updated_at": 1778492464088,
+  "version": "1.0.0"
+}
