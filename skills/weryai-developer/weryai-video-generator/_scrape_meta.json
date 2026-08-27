@@ -1,0 +1,71 @@
+{
+  "changelog": "**Major refactor to improve agent usability and remove vendored dependencies.**\n\n- All 25 vendored core and video utility scripts have been removed for a cleaner codebase.\n- Documentation clarified to emphasize result-first, bounded-wait workflows (auto-polling with timeouts).\n- Usage guidance now stresses example prompts and natural language instructions (not raw shell commands).\n- Default behaviors and safety confirmations are unchanged for end users.\n- Security, authentication, and parameter selection guidance remain, with improved clarity.",
+  "created_at": 1774085896676,
+  "display_name": "Weryai Video Generator",
+  "fetched_at": 1787858774124,
+  "files": [
+    "AGENTS.md",
+    "SKILL.md",
+    "_meta.json",
+    "eval.yaml",
+    "references/api-models.md",
+    "references/error-codes.md",
+    "scripts/balance-video.js",
+    "scripts/lib/balance.js",
+    "scripts/lib/cli.js",
+    "scripts/lib/client.js",
+    "scripts/lib/errors.js",
+    "scripts/lib/model-registry.js",
+    "scripts/lib/models-command.js",
+    "scripts/lib/models.js",
+    "scripts/lib/normalize.js",
+    "scripts/lib/status.js",
+    "scripts/lib/submit-almighty.js",
+    "scripts/lib/submit-image.js",
+    "scripts/lib/submit-multi-image.js",
+    "scripts/lib/submit-text.js",
+    "scripts/lib/utils.js",
+    "scripts/lib/validators.js",
+    "scripts/lib/wait.js",
+    "scripts/models-video.js",
+    "scripts/status-video.js",
+    "scripts/submit-almighty-video.js",
+    "scripts/submit-image-video.js",
+    "scripts/submit-multi-image-video.js",
+    "scripts/submit-text-video.js",
+    "scripts/wait-video.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090071680,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "WeryAI-Developer",
+    "handle": "weryai-developer",
+    "user_id": "s17csvx4ax7kyjt70t862cpp4d83h5hh"
+  },
+  "slug": "weryai-video-generator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/weryai-video-generator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=weryai-video-generator&ownerHandle=weryai-developer",
+    "page_url": "https://clawhub.ai/weryai-developer/skills/weryai-video-generator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 748,
+    "installs": 19,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Generate and transform WeryAI videos from text, images, storyboard frames, or first-frame and last-frame guidance. Use when the user needs text-to-video, ima...",
+  "updated_at": 1778492083540,
+  "version": "0.1.2"
+}
