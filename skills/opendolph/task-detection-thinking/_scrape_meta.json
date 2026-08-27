@@ -1,0 +1,48 @@
+{
+  "changelog": "- Initial release: automates task anomaly detection and proactive solution generation.\n- Scans HEARTBEAT.md and WORKING.md to identify stalled, blocked, overdue, duplicate, and other anomalous tasks.\n- Generates multi-step analysis and up to 3 solution options per anomaly, with auto-fix attempts where possible.\n- Outputs detection results and thinking logs to structured memory files; sends critical alerts via Feishu.\n- Supports multiple trigger modes: heartbeat, scheduled scan, and manual command.\n- Flexible configuration for detection frequency, thresholds, auto-fix attempts, and alerting options.",
+  "created_at": 1774348591906,
+  "display_name": "Task Detection + Proactive Thinking",
+  "fetched_at": 1787851837631,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "locales/en/SKILL.md",
+    "locales/zh/SKILL.md",
+    "package.json",
+    "scripts/detect.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090072363,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jason-tiger",
+    "handle": "opendolph",
+    "user_id": "s170zcgka72kfpcxdav0wvf2x183h6hj"
+  },
+  "slug": "task-detection-thinking",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/task-detection-thinking",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=task-detection-thinking&ownerHandle=opendolph",
+    "page_url": "https://clawhub.ai/opendolph/skills/task-detection-thinking"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 559,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Incomplete task detection + proactive thinking. Automatically scans task status, identifies anomalies, generates solutions, and attempts auto-fixes.",
+  "updated_at": 1778492154873,
+  "version": "1.0.0"
+}
