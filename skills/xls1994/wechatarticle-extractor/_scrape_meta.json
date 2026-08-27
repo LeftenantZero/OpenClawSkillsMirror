@@ -1,0 +1,53 @@
+{
+  "changelog": "Initial major release \u2014 rewritten in Node.js for robust WeChat article extraction and CLI use.\n\n- Add command-line interface (CLI) for article extraction to Markdown or JSON: `npx wechat-article-extractor <URL>`.\n- Supports parsing WeChat article links (mp.weixin.qq.com), extracting metadata (title, author, publish time, etc.), and handling multiple article types (posts, videos, images, voices, reposts).\n- Provides both CLI and programmatic (JavaScript API) usage.\n- Detailed error handling with meaningful error codes and messages for various WeChat content restrictions or failures.\n- Output supports Markdown, JSON, or HTML, with options for file path and format.\n- Dependencies: cheerio, dayjs, request-promise, qs, lodash.unescape.",
+  "created_at": 1775133040069,
+  "display_name": "\u5fae\u4fe1\u516c\u4f17\u53f7\u5185\u5bb9\u63d0\u53d6\u5de5\u5177",
+  "fetched_at": 1787796651568,
+  "files": [
+    ".gitignore",
+    "IMPROVEMENTS.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "bin/wechat-extract.js",
+    "convert.js",
+    "package-lock.json",
+    "package.json",
+    "run-extract.js",
+    "scripts/errors.js",
+    "scripts/extract.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090262302,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u96e8\u98de",
+    "handle": "xls1994",
+    "user_id": "s17ax68smjccnceec48p51edhh842fpt"
+  },
+  "slug": "wechatarticle-extractor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wechatarticle-extractor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wechatarticle-extractor&ownerHandle=xls1994",
+    "page_url": "https://clawhub.ai/xls1994/skills/wechatarticle-extractor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 688,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Extract metadata and content from WeChat Official Account articles. Use when user needs to parse WeChat article URLs (mp.weixin.qq.com), extract article info...",
+  "updated_at": 1779075348929,
+  "version": "1.0.0"
+}
