@@ -1,0 +1,36 @@
+{
+  "changelog": "- Initial release of lark-doc-reviser.\n- Enables fetching unresolved comments from Feishu (Lark) documents and presenting them for targeted editing.\n- Guides users through a step-by-step workflow: fetch doc state, present comments, apply block edits, resolve comments, and refresh state.\n- Supports text edits at the block level, including rich text fields (bold, italic, code, etc.).\n- Documents current limitations (blank line insertion, block deletion/reordering not automated).\n- Warns against destructive heading renames using certain lark-cli options.",
+  "created_at": 1776090248495,
+  "display_name": "lark-doc-reviser",
+  "fetched_at": 1787823550951,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/fetch_doc.py",
+    "scripts/patch_blocks.py",
+    "scripts/resolve_comments.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Bill Zhuang",
+    "handle": "billzhuang6569",
+    "user_id": "s17d7mdp9nn22faex2cbvcrzy183wr4c"
+  },
+  "slug": "lark-doc-reviser",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/lark-doc-reviser",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=lark-doc-reviser&ownerHandle=billzhuang6569",
+    "page_url": "https://clawhub.ai/billzhuang6569/skills/lark-doc-reviser"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 563,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read unresolved comments in a Feishu (Lark) document and apply targeted edits block-by-block based on those comments. Use when the user shares a Feishu doc U...",
+  "updated_at": 1778492568090,
+  "version": "1.0.0"
+}
