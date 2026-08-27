@@ -1,0 +1,43 @@
+{
+  "changelog": "Optimized for memory usage and prevents freezing during price searches in Hyderabad (500081).\n\n- Now processes platforms one at a time to reduce memory usage and avoid browser freezes.\n- Default search checks Blinkit, Zepto, and Swiggy Instamart; Amazon, Flipkart, BigBasket, and DMart searched only if user requests \"search all platforms\".\n- Strict timeout: any platform taking over 15 seconds is skipped and marked as \"Timeout\".\n- Clean Markdown output of results for user clarity.\n- Buying flow pauses at checkout, requiring manual payment by the user for final approval. \n- Checkout details and screenshots are sent via Telegram for user review and security.",
+  "created_at": 1774896331717,
+  "display_name": "Hyderabad Shopper",
+  "fetched_at": 1787839360969,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090198940,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "sparshkhandelwal28",
+    "handle": "sparshkhandelwal28",
+    "user_id": "s17ad8wsseztcvr7f3d63vt2h983x6ne"
+  },
+  "slug": "hyderabad-shopper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hyderabad-shopper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hyderabad-shopper&ownerHandle=sparshkhandelwal28",
+    "page_url": "https://clawhub.ai/sparshkhandelwal28/skills/hyderabad-shopper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 509,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Finds lowest prices for Pincode 500081 without freezing. Optimized for memory.",
+  "updated_at": 1778492305892,
+  "version": "1.0.0"
+}
