@@ -1,0 +1,47 @@
+{
+  "changelog": "- Removed remote/device-transfer features: epdfont conversion and upload-to-/fonts steps are no longer included.\n- Local-only scope: the skill now focuses strictly on local conversion, preview, audit, and test artifact generation.\n- Updated documentation to clarify scope, boundaries, and explicit out-of-scope features.\n- Removed scripts and references related to remote delivery and epdfont conversion, ensuring all steps stay local.",
+  "created_at": 1776840081713,
+  "display_name": "Vertical Font Conversion \uff08CHINESE\uff09",
+  "fetched_at": 1787817071218,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/case-template.md",
+    "references/cases-zihun-songkekaiti.md",
+    "references/default-config.json",
+    "references/examples.md",
+    "references/implementation-notes.md",
+    "references/rules.md",
+    "references/workflow.md",
+    "scripts/audit_font_rules.py",
+    "scripts/generate_reader_test_txt.py",
+    "scripts/make_vertical_font.py",
+    "scripts/make_vertical_font_cff.py",
+    "scripts/render_original_preview.py",
+    "scripts/render_vertical_preview.py",
+    "scripts/run_full_pipeline.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "aster-copilot",
+    "handle": "aster-copilot",
+    "user_id": "s1759jmvfk05581xkmhekras5n85bvmp"
+  },
+  "slug": "ttf-converter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ttf-converter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ttf-converter&ownerHandle=aster-copilot",
+    "page_url": "https://clawhub.ai/aster-copilot/skills/ttf-converter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 698,
+    "installs": 17,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Local-only skill for converting horizontal Chinese fonts into high-quality vertical-reading TTF fonts with a preview-first workflow, grouped glyph rules, and...",
+  "updated_at": 1778492706596,
+  "version": "1.0.1"
+}
