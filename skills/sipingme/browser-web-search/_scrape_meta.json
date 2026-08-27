@@ -1,0 +1,48 @@
+{
+  "changelog": "**Major hardening release with new residual-risk controls for sensitive session data:**\n\n- Adds a Gate 4 platform consent ledger (~/.bws/consents.json); one-time per-site consent now required for sensitive calls (via --accept-platform-consent).\n- Emits a machine-readable transparency block to stderr on every sensitive call (or all calls with BWS_TRANSPARENCY=1), detailing third-party package and audit info.\n- New --dry-run flag to exercise all access gates and audit logging without loading untrusted code\u2014ideal for CI workflows.\n- Underlying npm dependency remains pinned and integrity-verified (0.4.3, unchanged).\n- SECURITY.md added.",
+  "created_at": 1774939299832,
+  "display_name": "Browser Web Search",
+  "fetched_at": 1787797030535,
+  "files": [
+    "README.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "scripts/postinstall.js",
+    "scripts/run.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090778275,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "PING SI",
+    "handle": "sipingme",
+    "user_id": "s17867zbqf69d0mb2yqzym6nmh83hrxm"
+  },
+  "slug": "browser-web-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/browser-web-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=browser-web-search&ownerHandle=sipingme",
+    "page_url": "https://clawhub.ai/sipingme/skills/browser-web-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1561,
+    "installs": 41,
+    "stars": 0,
+    "versions": 27
+  },
+  "summary": "\u4e00\u884c\u547d\u4ee4\u641c\u904d\u5168\u7f51 \u2014 55 \u4e2a\u5e73\u53f0 91+ \u4e2a\u547d\u4ee4\uff0c\u5934\u6761\u3001\u77e5\u4e4e\u3001\u8c46\u74e3\u3001YouTube\u3001GitHub\u3001Reddit\u3001Hacker News \u7b49\u3002\u4e13\u4e3a OpenClaw \u8bbe\u8ba1\uff0c\u590d\u7528\u6d4f\u89c8\u5668\u767b\u5f55\u6001\uff0c\u8fd4\u56de\u7ed3\u6784\u5316 JSON\uff0c\u5929\u7136\u9002\u914d AI Agent \u5de5\u5177\u8c03\u7528\u3002",
+  "updated_at": 1779075173441,
+  "version": "0.4.11"
+}
