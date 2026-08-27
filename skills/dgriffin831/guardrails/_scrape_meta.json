@@ -1,0 +1,53 @@
+{
+  "changelog": "- Switched risk classification script from Node.js (classify-risks.js) to Python (classify-risks.py).\n- Updated workflow commands to use the new Python risk classifier.\n- Clarified that classification uses only the Python standard library.\n- Removed references to Node.js for classification step in documentation.",
+  "created_at": 1770063583914,
+  "display_name": "Guardrails",
+  "fetched_at": 1787805871076,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "schemas/config.schema.json",
+    "schemas/risks.schema.json",
+    "scripts/classify-risks.py",
+    "scripts/discover.sh",
+    "scripts/generate_guardrails_md.py",
+    "scripts/generate_questions.py",
+    "scripts/monitor.sh",
+    "skill-card.md",
+    "templates/guardrails-template.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783655969916,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "dgriffin831",
+    "handle": "dgriffin831",
+    "user_id": "s17faq5seed7yjjqdaz8cs48sx88526g"
+  },
+  "slug": "guardrails",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/guardrails",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=guardrails&ownerHandle=dgriffin831",
+    "page_url": "https://clawhub.ai/dgriffin831/skills/guardrails"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 3153,
+    "installs": 105,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Interactively configure, review, and monitor security guardrails for your OpenClaw workspace by discovering risks, interviewing users, and generating GUARDRA...",
+  "updated_at": 1778987945396,
+  "version": "1.0.1"
+}
