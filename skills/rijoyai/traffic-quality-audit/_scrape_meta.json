@@ -1,0 +1,41 @@
+{
+  "changelog": "Initial release of the traffic-quality-audit skill.\n\n- Audits traffic quality beyond basic GA4/Meta reports, mapping source/medium to behavioral depth and conversions.\n- Flags invalid or low-intent clicks (bots, spam referrals, mis-set placements) and recommends specific sources, campaigns, or placements to pause/exclude.\n- Always delivers a markdown table comparing source, bounce rate, key action completion, and budget recommendations.\n- Enforces a \"dwell time vs conversion path\" analysis for any ads/traffic queries, even if user input is vague.\n- Requires at least two actionable shutoff/pause recommendations per audit.\n- Includes framework for data-collection and sample recommendations when data is missing.\n- Excludes use for pure creative-only, criminal investigation, or non-analytics requests.",
+  "created_at": 1774332767178,
+  "display_name": "Traffic Quality Audit",
+  "fetched_at": 1787852425779,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/README.md",
+    "evals/README.md",
+    "evals/evals.json",
+    "evals/files/README.md",
+    "references/README.md",
+    "references/rijoy_brand_context.md",
+    "references/traffic_quality_playbook.md",
+    "scripts/README.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "RIJOY-AI",
+    "handle": "rijoyai",
+    "user_id": "s17968d4vetrx5cj2yx3105heh83hrb4"
+  },
+  "slug": "traffic-quality-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/traffic-quality-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=traffic-quality-audit&ownerHandle=rijoyai",
+    "page_url": "https://clawhub.ai/rijoyai/skills/traffic-quality-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 642,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Audit traffic sources for engagement depth and key action rates beyond surface GA4 or Meta metrics, flag low-intent clicks, and recommend specific budget cut...",
+  "updated_at": 1778492146803,
+  "version": "1.0.0"
+}
