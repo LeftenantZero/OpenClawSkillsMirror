@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of gh-bridge: an agent-to-human verification and escrow platform.\n\n- Agents can request physical-world tasks with defined verification criteria (GPS, photos, timestamps, signatures).\n- Automated escrow: funds locked at task creation, released only when all proofs pass.\n- Built-in dispute mechanism: freezes escrow and verification if challenged.\n- REST API endpoints to create tasks, submit proofs, dispute, and query platform stats.\n- Supports multiple verification types for proof: gps, photo, timestamp, and signature.",
+  "created_at": 1776131999737,
+  "display_name": "Bridge",
+  "fetched_at": 1787823201429,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "bridge/__init__.py",
+    "bridge/app.py",
+    "bridge/models.py",
+    "bridge/state.py",
+    "bridge/verifier.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090414018,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mirni",
+    "handle": "mirni",
+    "user_id": "s1711srsc0t5e7tx4tkwpmygw584bfmq"
+  },
+  "slug": "gh-bridge",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gh-bridge",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gh-bridge&ownerHandle=mirni",
+    "page_url": "https://clawhub.ai/mirni/skills/gh-bridge"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 610,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Agent-to-Human (A2H) verification and escrow platform. Agents request physical-world tasks from humans, define verification criteria (GPS, photos, timestamps...",
+  "updated_at": 1778492575478,
+  "version": "1.0.0"
+}
