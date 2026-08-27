@@ -1,0 +1,54 @@
+{
+  "changelog": "Initial release of the event-driven issue creation workflow controller.\n\n- Enables trigger via Gitea webhook (on renaming draft_issue.md to confirmed_issue.md) or through OpenClaw chat commands.\n- Automates strict workflow: precondition check, issue creation, dependency linking, status update, and email notification.\n- Differentiates between single-project and cross-project meetings, handling each with appropriate branching logic.\n- Provides robust error handling with user feedback and ensures idempotency at all stages.\n- Includes detailed configuration and setup instructions for seamless deployment.",
+  "created_at": 1777449690658,
+  "display_name": "skill-d-create-issues",
+  "fetched_at": 1787794378190,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "env-example.txt",
+    "main.js",
+    "requirements.txt",
+    "scripts/check.py",
+    "scripts/create_issues.py",
+    "scripts/email_utils.py",
+    "scripts/finish.py",
+    "scripts/gitea_utils.py",
+    "scripts/log_utils.py",
+    "scripts/webhook.py",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090581522,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "myd2002",
+    "handle": "myd2002",
+    "user_id": "s175zrvz5m28epr76c6rt4dtex8474t6"
+  },
+  "slug": "skill-d-create-issues",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-d-create-issues",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-d-create-issues&ownerHandle=myd2002",
+    "page_url": "https://clawhub.ai/myd2002/skills/skill-d-create-issues"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 569,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Validate issue draft existence and status, batch create Gitea issues with dependencies on confirmation, update meeting status, and manage related email notif...",
+  "updated_at": 1779076213008,
+  "version": "1.0.0"
+}
