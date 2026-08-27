@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of claw-shell skill.\n\n- Runs shell commands exclusively in a tmux session named \"claw\"\n- Ensures no other tmux sessions are affected\n- Captures and returns command output to the agent\n- Confirms with user before running potentially dangerous commands (e.g., sudo, rm, reboot, shutdown)\n- Provides example safe and dangerous commands for reference",
+  "created_at": 1771258752768,
+  "display_name": "Skills Backup Claw Shell",
+  "fetched_at": 1787791886300,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "handler.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779971113731,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Gexsta",
+    "handle": "gexsta",
+    "user_id": "s17801hgben7h9wmz29x2g72d5884fc1"
+  },
+  "slug": "skills-backup-claw-shell",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skills-backup-claw-shell",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skills-backup-claw-shell&ownerHandle=gexsta",
+    "page_url": "https://clawhub.ai/gexsta/skills/skills-backup-claw-shell"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1526,
+    "installs": 47,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Executes shell commands inside a dedicated tmux session named claw, capturing and returning the command output safely.",
+  "updated_at": 1779077098648,
+  "version": "1.0.0"
+}
