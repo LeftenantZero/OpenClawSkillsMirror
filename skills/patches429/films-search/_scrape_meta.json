@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of films-search:\n\n- Enables searching for movies, TV series, and anime resources across Quark, Baidu, Aliyun, and UC cloud drives.\n- Supports deep (cloudscraper) and shallow (web-search) resource extraction.\n- Search via shell or PowerShell scripts with multiple filter options (pan type, quality, result limits).\n- Includes command for resolving redirect links to actual cloud drive URLs.\n- All outputs in structured JSON suitable for downstream agent use.\n- Customizable preferences via .env file.\n- Search commands triggered by common keywords (e.g., \u201c\u627e\u7535\u5f71\u201d, \u201c\u7f51\u76d8\u8d44\u6e90\u201d).",
+  "created_at": 1772796131648,
+  "display_name": "Films Search",
+  "fetched_at": 1787789912310,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/deep_extract.py",
+    "scripts/film-search.js",
+    "scripts/film-search.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089780846,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Parker",
+    "handle": "patches429",
+    "user_id": "s171by77r8sahftxk2h3besw5s884a4c"
+  },
+  "slug": "films-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/films-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=films-search&ownerHandle=patches429",
+    "page_url": "https://clawhub.ai/patches429/skills/films-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 532,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u641c\u7d22\u5f71\u89c6\u8d44\u6e90\uff08\u7535\u5f71\u3001\u7535\u89c6\u5267\u3001\u52a8\u6f2b\uff09\uff0c\u4ece\u5938\u514b\u7f51\u76d8\u3001\u767e\u5ea6\u7f51\u76d8\u3001\u963f\u91cc\u4e91\u76d8\u3001UC\u7f51\u76d8\u83b7\u53d6\u8d44\u6e90\u94fe\u63a5\u3002\u89e6\u53d1\u8bcd\uff1a\u627e\u7535\u5f71\u3001\u627e\u5267\u3001\u5f71\u89c6\u8d44\u6e90\u3001\u4e0b\u8f7d\u94fe\u63a5\u3001\u7f51\u76d8\u8d44\u6e90\u3001\u627e\u7247\u3001\u7535\u5f71\u4e0b\u8f7d\u3001\u5938\u514b\u8d44\u6e90\u3002",
+  "updated_at": 1779077773159,
+  "version": "0.1.0"
+}
