@@ -1,0 +1,36 @@
+{
+  "changelog": "wechat-article-fetcher v0.0.1\n\n- Initial release for WeChat public article content extraction.\n- Automatically detects and processes links starting with https://mp.weixin.qq.com/s/.\n- Primary extraction uses a custom get_content.py script with real browser User-Agent and retry logic.\n- Fallback to browser tool only if script fails and recommends browser usage.\n- Documentation includes extraction flow, structure of article pages, and usage notes for handling login, time limits, and media.",
+  "created_at": 1773586108665,
+  "display_name": "wechat-article-skill",
+  "fetched_at": 1787872104481,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/get_content.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Alien",
+    "handle": "alienhub",
+    "user_id": "s171hbxm556ydykff6bkjmbt4183w60f"
+  },
+  "slug": "wechat-article-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wechat-article-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wechat-article-skill&ownerHandle=alienhub",
+    "page_url": "https://clawhub.ai/alienhub/skills/wechat-article-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 814,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5fae\u4fe1\u516c\u4f17\u53f7\u6587\u7ae0\u94fe\u63a5\u5904\u7406\u3002\u5f53\u7528\u6237\u53d1\u9001\u5fae\u4fe1\u516c\u4f17\u53f7\u6587\u7ae0\u94fe\u63a5\u65f6\uff0c\u81ea\u52a8\u83b7\u53d6\u5e76\u63d0\u53d6\u6587\u7ae0\u5185\u5bb9\u3002 \u89e6\u53d1\u6761\u4ef6\uff1a(1) \u7528\u6237\u53d1\u9001 http(s)://mp.weixin.qq.com/s/ \u5f00\u5934\u7684\u94fe\u63a5 (2) \u7528\u6237\u8bf7\u6c42\u83b7\u53d6\u516c\u4f17\u53f7\u6587\u7ae0\u5185\u5bb9",
+  "updated_at": 1778491928981,
+  "version": "0.0.1"
+}
