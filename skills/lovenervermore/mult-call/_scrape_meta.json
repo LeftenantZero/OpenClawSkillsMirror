@@ -1,0 +1,45 @@
+{
+  "changelog": "Summary: Initial public release for multi_call skill, enabling multi-path recall of QA pairs and table schema based on intent recognition results.\n\n- Retrieves QA pairs using a vector knowledge base (Milvus) and table definitions using a graph database (Neo4j).\n- Extracts and analyzes metric and dimension information from recognized intent outputs.\n- Outputs include table DDL structure and similar QA pairs, with configurable recall weights for each data source.\n- Independent failure handling: gracefully degrades if either Milvus or Neo4j service fails.\n- Includes .env configuration for service credentials and supports standalone execution from the command line.",
+  "created_at": 1773710927770,
+  "display_name": "Mult Call",
+  "fetched_at": 1787869363371,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "index.js",
+    "multi_call.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089922802,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "LoveNerverMore",
+    "handle": "lovenervermore",
+    "user_id": "s179eehz3gk12qcjky3an7t6sx83pxjj"
+  },
+  "slug": "mult-call",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mult-call",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mult-call&ownerHandle=lovenervermore",
+    "page_url": "https://clawhub.ai/lovenervermore/skills/mult-call"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 704,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u591a\u8def\u53ec\u56deskill ,\u7528\u4e8e\u5c06\u610f\u56fe\u8bc6\u522bskill\u4e2d\u7684\u6307\u6807\u548c\u7ef4\u5ea6\u4fe1\u606f\u8fdb\u884c\u5206\u6790\uff0c\u901a\u8fc7\u5411\u91cf\u77e5\u8bc6\u5e93\u53ec\u56deQA\u95ee\u7b54\u5bf9\uff0c\u901a\u8fc7\u56fe\u6570\u636e\u5e93\u53ec\u56de\u8868\u7684\u5b9a\u4e49\u7ed3\u6784\u3002",
+  "updated_at": 1778491961785,
+  "version": "1.0.0"
+}
