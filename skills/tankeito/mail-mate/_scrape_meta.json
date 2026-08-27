@@ -1,0 +1,38 @@
+{
+  "changelog": "# v1.0.0: Major Simplication & Core Feature Rollup\n\n- Reduced file count for a leaner, zero-dependency package (6 added, 19 removed).\n- Refactored to core Python standard library, removing external requirements.\n- New concise folder structure: main.py, reader.py (mail routing/processing), pusher.py (push notifications), setup_cron.sh, README, and documentation.\n- All previous multi-language health-report logic removed; skill now focuses on a universal IMAP mail processing pipeline.\n- Features: provider-based routing, precise local timezone filtering, deep string normalization, keyword+body matching, regex structured extraction, and multi-platform push support.\n- One-command cron registration for scheduled mail processing.",
+  "created_at": 1776829065164,
+  "display_name": "Mail Mate",
+  "fetched_at": 1787817182042,
+  "files": [
+    "README.md",
+    "_meta.json",
+    "main.py",
+    "pusher.py",
+    "reader.py",
+    "setup_cron.sh",
+    "skill-card.md",
+    "skill.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "tankeito",
+    "handle": "tankeito",
+    "user_id": "s17050jbyjd1x0p5mb5z41j5n983hd2e"
+  },
+  "slug": "mail-mate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mail-mate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mail-mate&ownerHandle=tankeito",
+    "page_url": "https://clawhub.ai/tankeito/skills/mail-mate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 696,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Connects to IMAP mailboxes using built-in provider routing to filter, normalize, extract data via regex, and push matching emails with precise time window co...",
+  "updated_at": 1778492702954,
+  "version": "1.0.0"
+}
