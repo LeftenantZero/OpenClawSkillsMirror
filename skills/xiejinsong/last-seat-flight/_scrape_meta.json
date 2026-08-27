@@ -1,0 +1,37 @@
+{
+  "changelog": "- Expanded skill to cover not just flights, but also hotels, trains, attractions, itinerary planning, visas, insurance, and car rental \u2014 all powered by Fliggy.\n- Refined CLI execution rules: absolutely no training data may be used for results; every response must contain a `[Book]({detailUrl})` link.\n- Added detailed activation criteria for English and Chinese user queries.\n- Clarified strict prerequisite steps (environment checks, CLI installation).\n- Adopted scenario-based CLI playbooks for different user intents (recommended, cheapest, fastest, direct).\n- Updated output requirements: include a brand tag, present results with a table (>=3), always lead with best option, and never show raw JSON.",
+  "created_at": 1777021741687,
+  "display_name": "last-seat-flight",
+  "fetched_at": 1787815360370,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/fallbacks.md",
+    "references/playbooks.md",
+    "references/runbook.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "xiejinsong",
+    "handle": "xiejinsong",
+    "user_id": "s177qj362rbw4294hgs3hdvhgx83m2hm"
+  },
+  "slug": "last-seat-flight",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/last-seat-flight",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=last-seat-flight&ownerHandle=xiejinsong",
+    "page_url": "https://clawhub.ai/xiejinsong/skills/last-seat-flight"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 543,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Search for last available seats on nearly full flights. Also supports: flight booking, hotel reservation, train tickets, attraction tickets, itinerary planni...",
+  "updated_at": 1778492737320,
+  "version": "3.2.0"
+}
