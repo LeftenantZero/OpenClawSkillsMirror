@@ -1,0 +1,49 @@
+{
+  "changelog": "## v1.2.0 - Initial Release\n\n### \ud83c\udfaf Core Features\n- Multi-Agent collaboration system for Feishu (Lark)\n- Coordinator-Specialist architecture pattern\n- Cross-Bot user identity mapping (solves open_id isolation)\n- Agent-to-Agent task relay via sessions_send\n- Specialist Bots can proactively message users\n\n### \ud83d\ude80 Deployment Modes\n- **Single-User Mode**: Zero configuration, auto-registration (5 min setup)\n- **Multi-User Mode**: Team support with manual registration (30 min setup)\n\n### \ud83d\udcda Documentation\n- Complete SKILL.md with architecture and workflows\n- Single-user setup guide (auto-registration pattern)\n- Multi-user setup guide (team deployment)\n- Mapping table schema reference\n- 6 real-world relay examples with code\n\n### \u26a0\ufe0f Important Notes\n- Single-user mode: Recommended for personal use (secure, zero-config)\n- Multi-user mode: Internal use only (manual ID entry, no verification)\n- Requires 3+ Feishu Bot applications (Coordinator + Specialists)\n\n### \ud83e\uddea Tested\n- Feishu multi-Bot coordination with 3 Agents\n- Coordinator \u2192 Specialist relay flow\n- Proactive messaging from specialists\n- Auto-registration (single-user mode)\n- Manual registration (multi-user mode)\n\n### \ud83d\udce6 Includes\n- SKILL.md (main documentation)\n- mapping-api.js (unified mapping API)\n- 4 reference guides (setup, schema, examples)\n- README.md (ClawHub showcase)",
+  "created_at": 1772854472465,
+  "display_name": "Feishu Agent Relay - Multi-Bot Collaboration",
+  "fetched_at": 1787800085625,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/feishu-bot-setup.md",
+    "references/mapping-schema.md",
+    "references/relay-examples.md",
+    "references/single-user-setup.md",
+    "scripts/mapping-api.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089790389,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Glassmarbles",
+    "handle": "glassmarbles",
+    "user_id": "s172mhs8zjb6nendte62kg091h83ky1n"
+  },
+  "slug": "feishu-agent-relay",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-agent-relay",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-agent-relay&ownerHandle=glassmarbles",
+    "page_url": "https://clawhub.ai/glassmarbles/skills/feishu-agent-relay"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1190,
+    "installs": 35,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Enables multi-Agent collaboration on Feishu by relaying tasks between coordinator and specialist Bots with user ID mapping and proactive messaging.",
+  "updated_at": 1778996192595,
+  "version": "1.0.0"
+}
