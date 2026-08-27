@@ -1,0 +1,48 @@
+{
+  "changelog": "China Mirror Resolver 2.1.0 \u2014 Self-healing mirror source selection & configuration for dev tools in mainland China\n\n- Introduced an execution flow that discovers, validates, and configures the fastest domestic mirror for popular developer tools (pip, npm, conda, Docker, Go, Rust, Maven, etc.).\n- Added baseline mirror source tables for each supported tool as an offline fallback.\n- Integrated error keyword detection and current source diagnostics for rapid troubleshooting.\n- Implemented graceful degradation: supports both web search-capable and offline-only environments.\n- Expanded documentation, including tool-specific validation and configuration steps, trigger keywords, and agent compatibility details.",
+  "created_at": 1772957031160,
+  "display_name": "China Mirror Resolver",
+  "fetched_at": 1787799921690,
+  "files": [
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/config-templates.md",
+    "scripts/validate.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089804437,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "The-Ladder-of-Rrogress",
+    "handle": "the-ladder-of-rrogress",
+    "user_id": "s176f4c28ak6tw9d7xk6q90vy188457f"
+  },
+  "slug": "china-mirror-resolver",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/china-mirror-resolver",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=china-mirror-resolver&ownerHandle=the-ladder-of-rrogress",
+    "page_url": "https://clawhub.ai/the-ladder-of-rrogress/skills/china-mirror-resolver"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 980,
+    "installs": 28,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Self-healing China mirror source resolver. Automatically discovers, validates, and configures domestic mirror sources for pip/npm/yarn/pnpm/conda/Docker/Go/...",
+  "updated_at": 1778996581516,
+  "version": "2.1.0"
+}
