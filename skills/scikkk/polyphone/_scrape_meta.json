@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of polyphone-aware Chinese TTS pronunciation control.\n\n- Automatically detects ambiguous polyphonic Chinese characters (\u591a\u97f3\u5b57) in user text.\n- Suggests likely pronunciations using context clues, and prompts the user to confirm or adjust them.\n- Constructs a pinyin-annotated `dictionary` array to ensure accurate pronunciation in TTS synthesis.\n- Requires a cloned voice and the SenseAudio-TTS-1.5 model for dictionary support; reminds users if missing.\n- Allows iterative correction: update dictionary entries and re-synthesize as needed.\n- Reports applied dictionary items, output file path, duration, and character count after synthesis.",
+  "created_at": 1773498682069,
+  "display_name": "Polyphone TTS",
+  "fetched_at": 1787798927246,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "scikkk",
+    "handle": "scikkk",
+    "user_id": "s171sgccp6wt09makas274ye9584ktsf"
+  },
+  "slug": "polyphone",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polyphone",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polyphone&ownerHandle=scikkk",
+    "page_url": "https://clawhub.ai/scikkk/skills/polyphone"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 873,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fix Chinese polyphone (\u591a\u97f3\u5b57) mispronunciation in TTS by auto-detecting ambiguous characters and applying pinyin annotations. Use when users complain about wro...",
+  "updated_at": 1778999620012,
+  "version": "1.0.0"
+}
