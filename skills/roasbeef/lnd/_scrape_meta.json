@@ -1,0 +1,61 @@
+{
+  "changelog": "- Removed configuration template files: `litd-regtest.toml`, `litd-watchonly.toml`, `litd.toml`, and `lnd.toml` from the templates directory.\n- No changes to user-facing functionality or documentation.  \n- Skill version update for maintenance and cleanup.",
+  "created_at": 1770777551765,
+  "display_name": "Lnd",
+  "fetched_at": 1787804906815,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "profiles/debug.env",
+    "profiles/default.env",
+    "profiles/regtest.env",
+    "profiles/taproot.env",
+    "profiles/wumbo.env",
+    "references/security.md",
+    "scripts/create-wallet.sh",
+    "scripts/docker-start.sh",
+    "scripts/docker-stop.sh",
+    "scripts/import-credentials.sh",
+    "scripts/install.sh",
+    "scripts/lncli.sh",
+    "scripts/start-lnd.sh",
+    "scripts/stop-lnd.sh",
+    "scripts/unlock-wallet.sh",
+    "skill-card.md",
+    "templates/docker-compose-regtest.yml",
+    "templates/docker-compose-watchonly.yml",
+    "templates/docker-compose.yml"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968984640,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Roasbeef",
+    "handle": "roasbeef",
+    "user_id": "s17ct3pzdm5xvjjh7x3qs5z3kn884ax4"
+  },
+  "slug": "lnd",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/lnd",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=lnd&ownerHandle=roasbeef",
+    "page_url": "https://clawhub.ai/roasbeef/skills/lnd"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2058,
+    "installs": 64,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Install and run Lightning Terminal (litd) which bundles lnd, loop, pool, tapd, and faraday in a single Docker container. Defaults to neutrino backend with SQLite storage on testnet. Supports watch-only mode with remote signer, standalone mode, and regtest development. Use when setting up a Lightning node for payments, channel management, liquidity management (loop), channel marketplace (pool), taproot assets (tapd), or enabling agent L402 commerce.",
+  "updated_at": 1778989747745,
+  "version": "1.0.1"
+}
