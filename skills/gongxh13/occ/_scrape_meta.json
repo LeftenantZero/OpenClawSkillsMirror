@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release of the OCC (OpenCode Controller) skill.\n\n- Enables session management and task execution for OpenCode via CLI.\n- Supports querying, creating, and continuing OpenCode development sessions.\n- Automatically detects and starts the OpenCode Server as needed.\n- Designed for integration with external systems or to automate coding workflows.",
+  "created_at": 1773460679104,
+  "display_name": "occ",
+  "fetched_at": 1787874659110,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/bin/opencode-server.js",
+    "scripts/package.json",
+    "scripts/src/index.js",
+    "scripts/src/services/message.js",
+    "scripts/src/services/session.js",
+    "scripts/src/utils/http.js",
+    "scripts/src/utils/server.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089876661,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "gongxh13",
+    "handle": "gongxh13",
+    "user_id": "s17cfkh2bgqnc9nxwpfn4xgj6h885x8g"
+  },
+  "slug": "occ",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/occ",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=occ&ownerHandle=gongxh13",
+    "page_url": "https://clawhub.ai/gongxh13/skills/occ"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 757,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Control OpenCode to execute development tasks. Provides session management and task execution capabilities.",
+  "updated_at": 1778491898098,
+  "version": "0.1.0"
+}
