@@ -1,0 +1,54 @@
+{
+  "changelog": "Security hardening: built-in secret redaction in summariser (strips API keys, tokens, passwords, AWS creds before sending to LLM). Added Security & Privacy section to README. Declared source/homepage URLs.",
+  "created_at": 1775129631086,
+  "display_name": "Memory Dreaming",
+  "fetched_at": 1787796614789,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/architecture.md",
+    "references/cold-start.md",
+    "references/cron-templates.md",
+    "references/dream-cycle.md",
+    "scripts/conversation-archive.js",
+    "scripts/conversation-summarise.js",
+    "scripts/memory-bootstrap.js",
+    "scripts/memory-decay.js",
+    "scripts/memory-recall-logger.js",
+    "scripts/memory-supersede.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090265052,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Peter Rossi",
+    "handle": "ptburkis",
+    "user_id": "s170a958e0pnn3n4gwvkacgzsd843c43"
+  },
+  "slug": "openclaw-memory-dreaming",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-memory-dreaming",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-memory-dreaming&ownerHandle=ptburkis",
+    "page_url": "https://clawhub.ai/ptburkis/skills/openclaw-memory-dreaming"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 651,
+    "installs": 17,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "A Markdown + JSON memory framework with conversation archiving for AI agents. Provides persistent long-term memory with biologically-inspired decay, recall b...",
+  "updated_at": 1779075357870,
+  "version": "0.1.2"
+}
