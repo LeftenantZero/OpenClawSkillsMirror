@@ -1,0 +1,49 @@
+{
+  "changelog": "- Initial release of the location-service skill.\n- Supports geocoding (coordinates \u2194 address), distance calculation, and weather integration.\n- New: Paste any Google Maps URL (including short links) to automatically extract coordinates and proceed with location processing.\n- Compatible with OpenStreetMap Nominatim for all geocoding operations.\n- Distance calculation uses the Haversine formula.\n- Seamlessly integrates with the existing weather skill for location-based forecasts.",
+  "created_at": 1778860338983,
+  "display_name": "Location Service",
+  "fetched_at": 1787806886992,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/examples.md",
+    "references/nominatim_api.md",
+    "scripts/distance_calc.py",
+    "scripts/geocode_forward.py",
+    "scripts/geocode_reverse.py",
+    "scripts/location_service.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090811303,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Alessandro Tarantino",
+    "handle": "jakah2551",
+    "user_id": "s1724cxbqx80t7s1ztphr6pp5n86g3pj"
+  },
+  "slug": "location-service",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/location-service",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=location-service&ownerHandle=jakah2551",
+    "page_url": "https://clawhub.ai/jakah2551/skills/location-service"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 554,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Location-based services including geocoding (coordinates to address and address to coordinates), distance calculation, and integration with weather data. Use...",
+  "updated_at": 1778860525031,
+  "version": "1.0.0"
+}
