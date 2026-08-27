@@ -1,0 +1,55 @@
+{
+  "changelog": "- Enhanced paper-code joint analysis workflow details and modularization guidance.\n- Set default user-facing language to Chinese for reports and explanations, with preservation of technical identifiers in original form.\n- Clarified mandatory output artifacts: both human-readable Markdown and fixed-structure JSON bundle (`analysis_bundle.json`), forbidding web-only or prose-only reports.\n- Outlined strict step-by-step analysis process: from paper parsing to code mapping, unreported detail extraction, and validation.\n- Specified modular, reusable reader architecture and upgrade flow for future changes.",
+  "created_at": 1778480115905,
+  "display_name": "Paper-Code Joint Analysis",
+  "fetched_at": 1787808650422,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/reader-template/assets/app.js",
+    "assets/reader-template/assets/styles.css",
+    "assets/reader-template/index.html",
+    "assets/reader-template/vendor/katex/katex.min.css",
+    "assets/reader-template/vendor/katex/katex.min.js",
+    "assets/reader-template/vendor/mermaid.min.js",
+    "modules/deep-reading-gate1.md",
+    "modules/fixed-artifacts-and-reader.md",
+    "modules/modify-method-guide.md",
+    "modules/question-led-code-reading.md",
+    "references/analysis-bundle.schema.json",
+    "references/deep-reading-overlay.md",
+    "references/large-artifact-policy.md",
+    "references/output-contract.md",
+    "references/reader-data-contract.md",
+    "scripts/build_static_reader.py",
+    "scripts/check_outputs.py",
+    "scripts/check_reader.py",
+    "scripts/merge_markdown_parts.py",
+    "scripts/validate_bundle.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "c-narcissus",
+    "handle": "c-narcissus",
+    "user_id": "s177jw27anm32qt3dm1c7dq0jh851mjz"
+  },
+  "slug": "paper-code-joint-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/paper-code-joint-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=paper-code-joint-analysis&ownerHandle=c-narcissus",
+    "page_url": "https://clawhub.ai/c-narcissus/skills/paper-code-joint-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 479,
+    "installs": 9,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Jointly analyze a research paper and its open-source implementation. Use when a user wants to understand a paper through code, map theory/formulas/algorithms...",
+  "updated_at": 1778492895889,
+  "version": "1.0.9"
+}
