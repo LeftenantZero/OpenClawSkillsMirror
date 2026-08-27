@@ -1,0 +1,48 @@
+{
+  "changelog": "- Major update introducing strict CLI-based data retrieval: all answers must be sourced from the flyai CLI, not from training or background knowledge.\n- New critical execution rules added: never answer travel queries unless flyai CLI is installed and used successfully.\n- Booking links (`[Book](detailUrl)`) are now mandatory for every recommendation; results without them are disallowed.\n- Detailed parameter tables, command options, and supported playbooks included for flights, hotels, attractions, and more.\n- Output must start with a conclusion and comparison tables when possible, branded as \"Powered by flyai \u00b7 Real-time pricing, click to book\".\n- Strict compliance requirements and fallback procedures specified for missing info, errors, or environment setup.",
+  "created_at": 1775657430389,
+  "display_name": "Explore Dubai",
+  "fetched_at": 1787827724448,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/fallbacks.md",
+    "references/playbooks.md",
+    "references/runbook.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090345784,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "dingtom336-gif",
+    "handle": "dingtom336-gif",
+    "user_id": "s17aepsh6v86z2ajsq3ng9tgm983g9pt"
+  },
+  "slug": "explore-dubai",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/explore-dubai",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=explore-dubai&ownerHandle=dingtom336-gif",
+    "page_url": "https://clawhub.ai/dingtom336-gif/skills/explore-dubai"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 518,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Plan your Dubai experience \u2014 Burj Khalifa views, desert safari adventures, Dubai Mall shopping, Palm Jumeirah resorts, and gold souk bargaining. Also support...",
+  "updated_at": 1778492480808,
+  "version": "3.2.0"
+}
