@@ -1,0 +1,56 @@
+{
+  "changelog": "- Initial release providing schedules, trip planning, and service alerts for LIRR, Metro-North, and NYC Subway.\n- Supports direct schedule lookup, multi-leg trip planning, and finding nearby stations across all covered systems.\n- Live train delay and service alert integration using MTA GTFS static and real-time feeds.\n- Includes track watch functionality for LIRR and Metro-North departure platforms (via optional cron jobs).\n- Allows user location management for personalized trip planning.\n- Provides setup guidance and usage examples for all major features.",
+  "created_at": 1776388559692,
+  "display_name": "MTA Commuter",
+  "fetched_at": 1787820398511,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/check_track.py",
+    "scripts/feeds.json",
+    "scripts/geo.py",
+    "scripts/gtfs.py",
+    "scripts/locations.py",
+    "scripts/mta.py",
+    "scripts/subway.py",
+    "scripts/transfers.json",
+    "scripts/trip.py",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_apply_realtime.py",
+    "tests/test_check_track.py",
+    "tests/test_fetch_alerts.py",
+    "tests/test_geo.py",
+    "tests/test_gtfs.py",
+    "tests/test_locations.py",
+    "tests/test_mta_cli.py",
+    "tests/test_multi_leg_trip.py",
+    "tests/test_subway.py",
+    "tests/test_trip.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Frankie Ottomanelli",
+    "handle": "ottomanelli",
+    "user_id": "s178xws25yrss0vn5yc21gb2r98516dr"
+  },
+  "slug": "mta-commuter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mta-commuter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mta-commuter&ownerHandle=ottomanelli",
+    "page_url": "https://clawhub.ai/ottomanelli/skills/mta-commuter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 613,
+    "installs": 14,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "NYC commuter transit: LIRR, Metro-North, and Subway schedules, trip planning, and service alerts. Use when the user asks about train departures, arrivals, co...",
+  "updated_at": 1778492631819,
+  "version": "1.0.0"
+}
