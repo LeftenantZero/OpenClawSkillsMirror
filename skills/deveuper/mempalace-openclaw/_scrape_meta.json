@@ -1,0 +1,71 @@
+{
+  "changelog": "v1.6.0: CRITICAL PATH FIX - archive.ps1 now uses 'python -m mempalace' instead of bare 'mempalace' command to avoid broken .exe shim. config.py auto-detects skill root via .skill_root marker file written by archive.ps1. All paths confirmed writing to skill/palace_data/ (NOT ~/.mempalace). archive: 0.36s, search: 344ms. Based on https://github.com/milla-jovovich/mempalace",
+  "created_at": 1775631706690,
+  "display_name": "MemPalace Memory System for OpenClaw",
+  "fetched_at": 1787828238073,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "mempalace.yaml",
+    "mempalace/README.md",
+    "mempalace/__init__.py",
+    "mempalace/__main__.py",
+    "mempalace/cli.py",
+    "mempalace/config.py",
+    "mempalace/convo_miner.py",
+    "mempalace/dialect.py",
+    "mempalace/entity_detector.py",
+    "mempalace/entity_registry.py",
+    "mempalace/general_extractor.py",
+    "mempalace/hooks/README.md",
+    "mempalace/hooks/mempal_precompact_hook.sh",
+    "mempalace/hooks/mempal_save_hook.sh",
+    "mempalace/knowledge_graph.py",
+    "mempalace/layers.py",
+    "mempalace/mcp_server.py",
+    "mempalace/miner.py",
+    "mempalace/normalize.py",
+    "mempalace/onboarding.py",
+    "mempalace/palace_graph.py",
+    "mempalace/pyproject.toml",
+    "mempalace/requirements.txt",
+    "mempalace/room_detector_local.py",
+    "mempalace/searcher.py",
+    "mempalace/spellcheck.py",
+    "mempalace/split_mega_files.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090346142,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Deveuper",
+    "handle": "deveuper",
+    "user_id": "s172bpj8fhw2zxbnb5psa48aq983v9xd"
+  },
+  "slug": "mempalace-openclaw",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mempalace-openclaw",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mempalace-openclaw&ownerHandle=deveuper",
+    "page_url": "https://clawhub.ai/deveuper/skills/mempalace-openclaw"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1238,
+    "installs": 39,
+    "stars": 1,
+    "versions": 8
+  },
+  "summary": "MemPalace memory system for OpenClaw/XClaw/WorkBuddy. Archive AI conversations to local long-term storage with semantic search. Commands: /mem-arc (archive),...",
+  "updated_at": 1778492473647,
+  "version": "1.6.0"
+}
