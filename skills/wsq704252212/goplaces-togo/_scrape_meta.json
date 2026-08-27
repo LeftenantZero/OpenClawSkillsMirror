@@ -1,0 +1,33 @@
+{
+  "changelog": "**Adds city classification and city-based filtering to recommendations.**\n\n- Each saved place is now classified by city using the Places API; city names are stored and normalized.\n- On launch, shows a summary of saved places grouped by city, and asks which city the user is in today (with option to search all).\n- Recommendations filter by selected city before applying cuisine/location preferences.\n- The data schema is updated: both `savedList` and `places` entries can contain a `city` field.\n- Place ID resolution now fills in both `city` and `placeId` for new entries to reduce duplicate lookups.",
+  "created_at": 1773033269873,
+  "display_name": "goplaces-togo",
+  "fetched_at": 1787799866644,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "wsq704252212",
+    "handle": "wsq704252212",
+    "user_id": "s175rm54q1e23etsny26vmqhbs884gq4"
+  },
+  "slug": "goplaces-togo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/goplaces-togo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=goplaces-togo&ownerHandle=wsq704252212",
+    "page_url": "https://clawhub.ai/wsq704252212/skills/goplaces-togo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 964,
+    "installs": 28,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Ask the user for their Google saved places list, look up each place with goplaces, and recommend the single best one to visit today based on their preference...",
+  "updated_at": 1778996788918,
+  "version": "1.0.2"
+}
