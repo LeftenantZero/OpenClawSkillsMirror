@@ -1,0 +1,47 @@
+{
+  "changelog": "agent-deploy 2.4.0\n\n- Improved API key management: The deploy script now merges API keys from both global config (openclaw.json) and the main agent's auth-profiles.json.\n- Updated documentation to reflect enhanced API key merging process.\n- Minor tweaks to scripts and helper for reliability and multi-account compatibility.",
+  "created_at": 1772538414189,
+  "display_name": "Agent Deploy",
+  "fetched_at": 1787790275357,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/deploy.sh",
+    "scripts/deploy_helper.py",
+    "scripts/list.sh",
+    "scripts/remove.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089754382,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Joe7921",
+    "handle": "joe7921",
+    "user_id": "s17bwq0rgbfqchrt332s0ze6h18852k8"
+  },
+  "slug": "agent-deploy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-deploy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-deploy&ownerHandle=joe7921",
+    "page_url": "https://clawhub.ai/joe7921/skills/agent-deploy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1332,
+    "installs": 40,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Deploy a new isolated OpenClaw agent with its own Telegram bot, workspace, and session storage. Use when user asks to create a new agent, add a new bot, or s...",
+  "updated_at": 1779077627163,
+  "version": "2.4.0"
+}
