@@ -1,0 +1,39 @@
+{
+  "changelog": "- Clarified that all endpoint and language auto-detection logic should be implemented in the agent, not the CLI script.\n- Updated and expanded JSON input format documentation to distinguish integer and float sample values and provide explicit conversion examples.\n- Adjusted terminology from \"ADC value\" to \"sample value\" for input data to reflect varying device output types.\n- Explicitly documented that the CLI script requires explicit arguments for mode and language; there is no internal auto-detection.\n- Clarified and updated the field naming conventions for script output (snake_case) for integration consistency.",
+  "created_at": 1774842098866,
+  "display_name": "ECG-AI-Diagnosis",
+  "fetched_at": 1787840562214,
+  "files": [
+    ".gitignore",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "data/example_12lead.json",
+    "data/example_1lead.json",
+    "requirements.txt",
+    "scripts/call_api.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "yujiecharles",
+    "handle": "yujiecharles",
+    "user_id": "s17a3ezzrvd3gb8s93g3960kjn83xefz"
+  },
+  "slug": "ecg-ai-diagnosis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ecg-ai-diagnosis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ecg-ai-diagnosis&ownerHandle=yujiecharles",
+    "page_url": "https://clawhub.ai/yujiecharles/skills/ecg-ai-diagnosis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 746,
+    "installs": 19,
+    "stars": 3,
+    "versions": 4
+  },
+  "summary": "Analyze ECG signals via heartvoice (\u5fc3\u4e4b\u58f0) API \u2014 single-lead and 12-lead. Automatically selects endpoint based on user intent and responds in the user's langua...",
+  "updated_at": 1778492287825,
+  "version": "0.9.1"
+}
