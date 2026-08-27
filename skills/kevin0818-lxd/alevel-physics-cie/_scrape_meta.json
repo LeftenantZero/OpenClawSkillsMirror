@@ -1,0 +1,56 @@
+{
+  "changelog": "No functional code changes; skill README clarified for users, orchestrators, and security reviewers.\n\n- Updated SKILL.md to clarify strict boundaries between local inference (no API/web access) and optional data-generation or retraining tools.\n- Added mandatory rule: orchestrators and clients must display all math as plain text (never LaTeX delimiters like $...$), matching enforced script output.\n- Expanded security and usage notes, including reference to SECURITY.md.\n- Minor corrections to references and output-format display instructions.",
+  "created_at": 1773927406675,
+  "display_name": "A-Level Physics CIE 9702",
+  "fetched_at": 1787862693742,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "adapters/adapter_config.json",
+    "clawhub.json",
+    "config.yaml",
+    "configs/train_qwen35_4b.yaml",
+    "data/eval/adversarial_report.json",
+    "data/eval/adversarial_report_v1.1.json",
+    "requirements.txt",
+    "scraper/__init__.py",
+    "scraper/extract_questions.py",
+    "scraper/scrape_9702.py",
+    "scraper/scrape_fraft.py",
+    "scraper/scrape_fraft_playwright.py",
+    "scripts/build_sft.py",
+    "scripts/run_full_pipeline.py",
+    "scripts/seed_questions.py",
+    "scripts/train.sh",
+    "skill-card.md",
+    "skill/SKILL.md",
+    "skill/references/answer_template_format.md",
+    "skill/references/training.md",
+    "skill/scripts/adversarial_eval.py",
+    "skill/scripts/inference.py",
+    "triggers.txt"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Xudong Liu",
+    "handle": "kevin0818-lxd",
+    "user_id": "s179hhzw0zteyz1ae4wjft1kjh83e23s"
+  },
+  "slug": "alevel-physics-cie",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alevel-physics-cie",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alevel-physics-cie&ownerHandle=kevin0818-lxd",
+    "page_url": "https://clawhub.ai/kevin0818-lxd/skills/alevel-physics-cie"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 907,
+    "installs": 24,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Generate structured answer templates for CIE A-Level Physics (9702) exam questions. Fine-tuned Qwen3-4B LoRA model: question type, given/required, formulae,...",
+  "updated_at": 1778492033442,
+  "version": "1.0.2"
+}
