@@ -1,0 +1,49 @@
+{
+  "changelog": "Renamed from service-persistence. Three-tier macOS reboot recovery: LaunchAgent + tmux bootstrap + wrapper daemon. Includes CLAUDE.md requirement for Tier 3, PATH pitfall docs, plugin subprocess checks.",
+  "created_at": 1775707908098,
+  "display_name": "Auto Reboot Recovery",
+  "fetched_at": 1787796019043,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/bootstrap-template.md",
+    "references/launchagent-template.md",
+    "references/registry-spec.md",
+    "references/wrapper-template.md",
+    "scripts/bootstrap-services.sh",
+    "scripts/restore-claude-telegram.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090348920,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Joey Luo",
+    "handle": "darwin7381",
+    "user_id": "s17d6805f0n7wkv9ewv2ayad7h84em8h"
+  },
+  "slug": "auto-reboot-recovery",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/auto-reboot-recovery",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=auto-reboot-recovery&ownerHandle=darwin7381",
+    "page_url": "https://clawhub.ai/darwin7381/skills/auto-reboot-recovery"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 558,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "macOS \u670d\u52d9\u6301\u4e45\u5316\u8207\u91cd\u555f\u6062\u5fa9\u3002\u7ba1\u7406 LaunchAgent\u3001tmux bootstrap\u3001wrapper daemon \u4e09\u5c64\u67b6\u69cb\uff0c \u78ba\u4fdd\u96fb\u8166\u91cd\u555f\u5f8c\u6240\u6709\u670d\u52d9\u81ea\u52d5\u6062\u5fa9\u3002Use when: (1) \u65b0\u589e\u9700\u8981\u5e38\u99d0\u7684\u670d\u52d9\uff0c(2) \u628a\u73fe\u6709 tmux session \u5347\u7d1a\u6210 LaunchAgent\uff0c (3) \u70ba\u4e92\u52d5\u5f0f\u7a0b\u5f0f\u5efa...",
+  "updated_at": 1779075655532,
+  "version": "1.0.0"
+}
