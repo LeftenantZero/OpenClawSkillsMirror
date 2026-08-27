@@ -1,0 +1,48 @@
+{
+  "changelog": "- Notify openClaw via cron job\n- Let claw decide if issue has to be surfaced to human or can be handled by itself",
+  "created_at": 1770511284558,
+  "display_name": "Monitored Ralph Loop",
+  "fetched_at": 1787805298399,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/ralph.sh",
+    "skill-card.md",
+    "templates/AGENTS.md",
+    "templates/PROMPT-BUILDING.md",
+    "templates/PROMPT-PLANNING.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783656904378,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Endogen",
+    "handle": "endogen",
+    "user_id": "s17apzzz7jdqrk84b635pjqwyd884a0c"
+  },
+  "slug": "monitored-ralph-loop",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/monitored-ralph-loop",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=monitored-ralph-loop&ownerHandle=endogen",
+    "page_url": "https://clawhub.ai/endogen/skills/monitored-ralph-loop"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2264,
+    "installs": 71,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Generate copy-paste bash scripts for Ralph Wiggum/AI agent loops (Codex, Claude Code, OpenCode, Goose). Use when asked for a \"Ralph loop\", \"Ralph Wiggum loop\", or an AI loop to plan/build code via PROMPT.md + AGENTS.md, SPECS, and IMPLEMENTATION_PLAN.md, including PLANNING vs BUILDING modes, backpressure, sandboxing, and completion conditions.",
+  "updated_at": 1778988956894,
+  "version": "0.1.1"
+}
