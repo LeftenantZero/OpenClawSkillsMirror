@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of Session Daily Backup - Obsidian:\n\n- Automates daily backup of OpenClaw session conversations to an Obsidian Vault at 2:00 AM.\n- Supports incremental backup, merging multiple sessions into a single daily file.\n- Uses Obsidian callout format with color-coding for conversation distinction.\n- Monitors token usage with 80%/90% thresholds and sends QQ warnings.\n- Provides session/token statistics and flexible manual/automatic backup scripts.\n- Requires `jq`, bash, and compatible OpenClaw session files (JSONL format).",
+  "created_at": 1774097609733,
+  "display_name": "Session Daily Backup - Obsidian",
+  "fetched_at": 1787858403898,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/create_hourly_snapshots.sh",
+    "scripts/format_message_v2.jq.txt",
+    "scripts/monitor_and_save.sh",
+    "scripts/save_full_snapshot.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090018477,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u5c0f\u6708\u6708",
+    "handle": "valuemoon2025",
+    "user_id": "s173q85astpaz7dm182906m5a583rbtc"
+  },
+  "slug": "session-daily-backup-obsidian",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/session-daily-backup-obsidian",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=session-daily-backup-obsidian&ownerHandle=valuemoon2025",
+    "page_url": "https://clawhub.ai/valuemoon2025/skills/session-daily-backup-obsidian"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 576,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u81ea\u52a8\u6bcf\u65e5\u51cc\u6668\u5907\u4efd OpenClaw \u4f1a\u8bdd\u5230 Obsidian\uff0c\u4ee5\u589e\u91cf\u65b9\u5f0f\u5408\u5e76\u591a session\uff0c\u5e76\u652f\u6301 Token \u76d1\u63a7\u4e0e QQ \u8b66\u544a\u3002",
+  "updated_at": 1778492087267,
+  "version": "1.0.0"
+}
