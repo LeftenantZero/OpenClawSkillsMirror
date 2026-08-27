@@ -1,0 +1,59 @@
+{
+  "changelog": "Summary: This release introduces a new local crawler, majorly reorganizes documentation, and updates core functionality for improved usability and independence.\n\n- Added custom Python crawler (crawler/search_crawler.py and SerpAPI version) for direct data collection, removing third-party search API dependencies.\n- Updated allowed-tools to include shell, enabling controlled execution of the crawler.\n- Major documentation overhaul: added multiple new guides (\u4f7f\u7528\u6307\u5357, \u5feb\u901f\u53c2\u8003, \u83b7\u53d6\u98de\u4e66Webhook\u6307\u5357, etc.), removed obsolete and redundant files.\n- Enhanced safety: local-only data processing, explicit platform compliance, more controlled script execution.\n- Improved configuration clarity and setup instructions in SKILL.md and related docs.\n- Reports and monitoring logic remain focused on new-energy vehicle brands, now more easily adaptable and deployable.",
+  "created_at": 1772014422351,
+  "display_name": "Brand Monitor - \u54c1\u724c\u8206\u60c5\u76d1\u63a7",
+  "fetched_at": 1787802213537,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "RELEASE_NOTES_v1.2.0.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.json",
+    "crawler/SerpAPI\u4f7f\u7528\u6307\u5357.md",
+    "crawler/requirements.txt",
+    "crawler/search_crawler_serpapi.py",
+    "install.sh",
+    "prepare-release.sh",
+    "prompts/alert.md",
+    "prompts/analyze-trend.md",
+    "prompts/monitor.md",
+    "skill-card.md",
+    "\u4f7f\u7528\u6307\u5357-SerpAPI\u7248.md",
+    "\u5982\u4f55\u4f7f\u7528Skill.md",
+    "\u5feb\u901f\u53c2\u8003.md",
+    "\u83b7\u53d6\u98de\u4e66Webhook\u6307\u5357.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779958929110,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "pig",
+    "handle": "wenxiaoyu",
+    "user_id": "s171xxgpvrw3vq01j0shfw0bt9885te5"
+  },
+  "slug": "brand-monitor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/brand-monitor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=brand-monitor&ownerHandle=wenxiaoyu",
+    "page_url": "https://clawhub.ai/wenxiaoyu/skills/brand-monitor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1325,
+    "installs": 40,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "\u65b0\u80fd\u6e90\u6c7d\u8f66\u54c1\u724c\u8206\u60c5\u76d1\u63a7 - \u81ea\u52a8\u641c\u7d22\u3001\u5206\u6790\u56fd\u5185\u5e73\u53f0\u7684\u54c1\u724c\u63d0\u53ca\u60c5\u51b5",
+  "updated_at": 1778993119333,
+  "version": "1.2.0"
+}
