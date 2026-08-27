@@ -1,0 +1,37 @@
+{
+  "changelog": "- Added coverage for native/token balance workflows; new balance skill at local-wallet/balance/SKILL.md.\n- Updated wallet skill mapping and routing logic to include balance checks.\n- Expanded runtime and input requirements for better clarity and security, including explicit chain/network and secret management needs.\n- Added a standard response contract specifying outputs for all wallet-related operations.\n- Enhanced safety guidance: default to read-only, use testnet if chain unspecified, prevent immediate broadcast, and enforce user confirmation for sensitive actions.\n- Updated skill and description naming to agent-wallet.",
+  "created_at": 1775829460697,
+  "display_name": "Agent-Wallet",
+  "fetched_at": 1787795929124,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "local-wallet/SKILL.md",
+    "local-wallet/balance/SKILL.md",
+    "local-wallet/generate/SKILL.md",
+    "local-wallet/send/SKILL.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Akinsuyi Joshua",
+    "handle": "beardkoda",
+    "user_id": "s174w3r3mt5pe1khf3xx62d5cd84gx0y"
+  },
+  "slug": "agent-wallets",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-wallets",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-wallets&ownerHandle=beardkoda",
+    "page_url": "https://clawhub.ai/beardkoda/skills/agent-wallets"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 651,
+    "installs": 16,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Route wallet workflows for agents that need to generate or import wallets using either a seed phrase or private key. Use when the user asks for wallet creati...",
+  "updated_at": 1779075687483,
+  "version": "1.0.1"
+}
