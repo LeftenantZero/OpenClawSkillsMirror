@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release of Shopee-Notion Sync skill:\n\n- Enables syncing Shopee products into Notion using a local Node.js workflow.\n- Supports searching, saving, updating, and syncing Shopee product data directly to Notion tables.\n- Enforces use of a single Node.js command; prohibits use of web, browser, curl, Python, shell scripts, scraping, or generated data.\n- Sets default target as `shopee_produtos` and default limit as `10`.\n- Response includes only: keyword used, target used, created, updated, and failed counts.",
+  "created_at": 1775604575072,
+  "display_name": "Shopee to Notion Sync",
+  "fetched_at": 1787828623558,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "jobs/config.js",
+    "jobs/notion-client.js",
+    "jobs/shopee-client.js",
+    "jobs/sync-shopee-notion.js",
+    "package-lock.json",
+    "package.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090338168,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Carine Bertagnolli Bathaglini",
+    "handle": "cbbathaglini",
+    "user_id": "s172pz7s3wpxyc37p0x7vjnkfh84cvnf"
+  },
+  "slug": "shopee-to-notion-sync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/shopee-to-notion-sync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=shopee-to-notion-sync&ownerHandle=cbbathaglini",
+    "page_url": "https://clawhub.ai/cbbathaglini/skills/shopee-to-notion-sync"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 556,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Sync Shopee products into Notion using the local Node.js workflow only.",
+  "updated_at": 1778492468374,
+  "version": "1.0.0"
+}
