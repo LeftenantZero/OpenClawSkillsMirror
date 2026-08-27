@@ -1,0 +1,53 @@
+{
+  "changelog": "openclaw-pc-security 2.0.1 changelog:\n\n- Clarified wording for target checks: \u201cOptional OpenClaw target checks (authorized use only)\u201d replaces \u201cOptional target probing for OpenClaw targets (authorized use only)\u201d.\n- Active scan functionality (credential and leak checks) must now be explicitly enabled via new command-line flags (--enable-cred-check, --enable-leak-check).\n- Updated instructions and sample commands to reflect explicit enabling of active network checks.\n- Revised notes for clearer guidance on usage restrictions and safe handling of report files.",
+  "created_at": 1773222676749,
+  "display_name": "openclaw-pc-security",
+  "fetched_at": 1787799530281,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "debug_audit.py",
+    "evals/evals.json",
+    "examples/example.md",
+    "output/scan_report.json",
+    "papar/cve_analysis_result.example.csv",
+    "papar/windows_cve_kb_map.sample.csv",
+    "requirements-audit.txt",
+    "requirements-scan.txt",
+    "requirements.txt",
+    "scripts/__init__.py",
+    "scripts/analyzer.py",
+    "scripts/audit.py",
+    "scripts/kbmap.py",
+    "scripts/main.py",
+    "scripts/mock_server.py",
+    "scripts/msrc.py",
+    "scripts/run_audit.py",
+    "scripts/run_scan.py",
+    "scripts/scanner.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Vincent_Openclaw",
+    "handle": "openclawvincent",
+    "user_id": "s17em1pykxjvc8ehz4kh5raxc583htds"
+  },
+  "slug": "openclaw-pc-security",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-pc-security",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-pc-security&ownerHandle=openclawvincent",
+    "page_url": "https://clawhub.ai/openclawvincent/skills/openclaw-pc-security"
+  },
+  "stats": {
+    "comments": 7,
+    "downloads": 1092,
+    "installs": 33,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Local security self-check for your Windows PC and OpenClaw server setup (password protection, port, and exposure), producing a local report.",
+  "updated_at": 1778997832957,
+  "version": "2.0.1"
+}
