@@ -1,0 +1,77 @@
+{
+  "changelog": "Initial release of tdoc-docx: a complete Word document processing skill.\n\n- Provides creation, reading, editing, conversion, and comparison for Word documents (.docx/.doc), supporting Chinese official templates, tables, images, tracked changes, and comments.\n- Offers both general and specialized (industry/government) template-based document creation with a clear routing decision tree.\n- Includes scripts for extracting content, batch editing, converting to/from PDF/Markdown, generating diff reports, adding comments, and word count/AI-powered summaries.\n- Supports common CLI and Python API workflows, with flexible document style options (default, business, academic).\n- Comprehensive installation guidance for required Python and system-level dependencies.\n- Auto-activates for a wide range of document-related tasks using keyword triggers.",
+  "created_at": 1773299700898,
+  "display_name": "TDOC Docx",
+  "fetched_at": 1787799371898,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "install.sh",
+    "pyproject.toml",
+    "requirements.txt",
+    "scripts/__init__.py",
+    "scripts/accept_changes.py",
+    "scripts/comment.py",
+    "scripts/convert_docx.py",
+    "scripts/create_docx.py",
+    "scripts/diff_docx.py",
+    "scripts/edit_docx.py",
+    "scripts/fetch_file.sh",
+    "scripts/office/__init__.py",
+    "scripts/office/helpers/__init__.py",
+    "scripts/office/helpers/merge_runs.py",
+    "scripts/office/helpers/simplify_redlines.py",
+    "scripts/office/pack.py",
+    "scripts/office/soffice.py",
+    "scripts/office/unpack.py",
+    "scripts/office/validate.py",
+    "scripts/office/validators/__init__.py",
+    "scripts/office/validators/base.py",
+    "scripts/office/validators/docx.py",
+    "scripts/office/validators/pptx.py",
+    "scripts/office/validators/redlining.py",
+    "scripts/read_docx.py",
+    "scripts/templates/comments.xml",
+    "scripts/templates/commentsExtended.xml",
+    "scripts/templates/commentsExtensible.xml",
+    "scripts/templates/commentsIds.xml",
+    "scripts/templates/people.xml",
+    "scripts/word_count.py",
+    "skill-card.md",
+    "templates/official_document/rules.md",
+    "templates/red_head/rules.md",
+    "templates/red_head/src/red_head_document.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089849522,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "WenRichard",
+    "handle": "wenrichard",
+    "user_id": "s179bcgf214k0maz7t1na4x42n83j415"
+  },
+  "slug": "tdoc-docx",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tdoc-docx",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tdoc-docx&ownerHandle=wenrichard",
+    "page_url": "https://clawhub.ai/wenrichard/skills/tdoc-docx"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1078,
+    "installs": 31,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Word \u6587\u6863\u5168\u80fd\u5904\u7406\u6280\u80fd | Complete Word Document Processing Skill. \u652f\u6301\u521b\u5efa\u3001\u8bfb\u53d6\u3001\u7f16\u8f91\u3001\u8f6c\u6362 Word \u6587\u6863 | Create, read, edit, convert Word documents. \u652f\u6301 .docx/.doc \u683c\u5f0f\u3001\u4e2d\u6587\u516c\u6587\u683c\u5f0f\u3001\u8868\u683c\u3001\u56fe\u7247\u3001tr...",
+  "updated_at": 1778998286653,
+  "version": "1.0.0"
+}
