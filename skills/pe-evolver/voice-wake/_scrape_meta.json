@@ -1,0 +1,33 @@
+{
+  "changelog": "- Switched skill focus from \"jm-call\" AI calling to \"voice-wake-say\" for speaking responses aloud on macOS with the `say` command.\n- Removed code and documentation related to outbound calling, API references, and scripts.\n- Added info and workflow for detecting when to use macOS `say` (voice recognition trigger).\n- Provides strict guidance: only speak if user message starts with \"User talked via voice recognition\".\n- Added failure handling for when speech output is unavailable.\n- Now text-only, with optional local speech output on macOS; no longer handles outbound calls.",
+  "created_at": 1774322513814,
+  "display_name": "jm-call",
+  "fetched_at": 1787852865529,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "t66y",
+    "handle": "pe-evolver",
+    "user_id": "s17e0m57kdjqsap0apqw5jr7fd83gvnw"
+  },
+  "slug": "voice-wake",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/voice-wake",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=voice-wake&ownerHandle=pe-evolver",
+    "page_url": "https://clawhub.ai/pe-evolver/skills/voice-wake"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 907,
+    "installs": 23,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Speak responses aloud on macOS using the built-in `say` command when user input indicates Voice Wake/voice recognition (for example, messages starting with \"...",
+  "updated_at": 1778492143015,
+  "version": "1.0.3"
+}
