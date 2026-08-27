@@ -1,0 +1,45 @@
+{
+  "changelog": "Autonomous Greptile PR review loop: auto-fix, auto-merge at 4/5+, round tracking, escalation for architectural decisions",
+  "created_at": 1770991327839,
+  "display_name": "PR Review Loop",
+  "fetched_at": 1787792459611,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/greptile-patterns.md",
+    "scripts/pr-review-loop.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779973776243,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Cem S",
+    "handle": "cemoso",
+    "user_id": "s17937zzznyw1yx62yrceh87md884vyw"
+  },
+  "slug": "pr-review-loop",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pr-review-loop",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pr-review-loop&ownerHandle=cemoso",
+    "page_url": "https://clawhub.ai/cemoso/skills/pr-review-loop"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1676,
+    "installs": 53,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Autonomous PR review loop with Greptile. Use when an agent creates a PR and needs to autonomously handle code review feedback \u2014 reading Greptile reviews, fixing issues, pushing fixes, re-triggering review, and auto-merging when score is 4/5+. Trigger on commands like \"pr review {url}\", \"review my PR\", or when a Greptile review webhook/poll delivers feedback.",
+  "updated_at": 1779076918635,
+  "version": "1.0.0"
+}
