@@ -1,0 +1,43 @@
+{
+  "changelog": "LI.FI Skill 2.0.1 Changelog\n\n- Major skill rewrite with stricter security and usage rules for all DeFi swaps and bridges.\n- Default slippage increased to 10%; dynamically adjustable if user requests.\n- All /v1/quote requests now require &skipSimulation=true to ensure compatibility with delegated wallets.\n- Explicit support and special instructions for Sui chain swaps and bridging (chain ID 9270000000000000).\n- Clear separation for handling ERC-20 approval flows, ensuring all approvals use provided tools.\n- After transaction, always return a clickable block explorer link for easy tracking.\n- Only documented LI.FI API endpoints may be used; no guessing or external API calls.",
+  "created_at": 1770211980405,
+  "display_name": "LI.FI Skill",
+  "fetched_at": 1787793329733,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783655254483,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fabriziogianni7",
+    "handle": "fabriziogianni7",
+    "user_id": "s17e2z3w7wk8a3jswyehyqqw1588467s"
+  },
+  "slug": "lifi-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/lifi-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=lifi-skill&ownerHandle=fabriziogianni7",
+    "page_url": "https://clawhub.ai/fabriziogianni7/skills/lifi-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3964,
+    "installs": 134,
+    "stars": 3,
+    "versions": 13
+  },
+  "summary": "v4 - Use LI.FI API for cross-chain and same-chain swaps, bridges, and contract calls. Use when quoting routes, validating chains/tokens, building transaction requests, and tracking status.",
+  "updated_at": 1779076613253,
+  "version": "2.0.1"
+}
