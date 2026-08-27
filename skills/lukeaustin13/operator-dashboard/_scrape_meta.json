@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial public release of operator-dashboard \u2014 zero-config OpenClaw gateway monitoring.\n\n- Monitors OpenClaw gateway health, cron jobs, plugins, disk, memory, and sessions automatically.\n- Sends daily 5\u20136 line summaries in the current conversation channel; uses emoji for clarity.\n- Issues immediate alerts for critical problems (gateway down, repeated cron failures, disk/memory overuse, plugin errors).\n- Respects quiet hours (23:00\u201307:00); batches most alerts into daily summary except gateway down.\n- Suggests specific fixes for problems and only acts with explicit user approval.\n- No channel-specific configuration required; always replies in the active channel.",
+  "created_at": 1777810858042,
+  "display_name": "Operator Dashboard",
+  "fetched_at": 1787810723630,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "LukeAustin13",
+    "handle": "lukeaustin13",
+    "user_id": "s17f8b0m7p0mdh72e14zgrb7kd861e4c"
+  },
+  "slug": "operator-dashboard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/operator-dashboard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=operator-dashboard&ownerHandle=lukeaustin13",
+    "page_url": "https://clawhub.ai/lukeaustin13/skills/operator-dashboard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 577,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Zero\u2011config OpenClaw gateway monitoring. Runs health checks, sends daily 5\u2011line summaries, alerts immediately on critical issues (gateway down, cron failures...",
+  "updated_at": 1778492838254,
+  "version": "1.0.0"
+}
