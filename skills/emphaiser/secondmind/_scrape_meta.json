@@ -1,0 +1,68 @@
+{
+  "changelog": "## SecondMind v1.4.0 \u2013 \"Project Tracker\"\n\n### New Features\n- **Project Tracking**: `/accept` automatically creates tracked projects\n- `/projects` command to view active/completed projects\n- `/complete` marks projects as done \u2013 permanently excluded from future suggestions\n- Initiative engine checks project state before suggesting (no duplicates)\n- Project count in `/status` output\n\n### Fixes\n- **Initiative dedup overhaul**: Blacklist now covers ALL rejected/dead/completed proposals (was 7 days)\n- **Hard blacklist safety net**: Fuzzy keyword matching blocks reformulated duplicates even when LLM ignores instructions\n- **Explicit blacklist section in LLM prompt** with examples and strict rules\n- `/drop` now archives related knowledge entries to longterm (source dries up, not just the proposal)\n\n### Breaking Changes\n- None. Migration runs automatically on first start.",
+  "created_at": 1770829349296,
+  "display_name": "SecondMind",
+  "fetched_at": 1787792535350,
+  "files": [
+    "AGENT-SETUP.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.json",
+    "lib/db.js",
+    "lib/dedup.js",
+    "lib/extractor.js",
+    "lib/jsonl-parser.js",
+    "lib/llm.js",
+    "lib/notifier.js",
+    "lib/search.js",
+    "lib/sessions.js",
+    "package.json",
+    "scripts/archive.js",
+    "scripts/consolidate.js",
+    "scripts/feedback.js",
+    "scripts/flush.js",
+    "scripts/ingest.js",
+    "scripts/initiative.js",
+    "scripts/proposals.js",
+    "scripts/search.js",
+    "scripts/session-watcher.js",
+    "scripts/status.js",
+    "scripts/telegram-bot.js",
+    "setup.js",
+    "skill-card.md",
+    "templates/schema.sql"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779971119853,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Emphaiser",
+    "handle": "emphaiser",
+    "user_id": "s171k5cvwsxs5bvp553e23k4cx884wjw"
+  },
+  "slug": "secondmind",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/secondmind",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=secondmind&ownerHandle=emphaiser",
+    "page_url": "https://clawhub.ai/emphaiser/skills/secondmind"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2141,
+    "installs": 67,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Autonomous three-tier memory with proactive initiative, project tracking, and social intelligence. Ingests OpenClaw conversations, extracts knowledge + emoti...",
+  "updated_at": 1779076890769,
+  "version": "1.4.0"
+}
