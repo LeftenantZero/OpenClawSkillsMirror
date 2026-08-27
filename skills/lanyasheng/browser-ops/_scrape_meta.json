@@ -1,0 +1,68 @@
+{
+  "changelog": "feat: prioritize opencli platform adapters (74 sites) over WebFetch/web read. Adapted platforms now route directly to opencli <platform> for structured data instead of falling through generic web read.",
+  "created_at": 1775114001940,
+  "display_name": "Browser Ops Publish",
+  "fetched_at": 1787796687934,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "evals/compare_with_baseline.sh",
+    "evals/eval_results.json",
+    "evals/evals.json",
+    "evals/trigger_evals.json",
+    "references/anti-detection.md",
+    "references/extended-content.md",
+    "references/opencli-usage.md",
+    "references/routing.md",
+    "references/setup.md",
+    "references/state-management.md",
+    "scripts/sync-cookies.sh",
+    "scripts/web-read.sh",
+    "scripts/web-search.sh",
+    "scripts/web-trending.sh",
+    "skill-card.md",
+    "task_suite.yaml",
+    "tests/run_tests.sh",
+    "tests/test_agent_browser.sh",
+    "tests/test_anti_detection.sh",
+    "tests/test_antibot.py",
+    "tests/test_opencli.sh",
+    "tests/test_session.sh",
+    "tests/test_smoke.py",
+    "tests/test_stagehand.sh",
+    "tests/test_structure.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090356417,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "_silhouette",
+    "handle": "lanyasheng",
+    "user_id": "s179bk63dv96y90hw97xaay4fx83t7yr"
+  },
+  "slug": "browser-ops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/browser-ops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=browser-ops&ownerHandle=lanyasheng",
+    "page_url": "https://clawhub.ai/lanyasheng/skills/browser-ops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 707,
+    "installs": 17,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "AI Agent \u7684\u7f51\u9875\u8bbf\u95ee\u8def\u7531\u51b3\u7b56\u6307\u5357\u3002\u5168 CLI \u67b6\u6784\uff0c\u96f6 MCP \u4f9d\u8d56\uff0c\u4e0d\u5360\u5e38\u9a7b\u4e0a\u4e0b\u6587 token\u3002 \u6309\u6210\u672c\u9010\u7ea7\u5347\u7ea7: WebFetch($0) \u2192 opencli web read($0,\u5e26Cookie) \u2192 Firecrawl \u2192 agent-browser \u2192 browser-use\u3002 IMPORTA...",
+  "updated_at": 1779075330466,
+  "version": "3.0.0"
+}
