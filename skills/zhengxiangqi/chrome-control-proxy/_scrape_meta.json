@@ -1,0 +1,43 @@
+{
+  "changelog": "- Added documentation for the new /playwright/pipeline endpoint, supporting chained actions and snapshots in a single request.\n- Recommended using the compact Playwright snapshot mode (\"playwrightSnapshotMode: 'compact'\") for high-frequency analysis scenarios in /playwright/page-dom.\n- Updated suggested parameter usage for /playwright/page-dom and described preferred snapshot and selector options.\n- Recommended /playwright/pipeline over sequential /page-dom and /run when both pre- and post-action page analysis are needed.\n- Expanded and clarified the relation table for Playwright endpoints, now including /playwright/pipeline.",
+  "created_at": 1775200724218,
+  "display_name": "Chrome Control Proxy",
+  "fetched_at": 1787796689472,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090302224,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "KiKi",
+    "handle": "zhengxiangqi",
+    "user_id": "s177j8566g7vwkqmps25fnhdv1840n64"
+  },
+  "slug": "chrome-control-proxy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/chrome-control-proxy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=chrome-control-proxy&ownerHandle=zhengxiangqi",
+    "page_url": "https://clawhub.ai/zhengxiangqi/skills/chrome-control-proxy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 723,
+    "installs": 18,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "\u5bbf\u4e3b\u673a chrome-control-proxy \u670d\u52a1\u8c03\u7528\u6307\u5357\u3002\u901a\u8fc7 HTTP \u63a7\u5236 Chrome \u751f\u547d\u5468\u671f\u4e0e Playwright\uff08page-dom \u5feb\u7167\u3001run \u811a\u672c\uff09\u3002\u9002\u7528\u4e8e OpenClaw \u5728\u5bb9\u5668\u5185\u8bbf\u95ee host.docker.internal:3333 \u6216\u5bbf\u4e3b\u673a\u76f4\u63a5\u8bbf\u95ee 127.0.0.1:3333\u3002...",
+  "updated_at": 1779075331264,
+  "version": "1.0.2"
+}
