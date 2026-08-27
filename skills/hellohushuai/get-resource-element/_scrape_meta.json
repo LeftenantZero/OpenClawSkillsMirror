@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release of the get-resource-element skill.\n- Supports querying and comparing required hardware resource assessment elements for specified products.\n- Automatically extracts product name and provided elements, locates the standard reference file, and performs element completeness checks.\n- Returns \"ok\" if requirements are fully met; otherwise, lists missing assessment elements.\n- Supports CDSS \u7cfb\u7edf, VTE \u7cfb\u7edf, \u75c5\u5386\u8d28\u63a7\u7cfb\u7edf, \u5355\u75c5\u79cd\u7cfb\u7edf, and \u667a\u533b\u52a9\u7406 - \u57fa\u5c42\u4eba\u5de5\u667a\u80fd\u8f85\u52a9\u8bca\u7597\u7cfb\u7edf.",
+  "created_at": 1773977551267,
+  "display_name": "Get Resource Element",
+  "fetched_at": 1787861560172,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/compare_elements.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089992231,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "hellohushuai",
+    "handle": "hellohushuai",
+    "user_id": "s17afc6pzvsmvb48a4ypa98kg983qve2"
+  },
+  "slug": "get-resource-element",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/get-resource-element",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=get-resource-element&ownerHandle=hellohushuai",
+    "page_url": "https://clawhub.ai/hellohushuai/skills/get-resource-element"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 658,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6839\u636e\u4ea7\u54c1\u540d\u79f0\u67e5\u8be2\u5bf9\u5e94\u6807\u51c6\u786c\u4ef6\u8d44\u6e90\u8bc4\u4f30\u8981\u70b9\uff0c\u667a\u80fd\u5bf9\u6bd4\u7528\u6237\u63d0\u4f9b\u5185\u5bb9\u662f\u5426\u5b8c\u6574\u5e76\u8fd4\u56de\u7f3a\u5931\u9879\u6216\u786e\u8ba4\u5b8c\u6574\u3002",
+  "updated_at": 1778492049576,
+  "version": "1.0.0"
+}
