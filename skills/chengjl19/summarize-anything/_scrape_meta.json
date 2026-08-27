@@ -1,0 +1,58 @@
+{
+  "changelog": "Summarize Anything 1.0.1 adds explicit output language rules.\n\n- Introduced a new \"Output Language\" section clarifying how the response language is determined (defaults to user's language; falls back to source content language if unclear).\n- Stated that translated subtitles or metadata do not dictate response language unless specifically requested.\n- All other workflow, extraction, segmentation, and memo-writing logic remains unchanged.",
+  "created_at": 1774186980268,
+  "display_name": "TL;DX",
+  "fetched_at": 1787855981389,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/insight-template.md",
+    "references/invocation-examples.md",
+    "references/speaker-segmentation.md",
+    "references/transcript-cleaning.md",
+    "references/workflow.md",
+    "scripts/bootstrap_runtime.sh",
+    "scripts/cleanup_runtime.sh",
+    "scripts/ensure_ffmpeg.sh",
+    "scripts/ensure_whisper_cpp.sh",
+    "scripts/ensure_whisper_model.sh",
+    "scripts/extract_audio.sh",
+    "scripts/maintain_runtime.sh",
+    "scripts/run_whisper_cpp.sh",
+    "scripts/runtime_status.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090038528,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jiale Cheng",
+    "handle": "chengjl19",
+    "user_id": "s175qde2231a1frtsekvdg6xgx83m28x"
+  },
+  "slug": "summarize-anything",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/summarize-anything",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=summarize-anything&ownerHandle=chengjl19",
+    "page_url": "https://clawhub.ai/chengjl19/skills/summarize-anything"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 713,
+    "installs": 18,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Extract, transcribe, clean, segment, and analyze long-form content from URLs, local media files, existing transcripts, and pasted text. Use when a user provi...",
+  "updated_at": 1778492111768,
+  "version": "1.0.1"
+}
