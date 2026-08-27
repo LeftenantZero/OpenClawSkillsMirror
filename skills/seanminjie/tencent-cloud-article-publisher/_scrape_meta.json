@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of the Tencent Cloud article publisher skill:\n\n- Enables automatic article publishing to Tencent Cloud Developer Community via direct API.\n- Accepts title, Markdown or plain text content, and user-provided Cookie for authentication.\n- Converts Markdown to HTML for publishing; summary auto-generated if none provided.\n- No browser needed; articles are published immediately upon successful API call.\n- Ensures cookies are handled securely and only in memory; instructs users to retrieve cookies from browser DevTools.\n- Returns article link and publishing status after completion.",
+  "created_at": 1775282133064,
+  "display_name": "tencent-cloud-article-publisher",
+  "fetched_at": 1787832532808,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "install.sh",
+    "publish_tencent.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090295916,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Seanminjie",
+    "handle": "seanminjie",
+    "user_id": "s177xxvyzn3jr85fjfp5rr4wqh844vcd"
+  },
+  "slug": "tencent-cloud-article-publisher",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tencent-cloud-article-publisher",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tencent-cloud-article-publisher&ownerHandle=seanminjie",
+    "page_url": "https://clawhub.ai/seanminjie/skills/tencent-cloud-article-publisher"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 588,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06\u6587\u7ae0\u81ea\u52a8\u53d1\u5e03\u5230\u817e\u8baf\u4e91\u5f00\u53d1\u8005\u793e\u533a (https://cloud.tencent.com/developer)\u3002\u9700\u8981\u63d0\u4f9b\uff1a\u6807\u9898\u3001\u6b63\u6587\uff08Markdown \u6216\u7eaf\u6587\u672c\uff09\u3001Cookie \u8ba4\u8bc1\u4fe1\u606f\u3002\u652f\u6301\u76f4\u63a5\u53d1\u5e03\uff08addArticle API\uff09\uff0c\u65e0\u9700\u6253\u5f00\u6d4f\u89c8\u5668\u3002",
+  "updated_at": 1778492403242,
+  "version": "1.0.0"
+}
