@@ -1,0 +1,55 @@
+{
+  "changelog": "video-clip-editor v1.0.0\n\n- Initial release: Automates video content analysis and generates CapCut draft templates with precise output requirements.\n- Provides two operating modes: cinematic narration from movie names or jump-cut editing from real speech videos.\n- Integrates local Whisper for speech transcription, Qwen-VL-Plus for scene description, and edge-tts for narration synthesis.\n- Intelligently splits content by dialogue, keywords, or highlights, and applies koubo jump-cut editing.\n- Strictly outputs four files per run: narration MP3(s), subtitles.srt, video clips (mp4), and CapCut draft_content.json, with time alignment enforced.\n- Handles draft project name conflicts with automatic renaming and user confirmation.",
+  "created_at": 1774353885186,
+  "display_name": "clip-editor",
+  "fetched_at": 1787851657718,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/capcut-mcp.md",
+    "references/vectcut-api.md",
+    "scripts/__init__.py",
+    "scripts/build_payload.py",
+    "scripts/capcut_mcp_builder.py",
+    "scripts/jianying_draft.py",
+    "scripts/narration_audio.py",
+    "scripts/narration_writer.py",
+    "scripts/plot_researcher.py",
+    "scripts/run_clip_pipeline.py",
+    "scripts/tts_generator.py",
+    "scripts/whisper_transcribe.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090072932,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "RicLinccc",
+    "handle": "riclinccc",
+    "user_id": "s17eyyq64affmk8pc0c2zr9wrh83h4pb"
+  },
+  "slug": "video-clip-editor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/video-clip-editor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=video-clip-editor&ownerHandle=riclinccc",
+    "page_url": "https://clawhub.ai/riclinccc/skills/video-clip-editor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 647,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Video clip editing skill for automatically analyzing video content and generating CapCut draft templates. Uses local Whisper for speech transcription, Qwen-V...",
+  "updated_at": 1778492158429,
+  "version": "1.0.0"
+}
