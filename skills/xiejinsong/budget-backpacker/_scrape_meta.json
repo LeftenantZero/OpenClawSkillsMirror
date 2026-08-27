@@ -1,0 +1,47 @@
+{
+  "changelog": "- Major update enforcing strict CLI-only data sourcing: all responses must be generated from flyai CLI command output, with `[Book]({detailUrl})` links required for every result.\n- Added comprehensive CRITICAL EXECUTION RULES and a step-by-step core workflow for multi-command orchestration, including mandatory environment checks and clear fallback procedures.\n- Expanded functionality and coverage: now supports booking flights, hotels, train and attraction tickets, plus visa info, travel insurance, and car rental\u2014powered by Fliggy (Alibaba Group).\n- Detailed parameter tables, output formatting requirements, and domain knowledge included for accurate command execution and result presentation.\n- Enhanced scenario playbooks for classic backpacker routes (SE Asia, China, multi-city) and strict output validation before sending responses.\n- Updated usage restrictions: never answer from training data, never invent information, and always follow the user\u2019s language.",
+  "created_at": 1775793117713,
+  "display_name": "Budget Backpacker",
+  "fetched_at": 1787826258602,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/fallbacks.md",
+    "references/playbooks.md",
+    "references/runbook.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090363005,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xiejinsong",
+    "handle": "xiejinsong",
+    "user_id": "s177qj362rbw4294hgs3hdvhgx83m2hm"
+  },
+  "slug": "budget-backpacker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/budget-backpacker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=budget-backpacker&ownerHandle=xiejinsong",
+    "page_url": "https://clawhub.ai/xiejinsong/skills/budget-backpacker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 529,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Plan backpacking trips \u2014 ultra-budget itineraries, hostel recommendations, multi-city routes, and survival tips for long-term budget travelers. Also supports...",
+  "updated_at": 1778492510391,
+  "version": "3.2.0"
+}
