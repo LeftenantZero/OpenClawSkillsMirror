@@ -1,0 +1,63 @@
+{
+  "changelog": "nadfunagent 1.0.0\n\n- Initial release of an autonomous trading agent for Nad.fun, designed to scan markets, analyze tokens, execute trades, and distribute profits to MMIND token holders.\n- Integrates with nadfun-trading, nadfun-indexer, and nadfun-agent-api skills.\n- Enforces critical setup: requires all config variables (MMIND_TOKEN_ADDRESS, MONAD_PRIVATE_KEY, MONAD_RPC_URL, MONAD_NETWORK) before operation.\n- Includes Telegram reporting for trading cycles, with detailed notifications on positions, P&L, and trades.\n- Implements multi-method token discovery and prioritization, with clear step-by-step workflow and strict logging requirements.\n- Uses OpenClaw memory/session storage for configuration and persistent data handling.",
+  "created_at": 1771069949967,
+  "display_name": "nadfunagent",
+  "fetched_at": 1787792294920,
+  "files": [
+    ".env",
+    "DEPENDENCIES.md",
+    "INSTALL.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "scripts/README.md",
+    "scripts/check_positions.js",
+    "scripts/save_tokens.js",
+    "scripts/write_positions_report.js",
+    "skill-card.md",
+    "trading/ENTRY_PRICE_TRACKING.md",
+    "trading/HOW_PNL_WORKS.md",
+    "trading/README.md",
+    "trading/buy-token.js",
+    "trading/check-pnl.js",
+    "trading/execute-bonding-v2.js",
+    "trading/fix-entry-prices.js",
+    "trading/monad-chains.js",
+    "trading/package.json",
+    "trading/sell-all.js",
+    "trading/sell-token.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966849430,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "encipher88",
+    "handle": "encipher88",
+    "user_id": "s17b5qhyftbxwx4dgevyjmamen885sst"
+  },
+  "slug": "nadfunagent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nadfunagent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nadfunagent&ownerHandle=encipher88",
+    "page_url": "https://clawhub.ai/encipher88/skills/nadfunagent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1649,
+    "installs": 52,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Autonomous Nad.fun trading agent that scans markets via API and indexer, analyzes tokens, executes trades, and shares profits with MMIND token holders.",
+  "updated_at": 1779076969683,
+  "version": "1.0.0"
+}
