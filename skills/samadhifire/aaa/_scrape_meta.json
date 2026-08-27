@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of wos-feishu-literature skill for streamlined WoS-to-Feishu Base workflows.\n\n- Triggers on user mention of wos, WoS, or Web of Science for literature collection, screening, and export to Feishu multidimensional tables.\n- Prefers Shenzhen University library login and local lark-cli for data writeback; uses browser automation per user\u2019s explicit tool choice and waits at authentication steps.\n- Asks all needed preflight questions upfront, confirms search scope, screening rule, and Feishu Base setup before continuing.\n- Deduplicates and screens papers by default rules, expands topics into English concepts and keywords, and extracts detailed metadata (including JCR Quartile, when required).\n- Carefully processes credentials as runtime-only, never storing sensitive user info.\n- Provides field type defaults, workflow-specific handling for Q\u51e0\u533a (quartile) assignment, and platform/Powershell compatibility notes.",
+  "created_at": 1776084693380,
+  "display_name": "aaa",
+  "fetched_at": 1787823654904,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/playbook.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SamadhiFire",
+    "handle": "samadhifire",
+    "user_id": "s17019cwb3fazs0hycm47xbz0h84f7jh"
+  },
+  "slug": "aaa",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aaa",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aaa&ownerHandle=samadhifire",
+    "page_url": "https://clawhub.ai/samadhifire/skills/aaa"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 547,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when the user mentions wos, WOS, WoS, or Web of Science and wants topic-based literature search, Shenzhen University library login, paper screening, abst...",
+  "updated_at": 1778492568090,
+  "version": "1.0.0"
+}
