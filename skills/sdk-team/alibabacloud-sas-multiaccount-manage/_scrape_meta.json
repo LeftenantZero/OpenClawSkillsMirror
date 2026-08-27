@@ -1,0 +1,40 @@
+{
+  "changelog": "alibabacloud-sas-multiaccount-manage v0.0.1\n\n- Initial release with Python and aliyun CLI integration for Alibaba Cloud Security Center multi-account management.\n- Manage multiple Alibaba Cloud accounts: auto-fetch account list, enable/disable accounts, and search/filter accounts.\n- Batch-export and merge Security Center baseline (cloud config check, system baseline risk) and vulnerability (Linux/Windows/app/emergency) reports across all enabled accounts.\n- Supports concurrent export, polling, merging to Excel, and robust error handling for unsupported or permission-restricted accounts.\n- Output includes merged Excel reports with \u201cResource Directory Account\u201d column for easy multi-account compliance review.",
+  "created_at": 1776843885067,
+  "display_name": "Alibabacloud Sas Multiaccount Manage",
+  "fetched_at": 1787817022211,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ram-policies.md",
+    "scripts/accounts.py",
+    "scripts/baseline.py",
+    "scripts/merge.py",
+    "scripts/pyproject.toml",
+    "scripts/requirements.txt",
+    "scripts/vuln.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-sas-multiaccount-manage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-sas-multiaccount-manage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-sas-multiaccount-manage&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-sas-multiaccount-manage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 698,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Manage multiple Alibaba Cloud accounts and batch-export Security Center (SAS) baseline and vulnerability reports via the aliyun CLI and Python scripts. Suppo...",
+  "updated_at": 1778492706596,
+  "version": "0.0.1"
+}
