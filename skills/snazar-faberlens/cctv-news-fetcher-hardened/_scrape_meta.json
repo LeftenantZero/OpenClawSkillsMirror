@@ -1,0 +1,48 @@
+{
+  "changelog": "- Initial release of CCTV News Fetcher skill.\n- Fetches and parses news highlights from CCTV News Broadcast (Xinwen Lianbo) for any specified date.\n- Supports date parsing from user input, including phrases like \"yesterday\" or \"today\".\n- Executes a local script to retrieve news summaries and groups them by \"Domestic\" and \"International\" if possible.\n- Implements security guardrails restricting command execution to the authorized script and disallowing external URL fetching.",
+  "created_at": 1776822772971,
+  "display_name": "Cctv News Fetcher Hardened",
+  "fetched_at": 1787817266601,
+  "files": [
+    "SAFETY.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/example.md",
+    "package-lock.json",
+    "package.json",
+    "scripts/news_crawler.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090507373,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Faberlens",
+    "handle": "snazar-faberlens",
+    "user_id": "s17er0wp685j1z14w6vqrsnqrh83h5er"
+  },
+  "slug": "cctv-news-fetcher-hardened",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cctv-news-fetcher-hardened",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cctv-news-fetcher-hardened&ownerHandle=snazar-faberlens",
+    "page_url": "https://clawhub.ai/snazar-faberlens/skills/cctv-news-fetcher-hardened"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 587,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fetch and parse news highlights from CCTV News Broadcast (Xinwen Lianbo) for a given date.",
+  "updated_at": 1778492702954,
+  "version": "1.0.0"
+}
