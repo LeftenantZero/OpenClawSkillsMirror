@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of OpenClaw Samba backup skill.\n\n- Backs up OpenClaw data to a remote Samba server, triggered by keywords like \"\u5907\u4efd openclaw\" or \"\u8bbe\u7f6e\u81ea\u52a8\u5907\u4efd\".\n- Supports both immediate and scheduled (cron-based) backups.\n- Includes easy configuration via JSON files, with a provided template and schema.\n- Retains a configurable number of backups and organizes them by timestamp.\n- Requires cifs-utils for Samba mounting.\n- Provides a standalone backup script for manual or automated runs.",
+  "created_at": 1773260064956,
+  "display_name": "iScandium OpenClaw Samba Backup",
+  "fetched_at": 1787789224754,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/default.json",
+    "config/params.schema.json",
+    "scripts/backup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089843563,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "iscandium",
+    "handle": "iscandium",
+    "user_id": "s179szsx33vyjm3zhe04dp3vph885qw9"
+  },
+  "slug": "iscandium-openclaw-samba-backup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/iscandium-openclaw-samba-backup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=iscandium-openclaw-samba-backup&ownerHandle=iscandium",
+    "page_url": "https://clawhub.ai/iscandium/skills/iscandium-openclaw-samba-backup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 887,
+    "installs": 26,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5c06 OpenClaw \u6570\u636e\u5907\u4efd\u5230\u8fdc\u7a0b Samba \u670d\u52a1\u5668\u3002\u5f53\u7528\u6237\u63d0\u5230\u300c\u5907\u4efd openclaw\u300d\u300c\u8bbe\u7f6e\u81ea\u52a8\u5907\u4efd\u300d\u65f6\u89e6\u53d1\u3002",
+  "updated_at": 1779078038255,
+  "version": "1.0.0"
+}
