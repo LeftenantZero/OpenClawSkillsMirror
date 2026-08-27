@@ -1,0 +1,43 @@
+{
+  "changelog": "smart-search 1.0.0 \u2014 Initial release with multi-provider web search, automatic routing logic, and robust quota management.\n\n- Added automatic search routing between Gemini and Brave APIs, with web scraping fallback if APIs are unavailable.\n- Introduced daily quota management per agent and shared pool, with persistent coordination across agents.\n- Developed two execution strategies: scheduled agents prioritize APIs; general agent prioritizes scraping to save quota.\n- Exposed three tools: `smart_search` for search, `search_quota_status` for quota checking, and `search_mark_agent_complete`.\n- All allocations, provider routing rules, and quota ceilings are config-driven and reloadable without restart.",
+  "created_at": 1773789082938,
+  "display_name": "smart-search",
+  "fetched_at": 1787867037545,
+  "files": [
+    ".clawhub/origin.json",
+    ".learnings/ERRORS.md",
+    ".learnings/FEATURE_REQUESTS.md",
+    ".learnings/LEARNINGS.md",
+    "SKILL.md",
+    "_meta.json",
+    "index.js",
+    "package.json",
+    "references/openclaw-config.md",
+    "references/quota-system.md",
+    "scripts/reset-quota.sh",
+    "scripts/setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "AiraAlfredSF",
+    "handle": "airaalfredsf",
+    "user_id": "s175d4qn7hzcss7b3m7j2af6bn885msa"
+  },
+  "slug": "aira-smart-search",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aira-smart-search",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aira-smart-search&ownerHandle=airaalfredsf",
+    "page_url": "https://clawhub.ai/airaalfredsf/skills/aira-smart-search"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 754,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Intelligent web search routing across Gemini and Brave APIs with quota management, circuit breaker, and web_fetch fallback. Routes finance queries to Gemini,...",
+  "updated_at": 1778491985988,
+  "version": "1.0.0"
+}
