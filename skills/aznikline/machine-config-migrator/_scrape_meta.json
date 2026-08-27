@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of Machine Config Migrator.\n\n- Enables safe migration of configurations for tmux, Vim/Neovim, Emacs, Zsh, Alfred, Git, and SSH across machines.\n- Allows users to select components for backup and restore, with plugin-aware transfer options.\n- Supports both suggest and automatic modes for plugin (re)installation.\n- Provides dry-run mode for safe verification before applying changes.\n- Excludes sensitive SSH artifacts like private keys by default; emphasizes backup safety.\n- Offers clear workflow and usage instructions for both collection and restore processes.",
+  "created_at": 1771904695735,
+  "display_name": "Machine Config Migrator",
+  "fetched_at": 1787802487016,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/plugin-sources.md",
+    "scripts/apply_config_bundle.py",
+    "scripts/collect_config_bundle.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779955513044,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Mason",
+    "handle": "aznikline",
+    "user_id": "s17b7qvsrcfz751mqr4j9tgs2183jhcb"
+  },
+  "slug": "machine-config-migrator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/machine-config-migrator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=machine-config-migrator&ownerHandle=aznikline",
+    "page_url": "https://clawhub.ai/aznikline/skills/machine-config-migrator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 493,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Migrate workstation configuration from an old machine to a new one with selectable components and plugin-aware transfer. Use when users ask to backup, move,...",
+  "updated_at": 1778992764561,
+  "version": "1.0.0"
+}
