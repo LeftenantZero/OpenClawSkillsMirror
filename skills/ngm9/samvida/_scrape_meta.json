@@ -1,0 +1,49 @@
+{
+  "changelog": "fix: remove ANTHROPIC_API_KEY from registry metadata \u2014 skill uses OpenClaw configured LLM; clarify deploy credentials are optional and never persisted; add data handling disclosure",
+  "created_at": 1772263092651,
+  "display_name": "Samvida",
+  "fetched_at": 1787801617831,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "references/cloudflare_api.md",
+    "references/llms_txt_spec.md",
+    "scripts/crawl.py",
+    "scripts/deploy.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966429826,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Naman Muley",
+    "handle": "ngm9",
+    "user_id": "s170jb7e5tr482ddvqkx1nh2zx884vj5"
+  },
+  "slug": "samvida",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/samvida",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=samvida&ownerHandle=ngm9",
+    "page_url": "https://clawhub.ai/ngm9/skills/samvida"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1129,
+    "installs": 33,
+    "stars": 0,
+    "versions": 8
+  },
+  "summary": "Generate an agentic contract (llms.txt) for any business website. Crawls the site, fills gaps conversationally, and produces a structured agent-optimized llm...",
+  "updated_at": 1778993866887,
+  "version": "0.3.3"
+}
