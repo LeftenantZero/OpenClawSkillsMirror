@@ -1,0 +1,52 @@
+{
+  "changelog": "All notable changes to this project will be documented in this file.\n\nThe format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).\n\n## [1.0.1] - 2026-03-14\n\n### Fixed\n- Fixed Windows UTF-8 encoding issue in console output\n- Fixed OpenClaw 2026.3.x path compatibility (`agents/main/sessions`)\n- Fixed plugin system circular import issue by extracting `plugin_base.py`\n\n### Changed\n- Updated SKILL.md with generic descriptions (removed personal references)\n- Added proper metadata (version, author, license, tags)\n- Added security verification section\n\n### Security\n- Verified no external network connections\n- Verified plugin system works correctly\n- Added data privacy documentation\n\n## [1.0.0] - 2026-03-10\n\n### Added\n- Initial release\n- Basic session synchronization functionality\n- JSON + Markdown dual format output\n- Incremental sync with hash-based change detection\n- Automatic sensitive information sanitization (email, phone, API keys)\n- Plugin system with knowledge and todo plugins\n- Cron job support for automatic syncing",
+  "created_at": 1773412350018,
+  "display_name": "ChronoSync",
+  "fetched_at": 1787789030820,
+  "files": [
+    "CHANGELOG.md",
+    "DESIGN.md",
+    "SKILL.md",
+    "_meta.json",
+    "check_install.py",
+    "plugin_base.py",
+    "plugins/__init__.py",
+    "plugins/knowledge.py",
+    "plugins/todo.py",
+    "session_sync.py",
+    "skill-card.md",
+    "test_sync.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089877564,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "smallccwc",
+    "handle": "smallccwc",
+    "user_id": "s172medm5439sgtmq6t15rhqrs83qy23"
+  },
+  "slug": "chronosync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/chronosync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=chronosync&ownerHandle=smallccwc",
+    "page_url": "https://clawhub.ai/smallccwc/skills/chronosync"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 986,
+    "installs": 26,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "\u8de8\u4f1a\u8bdd\u804a\u5929\u8bb0\u5f55\u540c\u6b65\u5de5\u5177\u3002\u81ea\u52a8\u5907\u4efd OpenClaw \u5404\u4f1a\u8bdd\u7684\u804a\u5929\u8bb0\u5f55\uff0c \u5b9e\u73b0\u4f1a\u8bdd\u95f4\u8bb0\u5fc6\u5171\u4eab\uff0c\u907f\u514d\u5207\u6362\u4f1a\u8bdd\u540e\u4e22\u5931\u4e0a\u4e0b\u6587\u3002",
+  "updated_at": 1779078116799,
+  "version": "1.0.2"
+}
