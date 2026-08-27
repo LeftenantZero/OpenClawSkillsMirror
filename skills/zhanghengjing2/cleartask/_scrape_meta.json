@@ -1,0 +1,38 @@
+{
+  "changelog": "Initial release of the clear-task skill.\n\n- Transforms broad or ambiguous user requests into precise, executable tasks via a structured Stage1\u2013Stage3 process.\n- Requires explicit user confirmation before proceeding from requirement clarification (Stage2) to task packaging (Stage3).\n- Uses expert-guided internal task packages to guide downstream execution; these packages are not shown unless requested.\n- Separates requirement modeling, clarification, user approval, and expert packaging to ensure traceability and clarity.\n- Clearly defines output rules, confirmation steps, and policies for safe, user-driven task execution.",
+  "created_at": 1779009655075,
+  "display_name": "Clear Task",
+  "fetched_at": 1787797653248,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/expert-roles-and-acceptance.md",
+    "references/stage1-universal-process-model.md",
+    "references/stage2-clarification-handoff.md",
+    "references/stage3-agent-task-guidance-package.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Hengjing Zhang",
+    "handle": "zhanghengjing2",
+    "user_id": "s1717zjnpzacdb4v0szmzmj4b186w551"
+  },
+  "slug": "cleartask",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cleartask",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cleartask&ownerHandle=zhanghengjing2",
+    "page_url": "https://clawhub.ai/zhanghengjing2/skills/cleartask"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 620,
+    "installs": 14,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Transform broad, ambiguous, or early-stage user requirements into executable work through Stage1 requirement understanding, Stage2 clarification, a required...",
+  "updated_at": 1779010309338,
+  "version": "1.0.0"
+}
