@@ -1,0 +1,49 @@
+{
+  "changelog": "- Added strong security guidance and warnings regarding private key usage; recommend dedicated ephemeral wallets for launches.\n- Enforced explicit user-invocation only\u2014skill may not be called autonomously by agents.\n- Updated prerequisites: `SOLPAW_API_URL` must be set in environment variables.\n- Disabled model invocation: now requires explicit user action.\n- Expanded and clarified security section on transaction signing, API keys, environment variables, and daily launch limits.\n- Revised constraints to emphasize no logging or transmitting of private keys and stricter user-approval requirements.",
+  "created_at": 1770747771614,
+  "display_name": "Solpaw-Launcher",
+  "fetched_at": 1787792703374,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "references/api-docs.md",
+    "skill-card.md",
+    "skill.json",
+    "skill.yml",
+    "solpaw-skill.ts"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967870448,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "LvcidPsyche",
+    "handle": "lvcidpsyche",
+    "user_id": "s17drrndmbstv09yka41s67hwh884zsh"
+  },
+  "slug": "solpaw-launcher",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/solpaw-launcher",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=solpaw-launcher&ownerHandle=lvcidpsyche",
+    "page_url": "https://clawhub.ai/lvcidpsyche/skills/solpaw-launcher"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1699,
+    "installs": 54,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Launch Solana tokens on Pump.fun via the SolPaw platform. 0.1 SOL one-time fee. Your wallet is the onchain creator.",
+  "updated_at": 1779076833838,
+  "version": "3.0.2"
+}
