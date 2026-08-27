@@ -1,0 +1,59 @@
+{
+  "changelog": "Changelog for v1.2.5 (2026-02-22)\n\nFixed\n\n\u2022 Memvid Tag Format: Updated build_tags() to use KEY=VALUE format for Memvid 2.0+ compatibility\n  \u2022 Old: --tag \"user,telegram\" (comma-separated) \u2014 broken\n  \u2022 New: --tag \"role=user\" --tag \"source=telegram\" (multiple flags) \u2014 fixed\n  \u2022 Fixes \"invalid value for --tag\" error\n\nChanged\n\n\u2022 Documentation - Environment Variables: Added clear instructions to use /etc/environment instead of .bashrc/.profile\n  \u2022 OpenClaw runs as a background service and doesn't inherit shell profiles\n  \u2022 System-wide environment via /etc/environment is required\n\u2022 Documentation - Hook Format: Clarified that OpenClaw 2026.2.12+ requires JavaScript (.js) handlers, not TypeScript (.ts)\n\u2022 Documentation - Troubleshooting: Added comprehensive troubleshooting section covering:\n  \u2022 Environment variables not persisting\n  \u2022 Hook registered but not logging\n  \u2022 Memvid tag format errors\n  \u2022 Free tier limits\n  \u2022 Full diagnostic checklist\n\nCompatibility\n\n\u2022 Verified with OpenClaw 2026.2.12\n\u2022 Verified with Memvid CLI 2.0+",
+  "created_at": 1771558984882,
+  "display_name": "MemSync Dual Memory System",
+  "fetched_at": 1787791707973,
+  "files": [
+    ".github/ISSUE_TEMPLATE/bug_report.md",
+    ".github/ISSUE_TEMPLATE/feature_request.md",
+    ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/workflows/ci.yml",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "README-clawhub.md",
+    "README.md",
+    "SKILL.md",
+    "TEMPLATE.md",
+    "_meta.json",
+    "claw.json",
+    "install.sh",
+    "instructions.md",
+    "license.txt",
+    "package.json",
+    "skill-card.md",
+    "tests/test_log.py",
+    "tools/log.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779940249019,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "anthony stachowitz",
+    "handle": "stackblock",
+    "user_id": "s1714y31g3k303ws9ydbkv2xgs8850pb"
+  },
+  "slug": "openclaw-memvid-logger",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-memvid-logger",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-memvid-logger&ownerHandle=stackblock",
+    "page_url": "https://clawhub.ai/stackblock/skills/openclaw-memvid-logger"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1516,
+    "installs": 47,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Logs all OpenClaw conversations and events with role tags, saving to JSONL and Memvid for full context search and monthly sharded or single-file storage.",
+  "updated_at": 1779077157237,
+  "version": "1.2.6"
+}
