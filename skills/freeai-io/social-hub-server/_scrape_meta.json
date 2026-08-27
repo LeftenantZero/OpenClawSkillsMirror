@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of the matching-engine centralized matching skill.\n\n- Implements a centralized AI-driven relationship matching engine for 30 users\u2019 personal Agents.\n- Maintains a global user registry, complete match history, and stores user vector embeddings in ChromaDB by skill, interest, goal, challenge, and basic info.\n- Processes group messages for heartbeats, profile updates, match responses, and feedback\u2014while providing detailed, observable log messages.\n- Performs event-driven and scheduled (every 6 hours) full-pool match calculations, combining vector similarity and LLM-based evaluations (consistency & complementarity).\n- Strictly enforces user disclosure settings when sharing profile information during matches.\n- Manages confirmation workflow and sends personalized introductions (icebreakers) upon both users accepting a match.\n- Provides comprehensive operational logs and summary metrics for transparency and debugging.",
+  "created_at": 1770449662731,
+  "display_name": "Social Hub Server",
+  "fetched_at": 1787792953649,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783657325086,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Social Hub",
+    "handle": "freeai-io",
+    "user_id": "s174head2ykaeq5emfj0rqj6t5885b60"
+  },
+  "slug": "social-hub-server",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/social-hub-server",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=social-hub-server&ownerHandle=freeai-io",
+    "page_url": "https://clawhub.ai/freeai-io/skills/social-hub-server"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2074,
+    "installs": 70,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "AI \u5173\u7cfb\u5339\u914d\u52a9\u624b\u7684\u4e2d\u5fc3\u5316\u5339\u914d\u5f15\u64ce\u3002\u4f5c\u4e3a\u4e00\u4e2a\u72ec\u7acb\u7684 OpenClaw \u5b9e\u4f8b\u8fd0\u884c\uff0c\u901a\u8fc7\u5185\u90e8\u7fa4\u7ec4\u4e0e\u6240\u6709\u7528\u6237\u7684\u4e2a\u4eba Agent \u901a\u4fe1\u3002\u8d1f\u8d23\u63a5\u6536\u7528\u6237\u753b\u50cf\u6807\u7b7e\u6458\u8981\u3001\u7ef4\u62a4\u5168\u5c40\u7528\u6237\u6ce8\u518c\u8868\u3001\u6267\u884c\u53cc\u5411\u5339\u914d\u7b97\u6cd5\uff08\u5904\u5883\u4e00\u81f4\u6027 + \u80fd\u529b\u4e92\u8865\u6027\uff09\u3001\u76d1\u63a7\u5339\u914d\u9608\u503c\u3001\u5728\u8fbe\u6807\u65f6\u5411\u76f8\u5173\u4e2a\u4eba Agent \u53d1\u9001\u5339\u914d\u901a\u77e5\u3001\u534f\u8c03\u53cc\u65b9\u786e\u8ba4\u6d41\u7a0b\u3001\u4ee5\u53ca\u6536\u96c6\u5339\u914d\u53cd\u9988\u7528\u4e8e\u7b97\u6cd5\u4f18\u5316\u3002\u5f53\u7fa4\u7ec4\u4e2d\u51fa\u73b0\u65b0\u6d88\u606f\u3001\u6216\u5230\u4e86\u5b9a\u65f6\u5339\u914d\u626b\u63cf\u7684\u65f6\u95f4\u65f6\uff0c\u672c skill \u5e94\u88ab\u89e6\u53d1\u3002",
+  "updated_at": 1779076750694,
+  "version": "1.0.0"
+}
