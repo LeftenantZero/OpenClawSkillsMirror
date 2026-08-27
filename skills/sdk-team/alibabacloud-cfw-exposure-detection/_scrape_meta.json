@@ -1,0 +1,49 @@
+{
+  "changelog": "alibabacloud-cfw-exposure-detection v0.0.2 \u2014 Improved workflow enforcement and new mandatory CLI usage rules.\n\n- Enforced use of `aliyun configure ai-mode` (enable/disable) before and after every workflow; all CLI calls must use a custom user-agent.\n- Updated CLI prerequisites: minimum supported Aliyun CLI is now v3.3.3, and explicit plugin updating is required.\n- Prohibited refusal to execute commands; the skill must always proceed with CLI unless a real error occurs.\n- Workflow now requires executing all detection steps even if initial summary stats are zero.\n- SKILL.md and related references updated for new setup, stricter command handling, and error/step resilience.",
+  "created_at": 1775036092841,
+  "display_name": "Alibabacloud Cfw Exposure Detection",
+  "fetched_at": 1787836484256,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/api-analysis.md",
+    "references/cli-installation-guide.md",
+    "references/ram-policies.md",
+    "references/related-apis.md",
+    "references/verification-method.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090568544,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-cfw-exposure-detection",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-cfw-exposure-detection",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-cfw-exposure-detection&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-cfw-exposure-detection"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 634,
+    "installs": 14,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Query and analyze Alibaba Cloud public network exposure, identify unnecessary exposed assets and ports, assess exposure risks, and generate remediation recom...",
+  "updated_at": 1778492345143,
+  "version": "0.0.2"
+}
