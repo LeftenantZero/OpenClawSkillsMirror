@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of app-packager skill:\n\n- Automatically switches Git branches and executes app packaging scripts based on user requests.\n- Supports parameters for branch, platform (android/ios/all), build type (debug/adhoc/release), version, upload options, API_KEY, and update descriptions.\n- Provides CLI and natural language triggers for invocation; parses user intent and maps to script parameters.\n- Performs pre-flight checks for project path, script permissions, and Git availability.\n- Notifies user about packaging progress and returns detailed results, including generated files and download links.\n- Designed specifically for app packaging scenarios\u2014does not support merging, committing, unit testing, or code checking.",
+  "created_at": 1773915131669,
+  "display_name": "App Packager",
+  "fetched_at": 1787863111927,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089978625,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Heigher",
+    "handle": "heigher",
+    "user_id": "s17amwp9wgjkhj86zj0362mv6x884t29"
+  },
+  "slug": "app-packager",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/app-packager",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=app-packager&ownerHandle=heigher",
+    "page_url": "https://clawhub.ai/heigher/skills/app-packager"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 721,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u81ea\u52a8\u5207\u6362 Git \u5206\u652f\u5e76\u6267\u884c APP \u6253\u5305\u811a\u672c\u3002\u652f\u6301\u6307\u5b9a\u5206\u652f\u3001\u5e73\u53f0\u3001\u6784\u5efa\u7c7b\u578b\u3001\u7248\u672c\u53f7\u3001\u4e0a\u4f20\u9009\u9879\u3001API_KEY\u548c\u66f4\u65b0\u8bf4\u660e\u3002 \u6253\u5305\u5b8c\u6210\u540e\u4f1a\u81ea\u52a8\u901a\u77e5\u7528\u6237\u7ed3\u679c\u3002 Use when: \u7528\u6237\u9700\u8981\u6253\u5305 APP\u3001\u5207\u6362\u5206\u652f\u6253\u5305\u3001\u6784\u5efa\u5e94\u7528\u3001\u751f\u6210\u5b89\u88c5\u5305\u3002 NOT for: \u4ee3\u7801\u5408\u5e76\u3001\u4ee3\u7801\u63d0\u4ea4\u3001\u5355\u5143\u6d4b\u8bd5\u3001\u4ee3\u7801\u68c0\u67e5\u3002",
+  "updated_at": 1778492029687,
+  "version": "1.0.0"
+}
