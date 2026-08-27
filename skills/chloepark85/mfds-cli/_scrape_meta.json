@@ -1,0 +1,43 @@
+{
+  "changelog": "- Initial release of mfds-cli, a CLI for Korea Ministry of Food and Drug Safety (MFDS) public APIs.\n- Supports searching drug product permissions, consumer-friendly drug info, DUR contraindications, and drug recall/sale-stop alerts, all normalized to JSONL output.\n- Four main subcommands: drug, drug-easy, dur, and recall, each wrapping a corresponding MFDS API endpoint.\n- Includes detailed flag support, normalization options, and example usage scripts for pharmacy and healthcare workflows.\n- Requires free MFDS_API_KEY registration at data.go.kr; data rate limits and licensing are documented.",
+  "created_at": 1778026234468,
+  "display_name": "Mfds Cli",
+  "fetched_at": 1787810051566,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "bin/_mfds_common.sh",
+    "bin/_normalize.py",
+    "bin/drug-easy.sh",
+    "bin/drug.sh",
+    "bin/dur.sh",
+    "bin/recall.sh",
+    "examples/drug-name-to-leaflet.sh",
+    "examples/prescription-safety-check.sh",
+    "examples/recall-watch.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Chloe Park",
+    "handle": "chloepark85",
+    "user_id": "s176h4kgd3ahcdsgj48g3epf1584a12v"
+  },
+  "slug": "mfds-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mfds-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mfds-cli&ownerHandle=chloepark85",
+    "page_url": "https://clawhub.ai/chloepark85/skills/mfds-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 559,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Korean Ministry of Food and Drug Safety (\uc2dd\ud488\uc758\uc57d\ud488\uc548\uc804\ucc98) public API CLI. Search drug product permissions (\uc758\uc57d\ud488 \ud5c8\uac00\uc815\ubcf4), consumer-friendly drug info (e\uc57d\uc740\uc694), DUR contra...",
+  "updated_at": 1778492854429,
+  "version": "0.1.0"
+}
