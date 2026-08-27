@@ -1,0 +1,59 @@
+{
+  "changelog": "Security fixes: remove wildcard CORS from dashboard server (prevented cross-origin transaction data reads); strip query params from service.url before storage (prevents accidental capture of API keys in URLs); add sync_community_patterns config option to disable automatic pattern download; fix 'full arguments never stored' documentation inaccuracy",
+  "created_at": 1774973120665,
+  "display_name": "Spend Ledger",
+  "fetched_at": 1787796893979,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "TECHNICAL.md",
+    "_meta.json",
+    "openclaw.plugin.json",
+    "package.json",
+    "references/payment-tools.md",
+    "scripts/dashboard.sh",
+    "scripts/log-transaction.sh",
+    "scripts/query-log.sh",
+    "server/detectors.js",
+    "server/index.html",
+    "server/patterns-sync.js",
+    "server/plugin.js",
+    "server/server.js",
+    "server/transactions.js",
+    "skill-card.md",
+    "test/test.js",
+    "test_usdc_transaction.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090485224,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mattpolly",
+    "handle": "mattpolly",
+    "user_id": "s17asmv1t6xwdrynazrs96kaj983y0fd"
+  },
+  "slug": "spend-ledger",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/spend-ledger",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=spend-ledger&ownerHandle=mattpolly",
+    "page_url": "https://clawhub.ai/mattpolly/skills/spend-ledger"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 601,
+    "installs": 15,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Tamper-evident payment ledger for autonomous agents \u2014 auto-detects payments across all tools, prevents duplicate payments, and presents full spending history.",
+  "updated_at": 1779075221312,
+  "version": "0.4.0"
+}
