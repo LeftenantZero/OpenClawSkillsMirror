@@ -1,0 +1,50 @@
+{
+  "changelog": "- Initial release of wangyi-banana skill with WangYi Banana API integration for image and video generation.\n- Supports text-to-image, image-to-image, text-to-video, image-to-video, and character creation.\n- Introduces friendly Chinese persona \"\u6b66\u955c\u753b\u5bb6\u5c0f\u52a9\u624b\" with warm, lively responses and built-in cost reporting.\n- Enforces strict file delivery rules using the message tool (never show raw paths or internal URLs).\n- Requires user to select models before generation; follows distinct flows for image and video tasks with mandatory notifications for slow tasks.\n- Includes guide for API key setup and auto-fallback between multiple API host endpoints for reliability.",
+  "created_at": 1773496102803,
+  "display_name": "wangyi-banana2",
+  "fetched_at": 1787873788914,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "data/capabilities.json",
+    "install.md",
+    "references/api-key-setup.md",
+    "references/image-generation.md",
+    "references/output-delivery.md",
+    "references/video-generation.md",
+    "scripts/wangyi-banana.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089886164,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zxq790909-maker",
+    "handle": "zxq790909-maker",
+    "user_id": "s1738p1tchdrdjz53shhssxa5983kcnp"
+  },
+  "slug": "wangyi-banana2",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wangyi-banana2",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wangyi-banana2&ownerHandle=zxq790909-maker",
+    "page_url": "https://clawhub.ai/zxq790909-maker/skills/wangyi-banana2"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 690,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate images and videos via WangYi Banana API (nano-banana, SORA2). Supports text-to-image, image-to-image, text-to-video, image-to-video, and character c...",
+  "updated_at": 1778491905918,
+  "version": "1.0.0"
+}
