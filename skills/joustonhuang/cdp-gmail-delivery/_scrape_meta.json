@@ -1,0 +1,48 @@
+{
+  "changelog": "Version 1.0.8\n\n- Documented a new explicit limitation: sending raw HTML email body is not reliably supported; only plain-text body plus attachments are supported.\n- Added guidance to treat HTML body requests as unsupported; suggest attaching .html files or using plain-text summaries instead.\n- Updated workflow and preflight sections to clarify behavior regarding HTML emails and editor capability.\n- No functional or code changes\u2014documentation improvements only.",
+  "created_at": 1776059457240,
+  "display_name": "CDP Gmail Delivery",
+  "fetched_at": 1787823974764,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/drive-fallback.md",
+    "references/receipts.md",
+    "references/troubleshooting.md",
+    "scripts/install_runtime.sh",
+    "scripts/send_via_cdp.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090448323,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Jouston Huang",
+    "handle": "joustonhuang",
+    "user_id": "s17dc7gc29f75gpdchxkm752sh84kgt3"
+  },
+  "slug": "cdp-gmail-delivery",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cdp-gmail-delivery",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cdp-gmail-delivery&ownerHandle=joustonhuang",
+    "page_url": "https://clawhub.ai/joustonhuang/skills/cdp-gmail-delivery"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 748,
+    "installs": 18,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Send Gmail messages from an operator-controlled Chrome debug session using Gmail CDP automation. Use when the user asks to send email from the local machine,...",
+  "updated_at": 1778492561009,
+  "version": "1.0.8"
+}
