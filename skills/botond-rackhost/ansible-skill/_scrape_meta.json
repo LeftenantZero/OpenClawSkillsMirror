@@ -1,0 +1,62 @@
+{
+  "changelog": "Initial release of Ansible Skill: infrastructure automation framework for provisioning, configuration, and orchestration.\n\n- Provides ready-to-use Ansible playbooks for OpenClaw VPS setup, security hardening, and common server configurations.\n- Includes modular roles: common (base system), security (hardening), nodejs (Node.js installs), and openclaw (OpenClaw deployment).\n- Outlines best practices, core Ansible concepts (inventories, playbooks, roles), and usage patterns for reproducible server management.\n- Covers secrets management with vault, recommended directory structure, and ad-hoc command usage.\n- Includes documentation references for best practices, module usage, and troubleshooting.",
+  "created_at": 1769956578976,
+  "display_name": "Ansible",
+  "fetched_at": 1787793496365,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "ansible.cfg",
+    "inventory/group_vars/all.yml",
+    "inventory/hosts.yml",
+    "playbooks/openclaw-vps.yml",
+    "playbooks/security.yml",
+    "playbooks/site.yml",
+    "references/best-practices.md",
+    "references/modules-cheatsheet.md",
+    "references/troubleshooting.md",
+    "roles/common/defaults/main.yml",
+    "roles/common/tasks/main.yml",
+    "roles/nodejs/defaults/main.yml",
+    "roles/nodejs/tasks/main.yml",
+    "roles/openclaw/defaults/main.yml",
+    "roles/openclaw/handlers/main.yml",
+    "roles/openclaw/tasks/main.yml",
+    "roles/security/defaults/main.yml",
+    "roles/security/handlers/main.yml",
+    "roles/security/tasks/main.yml",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783653631475,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "rhbotond",
+    "handle": "botond-rackhost",
+    "user_id": "s1719ma1fk7gcyjnn26drncwd5885600"
+  },
+  "slug": "ansible-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ansible-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ansible-skill&ownerHandle=botond-rackhost",
+    "page_url": "https://clawhub.ai/botond-rackhost/skills/ansible-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3793,
+    "installs": 127,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Infrastructure automation with Ansible. Use for server provisioning, configuration management, application deployment, and multi-host orchestration. Includes playbooks for OpenClaw VPS setup, security hardening, and common server configurations.",
+  "updated_at": 1779076563869,
+  "version": "0.1.0"
+}
