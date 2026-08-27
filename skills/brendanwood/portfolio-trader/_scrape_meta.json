@@ -1,0 +1,57 @@
+{
+  "changelog": "**Adds order placement, monitoring, and per-broker reporting functionality.**\n\n- Introduced support for placing and monitoring buy/sell orders (market/limit) with new order scripts.\n- Added per-broker portfolio totals with FX conversion capability.\n- Expanded documentation with detailed API references and new usage instructions for order-related features.\n- Preferred usage of positions endpoint over holdings for improved efficiency.\n- Updated skill description to reflect broader brokerage support (e.g., Webull, E*TRADE).",
+  "created_at": 1770684144147,
+  "display_name": "Portfolio Trader",
+  "fetched_at": 1787792980500,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api-reference.md",
+    "references/connection-portal.md",
+    "references/getting-started.md",
+    "references/webhooks.md",
+    "requirements.txt",
+    "scripts/snaptrade_accounts.py",
+    "scripts/snaptrade_broker_totals.py",
+    "scripts/snaptrade_brokers.py",
+    "scripts/snaptrade_common.py",
+    "scripts/snaptrade_order.py",
+    "scripts/snaptrade_portal.py",
+    "scripts/snaptrade_reconnect.py",
+    "scripts/snaptrade_total.py",
+    "scripts/snaptrade_watch_order.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779963676133,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "brendanwood",
+    "handle": "brendanwood",
+    "user_id": "s1789nngf2jj02b6pbehctbj9n884ty9"
+  },
+  "slug": "portfolio-trader",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/portfolio-trader",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=portfolio-trader&ownerHandle=brendanwood",
+    "page_url": "https://clawhub.ai/brendanwood/skills/portfolio-trader"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1734,
+    "installs": 55,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Connect to a user's investment accounts via SnapTrade SDK and generate portfolio reports (e.g., daily total value). Use when the user wants SnapTrade-based b...",
+  "updated_at": 1779076741874,
+  "version": "1.1.0"
+}
