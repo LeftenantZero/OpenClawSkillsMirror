@@ -1,0 +1,75 @@
+{
+  "changelog": "Fix Codex CLI worker integration: use codex exec, add --skip-git-repo-check, update docs and tests.",
+  "created_at": 1776064354850,
+  "display_name": "Agent Office",
+  "fetched_at": 1787795584570,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "deerflow_runtime.py",
+    "deerflow_runtime_runner.py",
+    "flows/fanout-synthesis.json",
+    "flows/handoff-review.json",
+    "presets/coding-company.json",
+    "presets/publishing-company.json",
+    "scripts/add_worker.py",
+    "scripts/add_worker.sh",
+    "scripts/apply_preset.py",
+    "scripts/apply_preset.sh",
+    "scripts/demo.sh",
+    "scripts/list_workers.sh",
+    "scripts/remove_worker.py",
+    "scripts/remove_worker.sh",
+    "scripts/run_flow.py",
+    "scripts/run_flow.sh",
+    "scripts/update_deerflow_runtime.py",
+    "scripts/update_deerflow_runtime.sh",
+    "skill-card.md",
+    "templates/cli_prompt.md",
+    "templates/deerflow_prompt.md",
+    "templates/deerflow_task_prompt.txt",
+    "templates/external_prompt.md",
+    "templates/hermes_prompt.md",
+    "templates/openclaw_prompt.md",
+    "templates/stub_prompt.md",
+    "tests/test_add_worker.py",
+    "tests/test_apply_preset.py",
+    "tests/test_deerflow_runtime.py",
+    "tests/test_run_flow.py",
+    "tests/test_worker_server.py",
+    "worker_server.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090458577,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jast-hub",
+    "handle": "jast-hub",
+    "user_id": "s17bc7kdmw34mtmt993vk4t29n84rph6"
+  },
+  "slug": "agent-office",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-office",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-office&ownerHandle=jast-hub",
+    "page_url": "https://clawhub.ai/jast-hub/skills/agent-office"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 979,
+    "installs": 25,
+    "stars": 0,
+    "versions": 8
+  },
+  "summary": "Agent Office\uff1a\u521b\u5efa\u672c\u5730 AI \u5458\u5de5\u3001office worker\u3001AI employee \u4e0e multi-agent office team\u3002\u6bcf\u4e2a\u5458\u5de5\u4ee5\u72ec\u7acb HTTP Worker \u8fd0\u884c\uff0c\u652f\u6301 openclaw / hermes / deerflow / cli / external / stub \u516d\u79cd...",
+  "updated_at": 1779075798795,
+  "version": "1.5.1"
+}
