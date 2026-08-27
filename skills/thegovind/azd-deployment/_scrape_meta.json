@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of azd-deployment skill for Azure Container Apps.\n\n- Deploy containerized frontend and backend apps using Azure Developer CLI (azd) with remote ACR builds and Bicep infrastructure-as-code.\n- Provides full sample file structure, azure.yaml service configuration, and Bicep module patterns.\n- Documents three-level environment variable management connecting local dev, azd-managed settings, and deployment parameters.\n- Details idempotent deployment patterns and how to preserve Portal-applied customizations on redeploy.\n- Includes RBAC assignment via deployment hooks and best practices for managed identities.\n- Offers built-in troubleshooting references, common azd commands, and key reminders for remote builds and environment management.",
+  "created_at": 1769835675007,
+  "display_name": "Azd Deployment for Azure",
+  "fetched_at": 1787806133844,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/azure-yaml-schema.md",
+    "references/bicep-patterns.md",
+    "references/troubleshooting.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783653091307,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "thegovind",
+    "handle": "thegovind",
+    "user_id": "s177vrg50r2ngycghhx4d8f9wh884wmz"
+  },
+  "slug": "azd-deployment",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/azd-deployment",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=azd-deployment&ownerHandle=thegovind",
+    "page_url": "https://clawhub.ai/thegovind/skills/azd-deployment"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3105,
+    "installs": 104,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Deploy containerized applications to Azure Container Apps using Azure Developer CLI (azd). Use when setting up azd projects, writing azure.yaml configuration, creating Bicep infrastructure for Container Apps, configuring remote builds with ACR, implementing idempotent deployments, managing environment variables across local/.azure/Bicep, or troubleshooting azd up failures. Triggers on requests for azd configuration, Container Apps deployment, multi-service deployments, and infrastructure-as-code with Bicep.",
+  "updated_at": 1778987428494,
+  "version": "0.1.0"
+}
