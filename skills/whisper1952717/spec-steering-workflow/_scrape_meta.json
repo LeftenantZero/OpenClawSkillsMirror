@@ -1,0 +1,53 @@
+{
+  "changelog": "- Introduces the spec-steering-workflow skill for managing long, interruptible, multi-phase tasks with checkpointed progress and recoverable state.\n- Defines a default workflow using workspace directories and structured checkpoints (`done`, `blocked`, `failed`).\n- Provides commands for lifecycle management via `specctl.py` (init, checkpoint, resume, validate, archive, status).\n- Supplies explicit rules for when and how to use this workflow, ensuring state is recoverable and tasks can span multiple sessions.\n- Separates references and templates into dedicated directories for clarity and maintainability.",
+  "created_at": 1773607691926,
+  "display_name": "spec steering workflow",
+  "fetched_at": 1787798710907,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/icon-large.svg",
+    "assets/icon-small.svg",
+    "assets/templates/design.md",
+    "assets/templates/handoff.md",
+    "assets/templates/meta.json",
+    "assets/templates/notes.md",
+    "assets/templates/preferences.md",
+    "assets/templates/product.md",
+    "assets/templates/requirements.md",
+    "assets/templates/structure.md",
+    "assets/templates/tasks.md",
+    "assets/templates/tech.md",
+    "assets/templates/workflow.md",
+    "references/checkpoint-rules.md",
+    "references/integration-rules.md",
+    "references/recovery-rules.md",
+    "references/template-contracts.md",
+    "references/workflow-rules.md",
+    "scripts/specctl.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "whisper1952717",
+    "handle": "whisper1952717",
+    "user_id": "s176wfbh8krs6gvbw64yp5wa3h83mh33"
+  },
+  "slug": "spec-steering-workflow",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/spec-steering-workflow",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=spec-steering-workflow&ownerHandle=whisper1952717",
+    "page_url": "https://clawhub.ai/whisper1952717/skills/spec-steering-workflow"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 895,
+    "installs": 26,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use a lightweight spec + steering workflow for long, interruptible, multi-phase tasks that need checkpointed progress, recoverable state, and multi-session c...",
+  "updated_at": 1779000396269,
+  "version": "1.0.0"
+}
