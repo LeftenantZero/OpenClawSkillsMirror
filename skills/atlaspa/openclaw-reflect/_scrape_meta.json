@@ -1,0 +1,61 @@
+{
+  "changelog": "openclaw-reflect 1.0.2\n\n- Added support for multiple evaluator backends (Anthropic, OpenAI, Ollama, rules) via new optional environment variables in SKILL.md.\n- Updated documentation to describe configuration using ANTHROPIC_API_KEY, OPENAI_API_KEY, OLLAMA_HOST/PORT, REFLECT_EVAL_MODEL, and REFLECT_EVALUATOR.\n- No changes to workflow or operator commands; improvements center on flexible evaluation options.",
+  "created_at": 1771718359133,
+  "display_name": "openclaw-reflect",
+  "fetched_at": 1787791592790,
+  "files": [
+    "AGENT-PAYMENTS.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/evaluator-prompt-binary.md",
+    "assets/evaluator-prompt.md",
+    "hooks/post-tool-use.js",
+    "hooks/session-end.js",
+    "hooks/user-prompt-submit.js",
+    "scripts/apply.js",
+    "scripts/classify.js",
+    "scripts/evaluate.js",
+    "scripts/hook-observe.js",
+    "scripts/hook-pipeline.js",
+    "scripts/observe.js",
+    "scripts/propose.js",
+    "scripts/rollback.js",
+    "scripts/status.js",
+    "skill-card.md",
+    "skill.json",
+    "test/run-eval-test.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779948137694,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "AtlasPA",
+    "handle": "atlaspa",
+    "user_id": "s17cbdkg4hkk4m581rvtwd7t5x885p6e"
+  },
+  "slug": "openclaw-reflect",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-reflect",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-reflect&ownerHandle=atlaspa",
+    "page_url": "https://clawhub.ai/atlaspa/skills/openclaw-reflect"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1537,
+    "installs": 48,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Self-improvement layer with evaluation separation, rollback, and tiered operator gates. Observes outcomes across sessions, detects recurring patterns, propos...",
+  "updated_at": 1779077196352,
+  "version": "1.0.2"
+}
