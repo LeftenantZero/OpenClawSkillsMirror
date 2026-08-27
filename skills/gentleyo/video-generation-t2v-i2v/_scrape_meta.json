@@ -1,0 +1,47 @@
+{
+  "changelog": "- Added requirement for the inference.sh CLI and provided installation instructions.\n- Updated image-to-video constraints: images must be accessible via public URL, and users must supply their own API key for ImgBB or SM.MS, or use publicly accessible images.\n- Clarified that for ImgBB, the API token is now required and must be provided via the `--api-token` flag or environment variable.\n- Improved documentation on prerequisites and setup for both tools.",
+  "created_at": 1773546413634,
+  "display_name": "Video Generation (t2v & i2v)",
+  "fetched_at": 1787798834798,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/image_to_video.py",
+    "scripts/text_to_video.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.25",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1781079603938,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "GentleYo",
+    "handle": "gentleyo",
+    "user_id": "s177r9medgqfs6n194fkycgan983gb5m"
+  },
+  "slug": "video-generation-t2v-i2v",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/video-generation-t2v-i2v",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=video-generation-t2v-i2v&ownerHandle=gentleyo",
+    "page_url": "https://clawhub.ai/gentleyo/skills/video-generation-t2v-i2v"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1361,
+    "installs": 36,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "AI Video generation toolkit \u2014 generate videos from text prompts or input images using multiple AI models (Veo 3.1, Veo 3, Seedance 1.5 Pro, Wan 2.5, Grok Ima...",
+  "updated_at": 1778999937122,
+  "version": "1.0.1"
+}
