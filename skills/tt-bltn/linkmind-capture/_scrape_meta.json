@@ -1,0 +1,66 @@
+{
+  "changelog": "Xiaoyuzhou (\u5c0f\u5b87\u5b99) podcast support added and subtitle workflows introduced.\n\n- Added support for capturing \u5c0f\u5b87\u5b99\uff08Xiaoyuzhou\uff09podcast links, including parsing of shared text and extracting/using URL timestamps.\n- Implemented subtitle download, parsing, and time window filtering for Xiaoyuzhou episodes with available SRT/VTT.\n- Workflows for Xiaoyuzhou now include:\n  - Subtitle availability checks, download, and parsing.\n  - Deep summary generation based on user-specified time point windows or full transcript.\n  - User-facing notifications if subtitles are unavailable or ASR is not configured.\n- Updated supported platform list and documentation to reflect Xiaoyuzhou integration.\n- Added corresponding scripts (xiaoyuzhou.ts and test-xiaoyuzhou.ts) for new platform handling.",
+  "created_at": 1774188723727,
+  "display_name": "LinkMind Capture",
+  "fetched_at": 1787855972972,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "config.template.json",
+    "references/deep-summary-guide.md",
+    "scripts/chrome-cdp.ts",
+    "scripts/config.ts",
+    "scripts/download-images.ts",
+    "scripts/extract-transcript.ts",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "scripts/retry.ts",
+    "scripts/setup.ts",
+    "scripts/test-transcript.ts",
+    "scripts/test-wechat.ts",
+    "scripts/test-weibo.ts",
+    "scripts/test-xiaohongshu.ts",
+    "scripts/test-xiaoyuzhou.ts",
+    "scripts/tsconfig.json",
+    "scripts/types.ts",
+    "scripts/wechat.ts",
+    "scripts/weibo.ts",
+    "scripts/xiaohongshu.ts",
+    "scripts/xiaoyuzhou.ts",
+    "skill-card.md",
+    "templates/note.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090303446,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "tt_bltn",
+    "handle": "tt-bltn",
+    "user_id": "s17e3jbvea3gkps34z0p5ps4q983hhp1"
+  },
+  "slug": "linkmind-capture",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/linkmind-capture",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=linkmind-capture&ownerHandle=tt-bltn",
+    "page_url": "https://clawhub.ai/tt-bltn/skills/linkmind-capture"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 689,
+    "installs": 17,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Capture social media links (Weibo, Xiaohongshu, WeChat, Xiaoyuzhou) \u2014 extract text, images, and metadata, then generate a Markdown note with AI deep summary,...",
+  "updated_at": 1778492111768,
+  "version": "0.3.0"
+}
