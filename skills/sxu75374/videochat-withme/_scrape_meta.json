@@ -1,0 +1,50 @@
+{
+  "changelog": "Fix: prevent TTS audio from replaying on every click/keypress",
+  "created_at": 1770873404481,
+  "display_name": "Video Chat With Me",
+  "fetched_at": 1787792413938,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/index.html",
+    "scripts/call.sh",
+    "scripts/server.py",
+    "scripts/setup.sh",
+    "scripts/start.sh",
+    "scripts/stop.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779971721984,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "sxu75374",
+    "handle": "sxu75374",
+    "user_id": "s1762schg8f2r5tn1g3638wb5h884h61"
+  },
+  "slug": "videochat-withme",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/videochat-withme",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=videochat-withme&ownerHandle=sxu75374",
+    "page_url": "https://clawhub.ai/sxu75374/skills/videochat-withme"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2129,
+    "installs": 68,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Real-time AI video chat that routes through your OpenClaw agent. Uses Groq Whisper (cloud STT),\nedge-tts (cloud TTS via Microsoft), and OpenClaw chatCompletions API for conversation. Your agent\nsees your camera, hears your voice, and responds with its own personality and memory.\nRequires: GROQ_API_KEY for speech recognition. Reads ~/.openclaw/openclaw.json for gateway port and auth token.\nData flows: audio \u2192 Groq cloud (STT), TTS text \u2192 Microsoft cloud (edge-tts), camera frames (base64) + text\n\u2192 OpenClaw gateway \u2192 your configured LLM provider (may be cloud \u2014 frames leave the machine if using a cloud LLM).\nInstalls a persistent launchd service (optional). Trigger phrases: \"video chat\", \"voice call\",\n\"call me\", \"\u89c6\u9891\u4e00\u4e0b\", \"\u8bed\u97f3\", \"\u6253\u7535\u8bdd\u7ed9\u6211\", \"\u6211\u8981\u548c\u4f60\u89c6\u9891\", \"videochat-withme\".",
+  "updated_at": 1779076935064,
+  "version": "1.1.0"
+}
