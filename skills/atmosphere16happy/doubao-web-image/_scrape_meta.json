@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of doubao-web-image skill.\n\n- Enables image generation via Doubao Web using Playwright for browser automation.\n- Supports extracting core subject, style, scene, aspect ratio, and save path from user prompts.\n- Allows using parameters for image aspect ratio (`--ratio=<value>`) and output path (`--output=<path>`).\n- Operates in headless mode by default and provides feedback with image path or success confirmation.",
+  "created_at": 1775705175608,
+  "display_name": "Doubao Web Image",
+  "fetched_at": 1787795939408,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "package-lock.json",
+    "package.json",
+    "scripts/doubao-webapi/client.ts",
+    "scripts/main.ts",
+    "skill-card.md",
+    "tsconfig.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090348955,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "atmosphere16happy",
+    "handle": "atmosphere16happy",
+    "user_id": "s173eg12drjj8ds4rb5ddfj7h184gj3y"
+  },
+  "slug": "doubao-web-image",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/doubao-web-image",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=doubao-web-image&ownerHandle=atmosphere16happy",
+    "page_url": "https://clawhub.ai/atmosphere16happy/skills/doubao-web-image"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 640,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use Playwright to host a browser and call Doubao Web's image generation function. Call this skill when the user requests to draw or generate an image using D...",
+  "updated_at": 1779075687796,
+  "version": "1.0.0"
+}
