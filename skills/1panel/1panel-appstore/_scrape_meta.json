@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release for 1panel-appstore-skills.\n\n- Packages Dockerized applications into the 1Panel appstore/local-app format using official sources.\n- Resolves app sources from repository URLs, app names, Docker images, or Compose files.\n- Enforces strict source and packaging rules: only uses details from official repositories or docs.\n- Generates intermediate app specs and app packages via `scripts/generate_app_package.py`, supporting i18n and user-editable fields.\n- Reports app package path, generated version, source evidence, warnings, and local test directory in outputs.",
+  "created_at": 1777023557797,
+  "display_name": "1Panel Appstore skill",
+  "fetched_at": 1787815315390,
+  "files": [
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/sample-appspec.json",
+    "references/appspec.md",
+    "references/appstore-format.md",
+    "references/review-checklist.md",
+    "references/source-policy.md",
+    "scripts/generate_app_package.py",
+    "scripts/validate_app_package.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "1Panel",
+    "handle": "1panel",
+    "user_id": "s178v9mfknrkdzqqsvtc1dvajn83hm9t"
+  },
+  "slug": "1panel-appstore",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/1panel-appstore",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=1panel-appstore&ownerHandle=1panel",
+    "page_url": "https://clawhub.ai/1panel/skills/1panel-appstore"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 598,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Create 1Panel appstore/local-app installation packages for Dockerized applications from official repositories, Docker images, docker-compose.yml files, or a...",
+  "updated_at": 1778492737320,
+  "version": "1.0.0"
+}
