@@ -1,0 +1,46 @@
+{
+  "changelog": "- Initial release of the \"ask-graphql-mcp\" skill for handling Web3 and on-chain questions via Ask GraphQL MCP.\n- Enforces all Web3/on-chain queries to go through Ask MCP agent\u2014never direct GraphQL calls, except upon explicit user request.\n- Automatically discovers the appropriate GraphQL endpoint if missing, asking users only when endpoint discovery is inconclusive.\n- Integrates both session tool and HTTP JSON-RPC paths for executing user queries.\n- Implements robust handling of free/paid plan modes, including API key requirements, header setup, and clear user guidance for quota/rate-limit errors.\n- Returns structured, user-friendly responses with concise summaries, copy-ready config samples, and actionable next steps.",
+  "created_at": 1774421229412,
+  "display_name": "Ask GraphQL MCP",
+  "fetched_at": 1787849704632,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/config-templates.md",
+    "references/tools-and-prompts.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090089118,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "SubQuery-Network",
+    "handle": "subquery-network",
+    "user_id": "s17f2h4d5pjay7k6fvgvbstq6983ktf3"
+  },
+  "slug": "web3-graphql",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/web3-graphql",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=web3-graphql&ownerHandle=subquery-network",
+    "page_url": "https://clawhub.ai/subquery-network/skills/web3-graphql"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 501,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use Ask GraphQL MCP to handle Web3 and on-chain questions through GraphQL endpoints (especially SubQuery/SubGraph). Trigger by default for blockchain/Web3-re...",
+  "updated_at": 1778492179546,
+  "version": "1.0.0"
+}
