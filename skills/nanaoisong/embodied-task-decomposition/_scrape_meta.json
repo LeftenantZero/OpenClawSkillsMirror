@@ -1,0 +1,36 @@
+{
+  "changelog": "- Initial release of embodied-task-decomposition skill.\n- Decomposes high-level physical task instructions into atomic robot-executable subtasks using both image and natural language input.\n- Triggers on phrases like \"decompose this task\" or when both an image and a task instruction are provided.\n- Outputs a numbered list of subtasks using a fixed action format, always specifying gripper and drawing from the action bank.\n- Supports systematic addition of new actions to the action bank with clear documentation and duplication checks.",
+  "created_at": 1774511892117,
+  "display_name": "Embodied Task Decomposition",
+  "fetched_at": 1787847227665,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/action-bank.md",
+    "references/examples.md",
+    "scripts/validate.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "NaNaoiSong",
+    "handle": "nanaoisong",
+    "user_id": "s17d0s9hyd06ef9rqkk9cb3ras83mhsv"
+  },
+  "slug": "embodied-task-decomposition",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/embodied-task-decomposition",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=embodied-task-decomposition&ownerHandle=nanaoisong",
+    "page_url": "https://clawhub.ai/nanaoisong/skills/embodied-task-decomposition"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 689,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Decompose complex physical tasks into atomic subtasks for robot execution. Use when user provides: (1) An image showing a physical scene (indoor/outdoor), an...",
+  "updated_at": 1778492205203,
+  "version": "1.0.0"
+}
