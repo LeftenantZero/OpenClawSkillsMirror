@@ -1,0 +1,43 @@
+{
+  "changelog": "**Skill-grep 1.0.1 Changelog**\n\n- Switched all retrieval calls from `POST /search_multi` to `POST /search_multi_field`.\n- Structured query objects now include an `origin_query` field with the user's original input.\n- Updated contract and operational guidance to require `origin_query` and preserve the original user language.\n- All procedures, request/response examples, and feedback flows updated to use the new endpoint and contract.\n- No behavioral changes to retrieval or clarification logic; the changes are for API compatibility and future-proofing.",
+  "created_at": 1775975933920,
+  "display_name": "Skill Grep",
+  "fetched_at": 1787824751718,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090438470,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Yichen Tang",
+    "handle": "littledinoc",
+    "user_id": "s1792jew4fvjg87nsn3snmb0dn84201z"
+  },
+  "slug": "skill-grep",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-grep",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-grep&ownerHandle=littledinoc",
+    "page_url": "https://clawhub.ai/littledinoc/skills/skill-grep"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 661,
+    "installs": 16,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Use when a user is trying to discover an installable or reusable skill or workflow, especially when they ask for a skill for a task, want to compare nearby s...",
+  "updated_at": 1778492544359,
+  "version": "1.0.3"
+}
