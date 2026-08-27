@@ -1,0 +1,49 @@
+{
+  "changelog": "unikraft-sandbox 1.1.0\n\n- Improved sandbox creation: now checks for existing sandbox names and errors if a name is reused.\n- Updated file synchronization details: local \u2192 sandbox sync uses a destructive method (`--delete`), warning users that files not present locally will be deleted from the sandbox.\n- SSH instructions now use an `openssl s_client` proxy for connections.\n- Removed outdated notes about script TODO stubs.\n- Clarified and streamlined procedure steps and usage notes.",
+  "created_at": 1774870749924,
+  "display_name": "Unikraft Cloud Sandbox",
+  "fetched_at": 1787839804419,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ukc_api.md",
+    "scripts/create-sandbox.sh",
+    "scripts/delete-sandbox.sh",
+    "scripts/exec-sandbox.js",
+    "scripts/sync-from-sandbox.sh",
+    "scripts/sync-to-sandbox.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090192270,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "procub3r",
+    "handle": "procub3r",
+    "user_id": "s173gxar2b4jn4xqmdn64g6y6183xd9a"
+  },
+  "slug": "unikraft-sandbox",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/unikraft-sandbox",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=unikraft-sandbox&ownerHandle=procub3r",
+    "page_url": "https://clawhub.ai/procub3r/skills/unikraft-sandbox"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 659,
+    "installs": 15,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Run agent tasks inside an isolated Unikraft Cloud (UKC) sandbox VM. Use when the agent needs a clean, isolated execution environment \u2014 e.g. running untrusted...",
+  "updated_at": 1778492299065,
+  "version": "1.1.0"
+}
