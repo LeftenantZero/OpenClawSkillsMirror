@@ -1,0 +1,37 @@
+{
+  "changelog": "- Enforced a stricter, stepwise review workflow: findings can only be reported after satisfying four explicit review \"passes\" (Go version read, full context loaded, checklist scoped, and pre-report protocol).\n- Added hard gate table summarizing pass/fail objectives for each review stage.\n- Required explicit noting of the `go X.YY` baseline and scoping of review checklist blocks per change.\n- Emphasized that only version-relevant advice should be applied, based on the actual `go.mod` baseline.\n- Clarified the requirement to load and check the review-verification-protocol before reporting any issues.\n- All rule content, checklist items, severity calibration, and context-sensitive rules are unchanged.",
+  "created_at": 1774183337203,
+  "display_name": "Go Code Review",
+  "fetched_at": 1787856101538,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/common-mistakes.md",
+    "references/concurrency.md",
+    "references/error-handling.md",
+    "references/interfaces.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Kevin Anderson",
+    "handle": "anderskev",
+    "user_id": "s17b1fzefm8nj8j1sdkzrze7gn83pfrg"
+  },
+  "slug": "go-code-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/go-code-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=go-code-review&ownerHandle=anderskev",
+    "page_url": "https://clawhub.ai/anderskev/skills/go-code-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 791,
+    "installs": 20,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Reviews Go code for idiomatic patterns, error handling, concurrency safety, and common mistakes. Use when reviewing .go files, checking error handling, gorou...",
+  "updated_at": 1778492107800,
+  "version": "2.3.1"
+}
