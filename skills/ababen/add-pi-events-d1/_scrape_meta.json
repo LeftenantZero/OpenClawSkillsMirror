@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release: Add PI Events to Cloudflare D1 skill\n\n- Enables adding events to the `mb-events` Cloudflare D1 database for babenchuk.com based on Alex's prompts.\n- Parses event details (including CSV files or lists) and converts date formats to ISO 8601 for database insertion.\n- Provides step-by-step commands for inserting, verifying, and managing events via Cloudflare Wrangler.\n- Includes event schema, tag conventions, and useful SQL/CLI query examples.\n- No site redeploy needed; events appear live immediately after database update.",
+  "created_at": 1775760362046,
+  "display_name": "Add Pi Events D1",
+  "fetched_at": 1787795937928,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090361941,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Alexander Babenchuk",
+    "handle": "ababen",
+    "user_id": "s17fccw88y3pepxvx2ptrp96xx83tkma"
+  },
+  "slug": "add-pi-events-d1",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/add-pi-events-d1",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=add-pi-events-d1&ownerHandle=ababen",
+    "page_url": "https://clawhub.ai/ababen/skills/add-pi-events-d1"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 586,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Add or update PI events in the Cloudflare D1 mb-events database using parsed details, ISO 8601 dates, and SQL insert commands executed remotely.",
+  "updated_at": 1779075688976,
+  "version": "1.0.0"
+}
