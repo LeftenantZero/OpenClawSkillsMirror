@@ -1,0 +1,52 @@
+{
+  "changelog": "Version 1.0.5\n\n- Fixed token extraction bug in auto-refresh-cron.sh (removed unnecessary quotes handling).\n- Changed token health check from every 1 hour to every 30 minutes for increased reliability.\n- Improved OAuth token sync process to be more robust, referencing ~/.claude/.credentials.json.\n- Updated documentation to reflect changes and add a changelog section.",
+  "created_at": 1771585022822,
+  "display_name": "Token Usage Optimizer",
+  "fetched_at": 1787791646581,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/api-endpoint.md",
+    "references/plans.md",
+    "references/token-extraction.md",
+    "scripts/auto-refresh-cron.sh",
+    "scripts/check-usage.sh",
+    "scripts/refresh-token.sh",
+    "scripts/report.sh",
+    "scripts/setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779942965234,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Ruslan Popesku",
+    "handle": "rusel95",
+    "user_id": "s17631hzczey2ccx6hzswwc735884ryp"
+  },
+  "slug": "token-usage-optimizer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/token-usage-optimizer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=token-usage-optimizer&ownerHandle=rusel95",
+    "page_url": "https://clawhub.ai/rusel95/skills/token-usage-optimizer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1788,
+    "installs": 55,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Maximize your Claude Code subscription value with smart usage monitoring and burn rate optimization. Track 5-hour session and 7-day weekly quotas, get one-ti...",
+  "updated_at": 1779077179143,
+  "version": "1.0.5"
+}
