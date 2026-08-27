@@ -1,0 +1,70 @@
+{
+  "changelog": "# Enterprise Knowledge Base Manager\n\nEnterprise-grade knowledge base management system that provides powerful document management and intelligent Q&A capabilities for AI Agents.\n\n## \ud83d\ude80 Core Features\n\n- **Multi-format Document Support**: PDF, DOCX, TXT, Markdown\n- **Intelligent Document Chunking**: Configurable chunk size and overlap strategies\n- **Semantic Search**: High-precision search based on vector similarity\n- **RAG Q&A**: Intelligent Q&A combining retrieval and generation\n- **Local Storage**: ChromaDB local vector database, no cloud services required\n- **Multi-API Support**: DashScope, OpenAI and other embedding models\n\n## \ud83d\udca1 Use Cases\n\n- Enterprise internal document management\n- Customer service knowledge base construction\n- Technical documentation retrieval\n- Training material management\n- AI Agent knowledge enhancement\n\n## \ud83d\udd27 Quick Start\n\n1. Set API key: `export DASHSCOPE_API_KEY='your-key'`\n2. Initialize system: `python main.py setup`\n3. Upload documents: `python main.py upload document.pdf`\n4. Intelligent Q&A: `python main.py query \"your question\"`\n\n## \ud83c\udfd7\ufe0f Technical Features\n\n- Local ChromaDB storage for secure and controllable data\n- System-level directory management supporting multi-application sharing\n- High-performance vector search with <500ms response time\n- Supports 100k+ document chunks scale\n- Cross-platform compatibility (Windows, Linux, macOS)\n- Environment variable based secure API key management",
+  "created_at": 1778209052369,
+  "display_name": "Enterprise Knowledge Base Manager",
+  "fetched_at": 1787794403251,
+  "files": [
+    ".gitignore",
+    "QUICKSTART.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "main.py",
+    "query_kb.py",
+    "requirements.txt",
+    "setup_shared.py",
+    "skill-card.md",
+    "src/__init__.py",
+    "src/admin_config.py",
+    "src/advanced_chunker.py",
+    "src/advanced_document_processor.py",
+    "src/advanced_retriever.py",
+    "src/chat_interface.py",
+    "src/chroma_client.py",
+    "src/chunker.py",
+    "src/config_loader.py",
+    "src/document_processor.py",
+    "src/embedder.py",
+    "src/gte_reranker.py",
+    "src/hybrid_retriever.py",
+    "src/manager.py",
+    "src/parser.py",
+    "src/retriever.py",
+    "src/system_config.py",
+    "test_skill.py",
+    "upload_document.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090759116,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "apanghu",
+    "handle": "apanghu",
+    "user_id": "s176x9xhy66hr127pqkkqwjykd86ae5c"
+  },
+  "slug": "enterprise-kb-manager",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/enterprise-kb-manager",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=enterprise-kb-manager&ownerHandle=apanghu",
+    "page_url": "https://clawhub.ai/apanghu/skills/enterprise-kb-manager"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 531,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4f01\u4e1a\u77e5\u8bc6\u5e93\u7ba1\u7406\u3002\u7528\u6237\u9700\u8981\u4e0a\u4f20\u6587\u6863\u3001\u6dfb\u52a0\u77e5\u8bc6\u3001\u66f4\u65b0\u8d44\u6599\u3001\u5220\u9664\u6587\u6863\u3001\u7ba1\u7406\u77e5\u8bc6\u5e93\u3001\u521d\u59cb\u5316\u7cfb\u7edf\u65f6\u8c03\u7528\u3002\u540c\u65f6\u652f\u6301\u4e1a\u52a1\u95ee\u7b54\uff1a\u5f53\u7528\u6237\u63d0\u51fa\u4e1a\u52a1\u95ee\u9898\u3001\u516c\u53f8\u653f\u7b56\u3001\u6d41\u7a0b\u89c4\u8303\u7b49\u95ee\u9898\u65f6\uff0c\u4f18\u5148\u68c0\u7d22\u77e5\u8bc6\u5e93\u540e\u56de\u7b54\u3002",
+  "updated_at": 1779076211323,
+  "version": "1.1.0"
+}
