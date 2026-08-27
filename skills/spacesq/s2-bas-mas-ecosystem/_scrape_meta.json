@@ -1,0 +1,64 @@
+{
+  "changelog": "## [2.0.6] - 2026-04-08\n### \ud83d\udee1\ufe0f The SAST Endgame Patch (Metadata Parity & Log Sanitization)\n\nThis release conclusively resolves the remaining static analysis anomalies, aligning the skill's operational footprint perfectly with the OpenClaw Sandbox registry constraints.\n\n### \ud83d\udd12 Security Remediations\n- **Skill Metadata Parity Achieved:** We identified that the sandbox registry parses metadata directly from the `SKILL.md` YAML Frontmatter. We have now explicitly declared the required `S2_BMS_MASTER_KEY` environment variable and the `s2_bas_governance/*` filesystem read/write permissions at the top of `SKILL.md`. The gap between code behavior and registry declaration is fully closed.\n- **Eradicated Stdout Token Leakage:** Audited all Python agent test modules. Removed print statements that truncated and outputted base64 `dispatch_token` strings to the console. All token generation events are now strictly masked in stdout to prevent log-based credential harvesting.\n- **Zero-Byte Injection Hardening:** The `SKILL.md` was regenerated using a pure Python binary-byte writer to guarantee zero Unicode control characters, effectively neutralizing any false-positive prompt-injection signatures.",
+  "created_at": 1775655203900,
+  "display_name": "The ultimate Multi-Agent System for Building Automation",
+  "fetched_at": 1787827807068,
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "SKILL.md",
+    "_meta.json",
+    "core/s2_bas_identity_registry.py",
+    "core/s2_bms_lord.py",
+    "core/s2_chiller_agent.py",
+    "core/s2_ems_auditor.py",
+    "core/s2_gshp_agent.py",
+    "core/s2_hydronic_agent.py",
+    "core/s2_microgrid_agent.py",
+    "core/s2_oracle_agent.py",
+    "docs/S2-BAS-MAS-Whitepaper-CN.md",
+    "docs/S2-BAS-MAS-Whitepaper-EN.md",
+    "package.json",
+    "requirements.txt",
+    "skill-card.md",
+    "visualizations/01_chiller_thermodynamics.json",
+    "visualizations/02_hydronic_affinity.json",
+    "visualizations/03_gshp_eco_balance.json",
+    "visualizations/04_vpp_arbitrage.json",
+    "visualizations/05_bms_lord_command.json",
+    "visualizations/06_oracle_time_machine.json",
+    "visualizations/07_ems_financial_roi.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090347163,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "MilesXiang",
+    "handle": "spacesq",
+    "user_id": "s17c8pmv1e8tb2mcc5aset88e183hq1t"
+  },
+  "slug": "s2-bas-mas-ecosystem",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/s2-bas-mas-ecosystem",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=s2-bas-mas-ecosystem&ownerHandle=spacesq",
+    "page_url": "https://clawhub.ai/spacesq/skills/s2-bas-mas-ecosystem"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 744,
+    "installs": 20,
+    "stars": 0,
+    "versions": 9
+  },
+  "summary": "Multi-Agent System for Building Automation powered by S2-SWM. Fully localized thermodynamic causality, local subsystem optimization, and unified Ed25519 zero...",
+  "updated_at": 1778492480808,
+  "version": "2.0.6"
+}
