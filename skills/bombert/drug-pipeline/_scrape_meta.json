@@ -1,0 +1,44 @@
+{
+  "changelog": "- Updated valid values for `drug_modality`, `drug_feature`, and `route_of_administration` fields; these must now use exact strings from provided lists.\n- `route_of_administration` and example values now require exact formatting (e.g., \"Intravenous (IV)\", \"Oral (PO)\").\n- Clarified that `drug_modality` and `drug_feature` fields have new standardized options (e.g., \"Monoclonal Antibodies\", \"Biologic\").\n- Updated fallback strategies to use new terminology and valid values for modality and features.\n- Adjusted sample JSON queries and examples to match new field value requirements.",
+  "created_at": 1774508758797,
+  "display_name": "NoahAI drug pipeline",
+  "fetched_at": 1787847340982,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/search.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090484285,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yichen",
+    "handle": "bombert",
+    "user_id": "s17ezwe11e1pyfxzka699prf4x83j1kd"
+  },
+  "slug": "drug-pipeline",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/drug-pipeline",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=drug-pipeline&ownerHandle=bombert",
+    "page_url": "https://clawhub.ai/bombert/skills/drug-pipeline"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 865,
+    "installs": 22,
+    "stars": 1,
+    "versions": 7
+  },
+  "summary": "Search a pharmaceutical drug database for pipeline and development information. Use this skill whenever the user asks about drugs by name, target, indication...",
+  "updated_at": 1778492205203,
+  "version": "1.0.6"
+}
