@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of airkorea-cli \u2014 a command-line wrapper for Korea's real-time air quality APIs.\n\n- Supports 6 subcommands for real-time, forecast, station info, TM coordinate, and proximity queries.\n- All output is in JSONL for easy scripting and integration with tools like jq, csvkit, or pandas.\n- Designed for AQI dashboards, location-based alerts, school activity advisories, and data research.\n- Includes detailed instructions for obtaining API keys and integrating with related skills.\n- Free to use within the dev-tier limit (1,000 req/day); higher throughput requires production approval.",
+  "created_at": 1777421634986,
+  "display_name": "Airkorea Cli",
+  "fetched_at": 1787812827624,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/nearest_station.sh",
+    "examples/seoul_pm25_alert.sh",
+    "scripts/_common.sh",
+    "scripts/forecast.sh",
+    "scripts/nearby.sh",
+    "scripts/realtime.sh",
+    "scripts/sido.sh",
+    "scripts/station.sh",
+    "scripts/tm.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Chloe Park",
+    "handle": "chloepark85",
+    "user_id": "s176h4kgd3ahcdsgj48g3epf1584a12v"
+  },
+  "slug": "airkorea-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/airkorea-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=airkorea-cli&ownerHandle=chloepark85",
+    "page_url": "https://clawhub.ai/chloepark85/skills/airkorea-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 564,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Korean real-time air quality (PM10, PM2.5, O3, NO2, CO, SO2) and 1\u20133 day forecasts via \ud55c\uad6d\ud658\uacbd\uacf5\ub2e8 \uc5d0\uc5b4\ucf54\ub9ac\uc544 OpenAPI (apis.data.go.kr/B552584). Six subcommands wrap g...",
+  "updated_at": 1778492789909,
+  "version": "0.1.0"
+}
