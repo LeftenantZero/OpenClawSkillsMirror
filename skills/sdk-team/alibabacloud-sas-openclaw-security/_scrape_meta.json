@@ -1,0 +1,62 @@
+{
+  "changelog": "**Summary: Enforces aliyun CLI version, plugin update, and standardized user-agent for all operations.**\n\n- Requires aliyun CLI version 3.3.3 or above, with pre-check and upgrade instructions.\n- Mandates aliyun CLI plugin auto-update and manual `aliyun plugin update` before execution.\n- All CLI calls must now append `--user-agent AlibabaCloud-Agent-Skills/alibabacloud-sas-openclaw-security`.\n- Enhanced documentation in SKILL.md to reflect new strict environment and user-agent requirements.\n- Minor updates to scripts and references to support and clarify these enforcement policies.",
+  "created_at": 1775642009914,
+  "display_name": "Alibabacloud Sas Openclaw Security",
+  "fetched_at": 1787795945310,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ram-policies.md",
+    "references/remediation_guide.md",
+    "references/security_workflow.md",
+    "scripts/__init__.py",
+    "scripts/aisc_client.py",
+    "scripts/base_client.py",
+    "scripts/check_openclaw_alerts.py",
+    "scripts/check_openclaw_baseline.py",
+    "scripts/check_openclaw_vulns.py",
+    "scripts/ecs_client.py",
+    "scripts/generate_security_report.py",
+    "scripts/get_ai_agent_plugin_command.py",
+    "scripts/install_security_guardrail.py",
+    "scripts/push_openclaw_check_tasks.py",
+    "scripts/query_asset_detail.py",
+    "scripts/query_guardrail_status.py",
+    "scripts/query_openclaw_instances.py",
+    "scripts/run_cloud_assistant_command.py",
+    "scripts/sas_client.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090542678,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-sas-openclaw-security",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-sas-openclaw-security",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-sas-openclaw-security&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-sas-openclaw-security"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 700,
+    "installs": 16,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Perform security operations on OpenClaw environments by calling Alibaba Cloud Security Center (SAS) and ECS APIs via the aliyun CLI. Supports asset queries,...",
+  "updated_at": 1779075685693,
+  "version": "0.0.2"
+}
