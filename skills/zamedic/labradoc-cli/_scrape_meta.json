@@ -1,0 +1,72 @@
+{
+  "changelog": "Initial release of labradoc-cli skill.\n\n- Enables authenticated command-line access to the Labradoc API for tasks, files, users, email, API keys, integrations, and billing.\n- Supports API token and OAuth authentication methods with clear configuration precedence.\n- Provides commands for document upload, search, processing, and management.\n- Includes wrappers and troubleshooting guidance for seamless operation.\n- Detailed usage examples and flag descriptions provided for all major commands.",
+  "created_at": 1772477715171,
+  "display_name": "Labradoc Cli",
+  "fetched_at": 1787800916697,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "cmd/api/apikeys.go",
+    "cmd/api/email.go",
+    "cmd/api/files.go",
+    "cmd/api/google.go",
+    "cmd/api/microsoft.go",
+    "cmd/api/request.go",
+    "cmd/api/root.go",
+    "cmd/api/stripe.go",
+    "cmd/api/tasks.go",
+    "cmd/api/user.go",
+    "cmd/auth/exchange.go",
+    "cmd/auth/login.go",
+    "cmd/auth/logout.go",
+    "cmd/auth/refresh.go",
+    "cmd/auth/root.go",
+    "cmd/auth/status.go",
+    "cmd/auth/token.go",
+    "cmd/auth/url.go",
+    "cmd/root.go",
+    "internal/cli/http.go",
+    "internal/cli/oauth.go",
+    "internal/cli/pkce.go",
+    "internal/cli/store.go",
+    "internal/config/viper.go",
+    "main.go",
+    "references/integrations.md",
+    "references/labradoc-cli.md",
+    "scripts/run-labradoc.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089739510,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Marc Arndt",
+    "handle": "zamedic",
+    "user_id": "s17a5wjf8cp7t4ctq97c9e1b3x884c0n"
+  },
+  "slug": "labradoc-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/labradoc-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=labradoc-cli&ownerHandle=zamedic",
+    "page_url": "https://clawhub.ai/zamedic/skills/labradoc-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 982,
+    "installs": 29,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use the Labradoc CLI to authenticate and call Labradoc API endpoints (tasks, files, users, API keys, email, Google/Microsoft integrations, billing) from Open...",
+  "updated_at": 1778994609886,
+  "version": "1.0.0"
+}
