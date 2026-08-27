@@ -1,0 +1,56 @@
+{
+  "changelog": "**Summary: Modernized and expanded agent management with new scripts, protocols, and clearer human/agent workflows.**\n\n- Added comprehensive agent management scripts (discovery, validation, health checking, stats, visualization, setup).\n- Introduced \"Handshake Protocol\" and approval workflows for task assignment.\n- Replaced older references/structure files to fix naming consistency.\n- Split guidance for humans and agents, including step-by-step commands and protocols.\n- Included detailed references and agent registry schema for easier onboarding and management.\n- Updated metadata and homepage for better integration and discoverability.",
+  "created_at": 1769896942964,
+  "display_name": "Agent manager",
+  "fetched_at": 1787806052509,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/agent-profile-schema.md",
+    "references/agent-registry.md",
+    "references/health-check-template.md",
+    "references/task-routing-rules.md",
+    "scripts/can_assign.js",
+    "scripts/generate_card.js",
+    "scripts/health_check.js",
+    "scripts/log_analyzer.js",
+    "scripts/scan_agents.js",
+    "scripts/setup_wizard.js",
+    "scripts/validate_registry.js",
+    "scripts/visualize_agents.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783654174819,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "agentandbot",
+    "handle": "agentandbot-design",
+    "user_id": "s177284ff8hnd3k9vj4ddnbs8d885fas"
+  },
+  "slug": "agents-manager",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agents-manager",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agents-manager&ownerHandle=agentandbot-design",
+    "page_url": "https://clawhub.ai/agentandbot-design/skills/agents-manager"
+  },
+  "stats": {
+    "comments": 4,
+    "downloads": 5371,
+    "installs": 185,
+    "stars": 5,
+    "versions": 3
+  },
+  "summary": "Manage Clawdbot agents: discover, profile, track capabilities, define routing hierarchy, and assign tasks.\nUse when: (1) Listing available agents, (2) Profiling agent capabilities and communication methods,\n(3) Defining agent routing (can_assign_to, reports_to, escalation_path), (4) Assigning tasks to appropriate agents,\n(5) Tracking agent performance and completed work, (6) Updating agent registry after changes.",
+  "updated_at": 1778987581104,
+  "version": "1.0.2"
+}
