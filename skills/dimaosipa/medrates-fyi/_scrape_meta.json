@@ -1,0 +1,43 @@
+{
+  "changelog": "- Added plan_category filter to the price quote endpoint (`GET /api/price-quote`), supporting \"Commercial\", \"Medicare\", \"Medicaid\", or \"Other\".\n- Price quote endpoint response now includes a `plan_category` field for negotiated/estimated-rate items when a payer is specified.\n- Documentation updated to reflect new filtering and response field for plan category.\n- No functional changes to endpoints or API structure beyond the new filter and response field.",
+  "created_at": 1773789966457,
+  "display_name": "MedRates.fyi",
+  "fetched_at": 1787867055754,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089963789,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "dimaosipa",
+    "handle": "dimaosipa",
+    "user_id": "s1753b6qq8wsj30dnzrxc80hnh885d6z"
+  },
+  "slug": "medrates-fyi",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/medrates-fyi",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=medrates-fyi&ownerHandle=dimaosipa",
+    "page_url": "https://clawhub.ai/dimaosipa/skills/medrates-fyi"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 715,
+    "installs": 18,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Query US hospital price transparency data via the MedRates REST API. Search medical procedure prices, compare hospitals, filter by insurance plan and locatio...",
+  "updated_at": 1778491985988,
+  "version": "1.0.1"
+}
