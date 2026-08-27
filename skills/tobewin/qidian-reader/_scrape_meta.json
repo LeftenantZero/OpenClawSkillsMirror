@@ -1,0 +1,36 @@
+{
+  "changelog": "- Major change: Data fetching now requires browser automation (openclaw) for real-time Qidian rankings instead of curl, due to anti-bot protection and dynamic rendering.\n- Updated requirements to include google-chrome, chromium, node, and npx for browser automation.\n- Added detailed steps for browser-based data extraction, including DOM parsing and handling anti-bot verification.\n- Introduced explicit downgrade handling when real-time rankings cannot be reliably fetched.\n- Clarified that only openclaw browser automation should be used; curl is no longer the main method.\n- Output and error messages now clearly distinguish between real-time and fallback (classic/hot) recommendations.",
+  "created_at": 1774058922554,
+  "display_name": "Qidian Reader",
+  "fetched_at": 1787859410060,
+  "files": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "_meta.json",
+    "references/categories.md",
+    "references/urls.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ToBeWin",
+    "handle": "tobewin",
+    "user_id": "s174rz3f0862tcfw7pzfh5w8kn83hv2z"
+  },
+  "slug": "qidian-reader",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/qidian-reader",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=qidian-reader&ownerHandle=tobewin",
+    "page_url": "https://clawhub.ai/tobewin/skills/qidian-reader"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 806,
+    "installs": 20,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "\u8d77\u70b9\u4e2d\u6587\u7f51\u597d\u4e66\u63a8\u8350\u4e0e\u699c\u5355\u67e5\u8be2\u3002Use when the user wants to find good novels on Qidian (\u8d77\u70b9\u4e2d\u6587\u7f51), browse rankings by genre or category, get personalized book recommendations, or...",
+  "updated_at": 1778492076651,
+  "version": "1.1.0"
+}
