@@ -1,0 +1,37 @@
+{
+  "changelog": "- Add support for `multipart/form-data` local file upload to `sendPhoto` and `sendDocument` (via local path strings).\n- Update guardrails: clarify that `sendMediaGroup` is still JSON-only and does not use multipart file arrays.\n- Expand documentation for multipart usage, including local photo/document file upload examples.\n- `setWebhook` now supports multipart certificate uploads for self-signed certificates through the `certificate` file field.\n- Update OpenAPI schema and usage references to reflect multipart and related behavior.\n- Improve prerequisites, scope, and operation documentation for clarity.",
+  "created_at": 1773587241661,
+  "display_name": "Telegram OpenAPI Skill",
+  "fetched_at": 1787872010578,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/telegram-bot.openapi.json",
+    "references/usage-patterns.md",
+    "scripts/validate.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jolestar",
+    "handle": "jolestar",
+    "user_id": "s1769rm50f8wvzw550m22hg10x83gkem"
+  },
+  "slug": "telegram-openapi-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/telegram-openapi-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=telegram-openapi-skill&ownerHandle=jolestar",
+    "page_url": "https://clawhub.ai/jolestar/skills/telegram-openapi-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 779,
+    "installs": 20,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Operate Telegram Bot API via UXC + curated OpenAPI schema",
+  "updated_at": 1778491928981,
+  "version": "1.0.1"
+}
