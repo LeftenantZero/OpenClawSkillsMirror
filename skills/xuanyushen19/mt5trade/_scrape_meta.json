@@ -1,0 +1,42 @@
+{
+  "changelog": "mt5-http-trader 1.0.0\n\n- Initial release of mt5-http-trader skill.\n- Provides safety-checked trade execution via a local MT5 HTTP API.\n- Enforces a strict multi-step order process: signal \u2192 draft (with user review) \u2192 explicit confirm.\n- Includes mandatory health checks and strict user confirmation before order execution.\n- Optimized for Windows (win32) environments.",
+  "created_at": 1771225217032,
+  "display_name": "mt5_trade",
+  "fetched_at": 1787803947905,
+  "files": [
+    "SKILL.md",
+    "_meta.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779969199660,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "XuanyuShen19",
+    "handle": "xuanyushen19",
+    "user_id": "s17fhx4zkt4vdbk2srxrg6qrn1885azq"
+  },
+  "slug": "mt5trade",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mt5trade",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mt5trade&ownerHandle=xuanyushen19",
+    "page_url": "https://clawhub.ai/xuanyushen19/skills/mt5trade"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 648,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Execute MT5 trades via local HTTP API using a signal-draft-confirm workflow that requires explicit user confirmation before order placement.",
+  "updated_at": 1778990909867,
+  "version": "1.0.0"
+}
