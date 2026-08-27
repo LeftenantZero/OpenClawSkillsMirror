@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of gateway-env-injector.\n\n- Injects API keys from 1Password into macOS LaunchAgent plists using PlistBuddy.\n- Prevents plaintext secrets on disk while ensuring LaunchAgents have required environment variables.\n- Requires 1Password CLI (`op`) and Bash; uses service account token from environment.\n- Customizable for your own 1Password items and desired environment variables.\n- Designed for secure OpenClaw deployments on macOS.",
+  "created_at": 1772823958636,
+  "display_name": "Gateway Env Injector",
+  "fetched_at": 1787790072794,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/inject-gateway-env.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089785133,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Nissan Dookeran",
+    "handle": "nissan",
+    "user_id": "s17f2fw07zktjmcgagf5c29tbd83rt7v"
+  },
+  "slug": "gateway-env-injector",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gateway-env-injector",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gateway-env-injector&ownerHandle=nissan",
+    "page_url": "https://clawhub.ai/nissan/skills/gateway-env-injector"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 985,
+    "installs": 29,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Safely inject API keys from 1Password into macOS LaunchAgent plists using PlistBuddy. Use when running OpenClaw on macOS and storing secrets in 1Password \u2014 a...",
+  "updated_at": 1779077699062,
+  "version": "1.0.0"
+}
