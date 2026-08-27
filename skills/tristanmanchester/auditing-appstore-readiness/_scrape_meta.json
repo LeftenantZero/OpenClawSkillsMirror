@@ -1,0 +1,40 @@
+{
+  "changelog": "- Initial release of auditing-appstore-readiness.\n- Audits iOS app repositories (Swift/Xcode, React Native, Expo) for App Store/TestFlight compliance.\n- Outputs a structured PASS/WARN/FAIL report with evidence, remediation steps, and a publish checklist.\n- Implements static compliance checks and optional build-accuracy checks if Xcode is available.\n- Follows strict safety rules: defaults to read-only actions and clearly labels any changes.\n- Includes manual review checklist items for areas automation cannot fully verify.",
+  "created_at": 1770112715841,
+  "display_name": "Audit App Store Readiness",
+  "fetched_at": 1787805814357,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/expo.md",
+    "references/manual-checklist.md",
+    "references/native-ios.md",
+    "references/permissions-map.md",
+    "references/react-native.md",
+    "references/report-template.md",
+    "scripts/audit.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Tristan Manchester",
+    "handle": "tristanmanchester",
+    "user_id": "s17c3xv8wvvzzbj84z9vcj498n83gnkp"
+  },
+  "slug": "auditing-appstore-readiness",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/auditing-appstore-readiness",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=auditing-appstore-readiness&ownerHandle=tristanmanchester",
+    "page_url": "https://clawhub.ai/tristanmanchester/skills/auditing-appstore-readiness"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2923,
+    "installs": 95,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Audit an iOS app repo (Swift/Xcode or React Native/Expo) for App Store compliance and release readiness; output a pass/warn/fail report and publish checklist.",
+  "updated_at": 1778988031377,
+  "version": "1.0.0"
+}
