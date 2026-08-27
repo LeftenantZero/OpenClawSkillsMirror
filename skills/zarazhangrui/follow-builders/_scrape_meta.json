@@ -1,0 +1,62 @@
+{
+  "changelog": "Initial release of follow-builders skill \u2014 delivers curated AI builder digests.\n\n- Onboards users with platform detection and step-by-step setup for delivery preferences, frequency, language, and channels.\n- Supports delivery via OpenClaw messaging, Telegram, Email, or on-demand in terminal.\n- Guides users through Telegram bot/email setup if needed; no extra keys required for \"right here\" delivery.\n- Automatically manages source lists for tracked builders and podcasts, updated centrally.\n- Sets up scheduled jobs (cron) according to user preferences and delivery platform.\n- Simple config file and user-friendly reminders for managing and changing settings.",
+  "created_at": 1773639583529,
+  "display_name": "Follow Builders",
+  "fetched_at": 1787798601872,
+  "files": [
+    ".github/workflows/generate-feed.yml",
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/config-schema.json",
+    "config/default-sources.json",
+    "examples/sample-digest.md",
+    "feed-podcasts.json",
+    "feed-x.json",
+    "prompts/digest-intro.md",
+    "prompts/summarize-podcast.md",
+    "prompts/summarize-tweets.md",
+    "prompts/translate.md",
+    "scripts/deliver.js",
+    "scripts/fetch-content.js",
+    "scripts/generate-feed.js",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "scripts/prepare-digest.js",
+    "skill-card.md",
+    "state-feed.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779957674512,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Zara Zhang",
+    "handle": "zarazhangrui",
+    "user_id": "s17c8txgaycsyr243ysxg7fzas83hk27"
+  },
+  "slug": "follow-builders",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/follow-builders",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=follow-builders&ownerHandle=zarazhangrui",
+    "page_url": "https://clawhub.ai/zarazhangrui/skills/follow-builders"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4184,
+    "installs": 122,
+    "stars": 7,
+    "versions": 1
+  },
+  "summary": "AI builders digest \u2014 monitors top AI builders on X and YouTube podcasts, remixes their content into digestible summaries. Use when the user wants AI industry...",
+  "updated_at": 1779000639038,
+  "version": "0.1.0"
+}
