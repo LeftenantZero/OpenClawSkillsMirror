@@ -1,0 +1,64 @@
+{
+  "changelog": "- Initial release of the voice translation skill.\n- Supports audio transcription with Whisper or faster-whisper, translation by the current agent model, and speech synthesis using Piper, OpenClaw tts, or a mock backend.\n- Offers two modes: chat-native voice translation and a deterministic local file-based pipeline.\n- Ensures consistent output order: transcript, translation, then translated audio.\n- Includes resources, references, and scripts for setup, orchestration, and backend selection.\n- Designed for both interactive chat and automated batch workflows.",
+  "created_at": 1774767688044,
+  "display_name": "speech-translation",
+  "fetched_at": 1787841721388,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/examples/mock-input.txt",
+    "references/llm-translation-pattern.md",
+    "references/openclaw-chat-mode.md",
+    "references/runtime-notes.md",
+    "scripts/mock_audio_sender.py",
+    "scripts/mock_text_sender.py",
+    "scripts/run_voice_translate.py",
+    "scripts/run_voice_translate_llm.sh",
+    "scripts/send_audio.py",
+    "scripts/send_text.py",
+    "scripts/voice_translate_app/__init__.py",
+    "scripts/voice_translate_app/cli.py",
+    "scripts/voice_translate_app/config.py",
+    "scripts/voice_translate_app/mock_translation_service.py",
+    "scripts/voice_translate_app/notifier.py",
+    "scripts/voice_translate_app/pipeline.py",
+    "scripts/voice_translate_app/transcribe.py",
+    "scripts/voice_translate_app/translate.py",
+    "scripts/voice_translate_app/tts.py",
+    "scripts/voice_translate_app/types.py",
+    "scripts/voice_translate_app/utils.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090176913,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "decin",
+    "handle": "decin",
+    "user_id": "s17e7np3znmt1rmdgft0ne7qq183gxw4"
+  },
+  "slug": "speech-translation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/speech-translation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=speech-translation&ownerHandle=decin",
+    "page_url": "https://clawhub.ai/decin/skills/speech-translation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 734,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Build, adapt, or run an audio-processing workflow that takes spoken audio, transcribes it with Whisper or faster-whisper, translates the transcript using the...",
+  "updated_at": 1778492271739,
+  "version": "1.0.0"
+}
