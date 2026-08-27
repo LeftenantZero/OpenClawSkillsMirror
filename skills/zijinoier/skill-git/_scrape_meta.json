@@ -1,0 +1,51 @@
+{
+  "changelog": "Version 0.2.2 of skill-git \n---                                                                                                                                            \n  Fix 1 \u2014 scan.md: Auto-deletion of missing skills \u2192 explicit confirmation\n                                                                                                                                                 \n  Before: On path not found, immediately ran jq del(...) and displayed a post-hoc warning.\n  After: Collects all missing skills, displays the list, prompts [y/n] once. Deletion only runs if user confirms.                                \n                                                                                                                                                 \n  Fix 2 \u2014 commit.md: Same pattern, same fix                                                                                                      \n                                                                                                                                                 \n  Before: Auto-removed missing skill directories from config.json without asking.                                                                \n  After: Same gate \u2014 show the list, ask [y/n], only delete on explicit confirmation.\n                                                                                                                                                 \n  Fix 3 \u2014 merge.md Step 7b: No sensitive-filename blocklist when copying files                                                                   \n                                                                                                                                                 \n  Before: Copied all non-_meta.json, non-backup files (including .env, .key, .pem, etc.) from source skill folders, with no credential check.    \n  After: Added the same comprehensive blocklist used in commit.md as filter 0 (highest priority, applied before _meta.json or conflict checks).\n  Any blocked file is listed in the Output Summary under Skipped (sensitive filename).",
+  "created_at": 1773982532054,
+  "display_name": "skill git - version control for your skills",
+  "fetched_at": 1787861430249,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/conflict-patterns/SKILL.md",
+    "assets/rule-extraction/SKILL.md",
+    "check.md",
+    "commit.md",
+    "init.md",
+    "merge.md",
+    "revert.md",
+    "scan.md",
+    "scripts/sg-init.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090103221,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Wen Licheng",
+    "handle": "zijinoier",
+    "user_id": "s1713ehvwbazj5dc5mczkmxjyx83hm06"
+  },
+  "slug": "skill-git",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-git",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-git&ownerHandle=zijinoier",
+    "page_url": "https://clawhub.ai/zijinoier/skills/skill-git"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 985,
+    "installs": 28,
+    "stars": 1,
+    "versions": 6
+  },
+  "summary": "Manage AI agent skills with version control to initialize tracking, commit changes with semantic versioning, and revert to previous skill versions.",
+  "updated_at": 1778492052955,
+  "version": "0.2.2"
+}
