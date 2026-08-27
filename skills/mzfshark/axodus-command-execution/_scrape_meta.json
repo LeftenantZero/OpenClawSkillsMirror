@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of command-execution skill for safe, auditable command runs.\n\n- Supports executing terminal commands with preflight risk checks and gating.\n- Requires specifying both the command and its purpose.\n- Classifies and blocks high-risk operations (e.g., recursive deletes, remote scripts) unless explicitly confirmed.\n- Preferentially uses dry-run flags to reduce risk.\n- Captures and summarizes results, checks expected effects, and proposes diagnostics on failure.\n- Enforces safety rules\u2014no destructive or remote-script commands without explicit user review.",
+  "created_at": 1777029966367,
+  "display_name": "RedHat Command Execution",
+  "fetched_at": 1787815307592,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "command-execution.md",
+    "skill-card.md",
+    "skill.yml"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Mauricio Z.",
+    "handle": "mzfshark",
+    "user_id": "s17c7t947t48hg8ymjbywz1th583y2n6"
+  },
+  "slug": "axodus-command-execution",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/axodus-command-execution",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=axodus-command-execution&ownerHandle=mzfshark",
+    "page_url": "https://clawhub.ai/mzfshark/skills/axodus-command-execution"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 589,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Execute terminal commands safely with preflight checks and risk gating.",
+  "updated_at": 1778492737320,
+  "version": "1.0.0"
+}
