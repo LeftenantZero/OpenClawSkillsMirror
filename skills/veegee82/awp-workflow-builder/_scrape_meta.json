@@ -1,0 +1,74 @@
+{
+  "changelog": "Initial release of awp-workflow-builder: generate complete AWP-compliant multi-agent workflows from natural language.\n\n- Converts user descriptions into full AWP workflow directories, including workflow.awp.yaml, agent configs, prompts, and schemas.\n- Supports generation of custom tools and skills on request.\n- Follows the AWP 7-layer model with detailed compliance levels and strict workflow rules.\n- Guides users through a structured interactive questionnaire to clarify requirements before generation.\n- Compatible with various execution modes and agent orchestration strategies.\n- Allows tool implementation customization and language selection for prompts and outputs.",
+  "created_at": 1774394878785,
+  "display_name": "AWP - Agent Workflow Protocol",
+  "fetched_at": 1787850581665,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "adapters/clawhub.md",
+    "adapters/cloudflare-dynamic-workers.md",
+    "adapters/standalone.md",
+    "extensions/README.md",
+    "extensions/examples/devops.md",
+    "extensions/examples/financial.md",
+    "references/architecture.md",
+    "references/compliance-levels.md",
+    "references/spec-summary.md",
+    "references/tools-reference.md",
+    "references/validation-rules.md",
+    "skill-card.md",
+    "templates/00_INTRO.md",
+    "templates/SYSTEM_PROMPT.md",
+    "templates/adapters/agent-standalone.py",
+    "templates/adapters/cloudflare/README.md",
+    "templates/adapters/cloudflare/package.json",
+    "templates/adapters/cloudflare/src/index.ts",
+    "templates/adapters/cloudflare/src/llm.ts",
+    "templates/adapters/cloudflare/src/memory.ts",
+    "templates/adapters/cloudflare/src/types.ts",
+    "templates/adapters/cloudflare/tsconfig.json",
+    "templates/adapters/cloudflare/wrangler.toml",
+    "templates/agent-full.awp.yaml",
+    "templates/agent.awp.yaml",
+    "templates/agent.py",
+    "templates/codemode-skill.md",
+    "templates/mcp-tool.py",
+    "templates/output_schema.json",
+    "templates/output_schema_desc.json",
+    "templates/project-skill.md",
+    "templates/workflow.awp.yaml"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090084363,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Shumway",
+    "handle": "veegee82",
+    "user_id": "s17akcyhcjedb537knh32ct76n83gyqs"
+  },
+  "slug": "awp-workflow-builder",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/awp-workflow-builder",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=awp-workflow-builder&ownerHandle=veegee82",
+    "page_url": "https://clawhub.ai/veegee82/skills/awp-workflow-builder"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 524,
+    "installs": 12,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate complete Agent Workflow Protocol (AWP) compliant multi-agent workflows from natural language descriptions. Produces workflow.awp.yaml, agent configs...",
+  "updated_at": 1778492167221,
+  "version": "1.0.0"
+}
