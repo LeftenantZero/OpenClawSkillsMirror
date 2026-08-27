@@ -1,0 +1,52 @@
+{
+  "changelog": "**Major upgrade: Skill renamed, expanded\u529f\u80fd, \u6846\u67b6\u4e0e\u9ad8\u4f18\u5148\u7ea7\u89c4\u5219\u5168\u65b0\u91cd\u6784**\n\n- Skill \u91cd\u547d\u540d\u4e3a \u201cmeituan-waimai-coupon\u201d\uff0c\u5b9a\u4f4d\u4e3a\u7f8e\u56e2\u5916\u5356\u7ea2\u5305\u52a9\u624b\uff08\u542b\u5b98\u65b9\u8bf4\u660e\u4e0e\u7edf\u4e00\u8c03\u5ea6\u4f18\u5148\u7ea7\u8bf4\u660e\uff09\u3002\n- \u5168\u65b0\u7f16\u5199 SKILL.md\uff0c\u65b0\u589e\u3010Critical Rules\u3011\u7ae0\u8282\uff0c\u7ec6\u5316\u8f93\u51fa\u89c4\u8303\u3001\u6267\u884c\u7ea6\u675f\u3001\u5b89\u5168\u8981\u6c42\u53ca\u4e25\u683c\u6d41\u7a0b\u63a7\u5236\uff0c\u786e\u4fdd\u7528\u6237\u8bdd\u672f\u3001\u884c\u4e3a\u548c\u9519\u8bef\u5904\u7406\u9ad8\u5ea6\u4e00\u81f4\u3002\n- \u652f\u6301\u591a\u5e73\u53f0 Skill \u76ee\u5f55\u667a\u80fd\u68c0\u6d4b\u4e0e\u5b89\u88c5\u81ea\u9002\u5e94\uff1b\u517c\u5bb9\u591a\u79cd Shell\u3001Agent \u73af\u5883\u542f\u52a8\uff0c\u7ec6\u5316 Python/Skill \u81ea\u52a8\u63a2\u6d4b\u811a\u672c\u3002\n- \u6d41\u7a0b\u5185\u7f6e\u670d\u52a1\u534f\u8bae\u786e\u8ba4\u3001\u5b9a\u65f6\u9886\u5238\uff08cron\uff09\u63d0\u9192\u3001\u4e25\u683c\u7684\u65f6\u533a\uff08\u5317\u4eac\u65f6\u95f4\uff09\u548c\u591a token \u67e5\u8be2\u515c\u5e95\u673a\u5236\u3002\n- \u65b0\u589e reference \u8bf4\u660e\u6587\u6863\uff0c\u62c6\u5206\u8ba4\u8bc1\u3001\u5b9a\u65f6\u4efb\u52a1\u3001\u5c55\u793a\u8bdd\u672f\u7edf\u4e00\u7ba1\u7406\u6807\u51c6\uff0c\u4fbf\u4e8e\u7ef4\u62a4\u548c\u6269\u5c55\u3002\n- \u660e\u786e\u4e8c\u7ef4\u7801\u3001cron \u7ba1\u7406\u3001\u767b\u5f55\u3001\u53d1\u5238",
+  "created_at": 1774354844844,
+  "display_name": "\u7f8e\u56e2\u5916\u5356\u7ea2\u5305",
+  "fetched_at": 1787851591087,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/auth-flow.md",
+    "references/cron-rules.md",
+    "references/response-copy.md",
+    "scripts/auth.py",
+    "scripts/common.py",
+    "scripts/config.json",
+    "scripts/issue.py",
+    "scripts/query.py",
+    "scripts/skill_cache_cli.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090420580,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Meituan-OpenPlatform",
+    "handle": "meituan-openplatform",
+    "user_id": "s17aj3jygxdj93kw2w34sec3f583hrfd"
+  },
+  "slug": "meituan-waimai-coupon",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/meituan-waimai-coupon",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=meituan-waimai-coupon&ownerHandle=meituan-openplatform",
+    "page_url": "https://clawhub.ai/meituan-openplatform/skills/meituan-waimai-coupon"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 765,
+    "installs": 18,
+    "stars": 0,
+    "versions": 8
+  },
+  "summary": "\u3010\u7f8e\u56e2\u5b98\u65b9\u3011\u7f8e\u56e2\u5916\u5356\u7ea2\u5305\u52a9\u624b\uff0c\u652f\u6301\u5916\u5356\u3001\u9910\u996e\u56e2\u8d2d\u3001\u9152\u5e97\u4f4f\u5bbf\u3001\u95e8\u7968\u5ea6\u5047\u3001\u4f11\u95f2\u5a31\u4e50\u3001\u95ea\u8d2d\u3001\u533b\u836f\u7b49\u591a\u54c1\u7c7b\u4f18\u60e0\u5238/\u7ea2\u5305/\u795e\u5238\u7684\u4e00\u952e\u9886\u53d6\u4e0e\u5386\u53f2\u9886\u53d6\u8bb0\u5f55\u67e5\u8be2\u3002\u6838\u5fc3\u80fd\u529b\uff1a1\uff09\u4e00\u952e\u9886\u5238\uff0c\u8986\u76d6\u4e0a\u8ff0\u591a\u54c1\u7c7b\u573a\u666f\uff0c\u9886\u53d6\u79d2\u5230\u8d26\uff1b2\uff09\u67e5\u8be2\u5386\u53f2\u7ea2\u5305\u9886\u53d6\u8bb0\u5f55\uff0c\u67e5\u770b\u5df2\u9886\u7ea2\u5305\u72b6\u6001\u548c\u6709\u6548\u671f\uff1b3\uff09\u5185\u7f6e\u7f8e\u56e2\u5b98\u65b9\u8d26\u53f7\u8ba4\u8bc1\uff0c\u767b\u5f55\u5373\u53ef\u9886\u5238\u3002\u91cd\u8981\u8bf4\u660e\uff1a\u5982\u5b58\u5728\u591a\u4e2a...",
+  "updated_at": 1778492158429,
+  "version": "1.0.7"
+}
