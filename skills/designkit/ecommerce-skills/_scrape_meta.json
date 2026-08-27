@@ -1,0 +1,43 @@
+{
+  "changelog": "- Clarified the public installation and privacy posture: the skill only processes image URLs or local file paths explicitly provided by the user, and this is explained in user-facing language.\n- Reduced public configuration to a single required credential: `DESIGNKIT_OPENCLAW_AK`.\n- Tightened privacy defaults: request logging is disabled by default, and sensitive values are redacted when logging is enabled manually.\n- Updated user guidance to avoid exposing command lines, raw JSON payloads, credentials, or internal script paths in normal non-technical replies.\n- Added guardrails to prevent browsing, referencing, or inventing unrelated local files.\n- Unified runtime execution under Python-based runners and excluded non-runtime artifacts from the release bundle.",
+  "created_at": 1774607913524,
+  "display_name": "Designkit Ecommerce Studio",
+  "fetched_at": 1787844467765,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "api/commands.json",
+    "claw.json",
+    "scripts/ecommerce_product_kit.py",
+    "scripts/openclaw_atomic_runner.py",
+    "scripts/openclaw_safety.py",
+    "scripts/run_command.sh",
+    "scripts/run_ecommerce_kit.sh",
+    "skill-card.md",
+    "skills/designkit-ecommerce-product-kit/SKILL.md",
+    "skills/designkit-edit-tools/SKILL.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "designkit",
+    "handle": "designkit",
+    "user_id": "s17cfttrmewenv8j997kgyg3z583jd0q"
+  },
+  "slug": "ecommerce-skills",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ecommerce-skills",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ecommerce-skills&ownerHandle=designkit",
+    "page_url": "https://clawhub.ai/designkit/skills/ecommerce-skills"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 981,
+    "installs": 24,
+    "stars": 2,
+    "versions": 3
+  },
+  "summary": "Use when users need ecommerce image help such as background removal, transparent or white background output, blurry photo restoration, or listing image gener...",
+  "updated_at": 1778492239922,
+  "version": "1.0.2"
+}
