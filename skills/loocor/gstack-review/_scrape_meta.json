@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of the gstack-review skill for pre-landing PR assessment.\n\n- Analyzes git diffs for SQL safety, LLM trust boundaries, scope drift, missing requirements, and structural issues.\n- Implements a two-pass review with critical and informational checks, plus optional frontend and Codex review.\n- Applies fix-first workflow: auto-fixes clear issues, batches user questions for others.\n- Includes scope drift detection, TODO/documentation cross-referencing, and design review if frontend changes present.\n- Provides a structured protocol for completeness and clear user interaction flow.",
+  "created_at": 1774092487186,
+  "display_name": "Review",
+  "fetched_at": 1787858613451,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090017304,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Loocor",
+    "handle": "loocor",
+    "user_id": "s17c7b7szmkrgr7xyvd59s27qs884spm"
+  },
+  "slug": "gstack-review",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gstack-review",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gstack-review&ownerHandle=loocor",
+    "page_url": "https://clawhub.ai/loocor/skills/gstack-review"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 709,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Pre-landing PR review. Analyzes diff against the base branch for SQL safety, LLM trust boundary violations, conditional side effects, and other structural is...",
+  "updated_at": 1778492083540,
+  "version": "1.0.0"
+}
