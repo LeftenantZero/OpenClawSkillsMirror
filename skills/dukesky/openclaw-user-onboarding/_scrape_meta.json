@@ -1,0 +1,44 @@
+{
+  "changelog": "OpenClaw User Onboarding Skill \u2014 initial release.\n\n- Automatically guides new OpenClaw users through setup if ONBOARDING_PROGRESS.md is missing.\n- Collects user info (name, channel, goal, timezone, intro frequency) via a friendly, step-by-step conversation.\n- Creates and configures USER.md, SOUL.md, HEARTBEAT.md, onboarding cron job, and ONBOARDING_PROGRESS.md.\n- Introduces one OpenClaw feature per interval (daily/weekly/custom), supporting pause/resume/adjustment.\n- All actions are triggered only in interactive (not cron or background) sessions.",
+  "created_at": 1775972326474,
+  "display_name": "Openclaw User Onboarding",
+  "fetched_at": 1787824785299,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090389464,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Tian",
+    "handle": "dukesky",
+    "user_id": "s17521wn9tjm2dqx0pqrsyf5d584q31b"
+  },
+  "slug": "openclaw-user-onboarding",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-user-onboarding",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-user-onboarding&ownerHandle=dukesky",
+    "page_url": "https://clawhub.ai/dukesky/skills/openclaw-user-onboarding"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 600,
+    "installs": 15,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Bootstraps new OpenClaw users with guided setup and configurable feature introductions. Auto-triggers on first session if ONBOARDING_PROGRESS.md is missing....",
+  "updated_at": 1778492540011,
+  "version": "1.0.0"
+}
