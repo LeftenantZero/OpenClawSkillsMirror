@@ -1,0 +1,47 @@
+{
+  "changelog": "- Initial release of crm-add-record skill for automating new record entry in Fractal CRM.\n- Supports navigation, login handling, and intelligent field mapping from natural language input.\n- Automatically extracts phone number, contact name, region, and project info with regex-based parsing.\n- Fallback strategy: places all input in \"Basic Info\" if parsing fails.\n- Step-by-step workflow covers form filling and submission, with troubleshooting guidance included.",
+  "created_at": 1772779082132,
+  "display_name": "Crm Add Record",
+  "fetched_at": 1787790168838,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "scripts/main.sh",
+    "scripts/parse_crm_input.js",
+    "scripts/parse_crm_input.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089778583,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zhangli123456",
+    "handle": "zhangli123456",
+    "user_id": "s177h9dfy50n55g8ggr5r413gs8857rp"
+  },
+  "slug": "crm-add-record",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/crm-add-record",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=crm-add-record&ownerHandle=zhangli123456",
+    "page_url": "https://clawhub.ai/zhangli123456/skills/crm-add-record"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1045,
+    "installs": 31,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Automate adding new CRM records to the Fractal CRM system. Use when user asks to add new CRM entries, customers, or sales leads. The skill handles navigation...",
+  "updated_at": 1779077667296,
+  "version": "1.0.0"
+}
