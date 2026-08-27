@@ -1,0 +1,36 @@
+{
+  "changelog": "**Switch to safer, fixed-version install path (no runtime npx) with in-process invocation via launcher.**\n\n- Changed install method from dynamic `npx` invocation to global `npm install -g news-to-markdown@3.3.1` with process-internal require.\n- All usage/docs now recommend `node scripts/run.js convert ...` instead of direct `npx` calls.\n- Eliminated runtime version drift and sub-process risk; CLI args are allow-listed and strictly validated.\n- npx-based usage remains as backup, but is discouraged for regular or batch use.\n- Updated risk and security notices to reflect the new install and invocation approach.",
+  "created_at": 1774163673571,
+  "display_name": "News To Markdown",
+  "fetched_at": 1787856638343,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "scripts/run.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "PING SI",
+    "handle": "sipingme",
+    "user_id": "s17867zbqf69d0mb2yqzym6nmh83hrxm"
+  },
+  "slug": "news-to-markdown-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/news-to-markdown-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=news-to-markdown-skill&ownerHandle=sipingme",
+    "page_url": "https://clawhub.ai/sipingme/skills/news-to-markdown-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1323,
+    "installs": 39,
+    "stars": 1,
+    "versions": 57
+  },
+  "summary": "\u8f93\u5165\u6587\u7ae0 URL\uff0c\u8f93\u51fa\u5e72\u51c0\u7684 Markdown \u6b63\u6587\u3002\u652f\u630117\u4e2a\u5e73\u53f0\u4e13\u9879\u4f18\u5316\uff08\u5934\u6761\u3001\u5fae\u4fe1\u516c\u4f17\u53f7\u3001\u77e5\u4e4e\u300136kr\u3001\u864e\u55c5\u3001\u534e\u5c14\u8857\u89c1\u95fb\u3001\u6f8e\u6e43\u3001InfoQ \u7b49\uff09\uff0c\u53cc\u5f15\u64ce\u63d0\u53d6\u3001\u56fe\u7247\u672c\u5730\u5316\u3001\u4e09\u5c42\u6293\u53d6\u7b56\u7565\u3002\u5e38\u4e0e browser-web-search skill \u914d\u5408\uff1a\u5148\u7528 bws \u641c\u7d22\u62ff\u5230 url \u5217\u8868\uff0c\u518d\u9010\u7bc7\u8c03\u7528\u672c skil...",
+  "updated_at": 1778492103506,
+  "version": "3.1.7"
+}
