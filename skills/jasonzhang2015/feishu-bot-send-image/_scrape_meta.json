@@ -1,0 +1,35 @@
+{
+  "changelog": "First release: Sends local image files as native image messages in Feishu via Bot API, not as attachments.\n\n- Added script (feishu_send_image.sh) to send PNG/JPG/GIF/WEBP images directly to Feishu users or groups\n- Usage requires specifying image path, receiver ID/type, app ID, and app secret\n- Uses Feishu Bot API: authenticates, uploads image, sends message\n- Credentials must be manually extracted from ~/.openclaw/openclaw.json\n- Replaces previous tool which could only send attachments, enabling true image messages",
+  "created_at": 1773932763326,
+  "display_name": "Feishu Send Image",
+  "fetched_at": 1787797862266,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/feishu_send_image.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "PL Uncle",
+    "handle": "jasonzhang2015",
+    "user_id": "s176m6r1kkv4wv92134rj0mw2h83k827"
+  },
+  "slug": "feishu-bot-send-image",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-bot-send-image",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-bot-send-image&ownerHandle=jasonzhang2015",
+    "page_url": "https://clawhub.ai/jasonzhang2015/skills/feishu-bot-send-image"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1107,
+    "installs": 32,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Send images directly in Feishu chat as native image messages (not file attachments). Use when: need to send a generated image, chart, screenshot, or any loca...",
+  "updated_at": 1779003503283,
+  "version": "1.0.0"
+}
