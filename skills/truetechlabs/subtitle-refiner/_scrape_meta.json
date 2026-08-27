@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of subtitle-refiner \u2013 a tool for optimizing SRT subtitle files.\n\n- Removes filler words (e.g., \u55ef, \u554a) and corrects ASR recognition errors (e.g., XGBT\u2192ChatGPT) while preserving timestamps.\n- Sends optimized files and token usage reports via Feishu.\n- Requires Python 3 and a SILICONFLOW_API_KEY environment variable.\n- Provides clear error handling and token consumption tracking.\n- User-invocable by sending SRT files or trigger keywords (e.g., \"\u4f18\u5316\u5b57\u5e55\", \"fix subtitle\").",
+  "created_at": 1773039955825,
+  "display_name": "subtitle-refiner",
+  "fetched_at": 1787789657548,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/__init__.py",
+    "scripts/refine.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089810225,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "TrueTechLabs",
+    "handle": "truetechlabs",
+    "user_id": "s173r3xe3rnmqccwkgaafxfez9885xkk"
+  },
+  "slug": "subtitle-refiner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/subtitle-refiner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=subtitle-refiner&ownerHandle=truetechlabs",
+    "page_url": "https://clawhub.ai/truetechlabs/skills/subtitle-refiner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 958,
+    "installs": 29,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u667a\u80fd\u4f18\u5316 SRT \u5b57\u5e55\uff0c\u53bb\u9664\u8bed\u6c14\u8bcd\u5e76\u4fee\u6b63 ASR \u9519\u8bef\uff0c\u4fdd\u6301\u65f6\u95f4\u6233\u4e0d\u53d8\uff0c\u8f93\u51fa\u4f18\u5316\u6587\u4ef6\u5e76\u53d1\u9001\u98de\u4e66\u901a\u77e5\u53ca token \u62a5\u544a\u3002",
+  "updated_at": 1779077864756,
+  "version": "1.0.0"
+}
