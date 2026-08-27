@@ -1,0 +1,44 @@
+{
+  "changelog": "- Changed references from job_id to task_id throughout the documentation for consistency with actual API responses.\n- Updated JSON examples in the README to match the latest script output format, including fields like biz_code, msg, data, and trace_id.\n- Clarified the structure for parsing responses and communicating task_id and video_url to the user.\n- No changes to core logic or user-visible commands.",
+  "created_at": 1773296015834,
+  "display_name": "magic-text2video",
+  "fetched_at": 1787789294315,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/media_gen_client.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089870213,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zhangyuangao",
+    "handle": "zhangyuangao",
+    "user_id": "s175y9230syggek6r26zd393yh84v2r5"
+  },
+  "slug": "magic-text2video",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/magic-text2video",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=magic-text2video&ownerHandle=zhangyuangao",
+    "page_url": "https://clawhub.ai/zhangyuangao/skills/magic-text2video"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 942,
+    "installs": 27,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Create a text-to-video job from user-provided copy. Submits to the remote video service via one API key.",
+  "updated_at": 1779078006586,
+  "version": "1.0.2"
+}
