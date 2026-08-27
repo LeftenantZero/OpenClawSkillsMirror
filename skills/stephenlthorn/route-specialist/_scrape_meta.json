@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of the route-specialist skill \u2014 a system for classifying and routing coding tasks to domain-specific expert prompts.\n\n- Classifies tasks into domains (iOS, web, python, trading, VC, devops, or general) using two-stage routing: deterministic file/keyword match, then LLM fallback for ambiguity.\n- Outputs structured metadata: domain, specialist, system_prompt, recommended model, detected frameworks, iOS version, multi-hop analysis, project root, and hard gate detection.\n- Integrates with coding-orchestrator as first-call router, or can answer \"what kind of task is this\" directly.\n- Provides specially-tuned prompts and model recommendations to maximize performance in each domain.\n- Supports project/file context and detects hard domain boundaries (e.g., iOS by .swift files).",
+  "created_at": 1776779179783,
+  "display_name": "Route Specialist",
+  "fetched_at": 1787817488410,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Stephen Thorn",
+    "handle": "stephenlthorn",
+    "user_id": "s1781macwsy8b25gaqa558qrx5858x3k"
+  },
+  "slug": "route-specialist",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/route-specialist",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=route-specialist&ownerHandle=stephenlthorn",
+    "page_url": "https://clawhub.ai/stephenlthorn/skills/route-specialist"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 641,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Classifies tasks by domain using deterministic and LLM methods, then routes to specialized prompts with tuned models and metadata for expert handling.",
+  "updated_at": 1778492695381,
+  "version": "1.0.0"
+}
