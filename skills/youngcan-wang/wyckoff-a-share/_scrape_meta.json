@@ -1,0 +1,36 @@
+{
+  "changelog": "akshare-online-alpha 1.0.0 initial release:\n\n- Provides Wyckoff-style analysis for A-shares using online multi-source data with automatic source switching.\n- Supports analysis from stock codes, CSVs, chart images, and portfolio holdings (symbol/cost/qty/cash/candidate).\n- Enforces strict Beijing-time trading session checks before suggesting any trading actions.\n- Automatically infers user intent (add/reduce/switch/cash-deployment) based on provided fields.\n- Outputs follow a fixed contract: session info, data audit, Wyckoff analysis, portfolio actions, and plotting (when allowed).\n- Implements robust error handling for data availability, structure depth, and image parsing.",
+  "created_at": 1773626201616,
+  "display_name": "Wyckoff Analysis AShare",
+  "fetched_at": 1787871599142,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "rules/alpha-system-prompt.md",
+    "rules/source-fallbacks.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "YoungCan-Wang",
+    "handle": "youngcan-wang",
+    "user_id": "s174z9s1sbky3r2bdxfwys6n9s83h5py"
+  },
+  "slug": "wyckoff-a-share",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wyckoff-a-share",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wyckoff-a-share&ownerHandle=youngcan-wang",
+    "page_url": "https://clawhub.ai/youngcan-wang/skills/wyckoff-a-share"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 858,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Run Wyckoff master-style analysis from stock codes, holdings (symbol/cost/qty), cash, CSV data, and optional chart images. Use when users want online multi-s...",
+  "updated_at": 1778491933006,
+  "version": "1.0.0"
+}
