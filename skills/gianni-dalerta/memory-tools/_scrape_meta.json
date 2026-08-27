@@ -1,0 +1,56 @@
+{
+  "changelog": "Security hardening: changed high-impact behaviors to opt-in defaults (autoInjectInstructions=false, autoMigrateLegacy=false), removed startup systemPrompt override path, and kept explicit config-based enablement for instruction context injection and legacy migration.",
+  "created_at": 1770501099743,
+  "display_name": "Memory Tools",
+  "fetched_at": 1787805311734,
+  "files": [
+    "CLAUDE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "clawdbot.plugin.json",
+    "openclaw.plugin.json",
+    "package-lock.json",
+    "package.json",
+    "scripts/verify-release.mjs",
+    "src/config.ts",
+    "src/file-manager.ts",
+    "src/index.ts",
+    "src/migration.ts",
+    "src/plugin-types.ts",
+    "src/qmd.ts",
+    "src/store.test.ts",
+    "src/store.ts",
+    "src/tools.test.ts",
+    "src/tools.ts",
+    "src/types.ts",
+    "test/docker/docker-compose.yml",
+    "test/docker/run-tests.sh",
+    "test/docker/seed-v1-data.js",
+    "test/docker/test-migration.sh",
+    "tsconfig.json",
+    "vitest.config.ts"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Gianni D'Alerta",
+    "handle": "gianni-dalerta",
+    "user_id": "s17cc17ezh3q3w2b25qwem3dxh884zt1"
+  },
+  "slug": "memory-tools",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memory-tools",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memory-tools&ownerHandle=gianni-dalerta",
+    "page_url": "https://clawhub.ai/gianni-dalerta/skills/memory-tools"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 3375,
+    "installs": 116,
+    "stars": 4,
+    "versions": 15
+  },
+  "summary": "Agent-controlled memory plugin for OpenClaw with confidence scoring, decay, and semantic search. The agent decides WHEN to store/retrieve memories \u2014 no auto-...",
+  "updated_at": 1778988934370,
+  "version": "2.0.4"
+}
