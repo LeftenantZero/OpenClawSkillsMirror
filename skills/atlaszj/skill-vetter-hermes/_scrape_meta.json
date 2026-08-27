@@ -1,0 +1,48 @@
+{
+  "changelog": "**Major update: automatic blocking of high-risk skills and stricter security protocol.**\n\n- Introduced a 2-level trust hierarchy for skill vetting (OFFICIAL vs COMMUNITY skills).\n- Added automatic blocking of HIGH and EXTREME risk skills from community/unknown sources.\n- Scan failures now block installation by default.\n- Updated output/reporting format to clearly show trust and risk levels.\n- Enhanced documentation and integration instructions for use with clawhub installation.\n- Added new project and integration files: origin.json, INTEGRATION_REPORT.md, PUBLISH_GUIDE.md, etc.",
+  "created_at": 1776059718297,
+  "display_name": "Skill Vetter",
+  "fetched_at": 1787823981120,
+  "files": [
+    ".clawhub/origin.json",
+    "INTEGRATION_REPORT.md",
+    "PUBLISH_GUIDE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090404905,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u5341\u4e09\u9999\u5c0f\u7cbe\u7075",
+    "handle": "atlaszj",
+    "user_id": "s17350fyfmrar7mdr5af4zstth83hsx6"
+  },
+  "slug": "skill-vetter-hermes",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-vetter-hermes",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-vetter-hermes&ownerHandle=atlaszj",
+    "page_url": "https://clawhub.ai/atlaszj/skills/skill-vetter-hermes"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 739,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Security-first skill vetting for AI agents. Use before installing any skill from ClawdHub, GitHub, or other sources. Checks for red flags, permission scope,...",
+  "updated_at": 1778492561009,
+  "version": "1.2.0"
+}
