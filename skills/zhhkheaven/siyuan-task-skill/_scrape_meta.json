@@ -1,0 +1,46 @@
+{
+  "changelog": "SiYuan Note Task Management skill initial release.\n\n- Manage tasks in SiYuan Note via Python scripts and HTTP API.\n- Auto-creates a task database and sub-documents for each task.\n- Supports task CRUD (create, query, update, delete), status changes, renaming, and attachment of images.\n- Configuration via simple `config.env` file; auto-initialization with `init` command.\n- Command-line tool and Python API for both quick usage and programmatic integration.\n- Detailed data model with customizable columns and automatic handling of notebook/document structure.",
+  "created_at": 1770707864077,
+  "display_name": "siyuan-task-skill",
+  "fetched_at": 1787792774423,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config.env",
+    "references/API.md",
+    "scripts/siyuan_api.py",
+    "scripts/task_ops.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779965332051,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zhhkheaven",
+    "handle": "zhhkheaven",
+    "user_id": "s17d997ztnd6y31xghpbn5wpy1845kf4"
+  },
+  "slug": "siyuan-task-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/siyuan-task-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=siyuan-task-skill&ownerHandle=zhhkheaven",
+    "page_url": "https://clawhub.ai/zhhkheaven/skills/siyuan-task-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2019,
+    "installs": 63,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Manage tasks in SiYuan Note via its HTTP API. Create, query, update, and organize tasks stored in the \u4efb\u52a1\u6e05\u5355 document (with a TASK database) and sub-documents for related materials. Use when the user mentions SiYuan, task management, or needs to track work items.",
+  "updated_at": 1779076810877,
+  "version": "1.0.0"
+}
