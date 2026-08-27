@@ -1,0 +1,50 @@
+{
+  "changelog": "Document cross-skill relationships in all SKILL.md files",
+  "created_at": 1771069143732,
+  "display_name": "ArXiv Paper Processor",
+  "fetched_at": 1787804322339,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/summary-example-en.md",
+    "references/summary-example-zh.md",
+    "references/summary-format.md",
+    "scripts/download_arxiv_pdf.py",
+    "scripts/download_arxiv_source.py",
+    "scripts/download_papers_batch.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966783317,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xukp20",
+    "handle": "xukp20",
+    "user_id": "s17d0z1j1dfyak54h374wncavs843hep"
+  },
+  "slug": "arxiv-paper-processor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/arxiv-paper-processor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=arxiv-paper-processor&ownerHandle=xukp20",
+    "page_url": "https://clawhub.ai/xukp20/skills/arxiv-paper-processor"
+  },
+  "stats": {
+    "comments": 2,
+    "downloads": 3534,
+    "installs": 116,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Tool for manual per-paper ArXiv paper processing: batch/source/pdf download then model-driven full-text reading and summary.md writing in chosen language.",
+  "updated_at": 1778990479966,
+  "version": "0.1.1"
+}
