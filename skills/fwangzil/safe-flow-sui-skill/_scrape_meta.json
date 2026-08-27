@@ -1,0 +1,53 @@
+{
+  "changelog": "Initial release of safe-flow-sui-skill for collaborative SafeFlow contract testing and owner-assisted agent set-up:\n\n- Provides scripts for agent-owner handoff, wallet/session configuration, and autonomous payment execution.\n- Supports end-to-end Publish API and Walrus integration tests.\n- Enables syncing of Sui package IDs with SQL databases (SQLite or Postgres).\n- Includes concise workflows and progressive disclosure references for setup, testing, and troubleshooting.",
+  "created_at": 1772632488760,
+  "display_name": "Safeflow Sui Skill",
+  "fetched_at": 1787790191947,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/owner-handoff-flow.md",
+    "references/publish-api-test-flow.md",
+    "references/sql-sync.md",
+    "references/troubleshooting.md",
+    "scripts/bootstrap_owner_handoff.sh",
+    "scripts/execute_payment.sh",
+    "scripts/save_owner_config.sh",
+    "scripts/setup.sh",
+    "scripts/sync_package_id_to_sql.sh",
+    "scripts/test_publish_api_flow.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089756361,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Togo",
+    "handle": "fwangzil",
+    "user_id": "s17998k8hk3q50mknqvwpep89h845q9m"
+  },
+  "slug": "safe-flow-sui-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/safe-flow-sui-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=safe-flow-sui-skill&ownerHandle=fwangzil",
+    "page_url": "https://clawhub.ai/fwangzil/skills/safe-flow-sui-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1023,
+    "installs": 30,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use when running SafeFlow against the shared Sui package with owner-assisted provisioning. Trigger for tasks such as creating an agent execution address with...",
+  "updated_at": 1779077657914,
+  "version": "1.0.0"
+}
