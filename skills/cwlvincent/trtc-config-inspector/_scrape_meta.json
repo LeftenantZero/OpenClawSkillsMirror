@@ -1,0 +1,46 @@
+{
+  "changelog": "**v2.1.0 introduces report-only mode and agent-guided automation.**\n\n- The skill now generates structured diff reports and code modification plans but does not directly modify user code.\n- Actual source code changes are performed by the AI Agent using standard code editing tools, based on the generated suggestions.\n- Updated documentation to clarify the separation of report generation and code editing, and to support multilingual scenarios.\n- Refined the description, triggers, usage instructions, and parameter-to-code API mappings for clarity.\n- Adjusted permissions to remove write access, reflecting the report-only architecture.",
+  "created_at": 1771991826612,
+  "display_name": "trtc-config-inspector",
+  "fetched_at": 1787802263646,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/diff_config.py",
+    "scripts/download_files.py",
+    "scripts/parse_excel.py",
+    "scripts/run_inspector.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779958390770,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "CwlVincent",
+    "handle": "cwlvincent",
+    "user_id": "s176m3b1xgffvrc0swqz9v2g0n884pr2"
+  },
+  "slug": "trtc-config-inspector",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/trtc-config-inspector",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=trtc-config-inspector&ownerHandle=cwlvincent",
+    "page_url": "https://clawhub.ai/cwlvincent/skills/trtc-config-inspector"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 642,
+    "installs": 14,
+    "stars": 2,
+    "versions": 2
+  },
+  "summary": "TRTC SDK configuration inspection and analysis tool. Downloads scene config template Excel, inspection result Excel, and project code from user-provided URLs...",
+  "updated_at": 1778993047400,
+  "version": "1.0.1"
+}
