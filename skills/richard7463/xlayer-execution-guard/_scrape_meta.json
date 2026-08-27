@@ -1,0 +1,53 @@
+{
+  "changelog": "**Expanded pre-execution guard with runtime and CLI support**\n\n- Added dedicated Python runtime and CLI scripts for guarded execution and environment checks.\n- Introduced detailed operating rules for simulation (proof mode), agentic-wallet execution, and handling missing API credentials.\n- Clear split between mock output vs. live proof; ensures users distinguish real/wallet actions from simulation.\n- Updated documentation for OpenClaw and ClawHub quick-start, environment setup, wallet requirements, and error handling.\n- Outputs now include stepwise pre-execution judgment, post-execution proof, and closed-loop validation artifacts.",
+  "created_at": 1776240716638,
+  "display_name": "X Layer Execution Guard",
+  "fetched_at": 1787795258621,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "plugin.yaml",
+    "requirements.txt",
+    "runtime/execution_guard/__init__.py",
+    "runtime/execution_guard/cli.py",
+    "runtime/execution_guard/guard.py",
+    "runtime/execution_guard/models.py",
+    "runtime/route_referee/__init__.py",
+    "runtime/route_referee/client.py",
+    "scripts/check_agentic_wallet.py",
+    "scripts/run_execution_guard.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090439339,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "richard7463",
+    "handle": "richard7463",
+    "user_id": "s171aabnhwf1azz5asdd7pk8sn83g299"
+  },
+  "slug": "xlayer-execution-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/xlayer-execution-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=xlayer-execution-guard&ownerHandle=richard7463",
+    "page_url": "https://clawhub.ai/richard7463/skills/xlayer-execution-guard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 605,
+    "installs": 14,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Run an executable X Layer pre-execution guard for autonomous agents: OnchainOS DEX route judgment, honeypot and price-impact checks, proof-mode evidence, and...",
+  "updated_at": 1779075903351,
+  "version": "1.0.1"
+}
