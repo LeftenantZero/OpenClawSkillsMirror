@@ -1,0 +1,41 @@
+{
+  "changelog": "byted-byteplus-vod-precision-erasure 1.0.0\n\n- Initial release with support for uploading local video/audio files or public URLs to BytePlus VOD, returning Vid and playback references.\n- Adds precision erasure jobs on ingested media using automatic OCR (subtitle-only by default; optional full on-screen text erasure).\n- Supports optional erasure segment selection with ClipFilter (skip/selected modes).\n- Always creates a new output asset (NewVid=true) and, by default, returns erasure metadata (WithEraseInfo).\n- Provides robust command-line tools for upload and precision erasure pipelines, including polling, error, and timeout handling.",
+  "created_at": 1778731995193,
+  "display_name": "Byted Byteplus Vod Precision Erasure",
+  "fetched_at": 1787807512204,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/precise_erase.md",
+    "scripts/.env",
+    "scripts/poll_execution.py",
+    "scripts/precise_erase.py",
+    "scripts/pyproject.toml",
+    "scripts/tos_upload.py",
+    "scripts/upload.py",
+    "scripts/vod_client.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "volcengine-skills",
+    "handle": "volcengine-skills",
+    "user_id": "s17bcxs73bckd3eercvtn6cmsx83g5kg"
+  },
+  "slug": "byted-byteplus-vod-precision-erasure",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/byted-byteplus-vod-precision-erasure",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=byted-byteplus-vod-precision-erasure&ownerHandle=volcengine-skills",
+    "page_url": "https://clawhub.ai/volcengine-skills/skills/byted-byteplus-vod-precision-erasure"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 515,
+    "installs": 10,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Upload video/audio media to BytePlus VOD (Video on Demand) storage, returning the Vid and playback references; supports local file upload (ApplyUploadInfo +...",
+  "updated_at": 1778732206742,
+  "version": "1.0.0"
+}
