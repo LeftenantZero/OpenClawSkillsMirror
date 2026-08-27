@@ -1,0 +1,54 @@
+{
+  "changelog": "Initial release of Slide to Video Converter.\n\n- Converts PPT, PPTX, or PDF slides with speaker notes into high-quality narrated MP4 videos.\n- Features auto-synced subtitles, audio validation, and batch processing.\n- Supports three TTS modes: Edge TTS (default, online), Qwen3-TTS (local GPU), and HTTP service.\n- Includes optimized PPTX support via LibreOffice, with fallback to python-pptx if needed.\n- Flexible pipeline allows per-slide partial processing, custom audio/video options, and quality control settings.",
+  "created_at": 1774358071904,
+  "display_name": "slide-to-video-converter",
+  "fetched_at": 1787851494690,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/config.json",
+    "references/script-format.md",
+    "scripts/compose_video.py",
+    "scripts/merge_videos.py",
+    "scripts/pdf_to_images.py",
+    "scripts/pipeline.py",
+    "scripts/pptx_to_images.py",
+    "scripts/restart_tts.sh",
+    "scripts/slide_to_video.py",
+    "scripts/tts_server.py",
+    "scripts/utils.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090074113,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "hzsunzixiang",
+    "handle": "hzsunzixiang",
+    "user_id": "s17069wbwf7gnepk3p3g4wa06183g8zb"
+  },
+  "slug": "slide-to-video-converter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/slide-to-video-converter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=slide-to-video-converter&ownerHandle=hzsunzixiang",
+    "page_url": "https://clawhub.ai/hzsunzixiang/skills/slide-to-video-converter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 589,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "End-to-end pipeline for converting PPT/PPTX/PDF slides with speaker notes into narrated MP4 videos. Defaults to Edge TTS (Microsoft free online API) for univ...",
+  "updated_at": 1778492158429,
+  "version": "1.0.0"
+}
