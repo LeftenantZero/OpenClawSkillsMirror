@@ -1,0 +1,48 @@
+{
+  "changelog": "- Add execution rules to always invoke scripts via bash and never directly by shebang.\n- Specify fast fallback: if scripts fail, fallback to direct cron tool calls and inform the user.\n- Update workflow examples to use bash explicitly in all script invocations.\n- Emphasize reliability: never leave user waiting without timer creation or explicit error.\n- No changes to timer logic, just invocation, error handling, and reliability clarifications.",
+  "created_at": 1775073527485,
+  "display_name": "Nervtimer",
+  "fetched_at": 1787835522448,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/escalation-policy.md",
+    "references/intent-schema.md",
+    "scripts/build-cron-payload.sh",
+    "scripts/state.sh",
+    "scripts/validate-intent.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090238805,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fragwuerdig",
+    "handle": "fragwuerdig",
+    "user_id": "s177v75jxkfnerd1tt70tnj5g98408wp"
+  },
+  "slug": "nervtimer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nervtimer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nervtimer&ownerHandle=fragwuerdig",
+    "page_url": "https://clawhub.ai/fragwuerdig/skills/nervtimer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 648,
+    "installs": 15,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Set one-shot or recurring timers across channels and keep nagging every 5 minutes until the user explicitly says it is done. Uses cron for scheduling, determ...",
+  "updated_at": 1778492356127,
+  "version": "1.0.1"
+}
