@@ -1,0 +1,47 @@
+{
+  "changelog": "- Enforced strict CLI-only responses: all results must originate from flyai CLI output, not training data.\n- Added multi-language support: output language matches user input (English/Chinese).\n- Specified detailed CLI parameter mapping and validation rules, including comprehensive environment and output checks.\n- Expanded description to clarify supported booking services (flights, hotels, trains, etc.) powered by Fliggy.\n- Updated output formatting rules: conclusions first, booking links required, minimum 3 results in comparison table when possible.",
+  "created_at": 1777061044325,
+  "display_name": "oversize-baggage",
+  "fetched_at": 1787815062532,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/fallbacks.md",
+    "references/playbooks.md",
+    "references/runbook.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090544442,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xiejinsong",
+    "handle": "xiejinsong",
+    "user_id": "s177qj362rbw4294hgs3hdvhgx83m2hm"
+  },
+  "slug": "oversize-baggage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oversize-baggage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oversize-baggage&ownerHandle=xiejinsong",
+    "page_url": "https://clawhub.ai/xiejinsong/skills/oversize-baggage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 514,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Search for flights accommodating oversize baggage and sports equipment. Also supports: flight booking, hotel reservation, train tickets, attraction tickets,...",
+  "updated_at": 1778492741073,
+  "version": "3.2.0"
+}
