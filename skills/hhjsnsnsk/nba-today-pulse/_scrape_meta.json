@@ -1,0 +1,74 @@
+{
+  "changelog": "NBA Today Pulse v1.0.15 - Minor update following thin-wrapper contract and removing test harness.\n\n- Removes the internal test harness file `tools/verify_nba_tr.py` from the public bundle.\n- Updates documentation (SKILL.md) to clarify that only the intended execution wrapper and official route separation are supported.\n- Confirms `official_report` summaries are a dedicated route and cannot be mixed into other reports.\n- Adjusts and simplifies the description for clarity and accurate feature scope.\n- No changes to external commands, parameters, or end-user experience.",
+  "created_at": 1774437068445,
+  "display_name": "NBA Today Pulse",
+  "fetched_at": 1787849061018,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "TOOLS.md",
+    "_meta.json",
+    "skill-card.md",
+    "tools/cache_store.py",
+    "tools/entity_guard.py",
+    "tools/nba_advanced_report.py",
+    "tools/nba_common.py",
+    "tools/nba_day_snapshot.py",
+    "tools/nba_game_full_stats.py",
+    "tools/nba_game_live_context.py",
+    "tools/nba_game_locator.py",
+    "tools/nba_game_preview_context.py",
+    "tools/nba_game_recap_context.py",
+    "tools/nba_game_rosters.py",
+    "tools/nba_head_to_head.py",
+    "tools/nba_official_report.py",
+    "tools/nba_play_digest.py",
+    "tools/nba_player_names.py",
+    "tools/nba_pulse_core.py",
+    "tools/nba_pulse_router.py",
+    "tools/nba_story_summarizer.py",
+    "tools/nba_team_form_snapshot.py",
+    "tools/nba_team_injury_report.py",
+    "tools/nba_team_roster.py",
+    "tools/nba_teams.py",
+    "tools/nba_today_command.py",
+    "tools/nba_today_report.py",
+    "tools/provider_espn.py",
+    "tools/provider_nba.py",
+    "tools/provider_nba_injuries.py",
+    "tools/timezone_resolver.py",
+    "tools/vendor_pdf_text.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090543478,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Stsk",
+    "handle": "hhjsnsnsk",
+    "user_id": "s1735b7pdmeh0bw9s5kcwrnw3n83hz0h"
+  },
+  "slug": "nba-today-pulse",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nba-today-pulse",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nba-today-pulse&ownerHandle=hhjsnsnsk",
+    "page_url": "https://clawhub.ai/hhjsnsnsk/skills/nba-today-pulse"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1075,
+    "installs": 30,
+    "stars": 2,
+    "versions": 16
+  },
+  "summary": "Timezone-aware NBA daily intelligence using bundled public ESPN/NBA fetchers plus official NBA injury-report PDFs, with compact day fast path, same-day stats...",
+  "updated_at": 1778492186671,
+  "version": "1.0.15"
+}
