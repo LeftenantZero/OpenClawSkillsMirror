@@ -1,0 +1,40 @@
+{
+  "changelog": "claude-notifications 1.0.0 \u2013 Initial release\n\n- Adds native macOS notification setup for Claude Code, supporting both local and remote (devpod) environments.\n- Provides a setup script to configure terminal-notifier, launchd listener, SSH reverse tunnels, tmux passthrough, and Claude Code notification hooks.\n- Includes detailed user instructions and troubleshooting guidance.\n- macOS-only; blocks install on non-macOS systems.\n- Reminds users of required manual macOS notification permissions and Focus/DND settings.",
+  "created_at": 1774130241076,
+  "display_name": "Claude Notifications",
+  "fetched_at": 1787857653576,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/notify-listener.py",
+    "scripts/notify.py",
+    "scripts/notify.sh",
+    "scripts/setup-notifications.sh",
+    "scripts/setup_notifications.py",
+    "scripts/test_notify.py",
+    "scripts/test_setup_notifications.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ajit Singh",
+    "handle": "ajitsingh25",
+    "user_id": "s17f3x4tze40mv0zt71rgpkbtn8541ee"
+  },
+  "slug": "claude-notifications",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claude-notifications",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claude-notifications&ownerHandle=ajitsingh25",
+    "page_url": "https://clawhub.ai/ajitsingh25/skills/claude-notifications"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 643,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Set up native macOS notifications for Claude Code on local and devpod/remote environments. Use when the user asks to 'setup notifications', 'configure devpod...",
+  "updated_at": 1778492095714,
+  "version": "1.0.0"
+}
