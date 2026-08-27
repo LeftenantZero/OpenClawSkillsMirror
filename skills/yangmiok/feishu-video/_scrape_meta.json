@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of Feishu Audio Message skill.\n\n- Send voice/audio messages to Feishu (Lark) users as actual voice messages, not file attachments.\n- Automatically converts MP3, WAV, and other audio to OPUS format (requires ffmpeg).\n- Requires Feishu app credentials and target user's Open ID.\n- Includes step-by-step instructions for converting audio and sending messages.\n- Provides troubleshooting tips for common errors.",
+  "created_at": 1773550444262,
+  "display_name": "feishu-video",
+  "fetched_at": 1787872828447,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/convert-audio.sh",
+    "scripts/send-video.mjs",
+    "scripts/send-voice.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089893097,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "yangmiok",
+    "handle": "yangmiok",
+    "user_id": "s17ef42qa6jcf7pvhyqzfqa1vd88469c"
+  },
+  "slug": "feishu-video",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-video",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-video&ownerHandle=yangmiok",
+    "page_url": "https://clawhub.ai/yangmiok/skills/feishu-video"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 761,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Send voice/audio messages to Feishu (Lark) users. Converts audio files to OPUS format and sends as voice message, not file attachment. create by Alex",
+  "updated_at": 1778491917527,
+  "version": "1.0.0"
+}
