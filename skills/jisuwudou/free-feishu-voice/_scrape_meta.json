@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial public release with core Feishu voice messaging features:\n\n- Added support for sending Feishu voice messages via shell scripts, using either espeak-ng+ffmpeg or high-quality Edge TTS.\n- Introduced a JSON configuration system with environment variable overrides for credentials, chat ID, default text, and voice.\n- Scripts automatically generate config templates if the config file does not exist.\n- Both basic (espeak) and enhanced (Edge TTS) scripts validate parameters and dependencies before sending messages.\n- Edge TTS version supports auto-installation of Python package edge-tts and provides higher quality voice output.\n- Added inline help and status/error outputs for simplified troubleshooting.",
+  "created_at": 1773645207061,
+  "display_name": "free-feishu-voice",
+  "fetched_at": 1787798565732,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jisuwudou",
+    "handle": "jisuwudou",
+    "user_id": "s1743q3j1rgwd1x2nrkp0jb8kn88467h"
+  },
+  "slug": "free-feishu-voice",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/free-feishu-voice",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=free-feishu-voice&ownerHandle=jisuwudou",
+    "page_url": "https://clawhub.ai/jisuwudou/skills/free-feishu-voice"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 915,
+    "installs": 26,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Send customized voice messages to Feishu chats by generating and uploading TTS audio using configurable credentials and options.",
+  "updated_at": 1779000732326,
+  "version": "1.0.0"
+}
