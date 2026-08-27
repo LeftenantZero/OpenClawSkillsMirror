@@ -1,0 +1,41 @@
+{
+  "changelog": "ClawInboxRAG Skill 1.0.0 - Initial Release\n\n- Enables safe parsing and execution of local `mail ...` commands for ClawInboxRAG mailbox retrieval.\n- Supports read-only querying with bounded, citation-friendly output; never exposes full raw message bodies by default.\n- Includes actions: help, status, labels, sync, recents, and flexible search with advanced options.\n- Enforces safety constraints on command surface, numeric limits, and argument handling.\n- Clear error handling for setup, runner, index, and command issues.\n- Requires a local ClawInboxRAG checkout and proper environment configuration.",
+  "created_at": 1774795229377,
+  "display_name": "ClawInboxRAG",
+  "fetched_at": 1787841166798,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/commands.md",
+    "references/security.md",
+    "references/setup.md",
+    "references/troubleshooting.md",
+    "scripts/parse_mail.py",
+    "scripts/run_cli.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "dmoraine",
+    "handle": "dmoraine",
+    "user_id": "s17epqhw6vjcfm5r3sykdcyqp583h65g"
+  },
+  "slug": "clawinboxrag",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawinboxrag",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawinboxrag&ownerHandle=dmoraine",
+    "page_url": "https://clawhub.ai/dmoraine/skills/clawinboxrag"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 651,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Community skill for parsing and executing local mailbox retrieval commands (`mail ...`) against a local backend with safe defaults, bounded output, and read-...",
+  "updated_at": 1778492279313,
+  "version": "1.0.0"
+}
