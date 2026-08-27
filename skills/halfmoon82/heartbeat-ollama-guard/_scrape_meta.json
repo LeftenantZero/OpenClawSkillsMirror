@@ -1,0 +1,37 @@
+{
+  "changelog": "- Added skill to redirect OpenClaw's heartbeat from cloud to local Ollama model, preventing excessive token use.\n- Implements a 60s polling guard to monitor and revert unauthorized changes to heartbeat configuration, with system notifications.\n- Provides CLI commands for setup, status monitoring, authorized modification, and uninstallation.\n- Ensures all operations are local, secure, and fully reversible with built-in backup and restoration tools.\n- Detailed instructions for quick start, Ollama installation, and permission management included.",
+  "created_at": 1773906639380,
+  "display_name": "Heartbeat Ollama Guard",
+  "fetched_at": 1787797973781,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.yaml",
+    "generate_readme_cn.py",
+    "heartbeat_ollama_guard.py",
+    "package.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "halfmoon82",
+    "handle": "halfmoon82",
+    "user_id": "s173a0sd7rjbb7s3bsayc8607s83n58t"
+  },
+  "slug": "heartbeat-ollama-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/heartbeat-ollama-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=heartbeat-ollama-guard&ownerHandle=halfmoon82",
+    "page_url": "https://clawhub.ai/halfmoon82/skills/heartbeat-ollama-guard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 897,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Switch OpenClaw heartbeat model to local Ollama and deploy a guard to prevent unauthorized changes, avoiding paid cloud token usage.",
+  "updated_at": 1779003176707,
+  "version": "1.0.0"
+}
