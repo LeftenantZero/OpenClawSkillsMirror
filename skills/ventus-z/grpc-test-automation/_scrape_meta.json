@@ -1,0 +1,54 @@
+{
+  "changelog": "Initial release of grpc-test-automation.\n\n- Provides a full gRPC test automation framework for C/C++ SDKs on embedded devices.\n- Automatically analyzes SDK headers, generates gRPC interfaces, and wraps SDK calls with a C++ gRPC server.\n- Integrates with JMeter to create and run test plans using generated proto descriptors.\n- Simulates serial communication for resource deployment and service control on the embedded board.\n- Generates Excel-format test reports summarizing test results, performance metrics, and errors.\n- Includes scripts for each step: analysis, server generation, build, deployment, test execution, and reporting.",
+  "created_at": 1774860249023,
+  "display_name": "grpc-test-automation",
+  "fetched_at": 1787840086807,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cpp-server.md",
+    "references/excel-format.md",
+    "references/jmeter-config.md",
+    "references/jmx-template.md",
+    "references/proto-design.md",
+    "references/sdk-analysis.md",
+    "references/serial-protocol.md",
+    "references/test-patterns.md",
+    "scripts/analyze_sdk.py",
+    "scripts/generate_report.py",
+    "scripts/init_project.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968572395,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ventus-Z",
+    "handle": "ventus-z",
+    "user_id": "s175md548q0txw2ncegqd0b0h583xcr7"
+  },
+  "slug": "grpc-test-automation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/grpc-test-automation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=grpc-test-automation&ownerHandle=ventus-z",
+    "page_url": "https://clawhub.ai/ventus-z/skills/grpc-test-automation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 599,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Complete gRPC test automation for embedded devices with C/C++ SDK. Input: requirements.md + SDK (C/C++ headers and libraries) Output: Test framework + JMX +...",
+  "updated_at": 1778492295572,
+  "version": "1.0.0"
+}
