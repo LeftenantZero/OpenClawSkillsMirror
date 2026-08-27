@@ -1,0 +1,61 @@
+{
+  "changelog": "Initial public release.\n\nLightweight Flask web interface for OpenClaw providing a simple browser chat UI.\n\nFeatures:\n- Multi-user chat interface\n- Proxy to OpenClaw HTTP endpoint\n- Configurable upstream agent and model\n- Environment-based configuration\n- Local state and memory storage\n\nConfiguration via environment variables:\n\nOPENCLAW_BASE=http://127.0.0.1:18789\nOPENCLAW_AUTH=\nOPENCLAW_AGENT=main\nOPENCLAW_CHANNEL=web-gateway\nOPENCLAW_MODEL=default\nDEFAULT_USER=family\nPORT=5002",
+  "created_at": 1773275761449,
+  "display_name": "Web Gateway",
+  "fetched_at": 1787789074304,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "app.py",
+    "config.py",
+    "config/participants.example.json",
+    "config/participants.json",
+    "memory_store.py",
+    "openclaw_client.py",
+    "prompts.py",
+    "requirements.txt",
+    "routes/chat.py",
+    "routes/state.py",
+    "run.sh",
+    "skill-card.md",
+    "skill.json",
+    "state_manager.py",
+    "static/css/app.css",
+    "static/js/background.js",
+    "static/js/chat.js",
+    "static/js/ui.js",
+    "templates/index.html"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089851018,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jeanne0r",
+    "handle": "jeanne0r",
+    "user_id": "s173kp8asz7y8esxn69e0hymb183thx5"
+  },
+  "slug": "openclaw-web-gateway",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-web-gateway",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-web-gateway&ownerHandle=jeanne0r",
+    "page_url": "https://clawhub.ai/jeanne0r/skills/openclaw-web-gateway"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1056,
+    "installs": 30,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Minimal Flask-based multi-user chat interface enabling OpenClaw HTTP integration with persistent UI state and optional Google Maps support.",
+  "updated_at": 1779078099557,
+  "version": "1.0.6"
+}
