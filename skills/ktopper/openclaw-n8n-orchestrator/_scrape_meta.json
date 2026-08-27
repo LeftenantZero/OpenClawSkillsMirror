@@ -1,0 +1,54 @@
+{
+  "changelog": "v2.0.0 \u2014 Complete architectural rewrite\n\n- Generates proper OpenClaw skill directories (SKILL.md + YAML frontmatter) instead of legacy .mmd files\n- YAML frontmatter uses correct metadata.clawdbot namespace, requires.env singular, files declarations\n- Security Manifest Headers in all scripts (ClawHub scanner compliance)\n- Shell injection mitigation: urllib.parse.quote sanitization, --data-urlencode, Node.js zero-injection templates\n- set -euo pipefail enforced in all bash scripts\n- Four mandatory transparency sections: External Endpoints, Security & Privacy, Model Invocation Note, Trust Statement\n- New Mode 5: ClawHub publishing pipeline with clawhub CLI workflow\n- SkillPointer pattern for scaling 20+ webhook skills (8,000 \u2192 200 startup tokens)\n- exec.approval and soul.md guardrail templates\n- Node.js trigger template (zero npm dependencies, zero shell surface)\n- Expanded validation script: checks YAML, manifests, injection patterns, dangerous files\n- Multi-model cost routing guidance (~70% API savings)",
+  "created_at": 1773241866409,
+  "display_name": "OpenClaw n8n Orchestrator",
+  "fetched_at": 1787789362006,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/deployment.md",
+    "references/gateway-api.md",
+    "references/n8n-claw-architecture.md",
+    "references/publishing.md",
+    "references/security.md",
+    "scripts/validate_integration.py",
+    "skill-card.md",
+    "templates/docker-compose.yml",
+    "templates/skill-template-SKILL.md",
+    "templates/trigger-template.js",
+    "templates/trigger-template.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089842568,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Kristopher Dunham",
+    "handle": "ktopper",
+    "user_id": "s1796hwdqm3e9er7phdtq6e5y1885g59"
+  },
+  "slug": "openclaw-n8n-orchestrator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-n8n-orchestrator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-n8n-orchestrator&ownerHandle=ktopper",
+    "page_url": "https://clawhub.ai/ktopper/skills/openclaw-n8n-orchestrator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1160,
+    "installs": 33,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "When the user wants to connect an OpenClaw agent to n8n workflows, create n8n webhook skills for OpenClaw, route agent API calls through n8n for credential i...",
+  "updated_at": 1779077975769,
+  "version": "2.0.0"
+}
