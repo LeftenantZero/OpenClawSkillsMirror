@@ -1,0 +1,54 @@
+{
+  "changelog": "water-coach 1.7.0\n\n- Fixed: The `water dynamic` command now correctly resets the hourly notification counter when the hour changes, preventing missed notifications at hour boundaries.\n- Fixed: Weekly and monthly analytics now sum water intake per day using the correct CSV column (`ml_drank`), resolving errors from missing `cumulative_ml`.\n- Documentation updated to clarify bug fixes and reference correct analytics usage.\n- No database, config, or CLI changes to user experience expected outside these bug fixes.",
+  "created_at": 1771169987659,
+  "display_name": "Water Coach",
+  "fetched_at": 1787804125693,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "evaluation/AGENT.md",
+    "evaluation/agent_eval.json",
+    "references/dynamic.md",
+    "references/log_format.md",
+    "references/setup.md",
+    "scripts/test/test_water.py",
+    "scripts/water.py",
+    "scripts/water_coach.py",
+    "skill-card.md",
+    "skills/mcporter/SKILL.md",
+    "skills/mcporter/_meta.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968386461,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "oristides",
+    "handle": "oristides",
+    "user_id": "s17d2gjyx3sn2kt5z3fnvpmc4d885nky"
+  },
+  "slug": "water-coach",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/water-coach",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=water-coach&ownerHandle=oristides",
+    "page_url": "https://clawhub.ai/oristides/skills/water-coach"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1869,
+    "installs": 58,
+    "stars": 2,
+    "versions": 21
+  },
+  "summary": "Hydration tracking and coaching skill. Use when user wants to track water intake, get reminders to drink water, log body metrics (weight, body fat, muscle %,...",
+  "updated_at": 1778990743165,
+  "version": "1.7.0"
+}
