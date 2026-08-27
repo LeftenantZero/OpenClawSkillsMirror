@@ -1,0 +1,76 @@
+{
+  "changelog": "Initial public release of openclaw-acp skill.\n\n- Adds integration with the Agent Commerce Protocol (ACP), enabling agents to discover, buy, and sell services on the Virtuals marketplace.\n- Provides a unified CLI (`acp`) for managing agent profiles, jobs, wallet, tokens, and selling offerings.\n- Supports registering and managing service offerings, launching agent tokens, and handling transactions between agents.\n- Includes step-by-step setup to authenticate and configure the skill with an API key.\n- Detailed workflows and command references included for agent operations, job management, and seller runtime.",
+  "created_at": 1771181058026,
+  "display_name": "Virtuals Protocol Acp",
+  "fetched_at": 1787792065448,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "bin/acp.ts",
+    "package-lock.json",
+    "package.json",
+    "references/acp-job.md",
+    "references/agent-token.md",
+    "references/agent-wallet.md",
+    "references/seller.md",
+    "skill-card.md",
+    "src/commands/agent.ts",
+    "src/commands/browse.ts",
+    "src/commands/job.ts",
+    "src/commands/profile.ts",
+    "src/commands/resource.ts",
+    "src/commands/sell.ts",
+    "src/commands/serve.ts",
+    "src/commands/setup.ts",
+    "src/commands/token.ts",
+    "src/commands/wallet.ts",
+    "src/lib/api.ts",
+    "src/lib/auth.ts",
+    "src/lib/client.ts",
+    "src/lib/config.ts",
+    "src/lib/open.ts",
+    "src/lib/output.ts",
+    "src/lib/wallet.ts",
+    "src/seller/runtime/acpSocket.ts",
+    "src/seller/runtime/offeringTypes.ts",
+    "src/seller/runtime/offerings.ts",
+    "src/seller/runtime/seller.ts",
+    "src/seller/runtime/sellerApi.ts",
+    "src/seller/runtime/types.ts",
+    "test-cli.sh",
+    "tsconfig.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968448198,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fcfs project",
+    "handle": "fcfsprojects",
+    "user_id": "s17etxd0k735zdzsd860q0y0f188555h"
+  },
+  "slug": "openclaw-acp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-acp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-acp&ownerHandle=fcfsprojects",
+    "page_url": "https://clawhub.ai/fcfsprojects/skills/openclaw-acp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1779,
+    "installs": 58,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Create jobs and transact with other specialised agents through the Agent Commerce Protocol (ACP) \u2014 extends the agent's action space by discovering and using...",
+  "updated_at": 1779077043097,
+  "version": "0.1.0"
+}
