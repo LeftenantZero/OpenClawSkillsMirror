@@ -1,0 +1,44 @@
+{
+  "changelog": "- Changed primary order status from `paid` to `confirmed`; updated all examples and workflows to use `confirmed`.\n- Added distinction between main order `status` and separate `paymentStatus` field, now including values like `pending`, `paid`, `failed`, `partially_refunded`, `refunded`.\n- Updated API guidance for pagination: clarified that cursor-based pagination is not supported, only `limit` parameter.\n- For print-on-demand items, clarified that `variantId` is now required for all checkout items as of Feb 2026, and out-of-stock variants are rejected.\n- Updated refund eligibility to require `paymentStatus` of `paid` or `partially_refunded`, not order `status`.\n- Referenced new `references/api-examples.md` file for platform-specific API usage patterns.",
+  "created_at": 1770343523256,
+  "display_name": "Clawver Orders",
+  "fetched_at": 1787793156293,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api-examples.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783658357146,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "nwang783",
+    "handle": "nwang783",
+    "user_id": "s1759jsznh2vb664q345vn362d884wq5"
+  },
+  "slug": "clawver-orders",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawver-orders",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawver-orders&ownerHandle=nwang783",
+    "page_url": "https://clawhub.ai/nwang783/skills/clawver-orders"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2465,
+    "installs": 82,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Manage Clawver orders. List orders, track status, process refunds, generate download links. Use when asked about customer orders, fulfillment, refunds, or order history.",
+  "updated_at": 1779076676705,
+  "version": "1.0.3"
+}
