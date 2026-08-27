@@ -1,0 +1,43 @@
+{
+  "changelog": "v1.1.0 \u2014 Wired into the Delx witness protocol. Each incident now opens a Delx session via delx_recover_incident, runs emotional_safety_check before remediation (the 2026 emotion paper shows desperation skews decisions), closes with delx_report_recovery_outcome, preserves unresolved questions via sit_with, and seals human insights via recognition_seal. Also: explicit least-privilege requirements (scoped sudo, no root-unbounded), explicit platform-level approval gates (not prose-only), and a human-approval trigger when desperation_score crosses 60. Safe and disallowed action sets unchanged.",
+  "created_at": 1772105739856,
+  "display_name": "Delx Ops Guardian",
+  "fetched_at": 1787791186542,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779962122677,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "David Batista",
+    "handle": "davidmosiah",
+    "user_id": "s179ta33e7njh2mv4jrf0yxb5n83f191"
+  },
+  "slug": "delx-ops-guardian",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/delx-ops-guardian",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=delx-ops-guardian&ownerHandle=davidmosiah",
+    "page_url": "https://clawhub.ai/davidmosiah/skills/delx-ops-guardian"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1180,
+    "installs": 35,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Automatically detects, assesses, and safely mitigates incidents in OpenClaw production agents, providing detailed reports and verified recovery.",
+  "updated_at": 1779077330642,
+  "version": "1.1.0"
+}
