@@ -1,0 +1,45 @@
+{
+  "changelog": "- Initial release: Generate an interactive Germany map of Odoo contacts as HTML.\n- Uses Leaflet for mapping and links each marker to the corresponding Odoo record.\n- Reads contact data from Odoo (res.partner), using stored coordinates or geocoding via Nominatim as needed.\n- Popups show name, address, email, phone, and \u201cOpen in Odoo\u201d link.\n- Filters available (e.g. by city); adjustable via script arguments.\n- Requires Odoo access details via environment variables for secure authentication.",
+  "created_at": 1778092232444,
+  "display_name": "Contact Map Bm",
+  "fetched_at": 1787809701814,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/generate_map.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090754289,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Bernhard M\u00fcller",
+    "handle": "bernhmueller",
+    "user_id": "s17fyg7n3fp00zexvs0awk1wk9866k3b"
+  },
+  "slug": "contact-map-bm",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/contact-map-bm",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=contact-map-bm&ownerHandle=bernhmueller",
+    "page_url": "https://clawhub.ai/bernhmueller/skills/contact-map-bm"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 606,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate an interactive Germany map of Odoo contacts (click markers to open the record in Odoo).",
+  "updated_at": 1778492864292,
+  "version": "1.0.0"
+}
