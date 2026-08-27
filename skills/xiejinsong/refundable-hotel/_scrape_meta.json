@@ -1,0 +1,47 @@
+{
+  "changelog": "- Enforced strict CLI-only data sourcing; all hotel info must come from the flyai CLI, never from training data.\n- Added a mandatory validation step requiring every hotel result to include a `[Book]({detailUrl})` link.\n- Expanded description to highlight support for flights, trains, car rentals, attractions, insurance, and visas\u2014all via Fliggy.\n- Updated activation logic and trigger keywords for English and Chinese regarding free cancellation search.\n- Clarified full step-by-step command execution workflow, CLI parameter usage, and strict output formatting requirements.\n- Included references to detailed templates, scenario playbooks, and failure handling documentation.",
+  "created_at": 1775875959102,
+  "display_name": "Refundable Hotel",
+  "fetched_at": 1787825600410,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/fallbacks.md",
+    "references/playbooks.md",
+    "references/runbook.md",
+    "references/templates.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090373098,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xiejinsong",
+    "handle": "xiejinsong",
+    "user_id": "s177qj362rbw4294hgs3hdvhgx83m2hm"
+  },
+  "slug": "refundable-hotel",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/refundable-hotel",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=refundable-hotel&ownerHandle=xiejinsong",
+    "page_url": "https://clawhub.ai/xiejinsong/skills/refundable-hotel"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 561,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Find hotels with free cancellation policy \u2014 book with confidence, change plans without penalty. Perfect for uncertain travel dates. Also supports: flight boo...",
+  "updated_at": 1778492521505,
+  "version": "3.2.0"
+}
