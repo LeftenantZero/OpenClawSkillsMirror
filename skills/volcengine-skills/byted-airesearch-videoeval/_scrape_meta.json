@@ -1,0 +1,39 @@
+{
+  "changelog": "byted-airesearch-videoeval 1.0.0 \u2013 initial release\n\n- Adds the ability to create and check progress/results of long-running video material evaluation tasks.\n- Supports submission of 1\u201350 local MP4 videos per evaluation task, with strict validation on format and size (max 50MB each).\n- Provides task listing and querying of individual task details, with natural-language summaries of status and results.\n- Requires API key authentication; prompts user for API key if missing.\n- Upload and task-creation are internal to the orchestration workflow\u2014generic video uploads are not supported.\n- Clear error messages for invalid inputs and actionable feedback for all supported commands.",
+  "created_at": 1774515297860,
+  "display_name": "Byted Airesearch Videoeval",
+  "fetched_at": 1787846995063,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/common.py",
+    "scripts/create_evaluation_task.py",
+    "scripts/get_evaluation_task_detail.py",
+    "scripts/list_evaluation_tasks.py",
+    "scripts/submit_evaluation_task.py",
+    "scripts/upload_video.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "volcengine-skills",
+    "handle": "volcengine-skills",
+    "user_id": "s17bcxs73bckd3eercvtn6cmsx83g5kg"
+  },
+  "slug": "byted-airesearch-videoeval",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/byted-airesearch-videoeval",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=byted-airesearch-videoeval&ownerHandle=volcengine-skills",
+    "page_url": "https://clawhub.ai/volcengine-skills/skills/byted-airesearch-videoeval"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 658,
+    "installs": 16,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Create and check long-running video material evaluation tasks. Use this skill when the user wants to submit videos for evaluation, check an existing video ev...",
+  "updated_at": 1778492209295,
+  "version": "1.0.0"
+}
