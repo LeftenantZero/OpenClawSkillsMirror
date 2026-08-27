@@ -1,0 +1,37 @@
+{
+  "changelog": "This Claude Code Skill optimizes and formats Markdown files, improves readability, generates titles and summaries, and applies **MkDocs/Material-compatible spacing fixes** for math, lists, and tables \u2014 all while fully preserving your original writing and meaning.\n\n1. **Content formatting & enhancement**\n   - Analyzes full text to extract key insights, structure issues, and formatting problems\n   - Generates multiple title & summary candidates and lets you choose the best\n   - Adds or optimizes YAML frontmatter, headings, bold, lists, tables, code formatting, and MkDocs-style admonitions\n   - Fixes obvious typos and converts dense prose into scannable structures\n   - Saves a detailed content analysis report for transparency\n\n2. **MkDocs/Material structural compatibility fixes**\n   - Runs a dedicated whitespace\u2011only script to adjust spacing around math blocks, lists, and tables\n   - Ensures reliable rendering in MkDocs Material without rewriting any actual content\n   - Supports configurable rules and in\u2011place or separate file output\n\nThe Skill automatically backs up existing files, outputs formatted documents as `{filename}_formatted.md` by default, and provides a clear completion report summarizing all changes made.\n\nrun in your claude code:\n\n/format-markdown [YOUR .md path]",
+  "created_at": 1774335007935,
+  "display_name": "format-markdown-mkdocs",
+  "fetched_at": 1787852360806,
+  "files": [
+    "EXTEND.md",
+    "SKILL.md",
+    "_meta.json",
+    "package-lock.json",
+    "package.json",
+    "scripts/format-structure.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SmilingWayne",
+    "handle": "smilingwayne",
+    "user_id": "s17ceym316b7t11hcmtec3f3t583hwyb"
+  },
+  "slug": "format-markdown",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/format-markdown",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=format-markdown&ownerHandle=smilingwayne",
+    "page_url": "https://clawhub.ai/smilingwayne/skills/format-markdown"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 792,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Summarize and format markdown files, then apply mkdocs/material-compatible structural spacing fixes for math, list, and table blocks. Outputs to {filename}_f...",
+  "updated_at": 1778492151351,
+  "version": "1.0.0"
+}
