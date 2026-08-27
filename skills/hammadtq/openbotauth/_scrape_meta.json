@@ -1,0 +1,43 @@
+{
+  "changelog": "- Updated JWKS endpoint \u2014 changed from /agent-jwks/{id}.json to /jwks/{username}.json\n  - Added Token Handling Contract \u2014 documents bearer token lifecycle (registration-only, delete after)\n  - Added Compatibility Modes section \u2014 Core Mode (CLI) vs Browser Mode with security guidance\n  - Added Token Safety Rules table \u2014 do/don't guidance for token handling\n  - Added Runtime Compatibility table \u2014 support matrix for Claude Code, agent-browser, OpenClaw, CUA, skills.sh\n  - Registration script hardened:\n    - Added redirect: 'error' to prevent token leakage on redirects\n    - Writes config.json with agent_id, username, jwksUrl\n    - Deletes token after successful registration\n    - Fetches /auth/session to resolve username for JWKS URL\n  - Proxy security hardened:\n    - Changed execSync to execFileSync (prevents command injection)\n    - Added strict hostname validation regex\n    - Added hash-based cert filenames (prevents path traversal)\n    - Added port validation (1-65535)\n  - Added Official Packages section \u2014 links to @openbotauth/verifier-client, registry-signer, bot-cli, proxy\n  - Added strict verifier note \u2014 points to @openbotauth/bot-cli and openbotauth-demos/packages/signing-ts\n  - Enterprise SSO section \u2014 rewritten as roadmap spec (no runnable code, marked \"not yet implemented\")\n  - Proxy limitations \u2014 added IP hostname mitigation guidanc",
+  "created_at": 1770546483061,
+  "display_name": "OpenBotAuth",
+  "fetched_at": 1787805266893,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783658582211,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "hammadtq",
+    "handle": "hammadtq",
+    "user_id": "s177yn5m8wjerdfz1m1zp49qs183kk1b"
+  },
+  "slug": "openbotauth",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openbotauth",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openbotauth&ownerHandle=hammadtq",
+    "page_url": "https://clawhub.ai/hammadtq/skills/openbotauth"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2118,
+    "installs": 68,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Get a cryptographic identity for your AI agent. Generate Ed25519 keys, sign your work, prove who you are \u2014 across any platform.",
+  "updated_at": 1778989005073,
+  "version": "0.1.1"
+}
