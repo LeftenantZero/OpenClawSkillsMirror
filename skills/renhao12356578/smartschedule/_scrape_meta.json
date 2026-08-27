@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial team-focused scheduling system with local management and advanced interaction logic.\n\n- Supports all scheduling operations (add, update, query, delete, conflict check, suggestions) via local Python+SQLite, no remote calendar APIs.\n- Detailed rules for handling conflicts, ambiguous commands, and time expressions; includes workflow for resolving scheduling ambiguities through user choices.\n- Reminder and notification system integrates with DingTalk (group or private) and schedules email summaries using cron tasks, with clear setup and management instructions.\n- Enforces consistent output formatting for user clarity and improved scheduling experience.",
+  "created_at": 1775977065966,
+  "display_name": "My skill for SmartSchedule",
+  "fetched_at": 1787824729767,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "TECHNICAL.md",
+    "_meta.json",
+    "scripts/check_upcoming.py",
+    "scripts/config.json",
+    "scripts/email_summary.py",
+    "scripts/schedule_manager.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090389339,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Mr.Hao",
+    "handle": "renhao12356578",
+    "user_id": "s1753hjdcgzv7pw5v2erjdvpvd83pgda"
+  },
+  "slug": "smartschedule",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/smartschedule",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=smartschedule&ownerHandle=renhao12356578",
+    "page_url": "https://clawhub.ai/renhao12356578/skills/smartschedule"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 536,
+    "installs": 13,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u672c\u5730\u65e5\u7a0b\u7ba1\u7406\u7cfb\u7edf\u3002\u5f53\u7528\u6237\u63d0\u5230\u65e5\u7a0b\u3001\u5b89\u6392\u3001\u4f1a\u8bae\u3001\u63d0\u9192\u3001\u884c\u7a0b\u65f6\u4f7f\u7528\u6b64\u6280\u80fd\u3002 \u4f7f\u7528 Python + SQLite \u5728\u672c\u5730\u7ba1\u7406\u56e2\u961f\u65e5\u7a0b\uff0c\u652f\u6301\u589e\u5220\u6539\u67e5\u3001\u51b2\u7a81\u68c0\u6d4b\u3001\u90ae\u4ef6\u6c47\u603b\u3001\u9489\u9489\u63d0\u9192\u3002 \u6ce8\u610f\uff1a\u6240\u6709\u65e5\u7a0b\u64cd\u4f5c\u901a\u8fc7 schedule_manager.py \u5b8c\u6210\u3002",
+  "updated_at": 1778492544359,
+  "version": "1.0.0"
+}
