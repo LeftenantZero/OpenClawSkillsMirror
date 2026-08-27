@@ -1,0 +1,44 @@
+{
+  "changelog": "- Added support for recognizing CAPTCHA images directly from HTTP/HTTPS URLs.\n- Updated documentation to describe handling of browser Blob URLs and expanded input format options.\n- Required dependencies now include the requests library for network image retrieval.\n- API and command-line tool now accept both local file paths and image URLs as input.\n- Improved error handling and parameter documentation for various input scenarios.",
+  "created_at": 1774112665455,
+  "display_name": "captcha-recognition",
+  "fetched_at": 1787857903524,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/captcha.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090019800,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u672b\u5fc3",
+    "handle": "moxin1044",
+    "user_id": "s179edwyjyfjkwyce78c44wve983ejpk"
+  },
+  "slug": "captcha-recognition",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/captcha-recognition",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=captcha-recognition&ownerHandle=moxin1044",
+    "page_url": "https://clawhub.ai/moxin1044/skills/captcha-recognition"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1022,
+    "installs": 26,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Recognizes CAPTCHA images using ddddocr library. Invoke when user needs to recognize/decode CAPTCHA images or mentions captcha verification.",
+  "updated_at": 1778492091613,
+  "version": "1.0.1"
+}
