@@ -1,0 +1,46 @@
+{
+  "changelog": "openclaw-create-feishu-agent-skills v0.1.0\n\n- Initial release introducing Feishu-only agent creation and routing setup automation for OpenClaw.\n- Automates full workflow: scenario alignment, config backup, agent creation, config upsert, gateway restart, and binding verification.\n- Supports both new bot/account (account routing) and new group binding (peer routing) modes.\n- Includes guided steps for multi-group setup with required user confirmations before proceeding.\n- Preserves existing configurations and rejects route conflicts to ensure robust multi-agent deployment.",
+  "created_at": 1772372130414,
+  "display_name": "Openclaw Create Agent",
+  "fetched_at": 1787790792824,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/routing-modes.md",
+    "scripts/upsert_openclaw_agent.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779970324383,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xiaowen-0725",
+    "handle": "xiaowen-0725",
+    "user_id": "s179kfsb23aeze3hkdzpykds458845tw"
+  },
+  "slug": "openclaw-create-feishu-agent-skills",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-create-feishu-agent-skills",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-create-feishu-agent-skills&ownerHandle=xiaowen-0725",
+    "page_url": "https://clawhub.ai/xiaowen-0725/skills/openclaw-create-feishu-agent-skills"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1059,
+    "installs": 31,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Create and wire a new OpenClaw agent with a fixed workflow. Use when the user asks to create/add a new OpenClaw agent or says \u201c\u6211\u8981\u521b\u5efa\u4e00\u4e2a\u65b0\u7684 Agent\u201d, automate mult...",
+  "updated_at": 1779077462092,
+  "version": "0.1.0"
+}
