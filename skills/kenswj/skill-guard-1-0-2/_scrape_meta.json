@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release: client-side security scanning for ClawHub skills before installation.\n\n- Scans skill packages for prompt injections, malware, hardcoded secrets, exfiltration URLs, and other AI-specific threats before installing.\n- Uses Invariant Labs/Snyk's mcp-scan for deep AI skill analysis.\n- Installs only if skill is clean; otherwise quarantines detected threats in a staging folder.\n- Provides clear CLI usage: secure install script, exit codes, and threat handling instructions.\n- Adds a strong comparison to existing solutions (VirusTotal, skillscanner) highlighting superior coverage for AI risks.",
+  "created_at": 1773516093387,
+  "display_name": "Skill Guard 1.0.2",
+  "fetched_at": 1787788827345,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/safe-install.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089889696,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "kenswj",
+    "handle": "kenswj",
+    "user_id": "s17d896e7f5ep1sf0czq0yjckn83k80e"
+  },
+  "slug": "skill-guard-1-0-2",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-guard-1-0-2",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-guard-1-0-2&ownerHandle=kenswj",
+    "page_url": "https://clawhub.ai/kenswj/skills/skill-guard-1-0-2"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 960,
+    "installs": 27,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Scan ClawHub skills for security vulnerabilities BEFORE installing. Use when installing new skills from ClawHub to detect prompt injections, malware payloads...",
+  "updated_at": 1779078195353,
+  "version": "1.0.0"
+}
