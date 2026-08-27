@@ -1,0 +1,48 @@
+{
+  "changelog": "**Adds multilingual onboarding.**\n- Detects and replies in the user's language throughout the onboarding flow; defaults to English if unclear.\n- SAY lines are now reference wording and must be translated in responses (except for commands, URLs, or tokens).\n- Explicitly clarifies that the OTP verification script must be called only once per code.\n- When login URL is available, sends three separate messages instead of one combined message at the end of onboarding.\n- No other flow or logic changes.",
+  "created_at": 1775995502668,
+  "display_name": "Todo4 Onboard",
+  "fetched_at": 1787824525548,
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/connect.sh",
+    "scripts/register.sh",
+    "scripts/verify.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090409918,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Panit Wechasil",
+    "handle": "panitw",
+    "user_id": "s170v45kx4p5jhh59bd8y699hn84pq2w"
+  },
+  "slug": "todo4-onboard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/todo4-onboard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=todo4-onboard&ownerHandle=panitw",
+    "page_url": "https://clawhub.ai/panitw/skills/todo4-onboard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 751,
+    "installs": 19,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Sign up for Todo4 and connect this agent via MCP. Use whenever the user says things like 'set me up with Todo4', 'sign me up for Todo4', 'install Todo4', 'co...",
+  "updated_at": 1778492548178,
+  "version": "1.3.1"
+}
