@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of openfin-enable-banking: PSD2 open banking integration for DACH (Germany & Austria) banks.\n\n- Supports onboarding, balance/transaction fetch, and session renewal for multiple mandants via Enable Banking API.\n- Provides Python scripts for onboarding (`onboard.py`), fetching data (`fetch.py`), renewing sessions (`renew.py`), and running a secure callback server.\n- Designed for automated workflows, including cross-platform and headless operation (manual or server-driven OAuth).\n- Outputs all bank data as structured JSON, optimized for tax advisory automation.\n- Clear directory structure and robust troubleshooting guide included.\n- Supports both personal and business accounts for major DACH banks.",
+  "created_at": 1773138806928,
+  "display_name": "openfin-enable-banking",
+  "fetched_at": 1787799684373,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api-reference.md",
+    "requirements.txt",
+    "scripts/callback_server.py",
+    "scripts/fetch.py",
+    "scripts/lib/__init__.py",
+    "scripts/lib/auth.py",
+    "scripts/onboard.py",
+    "scripts/renew.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089822604,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Prof. Dr. Paul Pronobis",
+    "handle": "ppronobis",
+    "user_id": "s171hcek52dvshc9c4t9zejyzh83gkwy"
+  },
+  "slug": "openfin-enable-banking",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openfin-enable-banking",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openfin-enable-banking&ownerHandle=ppronobis",
+    "page_url": "https://clawhub.ai/ppronobis/skills/openfin-enable-banking"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 865,
+    "installs": 26,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "PSD2 Open Banking integration via Enable Banking API. Connect DACH bank accounts (Sparkasse, Volksbank, Deutsche Bank, Commerzbank, DKB, ING, Postbank + Aust...",
+  "updated_at": 1778997330597,
+  "version": "1.0.0"
+}
