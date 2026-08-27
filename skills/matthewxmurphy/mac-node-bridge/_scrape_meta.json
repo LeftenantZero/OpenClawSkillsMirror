@@ -1,0 +1,39 @@
+{
+  "changelog": "Version 0.6.1\n\n- Added dynamic path resolution for wrapper installs, using `OPENCLAW_BIN_DIR`, `XDG_DATA_HOME`, or `$HOME`.\n- Preset installer now auto-detects remote binary paths using `command -v`, `brew --prefix`, and common Homebrew locations.\n- Wrapper scripts (`install-preset.sh`, `install-wrapper.sh`, `verify-node-tool.sh`) updated for greater flexibility; explicit paths can override defaults as needed.\n- Updated docs to clarify dynamic install locations, remote binary resolution, and recommended usage patterns.\n- Added `_meta.json` for improved metadata handling.",
+  "created_at": 1772639585154,
+  "display_name": "Mac Node Bridge",
+  "fetched_at": 1787800438513,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/publish-pattern.md",
+    "references/security-model.md",
+    "scripts/install-preset.sh",
+    "scripts/install-wrapper.sh",
+    "scripts/verify-node-tool.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Matthew Murphy",
+    "handle": "matthewxmurphy",
+    "user_id": "s17e4vez0qmckg0a0a8j3sq4rd885nyq"
+  },
+  "slug": "mac-node-bridge",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mac-node-bridge",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mac-node-bridge&ownerHandle=matthewxmurphy",
+    "page_url": "https://clawhub.ai/matthewxmurphy/skills/mac-node-bridge"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1039,
+    "installs": 30,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Bridge macOS-only tools into a Linux OpenClaw gateway via SSH wrappers and connected Mac nodes. Use when a Linux gateway needs to run imsg, remindctl, memo,...",
+  "updated_at": 1778995269362,
+  "version": "0.6.1"
+}
