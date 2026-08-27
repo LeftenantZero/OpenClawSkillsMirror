@@ -1,0 +1,33 @@
+{
+  "changelog": "Refactor bin/uno.py into a 56-line launcher that delegates to the new uno-cli>=1.0.0 PyPI package. The launcher pins UNO_OAUTH_SCOPE=mcp:gpt-image-2 and UNO_ALLOWED_TOOLS=gpt-image-2.* in code so any tool call outside this skill's declared scope is rejected locally before any network request. Add a 'Part of Uno' section to surface the 2000+ tool upgrade path for users who need more than gpt-image-2.",
+  "created_at": 1777554258059,
+  "display_name": "Gpt Image2",
+  "fetched_at": 1787811754873,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Agentrix",
+    "handle": "lxyd-ai",
+    "user_id": "s175jrdxqpq98yx7etkaqne2md83tf6g"
+  },
+  "slug": "gpt-image2",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gpt-image2",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gpt-image2&ownerHandle=lxyd-ai",
+    "page_url": "https://clawhub.ai/lxyd-ai/skills/gpt-image2"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 864,
+    "installs": 23,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "Generate high-quality images with GPT Image 2 (OpenAI gpt-image-2) via the ClawdChat tool gateway. Use when the user asks to create / generate / draw / paint...",
+  "updated_at": 1778492814510,
+  "version": "0.5.0"
+}
