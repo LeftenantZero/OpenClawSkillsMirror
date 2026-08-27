@@ -1,0 +1,46 @@
+{
+  "changelog": "nas-file-courier 1.0.0 \u2013 Initial Release\n\n- Search files on a NAS via rclone over Tailscale based on user keywords, type, or time range.\n- Deliver files to users through supported messaging APIs (Feishu, Telegram, QQ Bot) using validated native sending methods.\n- Guides user through file selection, confirmation, and delivery verification to ensure correct receipt.\n- Implements strict temp file management in `/tmp/openclaw/nas-courier/` with mandatory cleanup after every operation.\n- Enforces security policies: read-only operations, no sudo, no exposure of credentials or private data, and sends only permitted file types.",
+  "created_at": 1773304373212,
+  "display_name": "NAS File Courier Skill",
+  "fetched_at": 1787789203073,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/channel-file-send.md",
+    "references/http-temp-link.md",
+    "references/rclone-ops.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089851016,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Randal",
+    "handle": "tecfancy",
+    "user_id": "s177ebhaemy30qzrh6senc02e185a2aa"
+  },
+  "slug": "nas-file-courier",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nas-file-courier",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nas-file-courier&ownerHandle=tecfancy",
+    "page_url": "https://clawhub.ai/tecfancy/skills/nas-file-courier"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 964,
+    "installs": 26,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Search files on NAS (via rclone + Tailscale) and send to user via messaging API. Triggers on file search, find file, send file, \u627e\u6587\u4ef6, \u53d1\u6587\u4ef6, NAS \u67e5\u627e, \u4e0b\u8f7d\u6587\u4ef6.",
+  "updated_at": 1779078044584,
+  "version": "1.0.0"
+}
