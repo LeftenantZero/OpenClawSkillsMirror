@@ -1,0 +1,60 @@
+{
+  "changelog": "Crypto Genie v2.0 is a major upgrade focusing on local database-powered scam detection with instant results and expanded scam detection capabilities.\n\n- All scam checks are now instant and privacy-preserving\u2014no external API calls are made during user lookups.\n- Introduced a local SQLite database architecture and background sync worker for data updates from Etherscan.\n- Automatically queues new/unknown addresses for background analysis.\n- New deep scam detection, now catches phishing, honeypots, rug pulls, exploit group activity, and social engineering attempts missed before.\n- Enhanced risk scoring and detection based on address activity, contract status, keywords, and suspicious transaction patterns.\n- Added robust CLI tools for installation, encrypted API key setup, manual and automated background sync, and convenient address checks.",
+  "created_at": 1771579510721,
+  "display_name": "Crypto Genie",
+  "fetched_at": 1787803246096,
+  "files": [
+    "CHANGELOG.md",
+    "DATABASE_ARCHITECTURE.md",
+    "README.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "blockchain_detector.py",
+    "check_address.sh",
+    "clawhub-manifest.json",
+    "crypto_check_db.py",
+    "database.py",
+    "install.sh",
+    "package.json",
+    "requirements.txt",
+    "scam_database.py",
+    "secure_key_manager.py",
+    "setup.sh",
+    "skill-card.md",
+    "sync_worker.py",
+    "verify_package.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779942951629,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "princedoss77",
+    "handle": "princedoss77",
+    "user_id": "s17838vwg83s6e1k93nh09zjwn884m26"
+  },
+  "slug": "crypto-genie",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/crypto-genie",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=crypto-genie&ownerHandle=princedoss77",
+    "page_url": "https://clawhub.ai/princedoss77/skills/crypto-genie"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1476,
+    "installs": 45,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "AI-powered cryptocurrency safety assistant with database-first architecture. Protects users from phishing, honeypots, rug pulls, and ponzi schemes. No extern...",
+  "updated_at": 1778991843252,
+  "version": "1.0.0"
+}
