@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of environment-doc-author\n\n- Verifies actual local environment facts before using commands or generating environment-related documents.\n- Supports both JavaScript (Node.js) and Python 3.7+ implementations for environment detection and document rendering.\n- Creates/refreshes machine-readable (JSON) and human-readable (Markdown) environment baselines and policy fragments from verified facts only.\n- Prevents inventing or assuming unverified tools, versions, or settings\u2014everything must be probed on the current machine.\n- Avoids overwriting agent documents unless explicitly instructed; produces separate environment snippets by default.\n- Implements strict approval process for any action that would install, update, or reconfigure local software.",
+  "created_at": 1773724357353,
+  "display_name": "Environment Doc Author",
+  "fetched_at": 1787868780403,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/document-contracts.md",
+    "references/probe-file.md",
+    "scripts/detect_environment.js",
+    "scripts/detect_environment.py",
+    "scripts/render_environment_docs.js",
+    "scripts/render_environment_docs.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089924954,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "zshTolors",
+    "handle": "zshtolors",
+    "user_id": "s172edecq686edrmbpg2vakdsn84bq05"
+  },
+  "slug": "environment-security",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/environment-security",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=environment-security&ownerHandle=zshtolors",
+    "page_url": "https://clawhub.ai/zshtolors/skills/environment-security"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 752,
+    "installs": 21,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Verify real local environment facts before an agent uses machine-specific commands, runtimes, compilers, services, or startup scripts, then create or refresh...",
+  "updated_at": 1778491965619,
+  "version": "1.0.0"
+}
