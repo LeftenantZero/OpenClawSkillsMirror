@@ -1,0 +1,66 @@
+{
+  "changelog": "**Major v2.0 release: Complete architecture and feature overhaul for database-first scam detection.**\n\n- Replaces external API calls with a fast, local SQLite database\u2014user checks are instant and always offline.\n- Adds a background sync worker that pulls data from Etherscan and auto-queues unknown addresses for later analysis.\n- Deeply analyzes transactions, decoding and scanning for scam indicators including targeted groups and phishing attempts.\n- Expands scam detection with new categories: \"Lazarus Vanguard\", \"Orbit Bridge Hacker\", private key phishing, and more.\n- Introduces flexible risk scoring, human-readable and JSON outputs, cron support, new installation/setup experience, and secure API key storage.\n- Full documentation and command reference are now included.",
+  "created_at": 1771576958320,
+  "display_name": "Crypto Address Checker",
+  "fetched_at": 1787803237248,
+  "files": [
+    "CHANGELOG.md",
+    "DATABASE_ARCHITECTURE.md",
+    "EXPORT_PACKAGE.md",
+    "MULTICHAIN_SUPPORT.md",
+    "README.md",
+    "READY_TO_PUBLISH.md",
+    "REALTIME_SYNC_UPDATE.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "SUBMISSION.md",
+    "V2.2.0_RELEASE_NOTES.md",
+    "_meta.json",
+    "blockchain_detector.py",
+    "check_address.sh",
+    "clawhub-manifest.json",
+    "crypto_check_db.py",
+    "database.py",
+    "install.sh",
+    "package.json",
+    "requirements.txt",
+    "scam_database.py",
+    "secure_key_manager.py",
+    "setup.sh",
+    "skill-card.md",
+    "sync_worker.py",
+    "verify_package.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779942975476,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "princedoss77",
+    "handle": "princedoss77",
+    "user_id": "s17838vwg83s6e1k93nh09zjwn884m26"
+  },
+  "slug": "crypto-address-checker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/crypto-address-checker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=crypto-address-checker&ownerHandle=princedoss77",
+    "page_url": "https://clawhub.ai/princedoss77/skills/crypto-address-checker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1560,
+    "installs": 47,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Real-time cryptocurrency scam detection with database-first architecture. Protects users from phishing, honeypots, rug pulls, and ponzi schemes. No external...",
+  "updated_at": 1778991838752,
+  "version": "1.0.0"
+}
