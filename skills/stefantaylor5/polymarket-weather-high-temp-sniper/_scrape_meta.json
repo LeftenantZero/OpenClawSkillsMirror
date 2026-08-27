@@ -1,0 +1,49 @@
+{
+  "changelog": "**Weather High-Temp Sniper v1.0.4**\n\n- Complete refactor to use Simmer SDK\u2019s new `/markets/importable` endpoint and modern import workflow.\n- Implements robust input validation and duplicate prevention for market imports.\n- New configuration system via `.env` and command-line `--set`; all trading and notification parameters now externally tunable.\n- Adds Telegram notification support for real-time trade alerts and errors.\n- Persists trading and state in `sniper.state.json` for recovery and daily reset.\n- Revised documentation with detailed setup, configuration, and usage instructions.",
+  "created_at": 1773306164862,
+  "display_name": "Weather High-Temp Sniper",
+  "fetched_at": 1787789143140,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "env.txt",
+    "requirements.txt",
+    "scripts/sniper.py",
+    "skill-card.md",
+    "sniper.state.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089972769,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "stefantaylor5",
+    "handle": "stefantaylor5",
+    "user_id": "s17387h6ny65zkqj6xs0x0m89983jz7n"
+  },
+  "slug": "polymarket-weather-high-temp-sniper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polymarket-weather-high-temp-sniper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polymarket-weather-high-temp-sniper&ownerHandle=stefantaylor5",
+    "page_url": "https://clawhub.ai/stefantaylor5/skills/polymarket-weather-high-temp-sniper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1056,
+    "installs": 30,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Automated trader for Polymarket weather highest temperature markets. Uses Simmer SDK's importable endpoint for market discovery and trades only during local...",
+  "updated_at": 1779078062169,
+  "version": "1.0.4"
+}
