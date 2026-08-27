@@ -1,0 +1,49 @@
+{
+  "changelog": "v0.2.0: Preserve last 10 raw messages verbatim for exact conversation resumption. Two-layer continuity: AI summary + raw interactions. Loads today + yesterday on session start. Configurable MAX_RECENT_MESSAGES and MAX_SUMMARY_CHARS.",
+  "created_at": 1775184319358,
+  "display_name": "Session Memory & Summarization",
+  "fetched_at": 1787833692393,
+  "files": [
+    "AGENTS.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/LEARNINGS.md",
+    "assets/SKILL-TEMPLATE.md",
+    "hooks/session/compact:before/handler.js",
+    "hooks/session/start/handler.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779942825369,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Thomas Alcala Schneider",
+    "handle": "thomasmarcel",
+    "user_id": "s179h2y6xtfhqm5edb0wjxbs75845mnf"
+  },
+  "slug": "session-context",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/session-context",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=session-context&ownerHandle=thomasmarcel",
+    "page_url": "https://clawhub.ai/thomasmarcel/skills/session-context"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 916,
+    "installs": 23,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Automatically loads recent conversation memory into new sessions and generates AI summaries during compaction to maintain continuity across conversations. Pr...",
+  "updated_at": 1778492383263,
+  "version": "0.2.0"
+}
