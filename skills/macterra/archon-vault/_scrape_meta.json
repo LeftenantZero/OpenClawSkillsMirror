@@ -1,0 +1,56 @@
+{
+  "changelog": "Initial public release of archon-vault.\n\n- Provides encrypted, distributed storage using Archon DID vaults with client-side encryption.\n- Allows backup and restore of workspace/config/memory with support for multi-party access control.\n- Includes scripts for creating/managing vaults, managing vault contents, and performing disaster recovery.\n- Flexible backup options with `.backup-ignore` support and integrity verification.\n- Requires Archon identity configuration and environment variables for secure operation.",
+  "created_at": 1772044954289,
+  "display_name": "Archon Vault",
+  "fetched_at": 1787791000409,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/backup/backup-to-vault.sh",
+    "scripts/backup/disaster-recovery.sh",
+    "scripts/backup/restore-from-vault.sh",
+    "scripts/backup/verify-backup.sh",
+    "scripts/vaults/add-vault-item.sh",
+    "scripts/vaults/add-vault-member.sh",
+    "scripts/vaults/create-vault.sh",
+    "scripts/vaults/get-vault-item.sh",
+    "scripts/vaults/list-vault-items.sh",
+    "scripts/vaults/list-vault-members.sh",
+    "scripts/vaults/remove-vault-item.sh",
+    "scripts/vaults/remove-vault-member.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779960559007,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "macterra",
+    "handle": "macterra",
+    "user_id": "s172cfqmwx0gwmy1p1354n948s8854c3"
+  },
+  "slug": "archon-vault",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/archon-vault",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=archon-vault&ownerHandle=macterra",
+    "page_url": "https://clawhub.ai/macterra/skills/archon-vault"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1104,
+    "installs": 33,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Encrypted distributed storage using Archon DID vaults. Manage vaults, backup and restore workspace/config/memory with multi-party access control. Use for cre...",
+  "updated_at": 1779077395677,
+  "version": "0.1.0"
+}
