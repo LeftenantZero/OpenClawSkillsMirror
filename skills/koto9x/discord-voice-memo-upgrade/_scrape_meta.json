@@ -1,0 +1,52 @@
+{
+  "changelog": "- Initial release of Discord Voice Memo Upgrades core patch for Moltbot.\n- Fixes TTS auto-reply for voice memos by ensuring the final payload is processed, even with block streaming enabled.\n- Adds detailed debug logging for TTS detection and processing.\n- Provides manual patch instructions and reversion steps.\n- No configuration changes required beyond current TTS settings.\n- Documentation includes detailed troubleshooting, production considerations, compatibility, and support guidance.",
+  "created_at": 1769581095505,
+  "display_name": "discord voice memo upgrade",
+  "fetched_at": 1787806248826,
+  "files": [
+    "CHANGELOG.md",
+    "PATCH.md",
+    "README.md",
+    "SKILL.md",
+    "UPLOAD.md",
+    "_meta.json",
+    "clawdbot.plugin.json",
+    "index.js",
+    "package.json",
+    "patch/dispatch-from-config.js",
+    "patch/tts.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783651002708,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "koto9x",
+    "handle": "koto9x",
+    "user_id": "s17b96189rkb4y2sq241tqrhmx885hs7"
+  },
+  "slug": "discord-voice-memo-upgrade",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/discord-voice-memo-upgrade",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=discord-voice-memo-upgrade&ownerHandle=koto9x",
+    "page_url": "https://clawhub.ai/koto9x/skills/discord-voice-memo-upgrade"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2407,
+    "installs": 83,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Provides a patch for Clawdbot fixing TTS auto-replies on inbound voice memos by disabling block streaming to ensure final payload reaches TTS pipeline.",
+  "updated_at": 1778987271559,
+  "version": "1.0.0"
+}
