@@ -1,0 +1,50 @@
+{
+  "changelog": "**Major update: Signal-based trading, streamlined research and intelligence tools.**\n\n- Introduced signal triggers and configuration wizard for automated, 10-minute-cadence monitoring and trade workflow initiation (via new `katbot_signal_trigger.py` & `katbot_trigger_setup.py`).\n- Removed legacy BMI and token selection tools, switching to Katbot Market Intelligence signals (momentum, volume breakout, whale activity, trending) for research triggers.\n- Enhanced market intelligence features: access trending tokens, sentiment, whale flow/activity, and enriched articles directly in workflows and CLI.\n- `katbot_workflow.py` and `katbot_client.py` updated for new signal-driven research \u2192 recommendation \u2192 execution pipeline.\n- Updated documentation and configuration: workflows, environment variables, persistent identity, CLI samples, and cron management.\n- Deprecated: `bmi_alert.py`, `btc_momentum.py`, and `token_selector.py`.",
+  "created_at": 1772657295960,
+  "display_name": "Katbot Trading",
+  "fetched_at": 1787790086086,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "skill-card.md",
+    "tools/ensure_env.sh",
+    "tools/katbot_client.py",
+    "tools/katbot_onboard.py",
+    "tools/katbot_signal_trigger.py",
+    "tools/katbot_trigger_setup.py",
+    "tools/katbot_workflow.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090485291,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Clay Graham",
+    "handle": "claytantor",
+    "user_id": "s1774dn00pjfgwbfh8n445dc0h83j8sj"
+  },
+  "slug": "katbot-trading",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/katbot-trading",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=katbot-trading&ownerHandle=claytantor",
+    "page_url": "https://clawhub.ai/claytantor/skills/katbot-trading"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1431,
+    "installs": 42,
+    "stars": 0,
+    "versions": 29
+  },
+  "summary": "Live crypto trading on Hyperliquid via Katbot.ai. Signal-triggered research \u2192 recommendation \u2192 execution workflow with Market Intelligence, research, and con...",
+  "updated_at": 1779077691712,
+  "version": "0.5.0"
+}
