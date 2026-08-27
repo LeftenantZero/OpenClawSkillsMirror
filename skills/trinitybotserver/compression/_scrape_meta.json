@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of Trinity Compress: streamline repetitive AI dev loop prompts by compressing them pre-run.\n\n- Compresses prompt files locally before each iteration, supporting Ralph-style loops and agent/skill setups.\n- Installs configuration file, bash script, Windows and bash installers, optional Makefile targets, and .gitignore updates.\n- Automatically creates .bak backups for each compression, enabling instant undo.\n- Requires bash 4+, jq, and bc.\n- Does not rewrite code blocks, URLs, file paths, or variable names, preserving essential information.",
+  "created_at": 1771017978103,
+  "display_name": "Prompt Compression",
+  "fetched_at": 1787804391082,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "UPLOAD_CHECKLIST.md",
+    "_meta.json",
+    "assets/trinity-compress.config.json",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779974300278,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "TrinityBotServer",
+    "handle": "trinitybotserver",
+    "user_id": "s172pk5v6y6612h327240jj0p1884edy"
+  },
+  "slug": "compression",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/compression",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=compression&ownerHandle=trinitybotserver",
+    "page_url": "https://clawhub.ai/trinitybotserver/skills/compression"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 713,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Compress prompts locally before iterative AI runs to reduce tokens, with backup, undo, and compatibility for Ralph-style loops and token-billed providers.",
+  "updated_at": 1778990382091,
+  "version": "1.0.0"
+}
