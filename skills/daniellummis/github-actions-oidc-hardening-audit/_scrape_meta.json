@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release \u2014 GitHub Actions OIDC Hardening Audit skill:\n\n- Audits GitHub Actions workflows for OIDC authentication misconfigurations and risky patterns.\n- Flags missing `id-token: write` permissions, static cloud credential usage, weak action refs, and improper AWS role configuration.\n- Supports both text and JSON output, top-N reporting, and CI fail-gate.\n- Highly configurable via input environment variables and regex allow-lists.\n- Designed for security teams and DevOps to preemptively catch identity and secret exposure risks.",
+  "created_at": 1772928428694,
+  "display_name": "GitHub Actions OIDC Hardening Audit",
+  "fetched_at": 1787885172573,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "fixtures/aws-unsafe.yml",
+    "fixtures/gcp-unsafe.yml",
+    "fixtures/oidc-hardened.yml",
+    "scripts/oidc-hardening-audit.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Daniel Lummis",
+    "handle": "daniellummis",
+    "user_id": "s17fw617wehb1y9a026bgg9yed885cv7"
+  },
+  "slug": "github-actions-oidc-hardening-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/github-actions-oidc-hardening-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=github-actions-oidc-hardening-audit&ownerHandle=daniellummis",
+    "page_url": "https://clawhub.ai/daniellummis/skills/github-actions-oidc-hardening-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 742,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Audit GitHub Actions cloud auth workflows for OIDC hardening gaps like missing id-token write permissions, static cloud secrets, and floating auth action refs.",
+  "updated_at": 1778491768590,
+  "version": "1.0.0"
+}
