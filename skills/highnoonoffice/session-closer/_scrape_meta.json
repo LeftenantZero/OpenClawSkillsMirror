@@ -1,0 +1,45 @@
+{
+  "changelog": "Clearer pattern-update context for new users. Fingerprint field rewritten to lead with the why. Cold-start section added for users with no existing journal infrastructure.",
+  "created_at": 1787888233362,
+  "display_name": "session-closer",
+  "fetched_at": 1787931563595,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/journal-format.md",
+    "references/pattern-keys.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787890176918,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "High Noon Office",
+    "handle": "highnoonoffice",
+    "user_id": "s17788hys8dcemdm7pfhe61p9d83hbhs"
+  },
+  "slug": "session-closer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/session-closer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=session-closer&ownerHandle=highnoonoffice",
+    "page_url": "https://clawhub.ai/highnoonoffice/skills/session-closer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 38,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Structured end-of-session protocol for OpenClaw agents. Produces a complete, consistent journal entry at session close \u2014 summary, full file surface (read/written/external APIs), one self-caught failure delta, one behavioral fingerprint. Also runs pattern-update for any tracked behavioral patterns that fired this session. Use when a session ends, a task completes, or the user says 'log this,' 'log the session,' 'close out,' or 'write the journal.'",
+  "updated_at": 1787889515130,
+  "version": "1.1.0"
+}
