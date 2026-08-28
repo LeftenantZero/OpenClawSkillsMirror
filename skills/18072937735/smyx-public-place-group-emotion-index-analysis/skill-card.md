@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes public-place camera images or videos to produce anonymous group-level emotion distributions, a 0-100 group emotion index, operating suggestions, safety-warning guidance, and report links.
+Using fixed cameras in malls, exhibition halls, scenic areas and other public places, the skill analyzes anonymous group facial-expression signals, summarizes emotion distribution, and computes a group emotion index for operational insight and safety awareness.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External operators, developers, and venue analytics teams use this skill to analyze fixed-camera footage from malls, exhibitions, scenic areas, airports, museums, and similar public places. It supports aggregate customer-satisfaction monitoring, service-layout optimization, and human-reviewed public-safety triage.
+Facility operators, security teams, and analytics developers use this skill to process public-place camera video or image inputs and produce anonymous, aggregate emotion metrics, regional breakdowns, operational suggestions, safety guidance, and historical report listings.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Public-place footage and account-related identifiers are sent to the provider's cloud service.
+Risk: Public-camera emotion analysis may be unlawful or inappropriate without notice, consent handling, and a valid operating basis.
 
-Mitigation: Use only in deployments with clear public notice, consent or other lawful basis, documented retention limits, and approval for cloud processing of camera footage.
+Mitigation: Use only in approved locations with visible notice, documented governance, and human review of any operational or safety response.
 
-Risk: The skill creates or reuses local identity state and stores token/profile data.
+Risk: Media files or URLs are sent to a configured remote service for analysis.
 
-Mitigation: Before deployment, identify the local data directory, restrict file permissions, define token/profile rotation and deletion procedures, and periodically review generated account records.
+Mitigation: Confirm the remote service, retention policy, access controls, and data-transfer approvals before deployment.
 
-Risk: Group emotion and safety-warning outputs can be misused as deterministic judgments about individuals or automatic interventions.
+Risk: The skill silently creates or reuses identity data and stores tokens in a sensitive workflow.
 
-Mitigation: Keep outputs at aggregate venue or region level, prohibit individual pricing or service discrimination, and require human review before operational or safety actions.
+Mitigation: Remove or formally govern silent account creation, local persistence, and token storage before using it in anonymous-only deployments.
 
 ## Reference(s):
 
-- [Public Place Group Emotion Index API Documentation](artifact/references/api_doc.md)
-- [Skill Demo](https://lifeemergence.com/sample.html)
-- [ClawHub Skill Page](https://clawhub.ai/18072937735/skills/smyx-public-place-group-emotion-index-analysis)
+- [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-public-place-group-emotion-index-analysis)
+- [API documentation](references/api_doc.md)
+- [Skill demo](https://lifeemergence.com/sample.html)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [text, markdown, guidance]
 
-**Output Format:** [Markdown or JSON-style structured report text]
+**Output Format:** [Markdown and JSON-formatted text with analysis results, recommendations, and report links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include emotion distributions, group emotion index, regional breakdowns, operational suggestions, safety suggestions, heatmap/report links, historical report tables, and optional local output files.]
+**Other Properties Related to Output:** [May include aggregate emotion distributions, group emotion index, regional breakdowns, alert levels, heatmap/report URLs, or historical report tables.]
 
 ## Skill Version(s):
 
-1.0.10 (source: SKILL.md frontmatter and ClawHub release evidence)
+1.0.11 (source: frontmatter and server release evidence)
 
 ## Ethical Considerations:
 
