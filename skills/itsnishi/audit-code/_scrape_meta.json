@@ -1,0 +1,35 @@
+{
+  "changelog": "- Expand pattern database from ~70 to 151 patterns across 15 categories\n- Add 5 new categories: code_before_review, config_backdoor, memory_corruption, confused_delegation, persistence\n- Add live package verification -- pip/npm install commands checked against PyPI/npm in real time\n- Non-existent packages flagged CRITICAL (slopsquatting/hallucination detection)\n- New coverage: reverse shells, cloud IMDS, env var hijacking, persistence mechanisms, dependency confusion, GitHub Actions poisoning, 16+ obfuscation techniques\n- Document advisory hook behavior in SKILL.md",
+  "created_at": 1770506520844,
+  "display_name": "Audit Code",
+  "fetched_at": 1787907044620,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/audit_code.py",
+    "scripts/patterns.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ItsNishi",
+    "handle": "itsnishi",
+    "user_id": "s1731fs5mvb843mj295egzx6rh83gzbc"
+  },
+  "slug": "audit-code",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/audit-code",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=audit-code&ownerHandle=itsnishi",
+    "page_url": "https://clawhub.ai/itsnishi/skills/audit-code"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4039,
+    "installs": 118,
+    "stars": 2,
+    "versions": 3
+  },
+  "summary": "Security-focused code review for hardcoded secrets, dangerous calls, and common vulnerabilities",
+  "updated_at": 1778486077727,
+  "version": "1.1.1"
+}
