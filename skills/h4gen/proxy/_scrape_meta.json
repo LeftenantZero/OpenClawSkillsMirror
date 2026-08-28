@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release: major upgrade to a meta-skill for controlled VPN/proxy switching, geo/IP diagnostics, and workflow resumption.\n\n- Adds orchestration of tunnel setup, region/IP verification, DNS leak checks, and task retry for blocked workflows.\n- Integrates with provider CLI tools, WireGuard, Tailscale, plus DNS, IPinfo, and MoltGuard for security/context enrichment.\n- Requires explicit user consent and collects all vital inputs (blocked endpoint, target region, tunnel path, etc.) before execution.\n- Implements strong preflight and compliance gates, including mandatory acknowledgment for legal responsibility.\n- Returns detailed, auditable output reports with evidence of block detection, tunnel outcome, DNS posture, and security findings.\n- Clear error, partial, and revision handling for missing credentials, API keys, or quality gate failures.",
+  "created_at": 1771088009222,
+  "display_name": "Proxy",
+  "fetched_at": 1787902288242,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/inspected-skills.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Hagen Hoferichter",
+    "handle": "h4gen",
+    "user_id": "s1789vg92zcrdcbajdp87fjxsh8487xv"
+  },
+  "slug": "proxy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/proxy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=proxy&ownerHandle=h4gen",
+    "page_url": "https://clawhub.ai/h4gen/skills/proxy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 660,
+    "installs": 14,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Establish and verify secure VPN or tunnel connections to bypass geo/IP blocks, confirm IP and DNS safety, and safely resume blocked tasks with audit logging.",
+  "updated_at": 1778491542212,
+  "version": "1.0.0"
+}
