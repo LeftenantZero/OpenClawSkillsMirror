@@ -1,6 +1,6 @@
 ## Description:
 
-Identifies visible plant leaf disease features from images or videos and returns likely disease types, confidence, general prevention guidance, and report links.
+Identifies plant leaf disease features from image or video inputs and returns likely disease types, confidence scores, general prevention guidance, and report links.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users, growers, greenhouse operators, home gardeners, and farm inspectors use this skill to triage plant leaf images or videos for common disease symptoms and retrieve prior analysis reports.
+External users, growers, greenhouse operators, home gardeners, and inspection teams use this skill to analyze leaf images or videos for likely disease symptoms and general next steps. It can also retrieve cloud-stored historical plant disease reports associated with the current workspace identity.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Images, videos, or URLs submitted for analysis may be processed by an external cloud service and associated with an automatically managed identity.
+Risk: Media and report queries are sent to a cloud service rather than processed fully locally.
 
-Mitigation: Use only media that is acceptable for external processing, avoid sensitive location or business data in uploads, and disclose this processing path to users before deployment.
+Mitigation: Use only images, videos, and URLs acceptable for cloud processing, and avoid sensitive plant or site media when that transfer is not approved.
 
-Risk: The skill may create or reuse local identity state and service tokens for report history retrieval.
+Risk: The skill may silently create or reuse a local identity and retain account-linked tokens or report access state in the workspace data directory.
 
-Mitigation: Run it in an isolated workspace, review local state before installation and after use, and remove stored identity or token files when they are no longer needed.
+Mitigation: Review or clear the workspace data directory before and after use when identity reuse, token persistence, or report history access is not desired.
 
-Risk: The authoritative scanner verdict is suspicious.
+Risk: Plant disease classifications and severity estimates can be uncertain for unclear images or overlapping symptoms.
 
-Mitigation: Perform security review and scanning before deployment, and deploy only after the cloud processing and local identity behavior are acceptable for the target environment.
+Mitigation: Treat results as diagnostic support, use clear close-up images, and confirm important treatment decisions with a plant health professional.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-plant-leaf-disease-identification-analysis)
-- [API documentation](references/api_doc.md)
-- [Shared analysis API documentation](skills/smyx_analysis/references/api_doc.md)
 - [Skill demo](https://lifeemergence.com/sample.html)
+- [Plant Leaf Disease Identification API documentation](references/api_doc.md)
+- [Shared analysis API documentation](skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, JSON, Guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown or JSON analysis report with confidence scores, general recommendations, history tables, and report links]
+**Output Format:** [Markdown text with JSON-style structured analysis results, command examples, and report links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May optionally write the returned analysis to a user-specified output file.]
+**Other Properties Related to Output:** [Accepts local file paths or URLs for image/video inputs, supports historical report listing, and may write an output file when requested.]
 
 ## Skill Version(s):
 
-1.0.9 (source: server release metadata; artifact frontmatter lists 1.0.11)
+1.0.10 (source: server release metadata; artifact frontmatter reports 1.0.12)
 
 ## Ethical Considerations:
 
