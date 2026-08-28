@@ -1,0 +1,56 @@
+{
+  "changelog": "- Initial release of douyin-hot-to-hook-clip skill.\n- Converts Douyin hot search topics into short (2\u201315s) talking hook clips, one per still image provided.\n- Accepts hard inputs: Douyin hot search topic (either from board or pasted), confirmed brand/product info, at least one still, likeness/voice rights, and desired number of clips (defaults to 3).\n- Stages work via labeled planning, live trend lookup, optional voice cloning, text-to-speech synthesis, and final image-to-video animation, each requiring explicit approval and showing live price per stage.\n- Ensures clips are never stitched; each remains a standalone talking hook, always opening with the original image.\n- Adheres strictly to seller-provided facts; never invents data such as topic, rank, or offer.",
+  "created_at": 1787923843053,
+  "display_name": "douyin-hot-to-hook-clip",
+  "fetched_at": 1787930387909,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "references/automatic-updates-and-safety.md",
+    "references/billing-errors-and-recovery.md",
+    "references/installation-and-auth.md",
+    "references/installation-registration.md",
+    "references/mcp-connection.md",
+    "references/tasks-and-results.md",
+    "references/trend-lookup.md",
+    "references/uninstall-and-disconnect.md",
+    "references/workflow.md",
+    "scripts/authorize.py",
+    "scripts/mcp_client.py",
+    "scripts/uninstall.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787924676407,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "beatra-ai",
+    "handle": "beatra-ai",
+    "user_id": "s176vcp4w7b7tt3j7a62gdnfys8cntp4"
+  },
+  "slug": "douyin-hot-to-hook-clip",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/douyin-hot-to-hook-clip",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=douyin-hot-to-hook-clip&ownerHandle=beatra-ai",
+    "page_url": "https://clawhub.ai/beatra-ai/skills/douyin-hot-to-hook-clip"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 7,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Turn a Douyin hot search topic into one talking hook clip per still. This douyin hot search hook studio writes a speakable hot search talking clip from each seller-picked trend, then animates a 2 to 15s douyin hook clip. Use it for trend hook video and a hot search hook clip that stay one photo, one talking hook clip.",
+  "updated_at": 1787923963054,
+  "version": "0.1.1"
+}
