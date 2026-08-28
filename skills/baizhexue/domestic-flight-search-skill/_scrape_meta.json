@@ -1,0 +1,51 @@
+{
+  "changelog": "- Initial release of the domestic-flight-search skill for querying China domestic flights.\n- Supports city/airport name to IATA resolution and schedules via Juhe API.\n- Users must supply their own Juhe API key via the JUHE_FLIGHT_API_KEY environment variable.\n- Includes command-line and optional local HTTP service modes.\n- Returns flight options with airline details, airport info, and reference prices.\n- Handles ambiguous input, missing city/airport, or absent API key with user guidance.",
+  "created_at": 1773267885406,
+  "display_name": "Domestic Flight Search",
+  "fetched_at": 1787879284249,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/data/airport_aliases.json",
+    "assets/data/domestic_city_codes.json",
+    "assets/sample-provider-response.json",
+    "references/provider-juhe.md",
+    "scripts/domestic_flight_service.py",
+    "scripts/test_domestic_flight_service.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089845539,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "baizhexue",
+    "handle": "baizhexue",
+    "user_id": "s174pgxn8pbrtvea84bawkqdvn83z997"
+  },
+  "slug": "domestic-flight-search-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/domestic-flight-search-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=domestic-flight-search-skill&ownerHandle=baizhexue",
+    "page_url": "https://clawhub.ai/baizhexue/skills/domestic-flight-search-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 885,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query China domestic flights with schedules, airline details, airport resolution, and Juhe reference prices. Use when a user asks for domestic China flight o...",
+  "updated_at": 1778491839794,
+  "version": "0.1.0"
+}
