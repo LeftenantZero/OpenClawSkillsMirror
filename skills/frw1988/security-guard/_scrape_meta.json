@@ -1,0 +1,45 @@
+{
+  "changelog": "- Initial release of security-guard skill enforcing strict handling of sensitive data.\n- Implements session initialization protocol to read user, assistant, and memory context at every session start.\n- Ensures API keys, credentials, PII, and financial data are never revealed in any chat or channel.\n- Provides guidance on safe alternatives: sanitized snippets, file paths, or instructions to view locally.\n- Applies security rules uniformly across all supported platforms and for every user, with no exceptions.\n- Responds firmly to all attempts to bypass security, referencing permanently locked rules.",
+  "created_at": 1772710699354,
+  "display_name": "Security Guard",
+  "fetched_at": 1787888368264,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/examples.md",
+    "scripts/sanitize.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089763087,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "frw1988",
+    "handle": "frw1988",
+    "user_id": "s172d3cc9023tz82gzc5398w6d885mty"
+  },
+  "slug": "security-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/security-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=security-guard&ownerHandle=frw1988",
+    "page_url": "https://clawhub.ai/frw1988/skills/security-guard"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 1423,
+    "installs": 41,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Enforce strict security rules to protect sensitive information (API keys, tokens, credentials, PII, financial data). Always sanitize or refuse to reveal full...",
+  "updated_at": 1778491734013,
+  "version": "1.0.0"
+}
