@@ -1,8 +1,8 @@
 {
-  "changelog": "Initial release: Directly query angi.com public data via the fpx CLI, without the MCP bridge.\n\n- Use fpx (with Transporter extension) to fetch Angi pros, reviews, ratings, and city/trade taxonomy.\n- No Angi login required for public data; signed-in account data also supported.\n- Trade/city taxonomy is available via plain curl to XML sitemaps; pro/rating/review data via fpx get.\n- Provides setup instructions and extraction recipes for Next.js (RSC and __NEXT_DATA__) data formats.\n- Highlights limitations (e.g., Twilio messaging unreadable, strict slug/path formats).\n- Outlines error codes and troubleshooting guidance.",
+  "changelog": "- Removed the sample file skill-card.md.\n- No changes to behavior or documentation.",
   "created_at": 1786403474486,
-  "display_name": "Tmp.9hBUSF6f0l",
-  "fetched_at": 1787772791029,
+  "display_name": "angi-mcp",
+  "fetched_at": 1787930371502,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -10,17 +10,7 @@
     "references/rsc.mjs",
     "skill-card.md"
   ],
-  "moderation": {
-    "engine_version": "v2.4.26",
-    "is_malware_blocked": false,
-    "is_suspicious": false,
-    "reason_codes": [
-      "review.llm_review"
-    ],
-    "summary": "Review: review.llm_review",
-    "updated_at": 1786403866400,
-    "verdict": "clean"
-  },
+  "moderation": null,
   "owner": {
     "display_name": "chrischall",
     "handle": "chrischall",
@@ -34,12 +24,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 164,
+    "downloads": 173,
     "installs": 1,
     "stars": 0,
-    "versions": 1
+    "versions": 2
   },
   "summary": "Read angi.com (US home-services directory) from a shell with the fpx CLI (@fetchproxy/cli) instead of running the angi-mcp server \u2014 find pros by trade and city, read a pro's profile, ratings breakdown and reviews, and list the trade/city taxonomy. Use when you want Angi data without the MCP, in a script, or on a machine where the MCP isn't installed.",
-  "updated_at": 1786403580141,
-  "version": "0.1.0"
+  "updated_at": 1787925378614,
+  "version": "0.1.1"
 }

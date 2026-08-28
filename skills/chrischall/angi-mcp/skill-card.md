@@ -1,6 +1,6 @@
 ## Description:
 
-Read angi.com public home-services directory data from a shell with the fpx CLI, including pros by trade and city, profiles, ratings, reviews, and trade/city taxonomy.
+Read angi.com from a shell with the fpx CLI to find home-service pros by trade and city, inspect pro profiles, review ratings and reviews, and list trade/city taxonomy without running the angi-mcp server.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and analysts use this skill to query Angi public directory data and produce shell pipelines for extracting provider, rating, review, and taxonomy information. It can also guide optional authenticated reads of the user's own Angi account data when explicitly intended.
+Developers and agents use this skill to gather Angi directory data for US home-service providers, including taxonomy, search results, provider profiles, ratings, and reviews. It is useful when Angi data is needed from shell workflows or environments where the MCP server is unavailable.
 
 ### Deployment Geography for Use:
 
@@ -22,34 +22,35 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: A persistent browser-tab fetch bridge can expose data available through the user's Angi browser session.
+Risk: Pairing my.angi.com can let the agent read signed-in account pages through the user's browser session.
 
-Mitigation: Install only when comfortable granting that bridge, keep pairing limited to intended Angi hosts, and avoid widening browser scope beyond fetch access.
+Mitigation: Pair my.angi.com only when account data is intentionally needed, and avoid prompts that request account areas the user does not want exposed in session output.
 
-Risk: Signed-in my.angi.com examples can read private account data through the user's own session.
+Risk: Angi content fetches depend on fpx and the Transporter browser extension using an open, cleared tab.
 
-Mitigation: Run signed-in examples only when the user explicitly intends to expose their own Angi account data to the agent, and review outputs before sharing or storing them.
+Mitigation: Pair only the host being fetched, keep the relevant Angi tab open, and refresh the tab or run fpx health when fetches return bridge or bot-wall errors.
 
 ## Reference(s):
 
-- [Angi page shapes and recipes](artifact/references/angi-pages.md)
-- [Angi RSC flight extractor](artifact/references/rsc.mjs)
-- [ClawHub release page](https://clawhub.ai/chrischall/skills/angi-mcp)
-- [Angi trade sitemap](https://www.angi.com/sitemap/statecat-sitemap.xml)
+- [Angi Skill Release](https://clawhub.ai/chrischall/skills/angi-mcp)
+- [Angi Page Shapes and Recipes](references/angi-pages.md)
+- [Angi RSC Flight Extractor](references/rsc.mjs)
+- [Angi Trade Sitemap](https://www.angi.com/sitemap/statecat-sitemap.xml)
+- [Angi Plumbing Geo Sitemap Example](https://www.angi.com/sitemap/angi-geocat-plumbing.xml)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration instructions, Guidance]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with shell commands, JavaScript extractor usage, and JSON/jq recipes]
+**Output Format:** [Markdown with shell command examples and JSON extraction guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces read-oriented Angi data extraction guidance; optional signed-in account examples depend on the user's active browser session.]
+**Other Properties Related to Output:** [May include fpx, curl, node, and jq commands for read-only Angi data retrieval.]
 
 ## Skill Version(s):
 
-0.1.0 (source: server release metadata)
+0.1.1 (source: server release evidence)
 
 ## Ethical Considerations:
 
