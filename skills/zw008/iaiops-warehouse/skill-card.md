@@ -1,6 +1,6 @@
 ## Description:
 
-Warehouse and intralogistics skill for working with material-handling assets such as conveyors, sorters, palletizers, AS/RS systems, AGV/AMR fleets, WMS/WCS gateways, and related industrial telemetry across EtherNet/IP, Profinet, Modbus, OPC-UA, and MQTT-Sparkplug.
+Warehouse and intralogistics skill for agents working with conveyors, sorters, palletizers, AS/RS, AGV/AMR fleets, industrial protocols, predictive maintenance, downtime triage, OEE, throughput, and alarm analysis.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Warehouse automation, controls, and operations engineers use this skill to inspect warehouse control data, diagnose downtime and throughput issues, analyze alarms, and plan predictive maintenance for material-handling equipment. It is intended for read-first operational analysis, with production-changing actions handled only through explicit authorization and approval controls.
+Industrial operations engineers and warehouse automation teams use this skill to inspect warehouse material-handling systems, analyze telemetry, triage downtime, assess throughput and OEE, and prepare guarded operational actions. The evidence flags that the release describes itself as read-only while also documenting write and publish tools, so production use should require authorization, gating, logging, and non-production testing first.
 
 ### Deployment Geography for Use:
 
@@ -22,9 +22,13 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Security evidence reports that the skill claims a read-only posture while documenting production-impacting write and publish actions.
+Risk: The release claims a read-only posture while documenting write and publish operations that could affect warehouse control systems or operational data flows.
 
-Mitigation: Use only where the IAIOPS MCP server enforces real authorization, dry-run defaults, approval gates, and environment scoping; disable or separate write and publish tools for deployments that must be read-only.
+Mitigation: Treat the skill as mixed read/write in production contexts; require separate authorization, gating, logging, and successful non-production testing before any write or publish operation.
+
+Risk: Use in a production or safety-sensitive warehouse environment could affect material-handling operations if actions are approved without operational review.
+
+Mitigation: Have qualified site personnel review proposed actions and limit production execution to approved maintenance-of-change workflows.
 
 ## Reference(s):
 
@@ -32,17 +36,17 @@ Mitigation: Use only where the IAIOPS MCP server enforces real authorization, dr
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance, analysis]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline commands and structured operational guidance]
+**Output Format:** [Markdown and text with inline shell commands and configuration examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include tool names, configuration notes, diagnostic workflows, and risk-aware operational guidance.]
+**Other Properties Related to Output:** [May include operational analysis, diagnostic next steps, tool recommendations, and guarded command guidance.]
 
 ## Skill Version(s):
 
-0.23.0 (source: server release evidence)
+0.23.1 (source: server release evidence)
 
 ## Ethical Considerations:
 
