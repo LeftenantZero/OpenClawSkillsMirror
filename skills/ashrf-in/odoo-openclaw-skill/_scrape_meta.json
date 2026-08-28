@@ -1,0 +1,77 @@
+{
+  "changelog": "Version 2.0.5\n\n- Model invocation is now disabled per skill policy; the skill must be explicitly called by the user.\n- Updated documentation to reflect new invocation and security policy.\n- Added new documentation in assets/autonomous-cfo/README.md.\n- Removed obsolete logic file assets/autonomous-cfo/src/logic/openclaw_intelligence.py.",
+  "created_at": 1769962511442,
+  "display_name": "Odoo Reporting",
+  "fetched_at": 1787910789354,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/autonomous-cfo/README.md",
+    "assets/autonomous-cfo/config/settings.json",
+    "assets/autonomous-cfo/install.sh",
+    "assets/autonomous-cfo/requirements.txt",
+    "assets/autonomous-cfo/setup.py",
+    "assets/autonomous-cfo/src/__init__.py",
+    "assets/autonomous-cfo/src/connectors/odoo_client.py",
+    "assets/autonomous-cfo/src/logic/error_handler.py",
+    "assets/autonomous-cfo/src/logic/finance_engine.py",
+    "assets/autonomous-cfo/src/logic/forecasting.py",
+    "assets/autonomous-cfo/src/logic/intelligence_engine.py",
+    "assets/autonomous-cfo/src/logic/reporting_standards.py",
+    "assets/autonomous-cfo/src/reporters/__init__.py",
+    "assets/autonomous-cfo/src/reporters/adhoc.py",
+    "assets/autonomous-cfo/src/reporters/aging.py",
+    "assets/autonomous-cfo/src/reporters/base.py",
+    "assets/autonomous-cfo/src/reporters/executive.py",
+    "assets/autonomous-cfo/src/reporters/expenses.py",
+    "assets/autonomous-cfo/src/reporters/financial_statements.py",
+    "assets/autonomous-cfo/src/reporters/health.py",
+    "assets/autonomous-cfo/src/reporters/revenue.py",
+    "assets/autonomous-cfo/src/runtime_env.py",
+    "assets/autonomous-cfo/src/tools/cfo_cli.py",
+    "assets/autonomous-cfo/src/tools/visualizer.py",
+    "assets/autonomous-cfo/src/validators/__init__.py",
+    "assets/autonomous-cfo/src/validators/param_checker.py",
+    "assets/autonomous-cfo/src/visualizers/__init__.py",
+    "assets/autonomous-cfo/src/visualizers/chart_factory.py",
+    "assets/autonomous-cfo/src/visualizers/excel_export.py",
+    "assets/autonomous-cfo/src/visualizers/pdf_report.py",
+    "assets/autonomous-cfo/src/visualizers/whatsapp_cards.py",
+    "assets/autonomous-cfo/tests/__init__.py",
+    "assets/autonomous-cfo/tests/test_skill.py",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783653735154,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ashrf-in",
+    "handle": "ashrf-in",
+    "user_id": "s170ep6emm2mmhmq6vgmnwe795884j2h"
+  },
+  "slug": "odoo-openclaw-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/odoo-openclaw-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=odoo-openclaw-skill&ownerHandle=ashrf-in",
+    "page_url": "https://clawhub.ai/ashrf-in/skills/odoo-openclaw-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4460,
+    "installs": 155,
+    "stars": 7,
+    "versions": 12
+  },
+  "summary": "Query Odoo data including salesperson performance, customer analytics, orders, invoices, CRM, accounting, VAT, inventory, and AR/AP. Generates WhatsApp cards...",
+  "updated_at": 1778485946485,
+  "version": "2.0.5"
+}
