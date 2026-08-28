@@ -1,6 +1,6 @@
 ## Description:
 
-Access the Crown Town Compost customer portal from a shell with curl to retrieve pickup and service history, invoices, upcoming service days, skips, and account details without running the crowntowncompost-mcp server.
+Guides an agent through using curl to access the Crown Town Compost customer portal for pickup history, invoices, upcoming service days, skips, account details, and related portal pages.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and technically comfortable users use this skill to script authenticated Crown Town Compost portal access for account, pickup, service, and billing information. It can also guide deliberate account actions such as skipping service, reporting issues, updating account details, contacting support, or entering cancellation flow.
+External users and developers use this skill to inspect Crown Town Compost customer portal data from a shell, including service history, billing history, environmental impact, service calendar state, and account pages. It also documents write-capable POST flows, which should be reviewed and confirmed before execution.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can guide an agent through authenticated Crown Town Compost portal sessions and account-changing POST requests.
+Risk: The skill stores an authenticated portal session in a local cookie jar that gives shell-level access to the user's Crown Town Compost account.
 
-Mitigation: Require clear user confirmation before POST requests that skip service, update account details, report issues, contact support, or enter cancellation flow.
+Mitigation: Treat the cookie jar like a password, keep it in a restricted location, remove it when finished, and avoid sharing logs or terminal output that may expose session material.
 
-Risk: The skill handles sensitive account credentials and session cookies.
+Risk: The documented POST flows can change account state, including skipped service days, account details, support messages, missed-pickup reports, and cancellation-related requests.
 
-Mitigation: Protect the password and cookie jar, avoid exposing secrets in process arguments, and prefer read-only use unless an account change is intentional.
+Mitigation: Require explicit user confirmation before any write-capable POST and re-read the relevant portal page afterward to verify the intended change.
+
+Risk: Billing endpoints can expose invoice, receipt, and hosted payment links.
+
+Mitigation: Use the shell flow for inspection only and open payment actions in a browser rather than scripting payment or card-entry workflows.
 
 ## Reference(s):
 
-- [Endpoint reference](references/endpoints.md)
-- [Crown Town Compost portal](https://portal.crowntowncompost.com)
-- [ClawHub skill page](https://clawhub.ai/chrischall/skills/crowntowncompost-mcp)
+- [Crown Town Compost endpoint reference](references/endpoints.md)
+- [Crown Town Compost customer portal](https://portal.crowntowncompost.com)
+- [ClawHub skill release page](https://clawhub.ai/chrischall/skills/crowntowncompost-mcp)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline shell commands and JSON examples]
+**Output Format:** [Markdown guidance with inline shell commands and JSON endpoint examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May produce commands that read portal data, handle an authenticated cookie jar, or perform account-changing POST requests when the user deliberately asks for them.]
+**Other Properties Related to Output:** [Requires user-provided Crown Town Compost credentials and confirmation before write-capable portal POSTs.]
 
 ## Skill Version(s):
 
-0.3.1 (source: server release evidence)
+0.4.0 (source: server release evidence)
 
 ## Ethical Considerations:
 
