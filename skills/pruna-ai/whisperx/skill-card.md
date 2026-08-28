@@ -1,41 +1,54 @@
-## Description: <br>
-Use when someone needs word-level timestamps from audio for lyric alignment, cut-safe line boundaries, or caption source timing before burn-in with video editing. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+Use this skill when an agent needs word-level timestamps from audio for lyric alignment, line-boundary edits, or caption source timing before video burn-in.
 
-## Publisher: <br>
-[pruna-ai](https://clawhub.ai/user/pruna-ai) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[pruna-ai](https://clawhub.ai/user/pruna-ai)
 
-## Use Case: <br>
-Developers and content-production agents use this skill to turn audio into timestamped transcript artifacts for lyric alignment, caption timing, and downstream video-editing workflows. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: The workflow sends selected audio to an external Replicate model and requires a Replicate API token. <br>
-Mitigation: Confirm the audio is appropriate to upload to Replicate and handle the API token through the prerequisite API guidance before running the workflow. <br>
-Risk: Installing the full Pruna skill suite can add capabilities beyond this WhisperX workflow. <br>
-Mitigation: Review prerequisite PrunaAI skills before installation, and install only the needed prerequisite skills when a narrower setup is preferred. <br>
+## Use Case:
 
+Developers and agents use whisperx to transcribe uploaded audio and obtain word-level timing for captions, lyric alignment, and cut planning. It is suited to workflows that can use a Replicate token and send the selected audio file to the Replicate/Pruna workflow.
 
-## Reference(s): <br>
-- [ClawHub skill page](https://clawhub.ai/pruna-ai/skills/whisperx) <br>
-- [Replicate model: victor-upmeet/whisperx](https://replicate.com/victor-upmeet/whisperx) <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [guidance, shell commands, configuration, text, files] <br>
-**Output Format:** [Markdown guidance with inline shell commands; generated transcript outputs are JSON and SRT files when the workflow is executed.] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [Requires a Replicate API token and an HTTPS audio input URL. Optional language, word-alignment, initial prompt, and diarization settings affect transcript detail.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-1.0.9 (source: server release metadata and skill metadata) <br>
+Risk: Audio files and Replicate credentials are used with a third-party workflow.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Use a scoped Replicate token where possible and avoid submitting confidential audio unless provider terms and account controls are acceptable.
+
+Risk: Incorrect timestamps can affect downstream captions, lyric alignment, or edit boundaries.
+
+Mitigation: Set language, align_output true, and an initial_prompt when helpful, then review transcript and cut outputs before final burn-in or publishing.
+
+## Reference(s):
+
+- [ClawHub skill page](https://clawhub.ai/pruna-ai/skills/whisperx)
+- [Replicate model: victor-upmeet/whisperx](https://replicate.com/victor-upmeet/whisperx)
+
+## Skill Output:
+
+**Output Type(s):** [text, shell commands, configuration, guidance, files]
+
+**Output Format:** [Markdown guidance with inline bash commands and expected transcript file outputs]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [Requires a Replicate API token and an audio_file HTTPS URL; word-level alignment uses align_output true.]
+
+## Skill Version(s):
+
+1.0.10 (source: server release metadata and SKILL.md metadata)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
