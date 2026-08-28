@@ -1,0 +1,35 @@
+{
+  "changelog": "## v2.1.3 (2026-03-02)\n\n### Fixed\n- `document_hash.py` now implements full FORMAT_SPEC \u00a72.1-2.4 compliance\n- Fence-aware end marker detection (Quine Protection per \u00a72.3/\u00a78.5)\n- All deployment copies converged to single canonical implementation\n\n### Added\n- `canonicalize()`: trailing whitespace stripping, newline collapsing (3+\u21922), final newline normalization, UTF-8 NFC normalization\n- Hash window extraction between `---\\n` and `<!-- CLARITY_GATE_END -->`\n- YAML-aware `document-sha256` removal with multiline continuation support (\u00a72.2)\n- `find_end_marker()`: fence-tracking for Quine Protection \u2014 markers inside fenced code blocks are correctly ignored\n- 7 new test vectors for fence-aware detection (15 total)\n\n### Why\nResolves ClawHub/OpenClaw \"Suspicious\" finding: the previous implementation only did BOM removal + CRLF normalization, missing 5 of 7 canonicalization steps declared in SKILL.md and FORMAT_SPEC. Implementation now matches spec exactly.",
+  "created_at": 1771790554541,
+  "display_name": "Clarity Gate",
+  "fetched_at": 1787896946101,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/claim_id.py",
+    "scripts/document_hash.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Francesco Marinoni Moretto",
+    "handle": "frmoretto",
+    "user_id": "s17a8cyqjzv952qpwcq9xnj0y5885tzh"
+  },
+  "slug": "clarity-gate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clarity-gate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clarity-gate&ownerHandle=frmoretto",
+    "page_url": "https://clawhub.ai/frmoretto/skills/clarity-gate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1293,
+    "installs": 37,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Pre-ingestion verification for epistemic quality in RAG systems. Ensures documents are properly qualified before entering knowledge bases. Produces CGD (Clar...",
+  "updated_at": 1778491612653,
+  "version": "2.1.3"
+}
