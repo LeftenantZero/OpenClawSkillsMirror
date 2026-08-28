@@ -1,6 +1,6 @@
 ## Description:
 
-Access SignUpGenius sign-ups, groups, RSVPs, public lookup, and slot workflows from a shell with curl by using documented session login and API call patterns instead of running the signupgenius-mcp server.
+Access SignUpGenius (sign-ups, groups, RSVPs) from a shell with curl instead of running the signupgenius-mcp server - server-side email/password login to a JWT + cfid/cftoken cookies, then curl the v3 API and legacy /SUGboxAPI.cfm dispatcher directly.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and automation operators use this skill to have an agent generate curl-based SignUpGenius login, profile, group, sign-up listing, RSVP, slot claim, release, and lookup workflows for accounts and sign-ups they are authorized to access.
+Developers and operators use this skill to access SignUpGenius profile, group, sign-up, slot, participant, and RSVP workflows from shell sessions or scripts without running the MCP server.
 
 ### Deployment Geography for Use:
 
@@ -22,17 +22,17 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Session credentials and temporary cookie jars can expose active SignUpGenius access.
+Risk: The skill handles SignUpGenius passwords, JWTs, and cfid/cftoken cookies as full account credentials.
 
-Mitigation: Store passwords and tokens only in approved secret stores or short-lived environment variables, avoid logging them, and delete temporary cookie jars and login headers after use.
+Mitigation: Use only authorized SignUpGenius accounts, keep credentials in environment variables or a secret manager, avoid logging tokens, and remove temporary cookie or header files after use.
 
-Risk: Unauthenticated endpoints may reveal participant names, comments, quantities, member IDs, or item-member IDs from public sign-ups.
+Risk: The skill includes unauthenticated participant-name lookup and guidance for write or withdraw actions.
 
-Mitigation: Use read flows only for sign-ups the user is authorized to inspect, minimize collection of participant data, and avoid processing third-party participant details unless necessary.
+Mitigation: Use participant lookup only for sign-ups the user is authorized to access, confirm before write actions, and verify a withdrawal belongs to the signed-in member before submitting it.
 
-Risk: Generated RSVP, claim, release, or group-member commands can change account or sign-up state.
+Risk: Session expiry can return redirects or HTML instead of clear API errors, which can make failed operations look successful.
 
-Mitigation: Require explicit user confirmation before executing write commands and re-read the relevant sign-up or group state after execution to confirm the intended change.
+Mitigation: Check redirect destinations and response bodies for login markers, re-read affected slots after writes or withdrawals, and renew or re-login before retrying.
 
 ## Reference(s):
 
@@ -41,17 +41,17 @@ Mitigation: Require explicit user confirmation before executing write commands a
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, markdown, shell commands, API calls, configuration]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline shell commands, JSON request examples, and jq recipes]
+**Output Format:** [Markdown with inline shell commands, curl examples, JSON request bodies, and jq filters]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Documentation-only output; users should review generated commands before executing account-changing requests.]
+**Other Properties Related to Output:** [The skill provides command patterns and endpoint guidance; it does not emit standalone executable files.]
 
 ## Skill Version(s):
 
-1.4.0 (source: server release evidence)
+1.5.0 (source: server release metadata)
 
 ## Ethical Considerations:
 
