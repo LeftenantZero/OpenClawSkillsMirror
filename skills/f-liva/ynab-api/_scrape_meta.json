@@ -1,0 +1,56 @@
+{
+  "changelog": "**Improved error handling, retry logic, and API guidance.**\n\n- Added robust guidance on handling API errors (especially 401/429), recommending silent retries before alerting the user.\n- Clarified that 401 errors are often caused by temporary rate limits, not always expired tokens.\n- Updated monthly spending calculation to explicitly exclude internal transfers.\n- Included new agent instructions for retries and not assuming API key expiration on first error.\n- Added/updated configuration and metadata files (prompt_context.md, skill.toml).",
+  "created_at": 1771671608070,
+  "display_name": "Ynab Api",
+  "fetched_at": 1787897941405,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "prompt_context.md",
+    "references/api-guide.md",
+    "references/category-examples.md",
+    "scripts/daily-budget-check.sh",
+    "scripts/daily-spending-report.sh",
+    "scripts/goals-progress.sh",
+    "scripts/month-comparison.sh",
+    "scripts/scheduled-upcoming.sh",
+    "scripts/setup-automation.sh",
+    "scripts/transfer.sh",
+    "scripts/ynab-helper.sh",
+    "skill-card.md",
+    "skill.toml"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779947118315,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Federico Liva",
+    "handle": "f-liva",
+    "user_id": "s172qzhaaqgbcj367wdz5xwjjx84m22g"
+  },
+  "slug": "ynab-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ynab-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ynab-api&ownerHandle=f-liva",
+    "page_url": "https://clawhub.ai/f-liva/skills/ynab-api"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1224,
+    "installs": 37,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "YNAB (You Need A Budget) budget management via API. Add transactions, track goals, monitor spending, create transfers, and generate budget reports. Use this...",
+  "updated_at": 1778491597572,
+  "version": "2.4.0"
+}
