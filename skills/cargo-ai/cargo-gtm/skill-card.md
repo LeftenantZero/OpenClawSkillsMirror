@@ -1,6 +1,6 @@
 ## Description:
 
-Cargo GTM helps agents perform B2B go-to-market work on Cargo, including account and buying-committee research, licensed contact enrichment and verification, lead scoring, permission-based outreach drafting, CRM sync, and buying-signal monitoring.
+Cargo GTM helps agents perform B2B go-to-market workflows on Cargo, including account research, contact enrichment and verification, lead scoring, permission-based outreach drafting, CRM sync, and buying-signal monitoring.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Sales, marketing, RevOps, and GTM teams use this skill to move from an ICP or account list to researched, enriched, verified, scored, and sequencer-ready B2B prospect data. Agents use it to choose appropriate Cargo provider playbooks, apply consent and suppression gates, control paid fan-out, and produce compliant outreach drafts or activation handoffs.
+Sales, marketing, RevOps, and GTM teams use this skill to plan and execute compliant B2B prospecting, enrichment, qualification, outreach-preparation, CRM, advertising-audience, and signal-monitoring workflows through Cargo.
 
 ### Deployment Geography for Use:
 
@@ -22,41 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can support B2B prospecting and enrichment workflows that handle professional contact data.
+Risk: The skill handles sensitive prospect and customer data and can interact with live CRM, advertising, LinkedIn, and recurring-workflow surfaces.
 
-Mitigation: Install only for approved B2B use cases, require lawful-basis, suppression-list, relevance, retention, and data-provider controls, and store downloaded or intermediate prospect data privately until it is deleted.
+Mitigation: Review the skill before installation and use it only with authorized B2B data sources and approved provider, CRM, ads, and LinkedIn connections.
 
-Risk: Paid fan-out, recurring extractors, CRM or ads writes, phone lookups, and LinkedIn actions can create spend, privacy, or account-action exposure.
+Risk: Actions involving personal contact data, phone numbers, personal email, visitor identification, LinkedIn engagement, recurring workflows, CRM writes, ads, or repository writes can create privacy, compliance, or operational risk.
 
-Mitigation: Require explicit approval before these actions, sample before full runs, honor provider playbooks, and keep phone lookups limited to qualified leads with explicit user request.
-
-Risk: Outreach drafts could be misused for unsolicited or deceptive bulk messaging.
-
-Mitigation: Use the documented refusal rules for consumer targeting, purchased or scraped lists, suppression evasion, disguised sender identity, auto-dialing, SMS blasts, and undifferentiated fan-out.
+Mitigation: Require explicit approval for those actions and enforce the documented basis, suppression, relevance, volume, and cost gates before execution.
 
 ## Reference(s):
 
 - [Cargo skills repository](https://github.com/getcargohq/cargo-skills)
-- [Cargo GTM skill page](https://clawhub.ai/cargo-ai/skills/cargo-gtm)
-- [Acceptable use](artifact/references/acceptable-use.md)
-- [Cost discipline](artifact/references/cost-discipline.md)
-- [Contact accuracy](artifact/references/contact-accuracy.md)
-- [Stage action map](artifact/references/stage-action-map.md)
-- [Output retrieval](artifact/references/output-retrieval.md)
+- [Acceptable use](references/acceptable-use.md)
+- [Cost discipline](references/cost-discipline.md)
+- [Contact accuracy](references/contact-accuracy.md)
+- [Stage to action map](references/stage-action-map.md)
+- [Waterfall strategy](references/waterfall-strategy.md)
+- [Output retrieval](references/output-retrieval.md)
+- [Prompt library index](references/prompt-library/index.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Shell commands, Configuration, Markdown, Code]
+**Output Type(s):** [Guidance, Markdown, Shell commands, Configuration, Code]
 
-**Output Format:** [Markdown guidance with inline shell commands, JSON configuration examples, and local TypeScript QA scripts]
+**Output Format:** [Markdown guidance with Cargo CLI commands, JSON payloads, TypeScript helper scripts, and structured workflow plans]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Outputs are gated by task-specific phase guides, provider playbooks, approval steps for paid actions, and local QA checks for contact data.]
+**Other Properties Related to Output:** [Outputs may include send-ready outreach variables and workflow instructions, but the skill states that it does not send outreach directly.]
 
 ## Skill Version(s):
 
-1.16.0 (source: frontmatter and server release evidence)
+1.17.0 (source: frontmatter and server release evidence)
 
 ## Ethical Considerations:
 

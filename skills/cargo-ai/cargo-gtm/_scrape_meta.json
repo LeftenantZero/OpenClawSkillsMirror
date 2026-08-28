@@ -1,8 +1,8 @@
 {
-  "changelog": "cargo-gtm 1.16.0\n\n- Updated skill documentation and metadata for the new version.\n- Removed the deprecated skill-card.md file.\n- Updated acceptable use policy and improved cross-references.\n- Refined guidance in phase guides and documentation structure.\n- Minor improvements to outreach activation recipe.",
+  "changelog": "- Major documentation overhaul: revised and expanded phase guides, provider playbooks, and process documentation for improved clarity and workflow guidance.\n- Numerous file changes across agents, guides, and provider-playbooks to update procedures, best practices, and safety guardrails.\n- Outdated skill-card.md removed for streamlined doc organization.\n- Skill version incremented to 1.17.0.",
   "created_at": 1779992762319,
   "display_name": "cargo-gtm",
-  "fetched_at": 1787769679174,
+  "fetched_at": 1787932215856,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -105,7 +105,17 @@
     "skill-card.md",
     "skill-metadata.json"
   ],
-  "moderation": null,
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787875336456,
+    "verdict": "clean"
+  },
   "owner": {
     "display_name": "Cargo",
     "handle": "cargo-ai",
@@ -119,12 +129,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 1905,
+    "downloads": 1966,
     "installs": 13,
     "stars": 0,
-    "versions": 17
+    "versions": 18
   },
   "summary": "Do business-to-business go-to-market work on Cargo \u2014 research accounts and buying committees, enrich and verify B2B contact records from licensed data providers, score and qualify leads, draft permission-based outreach for the user's own sequencer, sync to CRM, and monitor buying signals. Consent basis, suppression lists, and volume limits gate every step that touches a person (`references/acceptable-use.md`); bulk unsolicited messaging, purchased or scraped lists, and consumer targeting are refused. Triggers: \"build me a list of\", \"find 50 <title> at <segment>\", \"who works at\", \"find work emails for these accounts\", \"enrich this CSV\", \"verify these emails\", \"build a TAM\", \"who fits our ICP\", \"who actually buys from us\", \"what data points should we collect on accounts\", \"our outbound is reaching the wrong people\", \"score these leads\", \"write a first-touch email\", \"push these to my CRM\", \"who changed jobs\", \"who just raised funding\", \"companies using <tech>\", \"who is hiring <role>\", \"find the buying committee\", \"portfolio companies of <investor>\", \"upload this audience to Google/Meta/LinkedIn ads\". Providers: aiArk, anthropic, apolloio, bouncer, builtwith, cargo, cleon1, companyEnrich, contactOut, datagma, dropcontact, enrichCrm, enrichley, enrowio, exa, findyMail, firecrawl, forager, FullEnrich, g2, gemini, hunter, icypeas, kitt, leadMagic, linkedin, linkup, mixrank, neverBounce, oceanio, openAi, parallel, peopleDataLabs, perplexity, piloterr, prospeo, reverseContact, rocketreach, salesNavigator, serper, sillage, snitcher, societeInfo, theirStack, theSwarm, waterfall, x, zeroBounce. Reads phase guides, recipes, and per-provider playbooks before any paid call. Skip when: a run already happened and misbehaved \u2014 use cargo-diagnostics.",
-  "updated_at": 1787547201968,
-  "version": "1.16.0"
+  "updated_at": 1787874498583,
+  "version": "1.17.0"
 }
