@@ -1,6 +1,6 @@
 ## Description:
 
-Uses the Flyelep asynchronous video generation API to create product or creative videos from text prompts.
+Generates product or creative videos from text prompts through Flyelep's asynchronous video-generation API.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to collect video generation requirements, call Flyelep's asynchronous API, poll for task completion, and return the generated video URL.
+External users and developers use this skill to prepare Flyelep asynchronous video-generation API requests from text prompts and optional media references, then poll for the generated video URL.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,42 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill sends video prompts, referenced media URLs, and a Flyelep API key to Flyelep.
+Risk: A Flyelep secretKey is required for API calls and could be exposed if stored in files, examples, or persistent configuration.
 
-Mitigation: Use the skill only when that data sharing is acceptable, provide the API key at runtime, and avoid storing the key in files or logs.
+Mitigation: Collect the secretKey at runtime, pass it only in request headers, and do not save it in skill files, repositories, logs, or reusable payloads.
 
-Risk: Temporary payload files can contain request details or credentials when used for Windows or PowerShell execution.
+Risk: Uploaded media is sent to Flyelep and may be returned as a permanent public URL.
 
-Mitigation: Delete temporary payload files after the API call and avoid persisting generated request bodies beyond the active task.
+Mitigation: Upload only media the user is comfortable sharing with Flyelep and exposing through a persistent URL.
 
-Risk: Video generation is asynchronous and may return only a task ID before the final video is ready.
+Risk: Video generation is asynchronous and can take long enough for premature timeouts or incomplete results.
 
-Mitigation: Poll the task result endpoint until a successful completion status is returned, and treat failures or timeouts as incomplete generation.
+Mitigation: Submit the task first, poll the result endpoint with the returned task ID, and allow an extended timeout before reporting failure.
+
+Risk: Reference media has strict type, count, size, duration, and mode-combination limits.
+
+Mitigation: Validate media inputs against the documented limits before upload or task submission, including the restriction against using first/last frame mode with reference media.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/flyelepai/skills/generate-video)
-- [Flyelep controlboard](https://www.flyelep.cn/controlboard)
-- [Flyelep generateVideo endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/generateVideo)
-- [Flyelep queryTaskResult endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/queryTaskResult)
+- [Flyelep video generation API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/generateVideo)
+- [Flyelep task result API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/queryTaskResult)
+- [Flyelep file upload API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/file/upload)
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, shell commands, configuration, text]
+**Output Type(s):** [Guidance, Shell commands, Configuration, Text]
 
-**Output Format:** [Markdown with JSON and shell command examples]
+**Output Format:** [Markdown guidance with JSON request bodies, shell commands, and returned video URLs.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Returns an asynchronous task ID first, then a generated video URL after polling succeeds.]
+**Other Properties Related to Output:** [Requires a user-provided Flyelep secretKey at runtime and may require polling for asynchronous task completion.]
 
 ## Skill Version(s):
 
-1.0.0 (source: server release evidence)
+1.0.2 (source: server release metadata)
 
 ## Ethical Considerations:
 
