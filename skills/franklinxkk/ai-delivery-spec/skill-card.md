@@ -1,6 +1,6 @@
 ## Description:
 
-AI Delivery Spec helps agents create, review, reverse-engineer, change, and accept requirements, PRDs, prototypes, and existing-system evidence while keeping outputs traceable from framing through acceptance.
+Helps agents turn ideas, existing systems, changes, PRDs, prototypes, and acceptance work into traceable requirement artifacts with validation gates.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -10,11 +10,11 @@ This skill is ready for commercial/non-commercial use.
 
 ### License/Terms of Use:
 
-Apache 2.0
+Apache License 2.0
 
 ## Use Case:
 
-Product, design, engineering, QA, compliance, and agent teams use this skill to turn ideas, source materials, existing systems, changes, and acceptance needs into the smallest complete requirement artifact for the current stage. It is suited for requirement framing, PRD and prototype specification, review baselines, change impact analysis, traceability, and acceptance records.
+Product managers, designers, engineers, testers, and coding agents use this skill to clarify requirements, produce PRDs and prototypes, manage review baselines, analyze changes, build traceability, and prepare acceptance evidence.
 
 ### Deployment Geography for Use:
 
@@ -22,41 +22,43 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill may read project requirement materials and create local artifacts for scaffolding, gates, baselines, traceability, or acceptance records.
+Risk: The skill has a broad trigger surface for requirements, PRD, prototype, review, and acceptance tasks.
 
-Mitigation: Use it in trusted project workspaces and review generated files before sharing them outside the team.
+Mitigation: Configure the host to invoke it for those task families rather than every ambiguous conversation.
 
-Risk: Static gate results can be mistaken for proof of domain correctness, legal suitability, browser behavior, implemented behavior, or customer acceptance.
+Risk: Local validation helpers may execute in the user's workspace.
 
-Mitigation: Treat PASS as a contract check only and require separate domain, browser, implementation, and customer evidence where those claims matter.
+Mitigation: Run Python and Node validation commands only in trusted workspaces after reviewing the release contents.
 
-Risk: Running local Python gates from an untrusted or modified package could execute code outside the expected release behavior.
+Risk: Static gates can be mistaken for proof of business correctness, real implementation behavior, legal compliance, or customer acceptance.
 
-Mitigation: Run Python gates only from the trusted installed package and keep scanner or package provenance evidence with the release review.
+Mitigation: Keep the generated evidence boundary visible and require domain, implementation, browser, or customer evidence before making stronger claims.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/franklinxkk/skills/ai-delivery-spec)
+- [ClawHub skill page](https://clawhub.ai/franklinxkk/skills/ai-delivery-spec)
 - [README](README.md)
-- [Lifecycle Stages](references/stages.md)
-- [Requirement Specification](references/specify.md)
-- [Prototype Guidance](references/prototype.md)
-- [Review Workspace](references/review-workspace.md)
-- [Change and Acceptance](references/change-acceptance.md)
+- [Changelog](CHANGELOG.md)
+- [Lifecycle stages](references/stages.md)
+- [Specification workflow](references/specify.md)
+- [Prototype workflow](references/prototype.md)
+- [Review workspace](references/review-workspace.md)
+- [Change and acceptance workflow](references/change-acceptance.md)
+- [Context management](references/context.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown, YAML, JSON, diagrams, prototype files, and command snippets]
+**Output Format:** [Markdown, YAML/JSON, HTML prototypes, and inline shell commands]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May create local artifacts and static gate records when requested; static PASS does not prove legal, domain, browser, implementation, or customer acceptance correctness.]
+**Other Properties Related to Output:** [Outputs use stable IDs, traceability links, GAP/unknown markers, and explicit evidence boundaries.]
 
 ## Skill Version(s):
 
-5.4.7 (source: ClawHub release metadata, created 2026-08-26; CHANGELOG entry dated 2026-08-22)
+5.4.8 (source: evidence release and CHANGELOG, released 2026-08-26)
 
 ## Ethical Considerations:
 

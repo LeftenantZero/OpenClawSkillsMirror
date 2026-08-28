@@ -1,16 +1,16 @@
 {
-  "changelog": "**Added support for structured review workspace documentation and schema.**\n\n- Introduced `references/review-workspace.md` and `schemas/review-workspace.schema.json` for organizing review workspace references and their schema validation.\n- Improved review-mode documentation and explicit review context handling, with new details for visual/product separation in prototype reviews.\n- Refined explanation of delivery depth (`direct`, `standard`, `governed`), risk facets, and evidence levels; deprecated old numeric artifact levels.\n- Clarified rules around stage entry/exit, artifact persistence, and cross-role handoff.\n- Removed obsolete `skill-card.md` file.",
+  "changelog": "ai-delivery-spec 5.4.8 \u2014 Adds lightweight intent shortcuts and refines core process\n\n- Introduced concise, multi-intent description with support for /ads, /dig, /prd, /proto shortcuts in SKILL.md.\n- Added documentation and logic for four shortcut entrypoints, clarifying their routing and default behaviors.\n- Updated SKILL.md for greater focus on usability, language locking, artifact criteria, and scenario coverage.\n- Removed outdated ./github/assets/lifecycle-bridge.svg and skill-card.md files.\n- Added new review-prototype HTML example for handoff scenarios.",
   "created_at": 1781797820442,
   "display_name": "AI Delivery Spec\uff5c\u9700\u6c42\u7ba1\u7406\u5185\u6838",
-  "fetched_at": 1787768753277,
+  "fetched_at": 1787930825558,
   "files": [
-    ".github/assets/lifecycle-bridge.svg",
     "CHANGELOG.md",
     "LICENSE",
     "README.md",
     "SKILL.md",
     "_meta.json",
     "agents/openai.yaml",
+    "examples/medium-review-handoff/review-prototype.html",
     "examples/minimal-v5/README.md",
     "examples/minimal-v5/intake.yaml",
     "examples/minimal-v5/requirement-card.md",
@@ -136,12 +136,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 2108,
+    "downloads": 2152,
     "installs": 4,
     "stars": 1,
-    "versions": 31
+    "versions": 32
   },
-  "summary": "Use for creating, changing, reviewing, reverse-engineering or accepting requirements, PRDs, prototypes, competitor material or existing systems, including any small UI/field/column/tab/dropdown/legacy-HTML change and direct PRD/prototype generation. Always invoke regardless of size or clarity. Deliv",
-  "updated_at": 1787703607847,
-  "version": "5.4.7"
+  "summary": "Use for creating, changing, reviewing, reverse-engineering or accepting requirements, PRDs, prototypes, competitor material or existing systems, including any small UI, field, column, tab, dropdown or legacy-HTML change. Supports /ads, /dig, /prd and /proto intent shortcuts where the host routes the",
+  "updated_at": 1787925428436,
+  "version": "5.4.8"
 }
