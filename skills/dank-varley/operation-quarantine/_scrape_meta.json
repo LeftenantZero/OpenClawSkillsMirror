@@ -1,0 +1,45 @@
+{
+  "changelog": "v1.0.3 \u2014 Removed installer/systemd from bundle; external egress off by default (requires ENABLE_WEBHOOKS=1); homedir-based discovery (no hardcoded /root); detection patterns moved to signatures/ with README",
+  "created_at": 1773172503409,
+  "display_name": "Operation Quarantine",
+  "fetched_at": 1787881325963,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/email-scan.sh",
+    "scripts/skill-scan.sh",
+    "service/alerts.js",
+    "service/llm.js",
+    "service/package-lock.json",
+    "service/package.json",
+    "service/sanitizers/email.js",
+    "service/sanitizers/skill.js",
+    "service/server.js",
+    "service/test-quarantine.js",
+    "signatures/README.md",
+    "signatures/patterns.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "dank-varley",
+    "handle": "dank-varley",
+    "user_id": "s17apm6p1qh43h5newf4v83pj184hc2b"
+  },
+  "slug": "operation-quarantine",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/operation-quarantine",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=operation-quarantine&ownerHandle=dank-varley",
+    "page_url": "https://clawhub.ai/dank-varley/skills/operation-quarantine"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 497,
+    "installs": 11,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "Prompt injection defense for OpenClaw agents. Scans emails and skill installations through a two-phase security pipeline (pattern matching + optional LLM ana...",
+  "updated_at": 1778491816516,
+  "version": "1.0.3"
+}
