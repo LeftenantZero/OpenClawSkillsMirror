@@ -1,0 +1,37 @@
+{
+  "changelog": "**Summary**: Introduces atomic, automatic config updates with built-in backup, validation, and rollback.\n\n- Added `atomic_apply.sh` for one-step safe config changes; creates backups, validates, and auto-rolls back on failure.\n- Removed legacy scripts: `backup_config.sh` and `diff_config.sh`.\n- Updated workflow and documentation to enforce atomic updates and automatic rollback.\n- Tightened guardrails to only allow validated, agent-initiated config changes.\n- Backups now stored in `~/.openclaw/config-guardian-backups/`.",
+  "created_at": 1769884817387,
+  "display_name": "Config Guardian",
+  "fetched_at": 1787911241289,
+  "files": [
+    ".clawhub/origin.json",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/atomic_apply.sh",
+    "scripts/restore_config.sh",
+    "scripts/validate_config.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "abdhilabs",
+    "handle": "abdhilabs",
+    "user_id": "s17fe5141n0se95wjda5rvaf998849bh"
+  },
+  "slug": "config-guardian",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/config-guardian",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=config-guardian&ownerHandle=abdhilabs",
+    "page_url": "https://clawhub.ai/abdhilabs/skills/config-guardian"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 7698,
+    "installs": 274,
+    "stars": 4,
+    "versions": 2
+  },
+  "summary": "Safe OpenClaw config updates with automatic backup, validation, and rollback. For agent use - prevents invalid config updates.",
+  "updated_at": 1778485891685,
+  "version": "1.0.1"
+}
