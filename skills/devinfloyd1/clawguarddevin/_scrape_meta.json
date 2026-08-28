@@ -1,0 +1,39 @@
+{
+  "changelog": "Initial release \u2014 ClawGuard skill security scanner for OpenClaw/Clawdbot.\n\n- Scans skills for malicious patterns, including reverse shells, data exfiltration, credential harvesting, obfuscation, code execution, and campaign-specific indicators.\n- Supports scanning by skill name, file path, or all installed skills.\n- Outputs results in console, JSON, or Markdown formats.\n- Detailed risk scoring system with guidance based on score.\n- IOC database includes 70+ compromise indicators, with ClawHavoc campaign coverage.\n- Python 3.8+ only, no external dependencies required.\n- Includes test fixture samples for clean and multiple types of malicious skills.",
+  "created_at": 1771447875529,
+  "display_name": "Devin Floyd",
+  "fetched_at": 1787899389759,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md",
+    "tests/fixtures/clean_skill/SKILL.md",
+    "tests/fixtures/edge_case_skill/SKILL.md",
+    "tests/fixtures/malicious_skill_credential/SKILL.md",
+    "tests/fixtures/malicious_skill_exfil/SKILL.md",
+    "tests/fixtures/malicious_skill_obfuscated/SKILL.md",
+    "tests/fixtures/malicious_skill_revshell/SKILL.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Devin Floyd",
+    "handle": "devinfloyd1",
+    "user_id": "s17b7ajwekg49ebqhd86wnwxa5885xvx"
+  },
+  "slug": "clawguarddevin",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawguarddevin",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawguarddevin&ownerHandle=devinfloyd1",
+    "page_url": "https://clawhub.ai/devinfloyd1/skills/clawguarddevin"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1057,
+    "installs": 31,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Security scanner for OpenClaw/Clawdbot skills - detect malicious patterns before installation",
+  "updated_at": 1778491578254,
+  "version": "1.0.0"
+}
