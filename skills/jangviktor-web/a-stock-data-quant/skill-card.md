@@ -1,8 +1,8 @@
 ## Description:
 
-A-share stock quantitative analysis toolkit with 20+ technical indicators, 7 backtesting strategies, candlestick pattern recognition, multi-source data fallback, real-time quotes, AI financial analysis, news, chip distribution, board fund flow, F10 finance, research reports, and interactive answers.
+Provides a finance research and data-analysis skill for A-share, Hong Kong, U.S. stock, fund, ETF, futures, options, macro, valuation, quant factor, backtesting, screening, and research-report workflows.
 
-This skill is for research and development only.
+This skill is ready for commercial/non-commercial use.
 
 ## Publisher:
 
@@ -10,11 +10,11 @@ This skill is for research and development only.
 
 ### License/Terms of Use:
 
-MIT
+MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to run A-share market analysis, technical indicators, backtests, stock comparisons, real-time quote lookups, financial data queries, and AI-assisted finance summaries. Its outputs are for learning and research and should not be treated as investment advice.
+External users and developers use this skill to retrieve market and financial data, run quantitative analysis and backtests, evaluate securities, and draft structured finance research reports. It is intended for finance workflows where outputs should be checked against current market data and reviewed before investment use.
 
 ### Deployment Geography for Use:
 
@@ -22,44 +22,51 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill contacts multiple third-party finance and AI services.
+Risk: Bundled or shared API credentials could expose provider access or create unclear authorization boundaries.
 
-Mitigation: Review the configured services and run it only in an environment where those network requests are acceptable.
+Mitigation: Remove bundled credentials before deployment and require each installation to supply its own provider keys through a protected secret store.
 
-Risk: The package ships obfuscated default API keys in config.yaml.
+Risk: Credential persistence may store sensitive API keys outside the user's expected secret-management boundary.
 
-Mitigation: Replace or remove bundled defaults before use and prefer environment variables for your own service credentials.
+Mitigation: Disable cross-session credential persistence unless the platform provides protected storage, and prevent credentials from being written to repositories, logs, prompts, or user-visible outputs.
 
-Risk: Financial analysis output can be mistaken for investment advice.
+Risk: Broad automatic activation can route many finance requests through external data providers or scripts.
 
-Mitigation: Treat generated analysis as informational, verify source data, and keep the skill's investment-advice disclaimer visible in downstream use.
+Mitigation: Review activation rules before installation and require explicit user confirmation before enabling fallback providers or authenticated data sources.
 
-Risk: Unpinned dependencies and live market-data providers can change behavior over time.
+Risk: Dependencies are specified with lower bounds rather than exact pins, which can change installed code over time.
 
-Mitigation: Use an audited environment with pinned dependencies and test critical commands before relying on results.
+Mitigation: Install in an isolated environment, pin and review dependencies, and avoid automatic package installation in production workflows.
+
+Risk: Market data, model outputs, and investment analysis can be stale, incomplete, or misleading.
+
+Mitigation: Cross-check outputs against authoritative current data sources and require human review before making trading, portfolio, or investment decisions.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/jangviktor-web/skills/a-stock-data-quant)
-- [README](README.md)
-- [AkShare](https://github.com/akfamily/akshare)
-- [MyTT](https://github.com/mpquant/MyTT)
-- [PanWatch](https://github.com/TNT-Likely/PanWatch)
-- [Eastmoney Miaoxiang AI](https://ai.eastmoney.com/mxClaw)
+- [A-stock full reference](references/a-stock-full.md)
+- [Connector guidance](CONNECTORS.md)
+- [HiThink Finance overview](references/hithink-finance/00-overview.md)
+- [HiThink Finance API](references/hithink-finance/api.md)
+- [MX finance data skill](references/mx-skills/mx-finance-data/SKILL.md)
+- [MX finance search skill](references/mx-skills/mx-finance-search/SKILL.md)
+- [MX macro data skill](references/mx-skills/mx-macro-data/SKILL.md)
+- [MX stocks screener skill](references/mx-skills/mx-stocks-screener/SKILL.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, HTML files, shell commands, configuration, guidance]
+**Output Type(s):** [Analysis, Markdown, Code, Shell commands, Configuration, Guidance, Files]
 
-**Output Format:** [Markdown or terminal text with optional JSON and generated HTML chart files]
+**Output Format:** [Markdown guidance with inline shell commands, structured tables, and optional generated data or report files]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include market data tables, calculated indicators, backtest summaries, command examples, and finance-risk disclaimers.]
+**Other Properties Related to Output:** [May generate local HTML charts, Markdown reports, Excel files, cached data, and script outputs depending on the selected workflow.]
 
 ## Skill Version(s):
 
-0.1.2 (source: server release metadata; artifact frontmatter reports 3.6.0)
+3.8.0 (source: frontmatter, manifest, and server release evidence)
 
 ## Ethical Considerations:
 
