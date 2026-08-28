@@ -1,0 +1,47 @@
+{
+  "changelog": "# Changelog\n\n## v0.3.0\n\n### Security\n\n- **Input sanitization for all user-supplied arguments in `helio.sh`**\n  - Added `validate_input` function that rejects values containing shell metacharacters, URL-unsafe characters, and path traversal sequences (`..`)\n  - Allowlist: `a-zA-Z0-9._@:/-` \u2014 covers Helio IDs, currency symbols, wallet addresses, and decimal amounts\n  - Validated arguments: `symbol` (currency-id, create-paylink), `amount` (create-paylink), `paylink_id` (charge, transactions, disable, enable)\n  - Mitigates URL path traversal and terminal output injection when arguments are interpolated into curl URLs and echo statements\n  - Addresses code scanner findings from v0.2.0 review",
+  "created_at": 1769635701274,
+  "display_name": "MoonPay Commerce (Helio) Accept Crypto Payments",
+  "fetched_at": 1787911900416,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/api-reference.md",
+    "scripts/helio.sh",
+    "scripts/setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783649249069,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "mavagio",
+    "handle": "mavagio",
+    "user_id": "s179e96p69c5xzqmmcge19n2e5885bs5"
+  },
+  "slug": "mpc-accept-crypto-payments",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mpc-accept-crypto-payments",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mpc-accept-crypto-payments&ownerHandle=mavagio",
+    "page_url": "https://clawhub.ai/mavagio/skills/mpc-accept-crypto-payments"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2375,
+    "installs": 81,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Accept crypto payments on Solana via MoonPay Commerce (formerly Helio). Create Pay Links, generate checkout URLs, check transactions, and list supported currencies. Use when the user wants to accept crypto payments, create payment links, charge for products/services with crypto, or query payment transactions. Requires a MoonPay Commerce account with API key and secret.",
+  "updated_at": 1778485867301,
+  "version": "0.3.0"
+}
