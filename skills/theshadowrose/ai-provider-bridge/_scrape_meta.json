@@ -1,0 +1,36 @@
+{
+  "changelog": "v1.0.3\n\nFixed API usage examples \u2014 config object uses camelCase property names (anthropicApiKey, openaiApiKey, googleApiKey, xaiApiKey, mistralApiKey), not flat apiKey or env var names. Model prefix determines provider (anthropic/model-name). Clarified sendMessage() as the correct method name.\n\nv1.0.2\n\nRemoved require('./token-compressor') reference entirely. TokenCompressor is now an inlined no-op pass-through class \u2014 no missing dependency, no external file needed. To enable compression, install the companion token-compressor skill and swap the class as noted in the code comments.\nRemoved automatic \"Do not store or train on this data.\" appended to system prompts in OpenAI-compatible requests. This is the caller's responsibility \u2014 pass it via setSystemPrompt() if needed.\n\nv1.0.1\n\nTokenCompressor dependency made optional \u2014 no-op fallback added when ./token-compressor is not present. Bridge works without it; messages pass through uncompressed.\nRemoved buildSystemPrompt() and workspaceContext option. These allowed embedding workspace files into system prompts sent to external APIs \u2014 data exposure risk. Use setSystemPrompt() directly.\nAdded env: section to frontmatter declaring required API keys per provider. All optional \u2014 only keys for providers you use are needed.",
+  "created_at": 1773046901648,
+  "display_name": "Ai Provider Bridge",
+  "fetched_at": 1787883702066,
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md",
+    "src/ai-bridge.js"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Shadow Rose",
+    "handle": "theshadowrose",
+    "user_id": "s1736mx5m1zt9qzh6fvzvffnhh83hgf8"
+  },
+  "slug": "ai-provider-bridge",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-provider-bridge",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-provider-bridge&ownerHandle=theshadowrose",
+    "page_url": "https://clawhub.ai/theshadowrose/skills/ai-provider-bridge"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1032,
+    "installs": 28,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "One interface to call 6 AI providers. Swap models with a config change, not a code rewrite. Zero external dependencies.",
+  "updated_at": 1778491784317,
+  "version": "1.0.3"
+}
