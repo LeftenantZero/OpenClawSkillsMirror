@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and agents use this skill to collect a writing prompt and optional reference file URLs, call Flyelep's writing-assistance API, and present multiple creative copy options for prompt optimization, ecommerce copy, poster copy, or short-video scripts.
+External users and developers use this skill to call Flyelep's assisted-generation API for product copy, prompt polishing, poster text, and short video script ideas. The skill can include up to six reference image URLs or upload local images before requesting writing options.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Prompts and optional file URLs are sent to Flyelep for writing assistance.
+Risk: Prompts and uploaded files are sent to the external Flyelep service.
 
-Mitigation: Use the skill only for content appropriate to share with Flyelep, and avoid secrets, regulated data, private business material, or sensitive file URLs.
+Mitigation: Use non-confidential prompt text and images unless the user explicitly accepts sharing them with that service.
 
-Risk: The Flyelep API key is required in the request header at call time.
+Risk: Uploaded local files are described as permanent public links.
 
-Mitigation: Provide the API key only at runtime and do not store it in skill files, repositories, examples, or persistent configuration.
+Mitigation: Confirm before uploading local files, limit uploads to intended non-sensitive images, and reuse returned links instead of re-uploading the same file.
+
+Risk: The skill requires a user-provided API key.
+
+Mitigation: Request the key at runtime and avoid storing real keys in skill files, examples, logs, or persistent configuration.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/flyelepai/skills/ai-writing-assist)
-- [Flyelep assisted generation API](https://www.flyelep.cn/prod-api/poster-design/api/v1/aiTool/assistedGeneration)
-- [Flyelep controlboard](https://www.flyelep.cn/controlboard)
+- [Flyelep assisted generation API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/aiTool/assistedGeneration)
+- [Flyelep file upload API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/file/upload)
 
 ## Skill Output:
 
-**Output Type(s):** [text, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration instructions, Guidance]
 
-**Output Format:** [Markdown guidance with JSON and shell command examples]
+**Output Format:** [Markdown with JSON and shell command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Returns multiple generated copy options; query input is limited to 1000 characters and optional reference file URLs are limited to six files.]
+**Other Properties Related to Output:** [Returns multiple creative copy options from the API and may include uploaded image URLs as request inputs.]
 
 ## Skill Version(s):
 
-1.0.0 (source: server release metadata)
+1.0.1 (source: ClawHub release evidence)
 
 ## Ethical Considerations:
 
