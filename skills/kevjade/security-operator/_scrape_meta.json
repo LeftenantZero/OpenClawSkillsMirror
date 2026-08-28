@@ -1,0 +1,48 @@
+{
+  "changelog": "v2.2: Defense-in-depth skill vetting. ClawHub scans can have false negatives, so now includes Layer 2 self-inspection with grep patterns for dangerous code. Added decision matrix. Update checks now include diff inspection for new dangerous patterns. Added paranoid mode for production.",
+  "created_at": 1771608180305,
+  "display_name": "Security Operator",
+  "fetched_at": 1787898282691,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/modes-and-approval-gates.md",
+    "references/prompt-injection-guardrails.md",
+    "references/vps-hardening-checklist.md",
+    "references/workshop-security-section.md",
+    "scripts/install.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779943199614,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Kevin Jeppesen @ TheOperatorVault.io",
+    "handle": "kevjade",
+    "user_id": "s179fvzmwrn46pm4a3tfvtq9bs8841a2"
+  },
+  "slug": "security-operator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/security-operator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=security-operator&ownerHandle=kevjade",
+    "page_url": "https://clawhub.ai/kevjade/skills/security-operator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1774,
+    "installs": 54,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Runtime security guardrails for OpenClaw agents. Protects against prompt injection, excessive agency, cost runaway, credential leaks, and cascade effects. In...",
+  "updated_at": 1778491594064,
+  "version": "2.2.0"
+}
