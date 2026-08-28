@@ -1,0 +1,55 @@
+{
+  "changelog": "cs-onboard-voice v0.1.1\n\n- New: Skill converts a written customer-onboarding step list into 8\u201320 spoken audio clips (one per labeled step).\n- Supports onboarding audio packs: welcome, identity, documents, first login, and more.\n- Enforces collection of only written onboarding steps; does not invent or add steps.\n- Handles voice cloning requests with explicit consent and credit confirmation.\n- Manages all Beatra API operations via bundled command-line client with secure, controlled execution.\n- Includes detailed slot planning, clip delivery, cloning/billing safeguards, and automatic safe updates.",
+  "created_at": 1787883871562,
+  "display_name": "cs-onboard-voice",
+  "fetched_at": 1787931850926,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "references/automatic-updates-and-safety.md",
+    "references/billing-errors-and-recovery.md",
+    "references/installation-and-auth.md",
+    "references/installation-registration.md",
+    "references/mcp-connection.md",
+    "references/tasks-and-results.md",
+    "references/uninstall-and-disconnect.md",
+    "references/workflow.md",
+    "scripts/authorize.py",
+    "scripts/mcp_client.py",
+    "scripts/uninstall.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787884718803,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "beatra-ai",
+    "handle": "beatra-ai",
+    "user_id": "s176vcp4w7b7tt3j7a62gdnfys8cntp4"
+  },
+  "slug": "cs-onboard-voice",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cs-onboard-voice",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cs-onboard-voice&ownerHandle=beatra-ai",
+    "page_url": "https://clawhub.ai/beatra-ai/skills/cs-onboard-voice"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 33,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Turn a written customer-onboarding step list into one customer onboard voice clip per labeled cue. This onboarding-step voice studio records each customer onboarding audio and step list voice from the steps the enablement team already wrote, then delivers 8 to 20 customer onboard voice pack files. Use it for onboarding clip packs that keep one written step on each clip.",
+  "updated_at": 1787883999914,
+  "version": "0.1.1"
+}
