@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-Developers and engineering teams use Iterate to run structured, multi-round code review and repair passes across a project, with onboarding-generated project context, configurable quality dimensions, validation commands, and optional review-only operation.
+Developers and engineering teams use Iterate to run repeated, multi-dimension code reviews, apply small fixes, coordinate approved larger changes, and validate projects before release. It is suited for repository quality improvement, security hardening, refactoring wrap-up, and read-only review reports.
 
 ### Deployment Geography for Use:
 
@@ -22,34 +22,39 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Autonomous git behavior could lead to unintended merge or push actions if publication settings are enabled or conflicting instructions are followed.
+Risk: The skill has high-autonomy code and git automation that can edit files, run validation commands, and create commits.
 
-Mitigation: Keep git.auto_merge and git.push_per_round disabled unless publication is explicitly intended, review branch diffs before merging, and use review-only or dry-run mode for audit-only use.
+Mitigation: Install only when this level of autonomy is acceptable, review generated branches before merging, and keep automated merge or push settings disabled unless explicitly intended.
 
-Risk: Configured validation commands and installer paths can execute local commands during review, onboarding, or installation.
+Risk: PATH-level CLI installation changes the local environment.
 
-Mitigation: Review validation.commands and command whitelist entries before running the skill, prefer --no-cli when only the assistant skill is needed, avoid curl-to-shell installation paths, and do not pass GitHub tokens on shared command lines.
+Mitigation: Use the documented no-CLI installation mode when a PATH-level command should not be installed.
+
+Risk: Token handling and curl-to-bash installation can expose credentials or execute unreviewed code.
+
+Mitigation: Prefer GITHUB_TOKEN over command-line token flags and inspect installation scripts before using curl-to-bash flows.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/jingzhao-l/skills/iterate-skill)
-- [README.md](README.md)
-- [SKILL.md](SKILL.md)
-- [npm installer package](https://www.npmjs.com/package/iterate-skill-installer)
+- [GitHub repository](https://github.com/jingzhao-l/iterate-skill)
+- [Release notes](RELEASE.md)
+- [README](README.md)
+- [Configuration schema](config/config.schema.json)
 
 ## Skill Output:
 
-**Output Type(s):** [Markdown, Code, Shell commands, Configuration instructions, Guidance]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown reports and agent actions with optional code edits, shell commands, and configuration file updates]
+**Output Format:** [Markdown, code edits, shell commands, configuration files, and review summaries]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Can operate in review-only mode or perform file and git actions according to configured approvals and validation settings.]
+**Other Properties Related to Output:** [Can edit files, run configured validation commands, create git commits, and generate review or iteration reports depending on mode.]
 
 ## Skill Version(s):
 
-2.9.0 (source: frontmatter and pyproject.toml)
+2.9.1 (source: frontmatter, pyproject.toml, package.json, release evidence)
 
 ## Ethical Considerations:
 

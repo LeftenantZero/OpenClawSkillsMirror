@@ -1,8 +1,8 @@
 {
-  "changelog": "**2.9.0 is a significant update with broad changes to core files, docs, CLI logic, and onboarding.**\n\n- Updated onboarding logic and drift detection with improvements to configuration and manifest handling.\n- Refreshed and reorganized documentation, including major SKILL.md and README.md updates; removed obsolete files.\n- Enhanced CLI features and internal structure across multiple iterate_cli modules (init, cli, generator, personalize, refresh, scan, show, tui, wizard).\n- Updated npm installer logic and related tests for broader reliability.\n- Improved test coverage with changes to several test scripts.\n- Numerous config, badge, and workflow updates to streamline multi-round review, install/update, and parallel checking.",
+  "changelog": "**iterate-skill 2.9.1**\n\n- Improved and updated documentation in `SKILL.md`; descriptions and instructions clarified.\n- Updated sensitive file skip patterns to improve security filtering (added \"secrets/\" and reordered list).\n- Minor maintenance: removal of deprecated file `skill-card.md`.\n- Miscellaneous internal and documentation improvements across CLI and installer scripts.",
   "created_at": 1784520145908,
   "display_name": "Iterate",
-  "fetched_at": 1787768750203,
+  "fetched_at": 1787946121324,
   "files": [
     "CHANGELOG.md",
     "CONTRIBUTING.md",
@@ -80,7 +80,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1787702521422,
+    "updated_at": 1787789309134,
     "verdict": "clean"
   },
   "owner": {
@@ -96,12 +96,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 1277,
+    "downloads": 1381,
     "installs": 1,
     "stars": 0,
-    "versions": 35
+    "versions": 36
   },
   "summary": "Fully automated multi-round code iteration with configurable N-dimension parallel review, onboarding/personalization, and a cross-assistant installer/update system with mandatory SHA256 checksum verification.",
-  "updated_at": 1787702033243,
-  "version": "2.9.0"
+  "updated_at": 1787788510351,
+  "version": "2.9.1"
 }
