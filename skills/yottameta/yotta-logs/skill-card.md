@@ -1,6 +1,6 @@
 ## Description:
 
-元史 yotta-logs helps agents search and analyze local JSONL conversation logs to recover prior context, decisions, messages, tool usage, and statistics without modifying logs or uploading them.
+Yuanshi yotta-logs helps agents search local historical session and memory logs across JSONL, JSON, SQLite, Markdown, and title-only binary sources to recover prior conversations and supporting context.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-Developers, engineers, and agent users use this skill to locate prior conversations, inspect original log excerpts, verify when decisions were made, and summarize local session activity. It is intended for read-only local log retrieval with default redaction.
+Developers and agent users use this skill when they need to locate earlier decisions, commands, conclusions, or parent-session context from local AI conversation and memory files.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can search sensitive local conversation logs and may expose private snippets in the agent context.
+Risk: The skill can expose sensitive content from private local AI conversation and memory logs to the active agent session.
 
-Mitigation: Keep redaction enabled, pass a narrow --dir with session/date filters where possible, and avoid sharing retrieved log output externally.
+Mitigation: Limit searches with --dir, --source, or --kind, keep default redaction enabled, and review matches before sharing or acting on them.
 
-Risk: Security evidence notes review concerns because the skill can read outside the chosen log directory.
+Risk: Broad default discovery can surface more historical context than the user intended.
 
-Mitigation: Review before installing, run in a least-privilege environment, and provide only trusted explicit log directories.
-
-Risk: Global installation can make local log-search capability available across multiple agent environments.
-
-Mitigation: Install only for the specific agent or project that needs it unless broad availability is intentional.
+Mitigation: Use explicit paths or source filters for targeted investigations, and avoid broad discovery unless the user is comfortable searching across registered local sources.
 
 ## Reference(s):
 
-- [CLI protocol](references/cli.md)
-- [Session log format](references/format.md)
-- [Security boundaries](references/security.md)
 - [ClawHub skill page](https://clawhub.ai/yottameta/skills/yotta-logs)
+- [GitHub repository](https://github.com/YottaMeta/yotta-logs)
+- [npm package](https://www.npmjs.com/package/@yottameta/yotta-logs)
+- [Agent formats reference](references/agent-formats.md)
+- [CLI reference](references/cli.md)
+- [Record format reference](references/format.md)
+- [Security boundary reference](references/security.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Shell commands, Text, JSON]
+**Output Type(s):** [text, markdown, shell commands, JSON]
 
-**Output Format:** [Markdown guidance with inline shell commands; CLI results may be plain text or JSON.]
+**Output Format:** [Markdown guidance with shell commands and optional JSON command output]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Default output redacts suspected secrets unless explicitly disabled.]
+**Other Properties Related to Output:** [Search results are local-only and redacted by default unless the user disables redaction.]
 
 ## Skill Version(s):
 
-0.1.0 (source: SKILL.md frontmatter, package.json, release evidence)
+0.2.1 (source: SKILL.md frontmatter, package.json, and release evidence)
 
 ## Ethical Considerations:
 
