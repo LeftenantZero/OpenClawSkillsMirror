@@ -1,0 +1,45 @@
+{
+  "changelog": "alibabacloud-media-diagnostics 0.0.1\n\n- Initial release.\n- Diagnose a wide range of playback and streaming issues in user-provided media files and URLs, including moov atom position, codec compatibility, container and segment integrity, and audio-video sync.\n- Supports analysis of local files, HLS/m3u8 playlists, and live streams (RTMP/RTSP/SRT/TS).\n- Enforces read-only access, never modifies or repairs files, and requires no credentials or cloud API calls.\n- Mandatory triage workflow: always starts with triage.py and routes all deep checks accordingly.\n- Designed for secure, user-confirmed, non-destructive diagnostics with explicit triggers and clear orchestration flow.",
+  "created_at": 1787816741785,
+  "display_name": "alibabacloud-media-diagnostics",
+  "fetched_at": 1787932592197,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/knowledge-base.md",
+    "scripts/__init__.py",
+    "scripts/hls_check.py",
+    "scripts/lib/__init__.py",
+    "scripts/lib/checker.py",
+    "scripts/lib/cmd.py",
+    "scripts/lib/format.py",
+    "scripts/lib/registry.py",
+    "scripts/lib/report.py",
+    "scripts/media_analyze.py",
+    "scripts/requirements.txt",
+    "scripts/triage.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-media-diagnostics",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-media-diagnostics",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-media-diagnostics&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-media-diagnostics"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 54,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Diagnose playback and streaming problems in user-provided media files and URLs (m3u8 / HTTP / RTMP / RTSP / SRT): moov atom position, codec compatibility (H.265/HEVC, AAC-HE, 10-bit), container issues, HLS playlist and TS segment integrity, bitrate/frame-rate anomalies, audio-video sync, and live latency factors such as B-frames and GOP size. Use when the user reports a video that will not play, shows a black or green screen, stutters or buffers, or asks for an HLS playlist, TS segment, or live stream latency check. Read-only. No credentials and no cloud API calls. Triggers: \"video file won't play\", \"video black screen or green screen\", \"moov atom position issue\", \"HLS m3u8 playlist check\", \"HLS segment corrupted\", \"live stream latency or stutter\", \"TS segment analysis\", \"video codec compatibility\", \"media file format diagnosis\", \"B-frame or GOP structure analysis\".",
+  "updated_at": 1787816847615,
+  "version": "0.0.1"
+}
