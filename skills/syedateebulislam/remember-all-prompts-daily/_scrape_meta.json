@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release: Auto-archive prompts at 95% token usage, ingest at 1% for continuous context preservation",
+  "created_at": 1769445380098,
+  "display_name": "Remember All Prompts Daily",
+  "fetched_at": 1787912351687,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/check_token_usage.py",
+    "scripts/export_prompts.py",
+    "scripts/ingest_prompts.py",
+    "scripts/setup_cron.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783650324343,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Syed Ateebul Islam",
+    "handle": "syedateebulislam",
+    "user_id": "s17b3nwy5pvzwkr77v275t0dtd8850qp"
+  },
+  "slug": "remember-all-prompts-daily",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/remember-all-prompts-daily",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=remember-all-prompts-daily&ownerHandle=syedateebulislam",
+    "page_url": "https://clawhub.ai/syedateebulislam/skills/remember-all-prompts-daily"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3032,
+    "installs": 103,
+    "stars": 3,
+    "versions": 2
+  },
+  "summary": "Preserve conversation continuity across token compaction cycles by extracting and archiving all prompts with date-wise entries. Automatically triggers at 95% token usage (pre-compaction) and 1% (new sprint start) to export session history, then ingests archived summaries on session restart to restore context.",
+  "updated_at": 1778485857338,
+  "version": "1.0.1"
+}
