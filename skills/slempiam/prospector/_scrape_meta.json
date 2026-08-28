@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of the Prospector skill for automated B2B lead generation with Exa and Apollo.\n\n- Supports searching for companies via Exa and enriching contacts via Apollo based on user-defined ICP (Ideal Customer Profile) criteria.\n- Outputs results as a CSV file; optionally syncs leads and contacts to Attio CRM if configured.\n- Includes guided questionnaire for ICP collection: Industry, Company Size, Funding Stage, Geography, Keywords, and Contact Count.\n- Robust setup process with API key management (config file or environment variables).\n- Implements step-by-step workflow with error handling and user feedback for missing configuration, invalid keys, and no results.\n- Core commands: `/prospector` (main workflow) and `/prospector:setup` (API configuration).",
+  "created_at": 1770253376430,
+  "display_name": "Prospector",
+  "fetched_at": 1787909075450,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "commands/setup.md",
+    "scripts/prospector.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "slempiam",
+    "handle": "slempiam",
+    "user_id": "s176hbyjk3m1c27sen2v47s3k5885bz1"
+  },
+  "slug": "prospector",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/prospector",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=prospector&ownerHandle=slempiam",
+    "page_url": "https://clawhub.ai/slempiam/skills/prospector"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2750,
+    "installs": 93,
+    "stars": 6,
+    "versions": 1
+  },
+  "summary": "This skill should be used when the user wants to find leads, prospects, or contacts matching their ICP (Ideal Customer Profile). It searches for companies via Exa and enriches contacts via Apollo, outputting to CSV and optionally syncing to Attio CRM.\n\nMANDATORY TRIGGERS: \"find leads\", \"prospecting\", \"ICP search\", \"find contacts\", \"lead generation\", \"/prospector\"",
+  "updated_at": 1778486022044,
+  "version": "1.0.0"
+}
