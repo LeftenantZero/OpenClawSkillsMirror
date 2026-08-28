@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of the multi-task skill: orchestrated parallel batch execution.\n\n- Enables automatic decomposition and parallel processing of multiple similar, independent user tasks.\n- Guides subagent prompt construction to ensure each task is performed in isolation, with clear context and outputs.\n- Suggests optimal dispatch strategy based on batch size: single or multiple waves, with pilot runs for very large batches.\n- Monitors task progress and manages retries for failed tasks to maximize batch throughput.\n- Consolidates and presents results efficiently after parallel execution.",
+  "created_at": 1772280711564,
+  "display_name": "multi task",
+  "fetched_at": 1787893058840,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/advanced-patterns.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Bright Ween",
+    "handle": "brightween",
+    "user_id": "s17drkvacgw4bpaq2evmh6chan83hn80"
+  },
+  "slug": "multi-task",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/multi-task",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=multi-task&ownerHandle=brightween",
+    "page_url": "https://clawhub.ai/brightween/skills/multi-task"
+  },
+  "stats": {
+    "comments": 2,
+    "downloads": 841,
+    "installs": 25,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Orchestrate parallel execution of batch tasks by splitting work into independent units and dispatching them to multiple subagents simultaneously. Use this sk...",
+  "updated_at": 1778491670926,
+  "version": "1.0.0"
+}
