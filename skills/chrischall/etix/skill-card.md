@@ -1,6 +1,6 @@
 ## Description:
 
-Search Etix events, venues, and performers and pull event and venue details via MCP.
+Search Etix events, venues, and performers and pull event/venue details via MCP.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and external users can use this skill to configure and operate an Etix MCP integration for natural-language discovery of Etix events, venues, performers, showtimes, and event details.
+Developers and agents use this skill to search Etix event listings, inspect event or venue details, and troubleshoot the local Etix MCP bridge.
 
 ### Deployment Geography for Use:
 
@@ -22,13 +22,17 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The integration routes Etix requests through the user's browser session and a third-party browser extension.
+Risk: The skill routes Etix requests through the user's browser session by way of a local MCP server and browser extension.
 
-Mitigation: Install only after reviewing the referenced projects, keep the extension limited to the intended Etix workflow, and approve pairing only for expected use.
+Mitigation: Use a dedicated browser profile with only the Etix access intended for the agent, approve pairing deliberately, and review the npm package and extension source before installation.
 
-Risk: The artifact states the project is unofficial, uses Etix website endpoints and pages, and should be used at the user's discretion.
+Risk: Etix does not provide a public consumer API, so the site behavior and endpoints this integration depends on may change.
 
-Mitigation: Use it consistently with Etix's terms and expect Etix site behavior or endpoints to change without notice.
+Mitigation: Run the Etix healthcheck when tool calls fail and confirm important event or venue details on Etix before relying on them.
+
+Risk: Use of the integration may be governed by Etix terms and organizational policy.
+
+Mitigation: Use it only in contexts where routing requests through the user's own browser session is acceptable under applicable terms and internal policy.
 
 ## Reference(s):
 
@@ -42,15 +46,15 @@ Mitigation: Use it consistently with Etix's terms and expect Etix site behavior 
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with JSON and bash code blocks]
+**Output Format:** [Markdown with inline JSON and shell command snippets]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires etix-mcp, the fetchproxy browser extension, and an open etix.com browser tab.]
+**Other Properties Related to Output:** [May include MCP tool names, event or venue identifiers, event URLs, venue details, price ranges, and healthcheck guidance.]
 
 ## Skill Version(s):
 
-0.4.3 (source: server release evidence)
+0.4.4 (source: server release evidence)
 
 ## Ethical Considerations:
 
