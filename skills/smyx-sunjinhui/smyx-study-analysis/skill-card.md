@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes child or student study videos to identify learning behavior patterns and produce structured reports with family education suggestions.
+Analyzes children's learning behavior from video or URL inputs and returns structured reports on focus, posture, study habits, risk indicators, and family education suggestions.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users such as parents, caregivers, and education support staff use this skill to analyze study-session video files or URLs, review structured behavior reports, and retrieve historical learning behavior reports. The results are intended for family education support and study habit improvement, not diagnosis.
+Parents, educators, and agents supporting family education use this skill to submit a child's study video or video URL for learning-behavior analysis. It can also retrieve the user's historical learning analysis reports from the configured cloud API.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Sensitive child or student study videos, URLs, derived reports, and account-linked identifiers may be sent to the configured external service.
+Risk: The skill may upload children's study videos or URL references to a remote service.
 
-Mitigation: Use only with appropriate consent, submit the minimum necessary media, and review the configured service and data handling expectations before installation or use.
+Mitigation: Install only after confirming consent to process minors' media and verifying the service endpoint, TLS use, retention policy, and deletion behavior.
 
-Risk: Local workspace data, SQLite records, and persisted tokens can remain on the machine after use.
+Risk: Reports may be associated with an internal or locally generated identity and historical reports can be retrieved from the cloud API.
 
-Mitigation: Avoid shared machines for sensitive use and clear the workspace data directory, local database, and token files when they are no longer needed.
+Mitigation: Review identity handling, access controls, and local workspace storage before use in shared or regulated environments.
 
-Risk: Behavior analysis reports could be mistaken for professional educational, medical, or psychological diagnosis.
+Risk: Security evidence reports a mismatch between privacy claims and observed endpoint, upload, identity-linking, and token-storage behavior.
 
-Mitigation: Treat outputs as family education guidance only and involve qualified professionals for serious learning, behavioral, or health concerns.
+Mitigation: Treat the release as requiring careful review before installation and use the publisher service only where its data-handling terms are acceptable.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-study-analysis)
-- [Skill demo](https://lifeemergence.com/sample.html)
-- [Study analysis API documentation](artifact/references/api_doc.md)
-- [SMYX analysis API documentation](artifact/skills/smyx_analysis/references/api_doc.md)
+- [ClawHub Skill Page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-study-analysis)
+- [Skill Demo](https://lifeemergence.com/sample.html)
+- [API Documentation](references/api_doc.md)
+- [Analysis API Documentation](skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, guidance]
+**Output Type(s):** [text, markdown, json, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown or JSON text containing structured analysis results, risk notes, suggestions, report links, or historical report lists.]
+**Output Format:** [Markdown and JSON analysis reports, optional saved text output, and report links.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include externally hosted report export links and locally saved output files when the output option is used.]
+**Other Properties Related to Output:** [Outputs may include structured learning-behavior results, historical report lists, risk warnings, suggestions, and report export URLs.]
 
 ## Skill Version(s):
 
-1.0.14 (source: server release metadata; artifact frontmatter is 1.0.12)
+1.0.15 (source: ClawHub server release evidence; artifact frontmatter states 1.0.14)
 
 ## Ethical Considerations:
 
