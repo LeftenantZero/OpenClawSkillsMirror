@@ -1,0 +1,33 @@
+{
+  "changelog": "**Expanded and clarified API docs with new template contract and updated auth/error details:**\n\n- Overhauled authentication and error code explanations, adding details on how API keys and subscription status are checked.\n- Updated template contract: templates are now defined by a single code (JSX/TSX) field; legacy fields like jsx/variables/googleFonts are rejected.\n- Expanded image minting endpoint (`/v1/url`) to include new options (`devicePixelRatio`), clearer field constraints, and longer URL expiry.\n- Documented that public image requests 301 redirect to Cloudflare Worker; clarified query params and opaqueness of signed URLs.\n- Updated AI template generation: always uses batch format, lists all error responses, and item-by-item status in responses.\n- Added structured tables for all field types, constraints, and error codes for easier reference.",
+  "created_at": 1772600639274,
+  "display_name": "HTMLPix API",
+  "fetched_at": 1787890164088,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jyma",
+    "handle": "jymaa",
+    "user_id": "s175et200q1zj4prc1tp9pxjn5847gh2"
+  },
+  "slug": "htmlpix",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/htmlpix",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=htmlpix&ownerHandle=jymaa",
+    "page_url": "https://clawhub.ai/jymaa/skills/htmlpix"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 947,
+    "installs": 28,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Use when the user wants to call, test, or integrate the HTMLPix HTML-to-image API \u2014 including auth setup, signed URL minting, image rendering, template CRUD,...",
+  "updated_at": 1778491711300,
+  "version": "0.1.3"
+}
