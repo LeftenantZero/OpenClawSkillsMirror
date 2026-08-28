@@ -1,0 +1,79 @@
+{
+  "changelog": "Initial release of claw-mail: a secure, multi-account email management tool for IMAP/SMTP.\n\n- Manage multiple email accounts with integrated IMAP/SMTP, OAuth2, and secure credential storage (1Password, macOS Keychain, or environment variables).\n- Supports fetching, reading, searching, sending (with Outbox & automatic retry), replying, forwarding, drafts, folder management, mail merge, archiving, and conversation threading.\n- Provides robust security: enforced TLS 1.2+, hardened ciphers, certificate verification, and S/MIME signing.\n- Rule-based processing pipeline with webhook actions and configurable archival by date.\n- Includes a suite of command-line scripts for all major email and mailbox operations.",
+  "created_at": 1772190999869,
+  "display_name": "claw-mail",
+  "fetched_at": 1787893757618,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/config.example.yaml",
+    "references/REFERENCE.md",
+    "references/RULES.md",
+    "references/TEMPLATES.md",
+    "scripts/archive_mail.py",
+    "scripts/calendar_invite.py",
+    "scripts/compose_mail.py",
+    "scripts/draft_mail.py",
+    "scripts/fetch_mail.py",
+    "scripts/forward_mail.py",
+    "scripts/heartbeat.py",
+    "scripts/idle_monitor.py",
+    "scripts/lib/__init__.py",
+    "scripts/lib/account_manager.py",
+    "scripts/lib/composer.py",
+    "scripts/lib/credential_store.py",
+    "scripts/lib/defaults.py",
+    "scripts/lib/imap_client.py",
+    "scripts/lib/models.py",
+    "scripts/lib/oauth2.py",
+    "scripts/lib/outbox.py",
+    "scripts/lib/pool.py",
+    "scripts/lib/processor.py",
+    "scripts/lib/send_queue.py",
+    "scripts/lib/smime.py",
+    "scripts/lib/smtp_client.py",
+    "scripts/mail_merge.py",
+    "scripts/manage_folders.py",
+    "scripts/move_mail.py",
+    "scripts/process_mail.py",
+    "scripts/read_mail.py",
+    "scripts/reply_mail.py",
+    "scripts/retry_send.py",
+    "scripts/search_mail.py",
+    "scripts/send_mail.py",
+    "scripts/thread_mail.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779963964132,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Kamau Wanguhu",
+    "handle": "borgcube",
+    "user_id": "s1719zp47v2tysmffbyasw7b0d884sa5"
+  },
+  "slug": "claw-mail",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claw-mail",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claw-mail&ownerHandle=borgcube",
+    "page_url": "https://clawhub.ai/borgcube/skills/claw-mail"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 996,
+    "installs": 32,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Multi-account email management skill for IMAP/SMTP. Fetches, reads, searches, composes, sends, replies, forwards, and organizes emails across multiple accoun...",
+  "updated_at": 1778491656611,
+  "version": "1.0.0"
+}
