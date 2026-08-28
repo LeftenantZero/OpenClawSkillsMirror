@@ -1,0 +1,44 @@
+{
+  "changelog": "- Added initial implementation of the Amazon Product Search API skill script at `scripts/amazon_product_search_api.py`.\n- Enables automated product data extraction from Amazon search results using BrowserAct's API.\n- Supports product searching by keywords, brand, result count, and language.\n- Guides user to configure `BROWSERACT_API_KEY` if missing.\n- Monitors execution with status logs and includes robust error handling with a single automatic retry.",
+  "created_at": 1770508340758,
+  "display_name": "Amazon Product Search Api Skill",
+  "fetched_at": 1787942875904,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/amazon_product_search_api.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783656860778,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Henk Nie",
+    "handle": "phheng",
+    "user_id": "s17cnrtda4fqzdjza3g2hx20bs83f18z"
+  },
+  "slug": "amazon-product-search-api-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/amazon-product-search-api-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=amazon-product-search-api-skill&ownerHandle=phheng",
+    "page_url": "https://clawhub.ai/phheng/skills/amazon-product-search-api-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4175,
+    "installs": 141,
+    "stars": 6,
+    "versions": 3
+  },
+  "summary": "This skill is designed to help users automatically extract product data from Amazon search results. The Agent should proactively apply this skill when users...",
+  "updated_at": 1778486077727,
+  "version": "0.1.2"
+}
