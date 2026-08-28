@@ -1,8 +1,8 @@
 {
-  "changelog": "Docs-only: new 'Data & Network Disclosure' section fully documenting the opt-in monitoring feature (enroll endpoint, daily cron line, exact ping payload \u2014 summary counts and check names only, never finding text/config/credentials \u2014 and the disable path), frontmatter network/data_handling claims made consistent with it, and the agent-safety rules reworded to keep their semantics without injection-shaped phrasing. Code unchanged from 0.13.0.",
+  "changelog": "The **Hermes + honest-report** release: read-only Hermes Agent support, and a report that gives every user the full picture for free.\n\n**Added**\n- **Hermes Agent support (read-only):** detects `~/.hermes`, audits model/fallback chain, approvals + command allowlist, prompt caching, compression, memory write-approval, per-channel allowlists (correct per-channel keys, `require_mention` treated as a gate), PII redaction, skill-safety flags, and auth token expiry. Headline check: catches the `hermes config set` defect where a list-valued key is silently stored as one quoted string while `hermes config check` reports healthy. `~/.hermes/skills` included in `scan`. No writes.\n- Hermes-only boxes audit cleanly (missing OpenClaw config no longer aborts).\n- `audit -v/--verbose` to show all informational notes.\n\n**Changed**\n- All fix advice is now **free** \u2014 the licensed feature is `--fix` applying it.\n- Deduplicated human report (\"also flagged by N other checks\"); `--json` unchanged.\n- Info notes collapse to a count by default; Cost Estimate stays visible.\n- Honest health score: info rows no longer count as passes.\n- Multi-agent branding: Claude Code + OpenClaw + Hermes.\n- Bare `npx @drakon-systems/agent-optimizer` runs the audit.\n\nVerified live on an OpenClaw 2026.7.1-2 box and a Hermes 0.15+ box. 700/700 tests.",
   "created_at": 1776286173959,
-  "display_name": "Agent Optimizer",
-  "fetched_at": 1787775824083,
+  "display_name": "Agent Optimizer by Drakon Systems",
+  "fetched_at": 1787932682843,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -22,12 +22,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 813,
+    "downloads": 872,
     "installs": 13,
     "stars": 0,
-    "versions": 4
+    "versions": 5
   },
-  "summary": "CLI tool that audits Claude Code and OpenClaw config files for misconfigurations, token waste, security issues, and stale auth. Reads local JSON/Markdown con...",
-  "updated_at": 1784616200772,
-  "version": "0.13.1"
+  "summary": "CLI tool that audits Claude Code, OpenClaw, and Hermes Agent config files for misconfigurations, token waste, security issues, and stale auth. Reads local JSON/Markdown config files only. No data leaves the machine unless you explicitly enroll in optional daily monitoring (summary counts only \u2014 see Data & Network Disclosure). No API keys required. Other network calls: one-time license activation and npm update check.",
+  "updated_at": 1787809574829,
+  "version": "0.14.0"
 }
