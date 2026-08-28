@@ -1,0 +1,38 @@
+{
+  "changelog": "Initial release: detect over-broad token permissions, pull_request_target+write risk, and missing explicit permissions policy with text/json outputs + fail gate.",
+  "created_at": 1772942907927,
+  "display_name": "GitHub Actions Permission Scope Audit",
+  "fetched_at": 1787884867605,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "fixtures/critical-pr-target-write-all.yml",
+    "fixtures/ok-least-privilege.yml",
+    "fixtures/warn-missing-permissions.yml",
+    "fixtures/warn-write-scope.yml",
+    "scripts/permission-scope-audit.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Daniel Lummis",
+    "handle": "daniellummis",
+    "user_id": "s17fw617wehb1y9a026bgg9yed885cv7"
+  },
+  "slug": "github-actions-permission-scope-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/github-actions-permission-scope-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=github-actions-permission-scope-audit&ownerHandle=daniellummis",
+    "page_url": "https://clawhub.ai/daniellummis/skills/github-actions-permission-scope-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 712,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Audit GitHub Actions workflow permission scope drift to enforce least-privilege token access.",
+  "updated_at": 1778491773474,
+  "version": "1.0.0"
+}
