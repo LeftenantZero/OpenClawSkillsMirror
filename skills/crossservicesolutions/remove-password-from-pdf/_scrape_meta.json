@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release \u2014 remove passwords from PDF files via Solutions API.\n\n- Accepts a password-protected PDF, current password, and API key.\n- Uploads the file to the Solutions API and polls for job completion.\n- Returns a download URL for the unlocked PDF along with job status and file name.",
+  "created_at": 1770604136817,
+  "display_name": "Remove password from PDF",
+  "fetched_at": 1787906556385,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/request.json",
+    "requirements.txt",
+    "scripts/remove-password-from-pdf.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779961502093,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "CrossServiceSolutions",
+    "handle": "crossservicesolutions",
+    "user_id": "s177d5e22d11bz43r6pegrm47s8845v0"
+  },
+  "slug": "remove-password-from-pdf",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/remove-password-from-pdf",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=remove-password-from-pdf&ownerHandle=crossservicesolutions",
+    "page_url": "https://clawhub.ai/crossservicesolutions/skills/remove-password-from-pdf"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1711,
+    "installs": 54,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Remove password protection from a PDF by uploading it (with its current password) to the Solutions API, polling until completion, then returning a download URL for the unlocked PDF.",
+  "updated_at": 1778486092879,
+  "version": "1.0.0"
+}
