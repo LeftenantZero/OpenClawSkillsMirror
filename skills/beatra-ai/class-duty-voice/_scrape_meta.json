@@ -1,0 +1,55 @@
+{
+  "changelog": "class-duty-voice v0.1.1\n\n- Clarified scope and adjacent workflow routing; clearly distinguishes this skill from related voice/narration skills.\n- Expanded detailed guidance on collecting and validating roster, pronunciation, and required clip count.\n- Added explicit instructions for handling paid stages, credit checks, and error flows for both cloning and speech synthesis.\n- Made workflow steps, task recovery, and artifact delivery requirements more specific and robust.\n- Strengthened safety and voice rights requirements, and defined file upload and voice cloning consent procedures.\n- Outlined precise usage of bundled MCP client and blocked direct API or connector calls.\n- Documented automatic safe update mechanisms for the packaged client.",
+  "created_at": 1787883274199,
+  "display_name": "class-duty-voice",
+  "fetched_at": 1787931905455,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "references/automatic-updates-and-safety.md",
+    "references/billing-errors-and-recovery.md",
+    "references/installation-and-auth.md",
+    "references/installation-registration.md",
+    "references/mcp-connection.md",
+    "references/tasks-and-results.md",
+    "references/uninstall-and-disconnect.md",
+    "references/workflow.md",
+    "scripts/authorize.py",
+    "scripts/mcp_client.py",
+    "scripts/uninstall.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787884228816,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "beatra-ai",
+    "handle": "beatra-ai",
+    "user_id": "s176vcp4w7b7tt3j7a62gdnfys8cntp4"
+  },
+  "slug": "class-duty-voice",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/class-duty-voice",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=class-duty-voice&ownerHandle=beatra-ai",
+    "page_url": "https://clawhub.ai/beatra-ai/skills/class-duty-voice"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 26,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Turn a written class duty roster into one class duty voice clip per labeled cue. This duty roster voice studio records each class duty audio and roster reminder from the list the teacher already wrote, then delivers 8 to 20 class duty voice pack files. Use it for duty clip packs that keep one roster item on each clip.",
+  "updated_at": 1787883393661,
+  "version": "0.1.1"
+}
