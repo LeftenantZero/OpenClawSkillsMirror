@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External growers, agronomists, and developers use this skill to diagnose plant nutrient deficiency or excess from leaf images or videos, generate structured analysis, and retrieve cloud-hosted diagnosis history. The results support precision fertilization decisions but should be checked against soil tests and local agricultural guidance.
+Growers, agronomy advisors, and agents can use this skill to analyze plant leaf images or videos for nutrient deficiencies, excesses, likely physiological causes, and fertilization suggestions. It can also query account-linked historical diagnosis reports from the cloud service.
 
 ### Deployment Geography for Use:
 
@@ -22,34 +22,41 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill automatically links a local or cloud identity and persists account tokens.
+Risk: Plant images, videos, or URLs are sent to a Life Emergence cloud service for analysis.
 
-Mitigation: Install only if the publisher and backend service are trusted, and review account linkage and token storage behavior before use.
+Mitigation: Install only when cloud processing is acceptable, disclose the upload behavior to users, and confirm production HTTPS endpoints before deployment.
 
-Risk: Plant media and report history requests are sent to backend services with incomplete and inconsistent disclosure.
+Risk: The skill can silently create or reuse cloud identities and query account-linked history.
 
-Mitigation: Review configured backend URLs, retention, and account behavior before deployment, and avoid submitting sensitive media unless that storage model is acceptable.
+Mitigation: Require explicit consent for account and history actions, and disclose how report history is associated with users.
+
+Risk: Local workspace data may store identity records and tokens.
+
+Mitigation: Review token storage before approval and remove or restrict persistent local credentials unless they are essential.
+
+Risk: Plant nutrition diagnosis may be incomplete or misleading without soil testing and local agronomic context.
+
+Mitigation: Treat results as fertilization guidance and confirm recommendations with soil tests or local agricultural extension advice.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-plant-nutrition-diagnosis-analysis)
-- [Publisher Profile](https://clawhub.ai/user/smyx-sunjinhui)
-- [API Documentation](skills/smyx_analysis/references/api_doc.md)
-- [Skill Demo](https://lifeemergence.com/sample.html)
+- [ClawHub skill page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-plant-nutrition-diagnosis-analysis)
+- [Skill demo](https://lifeemergence.com/sample.html)
+- [API interface documentation](skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown text with structured JSON report content and report links]
+**Output Format:** [Markdown and JSON-oriented text with shell command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May upload plant media to backend services and query cloud report history associated with an automatically resolved identity.]
+**Other Properties Related to Output:** [May include structured diagnosis results, fertilization guidance, cloud report links, and Markdown tables for history queries.]
 
 ## Skill Version(s):
 
-1.0.10 (source: server release metadata; artifact frontmatter says 1.0.14)
+1.0.11 (source: release metadata)
 
 ## Ethical Considerations:
 
