@@ -1,0 +1,43 @@
+{
+  "changelog": "Summary: This update changes the AI privacy guard from a silent/passive protector to an informative one, providing user notifications for all security actions without interrupting workflow.\n\n- The guard now briefly notifies users of any data protection actions taken (execution, anonymization, cancellation, or block).\n- All decisions (execution, anonymization, cancellation, phishing block) are now explicitly communicated to the user in a non-intrusive way.\n- Phishing attempts are blocked and the user receives a one-time warning.\n- The principle and scenario descriptions have been updated to reflect the new informative notification approach.\n- Workflow remains non-disruptive\u2014no confirmations or prompts are required from users.",
+  "created_at": 1773587358045,
+  "display_name": "AI Safety Guard",
+  "fetched_at": 1787939345406,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090201520,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Andre Wu",
+    "handle": "andreqingyuwu",
+    "user_id": "s170h1xx6qw2aqb53v7as49xhh83qwzp"
+  },
+  "slug": "ai-safety-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-safety-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-safety-guard&ownerHandle=andreqingyuwu",
+    "page_url": "https://clawhub.ai/andreqingyuwu/skills/ai-safety-guard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1033,
+    "installs": 28,
+    "stars": 5,
+    "versions": 7
+  },
+  "summary": "Lightweight passive privacy guard for OpenClaw \u2014 intelligently prevents user data from leaking externally. TRIGGER: before the AI sends or outputs any data t...",
+  "updated_at": 1778491928981,
+  "version": "1.0.6"
+}
