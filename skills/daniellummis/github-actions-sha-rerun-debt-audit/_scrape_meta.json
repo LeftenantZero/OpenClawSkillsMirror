@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of the GitHub Actions SHA Rerun Debt Audit skill.\n\n- Audits GitHub Actions run exports to detect commits that repeatedly trigger reruns and CI minutes usage.\n- Aggregates and ranks rerun \"debt\" by repository and commit SHA.\n- Scores and emits severity (`ok`, `warn`, `critical`) based on rerun rate, failure count, wasted minutes, and workflow spread.\n- Highly configurable with environment variables and filters for SHAs, branches, workflows, events, and repositories.\n- Supports text and JSON reports, with optional CI gate failure on critical findings.",
+  "created_at": 1772903273416,
+  "display_name": "GitHub Actions SHA Rerun Debt Audit",
+  "fetched_at": 1787885393169,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/sha-rerun-debt-audit.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Daniel Lummis",
+    "handle": "daniellummis",
+    "user_id": "s17fw617wehb1y9a026bgg9yed885cv7"
+  },
+  "slug": "github-actions-sha-rerun-debt-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/github-actions-sha-rerun-debt-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=github-actions-sha-rerun-debt-audit&ownerHandle=daniellummis",
+    "page_url": "https://clawhub.ai/daniellummis/skills/github-actions-sha-rerun-debt-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 756,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Audit rerun debt by commit SHA to find commits that repeatedly burn CI minutes across workflows.",
+  "updated_at": 1778491768590,
+  "version": "1.0.0"
+}
