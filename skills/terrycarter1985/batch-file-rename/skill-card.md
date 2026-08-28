@@ -1,6 +1,6 @@
 ## Description:
 
-Batch rename files with pattern substitution, prefix and suffix addition, sequential numbering, case conversion, extension changes, dry-run previews, rename logs, and undo support.
+Batch file renaming utility with pattern matching, regex, sequence numbering, and dry-run preview. Supports prefix/suffix, case conversion, whitespace cleanup, and recursive directory processing.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, operators, and other external users can use this skill to standardize groups of filenames, add sequence numbers, change case or extensions, and generate undoable rename operations. Users should preview with --dry-run before performing real renames.
+Developers, operators, and other end users use this skill to generate shell command recipes for bulk file renaming, including pattern replacement, sequence numbering, normalization, and recursive processing with dry-run checks.
 
 ### Deployment Geography for Use:
 
@@ -22,31 +22,30 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The security evidence reports that the skill falsely says dry-run is the default while the script performs real renames unless --dry-run is explicitly requested.
+Risk: Bulk rename commands can change many filenames in the wrong folder if run without review.
 
-Mitigation: Run with --dry-run first, test on a small copied directory, and review the proposed rename list before running a real rename.
+Mitigation: Run the dry-run preview first and confirm the working directory before applying any mv commands.
 
-Risk: Batch rename operations can unintentionally change many files when the target directory, glob, or rename pattern is wrong.
+Risk: Filename collisions can fail a rename or overwrite existing files in some environments.
 
-Mitigation: Use an explicit --dir path, narrow the --glob pattern where possible, preserve the generated rename log, and use undo promptly if the result is incorrect.
+Mitigation: Check the proposed destination names for collisions and make a backup before bulk operations.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/terrycarter1985/skills/batch-file-rename)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Shell commands, Configuration]
+**Output Type(s):** [text, markdown, shell commands, guidance]
 
-**Output Format:** [Markdown with inline bash code blocks]
+**Output Format:** [Markdown with bash code blocks]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May result in filesystem rename operations and generated rename logs when the script is executed.]
+**Other Properties Related to Output:** [Includes dry-run preview recipes, backup guidance, quoting guidance, and collision checks for bulk rename operations.]
 
 ## Skill Version(s):
 
-1.0.0 (source: server release metadata and artifact/_meta.json)
+1.0.1 (source: release evidence)
 
 ## Ethical Considerations:
 

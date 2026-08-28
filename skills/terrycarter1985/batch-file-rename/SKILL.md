@@ -1,130 +1,116 @@
 ---
 name: batch-file-rename
-description: Batch rename files with pattern substitution, prefix/suffix addition, sequential numbering, case conversion, and extension changes. Dry-run by default for safety. Use when you need to rename multiple files at once, standardize naming conventions, add sequence numbers, or convert file extensions in bulk.
-metadata:
-  openclaw:
-    emoji: "🔁"
+description: Batch file renaming utility with pattern matching, regex, sequence numbering, and dry-run preview. Supports prefix/suffix, case conversion, whitespace cleanup, and recursive directory processing.
+metadata: {"openclaw":{"emoji":"📝"}}
 ---
 
 # Batch File Rename
 
-Safely rename multiple files with preview-first semantics.
+Rename multiple files using flexible patterns with safe dry-run preview.
 
-## When to use it
+## When to Use
 
-- Standardize filenames across a directory (e.g., all lowercase, spaces → underscores)
-- Add sequential numbers (`photo_001.jpg`, `photo_002.jpg`, …)
-- Add prefixes or suffixes to batches of files
-- Replace patterns in filenames (e.g., `draft_` → `final_`)
-- Change extensions in bulk (`.JPG` → `.jpg`, `.md` → `.txt`)
-- Revert accidental renames via generated undo script
+- Bulk rename files in a directory (photos, downloads, exports)
+- Normalize file names (trim whitespace, lowercase, replace separators)
+- Add sequence numbers (e.g., `001-file.txt`, `002-file.txt`)
+- Replace patterns with regex across many files
+- Process directories recursively
 
 ## Prerequisites
 
-- `bash` 4+
-- `python3` (optional, for Unicode-safe slugify)
-- No external dependencies required
+- No external dependencies — uses only shell builtins and `sed`/`awk`
 
-## Quick Start
+## Basic Steps
 
-### 1. Dry-run (always do this first)
+### 1. Dry-run preview (always do this first)
 
 ```bash
-bash scripts/batch-rename.sh --dir /path/to/files --dry-run
+# Preview rename with prefix + sequence number
+for f in *.txt; do
+  [ -f "$f" ] || continue
+  echo "Would rename: $f → photo-001-$f"
+done
 ```
 
-Output example:
-```
-[DRY-RUN] photo 1.JPG → photo_001.JPG
-[DRY-RUN] photo 2.JPG → photo_002.JPG
-[DRY-RUN] photo 3.JPG → photo_003.JPG
-3 files will be renamed
-```
-
-### 2. Add sequential numbers
+### 2. Prefix + sequence number
 
 ```bash
-bash scripts/batch-rename.sh --dir ./photos --number --prefix "vacation_" --start 1 --digits 3
+i=1
+for f in *.jpg *.png; do
+  [ -f "$f" ] || continue
+  printf -v new "vacation-%03d-%s" "$i" "$f"
+  echo "Renaming: $f → $new"
+  mv -- "$f" "$new"
+  ((i++))
+done
 ```
 
-### 3. Pattern substitution
+### 3. Regex pattern replace
 
 ```bash
-bash scripts/batch-rename.sh --dir ./docs --replace "draft_" --with "final_"
+# Replace spaces with underscores, lowercase everything
+for f in *; do
+  [ -f "$f" ] || continue
+  new=$(echo "$f" | tr '[:upper:] ' '[:lower:]_' | sed 's/[^a-z0-9._-]/_/g' | sed 's/_\+/_/g')
+  [ "$f" != "$new" ] && mv -- "$f" "$new" && echo "$f → $new"
+done
 ```
 
-### 4. Change case + extension
+### 4. Strip prefix from all files
 
 ```bash
-bash scripts/batch-rename.sh --dir ./files --lowercase --ext-lower
+for f in report-*.pdf; do
+  [ -f "$f" ] || continue
+  new="${f#report-}"
+  mv -- "$f" "$new" && echo "$f → $new"
+done
 ```
 
-### 5. Full options
+### 5. Recursive rename in subdirectories
 
 ```bash
-bash scripts/batch-rename.sh [OPTIONS]
-
-Options:
-  --dir DIR        Target directory (required)
-  --dry-run        Preview changes without renaming
-  --number         Add sequential numbers
-  --prefix P       Prepend P to each filename
-  --suffix S       Append S before extension
-  --start N        Starting number for --number (default: 1)
-  --digits N       Pad width for --number (default: 3)
-  --replace FROM   Replace FROM pattern in filenames
-  --with TO        Replace with TO (default: empty)
-  --lowercase      Convert filenames to lowercase
-  --uppercase      Convert filenames to uppercase
-  --ext-lower      Convert extensions to lowercase
-  --ext-upper      Convert extensions to uppercase
-  --glob PAT       Only match files matching PAT (default: *)
-  --undo FILE      Undo using a previous rename log
-  --log FILE       Write rename log to FILE (default: <dir>/.rename-log-<timestamp>)
-  -h, --help       Show this help
+find . -type f -name "*.tmp" | while read -r f; do
+  dir=$(dirname "$f")
+  base=$(basename "$f" .tmp)
+  new="$dir/$base.txt"
+  mv -- "$f" "$new" && echo "$f → $new"
+done
 ```
 
-## Safety Features
+## Key Safety Rules
 
-1. **Dry-run by default** — always preview before committing
-2. **Collision detection** — aborts if two files would get the same name
-3. **Rename log** — every real run writes a log that can `--undo`
-4. **No overwrite** — refuses to overwrite existing files
+1. **Always dry-run first** — replace `mv` with `echo "Would rename:"` and verify output
+2. **Quote variables** — `"$f"` not `$f` (handles spaces and special chars)
+3. **Use `--` in mv** — `mv -- "$f" "$new"` prevents option injection
+4. **Backup first** — `tar czf backup.tar.gz *.txt` before bulk operations
+5. **Check collisions** — if two files map to the same name, the rename will fail or overwrite
 
-## Undo
-
-Every real run generates `<dir>/.rename-log-<timestamp>`:
-
-```
-RENAME|photo 1.JPG|photo_001.JPG
-RENAME|photo 2.JPG|photo_002.JPG
-```
-
-Undo:
-```bash
-bash scripts/batch-rename.sh --undo ./photos/.rename-log-20260816-231500
-```
-
-## Examples
-
-### Standardize a download folder
+## Example: Normalize Downloads Folder
 
 ```bash
-bash scripts/batch-rename.sh --dir ~/Downloads --lowercase --ext-lower --replace " " --with "_"
+cd ~/Downloads
+# Dry run
+for f in *; do
+  [ -f "$f" ] || continue
+  new=$(echo "$f" | tr '[:upper:] ' '[:lower:]_' | sed 's/[^a-z0-9._-]/_/g')
+  echo "$f → $new"
+done
+# After verifying, apply:
+for f in *; do
+  [ -f "$f" ] || continue
+  new=$(echo "$f" | tr '[:upper:] ' '[:lower:]_' | sed 's/[^a-z0-9._-]/_/g')
+  [ "$f" != "$new" ] && mv -- "$f" "$new"
+done
 ```
 
-### Number photos for a gallery
+## Example: Sequential Numbering for Photos
 
 ```bash
-bash scripts/batch-rename.sh --dir ./gallery --number --prefix "img_" --digits 4 --start 100
+i=1
+for f in IMG_*.JPG; do
+  [ -f "$f" ] || continue
+  printf -v new "trip-2026-%03d.JPG" "$i"
+  mv -- "$f" "$new"
+  ((i++))
+done
 ```
-
-### Convert .JPG to .jpg in place
-
-```bash
-bash scripts/batch-rename.sh --dir ./photos --ext-lower --glob "*.JPG"
-```
-
-## Script
-
-See `scripts/batch-rename.sh` for the full implementation.
