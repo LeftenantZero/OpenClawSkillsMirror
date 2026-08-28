@@ -1,0 +1,33 @@
+{
+  "changelog": "Major security and workflow update: The skill is now strictly read-only and no longer creates or manages carts or checkout sessions.\n\n- Skill purpose is now limited to product discovery, template, and lead time retrieval\u2014no cart or checkout execution.\n- All session and user PII handling is prohibited; users must manually add products to cart themselves.\n- Outputs now use \"Shopping List\" format with direct product and template links instead of cart/checkout links.\n- Security guardrails are strengthened: checkout/session manipulation and PII collection are now explicitly forbidden.\n- Timeline and event advice preserved, but recommends contacting support for expedited shipping rather than facilitating it directly.",
+  "created_at": 1771268783772,
+  "display_name": "BriteBooth Procurement",
+  "fetched_at": 1787900847468,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Vismonkey19",
+    "handle": "vismonkey19",
+    "user_id": "s17eay32tzxpmt1sam8ss13pmd8848vy"
+  },
+  "slug": "britebooth-procurement",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/britebooth-procurement",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=britebooth-procurement&ownerHandle=vismonkey19",
+    "page_url": "https://clawhub.ai/vismonkey19/skills/britebooth-procurement"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1344,
+    "installs": 39,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Read-only assistant for BriteBooth.com. Collects product IDs, templates, and lead times. Requires human execution for cart creation.",
+  "updated_at": 1778491560329,
+  "version": "3.0.0"
+}
