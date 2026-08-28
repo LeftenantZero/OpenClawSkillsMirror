@@ -1,6 +1,6 @@
 ## Description:
 
-MyBooks lets an agent manage a personal MyBooks library, including search, metadata updates, reading status, notes import, uploads, device delivery, and MiMo TTS audiobook workflows.
+MyBooks lets an agent work with a user's MyBooks personal library to search and manage books, metadata, reading status, per-format reading progress, delivery, uploads, third-party annotations, and MiMo TTS audiobook workflows.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and their agents use this skill to operate a MyBooks personal library server: finding books, editing metadata, managing reading state, importing annotations, uploading books, sending books to devices, and running supported TTS audiobook tasks.
+Developers and readers use this skill to let an agent operate a self-hosted MyBooks library: querying catalog and reading stats, editing metadata, sending or uploading books, importing annotations, and managing TTS audiobook tasks.
 
 ### Deployment Geography for Use:
 
@@ -22,36 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill authenticates to a MyBooks server and can expose credentials if they are stored in shared configuration.
+Risk: The skill uses MyBooks credentials and session cookies to access a personal library.
 
-Mitigation: Provide credentials through session-level environment variables or a secret manager, and avoid writing them to shared or global config files.
+Mitigation: Use session-scoped environment variables or a dedicated secret manager, and avoid placing MYBOOKS_USER or MYBOOKS_PASSWORD in shared or global environment files.
 
-Risk: The skill can upload, download, and modify library records using local file paths and server API calls.
+Risk: Disabling TLS verification can expose credentials and library data when the MyBooks host is not local or otherwise trusted.
 
-Mitigation: Pass only the specific ebook, audio, or output paths needed for the requested action, and confirm intended library changes before mutation-heavy operations.
+Mitigation: Keep TLS verification enabled for non-local hosts and disable it only for trusted self-signed deployments.
 
-Risk: Disabling SSL verification can weaken transport protections outside a trusted local or self-signed deployment.
+Risk: Book text, ebook files, annotations, TTS API keys, and voice samples can contain sensitive personal or licensed content.
 
-Mitigation: Keep SSL verification enabled unless connecting to a trusted self-signed local deployment.
+Mitigation: Confirm upload, delivery, annotation import, and TTS destinations before use, and treat book files, extracted text, voice samples, and provider keys as sensitive data.
+
+Risk: Metadata edits, reading-progress updates, note imports, and note-clearing operations can change the user's MyBooks library state.
+
+Mitigation: Preview or query existing records first where supported, confirm user intent for write operations, and use dry-run flows for annotation imports before committing changes.
 
 ## Reference(s):
 
-- [MyBooks Homepage](https://www.mybooks.top)
-- [ClawHub MyBooks Skill Page](https://clawhub.ai/poxenstudio/skills/mybooks)
+- [MyBooks homepage](https://www.mybooks.top)
+- [ClawHub MyBooks skill page](https://clawhub.ai/poxenstudio/skills/mybooks)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, JSON]
+**Output Type(s):** [text, json, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with shell command examples and JSON API responses]
+**Output Format:** [Markdown guidance with inline shell commands and JSON API responses]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires python3 plus MYBOOKS_HOST, MYBOOKS_USER, and MYBOOKS_PASSWORD; MYBOOKS_SSL_VERIFY is optional for trusted self-signed local deployments.]
+**Other Properties Related to Output:** [Requires python3 and the MYBOOKS_HOST, MYBOOKS_USER, and MYBOOKS_PASSWORD environment variables.]
 
 ## Skill Version(s):
 
-1.0.3 (source: server release metadata)
+1.0.4 (source: ClawHub release evidence)
 
 ## Ethical Considerations:
 
