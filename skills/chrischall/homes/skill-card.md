@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to retrieve homes.com real-estate listing data, property records, market summaries, saved homes, saved searches, and photo galleries through an MCP server. It also supports local mortgage, affordability, and rent-versus-buy calculations when the user supplies the required inputs.
+External users and real-estate workflows use this skill to search homes.com listings, resolve property addresses, review property records, compare homes, inspect price and tax history, retrieve photo galleries, and run local mortgage or affordability calculations.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,34 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can read homes.com pages visible in the user's active browser session, including saved homes and saved searches when requested.
+Risk: The skill can route homes.com requests through a signed-in Chrome session and may expose saved homes or saved searches to the agent when those tools are used.
 
-Mitigation: Install and use it only when read access to the active homes.com session is acceptable, and treat the integration as read-only homes.com automation rather than an official homes.com API.
+Mitigation: Use the saved-items tools only when account-derived homes.com data is appropriate for the agent context.
 
-Risk: homes.com access depends on a signed-in browser tab and the fetchproxy extension, so availability and returned data can depend on the user's live browser session.
+Risk: The skill depends on a separately installed fetchproxy browser extension.
 
-Mitigation: Confirm that the browser session and fetchproxy extension are active before relying on results, especially for saved homes or saved searches.
+Mitigation: Install the fetchproxy extension only from the referenced source and review it before use.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/chrischall/skills/homes)
 - [homes-mcp npm package](https://www.npmjs.com/package/homes-mcp)
-- [fetchproxy extension setup](https://github.com/chrischall/fetchproxy)
+- [homes-mcp source referenced by the skill](https://github.com/chrischall/homes-mcp)
+- [fetchproxy extension source referenced by setup](https://github.com/chrischall/fetchproxy)
+- [ClawHub skill page](https://clawhub.ai/chrischall/skills/homes)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, configuration, guidance]
 
-**Output Format:** [Markdown and structured text with inline configuration examples]
+**Output Format:** [Markdown or structured text with MCP setup configuration and real-estate lookup results]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Read-only MCP outputs may include homes.com listing details, property history, saved-home data, photo URLs, market summaries, and calculator results.]
+**Other Properties Related to Output:** [May include homes.com listing details, property records, price and tax history, market statistics, saved-items summaries, photo URLs, and local calculator outputs.]
 
 ## Skill Version(s):
 
-1.1.3 (source: server release evidence)
+1.1.4 (source: server release evidence)
 
 ## Ethical Considerations:
 
