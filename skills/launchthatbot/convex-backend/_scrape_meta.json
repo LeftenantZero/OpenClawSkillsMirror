@@ -1,0 +1,45 @@
+{
+  "changelog": "convex-backend 1.0.4\n\n- Adds detailed instructions and rules for setting up Convex as a backend for secrets, memory, and logs, replacing local file storage.\n- Now requires manual provisioning of `CONVEX_DEPLOY_KEY` (and optionally `CONVEX_DEPLOYMENT`) through environment variables.\n- Includes setup and usage notes for mcporter compatibility as a bridge to MCP tools in certain runtimes.\n- Introduces strict secret handling and bootstrap rules to ensure security and proper operation.\n- Documents the deploy step for integrating the Convex skill backend, with specific guidelines for custom backend logic and migration from local functions to Convex.",
+  "created_at": 1772567277647,
+  "display_name": "Convex Backend",
+  "fetched_at": 1787890469501,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "convex.json",
+    "convex/_generated/api.js",
+    "convex/_generated/server.js",
+    "convex/components/openclawBackend/README.md",
+    "convex/components/openclawBackend/convex.config.js",
+    "convex/components/openclawBackend/memory.js",
+    "convex/components/openclawBackend/schema.js",
+    "convex/components/openclawBackend/server.js",
+    "convex/convex.config.js",
+    "convex/memory.js",
+    "package.json",
+    "tsconfig.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "launchthatbot",
+    "handle": "launchthatbot",
+    "user_id": "s1705196z5fbzbq59es237jgfn885ht3"
+  },
+  "slug": "convex-backend",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/convex-backend",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=convex-backend&ownerHandle=launchthatbot",
+    "page_url": "https://clawhub.ai/launchthatbot/skills/convex-backend"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 405,
+    "installs": 7,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Store secrets, long-term memory, daily logs, and anything custom in your Convex backend instead of local files",
+  "updated_at": 1778491707669,
+  "version": "1.0.4"
+}
