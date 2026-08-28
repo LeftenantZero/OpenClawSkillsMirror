@@ -1,0 +1,63 @@
+{
+  "changelog": "No changes detected in this version.\n\n- Version 1.2.1 does not include any file modifications or user-facing updates.",
+  "created_at": 1787877795446,
+  "display_name": "KWDB Data Migration",
+  "fetched_at": 1787932082533,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/migration-checklist.md",
+    "assets/migration-checklist.zh.md",
+    "assets/prompt-examples.md",
+    "assets/prompt-examples.zh.md",
+    "assets/user-interaction-scenarios.md",
+    "assets/user-interaction-scenarios.zh.md",
+    "references/api-reference.md",
+    "references/config-templates.md",
+    "references/ddl-syntax.md",
+    "references/error-codes.md",
+    "references/source-types.md",
+    "references/type-mapping.md",
+    "scripts/README.md",
+    "scripts/__init__.py",
+    "scripts/api_client.py",
+    "scripts/config.py",
+    "scripts/config_validator.py",
+    "scripts/data_source.py",
+    "scripts/error_handler.py",
+    "scripts/migration_task.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787878980889,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "KWDB",
+    "handle": "kwdb",
+    "user_id": "s17e2f9k2hwm2p7q50y9wz03fs8445dh"
+  },
+  "slug": "kwdb-data-migration",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kwdb-data-migration",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kwdb-data-migration&ownerHandle=kwdb",
+    "page_url": "https://clawhub.ai/kwdb/skills/kwdb-data-migration"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 39,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Automated heterogeneous database migration skill for KaiwuDB / KWDB via KDTS REST API. Use this skill whenever the user mentions: - heterogeneous migration, cross-database migration, or data migration to KaiwuDB / KWDB - KDTS, migration tool, or data transfer between different databases - Specific source databases: MySQL, Oracle, PostgreSQL, SQL Server, ClickHouse, TDengine, InfluxDB, OpenTSDB, MongoDB, FTP, HDFS - Migration operations: create migration task, configure data source, test connection, import data, sync schema, batch migration - Migration management: query task status, view migration progress, check logs, kill migration, export/import config - Data type mapping, table structure sync, DDL generation, schema validation Even if the user does not explicitly say \"migration\", trigger this skill when they ask to transfer or sync data between databases with different engines.",
+  "updated_at": 1787878278982,
+  "version": "1.2.1"
+}
