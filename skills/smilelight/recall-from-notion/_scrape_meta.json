@@ -1,0 +1,43 @@
+{
+  "changelog": "- Added critical guidance for Claude Code/Claude.ai (MCP) platforms: do not parallel-call multiple semantic searches (`notion-search`) against the same Memory Store database\u2014run sequentially or combine queries to avoid errors.\n- Updated recall search strategy to prefer a single, well-crafted natural language query over multiple keyword searches, improving both performance and coverage.\n- Clarified when and how to add a second search only if the first misses a key topic.\n- No code or behavior changes; documentation updates only.",
+  "created_at": 1772456587559,
+  "display_name": "recall-from-notion",
+  "fetched_at": 1787891513080,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089756738,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Defang Li",
+    "handle": "smilelight",
+    "user_id": "s17bt93a83ag9heaxp81ya4fy986608s"
+  },
+  "slug": "recall-from-notion",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/recall-from-notion",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=recall-from-notion&ownerHandle=smilelight",
+    "page_url": "https://clawhub.ai/smilelight/skills/recall-from-notion"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 871,
+    "installs": 25,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Recall user memories from the Notion Memory Store. Trigger PROACTIVELY at the beginning of conversations where knowing the user's background, preferences, pa...",
+  "updated_at": 1778491691403,
+  "version": "1.0.3"
+}
