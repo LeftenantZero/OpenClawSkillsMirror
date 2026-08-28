@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release of llm-signal-geo-analyst.\n\n- Enables deterministic GEO action plan fetching, site health checks, and execution/review of OpenClaw agent workflows.\n- Supports automatic execution of safe actions, while routing manual/assist actions for human approval.\n- Integrates with LLM Signal agent APIs; requires specific environment variables and key binaries (`curl` or PowerShell).\n- Provides clear output format for action recommendations.\n- Compatible only with Growth and Pro plans.",
+  "created_at": 1772843993371,
+  "display_name": "LLM Signal GEO Analyst",
+  "fetched_at": 1787886374700,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "prompts/system.txt",
+    "scripts/fetch-plan.sh",
+    "scripts/fetch-status.sh",
+    "skill-card.md",
+    "templates/plan.request.json",
+    "templates/status.request.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089786948,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ImMythz",
+    "handle": "immythz",
+    "user_id": "s174jqtnyjyy8x4bjje6ryzha5885mh8"
+  },
+  "slug": "llm-signal-geo-analyst",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/llm-signal-geo-analyst",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=llm-signal-geo-analyst&ownerHandle=immythz",
+    "page_url": "https://clawhub.ai/immythz/skills/llm-signal-geo-analyst"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 786,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Run LLM Signal GEO analyst workflows from OpenClaw. Use when you need to fetch deterministic GEO action plans, check site health status, and execute/review h...",
+  "updated_at": 1778491757870,
+  "version": "0.1.0"
+}
