@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and operators use this skill to analyze child-monitoring videos or URLs for hazardous behavior, generate structured risk reports, and query cloud-stored historical reports.
+Developers and operators use this skill to submit child-monitoring media for hazardous-behavior recognition, alerts, structured reports, and report history lookup in home, kindergarten, or nursery settings.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,42 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Child-safety videos or URLs may be processed through the provider's cloud services.
+Risk: Real child, home, school, or nursery footage may be uploaded or referenced by URL for backend analysis.
 
-Mitigation: Use the skill only when the operator accepts the provider's media processing, retention, and deletion practices for sensitive child-safety footage.
+Mitigation: Use only approved media with appropriate consent, and install the skill only after trusting the publisher and backend data flow.
 
-Risk: The skill can create or reuse a local identity tied to cloud-stored reports.
+Risk: The skill can silently create or reuse an internal identity and store service tokens in the local workspace database.
 
-Mitigation: Review identity handling and cloud report association before deployment, and avoid exposing internal identity values in user-facing outputs.
+Mitigation: Run it in an isolated workspace, restrict local file access, and clear local identity or token state when the analysis session is complete.
 
-Risk: Bundled common configuration may select development or private-network endpoints.
+Risk: Cloud report history queries can expose sensitive child-monitoring reports.
 
-Mitigation: Review and update configuration endpoints before use in production or customer-facing environments.
+Mitigation: Limit history access to authorized users and review report history behavior before enabling the skill in shared environments.
 
-Risk: Account tokens may be persisted with incomplete disclosure.
+Risk: Automated alerts are an auxiliary child-safety aid and may miss or misclassify dangerous behavior.
 
-Mitigation: Confirm token storage, rotation, and deletion practices before installing or running the skill.
+Mitigation: Require human confirmation of alerts and do not use the skill as the sole supervision or emergency-response mechanism.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-child-dangerous-behavior-recognition-analysis)
-- [Skill demo](https://lifeemergence.com/sample.html)
-- [API documentation](references/api_doc.md)
-- [Analysis API documentation](skills/smyx_analysis/references/api_doc.md)
+- [ClawHub Skill Page](https://clawhub.ai/18072937735/skills/smyx-child-dangerous-behavior-recognition-analysis)
+- [Skill Demo](https://lifeemergence.com/sample.html)
+- [API Documentation](references/api_doc.md)
+- [Common Analysis API Documentation](skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Analysis, API Calls, Markdown, JSON, Files, Shell commands, Guidance]
+**Output Type(s):** [text, markdown, JSON, files, shell commands, guidance]
 
-**Output Format:** [Markdown summaries, JSON analysis results, report links, and optional output files]
+**Output Format:** [Markdown or JSON structured analysis report with optional saved output file]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Supports local video files or video URLs, configurable alert threshold, basic/standard/json detail levels, and historical report listing.]
+**Other Properties Related to Output:** [Reports can include detected behavior details, alert status, recommendations, report links, and cloud report history results.]
 
 ## Skill Version(s):
 
-1.0.12 (source: server release metadata; artifact frontmatter reports 1.0.13)
+1.0.13 (source: server release metadata; artifact frontmatter and auto changelog mention 1.0.14)
 
 ## Ethical Considerations:
 
