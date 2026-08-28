@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators and social media operators use this skill to turn a photo, topic idea, or accepted draft into a vertical 3:4 REDnote cover or post image with platform-appropriate composition and text-safe space.
+External creators and agents use this skill to transform source photos, topic ideas, or accepted drafts into vertical 3:4 REDnote/Xiaohongshu covers and post images. It helps prepare a single confirmed cover brief, submit approved Beatra image-generation work, track the task, and review the result.
 
 ### Deployment Geography for Use:
 
@@ -22,53 +22,49 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uses a shared Beatra Device Token with permissions beyond image-cover generation.
+Risk: The skill uses a broad shared Beatra device token stored under ~/.beatra.
 
-Mitigation: Install only when broad Beatra access is acceptable, keep the token in ~/.beatra as documented, and revoke or disconnect the Beatra authorization when the skill is no longer needed.
+Mitigation: Review the Beatra authorization before installation, keep the token out of command arguments and logs, and revoke the device from the Beatra Console when the connection is no longer needed.
 
-Risk: Selected source images are uploaded to Beatra for transform and edit workflows.
+Risk: Approved generation calls can spend Beatra credits.
 
-Mitigation: Upload only images the user is comfortable sending to Beatra, avoid sensitive media, and disclose that upload makes the image bytes available to the remote tool.
+Mitigation: Confirm the prompt, references, canvas, model, count, controls, and client_request_id before submitting paid work, then avoid duplicate submissions during recovery.
 
-Risk: Approved image generation consumes Beatra credits and transport uncertainty can otherwise lead to duplicate paid work.
+Risk: The skill silently updates its installed package files by default.
 
-Mitigation: Require one final approval before the paid call, use a stable client_request_id for recovery, and avoid resubmission unless the exact same request identity and arguments are being recovered.
+Mitigation: Use python3 scripts/mcp_client.py update --auto off to disable automatic updates when a reviewed static installation is required.
 
-Risk: The package sends limited package and platform registration metadata.
+Risk: Selected local images are uploaded to Beatra for transform or edit workflows.
 
-Mitigation: Tell users this registration occurs on first use and install only when that telemetry is acceptable.
-
-Risk: Silent package updates are enabled by default.
-
-Mitigation: Use the documented `python3 scripts/mcp_client.py update --auto off` command when review is required before code changes.
+Mitigation: Upload only user-approved images and avoid exposing private prompts, credentials, or sensitive input details in recovery messages.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/rednote-cover-maker)
-- [Beatra skill homepage](https://beatra.ai/skills/rednote-cover-maker)
 - [Cover routing](references/cover-routing.md)
 - [Cover craft](references/cover-craft.md)
 - [Workflow](references/workflow.md)
 - [Review and recovery](references/review-and-recovery.md)
 - [Installation and authentication](references/installation-and-auth.md)
-- [MCP connection](references/mcp-connection.md)
+- [Bundled MCP Client diagnostics](references/mcp-connection.md)
 - [Tasks and results](references/tasks-and-results.md)
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/rednote-cover-maker)
+- [Beatra skill homepage](https://beatra.ai/skills/rednote-cover-maker)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Markdown, Shell commands, API calls, Files]
+**Output Type(s):** [guidance, markdown, shell commands, configuration, API calls]
 
-**Output Format:** [Markdown guidance with inline shell commands, JSON MCP arguments, task identifiers, billing fields, and generated image artifact links.]
+**Output Format:** [Markdown guidance with inline shell commands and JSON MCP tool arguments]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [The skill normally asks for one approval before a paid image operation, uses count=1 by default, and reports task and billing results after completion.]
+**Other Properties Related to Output:** [Produces a single confirmed image-generation request path and reports task links, dimensions, task ID, and net charged credits after completion.]
 
 ## Skill Version(s):
 
-0.1.1 (source: server release evidence and manifest.json)
+0.1.2 (source: server evidence and manifest.json)
 
 ## Ethical Considerations:
 
