@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users, developers, and real-estate workflows use this skill to query Compass listings, resolve addresses, inspect property details and photos, compare listings, review price history, and calculate mortgage or affordability scenarios through an MCP server.
+Developers and agents use this skill to search Compass listings, fetch property records, inspect photos and price history, compare homes, resolve addresses, and run local mortgage or affordability calculations.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uses a signed-in Compass browser tab through a browser bridge to read Compass pages.
+Risk: The skill uses a sideloaded browser bridge and the user's signed-in Compass session to fetch Compass pages.
 
-Mitigation: Enable it only for accounts and sessions where this read-only browser-mediated access is acceptable, and keep the Compass tab under the user's control.
+Mitigation: Review the fetchproxy extension permissions and Compass terms before installation, and use the skill only for user-directed read-only lookups.
 
-Risk: Bulk or commercial scraping may conflict with acceptable-use expectations for Compass pages.
+Risk: Compass WAF challenges or missing sign-in state can prevent network tools from returning listing data.
 
-Mitigation: Use the skill for personal, read-only lookup workflows and avoid high-volume automation or redistribution of retrieved listing data.
+Mitigation: Confirm the bridge health check, keep a signed-in Compass tab active, and resolve any Compass browser challenge before relying on network results.
 
-Risk: The workflow depends on third-party npm and fetchproxy extension components.
+Risk: Floating package installation can change MCP behavior over time.
 
-Mitigation: Review the package and extension source before installation and keep them updated through trusted package and repository sources.
+Mitigation: Pin compass-mcp to a specific version in the MCP configuration for controlled deployments.
 
 ## Reference(s):
 
-- [Compass MCP npm package](https://www.npmjs.com/package/compass-mcp)
-- [Compass MCP source repository](https://github.com/chrischall/compass-mcp)
-- [fetchproxy browser extension source](https://github.com/chrischall/fetchproxy)
+- [compass ClawHub page](https://clawhub.ai/chrischall/skills/compass)
+- [compass-mcp npm package](https://www.npmjs.com/package/compass-mcp)
+- [compass-mcp source](https://github.com/chrischall/compass-mcp)
+- [fetchproxy source](https://github.com/chrischall/fetchproxy)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline JSON and bash code blocks]
+**Output Format:** [Markdown with JSON and shell command snippets]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Can surface structured property records, listing comparisons, photo metadata, price-history data, diagnostics, and mortgage or affordability calculations through MCP tool responses.]
+**Other Properties Related to Output:** [May return listing data, property details, photo URLs, price history, comparisons, local mortgage calculations, and session diagnostics.]
 
 ## Skill Version(s):
 
-0.12.3 (source: ClawHub release evidence)
+0.12.4 (source: server release metadata)
 
 ## Ethical Considerations:
 

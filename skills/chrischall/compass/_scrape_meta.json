@@ -1,8 +1,8 @@
 {
-  "changelog": "- Added comprehensive documentation and usage details in SKILL.md for compass-mcp.\n- Clarified all tool capabilities, including listing search, property data, photos, price history, comps, agent listings, address resolution, batch utilities, mortgage/affordability calculations, diagnostics, and session management.\n- Provided detailed setup instructions for both the compass-mcp server and fetchproxy extension.\n- Outlined supported triggers, caveats, authentication requirements, and not-yet-supported features.\n- Improved clarity on how property data is extracted and the network/session model using a real browser tab.",
+  "changelog": "- Adds detailed documentation on how to set up and use the Compass skill with compass-mcp and fetchproxy.\n- Lists available tools for searching properties, fetching details/photos/price history, resolving addresses, comparing listings, and calculating mortgages or affordability.\n- Clarifies requirements: must be signed into compass.com and have the fetchproxy extension enabled.\n- Highlights \"gotchas\" such as WAF challenges, no write capability, and unsupported saved homes/searches.",
   "created_at": 1785416026940,
-  "display_name": "Tmp.XhxE1uezUS",
-  "fetched_at": 1787773328486,
+  "display_name": "compass",
+  "fetched_at": 1787931146149,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -22,12 +22,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 51,
+    "downloads": 62,
     "installs": 0,
     "stars": 0,
-    "versions": 2
+    "versions": 3
   },
   "summary": "Look up real-estate listings, property details, photos, price history, and resolve addresses on Compass via MCP. Triggers on phrases like \"find homes on compass in\", \"compass property details for\", \"compass photos for\", \"compass price history for\", \"resolve this address on compass\", \"compare these compass listings\", \"what does compass say about\", or any request involving Compass properties, prices, or comparisons. Requires compass-mcp installed and the fetchproxy extension active (see Setup below).",
-  "updated_at": 1785977029576,
-  "version": "0.12.3"
+  "updated_at": 1787916928924,
+  "version": "0.12.4"
 }
