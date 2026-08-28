@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and agents use this skill to turn a short music excerpt and visual direction into a cinematic music promo clip, animated cover-art clip, transition between approved frames, or mood-driven visual concept.
+External users and creative teams use this skill to turn a finished music excerpt and visual direction into a short music-driven promo clip, cover-art animation, lyric-led visual, or mood visual. The skill guides media inspection, route selection, Beatra task submission, polling, and result reporting.
 
 ### Deployment Geography for Use:
 
@@ -22,43 +22,46 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uses a persistent shared Beatra device credential with broad media-generation scopes.
+Risk: The skill uses broad Beatra account permissions through a shared device token.
 
-Mitigation: Install only in environments that accept the shared credential model, protect the local credential files, and review whether the requested scopes are appropriate before authorization.
+Mitigation: Review the requested Beatra authorization before installation, keep the token only in the documented local credential file, and disconnect through the bundled uninstall workflow when access is no longer needed.
 
-Risk: The package silently checks for and installs updates by default.
+Risk: The skill can upload user-selected local media.
 
-Mitigation: Use `python3 scripts/mcp_client.py update --auto off` when administrator-managed updates are required, and rely on the documented verified update path for manual checks.
+Mitigation: Inspect local files before upload, avoid sensitive or uncleared media, and preserve returned artifact references instead of exposing local paths.
 
-Risk: The authoritative security verdict is suspicious because of the broad shared credential and default self-update behavior.
+Risk: Silent automatic updates are enabled by default.
 
-Mitigation: Review the package before installation and scan it before deployment, especially in managed or high-trust environments.
+Mitigation: Use the documented update control command to disable automatic checks when manual review of package updates is required.
+
+Risk: Billable Beatra generation calls can spend credits.
+
+Mitigation: Show the admission card before paid video submission, freeze one request identity per paid stage, and report terminal billing from the completed task response.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/beatra-ai/skills/ai-music-video-clip-maker)
-- [Beatra Skill Homepage](https://beatra.ai/skills/ai-music-video-clip-maker)
-- [Music Video Clip Workflow](references/workflow.md)
-- [Billing, Errors, and Recovery](references/billing-errors-and-recovery.md)
-- [Tasks and Results](references/tasks-and-results.md)
-- [Installation and Authentication](references/installation-and-auth.md)
-- [MCP Connection](references/mcp-connection.md)
-- [Automatic Updates and Safety](references/automatic-updates-and-safety.md)
-- [Uninstall and Disconnect](references/uninstall-and-disconnect.md)
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/ai-music-video-clip-maker)
+- [Beatra skill homepage](https://beatra.ai/skills/ai-music-video-clip-maker)
+- [Music video clip workflow](artifact/references/workflow.md)
+- [Installation and authentication](artifact/references/installation-and-auth.md)
+- [MCP connection](artifact/references/mcp-connection.md)
+- [Tasks and results](artifact/references/tasks-and-results.md)
+- [Billing, errors, and recovery](artifact/references/billing-errors-and-recovery.md)
+- [Automatic updates and safety](artifact/references/automatic-updates-and-safety.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Guidance, Shell commands, Configuration, API calls, Text, Markdown]
 
-**Output Format:** [Markdown with inline shell commands and JSON payloads]
+**Output Format:** [Markdown guidance with inline shell commands and JSON payloads]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Guides Beatra media-generation calls, task polling, billing reporting, and delivery of returned video artifacts or links.]
+**Other Properties Related to Output:** [May upload local media, submit asynchronous Beatra generation tasks, poll task state, and return generated video artifacts or links with actual usage and billing details.]
 
 ## Skill Version(s):
 
-0.1.2 (source: server release evidence and manifest.json)
+0.1.4 (source: server release evidence and manifest.json)
 
 ## Ethical Considerations:
 
