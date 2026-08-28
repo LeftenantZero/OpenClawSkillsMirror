@@ -1,0 +1,37 @@
+{
+  "changelog": "Here is the comprehensive summary of the changes made to the skill, expressed entirely in English:\n\nOverview of Enhancements: Tavily Insight Engine (v1.1.0)\nThe modified skill has evolved from a basic search utility into a sophisticated AI Intelligence Suite. It shifts the focus from simple data retrieval to high-level analysis and structured reporting.\n\nKey Changes and New Features\n1. Evolution from \"Data Retrieval\" to \"Intelligent Insights\"\nChange: The original skill was primarily a bridge to fetch raw web results. The new version acts as an analytical layer.\n\nDescription: By optimizing the core search logic, the agent now prioritizes \"AI Insights\" (summaries) over raw links, providing the user with immediate context and synthesized answers before diving into the sources.\n\n2. Real-time Sentiment Analysis (Vibe Check) \ud83c\udd95\nChange: Added a completely new analytical tool via vibe.mjs.\n\nDescription: This feature performs a \"Vibe Check\" on any given topic. It uses a keyword-based heuristic algorithm to scan search results for emotional markers (e.g., \"breakthrough,\" \"controversy,\" \"growth\"). It then calculates an Internet Sentiment Index, categorizing the public mood as Bullish (Optimistic), Bearish (Skeptical), or Neutral.\n\n3. Structured Intelligence Reporting (Mission Brief) \ud83c\udd95\nChange: Added a specialized extraction and formatting tool via brief.mjs.\n\nDescription: Instead of returning a wall of text, this tool converts long-form web content into a structured \"Mission Brief.\" It automatically segments information into key metadata (source, timestamp, summary), making it easier for AI agents to digest critical intelligence without excessive token consumption.\n\n4. Enhanced Visualization and Interaction\nChange: Overhauled the terminal output interface.\n\nDescription: The user interface now utilizes rich console formatting, including emojis for visual cues, relevance scores (Match %) for credibility assessment, and clearly defined headers. This makes the debugging process and the final user experience significantly more intuitive.\n\n5. High-Standard Modular Architecture\nChange: Restructured the file organization to strictly follow the latest ClawHub.ai standards.\n\nDescription: All functionalities are decoupled into independent modules within the scripts/ directory. This modularity ensures that the skill is highly scalable, allowing developers to add new vertical-specific tools (e.g., financial data or code analysis) without breaking existing workflows.",
+  "created_at": 1773155842227,
+  "display_name": "tavily-search-up",
+  "fetched_at": 1787881660889,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/brief.mjs",
+    "scripts/extract.mjs",
+    "scripts/search.mjs",
+    "scripts/vibe.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "airoom-ai",
+    "handle": "airoom-ai",
+    "user_id": "s17f4t8hxa9bksgkc57pc5cmys83kvpg"
+  },
+  "slug": "tavily-search-up",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tavily-search-up",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tavily-search-up&ownerHandle=airoom-ai",
+    "page_url": "https://clawhub.ai/airoom-ai/skills/tavily-search-up"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 396,
+    "installs": 8,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u589e\u5f3a\u578b AI \u641c\u7d22\u4e0e\u6df1\u5ea6\u6d1e\u5bdf\u5f15\u64ce\u3002\u9664\u4e86\u641c\u7d22\uff0c\u8fd8\u80fd\u8fdb\u884c\u60c5\u7eea\u5206\u6790\u548c\u60c5\u62a5\u6c47\u603b\u3002",
+  "updated_at": 1778491811973,
+  "version": "1.1.0"
+}
