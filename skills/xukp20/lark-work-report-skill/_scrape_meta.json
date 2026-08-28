@@ -1,0 +1,36 @@
+{
+  "changelog": "- Initial release of lark-work-report-skill.\n- Enables reporting task results to Feishu/Lark groups with a preflight check to ensure the reporting channel is available.\n- Automatically finds, confirms, or creates the \"Codex\u5de5\u4f5c\u7fa4\" work group as the reporting channel, with user confirmation at each decision point.\n- Sends concise task summary reports to the confirmed group after task completion.\n- Ensures user identity and group identity are explicitly verified before sending reports.\n- Does not poll Feishu/Lark for follow-up instructions or manage task intake outside the CLI conversation.",
+  "created_at": 1773037794537,
+  "display_name": "Lark Work Report",
+  "fetched_at": 1787883888798,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/api-playbook.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "xukp20",
+    "handle": "xukp20",
+    "user_id": "s17d0z1j1dfyak54h374wncavs843hep"
+  },
+  "slug": "lark-work-report-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/lark-work-report-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=lark-work-report-skill&ownerHandle=xukp20",
+    "page_url": "https://clawhub.ai/xukp20/skills/lark-work-report-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 970,
+    "installs": 27,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Preflight-check Lark channel and send completion reports",
+  "updated_at": 1778491784317,
+  "version": "0.1.0"
+}
