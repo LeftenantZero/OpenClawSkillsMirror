@@ -1,6 +1,6 @@
 ## Description:
 
-Query Homes.com from a shell with the fpx CLI to search listings, resolve street addresses, fetch property details, photos, history, and access the signed-in user's saved homes through their own browser session.
+Query homes.com through the fpx CLI from a signed-in browser tab to search listings, resolve street addresses, fetch property details, photos, history, nearby listings, and saved homes or searches.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and agents use this skill to make one-shot Homes.com requests through fpx when they need listing search, property detail, saved-home, saved-search, or address-resolution data without running the homes-mcp server.
+Developers and agents use this skill to generate fpx setup guidance, shell commands, Node.js extractors, and jq filters for homes.com listing search, address resolution, property lookup, history, nearby listings, and saved homes or searches.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,32 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can use a signed-in Homes.com browser session, including optional access to saved homes and saved searches.
+Risk: Saved homes and saved searches may expose private account data from the signed-in homes.com session.
 
-Mitigation: Install only if that session access is acceptable; use a separate browser profile or sign out when account-specific pages should not be exposed.
+Mitigation: Confirm the browser tab is signed into the intended account and avoid saving or sharing fetched HTML or extracted results unless needed.
 
-Risk: Homes.com requests may return a sign-in redirect, AWS WAF challenge page, or changed HTML shape instead of expected listing data.
+Risk: Requests are routed through a paired browser session, so a stale, wrong, or untrusted session can produce misleading or unintended account-scoped results.
 
-Mitigation: Check response bodies and fpx exit codes, confirm the paired browser tab is signed in and past the WAF challenge, and review extracted data before relying on it.
-
-Risk: Free-text address resolution can return the closest result rather than a confirmed property match.
-
-Mitigation: Resolve addresses through the documented typeahead, slug, and search fallback order, then verify the selected candidate against the requested address.
+Mitigation: Run the fpx health check, open the intended homes.com tab, clear any sign-in or WAF challenge state, and retry before relying on results.
 
 ## Reference(s):
 
-- [homes.com request recipes](artifact/references/homes-requests.md)
+- [homes.com request recipes](references/homes-requests.md)
 - [ClawHub skill page](https://clawhub.ai/chrischall/skills/homes-fpx)
-- [Publisher profile](https://clawhub.ai/user/chrischall)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with shell, JavaScript, jq, and JSON examples]
+**Output Format:** [Markdown with shell commands, Node.js snippets, jq filters, and concise operational guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces request recipes and extraction guidance for use with fpx, a paired browser tab, node, and jq.]
+**Other Properties Related to Output:** [May reference signed-in browser session state and saved homes or saved searches when the user requests account-gated homes.com pages.]
 
 ## Skill Version(s):
 
-1.1.3 (source: server release evidence)
+1.1.4 (source: server release metadata)
 
 ## Ethical Considerations:
 
