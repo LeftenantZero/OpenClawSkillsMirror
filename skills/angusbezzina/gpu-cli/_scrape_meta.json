@@ -1,0 +1,49 @@
+{
+  "changelog": "- Added SECURITY.md detailing the full threat model, permission rationale, and version history.\n- Updated usage documentation to reference templates/prompts.md for more prompt examples.\n- Expanded security section: described input sanitization mechanisms and how commands are executed securely.\n- Improved transparency by highlighting where to find more safety and scope details.",
+  "created_at": 1772035987147,
+  "display_name": "GPU CLI: Remote GPU Compute for ML Training and Inference",
+  "fetched_at": 1787895104994,
+  "files": [
+    "README.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "manifest.yaml",
+    "runner.sh",
+    "selftest.sh",
+    "skill-card.md",
+    "templates/prompts.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779959386692,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Angus Bezzina",
+    "handle": "angusbezzina",
+    "user_id": "s179k21kg63cqpay02sq2rg8pn88525w"
+  },
+  "slug": "gpu-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gpu-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gpu-cli&ownerHandle=angusbezzina",
+    "page_url": "https://clawhub.ai/angusbezzina/skills/gpu-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1269,
+    "installs": 36,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "Safely run local `gpu` commands via a guarded wrapper (`runner.sh`) with preflight checks and budget/time caps.",
+  "updated_at": 1778491640561,
+  "version": "1.2.0"
+}
