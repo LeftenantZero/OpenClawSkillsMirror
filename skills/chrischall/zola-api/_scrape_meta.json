@@ -1,0 +1,44 @@
+{
+  "changelog": "- Add comprehensive setup and usage documentation in SKILL.md for authenticating and querying Zola's mobile API via curl (no MCP server required).\n- Document one-time authentication using the Zola refresh token and common session workflow for API calls.\n- Provide examples for resolving necessary account, registry, and wedding IDs.\n- Clarify best practices for safe read-modify-write operations and error handling when working with Zola endpoints.",
+  "created_at": 1787916920632,
+  "display_name": "zola-api",
+  "fetched_at": 1787930918449,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/mobile-api-endpoints.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787918042479,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "chrischall",
+    "handle": "chrischall",
+    "user_id": "s17cjx1a349nz5apaqp02vgz4h85728z"
+  },
+  "slug": "zola-api",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/zola-api",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=zola-api&ownerHandle=chrischall",
+    "page_url": "https://clawhub.ai/chrischall/skills/zola-api"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 20,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query or update Zola wedding-planning data (vendors, budget, guests, seating, events/RSVPs, registry, gift tracker, inquiries, wedding website) straight from a shell with curl against mobile-api.zola.com, instead of running the zola-mcp server. Use when you want Zola data without the MCP, in a script, or on a machine where the MCP isn't installed. Triggers on \"check Zola\", \"Zola vendors/budget/guests/RSVP/seating/registry\", or any Zola wedding data request that should hit the API directly.",
+  "updated_at": 1787917019777,
+  "version": "1.8.0"
+}
