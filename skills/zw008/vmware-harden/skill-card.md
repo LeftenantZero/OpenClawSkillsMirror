@@ -1,6 +1,6 @@
 ## Description:
 
-VMware Harden helps agents run VMware cyber-compliance scans, baseline checks, drift detection, and remediation-advice workflows across vSphere, ESXi, and NSX environments.
+VMware Harden helps agents audit VMware vSphere, ESXi, and NSX environments against security baselines, detect drift, and produce remediation advice, reports, and dashboard output.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -10,11 +10,11 @@ This skill is ready for commercial/non-commercial use.
 
 ### License/Terms of Use:
 
-MIT-0
+MIT
 
 ## Use Case:
 
-Developers, platform engineers, and security operators use this skill to scan VMware estates against supported compliance baselines, inspect drift, and produce remediation guidance without directly changing managed infrastructure.
+Developers, platform engineers, and security operators use this skill to run point-in-time VMware compliance scans, review drift, inspect baseline coverage, and obtain remediation suggestions without directly changing the target estate.
 
 ### Deployment Geography for Use:
 
@@ -22,46 +22,42 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Documentation conflicts about whether remediation can be initiated from this skill.
+Risk: Security evidence reports that the skill is mostly read-only but documentation inconsistently mentions a remediation apply path that could lead agents toward changes outside the declared scope.
 
-Mitigation: Review the installed CLI before production use and do not run or enable any apply workflow unless approved infrastructure changes through vmware-pilot are intended.
+Mitigation: Use this skill for scanning, reports, drift, and advice only; route actual remediation through approval-gated vmware-pilot and do not allow a harden apply workflow unless the installed package's approval gates and pilot handoff have been independently confirmed.
 
-Risk: A web dashboard or upstream VMware credentials could expose sensitive operational information if broadly accessible.
+Risk: Advisor output can use an external Anthropic API call when ANTHROPIC_API_KEY is configured.
 
-Mitigation: Keep the dashboard bound to localhost or trusted access controls, and use least-privilege credentials in the upstream VMware collector skills.
+Mitigation: Leave ANTHROPIC_API_KEY unset for offline-only use, or review which violation evidence may be sent externally before enabling live LLM advice.
 
-Risk: Partial scan coverage can be mistaken for a clean compliance result.
+Risk: An empty violation list can be mistaken for a clean compliance verdict when collector coverage is incomplete.
 
-Mitigation: Report coverage fields with every result and avoid calling an estate compliant when rules are undetermined or coverage tracking is absent.
-
-Risk: Optional LLM remediation advice may be generic or depend on external API configuration.
-
-Mitigation: Treat remediation output as a proposal, disclose when the advisor uses a mock fallback, and require human review before routing execution to another skill.
+Mitigation: Review the coverage and undetermined-rule fields before reporting scan results, and avoid calling an estate compliant when checks were not evaluated.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/zw008/skills/vmware-harden)
-- [Homepage](https://github.com/vmware-skills/VMware-Harden)
+- [Project homepage](https://github.com/vmware-skills/VMware-Harden)
 - [Setup Guide](references/setup-guide.md)
 - [CLI Reference](references/cli-reference.md)
 - [Capabilities](references/capabilities.md)
 - [Agent Guardrails](references/agent-guardrails.md)
-- [STIG Content Sync](references/stig-content-sync.md)
 - [Cross-Skill Workflows](references/cross-skill-workflows.md)
+- [vSphere 9 STIG content sync](references/stig-content-sync.md)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown responses with inline shell commands, configuration snippets, and optional JSON report guidance.]
+**Output Format:** [Markdown with CLI commands, configuration snippets, and structured compliance report summaries]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May reference local DuckDB scan state, custom YAML baselines, and optional LLM-generated remediation suggestions.]
+**Other Properties Related to Output:** [May refer to local DuckDB state and coverage metadata when summarizing scan and drift results.]
 
 ## Skill Version(s):
 
-1.9.0 (source: server release metadata)
+1.10.0 (source: server release evidence)
 
 ## Ethical Considerations:
 
