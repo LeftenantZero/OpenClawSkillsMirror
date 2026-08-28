@@ -1,0 +1,45 @@
+{
+  "changelog": "- Initial release of skill-amazon-review-request.\n- Sends Amazon review requests for eligible shipped orders using the SP-API Messaging API.\n- Includes retry logic, deduplication, eligibility window enforcement (5\u201330 days old), and dry-run mode.\n- Provides tracking and text logs for transparency and troubleshooting.\n- Simple CLI usage with options for dry runs and live requests.\n- Designed for easy daily scheduling via cron.",
+  "created_at": 1772403342281,
+  "display_name": "Skill Amazon Review Request",
+  "fetched_at": 1787892084959,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/internal.md",
+    "scripts/request-reviews.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089733973,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Zero2Ai",
+    "handle": "zero2ai-hub",
+    "user_id": "s17a1b8dv4hc6x68q9m057m67n83ryrt"
+  },
+  "slug": "skill-amazon-review-request",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-amazon-review-request",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-amazon-review-request&ownerHandle=zero2ai-hub",
+    "page_url": "https://clawhub.ai/zero2ai-hub/skills/skill-amazon-review-request"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 851,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Sends Amazon review requests for eligible shipped orders using SP-API with retry, deduplication, eligibility checks, and optional dry-run mode.",
+  "updated_at": 1778491681414,
+  "version": "1.0.0"
+}
