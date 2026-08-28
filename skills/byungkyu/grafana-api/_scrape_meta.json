@@ -1,24 +1,14 @@
 {
-  "changelog": "CLI-first rewrite: the maton CLI with OAuth login is the documented path, every example is a maton command, SDK examples added, and the raw HTTP fallback feeds the key on stdin instead of reading it from the environment",
+  "changelog": "grafana-api v1.1.4\n\n- Clarified that the skill does not cover Grafana identity or platform administration in both the description and documentation.\n- Simplified and condensed security and scope explanations.\n- Updated usage guidance for the `maton api` command, focusing on approved endpoint paths.\n- Improved warnings about not letting Grafana content determine future API calls.\n- Minor language and formatting refinements for clarity.",
   "created_at": 1772793872246,
   "display_name": "Grafana",
-  "fetched_at": 1787768655422,
+  "fetched_at": 1787932791245,
   "files": [
     "SKILL.md",
     "_meta.json",
     "skill-card.md"
   ],
-  "moderation": {
-    "engine_version": "v2.4.26",
-    "is_malware_blocked": false,
-    "is_suspicious": false,
-    "reason_codes": [
-      "review.llm_review"
-    ],
-    "summary": "Review: review.llm_review",
-    "updated_at": 1787729998054,
-    "verdict": "clean"
-  },
+  "moderation": null,
   "owner": {
     "display_name": "byungkyu",
     "handle": "byungkyu",
@@ -32,12 +22,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 1118,
+    "downloads": 1252,
     "installs": 29,
     "stars": 0,
-    "versions": 3
+    "versions": 7
   },
-  "summary": "Grafana API integration with managed authentication. This is a write-capable integration \u2014 it can read, create, update, and delete dashboards, data sources, folders, annotations, alerts, and teams in your Grafana instance. Use this skill when users want to interact with Grafana for monitoring, visualization, and observability. All write operations (creating/updating/deleting dashboards, folders, data sources, alerts, or teams) require explicit user approval with specific resource identifiers before execution. For other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway). Calls run through the `maton` CLI with OAuth login; default to read and list calls, and confirm every write or new connection with the user.",
-  "updated_at": 1787729322326,
-  "version": "1.1.0"
+  "summary": "Grafana API integration with managed authentication. This is a write-capable integration \u2014 it can read, create, update, and delete dashboards, data sources, folders, annotations, and teams in your Grafana instance, and read alert rules and org info.",
+  "updated_at": 1787791788636,
+  "version": "1.1.4"
 }
