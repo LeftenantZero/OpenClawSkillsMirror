@@ -1,0 +1,36 @@
+{
+  "changelog": "SecurityClaw is a security-first skill + toolkit for OpenClaw that audits installed skills for:\n\nmalicious behavior / exploit patterns\nprompt injection payloads embedded in docs\nsecret exfiltration and unsafe tool usage\nrisky install scripts / supply-chain issues\nWhen a suspicious or infected skill is detected, SecurityClaw\u2019s workflow is:\n\nQuarantine the skill (move it out of the active skills directory)\nGenerate a forensic report (what matched, where, why it\u2019s risky)\nNotify the owner and await explicit instruction:\nDelete (remove quarantined files)\nReport (open an issue / publish IOCs)\nAllow (add to allowlist and restore)\nScan all (deep scan all skills)",
+  "created_at": 1770099950718,
+  "display_name": "SecurityClaw",
+  "fetched_at": 1787909894789,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/rules.md",
+    "references/sandboxing.md",
+    "scripts/securityclaw_scan.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mallen-lbx",
+    "handle": "mallen-lbx",
+    "user_id": "s176qyfqc4chny86b8j7pba9xx884d6g"
+  },
+  "slug": "securityclaw",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/securityclaw",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=securityclaw&ownerHandle=mallen-lbx",
+    "page_url": "https://clawhub.ai/mallen-lbx/skills/securityclaw"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2806,
+    "installs": 94,
+    "stars": 3,
+    "versions": 1
+  },
+  "summary": "Security-first skill auditing and quarantine for OpenClaw skills. Use when installing new skills, reviewing skills from unknown sources, scanning skills for prompt injection/exfiltration/supply-chain risks, or when a bot suspects a skill is malicious. Guides static + optional sandbox checks, quarantines suspicious skills, and produces an owner-action checklist (Delete / Report / Allow / Scan all).",
+  "updated_at": 1778485997364,
+  "version": "1.0.0"
+}
