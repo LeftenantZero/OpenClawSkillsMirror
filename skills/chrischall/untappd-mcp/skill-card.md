@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to query Untappd beer, brewery, venue, profile, check-in, wishlist, badge, friend, and activity data, and to prepare account write actions such as check-ins, toasts, and comments. It is suited to beer discovery, account history lookup, and public Untappd account interactions.
+External users and developers use this skill to look up Untappd beer, brewery, venue, and account activity data and to perform confirm-gated actions on their own Untappd account.
 
 ### Deployment Geography for Use:
 
@@ -22,35 +22,34 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill requires an Untappd username and password and unofficial mobile API credentials.
+Risk: The skill requires Untappd login credentials and mobile app client credentials.
 
-Mitigation: Install only if you are comfortable providing those credentials and review the release before use.
+Mitigation: Install only when comfortable providing those credentials; keep them in protected environment variables and prefer a dedicated or low-risk account.
 
-Risk: Write tools can affect a public Untappd account.
+Risk: Confirmed write actions can post public check-ins, toasts, and comments to the user's Untappd account.
 
-Mitigation: Treat check-ins, toasts, and comments as public account actions and rely on the skill's explicit confirmation gate before network submission.
+Mitigation: Review each dry-run preview carefully and set confirm to true only for intended public account actions.
 
-Risk: The skill may cache check-in or beer-history data locally.
+Risk: The skill may maintain a local SQLite cache of account history.
 
-Mitigation: Use the cache only for data you have a legitimate reason to query and that is appropriately visible to you.
+Mitigation: Store the cache in a protected location, limit local access, and remove it when the account-history data is no longer needed.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/chrischall/skills/untappd-mcp)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, API calls, Configuration guidance]
+**Output Type(s):** [Text, Markdown, API Calls, Configuration, Guidance]
 
-**Output Format:** [Natural-language responses with structured tool result data and confirmation-gated account actions]
+**Output Format:** [Markdown or plain text responses with MCP tool calls and configuration guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Write actions require explicit confirmation; check-in history queries may rely on a local cache whose freshness should be reported to the user.]
+**Other Properties Related to Output:** [Write actions use dry-run previews and require explicit confirmation before posting.]
 
 ## Skill Version(s):
 
-1.8.7 (source: server release evidence)
+1.9.0 (source: server release metadata)
 
 ## Ethical Considerations:
 
