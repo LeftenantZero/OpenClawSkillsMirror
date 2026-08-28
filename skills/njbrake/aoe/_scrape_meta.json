@@ -1,8 +1,8 @@
 {
-  "changelog": "**State and trash/archive support for sessions**\n\n- Sessions now include a `state` field (`live`, `archived`, `trashed`) in all JSON outputs (`aoe list --json`, `aoe session show --json`)\n- Documented how `archived_at` and `trashed_at` timestamps are set and cleared, and that session `state` supersedes relying on timestamps\n- Added `aoe list --json --state=live` example to skip trashed/archived sessions; clarified that trashed sessions remain in lists but need to be checked by `state`\n- Clarified that session lifecycle/status and persist/state (live/archived/trashed) are separate concepts\n- Removed deprecated file: `skill-card.md`",
+  "changelog": "**Changelog for aoe skill v1.15.1**\n\n- Added documentation for `snoozed_until` and `pinned_at` fields in session JSON output, describing their appearance and lifecycle.\n- Clarified that both fields are managed independently from session `state`, and updated guidance on interpreting them.\n- No functional CLI changes; documentation update only.\n- Removed redundant or outdated reference file: `skill-card.md`.",
   "created_at": 1773324409652,
   "display_name": "Agent of Empires",
-  "fetched_at": 1787770101537,
+  "fetched_at": 1787930161888,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -22,12 +22,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 3832,
+    "downloads": 3863,
     "installs": 77,
     "stars": 1,
-    "versions": 47
+    "versions": 48
   },
   "summary": "Manage AI coding agent sessions via Agent of Empires (aoe)",
-  "updated_at": 1787346692250,
-  "version": "1.15.0"
+  "updated_at": 1787926414583,
+  "version": "1.15.1"
 }

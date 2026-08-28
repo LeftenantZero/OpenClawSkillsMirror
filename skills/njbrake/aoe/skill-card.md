@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and engineers use this skill to create, monitor, organize, and inspect AI coding-agent sessions managed by Agent of Empires in tmux.
+Developers and engineers use this skill to launch, organize, monitor, capture, and manage AI coding agent sessions running through Agent of Empires and tmux.
 
 ### Deployment Geography for Use:
 
@@ -22,36 +22,35 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: YOLO mode can skip permission prompts when launching agent sessions.
+Risk: Powerful session commands can start, stop, remove, or alter coding-agent workspaces, including worktrees.
 
-Mitigation: Use YOLO mode only when that behavior is intended; prefer normal permission prompts on sensitive repositories.
+Mitigation: Use exact session IDs, inspect sessions with list or info commands before destructive actions, and avoid forceful removal unless intended.
 
-Risk: Force deletion and worktree deletion commands can remove session state or worktree contents.
+Risk: Captured agent output may contain incomplete, incorrect, or misleading work.
 
-Mitigation: Review the target session and path before using --force or --delete-worktree.
+Mitigation: Review captured session output before acting on it or using it to make project changes.
 
-Risk: Agent sessions execute in project directories and may affect repository state.
+Risk: YOLO mode can skip normal permission prompts for agent sessions.
 
-Mitigation: Prefer sandboxed sessions or scoped worktrees for sensitive repositories.
+Mitigation: Keep normal permission prompts enabled for routine work and enable YOLO mode only for explicitly trusted workflows.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/njbrake/skills/aoe)
-- [Agent of Empires homepage](https://github.com/agent-of-empires/agent-of-empires)
+- [Agent of Empires project homepage](https://github.com/agent-of-empires/agent-of-empires)
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, shell commands, configuration]
+**Output Type(s):** [Guidance, Markdown, Shell commands, Configuration instructions]
 
-**Output Format:** [Markdown with inline bash and JSON examples]
+**Output Format:** [Markdown with inline bash and JSON code blocks]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires the aoe and tmux binaries; some examples produce JSON output.]
+**Other Properties Related to Output:** [Requires the aoe and tmux command-line tools.]
 
 ## Skill Version(s):
 
-1.15.0 (source: release evidence)
+1.15.1 (source: release metadata)
 
 ## Ethical Considerations:
 
