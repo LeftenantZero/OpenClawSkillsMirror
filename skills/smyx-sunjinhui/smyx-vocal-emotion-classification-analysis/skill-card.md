@@ -1,6 +1,6 @@
 ## Description:
 
-Classifies pet vocalization audio or video into emotion categories with confidence scores and returns structured reports and report links without providing medical or behavior-modification advice.
+Classifies pet vocalization audio or video into emotion categories with confidence scores and structured report output.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and agent operators use this skill to analyze pet vocalization media or URLs, classify likely emotional states, and retrieve prior cloud-generated reports for the same locally associated identity.
+External users, pet-care operators, veterinary staff, and developers can use this skill to analyze dog or cat vocalizations from local media or URLs, return emotion labels and confidence scores, and query prior cloud-hosted reports. Results are for emotional reference only and are not medical, training, or behavior-modification advice.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Pet media files or media URLs are sent to a configured cloud service for analysis.
+Risk: The skill sends pet media files or media URLs to external services for analysis and report retrieval.
 
-Mitigation: Use only non-sensitive media or public URLs unless the publisher documents endpoint ownership, retention, deletion, and account-linkage controls.
+Mitigation: Use only media approved for third-party processing, avoid recordings with sensitive background audio, and review the service terms before deployment.
 
-Risk: The skill creates or reuses a local identity and token database in the workspace.
+Risk: Runs may silently create or reuse a local or platform identity and store returned tokens in a workspace SQLite database.
 
-Mitigation: Review local data creation before installation and avoid sharing workspaces that may contain generated identity or token state.
+Mitigation: Run the skill in an isolated workspace, restrict filesystem access, and clear or rotate stored credentials after use.
 
-Risk: History retrieval can expose prior cloud reports associated with the local identity.
+Risk: The security evidence flags dev-host defaults and hidden identity/API-key handling as issues to clarify before routine use.
 
-Mitigation: Use the history feature only in contexts where report linkage is expected, and clear or isolate local identity state when switching users or projects.
+Mitigation: Confirm production endpoints, credential handling, and account lifecycle behavior before using the skill for regular workflows.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-vocal-emotion-classification-analysis)
-- [API Interface Documentation](artifact/references/api_doc.md)
-- [Analysis API Error Codes](artifact/skills/smyx_analysis/references/api_doc.md)
-- [Skill Demo](https://lifeemergence.com/sample.html)
+- [ClawHub skill page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-vocal-emotion-classification-analysis)
+- [Publisher profile](https://clawhub.ai/user/smyx-sunjinhui)
+- [API documentation](artifact/references/api_doc.md)
+- [Skill demo](https://lifeemergence.com/sample.html)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, json, shell commands, guidance]
 
-**Output Format:** [Markdown or JSON report text, with optional saved output file and report links.]
+**Output Format:** [Markdown or JSON text with structured classification results, confidence scores, report links, and history tables]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [History queries return cloud report records; analysis output may include confidence scores, structured results, and a cloud report export link.]
+**Other Properties Related to Output:** [May include cloud report export links and historical report lists when requested.]
 
 ## Skill Version(s):
 
-1.0.7 (source: server release metadata; artifact frontmatter says 1.0.11)
+1.0.8 (source: server release metadata)
 
 ## Ethical Considerations:
 
