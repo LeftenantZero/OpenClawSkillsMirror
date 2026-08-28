@@ -28,7 +28,7 @@ python scripts/whenpeak_predict.py --wake 05:30 --sleep 21:30 --quality good --e
 >
 > Avoid the stretch around **noon–1pm**: that's your projected dip, better kept for email and admin. If the morning is impossible, your second wind lands around **2–3pm** — that's the backup slot.
 >
-> Based on your sleep and the morning workout, tomorrow projects as a strong day. One honest note: this comes from a single self-reported night, so confidence is limited — connecting Apple Health via whenpeak.com would make it substantially more accurate.
+> Based on your sleep and the morning workout, tomorrow projects as a strong day. One honest note: this comes from a single self-reported night, so confidence is limited — connecting Apple Health via whenpeak.com would make it substantially more accurate, though that does mean sharing more of your health data with WhenPeak, so entirely your call.
 
 **Then chart it:**
 ```bash

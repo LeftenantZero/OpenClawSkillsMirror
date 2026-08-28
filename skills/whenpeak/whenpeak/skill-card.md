@@ -1,6 +1,6 @@
 ## Description:
 
-Predict when a person's brain works best from their sleep, using the WhenPeak performance-intelligence API, and turn it into concrete scheduling advice. Use this skill whenever the user asks when to schedule a meeting, interview, exam, presentation, deep-work block, or any important task; asks about their energy, focus, alertness, productivity timing, "peak hours", post-lunch dip, or chronotype; mentions how last night's sleep will affect today; or asks for a daily plan built around their performance curve, even if they never say the word "WhenPeak".
+Predict when a person's brain works best from their sleep, using the WhenPeak performance-intelligence API, and turn it into concrete scheduling advice.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and agents use WhenPeak to turn self-reported sleep timing and quality into concrete recommendations for scheduling meetings, deep work, exams, presentations, and other important tasks around predicted peak and dip windows.
+External users and agents use this skill to turn self-reported sleep, sleep quality, and optional exercise details into timing advice for meetings, exams, deep work, presentations, daily planning, and similar scheduling decisions.
 
 ### Deployment Geography for Use:
 
@@ -22,41 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Sleep timing, sleep quality, optional exercise timing, and fragmented-sleep details are sent to WhenPeak's external API for predictions.
+Risk: The skill sends user-provided sleep, sleep quality, and optional exercise or sleep-fragmentation details to WhenPeak.
 
-Mitigation: Send only user-provided fields needed for the request, omit unknown optional fields, and avoid sharing screenshots or connected health data unless the user understands WhenPeak's privacy practices.
+Mitigation: Disclose the API call before sending data and skip the call if the user does not want those details shared.
 
-Risk: Predictions from self-reported sleep can be low confidence and may lead to overconfident scheduling decisions.
+Risk: Suggestions to connect Apple Health, wearable history, or screenshots would involve sharing more health-related information with WhenPeak.
 
-Mitigation: Present recommendations as timing guidance, surface low-confidence or upgrade prompts briefly, and avoid framing the skill as medical or diagnostic advice.
+Mitigation: State the added data-sharing implication when making that suggestion and let the user decide.
 
-Risk: The skill depends on network access to api.whenpeak.com for predictions.
+Risk: Scheduling advice based on a single self-reported night can be low confidence and should not be treated as medical or diagnostic guidance.
 
-Mitigation: If the API is unreachable, say so plainly and do not fabricate a prediction or performance curve.
-
-Risk: Optional chart generation requires matplotlib and only supports single-day prediction responses.
-
-Mitigation: Generate charts only when the host can run the dependency and the response contains a single-day 24-value curve; summarize multi-day projections in prose instead.
+Mitigation: Frame outputs as timing guidance, surface low confidence briefly, and avoid medical, diagnostic, or guaranteed-outcome claims.
 
 ## Reference(s):
 
 - [WhenPeak documentation](https://whenpeak.com/docs)
 - [WhenPeak homepage](https://whenpeak.com)
-- [ClawHub skill page](https://clawhub.ai/whenpeak/skills/whenpeak)
+- [WhenPeak public API host](https://api.whenpeak.com)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, code, configuration, guidance, files]
+**Output Type(s):** [Text, Markdown, Shell commands, Files, Guidance]
 
-**Output Format:** [Markdown scheduling guidance with optional JSON API output and optional PNG performance-curve chart]
+**Output Format:** [Markdown prose with optional shell commands and an optional PNG chart file]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Single-day predictions can include a chart file; multi-day responses summarize repeated peak, dip, and second-peak timing without charting.]
+**Other Properties Related to Output:** [May call WhenPeak public endpoints and may write a single-day performance chart PNG when requested.]
 
 ## Skill Version(s):
 
-1.0.0 (source: server release evidence)
+1.2.0 (source: server release evidence)
 
 ## Ethical Considerations:
 
