@@ -1,0 +1,36 @@
+{
+  "changelog": "Hyperbot MCP Server - Feature Description\nHyperbot Trading Analytics MCP Server is a comprehensive blockchain trading analytics platform that provides real-time data and intelligent analysis tools for cryptocurrency traders. The server exposes capabilities through the Model Context Protocol (MCP), enabling seamless integration with AI agents and trading analysis tools.\nCore Capabilities\n1. Smart Money Discovery & Analysis\nAccess to real-time smart money leaderboard ranked by PnL and win rate across multiple timeframes (24h, 7d, 30d)\nAdvanced filtering and sorting of smart money addresses by metrics including win-rate, ROI, account balance, position count, and profit patterns\nDetailed trade history and performance analytics for specific wallet addresses\nAutomated strategy generation for copy-trading based on high-performing addresses\n2. Whale Monitoring & Behavior Tracking\nReal-time surveillance of whale positions with advanced filtering by coin, direction (long/short), PnL status, and funding fee performance\nLive monitoring of whale open/close position events to capture market-moving activities\nHistorical long/short ratio tracking to identify whale positioning trends\nMarket impact assessment and short-term trend prediction based on whale behavior patterns\n3. Comprehensive Market Data\nReal-time ticker prices and L2 order book depth for major cryptocurrencies (BTC, ETH, SOL, etc.)\nMulti-timeframe K-line data with trading volume (from 1-minute to daily candles)\nActive order statistics including long/short ratios and whale order detection\nMarket mid-price information and sentiment indicators\n4. Trader Performance Analytics\nIn-depth trader statistics including win rate, PnL curves, and max drawdown analysis\nCoin-specific performance breakdown to identify trading specialization\nHistorical position analysis with complete execution trajectory tracking\nCurrent position PnL monitoring with customizable time intervals\nBest trades identification to understand successful trading patterns\n5. Batch Query Capabilities\nSupport for querying up to 50 addresses simultaneously for account information and statistics\nEfficient bulk data retrieval for portfolio-level analysis\nComparative performance analysis across multiple traders\n6. AI-Powered Analysis Prompts\nPre-built analytical frameworks for smart-money-analysis, whale-tracking, market-sentiment, and trader-evaluation\nJSON-formatted output optimized for AI agent consumption and automated decision-making\nComposable prompts that can be chained for complex multi-step analysis workflows\nTechnical Features\nRESTful API Architecture: Standard HTTPS endpoints with JSON-RPC 2.0 protocol support\nReal-time Data Updates: Market data updates in real-time, trader statistics refresh every 5 minutes\nRate Limiting: 100 requests per minute per IP with batch operations supporting up to 50 addresses\nSSE Connection Support: Session-based communication via Server-Sent Events\nResource URIs: Direct access to curated datasets including smart money addresses, whale positions, market data, and trader statistics\nUse Cases\nCopy Trading Strategy Development: Identify and analyze high-performing smart money addresses to develop data-driven copy-trading strategies\nMarket Sentiment Analysis: Combine order book data, whale ratios, and active order statistics to gauge market direction\nWhale Activity Surveillance: Monitor large position movements and predict short-term price impacts\nTrader Due Diligence: Comprehensive evaluation of trader performance across multiple dimensions before following their strategies\nPortfolio Risk Assessment: Track current positions, historical performance, and max drawdown for risk management\nThe Hyperbot MCP Server transforms complex on-chain and trading data into actionable intelligence, empowering traders with institutional-grade analytics through an accessible, API-first approach designed for both manual analysis and AI-powered automation.",
+  "created_at": 1772518160786,
+  "display_name": "hyperbot-quote",
+  "fetched_at": 1787940887283,
+  "files": [
+    "SKILL.md",
+    "SKILL_zh.md",
+    "_meta.json",
+    "references/prompts-reference.md",
+    "references/prompts-reference_zh.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "developHyperbotNetwork",
+    "handle": "develophyperbotnetwork",
+    "user_id": "s175t8azn3vgyevq81dmq7zs6x885pkj"
+  },
+  "slug": "hyperbot-mcp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hyperbot-mcp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hyperbot-mcp&ownerHandle=develophyperbotnetwork",
+    "page_url": "https://clawhub.ai/develophyperbotnetwork/skills/hyperbot-mcp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 806,
+    "installs": 23,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "\u63d0\u4f9bHyperbot\u5e73\u53f0\u52a0\u5bc6\u8d27\u5e01\u4ea4\u6613\u6570\u636e\u5206\u6790\uff0c\u5305\u62ec\u806a\u660e\u94b1\u8ffd\u8e2a\u3001\u9cb8\u9c7c\u76d1\u63a7\u3001\u5e02\u573a\u884c\u60c5\u67e5\u8be2\u548c\u4ea4\u6613\u7edf\u8ba1\u7b49\u529f\u80fd\u3002",
+  "updated_at": 1778491695332,
+  "version": "1.0.2"
+}
