@@ -1,6 +1,6 @@
 ## Description:
 
-Generates e-commerce product hero images, detail-page posters, and white-background product images through the Flyelep API.
+Generate Poster helps agents call the Flyelep API to create e-commerce product main images, detail-page posters, and white-background product images using asynchronous polling or synchronous image generation.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to collect product-generation parameters, call Flyelep's asynchronous poster-generation API, poll for task completion, and return generated image URLs for e-commerce product imagery.
+External users and developers use this skill to collect e-commerce image-generation requirements, prepare optional reference images, call Flyelep poster-generation endpoints, and return generated image URLs for product listings.
 
 ### Deployment Geography for Use:
 
@@ -22,35 +22,39 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Flyelep API keys may be exposed through local temp files, inline shell commands, logs, or command history.
+Risk: The skill requires a Flyelep API key to call the service.
 
-Mitigation: Use a secret-handling method that avoids writing keys to payload_temp.json or embedding them directly in shell commands, delete any temporary payload files, and rotate the key if exposure is possible.
+Mitigation: Provide the API key only at runtime and do not place real secrets in saved examples or shared files.
 
-Risk: Product descriptions and reference image URLs are sent to Flyelep for image generation.
+Risk: Product images supplied by the user may be uploaded to Flyelep and made available through a permanent public URL.
 
-Mitigation: Install and use the skill only when users are comfortable sending that content to Flyelep.
+Mitigation: Upload only product images the user is comfortable sending to Flyelep and exposing through a public image link.
+
+Risk: Synchronous generation can time out or disconnect before a result is returned, and that mode does not provide a task ID for later lookup.
+
+Mitigation: Prefer asynchronous generation with polling unless the user explicitly needs a single blocking request.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/flyelepai/skills/flyelep-generate-poster)
-- [Flyelep publisher profile](https://clawhub.ai/user/flyelepai)
-- [Flyelep platform](https://www.flyelep.cn)
-- [Flyelep generateAsync API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/generateAsync)
-- [Flyelep queryTaskResult API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/queryTaskResult)
+- [ClawHub Skill Page](https://clawhub.ai/flyelepai/skills/flyelep-generate-poster)
+- [Flyelep asynchronous poster generation endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/generateAsync)
+- [Flyelep task result query endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/queryTaskResult)
+- [Flyelep synchronous poster generation endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/generate)
+- [Flyelep file upload endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/file/upload)
 
 ## Skill Output:
 
-**Output Type(s):** [API Calls, Shell commands, Configuration, Guidance, Text]
+**Output Type(s):** [Guidance, Shell commands, Configuration, API calls, Markdown]
 
-**Output Format:** [Markdown guidance with JSON request bodies, shell commands, and generated image URLs]
+**Output Format:** [Markdown guidance with JSON payload examples and curl commands; Flyelep returns generated image URLs.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Uses asynchronous task submission and polling; generated images are returned as URLs rather than embedded image content.]
+**Other Properties Related to Output:** [Requires a user-provided Flyelep secretKey at runtime; synchronous generation can hold a request open for up to 15 minutes.]
 
 ## Skill Version(s):
 
-1.0.1 (source: server release metadata)
+1.0.2 (source: server release evidence)
 
 ## Ethical Considerations:
 
