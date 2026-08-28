@@ -1,0 +1,53 @@
+{
+  "changelog": "**Circle Programmable Wallets integration and safer agent usage**\n\n- Added integration with Circle Programmable Wallets (no raw private keys required).\n- Added dependency on the `circle-wallet` skill (`eltontay/circle-wallet`).\n- Updated environment variables: now requires `CIRCLE_API_KEY`, `CIRCLE_ENTITY_SECRET`, and `CIRCLE_WALLET_SET_ID`.\n- Introduced a new `circle-wallet-client.js` file for wallet interactions.\n- Documentation updated to reflect Circle MPC wallet use, removing the need for direct private keys and improving security for agent operations.",
+  "created_at": 1770492800356,
+  "display_name": "Nexwave Gateway",
+  "fetched_at": 1787907139522,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "abis.js",
+    "check-balance.js",
+    "circle-wallet-client.js",
+    "deposit.js",
+    "gateway-client.js",
+    "setup-gateway.js",
+    "setup.sh",
+    "skill-card.md",
+    "transfer.js",
+    "typed-data.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783658988236,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "botmechanic",
+    "handle": "botmechanic",
+    "user_id": "s1739jt1r421t1kzr15fprkh89885aay"
+  },
+  "slug": "nexwave-gateway",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nexwave-gateway",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nexwave-gateway&ownerHandle=botmechanic",
+    "page_url": "https://clawhub.ai/botmechanic/skills/nexwave-gateway"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1943,
+    "installs": 63,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Unified crosschain USDC balance via Circle Gateway + Circle Programmable Wallets. Deposit USDC on any supported chain, check your unified balance, and instantly mint USDC on any destination chain in <500ms \u2014 no bridging, no raw private keys.",
+  "updated_at": 1778486075083,
+  "version": "1.0.2"
+}
