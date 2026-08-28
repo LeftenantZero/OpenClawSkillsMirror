@@ -1,0 +1,41 @@
+{
+  "changelog": "Initial release \u2014 pre-flight routing, post-outcome validation, escalation to cloud, v2 savings ledger with local_success/escalated/cloud/bypassed tracking",
+  "created_at": 1772484452358,
+  "display_name": "Adaptive Routing",
+  "fetched_at": 1787891269809,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/local-providers.md",
+    "references/routing-logic.md",
+    "references/token-estimation.md",
+    "scripts/check_local.py",
+    "scripts/dashboard.py",
+    "scripts/route_request.py",
+    "scripts/track_savings.py",
+    "scripts/validate_result.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "OfflynAI",
+    "handle": "joelnishanth",
+    "user_id": "s175bmppg255yzbqa2vdce50sn881gab"
+  },
+  "slug": "adaptive-routing",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/adaptive-routing",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=adaptive-routing&ownerHandle=joelnishanth",
+    "page_url": "https://clawhub.ai/joelnishanth/skills/adaptive-routing"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1036,
+    "installs": 30,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Routes LLM requests to a local model first (Ollama, LM Studio, llamafile), validates the response quality, and escalates to cloud only when the local result...",
+  "updated_at": 1778491691403,
+  "version": "1.0.0"
+}
