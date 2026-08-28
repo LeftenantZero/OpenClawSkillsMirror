@@ -1,0 +1,33 @@
+{
+  "changelog": "This skill uploads files (images, documents, videos, etc.) to Tencent Cloud COS (Cloud Object Storage). It supports\n  configuration via environment variables or command\u2011line arguments, generates a unique object key automatically, and\n  returns both a direct URL and a signed URL (24\u2011hour expiry) for private buckets. Ideal for building simple image\n  hosting or file sharing workflows.\n\n  Primary use cases\n\n  - Upload images and get shareable URLs\n  - Host documents/videos on Tencent COS\n  - Generate signed URLs for private buckets\n  - Automate asset hosting in scripts or pipelines\n\n  Inputs\n\n  - File path to upload\n  - Tencent Cloud Secret ID / Secret Key\n  - COS bucket name\n  - COS region\n  - Optional upload path prefix\n\n  Outputs\n\n  - Direct URL: https://{bucket}.cos.{region}.myqcloud.com/{key}\n  - Signed URL (24\u2011hour expiration)\n  - COS object key\n\n  Requirements\n\n  - Tencent Cloud COS credentials\n  - Node.js runtime\n  - Access to target bucket and region",
+  "created_at": 1772719961159,
+  "display_name": "Tencent Cloud Image Hosting (Upload files to get online URLs)",
+  "fetched_at": 1787888281341,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/cos-upload.js"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "parsonssss",
+    "handle": "parsonssss",
+    "user_id": "s175dke9r3zvcmp4r59ytqhrq583gseh"
+  },
+  "slug": "upload-files-to-get-online-url",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/upload-files-to-get-online-url",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=upload-files-to-get-online-url&ownerHandle=parsonssss",
+    "page_url": "https://clawhub.ai/parsonssss/skills/upload-files-to-get-online-url"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 840,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Upload files to Tencent Cloud COS (Cloud Object Storage). Use when the user needs to upload images, documents, or any files to Tencent Cloud COS. Supports en...",
+  "updated_at": 1778491734013,
+  "version": "1.0.0"
+}
