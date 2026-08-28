@@ -1,8 +1,8 @@
 {
-  "changelog": "v1.0.48 \u00b7 Corrects the paper-trading section (scenario 6), which previously showed paper.account.create / paper.order.place / paper.order.get \u2014 none of which exist in the catalog (they return 400 Skill not found), and paper.* is a reserved scope namespace that cannot be self-minted (400 RESERVED_SCOPE). Rewritten to the real path: investment.paper.* is reached only from inside a Process python_script node via the lg.paper.* SDK (the platform auto-injects a scope-limited short-lived Bearer at run time), or by subscribing the starter_paper_trade_strategy template \u2014 an external Agent cannot call it by changing an id. Also folds in changes accumulated since 1.0.47 but never released: a \u573a\u666f\u2192scope \u901f\u67e5\u8868 (a freshly-created token's default read-data scope already fetches data; per-scenario preset buttons; GET /agent/scope-presets and a full GET /agent/skills catalogue annotated with granted; 403/400 self-healing via requiredScope / didYouMean); schedule.job.depends now documents dependGroup (OR within a group, AND across groups); and a cross-reference to the new scenario-shaped package privora-alert for the alert-only use case.",
+  "changelog": "v1.0.50 \u00b7 Fixes documentation that sent readers to an asset id belonging to the publisher rather than themselves. Subscribing clones an asset into your own tenant under a different id (asset-1 is id 1 to the publisher, 398 / 268 / 402 to three different subscribers), so the first call after subscribing was a guaranteed 404. Section 0 now leads with marketplace.item.subscribe's clonedAssetId response field -- the subscribe upsert is idempotent, so an existing subscriber gets it by calling again -- with dataasset.list plus the Subscribed tag as the fallback. Section 4 was already correct and is unchanged in that respect. Also corrects the paper-trading token guidance: one line told readers to mint a PAT carrying paper.* scopes, which two other sections correctly say is impossible (rejectReservedScopes rejects the paper. prefix unconditionally). And discloses, for the first time, which skills fall outside the default read-data preset and will therefore 403 on a token created by accepting the defaults: datasource.list, datasource.get, datasource.list.active, datasource.connection.test, dataasset.metadata.get, dataasset.history.field-as-of, and marketplace.item.subscribe.",
   "created_at": 1774839388276,
   "display_name": "Privora \u00b7 A\u80a1/\u6e2f\u80a1/\u9ec4\u91d1/\u57fa\u91d1 \u591a\u8d44\u4ea7 \u91cf\u5316\u5206\u6790 \u00b7 \u91cf\u5316\u56de\u6d4b \u00b7 \u6a21\u62df\u76d8 \u00b7 \u5b9e\u65f6\u544a\u8b66 \u00b7 \u98ce\u9669\u76d1\u63a7 \u00b7 Python \u7b56\u7565 \u00b7 AI Agent",
-  "fetched_at": 1787772750213,
+  "fetched_at": 1787932646142,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -18,7 +18,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1786436932765,
+    "updated_at": 1787821354847,
     "verdict": "clean"
   },
   "owner": {
@@ -34,12 +34,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 3117,
+    "downloads": 3191,
     "installs": 36,
     "stars": 1,
-    "versions": 41
+    "versions": 42
   },
   "summary": "Privora \u00b7 AI Agent \u6295\u8d44\u5de5\u4f5c\u6d41\u5e73\u53f0 \u2014 Bearer Token \u5373\u63a5\u5165 /agent/skills/execute \u901a\u7528 dispatcher\uff0c\u8986\u76d6 A \u80a1/\u6e2f\u80a1/\u7f8e\u80a1/\u9ec4\u91d1/\u57fa\u91d1/\u8d22\u62a5\u6570\u636e + Python \u56de\u6d4b\uff08\u542b sandbox\uff09+ \u6a21\u62df\u4ea4\u6613 + \u7ec4\u5408\u5f52\u56e0\uff08\u03b1/\u03b2 TWR\uff09+ \u4e91\u7aef\u544a\u8b66 + \u6d41\u7a0b\u7f16\u6392\u3002Hermes / Claude / GPT / OpenClaw \u5168\u517c\u5bb9\u3002",
-  "updated_at": 1786432873587,
-  "version": "1.0.48"
+  "updated_at": 1787820602050,
+  "version": "1.0.50"
 }

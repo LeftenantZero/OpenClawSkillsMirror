@@ -1,8 +1,8 @@
 ---
 name: Privora · 数据驱动投资工作流平台 for AI Agents
 title: 🔬 Privora · AI Agent 投资工作流平台（A股/港股/美股/黄金/基金/财报数据 + Python 回测 + 模拟交易 + 组合归因 + 云端告警 + 流程编排）
-version: 1.0.48
-updatedAt: 2026-08-11
+version: 1.0.50
+updatedAt: 2026-08-27
 keywords:
   - A股
   - 港股
@@ -47,7 +47,7 @@ metadata:
 
 Hermes / Claude / GPT / OpenClaw 任何 Agent，通过一个 Bearer Token 即可访问：
 
-- 📊 **多资产数据（按市场段分别发布，均 🟢 生产可用）**：**日线** A 股 5500+ 股票（`stock_day`，含沪深300 / 上证综指 / 中证A500 / 深证成指 4 主要指数）+ 港股（`stock_day_hk`，如 `00700.HK`）+ 美股（`stock_day_us`，如 `AAPL`）；**分钟 K 线** A 股（`stock_kline`）+ 港股（`stock_kline_hk`），1/5/15/30/60 分钟；**持仓**、**黄金**、**基金**、**财报事件**（业绩预告 / 快报）——一个 API 全覆盖，详见下方「数据资产可用性」表。
+- 📊 **多资产数据（按市场段分别发布，均 🟢 生产可用）**：**日线** A 股 5500+ 股票（`stock_day`，含沪深300 / 上证综指 / 中证A500 / 深证成指 4 主要指数）+ 港股（`stock_day_hk`，如 `00700.HK`）+ 美股（`stock_day_us`，如 `AAPL`）；**分钟 K 线** A 股（`stock_kline`）+ 港股（`stock_kline_hk`），1/5/15/30/60 分钟；**持仓**、**黄金**、**基金**、**财报事件**（业绩预告 / 快报）——一个 API 全覆盖，详见下方「数据资产可用性」表。场内基金（ETF/LOF）日线（`fund_quote_day`）+ 分钟 K 线（`fund_kline`）表已就绪（🟡 尚未开放跨团队订阅，见下方表格）。
 - 🔔 **7×24 云端监控**：Serverless 策略托管，飞书 / 微信毫秒级预警，零服务器运维
 - 🧪 **Python 策略回测**：用同一份平台数据跑回测，输出 Sharpe / 最大回撤 / 交易明细
 - 🔒 **加密静态、认证边界返明文**：持仓数据在数据库中以 per-account 独立密钥密文存储（防 DB 层泄露 + 平台 admin 跨账户读取）；**持有你 Bearer Token 的 Agent 通过 API 认证后，平台按调用者身份解密并返回明文** —— 这不是 E2E 加密，Token 授权即数据访问权。
@@ -92,7 +92,7 @@ Hermes / Claude / GPT / OpenClaw 任何 Agent，通过一个 Bearer Token 即可
 | **资产盈亏巡航** | 一键查询持仓明细、当日盈亏、历史收益率，数据由 privora.cn 闭环处理。 |
 | **云端自动盯盘** | 设置预警条件（突破均线、涨跌幅、换手率等），触发即通知，7x24小时云端值守。 |
 | **多终端实时推送** | 策略触发毫秒级推送到飞书、微信 Webhook，不错过任何交易信号。 |
-| **行情数据** | 日线按市场段分别发布，均 🟢 生产可用：A 股（`stock_day`，沪深京 5500+ 股票 + 4 指数）、港股（`stock_day_hk`，如 `00700.HK`）、美股（`stock_day_us`，如 `AAPL`）；分钟 K 线：A 股（`stock_kline`）+ 港股（`stock_kline_hk`），1/5/15/30/60 分钟；基金日 NAV（`fund_day`）；SGE 黄金日线（`metal_day`）；财报事件（`stock_forecast` 业绩预告 + `stock_express` 业绩快报，11 年历史已回填）。详见下方「数据资产可用性」表。 |
+| **行情数据** | 日线按市场段分别发布，均 🟢 生产可用：A 股（`stock_day`，沪深京 5500+ 股票 + 4 指数）、港股（`stock_day_hk`，如 `00700.HK`）、美股（`stock_day_us`，如 `AAPL`）；分钟 K 线：A 股（`stock_kline`）+ 港股（`stock_kline_hk`），1/5/15/30/60 分钟；基金日 NAV（`fund_day`）；场内基金（ETF/LOF）日线（`fund_quote_day`）+ 分钟 K 线（`fund_kline`，🟡 已建库尚未开放订阅）；SGE 黄金日线（`metal_day`）；财报事件（`stock_forecast` 业绩预告 + `stock_express` 业绩快报，11 年历史已回填）。详见下方「数据资产可用性」表。 |
 | **Python 策略回测** ✨ | 用平台日线数据跑单股 / 多股组合回测，输出 Sharpe / 最大回撤 / 交易明细 / equity curve；结果持久化到 `process_backtest_result`，可通过 `investment.stock.backtest.list` 检索历史审计记录（平台已积累 44+ 次持久化回测）。 |
 | **模拟交易 (Paper Trading)** ✨ | MARKET / LIMIT 两种委托类型，调度器驱动，模拟完整委托 → 成交 → 盈亏核算链路；账户按 `user_name` 唯一（DB-level UNIQUE），订单按 `(user_name, client_order_id)` 幂等，Agent 重复调用不重建。适合策略 6 阶段验证的最终纸面交易关卡。 |
 | **用户声音收集** | 支持 Agent 代客户提交 Bug 和需求，无缝对接后台反馈系统。 |
@@ -109,13 +109,15 @@ Hermes / Claude / GPT / OpenClaw 任何 Agent，通过一个 Bearer Token 即可
 | `stock_kline` | 🟢 **生产可用** | A 股 1/5/15/30/60 分钟 K 线（`interval_type` 区分周期） | 分钟 | id=202；日线 + 日内同步，由 `stock_kline_daily_sync` 等调度维护 |
 | `stock_kline_hk` | 🟢 **生产可用** | 港股 1/5/15/30/60 分钟 K 线 | 分钟 | id=207；与 `stock_kline` 同结构，段独立 |
 | `stock_minutes` | ⚪ **已弃用** | (旧) 分钟 K 线，已被 `stock_kline` / `stock_kline_hk` 取代 | — | id=154；仅历史兼容保留，新集成请改用 `stock_kline`/`stock_kline_hk` |
-| `fund_day` | 🟢 **生产可用** | 公募基金日 NAV | 日 (T+1) | 数据延迟约 1 个工作日 |
+| `fund_day` | 🟢 **生产可用** | 公募基金日 NAV | 日 (T+1) | 数据延迟约 1 个工作日；**长期回测/算收益率必须用 `adj_nav`（复权净值），不能用 `unit_nav`（会被拆分/分红污染，且约 49% 行 `adj_nav` 为 NULL）**——详见下方「`adj_nav` 缺失信号」一节 |
+| `fund_quote_day` | 🟡 **数据已就绪，尚未开放跨团队订阅** | 场内基金（ETF/LOF）价格日线；PG 单表不分区；`market` ∈ {ETF, LOF}——**与 `fund_day`/`fund_codes` 的 `{E,O}` 词表不同，跨表 join 只能用 `fund_code`**；`turnover` 是成交额（元），不是换手率 | 日 | `source` 分 `akshare_hist_em`（官方历史，`is_final=true`/`calibration_status='confirmed'`）与 `fund_realtime_t0`（当日 T+0 推导，`is_final=false`/`pending`）；两者交叉验证收盘价/成交量完全一致；详见下方「场内基金 K 线」一节 |
+| `fund_kline` | 🟡 **数据已就绪，尚未开放跨团队订阅** | 场内基金（ETF/LOF）分钟 K 线，`interval_type` ∈ {1m,5m,15m,30m,60m}（无 1d，日线见 `fund_quote_day`） | 分钟 | PG 原生 RANGE 分区表（按 `day_id`），**保留期仅 3 天**（非 MC 资产，不受 ODPS 分区自动注入影响）；`bar_time` 是 VARCHAR 不是 timestamp；`tick_count` 量化稀疏度；详见下方「场内基金 K 线」一节 |
 | `metal_day` | 🟢 **生产可用** | SGE 黄金 / 白银日线 | 日 | 上海黄金交易所 |
 | `stock_forecast` | 🟢 **生产可用** (NEW 2026-06-22) | A 股上市公司业绩预告；11 年历史 82,457 行已回填 | 日 | 财报季 (1/4/7/10 月底前后) 集中发布 |
 | `stock_express` | 🟢 **生产可用** (NEW 2026-06-22) | A 股上市公司业绩快报；11 年历史 19,945 行已回填 | 日 | 比业绩预告更精确但发布更稀疏 |
 | `stock_dividend` | 🟢 **生产可用** (NEW v1.0.32) | A 股上市公司现金分红事件；进入 `portfolio.attribution` 归因 | 事件驱动 | 除权除息日发布 |
 
-**对 Agent 的指导**：调用 `dataasset.list` 看完整列表；标 🔴 / ⚫ / ⚪ 的资产请避免在策略里硬编码依赖（⚪ = 已弃用，改用其后继 asset）。`dataasset.metadata.get` (2026-06-22 新上) 可查每张表的 `lastUpdated` / `expectedUpdateCadence` / `cronExpression` 来判断当前状态。
+**对 Agent 的指导**：调用 `dataasset.list` 看完整列表；标 🔴 / ⚫ / ⚪ 的资产请避免在策略里硬编码依赖（⚪ = 已弃用，改用其后继 asset）。`dataasset.metadata.get` (2026-06-22 新上) 可查每张表的 `lastUpdated` / `expectedUpdateCadence` / `cronExpression` 来判断当前状态——**注意这个 scope 不在默认 `read-data` 预设里**，用默认预设建的 token 直接调会 403，见下方「快速接入」§4 的说明。
 
 > 📌 本节是 **2026-07-17 的一次平台盘点快照**，随时间推移可能与实际覆盖漂移。各已发布资产的完整覆盖范围、分市场明细、更新频率与数据起始日期，见持续维护的公开清单页：[privora.cn/features/realtime-minute-data-coverage](https://privora.cn/features/realtime-minute-data-coverage)（按六类分组，含 A股/港股/美股/北交所分市场明细）。
 
@@ -204,7 +206,7 @@ skillId 写错时 400 响应体给 `didYouMean[]` 候选。
 - 无需登录，直接浏览公开挂牌的 A 股 / 港股 / 美股 / 黄金 / 基金 / 财报事件等数据资产
 - 想一眼看完**全部已发布资产**的覆盖范围 / 更新频率 / 数据起始日期，不用一个个点开？看公开清单页 [privora.cn/features/realtime-minute-data-coverage](https://privora.cn/features/realtime-minute-data-coverage)
 - 每个资产可以点进去看 25 行样本数据 + 20 字段元信息（`lastUpdated` / 数据源 / cron 表达式等）
-- 看到有价值的资产？记下 numeric asset id → 回到终端跑下面的 §4 First Call Recipe（3 步 / 约 2 分钟）**立刻验证 Bearer Token 对同一资产能跑通** —— 无需额外配置，安装 skill 时的环境变量对同一资产完全生效
+- 看到有价值的资产？**不要记这里显示的 numeric id**：那是发布方团队的 id，拿去调你自己的 Bearer Token 接口只会 404——订阅后你自己团队会拿到一份**全新数字 id** 的克隆资产，两者不是同一个数。**拿自己团队 id 最直接的办法**：走 §1 - §3 注册拿 Token——**`marketplace.item.subscribe` 不在默认 `read-data` 预设里，六个预设场景按钮里也都没有它**，创建 token 时必须自己在 scope 列表里手动勾选 `marketplace.item.subscribe`，不勾这一步调用会 403——然后调 `marketplace.item.subscribe`（幂等——哪怕你之前已经订阅过，重复调用同一个 item 也照样成功），响应体里的 `clonedAssetId` 就是你自己团队里那份克隆资产的数字 id，直接拿去跑 §4 First Call Recipe（2 步 / 约 1 分钟）验证 Bearer Token 对同一资产能跑通。**兜底路径**：如果响应丢了这个字段、或你不想再调一次 subscribe，`dataasset.list` 里按 `tags` 含 `Subscribed` 也能扫到同一份克隆资产的 id
 - 觉得样本还不够？往下走 §1 - §4 注册生成 Bearer Token 拿完整访问权（分页 / 过滤 / 更高 rate limit / 写操作 / Agent 集成）
 
 **为什么先看再注册**：Privora 是投研工作流平台，"你的数据是否值得订阅"应该 30 秒能判断 —— 不需要注册墙。marketplace UI 是**发现工具**，Bearer Token 是**同一批数据的程序化访问入口**，两者对应关系明确。
@@ -226,11 +228,11 @@ export LG_AGENT_TOKEN="***"
 ### 3) 唤醒 Agent，开始对话
 现在，您可以直接用自然语言向您的 Agent 下达指令了！
 
-### 4) ⚠️ 做出你的第一次成功 API 调用（3 步走 / 避免最常见的 500）
+### 4) ⚠️ 做出你的第一次成功 API 调用（2 步走 + 1 步可选 / 避免最常见的 500 和 403）
 
 **最容易踩的坑**：URL 里的 `{id}` 必须是**数字型 asset ID**（如 `42`），**不是 asset 名字**（如 `fund_day` / `stock_day`）。传成名字后端 Spring 转 Long 失败会返回 500——错误信息不会明确告诉你原因。
 
-**正确的 3 步 recipe**：
+**正确的 recipe**（用默认 `read-data` 预设的 token 即可全部跑通）：
 
 ```bash
 # Step 1: 先 list 拿数字 id ← 别跳过这步
@@ -241,21 +243,24 @@ curl -H "Authorization: Bearer $LG_AGENT_TOKEN" \
 # {"id": 8,  "assetName": "stock_day"}
 # {"id": 15, "assetName": "stock_dividend"}
 
-# Step 2: 用数字 id (不是 assetName!) 查元数据
-curl -H "Authorization: Bearer $LG_AGENT_TOKEN" \
-  https://privora.cn/api/data-assets/42/metadata
-
-# Step 3: 用数字 id 查实际数据
+# Step 2: 用数字 id (不是 assetName!) 查实际数据
 curl -H "Authorization: Bearer $LG_AGENT_TOKEN" \
   "https://privora.cn/api/data-assets/42/data?page=1&size=10"
+```
+
+**（可选）Step 3：查富元数据**——`GET /api/data-assets/{id}/metadata`（对应 skill `dataasset.metadata.get`）**不在** Token Management 页面 `read-data` 默认预设的 6 个 scope 里（`dataasset.list` / `dataasset.get` / `dataasset.schema.get` / `dataasset.data.get` / `dataasset.data.getRealtime` / `marketplace.item.list`）。照默认预设建的 token 调它会拿到 **403**，不是你哪里配错了；想用就在创建 token 时手动多勾 `dataasset.metadata.get` 这一项，或重新签发一个带这个 scope 的 token：
+
+```bash
+curl -H "Authorization: Bearer $LG_AGENT_TOKEN" \
+  https://privora.cn/api/data-assets/42/metadata
 ```
 
 **Agent 侧用 `lg_agent_exec.sh` 调用同理**（v1.0.45 起支持命名参数扁平写法，不用手拼 JSON）：
 
 ```bash
 scripts/lg_agent_exec.sh dataasset.list
-scripts/lg_agent_exec.sh dataasset.metadata.get id=42
 scripts/lg_agent_exec.sh dataasset.data.get id=42 filter_column=stock_num filter_value=600519
+# scripts/lg_agent_exec.sh dataasset.metadata.get id=42  ← 可选；默认 read-data 预设没有这个 scope，直接跑会 403，见上
 ```
 
 `id` **必须是数字**（先 `dataasset.list` 拿到再传，不是资产名字如 `fund_day`）。想看某个 skill 接受哪些 key，先 `scripts/lg_agent_list.sh describe dataasset.data.get` 看 schema + 示例，再照着填。
@@ -284,14 +289,18 @@ scripts/lg_agent_exec.sh dataasset.data.get id=42 filter_column=stock_num filter
 curl https://privora.cn/agent/skills
 
 # 无 token 拿 marketplace 列表
+# Windows Git Bash 提醒：curl.exe 是原生 Windows 程序，MSYS2 会按本地 ANSI 代码页重编码命令行参数，
+# 如果把下面的 body 换成含中文/非 ASCII 的内容（如搜索关键字），-d '...' 会被静默改坏——改用 --data-binary @file。
+printf '%s' '{"skillId":"marketplace.item.list"}' > /tmp/lg_body.json
 curl -X POST https://privora.cn/agent/skills/execute \
   -H "Content-Type: application/json" \
-  -d '{"skillId":"marketplace.item.list"}'
+  --data-binary @/tmp/lg_body.json
 
-# 无 token 拿某个已发布看板的 widget 数据
+# 无 token 拿某个已发布看板的 widget 数据（同上：非 ASCII 内容一律 --data-binary @file，不要用 -d）
+printf '%s' '{"skillId":"dashboard.data.get","params":{"pathParams":{"id":"<published-dashboard-uuid>"}}}' > /tmp/lg_body.json
 curl -X POST https://privora.cn/agent/skills/execute \
   -H "Content-Type: application/json" \
-  -d '{"skillId":"dashboard.data.get","params":{"pathParams":{"id":"<published-dashboard-uuid>"}}}'
+  --data-binary @/tmp/lg_body.json
 ```
 
 响应体的 `mode` 字段会明确标 `"anonymous"`，`grantedScopes` 列出下方 10 个允许的 skill。
@@ -510,7 +519,7 @@ echo "请打开此链接配置告警：${DEEPLINK}"
 
 ### REST 技能（`scripts/lg_agent_exec.sh` 调用）
 
-> 公开版 skill 覆盖 4 类操作，见 [§🛡️ Scope & Operator Responsibility](#scope--operator-responsibility) 完整的 read / idempotent-write / workflow-transition / outbound-webhook 分类。删除、撤销、系统级审批等**破坏性/管理类操作不在本 skill 范围内**，需通过 platform UI 或 admin 工具完成。
+> 公开版 skill 覆盖 4 类操作，见 [§🛡️ Scope & Operator Responsibility](#scope--operator-responsibility) 完整的 read / idempotent-write / workflow-transition / outbound-webhook 分类。**大部分**删除、撤销等破坏性/管理类操作不在本 skill 范围内，需通过 platform UI 或 admin 工具完成；**例外**是标记 🔴/🟡 且 `confirmRequired:true` 的一小撮 workflow-transition 类操作（`process.ingestion.delete` 等 13 个，见下方 [§高风险操作确认握手](#高风险操作确认握手-confirm-handshake)），这些 Bearer token 可达，但必须先完成两步确认握手——单次调用不会直接执行。系统级审批（管理员 approve/reject 一个陌生人发起的请求）仍然不在本 skill 范围内，需要 platform UI。
 > 风险标记：🟢 low / 🟡 medium / 🔴 high。所有 `GET` 技能默认对会话用户开放；写操作需显式授予 scope。
 
 > 📦 **Request shape (v1.0.45+)**: 命名参数扁平写法 —— 直接用 `key=value` 传参，不用手拼 JSON：
@@ -518,6 +527,72 @@ echo "请打开此链接配置告警：${DEEPLINK}"
 > scripts/lg_agent_exec.sh dataasset.data.get id=42 filter_column=code filter_value=000135
 > ```
 > 等价于旧 envelope 形式 `{"skillId":"dataasset.data.get","params":{"pathParams":{"id":42},"query":{"filter_column":"code","filter_value":"000135"}}}`——网关会按每个 skill 的 path 模板自动把 flat key 分类到 `pathParams` / `query` / `body`。`key=value` 一律当字符串（保留 `stock_num=000135` 这类前导零）；数字/布尔/数组用 `key:=value`（如 `qty:=100`）。**旧 envelope 形式 100% 继续可用，两种写法可以在同一次调用里混用**（例：数组 body 用 `--json`，path 参数用 flat key）。想看某个 skill 接受哪些 key，跑 `scripts/lg_agent_list.sh describe <skillId>`。完整规则 + 历史踩坑 + envelope 手工写法见文末 [§高级 / 兼容性附录](#高级--兼容性附录)。
+
+#### 高风险操作确认握手 (confirm handshake)
+
+13 个标记 `confirmRequired:true` 的技能对 Bearer token 可达（`process.ingestion.delete`、`schedule.job.{online,offline,delete}`、`schedule.instance.{redo,hold,kill,cancel,force_start,mark_success}`、`subscription.token.revoke`、`metric.alert.delete`、`investment.paper.account.reset`），但**单次调用永远不会直接执行**——第一次调用总是返回 HTTP 409，必须完成两步握手才能真正执行。（另有 6 个 `investment.{stock,fund,gold}.{portfolio,trading}.delete` 目前设计上暂不对 token 开放，见下方「不可达」说明。）
+
+**① 第一次调用（不带 `approvalId`）→ 总是 409：**
+
+```bash
+scripts/lg_agent_exec.sh process.ingestion.delete id=42
+```
+
+```json
+{
+  "success": false,
+  "traceId": "...",
+  "message": "Approval required for high-risk action",
+  "requiredScope": "process.ingestion.delete",
+  "confirmRequired": true,
+  "approvalId": 27,
+  "expiresAt": "2026-08-18T19:30:00",
+  "skillId": "process.ingestion.delete",
+  "next": "human-approves-then-resend-see-nextAction",
+  "nextAction": {
+    "method": "POST",
+    "url": "/agent/skills/execute",
+    "body": {
+      "skillId": "process.ingestion.delete",
+      "params": { "pathParams": { "id": 42 }, "approvalId": 27 }
+    }
+  },
+  "hint": "approvalId must be nested inside \"params\" (params.approvalId), never a sibling of \"skillId\" — see nextAction for the exact resend request. Optionally POST /api/agent/approvals/27/confirm ahead of time to self-confirm without waiting for the resend (idempotent — resending via nextAction afterwards still succeeds either way). Window closes at expiresAt."
+}
+```
+
+**② 把 ① 的内容原样展示给人类，等待其同意**（这是防误操作装置，不是授权检查——真正的权限仍然是 token 的 scope；见 [§🛡️ Scope & Operator Responsibility](#scope--operator-responsibility)）。
+
+**③ 重发，把 `approvalId` 嵌进 `params` 里 → 200：**
+
+`nextAction.body` 就是可以直接拿去重发的完整请求体——**逐字**用它，不要自己重新拼：
+
+```bash
+# Windows Git Bash 提醒：--data '...' 把 body 放进命令行参数，curl.exe 是原生 Windows 程序，
+# MSYS2 会按本地 ANSI 代码页重编码 argv——如果 approve/reject 理由等字段含中文/非 ASCII，
+# 内容会被静默改坏。优先用下面的 lg_agent_exec.sh；必须裸 curl 时改用 --data-binary @file。
+curl -X POST "$LG_AGENT_BASE_URL/agent/skills/execute" \
+  -H "Authorization: Bearer $LG_AGENT_TOKEN" -H "Content-Type: application/json" \
+  --data '{"skillId":"process.ingestion.delete","params":{"pathParams":{"id":42},"approvalId":27}}'
+```
+
+优先用 `lg_agent_exec.sh` 的扁平写法（也修好了上面这个 Windows 编码坑），`approvalId` 作为一个 flat key 传即可（网关不会把它当作业务参数转发下游，也不会因为它出现在 `params` 顶层而拒绝识别）：
+
+```bash
+scripts/lg_agent_exec.sh process.ingestion.delete id=42 approvalId:=27
+```
+
+**唯一会生效的判据是 `params.approvalId`。**踩坑记录（issue #74，2026-08-18 修复）：
+
+- ❌ `{"skillId":"process.ingestion.delete","approvalId":27,"params":{"pathParams":{"id":42}}}`——`approvalId` 和 `skillId` 同级、不在 `params` 里，**网关只会把顶层的 `pathParams`/`query`/`body` 折进 `params`，`approvalId` 不在这个白名单内**，会被静默丢弃，网关认为你还没有 approvalId，重新建一条 pending 审批（`approvalId` 会一次次往上涨），永远卡在 ①。
+- ❌ 单独发 `confirm:true`（不带 approvalId，或 approvalId 放错位置）——`confirm` 字段本身**不会被读取**，只是网关内部保留字（防止它泄漏到下游请求），加不加、真不真都不影响判定。
+- ✅ 只有 `params.approvalId`（嵌套在 `params` 内）才会被网关识别为「已经有一个待处理的审批」。
+
+`expiresAt` 是这条审批任务的过期时间（TTL 10 分钟）——超时后 `approvalId` 失效，重发 ③ 也会 409，须重新走 ①。
+
+**（可选）提前自确认**：`agent-skill/scripts/lg_agent_approval.sh confirm <approvalId>` 直接命中 `POST /api/agent/approvals/{id}/confirm`（同一 requester 才能确认自己发起的审批），可以在等待人类确认期间提前调用；之后按 ③ 正常重发仍会成功（幂等）。这**不是**必需步骤——③ 本身已经原子地完成"自确认 + 消费"，`confirm` 只是给需要分两次操作的场景用的便利工具。管理员批准/拒绝走 `lg_agent_approval.sh approve|reject`（需要 `userLevel>=8`，非管理员 token 调用会 403——这不是本 skill 的入口，除非你就是管理员）。
+
+**不可达（暂不支持）**：`investment.{stock,fund,gold}.{portfolio,trading}.delete`（6 个）目前设计上对 token 模式仍然 409——它们背后共用的几个 handler 目前只能声明单一权限校验字符串，无法表达"以下 12 个 scope 名中的任意一个"，属于已知限制，不是本次修复范围。
 
 ### 流程 (Process / Ingestion)
 
@@ -711,19 +786,19 @@ Ops 流程几乎总是先 `schedule.instance.list`（或 `schedule.job.by_proces
 
 | skillId | method | 功能 | 风险 |
 |---|---|---|---|
-| `datasource.list` | GET | 列出数据源 | 🟢 |
-| `datasource.get` | GET | 获取数据源详情 | 🟢 |
-| `datasource.list.active` | GET | 列出活跃数据源 | 🟢 |
-| `datasource.connection.test` | POST | 测试数据源连接 | 🟡 |
+| `datasource.list` | GET | 列出数据源。**不在默认 `read-data` 预设里**——默认预设建的 token 调会 403，需在创建 token 时手动勾选这个 scope，或重新签发。 | 🟢 |
+| `datasource.get` | GET | 获取数据源详情。**不在默认 `read-data` 预设里**，同上，需手动勾选或重新签发。 | 🟢 |
+| `datasource.list.active` | GET | 列出活跃数据源。**不在默认 `read-data` 预设里**，同上，需手动勾选或重新签发。 | 🟢 |
+| `datasource.connection.test` | POST | 测试数据源连接。**不在默认 `read-data` 预设里**，同上，需手动勾选或重新签发。 | 🟡 |
 | `datasource.update` | PUT | **全量替换**数据源（含连接配置 `dsConf`）。**想只改描述或显示标签？用 `datasource.patch`，避免 dsConf/dsAuth 被覆盖。** | 🟡 |
 | `datasource.patch` | PATCH | 部分更新数据源元数据（`PATCH /api/datasources/{dsId}`）。**字段掩码语义**：仅 `dsDescr`（描述）/ `dsLabel`（显示标签）两个安全字段可被更新；缺失字段、显式 `null`、**以及空字符串 `""`** 都视为"跳过"（**不**清空）。**严格拒绝**：`dsConf`（更改连接目标会破坏运行中的 ETL）/ `dsType`（标识符）/ `dsAuth` / `dsId` / `dsName` / `teamName` 出现在 body 即返回 HTTP 200 `success:false, code:"FIELD_NOT_PATCHABLE"`。**此 skill 需要 `datasource.patch` scope（独立于 `datasource.update`），现有 token 须重新签发方可使用。** | 🟢 |
 | `dataasset.list` | GET | 列出数据资产 | 🟢 |
 | `dataasset.get` | GET | 获取资产详情 | 🟢 |
 | `dataasset.schema.get` | GET | 获取资产 schema（列名/类型）；支持 `?refresh=true` 绕过缓存实时重新采集 | 🟢 |
-| `dataasset.metadata.get` | GET | 获取资产富元数据：20 个字段，包含 `lastUpdated`（最近刷新时间）、`expectedUpdateCadence`（调度批次类型，来自关联 Job）、`cronExpression`（cron 表达式）、`sourceDescription`（数据源描述）。Bug #50 后续，用于程序化判断资产新鲜度。 | 🟢 |
+| `dataasset.metadata.get` | GET | 获取资产富元数据：20 个字段，包含 `lastUpdated`（最近刷新时间）、`expectedUpdateCadence`（调度批次类型，来自关联 Job）、`cronExpression`（cron 表达式）、`sourceDescription`（数据源描述）。Bug #50 后续，用于程序化判断资产新鲜度。**这个 scope 不在默认 `read-data` 预设里**——用默认预设建的 token 调会 403，需要在创建 token 时手动多勾这一项，或重新签发。 | 🟢 |
 | `dataasset.data.get` | GET | 查询资产数据（盈亏、行情等，全量历史）；支持 `filter_op` 过滤运算符（见下方详情）。MC 数据源资产速度较慢（2-5s）但包含完整历史 | 🟢 |
 | `dataasset.data.getRealtime` | GET | 查询资产的 **实时镜像数据源**（PG 热窗口，最近 365 天）；低延迟，适合仪表盘 / 实时 P&L。资产未配置 `realtimeDataSource` 时返回 `{success:false, message:"This asset has no realtime mirror"}`，不抛异常。路径：`GET /api/data-assets/{id}/data-realtime` | 🟢 |
-| `dataasset.history.field-as-of` | GET | 点状时间（PIT）股票状态字段查询：`is_st`（ST/暂停挂牌）、`market_board`（板块）、`delisted`（退市）、`industry`（申万行业分类）。返回指定股票在某日期上的历史状态快照。依赖 PR-B ETL 完成首次回填后方可返回实际数据；回填未完成前返回 `data:null`。详见下方「dataasset.history.field-as-of」节。 | 🟢 |
+| `dataasset.history.field-as-of` | GET | 点状时间（PIT）股票状态字段查询：`is_st`（ST/暂停挂牌）、`market_board`（板块）、`delisted`（退市）、`industry`（申万行业分类）。返回指定股票在某日期上的历史状态快照。依赖 PR-B ETL 完成首次回填后方可返回实际数据；回填未完成前返回 `data:null`。**这个 scope 不在默认 `read-data` 预设里**——用默认预设建的 token 调会 403，需要在创建 token 时手动多勾这一项，或重新签发。详见下方「dataasset.history.field-as-of」节。 | 🟢 |
 | `dataasset.update` | PUT | **全量替换**数据资产元数据（`PUT /api/data-assets/{id}`）。**想只改 description/tags/allowSubscription？用 `dataasset.patch` PATCH，避免误改 sensitivityLevel 等不可改字段。** | 🟢 |
 | `dataasset.patch` | PATCH | 部分更新数据资产元数据（`PATCH /api/data-assets/{id}`）。**字段掩码语义**：仅 `description` / `tags` / `allowSubscription` 三个安全字段可被更新；缺失字段、显式 `null`、**以及空字符串 `""`** 都视为"跳过"。**严格拒绝**：`sensitivityLevel`（含别名 `sensitivity_level` / `securityLevel` / `level`）— 敏感级是 MONOTONIC，调整必须走专用 sensitivity-change 路径；`assetName` / `assetType` / `tableName` / `teamName` 等标识符也拒绝。**`allowSubscription=true` 在 INTERNAL 资产上要求 `tags` 包含 `permission_field:<col>`，否则返回 `code:"PERMISSION_FIELD_REQUIRED"`**（INLINE 复刻 PUT 路径的 publish-validation guard）。**此 skill 需要 `dataasset.patch` scope（独立于 `dataasset.update`），现有 token 须重新签发方可使用。** | 🟢 |
 
@@ -837,6 +912,8 @@ Ops 流程几乎总是先 `schedule.instance.list`（或 `schedule.job.by_proces
 
 **snake_case 别名是 agent-skill gateway 的属性，不是这个 HTTP 端点本身的属性。** 通过本技能（`dataasset.data.get` / `lg.get_asset_data`）调用时，gateway 会把 snake_case 参数名（`filter_column` / `filter_value` / `filter_op` / `filter_column_2` / `filter_value_2` / `filter_op_2` / `order_by` / `order_direction`）翻译成 camelCase 再转发给后端（`lib/skill-catalog.js` 的 `paramAliases`，经 `lib/param-aliases.js` 施加，仅在 skill-dispatch 路径生效）。**直接对底层 HTTP 端点发起裸请求（不经过 gateway）必须使用 camelCase**——snake_case 参数名会被 Spring 静默忽略（未声明的 `@RequestParam` 不报错也不生效），导致过滤器悄悄失效而不是报错。2026-07-30 起，四个资产数据 GET 端点（本端点、`dataasset.data.getRealtime`、以及两个 `/api/internal/**` 内部端点）新增了未识别 query 参数的 fail-loud 校验——裸 HTTP 调用如果误用 snake_case 名，会收到 `{"success":false,"message":"Validation Failed: Unrecognized query parameter(s): ..."}`（HTTP 200），而不是从前那样被静默丢弃、无任何信号。
 
+**省略 `filter_op` 时的默认值**：只传 `filter_column`/`filter_value`、不传 `filter_op`（`filterOp`）时，默认运算符是 **`contains`**（`LIKE '%value%'`），**不是精确匹配**——`filter_column=fund_code filter_value=510300`（没有 `filter_op`）会匹配任何**包含** `510300` 子串的代码，不止 `510300` 本身。想要精确匹配请显式传 `filter_op=eq`。
+
 **`filter_op` / `filterOp` 完整合法值：**
 
 | 运算符 | SQL 语义 | 示例 |
@@ -868,6 +945,17 @@ Ops 流程几乎总是先 `schedule.instance.list`（或 `schedule.job.by_proces
 - **`size <= 1000` 永远不受此限制**，无论 `page` 多大、总行数多少——marketplace 匿名预览固定 `page=1&size=25`，`25 <= 1000` 恒成立，天然、永久豁免，不需要任何特殊处理；普通小分页翻页（如 `size=25&page=2`）也不受影响，行为与本次修复前一致（这不是本次修复的范围）。
 - 当 `size` 超过 1000 **且**提供了 `order_by`（因此调用成功）时，响应里会带两个额外信号字段：`truncated: true` 和 `effectivePageSize: 1000`（实际生效的每页行数）。不超限时这两个 key **不存在**（不是 `false`/`null`，而是整个 key 缺失——沿用 `totalCountApproximate`/`totalCountTruncated` 的既有 additive-flag 惯例）。`pageSize` / `totalPages` 字段始终反映实际生效值，不会再出现"回显了 `size=10000` 但只拿到 1000 行"的自相矛盾。**换句话说，`truncated:true` 只会出现在你自己提供了排序键的成功响应里**——没有排序键的超限请求根本走不到返回结果那一步，直接报错。
   - 示例（第一次调用即可，不用先拿 page=1 再试探）：`scripts/lg_agent_exec.sh dataasset.data.get id=76 filter_column=fund_code filter_value=510300 filter_op=eq size=10000 order_by=day_id`。
+
+**`fund_day.adj_nav` 缺失信号（feedback #64 / #73，2026-08-18，LA REVISE #2 订正措辞）**：`fund_day` 有 `unit_nav`（单位净值）和 `adj_nav`（复权净值）两列。**`unit_nav` 会被基金份额拆分 / 分红再投污染**——一旦发生拆分，`unit_nav` 会在拆分当天出现一个和真实收益完全无关的价格台阶（实例：513100 于 20220113 发生 5:1 拆分，`unit_nav` 从 5.189 跌到 1.009，凭空产生 -80.56% 的"暴跌"；`adj_nav` 同期从 5.189 平滑过渡到 5.045）。**`adj_nav` 才是唯一能正确反映基金全收益（含拆分/分红调整）的字段**，长期回测 / 算收益率 / 算相关性一律应该用 `adj_nav`，不能用 `unit_nav`。
+
+  - **`adj_nav` 缺失是两条独立通道、两种不同性质的缺口，覆盖比例悬殊——不要把其中一条通道的情况当成全貌**：
+    - **`dataasset.data.get` / `lg.get_asset_data`（MC 主数据源）**：缺口是**极少数**（2026-08-18 审计：最新一天 12,482 行里仅 5 行 `adj_nav IS NULL AND unit_nav IS NOT NULL`，且全部来自 `source='tushare_fund_nav'`）。
+    - **`dataasset.data.getRealtime` / `lg.get_asset_data_realtime`（PG 实时镜像）**：缺口是**主体**（同一天 24,606 行里 12,138 行满足同一条件，除 5 行外全部来自 `source='akshare_em'`）。根因是 proc 3401（`fund_day_backfill`，写 MC）的依赖图里没有 proc 3540（`fund_day_backup_akshare`，写 PG）——MC 分区在 akshare 数据写完 PG 之前就被 tushare 数据覆盖，且从不回访旧分区，所以 akshare 来源的行**永久不会进入 MC**。这是**覆盖缺口**（行根本不存在），不是"存在但为 NULL"的缺口——对该类基金，`dataasset.data.get` 要么直接返回 0 行，要么返回一段完全没有触发下方 NULL 检查机会的历史。
+    - `fund_day` 是全平台仅有的两个配置了 `realtimeDataSource` 的资产之一，dashboard widget 带 `__dashboardId` 时**无条件**走 PG 镜像——这不是边缘路径，是这类资产的主要读路径之一。
+    - **注意**：本节的 `adjNavIncomplete` 信号目前只到达**直接调用** REST / `get_asset_data*` 的调用方（agent 脚本、`curl` 等）；dashboard 大盘的 table 类 widget 渲染管道（`DashboardDataService.fetchWidgetData`）在把结果交给前端之前会丢弃除 `data` 行以外的所有字段，**尚未把此信号透出到浏览器 UI** —— 这是一个更早、更大的既有缺口，不在本次改动范围内，已登记为独立 follow-up(issue #864)。
+  - 因此**两条通道的响应体都会带同一个额外的 additive-only 信号字段** `adjNavIncomplete`：当返回的某一页里出现"某行 `adj_nav` 为 NULL 但 `unit_nav` 非 NULL"（即确认是真实交易日，只是复权净值缺失，不是非交易日占位行）时，该通道的响应体里会出现 `adjNavIncomplete: true`；否则该 key **不存在**（同 `truncated`/`effectivePageSize` 的 additive-flag 惯例）。**但要记住上面的覆盖比例差异**：MC 通道触发这个信号的概率极低，PG 实时通道才是这个信号真正生效的地方。
+  - **`lg_utils.backtest_examples.fund_day.run_fund_day_backtest`（见下方 Python 工具库表格）内置的 fail-loud 检查只保护 MC 通道**（它调用 `get_asset_data`，从不调用 `get_asset_data_realtime`）——对 MC 里那极少数的 5 行是真保护，但对 PG 通道的 12,138 行**没有任何保护**，因为直接调用 `dataasset.data.getRealtime` / `lg.get_asset_data_realtime` 的代码根本不经过这个回测封装。**不要在看到 `adj_nav` 为 NULL 时静默退回 `unit_nav` 使用**——反馈#64 记录过真实事故：某次静默回退把 YTD 算成 -47.06%（真实约 +7~10%），与基准相关性 0.2956（真实应 >0.85）；直接读 `dataasset.data.getRealtime` 的调用方必须自己检查 `adjNavIncomplete`，不能假设有回测封装帮你挡住。
+  - 这个设计是**故意的 fail-loud**，不同于 `stock_day_v2.adj_factor` 的 optional pass-through（PR #678 独立裁定过）——两者面对的是不同的数据缺口性质，选择不同的处理方式是设计决策，不是标准漂移。本次改动**不做任何推导/回填**（不会用 `unit_nav` 的日收益率累乘出一条近似 `adj_nav`），这类链式推导方案已被 LA 明确驳回（先例：`stock_day` 的 `adj_factor` 拒绝"算个替代值"，只接受权威真值 + provenance 标注）。
 
 ---
 
@@ -912,6 +1000,62 @@ scripts/lg_agent_exec.sh dataasset.data.get id=76 \
 > **Prerequisite**: `.getRealtime` requires the asset to have `realtimeDataSource` populated (via `PUT /api/data-assets/{id}`, an admin API). If not configured, `.getRealtime` returns `{success:false, message:"This asset has no realtime mirror"}`. Currently `stock_day` and `fund_day` are the only assets with realtime mirrors configured; other assets will return the "no mirror" response until an admin populates their `realtimeDataSource`.
 
 > **Note for existing bearer token holders**: if you receive `403 Forbidden: missing required scope 'dataasset.data.getRealtime'` when calling this skill, your token was minted before this skill was added. Go to lg-data.cc → Token Management, edit your token, and add the `dataasset.data.getRealtime` scope. New tokens minted after 2026-07-02 automatically include all currently-registered scopes.
+
+---
+
+##### 场内基金（ETF/LOF）行情：`fund_quote_day` + `fund_kline`
+
+两张表都是 PG 原生表（**不是** MaxCompute/ODPS），走 `dataasset.data.get` 的常规 PG 读路径——不受本节上方 MC-only 的「最新分区自动注入」与「`size>1000` 必须带 `order_by`」两条守卫约束（两条守卫的判定条件都显式检查 `connectionInfo.databaseType == odps`）。**当前 `allowSubscription=false`——本节只描述数据契约，不代表其它团队今天就能订阅这两张表。**
+
+**`fund_quote_day`**（场内基金日线，PG 单表不分区）：
+
+- `market` 列取值 `{ETF, LOF}`——**与 `fund_day.market` / `fund_codes.market` 的 `{E,O}` 是不同词表**，跨表 join 一律用 `fund_code`，不要用 `market` 做 join key。
+- `turnover` 是**成交额**（元），不是换手率。
+- `source` 区分两种写入来源：`akshare_hist_em`（官方历史收盘价，`is_final=true` / `calibration_status='confirmed'`）与 `fund_realtime_t0`（当日 T+0 推导值，`is_final=false` / `calibration_status='pending'`，最终会被官方值校准或在 5 次校准失败后标记 `abandoned`）。回测/长期分析优先用 `is_final=true` 的行。
+- 主键 `(fund_code, day_id)`。
+
+**`fund_kline`**（场内基金分钟 K 线，PG 原生 `RANGE (day_id)` 分区表）：
+
+- `interval_type` ∈ `{1m, 5m, 15m, 30m, 60m}`——**没有 `1d`**，日线请用 `fund_quote_day`。
+- `bar_time` 是 **VARCHAR(19)**（形如 `'2026-08-18 09:30:00'`），**不是 timestamp 类型**——不要对它调用 SQL 的 `to_char`/日期函数，会报类型错误；需要日期运算时先在客户端解析。
+- **设计保留期为 3 天**（PG `RANGE (day_id)` 分区按日创建，由 proc 3389 Step 5d 按日龄丢弃超期分区，`FUND_KLINE_CUTOFF_DAYS=3`）。**该清理尚未真正执行过一次**——表 2026-08-18 才建立第一个分区，08-17 那次运行的 Step 5d 摘要是 `Age-eligible candidates: 0 / Dropped: 0`；且清理门控要求 MC 侧 `privora.fund_kline` 镜像存在才会真删（Phase 6 offload 未做，proc 3859 线上仅三步无 offload），门是 fail-safe 的，因此当前会一直 SKIP。**契约按 3 天规划，不要假设能稳定拉到更早的历史；但也不要假设旧分区此刻真的已被清理。**
+- 每日典型 bar 数（ETF 众数，实测）：
+
+  | `interval_type` | 每日典型 bar 数 | 备注 |
+  |---|---|---|
+  | `1m` | **237**（分布 232–239） | **不是 240**——源表并非每分钟都有 tick，缺口是正常现象不是缺陷 |
+  | `5m` | 48 | — |
+  | `15m` | 16 | — |
+  | `30m` | 8 | — |
+  | `60m` | **5**（hour-floor：09:00/10:00/11:00/13:00/14:00） | 与 `stock_kline` 一致，**不是**券商常见的 4 根 session-aligned 聚合 |
+
+  收盘打点已钳制：不存在 `bar_time` 落在 `09:25–09:29` / `11:30` / `15:00` 的桶。
+- `tick_count` 列量化该分钟内的真实采样笔数，用于判断稀疏度：**LOF 采样普遍稀疏**（覆盖率约 40%），`tick_count=1` 的 bar 必然 `open=high=low=close`——这代表"该分钟只采到一笔样本"，**不代表"该分钟无波动"**，不要把它当异常值剔除。
+- `is_final=false` 是盘中快照（当日可被覆盖），`is_final=true` 是 T+1 `fund_kline_daily_sync` 定稿后的 bar（该 proc 会用 `fund_quote_day` 的收盘价回校当日最后一根 bar 的 close/high/low/volume/turnover）。**注意 `is_final=true` 目前只保证"来自已收盘并做过全天重算的源快照"，不保证"已与官方日线对账"**——对账要求 join 的 `fund_quote_day.is_final=true`（即官方值已校准），而截至目前该双源对账周期从未完整走通过（例如 2026-08-18 的全天重建摘要 `unreconciled_fund_codes: 1947`，覆盖当天全部场内基金，因上游校准源不可用导致 `fund_quote_day` 一直停在 `calibration_status='pending'`）。
+
+**取数标准配方**：`dataasset.data.get` 只有两个过滤槽位（主槽位 + `filter_column_2`/`filter_value_2`/`filter_op_2` 第二槽位），无法同时对 `fund_code` + `interval_type` + `day_id` 三个谓词都做等值过滤。按需要哪两个维度精确定位来分配槽位：
+
+- **某只基金某个周期的近几天全部 K 线**（不过滤 `day_id`——3 天保留期本身就是天然小结果集，`1m` 最多 ~3×237≈711 行，不会碰到 1000 行分页上限）：
+
+  ```bash
+  scripts/lg_agent_exec.sh dataasset.data.get id=<fund_kline的assetId> \
+    filter_column=fund_code filter_op=eq filter_value=510300 \
+    filter_column_2=interval_type filter_op_2=eq filter_value_2=1m \
+    order_by=bar_time order_direction=desc size=800
+  ```
+
+  上例不带 `day_id`/`is_final` 过滤，会把当天尚未定稿的盘中数据与此前的历史 bar 一并按时间倒序捞出——需要严格区分「已定稿历史」与「当日快照」时，请在结果里按 `is_final` 或 `day_id` 分组，不要假设越靠前的行就是最终值。
+
+- **某一天某个周期的全市场快照**（不过滤 `fund_code`——覆盖全市场 ~1950 只场内基金，`1m` 单日全量约 1950×237≈462,000 行，**必须**显式传 `order_by` 并分页拉取，一次 `size` 请求不到全量）：
+
+  ```bash
+  scripts/lg_agent_exec.sh dataasset.data.get id=<fund_kline的assetId> \
+    filter_column=day_id filter_op=eq filter_value=20260818 \
+    filter_column_2=interval_type filter_op_2=eq filter_value_2=1m \
+    order_by=fund_code size=1000 page=1
+  ```
+
+  两张表尚未固定公开 `assetId`（当前 `allowSubscription=false`，尚未走公开发布流程）——与「快速接入」一节 Step 1 的惯例一致：**先 `dataasset.list` 按 `assetName=fund_kline` / `fund_quote_day` 查数字 id，不要硬编码猜测**。
 
 ---
 
@@ -1050,7 +1194,7 @@ events = load_st_history("000666.SZ")
 |---|---|---|---|
 | `subscription.token.list` | GET | 列出订阅 token | 🟢 |
 | `marketplace.item.list` | GET | 列出可订阅的看板/资产 | 🟢 |
-| `marketplace.item.subscribe` | POST | 订阅市场条目 | 🟡 |
+| `marketplace.item.subscribe` | POST | 订阅市场条目——**幂等**（`ON CONFLICT(item_code, team_name) DO UPDATE`，已订阅过再调一次同样成功）。响应体按 `itemId` 前缀带回订阅方**自己团队**的克隆 id：`asset-*` → `clonedAssetId`，`process-*` → `clonedProcessId`，`dashboard-*` → `clonedDashboardId`（见下方[场景 5](#场景-5一键-subscribealert-deeplink-new-v1013)）。这是拿"我自己团队里这份资产的数字 id 是多少"的最短路径，比 `dataasset.list` 扫 `tags` 少一次往返，见 Quick Start §0。**不在默认 `read-data` 预设里，六个预设场景按钮里也都没有它**——创建 token 时必须手动勾选这个 scope，或重新签发。 | 🟡 |
 | `marketplace.item.unsubscribe` | POST | 取消订阅 | 🟡 |
 
 ### 指标告警 (Metric Alert)
@@ -1531,13 +1675,13 @@ bug_report | feature_request | general | other
 
 | skillId | method | 功能 | 风险 |
 |---|---|---|---|
-| `investment.gold.portfolio.list` | GET | 查黄金持仓（query 传 `asset_class=gold`；`market` 取值 SGE/BANK；`stock_num` 取值 Au99.99/Au100g/AuTD） | 🟢 |
+| `investment.gold.portfolio.list` | GET | 查黄金持仓（query 传 `asset_class=gold`；`market` 取值 SGE/BANK；`stock_num` 取值为 SGE 规范码，2026-08-25 起共 10 个：`Au99.99` / `Au99.95` / `Au100g` / `Au(T+D)` / `mAu(T+D)` / `iAu99.99` / `iAu100g` / `iAu99.5` / `Ag99.99` / `Ag(T+D)`（即 `metal_codes` ∩ `metal_day`，全部 market=SGE；旧写法 `AuTD` 现规范化为 `Au(T+D)` 而非 `mAu(T+D)`）） | 🟢 |
 | `investment.gold.portfolio.create` | POST | 新增黄金持仓（body 含 `asset_class: "gold"`） | 🟡 |
 | `investment.gold.portfolio.update` | PUT | 更新黄金持仓 | 🟡 |
 | `investment.gold.trading.list` | GET | 查黄金交易记录（query 传 `asset_class=gold`） | 🟢 |
 | `investment.gold.trading.create` | POST | 录入新黄金交易（body 含 `asset_class: "gold"`） | 🟡 |
 
-#### investment.paper.* — 模拟盘交易（Paper Trading，单户 ¥1,000,000 沙盘）
+#### investment.paper.* — 模拟盘交易（Paper Trading，¥1,000,000 沙盘，2026-08-18 起支持多账户）
 
 > ⚠️ **Paper-trading tokens are platform-issued, NOT self-mintable.** The `paper.*` scope namespace is reserved — calling `POST /api/subscription/tokens` with `scopes: "paper.account.read"` (etc.) returns HTTP 400 + `{"code":"RESERVED_SCOPE"}`. Paper-execution tokens are auto-minted by the platform when a strategy is bound to a paper account via the UI (`PaperExecutionTokenService.mintForExecution`). If you want to drive paper trading from an external agent, mint the token via the strategy-binding flow first, then call the endpoints below with that token.
 
@@ -1545,14 +1689,15 @@ bug_report | feature_request | general | other
 
 | skillId | method | 功能 | 风险 |
 |---|---|---|---|
-| `investment.paper.account.get` | GET | 查模拟账户当前状态：现金 / 初始资金 / 累计重置次数 / 总市值。首次调用 lazy-create | 🟢 |
-| `investment.paper.orders.submit` | POST | 下单：`{stock_num, market, side: BUY/SELL, order_type: MARKET/LIMIT, qty, limit_price?, client_order_id}`。`client_order_id` 必传（同 user + 同 client_order_id 幂等）。MARKET 同步返回成交价；LIMIT 返回 SUBMITTED，撮合后由 scheduler 推到 FILLED/EXPIRED | 🟡 |
-| `investment.paper.orders.list` | GET | 查订单（支持 `status=` / `from=` / `to=` 过滤）；返回字段含 `status / source / filledPrice / filledQty / fees / rejectReason` 等 | 🟢 |
-| `investment.paper.positions.list` | GET | 查模拟持仓（只返 `account_id LIKE 'paper-%'` 的行，不会和真金混在一起） | 🟢 |
+| `investment.paper.account.get` | GET | 查模拟账户当前状态：现金 / 初始资金 / 累计重置次数 / 总市值。首次调用 lazy-create 默认账户。**多账户（2026-08-18）**：可选 query `account_id=` 指定具体账户（含已归档），省略则解析为调用方的 DEFAULT 账户；不属于调用方的 account_id 一律 404 "Account not found"（不区分「存在但不是你的」与「根本不存在」） | 🟢 |
+| `investment.paper.accounts.list` | GET | **新增（2026-08-18）**：列出调用方名下全部账户（含已归档），DEFAULT 账户排最前。用于发现 account.get / positions.list / orders.list 可传的 `account_id` 值——绑定到具名（非默认）账户的策略只能靠这个接口拿到自己的 accountId。复用 `paper.account.read` scope，能读默认账户的 token 无需额外授权即可调用 | 🟢 |
+| `investment.paper.orders.submit` | POST | 下单：`{stock_num, market, side: BUY/SELL, order_type: MARKET/LIMIT, qty, limit_price?, client_order_id, account_id?}`。`client_order_id` 必传（同 user + 同 client_order_id 幂等）。MARKET 同步返回成交价；LIMIT 返回 SUBMITTED，撮合后由 scheduler 推到 FILLED/EXPIRED。**`account_id`（2026-08-18，实际受限）**：只有携带 `X-Agent-Mode:true` 但**不带** `X-Process-Execution-Id` 的调用（即非 Process 来源，`source=API/UI`）才能真正指向具名账户；只要请求同时带了这两个 header（`source=PROCESS`——**`lg.paper.*` Python SDK 的每一次调用都属于这一类**，因为 `_EXEC_ID` 来自调度器注入的 `execution_id` 作业变量），后端会把 account_id 强制钉死在 DEFAULT 账户，传其它值一律 HTTP 400 `"PROCESS-sourced orders must target the default account"`——即使那个账户确实是调用方自己的（`PaperTradingController.placeOrder` 的 LA REVISE v2 BLOCKER 3）。换言之：**Process Python 节点里的 `lg.paper.submit_order(account_id=...)` 今天对非默认账户必然失败**，该参数只对直接持 PAT 调 HTTP 接口（不带 execution-id header）的外部调用方有意义 | 🟡 |
+| `investment.paper.orders.list` | GET | 查订单（支持 `status=` / `from=` / `to=` / `account_id=` 过滤，`account_id` 省略同样解析为 DEFAULT 账户，无 PROCESS 来源限制——与 orders.submit 不同）；返回字段含 `status / source / filledPrice / filledQty / fees / rejectReason` 等 | 🟢 |
+| `investment.paper.positions.list` | GET | 查模拟持仓（只返 `account_id LIKE 'paper-%'` 的行，不会和真金混在一起）。可选 query `account_id=` 指定具体账户，省略则为 DEFAULT 账户，无 PROCESS 来源限制 | 🟢 |
 
-**Scope 集（process-execution 默认）**：`paper.orders.write paper.account.read dataasset.read`。这是后端在 process 起跑时自动注入的 scope-limited 短期 Bearer。
+**Scope 集（process-execution 默认）**：`paper.orders.write paper.account.read dataasset.read`。这是后端在 process 起跑时自动注入的 scope-limited 短期 Bearer。`investment.paper.accounts.list` 复用 `paper.account.read`，因此默认 process-execution token 已经具备列账户的能力，无需额外配置。
 
-**Scope guard 边界**：带 paper scope 的 Bearer **只能**访问 `/api/wealth/paper/**`、`/api/data-assets/**`、`/api/auth/current`、`/api/public/agent/token-introspect`；其他 namespace（如 `/api/trading-records` 真金路径）一律 403 `scope_insufficient`。如需在自己的 PAT 上启用 paper 调用，去 个人设置 → Token 管理 创建一个带这套 scope 的长期 PAT。
+**Scope guard 边界**：带 paper scope 的 Bearer **只能**访问 `/api/wealth/paper/**`、`/api/data-assets/**`、`/api/auth/current`、`/api/public/agent/token-introspect`；其他 namespace（如 `/api/trading-records` 真金路径）一律 403 `scope_insufficient`。**`paper.*` 不可自助签发**——`POST /api/subscription/tokens` 传 `paper.*` scope 一律 `400 RESERVED_SCOPE`，个人设置 → Token 管理页面同理拒绝；外部 Agent 想拿到带 paper scope 的 Bearer，只能走上方「场景 6：模拟交易」一节描述的两条路（Process `python_script` 节点自动注入的短期 Bearer，或管理员按策略绑定流程手动铸的 process-execution token），**不存在自助签发这条路**。
 
 **典型用法（在 Process Python 节点里跑量化策略）**：
 
@@ -1620,11 +1765,12 @@ else:
 
 | 函数 | 模式 | 签名 | 返回 | 备注 |
 |---|---|---|---|---|
-| `lg.paper.submit_order(symbol, side, qty, order_type="MARKET", limit_price=None, client_order_id=None, market=None, asset_class=None)` | live + backtest | 见左 | `dict`。**两端共有**：`id`（**主键 — 不是 `orderId`**，两端一致）、`clientOrderId`、`stockNum`、`market`、`side`、`qty`、`orderType`、`limitPrice`、`assetClass`、`status`、`rejectReason`、`fees`、`filledQty`。**已成交价键名两端不一致**：backtest 用 `fillPrice`，live 用 `filledPrice`（pre-existing 命名分歧；agent 代码需做 `r.get("fillPrice") or r.get("filledPrice")` 兼容写法）。**时间戳键两端不同**：backtest 仅返回 `tradeDate`（推进到的模拟交易日）；live 额外返回 `submittedAt`/`filledAt`（PaperOrder 实体时间戳）但**不返回** `tradeDate`。**live 独有键**：`accountId`、`submittedAt`、`filledAt`、`source` — backtest 路径无此四键。 | `symbol` 推荐裸代码 + 显式 `market="SH"/"SZ"/"BJ"/"HK"`；带 `.SH/.SZ/.BJ/.HK` 后缀也接受（SDK 客户端 + 后端 `PaperOrderService.normalizeStockNum` 都会自动剥离 — Bug #51-A）。`client_order_id` 用作幂等键。`order_type="LIMIT"` 时 `limit_price` 必填。 |
-| `lg.paper.get_account()` | live + backtest | `()` | `dict`。**回测**：`{"initialCapital", "cashBalance", "positionValue", "totalEquity", "unrealizedPnl"}`。**live**：`{"id", "accountId", "initialCapital", "cashBalance", "baseCurrency", "status", ...}` — 注意 live 路径**不返回** `positionValue` / `totalEquity` / `unrealizedPnl`（这些是模拟器进程内汇总，不是后端持久化字段）。 | 回测模式下来自模拟器持仓估值；live 模式查询后端 `/api/wealth/paper/account` → `PaperTradingController.toAccountMap()`。 |
-| `lg.paper.get_positions()` | live + backtest | `()` | `dict`：`{"items": [...], "total": N}` | 每条 item 关键键名因模式**不完全统一**：**回测**返回 `{stockNum, qty, avgCost, lastBuyDate}`（精简）；**live** 返回 `{id, stockNum, market, stockName, assetClass, positionQty, avgCost, lastBuyDate, currency}`（包含 `positionQty` 而非 `qty`）。**`marketValue` / `unrealizedPnl` 两端都不返回** — 如需 market value / P&L 请自行用 `get_asset_data("stock_day", ...)` 的 `close_price` × `qty/positionQty` 算。两端通用 `stockNum`（camelCase）— **不是** `stock_num`。 |
-| `lg.paper.get_orders(status=None)` | live + backtest | `(status=None)` | `dict`：`{"items": [...], "total": N}` | `status` 可选过滤值：`SUBMITTED` / `FILLED` / `CANCELLED` / `REJECTED` / `EXPIRED`（5 个；`EXPIRED` 覆盖 DAY-TIF 限价单未触发收盘自动失效）。**不支持** `PARTIALLY_FILLED`（此后端未实现 partial fill 语义）。 |
-| `lg.paper.cancel_order(order_id)` | live + backtest | `(order_id)` | `dict`（更新后的订单对象） | 已成交订单 422 拒绝。 |
+| `lg.paper.submit_order(symbol, side, qty, order_type="MARKET", limit_price=None, client_order_id=None, market=None, asset_class=None, account_id=None)` | live + backtest | 见左 | `dict`。**两端共有**：`id`（**主键 — 不是 `orderId`**，两端一致）、`clientOrderId`、`stockNum`、`market`、`side`、`qty`、`orderType`、`limitPrice`、`assetClass`、`status`、`rejectReason`、`fees`、`filledQty`。**已成交价键名两端不一致**：backtest 用 `fillPrice`，live 用 `filledPrice`（pre-existing 命名分歧；agent 代码需做 `r.get("fillPrice") or r.get("filledPrice")` 兼容写法）。**时间戳键两端不同**：backtest 仅返回 `tradeDate`（推进到的模拟交易日）；live 额外返回 `submittedAt`/`filledAt`（PaperOrder 实体时间戳）但**不返回** `tradeDate`。**live 独有键**：`accountId`、`submittedAt`、`filledAt`、`source` — backtest 路径无此四键。 | `symbol` 推荐裸代码 + 显式 `market="SH"/"SZ"/"BJ"/"HK"`；带 `.SH/.SZ/.BJ/.HK` 后缀也接受（SDK 客户端 + 后端 `PaperOrderService.normalizeStockNum` 都会自动剥离 — Bug #51-A）。`client_order_id` 用作幂等键。`order_type="LIMIT"` 时 `limit_price` 必填。**`account_id`（2026-08-18，live 模式实际受限）**：省略/None ⇒ DEFAULT 账户（与旧行为字节级一致）。因为这个 SDK 恒定跑在 Process 执行里（`_EXEC_ID` 来自调度器注入的 `execution_id` 作业变量），后端恒把请求判为 `source=PROCESS`，而 PROCESS 来源的订单被硬性钉死在 DEFAULT 账户——传任何非默认 account_id 都会得到 HTTP 400 `"PROCESS-sourced orders must target the default account"`，哪怕那个账户确实归调用者所有。backtest 模式忽略该参数（单账户沙盘）。 |
+| `lg.paper.get_account(account_id=None)` | live + backtest | 见左 | `dict`。**回测**：`{"initialCapital", "cashBalance", "positionValue", "totalEquity", "unrealizedPnl"}`。**live**：`{"id", "accountId", "displayName", "isDefault", "initialCapital", "cashBalance", "baseCurrency", "status", ...}` — 注意 live 路径**不返回** `positionValue` / `totalEquity` / `unrealizedPnl`（这些是模拟器进程内汇总，不是后端持久化字段）。 | 回测模式下来自模拟器持仓估值；live 模式查询后端 `/api/wealth/paper/account` → `PaperTradingController.toAccountMap()`。**`account_id`（2026-08-18 新增）**：省略/None ⇒ DEFAULT 账户；不属于调用方的 id 一律 404 "Account not found"。backtest 模式忽略该参数（单账户）。此函数**没有** submit_order 那条 PROCESS-来源限制——任何来源都能按 account_id 正常解析。 |
+| `lg.paper.list_accounts()` | **live only** | `()` | `dict`：`{"items": [...], "total": N}`，每条 item 含 `accountId`、`displayName`、`isDefault`、`status`、`cashBalance`、`initialCapital` 等 | **2026-08-18 新增**。查询 `/api/wealth/paper/accounts`，用于发现自己名下所有账户的 `accountId`（尤其是具名/非默认账户 —没有别的方式能拿到自己的 accountId）。**backtest 模式调用会抛 `RuntimeError`**（模拟器恒为单账户，无可枚举对象）。 |
+| `lg.paper.get_positions(account_id=None)` | live + backtest | 见左 | `dict`：`{"items": [...], "total": N}` | 每条 item 关键键名因模式**不完全统一**：**回测**返回 `{stockNum, qty, avgCost, lastBuyDate}`（精简）；**live** 返回 `{id, stockNum, market, stockName, assetClass, positionQty, avgCost, lastBuyDate, currency}`（包含 `positionQty` 而非 `qty`）。**`marketValue` / `unrealizedPnl` 两端都不返回** — 如需 market value / P&L 请自行用 `get_asset_data("stock_day", ...)` 的 `close_price` × `qty/positionQty` 算。两端通用 `stockNum`（camelCase）— **不是** `stock_num`。**`account_id`（2026-08-18 新增）**：同 `get_account`，无 PROCESS-来源限制；backtest 模式忽略。 |
+| `lg.paper.get_orders(status=None, account_id=None)` | live + backtest | 见左 | `dict`：`{"items": [...], "total": N}` | `status` 可选过滤值：`SUBMITTED` / `FILLED` / `CANCELLED` / `REJECTED` / `EXPIRED`（5 个；`EXPIRED` 覆盖 DAY-TIF 限价单未触发收盘自动失效）。**不支持** `PARTIALLY_FILLED`（此后端未实现 partial fill 语义）。**`account_id`（2026-08-18 新增）**：同 `get_account`，无 PROCESS-来源限制；backtest 模式忽略。 |
+| `lg.paper.cancel_order(order_id)` | live + backtest | `(order_id)` | `dict`（更新后的订单对象） | 已成交订单 422 拒绝。订单按全局唯一 `order_id` 寻址，不需要 `account_id`（跨用户/跨账户访问一律 403）。 |
 | `lg.paper.advance_day(day)` | backtest only | `(day: str "YYYY-MM-DD")` | `None` | 推进模拟时钟到指定交易日；触发挂单成交评估、价格限制检查、T+1 规则。live 模式调用此函数会抛 `RuntimeError`（函数级文案，例如 `"advance_day() is only available in backtest mode (LG_PAPER_MODE=backtest). In live mode, the current day is inferred from the market calendar."`）。 |
 | `lg.paper.record_eod_equity()` | backtest only | `()` | `None` | 在当前模拟日的收盘后调用，记录该日的 equity curve 点（用于 Sharpe / MaxDD 等指标聚合）。 |
 | `lg.paper.persist_backtest(name=None, force=False)` | backtest only | `(name=None, force=False)` | `dict`：`{"id": int, "name": str}` — 仅 2 个 key | **必须显式调用** — 没有 `atexit` 隐式持久化（防异常中断写入半拉子结果）。`name=None` 时使用 `LG_PAPER_BACKTEST_PERSIST_NAME` env 或自动生成时间戳名。`force=True` 允许覆盖同名 result。metrics 不在返回里 — 需要 metrics 摘要请查 `process_backtest_result` 表或 `/profile/backtest-results` UI。 |
@@ -1688,8 +1834,10 @@ print(f"backtest persisted: id={result['id']}, name={result['name']}")
 | `lg_utils.get_context()` | 当前团队快照：`assets / datasources / dashboards / processes` |
 | `lg_utils.get_asset_data(asset_identifier, page, size, order_by, filter_column, filter_value, filter_operator=None, filter_column_2=None, filter_value_2=None, filter_operator_2=None)` | 分页拉团队有权限的资产数据（历史全量，步骤 4 切换后走 MC）；返回 `{success, data, totalElements, totalPages, ...}`。`filter_value` 支持 list/tuple → IN 查询；`filter_operator` 支持 `eq / ne / in / not_in / like / gt / gte / lt / lte / contains / between`，默认 `contains`。`between` 需要恰好 2 个值（start, end，经同一 list/tuple→逗号拼接机制传入 `filter_value`），值数量不对或区间反转时后端 fail-loud 拒绝。**第二过滤槽位**（2026-07-28，issue #68 executor 侧 follow-up）：`filter_column_2`/`filter_value_2`/`filter_operator_2`，与主槽位参数形态完全一致、独立解析、AND 拼接；底层打 `GET /api/internal/asset-data/{assetId}`（`InternalPythonExecuteController`，本轮已加第二槽位参数透传）。典型用法是主槽位业务列等值过滤 + 第二槽位分区列 `between`（例如 `fund_code eq` + `day_id between`），避免触发 MC "最新分区" 自动注入 guard——一次调用即可拿到跨分区的完整历史区间，无需按天拆调用。三个新参数均可选，不传时行为与之前完全一样。失败时 **抛出 RuntimeError**。 |
 | **`lg_utils.get_asset_data_realtime(asset_identifier, page, size, order_by, filter_column, filter_value, filter_operator=None, filter_column_2=None, filter_value_2=None, filter_operator_2=None)`** | 与 `get_asset_data` 参数完全相同（含 `between` 与第二过滤槽位）；内部走 `GET /api/internal/asset-data-realtime/{assetId}`，查询资产的 **实时镜像数据源**（PG 热窗口，最近 365 天）。**永不抛出异常**——所有错误（含无效 `between` 区间等业务校验错误）以 `{success:false, message:...}` 返回（无镜像 / MC 类型误配 / 连接失败 / 认证失败）；调用方须检查 `result["success"]`。适合仪表盘、实时 P&L 等低延迟场景。与 `dataasset.data.getRealtime` skill 对应。 |
+| **`lg_utils.list_partitions(asset_identifier)`** ✨ NEW | 列出团队有权限资产的 MaxCompute 分区目录（`SHOW PARTITIONS`，仅元数据、不扫描数据）。对 `stock_day_v2` 这类表，一次调用 ~2.9s 拿回全部 21,885 条分区规格（同时带 `day_id` 与 `market`），替代"翻页读全表拼交易日历"的做法——后者对同一张表要 8,201 页 × ~31.7s ≈ 72 小时，且单页耗时会撞到本模块 `urlopen` 的 120s 超时（见 `docs/plans/2026-08-11-adj-factor-day-id-fetch-redesign.md` §4/§5）。**先校验白名单**（复用 `get_asset_data` 同一条 `_resolve_asset_id` 路径，只按 asset_name/asset_id 匹配，不接受裸物理表名）；底层打 `GET /api/internal/asset-partitions/{assetId}`。返回 `list[dict]`，一条分区对应一个 dict（列名→值，如 `{"day_id": "20260811", "market": "HK"}`），**不做分组/去重/排序**——按 market 取排序去重的 `day_id` 列表需调用方自己处理。仅对 MaxCompute 资产有意义；失败时 **抛出 RuntimeError**（含"该资产不是 MaxCompute 类型"）。 |
+| **`lg_utils.list_partition_day_ids(asset_identifier, market=None)`** ✨ NEW | `list_partitions` 的薄封装（直接调用它，不是复制其逻辑，因此白名单校验/异常行为完全继承）：按 `market` 精确匹配过滤（不传则不过滤，返回所有 market 合并结果），提取 `day_id`，去重并**升序排序**返回 `list[str]`；无匹配结果时返回 `[]`（不是 `None`）。这就是 `stock_day_v2_hk_adj_factor_backfill/step1_sina_qfq_ingest.py` 里 `get_hk_trading_calendar` docstring 承诺的未来切换目标——`(market, ...) -> sorted list of day_id strings` 的同一契约；`list_partitions` 本身故意不做这层分组/去重/排序（多个 market 混在一起，`stock_day_v2` 全量 21,885 条里 HK 只占 ~5,977 条），这个封装才是调用方真正要用的入口。异常/校验规则与 `list_partitions` 完全一致（`PermissionError`/`RuntimeError`/`ValueError`）。 |
 | `lg_utils.get_portfolio_positions(stock_num=None, page=1, size=500)` | 当前团队持仓（每行附带最新的一条 per-stock 推荐 `recommendation`，由内部 API 按 update_time 取最近） |
-| **`lg_utils.get_trading_records(account_id=None, market=None, stock_num=None, trade_type=None, page=1, size=50)`** ✨ NEW | 拉团队的交易记录（分页 dict，字段 Jackson camelCase 如 `tradeDate / stockNum / tradeType`） |
+| **`lg_utils.get_trading_records(account_id=None, market=None, stock_num=None, trade_type=None, page=1, size=None, account_type=None)`** ✨ NEW | 拉团队的交易记录（分页 dict，字段 Jackson camelCase 如 `tradeDate / stockNum / tradeType`）。`account_type` 可选 `real`/`paper`/`all`（大小写不敏感）；**不传 = 不按账户类型过滤（真实+模拟都返回）**，不是 default 到 `real`——这一点与用户态 `/api/trading-records` 接口的默认语义不同。`size` **不传**时后端按自身默认（当前 50）取一页；若该团队匹配的总条数超过这一页能装下的数量，后端返回 `{success:false}` 业务错误（`RuntimeError`），而不是像 2026-08-18 之前那样静默截断——报错信息包含真实的 `totalElements`/`totalPages`，并点名要求显式传 `size=<n>`（feedback #71）。**显式传 `size`**（哪怕就是 `size=50`）完全维持之前的行为：不会触发上述报错，仍然会被 clamp 到 1000。失败（含上述业务错误）时**抛出 `RuntimeError`**，调用方需 try/except 或让异常向上冒泡。 |
 | `lg_utils.write_recommendations(items, process_id=None, execution_id=None)` | Python 脚本把 per-stock 推荐（`action/priority/add1/add2/reduce1/reduce2/noMoreAdd/market`）**追加** 到 `process_stock_recommendation`（历史保留，不 upsert）；前端持仓页"推荐"按时间倒序展示历史 |
 | `lg_utils.get_connection(ds_name)` / `get_db_config(ds_name)` | 按团队数据源名取 JDBC 连接 |
 | **`lg_utils.backtest(strategy, asset, ...)`** | **单资产回测引擎**：long-only、整数股；输出 Sharpe / Sortino / MaxDD / 胜率 / profit_factor / 交易明细 / equity_curve / 年度拆分；可选 `benchmark_asset=` 对比并输出 alpha/beta；可选 `persist=True` 持久化到 `process_backtest_result` 表 |
@@ -1699,7 +1847,7 @@ print(f"backtest persisted: id={result['id']}, name={result['name']}")
 | `lg_utils.backtest_examples.dual_ma.DualMA` | 内置双均线参考策略 |
 | `lg_utils.backtest_examples.stock_day.run_stock_day_backtest` | 针对平台 `stock_day` 日线表（`OPEN_PRICE/CLOSE_PRICE/day_id/STOCK_NUM`）的单股快捷封装 |
 | `lg_utils.backtest_examples.stock_day.run_stock_day_portfolio_backtest` ✨ NEW | 多只股票组合的快捷封装 |
-| **`lg_utils.backtest_examples.fund_day.run_fund_day_backtest`** ✨ NEW | 基金日线回测快捷封装。`fund_day` 表的 `unit_nav` 同时映射到 open/close（基金无 OHLC，只有单日净值）；`fund_code` 作为 filter；`nav_date` (YYYY-MM-DD) 作为日期列。其余参数 (strategy / start / end / capital / benchmark_asset) 与 stock_day 同形。 |
+| **`lg_utils.backtest_examples.fund_day.run_fund_day_backtest`** ✨ NEW（反馈#64/#73 2026-08-18 订正：默认价格列改为 `adj_nav`，见下方专节） | 基金日线回测快捷封装。`fund_code` 作为 filter；`nav_date` (YYYY-MM-DD) 作为日期列。默认把 open/close 映射到 **`adj_nav`（复权净值）**，NOT `unit_nav`（单位净值，会被份额拆分/分红污染，不能直接当收益序列用）。`adj_nav` 约 49% 的行是 NULL——遇到"该 fund_code 某个真实交易日 adj_nav 为 NULL"时会直接 `RuntimeError` 报错并说明原因，**不会**静默退回 `unit_nav`。其余参数 (strategy / start / end / capital / benchmark_asset) 与 stock_day 同形。 |
 | **`lg_utils.backtest_examples.metal_day.run_metal_day_backtest`** ✨ NEW | SGE 黄金/白银日线回测快捷封装。`metal_day.close_price` 同时映射到 open/close；`metal_code` 作为 filter。常用 metal_code: `Au99.99` (黄金 9999)、`Au100g` (黄金 100g)、`Ag(T+D)` (白银 T+D)。 |
 | **`lg_utils.backtest_examples.hk_day.run_hk_day_backtest`** | 港股日线回测快捷封装。**底层是对物理 `stock_day` 表按 HK ticker 过滤**读取（港股数据现已作为独立 DataAsset `stock_day_hk` 🟢 生产可用发布，见「数据资产可用性」表）。结构同 `stock_day` 模板。 |
 
@@ -1767,13 +1915,13 @@ canonical envelope —— `params` 字段下嵌套 `pathParams` / `query` / `bod
 
 - 公开版 skill 仅支持 Bearer Token 模式，不接受会话 Cookie / CSRF。
 - 首次安装建议使用测试账号或低权限 Token 验证读取类能力。
-- 公开版 skill 覆盖数据查询 + 回测 + 模拟交易 + 告警 + 流程编排四大类，完整 per-category 分类（read / idempotent-write / workflow-transition / outbound-webhook）见 [§Scope](#scope--operator-responsibility)。删除、撤销、审批等破坏性/管理类操作**不在 skill 范围内**，需通过 platform UI 完成。
+- 公开版 skill 覆盖数据查询 + 回测 + 模拟交易 + 告警 + 流程编排四大类，完整 per-category 分类（read / idempotent-write / workflow-transition / outbound-webhook）见 [§Scope](#scope--operator-responsibility)。**大部分**删除、撤销、审批等破坏性/管理类操作不在 skill 范围内，需通过 platform UI 完成；13 个标记 `confirmRequired:true` 的高风险操作例外，Bearer token 可达但必须先完成两步确认握手，见 [§高风险操作确认握手](#高风险操作确认握手-confirm-handshake)。管理员 approve/reject 陌生人发起的审批仍然不在 skill 范围内。
 - 写操作应只授予明确需要的 scopes。
 - 不要在脚本里硬编码 Token 凭据。
 
 ## 注意事项
 
-- 公开版 skill 覆盖数据 + 回测 + 模拟交易 + 告警 + 流程编排；**破坏性/管理类操作**（删除 / 撤销 / 审批）不在 skill 范围内，走 platform UI。
+- 公开版 skill 覆盖数据 + 回测 + 模拟交易 + 告警 + 流程编排；**大部分**破坏性/管理类操作（删除 / 撤销 / 审批）不在 skill 范围内，走 platform UI；13 个 `confirmRequired:true` 高风险操作例外，见 [§高风险操作确认握手](#高风险操作确认握手-confirm-handshake)。
 - 公开版 helper scripts 只支持 Token 调用，不支持 session/cookie 兼容模式。
 - `idempotencyKey` 用于幂等控制，写操作请保持稳定。
 - Token 从平台获取，不要硬编码在脚本中。
@@ -1781,6 +1929,21 @@ canonical envelope —— `params` 字段下嵌套 `pathParams` / `query` / `bod
 ---
 
 ## 最近更新
+
+### v1.0.50 (2026-08-27)
+
+- 🐛 **修复 Quick Start §0 与 §4 First Call Recipe 自相矛盾，并纠正拿克隆资产 id 的优先路径**：§0 此前教用户"记下 numeric asset id"直接拿去调 §4 的 Bearer Token 接口——但 marketplace UI 上看到的 id 是**发布方团队的**，订阅后你自己团队会拿到一份**全新数字 id** 的克隆资产，拿发布方 id 去调自己的 Token 接口必然 404。修正后 §0 优先指向 `marketplace.item.subscribe`（`MarketplaceService.subscribe` 是 `ON CONFLICT(item_code, team_name) DO UPDATE`，幂等）响应体里的 `clonedAssetId`——**存量已订阅用户重复调用同一个 item 一样能拿到这个字段**，不是只有新订阅才有；`dataasset.list` + `tags` 含 `Subscribed` 扫描降级为兜底路径（响应丢字段，或不想再调一次 subscribe 时用）。§4 本身的教法（先 `dataasset.list` 按 assetName 查自己团队里的数字 id）一直是对的，没有改动核心步骤顺序。
+- 🐛 **修复 §4 Step 2 在默认 token 上必然 403**：`dataasset.metadata.get` 不在 Token Management 页面 `read-data` 默认预设的 6 个 scope 里，照默认预设建 token 的人跑这一步必然 403。recipe 调整为 2 步核心（list → data.get，默认预设即可跑通）+ 1 步可选（metadata.get，原地注明需要额外勾选 scope），不再静默省略这个 skill。
+- 🐛 **修复 `investment.paper.*` 一节自相矛盾的 token 指引**（:1700，ClawHub 扫描判 `DO_NOT_INSTALL` 的具名原因之一）：该行此前说"如需在自己的 PAT 上启用 paper 调用，去 个人设置 → Token 管理 创建一个带这套 scope 的长期 PAT"——与同一份文档 §场景 6（:506）和本节顶部警告（:1686）正相反：`paper.*` 是保留 scope 前缀，`AssetSubscriptionTokenService.rejectReservedScopes` 对任何 `paper.` 开头的 scope 无条件 `400 RESERVED_SCOPE`，个人设置页面同理拒绝，**没有自助签发这条路**。已改为与 :506/:1686 一致的说法，并指回「场景 6：模拟交易」一节而非重复第三遍。
+- 📝 **`marketplace.item.subscribe` 补上 `clonedAssetId` / `clonedProcessId` 的说明**：此前只有 `clonedDashboardId`（v1.0.13）被文档化，`asset-*` / `process-*` item 拿自己团队克隆 id 的路径全文没有对应记载。现在这一 skillId 的目录行明确写出三种 `itemId` 前缀各自对应的响应字段，并指回 Quick Start §0。
+- 🐛 **补齐 `dataasset.history.field-as-of`（:801）与 `dataasset.list`/`get`/`list.active`/`connection.test` 四个 `datasource.*` skill（:789-792）缺失的 scope 披露**：这几个 🟢/🟡 skill 都不在 `DEFAULT_TOKEN_SCOPES` 里，且此前在各自的目录行里零披露——`dataasset.history.field-as-of` 与 `dataasset.metadata.get` 挨着坐在同一张表，`datasource.*` 四行则紧邻 `dataasset.list`/`dataasset.get`（这两个才是真默认），都容易让人误以为"同表挨着的都在默认里"。已按 :798 的同一句式各自补上"不在默认 `read-data` 预设里"的说明。
+- 🐛 **修复 §0 头条路径自己 403（LA 走 happy path 找出，本项工作里第 7 处同类缺陷、也是最重的一处）**：上一轮把 §0 改成"优先调 `marketplace.item.subscribe` 拿 `clonedAssetId`"，但没查这个 skill 本身的 scope 归属——`marketplace.item.subscribe` **不在 `DEFAULT_TOKEN_SCOPES`，也不在 `SCOPE_PRESETS` 六个预设场景按钮的任何一个里**（`lib/skill-catalog.js` 全文只在自己的 catalog 定义行出现一次）。一个在 `/profile/tokens` 点"创建"、什么都不改的新用户会在 §0 现在的头条步骤上直接 403。已在 §0（:209）和 `:1197` 的 catalog 行分别加注：创建 token 时必须手动勾选 `marketplace.item.subscribe` 这个 scope，六个预设按钮都不会自动带上它。
+
+### v1.0.49 (2026-08-18)
+
+- 🔒 **文档化高风险操作两步确认握手**（issue #74 修复）：13 个 `confirmRequired:true` 的 Bearer-token 可达 skill（`process.ingestion.delete`、`schedule.job.{online,offline,delete}`、`schedule.instance.{redo,hold,kill,cancel,force_start,mark_success}`、`subscription.token.revoke`、`metric.alert.delete`、`investment.paper.account.reset`）此前从未文档化两步握手的真实请求形状，导致第一次调用返回 409 后无法完成第二步。新增 [§高风险操作确认握手](#高风险操作确认握手-confirm-handshake) 一节，含逐字请求/响应示例。真正的门槛是 `params.approvalId`（必须嵌套在 `params` 内，不能与 `skillId` 同级）——`confirm` 字段本身不产生任何效果，只是网关内部用于不让它泄漏到下游请求的保留字。409 响应现在额外带 `expiresAt`、`skillId`、结构化 `nextAction`（可直接拿来重发的完整请求体）。
+- 🛠️ `scripts/lg_agent_approval.sh` 新增 `confirm` 动作（`POST /api/agent/approvals/{id}/confirm`），此前只有 `list-mine|list-all|approve|reject`——非管理员 token 调用 `approve` 必然 403（需要 `userLevel>=8`），而 `confirm` 才是 token 调用方本该走的自确认端点。
+- 📝 `schedule.instance.redo` 的 `exampleInvocation` 移除了误导性的 `confirm=true`（该字段单独出现不会跳过确认握手）。
 
 ### v1.0.47 (2026-07-30)
 
