@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of NetPad skill.\n\n- Manage NetPad forms, form submissions, users, groups, and RBAC via REST API and CLI.\n- Provides detailed curl/API usage examples for all standard operations (create, query, update, delete for forms and submissions).\n- Includes quick reference tables, field schema documentation, and code samples for automation.\n- Describes required authentication and rate limiting details.\n- Helper script available for common tasks via shell.",
+  "created_at": 1769886568656,
+  "display_name": "NetPad - Build forms, workflows and manage MongoDB data",
+  "fetched_at": 1787911176178,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api-endpoints.md",
+    "references/cli-commands.md",
+    "scripts/netpad.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783654067107,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Michael Lynn",
+    "handle": "mrlynn",
+    "user_id": "s1748tf1b6ec5ddf4nhrfd5m8h884k50"
+  },
+  "slug": "netpad",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/netpad",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=netpad&ownerHandle=mrlynn",
+    "page_url": "https://clawhub.ai/mrlynn/skills/netpad"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2355,
+    "installs": 80,
+    "stars": 3,
+    "versions": 1
+  },
+  "summary": "Manage NetPad forms, submissions, users, and RBAC. Use when: (1) Creating forms with custom fields, (2) Submitting data to forms, (3) Querying form submissions, (4) Managing users/groups/roles (RBAC), (5) Installing NetPad apps from marketplace. Requires NETPAD_API_KEY for API, or `netpad login` for CLI.",
+  "updated_at": 1778485891685,
+  "version": "1.0.0"
+}
