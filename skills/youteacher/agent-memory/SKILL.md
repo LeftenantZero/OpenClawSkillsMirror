@@ -3,7 +3,7 @@ name: agent-memory
 description: "使用场景: 用户要求代理记忆、长期偏好、纠错经验、范围化检索、记忆整理、归档或删除，并希望通过 AI Skills 平台 API 执行时。"
 metadata:
     {
-        "packageVersion": "1.3.0",
+        "packageVersion": "1.4.1",
         "openclaw":
             {
                 "requires": { "env": ["AGENT_MEMORY_API_KEY"] },
@@ -36,7 +36,7 @@ openclaw gateway restart
 
 ## 参考资料
 
-- 鉴权与环境变量：[API-KEY.md](https://github.com/YouTeacher/ai-skills-platform/blob/main/openclaw/agent-memory/references/API-KEY.md)
-- HTTP、幂等与轮询：[HTTP-REQUESTS.md](https://github.com/YouTeacher/ai-skills-platform/blob/main/openclaw/agent-memory/references/HTTP-REQUESTS.md)
-- 全部字段与结果：[OPERATIONS.md](https://github.com/YouTeacher/ai-skills-platform/blob/main/openclaw/agent-memory/references/OPERATIONS.md)
-- 错误、安全与交付规则：[BEHAVIOR-RULES.md](https://github.com/YouTeacher/ai-skills-platform/blob/main/openclaw/agent-memory/references/BEHAVIOR-RULES.md)
+- 鉴权与环境变量：[API-KEY.md](https://ai-skills.open-idea.net/skill-docs/agent-memory/API-KEY.md)
+- HTTP、幂等与轮询：[HTTP-REQUESTS.md](https://ai-skills.open-idea.net/skill-docs/agent-memory/HTTP-REQUESTS.md)
+- 全部字段与结果：[OPERATIONS.md](https://ai-skills.open-idea.net/skill-docs/agent-memory/OPERATIONS.md)
+- 错误、安全与交付规则：[BEHAVIOR-RULES.md](https://ai-skills.open-idea.net/skill-docs/agent-memory/BEHAVIOR-RULES.md)

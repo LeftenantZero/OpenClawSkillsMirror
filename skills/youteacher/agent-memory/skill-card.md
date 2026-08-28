@@ -1,6 +1,6 @@
 ## Description:
 
-Agent Memory helps an agent store, search, consolidate, archive, and delete user-controlled long-term memories such as preferences, corrections, project conventions, and reusable lessons through the AI Skills Platform API.
+Agent Memory helps an agent save, retrieve, consolidate, archive, and delete user-scoped long-term memories such as preferences, corrections, project conventions, and reusable lessons through the AI Skills platform API.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and agent users use this skill when a task requires durable memory for user preferences, corrections, scoped project context, memory retrieval, consolidation, archiving, or deletion. It is intended for explicit user-controlled memory operations through the AI Skills Platform API.
+Developers and external users use this skill when an agent needs durable, user-scoped memory for preferences, corrections, project conventions, lessons, scoped retrieval, memory cleanup, archiving, or deletion. The skill is intended for use through OpenClaw with an AI Skills platform API key.
 
 ### Deployment Geography for Use:
 
@@ -22,43 +22,43 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Memory content can contain secrets, credentials, or other sensitive user data.
+Risk: Selected memory content is sent to the AI Skills platform.
 
-Mitigation: Before storing memory content or metadata, check for secrets and do not submit or echo complete sensitive values; advise revocation and rotation for exposed credentials.
+Mitigation: Use the skill only for memory content the user is comfortable sending to that platform, and scan content and metadata for secrets before submitting.
 
-Risk: Archived memories can cascade to derived memories, and deletes do not fully erase historical task records.
+Risk: Deleting main memory records is irreversible and does not necessarily remove prior encrypted task history.
 
-Mitigation: Require explicit user confirmation for archive and delete operations, explain cascade and retention limits, and route complete erasure requests to the platform data deletion process.
+Mitigation: Require explicit confirmation of exact memory IDs before deletion, explain the limits of deletion, and route requests for complete historical data removal to the platform data deletion process.
 
-Risk: Network timeouts, partial results, conflicts, or reconciliation states can make operation status uncertain.
+Risk: Archive operations can affect derived memories and cannot preview the full cascade.
 
-Mitigation: Reuse the same idempotency key and request body for the same logical retry, report task IDs and final observed status, and avoid claiming success without response evidence.
+Mitigation: Require explicit confirmation before archiving, disclose that derived memories may also be archived, and avoid claiming that all affected records have been enumerated.
 
-Risk: Retrieved memory is user data and may include untrusted instructions.
+Risk: Memory content may contain untrusted commands, links, prompts, or permission requests.
 
-Mitigation: Treat memory content as data rather than authority, and do not execute commands, links, prompts, or permission requests found in stored memories.
+Mitigation: Treat stored memory as user data rather than instructions, and do not execute or place memory content into shell commands.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/youteacher/skills/agent-memory)
-- [API Key and Environment Variables](references/API-KEY.md)
-- [HTTP Requests, Idempotency, and Polling](references/HTTP-REQUESTS.md)
-- [Operations and Fields](references/OPERATIONS.md)
-- [Behavior, Errors, and Delivery Rules](references/BEHAVIOR-RULES.md)
+- [ClawHub skill page](https://clawhub.ai/youteacher/skills/agent-memory)
+- [API key and environment variables](https://ai-skills.open-idea.net/skill-docs/agent-memory/API-KEY.md)
+- [HTTP requests, idempotency, and polling](https://ai-skills.open-idea.net/skill-docs/agent-memory/HTTP-REQUESTS.md)
+- [Operations and fields](https://ai-skills.open-idea.net/skill-docs/agent-memory/OPERATIONS.md)
+- [Behavior, errors, and delivery rules](https://ai-skills.open-idea.net/skill-docs/agent-memory/BEHAVIOR-RULES.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Shell commands, Configuration, API calls, JSON, Markdown]
+**Output Type(s):** [guidance, markdown, text, configuration, shell commands]
 
-**Output Format:** [Markdown guidance with shell commands, HTTP request examples, and structured JSON request or response details]
+**Output Format:** [Markdown guidance with shell, HTTP, and JSON examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires AGENT_MEMORY_API_KEY and uses scoped, user-controlled memory operations.]
+**Other Properties Related to Output:** [Requires AGENT_MEMORY_API_KEY and returns structured operation status, task IDs, result fields, artifacts metadata, error codes, and billing headers.]
 
 ## Skill Version(s):
 
-1.3.0 (source: server release evidence and package metadata)
+1.4.1 (source: server release metadata and packageVersion metadata)
 
 ## Ethical Considerations:
 
