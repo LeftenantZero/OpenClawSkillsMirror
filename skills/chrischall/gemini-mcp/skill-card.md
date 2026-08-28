@@ -1,6 +1,6 @@
 ## Description:
 
-Generate and edit images, video, and music with Google Gemini models through an MCP server.
+gemini-mcp helps agents generate and edit images, videos, and music with Google Gemini models through an MCP server.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and agent users use this skill to connect an agent to a Gemini MCP server for image generation, image editing, short video generation, music generation, and iterative media refinement.
+Developers and agent users use this skill to configure and operate a Gemini MCP server for media generation workflows, including image creation, image editing, short video generation, and music or audio clip generation.
 
 ### Deployment Geography for Use:
 
@@ -22,36 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Media prompts and reference media may be sent to Gemini or the hosted connector.
+Risk: Selected prompts and media references may be sent to Gemini.
 
-Mitigation: Avoid submitting sensitive media unless the target Gemini and connector deployment are approved for that data.
+Mitigation: Use the skill only with content appropriate for Gemini processing and review sensitive prompts or media before invoking generation tools.
 
-Risk: Generated media may be saved in the current directory when no output directory is set.
+Risk: Clipboard and input-directory features can expose unintended local media.
 
-Mitigation: Set explicit output_dir or GEMINI_OUTPUT_DIR values for sensitive work and review saved files before sharing.
+Mitigation: Copy only the intended asset and point GEMINI_INPUT_DIR and GEMINI_OUTPUT_DIR at narrow project folders.
 
-Risk: Gemini API use can incur Google billing and uploaded Gemini files may persist temporarily.
+Risk: Uploaded Files API assets may remain available after the immediate task.
 
-Mitigation: Use billing-aware workflows, reuse idempotency keys where appropriate, and delete temporary Gemini file uploads when they are no longer needed.
+Mitigation: Use file listing and deletion tools to remove uploaded items when they are no longer needed.
 
 ## Reference(s):
 
-- [npm package: @chrischall/gemini-mcp](https://www.npmjs.com/package/@chrischall/gemini-mcp)
+- [ClawHub skill page](https://clawhub.ai/chrischall/skills/gemini-mcp)
+- [npm package @chrischall/gemini-mcp](https://www.npmjs.com/package/@chrischall/gemini-mcp)
 - [Google AI Studio API keys](https://aistudio.google.com/apikey)
 
 ## Skill Output:
 
-**Output Type(s):** [Files, API Calls, Configuration instructions, Guidance]
+**Output Type(s):** [Files, API calls, Shell commands, Configuration, Guidance]
 
-**Output Format:** [MCP tool results with generated media file paths, optional inline media metadata, and setup guidance]
+**Output Format:** [Markdown instructions with JSON and shell command examples; generated results are saved media files or inline media responses when the MCP server is used.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Generated images, video, and audio may be written to disk; some tools can also return inline results or asynchronous job identifiers.]
+**Other Properties Related to Output:** [Supports optional model selection, file upload references, local input and output directories, asynchronous jobs, and idempotency keys.]
 
 ## Skill Version(s):
 
-1.10.0 (source: server release metadata)
+1.11.0 (source: server release evidence)
 
 ## Ethical Considerations:
 
