@@ -1,0 +1,55 @@
+{
+  "changelog": "insurance-clause-talking v0.1.2\n\n- Clarified workflow for collecting insurance clauses, stills, and required rights before creating talking clips.\n- Documented explicit requirements for inspecting stills, including technical image details and handling of authorized uploads.\n- Codified a three-stage, card-based paid process\u2014voice clone, speech synthesis, video animation\u2014each with clear confirmation and stopping points.\n- Expanded detailed instructions on pricing, credit handling, and necessary API calls; added explicit top-up protocol for insufficient balance.\n- Emphasized that each clip explains only supplied clause text\u2014never invents or promises coverage, benefit limits, or payout details.\n- Added routing guidelines for similar requests to ensure proper skill usage and workflow.",
+  "created_at": 1787924603818,
+  "display_name": "insurance-clause-talking",
+  "fetched_at": 1787930348771,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "references/automatic-updates-and-safety.md",
+    "references/billing-errors-and-recovery.md",
+    "references/installation-and-auth.md",
+    "references/installation-registration.md",
+    "references/mcp-connection.md",
+    "references/tasks-and-results.md",
+    "references/uninstall-and-disconnect.md",
+    "references/workflow.md",
+    "scripts/authorize.py",
+    "scripts/mcp_client.py",
+    "scripts/uninstall.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787925523096,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "beatra-ai",
+    "handle": "beatra-ai",
+    "user_id": "s176vcp4w7b7tt3j7a62gdnfys8cntp4"
+  },
+  "slug": "insurance-clause-talking",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/insurance-clause-talking",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=insurance-clause-talking&ownerHandle=beatra-ai",
+    "page_url": "https://clawhub.ai/beatra-ai/skills/insurance-clause-talking"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 0,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Turn user-supplied insurance policy clauses and authorized stills into one insurance clause talking clip per still. This insurance clause talking video studio writes a speakable clause explanation talking clip for each photo, then animates a 2 to 15s insurance clause talking clip. Use it for insurance clause talking packs that stay one photo, one clip.",
+  "updated_at": 1787924731368,
+  "version": "0.1.2"
+}
