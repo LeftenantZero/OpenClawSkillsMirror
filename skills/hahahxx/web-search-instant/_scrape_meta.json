@@ -1,0 +1,42 @@
+{
+  "changelog": "# Web Search Instant - v1.1.0\n\n## New Features\n\n- Added `--format` option for output formats (text, markdown, plain)\n- Added `--no-color` option to disable colored output\n- Added `--max-related` option to control number of related topics\n- Added `--quiet` option for minimal output (no headers/footer)\n- Improved `--help` with comprehensive usage documentation\n- Updated SKILL.md with new options and usage examples\n- Created new test suite (test-new-features.sh) for validation\n\n## Changes\n\n- Markdown output uses `##` headers, `**bold**`, `-` bullets, and `[links]()`\n- Plain/text formats preserve colored ANSI output by default\n- All options work independently and in combination\n- Output to file supported via shell redirection\n\n## Testing\n\nAll 12 feature tests passing:\n- \u2705 --help flag\n- \u2705 --format markdown\n- \u2705 --format plain\n- \u2705 --no-color\n- \u2705 --max-related 2\n- \u2705 --max-related 10\n- \u2705 --quiet\n- \u2705 Combined options (--format markdown --no-color)\n- \u2705 Combined options (--quiet --max-related 3)\n- \u2705 Output to file\n- \u2705 Invalid format validation\n- \u2705 Default format (text with colors)",
+  "created_at": 1770061320645,
+  "display_name": "Web Search Instant",
+  "fetched_at": 1787943087004,
+  "files": [
+    "CHANGELOG-v1.1.0.md",
+    "README.md",
+    "SKILL.md",
+    "TEST-SUMMARY.md",
+    "_meta.json",
+    "performance-test.sh",
+    "skill-card.md",
+    "test-cases.sh",
+    "test-new-features.sh",
+    "test-output.md",
+    "test-outputs.md",
+    "web-search.sh"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "hahahxx",
+    "handle": "hahahxx",
+    "user_id": "s1724e7zjgk3z06hqzr697fdtd885ysj"
+  },
+  "slug": "web-search-instant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/web-search-instant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=web-search-instant&ownerHandle=hahahxx",
+    "page_url": "https://clawhub.ai/hahahxx/skills/web-search-instant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3159,
+    "installs": 104,
+    "stars": 5,
+    "versions": 2
+  },
+  "summary": "Web search using DuckDuckGo Instant Answer API (no API key required). Use when you need to search the web for information, definitions, calculations, conversions, or quick facts. Also use when user mentions \"search\", \"look up\", \"find information\", \"what is\", \"how to\", or \"google something\". The skill provides instant answers, definitions, abstracts, and related topics without requiring external API credentials.",
+  "updated_at": 1778485994101,
+  "version": "1.1.0"
+}
