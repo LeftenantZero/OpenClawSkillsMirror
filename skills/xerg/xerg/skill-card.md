@@ -1,6 +1,6 @@
 ## Description:
 
-Audits and reduces AI agent runtime spend in dollars across OpenClaw, Hermes, QM, Claude Code, Cursor, and generic event ingest.
+Audit and reduce AI agent runtime spend in dollars. Use for AI costs, agent spend, token waste, runtime attribution, detector coverage, and FinOps. Works with OpenClaw, Hermes, QM, Claude Code, Cursor, and generic event ingest.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, engineering teams, and FinOps reviewers use xerg to run local AI runtime audits, identify evidence-strict monetary waste and neutral signals, and compare compatible changes after remediation.
+Developers, engineering managers, and FinOps teams use Xerg to audit AI-agent runtime costs, identify evidence-backed waste, and compare compatible fixes across supported local sources.
 
 ### Deployment Geography for Use:
 
@@ -22,36 +22,39 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Xerg can inspect local agent logs, transcripts, state databases, exports, or remote audit sources that may contain sensitive operational metadata.
+Risk: Local audits may inspect AI agent logs, transcripts, usage exports, or runtime databases that can expose sensitive work patterns or content-derived metadata.
 
-Mitigation: Use the local audit path first, ask before package fetches or data inspection, and run hosted activation or push only after explicit user approval.
+Mitigation: Ask for separate approval before local data access, keep analysis local by default, and summarize only the audit results the user approved.
 
-Risk: Audit spend can be observed, locally estimated, or unpriced and is not an authoritative provider invoice.
+Risk: Hosted push can share audit totals, rollups, source metadata, findings, recommendations, and comparison deltas with Xerg Cloud.
 
-Mitigation: Present pricing and detector coverage before spend conclusions, and avoid treating incomplete coverage or zero identified findings as proof of no waste.
+Mitigation: Run hosted pairing or push only after explicit approval, and explain what categories of audit data will be shared before upload.
+
+Risk: Runtime costs may be observed, locally estimated, or unpriced and are not authoritative provider invoices.
+
+Mitigation: Describe audit totals as runtime spend evidence rather than invoice reconciliation, and call out unpriced or limited-estimate coverage before conclusions.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/xerg/skills/xerg)
 - [Xerg homepage](https://xerg.ai)
 - [Xerg documentation](https://xerg.ai/docs)
 - [Xerg skill source](https://xerg.ai/skill.md)
+- [@xerg/cli on npm](https://www.npmjs.com/package/@xerg/cli)
 - [Xerg service status](https://status.xerg.ai)
-- [@xerg/cli npm package](https://www.npmjs.com/package/@xerg/cli)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with shell command snippets and JSON audit interpretation.]
+**Output Format:** [Markdown guidance with inline shell commands and JSON-oriented CLI output handling]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Local audit guidance by default; hosted pairing or push actions require explicit user approval.]
+**Other Properties Related to Output:** [Guidance emphasizes explicit approval before installs, local analysis, and hosted uploads; audit outputs may distinguish priced, estimated, and unpriced runtime costs.]
 
 ## Skill Version(s):
 
-0.27.2 (source: server release metadata)
+0.27.3 (source: server release evidence)
 
 ## Ethical Considerations:
 
