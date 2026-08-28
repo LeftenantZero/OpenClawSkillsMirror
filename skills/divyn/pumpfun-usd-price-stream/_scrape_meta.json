@@ -1,0 +1,37 @@
+{
+  "changelog": "## pumpfun-usd-price-stream v1.0.4\n\n- Added explicit environment variable requirement (`BITQUERY_API_KEY`) to skill metadata (`requires` section).\n- Clarified that Bitquery API key must be passed in the WebSocket URL (not headers); emphasized security risks.\n- Added a detailed security checklist for safe usage, including reminders to avoid logging or exposing the API key.\n- Improved documentation on credential handling and reasons for not printing/logging the WebSocket URL.\n- No code changes; documentation and metadata update only.",
+  "created_at": 1773137105199,
+  "display_name": "Reliable Pumpfun Price Feed",
+  "fetched_at": 1787882130399,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/graphql-fields.md",
+    "requirements.txt",
+    "scripts/stream_pumpfun.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Divyasshree",
+    "handle": "divyn",
+    "user_id": "s176j9yg3ck3epn3kgfdra114d83jxn2"
+  },
+  "slug": "pumpfun-usd-price-stream",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pumpfun-usd-price-stream",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pumpfun-usd-price-stream&ownerHandle=divyn",
+    "page_url": "https://clawhub.ai/divyn/skills/pumpfun-usd-price-stream"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 873,
+    "installs": 24,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Real-time streaming PumpFun token feed on Solana with live USD pricing for every token. Subscribe to a live stream of PumpFun tokens over WebSocket: USD pric...",
+  "updated_at": 1778491807445,
+  "version": "1.0.4"
+}
