@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release \u2013 audit GitHub Actions jobs for timeout risks.\n\n- Calculates per-job runtime from GitHub Actions run JSON files.\n- Flags jobs as `warn` or `critical` based on configurable timeout ratios.\n- Groups repeated jobs for concise reporting.\n- Supports configurable input filters and output formats (text or JSON).\n- Can fail CI on critical timeout risks if desired.",
+  "created_at": 1772791761533,
+  "display_name": "GitHub Actions Timeout Risk Audit",
+  "fetched_at": 1787887042697,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "fixtures/run-3001.json",
+    "fixtures/run-3002.json",
+    "scripts/timeout-risk-audit.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Daniel Lummis",
+    "handle": "daniellummis",
+    "user_id": "s17fw617wehb1y9a026bgg9yed885cv7"
+  },
+  "slug": "github-actions-timeout-risk-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/github-actions-timeout-risk-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=github-actions-timeout-risk-audit&ownerHandle=daniellummis",
+    "page_url": "https://clawhub.ai/daniellummis/skills/github-actions-timeout-risk-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 731,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Audit GitHub Actions job runtime risk against timeout thresholds so near-timeout jobs get fixed before they fail CI.",
+  "updated_at": 1778491748674,
+  "version": "1.0.0"
+}
