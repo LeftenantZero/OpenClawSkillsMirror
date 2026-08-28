@@ -1,0 +1,41 @@
+{
+  "changelog": "Version 0.1.1 \u2014 Major update with full script implementation and core logic improvements.\n\n- Added core scripts for backtesting, config, FTSE 350 ticker sourcing, technical indicators, portfolio tracking, risk management, screener, and sentiment headline fetching.\n- Separated logic into modular Python scripts for each pipeline stage (screening, indicators, sentiment, backtest, risk, portfolio).\n- Revised agent workflow: sentiment is now assessed from raw headlines (not from pre-labeled FinBERT output).\n- Expanded and restructured documentation for all new scripts, command usage, and output expectations.\n- Updated and clarified risk management, portfolio tracking, and decision-making procedures.",
+  "created_at": 1772624475319,
+  "display_name": "Lse Trading Agent",
+  "fetched_at": 1787889749762,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/backtest.py",
+    "scripts/config.py",
+    "scripts/ftse350.py",
+    "scripts/indicators.py",
+    "scripts/portfolio.py",
+    "scripts/risk.py",
+    "scripts/screener.py",
+    "scripts/sentiment.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ankit Aglawe",
+    "handle": "ankit-aglawe",
+    "user_id": "s1745f12kzsd2efvhax5knf0s5885eak"
+  },
+  "slug": "openclaw-lse-trading-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-lse-trading-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-lse-trading-agent&ownerHandle=ankit-aglawe",
+    "page_url": "https://clawhub.ai/ankit-aglawe/skills/openclaw-lse-trading-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 801,
+    "installs": 22,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "FTSE 350 trading analysis agent. Screens LSE stocks using technical indicators (Bollinger Bands, RSI, MACD, EMA crossovers, ATR, VWAP, OBV), fetches news for...",
+  "updated_at": 1778491718264,
+  "version": "0.1.1"
+}
