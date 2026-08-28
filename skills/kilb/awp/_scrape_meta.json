@@ -1,0 +1,83 @@
+{
+  "changelog": "AWP skill 1.7.0 \u2014 Adds support for new wallet unlock flows and API enhancements.\n\n- Compatible with new awp-wallet versions: unlocking is now optional, session token (`--token`) is no longer required unless using older wallets.\n- API adds `staking.getPending` for querying pending allocations.\n- API notes: `nonce.get` and `nonce.getStaking` may lag behind on-chain state; on-chain queries preferred for signing.\n- Documentation and requirements updated to reflect new wallet behavior and API changes.",
+  "created_at": 1774027646391,
+  "display_name": "AWP  Skill",
+  "fetched_at": 1787937972793,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/api-reference.md",
+    "references/commands-governance.md",
+    "references/commands-staking.md",
+    "references/commands-worknet.md",
+    "references/protocol.md",
+    "scripts/awp-daemon.py",
+    "scripts/awp_lib.py",
+    "scripts/onchain-add-position.py",
+    "scripts/onchain-allocate.py",
+    "scripts/onchain-batch-withdraw.py",
+    "scripts/onchain-bind.py",
+    "scripts/onchain-claim.py",
+    "scripts/onchain-deallocate-all.py",
+    "scripts/onchain-deallocate.py",
+    "scripts/onchain-deposit.py",
+    "scripts/onchain-onboard.py",
+    "scripts/onchain-partial-withdraw.py",
+    "scripts/onchain-propose.py",
+    "scripts/onchain-reallocate.py",
+    "scripts/onchain-register.py",
+    "scripts/onchain-stake.py",
+    "scripts/onchain-switch-worknet.py",
+    "scripts/onchain-unstake.py",
+    "scripts/onchain-vote.py",
+    "scripts/onchain-withdraw.py",
+    "scripts/onchain-worknet-lifecycle.py",
+    "scripts/onchain-worknet-metadata.py",
+    "scripts/onchain-worknet-update.py",
+    "scripts/preflight.py",
+    "scripts/query-status.py",
+    "scripts/query-worknet.py",
+    "scripts/relay-allocate.py",
+    "scripts/relay-delegate.py",
+    "scripts/relay-onboard.py",
+    "scripts/relay-register-worknet.py",
+    "scripts/relay-stake.py",
+    "scripts/relay-start.py",
+    "scripts/relay-unbind.py",
+    "scripts/wallet-raw-call.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090383008,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "awp-core",
+    "handle": "kilb",
+    "user_id": "s17721r0m967d8j56q9shvs86583gj87"
+  },
+  "slug": "awp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/awp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=awp&ownerHandle=kilb",
+    "page_url": "https://clawhub.ai/kilb/skills/awp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1357,
+    "installs": 40,
+    "stars": 1,
+    "versions": 27
+  },
+  "summary": "AWP (Agent Work Protocol) \u2014 the complete toolkit for agent mining on Base, Ethereum, Arbitrum, and BSC. Use this skill when the user explicitly mentions AWP,...",
+  "updated_at": 1778492068588,
+  "version": "1.7.0"
+}
