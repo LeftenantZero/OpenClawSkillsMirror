@@ -1,0 +1,56 @@
+{
+  "changelog": "pepper-oil-scraper 1.0.0\n\n- Initial release of a specialized scraper for pepper oil and Sichuan pepper industry chain data.\n- Covers multi-dimensional sources including market size, raw material prices, company reports, imports/exports, industry analysis, and competition.\n- Contains adapters for 20+ major Chinese and global data sites, supporting both category-based and site-specific scraping.\n- Supports robust anti-crawling strategies: randomized delays, fake user agents, referer header, proxy pool support, and JS-rendering with playwright.\n- Built-in tools for standardized data output and Excel report exporting.\n- Data outputs include source_url, crawl_time, and original_text fields, with unified data units.",
+  "created_at": 1774009947978,
+  "display_name": "pepper-oil-scraper",
+  "fetched_at": 1787938131002,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/targets.json",
+    "references/anti_crawl_guide.md",
+    "scripts/adapters/__init__.py",
+    "scripts/adapters/company_adapters.py",
+    "scripts/adapters/global_adapters.py",
+    "scripts/adapters/gov_adapters.py",
+    "scripts/adapters/media_adapters.py",
+    "scripts/adapters/price_adapters.py",
+    "scripts/adapters/report_adapters.py",
+    "scripts/base_scraper.py",
+    "scripts/data_cleaner.py",
+    "scripts/export_report.py",
+    "scripts/main_crawler.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090001004,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "MajorLau",
+    "handle": "majorlau",
+    "user_id": "s176v2s6pf3xt6faynp984dp7n884pbz"
+  },
+  "slug": "pepper-oil-scraper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pepper-oil-scraper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pepper-oil-scraper&ownerHandle=majorlau",
+    "page_url": "https://clawhub.ai/majorlau/skills/pepper-oil-scraper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 764,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u722c\u53d6\u82b1\u6912\u6cb9\u3001\u85e4\u6912\u6cb9\u4ea7\u4e1a\u94fe\u76f8\u5173\u6570\u636e\u7684\u4e13\u7528\u6280\u80fd\u3002\u8986\u76d6\u5e02\u573a\u89c4\u6a21\u3001\u539f\u6599\u4ef7\u683c\u3001\u4f01\u4e1a\u8d22\u62a5\u3001 \u8fdb\u51fa\u53e3\u3001\u884c\u4e1a\u62a5\u544a\u3001\u7ade\u4e89\u683c\u5c40\u7b49\u591a\u7ef4\u5ea6\u6570\u636e\u6e90\uff0c\u5185\u7f6e 20+ \u91cd\u70b9\u7f51\u7ad9\u7684\u722c\u866b\u9002\u914d\u5668\u3002 \u5f53\u7528\u6237\u9700\u8981\u91c7\u96c6\u82b1\u6912/\u85e4\u6912/\u8c03\u5473\u6cb9/Sichuan Pepper Oil \u76f8\u5173\u4ea7\u4e1a\u6570\u636e\u65f6\u89e6\u53d1\u6b64\u6280\u80fd\u3002 \u5373\u4f7f\u7528\u6237\u53ea\u8bf4\"\u722c\u6570\u636e\"\"\u6293\u53d6\u62a5\u544a\"\"\u91c7\u96c6\u4ef7\u683c\"\uff0c\u53ea\u8981\u4e0a...",
+  "updated_at": 1778492064154,
+  "version": "1.0.0"
+}
