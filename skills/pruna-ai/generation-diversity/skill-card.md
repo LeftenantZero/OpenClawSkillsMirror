@@ -1,45 +1,58 @@
-## Description: <br>
-Use when writing any generative prompt - ritual seed, explicit structure, scenario axes, and quality gates before paid API calls. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+Use when writing any generative prompt — ritual seed, explicit structure, scenario axes, and quality gates before paid API calls.
 
-## Publisher: <br>
-[pruna-ai](https://clawhub.ai/user/pruna-ai) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[pruna-ai](https://clawhub.ai/user/pruna-ai)
 
-## Use Case: <br>
-Developers and creative agents use this skill to structure generative media prompts, rotate scenario axes, and run approval and quality gates before spending generation credits. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: Companion generation skills may spend API credits or upload assets when approval gates are bypassed. <br>
-Mitigation: Keep clarification and approval gates enabled unless the user explicitly opts into automation. <br>
-Risk: Generated media prompts can drift from locked brand, subject, format, or safety constraints. <br>
-Mitigation: Use brief locks, explicit prompt structure, and quality checklists before advancing to paid or downstream steps. <br>
+## Use Case:
 
+External users and developers use this agent skill to make image, video, audio, and other generative prompts more varied, explicit, and reviewable before paid generation steps.
 
-## Reference(s): <br>
-- [Generation diversity guide](references/generation-diversity.md) <br>
-- [Clarification intake](references/clarification-intake.md) <br>
-- [Still-image prompt flow](references/still-image-prompt-flow.md) <br>
-- [Generation quality checklist hub](references/generation-quality-checklists.md) <br>
-- [Workflow feedback gates](references/workflow-feedback-gates.md) <br>
-- [String Seed of Thought](https://pub.sakana.ai/ssot/) <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [text, markdown, shell commands, guidance] <br>
-**Output Format:** [Markdown guidance with prompt drafts, checklists, and optional shell commands] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [Requires approval gates before paid generation unless explicitly waived.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-1.0.9 (source: server release metadata and skill metadata) <br>
+Risk: Implicit identity, voice, or demographic defaults may not match user intent.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Ask the user to make people, voice, and representation preferences explicit before generation.
+
+Risk: Skipping review gates can spend paid generation steps on weak or unwanted outputs.
+
+Mitigation: Use clarification intake, quality checklists, and approval gates before paid image, video, or audio calls.
+
+## Reference(s):
+
+- [Generation diversity](references/generation-diversity.md)
+- [Still-image prompt flow](references/still-image-prompt-flow.md)
+- [Generation quality checklist hub](references/generation-quality-checklists.md)
+- [Workflow feedback gates](references/workflow-feedback-gates.md)
+- [Clarification intake](references/clarification-intake.md)
+- [String Seed of Thought](https://pub.sakana.ai/ssot/)
+
+## Skill Output:
+
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
+
+**Output Format:** [Markdown guidance with prompt text, checklists, install commands, and phase-gate instructions]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [May include ritual seeds, scenario axes, prompt drafts, QA pass/fail notes, and approval gates.]
+
+## Skill Version(s):
+
+1.0.10 (source: artifact frontmatter, server release metadata)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
