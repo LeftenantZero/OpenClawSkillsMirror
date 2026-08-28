@@ -1,0 +1,60 @@
+{
+  "changelog": "- Fixed setup.sh missing from published skill package (was excluded by .clawdhubignore)\n- Fixed broken ./setup.sh --update references in SKILL.md to point to correct backend-specific scripts",
+  "created_at": 1772478114559,
+  "display_name": "Super-Transcribe \u2014 Unified Speech-to-Text",
+  "fetched_at": 1787891342069,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/backends/faster-whisper/requirements.txt",
+    "scripts/backends/faster-whisper/setup.sh",
+    "scripts/backends/faster-whisper/transcribe.py",
+    "scripts/backends/lib/__init__.py",
+    "scripts/backends/lib/alignment.py",
+    "scripts/backends/lib/audio.py",
+    "scripts/backends/lib/exitcodes.py",
+    "scripts/backends/lib/formatters.py",
+    "scripts/backends/lib/postprocess.py",
+    "scripts/backends/lib/rss.py",
+    "scripts/backends/lib/speakers.py",
+    "scripts/backends/parakeet/requirements.txt",
+    "scripts/backends/parakeet/setup.sh",
+    "scripts/backends/parakeet/transcribe.py",
+    "setup.sh",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089741106,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Sarah Mak",
+    "handle": "theplasmak",
+    "user_id": "s173k5tmjmt8te70nxgg9hwrmh8854f7"
+  },
+  "slug": "super-transcribe",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/super-transcribe",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=super-transcribe&ownerHandle=theplasmak",
+    "page_url": "https://clawhub.ai/theplasmak/skills/super-transcribe"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1155,
+    "installs": 36,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Unified speech-to-text skill. Use when the user asks to transcribe audio or video, generate subtitles, identify speakers, translate speech, search transcript...",
+  "updated_at": 1778491691403,
+  "version": "1.0.2"
+}
