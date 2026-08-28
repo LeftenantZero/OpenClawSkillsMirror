@@ -1,0 +1,54 @@
+{
+  "changelog": "---\nname: triple-memory-baidu-embedding\nversion: 1.0.0\ndescription: Complete memory system combining Baidu Embedding auto-recall, Git-Notes structured memory, and file-based workspace search. Use when setting up comprehensive agent memory with local privacy, when you need persistent context across sessions, or when managing decisions/preferences/tasks with multiple memory backends working together.\nmetadata:\n  clawdbot:\n    emoji: \"\ud83e\udde0\"\n    requires:\n      skills:\n        - git-notes-memory\n        - memory-baidu-embedding-db\n---\n\n# Triple Memory System with Baidu Embedding\n\nA comprehensive memory architecture combining three complementary systems for maximum context retention across sessions, with full privacy protection using Baidu Embedding technology.\n\n## \ud83d\udccb Original Source & Modifications\n\n**Original Source**: Triple Memory (by Clawdbot Team)\n**Modified By**: [Your Clawdbot Instance]\n**Modifications**: Replaced LanceDB with Baidu Embedding DB for enhanced privacy and Chinese language support\n\nOriginal Triple Memory SKILL.md was adapted to create this version that:\n- Replaces OpenAI-dependent LanceDB with Baidu Embedding DB\n- Maintains the same three-tier architecture\n- Preserves Git-Notes integration\n- Adds privacy-focused local storage\n\n## \ud83c\udfd7\ufe0f Architecture Overview\n\n```\nUser Message\n     \u2193\n[Baidu Embedding auto-recall] \u2192 injects relevant conversation memories\n     \u2193\nAgent responds (using all 3 systems)\n     \u2193\n[Baidu Embedding auto-capture] \u2192 stores preferences/decisions automatically\n     \u2193\n[Git-Notes] \u2192 structured decisions with entity extraction\n     \u2193\n[File updates] \u2192 persistent workspace docs\n```\n\n## The Three Systems\n\n### 1. Baidu Embedding (Conversation Memory)\n- **Auto-recall:** Relevant memories injected before each response using Baidu Embedding-V1 (requires API credentials)\n- **Auto-capture:** Preferences/decisions/facts stored automatically with local vector storage (requires API credentials)\n- **Privacy Focused:** All embeddings processed via Baidu API with local storage\n- **Chinese Optimized:** Better understanding of Chinese language semantics\n- **Tools:** `baidu_memory_recall`, `baidu_memory_store`, `baidu_memory_forget` (require API credentials)\n- **Triggers:** \"remember\", \"prefer\", \"my X is\", \"I like/hate/want\"\n- **Note:** When API credentials are not provided, this layer is unavailable and the system operates in degraded mode.\n\n### 2. Git-Notes Memory (Structured, Local)\n- **Branch-aware:** Memories isolated per git branch\n- **Entity extraction:** Auto-extracts topics, names, concepts\n- **Importance levels:** critical, high, normal, low\n- **No external API calls**\n\n### 3. File Search (Workspace)\n- **Searches:** MEMORY.md, memory/*.md, any workspace file\n- **Script:** `scripts/file-search.sh`\n\n## \ud83d\udee0\ufe0f Setup\n\n### Install Dependencies\n```bash\nclawdhub install git-notes-memory\nclawdhub install memory-baidu-embedding-db\n```\n\n### Configure Baidu API\nSet environment variables:\n```bash\nexport BAIDU_API_STRING='your_bce_v3_api_string'\nexport BAIDU_SECRET_KEY='your_secret_key'\n```\n\n### Create File Search Script\nCopy `scripts/file-search.sh` to your workspace.\n\n## \ud83d\udcd6 Usage\n\n### Session Start (Always)\n```bash\npython3 skills/git-notes-memory/memory.py -p $WORKSPACE sync --start\n```\n\n### Store Important Decisions\n```bash\npython3 skills/git-notes-memory/memory.py -p $WORKSPACE remember \\\n  '{\"decision\": \"Use PostgreSQL\", \"reason\": \"Team expertise\"}' \\\n  -t architecture,database -i h\n```\n\n### Search Workspace Files\n```bash\n./scripts/file-search.sh \"database config\" 5\n```\n\n### Baidu Embedding Memory (Automatic)\nBaidu Embedding handles this automatically when API credentials are available. Manual tools:\n- `baidu_memory_recall \"query\"` - search conversation memory using Baidu vectors (requires API credentials)\n- `baidu_memory_store \"text\"` - manually store something with Baidu embedding (requires API credentials)\n- `baidu_memory_forget` - delete memories (GDPR, requires API credentials)\n\n**In Degraded Mode** (without API credentials):\n- System operates using only Git-Notes and File System layers\n- Manual tools are unavailable\n- Auto-recall and auto-capture are disabled\n\n## \ud83c\udfaf Importance Levels\n\n| Flag | Level | When to Use |\n|------|-------|-------------|\n| `-i c` | Critical | \"always remember\", explicit preferences |\n| `-i h` | High | Decisions, corrections, preferences |\n| `-i n` | Normal | General information |\n| `-i l` | Low | Temporary notes |\n\n## \ud83d\udccb When to Use Each System\n\n| System | Use For |\n|--------|---------|\n| **Baidu Embedding** | Conversation context, auto-retrieval with privacy |\n| **Git-Notes** | Structured decisions, searchable by entity/tag |\n| **File Search** | Workspace docs, daily logs, MEMORY.md |\n\n## \ud83d\udcc1 File Structure\n\n```\nworkspace/\n\u251c\u2500\u2500 MEMORY.md              # Long-term curated memory\n\u251c\u2500\u2500 memory/\n\u2502   \u251c\u2500\u2500 active-context.md  # Current session state\n\u2502   \u2514\u2500\u2500 YYYY-MM-DD.md      # Daily logs\n\u251c\u2500\u2500 scripts/\n\u2502   \u2514\u2500\u2500 file-search.sh     # Workspace search\n\u2514\u2500\u2500 skills/\n    \u251c\u2500\u2500 triple-memory-baidu-embedding/  # Enhanced memory system\n    \u251c\u2500\u2500 git-notes-memory/  # Structured memory\n    \u2514\u2500\u2500 memory-baidu-embedding-db/  # Vector storage\n```\n\n## \ud83d\udd27 Hook Integration\n\nThis skill can be integrated with Clawdbot's startup hooks for automatic initialization:\n\n### Memory Boot Hook Integration\nTo ensure the Triple Memory Baidu system starts automatically when the gateway starts:\n\n1. The `memory-boot-loader` hook can be configured to run `/root/clawd/session-init-triple-baidu.sh`\n2. This ensures all three memory layers are initialized on startup\n3. Provides immediate access to Git-Notes, Baidu Embedding, and file-based memory\n\n### Configuration\nThe system can be integrated with the gateway startup sequence to ensure:\n- Git-Notes synchronization on startup\n- Baidu Embedding connection check\n- File-based memory initialization\n- Ready-to-use memory system from the start\n\n## \ud83e\udd2b Silent Operation\n\nNever announce memory operations to users. Just do it:\n- \u274c \"I'll remember this\"\n- \u274c \"Saving to memory\"\n- \u2705 (silently store and continue)\n\n## \ud83d\udd04 Migration from Original Triple Memory\n\n1. **Install this skill** in your `skills/` directory\n2. **Configure your Baidu API credentials**\n3. **Disable original triple-memory** if desired\n4. **Update your bot configuration** to use this memory system\n5. **Verify data integrity** and performance\n\n## \ud83d\udcc8 Performance Benefits\n\n- **Enhanced Privacy**: All vector storage local with Baidu API\n- **Better Chinese Support**: Baidu Embedding optimized for Chinese\n- **Reduced Costs**: Potentially lower API costs compared to OpenAI\n- **Same Architecture**: Maintains proven three-tier design\n\n## \ud83e\udd1d Contributing\n\nBased on original Triple Memory system by Clawdbot Team. Contributions welcome to enhance the Baidu Embedding integration.\n\n## \ud83d\udcc4 License\n\nOriginal license applies with modifications noted above. Credit given to original authors.",
+  "created_at": 1770120259971,
+  "display_name": "triple-memory-baidu-embedding",
+  "fetched_at": 1787909791998,
+  "files": [
+    "CREDITS.md",
+    "INTEGRATION_GUIDE.md",
+    "README.md",
+    "SKILL.md",
+    "USAGE_EXAMPLES.md",
+    "_meta.json",
+    "clawdbot.skill.json",
+    "configure.sh",
+    "install.sh",
+    "scripts/baidu-memory-tools.sh",
+    "scripts/memory_skill_full_verification.sh",
+    "scripts/memory_skill_startup_check.sh",
+    "scripts/triple-integration.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783655964687,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xqicxx",
+    "handle": "xqicxx",
+    "user_id": "s174qrbs0vpdp5g7e1442kr90183q095"
+  },
+  "slug": "triple-memory-baidu-embedding",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/triple-memory-baidu-embedding",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=triple-memory-baidu-embedding&ownerHandle=xqicxx",
+    "page_url": "https://clawhub.ai/xqicxx/skills/triple-memory-baidu-embedding"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2215,
+    "installs": 76,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Complete memory system combining Baidu Embedding auto-recall, Git-Notes structured memory, and file-based workspace search. Use when setting up comprehensive agent memory with local privacy, when you need persistent context across sessions, or when managing decisions/preferences/tasks with multiple memory backends working together.",
+  "updated_at": 1778486000320,
+  "version": "1.0.0"
+}
