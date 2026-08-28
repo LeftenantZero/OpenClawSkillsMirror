@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes face images, videos, or URLs for micro-expression and emotion cues, returning structured reports, recommendations, report links, and history listings.
+Analyzes face images or videos for micro-expressions and emotional states, returning structured reports with findings, suggestions, and report links.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers can use this skill to submit face media or media URLs for cloud-based micro-expression analysis and receive structured emotion reports. It also supports querying prior analysis reports linked to the skill's internal user identity handling.
+External users, developers, and agents use this skill to submit face media or media URLs for micro-expression and emotion analysis, then retrieve structured results or historical report lists. Results should support review and communication workflows, not serve as proof of a person's true feelings or as a substitute for professional psychological judgment.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill processes sensitive face videos/images or URLs through the provider's cloud service.
+Risk: The skill sends sensitive face media or media URLs to a vendor cloud service for analysis.
 
-Mitigation: Use only with appropriate authorization and consent, and avoid submitting sensitive face media unless the provider's cloud processing and retention practices are acceptable.
+Mitigation: Use only with appropriate consent and data handling review, and avoid submitting media where cloud processing is not acceptable.
 
-Risk: Reports are linked to an internal user identity and the security summary notes local token and report-storage concerns.
+Risk: Reports are tied to automatically managed local or remote identity records.
 
-Mitigation: Review workspace storage, token handling, and report-retention behavior before deployment, especially in shared or regulated environments.
+Mitigation: Do not expose internal identity values to users, and review account, token, retention, and access behavior before deployment.
 
-Risk: Micro-expression and emotion outputs can be misleading in high-stakes contexts.
+Risk: Emotion-analysis outputs can be mistaken for objective proof of a person's true feelings.
 
-Mitigation: Do not use outputs for truthfulness judgments, psychological diagnosis, employment, legal, or other consequential decisions without qualified human review and independent validation.
+Mitigation: Present outputs as informational signals only and avoid employment, legal, medical, school discipline, surveillance, or other high-stakes decisions.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-emotion-analysis)
-- [Skill Demo](https://lifeemergence.com/sample.html)
-- [API Documentation](artifact/references/api_doc.md)
-- [Analysis API Documentation](artifact/skills/smyx_analysis/references/api_doc.md)
+- [ClawHub skill page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-emotion-analysis)
+- [Skill demo](https://lifeemergence.com/sample.html)
+- [API documentation](references/api_doc.md)
+- [Analysis API documentation](skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [text, markdown, JSON, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown and JSON-like structured text with report links]
+**Output Format:** [Markdown or JSON text containing emotion analysis results, history report tables, report links, and script invocation guidance.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include cloud analysis status, emotion scores, key cues, suggestions, historical report tables, and export URLs.]
+**Other Properties Related to Output:** [May include vendor-hosted report export links and historical report records associated with an automatically managed identity.]
 
 ## Skill Version(s):
 
-1.0.13 (source: server release metadata)
+1.0.14 (source: server release evidence; artifact frontmatter reports 1.0.12)
 
 ## Ethical Considerations:
 
