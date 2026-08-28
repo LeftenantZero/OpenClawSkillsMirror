@@ -1,6 +1,6 @@
 ## Description:
 
-Non-contact detection of heart rate, respiration, blood oxygen, and heart rate variability from camera footage, with structured report output and history lookup.
+Non-contact detection of heart rate, respiration, blood oxygen, and heart rate variability using camera footage without wearable devices.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users, developers, and care or wellness teams use this skill to analyze face video from a local file or URL for non-contact vital-sign estimates and to retrieve prior cloud reports. Results are for health reference and should not replace professional medical measurement or diagnosis.
+External users and developers use this skill to submit face-camera video files or video URLs for non-contact vital-sign analysis and to retrieve cloud-hosted analysis report history. The generated reports are for health reference and should not be treated as professional medical measurements or diagnoses.
 
 ### Deployment Geography for Use:
 
@@ -22,39 +22,42 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill sends face/video health data to the Lifeemergence cloud service for analysis and report retrieval.
+Risk: Face or video health data and provided video URLs may be sent to the configured LifeEmergence/SMYX service.
 
-Mitigation: Use only with appropriate consent and confirm the publisher's retention, deletion, access-control, and data-handling terms before processing sensitive footage.
+Mitigation: Use the skill only with data approved for that service, verify the configured endpoint before execution, and avoid submitting sensitive videos unless the service terms and data handling are acceptable.
 
-Risk: Reports are associated with an automatically managed identity and account tokens may be stored locally.
+Risk: Cloud report history is tied to an internal identity and local workspace storage may contain account identifiers or service tokens.
 
-Mitigation: Review local token storage and identity behavior before installation, and avoid shared environments unless account isolation is understood.
+Mitigation: Restrict workspace access, review local data storage before sharing or archiving the workspace, and rotate or remove service tokens when access is no longer needed.
 
-Risk: Vital-sign analysis output is health-related and may be inaccurate or incomplete.
+Risk: Packaged development configuration includes private network endpoints.
 
-Mitigation: Treat results as health reference only and direct users to professional medical measurement or diagnosis for clinical decisions.
+Mitigation: Confirm production endpoints and configuration values before installation or execution in any shared or commercial environment.
+
+Risk: Vital-sign outputs are health-reference reports rather than professional medical measurements.
+
+Mitigation: Present results with the medical-use limitation and direct users to professional care for concerning or abnormal findings.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/18072937735/skills/smyx-contactless-vital-signs-monitoring-analysis)
-- [Publisher Profile](https://clawhub.ai/user/18072937735)
-- [Skill Demo](https://lifeemergence.com/sample.html)
-- [API 接口文档](artifact/references/api_doc.md)
-- [API接口文档](artifact/skills/smyx_analysis/references/api_doc.md)
+- [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-contactless-vital-signs-monitoring-analysis)
+- [Skill demo](https://lifeemergence.com/sample.html)
+- [API interface documentation](references/api_doc.md)
+- [SMYX analysis API documentation](skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, json, shell commands, guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown or JSON analysis report with report links; Markdown table for history lookup]
+**Output Format:** [Markdown guidance with shell command examples; execution returns JSON-like text reports and report links.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May write results to a local output file when requested.]
+**Other Properties Related to Output:** [Accepts local mp4/avi/mov files up to 10MB or a video URL; history lookup returns report lists from the configured cloud API.]
 
 ## Skill Version(s):
 
-1.0.14 (source: server release metadata; artifact frontmatter says 1.0.13)
+1.0.15 (source: server release metadata; artifact frontmatter is 1.0.13)
 
 ## Ethical Considerations:
 
