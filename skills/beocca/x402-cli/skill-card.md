@@ -1,6 +1,6 @@
 ## Description:
 
-A CLI skill that helps agents discover x402 services, inspect payment requirements, and make paywalled requests.
+A simple CLI that helps AI agents discover x402 services and make paywalled requests.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and agent builders use x402-CLI to discover x402-enabled services, inspect cost and payment metadata, and invoke paid endpoints from an agent workflow. It is suitable when the calling system can provide wallet controls and approval policy outside the CLI.
+Developers and agent builders use x402-CLI to discover x402-enabled services, inspect their payment requirements, and make paywalled HTTP requests from an agent workflow.
 
 ### Deployment Geography for Use:
 
@@ -22,39 +22,45 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can autonomously spend real cryptocurrency without built-in approval, spend limits, or service allowlists.
+Risk: The skill can spend real Base USDC from the configured wallet without a built-in approval step.
 
-Mitigation: Use a fresh low-balance wallet and enforce approval, per-transaction limits, service allowlists, recipient allowlists, and monitoring in the calling agent before enabling request pay.
+Mitigation: Use a fresh, dedicated wallet with a very small balance and add an external approval gate before allowing an agent to call request pay.
 
-Risk: Payment endpoints and discovery results may be untrusted or unsuitable for the user's jurisdiction or use case.
+Risk: Agents can send payments or request data from arbitrary x402 service URLs, including untrusted or malicious endpoints.
 
-Mitigation: Run request info first, verify amount, network, recipient, and service terms, and only allow known services where the calling system has performed due diligence.
+Mitigation: Use domain and recipient allowlists, inspect payment requirements with request info first, and monitor paid requests.
 
-Risk: Wallet private keys and request data can be exposed through environment handling or saved request files.
+Risk: The wallet private key is supplied through CLIENT_EVM_WALLET_SECRET and exposure gives control of the wallet.
 
-Mitigation: Use a dedicated wallet key, avoid logging or hardcoding secrets, unset credentials after use, and do not save requests that contain sensitive headers, request bodies, or responses.
+Mitigation: Do not use a personal or high-value wallet, avoid hardcoding or logging the secret, and clear the environment variable after use.
+
+Risk: Saved request and response files may contain sensitive request bodies or service responses.
+
+Mitigation: Avoid --save when interacting with untrusted services or when request bodies and responses may contain secrets or sensitive data.
 
 ## Reference(s):
 
 - [x402-CLI ClawHub Skill Page](https://clawhub.ai/beocca/skills/x402-cli)
 - [x402 Official Site](https://x402.org/)
 - [x402 Documentation](https://docs.x402.org/introduction)
-- [Coinbase CDP x402 Facilitator Docs](https://docs.cdp.coinbase.com/x402/introduction)
+- [x402 GitHub Repository](https://github.com/x402-foundation/x402)
+- [CDP x402 Facilitator Docs](https://docs.cdp.coinbase.com/x402/introduction)
 - [x402scan](https://www.x402scan.com/)
+- [x402scan GitHub Repository](https://github.com/Merit-Systems/x402scan)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [Shell commands, Configuration, JSON, Files, Guidance]
 
-**Output Format:** [Markdown guidance with shell commands and JSON CLI outputs]
+**Output Format:** [JSON responses on stdout, optional saved JSON files, and Markdown usage guidance with shell command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [CLI invocations print one JSON object to stdout; optional saved files are JSON.]
+**Other Properties Related to Output:** [Commands return one JSON object with stable error_code values; request pay requires CLIENT_EVM_WALLET_SECRET and can move Base USDC.]
 
 ## Skill Version(s):
 
-1.2.3 (source: frontmatter and server release evidence)
+1.2.4 (source: frontmatter and server release metadata)
 
 ## Ethical Considerations:
 

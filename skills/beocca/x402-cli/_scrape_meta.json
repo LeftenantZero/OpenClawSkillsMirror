@@ -1,8 +1,8 @@
 {
-  "changelog": "x402-cli 1.2.3\n\n- `request info` / `request pay` saving is now **opt-in** (`--save`), no longer on by default.\n- Saved files **redact sensitive header values** (Authorization, Cookie, API keys, etc.).\n- A stderr warning now prints whenever `--save` is used.\n- Added an explicit **capabilities table** (env, network, file writes, blockchain writes) to `SKILL.md`.\n- Added shell-history exposure guidance for handling `CLIENT_EVM_WALLET_SECRET`.\n- Frontmatter now declares `metadata.openclaw.envVars` / `primaryEnv` for `CLIENT_EVM_WALLET_SECRET`.\n- **Not changed:** no confirmation gate / spend caps for `request pay` (`EA2`) \u2014 conflicts with the skill's autonomous-payment design; needs a product decision.",
+  "changelog": "x402-cli 1.2.4\n\n- added USDC spend limit",
   "created_at": 1783530646636,
   "display_name": "x402-CLI",
-  "fetched_at": 1787772806968,
+  "fetched_at": 1787932273696,
   "files": [
     "DISCLOSURES.md",
     "NOTICE.md",
@@ -20,7 +20,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1786382056897,
+    "updated_at": 1787854749830,
     "verdict": "clean"
   },
   "owner": {
@@ -36,12 +36,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 850,
+    "downloads": 870,
     "installs": 0,
     "stars": 2,
-    "versions": 13
+    "versions": 14
   },
-  "summary": "A simple CLI that helps AI agents discover x402 services and make paywalled requests.\nBecome part of the agentic-economy!",
-  "updated_at": 1786381930218,
-  "version": "1.2.3"
+  "summary": "A simple CLI that helps AI agents discover x402 services and make paywalled requests. \nBecome part of the agentic-economy!",
+  "updated_at": 1787854084924,
+  "version": "1.2.4"
 }

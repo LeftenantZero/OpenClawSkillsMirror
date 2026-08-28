@@ -32,7 +32,7 @@ Always use a fresh, dedicated wallet with minimal, intentional funding.
 
 ## 7. Wallet Funding as Security Boundary
 
-This CLI has no built-in spend limits or allowlists. The wallet's on-chain balance *is* your only security boundary. If the wallet holds 10 USDC, the agent can spend at most 10 USDC before subsequent transactions fail. If it holds 100 USDC and you made an error, 100 USDC is at risk.
+This CLI has a configurable per-invocation spend limit, but it does not implement allowlists. The wallet's on-chain balance *is* your ultimate security boundary. If the wallet holds 10 USDC, the agent can spend at most 10 USDC before subsequent transactions fail. If it holds 100 USDC and you made an error, 100 USDC is at risk.
 
 - Minimal use: 5–10 USDC
 - Higher-volume use: up to 50–100 USDC (only if you trust the agent's orchestration)

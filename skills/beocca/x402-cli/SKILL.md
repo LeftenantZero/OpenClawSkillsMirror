@@ -1,6 +1,6 @@
 ---
 name: x402-cli
-version: 1.2.3
+version: 1.2.4
 description: A simple CLI that helps AI agents discover x402 services and make paywalled requests. Become part of the agentic-economy!
 metadata:
   x402:
@@ -103,10 +103,15 @@ Sends a plain HTTP request with no payment — the endpoint typically replies `4
 
 ```bash
 python x402_cli.py request pay https://example.com/paywalled-endpoint \
-	--method post --data '{"foo":"bar"}' --header '{"Authorization":"Bearer ..."}'
+  --method post --data '{"foo":"bar"}' --header '{"Authorization":"Bearer ..."}' \
+  --spend-limit 1.0
 ```
 
 Same flags as `request info`, plus it requires `CLIENT_EVM_WALLET_SECRET`. Signs an x402 payment, sends it on Base mainnet, then sends the request and returns the service's response.
+
+| Flag | Default | Meaning |
+|---|---|---|
+| `--spend-limit` | `1.0` | Maximum USDC to authorize for the payment request |
 
 **⚠️ This authorizes an on-chain payment the moment it runs — there is no confirmation prompt.** A warning is printed to stderr immediately beforehand as a last reminder, but it does not block execution. Always inspect with `request info` first.
 

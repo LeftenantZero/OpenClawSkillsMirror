@@ -20,13 +20,19 @@ from datetime import datetime
 
 import requests
 from eth_account import Account
-from x402 import x402ClientSync
+from x402 import x402Client, max_amount
 from x402.http.clients import x402_requests
 from x402.mechanisms.evm import EthAccountSigner
 from x402.mechanisms.evm.exact.register import register_exact_evm_client
 
 from dotenv import load_dotenv
 load_dotenv()
+
+
+
+DEFAULT_USDC_SPEND_LIMIT = 1
+USDC_DECIMALS = 6
+
 
 
 class ErrorCode:
@@ -158,7 +164,8 @@ def _http_request(
         raise CliError(f"Request to {url} failed: {e}", ErrorCode.NETWORK_ERROR) from e
 
 
-def _init_x402_evm_client() -> x402ClientSync:
+
+def _init_x402_evm_client(usdc_spend_limit: float) -> x402Client:
 
     # Create the eth wallet for the agent to use
     evm_wallet_secret = os.getenv("CLIENT_EVM_WALLET_SECRET")
@@ -170,7 +177,7 @@ def _init_x402_evm_client() -> x402ClientSync:
     evm_wallet = Account.from_key(evm_wallet_secret)
 
     # Init the x402 client
-    x402_client = x402ClientSync()
+    x402_client = x402Client().register_policy(max_amount(usdc_spend_limit * 10**USDC_DECIMALS))
     register_exact_evm_client(
         x402_client, 
         EthAccountSigner(evm_wallet),
@@ -180,6 +187,7 @@ def _init_x402_evm_client() -> x402ClientSync:
             # "eip155:84532",   # -> base-sepolia
         ]
     )
+
 
     return x402_client
 
@@ -585,8 +593,10 @@ def command_request_pay(args: argparse.Namespace) -> Dict[str, Any]:
     request_data = _parse_request_data(args.data)
     request_header = _parse_request_header(args.header)
 
+    usdc_spend_limit = args.spend_limit
+
     try:
-        x402_client = _init_x402_evm_client()
+        x402_client = _init_x402_evm_client(usdc_spend_limit)
 
         print(
             "\n[!] PAID REQUEST WARNING\n"
@@ -771,6 +781,12 @@ def _build_parser() -> argparse.ArgumentParser:
         type=int,
         default=60,
         help="Request timeout in seconds",
+    )
+    pay_parser.add_argument(
+        "--spend-limit",
+        type=float,
+        default=DEFAULT_USDC_SPEND_LIMIT,
+        help="Maximum USDC to authorize for this payment request",
     )
     pay_parser.add_argument(
         "--save",
