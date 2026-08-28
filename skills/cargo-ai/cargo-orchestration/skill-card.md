@@ -1,6 +1,6 @@
 ## Description:
 
-Guides an agent through Cargo CLI orchestration tasks, including running connector actions and workflows, managing batches and plays, messaging AI agents, drawing node graphs, and querying runtime execution tables.
+Cargo Orchestration helps agents run and inspect Cargo CLI workflows, connector actions, batches, AI agent messages, node graphs, diagrams, and runtime SQL queries.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, operators, and go-to-market teams use this skill to run and inspect Cargo workflows, batches, plays, connector actions, and agent messages while checking schemas, diagrams, status, cost, and errors before live execution.
+External users, operations teams, and developers use this skill to operate Cargo workspaces through the Cargo CLI: execute actions, run or batch workflows, message AI agents, build and validate node graphs, draw workflow diagrams, and query orchestration history.
 
 ### Deployment Geography for Use:
 
@@ -22,51 +22,50 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can trigger live batches, connector actions, CRM updates, and data downloads in a Cargo workspace.
+Risk: The skill can run, deploy, and mutate high-impact Cargo automations.
 
-Mitigation: Confirm the active workspace, connector targets, data sensitivity, record count, and cost estimate before live execution.
+Mitigation: Install it only for users authorized to operate the target Cargo workspace and confirm the active workspace, connector accounts, and destination systems before running commands.
 
-Risk: Large batch or segment runs can apply the same workflow to many records and incur unexpected cost or broad data changes.
+Risk: Batch and connector operations can affect many records, consume credits, or send personal and customer data to enrichment, CRM, or AI providers.
 
-Mitigation: Run a 10-20 record sample first, report observed cost and hit rate, then require explicit approval for the full enrollment.
+Mitigation: Use samples and narrow filters first, report record counts and credit estimates, and require explicit approval before full batches or deployments.
 
-Risk: Workflow edits or deployments can fail or behave differently than intended if node graphs are invalid or hard to review.
+Risk: Segment removal and broad workflow changes can delete or reroute business automation state.
 
-Mitigation: Validate node graphs and render a diagram before deployment so routing, paid steps, and fallbacks are visible.
+Mitigation: Avoid segment removal unless the intended deletion is clear, and validate or diagram workflow changes before execution.
 
 ## Reference(s):
 
-- [Cargo Orchestration on ClawHub](https://clawhub.ai/cargo-ai/skills/cargo-orchestration)
-- [Cargo Skills Repository](https://github.com/getcargohq/cargo-skills)
-- [Cargo CLI - Orchestration](artifact/SKILL.md)
-- [Action Examples](artifact/references/examples/actions.md)
-- [Tool Examples](artifact/references/examples/tools.md)
-- [Play Examples](artifact/references/examples/plays.md)
-- [AI Agent Examples](artifact/references/examples/agents.md)
-- [Orchestration Templates](artifact/references/examples/templates.md)
-- [Orchestration Query Examples](artifact/references/examples/queries.md)
-- [Segment Data Examples](artifact/references/examples/segments.md)
-- [Creating Nodes](artifact/references/nodes.md)
-- [Diagramming a Node Graph](artifact/references/node-diagram.md)
-- [Node Selection](artifact/references/node-selection.md)
-- [Filter Syntax](artifact/references/filter-syntax.md)
-- [Async Polling Reference](artifact/references/polling.md)
-- [Response Shapes](artifact/references/response-shapes.md)
-- [Troubleshooting](artifact/references/troubleshooting.md)
+- [Cargo skills homepage](https://github.com/getcargohq/cargo-skills)
+- [Cargo CLI - Orchestration](SKILL.md)
+- [Action examples](references/examples/actions.md)
+- [Tool examples](references/examples/tools.md)
+- [Play examples](references/examples/plays.md)
+- [AI agent examples](references/examples/agents.md)
+- [Orchestration templates](references/examples/templates.md)
+- [Orchestration query examples](references/examples/queries.md)
+- [Segment data examples](references/examples/segments.md)
+- [Creating nodes](references/nodes.md)
+- [Diagramming a node graph](references/node-diagram.md)
+- [Prefer built-in actions and expressions over code/HTTP nodes](references/node-selection.md)
+- [Filter syntax](references/filter-syntax.md)
+- [Async polling reference](references/polling.md)
+- [Response shapes](references/response-shapes.md)
+- [Troubleshooting](references/troubleshooting.md)
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, markdown, shell commands, configuration, code]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with inline Cargo CLI commands, JSON payloads, SQL queries, and diagram text.]
+**Output Format:** [Markdown guidance with inline shell commands, JSON payload examples, and configuration snippets.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Commands may create or inspect Cargo runs, batches, draft releases, node diagrams, agent messages, and read-only orchestration queries.]
+**Other Properties Related to Output:** [Outputs often include Cargo CLI commands and JSON request or response shapes for workspace operations.]
 
 ## Skill Version(s):
 
-1.8.0 (source: server release evidence and SKILL.md frontmatter)
+1.9.0 (source: frontmatter and server release evidence)
 
 ## Ethical Considerations:
 
