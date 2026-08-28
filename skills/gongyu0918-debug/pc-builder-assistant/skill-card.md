@@ -1,6 +1,6 @@
 ## Description:
 
-PC Build Assistant helps agents plan desktop PC builds, upgrades, compatibility checks, hardware guidance, local LLM sizing, and gaming or creator configurations using bundled China-market catalogs and verification rules.
+PC Build Assistant helps agents plan budget desktop PC builds, upgrades, configuration completion, compatibility checks, hardware guidance, local LLM GPU/VRAM/RAM sizing, and gaming, streaming, creator, aesthetic, compact, or ITX builds using China-market CNY reference data and optional user overlays.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,63 +14,50 @@ MIT No Attribution
 
 ## Use Case:
 
-External users and agents use this skill to produce desktop PC part recommendations, upgrade plans, configuration completion, and compatibility guidance for budget, gaming, creator, compact/ITX, and local AI workloads. It is not intended for laptops, server procurement, ordering, payment, remote control, security isolation, or standalone software tutorials.
+External users and developers use this skill for desktop PC part selection, upgrade planning, compatibility review, price-aware build lists, gaming FPS lookup, and local model hardware sizing. It is not intended for laptops, server procurement, ordering or payment, remote control, security isolation, or standalone software, game, or agent tutorials.
 
 ### Deployment Geography for Use:
 
-Global; bundled reference pricing is China-market CNY unless the user supplies a separate local overlay.
+Global
 
 ## Known Risks and Mitigations:
 
-Risk: Bundled hardware catalogs and CNY price references may become stale or may not match a user's local market.
+Risk: Bundled or searched prices may be stale, incomplete, or different from purchase-time market prices.
 
-Mitigation: Use current online price checks when offline data is old or the user asks for real-time pricing, and keep user-supplied local currency overlays separate from CNY references.
+Mitigation: Treat quoted prices as references and verify current seller prices before purchase.
 
-Risk: Unrelated private files or overly broad user overlay inputs could expose data that is not needed for PC build advice.
+Risk: User overlay or catalog files may contain hardware inventory and pricing data the user does not intend to share with an agent.
 
-Mitigation: Provide only relevant hardware, quote, or catalog overlay inputs and avoid sharing unrelated private files with the skill.
-
-Risk: Incomplete catalog fields can leave purchase-critical compatibility details unresolved.
-
-Mitigation: Run strict compatibility checks for complete build recommendations and present unresolved items as pre-purchase checks instead of claiming full compatibility.
+Mitigation: Only provide overlay files containing hardware and pricing information that is acceptable to share with the agent.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/gongyu0918-debug/skills/pc-builder-assistant)
-- [Skill definition](SKILL.md)
-- [Demand routing](references/routing.md)
-- [Selection policy](references/selection-policy.md)
+- [PC Build Assistant on ClawHub](https://clawhub.ai/gongyu0918-debug/skills/pc-builder-assistant)
 - [Compatibility checks](references/compatibility.md)
-- [Pricing rules](references/pricing.md)
-- [Workflows](references/workflows.md)
+- [English usage](references/english-usage.md)
+- [Game FPS reference](references/game-performance.md)
 - [Hardware scope](references/hardware-scope.md)
-- [Local model fit](references/local-model-fit.md)
-- [Game performance](references/game-performance.md)
-- [User catalog overlay](references/user-catalog.md)
-- [Price history](references/price-history.md)
+- [Local model hardware fit](references/local-model-fit.md)
+- [Pricing rules](references/pricing.md)
+- [Selection policy](references/selection-policy.md)
+- [User catalog overlays](references/user-catalog.md)
 - [Hugging Face Transformers quantization](https://huggingface.co/docs/transformers/main/en/quantization)
 - [Hugging Face Transformers KV cache](https://huggingface.co/docs/transformers/kv_cache)
 - [Hugging Face Accelerate big model inference](https://huggingface.co/docs/accelerate/main/concept_guides/big_model_inference)
-- [Qwen3-8B model card](https://huggingface.co/Qwen/Qwen3-8B)
-- [Qwen3-30B-A3B model card](https://huggingface.co/Qwen/Qwen3-30B-A3B)
-- [Qwen3-32B model card](https://huggingface.co/Qwen/Qwen3-32B)
-- [Qwen2.5-72B-Instruct model card](https://huggingface.co/Qwen/Qwen2.5-72B-Instruct)
-- [Mistral-Small-3.1-24B-Instruct-2503 model card](https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503)
-- [DeepSeek-R1-Distill-Qwen-32B model card](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Configuration, Guidance]
+**Output Type(s):** [text, markdown, configuration, guidance]
 
-**Output Format:** [Markdown or structured text with part lists, prices, totals, compatibility findings, trade-off notes, and pre-purchase checks.]
+**Output Format:** [Markdown text with build lists, compatibility notes, price references, and verification points]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Uses CNY by default, keeps user-supplied overlay currencies separate, and includes price reference dates and compatibility status for concrete build recommendations.]
+**Other Properties Related to Output:** [May include CNY price references, budget differences, component rows, compatibility conclusions, and purchase-time review notes.]
 
 ## Skill Version(s):
 
-0.1.15 (source: server release evidence)
+0.1.17 (source: server release evidence)
 
 ## Ethical Considerations:
 
