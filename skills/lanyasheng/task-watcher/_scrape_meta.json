@@ -1,0 +1,51 @@
+{
+  "changelog": "v1.2.1: Isolate all tests from host filesystem (no ~/.openclaw writes), add .gitignore and MIT LICENSE. Fully portable: clone + pytest works anywhere.",
+  "created_at": 1772886672486,
+  "display_name": "Task Watcher Skill",
+  "fetched_at": 1787885676677,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/lib/__init__.py",
+    "scripts/lib/adapters.py",
+    "scripts/lib/bus.py",
+    "scripts/lib/models.py",
+    "scripts/lib/notifiers.py",
+    "scripts/lib/policies.py",
+    "scripts/lib/stores.py",
+    "scripts/register_task.py",
+    "scripts/watcher.py",
+    "skill-card.md",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_adapters.py",
+    "tests/test_bus.py",
+    "tests/test_models.py",
+    "tests/test_notifiers.py",
+    "tests/test_policies.py",
+    "tests/test_stores.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "_silhouette",
+    "handle": "lanyasheng",
+    "user_id": "s179bk63dv96y90hw97xaay4fx83t7yr"
+  },
+  "slug": "task-watcher",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/task-watcher",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=task-watcher&ownerHandle=lanyasheng",
+    "page_url": "https://clawhub.ai/lanyasheng/skills/task-watcher"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 861,
+    "installs": 24,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Monitor async tasks by polling their state and send Discord/Telegram notifications on changes or completion for workflows like CI/CD, deployments, or reviews.",
+  "updated_at": 1778491764944,
+  "version": "1.2.1"
+}
