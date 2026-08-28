@@ -1,6 +1,6 @@
 ## Description:
 
-Clinical-facility edition of iaiops for hospital facilities monitoring and analysis across BACnet/IP BMS points, Modbus medical-gas and energy devices, OPC-UA plant SCADA, and clinical safety checks for isolation-room pressure and medical-gas source pressure.
+iaiops-clinical helps agents inspect hospital facility systems across BACnet/IP, Modbus, and OPC-UA, with patient-safety checks for isolation-room pressure, medical gas, operating-room environment, alarms, and cross-protocol diagnostics.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and facility engineers use this skill to inspect hospital BMS, medical-gas, SCADA, alarm, data-quality, and predictive-maintenance workflows with patient-safety framing. It is intended to support read-first clinical facilities checks such as isolation-room pressure, medical-gas source pressure, operating-room environment review, downtime triage, and compliance evidence preparation.
+Clinical facilities teams, healthcare integrators, and operations engineers use this skill to investigate hospital BMS, medical-gas, SCADA, alarm, and maintenance signals while keeping patient-safety checks visible. It is especially relevant for isolation rooms, operating rooms, ICUs, medical gas systems, and clinical HVAC workflows.
 
 ### Deployment Geography for Use:
 
@@ -22,26 +22,27 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Security evidence reports a mixed read/write clinical facilities skill with a high-impact BACnet write capability despite read-only positioning.
+Risk: The skill is presented as read-first/read-only but includes a high-impact BACnet write capability for clinical building systems.
 
-Mitigation: Treat BACnet writes as disabled unless dry-run defaults, named approvals, rollback or undo capture, and site authorization are enforced for hospital HVAC, pressure, or medical-gas control points.
+Mitigation: Review it as a clinical control-system integration; require dry-run, approval, undo, authorization, and formal change control before any write, especially on life-safety-related HVAC or medical-gas systems.
 
 ## Reference(s):
 
+- [ClawHub skill page](https://clawhub.ai/zw008/skills/iaiops-clinical)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown guidance with inline commands, tool names, safety classifications, and structured check results]
+**Output Format:** [Markdown and structured text with inline commands and operational guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Read-first clinical facilities guidance; BACnet write actions are high-impact and require dry-run defaults, named approvals, rollback capture, and site authorization.]
+**Other Properties Related to Output:** [May include worst-first clinical safety findings, protocol diagnostics, readiness gaps, approval guidance, and change-control context.]
 
 ## Skill Version(s):
 
-0.23.0 (source: server-resolved release metadata)
+0.23.1 (source: server release metadata)
 
 ## Ethical Considerations:
 
