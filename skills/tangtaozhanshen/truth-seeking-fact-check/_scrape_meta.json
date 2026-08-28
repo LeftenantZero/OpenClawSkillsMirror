@@ -1,0 +1,57 @@
+{
+  "changelog": "Version 1.5.0 \u2013 Major Update\n\n- Added \u201cmeta-confidence\u201d output: The model now provides a self-assessed confidence percentage (0-100%) for each fact-check.\n- Made dimension scoring fully configurable: Users can customize or disable individual weighting factors used in credibility evaluation.\n- Introduced optional scheduled (timed) fact-checking with resource-aware controls and change alerts.\n- Enhanced privacy: All fact-checking is performed locally, with no data sent to external servers.\n- Added support for batch processing, and refactored for improved resource efficiency (optimized for 2-core/2GB environments).\n- New scheduler module added for background and timed checks.",
+  "created_at": 1773246580113,
+  "display_name": "Truth Seeking Fact Check",
+  "fetched_at": 1787879510348,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "batch.py",
+    "blockchain.py",
+    "checker.py",
+    "compliance.py",
+    "datasource.py",
+    "formatter.py",
+    "main.py",
+    "manifest.json",
+    "openclaw.plugin.json",
+    "package.json",
+    "preprocess.py",
+    "requirements.txt",
+    "scheduler.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090209511,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "tangtaozhanshen",
+    "handle": "tangtaozhanshen",
+    "user_id": "s176fb7qaa4vhjevz444708cah83g13a"
+  },
+  "slug": "truth-seeking-fact-check",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/truth-seeking-fact-check",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=truth-seeking-fact-check&ownerHandle=tangtaozhanshen",
+    "page_url": "https://clawhub.ai/tangtaozhanshen/skills/truth-seeking-fact-check"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1055,
+    "installs": 30,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "\u5bf9\u4fe1\u606f\u8fdb\u884c\u6743\u5a01\u591a\u6e90\u4e8b\u5b9e\u6838\u67e5\uff0c\u5224\u5b9a\u771f\u4f2a\u5e76\u652f\u6301\u94fe\u4e0a\u5b58\u8bc1\u4e0e\u7528\u6237\u53cd\u9988\u4f18\u5316\u3002",
+  "updated_at": 1778491832663,
+  "version": "1.5.0"
+}
