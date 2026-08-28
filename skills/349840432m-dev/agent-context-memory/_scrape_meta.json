@@ -1,0 +1,36 @@
+{
+  "changelog": "- Initial release of the \"Agent \u4e0a\u4e0b\u6587\u7ba1\u7406\u65b9\u6cd5\u8bba (context-management)\" skill.\n- Introduces a layered file system to enable memory persistence, context recovery, and role separation across agent sessions.\n- Defines five core layers: SOUL.md (identity), USER.md (user info), AGENTS.md (routing/workflow), TOOLS.md (environment), and memory/MEMORY.md (short/long-term memory).\n- Provides guidelines for regular memory distillation, cleanup routines, and heartbeat-based maintenance.\n- Includes an automated script (memory_distill.py) for extracting and refining technical learnings from daily memory files.\n- Outlines best practices, quick start instructions, and usage scenarios for robust context management in agents.",
+  "created_at": 1773388210558,
+  "display_name": "\u4e0a\u4e0b\u6587\u7ba1\u7406",
+  "fetched_at": 1787876704150,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "claw.json",
+    "scripts/memory_distill.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "349840432m-dev",
+    "handle": "349840432m-dev",
+    "user_id": "s17250cp6hefh46chds3rm869583k5e8"
+  },
+  "slug": "agent-context-memory",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-context-memory",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-context-memory&ownerHandle=349840432m-dev",
+    "page_url": "https://clawhub.ai/349840432m-dev/skills/agent-context-memory"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 815,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Agent \u4e0a\u4e0b\u6587\u7ba1\u7406\u65b9\u6cd5\u8bba\uff1a\u901a\u8fc7\u5206\u5c42\u6587\u4ef6\u4f53\u7cfb\u5b9e\u73b0\u8de8 session \u8bb0\u5fc6\u5ef6\u7eed\u3001\u804c\u8d23\u5206\u79bb\u548c\u9ad8\u6548\u4e0a\u4e0b\u6587\u6062\u590d\u3002Use when: (1) \u642d\u5efa\u65b0 agent \u5de5\u4f5c\u533a, (2) \u4f18\u5316 agent \u8bb0\u5fc6\u548c\u4e0a\u4e0b\u6587\u7ba1\u7406, (3) \u957f\u671f\u8fd0\u884c agent \u7684\u8bb0\u5fc6\u7ef4\u62a4\u3002",
+  "updated_at": 1778491876821,
+  "version": "1.0.0"
+}
