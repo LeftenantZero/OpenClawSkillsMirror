@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of openclaw-feeds: an RSS-based aggregator providing current headlines in news, games, and finance.\n\n- Fetches and aggregates headlines from 57 curated RSS feeds, organized into \"news\", \"games\", and \"finance\" categories.\n- No API keys or browser tools required\u2014fetches data directly from public RSS feeds.\n- Returns structured JSON arrays with metadata and entry fields (headline, link, source, date, summary).\n- CLI supports category selection with `--category`, outputs results as a streaming JSON array.\n- Output can be parsed and presented with grouping, deduplication, and cross-source highlighting according to provided guidelines.\n- Handles failed or missing feeds gracefully; reports errors if zero entries found.",
+  "created_at": 1769899361762,
+  "display_name": "openclaw-feeds",
+  "fetched_at": 1787911132928,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/feeds.py",
+    "scripts/lists.py",
+    "skill-card.md",
+    "spec/specification.mdx"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "nesdeq",
+    "handle": "nesdeq",
+    "user_id": "s1789jfqr432wa7px6cqnk6ded84y56q"
+  },
+  "slug": "openclaw-feeds",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-feeds",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-feeds&ownerHandle=nesdeq",
+    "page_url": "https://clawhub.ai/nesdeq/skills/openclaw-feeds"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 5037,
+    "installs": 179,
+    "stars": 5,
+    "versions": 1
+  },
+  "summary": "RSS news aggregator. Fetches headlines from curated feeds across three categories: news, games, and finance. Use when the user asks about current news, headlines, what's happening, what's going on, or says \"what's up in news\", \"what's up in finance\", \"what's up in games\", or the German equivalents \"was geht mit nachrichten\", \"was geht mit money\", \"was geht mit gaming\". Also activates for requests like \"give me a news rundown\", \"latest headlines\", \"market news\", \"gaming news\", \"tech news\", \"finance roundup\", or \"briefing\". Returns structured JSON from public RSS feeds \u2014 no API keys, no web search needed.",
+  "updated_at": 1778485891685,
+  "version": "3.1.1"
+}
