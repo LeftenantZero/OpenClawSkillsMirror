@@ -1,6 +1,6 @@
 ## Description:
 
-vmware-aria helps agents query VMware Aria Operations and VCF Operations data for metrics, alerts, capacity forecasts, anomalies, reports, platform health, and fleet diagnostics.
+VMware Aria Operations skill for querying performance metrics, alerts, capacity forecasts, anomalies, reports, platform health, and related VCF Operations data.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Infrastructure operators, VMware administrators, and SRE teams use this skill to inspect Aria Operations data, triage alerts, plan capacity, generate reports, and prepare operational recommendations. It is suited for local CLI and MCP-based agent workflows that need monitored infrastructure evidence before taking action.
+External developers, operators, and infrastructure teams use this skill to inspect VMware Aria Operations and VCF Operations environments, investigate alerts, plan capacity, generate reports, and produce operational summaries. It is read-heavy, with limited audited write actions for alert state, alert definitions, and report management.
 
 ### Deployment Geography for Use:
 
@@ -22,41 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uses Aria Operations credentials and local configuration files.
+Risk: The skill can read sensitive infrastructure inventory, performance, capacity, alert, and report data from VMware Aria or VCF Operations.
 
-Mitigation: Confirm the package source before installation, use least-privileged Aria service accounts, keep `.env` permissions at 600, and prefer a secret manager for production credentials.
+Mitigation: Use a least-privilege Aria Operations account and limit access to environments and data needed for the task.
 
-Risk: Some tools can change alert state, alert definitions, or generated reports.
+Risk: Limited write actions can acknowledge or cancel alerts, change alert definitions, generate reports, or delete reports.
 
-Mitigation: Reserve PowerUser-style credentials for authorized users only, require explicit approval for write actions, and review audit logs for write operations.
+Mitigation: Require explicit review and approval before write actions and rely on the skill's audit logging for operational traceability.
 
-Risk: Operational summaries can be misleading if list results are truncated or if alert/resource identifiers are confused.
+Risk: Credential handling and TLS settings can expose production access if configured carelessly.
 
-Mitigation: Check result envelopes for truncation, preserve returned enum values, and use the documented investigation flow before reporting root cause or recommended action.
+Mitigation: Keep production TLS verification enabled and prefer a secret manager over storing real passwords in .env files.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/zw008/skills/vmware-aria)
-- [VMware Aria source homepage](https://github.com/vmware-skills/VMware-Aria)
-- [Setup Guide](references/setup-guide.md)
+- [VMware Aria project homepage](https://github.com/vmware-skills/VMware-Aria)
 - [Capabilities](references/capabilities.md)
 - [CLI Reference](references/cli-reference.md)
-- [Agent Guardrails](references/agent-guardrails.md)
+- [Setup Guide](references/setup-guide.md)
 - [Investigation Protocol](references/investigation-protocol.md)
+- [Agent Guardrails](references/agent-guardrails.md)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline shell commands and JSON-oriented operational summaries]
+**Output Format:** [Markdown with inline shell commands and structured operational findings]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include CLI commands, MCP tool guidance, report links, capacity forecasts, alert summaries, and configuration steps.]
+**Other Properties Related to Output:** [May include generated report links, capacity forecasts, alert summaries, anomaly findings, and setup or troubleshooting steps.]
 
 ## Skill Version(s):
 
-1.8.10 (source: server release evidence)
+1.8.11 (source: server release metadata)
 
 ## Ethical Considerations:
 

@@ -1,8 +1,8 @@
 {
-  "changelog": "VCF Operations 9.1 fleet (certs/passwords/domains) + diagnostic findings + real-time PromQL \u2014 5 read tools (28\u219233). + Fable5-review hardening. Beta: paths verified, field names defensive pending live appliance.",
+  "changelog": "Fixes the server's self-reported version and the advertised tool count; adds a Claude Code plugin manifest.",
   "created_at": 1774575157301,
   "display_name": "vmware-aria",
-  "fetched_at": 1787773251242,
+  "fetched_at": 1787931875715,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -28,12 +28,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 4097,
+    "downloads": 4142,
     "installs": 52,
     "stars": 0,
-    "versions": 63
+    "versions": 64
   },
   "summary": "Use this skill whenever the user needs VMware Aria Operations (rebranded VMware VCF Operations in VCF 9 and later) data \u2014 performance metrics, alerts, capacity planning, anomaly detection, and automated reports. Directly handles: query resource metrics, list/acknowledge/cancel alerts, manage alert definitions, check capacity and time-remaining forecasts, detect anomalies, generate and manage reports. Always use this skill for \"check vSphere capacity\", \"what Aria Operations alerts are active\", \"show VMware anomalies\", \"generate an Aria report\", \"rightsizing recommendations\", \"VCF Operations alerts\", or any Aria Operations / VCF Operations / vRealize Operations task. Combined with LLM, Aria data powers natural language reports: \"give me a capacity report\" \u2192 Aria collects data \u2192 LLM formats the report. Do NOT use for real-time vCenter alarms/events (use vmware-monitor), VM operations (use vmware-aiops), or NSX networking (use vmware-nsx). For load balancing/AVI/AKO use vmware-avi.",
-  "updated_at": 1786009507833,
-  "version": "1.8.10"
+  "updated_at": 1787885813158,
+  "version": "1.8.11"
 }
