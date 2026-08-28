@@ -1,6 +1,6 @@
 ## Description:
 
-Uses the Flyelep AI Tool API to intelligently extend one or more user-provided images to a requested target aspect ratio.
+This skill helps agents use the Flyelep AI Tool API to intelligently extend one or more images to a requested aspect ratio.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, operators, and creative tooling agents use this skill to collect image URLs and a target ratio, call Flyelep's intelligent-extension API, and return the resulting image URLs in input order.
+External users and developers use this skill to send image URLs, or uploaded local images, to Flyelep for outpainting and aspect-ratio adaptation such as 16:9, 1:1, or 9:16.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,34 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: User-provided image URLs and the Flyelep API key are sent to Flyelep when the skill is run.
+Risk: The skill requires a Flyelep API key at runtime.
 
-Mitigation: Use only images appropriate for the Flyelep service, provide the API key at runtime, and do not store the key in skill files, examples, repositories, or persistent configuration.
+Mitigation: Provide the key only at runtime, avoid storing it in skill files or persistent configuration, and rotate it if exposure is suspected.
 
-Risk: A temporary payload_temp.json file may contain request data when used for Windows or PowerShell execution.
+Risk: Selected local images may be uploaded to Flyelep and converted into permanent public URLs.
 
-Mitigation: Create the payload as UTF-8 without BOM only when needed, use it for the API request, and remove it after the response is handled.
+Mitigation: Avoid uploading private, regulated, or sensitive images unless the user has approved that external processing and public URL exposure.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/flyelepai/skills/flyelep-intelligent-extension)
-- [Flyelep intelligent-extension API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/aiTool/intelligentExtension)
 - [Flyelep controlboard](https://www.flyelep.cn/controlboard)
+- [Flyelep intelligent extension API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/aiTool/intelligentExtension)
+- [Flyelep file upload API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/file/upload)
 
 ## Skill Output:
 
-**Output Type(s):** [Shell commands, Configuration, Guidance, JSON]
+**Output Type(s):** [API Calls, Shell commands, Configuration instructions, Guidance]
 
-**Output Format:** [Markdown guidance with JSON payload examples and shell command examples]
+**Output Format:** [Markdown with inline JSON and shell command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Returns generated image URLs from the API response; temporary payload files should be removed after use.]
+**Other Properties Related to Output:** [Returns generated image URLs in the same order as the input image URL list.]
 
 ## Skill Version(s):
 
-1.0.3 (source: release evidence)
+1.0.4 (source: server release evidence)
 
 ## Ethical Considerations:
 
