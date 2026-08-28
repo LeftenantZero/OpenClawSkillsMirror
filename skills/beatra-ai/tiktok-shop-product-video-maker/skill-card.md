@@ -1,6 +1,6 @@
 ## Description:
 
-Create TikTok Shop product-video plans from product facts, photos, selling points, and English or Japanese audience context.
+Create TikTok Shop product-video plans from product facts, photos, selling points, and English or Japanese audience context. This AI product video maker produces hooks, a ready-to-film script, shot beats, subtitle cues, localized titles, hashtags, and a product-page-safe CTA for product showcases, demonstrations, unboxings, reviews, and creator-led shopping videos.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External sellers, merchants, and creators use this skill to turn product facts, product photos, target market context, and selling points into a filmable TikTok Shop product-video plan. It produces hooks, script lines, shot beats, subtitle cues, localized titles, hashtags, a supported call to action, and a fact checklist for merchant review.
+External sellers, creators, and commerce teams use this skill to turn merchant-supplied product facts, photos, audience context, and market language needs into a TikTok Shop product-video plan. It helps produce hooks, a ready-to-film script, shot beats, subtitle cues, localized titles, hashtags, a product-page-safe call to action, and a fact checklist before filming.
 
 ### Deployment Geography for Use:
 
@@ -22,44 +22,44 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill stores a broad Beatra device token that is shared across Beatra skills.
+Risk: The server security summary says the package carries broad Beatra account authority and stores a shared device token in ~/.beatra.
 
-Mitigation: Review the authorization before installation, keep the credential file private, and use the bundled uninstall workflow or the Beatra Console to revoke access when it is no longer needed.
+Mitigation: Install only when that account access is acceptable, keep the token out of logs and chat, and use the bundled uninstall workflow when disconnecting the device.
 
-Risk: The bundled client can upload local files when its upload command is invoked.
+Risk: The server security summary flags arbitrary remote tool calls, file upload capability, telemetry, and wallet or generation scopes that are broader than product-video planning.
 
-Mitigation: Upload only intended regular files, confirm file contents before upload, and avoid passing sensitive local paths to the client.
+Mitigation: Avoid the generic call and upload commands unless intentionally using remote Beatra tools, and review any JSON tool arguments or local files before submitting them.
 
-Risk: Automatic updates are enabled by default and can replace package-owned files silently.
+Risk: The server security guidance warns that silent automatic updates are enabled by default.
 
-Mitigation: Use `python3 scripts/mcp_client.py update --auto off` where manual change review is required; the bundled updater verifies discovery data, checksums, archive contents, and package-owned destinations.
+Mitigation: Disable automatic updates with the documented update --auto off command when deterministic review is required, and use update --check before accepting a newer package.
 
-Risk: Product-video copy can include unsupported advertising, marketplace, comparison, or regulated-category claims if source facts are incomplete.
+Risk: The artifact workflow warns that unsupported product claims can create marketplace or seller-account risk.
 
-Mitigation: Require merchant-supplied facts for prices, stock, ratings, certifications, efficacy, comparisons, and regulated-category claims; rewrite unsupported claims and deliver a fact checklist for merchant confirmation.
+Mitigation: Require merchant-supplied substantiation for product claims, avoid unverifiable superlatives and regulated health or efficacy claims, and keep open questions separate from confirmed facts.
 
 ## Reference(s):
 
-- [Product video workflow](references/workflow.md)
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/tiktok-shop-product-video-maker)
+- [Beatra skill homepage](https://beatra.ai/skills/tiktok-shop-product-video-maker)
+- [TikTok Shop product video workflow](references/workflow.md)
 - [MCP connection](references/mcp-connection.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
 - [Uninstall and disconnect](references/uninstall-and-disconnect.md)
-- [ClawHub skill listing](https://clawhub.ai/beatra-ai/skills/tiktok-shop-product-video-maker)
-- [Beatra skill homepage](https://beatra.ai/skills/tiktok-shop-product-video-maker)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown text with optional shell command blocks]
+**Output Format:** [Markdown with product-video planning sections, script lines, shot beats, subtitle cues, localized publishing copy, checklists, and occasional shell commands.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Includes hook options, a line-by-line script, shot beats, subtitle cues, localized titles, hashtags, a product-page-safe call to action, and a merchant fact checklist.]
+**Other Properties Related to Output:** [The skill produces planning artifacts only; it does not render video, record narration, upload products, publish ads, or promise sales or platform approval.]
 
 ## Skill Version(s):
 
-0.1.3 (source: server release evidence and manifest.json)
+0.1.5 (source: server release evidence and artifact manifest)
 
 ## Ethical Considerations:
 
