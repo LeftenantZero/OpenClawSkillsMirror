@@ -1,6 +1,6 @@
 ## Description:
 
-Builds an 8-12 person influencer shortlist from a category, budget, and market, or from account links and handles the user already has.
+Build an 8-12 person influencer shortlist from campaign requirements or known creator accounts, using optional public creator lookups or pasted profile and post evidence to summarize followers, recent play, interaction, content pillars, and a talk-or-not call.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Employees and external campaign teams use this skill to identify creators to approach for an influencer campaign or collaboration. It can work from pasted creator details or, with explicit confirmation, paid public profile and post lookups on supported social platforms.
+Marketing teams, creator partnership leads, and agencies use this skill to turn campaign requirements or known creator accounts into an 8-12 person influencer shortlist. The memo supports creator research and approach decisions with attributed follower counts, recent play when available, interaction read, content pillars, and a talk-or-not recommendation.
 
 ### Deployment Geography for Use:
 
@@ -22,43 +22,44 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The package uses broad shared Beatra account authority, including spending credits and access beyond creator lookup.
+Risk: The skill uses broad shared Beatra device credentials.
 
-Mitigation: Install only when that shared authority is acceptable, reconnect deliberately if scope is insufficient, and avoid private or regulated account data unless sending it through Beatra is acceptable.
+Mitigation: Review the Beatra authorization scopes before installation and avoid use in environments where shared local credentials are not acceptable.
 
-Risk: Optional creator lookups are paid and can create charges for each confirmed page or operation.
+Risk: The bundled client silently self-updates package code by default.
 
-Mitigation: Confirm each lookup separately, show the live operation price before execution, use one stable request identifier per paid request, and report net charged credits from returned billing fields.
+Mitigation: Use the documented update controls to disable automatic updates when package-managed updates are not acceptable.
 
-Risk: The bundled client silently checks for and installs newer package code by default.
+Risk: Optional creator lookups are paid and can create duplicate charges if replayed with changed arguments.
 
-Mitigation: Disable automatic updates when explicit review of code changes is required, and use the documented update check command to inspect availability without replacement.
+Mitigation: Confirm each lookup and its current price before execution, then reuse the same client_request_id only for byte-identical recovery attempts.
 
 ## Reference(s):
 
-- [ClawHub skill listing](https://clawhub.ai/beatra-ai/skills/influencer-fit-analyzer)
-- [Beatra skill homepage](https://beatra.ai/skills/influencer-fit-analyzer)
 - [Looking up creators](references/creator-lookup.md)
 - [Writing the shortlist](references/shortlist.md)
 - [Shortlist workflow](references/workflow.md)
-- [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
 - [Tasks and results](references/tasks-and-results.md)
-- [Automatic updates and safety](references/automatic-updates-and-safety.md)
+- [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
+- [Installation and authentication](references/installation-and-auth.md)
+- [Installation registration](references/installation-registration.md)
 - [MCP connection](references/mcp-connection.md)
+- [Automatic updates and safety](references/automatic-updates-and-safety.md)
+- [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Guidance]
+**Output Type(s):** [Analysis, Markdown, Guidance, Shell commands, Configuration instructions]
 
-**Output Format:** [Markdown shortlist memo with creator facts, fit rationale, talk-or-not recommendations, and lookup task or billing details when applicable.]
+**Output Format:** [Markdown memo with optional inline shell commands and JSON task details]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Lookup-derived figures should be labeled with read time; supplied figures should remain labeled as supplied; missing counts should not be estimated.]
+**Other Properties Related to Output:** [Includes task ID, terminal status, and billing.net_charged_credits when an optional paid lookup runs.]
 
 ## Skill Version(s):
 
-0.1.1 (source: server release evidence and manifest.json)
+0.1.3 (source: server release metadata and manifest)
 
 ## Ethical Considerations:
 
