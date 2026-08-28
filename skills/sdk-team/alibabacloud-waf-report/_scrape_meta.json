@@ -1,0 +1,40 @@
+{
+  "changelog": "Initial release of alibabacloud-waf-report:\n\n- Generate or review Alibaba Cloud WAF 3.0 security reports (monthly, patrols, API Security reviews, BOT analysis, OWASP API Security Top 10).\n- Supports both offline analysis (user-supplied samples/exports) and online evidence collection using authorized read-only workflows.\n- Redacts sensitive information in all artifacts; never handles access credentials directly.\n- Strictly separates report scope: focused investigations do not trigger full assessments.\n- Enforces session-level observability: consistent session ID for all outbound evidence and queries.\n- Evidence-driven findings: marks unverifiable or out-of-scope areas, provides traceable, reproducible conclusions only for supported/relevant evidence.",
+  "created_at": 1787817367474,
+  "display_name": "alibabacloud-waf-report",
+  "fetched_at": 1787932615960,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/report-template.md",
+    "references/attack-analysis-checklist.md",
+    "references/methodology.md",
+    "references/openapi-cheatsheet.md",
+    "references/owasp-api-top10-queries.md",
+    "references/ram-policies.md",
+    "references/sls-query-cookbook.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-waf-report",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-waf-report",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-waf-report&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-waf-report"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 41,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Generate or review Alibaba Cloud WAF 3.0 security operations reports, customer assessments, rule-tuning reports, and focused false-positive or false-negative investigations using WAF OpenAPI, SLS traffic logs, authorized read-only verification, or user-supplied offline WAF samples and exports. Use for WAF monthly reports, security patrols, API Security reviews, BOT analysis, and OWASP API Security Top 10 coverage. Do not use for unauthorized testing or direct production rule changes.",
+  "updated_at": 1787817507673,
+  "version": "0.0.1"
+}
