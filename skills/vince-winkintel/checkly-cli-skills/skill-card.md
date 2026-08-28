@@ -1,6 +1,6 @@
 ## Description:
 
-Comprehensive Checkly CLI command reference and Monitoring as Code workflows for authentication, configuration, checks, monitors, testing, deployment, imports, constructs, Playwright, assets, members, and advanced patterns.
+Comprehensive Checkly CLI command reference and Monitoring as Code workflows for authoring, testing, importing, deploying, and inspecting Checkly checks.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and operations engineers use this skill to create, test, import, inspect, and deploy Checkly Monitoring as Code resources through the Checkly CLI. It helps agents choose safe CLI workflows, generate Checkly configuration and check definitions, and review account-changing actions before execution.
+Developers and DevOps engineers use this skill to work with Checkly CLI and Monitoring as Code projects, including authentication, configuration, check creation, local testing, deployment, imports, member administration, and failure investigation.
 
 ### Deployment Geography for Use:
 
@@ -22,41 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can guide actions that change Checkly account resources, including deploys, deletes, imports, and member changes.
+Risk: The skill can help operate a real Checkly account, including deploy, import, member, run, and delete workflows.
 
-Mitigation: Confirm the active account with whoami, review previews and dry-runs, and require explicit approval before running account-changing commands.
+Mitigation: Use least-privilege Checkly credentials and review CLI previews or confirmation prompts before approving commands that change account state.
 
-Risk: Checkly API keys, account IDs, verbose logs, and downloaded result assets can expose sensitive operational data.
+Risk: Verbose logs and downloaded result assets can contain production secrets, traces, screenshots, videos, packet captures, or other sensitive data.
 
-Mitigation: Use scoped credentials, keep credentials in environment variables or approved local config, and avoid sharing verbose logs or result assets in public channels.
+Mitigation: Avoid unnecessary verbose logging in production contexts and sanitize downloaded assets before sharing, committing, or attaching them to reports.
 
-Risk: Using --force or bypassing CLI confirmation can skip review of destructive or broad changes.
+Risk: CLI and MCP sessions can refer to different Checkly accounts if account identity is not checked.
 
-Mitigation: Avoid --force unless the change has already been approved and run returned confirmCommand values verbatim only after explicit approval.
+Mitigation: Run account identity checks and confirm the same account ID before combining CLI and MCP evidence or using either path for live-account work.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/vince-winkintel/skills/checkly-cli-skills)
-- [Checkly CLI Best Practices](references/best-practices.md)
-- [Common Issues and Solutions](references/troubleshooting.md)
+- [Checkly CLI Skills on ClawHub](https://clawhub.ai/vince-winkintel/skills/checkly-cli-skills)
+- [Checkly CLI Best Practices](artifact/references/best-practices.md)
+- [Common Issues and Solutions](artifact/references/troubleshooting.md)
 - [Checkly Documentation](https://www.checklyhq.com/docs/)
-- [Checkly Runtimes](https://www.checklyhq.com/docs/runtimes/)
 - [Playwright Documentation](https://playwright.dev/)
-- [Checkly CI Examples](https://github.com/checkly/checkly-ci-examples)
+- [Checkly CLI GitHub Issues](https://github.com/checkly/checkly-cli/issues)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown guidance with inline shell commands, TypeScript examples, and configuration snippets]
+**Output Format:** [Markdown with inline shell and TypeScript examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May propose Checkly CLI commands and generated Monitoring as Code files; account-changing commands should be reviewed before execution.]
+**Other Properties Related to Output:** [May propose Checkly CLI commands, configuration snippets, and review steps for live account operations.]
 
 ## Skill Version(s):
 
-1.0.14 (source: release evidence and artifact/VERSION)
+1.0.15 (source: server release metadata and artifact/VERSION)
 
 ## Ethical Considerations:
 
