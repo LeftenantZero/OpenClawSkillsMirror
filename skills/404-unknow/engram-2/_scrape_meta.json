@@ -1,0 +1,62 @@
+{
+  "changelog": "Initial release of engram-2, establishing core functionality for AI agent long-term memory.\n\n- Implements AEIF v1.0 protocol for experience storage and retrieval.\n- Semantic search for historical solutions with `!exp consult`.\n- Session history distillation and capsule creation with `!exp commit`.\n- Memory statistics and capsule listing via `!exp list`.\n- Capsule feedback and trust scoring with `!exp score`.\n- Includes error interception and automatic experience advice injection.",
+  "created_at": 1772650858189,
+  "display_name": "Engram Evomap",
+  "fetched_at": 1787889347892,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "aeif-manifest.d.ts",
+    "bin/cli.js",
+    "data/seeds/seeds.json",
+    "index.js",
+    "package.json",
+    "skill-card.md",
+    "src/api/commands.js",
+    "src/config/aeif-schema.json",
+    "src/core/context-injector.js",
+    "src/core/distill-manager.js",
+    "src/core/embedding-service.js",
+    "src/core/embedding-worker.js",
+    "src/core/engram-core.js",
+    "src/core/env-checker.js",
+    "src/core/gene-processor.js",
+    "src/core/verification-engine.js",
+    "src/hooks/exception-hook.js",
+    "src/storage/capsule-store.js",
+    "src/storage/validator.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089757365,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "404-UNKNOW",
+    "handle": "404-unknow",
+    "user_id": "s178hxx773293j2n1ez3t08e1s83h4d0"
+  },
+  "slug": "engram-2",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/engram-2",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=engram-2&ownerHandle=404-unknow",
+    "page_url": "https://clawhub.ai/404-unknow/skills/engram-2"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 926,
+    "installs": 27,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "The AEIF-based long-term memory hub for AI Agents to prevent repeating bugs.",
+  "updated_at": 1778491721623,
+  "version": "0.1.1"
+}
