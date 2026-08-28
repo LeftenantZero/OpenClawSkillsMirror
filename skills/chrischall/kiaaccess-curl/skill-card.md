@@ -1,6 +1,6 @@
 ## Description:
 
-Query and command a Kia vehicle directly with curl against the Kia Owners API, including status, location, EV charge state, door locks, climate, and charging operations after Kia credential and MFA setup.
+Query Kia vehicle status, location, EV charge state, and remote controls from the shell using curl against the Kia Owners API.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill for one-off shell access to Kia vehicle status, location, EV charge state, and supported remote commands when the Kia MCP server is not running or is not the right interface.
+Developers and technically comfortable Kia owners use this skill for one-off shell reads of vehicle state and location, or for explicit remote commands such as lock, unlock, climate, and charging actions.
 
 ### Deployment Geography for Use:
 
@@ -22,40 +22,32 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can issue physical vehicle commands such as unlock, climate, and charging actions.
+Risk: The skill stores a durable Kia refresh token that can re-authenticate the account without another MFA prompt.
 
-Mitigation: Use it only for an account and vehicle you are authorized to control, review each command before execution, and confirm completion by re-reading vehicle state.
+Mitigation: Treat the saved rmtoken like a password, store it only on trusted machines, keep the session file permissions restricted, and remove temporary header files after use.
 
-Risk: The saved rmtoken can re-authenticate the Kia account without another MFA prompt.
+Risk: The skill provides shell commands that can locate or remotely control a vehicle.
 
-Mitigation: Store it in a safer secret store or on a locked-down single-user machine, restrict file permissions, and rotate or revoke it if exposure is suspected.
-
-Risk: The provided curl helper captures response headers in a predictable temporary file path.
-
-Mitigation: Replace the fixed /tmp header capture with a private temporary file before operational use.
-
-Risk: Repeated rejected logins can trigger Kia account protections that break shell-based login.
-
-Mitigation: Do not retry invalid credentials in a loop; correct the username or password before attempting login again.
+Mitigation: Require explicit confirmation before commands that change door, climate, or charging state, and verify results by re-reading vehicle state rather than relying on HTTP status alone.
 
 ## Reference(s):
 
-- [Ready-to-run requests](artifact/references/requests.md)
-- [ClawHub skill page](https://clawhub.ai/chrischall/skills/kiaaccess-curl)
+- [Ready-to-run requests](references/requests.md)
+- [Kia Owners API endpoint](https://api.owners.kia.com/apigw/v1)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown guidance with bash, curl, and jq command blocks]
+**Output Format:** [Markdown with bash and jq command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Includes credential setup, request examples, response checks, and safety notes for vehicle commands.]
+**Other Properties Related to Output:** [Includes credential handling, MFA bootstrap, request construction, and command confirmation guidance.]
 
 ## Skill Version(s):
 
-0.6.1 (source: server release metadata)
+0.6.2 (source: server release evidence)
 
 ## Ethical Considerations:
 
