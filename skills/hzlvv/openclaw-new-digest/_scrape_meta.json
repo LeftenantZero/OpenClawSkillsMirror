@@ -1,0 +1,59 @@
+{
+  "changelog": "Initial release of the news-digest skill \u2014 a user-driven, configurable news aggregation and push system.\n\n- Aggregates news from Twitter (via Xpoz MCP), Hacker News, and Tavily Search, filtering by user-defined topics, keywords, and influence.\n- Completely user-configurable schedule: users define push times, topics, labels, keywords, and priority rules via interactive setup.\n- Summarizes and formats selected news items per user preferences, supporting custom language, summary length, and item count.\n- Supports both manual and scheduled pushes, with local configuration management and feedback integration.\n- All logic driven by user\u2019s config.json \u2014 no hardcoded topics, times, or keywords used without consent.",
+  "created_at": 1772777273135,
+  "display_name": "News Digest",
+  "fetched_at": 1787887262211,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "hooks/openclaw/HOOK.md",
+    "hooks/openclaw/handler.js",
+    "references/setup-guide.md",
+    "scripts/add-feedback.mjs",
+    "scripts/cron-trigger.sh",
+    "scripts/env-check.mjs",
+    "scripts/extract-tavily.mjs",
+    "scripts/fetch-hackernews.mjs",
+    "scripts/fetch-tavily.mjs",
+    "scripts/keyword-analyzer.mjs",
+    "scripts/keyword-suggester.mjs",
+    "scripts/lib/storage.mjs",
+    "scripts/manage-config.mjs",
+    "scripts/query.mjs",
+    "scripts/store-push.mjs",
+    "scripts/track-usage.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089777437,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Hzlvv",
+    "handle": "hzlvv",
+    "user_id": "s172n168md5e33kbra6tnexsgs884639"
+  },
+  "slug": "openclaw-new-digest",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-new-digest",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-new-digest&ownerHandle=hzlvv",
+    "page_url": "https://clawhub.ai/hzlvv/skills/openclaw-new-digest"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 764,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "User-configurable multi-slot news aggregation and push system. Schedule, topics, and keywords are defined by the user via config.json. Aggregates from Twitte...",
+  "updated_at": 1778491745273,
+  "version": "0.1.0"
+}
