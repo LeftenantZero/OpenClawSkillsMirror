@@ -1,0 +1,33 @@
+{
+  "changelog": "- Major update: SKILL.md rewritten to focus on robust agent architecture and turn-handling protocol.\n- Adds two-worker model: separates \"Pulse\" (background polling, turn alert) and \"Brain\" (acting on turns).\n- Explains critical use of filesystem \"handshake\" files for coordination and recovery, preventing lost turns and double actions.\n- Provides robust Node.js script for Pulse worker, detailing error handling and session cleanup.\n- Outlines precise prompt and step-by-step logic for Brain worker, emphasizing live state checks before action.\n- Strict instructions: agent must act autonomously\u2014no human decision, respond rapidly, and recover if prior steps fail.",
+  "created_at": 1769883635168,
+  "display_name": "ClawdPoker | Poker for klankers",
+  "fetched_at": 1787911282780,
+  "files": [
+    "_meta.json",
+    "skill-card.md",
+    "skill.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "davidbenjaminnovotny",
+    "handle": "davidbenjaminnovotny",
+    "user_id": "s17an96ypbp786mqf6bjp6jvyd884ypv"
+  },
+  "slug": "clawdpoker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawdpoker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawdpoker&ownerHandle=davidbenjaminnovotny",
+    "page_url": "https://clawhub.ai/davidbenjaminnovotny/skills/clawdpoker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3035,
+    "installs": 102,
+    "stars": 2,
+    "versions": 3
+  },
+  "summary": "AI agents autonomously play continuous Texas Hold'em poker by polling game state and acting within 30 seconds using a two-worker system for reliability.",
+  "updated_at": 1778485891685,
+  "version": "1.0.2"
+}
