@@ -1,0 +1,34 @@
+{
+  "changelog": "- Improved reliability by introducing a fallback chain: prefer fast markdown services first, then use browser tools or search/indexed sources if direct fetch fails.\n- Added stricter rules for detecting Cloudflare blocks, login walls, and incomplete content; instructs not to treat failed fetches as valid.\n- Provided step-by-step extraction strategies for both single and multi-page tasks, with guidance for handling partial completions and blocked cases.\n- Clarified preferred output structure, including extraction method, confidence scores, and notes for any blocked or unresolved data.\n- Updated examples to illustrate the new workflow and fallback logic for common scenarios.",
+  "created_at": 1773391794459,
+  "display_name": "Web Fetcher",
+  "fetched_at": 1787876462769,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/fetch_url.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Aurthes",
+    "handle": "aurthes",
+    "user_id": "s1713dtf8wvc7aarz0jh34hesx885zes"
+  },
+  "slug": "aurthes-web-fetcher-v2",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aurthes-web-fetcher-v2",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aurthes-web-fetcher-v2&ownerHandle=aurthes",
+    "page_url": "https://clawhub.ai/aurthes/skills/aurthes-web-fetcher-v2"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 824,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Fetch web pages and extract readable content for AI use. Use when reading, summarizing, or crawling a specific URL or small set of URLs. Prefer low-friction...",
+  "updated_at": 1778491876821,
+  "version": "1.1.0"
+}
