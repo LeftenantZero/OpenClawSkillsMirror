@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes long-form web novels through a staged pipeline covering opening chapters, chapter summaries, plot structure, characters, setting, pacing, reader appeal, and writing style.
+Analyzes long-form web novels through a staged decomposition pipeline covering opening chapters, chapter summaries, character structures, pacing, emotional hooks, settings, relationships, reports, and style profiles.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Authors, editors, and story-development teams use this skill to deconstruct a legally available long-form fiction manuscript into reusable analysis of structure, character systems, setting, pacing, emotional beats, and style.
+External writers, editors, and agent users can use this skill to analyze legally held long-form fiction and produce structured writing-reference materials. It is intended for literary criticism, editorial review, and writing-planning workflows rather than source-text redistribution.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,42 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill persists a full source-text backup and extracted original-text excerpts in the workspace.
+Risk: The skill saves a full local copy of the novel and derived analysis, including substantial style examples.
 
-Mitigation: Use it only with source text you have rights to analyze, and run it in a workspace where storing the manuscript under 拆文库/{书名}/原文/ is acceptable.
+Mitigation: Use it only with text the user has rights to process, avoid sensitive manuscripts unless local storage is acceptable, and review or remove stored source text and excerpts before sharing outputs.
 
-Risk: The optional topic-decision backfill can edit 选题决策.md outside the main analysis output folder.
+Risk: The skill can modify an optional planning file outside the main analysis folder.
 
-Mitigation: Review or disable that backfill path before execution when edits outside 拆文库/{书名}/ are not desired.
+Mitigation: Review or disable the optional topic-decision backfill before running it in projects where planning files should remain unchanged.
 
-Risk: Long-running analysis may create many persistent Markdown outputs and progress files.
+Risk: The security verdict is suspicious because of local persistence and file-modification behavior.
 
-Mitigation: Review the generated output tree and _progress.md after execution, especially before sharing or committing the workspace.
+Mitigation: Review the skill behavior before deployment and scan generated outputs before importing them into downstream writing workflows.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/worldwonderer/skills/story-long-analyze)
-- [OpenClaw source metadata](https://github.com/worldwonderer/oh-story-claudecode)
-- [deconstruction-notes.md](references/deconstruction-notes.md)
-- [material-decomposition.md](references/material-decomposition.md)
-- [output-templates.md](references/output-templates.md)
-- [pipeline-ops.md](references/pipeline-ops.md)
-- [style-profile-generator.md](references/style-profile-generator.md)
-- [style-profile-protocol.md](references/style-profile-protocol.md)
+- [ClawHub Skill Page](https://clawhub.ai/worldwonderer/skills/story-long-analyze)
+- [OpenClaw Source Metadata](https://github.com/zenstory-ai/oh-story-claudecode)
+- [Long-Form Story Deconstruction Notes](references/deconstruction-notes.md)
+- [Novel Material Decomposition Methodology](references/material-decomposition.md)
+- [Output Templates](references/output-templates.md)
+- [Pipeline Operations Reference](references/pipeline-ops.md)
+- [Style Profile Generator SOP](references/style-profile-generator.md)
+- [Style Profile Protocol](references/style-profile-protocol.md)
 
 ## Skill Output:
 
-**Output Type(s):** [analysis, markdown, files, guidance]
+**Output Type(s):** [text, markdown, shell commands, guidance]
 
-**Output Format:** [Markdown files organized under a story analysis directory]
+**Output Format:** [Markdown files, structured analysis text, progress notes, and occasional shell command snippets]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces persistent project files, including source-text backup, progress tracking, chapter analysis, plot and character notes, reports, and style guidance.]
+**Other Properties Related to Output:** [Writes analysis artifacts under a local book-specific directory and may ask the user whether to continue after the opening-chapter preview.]
 
 ## Skill Version(s):
 
-1.1.16 (source: server release metadata; artifact frontmatter reports 1.0.0)
+1.1.18 (source: server release metadata; artifact frontmatter lists 1.0.0)
 
 ## Ethical Considerations:
 
