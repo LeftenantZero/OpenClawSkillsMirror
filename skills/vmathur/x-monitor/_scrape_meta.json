@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of x-monitor: an automated tool for tracking high-value technology and trend tweets from selected X/Twitter accounts.\n\n- Monitors specific X/Twitter handles and filters for noteworthy, non-political content.\n- Configurable schedules via JSON (timezone, check times, enable/disable).\n- Supports up to 10\u201320 handles; easy add/remove/list commands.\n- Scheduled and manual reports include executive summaries and filtered tweet details.\n- Criteria for noteworthy content customizable via markdown file.\n- Cron jobs set up and updated based on schedule configuration.\n- Handles API errors, rate limits, and invalid accounts gracefully.",
+  "created_at": 1770769995089,
+  "display_name": "Monitor X posts",
+  "fetched_at": 1787904455612,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/schedule.json",
+    "scripts/fetch-tweets.py",
+    "scripts/setup-crons.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "vmathur",
+    "handle": "vmathur",
+    "user_id": "s173c0t9n52nn25kskp5cns8k18844h8"
+  },
+  "slug": "x-monitor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/x-monitor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=x-monitor&ownerHandle=vmathur",
+    "page_url": "https://clawhub.ai/vmathur/skills/x-monitor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2309,
+    "installs": 73,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Monitor specific X/Twitter accounts and surface noteworthy tweets on a configurable schedule. Filters for high-value content about technology and trends, excluding political rage bait. Use when user wants to manage their X account list, run a manual check, or update filtering criteria.",
+  "updated_at": 1778487820503,
+  "version": "1.0.0"
+}
