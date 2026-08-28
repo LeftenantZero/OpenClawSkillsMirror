@@ -1,0 +1,36 @@
+{
+  "changelog": "create-videoconference 1.0.1 changelog:\n\n- Tightened security: The Meetling base URL is now always set to https://app.meetling.de and cannot be changed via environment variables.\n- Contacts are loaded only from ./contacts.json in the working directory; the file path is no longer overridable by environment variables.\n- If contacts.json is missing or invalid, the skill proceeds with an empty map and marks recipients as unresolved.\n- Removed use of MEETLING_BASE_URL and CONTACTS_JSON environment variables; only MEETLING_INSTANT_THRESHOLD_MINUTES and SKILL_LANGUAGE_DEFAULT remain.",
+  "created_at": 1771444475520,
+  "display_name": "Create secure videoconference",
+  "fetched_at": 1787899461314,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "index.js",
+    "package.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "bavxhack",
+    "handle": "bavxhack",
+    "user_id": "s1739hy90qwhqtfrqj90wdts41885chr"
+  },
+  "slug": "create-videoconference",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/create-videoconference",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=create-videoconference&ownerHandle=bavxhack",
+    "page_url": "https://clawhub.ai/bavxhack/skills/create-videoconference"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1258,
+    "installs": 36,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Default video conferences via Meetling. Instant calls always use /m/ rooms + share payload for Claw default sending. Scheduled calls return link + email invi...",
+  "updated_at": 1778491578254,
+  "version": "1.0.1"
+}
