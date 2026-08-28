@@ -1,6 +1,6 @@
 ## Description:
 
-Generates evidence-constrained keyword and content-opportunity decisions using SignalDig's Decision MCP, with qualitative confidence, counter-evidence, conditions, risks, and a next validation test.
+Evaluate content opportunities from SignalDig search data to support topic selection and prioritization.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-Content strategists, growth teams, and SEO practitioners use this skill to decide whether or how to prioritize a keyword opportunity. It requires the SignalDig Decision MCP and a SignalDig API key, and it returns bounded recommendations from traceable keyword evidence rather than finished content or final business decisions.
+External content, SEO, and growth teams use this skill to request evidence-constrained keyword and content opportunity decisions from SignalDig's Decision MCP, including a stance, qualitative confidence, counter-evidence, conditions, risks, and a next validation test.
 
 ### Deployment Geography for Use:
 
@@ -22,41 +22,41 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Running the workflow sends the keyword, domain, market, language, and related decision context to SignalDig's hosted MCP service.
+Risk: Connecting the AI client to SignalDig's MCP endpoint can expose a SignalDig API key if credentials are stored unsafely.
 
-Mitigation: Use the skill only when that hosted service is intended for the decision workflow, and avoid submitting sensitive context that should not leave the user's environment.
+Mitigation: Use environment variables or the client's secret store, avoid committing MCP configuration with credentials, and keep tool approval prompts enabled for live MCP calls.
 
-Risk: The workflow depends on a SignalDig API key.
+Risk: The skill can mislead users if recommendations are fabricated when the MCP server is unavailable or evidence gaps are ignored.
 
-Mitigation: Protect the API key like any other secret and configure it only in the MCP client or environment intended to run the workflow.
+Mitigation: Stop when the MCP tools are unavailable, rely only on real tool results, cite request IDs and evidence IDs, and disclose limitations or missing evidence.
 
-Risk: Keyword evidence can be incomplete, partial, or insufficient for a costly content investment.
+Risk: Content opportunity recommendations can be mistaken for guaranteed business outcomes or final business decisions.
 
-Mitigation: Keep recommendations bounded by the returned evidence, disclose missing coverage, and use the next validation test before committing to expensive or hard-to-reverse actions.
+Mitigation: Use qualitative confidence, keep the decision owner human, and validate material recommendations with the next test and stop conditions before costly action.
 
 ## Reference(s):
 
 - [SignalDig homepage](https://signaldig.com/)
-- [ClawHub skill page](https://clawhub.ai/jerrykik/skills/decide-content-opportunities)
-- [Setup guide](references/setup-guide.md)
-- [Decision MCP contract](references/mcp-contract.md)
-- [Evidence evaluation](references/evidence-evaluation.md)
-- [Confidence rubric](references/confidence-rubric.md)
-- [Content decision template](references/content-decision-template.md)
+- [Content Opportunity Decisions on ClawHub](https://clawhub.ai/jerrykik/skills/decide-content-opportunities)
+- [Setup Guide](references/setup-guide.md)
+- [Decision MCP Functional Contract](references/mcp-contract.md)
+- [Evidence Evaluation](references/evidence-evaluation.md)
+- [Qualitative Confidence Rubric](references/confidence-rubric.md)
+- [Content Opportunity Decision Template](references/content-decision-template.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Guidance]
+**Output Type(s):** [text, markdown, guidance]
 
-**Output Format:** [Structured Markdown decision report with recommendation, decision basis, confidence, counter-evidence, risks, next test, and source job details.]
+**Output Format:** [Markdown response with traceable decision sections and optional decision-template fields]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Decision claims should cite real SignalDig request IDs and evidence IDs; the skill does not produce finished content or execute business actions.]
+**Other Properties Related to Output:** [Requires live Decision MCP results; SEO claims should cite request_id and evidence_id.]
 
 ## Skill Version(s):
 
-1.4.0 (source: server release metadata and skill frontmatter)
+1.5.0 (source: server release metadata and skill frontmatter)
 
 ## Ethical Considerations:
 
