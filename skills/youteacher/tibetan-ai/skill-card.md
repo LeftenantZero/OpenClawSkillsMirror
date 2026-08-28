@@ -1,6 +1,6 @@
 ## Description:
 
-Supports Chinese-Tibetan translation, Tibetan question answering and writing, and DOCX/PDF text-layer translation when TIBETAN_AI_SKILL_API_KEY is configured.
+Tibetan AI helps agents translate between Chinese and Tibetan, answer or draft Tibetan-language content, and translate text layers from DOCX/PDF files.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to translate Chinese and Tibetan text, process DOCX or text-layer PDF translation requests, and ask for Tibetan-language answers, rewrites, summaries, or creative writing.
+External users and developers use this skill for Chinese-Tibetan translation, Tibetan question answering, writing support, and text-layer translation from DOCX or PDF files.
 
 ### Deployment Geography for Use:
 
@@ -22,43 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: User text and uploaded DOCX/PDF files are sent to the AI Skills platform for processing.
+Risk: User text and uploaded DOCX/PDF files may be sent to ai-skills.open-idea.net for processing.
 
-Mitigation: Tell users before uploading files or sensitive long text, obtain consent, and avoid sensitive or regulated content unless third-party processing is acceptable.
+Mitigation: Do not use the skill for confidential, regulated, or secret material unless that service is approved for the user's use.
 
-Risk: API key exposure could allow unauthorized use of the configured Tibetan AI service.
+Risk: The required API key could be exposed through chats, logs, files, or copied diagnostic output.
 
-Mitigation: Keep TIBETAN_AI_SKILL_API_KEY in environment configuration and do not place full keys in chats, logs, code, filenames, or error messages.
-
-Risk: Paid write requests can become ambiguous during retries or partial failures.
-
-Mitigation: Use a stable Idempotency-Key for each logical request, reuse it for retries, and stop automatic retries when idempotency or billing state is indeterminate.
+Mitigation: Keep the API key out of chats, logs, files, filenames, and error messages.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/youteacher/skills/tibetan-ai)
-- [AI Skills Platform](https://ai-skills.open-idea.net)
-- [API Key Configuration](references/API-KEY.md)
-- [Interface Routing](references/INTERFACE-ROUTING.md)
-- [Text Translation](references/TRANSLATION.md)
-- [Chat Completions](references/CHAT-COMPLETIONS.md)
-- [Document Translation](references/DOCUMENT-TRANSLATION.md)
-- [HTTP Requests](references/HTTP-REQUESTS.md)
-- [Behavior, Errors, and Retry Rules](references/BEHAVIOR-RULES.md)
+- [ClawHub skill page](https://clawhub.ai/youteacher/skills/tibetan-ai)
+- [AI Skills homepage](https://ai-skills.open-idea.net)
+- [API Key configuration](https://ai-skills.open-idea.net/skill-docs/tibetan-ai/API-KEY.md)
+- [Interface routing](https://ai-skills.open-idea.net/skill-docs/tibetan-ai/INTERFACE-ROUTING.md)
+- [Text translation](https://ai-skills.open-idea.net/skill-docs/tibetan-ai/TRANSLATION.md)
+- [Chat completions](https://ai-skills.open-idea.net/skill-docs/tibetan-ai/CHAT-COMPLETIONS.md)
+- [Document translation](https://ai-skills.open-idea.net/skill-docs/tibetan-ai/DOCUMENT-TRANSLATION.md)
+- [Behavior, errors, and retry rules](https://ai-skills.open-idea.net/skill-docs/tibetan-ai/BEHAVIOR-RULES.md)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Plain text or Markdown with optional shell command snippets]
+**Output Format:** [Plain text or Markdown responses, with shell commands and configuration snippets when setup is needed]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires TIBETAN_AI_SKILL_API_KEY; document translation returns extracted text translation and does not preserve source document layout.]
+**Other Properties Related to Output:** [Requires TIBETAN_AI_SKILL_API_KEY; DOCX/PDF translation returns extracted translated text rather than a newly formatted document.]
 
 ## Skill Version(s):
 
-1.2.0 (source: server release metadata and skill metadata)
+1.4.1 (source: server release metadata and skill metadata packageVersion)
 
 ## Ethical Considerations:
 
