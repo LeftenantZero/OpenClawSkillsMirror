@@ -1,0 +1,34 @@
+{
+  "changelog": "- Initial public release of resy-fpx.\n- Query and manage Resy (resy.com) reservations entirely via shell with curl \u2014 no resy-mcp server needed.\n- Supports full end-to-end flows: search venues, check slots, book/cancel reservations, manage favorites and Priority Notify.\n- fpx CLI only required for one-time token bootstrap if Resy credentials are unavailable; otherwise, all ongoing actions are via API calls with curl.\n- Suitable for script automation and environments without MCP installed.",
+  "created_at": 1787916903458,
+  "display_name": "resy-fpx",
+  "fetched_at": 1787930904711,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/resy-api.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "chrischall",
+    "handle": "chrischall",
+    "user_id": "s17cjx1a349nz5apaqp02vgz4h85728z"
+  },
+  "slug": "resy-fpx",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/resy-fpx",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=resy-fpx&ownerHandle=chrischall",
+    "page_url": "https://clawhub.ai/chrischall/skills/resy-fpx"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 19,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Query and act on Resy (resy.com restaurant reservations) from a shell without running the resy-mcp server \u2014 search venues, check slot availability, book/cancel reservations, and manage favorites/Priority Notify with curl against api.resy.com, using the fpx CLI (@fetchproxy/cli) only for the one-time token bootstrap when you have no RESY_EMAIL/RESY_PASSWORD. Use when you want Resy data or actions without the MCP, in a script, or on a machine where the MCP isn't installed.",
+  "updated_at": 1787917004772,
+  "version": "0.7.0"
+}
