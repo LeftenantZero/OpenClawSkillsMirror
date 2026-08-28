@@ -1,6 +1,6 @@
 ## Description:
 
-CloudBase guides agents through building, deploying, debugging, migrating, and troubleshooting Tencent CloudBase projects across web apps, WeChat mini programs, authentication, databases, cloud functions, CloudRun, storage, AI model integration, agents, operations, and specs.
+Guides agents through CloudBase project design, implementation, deployment, debugging, operations, and scenario-specific routing across Web, mini program, serverless, database, AI, and CloudRun work.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and engineers use this skill to route CloudBase work to the right local guidance, prepare CloudBase resources, generate or update application code, deploy services, and verify CloudBase-specific behavior.
+Developers and engineers use this skill to route CloudBase work to the right local reference, prepare resources, implement app and backend changes, deploy through CloudBase MCP or CLI paths, and verify CloudBase projects before handoff.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The security scan marked the skill suspicious because auth, agent, deployment, and command examples could lead to unsafe production behavior if followed automatically.
+Risk: The skill can guide broad CloudBase account and environment actions, including login, environment binding, public route changes, deletion, remote downloads, and deployments.
 
-Mitigation: Review proposed changes before execution, confirm the target EnvId, account, and deployment scope, and avoid applying the skill to non-CloudBase work.
+Mitigation: Keep human confirmation enabled for plugin or MCP installation, account login, environment binding, public route changes, database or schema deletion, remote downloads, and deployments; resolve aliases to full EnvId values before use.
 
-Risk: Generated auth, JWT, CORS, token, logging, and third-party agent examples may expose sensitive data or weaken production controls.
+Risk: Copied CloudBase examples may need production hardening for auth, CORS, logging, telemetry, storage, and security rules.
 
-Mitigation: Harden generated examples before release, keep identifiers, prompts, API keys, and third-party agent data sensitive, and avoid automatic remote-download or removal commands.
+Mitigation: Review and harden auth, CORS, logging, telemetry, storage permissions, and database security rules before production use.
 
 ## Reference(s):
 
-- [CloudBase Skill Source](artifact/SKILL.md)
-- [CloudBase Scenario Guide](artifact/references/scenarios.md)
-- [Deployment Workflow](artifact/references/deployment-workflow.md)
-- [MCP Setup Reference](artifact/references/mcp-setup.md)
-- [Tooling Fallback Guide](artifact/references/tooling-fallback.md)
-- [Console Entry Points](artifact/references/console-links.md)
-- [ClawHub Skill Page](https://clawhub.ai/binggg/skills/cloudbase)
+- [ClawHub CloudBase skill page](https://clawhub.ai/binggg/skills/cloudbase)
+- [CloudBase Development Guidelines](SKILL.md)
+- [Activation routing map](references/activation-map.yaml)
+- [Deployment workflow](references/deployment-workflow.md)
+- [CloudBase MCP setup](references/mcp-setup.md)
+- [Tooling fallback](references/tooling-fallback.md)
+- [Scenario mapping](references/scenarios.md)
+- [Console links](references/console-links.md)
 
 ## Skill Output:
 
 **Output Type(s):** [guidance, markdown, code, shell commands, configuration]
 
-**Output Format:** [Markdown guidance with inline commands, code snippets, configuration examples, and implementation notes]
+**Output Format:** [Markdown guidance with inline code, shell commands, configuration snippets, and implementation changes]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Outputs may include CloudBase resource, deployment, authentication, database, storage, AI integration, and troubleshooting instructions.]
+**Other Properties Related to Output:** [Scenario-routed output may include project file edits and CloudBase management or deployment steps when appropriate.]
 
 ## Skill Version(s):
 
-1.92.72 (source: server release metadata)
+1.92.75 (source: ClawHub release metadata; artifact frontmatter reports 2.32.4)
 
 ## Ethical Considerations:
 
