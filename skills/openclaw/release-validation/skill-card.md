@@ -1,6 +1,6 @@
 ## Description:
 
-Safely copy an existing gateway, test the latest OpenClaw main commit, and guide human release-campaign feedback with one Markdown worksheet.
+Test the latest OpenClaw main commit through an isolated OCM copy or an explicitly approved in-place gateway update, then guide structured release feedback.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-OpenClaw maintainers and testers use this skill to validate a release campaign against a copied real gateway, record manual surface-test notes, and prepare sanitized feedback for a shared GitHub issue.
+Developers and release testers use this skill to validate an OpenClaw main build against a selected gateway, record manual surface testing, and prepare approved feedback for a shared release campaign.
 
 ### Deployment Geography for Use:
 
@@ -22,41 +22,43 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The workflow can use GitHub permissions and publish release-validation feedback.
+Risk: The skill can modify an OpenClaw gateway and use the tester's GitHub CLI session to dispatch workflows or publish approved reports.
 
-Mitigation: Use it only for OpenClaw release validation and review the generated report draft before approving publication.
+Mitigation: Prefer the isolated OCM copy, require explicit approval before in-place updates, and review every proposed GitHub post before publication.
 
-Risk: The workflow copies a selected local gateway into a disposable test environment.
+Risk: Release guidance is copied from a shared campaign issue into the private worksheet, so unexpected issue content can steer the validation run.
 
-Mitigation: Confirm the gateway selection and rely on the disposable copy; the source gateway is not modified.
+Mitigation: Require the expected label, hidden marker, current beta line, and campaign identity before preparing a gateway; stop if the campaign state is inconsistent.
 
-Risk: Copied channel credentials can conflict with the source gateway while the test copy runs.
+Risk: In-place validation can update a real gateway, migrate state or plugins, and restart services.
 
-Mitigation: Temporarily stop the current credential owner before activating the copy and restore it when validation ends.
+Mitigation: Use the isolated path by default; for in-place mode, show the backup or snapshot and dry-run summary before accepting the exact approval phrase.
 
-Risk: Optional diagnostics can capture local traces, metrics, and logs from the disposable test gateway.
+Risk: Validation reports can expose local paths, gateway names, logs, credentials, or user identifiers if drafts are not sanitized.
 
-Mitigation: Keep diagnostics opt-in, loopback-only, bounded, and local; review and redact any diagnostic evidence before it appears in a report.
+Mitigation: Use the structured report contract and privacy checks before publishing, and exclude local setup details, raw logs, credentials, and private identifiers from public comments.
 
 ## Reference(s):
 
+- [ClawHub skill page](https://clawhub.ai/openclaw/skills/release-validation)
+- [OpenClaw publisher profile](https://clawhub.ai/user/openclaw)
 - [Structured release report contract](references/structured-report.md)
+- [Release validation worksheet](assets/validation-worksheet.md)
 - [OpenClaw maturity scorecard](https://docs.openclaw.ai/maturity/scorecard.md)
-- [OpenClaw documentation](https://docs.openclaw.ai)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, JSON, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown guidance with inline shell commands, worksheet updates, and release-report drafts]
+**Output Format:** [Markdown guidance with inline shell commands, JSON campaign artifacts, configuration snippets, worksheets, and reviewable GitHub post drafts]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces a private worksheet, a reviewable GitHub release-feedback draft, and optional local diagnostic summaries.]
+**Other Properties Related to Output:** [Requires human choices before gateway selection, in-place updates, diagnostics capture, and GitHub publication.]
 
 ## Skill Version(s):
 
-0.1.2 (source: server release evidence)
+0.1.3 (source: server release metadata)
 
 ## Ethical Considerations:
 

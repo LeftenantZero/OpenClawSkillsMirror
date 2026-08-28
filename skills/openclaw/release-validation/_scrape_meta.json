@@ -1,8 +1,8 @@
 {
-  "changelog": "Improve copied-state release validation, readiness reporting, optional local OTel evidence, and reviewable feedback drafts.",
+  "changelog": "Add automatic campaign workflow dispatch, isolated or in-place main testing, stable-train guidance, and approval-first finding reports.",
   "created_at": 1787152204032,
   "display_name": "Openclaw Release Validation",
-  "fetched_at": 1787770274899,
+  "fetched_at": 1787932831782,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -14,9 +14,11 @@
     "engine_version": "v2.4.26",
     "is_malware_blocked": false,
     "is_suspicious": false,
-    "reason_codes": [],
-    "summary": "Security findings were reviewed by moderators and cleared for public use.",
-    "updated_at": 1787152240197,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787868868619,
     "verdict": "clean"
   },
   "owner": {
@@ -32,12 +34,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 202,
+    "downloads": 279,
     "installs": 3,
     "stars": 0,
-    "versions": 3
+    "versions": 4
   },
-  "summary": "Safely copy an existing gateway, test the latest OpenClaw main commit, and guide human release-campaign feedback with one Markdown worksheet.",
-  "updated_at": 1787280915597,
-  "version": "0.1.2"
+  "summary": "Test the latest OpenClaw main commit through an isolated OCM copy or an explicitly approved in-place gateway update, then guide structured release feedback.",
+  "updated_at": 1787783697024,
+  "version": "0.1.3"
 }
