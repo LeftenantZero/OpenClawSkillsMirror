@@ -1,6 +1,6 @@
 ## Description:
 
-Turn a YouTube link or a pasted transcript into a Chinese spoken script and a remake structure.
+Turns a YouTube link or pasted transcript into a Chinese spoken script and remake structure based on the source captions.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators and agents use this skill to turn a pasted transcript, or optionally looked-up public YouTube captions and comments, into a Chinese spoken remake script and structure while preserving source attribution.
+Creators, editors, and agents use this skill to convert user-supplied YouTube captions or pasted transcripts into a Chinese spoken remake script. When requested and confirmed, it can also perform paid public YouTube caption, video, or comment lookups before writing the script.
 
 ### Deployment Geography for Use:
 
@@ -22,49 +22,50 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill connects to Beatra and stores a shared device bearer token with broader account authority than captions alone require.
+Risk: The Beatra connection grants a broad shared device token.
 
-Mitigation: Install only when the publisher and Beatra account lifecycle are trusted; keep the credential private and use the bundled uninstall flow when removing the package.
-
-Risk: Optional caption, video metadata, and comment lookups can spend Beatra credits.
-
-Mitigation: Require a separate confirmation for every lookup, quote the live credit price before execution, and use stable request IDs to avoid duplicate charges during recovery.
+Mitigation: Review authorization before installation and revoke the device from the Beatra Console if the connection is no longer trusted or needed.
 
 Risk: The bundled client silently checks for and installs package updates by default.
 
-Mitigation: Review the update posture before installing and disable automatic updates with the bundled update command when silent replacement is not acceptable.
+Mitigation: Disable automatic updates with `python3 scripts/mcp_client.py update --auto off` when a fixed package version is required.
 
-Risk: A generated remake script may include unsupported claims if the source transcript is missing or incomplete.
+Risk: Public YouTube caption, video, and comment lookups are paid operations.
 
-Mitigation: Write only from looked-up captions or user-supplied transcript text, label source attribution, and mark remake-beat reasoning as inference.
+Mitigation: Confirm each lookup separately, quote the live price returned by `beatra.social.tools.get`, and work from a pasted transcript when no lookup is approved.
+
+Risk: Missing captions or unavailable lookup tools can lead to unsupported script content if the agent guesses.
+
+Mitigation: Use only looked-up captions or user-supplied transcript text, label the source, and state when the transcript is missing.
 
 ## Reference(s):
 
-- [ClawHub listing](https://clawhub.ai/beatra-ai/skills/youtube-caption-studio)
-- [Beatra skill homepage](https://beatra.ai/skills/youtube-caption-studio)
-- [Looking up captions](references/caption-lookup.md)
-- [Writing the script](references/script.md)
-- [Caption studio workflow](references/workflow.md)
-- [Installation and authentication](references/installation-and-auth.md)
-- [MCP connection](references/mcp-connection.md)
-- [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
-- [Tasks and results](references/tasks-and-results.md)
-- [Automatic updates and safety](references/automatic-updates-and-safety.md)
-- [Uninstall and disconnect](references/uninstall-and-disconnect.md)
+- [ClawHub Skill Page](https://clawhub.ai/beatra-ai/skills/youtube-caption-studio)
+- [Beatra Skill Homepage](https://beatra.ai/skills/youtube-caption-studio)
+- [Looking Up Captions](references/caption-lookup.md)
+- [Writing the Script](references/script.md)
+- [Caption Studio Workflow](references/workflow.md)
+- [Installation and Authentication](references/installation-and-auth.md)
+- [Installation Registration](references/installation-registration.md)
+- [Tasks and Results](references/tasks-and-results.md)
+- [Billing, Errors, and Recovery](references/billing-errors-and-recovery.md)
+- [Bundled MCP Client Diagnostics](references/mcp-connection.md)
+- [Automatic Updates and Safety](references/automatic-updates-and-safety.md)
+- [Uninstall and Disconnect](references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration guidance]
 
-**Output Format:** [Markdown containing a Chinese spoken script, remake structure, source attribution, and optional lookup task and billing fields]
+**Output Format:** [Markdown with Chinese spoken-script sections, remake-structure notes, and inline shell commands when setup or lookup is needed]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Optional paid lookups return task status and billing.net_charged_credits when present; the script stage can run from a user-supplied transcript at no lookup cost.]
+**Other Properties Related to Output:** [For paid lookups, reports returned payload facts, task ID, terminal status, and billing.net_charged_credits.]
 
 ## Skill Version(s):
 
-0.1.1 (source: server release evidence and artifact manifest)
+0.1.3 (source: server release metadata and manifest.json)
 
 ## Ethical Considerations:
 
