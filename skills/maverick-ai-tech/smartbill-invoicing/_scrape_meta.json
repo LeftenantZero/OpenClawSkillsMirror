@@ -1,0 +1,37 @@
+{
+  "changelog": "- Changed the file path rules for `download-invoice-pdf`: `--output` now accepts both absolute and relative paths, as long as they end in `.pdf`.\n- Clarified that relative output paths are resolved against the current working directory, and output must be within an allowed media root or working directory.\n- Removed the previous restriction on absolute paths and `../` traversals when specifying output PDF location.",
+  "created_at": 1771663024823,
+  "display_name": "SmartBill Invoicing",
+  "fetched_at": 1787897911833,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/invoice-example.json",
+    "references/smartbill-api.md",
+    "scripts/smartbill_cli.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Maverick",
+    "handle": "maverick-ai-tech",
+    "user_id": "s1739hrwh7208jxhr18qg7tgas85tx88"
+  },
+  "slug": "smartbill-invoicing",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/smartbill-invoicing",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=smartbill-invoicing&ownerHandle=maverick-ai-tech",
+    "page_url": "https://clawhub.ai/maverick-ai-tech/skills/smartbill-invoicing"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1346,
+    "installs": 39,
+    "stars": 2,
+    "versions": 8
+  },
+  "summary": "Issue SmartBill invoices through the SmartBill.ro API with local automation. Use for SmartBill tasks such as validating invoice payloads, creating invoices,...",
+  "updated_at": 1778491597572,
+  "version": "1.0.9"
+}
