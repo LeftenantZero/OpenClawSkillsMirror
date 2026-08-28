@@ -675,7 +675,7 @@ let turn='me', busy=false, uid=0, myFormation='chong\'e', enemyFormation='chong\
 let netRoom='qiguo', netTransport='bc', wsUrlVal='ws://127.0.0.1:8770', netRole=null, lastWinner=null, turnCount=0, logLines=[];
 let myStrats=['guwu','huifu','baiyun'], enStrats=['guwu','luanzhen','fuma'], myStratGenName='', enStratGenName='';
 let battleDone=null, lastBattleWin=false, pendingDefenseResolve=null, currentBattleO=null;
-let combo=0, meHitThisTurn=new Map();
+let combo=0, comboBest=0, meHitThisTurn=new Map();
 let battleStats={meDead:0,ultFired:false,captured:false,duelWon:false}, battleResolved=false;
 // ===== 成就系统 =====
 const ACH_DEFS=[
@@ -687,6 +687,7 @@ const ACH_DEFS=[
   {id:'collector',   name:'军械盈库', desc:'累计缴获 8 件装备', icon:'🎒'},
   {id:'unify',       name:'一统天下', desc:'消灭其余六国，霸业功成', icon:'🏯'},
   {id:'speedrun',    name:'疾风席卷', desc:'36 个月内一统天下', icon:'⏱'},
+  {id:'comboman',   name:'连击大师', desc:'单场战斗打出 10 连击', icon:'🔥'},
   {id:'chronicler',  name:'青史留名', desc:'解锁全部成就', icon:'📜'},
 ];
 let achState={}, equipCollected=0;
@@ -700,9 +701,11 @@ let codex={};
 function loadCodex(){ try{ codex=JSON.parse(localStorage.getItem('qg_codex')||'{}'); }catch(e){ codex={}; } }
 function saveCodex(){ try{ localStorage.setItem('qg_codex',JSON.stringify(codex)); }catch(e){} }
 function codexTotal(){ const s=new Set(); COUNTRY_KEYS.forEach(k=>COUNTRIES[k].g.forEach(a=>s.add(a[0]))); WILD_POOL.forEach(a=>s.add(a[0])); return s.size; }
-function recordCodex(){ for(const u of units){ if(u.side!=='en') continue; const st=u._died?'阵亡':(u.captured?'被擒':'退走'); codex[u.name]={name:u.name,country:battleEnemyKey,star:u.star,unit:u.unitName,status:st}; } saveCodex(); updateCodexCount(); }
+function recordCodex(){ let newly=[]; for(const u of units){ if(u.side!=='en') continue; const st=u._died?'阵亡':(u.captured?'被擒':'退走'); if(!codex[u.name]){ codex[u.name]={name:u.name,country:battleEnemyKey,star:u.star,unit:u.unitName,status:st}; newly.push(u.name); } else { codex[u.name].status=st; } } saveCodex(); updateCodexCount(); newly.forEach(n=>toastCodex(n)); }
 function updateCodexCount(){ const got=Object.keys(codex).length, tot=codexTotal(); const el=document.getElementById('codexCount'); if(el) el.textContent=got+'/'+tot; }
-function openCodex(){ const tot=codexTotal(); const got=Object.keys(codex).length; const stat=document.getElementById('codexStat'); if(stat) stat.textContent=`已收录 ${got} / 全部 ${tot} 名敌将（阵亡/被擒/退走）；击败或俘虏更多敌将即可解锁图鉴。`;
+function toastCodex(name){ const t=document.getElementById('toast'); if(!t) return; const el=document.createElement('div'); el.className='toast'; el.innerHTML='📖 <b>新武将收录</b>：'+name; t.appendChild(el); setTimeout(()=>{ el.classList.add('out'); setTimeout(()=>{ if(el.parentNode) el.parentNode.removeChild(el); },420); },2800); }
+function toastComboEnd(best, allBest){ const t=document.getElementById('toast'); if(!t) return; const el=document.createElement('div'); el.className='toast'; el.innerHTML='🔥 <b>最高连击</b>：本局 '+best+(best>=allBest&&best>0?'（新纪录!）':'（历史 '+allBest+'）'); t.appendChild(el); setTimeout(()=>{ el.classList.add('out'); setTimeout(()=>{ if(el.parentNode) el.parentNode.removeChild(el); },420); },3200); }
+function openCodex(){ const tot=codexTotal(); const got=Object.keys(codex).length; const stat=document.getElementById('codexStat'); if(stat) stat.innerHTML=`已收录 <b>${got}</b> / 全部 <b>${tot}</b> 名敌将（阵亡/被擒/退走）；击败或俘虏更多敌将即可解锁图鉴。收集度 <b>${Math.round(got/tot*100)}%</b>`;
   let html=''; COUNTRY_KEYS.forEach(k=>{ const list=COUNTRIES[k].g; if(!list.length) return; list.forEach(a=>{ const rec=codex[a[0]]; html+=`<div class="cx ${rec?'got':''}"><div class="cxc" style="background:${COUNTRIES[k].color}"></div><div><div class="cxn">${rec?a[0]:'？？？'}</div><div class="cxm">${COUNTRIES[k].name} · ${'★'.repeat(a[1])} · ${UNIT_TYPES[a[6]].name}${rec?' · '+rec.status:''}</div></div></div>`; }); });
   WILD_POOL.forEach(a=>{ const rec=codex[a[0]]; html+=`<div class="cx ${rec?'got':''}"><div class="cxc" style="background:#888"></div><div><div class="cxn">${rec?a[0]:'？？？'}</div><div class="cxm">游士 · ${'★'.repeat(a[1])} · ${UNIT_TYPES[a[6]].name}${rec?' · '+rec.status:''}</div></div></div>`; });
   const grid=document.getElementById('codexGrid'); if(grid) grid.innerHTML=html;
@@ -754,7 +757,7 @@ function launchCampaignBattle(o){
   const tag=o.defCity.tag;
   const scnName=tag==='snow'?'蓟城死守':tag==='river'?'鄢郢水攻':tag==='mountain'?'函谷关对峙':tag==='forest'?'即墨火牛':tag==='plain'?'桂陵围魏救赵':'长平之战';
   scenario=Object.assign({}, SCENARIO_BY_NAME[scnName], {vic:attIsPlayer?{annihilateWin:true,captureWin:true}:{annihilateWin:true,captureWin:false}});
-  weather=scenario.weather; buildMap(); units=[];
+  weather=scenario.weather; buildMap(); units=[]; comboBest=0;
   const myGens=attIsPlayer?o.attGens:o.defGens, enGens=attIsPlayer?o.defGens:o.attGens;
   const myFrom=attIsPlayer?o.attCity:o.defCity, enFrom=attIsPlayer?o.defCity:o.attCity;
   const DEPLOY_ROWS=[5,7,9,4,6,8,10,3,11,12,2];
@@ -1139,7 +1142,7 @@ function handleTile(r,c){ const clicked=unitAt(r,c);
 function counterMult(a,d){ if(COUNTER[a]&&COUNTER[a].includes(d)) return 1.5; if(COUNTER[d]&&COUNTER[d].includes(a)) return 0.67; return 1.0; }
 function moraleFactor(m){ return 0.7+0.5*(m/100); }
 function hasBond(u){ if(u.hp<=0) return false; for(const o of units){ if(o!==u&&o.side===u.side&&o.hp>0&&Math.abs(o.row-u.row)+Math.abs(o.col-u.col)<=1) return true; } return false; }
-function showCombo(n){ if(n<3) return; const fx=document.getElementById('comboFx'); if(!fx) return; const tier=n>=12?'#ff2a6a':n>=8?'#ff5a2a':n>=5?'#ff8c1a':'#ffb648'; const cn=fx.querySelector('.cn'); cn.textContent='🔥 '+n; cn.style.color=tier; fx.classList.remove('hidden'); fx.classList.remove('show'); void fx.offsetWidth; fx.classList.add('show'); clearTimeout(fx._t); fx._t=setTimeout(function(){ fx.classList.add('hidden'); fx.classList.remove('show'); },620); if(sfxOn) SFX.combo(); }
+function showCombo(n){ if(n<3) return; if(n>comboBest) comboBest=n; const fx=document.getElementById('comboFx'); if(!fx) return; const tier=n>=12?'#ff2a6a':n>=8?'#ff5a2a':n>=5?'#ff8c1a':'#ffb648'; const cn=fx.querySelector('.cn'); cn.textContent='🔥 '+n; cn.style.color=tier; fx.classList.remove('hidden'); fx.classList.remove('show'); void fx.offsetWidth; fx.classList.add('show'); clearTimeout(fx._t); fx._t=setTimeout(function(){ fx.classList.add('hidden'); fx.classList.remove('show'); },620); if(sfxOn) SFX.combo(); if(n>=10) unlockAch('comboman'); }
 function showCoop(att,partner,def){ const fx=document.getElementById('coopFx'); if(!fx) return; fx.querySelector('.coop-name').textContent='【合 击】'; fx.querySelector('.coop-who').textContent=att.name+' ⚔ '+partner.name+' → '+def.name; fx.classList.remove('hidden'); fx.classList.remove('show'); void fx.offsetWidth; fx.classList.add('show'); setTimeout(function(){ fx.classList.remove('show'); setTimeout(function(){ fx.classList.add('hidden'); },300); },1250); }
 function triggerCoop(att,partner,def){ showCoop(att,partner,def); const extra=Math.round(def.maxHp*0.18)+12; def.hp-=extra; def.morale=Math.max(0,def.morale-20); pushFloat(def,'合击!','#b14de0',{sub:'-'+extra,size:34}); if(def.hp<=0){ def.hp=0; def._died=true; log('<span class="sys">💥 【合击】'+def.name+' 被联手击破！</span>'); } for(const e of units){ if(e.side==='en'&&e.hp>0&&e!==def&&Math.abs(e.row-def.row)+Math.abs(e.col-def.col)<=1){ const d2=Math.round(extra*0.5); e.hp-=d2; e.morale=Math.max(0,e.morale-d2*0.4); if(e.hp<=0){ e.hp=0; e._died=true; } pushFloat(e,'-'+d2,'#b14de0',{size:20}); } } SFX.coop(); const cw=document.getElementById('board'); if(cw) cw.parentElement.classList.add('shake'); setTimeout(function(){ if(cw) cw.parentElement.classList.remove('shake'); },600); }
 function resetCombo(){ combo=0; const fx=document.getElementById('comboFx'); if(fx) fx.classList.add('hidden'); }
@@ -1205,7 +1208,7 @@ function showTips(){ const me=units.filter(u=>u.side==='me'&&u.hp>0), en=units.f
 }
 function checkEnd(){ const me=units.filter(u=>u.side==='me'&&u.hp>0), en=units.filter(u=>u.side==='en'&&u.hp>0); const v=scenario.vic||{annihilateWin:true,captureWin:true}; if(me.length===0) return win(false); if(en.some(u=>u.row===7&&u.col===0)) return win(false); if(v.captureWin && me.some(u=>u.row===7&&u.col===W-1)) return win(true); if(v.annihilateWin && en.length===0) return win(true); return false; }
 function showUlt(att, nm){ const fx=document.getElementById('ultFx'); if(!fx) return; SFX.ult(); fx.querySelector('.ult-who').textContent=att.name+' · '+att.unitName; fx.querySelector('.ult-name').textContent='【'+nm+'】'; fx.classList.remove('hidden'); fx.classList.remove('show'); void fx.offsetWidth; fx.classList.add('show'); const cw=document.getElementById('board'); if(cw) cw.parentElement.classList.add('shake'); setTimeout(()=>{ fx.classList.remove('show'); setTimeout(()=>fx.classList.add('hidden'),300); if(cw) cw.parentElement.classList.remove('shake'); }, 1150); }
-function win(isMe){ if(isMe) SFX.win(); else SFX.lose(); lastBattleWin=isMe; lastWinner=isMe; if(!battleResolved){ battleResolved=true; const meDead=units.filter(u=>u.side==='me'&&u._died).length; if(isMe){ unlockAch('first_blood'); if(meDead===0) unlockAch('flawless'); if(battleStats.ultFired) unlockAch('ult_zen'); if(battleStats.captured) unlockAch('captor'); if(battleStats.duelWon) unlockAch('duel'); } } const b=document.getElementById('banner'); document.getElementById('bannerBig').className='big '+(isMe?'win':'lose'); document.getElementById('bannerBig').textContent = gameMode==='hotseat' ? ('🏆 '+sideLabel(isMe?'me':'en')+' 胜利！') : (isMe?'🏆 胜！':'💀 败'); document.getElementById('bannerSub').textContent=isMe?'此战得手！':'此战失利。'; b.classList.remove('hidden'); busy=true; log(`<span class="sys">${isMe?'【胜利】':'【战败】'} 战斗结束</span>`); if(hostNet()) broadcastState(); return true; }
+function win(isMe){ if(isMe) SFX.win(); else SFX.lose(); lastBattleWin=isMe; lastWinner=isMe; if(!battleResolved){ battleResolved=true; const meDead=units.filter(u=>u.side==='me'&&u._died).length; if(isMe){ unlockAch('first_blood'); if(meDead===0) unlockAch('flawless'); if(battleStats.ultFired) unlockAch('ult_zen'); if(battleStats.captured) unlockAch('captor'); if(battleStats.duelWon) unlockAch('duel'); } } const b=document.getElementById('banner'); document.getElementById('bannerBig').className='big '+(isMe?'win':'lose'); document.getElementById('bannerBig').textContent = gameMode==='hotseat' ? ('🏆 '+sideLabel(isMe?'me':'en')+' 胜利！') : (isMe?'🏆 胜！':'💀 败'); document.getElementById('bannerSub').textContent=isMe?'此战得手！':'此战失利。'; b.classList.remove('hidden'); busy=true; const bestAll=parseInt(localStorage.getItem('qg_combo_best')||'0',10)||0; if(comboBest>bestAll) localStorage.setItem('qg_combo_best',String(comboBest)); if(comboBest>0) toastComboEnd(comboBest, Math.max(bestAll,comboBest)); log(`<span class="sys">${isMe?'【胜利】':'【战败】'} 战斗结束</span>`); if(hostNet()) broadcastState(); return true; }
 document.getElementById('duelClose').onclick=()=>{ document.getElementById('duelBanner').classList.add('hidden'); render(); checkEnd(); };
 /* ===================== 联机对战（主机权威 + 全状态快照广播） ===================== */
 function localSide(){ if(gameMode==='net') return netRole==='host'?'me':'en'; if(gameMode==='hotseat') return turn; return 'me'; }

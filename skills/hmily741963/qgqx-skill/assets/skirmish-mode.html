@@ -140,6 +140,15 @@
   .toast{background:linear-gradient(180deg,#2b1a0e,#42230f);color:#fff;border:1px solid var(--gold);border-radius:12px;padding:11px 20px;font-size:15px;box-shadow:0 8px 22px rgba(0,0,0,.4);opacity:0;transform:translateY(14px);animation:toastIn .42s ease-out forwards;}
   .toast.out{animation:toastOut .42s ease-in forwards;}
   .toast b{color:#ffd34d;}
+  /* ===== 武将图鉴 ===== */
+  #codexModal .box{max-width:560px;}
+  .codex-stat{font-size:12px;color:#7a6a52;margin-bottom:8px;}
+  .codex-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;max-height:54vh;overflow:auto;}
+  .cx{display:flex;gap:8px;align-items:center;background:#f6f1e8;border:1px solid var(--line);border-radius:10px;padding:8px;opacity:.55;}
+  .cx.got{background:linear-gradient(180deg,#fff7e6,#ffeccf);border-color:var(--gold);opacity:1;}
+  .cx .cxc{width:6px;align-self:stretch;border-radius:4px;}
+  .cx .cxn{font-weight:800;font-size:13px;}
+  .cx .cxm{font-size:10px;color:#7a6a52;}
   @keyframes toastIn{to{opacity:1;transform:translateY(0);}}
   @keyframes toastOut{to{opacity:0;transform:translateY(14px);}}
   /* ===== 连击 Combo ===== */
@@ -282,7 +291,8 @@
           <h3 style="margin-top:12px;">战报</h3>
           <div id="log" class="log"></div>
           <div class="row"><button id="endTurn" class="btn">结束回合 ▶</button></div>
-          <div class="row"><button id="btnAch" class="btn ghost" style="width:100%;">🏆 成就（<span id="achCount">0/8</span>）</button><button id="btnTut" class="btn ghost" style="flex:0 0 52px;" title="玩法说明">📖</button><button id="sfxBtn" class="btn ghost" style="flex:0 0 52px;" title="音效开关">🔊</button></div>
+          <div class="row"><button id="btnCodex" class="btn ghost" style="width:100%;">📖 武将图鉴（<span id="codexCount">0/0</span>）</button></div>
+          <div class="row"><button id="btnAch" class="btn ghost" style="width:100%;">🏆 成就（<span id="achCount">0/9</span>）</button><button id="btnTut" class="btn ghost" style="flex:0 0 52px;" title="玩法说明">📖</button><button id="sfxBtn" class="btn ghost" style="flex:0 0 52px;" title="音效开关">🔊</button></div>
         </div>
       </div>
       <div class="right">
@@ -347,6 +357,13 @@
   <h3>🏆 成就 <span id="achCount2" class="muted" style="font-size:13px;"></span></h3>
   <div id="achList" class="achlist"></div>
   <div class="row" style="justify-content:flex-end;margin-top:12px;"><button class="btn ghost" id="achClose">关闭</button></div>
+</div></div>
+
+<div id="codexModal" class="modal hidden"><div class="box">
+  <h3>📖 武将图鉴 <span id="codexCount2" class="muted" style="font-size:13px;"></span></h3>
+  <div class="codex-stat" id="codexStat"></div>
+  <div id="codexGrid" class="codex-grid"></div>
+  <div class="row" style="justify-content:flex-end;margin-top:12px;"><button class="btn ghost" id="codexClose">关闭</button></div>
 </div></div>
 
 <div id="toast"></div>
@@ -645,7 +662,7 @@ let netRoom='qiguo', netTransport='bc', wsUrlVal='ws://127.0.0.1:8770';
 let logLines=[];
 let myFormation='chong\'e', enemyFormation='chong\'e', stratUsed={me:false,en:false};
 let myStrats=['guwu','huifu','baiyun'], enStrats=['guwu','luanzhen','fuma'];
-let combo=0, meHitThisTurn=new Map();
+let combo=0, comboBest=0, meHitThisTurn=new Map();
 let myStratGenName='', enStratGenName='';
 let battleStats={ultFired:false,captured:false,duelWon:false}, battleResolved=false, turnCount=1, wgWins=0;
 // ===== 成就系统（普通模式） =====
@@ -657,6 +674,7 @@ const ACH_DEFS=[
   {id:'duel',        name:'阵前单挑', desc:'在武将单挑中取胜', icon:'⚔'},
   {id:'blitz',       name:'疾风席卷', desc:'6 个回合内取胜', icon:'⏱'},
   {id:'veteran',     name:'百战精兵', desc:'累计取胜 3 场', icon:'🎖'},
+  {id:'comboman',   name:'连击大师', desc:'单场战斗打出 10 连击', icon:'🔥'},
   {id:'chronicler',  name:'青史留名', desc:'解锁全部成就', icon:'📜'},
 ];
 let achState={};
@@ -667,6 +685,18 @@ function toastAch(d){ const t=document.getElementById('toast'); if(!t) return; c
 function openAch(){ const host=document.getElementById('achList'); if(host) host.innerHTML=ACH_DEFS.map(a=>{ const got=achState[a.id]; return `<div class="ach ${got?'on':''}"><div class="ai">${got?a.icon:'🔒'}</div><div><div class="an">${a.name}</div><div class="ad">${a.desc}</div></div></div>`; }).join(''); updateAchCount(); const cc2=document.getElementById('achCount2'); if(cc2) cc2.textContent='（'+ACH_DEFS.filter(a=>achState[a.id]).length+'/'+ACH_DEFS.length+'）'; const m=document.getElementById('achModal'); if(m) m.classList.remove('hidden'); }
 function updateAchCount(){ const el=document.getElementById('achCount'); if(el) el.textContent=ACH_DEFS.filter(a=>achState[a.id]).length+'/'+ACH_DEFS.length; }
 loadAch();
+
+/* ===================== 武将图鉴（收集系统） ===================== */
+let codex={};
+function loadCodex(){ try{ codex=JSON.parse(localStorage.getItem('wg_codex')||'{}'); }catch(e){ codex={}; } }
+function saveCodex(){ try{ localStorage.setItem('wg_codex',JSON.stringify(codex)); }catch(e){} }
+function codexTotal(){ const s=new Set(); Object.keys(COUNTRIES).forEach(k=>{ (COUNTRIES[k].g||[]).forEach(a=>s.add(a[0])); }); return s.size; }
+function recordCodex(){ let newly=[]; for(const u of units){ if(u.side!=='en') continue; const st=u._died?'阵亡':(u.captured?'被擒':'退走'); if(!codex[u.name]){ codex[u.name]={name:u.name,country:enemyCountry,star:u.star,unit:u.unitName,status:st}; newly.push(u.name); } else { codex[u.name].status=st; } } saveCodex(); updateCodexCount(); newly.forEach(n=>toastCodex(n)); }
+function updateCodexCount(){ const el=document.getElementById('codexCount'); if(el) el.textContent=Object.keys(codex).length+'/'+codexTotal(); }
+function toastCodex(name){ const t=document.getElementById('toast'); if(!t) return; const el=document.createElement('div'); el.className='toast'; el.innerHTML='📖 <b>新武将收录</b>：'+name; t.appendChild(el); setTimeout(()=>{ el.classList.add('out'); setTimeout(()=>{ if(el.parentNode) el.parentNode.removeChild(el); },420); },2800); }
+function toastComboEnd(best, allBest){ const t=document.getElementById('toast'); if(!t) return; const el=document.createElement('div'); el.className='toast'; el.innerHTML='🔥 <b>最高连击</b>：本局 '+best+(best>=allBest&&best>0?'（新纪录!）':'（历史 '+allBest+'）'); t.appendChild(el); setTimeout(()=>{ el.classList.add('out'); setTimeout(()=>{ if(el.parentNode) el.parentNode.removeChild(el); },420); },3200); }
+function openCodex(){ const tot=codexTotal(), got=Object.keys(codex).length; const stat=document.getElementById('codexStat'); if(stat) stat.innerHTML='已收录 <b>'+got+'</b> / 全部 <b>'+tot+'</b> 名敌将（阵亡/被擒/退走）。击败或俘虏更多敌将即可解锁图鉴。收集度 <b>'+Math.round(got/tot*100)+'%</b>'; let html=''; Object.keys(COUNTRIES).forEach(k=>{ const c=COUNTRIES[k]; if(!c.g||!c.g.length) return; c.g.forEach(a=>{ const rec=codex[a[0]]; const nm=rec?a[0]:'？？？'; html+='<div class="cx '+(rec?'got':'')+'"><div class="cxc" style="background:'+c.color+'"></div><div><div class="cxn">'+nm+'</div><div class="cxm">'+c.name+' · '+'★'.repeat(a[1])+' · '+UNIT_TYPES[a[6]].name+(rec?' · '+rec.status:'')+'</div></div></div>'; }); }); const grid=document.getElementById('codexGrid'); if(grid) grid.innerHTML=html; const c2=document.getElementById('codexCount2'); if(c2) c2.textContent=got+'/'+tot; const m=document.getElementById('codexModal'); if(m) m.classList.remove('hidden'); }
+loadCodex(); updateCodexCount();
 
 /* ===================== 选国家 ===================== */
 const countryGrid=document.getElementById('countryGrid');
@@ -847,7 +877,7 @@ function startBattle(){
   const others=Object.keys(COUNTRIES).filter(k=>k!==myCountry);
   enemyCountry=others[Math.floor(Math.random()*others.length)];
   weather=scenario.weather;
-  buildMap(); units=[];
+  buildMap(); units=[]; comboBest=0;
   const myG=countryGenerals(myCountry), enG=countryGenerals(enemyCountry);
   myGenKeys.slice(0,3).forEach((gi,k)=> units.push(makeArmy(myG[gi],'me',1,[5,7,9][k])) );
   enG.slice(0,3).forEach((g,k)=> units.push(makeArmy(g,'en',W-2,[5,7,9][k])) );
@@ -1352,7 +1382,7 @@ function handleTile(r,c){
 function counterMult(a,d){ if(COUNTER[a]?.includes(d)) return 1.5; if(COUNTER[d]?.includes(a)) return 0.67; return 1.0; }
 function moraleFactor(m){ return 0.7+0.5*(m/100); }
 function hasBond(u){ if(u.hp<=0) return false; for(const o of units){ if(o!==u&&o.side===u.side&&o.hp>0&&Math.abs(o.row-u.row)+Math.abs(o.col-u.col)<=1) return true; } return false; }
-function showCombo(n){ if(n<3) return; const fx=document.getElementById('comboFx'); if(!fx) return; const tier=n>=12?'#ff2a6a':n>=8?'#ff5a2a':n>=5?'#ff8c1a':'#ffb648'; const cn=fx.querySelector('.cn'); cn.textContent='🔥 '+n; cn.style.color=tier; fx.classList.remove('hidden'); fx.classList.remove('show'); void fx.offsetWidth; fx.classList.add('show'); clearTimeout(fx._t); fx._t=setTimeout(function(){ fx.classList.add('hidden'); fx.classList.remove('show'); },620); if(sfxOn) SFX.combo(); }
+function showCombo(n){ if(n<3) return; if(n>comboBest) comboBest=n; const fx=document.getElementById('comboFx'); if(!fx) return; const tier=n>=12?'#ff2a6a':n>=8?'#ff5a2a':n>=5?'#ff8c1a':'#ffb648'; const cn=fx.querySelector('.cn'); cn.textContent='🔥 '+n; cn.style.color=tier; fx.classList.remove('hidden'); fx.classList.remove('show'); void fx.offsetWidth; fx.classList.add('show'); clearTimeout(fx._t); fx._t=setTimeout(function(){ fx.classList.add('hidden'); fx.classList.remove('show'); },620); if(sfxOn) SFX.combo(); if(n>=10) unlockAch('comboman'); }
 function showCoop(att,partner,def){ const fx=document.getElementById('coopFx'); if(!fx) return; fx.querySelector('.coop-name').textContent='【合 击】'; fx.querySelector('.coop-who').textContent=att.name+' ⚔ '+partner.name+' → '+def.name; fx.classList.remove('hidden'); fx.classList.remove('show'); void fx.offsetWidth; fx.classList.add('show'); setTimeout(function(){ fx.classList.remove('show'); setTimeout(function(){ fx.classList.add('hidden'); },300); },1250); }
 function triggerCoop(att,partner,def){ showCoop(att,partner,def); const extra=Math.round(def.maxHp*0.18)+12; def.hp-=extra; def.morale=Math.max(0,def.morale-20); pushFloat(def,'合击!','#b14de0',{sub:'-'+extra,size:34}); if(def.hp<=0){ def.hp=0; def._died=true; log('<span class="sys">💥 【合击】'+def.name+' 被联手击破！</span>'); } for(const e of units){ if(e.side==='en'&&e.hp>0&&e!==def&&Math.abs(e.row-def.row)+Math.abs(e.col-def.col)<=1){ const d2=Math.round(extra*0.5); e.hp-=d2; e.morale=Math.max(0,e.morale-d2*0.4); if(e.hp<=0){ e.hp=0; e._died=true; } pushFloat(e,'-'+d2,'#b14de0',{size:20}); } } SFX.coop(); const cw=document.getElementById('board'); if(cw) cw.parentElement.classList.add('shake'); setTimeout(function(){ if(cw) cw.parentElement.classList.remove('shake'); },600); }
 function resetCombo(){ combo=0; const fx=document.getElementById('comboFx'); if(fx) fx.classList.add('hidden'); }
@@ -1384,7 +1414,7 @@ function doAttack(att,def){
   const tag=cm>1?'（克制！伤害×1.5）':cm<1?'（被克）':'';
   const who=att.side==='me'?'me':'en';
   log(`<span class="${who}">${att.name}【${att.unitName}】击 ${def.name} 伤 ${dmg}${tag}</span>`);
-  if(def.hp<=0){ def.hp=0; def._died=true; log(`<span class="${who}">💀 ${def.name} 阵亡</span>`); }
+  if(def.hp<=0){ def.hp=0; def._died=true; log(`<span class="${who}">💀 ${def.name} 阵亡</span>`); if(att.side===actingSide && combo>=3) pushFloat(def,'连击 x'+combo+' 斩!','#ff2a2a',{size:30}); }
   att.attacked=true; att.acted=true; att.morale=Math.min(100,att.morale+3);
   checkEnd();
 }
@@ -1778,6 +1808,10 @@ function win(isMe){
     ? `${COUNTRIES[myCountry].name}在【${scenario.name}】中击破${COUNTRIES[enemyCountry].name}！${newRec?` ⏱ 新纪录：${turnCount}回合！`:''}`
     : `${COUNTRIES[enemyCountry].name}攻入蓟/咸阳，整军再战。`;
   b.classList.remove('hidden'); busy=true;
+  recordCodex();
+  const bestAll=parseInt(localStorage.getItem('wg_combo_best')||'0',10)||0;
+  if(comboBest>bestAll) localStorage.setItem('wg_combo_best',String(comboBest));
+  if(comboBest>0) toastComboEnd(comboBest, Math.max(bestAll,comboBest));
   log(`<span class="sys">${isMe?'【胜利】':'【战败】'} 战斗结束</span>`);
   if(hostNet()) broadcastState();
   return true;
@@ -1934,6 +1968,8 @@ function saveRec(r){ try{ localStorage.setItem(WG_REC_KEY,JSON.stringify(r)); }c
 // ===== 成就面板交互 =====
 document.getElementById('btnAch').onclick=openAch;
 document.getElementById('achClose').onclick=()=>document.getElementById('achModal').classList.add('hidden');
+document.getElementById('btnCodex').onclick=()=>{ updateCodexCount(); openCodex(); };
+document.getElementById('codexClose').onclick=()=>document.getElementById('codexModal').classList.add('hidden');
 
 // ===== 新手引导 / 玩法说明 =====
 function openTut(){ const m=document.getElementById('tutModal'); if(m) m.classList.remove('hidden'); }

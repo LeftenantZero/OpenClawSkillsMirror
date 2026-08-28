@@ -1,6 +1,6 @@
 ## Description:
 
-Launches 七国群雄传 (Seven Kingdoms Tactics), a bundled HTML5 Canvas turn-based strategy game with campaign, skirmish, AI, hotseat, and optional network play modes.
+Launches a bundled browser tactics game, 七国群雄传, with campaign and skirmish modes plus AI, same-device hotseat, same-browser, and optional cross-device multiplayer.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and agents use this skill to copy and open a playable browser strategy game from bundled files, choosing campaign or skirmish and optionally using AI, same-device hotseat, or network multiplayer.
+External users and agent operators use this skill to open a playable Warring States browser strategy game from bundled HTML assets. It is useful for quick single-player play, same-device two-player matches, and optional live multiplayer when a trusted relay is available.
 
 ### Deployment Geography for Use:
 
@@ -22,27 +22,32 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Optional cross-device multiplayer uses a relay server that opens a network listener.
+Risk: Optional cross-device multiplayer requires running a WebSocket relay and entering a server URL, which can expose connections outside a purely local play session.
 
-Mitigation: Run net-server.js only on trusted networks, bind or firewall it to trusted peers, and stop the process after play.
+Mitigation: Run net-server.js only on trusted networks, bind or firewall it deliberately, and connect only to trusted relay URLs.
+
+Risk: The artifact documentation includes offline/no-network language even though cross-device multiplayer can use a relay server.
+
+Mitigation: Treat the skill as offline only for AI, hotseat, and same-browser play; review network behavior before enabling cross-device matches.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/hmily741963/skills/qgqx-skill)
+- [Publisher profile](https://clawhub.ai/user/hmily741963)
 
 ## Skill Output:
 
-**Output Type(s):** [text, shell commands, files, guidance]
+**Output Type(s):** [text, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with shell commands and local HTML file paths]
+**Output Format:** [Markdown guidance with shell commands and local file references]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces playable HTML game files in the workspace; optional net-server.js relay can be run for trusted cross-device play.]
+**Other Properties Related to Output:** [May copy bundled HTML game files into the workspace and open them in a browser preview; optional cross-device play requires a WebSocket relay URL.]
 
 ## Skill Version(s):
 
-1.0.0 (source: release evidence)
+1.0.1 (source: ClawHub release evidence)
 
 ## Ethical Considerations:
 
