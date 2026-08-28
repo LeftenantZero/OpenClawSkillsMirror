@@ -1,0 +1,48 @@
+{
+  "changelog": "Major simplification: Removed redundant scripts (send-sticker.sh, add-sticker.sh, should_send_sticker.py). Core value is collection management, emotion tagging, and smart selection - sending is handled natively by OpenClaw's message tool. Kept only essential tools: import-sticker-pack.sh, auto-tag-stickers.sh, random-sticker.sh, check-collection.sh. Updated documentation to clarify skill's role.",
+  "created_at": 1772784187693,
+  "display_name": "Telegram Stickers",
+  "fetched_at": 1787887206430,
+  "files": [
+    "README.md",
+    "RELEASE_NOTES.md",
+    "SKILL.md",
+    "_meta.json",
+    "auto-tag-stickers.sh",
+    "check-collection.sh",
+    "import-sticker-pack.sh",
+    "random-sticker.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089783858,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Ben Zhang",
+    "handle": "bangyizhang",
+    "user_id": "s17ccccw2tjsdamhcy6spvnd6n885sjy"
+  },
+  "slug": "tg-stickers",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tg-stickers",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tg-stickers&ownerHandle=bangyizhang",
+    "page_url": "https://clawhub.ai/bangyizhang/skills/tg-stickers"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 962,
+    "installs": 27,
+    "stars": 1,
+    "versions": 6
+  },
+  "summary": "Collect and send Telegram stickers smartly. Auto-import packs, tag by emotion, select contextually, and respect frequency limits (2-5 messages).",
+  "updated_at": 1778491748674,
+  "version": "0.2.0"
+}
