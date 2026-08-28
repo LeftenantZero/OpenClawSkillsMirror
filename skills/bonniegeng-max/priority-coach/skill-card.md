@@ -1,6 +1,6 @@
 ## Description:
 
-Priority Coach helps users turn overwhelm into one to three current priorities, choose a small action they can start today, and use low-pressure daily check-ins when they are stuck, overloaded, starting, or winding down.
+Priority Coach Publish is a gentle personal priority-coaching skill that helps users narrow messy priorities into one to three current focuses and a small action they can start today.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users use this coaching skill to clarify personal priorities, reduce overcommitment, and convert the most important current focus into a small, concrete next action. It is especially suited for sessions about feeling busy but unfocused, planning today lightly, starting a first step, wrapping up the day, checking recurring habits, or switching to an overwhelmed mode.
+External users use this skill for conversational priority coaching when they feel busy, unclear, overloaded, or need to restart after a break. It routes the conversation into lightweight flows for selecting priorities, planning today's first action, starting work, wrapping up, checking habits, reviewing longer-term direction, or reducing load.
 
 ### Deployment Geography for Use:
 
@@ -22,41 +22,39 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Optional local priority records can retain sensitive personal context if the user chooses to save them.
+Risk: Optional local records may contain personal priorities, session summaries, or sensitive context.
 
-Mitigation: Save records only after explicit user consent, prefer result cards over raw answers, and avoid saving sensitive raw answers unless the user explicitly wants them retained locally.
+Mitigation: Install only if comfortable with a local journal; save deliberately, avoid saving sensitive raw answers unless necessary, and use the provided delete and export commands to manage records.
 
-Risk: Record export, delete, and migration commands affect local priority-coach data.
+Risk: Users may treat priority coaching as decision-making, medical, mental-health, or crisis support.
 
-Mitigation: Run save, export, delete, or migrate commands only when the user intends that action, and use the path or list command first when the user needs to inspect what data exists.
-
-Risk: High-risk self-harm, violence, severe medical, or mental-health crisis statements are outside ordinary priority coaching.
-
-Mitigation: Suspend normal priority coaching for those cases and direct the user toward trusted people, local emergency support, or professional help.
+Mitigation: Keep the skill within prioritization and planning support; for self-harm, violence, severe medical, or serious mental-health crisis signals, stop ordinary coaching and encourage trusted local or professional support.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/bonniegeng-max/skills/priority-coach)
-- [Router rules](references/router.md)
-- [State scripts](references/states.md)
-- [Cold start rules](references/cold-start.md)
-- [Daily flows](references/daily-flows.md)
-- [Memory schema](references/memory-schema.md)
-- [Copy tone](references/copy-tone.md)
+- [README](README.md)
+- [Router reference](references/router.md)
+- [State scripts reference](references/states.md)
+- [Cold start reference](references/cold-start.md)
+- [Daily flows reference](references/daily-flows.md)
+- [Mainline review reference](references/review.md)
+- [Memory schema reference](references/memory-schema.md)
+- [Copy tone reference](references/copy-tone.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Markdown, Shell commands]
+**Output Type(s):** [Text, Markdown, Shell commands, Guidance]
 
-**Output Format:** [Markdown coaching responses with structured priority, action, wrap-up, and low-burden cards; optional shell commands for local record management.]
+**Output Format:** [Markdown coaching cards with optional inline shell commands for local record management]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Limits normal coaching output to at most three priorities and one smallest next action; local records are saved only after explicit user consent.]
+**Other Properties Related to Output:** [May create optional local JSON records only after explicit user consent.]
 
 ## Skill Version(s):
 
-0.2.0 (source: frontmatter, server release metadata)
+0.3.0 (source: server release and skill frontmatter)
 
 ## Ethical Considerations:
 
