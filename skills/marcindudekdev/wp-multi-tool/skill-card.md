@@ -1,6 +1,6 @@
 ## Description:
 
-WordPress site health audit, performance optimization, database cleanup, autoload tuning, slow query detection, wp-config management, image size control, frontend speed fixes, and server diagnostics.
+Provides WordPress site health diagnostics, performance analysis, database cleanup guidance, WP-CLI commands, and plugin-specific checks for WP Multitool-managed sites.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, site maintainers, and WordPress operators use this skill to audit site health, inspect performance bottlenecks, and propose WP-CLI based optimization or cleanup actions. Read-only diagnostics can run on any WordPress site with WP-CLI, while WP Multitool plugin commands require the paid plugin to be installed and active.
+External WordPress developers, site administrators, and operations engineers use this skill to audit site health, identify performance bottlenecks, inspect WP Multitool plugin data, and prepare WP-CLI remediation steps. Destructive cleanup or configuration changes require explicit user confirmation and a recent database backup.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,34 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill includes site-changing WordPress actions, including cleanup, wp-config edits, frontend option toggles, plugin activation, and database optimization.
+Risk: WP-CLI cleanup and configuration commands can delete WordPress data, modify wp-config.php, optimize database tables, or change plugin options.
 
-Mitigation: Require explicit user approval before any write operation, and recommend a database export or equivalent backup before actions that modify or delete data.
+Mitigation: Require explicit user confirmation and a recent database backup before any cleanup, wp-config change, table optimization, frontend toggle, or plugin activation command.
 
-Risk: Plugin activation is a site-changing action that the security summary flags as not clearly covered by confirmation guidance.
+Risk: Plugin-specific diagnostics depend on WP Multitool being installed and active; unavailable modules may leave areas unchecked.
 
-Mitigation: Treat plugin activation like other write operations and ask for explicit confirmation before running it.
+Mitigation: Check plugin availability before using wp multitool commands and treat unavailable module results as not checked rather than healthy.
 
 ## Reference(s):
 
-- [WP Multitool Homepage](https://wpmultitool.com)
+- [WP Multitool Website](https://wpmultitool.com)
 - [ClawHub Skill Page](https://clawhub.ai/marcindudekdev/skills/wp-multi-tool)
 - [Publisher Profile](https://clawhub.ai/user/marcindudekdev)
+- [Author Website](https://marcindudek.dev)
 
 ## Skill Output:
 
-**Output Type(s):** [Analysis, Shell commands, Configuration instructions, Guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline bash code blocks and optional JSON command output]
+**Output Format:** [Markdown guidance with WP-CLI and SQL command blocks; some commands may produce JSON output.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Commands require WP-CLI; write operations require explicit user confirmation and should be preceded by a backup when data may be changed or deleted.]
+**Other Properties Related to Output:** [Requires WP-CLI. Plugin-specific commands require the paid WP Multitool plugin to be installed and active.]
 
 ## Skill Version(s):
 
-1.9.5 (source: server release evidence)
+1.9.6 (source: server-resolved release metadata)
 
 ## Ethical Considerations:
 
