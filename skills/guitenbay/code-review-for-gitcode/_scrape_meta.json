@@ -1,0 +1,48 @@
+{
+  "changelog": "**Summary: Adds mandatory temp directory usage, strict file clearing, and automatic line number verification to the review process.**\n\n- All temporary/code review files are now required to be stored in the `temp/` directory; cleanup after review is mandatory.\n- Automated scanning now checks and auto-corrects line numbers against actual file content, with smart download caching.\n- Step 3 now supports exits with \"0 issues, review passed\" if no problems found, and does not require selecting 3 issues if fewer exist.\n- JSON output locations updated: all outputs (e.g., `review_result.json`, `top3_issues.json`, `formatted_review.json`) must be in `temp/`.\n- Step-by-step instructions updated for clarity, and file management requirements made explicit throughout.",
+  "created_at": 1773281707688,
+  "display_name": "code-review-for-gitcode",
+  "fetched_at": 1787879045132,
+  "files": [
+    "API.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/find_line_numbers.py",
+    "scripts/format_review.py",
+    "scripts/post_review.py",
+    "scripts/review_pr.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090397244,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "hummel mao",
+    "handle": "guitenbay",
+    "user_id": "s17f9m0x7ek58c96t233aedh5583xbw9"
+  },
+  "slug": "code-review-for-gitcode",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/code-review-for-gitcode",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=code-review-for-gitcode&ownerHandle=guitenbay",
+    "page_url": "https://clawhub.ai/guitenbay/skills/code-review-for-gitcode"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 972,
+    "installs": 27,
+    "stars": 4,
+    "versions": 4
+  },
+  "summary": "Handles full GitCode PR code reviews by automating security scans, manual analysis, selecting top issues, formatting results, and optionally posting review c...",
+  "updated_at": 1778491843876,
+  "version": "0.1.3"
+}
