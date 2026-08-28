@@ -1,0 +1,33 @@
+{
+  "changelog": "aws-spot-strategy 1.0.0 \u2014 Initial Release\n\n- Provides a guided workflow to design interruption-resilient AWS EC2 Spot instance strategies using exported data.\n- Analyzes EC2 inventory, Auto Scaling configs, and cost breakdowns to recommend Spot, On-Demand, and Savings Plan mixtures.\n- Outputs eligibility matrix, Spot fleet recommendation, interruption risk table, and fallback architecture.\n- Generates Karpenter NodePool YAML if EKS is detected.\n- Emphasizes security by requiring only exported data, not credentials or direct AWS access.\n- Flags stateful workloads as not Spot-safe and enforces best practices such as family diversification and interruption handling.",
+  "created_at": 1772359584046,
+  "display_name": "Spot Strategy",
+  "fetched_at": 1787892395086,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Anmol Nagpal",
+    "handle": "anmolnagpal",
+    "user_id": "s1743ht18ezy217y47byd9bda1884nqd"
+  },
+  "slug": "spot-strategy",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/spot-strategy",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=spot-strategy&ownerHandle=anmolnagpal",
+    "page_url": "https://clawhub.ai/anmolnagpal/skills/spot-strategy"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 764,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Design an interruption-resilient EC2 Spot instance strategy with fallback configurations",
+  "updated_at": 1778491678078,
+  "version": "1.0.0"
+}
