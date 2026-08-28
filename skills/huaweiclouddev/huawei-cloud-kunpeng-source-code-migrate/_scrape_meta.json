@@ -1,0 +1,62 @@
+{
+  "changelog": "Initial release of Kunpeng migration source code assessment skill.\n\n- Analyze C/C++/ASM/Fortran/Go/Java/Python/Scala code for migrability to Huawei Kunpeng (ARM64) platform using DevKit CLI.\n- Supports connecting to user\u2019s own server via SSH or auto-provisioning a Kunpeng ECS instance on Huawei Cloud (Guiyang Region 1).\n- Core features: OS detection, unified SSH operations (paramiko), DevKit installation, source code migration scanning, and migration report generation.\n- All sensitive credentials must be provided as environment variables by the user and are never requested in chat.\n- User must specify the source code path before any scan; no code is scanned or uploaded without explicit user confirmation.\n- Includes clear operational instructions and strict safeguards to prevent destructive or insecure actions.",
+  "created_at": 1787837507497,
+  "display_name": "huawei-cloud-kunpeng-source-code-migrate",
+  "fetched_at": 1787932538030,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/acceptance-criteria.md",
+    "references/cli-installation-guide.md",
+    "references/devkit-cli-reference.md",
+    "references/devkit-installation-guide.md",
+    "references/iam-policies.md",
+    "references/migration-report-guide.md",
+    "references/prerequisites.md",
+    "references/scripts-guide.md",
+    "references/task-connect-server.md",
+    "references/task-install-devkit.md",
+    "references/task-local-devkit.md",
+    "references/task-prepare-server.md",
+    "references/task-scan-source-code.md",
+    "references/troubleshooting.md",
+    "references/verification-method.md",
+    "scripts/detect_os.py",
+    "scripts/install_devkit.sh",
+    "scripts/provision_kunpeng_server.sh",
+    "scripts/ssh_client.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787838438943,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "huaweicloud-skills-team",
+    "handle": "huaweiclouddev",
+    "user_id": "s17axk041vxeamxj39r4dwvyts87wtza"
+  },
+  "slug": "huawei-cloud-kunpeng-source-code-migrate",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/huawei-cloud-kunpeng-source-code-migrate",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=huawei-cloud-kunpeng-source-code-migrate&ownerHandle=huaweiclouddev",
+    "page_url": "https://clawhub.ai/huaweiclouddev/skills/huawei-cloud-kunpeng-source-code-migrate"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 58,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Analyze the migrability of C/C++/ASM/Fortran/Go/Java/Python/Scala source code to Kunpeng (ARM64) platform using Huawei DevKit CLI tool. Connect to the source server via SSH, install DevKit, scan source code, and generate a migration assessment report. If the user does not have a remote server, this skill can automatically provision a Kunpeng ECS instance on Huawei Cloud (Guiyang Region 1) using hcloud CLI. Use this skill when the user wants to: (1) assess source code portability/migrability to Kunpeng ARM platform, (2) scan C/C++/ASM/Fortran/Go/Java/Python/Scala code for migration issues, (3) generate a Kunpeng migration report for their software project, (4) check source code compatibility with ARM64/Kunpeng architecture, (5) provision a Kunpeng server on Huawei Cloud for migration assessment. Trigger: user mentions \"\u9cb2\u9e4f\u79fb\u690d\", \"\u9cb2\u9e4f\u8fc1\u79fb\", \"Kunpeng migration\", \"Kunpeng porting\", \"\u6e90\u7801\u8fc1\u79fb\", \"\u6e90\u7801\u79fb\u690d\", \"ARM64\u8fc1\u79fb\", \"ARM\u79fb\u690d\u8bc4\u4f30\", \"DevKit\", \"\u53ef\u8fc1\u79fb\u6027\u5206\u6790\", \"migrability\", \"porting assessment\", \"migration report\", \"\u9cb2\u9e4f\u8bc4\u4f30\", \"\u8d2d\u4e70\u9cb2\u9e4f\u670d\u52a1\u5668\", \"\u9cb2\u9e4f\u4e91\u670d\u52a1\u5668\", \"Kunpeng ECS\"",
+  "updated_at": 1787837667074,
+  "version": "1.0.0"
+}
