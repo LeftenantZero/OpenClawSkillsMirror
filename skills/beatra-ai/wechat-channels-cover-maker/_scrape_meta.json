@@ -1,8 +1,8 @@
 {
-  "changelog": "Publish the reviewed WeChat Channels Cover Maker workflow with its English ClawHub listing.",
+  "changelog": "- Tightened input requirements: generation route now requires a confirmed topic, title, or script and explicitly forbids style-word-only requests.\n- Added safety on key inputs: do not invent a topic or title if none is provided.\n- Clarified default behavior: removed any suggestion to default to Xiaohongshu 3:4 aspect ratio.\n- Improved guidance on in-image text: now specifies freezing short text and its placement when required, and checking text visibility.\n- Documentation and workflow clarifications; removed redundant or outdated instructions and the unused skill-card.md file.",
   "created_at": 1787227848040,
-  "display_name": "WeChat Channels Cover Maker",
-  "fetched_at": 1787770376542,
+  "display_name": "wechat-channels-cover-maker",
+  "fetched_at": 1787931732559,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -28,7 +28,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1787228666366,
+    "updated_at": 1787887835739,
     "verdict": "clean"
   },
   "owner": {
@@ -44,12 +44,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 86,
+    "downloads": 120,
     "installs": 0,
     "stars": 0,
-    "versions": 1
+    "versions": 2
   },
   "summary": "Create a WeChat Channels video cover, WeChat Video Account cover, or WeChat Channels thumbnail from a video topic, title, script, key frame, portrait, product photo, or reference image. This AI video cover maker builds a clear focal visual, a text-safe area, and a channel-consistent cover direction for WeChat Channels videos, creator updates, product explainers, local-business posts, and knowledge content.",
-  "updated_at": 1787227967719,
-  "version": "0.1.1"
+  "updated_at": 1787887003625,
+  "version": "0.1.3"
 }

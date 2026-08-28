@@ -1,6 +1,6 @@
 ## Description:
 
-Create a WeChat Channels video cover, WeChat Video Account cover, or WeChat Channels thumbnail from a video topic, title, script, key frame, portrait, product photo, or reference image.
+Create a WeChat Channels video cover, WeChat Video Account cover, or WeChat Channels thumbnail from a video topic, title, script, key frame, portrait, product photo, or reference image, with a clear focal visual, a text-safe area, and a channel-consistent cover direction for WeChat Channels videos, creator updates, product explainers, local-business posts, and knowledge content.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators, marketers, local businesses, and brand teams use this skill to plan, generate, refine, and review one WeChat Channels video cover or thumbnail from a topic, script, key frame, portrait, product photo, or reference image.
+External creators, marketers, and agents use this skill to plan, generate, transform, or refine one WeChat Channels video cover with a clear focal visual and title-safe area before publishing.
 
 ### Deployment Geography for Use:
 
@@ -22,26 +22,28 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uses a shared Beatra device authorization with broad media and spending scopes.
+Risk: The security evidence flags broad shared device authorization for Beatra tools.
 
-Mitigation: Install only when those scopes are acceptable, keep the credential private, and disconnect or uninstall the package when access is no longer needed.
+Mitigation: Install only when that shared authorization is acceptable, keep the token in the private credential file, and revoke the Beatra device connection when it is no longer needed.
 
-Risk: Silent package updates are enabled by default.
+Risk: The security evidence flags registration telemetry and default silent self-updates.
 
-Mitigation: Disable automatic updates before use when explicit change control or pre-approval of package changes is required.
+Mitigation: Review the update behavior before installing and disable automatic updates with `python3 scripts/mcp_client.py update --auto off` when silent package replacement is not acceptable.
 
-Risk: Image generation and editing requests can spend Beatra credits.
+Risk: Uploaded portraits, product photos, key frames, and prompts may contain sensitive or confidential content.
 
-Mitigation: Freeze the route, prompt, canvas, inputs, model, controls, cost limit, and client_request_id before one user-approved paid submission.
+Mitigation: Avoid uploading sensitive media unless Beatra handling is acceptable for the intended use.
 
-Risk: Package and platform registration metadata is sent to Beatra.
+Risk: Paid image generation, transform, and edit calls can create duplicate charges if a request is repeated incorrectly.
 
-Mitigation: Review this metadata behavior before use in environments with sensitive deployment or platform-identification requirements.
+Mitigation: Require explicit approval of the frozen request, use one opaque `client_request_id`, poll the saved task, and retry only byte-identical uncertain submissions with the same request identity.
+
+Risk: Generated covers can have poor crop safety, low safe-area contrast, or incorrect visible text.
+
+Mitigation: Review the returned image for focal recognition, safe-area contrast, crop risk, must-keep details, and any requested visible text before delivery.
 
 ## Reference(s):
 
-- [ClawHub skill listing](https://clawhub.ai/beatra-ai/skills/wechat-channels-cover-maker)
-- [Beatra skill homepage](https://beatra.ai/skills/wechat-channels-cover-maker)
 - [WeChat Channels cover workflow](references/workflow.md)
 - [Installation and authentication](references/installation-and-auth.md)
 - [Installation registration](references/installation-registration.md)
@@ -50,20 +52,23 @@ Mitigation: Review this metadata behavior before use in environments with sensit
 - [MCP connection](references/mcp-connection.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
 - [Uninstall and disconnect](references/uninstall-and-disconnect.md)
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/wechat-channels-cover-maker)
+- [Publisher profile](https://clawhub.ai/user/beatra-ai)
+- [Beatra skill homepage](https://beatra.ai/skills/wechat-channels-cover-maker)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance, image artifacts]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with shell commands, tool payload details, and generated artifact links]
+**Output Format:** [Markdown guidance with JSON payload examples and shell commands]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include task ID, observed dimensions, resolved model, and returned billing.net_charged_credits after a task completes.]
+**Other Properties Related to Output:** [Produces one-image generation, transform, or edit guidance and returns task, artifact, model, dimension, and billing details when a Beatra task completes.]
 
 ## Skill Version(s):
 
-0.1.1 (source: server release evidence and manifest.json)
+0.1.3 (source: server release evidence and manifest.json)
 
 ## Ethical Considerations:
 
