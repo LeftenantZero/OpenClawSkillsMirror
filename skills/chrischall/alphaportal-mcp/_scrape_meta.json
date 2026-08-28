@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial public release: enables direct AlphaPortal API access via curl, no MCP server required.\n\n- Capture your AlphaPortal web refresh token once and export it for script use.\n- Mint new access tokens and make raw API calls via curl, fully authenticated.\n- Supports all read endpoints: students, stops, live vehicle GPS, notifications, etc.\n- No runtime browser extension required after initial token capture.\n- Write endpoints are live; all issued calls take effect immediately\u2014use with care.",
+  "created_at": 1787916883445,
+  "display_name": "alphaportal-mcp",
+  "fetched_at": 1787931055767,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/endpoints.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787917668079,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "chrischall",
+    "handle": "chrischall",
+    "user_id": "s17cjx1a349nz5apaqp02vgz4h85728z"
+  },
+  "slug": "alphaportal-mcp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alphaportal-mcp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alphaportal-mcp&ownerHandle=chrischall",
+    "page_url": "https://clawhub.ai/chrischall/skills/alphaportal-mcp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 22,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Access AlphaPortal (AlphaRoute) school-bus data \u2014 students, stops, live bus GPS location, arrival notifications \u2014 from a shell with curl instead of running the alphaportal-mcp server. Capture the signed-in web app's refresh token ONCE (a paste-in-console one-liner, or the fpx browser bridge), then mint access tokens and curl the REST API directly. Use when you want AlphaPortal data without the MCP, in a script, or on a machine where the MCP isn't installed.",
+  "updated_at": 1787916953736,
+  "version": "0.1.0"
+}
