@@ -1,0 +1,36 @@
+{
+  "changelog": "**Added advanced credential sourcing and global token caching.**\n\n- Added `lib/token_manager.py` for managing Ezviz token caching and credential sourcing.\n- Now supports loading Ezviz credentials from OpenClaw configuration files as a fallback (with environment variables taking priority).\n- Introduced global access token caching in system temp directory for efficiency, with configurable enable/disable via `EZVIZ_TOKEN_CACHE`.\n- Updated documentation to provide clear security warnings, credential priority order, and token cache details.\n- No changes to API usage or device config functionality\u2014upgrade is backward compatible.",
+  "created_at": 1773402764798,
+  "display_name": "Ezviz Open Camera Config",
+  "fetched_at": 1787875833055,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "lib/token_manager.py",
+    "references/api-mapping.md",
+    "scripts/device_config.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "EzvizOpenTeam",
+    "handle": "ezviz-open",
+    "user_id": "s174s8a00r18xwt2q5p7j85f5183gavv"
+  },
+  "slug": "ezviz-open-camera-config",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ezviz-open-camera-config",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ezviz-open-camera-config&ownerHandle=ezviz-open",
+    "page_url": "https://clawhub.ai/ezviz-open/skills/ezviz-open-camera-config"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 951,
+    "installs": 26,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "\u8424\u77f3\u8bbe\u5907\u914d\u7f6e\u6280\u80fd\u3002\u652f\u6301 9 \u4e2a\u8bbe\u5907\u914d\u7f6e API\uff0c\u5305\u62ec\u5e03\u9632/\u64a4\u9632\u3001\u955c\u5934\u906e\u853d\u3001\u5168\u5929\u5f55\u50cf\u3001\u79fb\u52a8\u4fa6\u6d4b\u7075\u654f\u5ea6\u7b49\u3002 Use when: \u9700\u8981\u8fdc\u7a0b\u914d\u7f6e\u8424\u77f3\u8bbe\u5907\u53c2\u6570\u3001\u4fee\u6539\u8bbe\u5907\u5e03\u9632\u72b6\u6001\u3001\u8c03\u6574\u8bbe\u5907\u529f\u80fd\u5f00\u5173\u3002 \u26a0\ufe0f \u5b89\u5168\u8981\u6c42\uff1a\u5fc5\u987b\u8bbe\u7f6e EZVIZ_APP_KEY \u548c EZVIZ_APP_SECRET \u73af\u5883\u53d8\u91cf\uff0c\u4f7f\u7528\u6700\u5c0f\u6743\u9650\u51ed\u8bc1\u3002",
+  "updated_at": 1778491885889,
+  "version": "1.0.1"
+}
