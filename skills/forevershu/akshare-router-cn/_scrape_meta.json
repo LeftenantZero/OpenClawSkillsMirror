@@ -1,0 +1,53 @@
+{
+  "changelog": "Initial release of akshare-router-cn skill for Chinese financial data routing:\n\n- Directs futures and options queries by frequency, asset type, and processing need to the best free data source and recipe.\n- Supports real-time, minute, and daily data needs using public AKShare-compatible APIs (e.g., \u4e1c\u65b9\u8d22\u5bcc, \u65b0\u6d6a).\n- Covers high-frequency user scenarios: futures live board, intraday indicators, options Greeks/IV, and RR25 calculations.\n- Modular \"router protocol\" with intent extraction and stepwise routing for precise source selection.\n- Agent-guided workflow: YAML-based routing table and script execution instructions included.",
+  "created_at": 1772891246388,
+  "display_name": "Akshare Router Cn",
+  "fetched_at": 1787885695302,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "maps/README.md",
+    "maps/keywords.yml",
+    "maps/router.yml",
+    "methods/greeks.md",
+    "methods/indicators.md",
+    "methods/resample.md",
+    "methods/rr25.md",
+    "recipes/README.md",
+    "recipes/futures_kline_indicators.md",
+    "recipes/futures_realtime_board.md",
+    "recipes/options_iv_greeks.md",
+    "recipes/options_rr25.md",
+    "references/INDEX.md",
+    "scripts/_lib.py",
+    "scripts/futures_indicators.py",
+    "scripts/futures_realtime.py",
+    "scripts/options_iv_greeks.py",
+    "scripts/options_rr25.py",
+    "skill-card.md",
+    "sources/akshare.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "forevershu",
+    "handle": "forevershu",
+    "user_id": "s178ywe9n79086xmkfryvxrnc9885shj"
+  },
+  "slug": "akshare-router-cn",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/akshare-router-cn",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=akshare-router-cn&ownerHandle=forevershu",
+    "page_url": "https://clawhub.ai/forevershu/skills/akshare-router-cn"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 988,
+    "installs": 28,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4e2d\u6587\u671f\u8d27\u671f\u6743\u6570\u636e\u8def\u7531\u5668\uff0c\u6839\u636e\u9891\u7387\u3001\u54c1\u7c7b\u548c\u8ba1\u7b97\u9700\u6c42\u5339\u914d\u514d\u8d39AKShare\u6570\u636e\u6e90\u53ca\u5bf9\u5e94\u5904\u7406\u65b9\u6848\u3002",
+  "updated_at": 1778491764944,
+  "version": "1.0.0"
+}
