@@ -1,0 +1,53 @@
+{
+  "changelog": "- Revised documentation to clearly require use of official search scripts for LOINC and SNOMED CT codes, forbidding code suggestions from memory.\n- Added detailed usage and workflow steps for scripts covering code search, answer options retrieval, and validation.\n- Clarified rules and best practices for custom answer lists; default to inline answerOption without a coding system unless reusable codes are explicitly requested.\n- Improved troubleshooting guidance and deep reference links.\n- Updated script references and templates section for consistency and clarity.",
+  "created_at": 1770736398003,
+  "display_name": "FHIR Questionnaire Designer",
+  "fetched_at": 1787905164822,
+  "files": [
+    "REFERENCE.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/templates/CodeSystem-example.json",
+    "assets/templates/ValueSet-example.json",
+    "assets/templates/advanced.json",
+    "assets/templates/basic.json",
+    "assets/templates/minimal.json",
+    "references/best_practices.md",
+    "references/examples.md",
+    "references/fhir_questionnaire_spec.md",
+    "references/loinc_guide.md",
+    "references/schema/questionnaire.schema.json",
+    "references/snomed_guide.md",
+    "requirements.txt",
+    "scripts/create_custom_codesystem.py",
+    "scripts/extract_loinc_codes.py",
+    "scripts/query_valueset.py",
+    "scripts/search_loinc.py",
+    "scripts/search_snomed.py",
+    "scripts/validate_questionnaire.py",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "elmariachi111",
+    "handle": "elmariachi111",
+    "user_id": "s17egj09mq4yzx865p0e2t3twh885k9t"
+  },
+  "slug": "fhir-questionnaire",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fhir-questionnaire",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fhir-questionnaire&ownerHandle=elmariachi111",
+    "page_url": "https://clawhub.ai/elmariachi111/skills/fhir-questionnaire"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1696,
+    "installs": 49,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Helps creating FHIR conforming questionnaire definitions from plain requirement ideation docs. Contains scripts to look up LOINC and SNOMED CT codes for medical conditions, findings, observations, medications, procedures from a official coding APIs. No API keys required at the moment.",
+  "updated_at": 1778486991803,
+  "version": "0.2.4"
+}
