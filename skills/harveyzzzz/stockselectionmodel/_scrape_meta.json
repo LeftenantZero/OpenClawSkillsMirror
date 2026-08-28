@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of ai-stock-insider (v3.0.0):\n\n- Provides real-time research reports for A-share sectors, including news, sector trends, US stock correlations, and major event alerts.\n- Fully automated: No configuration required, with outputs compatible across Feishu, Coze, and all Markdown platforms.\n- Generates complete sector reports with fixed sections (trend, news summary, gainers/losers, US stock links, pros/cons, risks, etc.).\n- Supports rapid sector queries, AI-insider news, and anomaly monitoring.\n- Minimizes LLM token usage by fetching market data, news, and logic automatically; only deep analysis triggers LLM.\n- Optional Tavily API support for enhanced news search.",
+  "created_at": 1772890619982,
+  "display_name": "Sun Yuchen's stock selection model",
+  "fetched_at": 1787885622330,
+  "files": [
+    ".local/ai_news_1772873582072.json",
+    ".local/ai_stocks_1772873582142.json",
+    ".local/monitor_1772873604385.json",
+    ".local/sector_\u5316\u5de5_1772873564166.json",
+    "SKILL.md",
+    "_meta.json",
+    "references/analysis_prompt.md",
+    "references/sector_prompt.md",
+    "references/source_list.md",
+    "references/stock_mapping.md",
+    "scripts/fetch_news.js",
+    "scripts/fetch_sector_news.js",
+    "scripts/fetch_us_related.js",
+    "scripts/generate_brief.js",
+    "scripts/map_stocks.js",
+    "scripts/market_monitor.js",
+    "scripts/sector_analyze.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u5185\u5bb9\u79d1\u5b66|Content Science",
+    "handle": "harveyzzzz",
+    "user_id": "s177qtetwq635pvtmzjkmst50x885nyn"
+  },
+  "slug": "stockselectionmodel",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/stockselectionmodel",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=stockselectionmodel&ownerHandle=harveyzzzz",
+    "page_url": "https://clawhub.ai/harveyzzzz/skills/stockselectionmodel"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 796,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "A\u80a1\u677f\u5757\u5b9e\u65f6\u7814\u62a5\u3002\u5168\u7403\u65b0\u95fb\u2192A\u80a1\u6620\u5c04\u3001\u677f\u5757\u8d8b\u52bf\u7814\u5224\u3001\u7f8e\u80a1\u5173\u8054\u3001\u5229\u597d\u5229\u7a7a\u3001\u5927\u4e8b\u4ef6\u63d0\u9192\u3002\u96f6\u914d\u7f6e\u53ef\u7528\uff0c\u8f93\u51fa\u517c\u5bb9\u98de\u4e66/\u6263\u5b50/Markdown\u5e73\u53f0\u3002",
+  "updated_at": 1778491764944,
+  "version": "1.0.0"
+}
