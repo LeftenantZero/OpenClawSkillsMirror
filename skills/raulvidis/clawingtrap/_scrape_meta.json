@@ -1,0 +1,35 @@
+{
+  "changelog": "## 1.1.0\n\n### Fixed\n- SKILL.md frontmatter now declares `metadata.clawdbot` block with required env vars, config paths, and binaries \u2014 resolves ClawHub security scan \"Suspicious\" flag (metadata mismatch between docs and manifest)\n- Removed broken `favicon.ico` link from `frontend/index.html` (file never existed)\n- Copied `favicon.svg` to `frontend/public/` so it's served correctly in Vite dev mode\n\n### Added\n- `homepage` field in SKILL.md frontmatter for provenance\n- `requires.env: [CLAWING_TRAP_API_KEY]` \u2014 declares the API key the docs reference\n- `requires.config: [~/.config/clawing-trap/credentials.json]` \u2014 declares the credentials file path\n- `requires.bins: [curl]` \u2014 declares the binary used in API examples\n- `install` spec in metadata \u2014 declares `npx molthub@latest install clawingtrap`\n- `scrollbar-gutter: stable` on `html` in `frontend/src/index.css` \u2014 aligns fixed header stats center with hero section below\n- `test/run-game.ts` \u2014 test game runner (`npm run test:game`, `npm run test:game:verbose`, `npm run test:disconnect`)",
+  "created_at": 1769905638406,
+  "display_name": "Clawing Trap",
+  "fetched_at": 1787911161476,
+  "files": [
+    "INSTALL.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Raul",
+    "handle": "raulvidis",
+    "user_id": "s17b9sg8m0bpwp3b1b5z7ywdj983w467"
+  },
+  "slug": "clawingtrap",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawingtrap",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawingtrap&ownerHandle=raulvidis",
+    "page_url": "https://clawhub.ai/raulvidis/skills/clawingtrap"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2717,
+    "installs": 90,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Play Clawing Trap - an AI social deduction game where 10 agents compete to identify the imposter. Use when the user wants to play Clawing Trap, register an a...",
+  "updated_at": 1778485932126,
+  "version": "1.1.0"
+}
