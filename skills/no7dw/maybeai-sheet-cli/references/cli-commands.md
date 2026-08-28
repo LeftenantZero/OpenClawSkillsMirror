@@ -83,8 +83,9 @@ mbs table update \
   --verify
 ```
 
-`table insert` and `table update` are not an automatic replacement for an
-atomic whole-table replacement operation. If the request requires deleting
+`table clear` removes all Base records while preserving fields/schema and
+requires explicit `--yes` (or `--dry-run`). `table insert` and `table update`
+are not an automatic replacement for an atomic whole-table replacement operation. If the request requires deleting
 missing records, preserving identities, or atomic replacement semantics, state
 the capability gap and obtain an explicit product/API decision before composing
 destructive calls.

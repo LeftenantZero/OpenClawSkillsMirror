@@ -1,9 +1,9 @@
 ---
-version: v0.21.3
+version: v0.21.4
 name: maybeai-sheet-cli
 description: Use when the user works with MaybeAI spreadsheets through the mbs CLI for workbook inspection, local or remote-URL file import, native cross-workbook import/export, worksheet/range/table writes, worksheet calculation and error scans, complete table/SQL reads with frame export, SQL-to-Base materialization, full worksheet data refreshes that keep headers, formulas, worksheet styling, chart/image CRUD, dashboard validate/refresh/export-template flows, or sharing. Route dashboard design and chart composition to `sheet-dashboard`.
 metadata:
-  cli_version: "0.28.3"
+  cli_version: "0.28.4"
   openclaw:
     requires:
       env:
@@ -288,8 +288,10 @@ migration.
   `cell note` entry points.
 - **Formula and notes.** Use `formula set` for formula writes and `range note
   read|set|clear` for Sheet notes. `range lineage` takes `--range`, not `--cell`.
-- **Semantics matter.** `table insert` and `table update` do not automatically
-  replace the atomic semantics of a hidden whole-table replace command. Use
+- **Clear versus replace.** Use public `table clear --target "$BASE_TABLE" --yes --verify`
+  to remove all Base records while preserving fields/schema; use `--dry-run`
+  before destructive execution. `table insert` and `table update` do not
+  provide atomic whole-table replacement semantics. Use
   `column batch-update` for a supported in-place batch update of existing Base
   field metadata; resource style config alone does not imply that capability.
 - **Verification.** Use `--dry-run` before destructive or unfamiliar writes;

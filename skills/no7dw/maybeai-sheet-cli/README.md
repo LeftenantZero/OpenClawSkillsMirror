@@ -29,8 +29,10 @@ Notable public-workflow boundaries:
 - Use `workbook inspect` and `worksheet list` for target discovery.
 - Use `formula set` for formula writes and `range note` for Sheet notes.
 - Use `mbs image` for image operations.
-- Whole-table replacement remains a capability gap. For batch updates to
-  existing Base field schema, use public `mbs column batch-update` after
+- Use public `mbs table clear --target "$BASE_TABLE" --yes --verify` to remove
+  all Base table records while preserving fields/schema. It is destructive, so
+  preview with `--dry-run` when needed. For batch updates to existing Base
+  field schema, use public `mbs column batch-update` after
   confirming its installed `--help` contract.
 
 This repository owns agent-facing assets:

@@ -86,7 +86,7 @@ before writing a formula.
 ```bash
 mbs worksheet create --doc-id <DOC_ID> --name <REPORT_WORKSHEET> --output json
 mbs range write --doc-id <DOC_ID> --worksheet-name <REPORT_WORKSHEET> --range A1:D20 --values <VALUES_JSON> --verify
-mbs formula set --doc-id <DOC_ID> --worksheet-name <REPORT_WORKSHEET> --cell E2 --formula '=<FORMULA>'
+mbs formula set --doc-id <DOC_ID> --worksheet-name <REPORT_WORKSHEET> --cell E2 --expression '=<FORMULA>' --language excel
 mbs formula recalculate --doc-id <DOC_ID> --worksheet-name <REPORT_WORKSHEET>
 mbs range inspect --doc-id <DOC_ID> --worksheet-name <REPORT_WORKSHEET>
 ```
