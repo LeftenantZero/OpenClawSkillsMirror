@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of cross-listing-ai: a guided workflow for seller-side listing generation and cross-listing.\n\n- Supports listing creation from item photos with conversational steps tailored for eBay, Mercari, Facebook Marketplace, Craigslist, and TCGPlayer.\n- Enforces a strict workflow: intake \u2192 extract \u2192 clarify \u2192 price \u2192 confirm \u2192 generate \u2192 revise.\n- Provides marketplace-ready, copy-paste listing output; only TCGPlayer output if all required card details are known.\n- Prevents invention of facts not found in images or confirmed by the seller.\n- Maintains an internal reviewed-item record while surfacing only clear, natural-language summaries to the seller.\n- Includes structured reference routing for extraction, pricing, and marketplace-specific guidance.",
+  "created_at": 1773254404260,
+  "display_name": "Cross Listing AI",
+  "fetched_at": 1787879322890,
+  "files": [
+    "AGENTS.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "package.json",
+    "references/examples.md",
+    "references/extraction.md",
+    "references/final-output.md",
+    "references/marketplaces/craigslist.md",
+    "references/marketplaces/ebay.md",
+    "references/marketplaces/facebook-marketplace.md",
+    "references/marketplaces/mercari.md",
+    "references/marketplaces/tcgplayer.md",
+    "references/pricing.md",
+    "references/workflow.md",
+    "scripts/publish-all.sh",
+    "scripts/publish-clawhub.sh",
+    "scripts/publish-skills.sh",
+    "skill-card.md",
+    "tests/publish-scripts.test.sh"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Aryan J",
+    "handle": "aryanj-nyc",
+    "user_id": "s17b52c0faknfgvd9bndchezdn885smk"
+  },
+  "slug": "cross-listing-ai",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/cross-listing-ai",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=cross-listing-ai&ownerHandle=aryanj-nyc",
+    "page_url": "https://clawhub.ai/aryanj-nyc/skills/cross-listing-ai"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 897,
+    "installs": 24,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Guide an OpenClaw agent through seller-side cross listing and marketplace-ready listing generation from item photos. Use when the seller wants a listing AI w...",
+  "updated_at": 1778491839794,
+  "version": "0.1.0"
+}
