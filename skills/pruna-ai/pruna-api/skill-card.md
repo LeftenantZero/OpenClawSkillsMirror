@@ -1,50 +1,71 @@
-## Description: <br>
-Use before any Pruna or Replicate HTTP call: credentials, upload/poll/download, parallel batches, and agent safety. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+Use before any Pruna or Replicate HTTP call for credentials, upload, polling, download, parallel batches, and agent safety.
 
-## Publisher: <br>
-[pruna-ai](https://clawhub.ai/user/pruna-ai) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[pruna-ai](https://clawhub.ai/user/pruna-ai)
 
-## Use Case: <br>
-Developers and agents use this skill to prepare authenticated Pruna P-API and Replicate calls, including credential checks, file uploads, async polling, downloads, and safety review before paid media generation. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: The skill can lead an agent to make paid Pruna or Replicate calls and upload local media to remote providers. <br>
-Mitigation: Confirm required API keys, user authorization for submitted content, and explicit acknowledgment before the first upload or prediction. <br>
-Risk: API keys could be exposed if copied into prompts, logs, manifests, or subagent task text. <br>
-Mitigation: Read PRUNA_API_KEY and REPLICATE_API_TOKEN from the host environment only, avoid printing full keys, and do not embed secrets in generated files or messages. <br>
-Risk: Downloaded outputs or runner files can overwrite local paths. <br>
-Mitigation: Confirm output paths before writing downloads or generated files and avoid clobbering unrelated workspace content. <br>
+## Use Case:
 
+Developers and engineers use this skill to prepare Pruna and Replicate API calls, including credential setup, file upload, prediction polling, output download, and safety checks before paid or external-processing requests.
 
-## Reference(s): <br>
-- [ClawHub skill page](https://clawhub.ai/pruna-ai/skills/pruna-api) <br>
-- [API credentials](artifact/references/api-credentials.md) <br>
-- [Agent safety](artifact/references/agent-safety.md) <br>
-- [Pruna P-API shared reference](artifact/references/pruna-api.md) <br>
-- [Replicate API minimal](artifact/references/replicate-api.md) <br>
-- [Pruna models index](artifact/references/pruna-models.md) <br>
-- [Pruna Developer Portal](https://docs.api.pruna.ai/) <br>
-- [Pruna Quickstart](https://docs.api.pruna.ai/guides/quickstart) <br>
-- [Pruna models](https://docs.api.pruna.ai/guides/models) <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [Guidance, Markdown, Shell commands, Configuration] <br>
-**Output Format:** [Markdown with inline shell commands and API request examples] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [Guides paid remote API calls, media uploads, async polling, downloads, and credential handling.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-1.0.9 (source: evidence.release.version, SKILL.md metadata.version) <br>
+Risk: Selected media, scripts, narration text, and related inputs may be sent to Pruna or Replicate for remote processing.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Require explicit user acknowledgment before the first upload or paid prediction, and disclose that content leaves the local environment.
+
+Risk: Portraits, voices, third-party likenesses, or identity replacement workflows can involve consent-sensitive material.
+
+Mitigation: Confirm the user has permission to use any likeness, voice, portrait, or identity material before making external API calls.
+
+Risk: API credentials could be exposed if copied into prompts, logs, manifests, committed files, or subagent instructions.
+
+Mitigation: Read PRUNA_API_KEY and REPLICATE_API_TOKEN only from host environment variables or local uncommitted environment files, and never include full keys in generated content.
+
+Risk: Downloaded outputs can overwrite local files.
+
+Mitigation: Confirm output paths before writing downloaded files and avoid clobbering unrelated workspace paths.
+
+## Reference(s):
+
+- [ClawHub skill page](https://clawhub.ai/pruna-ai/skills/pruna-api)
+- [Pruna developer portal](https://docs.api.pruna.ai/)
+- [Pruna quickstart](https://docs.api.pruna.ai/guides/quickstart)
+- [Pruna models](https://docs.api.pruna.ai/guides/models)
+- [Pruna dashboard](https://dashboard.pruna.ai/)
+- [Replicate API tokens](https://replicate.com/account/api-tokens)
+- [API credentials](references/api-credentials.md)
+- [Agent safety](references/agent-safety.md)
+- [Pruna P-API](references/pruna-api.md)
+- [Replicate API](references/replicate-api.md)
+- [Pruna models index](references/pruna-models.md)
+
+## Skill Output:
+
+**Output Type(s):** [guidance, markdown, shell commands, configuration]
+
+**Output Format:** [Markdown guidance with inline shell command examples and configuration instructions]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [May include API request patterns, credential checks, upload and polling steps, download guidance, and safety reminders.]
+
+## Skill Version(s):
+
+1.0.10 (source: server release evidence and frontmatter metadata)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
