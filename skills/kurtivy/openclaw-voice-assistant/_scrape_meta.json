@@ -1,0 +1,44 @@
+{
+  "changelog": "Reduce gateway scope from operator.admin to operator.write (least privilege)",
+  "created_at": 1770925730217,
+  "display_name": "Voice Assistant",
+  "fetched_at": 1787903534956,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/architecture.md",
+    "references/troubleshooting.md",
+    "scripts/generate_assets.py",
+    "scripts/generate_chime_sounds.py",
+    "scripts/generate_thinking_sounds.py",
+    "scripts/requirements.txt",
+    "scripts/src/assistant.py",
+    "scripts/src/audio_pipeline.py",
+    "scripts/src/config.py",
+    "scripts/src/gateway_client.py",
+    "scripts/src/tts_player.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "kurtivy",
+    "handle": "kurtivy",
+    "user_id": "s17699v9er3a7s6zqtkb2v49ex885fvj"
+  },
+  "slug": "openclaw-voice-assistant",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-voice-assistant",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-voice-assistant&ownerHandle=kurtivy",
+    "page_url": "https://clawhub.ai/kurtivy/skills/openclaw-voice-assistant"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1541,
+    "installs": 47,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Windows voice companion for OpenClaw. Custom wake word via Porcupine, local STT via faster-whisper, streamed responses over the gateway WebSocket, and ElevenLabs TTS with natural chime/thinking sounds. Supports multi-turn conversation with automatic follow-up listening, mic suppression to prevent feedback, and a system tray with pause/resume. Recommended voices: Matilda (XrExE9yKIg1WjnnlVkGX, free tier) or Ivy (MClEFoImJXBTgLwdLI5n, paid tier). Fully customizable wake word, voice, hotkey, and silence thresholds.",
+  "updated_at": 1778488085397,
+  "version": "1.0.4"
+}
