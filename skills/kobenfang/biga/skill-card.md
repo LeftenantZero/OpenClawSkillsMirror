@@ -1,6 +1,6 @@
 ## Description:
 
-BigA provides A-share stock analysis, quant stock selection, real-time quotes, timing scores, buy/sell signals, stock-pool management, and scheduled message pushes.
+BigA provides A-share stock screening, market analysis, quantitative scoring, timing signals, stock-pool monitoring, and scheduled buy/sell alert summaries for users tracking Chinese equity markets.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users interested in A-share market analysis use BigA to monitor stock pools, screen candidates, and receive concise stock-analysis messages combining market data, technical timing, fundamentals, and catalysts.
+External users and agents use this skill to monitor A-share market conditions, maintain a focused stock pool, and generate concise trading-watch summaries with technical timing, sector, catalyst, and risk notes. It is intended as informational investment analysis and alerting, not as a substitute for human financial judgment.
 
 ### Deployment Geography for Use:
 
@@ -22,40 +22,39 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Broad trigger phrases may start stock-analysis workflows or send messages when the user did not intend to run BigA.
+Risk: The skill can create scheduled jobs and send recurring stock-alert messages to a configured channel.
 
-Mitigation: Review and narrow the trigger set before installation, and avoid installing it in channels where accidental stock-analysis prompts are likely.
+Mitigation: Review the cron schedule, timeout, channel, and recipient before installation, and install only when recurring A-share alerts are intended.
 
-Risk: Scheduled jobs can create recurring OpenClaw runs and push messages to configured channels.
+Risk: The skill uses web searches and local memory to prepare stock-pool and market summaries.
 
-Mitigation: Install only after confirming the cron schedule, channel, target, and timeout settings, and periodically review active OpenClaw cron jobs.
+Mitigation: Use it only in workspaces where storing stock preferences locally and searching market context are acceptable.
 
-Risk: Stock-analysis outputs can be mistaken for financial advice.
+Risk: Generated stock analysis can be incomplete, stale, or unsuitable for a user's financial situation.
 
-Mitigation: Keep the skill's risk disclaimer visible and review market-data, catalyst, and scoring assumptions before acting on any signal.
+Mitigation: Treat outputs as informational market monitoring, verify material data independently, and require human review before any investment decision.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/kobenfang/skills/biga)
-- [BigA Technical Timing Score Framework](artifact/references/technical-timing-score.md)
-- [BigA User Preferences](artifact/references/user-preferences.md)
-- [BigA Sector Matrix](artifact/references/sector-matrix.md)
-- [BigA Cron Templates](artifact/references/cron-templates.json)
-- [BigA Cron Installation Shell](artifact/references/cron-install-shell.sh)
+- [ClawHub skill page](https://clawhub.ai/kobenfang/skills/biga)
+- [Technical timing score](artifact/references/technical-timing-score.md)
+- [Sector matrix](artifact/references/sector-matrix.md)
+- [User preferences](artifact/references/user-preferences.md)
+- [Cron templates](artifact/references/cron-templates.json)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown-formatted stock analysis messages, segmented text, JSON scan data, and OpenClaw cron or message commands.]
+**Output Format:** [Markdown alert summaries with optional segmented text, JSON scan output, and shell commands for scheduled setup or updates]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May schedule recurring market-analysis jobs and send messages to a configured channel.]
+**Other Properties Related to Output:** [Outputs can include recurring market alerts, stock-pool summaries, buy/sell watch labels, timing scores, and risk disclaimers.]
 
 ## Skill Version(s):
 
-6.0.19 (source: server release evidence)
+6.0.20 (source: server-resolved release evidence)
 
 ## Ethical Considerations:
 
