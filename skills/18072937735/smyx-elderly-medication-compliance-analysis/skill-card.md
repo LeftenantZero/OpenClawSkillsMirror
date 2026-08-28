@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes medication-area images or video to detect pick-up, to-mouth, and swallow steps, then reports whether an elderly person's medication action appears completed or missing steps.
+Analyzes fixed-camera medication-area images or videos to detect pick-up, to-mouth, and swallow steps, judge medication compliance, and return structured results or report links.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Care teams, family caregivers, and elder-care system developers use this skill to review medication-area media and receive structured compliance findings for pick-up, to-mouth, and swallow actions. The output supports follow-up checks and reporting, not medical prescribing or dosage decisions.
+External caregivers, family members, and elderly-care operators use this skill to review medication-area footage for visual evidence that an elder picked up medication, brought it to the mouth, and swallowed. The result is an auxiliary compliance signal and should be manually verified before any health or care decision.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,42 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Sensitive medication-area video or identifiers may be sent to remote cloud services.
+Risk: The skill processes private home medication videos through external services.
 
-Mitigation: Use only with informed consent, verify the configured endpoints and data-handling terms, and avoid deployment where remote processing of health-related media is not acceptable.
+Mitigation: Install and use only with informed consent and acceptable privacy, retention, authorization, and deletion controls from the publisher.
 
-Risk: Persistent identities, local tokens, and automatic history access may expose sensitive care records.
+Risk: The skill may retrieve historical health-related reports from the cloud.
 
-Mitigation: Review token storage and history-access behavior before deployment, restrict local file access, and clear credentials where retention is not approved.
+Mitigation: Confirm that report access is authorized for the user and that cloud report retention and deletion practices meet the deployment's requirements.
 
-Risk: Packaged dev or private HTTP endpoints may route data to unintended services.
+Risk: The skill silently creates or reuses an identity and stores returned tokens locally.
 
-Mitigation: Replace or disable dev/private endpoints before use and confirm production endpoint ownership and transport security.
+Mitigation: Review local token storage before deployment and limit execution to environments where workspace data is protected.
+
+Risk: Medication-compliance judgments can be incomplete or incorrect.
+
+Mitigation: Treat outputs as auxiliary visual confirmation and manually verify incomplete or concerning results before care decisions.
 
 ## Reference(s):
 
-- [API Documentation](references/api_doc.md)
-- [Supplemental API Documentation](skills/smyx_analysis/references/api_doc.md)
 - [ClawHub Skill Page](https://clawhub.ai/18072937735/skills/smyx-elderly-medication-compliance-analysis)
 - [Skill Demo](https://lifeemergence.com/sample.html)
+- [API Documentation](references/api_doc.md)
+- [Shared Analysis API Documentation](skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, configuration]
+**Output Type(s):** [Text, Markdown, JSON, Shell commands, Configuration]
 
-**Output Format:** [Markdown and JSON-like structured analysis text]
+**Output Format:** [Markdown or JSON structured analysis report]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include detected medication steps, compliance status, missing steps, confidence, event time, snapshot/report links, and alert text.]
+**Other Properties Related to Output:** [May include detected medication steps, compliance status, missed step, confidence, event time, snapshot URL, alert text, and report links when returned by the service.]
 
 ## Skill Version(s):
 
-1.0.9 (source: ClawHub release metadata; artifact frontmatter states 1.0.10)
+1.0.10 (source: server release metadata; artifact frontmatter says 1.0.11)
 
 ## Ethical Considerations:
 
