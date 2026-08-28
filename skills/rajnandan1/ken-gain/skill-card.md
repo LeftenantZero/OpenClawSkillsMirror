@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and engineers use ken-gain to display measured ken benchmark impact as a one-shot scoreboard. It reports only recorded benchmark medians and provides an honest empty state when no benchmark results exist.
+External users and developers use this skill to display measured Ken benchmark medians as a concise scoreboard, or an honest empty state when no benchmark results exist.
 
 ### Deployment Geography for Use:
 
@@ -22,31 +22,32 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Output could be mistaken for per-repository savings or estimated results.
+Risk: The skill could mislead users if it presents unmeasured or live per-repository savings as benchmark results.
 
-Mitigation: Report only measured medians from ken benchmark results and avoid claims that were not measured.
+Mitigation: Show only existing Ken benchmark medians or the documented empty state, and point users to the counted ledger instead of inventing a savings number.
 
-Risk: Users may expect the display helper to generate benchmarks or modify local state.
+Risk: Users may expect the skill to modify files or change agent mode.
 
-Mitigation: Treat the skill as a one-shot display helper; benchmark generation is separate and may require user-managed API keys.
+Mitigation: Keep the behavior to a one-shot display and avoid edits, persistence, or mode changes.
 
 ## Reference(s):
 
-- [ken repository](https://github.com/rajnandan1/ken)
+- [Ken project homepage](https://github.com/rajnandan1/ken)
+- [ClawHub skill page](https://clawhub.ai/rajnandan1/skills/ken-gain)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, guidance]
+**Output Type(s):** [Text, Guidance]
 
-**Output Format:** [Plain text or Markdown scoreboard with ASCII bars]
+**Output Format:** [Plain text or Markdown-compatible scoreboard with ASCII bars]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [One-shot display; does not write files, change modes, or persist state.]
+**Other Properties Related to Output:** [One-shot display; should not edit files, persist state, or claim live per-repository savings.]
 
 ## Skill Version(s):
 
-1.1.0 (source: server release metadata)
+1.2.0 (source: ClawHub release metadata)
 
 ## Ethical Considerations:
 
