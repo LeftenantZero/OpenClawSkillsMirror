@@ -1,6 +1,6 @@
 ## Description:
 
-Checks social media copy before publication, flags advertising and regulated-claim wording, proposes replacements, reads the copy through likely audience profiles, scores reach signals, returns corrected copy, and can render a cover from approved wording.
+Publish Preflight Studio checks pre-publish social and ad copy for compliance, audience fit, and reach, returns cited replacements and corrected copy, and can render a cover from approved wording.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Marketing teams, creators, agencies, and reviewers use this skill to preflight captions, titles, scripts, on-screen text, and tags before posting. It produces compliance findings with replacement wording, audience-profile reactions, reach scores, corrected copy, and optional cover-render instructions or results.
+External marketers, creators, and brand or client copy reviewers use this skill before publishing social posts or ads to screen risky claims, test audience reaction, score reach, produce corrected copy, and optionally render a cover from approved wording.
 
 ### Deployment Geography for Use:
 
@@ -22,48 +22,47 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The authoritative security evidence reports broad Beatra account access through a persistent shared device token.
+Risk: The skill uses a persistent shared Beatra device credential with broad media, wallet, artifact, and task access.
 
-Mitigation: Install only when that access is acceptable, keep the token out of chat, logs, command arguments, and environment variables, and use the bundled uninstall or Beatra Console revocation path when access is no longer needed.
+Mitigation: Install only if this access is acceptable, avoid uploading sensitive local files, and revoke the Beatra device authorization when the skill is no longer needed.
 
-Risk: The authoritative security evidence reports silent self-updates of installed package files.
+Risk: Automatic package updates are silently enabled by default.
 
-Mitigation: Disable automatic updates with the bundled update control when explicit change control is required, and rely on the package's checksum-verified update path before accepting newer files.
+Mitigation: Use the documented update command to disable automatic checks when review before update is required.
 
-Risk: Cover rendering is paid remote work and can create duplicate cost if retried incorrectly.
+Risk: Cover rendering is paid work and failed recovery could duplicate a generation request if request identity is not preserved.
 
-Mitigation: Confirm the exact wording, route, canvas, price estimate, and stable request ID before rendering; after submission, poll the recorded task rather than creating a replacement task.
+Mitigation: Confirm wording, route, canvas, and price before rendering; use one stable client_request_id and poll the recorded task rather than creating a replacement task.
 
-Risk: The compliance and audience reads are structured guidance, not final legal clearance or measured audience research.
+Risk: Compliance and audience reads may be useful pre-publish signals but are not measured audience research or legal approval.
 
-Mitigation: Use the findings and replacements as review inputs, keep substantiation and approval decisions with the user or responsible reviewer, and inspect generated cover wording before publication.
+Mitigation: Review the cited findings and corrected copy before publishing, especially for regulated-category claims or client-approved language.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/beatra-ai/skills/publish-preflight-studio)
-- [Beatra Skill Homepage](https://beatra.ai/skills/publish-preflight-studio)
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/publish-preflight-studio)
+- [Beatra skill homepage](https://beatra.ai/skills/publish-preflight-studio)
 - [Screening the copy](references/compliance-screen.md)
 - [Reading it as the audience](references/audience-read.md)
 - [Preflight workflow](references/workflow.md)
 - [Installation and authentication](references/installation-and-auth.md)
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
-- [Tasks and results](references/tasks-and-results.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
 - [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [text, markdown, shell commands, guidance]
 
-**Output Format:** [Markdown with tables, pasteable text blocks, inline shell commands, and optional task metadata or artifact links for rendered covers.]
+**Output Format:** [Markdown with structured findings, pasteable corrected copy, command snippets, and returned task or artifact details when a cover is rendered.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include compliance flags, replacement copy, audience-profile findings, reach scores, change lists, Beatra task IDs, billing.net_charged_credits, and rendered-cover artifact links.]
+**Other Properties Related to Output:** [May include platform verdicts, change lists, reader-profile reactions, hook and share scores, task IDs, artifact links, dimensions, and net charged credits.]
 
 ## Skill Version(s):
 
-0.1.1 (source: server release evidence and manifest.json)
+0.1.3 (source: server release metadata and artifact manifest)
 
 ## Ethical Considerations:
 
