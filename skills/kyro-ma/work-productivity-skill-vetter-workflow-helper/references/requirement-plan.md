@@ -33,16 +33,16 @@ Scoring rationale:
 
 ## Evidence
 
-- clawhub-popular-skill (2026-08-06T07:00:34.404000+00:00): [Popular Clawhub skill demand: self-improving agent has 476,145 downloads](https://clawhub.ai/skills/self-improving-agent)
-- clawhub-popular-skill (2026-05-11T07:51:18.349000+00:00): [Popular Clawhub skill demand: Skill Vetter has 270,504 downloads](https://clawhub.ai/skills/skill-vetter)
-- clawhub-popular-skill (2026-06-12T12:48:37.834000+00:00): [Popular Clawhub skill demand: Github has 196,554 downloads](https://clawhub.ai/skills/github)
-- clawhub-popular-skill (2026-05-18T03:40:07.591000+00:00): [Popular Clawhub skill demand: SkillScan has 181,261 downloads](https://clawhub.ai/skills/skillscan)
-- hacker-news-ask-hn (2026-08-24T21:47:14+00:00): [How I Read Books](https://news.ycombinator.com/item?id=49426275)
-- github-issues (2026-08-26T04:01:03+00:00): [[Good First Issue] 🦊 Add new Grammar Point 85 - Beginner-Friendly Open-source Contribution](https://github.com/lingdojo/kana-dojo/issues/29172)
-- github-issues (2026-08-26T04:02:23+00:00): [[security] Update Chromium pin to 152.0.7977.64](https://github.com/JackZeng/LongView-Chromium/issues/14)
-- github-issues (2026-08-26T04:01:54+00:00): [CI hardening: no permissions: block, and actions are pinned to mutable tags](https://github.com/joncfrancisco/pzbot/issues/14)
-- github-issues (2026-08-26T03:52:35+00:00): [[Feature Request] Allow setting proxy_url prior to initiating OAuth login flow](https://github.com/router-for-me/CLIProxyAPI/issues/5258)
-- github-issues (2026-08-26T03:42:53+00:00): [[BUG]: Cannot download HiRes even if listed as](https://github.com/alfdav/music-dl/issues/148)
+- clawhub-popular-skill (2026-08-06T07:00:34.404000+00:00): [Popular Clawhub skill demand: self-improving agent has 476,493 downloads](https://clawhub.ai/skills/self-improving-agent)
+- clawhub-popular-skill (2026-05-11T07:51:18.349000+00:00): [Popular Clawhub skill demand: Skill Vetter has 270,734 downloads](https://clawhub.ai/skills/skill-vetter)
+- clawhub-popular-skill (2026-06-12T12:48:37.834000+00:00): [Popular Clawhub skill demand: Github has 196,734 downloads](https://clawhub.ai/skills/github)
+- clawhub-popular-skill (2026-05-18T03:40:07.591000+00:00): [Popular Clawhub skill demand: SkillScan has 181,355 downloads](https://clawhub.ai/skills/skillscan)
+- hacker-news-ask-hn (2026-08-27T14:45:29+00:00): [Ask HN: Why is AI civil tech and not military first?](https://news.ycombinator.com/item?id=49465734)
+- hacker-news-ask-hn (2026-08-27T07:49:11+00:00): [Ask HN: Do you still do pair programming in this agentic age?](https://news.ycombinator.com/item?id=49461326)
+- github-issues (2026-08-28T04:02:27+00:00): [[BETA] refactor(deep-capture): expose a library-first session API and thin the CLI](https://github.com/h8rt3rmin8r/fragcap/issues/252)
+- github-issues (2026-08-28T04:02:05+00:00): [Run and diagnose the first local-model synthetic golden path](https://github.com/BeaudanBrown/pi-harness/issues/35)
+- github-issues (2026-08-28T04:01:54+00:00): [Security/privacy: minimize GitHub Backup credential scope and document data flows](https://github.com/xingkongliang/skills-manager/issues/406)
+- github-issues (2026-08-28T04:00:29+00:00): [Security hardening: Authenticode-sign Windows release artifacts and document verification](https://github.com/xingkongliang/skills-manager/issues/405)
 
 ## How The Skill Meets The Requirement
 

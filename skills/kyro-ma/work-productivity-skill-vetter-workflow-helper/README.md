@@ -14,16 +14,16 @@ Evidence coverage: 10 signals across 3 source families.
 
 ## Evidence
 
-- clawhub-popular-skill: [Popular Clawhub skill demand: self-improving agent has 476,145 downloads](https://clawhub.ai/skills/self-improving-agent)
-- clawhub-popular-skill: [Popular Clawhub skill demand: Skill Vetter has 270,504 downloads](https://clawhub.ai/skills/skill-vetter)
-- clawhub-popular-skill: [Popular Clawhub skill demand: Github has 196,554 downloads](https://clawhub.ai/skills/github)
-- clawhub-popular-skill: [Popular Clawhub skill demand: SkillScan has 181,261 downloads](https://clawhub.ai/skills/skillscan)
-- hacker-news-ask-hn: [How I Read Books](https://news.ycombinator.com/item?id=49426275)
-- github-issues: [[Good First Issue] 🦊 Add new Grammar Point 85 - Beginner-Friendly Open-source Contribution](https://github.com/lingdojo/kana-dojo/issues/29172)
-- github-issues: [[security] Update Chromium pin to 152.0.7977.64](https://github.com/JackZeng/LongView-Chromium/issues/14)
-- github-issues: [CI hardening: no permissions: block, and actions are pinned to mutable tags](https://github.com/joncfrancisco/pzbot/issues/14)
-- github-issues: [[Feature Request] Allow setting proxy_url prior to initiating OAuth login flow](https://github.com/router-for-me/CLIProxyAPI/issues/5258)
-- github-issues: [[BUG]: Cannot download HiRes even if listed as](https://github.com/alfdav/music-dl/issues/148)
+- clawhub-popular-skill: [Popular Clawhub skill demand: self-improving agent has 476,493 downloads](https://clawhub.ai/skills/self-improving-agent)
+- clawhub-popular-skill: [Popular Clawhub skill demand: Skill Vetter has 270,734 downloads](https://clawhub.ai/skills/skill-vetter)
+- clawhub-popular-skill: [Popular Clawhub skill demand: Github has 196,734 downloads](https://clawhub.ai/skills/github)
+- clawhub-popular-skill: [Popular Clawhub skill demand: SkillScan has 181,355 downloads](https://clawhub.ai/skills/skillscan)
+- hacker-news-ask-hn: [Ask HN: Why is AI civil tech and not military first?](https://news.ycombinator.com/item?id=49465734)
+- hacker-news-ask-hn: [Ask HN: Do you still do pair programming in this agentic age?](https://news.ycombinator.com/item?id=49461326)
+- github-issues: [[BETA] refactor(deep-capture): expose a library-first session API and thin the CLI](https://github.com/h8rt3rmin8r/fragcap/issues/252)
+- github-issues: [Run and diagnose the first local-model synthetic golden path](https://github.com/BeaudanBrown/pi-harness/issues/35)
+- github-issues: [Security/privacy: minimize GitHub Backup credential scope and document data flows](https://github.com/xingkongliang/skills-manager/issues/406)
+- github-issues: [Security hardening: Authenticode-sign Windows release artifacts and document verification](https://github.com/xingkongliang/skills-manager/issues/405)
 
 ## How This Skill Meets The Requirement
 

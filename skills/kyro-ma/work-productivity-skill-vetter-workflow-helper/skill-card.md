@@ -1,6 +1,6 @@
 ## Description:
 
-Helps agent users, skill authors, maintainers, and teams create practical Skill Vetter-style workflows for bug fixes, setup and safety hardening, reliability improvements, and adjacent skill ideas.
+Helps AI-agent users, skill authors, maintainers, and teams create practical workflows, checklists, analyses, or implementation support for vetting and improving agent skills.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External developers, skill authors, maintainers, and agent users use this skill to turn validated demand for Skill Vetter-style workflows into concrete plans, checklists, analysis, code changes, or implementation support. It is intended for practical work on bug fixing, setup and safety hardening, reliability, and related skill workflows.
+AI-agent users, skill authors, maintainers, and teams use this skill to turn skill-vetting and reliability needs into concise plans, templates, checklists, analyses, code changes, or decision support. It is intended for practical workflow help around fixing bugs, hardening setup and safety, improving reliability, and creating adjacent skills.
 
 ### Deployment Geography for Use:
 
@@ -22,36 +22,39 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Broad implicit activation may route generic security, GitHub, first-issue, or bug-fix requests to this skill unexpectedly.
+Risk: The skill's implicit trigger wording is broad enough that it may activate during unrelated security, GitHub, or bug-fix conversations.
 
-Mitigation: Review trigger terms and implicit invocation before deployment; narrow keywords or require explicit invocation where predictable routing is important.
-
-Risk: Generated workflow guidance may be incomplete or mismatched when the user's outcome, constraints, inputs, or success criteria are unclear.
-
-Mitigation: Have the agent restate the outcome, constraints, available inputs, success criteria, assumptions, and validation notes before relying on generated artifacts or changes.
+Mitigation: Before installing, narrow or disable implicit triggers so the skill activates only for explicit skill-vetting or pre-install review requests.
 
 ## Reference(s):
 
+- [Skill release page](https://clawhub.ai/kyro-ma/skills/work-productivity-skill-vetter-workflow-helper)
+- [Publisher profile](https://clawhub.ai/user/kyro-ma)
 - [Requirement Plan](references/requirement-plan.md)
-- [ClawHub Skill Page](https://clawhub.ai/kyro-ma/skills/work-productivity-skill-vetter-workflow-helper)
-- [Popular ClawHub skill demand: Skill Vetter](https://clawhub.ai/skills/skill-vetter)
-- [Popular ClawHub skill demand: SkillScan](https://clawhub.ai/skills/skillscan)
-- [CI hardening issue signal](https://github.com/joncfrancisco/pzbot/issues/14)
-- [Security update issue signal](https://github.com/JackZeng/LongView-Chromium/issues/14)
+- [Popular Clawhub skill demand: self-improving agent](https://clawhub.ai/skills/self-improving-agent)
+- [Popular Clawhub skill demand: Skill Vetter](https://clawhub.ai/skills/skill-vetter)
+- [Popular Clawhub skill demand: Github](https://clawhub.ai/skills/github)
+- [Popular Clawhub skill demand: SkillScan](https://clawhub.ai/skills/skillscan)
+- [Ask HN: Why is AI civil tech and not military first?](https://news.ycombinator.com/item?id=49465734)
+- [Ask HN: Do you still do pair programming in this agentic age?](https://news.ycombinator.com/item?id=49461326)
+- [Fragcap issue 252](https://github.com/h8rt3rmin8r/fragcap/issues/252)
+- [Pi Harness issue 35](https://github.com/BeaudanBrown/pi-harness/issues/35)
+- [Skills Manager issue 406](https://github.com/xingkongliang/skills-manager/issues/406)
+- [Skills Manager issue 405](https://github.com/xingkongliang/skills-manager/issues/405)
 
 ## Skill Output:
 
 **Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown with optional code, shell command, configuration, checklist, and validation-note sections]
+**Output Format:** [Markdown or text with optional code, shell command, and configuration blocks]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include assumptions, constraints, success criteria, remaining risks, and follow-up work when relevant.]
+**Other Properties Related to Output:** [Outputs should include assumptions, limits, verification notes, and follow-up risks when helpful.]
 
 ## Skill Version(s):
 
-0.20260826.40329 (source: server release evidence)
+0.20260828.40337 (source: server release evidence)
 
 ## Ethical Considerations:
 
