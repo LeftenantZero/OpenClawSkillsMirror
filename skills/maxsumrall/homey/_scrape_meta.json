@@ -1,0 +1,65 @@
+{
+  "changelog": "- Add `homeycli` wrapper entrypoint to reduce \"permission denied\" issues and automatically install npm deps if missing.\n- Add `homeycli device <name> capabilities` to list settable capabilities.\n- Local onboarding smoothing: `auth set-local` attempts mDNS discovery if address is missing.",
+  "created_at": 1768055614758,
+  "display_name": "Homey",
+  "fetched_at": 1787913481236,
+  "files": [
+    "CHANGELOG.md",
+    "EXAMPLES.md",
+    "INSTALL.sh",
+    "README.md",
+    "SKILL.md",
+    "TESTING.md",
+    "_meta.json",
+    "bin/homeycli.js",
+    "docs/_config.yml",
+    "docs/commands.md",
+    "docs/errors.md",
+    "docs/index.md",
+    "docs/output.md",
+    "lib/client.js",
+    "lib/commands.js",
+    "lib/config.js",
+    "lib/discover-local.js",
+    "lib/errors.js",
+    "lib/fuzzy.js",
+    "lib/resolve.js",
+    "package-lock.json",
+    "package.json",
+    "scripts/publish-clawdhub.sh",
+    "scripts/release.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783650686182,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "maxsumrall",
+    "handle": "maxsumrall",
+    "user_id": "s170ayv8wsaefwhg3nvjd8vg1s885vka"
+  },
+  "slug": "homey",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/homey",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=homey&ownerHandle=maxsumrall",
+    "page_url": "https://clawhub.ai/maxsumrall/skills/homey"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3970,
+    "installs": 137,
+    "stars": 4,
+    "versions": 5
+  },
+  "summary": "Control Athom Homey smart home devices via local (LAN/VPN) or cloud APIs. List/control devices, trigger flows, query zones. Works with Homey Pro, Cloud, and Bridge.",
+  "updated_at": 1778485729679,
+  "version": "1.1.2"
+}
