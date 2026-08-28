@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and operators use this skill to route explicit loop requests into durable task or project queues, run bounded execution ticks, track verification evidence, and manage revisions or human gates.
+Developers and agent operators use this skill to run explicit task and project loops that queue work, execute bounded worker-agent ticks, track verification evidence, manage revisions, and report completion status.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,32 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Installing or routing a loop against the wrong workspace, queue, worker, scheduler, or notification target can send work to the wrong environment.
+Risk: The workflow can queue work, run worker agents, and write local runtime or configuration artifacts.
 
-Mitigation: Review the installer plan output before writes, confirm the root, queue, worker, scheduler, and notification routing, then run doctor and smoke checks before real tasks.
+Mitigation: Review the installation plan, verify the selected workspace and queue, and run doctor or smoke checks before using mutable workflows.
 
-Risk: A loop run may involve destructive changes, production configuration, credentials, paid usage, or external messaging beyond the user's original authority.
+Risk: Destructive, production, credential, paid, external-message, and instrumentation actions could exceed the user's intended authority if treated as implicit loop permissions.
 
-Mitigation: Require explicit approval before destructive, production, credential, paid, or external-message actions and treat missing approval as a human gate.
-
-Risk: Dispatcher success can be mistaken for accepted task or project completion.
-
-Mitigation: Inspect final judgement, acceptance reviews, checkpoints, and verification evidence before reporting completion; distinguish task or milestone status from total project status.
+Mitigation: Keep separate confirmation gates for those action classes and fail closed when authorization or delivery routing is missing.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/ambitioncn/skills/taskforce-loop-engineering)
-- [npm package reference](references/npm-package.md)
-- [GitHub repository listed by skill documentation](https://github.com/ambitioncn/taskforce-loop-engineering)
+- [ClawHub Skill Page](https://clawhub.ai/ambitioncn/skills/taskforce-loop-engineering)
+- [npm Package Reference](artifact/references/npm-package.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Shell commands, Configuration instructions, Markdown, Guidance]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline shell commands and configuration paths]
+**Output Format:** [Markdown guidance with inline shell commands and configuration paths]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May produce queue, task, project, checkpoint, review, and verification artifact paths for follow-up inspection.]
+**Other Properties Related to Output:** [May produce local runtime and configuration artifacts when the underlying CLI and integrations are installed and explicitly invoked.]
 
 ## Skill Version(s):
 
-0.15.9 (source: server release evidence)
+0.15.12 (source: server release evidence)
 
 ## Ethical Considerations:
 
