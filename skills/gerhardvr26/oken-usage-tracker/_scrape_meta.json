@@ -1,0 +1,42 @@
+{
+  "changelog": "\u2022 Short description: Logs per\u2011call token usage, normalizes timestamps, and provides simple summarization and alert examples for OpenClaw.\n\u2022 Long description / Changelog (paste into \u201cdescription\u201d or \u201cchangelog\u201d):\n  \u2022 v1.0.0 \u2014 Initial release. Includes example scripts (token_tracker, token_interceptor, context_summarizer, token_alerts, migrate_timestamps, dedupe_log), skill-config.json (defaults: timezone=UTC, log_folder=./skills/logs), and example systemd unit. Safe examples only \u2014 no services enabled by default.",
+  "created_at": 1772307046120,
+  "display_name": "Token Usage Tracker",
+  "fetched_at": 1787892799641,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/systemd/token-interceptor.service.txt",
+    "scripts/context_summarizer.py",
+    "scripts/dedupe_log.py",
+    "scripts/migrate_timestamps.py",
+    "scripts/token_alerts.py",
+    "scripts/token_interceptor.py",
+    "scripts/token_tracker.py",
+    "skill-card.md",
+    "skill-config.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "gerhardvr26",
+    "handle": "gerhardvr26",
+    "user_id": "s17cqvnmc4k7hf5t9z8mrfg7hn884249"
+  },
+  "slug": "oken-usage-tracker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/oken-usage-tracker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=oken-usage-tracker&ownerHandle=gerhardvr26",
+    "page_url": "https://clawhub.ai/gerhardvr26/skills/oken-usage-tracker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 828,
+    "installs": 23,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Token usage logging, alerting, and context-compression utilities for OpenClaw. Use when you want to track per-call token usage, normalize timestamps, and red...",
+  "updated_at": 1778491670926,
+  "version": "1.0.0"
+}
