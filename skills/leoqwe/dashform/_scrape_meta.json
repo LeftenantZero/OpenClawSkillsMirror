@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release of Dashform skill \u2013 create and manage AI-powered forms, surveys, and quizzes via the Dashform MCP server.\n\n- Supports structured and dynamic (AI-powered) forms, including surveys, quizzes, and feedback forms.\n- Requires local Dashform MCP server and user authentication with session token.\n- Provides step-by-step workflow: checks credentials, handles authentication, prompts for form details, references documentation/examples, and creates production-ready forms.\n- Integrates with MCP tools: create_form (new forms) and create_reply (form responses).\n- Ensures generated forms include welcome/end screens, questions, and theme.\n- Instructions for saving configs and managing form/create scripts included.",
+  "created_at": 1772029926697,
+  "display_name": "Dashform",
+  "fetched_at": 1787941326126,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "examples/employee-satisfaction-survey.json",
+    "examples/event-registration.json",
+    "examples/nps-survey.json",
+    "examples/structured-survey.json",
+    "references/API.md",
+    "references/SCHEMA.md",
+    "scripts/create-form.sh",
+    "scripts/setup-credentials.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089732233,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "leoqwe",
+    "handle": "leoqwe",
+    "user_id": "s176aa64zs73pt2cwef8k00ssx885sm4"
+  },
+  "slug": "dashform",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dashform",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dashform&ownerHandle=leoqwe",
+    "page_url": "https://clawhub.ai/leoqwe/skills/dashform"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 372,
+    "installs": 7,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Create and manage AI-powered smart forms, surveys, and quizzes through the Dashform MCP server. Supports open-ended, single-choice, multiple-choice, and rati...",
+  "updated_at": 1778491640561,
+  "version": "0.1.0"
+}
