@@ -1,0 +1,59 @@
+{
+  "changelog": "Initial public beta release of the Alibaba Cloud AgentRun + AgentIdentity end-to-end deployment and test skill.\n\n- Automates full e2e flow: credential setup, identity provider registration, OAuth2 chain, console registration, build & deployment, verification, and cleanup.\n- Enforces strict, repeatable user interaction rules and phase-based workflow with mandatory output format.\n- Requires modern macOS/Linux, Python \u2265 3.10, conda, and aliyun CLI \u2265 3.3.3.\n- Automates setup steps; user input is only required for sensitive operations or decisions.\n- Fully covers normal setup, change verification, and resource teardown.",
+  "created_at": 1787815956325,
+  "display_name": "alibabacloud-agent-identity-agentrun-e2e",
+  "fetched_at": 1787932622481,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/agentrun-deploy.md",
+    "references/cleanup.md",
+    "references/console-guides.md",
+    "references/packaging.md",
+    "references/ram-policies.md",
+    "references/testing-checklist.md",
+    "references/troubleshooting.md",
+    "scripts/00_detect_env.sh",
+    "scripts/01_prepare_identities.sh",
+    "scripts/02_oss_testfile.sh",
+    "scripts/03_build.sh",
+    "scripts/04_reachability.sh",
+    "scripts/05_attach_role_policy.sh",
+    "scripts/06_cedar_setup.sh",
+    "scripts/07_cleanup.sh",
+    "scripts/lib/common.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787816828591,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alibabacloud-skills-team",
+    "handle": "sdk-team",
+    "user_id": "s173swjet2yrebzqrp6hjkvmy583mxef"
+  },
+  "slug": "alibabacloud-agent-identity-agentrun-e2e",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/alibabacloud-agent-identity-agentrun-e2e",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=alibabacloud-agent-identity-agentrun-e2e&ownerHandle=sdk-team",
+    "page_url": "https://clawhub.ai/sdk-team/skills/alibabacloud-agent-identity-agentrun-e2e"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 59,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Stand up a working Alibaba Cloud agent that authenticates its end users and proves its permissions hold, then tear it back down. Use when someone wants to deploy an AgentRun-hosted agent governed by AgentIdentity, see for themselves that only signed-in users reach it, that each tool receives the credentials it needs without any secret in the code, and that authorization rules actually block what they should \u2014 or when they want to remove the resources such a trial created. Covers first-time setup on an empty account, re-verification after a change, and cleanup. \u4e5f\u54cd\u5e94\"AgentRun \u7aef\u5230\u7aef\u6d4b\u8bd5\"\"AgentIdentity \u5168\u6d41\u7a0b\u9a8c\u8bc1\"\"AgentRun \u90e8\u7f72 Agent\"\u7b49\u4e2d\u6587\u8bf7\u6c42\u3002",
+  "updated_at": 1787816080858,
+  "version": "0.0.1-beta.1"
+}
