@@ -1,0 +1,55 @@
+{
+  "changelog": "Initial release of sms-gateway skill:\n\n- Send and receive SMS via a local sms-gate.app instance on Android phone like Google Pixel 3 \n- Scripts provided for sending SMS, checking delivery status, listing message history, and managing webhooks for incoming SMS and delivery confirmations.\n- Requires environment variables for gateway URL, user, and password.\n- Detailed setup instructions and common usage patterns included.\n- Supports webhook integration for receiving incoming SMS, with guidance for both local and remote setups (e.g., ngrok).",
+  "created_at": 1772801133402,
+  "display_name": "FreeSmsGateway",
+  "fetched_at": 1787940553395,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "env.example.txt",
+    "references/api.md",
+    "scripts/auth.py",
+    "scripts/check_incoming.py",
+    "scripts/check_status.py",
+    "scripts/health.py",
+    "scripts/list_messages.py",
+    "scripts/manage_webhooks.py",
+    "scripts/send_sms.py",
+    "scripts/webhook_server.py",
+    "skill-card.md",
+    "tests/test_sms_gateway.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089782444,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Minde",
+    "handle": "minstn",
+    "user_id": "s173t60wbdf3wzvvvyp3fzeqss844vm7"
+  },
+  "slug": "sms-gateway",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sms-gateway",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sms-gateway&ownerHandle=minstn",
+    "page_url": "https://clawhub.ai/minstn/skills/sms-gateway"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 802,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Send and receive SMS using a local sms-gate.app instance running on Android (via Termux) or a dedicated device. Use when the user needs to send text messages...",
+  "updated_at": 1778491751707,
+  "version": "1.0.0"
+}
