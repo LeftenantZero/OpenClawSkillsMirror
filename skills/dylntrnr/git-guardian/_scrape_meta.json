@@ -1,0 +1,34 @@
+{
+  "changelog": "- Initial release of git-guardian skill.\n- Enforces a git-tracked, diff-first workflow for all agent file creation and modification.\n- Requires feature branches for changes and prevents direct commits to main.\n- Automatically shows diffs for user review before applying changes; waits for approval.\n- Provides scripts for common git operations to streamline the process.\n- Excludes secrets, ephemeral files, and large binaries from tracking.",
+  "created_at": 1771974208331,
+  "display_name": "Git Guardian",
+  "fetched_at": 1787895499389,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/git-guardian.sh"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dylan Turner",
+    "handle": "dylntrnr",
+    "user_id": "s17em35qbdmk735c8991c2gctx884pxf"
+  },
+  "slug": "git-guardian",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/git-guardian",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=git-guardian&ownerHandle=dylntrnr",
+    "page_url": "https://clawhub.ai/dylntrnr/skills/git-guardian"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 421,
+    "installs": 7,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Track all agent work in git and show diffs before applying changes. Use when: (1) creating or modifying scripts, configs, skills, or any workspace files, (2)...",
+  "updated_at": 1778491632988,
+  "version": "0.1.0"
+}
