@@ -1,6 +1,6 @@
 ## Description:
 
-Music Generation Studio helps an agent turn themes, lyrics, scenes, or reference audio into production briefs, lyrics, generation requests, and reviewable AI-generated music outputs.
+Create original songs, AI-generated music, lyrics-to-song tracks, instrumentals, background music, video soundtracks, jingles, multilingual songs, and reference-led arrangements from a clear creative brief.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators, teams, and agent users use this skill to plan, generate, recover, and review songs, instrumentals, background music, jingles, soundtracks, multilingual tracks, and reference-led arrangements through Beatra music tools.
+External users, employees, and creators use this skill to turn themes, lyrics, scenes, or reference audio into a structured music brief and, when approved, reviewable AI-generated songs, instrumentals, background music, or soundtracks. The skill supports creative planning, lyrics preparation, model selection, Beatra music generation, task recovery, delivery, and focused revision.
 
 ### Deployment Geography for Use:
 
@@ -22,25 +22,25 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uses broad shared Beatra account authority for multiple media tools.
+Risk: The skill requires Beatra account authorization and stores a shared token under ~/.beatra.
 
-Mitigation: Install only in accounts where that authority is acceptable, keep tokens private, and reconnect or expand authorization only after explicit user approval.
+Mitigation: Install only when the user trusts the Beatra authorization model; use the documented uninstall and disconnect workflow for credential cleanup.
 
-Risk: The package can silently apply verified updates by default.
+Risk: Approved music generation can spend Beatra credits.
 
-Mitigation: Use `python3 scripts/mcp_client.py update --auto off` when explicit update review is required, and rely on the documented verified update flow before re-enabling automatic updates.
+Mitigation: Show the model, title, lyrics or instrumental status, reference audio, controls, and one-generation scope before making a billable request.
 
-Risk: Music generation is billable and duplicate submissions can create unintended charges.
+Risk: The skill can upload selected local reference audio.
 
-Mitigation: Show the final production card before generation, submit once with a stable request identity, and retry only unchanged requests when recovery is needed.
+Mitigation: Upload only the intended FLAC, MP3, or WAV file through the bundled upload command and review what should carry over or change before generation.
 
-Risk: Generated vocals, pronunciation, duration, loop points, melody carryover, and mastering are not guaranteed.
+Risk: The bundled client silently checks for and may install package updates by default.
 
-Mitigation: Review returned clips against the brief after generation and use a focused new request only when the user approves a revision.
+Mitigation: Review the update behavior before installation and run the documented auto-update disable command if silent updates are not acceptable.
 
 ## Reference(s):
 
-- [ClawHub skill listing](https://clawhub.ai/beatra-ai/skills/music-generation-studio)
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/music-generation-studio)
 - [Beatra skill homepage](https://beatra.ai/skills/music-generation-studio)
 - [Intent and routing](references/intent-and-routing.md)
 - [Creative brief and style](references/creative-brief-and-style.md)
@@ -48,26 +48,26 @@ Mitigation: Review returned clips against the brief after generation and use a f
 - [Vocal, language, and tags](references/vocal-language-and-tags.md)
 - [Model routing](references/model-routing.md)
 - [Music recipes](references/music-recipes.md)
-- [Review and iteration](references/review-and-iteration.md)
 - [Tasks and results](references/tasks-and-results.md)
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
+- [Review and iteration](references/review-and-iteration.md)
 - [Installation and authentication](references/installation-and-auth.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
 - [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with command snippets and JSON-like generation payload details]
+**Output Format:** [Markdown guidance with inline shell commands and Beatra task result details]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May report task status, clip metadata, artifact IDs, audio URLs, duration, MIME type, size, returned lyrics, and net charged credits after generation.]
+**Other Properties Related to Output:** [May include Beatra task IDs, audio clip URLs, artifact IDs, durations, MIME types, sizes, and net charged credits when generation succeeds.]
 
 ## Skill Version(s):
 
-0.1.5 (source: server release evidence and artifact manifest)
+0.1.7 (source: server release evidence and manifest.json)
 
 ## Ethical Considerations:
 
