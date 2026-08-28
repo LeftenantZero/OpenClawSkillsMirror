@@ -1,0 +1,59 @@
+{
+  "changelog": "- Initial release of Digital Employee Builder skill.\n- Converts business systems/modules into runnable agent workspaces with identity, rules, tools, personas, and verification steps.\n- Implements a gated workflow: analysis, proposal sign-off, role modeling, planning, and artifact creation are all confirmed interactively before workspace build.\n- Core principles enforced: self-contained runtime (no source or network dependency by default), deterministic multi-step logic ported as executable scripts, and a strict contract-first approach for any business-side changes.\n- Supports deployment into OpenClaw harness (default), or alternative frameworks as specified.\n- Includes detailed protocols for user interaction, capability extraction, proposal management, and onboarding guidance.",
+  "created_at": 1787820868317,
+  "display_name": "digital-employee-builder",
+  "fetched_at": 1787932628579,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/mcp-server-python/server.py.tmpl",
+    "assets/mcp-server-ts/server.ts.tmpl",
+    "assets/skill-template/SKILL.md.tmpl",
+    "assets/skill-template/scripts/workflow.py.tmpl",
+    "assets/workspace/AGENTS.md.tmpl",
+    "assets/workspace/HEARTBEAT.md.tmpl",
+    "assets/workspace/IDENTITY.md.tmpl",
+    "assets/workspace/SOUL.md.tmpl",
+    "assets/workspace/TOOLS.md.tmpl",
+    "assets/workspace/USER.md.tmpl",
+    "assets/workspace/business-api-proposals.md.tmpl",
+    "references/business-api-proposals.md",
+    "references/harness-adapters.md",
+    "references/mcp-integration.md",
+    "references/openclaw-workspace.md",
+    "references/script-encapsulation.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787821794427,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jaggerxzj",
+    "handle": "jaggerxzj",
+    "user_id": "s17avjk0t315txerpcy8kwe4e58d9tzk"
+  },
+  "slug": "digital-employee-builder",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/digital-employee-builder",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=digital-employee-builder&ownerHandle=jaggerxzj",
+    "page_url": "https://clawhub.ai/jaggerxzj/skills/digital-employee-builder"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 54,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Build a runnable Agent digital employee from a business codebase or business-function description. Input a business system/module (source code, API docs, or functional spec); output a complete digital-employee workspace \u2014 AGENTS.md (operating rules), SOUL.md (persona), IDENTITY.md, USER.md, TOOLS.md, HEARTBEAT.md, an MCP server wrapping business capabilities, per-workflow Skills \u2014 plus steps to onboard, run, and verify it in OpenClaw (default) or other harness frameworks (Claude Code, Cursor, custom). Triggers: digital employee, business-code-to-agent, turn a business system into an agent, SOUL.md, AGENTS.md, OpenClaw agent workspace, agent-ify a business function.",
+  "updated_at": 1787820980344,
+  "version": "0.1.0"
+}
