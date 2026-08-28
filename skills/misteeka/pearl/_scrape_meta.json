@@ -1,0 +1,39 @@
+{
+  "changelog": "- Credential storage now uses a read-only API token (`read_token`) instead of a full-privilege token.\n- Updated documentation to clarify that the read-only token (JWT audience `pearl-read`) cannot be used for write or mutating actions; only read operations are allowed (API returns 403 otherwise).\n- Adjusted security section to highlight that no full-access API token is stored or used in agent scripts\u2014only the read-only and skill-scoped tokens are present.\n- Updated table and explanations throughout to reflect these changes, improving clarity and user safety.",
+  "created_at": 1774374767647,
+  "display_name": "Pearl",
+  "fetched_at": 1787937510545,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "scripts/balance.js",
+    "scripts/io.js",
+    "scripts/run.js",
+    "scripts/setup.js",
+    "scripts/transactions.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Simeon",
+    "handle": "misteeka",
+    "user_id": "s179ak75ar8sk9k6q1w69c9xbd83ek08"
+  },
+  "slug": "pearl",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pearl",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pearl&ownerHandle=misteeka",
+    "page_url": "https://clawhub.ai/misteeka/skills/pearl"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 806,
+    "installs": 21,
+    "stars": 0,
+    "versions": 14
+  },
+  "summary": "Stripe for AI agents \u2014 one wallet for all paid skills. If you installed a skill that requires Pearl (check its SKILL.md), you MUST set up Pearl first: run no...",
+  "updated_at": 1778492167221,
+  "version": "0.0.14"
+}
