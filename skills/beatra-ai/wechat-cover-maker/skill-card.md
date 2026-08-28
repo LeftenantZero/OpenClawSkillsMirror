@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External content creators, brand teams, and agents use this skill to turn article topics, titles, summaries, or visual references into publish-ready WeChat cover images with a focused visual hook and headline-safe composition.
+External users and content teams use this skill to create, compose, refine, and review WeChat Official Account cover images from article context, reference assets, or an accepted draft. It helps prepare one confirmed image-generation request, track the Beatra task, and return publish-ready artifact details.
 
 ### Deployment Geography for Use:
 
@@ -22,45 +22,52 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The package uses a shared Beatra device token with broad media and spending scopes.
+Risk: Broad Beatra device authorization grants this package account-level authority for its Beatra operations.
 
-Mitigation: Install only in an environment where the local ~/.beatra credential and Beatra spending authority are acceptable, and avoid exposing the token in chat, logs, command arguments, or files.
+Mitigation: Install only when that authorization is acceptable, and reconnect or uninstall the package if the device authorization should no longer be trusted.
 
-Risk: The package can silently update its installed files by default.
+Risk: The skill stores a shared Beatra token under ~/.beatra.
 
-Mitigation: Consider disabling automatic updates immediately with the bundled update control before using the skill in a sensitive environment.
+Mitigation: Keep the credential files private to the local user and avoid copying tokens into prompts, logs, command arguments, diffs, or other files.
 
-Risk: Image generation consumes Beatra credits and creates asynchronous paid tasks.
+Risk: Selected local files may be uploaded to Beatra when composing from references or editing drafts.
 
-Mitigation: Confirm the final prompt, references, canvas, model, controls, and output count before the paid call, then preserve the request identity for recovery to avoid duplicate charges.
+Mitigation: Review chosen files before upload and provide only the images needed for the requested cover.
+
+Risk: The package can silently auto-update its installed package files during normal use.
+
+Mitigation: Disable automatic updates with python3 scripts/mcp_client.py update --auto off when silent replacement is not acceptable.
 
 ## Reference(s):
 
-- [ClawHub skill listing](https://clawhub.ai/beatra-ai/skills/wechat-cover-maker)
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/wechat-cover-maker)
 - [Beatra skill homepage](https://beatra.ai/skills/wechat-cover-maker)
-- [WeChat cover workflow](references/workflow.md)
+- [Beatra MCP endpoint](https://mcp.beatra.ai/mcp)
 - [Intent and routing](references/intent-and-routing.md)
 - [Canvas and cover craft](references/canvas-and-cover-craft.md)
+- [WeChat cover workflow](references/workflow.md)
 - [MCP connection](references/mcp-connection.md)
 - [Installation and authentication](references/installation-and-auth.md)
-- [Automatic updates and safety](references/automatic-updates-and-safety.md)
-- [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
 - [Tasks and results](references/tasks-and-results.md)
+- [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
 - [Review and recovery](references/review-and-recovery.md)
+- [Automatic updates and safety](references/automatic-updates-and-safety.md)
+- [Installation registration](references/installation-registration.md)
+- [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with shell command examples and generated image artifact links after execution]
+**Output Format:** [Markdown guidance with inline shell commands and returned artifact links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces one cover-image workflow at a time and reports task IDs, dimensions, artifact links, and net charged credits when available.]
+**Other Properties Related to Output:** [Uses one confirmed Beatra image request at a time and reports task, billing, and artifact details when available.]
 
 ## Skill Version(s):
 
-0.1.9 (source: server release evidence and manifest.json)
+0.2.1 (source: server release metadata and manifest.json)
 
 ## Ethical Considerations:
 
