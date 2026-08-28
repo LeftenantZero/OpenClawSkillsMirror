@@ -1,6 +1,6 @@
 ## Description:
 
-Query setlist.fm from shell commands and guide authenticated attendance toggles using curl, an API key, and an fpx-captured browser session cookie.
+Query and update setlist.fm from a shell by using curl for public REST reads and an fpx-captured browser session cookie for the authenticated attendance toggle.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and external users use this skill when they want setlist.fm data or need to mark and unmark attendance from a shell without running the setlist MCP server. It provides curl-oriented guidance for public REST reads and for the authenticated website-only attendance toggle.
+Developers and technically comfortable users use this skill to produce curl-based workflows for searching and reading setlist.fm artists, venues, cities, users, and setlists, and for marking or unmarking their own attendance when they have an authenticated browser session.
 
 ### Deployment Geography for Use:
 
@@ -22,22 +22,22 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill handles setlist.fm API keys and browser session cookies, including JSESSIONID, RememberMeCookie, aws-waf-token, and COOKIE values.
+Risk: The workflow uses a setlist.fm API key and browser session cookies that can expose account access if shared or logged.
 
-Mitigation: Treat those values as secrets: do not paste them into shared logs or commits, avoid long-lived shell history exposure, and unset them after use.
+Mitigation: Keep COOKIE, JSESSIONID, RememberMeCookie, the WAF token, and SETLIST_API_KEY out of commits, logs, shared shells, and messages; revoke the key or sign out if any value is exposed.
 
-Risk: The attendance workflow can change the user's setlist.fm attendance state.
+Risk: The attendance action is an authenticated website toggle, so blind execution can leave the wrong attendance state.
 
-Mitigation: Dry-run first, confirm the current and desired state before sending the toggle, and re-fetch the page afterward to verify the result.
+Mitigation: Dry-run first, compare the current and desired state before sending the toggle, then re-fetch the page and verify the final state after the request.
 
-Risk: setlist.fm REST API use has attribution, caching, rate, and free-key non-commercial constraints documented by the skill.
+Risk: setlist.fm API use has attribution, caching, rate, and free-key use constraints described by the skill.
 
-Mitigation: Surface followable setlist.fm links when displaying data, avoid persistent local caching, pace requests, and confirm current API terms before commercial use.
+Mitigation: Surface followable setlist.fm links when displaying data, fetch live instead of maintaining a persistent cache, back off on rate limits, and confirm the intended use complies with the applicable setlist.fm terms.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/chrischall/skills/setlist-fpx)
-- [setlist.fm REST API read endpoints for curl](references/rest-api.md)
+- [setlist.fm REST API read endpoints](references/rest-api.md)
 - [Attendance write walkthrough](references/attendance-write.md)
 - [setlist.fm API key settings](https://www.setlist.fm/settings/api)
 
@@ -45,15 +45,15 @@ Mitigation: Surface followable setlist.fm links when displaying data, avoid pers
 
 **Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown guidance with inline shell commands and curl examples]
+**Output Format:** [Markdown with inline shell command blocks and configuration examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include commands that use SETLIST_API_KEY, COOKIE, browser session cookies, and authenticated setlist.fm requests.]
+**Other Properties Related to Output:** [May include curl, jq, perl, fpx, and environment-variable examples; users must supply their own setlist.fm API key and authenticated session cookie.]
 
 ## Skill Version(s):
 
-0.9.7 (source: server release evidence)
+0.9.8 (source: release metadata)
 
 ## Ethical Considerations:
 
