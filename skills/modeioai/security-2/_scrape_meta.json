@@ -1,0 +1,39 @@
+{
+  "changelog": "Initial release of the security skill for backend-backed live safety checks.\n\n- Enables live instruction and operation safety checks before executing potentially risky commands.\n- Requires Python 3 and network reachability to a safety backend.\n- Provides a CLI for evaluating the safety of instructions that may trigger side effects or state changes.\n- Introduces a context contract for passing operational details to the backend.\n- Offers clear caller policy guidance based on backend risk scoring.\n- For read-only or pre-install auditing, recommends using other dedicated skills.",
+  "created_at": 1773209463470,
+  "display_name": "Security",
+  "fetched_at": 1787880614125,
+  "files": [
+    "ARCHITECTURE.md",
+    "SKILL.md",
+    "_meta.json",
+    "modeio_guardrail/__init__.py",
+    "modeio_guardrail/cli/__init__.py",
+    "modeio_guardrail/cli/safety.py",
+    "scripts/safety.py",
+    "skill-card.md",
+    "tests/test_safety_contract.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "modeioai",
+    "handle": "modeioai",
+    "user_id": "s17drajrev4xbfv5pxs87pw9q1884hkn"
+  },
+  "slug": "security-2",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/security-2",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=security-2&ownerHandle=modeioai",
+    "page_url": "https://clawhub.ai/modeioai/skills/security-2"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1024,
+    "installs": 27,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Runs a backend-backed live safety check for instructions that may trigger tool execution, external calls, file edits, permission changes, destructive or irre...",
+  "updated_at": 1778491824366,
+  "version": "0.1.0"
+}
