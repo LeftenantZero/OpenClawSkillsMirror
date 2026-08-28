@@ -1,42 +1,59 @@
-## Description: <br>
-Guides an agent through planning, generating, reviewing, and assembling a montage with transitions between composed video clips. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+Use when someone wants a montage with transitions between shots - action-sequence reel or multi-scene piece where narration is optional.
 
-## Publisher: <br>
-[pruna-ai](https://clawhub.ai/user/pruna-ai) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[pruna-ai](https://clawhub.ai/user/pruna-ai)
 
-## Use Case: <br>
-External creators, developers, and media teams use this skill to create multi-shot transition reels by planning scene anchors, generating start and end stills, rendering image-to-video transition clips, and assembling the final reel with optional background music. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: Source or generated images may be sent to referenced Pruna generation services. <br>
-Mitigation: Use the skill only with images that are approved for those services, and review the plan and stills before continuing. <br>
-Risk: Video generation and final assembly can spend credits and write PNG or MP4 files into the workspace. <br>
-Mitigation: Require the documented approve plan, approve stills, and approve clips gates before paid generation or assembly. <br>
+## Use Case:
 
+Developers and creators use this skill to plan, generate, review, and assemble visual transition reels from hero imagery, start and end stills, paired image-to-video clips, and optional background music.
 
-## Reference(s): <br>
-- [ClawHub skill page](https://clawhub.ai/pruna-ai/skills/visual-transition-reel) <br>
-- [Example prompt](artifact/example-prompt.md) <br>
-- [Transition plan template](artifact/templates/transition-plan.template.json) <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance] <br>
-**Output Format:** [Markdown guidance with JSON plan templates and inline shell commands] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [Produces staged plans, review gates, generation prompts, local PNG and MP4 outputs, ffmpeg assembly commands, and a final reel manifest.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-1.0.9 (source: server release evidence and frontmatter) <br>
+Risk: The workflow can upload supplied or generated images to provider file and video APIs.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Review dependent skills and provide only media that is acceptable to send to those services.
+
+Risk: The workflow can spend generation credits after approval gates.
+
+Mitigation: Require plan, stills, and clips approval before paid video generation or assembly steps.
+
+Risk: The workflow may install additional Pruna skills as dependencies.
+
+Mitigation: Review the dependent skills before installation and deployment.
+
+## Reference(s):
+
+- [ClawHub release page](https://clawhub.ai/pruna-ai/skills/visual-transition-reel)
+- [Example prompt](artifact/example-prompt.md)
+- [Transition plan template](artifact/templates/transition-plan.template.json)
+
+## Skill Output:
+
+**Output Type(s):** [text, markdown, configuration, shell commands, guidance]
+
+**Output Format:** [Markdown guidance with JSON plan templates and inline shell commands]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [Guides phased generation of stills, video clips, review gates, ffmpeg assembly, and a final scene manifest.]
+
+## Skill Version(s):
+
+1.0.10 (source: server release metadata and skill frontmatter)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
