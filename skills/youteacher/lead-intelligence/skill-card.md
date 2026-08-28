@@ -1,6 +1,6 @@
 ## Description:
 
-Helps users search companies or contacts with compliant filters, score leads from user-submitted observable signals, and generate local lead reports with a Lead Intelligence API key.
+Lead Intelligence helps users search companies or contacts with compliance-oriented filters, score leads from submitted observable signals, and generate local lead research reports.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Sales, growth, and operations users can ask an agent to prepare compliant company or contact searches, score submitted leads deterministically, and summarize lead batches into local reports. Developers and operators can use the skill's request contracts to call the Lead Intelligence service without exposing API keys or unsupported provider payloads.
+Sales, growth, and operations users use this skill to find companies or contacts under bounded filters, score submitted leads using deterministic observable criteria, and create concise local lead reports. It requires a Lead Intelligence API key before use.
 
 ### Deployment Geography for Use:
 
@@ -22,44 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The API key could be exposed if pasted into chat, logs, request bodies, or generated reports.
+Risk: The API key and submitted lead data are sensitive.
 
-Mitigation: Keep LEAD_INTELLIGENCE_API_KEY in the environment, do not echo the full value, and send it only in the Authorization header.
+Mitigation: Store the API key only in the OpenClaw environment setting, avoid pasting it into chat or logs, and confirm trust in ai-skills.open-idea.net before submitting company, domain, title, or lead data.
 
-Risk: Setting AI_SKILLS_API_URL to an untrusted endpoint would send the authorization header to that endpoint.
+Risk: The skill handles company and people search data and could be misused for contact enrichment or outreach workflows.
 
-Mitigation: Only override AI_SKILLS_API_URL with a trusted Lead Intelligence service root.
+Mitigation: Do not submit passwords, cookies, sessions, regulated personal data, or CRM and outreach actions unless separately authorized; do not infer email addresses or phone numbers from availability indicators.
 
-Risk: Contact search results may be misused to infer, purchase, or enrich personal contact details.
+Risk: Repeated POST requests may create inconsistent task or billing behavior if idempotency is ignored.
 
-Mitigation: Report only returned availability booleans, do not infer email addresses or phone numbers, and obtain separate confirmation before external outreach or CRM writes.
-
-Risk: Lead scores can be mistaken for identity verification, purchase intent, or conversion probability.
-
-Mitigation: Present scores as deterministic summaries of user-submitted observable signals and explain the factors that contributed to each score.
+Mitigation: Use a unique Idempotency-Key for each new logical POST request and reuse the same key and JSON body only for retries of that same request.
 
 ## Reference(s):
 
-- [API Key Configuration](references/API-KEY.md)
-- [Operations Contract](references/OPERATIONS.md)
-- [HTTP Requests and Task Query](references/HTTP-REQUESTS.md)
-- [Privacy, Scoring, and Error Rules](references/BEHAVIOR-RULES.md)
-- [AI Skills Platform](https://ai-skills.open-idea.net)
-- [Lead Intelligence ClawHub Listing](https://clawhub.ai/youteacher/skills/lead-intelligence)
+- [ClawHub skill page](https://clawhub.ai/youteacher/skills/lead-intelligence)
+- [AI Skills homepage](https://ai-skills.open-idea.net)
+- [API Key configuration](https://ai-skills.open-idea.net/skill-docs/lead-intelligence/API-KEY.md)
+- [Operations contract](https://ai-skills.open-idea.net/skill-docs/lead-intelligence/OPERATIONS.md)
+- [HTTP requests and task queries](https://ai-skills.open-idea.net/skill-docs/lead-intelligence/HTTP-REQUESTS.md)
+- [Privacy, scoring, and error rules](https://ai-skills.open-idea.net/skill-docs/lead-intelligence/BEHAVIOR-RULES.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Guidance, Shell commands, Configuration, API calls, JSON, Markdown]
 
-**Output Format:** [Markdown with JSON and bash examples]
+**Output Format:** [Markdown guidance with shell commands, HTTP request examples, JSON responses, deterministic scores, and local report summaries.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include bounded task polling guidance, privacy-preserving lead summaries, deterministic scores, local reports, and billing-header summaries.]
+**Other Properties Related to Output:** [Company and people searches return structured result records and pagination; lead scoring returns points, scores, and reasons; report creation returns aggregate lead-report fields.]
 
 ## Skill Version(s):
 
-1.0.0 (source: release evidence and package metadata)
+1.2.1 (source: release evidence and package metadata)
 
 ## Ethical Considerations:
 

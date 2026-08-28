@@ -1,36 +1,44 @@
 ---
 name: lead-intelligence
-description: Use when 用户需要按合规过滤器搜索企业或联系人、基于用户提交的可观察信号执行线索评分，或生成本地线索报告；需要 LEAD_INTELLIGENCE_API_KEY。
-metadata: {"packageVersion":"1.0.0","openclaw":{"emoji":"🎯","homepage":"https://ai-skills.open-idea.net","primaryEnv":"LEAD_INTELLIGENCE_API_KEY","requires":{"env":["LEAD_INTELLIGENCE_API_KEY"]}}}
+description: "使用场景: 用户需要按合规过滤器搜索企业或联系人、基于用户提交的可观察信号执行线索评分，或生成本地线索报告；需要 LEAD_INTELLIGENCE_API_KEY。"
+metadata:
+    {
+        "packageVersion": "1.2.1",
+        "openclaw":
+            {
+                "emoji": "🎯",
+                "homepage": "https://ai-skills.open-idea.net",
+                "primaryEnv": "LEAD_INTELLIGENCE_API_KEY",
+                "requires": { "env": ["LEAD_INTELLIGENCE_API_KEY"] },
+            },
+    }
 ---
 
 # Lead Intelligence
 
-通过 AI Skills 平台执行企业/联系人搜索与本地线索评分。默认 API 根为
-`https://ai-skills.open-idea.net/api/v1`；`AI_SKILLS_API_URL` 只能覆盖站点根。不要直连或
-描述第三方 Provider 接口。
+## Skill 简介
 
-## 执行流程
+销售线索情报 Skill 用于按合规条件搜索企业或联系人，结合公开且可观察的信号进行线索评分，并生成带依据的本地线索研究报告。
 
-1. 按 [API Key 配置](references/API-KEY.md)读取产品专属 Key，不回显完整值。
-2. 从 [Operations 契约](references/OPERATIONS.md)选择 operation，并严格使用其白名单字段。
-3. 按 [HTTP 请求与任务查询](references/HTTP-REQUESTS.md)为新逻辑请求生成 UUID 幂等键。
-4. 通常同步读取结果；若返回 `202`，查询同 operation 的任务路径直到终态或有界上限。
-5. 按 [隐私、评分与错误规则](references/BEHAVIOR-RULES.md)交付结果和计费头。
+## 平台入口与注册
 
-## 核心边界
+1. 打开 [AI Skills 平台](https://ai-skills.open-idea.net/)，新用户可直接进入 [注册页面](https://ai-skills.open-idea.net/register)，已有账号进入 [登录页面](https://ai-skills.open-idea.net/login)。
+2. 登录后进入 [产品管理](https://ai-skills.open-idea.net/dashboard/products) 开通本 Skill，再到 [API Key 管理](https://ai-skills.open-idea.net/dashboard/keys) 创建密钥。
 
-- `company.search`、`people.search` 需要平台 Provider；`lead.score`、`report.create` 在平台
-  本地运行，不需要 Provider 连接。
-- 不接收 LinkedIn Cookie、账号、密码、session 或任意 Provider payload，不登录或抓取
-  LinkedIn。
-- `people.search` 不返回邮箱或电话号码，只可报告 `email_available`、
-  `direct_phone_available` 布尔标记；不得据此猜测、拼接或购买联系方式，也不推断电话。
-- 评分只反映用户提交的四类信号，不代表身份真实性、购买意愿或成交概率。
+## API Key 获取与配置
+
+1. 在 [API Key 管理](https://ai-skills.open-idea.net/dashboard/keys)中选择已开通的产品，创建并复制 API Key。
+2. 在 OpenClaw 中安装本 Skill。
+3. 将复制的 Key 配置到本 Skill 的 API Key 环境变量，然后重启 Gateway：
+
+```sh
+openclaw config set env.LEAD_INTELLIGENCE_API_KEY "你的平台APIKey"
+openclaw gateway restart
+```
 
 ## 参考资料
 
-- [API Key 配置](references/API-KEY.md)
-- [Operations 契约](references/OPERATIONS.md)
-- [HTTP 请求与任务查询](references/HTTP-REQUESTS.md)
-- [隐私、评分与错误规则](references/BEHAVIOR-RULES.md)
+- [API Key 配置](https://ai-skills.open-idea.net/skill-docs/lead-intelligence/API-KEY.md)
+- [Operations 契约](https://ai-skills.open-idea.net/skill-docs/lead-intelligence/OPERATIONS.md)
+- [HTTP 请求与任务查询](https://ai-skills.open-idea.net/skill-docs/lead-intelligence/HTTP-REQUESTS.md)
+- [隐私、评分与错误规则](https://ai-skills.open-idea.net/skill-docs/lead-intelligence/BEHAVIOR-RULES.md)

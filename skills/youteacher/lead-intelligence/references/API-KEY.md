@@ -1,5 +1,6 @@
 # API Key 配置
 
+
 ```bash
 export LEAD_INTELLIGENCE_API_KEY="ais_..."
 export AI_SKILLS_API_URL="https://ai-skills.open-idea.net" # 可选，仅站点根
