@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of java-switch skill.\n\n- Automates switching and installation of Java versions on macOS using Homebrew and `/usr/libexec/java_home`.\n- Supports trigger phrases in both Chinese and English for Java version switching and installation.\n- Automatically installs specified Java version if not present, or switches environment variables if already installed.\n- Updates environment variables for the current session and persists configuration to `~/.zshrc`.\n- Provides step-by-step user feedback and troubleshooting tips.\n- Supports major Java versions (e.g., 8, 11, 17, 21) and full version numbers.",
+  "created_at": 1773428651762,
+  "display_name": "Java Switch",
+  "fetched_at": 1787875291712,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/switch-java.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "LongFer",
+    "handle": "longfer",
+    "user_id": "s1783m522c2zhwmxtv3kkxhvjs83xmzz"
+  },
+  "slug": "java-switch",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/java-switch",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=java-switch&ownerHandle=longfer",
+    "page_url": "https://clawhub.ai/longfer/skills/java-switch"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 865,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5728 macOS \u4e0a\u81ea\u52a8\u68c0\u6d4b\u3001\u5b89\u88c5\u5e76\u5207\u6362\u6307\u5b9a\u7248\u672c\u7684 Java\uff0c\u914d\u7f6e JAVA_HOME \u548c\u73af\u5883\u53d8\u91cf\uff0c\u652f\u6301\u6301\u4e45\u5316\u914d\u7f6e\u3002",
+  "updated_at": 1778491890041,
+  "version": "1.0.0"
+}
