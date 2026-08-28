@@ -1,0 +1,37 @@
+{
+  "changelog": "**Major update: Adds interactive setup wizard and reorganizes onboarding.**\n\n- New `setup.sh` script introduces a guided setup wizard for configuring tier, retention, destination, encryption, and optional collectors.\n- The setup wizard writes config, creates encryption keys if needed, runs a dry-run, and can install a cron job\u2014all interactively.\n- `verify-backup.sh` removed.\n- Setup section in docs now recommends running `setup.sh` as the first step.\n- All previous manual onboarding steps now streamlined and clarified.",
+  "created_at": 1772893177006,
+  "display_name": "Healthy Backup",
+  "fetched_at": 1787885592703,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "healthy-backup.sh",
+    "package.json",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "LittleJakub",
+    "handle": "littlejakub",
+    "user_id": "s177x99cm2ge3ymq8wtbnqf6t1885c8a"
+  },
+  "slug": "healthy-backup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/healthy-backup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=healthy-backup&ownerHandle=littlejakub",
+    "page_url": "https://clawhub.ai/littlejakub/skills/healthy-backup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1048,
+    "installs": 27,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Health-gated backup for OpenClaw rigs. Audits first \u2014 only backs up if healthy. Three tiers, 5-backup retention, optional rclone sync. Sensitive config value...",
+  "updated_at": 1778491764944,
+  "version": "1.2.5"
+}
