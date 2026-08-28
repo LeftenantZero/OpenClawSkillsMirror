@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release with auditing features for GitHub Actions workflows:\n\n- Scans workflow YAML files for secret exposure risks.\n- Flags usage of secrets in pull_request_target, secret echo commands, and secrets passed to unpinned actions.\n- Detects hardcoded credentials in workflow config.\n- Supports both text and JSON output formats.\n- Configurable scoring, file matching, and CI fail gate for critical findings.",
+  "created_at": 1772924873942,
+  "display_name": "GitHub Actions Secret Exposure Audit",
+  "fetched_at": 1787885296621,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "fixtures/hardened.yml",
+    "fixtures/mixed-release.yml",
+    "fixtures/risky-pr-target.yml",
+    "scripts/secret-exposure-audit.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Daniel Lummis",
+    "handle": "daniellummis",
+    "user_id": "s17fw617wehb1y9a026bgg9yed885cv7"
+  },
+  "slug": "github-actions-secret-exposure-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/github-actions-secret-exposure-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=github-actions-secret-exposure-audit&ownerHandle=daniellummis",
+    "page_url": "https://clawhub.ai/daniellummis/skills/github-actions-secret-exposure-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 789,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Audit GitHub Actions workflow files for secret exposure risks like pull_request_target secret usage, secret echo commands, and unpinned action secret passing.",
+  "updated_at": 1778491768590,
+  "version": "1.0.0"
+}
