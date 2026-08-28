@@ -1,0 +1,53 @@
+{
+  "changelog": "Schema completeness checker \u2014 local validation catches missing fields at zero token cost; Retry pass for missing critical/important fields \u2014 sends focused re-extraction prompt with __NOT_ON_DOCUMENT__ sentinel; Merge + re-validate pipeline recovers fields the first pass missed; Completeness metadata in every output (score, populated, missing, retryRecovered); prepare.js agent-native mode also gets completeness warnings",
+  "created_at": 1773400536870,
+  "display_name": "Invoice Scan",
+  "fetched_at": 1787876031938,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/canonical-schema.md",
+    "references/validation-rules.md",
+    "scripts/adapters/base.js",
+    "scripts/adapters/claude.js",
+    "scripts/adapters/index.js",
+    "scripts/cli.js",
+    "scripts/extraction/scanner.js",
+    "scripts/index.js",
+    "scripts/output/csv.js",
+    "scripts/output/excel.js",
+    "scripts/output/index.js",
+    "scripts/output/json.js",
+    "scripts/output/prepare.js",
+    "scripts/package.json",
+    "scripts/preprocessing/preprocess.js",
+    "scripts/schema/canonical.js",
+    "scripts/test/run-tests.js",
+    "scripts/validation/arithmetic.js",
+    "scripts/validation/completeness.js",
+    "scripts/validation/document-rules.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mr-muddle",
+    "handle": "mr-muddle",
+    "user_id": "s1798mqtm2z6zw4d5fgnncszcn83h19q"
+  },
+  "slug": "invoice-scan",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/invoice-scan",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=invoice-scan&ownerHandle=mr-muddle",
+    "page_url": "https://clawhub.ai/mr-muddle/skills/invoice-scan"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1190,
+    "installs": 35,
+    "stars": 0,
+    "versions": 29
+  },
+  "summary": "AI-powered invoice OCR, scanning, and data extraction. Use when: (1) user needs OCR or text extraction from invoice images, scanned documents, or PDFs, (2) s...",
+  "updated_at": 1778491880948,
+  "version": "2.2.0"
+}
