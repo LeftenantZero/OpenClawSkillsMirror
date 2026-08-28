@@ -1,0 +1,59 @@
+{
+  "changelog": "Initial release: Multi-source stock data aggregation with AKShare, Tencent, and Baostock. Features rate limiting, retry logic, circuit breaker, and technical indicators (MA/MACD/RSI/Bollinger/KDJ).",
+  "created_at": 1772789683617,
+  "display_name": "Market Data Hub",
+  "fetched_at": 1787887111113,
+  "files": [
+    "SKILL.md",
+    "TEST_REPORT.md",
+    "_meta.json",
+    "example.py",
+    "requirements.txt",
+    "seres_601127_baostock.csv",
+    "seres_601127_complete_analysis.csv",
+    "src/__init__.py",
+    "src/indicators/__init__.py",
+    "src/indicators/bollinger.py",
+    "src/indicators/kdj.py",
+    "src/indicators/macd.py",
+    "src/indicators/moving_average.py",
+    "src/indicators/rsi.py",
+    "src/limiter/__init__.py",
+    "src/limiter/token_bucket.py",
+    "src/market_data_hub.py",
+    "src/retry/__init__.py",
+    "src/retry/retry_strategy.py",
+    "src/strategies/__init__.py",
+    "src/strategies/akshare_strategy.py",
+    "src/strategies/baostock_strategy.py",
+    "src/strategies/base_strategy.py",
+    "src/strategies/tencent_strategy.py",
+    "test_report.txt",
+    "tests/test_indicators.py",
+    "tests/test_limiter.py",
+    "tests/test_market_data_hub.py",
+    "tests/test_strategies.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "paul1989889",
+    "handle": "paul1989889",
+    "user_id": "s178mc8jtbxg81yy1zv0tq6ktx8850x6"
+  },
+  "slug": "market-data-hub",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/market-data-hub",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=market-data-hub&ownerHandle=paul1989889",
+    "page_url": "https://clawhub.ai/paul1989889/skills/market-data-hub"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 893,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Provides multi-source real-time and historical Chinese stock market data with auto rate limiting, failover, and technical indicator calculations.",
+  "updated_at": 1778491748674,
+  "version": "1.0.0"
+}
