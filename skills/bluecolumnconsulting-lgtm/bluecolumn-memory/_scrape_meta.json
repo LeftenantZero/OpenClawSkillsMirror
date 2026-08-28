@@ -1,25 +1,15 @@
 {
-  "changelog": "- Clarified that BlueColumn runs on official Supabase Edge Functions infrastructure.\n- Updated API base URL context and added reference to BlueColumn's verified backend and website.\n- Provided additional instructions on API key handling: prefer platform secret store, never expose keys, and ensure user consent before sending content.\n- Explicitly warned against sending sensitive PII or full conversation history without user permission.\n- Minor language and formatting improvements for clarity and accuracy.",
+  "changelog": "Refresh: verified live API base URL, audio ingestion via audio_url, MCP install path (npx bluecolumn-mcp), OpenClaw integration pattern, current endpoint guidance",
   "created_at": 1776286665277,
-  "display_name": "BlueColumn Memory",
-  "fetched_at": 1787821262689,
+  "display_name": "bluecolumn-memory",
+  "fetched_at": 1787932069609,
   "files": [
     "SKILL.md",
     "_meta.json",
     "references/api.md",
     "skill-card.md"
   ],
-  "moderation": {
-    "engine_version": "v2.4.24",
-    "is_malware_blocked": false,
-    "is_suspicious": false,
-    "reason_codes": [
-      "review.llm_review"
-    ],
-    "summary": "Review: review.llm_review",
-    "updated_at": 1780090457226,
-    "verdict": "clean"
-  },
+  "moderation": null,
   "owner": {
     "display_name": "bluecolumnconsulting-lgtm",
     "handle": "bluecolumnconsulting-lgtm",
@@ -33,12 +23,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 609,
+    "downloads": 639,
     "installs": 14,
     "stars": 0,
-    "versions": 2
+    "versions": 3
   },
-  "summary": "Give AI agents persistent semantic memory using the BlueColumn API (bluecolumn.ai). Use when asked to remember, store, recall, or search memory using BlueCol...",
-  "updated_at": 1778492609704,
-  "version": "1.0.1"
+  "summary": "Give AI agents persistent semantic memory using the BlueColumn API (bluecolumn.ai). Use when asked to remember, store, recall, or search memory using BlueColumn; when ingesting notes, conversations, documents, or audio into BlueColumn; when querying what an agent has previously stored; or when wiring up BlueColumn memory endpoints (/agent-remember, /agent-recall, /agent-note) in any workflow. Also use when the user mentions their BlueColumn API key (bc_live_*) and wants to store or retrieve information.",
+  "updated_at": 1787878604018,
+  "version": "1.0.2"
 }
