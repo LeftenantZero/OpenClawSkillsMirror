@@ -1,6 +1,6 @@
 ## Description:
 
-Building edition of iaiops for facility, HVAC, BMS, and building automation workflows over BACnet/IP, Modbus, IO-Link, MQTT, and BAS controller REST layers, with read-first operations and MOC-gated writes.
+Building automation skill for BACnet/IP, Modbus, IO-Link, MQTT, and BAS controller workflows, including discovery, point and trend reads, diagnostics, facility checks, and approval-gated write commands.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, facilities engineers, and authorized building operations teams use this skill to inspect building automation systems, gather point and trend data, diagnose HVAC and dataflow issues, and prepare tightly gated equipment-changing commands.
+Developers, building automation engineers, and facility operators use this skill to inspect HVAC/BMS systems, collect point and trend evidence, diagnose dataflow and alarm issues, and prepare controlled actions for BACnet, BAS, MQTT, and related building telemetry.
 
 ### Deployment Geography for Use:
 
@@ -22,34 +22,36 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Write-capable BACnet, BAS, and MQTT operations can affect active building equipment if used without authorization or review.
+Risk: The skill exposes broad OT data movement and non-building analysis functions without clear gating in the skill text.
 
-Mitigation: Install only for authorized operators, keep dry-run mode and approval gates enabled, and require explicit MOC approval before write-capable actions.
+Mitigation: Review the skill before installing in a live facility environment and confirm export, historian, stream, and UNS publishing tools are disabled, destination-limited, audited, or approval-gated according to site policy.
 
-Risk: The skill depends on an external iaiops package whose provenance is not established by server-resolved source metadata.
+Risk: Commands can affect live building automation equipment if write paths are enabled.
 
-Mitigation: Verify the package source and release integrity before installation or deployment.
+Mitigation: Keep BACnet, BAS, and MQTT write commands in dry-run mode unless authorized through the documented MOC and approval workflow, and separately confirm live facility permissions before use.
 
-Risk: Live HVAC write, COV, trend, physical RS-485, live IO-Link master, and some BAS live-device behaviors are marked as needing verification in the artifact.
+Risk: PLC file analysis and fleet/compliance functions may be outside the intended scope for some building deployments.
 
-Mitigation: Validate these paths in a controlled environment before relying on them for production building operations.
+Mitigation: Confirm that these functions are intended for the target site before enabling them or relying on their outputs.
 
 ## Reference(s):
 
+- [ClawHub skill page](https://clawhub.ai/zw008/skills/iaiops-building)
+- [Publisher profile](https://clawhub.ai/user/zw008)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown and plain text with inline commands and configuration values]
+**Output Format:** [Markdown guidance with tool names, shell commands, configuration settings, and risk notes]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Includes read-first workflow guidance and approval-gated write posture for building-system operations.]
+**Other Properties Related to Output:** [Includes read-first workflows and approval-gated write guidance for building automation contexts]
 
 ## Skill Version(s):
 
-0.23.0 (source: ClawHub release evidence)
+0.23.1 (source: server release metadata)
 
 ## Ethical Considerations:
 
