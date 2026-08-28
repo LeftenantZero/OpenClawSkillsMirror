@@ -1,0 +1,42 @@
+{
+  "changelog": "- Added a metadata field specifying the skill key and primary environment variable required (`VALIRON_API_KEY`).\n- Clarified that `VALIRON_API_KEY` is now optional by default, but reserved/required for authenticated deployments.\n- Updated runtime requirements and configuration instructions to reflect optional and conditional use of `VALIRON_API_KEY`.\n- Improved guidance on failure behavior: fail closed only if required policy/config inputs are missing, and clarified SDK authentication handling.\n- No code or file changes; documentation/refinement update only.",
+  "created_at": 1771980859227,
+  "display_name": "Valiron",
+  "fetched_at": 1787895357075,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/payment-interceptor.ts",
+    "references/audit-events.md",
+    "references/decision-policy.md",
+    "references/error-handling.md",
+    "references/fallback-modes.md",
+    "references/runtime-requirements.md",
+    "references/spend-controls.md",
+    "scripts/policy.sample.json",
+    "scripts/validate-payment-policy.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Vatsa Shah",
+    "handle": "vatsashah45",
+    "user_id": "s17897mxjjyq7nqcady75rh49583gwx4"
+  },
+  "slug": "valiron-trust-layer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/valiron-trust-layer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=valiron-trust-layer&ownerHandle=vatsashah45",
+    "page_url": "https://clawhub.ai/vatsashah45/skills/valiron-trust-layer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1303,
+    "installs": 35,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Intercept and authorize outgoing machine-to-machine payments (x402 or similar) using @valiron/sdk trust decisions on the counterparty agent before payment ex...",
+  "updated_at": 1778491632988,
+  "version": "1.0.2"
+}
