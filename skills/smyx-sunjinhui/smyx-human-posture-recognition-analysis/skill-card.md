@@ -1,6 +1,6 @@
 ## Description:
 
-Recognizes standing, sitting, lying down, bending, raised hands, running, falling, and abnormal posture patterns for security monitoring and elder-care scenarios.
+Recognizes human postures such as standing, sitting, lying down, bending, raised hands, running, falling, and abnormal posture events from video inputs.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and operators use this skill to analyze uploaded or URL-based monitoring media for human posture recognition, fall detection, abnormal posture alerts, structured reports, and cloud history lookup.
+Safety monitoring, elder-care, and operations teams use this skill to analyze local or URL-based videos for posture classifications, fall warnings, abnormal posture counts, structured results, and report links.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Submitted videos may include private people, homes, care settings, or security footage and are sent to remote services.
+Risk: Media inputs and report queries may be sent to remote cloud or LAN services for posture analysis and history lookup.
 
-Mitigation: Review the publisher's remote destinations, data retention, access controls, and deletion process before using sensitive media.
+Mitigation: Use the skill only where that data flow is acceptable, especially for videos involving private homes, patients, seniors, employees, or surveillance footage.
 
-Risk: The skill creates or reuses an internal identity, persists tokens locally, and can retrieve cloud report history.
+Risk: The skill can create or reuse local account identity and persisted tokens.
 
-Mitigation: Run it in an isolated workspace, review token storage and revocation behavior, and clear local state when the skill is no longer needed.
+Mitigation: Run it in an environment with appropriate access controls, and clear local identity or token state when the workflow no longer requires it.
 
-Risk: The package includes dev/private endpoint configuration and API documentation that does not fully match the posture-recognition use case.
+Risk: Fall warnings and posture reports are safety-monitoring aids and may be incomplete or incorrect.
 
-Mitigation: Ask the publisher to document production endpoints and remove or explain unrelated pet-health API references before deployment.
+Mitigation: Treat results as operational guidance, verify urgent events through independent channels, and do not rely on the report as the sole emergency response signal.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-human-posture-recognition-analysis)
 - [Skill demo](https://lifeemergence.com/sample.html)
 - [API documentation](references/api_doc.md)
-- [Smyx analysis API documentation](skills/smyx_analysis/references/api_doc.md)
+- [Analysis API documentation](skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, shell commands, files]
+**Output Type(s):** [text, markdown, JSON, shell commands]
 
-**Output Format:** [Markdown and JSON-like structured analysis reports, with optional saved text output]
+**Output Format:** [Markdown or JSON analysis reports with optional report links and shell command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include report links and cloud history lists returned by the remote service.]
+**Other Properties Related to Output:** [Can save report output to a user-specified local file path.]
 
 ## Skill Version(s):
 
-1.0.11 (source: server release metadata; artifact frontmatter reports 1.0.13)
+1.0.12 (source: server release metadata)
 
 ## Ethical Considerations:
 
