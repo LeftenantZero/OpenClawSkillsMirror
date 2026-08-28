@@ -1,6 +1,6 @@
 ## Description:
 
-Transforms a real product photo into studio-quality ecommerce listing, lifestyle, or marketplace hero images while preserving confirmed product details.
+Transform a real product photo into a studio-quality ecommerce image, lifestyle scene, or marketplace-ready hero shot with clean backgrounds, professional lighting, and composition guided by confirmed product details.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External sellers, marketers, and ecommerce operators use this skill to turn a source product photo into clean-background listings, lifestyle scenes, or refined product-image drafts through Beatra image tools.
+External sellers, ecommerce teams, and agent users use this skill to turn a source product photo into marketplace listing images, lifestyle scenes, and polished hero shots while preserving confirmed product details.
 
 ### Deployment Geography for Use:
 
@@ -22,46 +22,47 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uses a shared full-scope Beatra device token for upload, generation, model, and task operations.
+Risk: The skill connects a Beatra account and stores a broad shared Device Token under ~/.beatra.
 
-Mitigation: Authorize only accounts intended for Beatra use, keep the credential file private, and revoke or rerun authorization when account access should change.
+Mitigation: Review before installing, protect the local credential file, never expose the token in chat or logs, and revoke or disconnect access when it is no longer needed.
 
-Risk: Product images are uploaded for remote Beatra processing.
+Risk: Product photos are uploaded to Beatra for remote image generation.
 
-Mitigation: Avoid confidential or unreleased product photos unless Beatra's account, retention, and data-handling terms meet the user's requirements.
+Mitigation: Use only approved product images, avoid sensitive content, and review generated images for product fidelity before publishing.
 
-Risk: Silent package updates are enabled by default.
+Risk: Paid image-generation calls consume credits and retries with changed inputs can create new billable work.
 
-Mitigation: Use the documented update command to turn automatic updates off when silent replacement is not acceptable, and rely on documented checksum and owned-file checks when updates remain enabled.
+Mitigation: Freeze the prompt and parameters before confirmation, use one client_request_id per logical request, and recover uncertain submissions only with the same unchanged arguments.
 
-Risk: Billable generation requests can create duplicate work if recovery changes the inputs.
+Risk: The packaged client can silently self-update package-owned files unless automatic updates are disabled.
 
-Mitigation: Freeze the prompt, references, canvas, model, count, and request ID before submission; retry only unchanged requests with the same request ID after uncertain delivery.
+Mitigation: Rely on the documented source and checksum verification, or disable silent checks with scripts/mcp_client.py update --auto off when manual review is required before updates.
 
 ## Reference(s):
 
-- [ClawHub skill listing](https://clawhub.ai/beatra-ai/skills/product-photo-studio)
-- [Beatra skill homepage](https://beatra.ai/skills/product-photo-studio)
+- [ClawHub Skill Page](https://clawhub.ai/beatra-ai/skills/product-photo-studio)
+- [Beatra Skill Homepage](https://beatra.ai/skills/product-photo-studio)
 - [Product routing](references/product-routing.md)
 - [Scene craft](references/scene-craft.md)
 - [Workflow](references/workflow.md)
+- [Review and recovery](references/review-and-recovery.md)
 - [Installation and authentication](references/installation-and-auth.md)
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Markdown, Shell commands, Configuration, Guidance]
+**Output Type(s):** [Guidance, Markdown, Shell commands, JSON, Files]
 
-**Output Format:** [Markdown guidance with inline shell commands and JSON tool arguments]
+**Output Format:** [Markdown guidance with shell commands and JSON MCP tool arguments; delivered results include image artifact links, task IDs, dimensions, and billing details.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May return Beatra task IDs, artifact links, observed dimensions, and net charged credits after generation.]
+**Other Properties Related to Output:** [Uses the source product photo as the visual anchor, confirms paid generation parameters before execution, and defaults to one generated image unless the user chooses otherwise.]
 
 ## Skill Version(s):
 
-0.1.6 (source: server release metadata and manifest.json)
+0.1.9 (source: server release evidence and artifact manifest)
 
 ## Ethical Considerations:
 
