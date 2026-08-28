@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes pet race start and finish media to identify start timing, lane assignment, finish order, false starts, and lane-crossing fouls, returning objective judgment results for referee review.
+Analyzes pet race start or finish videos to identify false starts, lane crossing, finish order, and lane assignments for referee review.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External event organizers, referees, and trainers use this skill to analyze pet racing videos or URLs for false starts, lane crossing, finish order, and supporting evidence. The results are intended to assist race officials, with final decisions remaining with the event referee.
+External users, event staff, and developers use this skill to run video-based foul detection for pet racing, including false-start and lane-crossing checks. Results are intended to support referee review rather than replace the final on-site decision.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,42 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Race media and report history are processed by the publisher's cloud service.
+Risk: Race media or media URLs may be sent to a remote service for analysis.
 
-Mitigation: Use the skill only with media and report data approved for third-party cloud processing.
+Mitigation: Review the configured service endpoints and only process media that is approved for that destination.
 
-Risk: The skill creates or reuses a local identity and stores account tokens in a workspace SQLite database.
+Risk: The skill may silently create or reuse an account identity and store session tokens or profile data in the workspace.
 
-Mitigation: Install only in workspaces where local identity and token storage are acceptable, and review local storage handling before use.
+Mitigation: Run it in an isolated workspace, review local stored identity data, and remove or rotate tokens after use when appropriate.
 
-Risk: Cloud report history can be retrieved without clear user control.
+Risk: History queries may retrieve prior cloud reports linked to the resolved identity.
 
-Mitigation: Limit use to intended accounts and review report-history access expectations before enabling history lookup.
+Mitigation: Confirm the user is authorized to view those reports before running history-list mode.
 
-Risk: Race foul analysis is an automated referee aid and may not match event rules or on-site judgment.
+Risk: Bundled configuration may select dev HTTP or private-network endpoints.
 
-Mitigation: Treat outputs as supporting evidence and keep final race decisions with qualified event officials.
+Mitigation: Change configuration to approved production HTTPS endpoints before commercial use.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-race-foul-detection-analysis)
 - [Skill demo](https://lifeemergence.com/sample.html)
-- [API interface documentation](references/api_doc.md)
-- [Analysis API documentation](skills/smyx_analysis/references/api_doc.md)
+- [API documentation](references/api_doc.md)
+- [SMYX analysis API documentation](skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [text, markdown, json, shell commands]
 
-**Output Format:** [Markdown and JSON-style structured analysis reports with report links]
+**Output Format:** [Markdown reports with structured JSON-style results, report links, and inline shell commands]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include historical report tables and cloud report URLs when history lookup is requested.]
+**Other Properties Related to Output:** [May include cloud report history when history-query mode is requested.]
 
 ## Skill Version(s):
 
-1.0.8 (source: server release metadata; artifact frontmatter says 1.0.11)
+1.0.9 (source: server release metadata; artifact frontmatter says 1.0.12)
 
 ## Ethical Considerations:
 
