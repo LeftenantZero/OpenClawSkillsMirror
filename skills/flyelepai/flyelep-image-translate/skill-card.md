@@ -1,6 +1,6 @@
 ## Description:
 
-Uses the Flyelep AI Tool API to identify and translate text in an image, returning a URL for the translated image.
+Recognizes and translates text in images through the Flyelep AI Tool API and returns URLs for the translated images.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to translate text embedded in posters, product images, and other public image URLs through Flyelep's API after providing an API key, image URL, and target language.
+External users and agents use this skill to translate visible text in posters, product images, and other image assets into a supported target language. It is intended for workflows where the user can provide a public image URL or allow local images to be uploaded before translation.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The API request sends the user-provided image URL and translation request to Flyelep.
+Risk: Local image uploads can create permanent public URLs for source images.
 
-Mitigation: Use a dedicated Flyelep API key and avoid submitting private or sensitive images.
+Mitigation: Warn users before uploading local files and proceed only with images they are comfortable making externally reachable.
 
-Risk: Image URLs can expose access tokens, confidential paths, or business data.
+Risk: Images sent for translation are processed by a third-party service.
 
-Mitigation: Use public direct image URLs that do not contain credentials, expiring access tokens, or confidential identifiers.
+Mitigation: Avoid confidential, personal, regulated, or unreleased business images unless the provider's retention and deletion controls are acceptable.
 
-Risk: A missing, invalid, or overprivileged Flyelep secretKey can cause failed requests or unnecessary credential exposure.
+Risk: The skill requires a Flyelep API key at runtime.
 
-Mitigation: Provide the secretKey only at runtime in the request header and do not store real keys in skill files, examples, repositories, or persistent configuration.
+Mitigation: Request the key only when needed and do not store it in skill files, repositories, or persistent configuration.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/flyelepai/skills/flyelep-image-translate)
-- [Flyelep image translation API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/aiTool/translate)
-- [Flyelep open platform dashboard](https://www.flyelep.cn/controlboard)
+- [ClawHub Skill Page](https://clawhub.ai/flyelepai/skills/flyelep-image-translate)
+- [Flyelep API Key Dashboard](https://www.flyelep.cn/controlboard)
+- [Flyelep Image Translation API](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/aiTool/translate)
+- [Flyelep File Upload API](https://www.flyelep.cn/prod-api/poster-design/api/v1/file/upload)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Shell commands, Guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown or plain text with JSON request examples and a translated image URL.]
+**Output Format:** [Markdown guidance with JSON request bodies and curl commands; runtime output is translated image URL text.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires a Flyelep secretKey and a public direct image URL; returns the translated image URL without rereading image contents.]
+**Other Properties Related to Output:** [May return one or more translated image URLs as a comma-separated list in the same order as the input images.]
 
 ## Skill Version(s):
 
-1.0.3 (source: server release metadata)
+1.0.4 (source: server release evidence)
 
 ## Ethical Considerations:
 
