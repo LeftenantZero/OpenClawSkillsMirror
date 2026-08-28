@@ -1,6 +1,6 @@
 ## Description:
 
-Uses the Flyelep AI Tool API to identify a product in an image and generate a new image URL with the product color changed while preserving the product.
+Uses the Flyelep AI Tool API to identify products in images and generate recolored product image results when users want the same product shown in a different color.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill when they need an agent to collect a product image URL, color-change prompt, and Flyelep API key, call Flyelep's product color-change endpoint, and return the resulting image URL.
+External users and agents use this skill to collect product image URLs, target color instructions, and a user-provided Flyelep API key, then call Flyelep endpoints to return a recolored product image URL.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Product image URLs, prompts, and the Flyelep API key are sent to a third-party Flyelep service.
+Risk: The skill uses a user-provided Flyelep API key at runtime.
 
-Mitigation: Install and use the skill only after confirming that this data sharing is acceptable for the intended products, prompts, and account.
+Mitigation: Ask the user for the key only when needed and avoid storing it in skill files, examples, repositories, or persistent configuration.
 
-Risk: The Flyelep secretKey may be exposed if stored in skill files, persistent configuration, temporary payloads, or shell history.
+Risk: Local images uploaded through the helper path may become permanently accessible through a public provider URL.
 
-Mitigation: Provide the key only at runtime through secure secret handling where available, avoid committing or saving real keys, and remove any temporary payload file after the API call.
+Mitigation: Use the upload path only for images appropriate for Flyelep processing and avoid uploading sensitive or restricted content.
 
-Risk: Color-change output can be inaccurate when the prompt is vague or the source image does not clearly show the product and target area.
+Risk: Color-change results can vary when prompts are vague or product boundaries are unclear.
 
-Mitigation: Use a clear public image URL and a specific prompt that names the target color, preserved materials, background, brand marks, lighting, and any product parts that should not change.
+Mitigation: Collect a clear target color, preservation constraints, and a clean source product image before calling the API.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/flyelepai/skills/flyelep-product-color-change)
-- [Flyelep product color-change API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/aiTool/productColorChange)
-- [Flyelep open platform controlboard](https://www.flyelep.cn/controlboard)
+- [Flyelep controlboard](https://www.flyelep.cn/controlboard)
+- [Flyelep product color change API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/aiTool/productColorChange)
+- [Flyelep file upload API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/file/upload)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, guidance]
+**Output Type(s):** [text, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with JSON request bodies, shell command examples, and a returned image URL.]
+**Output Format:** [Markdown guidance with JSON request examples and curl commands]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires a user-provided public source image URL, color-change prompt, modelType 0, and Flyelep secretKey at runtime.]
+**Other Properties Related to Output:** [Returns or displays the resulting product image URL without reading image contents back to the user.]
 
 ## Skill Version(s):
 
-1.0.3 (source: server-resolved release evidence)
+1.0.4 (source: server release metadata)
 
 ## Ethical Considerations:
 

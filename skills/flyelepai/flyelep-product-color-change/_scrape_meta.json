@@ -1,8 +1,8 @@
 {
-  "changelog": "- Removed the file: skill-card.md.\n- Updated required parameter handling: now agents must ask users for all required parameters before executing, and must present a parameter table for user confirmation.\n- Changed modelType to always default/fixed to 0 (was previously allowed 0/1).\n- Added detailed, platform-specific API calling procedures and encoding notes (Windows/PowerShell, macOS/Linux), with new requirements for handling JSON payloads and file cleanup.\n- Updated error table to reflect only modelType=0 is valid.\n- Clarified textPrompt and parameter collection process, strengthening compliance requirements.",
+  "changelog": "- Updated API parameter `modelType` to require value `9` (was previously `0`); only `9` is now supported.\n- Added optional parameters: `prompt` (for supplementary instructions) and `replaceImageUrl` (for color reference image).\n- Clarified steps for uploading local files to obtain a public URL when only a file path is provided.\n- Expanded error handling and troubleshooting, including new parameter validation and file upload limits.\n- Improved structured instructions, parameter documentation, and sample calls for both Windows and macOS/Linux environments.\n- Removed the file `skill-card.md` from the package.",
   "created_at": 1776679140519,
   "display_name": "product-color-change",
-  "fetched_at": 1787773194420,
+  "fetched_at": 1787945974131,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -22,12 +22,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 825,
+    "downloads": 860,
     "installs": 19,
     "stars": 0,
-    "versions": 4
+    "versions": 5
   },
   "summary": "\u901a\u8fc7 Flyelep AI \u5de5\u5177\u63a5\u53e3\u667a\u80fd\u8bc6\u522b\u56fe\u7247\u4e2d\u7684\u5546\u54c1\u5e76\u8fdb\u884c\u6362\u8272\u5904\u7406\u3002 \u5f53\u7528\u6237\u8981\u6c42\u4fee\u6539\u5546\u54c1\u989c\u8272\u3001\u4fdd\u6301\u5546\u54c1\u4e0d\u53d8\u53ea\u6362\u914d\u8272\u3001\u751f\u6210\u540c\u6b3e\u4e0d\u540c\u989c\u8272\u5c55\u793a\u56fe\u65f6\u4f7f\u7528\u6b64\u6280\u80fd\u3002",
-  "updated_at": 1786083430496,
-  "version": "1.0.3"
+  "updated_at": 1787886993612,
+  "version": "1.0.4"
 }
