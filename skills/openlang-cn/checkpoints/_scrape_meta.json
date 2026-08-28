@@ -1,0 +1,43 @@
+{
+  "changelog": "Initial release of the \"checkpoints\" skill.\n\n- Captures and stores full context (prompts, conversation, reasoning, decisions, metadata) related to AI-generated code changes.\n- Binds context data to specific git commits for traceability and auditing.\n- Supports multiple binding methods: standalone files, commit messages/tags, or external tools.\n- Provides structured guidelines for checkpoint content and workflow integration.\n- Emphasizes consistency, privacy, and traceability in checkpoint handling.",
+  "created_at": 1773369137758,
+  "display_name": "Checkpoints",
+  "fetched_at": 1787877134344,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089863028,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "openlang",
+    "handle": "openlang-cn",
+    "user_id": "s17dqxdtqm3n7dpc7r06vmnqfd83gw7r"
+  },
+  "slug": "checkpoints",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/checkpoints",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=checkpoints&ownerHandle=openlang-cn",
+    "page_url": "https://clawhub.ai/openlang-cn/skills/checkpoints"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 954,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Records full context of AI-generated code and binds it to git commits. When the agent writes and commits code, capture prompts, conversation history, reasoni...",
+  "updated_at": 1778491872769,
+  "version": "1.0.0"
+}
