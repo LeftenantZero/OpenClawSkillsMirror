@@ -1,0 +1,60 @@
+{
+  "changelog": "Initial release of Iran Intelligence Radar.\n\n- Monitors Persian-language X (Twitter) activity for Iran-related geopolitical signals.\n- Detects, ranks, and translates high-engagement tweets with focus on security, policy, and protest keywords.\n- Calculates escalation risk scores (0\u2013100) and classifies alert levels (LOW to CRITICAL).\n- Supports Telegram alert integration and generates daily intelligence briefings.\n- Provides multilingual translations (English, Arabic, Chinese) and outputs structured Markdown intelligence reports.\n- Skill is billed per scan ($0.02) with cooldown and optional payment link on insufficient balance.",
+  "created_at": 1772681743146,
+  "display_name": "Iran Intelligence Radar (Persian X Monitor)",
+  "fetched_at": 1787888939252,
+  "files": [
+    ".gitignore",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "prompts/system_prompt.md",
+    "requirements.txt",
+    "skill-card.md",
+    "skills/persian_x_radar/__init__.py",
+    "skills/persian_x_radar/agent.py",
+    "skills/persian_x_radar/alerts.py",
+    "skills/persian_x_radar/billing.py",
+    "skills/persian_x_radar/cache.py",
+    "skills/persian_x_radar/charge_cache.json",
+    "skills/persian_x_radar/config.yaml",
+    "skills/persian_x_radar/daily_briefing.py",
+    "skills/persian_x_radar/escalation.py",
+    "skills/persian_x_radar/search.py",
+    "skills/persian_x_radar/telegram_alert.py",
+    "skills/persian_x_radar/translator.py",
+    "skills/persian_x_radar/trending.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089759631,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ArthuronAI",
+    "handle": "arthuronai",
+    "user_id": "s1764se1vvs7nntfatq7mfrft983yezt"
+  },
+  "slug": "iran-intelligence-radar",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/iran-intelligence-radar",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=iran-intelligence-radar&ownerHandle=arthuronai",
+    "page_url": "https://clawhub.ai/arthuronai/skills/iran-intelligence-radar"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 929,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Monitor Persian-language X (Twitter) activity related to Iran, detect high-signal geopolitical events, translate posts, score escalation risk, and generate a...",
+  "updated_at": 1778491726627,
+  "version": "1.0.0"
+}
