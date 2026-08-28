@@ -1,0 +1,36 @@
+{
+  "changelog": "- Added a command-line Bash script (analyze-skill.sh) for local security audits of ClawHub skills.\n- Updated documentation to emphasize CLI usage and step-by-step instructions.\n- Clearly outlined the scope: manual invocation, no automatic scanning or VirusTotal API integration.\n- Improved description of detection heuristics and audit workflow.\n- Detailed how to analyze skills by slug or local file for risk assessment.",
+  "created_at": 1770536244483,
+  "display_name": "Skill Security Auditor",
+  "fetched_at": 1787906904551,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "analyze-skill.sh",
+    "patterns/malicious-patterns.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "AM",
+    "handle": "akhmittra",
+    "user_id": "s17deafs7w08t68k6mby7atcf9844e8c"
+  },
+  "slug": "skill-security-auditor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-security-auditor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-security-auditor&ownerHandle=akhmittra",
+    "page_url": "https://clawhub.ai/akhmittra/skills/skill-security-auditor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 5560,
+    "installs": 186,
+    "stars": 4,
+    "versions": 2
+  },
+  "summary": "Command-line security analyzer for ClawHub skills. Run analyze-skill.sh to scan SKILL.md files for malicious patterns, credential leaks, and C2 infrastructure before installation. Includes threat intelligence database with 20+ detection patterns.",
+  "updated_at": 1778486077727,
+  "version": "1.0.1"
+}
