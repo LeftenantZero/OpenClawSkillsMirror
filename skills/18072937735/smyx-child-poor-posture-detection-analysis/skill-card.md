@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes child study-area posture video from a smart desk lamp or desk-mounted camera to estimate spinal curvature and head tilt, generate posture findings, and return reminder text when poor posture persists.
+Analyzes child study-area images or videos through a configured service to estimate poor-posture indicators, produce structured results, and return reminder text and report links.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and product teams use this skill to add child posture monitoring to smart lamps, home desks, or classroom study environments. It accepts local or URL-based posture video, calls the analysis workflow, and returns structured posture metrics, reminder text, report links, or historical report listings.
+External users and developers use this skill to analyze child study-area posture media, estimate visual posture metrics such as head tilt and Cobb-angle approximation, and retrieve structured reports or reminder text. It is intended for habit-support workflows, not medical diagnosis.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Child video, video URLs, posture reports, and report history may be sent to or retrieved from cloud services.
+Risk: Children's posture videos or URLs may be sent to a configured remote service.
 
-Mitigation: Use only with guardian consent, trusted video sources, clear retention/deletion controls, and restricted access to stored reports.
+Mitigation: Use only with guardian consent and an explicit plan for retention, deletion, access control, and report sharing.
 
-Risk: The skill may create or reuse local identity and token records without asking the end user for an identifier.
+Risk: The skill silently creates and reuses a local identity and may persist tokens for service access.
 
-Mitigation: Deploy with explicit account separation, token protection, and review of identity storage before use with children or multiple households.
+Mitigation: Review the workspace identity file and local token database before deployment; clear or rotate persisted credentials when changing users or environments.
 
-Risk: Cobb angle and posture findings are visual estimates and are not a medical diagnosis.
+Risk: Configuration may include development or non-production service endpoints.
 
-Mitigation: Present results as habit-correction reminders and advise clinical review for medical scoliosis or vision concerns.
+Mitigation: Review and replace service configuration before commercial use, especially any HTTP or development endpoints.
 
 ## Reference(s):
 
-- [API Documentation](references/api_doc.md)
-- [Skill Demo](https://lifeemergence.com/sample.html)
 - [ClawHub Skill Page](https://clawhub.ai/18072937735/skills/smyx-child-poor-posture-detection-analysis)
+- [API Documentation](references/api_doc.md)
+- [Shared API Documentation](skills/smyx_analysis/references/api_doc.md)
+- [Skill Demo](https://lifeemergence.com/sample.html)
 
 ## Skill Output:
 
-**Output Type(s):** [Markdown, JSON, Shell commands, Guidance]
+**Output Type(s):** [Text, Markdown, JSON, Shell commands, Guidance]
 
-**Output Format:** [Markdown or JSON report content with posture metrics, reminder text, recommendations, and report links]
+**Output Format:** [Markdown text with structured JSON report content and report links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May query cloud-hosted historical reports and may save report output to a file when requested.]
+**Other Properties Related to Output:** [Can analyze a local video file or URL, and can list historical report records returned by the configured service.]
 
 ## Skill Version(s):
 
-1.0.9 (source: server release metadata; artifact frontmatter says 1.0.10)
+1.0.10 (source: frontmatter and server release evidence)
 
 ## Ethical Considerations:
 
