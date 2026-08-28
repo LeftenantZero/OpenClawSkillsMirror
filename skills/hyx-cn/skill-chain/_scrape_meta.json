@@ -1,0 +1,37 @@
+{
+  "changelog": "Security\nFix TLS verification: Removed explicit disabling of SSL certificate verification (ssl.CERT_NONE, check_hostname = False) in _clawhub_get(). All requests to clawhub.ai now use the default SSL context, preventing man-in-the-middle exposure of credentials or API traffic.\nRemove credential dependency: Online enrichment no longer reads ~/.codex/auth.json. The clawhub API is public and does not require authentication; all token and Codex-related auth logic has been removed. No local credential files are read.\nChanges\nOnline enrichment: enrich works without any token or config. No CLAWHUB_TOKEN or auth file needed.\nCode cleanup: Removed load_auth_token(), unused import os, and the Authorization: Bearer header from clawhub requests. Docstring usage example updated.\nCompatibility\nBreaking: If you previously relied on ~/.codex/auth.json or CLAWHUB_TOKEN for enrich, that is no longer used or supported\u2014enrich is now unauthenticated only. Behavior is otherwise unchanged; scan, enrich, analyze-all, and all analyze subcommands work as before.",
+  "created_at": 1773418061953,
+  "display_name": "SkillChain",
+  "fetched_at": 1787875402736,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/model.md",
+    "schema/skillchain.yaml",
+    "scripts/analyze.py",
+    "scripts/ingest.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "hyx-cn",
+    "handle": "hyx-cn",
+    "user_id": "s17fvha2djenr5r0ga7ng3g7x184z6zs"
+  },
+  "slug": "skill-chain",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-chain",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-chain&ownerHandle=hyx-cn",
+    "page_url": "https://clawhub.ai/hyx-cn/skills/skill-chain"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 793,
+    "installs": 21,
+    "stars": 2,
+    "versions": 2
+  },
+  "summary": "Supply chain intelligence for OpenClaw skills. Use when analyzing the local skill ecosystem, understanding tool and package dependencies, discovering skill c...",
+  "updated_at": 1778491890041,
+  "version": "1.0.1"
+}
