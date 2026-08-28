@@ -1,0 +1,41 @@
+{
+  "changelog": "**Major update: worksheet verification now uses structured data files (JSON), improving reliability and security.**\n\n- Replaced code-based verification (\"verify.py\" with explicit Python check calls) with a JSON-based format, interpreted by the bundled script.\n- Updated documentation to require a JSON verification file describing each problem and its expected answer.\n- `scripts/verify.py` now parses the JSON verification file and evaluates answers using SymPy\u2014no generated code is executed.\n- Removed legacy script `scripts/fetch_model_config.sh` as part of verification process cleanup.\n- README and guides updated to reflect the new workflow for problem verification.",
+  "created_at": 1771803214897,
+  "display_name": "Math Worksheets",
+  "fetched_at": 1787896790388,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/latex-templates.md",
+    "references/model-rankings.json",
+    "references/model-rankings.md",
+    "references/problem-library.md",
+    "scripts/check_reasoning_model.sh",
+    "scripts/compile.sh",
+    "scripts/run_verify.sh",
+    "scripts/verify.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Trond Wuellner",
+    "handle": "trondw",
+    "user_id": "s175jxj1rjk3azjdda2kdgbaps884t6j"
+  },
+  "slug": "math-worksheets",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/math-worksheets",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=math-worksheets&ownerHandle=trondw",
+    "page_url": "https://clawhub.ai/trondw/skills/math-worksheets"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 802,
+    "installs": 19,
+    "stars": 2,
+    "versions": 2
+  },
+  "summary": "Generate professional math practice worksheets and full answer keys as PDFs. Compiles LaTeX to PDF using tectonic (free, no account needed). Supports any mat...",
+  "updated_at": 1778491612653,
+  "version": "2.0.0"
+}
