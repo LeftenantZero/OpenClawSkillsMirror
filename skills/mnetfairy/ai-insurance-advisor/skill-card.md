@@ -1,6 +1,6 @@
 ## Description:
 
-A mainland China insurance assistant for needs analysis, insurance plan design, product comparison, premium estimation, compliance prompts, claims guidance, and insurance-agent sales or training support.
+AI Insurance Advisor is a mainland China insurance assistant for coverage planning, product comparison, premium estimation, coverage-gap analysis, compliance prompts, claims questions, social copy, sales training scripts, and agent sales support.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users in mainland China can use this skill to analyze insurance needs, compare products, estimate premiums, design coverage plans, and understand compliance or claims considerations. Insurance agents can use it to draft Chinese-language sales copy, training scripts, and customer-facing explanation material.
+External users in mainland China use this skill to discuss insurance needs, compare bundled product data, estimate premiums, design coverage plans, and receive Chinese-language insurance guidance. Insurance agents may also use it to draft social posts, training scripts, and compliant customer-facing explanations.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,38 @@ Mainland China
 
 ## Known Risks and Mitigations:
 
-Risk: The skill asks users for sensitive personal, family, health, and financial details to produce insurance advice.
+Risk: Insurance recommendations, premiums, product availability, exclusions, or sales-channel fit may be incorrect or outdated.
 
-Mitigation: Collect only the information needed for the immediate task, avoid sharing unnecessary identifying details, and handle any retained outputs as sensitive financial and personal information.
+Mitigation: Verify product details with licensed insurance professionals or insurers before making purchase, renewal, cancellation, or claims decisions.
 
-Risk: Insurance product recommendations and premium estimates rely on a bundled static product database and may be stale or incomplete.
+Risk: The skill may ask for sensitive personal, health, family, and financial context during insurance needs analysis.
 
-Mitigation: Independently verify product availability, premiums, policy terms, and sales-company contact details with insurers or qualified insurance professionals before making decisions.
+Mitigation: Collect only the minimum information needed, obtain user consent, and avoid retaining or sharing sensitive details outside the insurance consultation workflow.
 
-Risk: The skill can produce financial, compliance, and claims guidance that may be mistaken for final professional advice.
+Risk: A contact flow can point users to a named insurance sales company after the user asks for contact information.
 
-Mitigation: Treat outputs as planning support, keep the skill's product freshness and legal-advice disclaimers visible, and consult licensed insurance or legal professionals for binding decisions.
+Mitigation: Present contact information only after explicit user interest, keep the choice optional, and encourage comparison across licensed multi-company insurance agencies or brokerages.
 
 ## Reference(s):
 
-- [Insurance Product Database](references/products.json)
-- [Insurance Knowledge Base](references/insurance-knowledge.md)
-- [Regulatory Compliance Notes](references/compliance.md)
+- [Insurance product database](references/products.json)
+- [Insurance knowledge reference](references/insurance-knowledge.md)
+- [Compliance reference](references/compliance.md)
+- [ClawHub skill page](https://clawhub.ai/mnetfairy/skills/ai-insurance-advisor)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, shell commands, guidance]
+**Output Type(s):** [Guidance, Markdown, JSON, Shell commands]
 
-**Output Format:** [Chinese-language Markdown and text responses, with JSON output from helper scripts when invoked]
+**Output Format:** [Chinese-language Markdown guidance and structured JSON from local helper scripts]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include structured needs reports, premium comparison tables, plan options, product disclaimers, compliance reminders, and sales or training copy.]
+**Other Properties Related to Output:** [Uses bundled static insurance reference data and calculators; product availability, premiums, exclusions, and sales-channel suitability require independent verification.]
 
 ## Skill Version(s):
 
-2.0.52 (source: ClawHub release evidence; artifact frontmatter reports 2.0.0)
+2.0.59 (source: ClawHub release metadata and products metadata)
 
 ## Ethical Considerations:
 
