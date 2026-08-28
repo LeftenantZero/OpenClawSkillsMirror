@@ -1,48 +1,61 @@
-## Description: <br>
-Use when someone wants the same person hosting several clips - multi-segment UGC, comparison reels, or mixed speaking and animated scenes with continuity. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+Use when someone wants the same person hosting several clips - multi-segment UGC, comparison reels, or mixed speaking and animated scenes with continuity.
 
-## Publisher: <br>
-[pruna-ai](https://clawhub.ai/user/pruna-ai) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[pruna-ai](https://clawhub.ai/user/pruna-ai)
 
-## Use Case: <br>
-Developers, creators, and agent operators use this skill to plan and produce coherent multi-scene avatar reels that keep a host or persona consistent across speaking clips, animated motion-transfer beats, slider comparisons, and final ffmpeg assembly. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: Portraits, reference videos, scripts, and generated media may be uploaded to Pruna services. <br>
-Mitigation: Use rights-cleared media and review the scene plan and stills before approving uploads or generation. <br>
-Risk: Approved generation can spend Pruna API credits. <br>
-Mitigation: Keep the plan, stills, and clips approval gates; do not start paid predictions before explicit approval. <br>
-Risk: PRUNA_API_KEY exposure could grant access to Pruna API usage. <br>
-Mitigation: Keep PRUNA_API_KEY scoped and private, and do not include it in prompts, logs, or shared artifacts. <br>
-Risk: Poor pose, framing, or proportion alignment can produce broken motion-transfer clips. <br>
-Mitigation: Match shot size, facing direction, and limb visibility; repose with p-image-edit or choose a closer motion template before p-video-animate. <br>
+## Use Case:
 
+External creators, marketers, and developers use this skill to plan and generate coherent multi-scene avatar or motion-transfer reels with consistent cast identity, approved stills, Pruna video calls, slider comparisons, and ffmpeg assembly.
 
-## Reference(s): <br>
-- [Avatar Multi Scene on ClawHub](https://clawhub.ai/pruna-ai/skills/avatar-multi-scene) <br>
-- [Prompt templates](prompt-templates.md) <br>
-- [Animate beats](animate-beats.md) <br>
-- [Examples](examples.md) <br>
-- [Batch template](templates/batch.template.json) <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance] <br>
-**Output Format:** [Markdown guidance with JSON snippets, API request fields, and ffmpeg shell commands] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [May produce scene plans, cast ledgers, prompt fields, batch manifests, approval checkpoints, and local assembly commands.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-1.0.9 (source: server release metadata and skill metadata) <br>
+Risk: The workflow uploads portraits, scripts, motion templates, and related media to Pruna services.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Confirm the user trusts the PrunaAI skill dependencies and has rights to upload all selected media before generation.
+
+Risk: ffmpeg examples use overwrite behavior that can replace existing output files.
+
+Mitigation: Use unique output filenames or remove the overwrite flag when preserving prior renders matters.
+
+Risk: Poor pose, framing, or proportion alignment between reference images and motion templates can produce weak motion-transfer clips.
+
+Mitigation: Review alignment before running paid video jobs, repose references with p-image-edit, or choose a closer motion template.
+
+## Reference(s):
+
+- [ClawHub skill page](https://clawhub.ai/pruna-ai/skills/avatar-multi-scene)
+- [Animate beats guide](artifact/animate-beats.md)
+- [Prompt templates](artifact/prompt-templates.md)
+- [Examples](artifact/examples.md)
+- [Batch template](artifact/templates/batch.template.json)
+
+## Skill Output:
+
+**Output Type(s):** [guidance, markdown, code, shell commands, configuration]
+
+**Output Format:** [Markdown guidance with JSON manifests, API call fields, and ffmpeg command examples]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [Outputs may include scene plans, cast ledgers, prompt templates, Pruna request payload fields, file paths, comparison-render commands, and assembly instructions.]
+
+## Skill Version(s):
+
+1.0.10 (source: server release evidence and skill frontmatter)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
