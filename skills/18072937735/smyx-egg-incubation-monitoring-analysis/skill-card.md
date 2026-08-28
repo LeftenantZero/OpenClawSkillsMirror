@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes turtle or snake egg images, videos, or URLs to assess shell color, blood streaks, vascular signs, embryo silhouette, development stage, and incubation report outputs.
+Analyzes turtle or snake egg images or videos from incubator cameras to classify visible shell, vascular, embryo, mold, and signal-quality indicators and produce an incubation progress report.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External reptile breeders, smart incubator operators, and breeding-management app developers use this skill to analyze turtle or snake egg media and produce incubation progress reports. It is intended to support visual monitoring, historical report review, and non-invasive recommendations rather than replace species-specific husbandry manuals or professional review.
+External reptile breeders, breeding farms, and smart-incubator developers use this skill to review turtle or snake egg media, track egg-level incubation status, and surface non-invasive follow-up actions. It can also retrieve cloud-backed historical incubation reports for the associated user identity.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Cloud processing can send uploaded media or supplied URLs to remote service endpoints.
+Risk: Media and history data are sent to backend services for analysis and report retrieval, with limited disclosure about upload handling or retention.
 
-Mitigation: Use only with media that is appropriate for the configured service, and verify the API URLs before running the skill.
+Mitigation: Use only non-sensitive egg images or videos, review the publisher's service terms before deployment, and require clear upload and retention disclosure before production use.
 
-Risk: The skill can associate analyses with an internal identity and query historical reports.
+Risk: The skill can silently create or reuse a user identity and locally store service tokens.
 
-Mitigation: Review account handling and report-retention expectations before installation, especially in shared workspaces.
+Mitigation: Install only in an isolated workspace, review local token storage behavior before use, and require a user-visible way to manage or disable stored identity tokens.
 
-Risk: Local workspace storage can contain account records or remote tokens.
+Risk: Incorrect visual classifications could affect breeding decisions, especially for fertilization, blood-ring, mold, or pre-hatching status.
 
-Mitigation: Treat the workspace data directory as sensitive and remove stored credentials or records when decommissioning the skill.
-
-Risk: Visual egg-development classifications may be wrong or unreliable when image quality, lighting, species context, or handling history is incomplete.
-
-Mitigation: Require clear non-invasive imagery, species and incubation context, and human review before acting on important breeding decisions.
+Mitigation: Treat results as decision support, verify important findings against species incubation records and breeder judgment, and avoid invasive actions or exact environmental adjustments based only on the skill output.
 
 ## Reference(s):
 
-- [Skill API documentation](references/api_doc.md)
-- [SMYX analysis API documentation](skills/smyx_analysis/references/api_doc.md)
-- [Skill page](https://clawhub.ai/18072937735/skills/smyx-egg-incubation-monitoring-analysis)
+- [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-egg-incubation-monitoring-analysis)
+- [API documentation](references/api_doc.md)
 - [Skill demo](https://lifeemergence.com/sample.html)
 
 ## Skill Output:
 
-**Output Type(s):** [analysis, markdown, json, shell commands, guidance]
+**Output Type(s):** [text, markdown, json, shell commands, guidance]
 
-**Output Format:** [Markdown or JSON analysis report with classifications, alert level, recommended actions, and report links.]
+**Output Format:** [Markdown and JSON-formatted structured analysis text, with optional report export links and history listings]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Can save output to a file and can query cloud-hosted historical incubation reports.]
+**Other Properties Related to Output:** [May include incubation stage labels, alert levels, recommended non-invasive actions, disclaimers, report image URLs, and cloud history query results.]
 
 ## Skill Version(s):
 
-1.0.11 (source: server release evidence; artifact frontmatter lists 1.0.9)
+1.0.12 (source: server release metadata; artifact frontmatter reports 1.0.11)
 
 ## Ethical Considerations:
 
