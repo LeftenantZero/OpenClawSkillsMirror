@@ -1,6 +1,6 @@
 ## Description:
 
-Identifies prone sleeping positions, head covering, and mouth or nose occlusion in infant sleep media and returns risk alerts, structured findings, recommendations, and report links.
+Identifies prone sleeping positions, head covering, and mouth or nose occlusion by bedding or clothing, then returns high-risk infant sleep safety alerts and structured reports.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and agents use this skill to analyze infant sleep monitoring videos or URLs for prone sleeping, head covering, and mouth or nose occlusion risks. The output is intended as an auxiliary monitoring report and does not replace adult supervision or medical advice.
+External users and caregivers use this skill to analyze infant sleep monitoring videos or video URLs for prone sleeping, head covering, and mouth or nose occlusion risks. The skill can also return identity-linked cloud history for prior warning reports.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Infant sleep media or URLs may be sent to configured Life Emergence/Open API services for analysis.
+Risk: Sensitive infant sleep videos or video URLs may be sent to a backend for processing.
 
-Mitigation: Use only authorized media and deploy only where the configured service endpoints, retention practices, and privacy requirements are acceptable.
+Mitigation: Install only when the publisher and backend are trusted, and confirm that users understand where footage is processed and retained.
 
-Risk: The skill silently creates or reuses an internal identity and stores tokens in local workspace state.
+Risk: The skill can create or reuse an internal identity, store account tokens locally, and retrieve cloud report history tied to that identity.
 
-Mitigation: Run in a dedicated workspace, protect the workspace data directory, and clear local state when the identity or stored tokens should not persist.
+Mitigation: Run in an isolated workspace, review local token storage before use, and avoid shared workspaces for sensitive child footage or reports.
 
-Risk: Historical report queries are sent to cloud APIs and may return prior report data associated with the resolved identity.
+Risk: Automated alerts and reports may be treated as a substitute for direct adult supervision or professional care.
 
-Mitigation: Limit use to trusted environments and verify the resolved identity context before querying history.
-
-Risk: Bundled API documentation is partially mismatched with the infant suffocation use case.
-
-Mitigation: Verify endpoint behavior and response fields against the live service before relying on the reports operationally.
+Mitigation: Present the output as auxiliary monitoring only and require caregivers to verify high-risk alerts directly and seek appropriate medical help when needed.
 
 ## Reference(s):
 
 - [ClawHub Skill Page](https://clawhub.ai/18072937735/skills/smyx-infant-suffocation-warning-analysis)
 - [Skill Demo](https://lifeemergence.com/sample.html)
-- [API Documentation](references/api_doc.md)
-- [Analysis API Documentation](skills/smyx_analysis/references/api_doc.md)
+- [API 接口文档](references/api_doc.md)
+- [API接口文档](skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, JSON, Shell commands, Configuration, Guidance]
+**Output Type(s):** [text, markdown, json, shell commands, files]
 
-**Output Format:** [JSON or Markdown report text with structured findings, safety recommendations, and report links]
+**Output Format:** [Markdown reports and JSON strings, with optional saved text or JSON output files.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Accepts local video files or video URLs, supports sensitivity 1-5, can save results to a file, and can return a cloud history list.]
+**Other Properties Related to Output:** [Accepts local mp4, avi, or mov video files up to 10 MB, or public video URLs; can list cloud report history associated with the resolved identity.]
 
 ## Skill Version(s):
 
-1.0.12 (source: server release evidence and SKILL.md frontmatter)
+1.0.13 (source: ClawHub release metadata; artifact frontmatter says 1.0.12)
 
 ## Ethical Considerations:
 
