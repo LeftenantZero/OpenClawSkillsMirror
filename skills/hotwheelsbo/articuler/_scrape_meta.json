@@ -1,0 +1,33 @@
+{
+  "changelog": "**Summary:** This release introduces a two-step authentication and a new async API workflow for playbook generation.\n\n- Added a mandatory login step: users must submit a verification code received by email, then log in to receive a `token` for all business API calls.\n- Changed the playbook generation API to an asynchronous process; now returns a `sessionId` and requires polling for completion.\n- Updated API parameters: all main functions now require a `token` instead of raw email/captcha.\n- Clarified user flow: steps must be performed in order\u2014verification, login, submit job, then poll for results.\n- Updated documentation to match the new authentication and async job design.",
+  "created_at": 1773720067945,
+  "display_name": "articuler",
+  "fetched_at": 1787938941313,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "hotwheelsBo",
+    "handle": "hotwheelsbo",
+    "user_id": "s174ygzhqvykcy6y6q9021gmzx885mwm"
+  },
+  "slug": "articuler",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/articuler",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=articuler&ownerHandle=hotwheelsbo",
+    "page_url": "https://clawhub.ai/hotwheelsbo/skills/articuler"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 708,
+    "installs": 18,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "AI-powered professional networking assistant. Generate personalized cold emails and outreach playbooks to accelerate career growth and business development.",
+  "updated_at": 1778491965619,
+  "version": "1.0.2"
+}
