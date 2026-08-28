@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes fixed-camera video and optional microphone input from dementia care settings to identify confusion or disorientation behaviors and produce structured orientation-soothing reports.
+Analyzes fixed-camera video and optional microphone input from dementia care or home settings to identify confusion or disorientation behaviors and produce structured orientation-soothing recommendations and reports.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Care teams, facility operators, and home-care developers use this skill to analyze dementia-care audio/video inputs for disorientation indicators, review structured event reports, and guide staged orientation-soothing responses. It is intended to support observation and escalation workflows, not to provide a medical diagnosis.
+External care teams and developers use this skill to analyze dementia-care audio/video inputs for observable confusion, wandering, agitation, gaze drift, and repeated orientation questions, then return structured findings, escalation guidance, and report links. It is intended to support human-supervised care workflows, not to diagnose dementia or replace clinical judgment.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,33 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Sensitive resident audio, video, and care-event data may be uploaded to cloud endpoints.
+Risk: The skill handles highly sensitive dementia-care audio/video and may rely on cloud services, local identity reuse, remote account or token handling, and automated intervention flows.
 
-Mitigation: Use only with resident or legal-representative consent, approved cloud-processing terms, access controls, and retention and deletion rules.
+Mitigation: Install only in an authorized care setting after confirming informed consent, visible notice, retention limits, backend endpoints, local identity and token storage, and human oversight.
 
-Risk: Silent identity creation and persisted tokens can make report ownership and access harder to audit.
+Risk: Automated orientation soothing or escalation could be inappropriate if deployed without review in a care environment.
 
-Mitigation: Review identity provisioning, token storage, token rotation, and deletion behavior before deployment.
-
-Risk: Automatic caregiver, nurse, or soothing actions may affect real-world care workflows.
-
-Mitigation: Require approved escalation policies, audit logs, and human oversight for care-setting use.
-
-Risk: Behavior recognition results could be mistaken for clinical diagnosis.
-
-Mitigation: Use outputs as behavior observations only, and route medical concerns to qualified care or medical professionals.
+Mitigation: Disable or gate automated soothing and escalation until reviewed by responsible care staff, and require human supervision for operational use.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-dementia-confusion-orientation-analysis)
-- [Skill demo](https://lifeemergence.com/sample.html)
-- [API interface documentation](artifact/references/api_doc.md)
-- [Analysis API documentation](artifact/skills/smyx_analysis/references/api_doc.md)
+- [ClawHub Skill Page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-dementia-confusion-orientation-analysis)
+- [API Documentation](references/api_doc.md)
+- [Skill Demo](https://lifeemergence.com/sample.html)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, shell commands, guidance]
+**Output Type(s):** [analysis, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown and JSON-like structured reports with report links]
+**Output Format:** [Markdown and JSON-style structured analysis reports with report links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include cloud report export links and historical report lists when requested.]
+**Other Properties Related to Output:** [May include recognition results, monitoring findings, soothing or escalation guidance, and historical report tables.]
 
 ## Skill Version(s):
 
-1.0.7 (source: server release metadata; artifact frontmatter and release changelog mention 1.0.11)
+1.0.8 (source: server release evidence)
 
 ## Ethical Considerations:
 
