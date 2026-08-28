@@ -1,6 +1,6 @@
 ## Description:
 
-Provides read-only AllTrails trail search, trail details, reviews, photos, weather, GPX export, and signed-in user hiking data through an unofficial MCP server.
+This skill helps agents retrieve AllTrails hiking and trail data, including trail search results, details, reviews, photos, weather, GPX routes, and a signed-in user's saved lists and activity.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and agents use this skill when answering hiking and trail questions with AllTrails-backed search, trail details, reviews, weather, photos, GPX data, and signed-in user lists or activity.
+External users and developers use this skill when they want an agent to query AllTrails for trail discovery, trail details, reviews, photos, route GPX data, weather, or their own signed-in AllTrails lists and activity.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can use a signed-in AllTrails browser session for broad hiking requests and account data without a clear per-use consent boundary.
+Risk: The broad trigger wording may route ordinary hiking or trail questions through AllTrails even when the user did not intend to query AllTrails.
 
-Mitigation: Install only when read-only access through the signed-in AllTrails tab is acceptable; keep the tab open only when needed and review source/package contents before use.
+Mitigation: Invoke the skill for explicit AllTrails or personal AllTrails-data requests, and confirm intent before using it for general hiking questions.
 
-Risk: The unofficial MCP server relies on AllTrails internal endpoints and browser-mediated access that may break or conflict with AllTrails terms.
+Risk: The skill uses an unofficial AllTrails bridge through a signed-in browser session.
 
-Mitigation: Use it only when AllTrails-backed results are explicitly desired, expect service changes, and review AllTrails terms and package behavior before deployment.
+Mitigation: Install and use it only when the user is comfortable with that access pattern and understands that personal AllTrails data may be queried.
+
+Risk: All tools are read-only, but per-user tools can expose saved lists, completed trails, profile data, and activity from the signed-in session.
+
+Mitigation: Use per-user tools only for user-authorized requests and avoid sharing returned personal data beyond the current task.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/chrischall/skills/alltrails)
-- [npm package: alltrails-mcp](https://www.npmjs.com/package/alltrails-mcp)
-- [Source: chrischall/alltrails-mcp](https://github.com/chrischall/alltrails-mcp)
+- [alltrails ClawHub skill page](https://clawhub.ai/chrischall/skills/alltrails)
+- [alltrails-mcp npm package](https://www.npmjs.com/package/alltrails-mcp)
+- [alltrails-mcp source repository](https://github.com/chrischall/alltrails-mcp)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Configuration instructions, Shell commands, API calls, Markdown]
+**Output Type(s):** [Text, Markdown, Configuration, Guidance]
 
-**Output Format:** [Markdown guidance with JSON configuration snippets and MCP tool call descriptions]
+**Output Format:** [Markdown with JSON configuration snippets and tool-call guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Read-only AllTrails data access; signed-in session behavior depends on the user's AllTrails browser tab and fetchproxy bridge.]
+**Other Properties Related to Output:** [May include trail metadata, review summaries, photo URLs, weather summaries, user-list references, activity summaries, and GPX route text when requested.]
 
 ## Skill Version(s):
 
-2.1.3 (source: server release evidence)
+2.1.4 (source: server release evidence)
 
 ## Ethical Considerations:
 
