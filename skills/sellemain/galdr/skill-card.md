@@ -1,6 +1,6 @@
 ## Description:
 
-OpenClaw skill for using galdr's ARC workflow to turn YouTube URLs or local audio files into grounded, time-ordered listening-experience prompts backed by listener-state traces: pattern, attention, pulse, heard pressure, surface balance/evidence, harmony, melody, overtones, and silence/re-entry structure.
+Galdr helps OpenClaw agents turn YouTube URLs or local audio files into grounded, time-ordered listening-experience prompts backed by listener-state traces and optional music-video frame extraction.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and OpenClaw agent operators use this skill to analyze songs, music videos, or local audio into grounded listener-state evidence and listening-experience prompts. It helps agents extract structural moments, assemble ARC prompts, and avoid unsupported emotional or lyrical claims.
+Developers, engineers, and agent operators use Galdr to analyze songs or music videos, generate evidence-backed listening-experience prompts, and create analysis packets for downstream model writing.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill depends on a separate galdr CLI and media/model integrations that may process local audio, lyrics, background context, or prompts outside the skill artifact.
+Risk: Galdr workflows may contact remote media or context services and may include track-derived lyrics, metadata, or local-audio details in prompts.
 
-Mitigation: Install the CLI only from trusted sources, understand configured data flows before using private audio, and review assembled prompts before sending them to another model.
+Mitigation: Install and run Galdr only from trusted sources, and review assembled prompts before sending them to Claude, llm, or any other external model service.
 
-Risk: Generated listening-experience prose can overstate emotional intent or treat structural metrics as proof of private meaning.
+Risk: Local analysis files can contain audio-derived traces, lyrics, metadata, and generated prompt material.
 
-Mitigation: Use the metrics as evidence, walk the track through time, and keep claims bounded to audible structure rather than inferred intent.
+Mitigation: Store outputs in an appropriate workspace, limit access for private audio, and remove generated analysis files when they are no longer needed.
 
-Risk: Fetching or analyzing online music can raise rights and policy issues for copyrighted media.
+Risk: Fetching or downloading copyrighted audio may be inappropriate without rights or a valid use context.
 
-Mitigation: Use downloads and analysis only when the operator has appropriate rights or context, and prefer local or authorized media when rights are unclear.
+Mitigation: Confirm the operator has the necessary rights or context before downloading or analyzing copyrighted media.
 
 ## Reference(s):
 
-- [Galdr ClawHub release](https://clawhub.ai/sellemain/skills/galdr)
 - [Galdr metric reference](references/metrics.md)
-- [Galdr PyPI package](https://pypi.org/project/galdr/)
-- [Galdr source repository](https://github.com/sellemain/galdr)
+- [Galdr PyPI project](https://pypi.org/project/galdr/)
+- [Galdr source repository referenced by the skill](https://github.com/sellemain/galdr)
+- [ClawHub Galdr skill page](https://clawhub.ai/sellemain/skills/galdr)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with inline shell commands and references to generated JSON analysis files]
+**Output Format:** [Markdown guidance with inline shell commands and optional JSON or text file outputs.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Primary outputs guide the agent to run galdr, inspect time-ordered listener-state traces, and assemble or review ARC prompts before optional model handoff.]
+**Other Properties Related to Output:** [Creates local analysis files and prompts; full mode can include track-derived lyrics, background, and frames.]
 
 ## Skill Version(s):
 
-0.7.0 (source: server release metadata; artifact frontmatter says 0.6.0)
+0.7.1 (source: server release metadata and SKILL.md frontmatter)
 
 ## Ethical Considerations:
 
