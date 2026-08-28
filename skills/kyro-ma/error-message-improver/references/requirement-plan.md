@@ -32,18 +32,18 @@ Scoring rationale:
 
 ## Evidence
 
-- github-issues (2026-08-17T08:47:43+00:00): [Make SmolRunner an adaptive diagnostic runtime: turn failures into hints, probes, remedies, and eliminated error classes](https://github.com/teamleaderleo/smolrunner/issues/548)
-- segmentfault-search (2026-08-26T04:04:07.778469+00:00): [HarmonyOS 开发者社区](https://segmentfault.com/brand/harmonyos-next)
-- segmentfault-search (2026-08-26T04:04:07.778469+00:00): [javascript](https://segmentfault.com/t/javascript)
-- segmentfault-search (2026-08-26T04:04:07.778469+00:00): [typescript](https://segmentfault.com/t/typescript)
-- segmentfault-search (2026-08-26T04:04:07.778469+00:00): [ONES 研发管理](https://ones.cn/?utm_term=ONES%C2%A0%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86&utm_campaign=%E9%A6%96%E9%A1%B5%E6%A0%87%E7%AD%BE&_channel_track_key=myqX1C0f&utm_source=%E6%80%9D%E5%90%A6%E8%BD%AC%20ONES)
-- segmentfault-search (2026-08-26T04:04:07.778469+00:00): [答： c++单例类编译不通过](https://segmentfault.com/q/1010000004886164/a-1020000004886445)
-- segmentfault-search (2026-08-26T04:04:07.778469+00:00): [error-messages](https://segmentfault.com/t/error-messages)
-- segmentfault-search (2026-08-26T04:04:07.778469+00:00): [问： vue自定义指令报错](https://segmentfault.com/q/1010000009322969)
+- github-issues (2026-08-27T17:20:16+00:00): [Add/fix 2 landmark issues (handled by validateLandmark(), validateLandmarkStructure() and validateLandmarkAttributes()) in main.js](https://github.com/tadanobutubutu/screeps/issues/37417)
+- github-issues (2026-08-22T09:30:28+00:00): [[Intake] Node.js: missing `require("node:os")` inside `try/catch(_){}` silently kills ent](https://github.com/Ikalus1988/MisakaNet/issues/1222)
+- github-issues (2026-08-27T17:46:54+00:00): [Optimize automation scripts for performance](https://github.com/lightspeedwp/.github/issues/2390)
+- segmentfault-search (2026-08-28T04:04:34.281596+00:00): [HarmonyOS 开发者社区](https://segmentfault.com/brand/harmonyos-next)
+- segmentfault-search (2026-08-28T04:04:34.281596+00:00): [javascript](https://segmentfault.com/t/javascript)
+- segmentfault-search (2026-08-28T04:04:34.281596+00:00): [typescript](https://segmentfault.com/t/typescript)
+- segmentfault-search (2026-08-28T04:04:34.281596+00:00): [ONES 研发管理](https://ones.cn/?utm_term=ONES%C2%A0%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86&utm_campaign=%E9%A6%96%E9%A1%B5%E6%A0%87%E7%AD%BE&_channel_track_key=myqX1C0f&utm_source=%E6%80%9D%E5%90%A6%E8%BD%AC%20ONES)
+- segmentfault-search (2026-08-28T04:04:34.282607+00:00): [答： c++单例类编译不通过](https://segmentfault.com/q/1010000004886164/a-1020000004886445)
+- segmentfault-search (2026-08-28T04:04:34.282607+00:00): [error-messages](https://segmentfault.com/t/error-messages)
+- segmentfault-search (2026-08-28T04:04:34.282607+00:00): [问： vue自定义指令报错](https://segmentfault.com/q/1010000009322969)
 - hacker-news-search (2026-08-26T01:46:34+00:00): [Python's pre-declared constants are kinda weird](https://news.ycombinator.com/item?id=49443186)
 - hacker-news-search (2026-08-22T18:05:47+00:00): [I'm becoming AI-blind](https://news.ycombinator.com/item?id=49402160)
-- hacker-news-search (2026-08-20T16:35:23+00:00): [Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces (2025)](https://news.ycombinator.com/item?id=49376937)
-- hacker-news-search (2026-08-18T07:45:59+00:00): [The Benchmarkpocalypse](https://news.ycombinator.com/item?id=49342677)
 
 ## How The Skill Meets The Requirement
 

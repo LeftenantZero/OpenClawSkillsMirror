@@ -14,7 +14,9 @@ Evidence coverage: 12 signals across 3 source families.
 
 ## Evidence
 
-- github-issues: [Make SmolRunner an adaptive diagnostic runtime: turn failures into hints, probes, remedies, and eliminated error classes](https://github.com/teamleaderleo/smolrunner/issues/548)
+- github-issues: [Add/fix 2 landmark issues (handled by validateLandmark(), validateLandmarkStructure() and validateLandmarkAttributes()) in main.js](https://github.com/tadanobutubutu/screeps/issues/37417)
+- github-issues: [[Intake] Node.js: missing `require("node:os")` inside `try/catch(_){}` silently kills ent](https://github.com/Ikalus1988/MisakaNet/issues/1222)
+- github-issues: [Optimize automation scripts for performance](https://github.com/lightspeedwp/.github/issues/2390)
 - segmentfault-search: [HarmonyOS 开发者社区](https://segmentfault.com/brand/harmonyos-next)
 - segmentfault-search: [javascript](https://segmentfault.com/t/javascript)
 - segmentfault-search: [typescript](https://segmentfault.com/t/typescript)
@@ -24,8 +26,6 @@ Evidence coverage: 12 signals across 3 source families.
 - segmentfault-search: [问： vue自定义指令报错](https://segmentfault.com/q/1010000009322969)
 - hacker-news-search: [Python's pre-declared constants are kinda weird](https://news.ycombinator.com/item?id=49443186)
 - hacker-news-search: [I'm becoming AI-blind](https://news.ycombinator.com/item?id=49402160)
-- hacker-news-search: [Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces (2025)](https://news.ycombinator.com/item?id=49376937)
-- hacker-news-search: [The Benchmarkpocalypse](https://news.ycombinator.com/item?id=49342677)
 
 ## How This Skill Meets The Requirement
 
