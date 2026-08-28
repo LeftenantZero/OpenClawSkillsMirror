@@ -1,6 +1,6 @@
 ## Description:
 
-Identifies babies kicking off blankets or exposing their bodies during sleep and alerts parents to cover them up to prevent catching a cold.
+Identifies babies kicking off blankets or exposing their bodies during sleep and alerts parents to cover them up to prevent catching a cold. | 婴儿蹬被监测技能，识别婴儿夜间睡觉踢开被子、身体裸露，及时提醒家长给宝宝盖被保暖，预防着凉感冒
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to analyze infant sleep images or videos for blanket-kicking, body exposure, and related reminder conditions. It can also query cloud-hosted historical monitoring reports tied to the resolved local identity.
+Parents, caregivers, and developers use this skill to analyze infant sleep images or videos for blanket-kicking or body-exposure events and produce alerts, structured reports, and report links. It can also query cloud-stored historical monitoring reports.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,41 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Infant or nursery videos and URLs may be sent to the publisher's cloud service for analysis.
+Risk: Sensitive infant sleep videos or images may be uploaded to cloud services for analysis.
 
-Mitigation: Use only with media that the user is comfortable sharing with the publisher, and confirm endpoint, retention, deletion, and access practices before deployment.
+Mitigation: Install only after confirming the publisher and service endpoint are trusted, and review retention and deletion expectations before using real household media.
 
-Risk: Reports are associated with an automatically created or reused local identity.
+Risk: The skill may query cloud-stored analysis history and silently create or reuse an internal account identifier.
 
-Mitigation: Tell operators that history queries are identity-linked and review account-linking behavior before using the skill with sensitive household data.
+Mitigation: Confirm that cloud history access matches the intended user context and avoid sharing workspaces where cached identity state could expose another user's reports.
 
-Risk: Service tokens may be stored in a workspace SQLite database.
+Risk: Authentication tokens may be cached in a local workspace database.
 
-Mitigation: Restrict workspace access, avoid committing generated data directories, and rotate or clear service credentials when decommissioning the skill.
+Mitigation: Restrict workspace access, inspect local credential storage before deployment, and remove cached tokens when the skill is no longer needed.
 
-Risk: Monitoring results are only an auxiliary reminder and may miss unsafe sleep conditions.
+Risk: Monitoring results are advisory and may miss unsafe sleep conditions or produce incorrect alerts.
 
-Mitigation: Keep human caregiving and infant safety practices as the primary safeguards; do not rely on this skill as a substitute for supervision.
+Mitigation: Use outputs only as supplemental reminders and maintain direct caregiver supervision and safe sleep practices.
 
 ## Reference(s):
 
 - [ClawHub Skill Page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-infant-blanket-kick-monitoring-analysis)
-- [Publisher Profile](https://clawhub.ai/user/smyx-sunjinhui)
-- [API Documentation](references/api_doc.md)
 - [Skill Demo](https://lifeemergence.com/sample.html)
+- [API Documentation](artifact/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, json, shell commands, files]
+**Output Type(s):** [Text, Markdown, JSON, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown or JSON analysis report, with optional saved output file and Markdown history tables]
+**Output Format:** [Markdown reports and JSON analysis results, with optional saved output files]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Reports may include monitoring results, recommendations, risk prompts, and report links returned by the publisher's cloud service.]
+**Other Properties Related to Output:** [Accepts local media files, public media URLs, or historical-report list requests; default detail output is json.]
 
 ## Skill Version(s):
 
-1.0.10 (source: server release metadata; artifact frontmatter reports 1.0.12)
+1.0.11 (source: server release metadata; artifact SKILL.md frontmatter reports 1.0.13)
 
 ## Ethical Considerations:
 
