@@ -1,0 +1,56 @@
+{
+  "changelog": "### Added\n\n- LLM-powered scanning as optional second analysis layer (`--llm`, `--llm-only`, `--llm-auto`)\n- Provider auto-detection: `OPENAI_API_KEY` \u2192 gpt-4o-mini, `ANTHROPIC_API_KEY` \u2192 claude-sonnet-4-5\n- LLM scanner module (`llm_scanner.py`) with standalone CLI\n- Taxonomy module (`get_taxonomy.py`) for MoltThreats threat classification\n- Shipped `taxonomy.json` for offline LLM scanning (no API key required for taxonomy)\n- Merge logic: LLM can upgrade severity, downgrade with high confidence, or confirm pattern findings\n- New argparse flags: `--llm-provider`, `--llm-model`, `--llm-timeout`\n- JSON output includes `mode` field (`pattern`, `pattern+llm`, `llm-only`) and `llm` analysis block\n\n### Dependencies\n\n- `requests` library required only for `--llm` modes (pattern-only scanning remains zero-dependency)",
+  "created_at": 1769975235802,
+  "display_name": "Input Guard",
+  "fetched_at": 1787910662603,
+  "files": [
+    "CHANGELOG.md",
+    "INTEGRATION.md",
+    "README.md",
+    "SKILL.md",
+    "TESTING.md",
+    "_meta.json",
+    "evals/cases.json",
+    "evals/run.py",
+    "requirements.txt",
+    "scripts/get_taxonomy.py",
+    "scripts/llm_scanner.py",
+    "scripts/report-to-molthreats.sh",
+    "scripts/scan.py",
+    "scripts/scan.sh",
+    "skill-card.md",
+    "taxonomy.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783652607726,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "dgriffin831",
+    "handle": "dgriffin831",
+    "user_id": "s17faq5seed7yjjqdaz8cs48sx88526g"
+  },
+  "slug": "input-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/input-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=input-guard&ownerHandle=dgriffin831",
+    "page_url": "https://clawhub.ai/dgriffin831/skills/input-guard"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 3628,
+    "installs": 124,
+    "stars": 5,
+    "versions": 2
+  },
+  "summary": "Scan untrusted external text (web pages, tweets, search results, API responses) for prompt injection attacks. Returns severity levels and alerts on dangerous content. Use BEFORE processing any text from untrusted sources.",
+  "updated_at": 1778485946485,
+  "version": "1.0.1"
+}
