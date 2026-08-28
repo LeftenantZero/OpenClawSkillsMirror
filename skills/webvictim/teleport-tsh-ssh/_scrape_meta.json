@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of teleport-tsh-ssh: Provides standardized workflows for accessing Teleport-managed SSH nodes via tsh with a Machine ID identity file and explicit proxy resolution.\n\n- Supports connecting to Teleport hosts, running remote commands, node discovery, and file transfers using tsh with `-i <identity>` and `--proxy=<proxy>`.\n- Implements robust identity file discovery and proxy resolution, with user prompts and fallbacks.\n- Provides troubleshooting guidance for common Teleport CLI and access errors.\n- Designed to complement the teleport-tbot-bootstrap skill for Machine ID setup.\n- Focused on SSH workflows; does not cover app, DB, or Kubernetes access.\n- Adds proxy resolution order: TELEPORT_PROXY \u2192 saved proxy file \u2192 prompt user\n- Supports node discovery via `tsh ls`\n- Supports command execution via `tsh ssh <host> <cmd>`\n\u2022 Supports file transfer patterns via `tsh scp`\n\u2022 Includes practical troubleshooting flow for common Teleport errors",
+  "created_at": 1773257379456,
+  "display_name": "Teleport tsh SSH (Identity-First SSH Access, no passwords/static keys)",
+  "fetched_at": 1787879353849,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/tsh-ssh-reference.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "webvictim",
+    "handle": "webvictim",
+    "user_id": "s17ezzsec1c9c4n285jcwp5szd8851e2"
+  },
+  "slug": "teleport-tsh-ssh",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/teleport-tsh-ssh",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=teleport-tsh-ssh&ownerHandle=webvictim",
+    "page_url": "https://clawhub.ai/webvictim/skills/teleport-tsh-ssh"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 797,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use Teleport tsh CLI with a Machine ID (tbot) identity file to SSH into Teleport-managed hosts or run remote commands through Teleport access controls. Trigg...",
+  "updated_at": 1778491839794,
+  "version": "1.0.0"
+}
