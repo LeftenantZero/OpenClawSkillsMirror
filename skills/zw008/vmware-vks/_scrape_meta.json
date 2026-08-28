@@ -1,8 +1,8 @@
 {
-  "changelog": "Supervisor VM Service reads \u2014 VM snapshot / multi-NIC / VM groups via vm-operator CRDs (20\u219223), runtime-discovered version. Container Service not built (no CRD).",
+  "changelog": "Fixes the server's self-reported version and the advertised tool count; adds a Claude Code plugin manifest.",
   "created_at": 1774409020900,
   "display_name": "vmware-vks",
-  "fetched_at": 1787773249021,
+  "fetched_at": 1787931775741,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -21,7 +21,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1786010324167,
+    "updated_at": 1787886630776,
     "verdict": "clean"
   },
   "owner": {
@@ -37,12 +37,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 4183,
+    "downloads": 4231,
     "installs": 50,
     "stars": 0,
-    "versions": 66
+    "versions": 67
   },
   "summary": "Use this skill whenever the user needs to manage vSphere Kubernetes Service (VKS) \u2014 Supervisor clusters, vSphere Namespaces, and TKC cluster lifecycle. Directly handles: check VKS compatibility, create/delete namespaces, create/scale/upgrade/delete TKC clusters, get kubeconfig, check Harbor registry. Always use this skill for \"create Kubernetes cluster\", \"scale workers\", \"upgrade K8s version\", \"create namespace\", \"get kubeconfig\", or any VKS/TKC task. Do NOT use for vanilla VM operations (use vmware-aiops), non-vSphere Kubernetes (e.g., kubeadm, EKS, AKS), or AVI/AKO load balancing (use vmware-avi). For networking use vmware-nsx.",
-  "updated_at": 1786009565584,
-  "version": "1.8.10"
+  "updated_at": 1787885955868,
+  "version": "1.8.11"
 }

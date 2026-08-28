@@ -1,6 +1,6 @@
 ## Description:
 
-vmware-vks helps agents manage vSphere Kubernetes Service environments, including Supervisor clusters, vSphere Namespaces, TKC cluster lifecycle operations, kubeconfig retrieval, and Harbor registry checks.
+vmware-vks helps agents manage vSphere Kubernetes Service environments, including Supervisor compatibility checks, vSphere Namespaces, TKC cluster lifecycle operations, kubeconfig retrieval, Harbor registry checks, and storage usage review.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-Developers and platform engineers use this skill to inspect VKS readiness, manage vSphere Namespaces, deploy or modify Tanzu Kubernetes clusters, and retrieve access material for Kubernetes operations.
+Developers and platform engineers use this skill to operate vSphere Kubernetes Service environments through agent-assisted CLI or MCP workflows. It supports namespace administration, TKC cluster creation, scaling, upgrades, deletion, kubeconfig access, and pre-flight compatibility checks.
 
 ### Deployment Geography for Use:
 
@@ -22,40 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can retrieve live Supervisor or TKC kubeconfig material that may grant cluster access.
+Risk: The skill gives agents access to live kubeconfig credentials and vCenter session bearer tokens.
 
-Mitigation: Use least-privilege vCenter accounts, require human approval for kubeconfig retrieval, write kubeconfigs only to secure file destinations, and avoid printing tokens or kubeconfig content in chat.
+Mitigation: Require operator approval for kubeconfig retrieval, write exported kubeconfigs only to protected paths with restrictive permissions, and never print kubeconfig content or bearer tokens into chat or logs.
 
-Risk: The skill can mutate infrastructure, including namespace and TKC cluster creation, scaling, upgrades, and deletion.
+Risk: Namespace and TKC write operations can change capacity, delete resources, or disrupt running workloads.
 
-Mitigation: Require dry-run review and explicit approval for writes, keep destructive-operation confirmations enabled, and review policy and audit settings before production use.
+Mitigation: Use least-privilege vCenter accounts, keep dry-run previews enabled for create operations, require explicit confirmation for destructive actions, and rely on the built-in workload and namespace guards before applying changes.
 
-Risk: The security evidence reports a suspicious verdict due to infrastructure mutation and inconsistent approval guidance.
+Risk: Per-target vCenter passwords may be supplied through local environment files.
 
-Mitigation: Review the source, security guidance, and audit behavior before deployment, and install only where the agent is authorized to administer vSphere Kubernetes resources.
+Mitigation: Prefer a secret manager over storing passwords in .env files and restrict access to any local configuration or credential files.
 
 ## Reference(s):
 
-- [VMware VKS source homepage](https://github.com/vmware-skills/VMware-VKS)
 - [ClawHub skill page](https://clawhub.ai/zw008/skills/vmware-vks)
-- [Capabilities](artifact/references/capabilities.md)
-- [CLI Reference](artifact/references/cli-reference.md)
-- [Setup Guide](artifact/references/setup-guide.md)
-- [Agent Guardrails](artifact/references/agent-guardrails.md)
+- [Project homepage](https://github.com/vmware-skills/VMware-VKS)
+- [Capabilities](references/capabilities.md)
+- [CLI Reference](references/cli-reference.md)
+- [Setup Guide](references/setup-guide.md)
+- [Agent Guardrails](references/agent-guardrails.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown with inline shell commands and operational guidance]
+**Output Format:** [Markdown with inline shell commands, YAML plans, and configuration snippets]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May reference local configuration paths and generated command plans; kubeconfig content should be written to files rather than displayed in chat.]
+**Other Properties Related to Output:** [May direct agents to write kubeconfig output to protected local files instead of displaying tokens in chat.]
 
 ## Skill Version(s):
 
-1.8.10 (source: server release metadata)
+1.8.11 (source: ClawHub release metadata)
 
 ## Ethical Considerations:
 
