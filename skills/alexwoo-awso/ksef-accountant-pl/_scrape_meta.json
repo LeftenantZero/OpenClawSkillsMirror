@@ -1,0 +1,41 @@
+{
+  "changelog": "**Wersja 2.2.6 \u2013 Rozszerzone deklaracje bezpiecze\u0144stwa i nowy manifest skill.json**\n\n- Dodano plik manifestu `skill.json` z maszynowo czytelnymi deklaracjami bezpiecze\u0144stwa i zmiennych \u015brodowiskowych.\n- Rozbudowano sekcj\u0119 frontmatter w SKILL.md: wprowadzono r\u00f3wnoleg\u0142e flagi disableModelInvocation (camelCase, kebab-case) i dodatkowe pola bezpiecze\u0144stwa (`allowModelInvocation: false`, `instruction_only: true`, `has_executable_code: false`, `credential_scope: \"optional-user-provided\"`).\n- Zmiennym \u015brodowiskowym KSEF_TOKEN oraz KSEF_ENCRYPTION_KEY nadano atrybut `secret: true` (w SKILL.md oraz skill.json).\n- Zaktualizowano i doprecyzowano instrukcje oraz checklist\u0119 wymuszaj\u0105c jawne sprawdzenie obs\u0142ugi flag bezpiecze\u0144stwa przez platform\u0119, zar\u00f3wno z frontmatter jak i skill.json.\n- Aktual",
+  "created_at": 1770596096897,
+  "display_name": "KSeF Accountant (Polish)",
+  "fetched_at": 1787906516319,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/ksef-accounting-workflows.md",
+    "references/ksef-ai-features.md",
+    "references/ksef-api-reference.md",
+    "references/ksef-fa3-examples.md",
+    "references/ksef-legal-status.md",
+    "references/ksef-security-compliance.md",
+    "references/ksef-troubleshooting.md",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "alexwoo-awso",
+    "handle": "alexwoo-awso",
+    "user_id": "s1754xbymsgp9ns0znw62h5jed83v2dh"
+  },
+  "slug": "ksef-accountant-pl",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ksef-accountant-pl",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ksef-accountant-pl&ownerHandle=alexwoo-awso",
+    "page_url": "https://clawhub.ai/alexwoo-awso/skills/ksef-accountant-pl"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2574,
+    "installs": 85,
+    "stars": 0,
+    "versions": 12
+  },
+  "summary": "Asystent ksiegowy Krajowego Systemu e-Faktur (KSeF) w jezyku polskim. Uzyj przy pracy z KSeF 2.0 API, fakturami FA(3), zgodnoscia z polskim VAT, przetwarzaniem e-faktur, dopasowywaniem platnosci, rejestrami VAT (JPK_V7), fakturami korygujacymi, mechanizmem podzielonej platnosci (MPP) lub polskimi przeplywami ksiegowymi. Dostarcza wiedze domenowa do wystawiania faktur, przetwarzania zakupow, klasyfikacji kosztow, wykrywania fraudu i prognozowania cash flow w ekosystemie KSeF.",
+  "updated_at": 1778486092879,
+  "version": "2.2.6"
+}
