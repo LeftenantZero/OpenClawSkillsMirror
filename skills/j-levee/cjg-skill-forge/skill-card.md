@@ -1,6 +1,6 @@
 ## Description:
 
-CJG Skill Forge is a meta-skill for creating, upgrading, reviewing, recasting, consolidating, and clarifying WorkBuddy or AI agent skills.
+Skill Forge is a meta-skill for creating, upgrading, reviewing, consolidating, and making WorkBuddy or AI skills easier for agents to read.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and skill authors use this skill to build new agent skills, upgrade existing skills, review quality with a rubric, consolidate overlapping local skills, and make skill instructions clearer for agents.
+Developers, skill authors, and maintainers use this skill to build new agent skills, improve existing skills, review skill quality, consolidate overlapping skills, and prepare skills for release.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,46 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill has broad authority in skill-building workflows and can run target skill code.
+Risk: The skill manages other skills and can affect local skill files.
 
-Mitigation: Use it on trusted skills or in a sandbox, and review execution steps before running smoke tests or validation commands.
+Mitigation: Use it on skills you control and review generated proposals, edits, and validation output before deployment.
 
-Risk: Local usage logging is on by default and cloud sync can persist or sync behavioral logs when explicitly enabled.
+Risk: The skill creates local telemetry logs by default.
 
-Mitigation: Keep cloud sync off unless anonymous feedback upload is desired, and use the documented controls to view, disable, or delete local signals.
+Mitigation: Review the local telemetry behavior and disable recording if it is not acceptable for the workspace.
 
-Risk: Proposal approval and publishing workflows could introduce incorrect or misleading changes if accepted without review.
+Risk: The skill can contact configured cloud services when cloud sync is enabled.
 
-Mitigation: Review proposed changes, scan the skill before deployment, and require explicit approval before publishing actions.
+Mitigation: Keep cloud sync off unless the destination endpoints and data handling are understood.
+
+Risk: Unsafe validation paths may be risky against untrusted skill directories.
+
+Mitigation: Avoid running inject or check workflows against untrusted skill directories without sandboxing.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/j-levee/skills/cjg-skill-forge)
-- [Skill Forge Pipeline](references/pipeline.md)
-- [Forge Modes](references/forge-modes.md)
-- [Skill Review Rubric](references/skill-review-rubric.md)
-- [Skill Consolidation](references/skill-consolidation.md)
-- [Clarity Coverage](references/clarity-coverage.md)
-- [Security Audit](references/security-audit.md)
-- [Cloud Config Schema](references/cloud-config-schema.md)
+- [ClawHub skill page](https://clawhub.ai/j-levee/skills/cjg-skill-forge)
+- [Distribution readiness](references/discovery.md)
+- [Skill Forge introduction](references/intro.md)
+- [Forge pipeline](references/pipeline.md)
+- [Skill review rubric](references/skill-review-rubric.md)
+- [Skill writing guide](references/skill-writing-guide.md)
+- [Security audit guidance](references/security-audit.md)
+- [Signal and telemetry guidance](references/signals.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [Markdown, Code, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown guidance with inline code, shell commands, configuration snippets, and optional generated files]
+**Output Format:** [Markdown guidance with inline commands, generated files, scripts, and configuration suggestions]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Can produce review reports, forge plans, recast plans, clarity edits, validation commands, and release-preparation guidance.]
+**Other Properties Related to Output:** [May create or modify local skill files when the user approves an action.]
 
 ## Skill Version(s):
 
-3.1.0 (source: SKILL.md frontmatter and server release metadata)
+3.1.2 (source: server release evidence and SKILL.md frontmatter)
 
 ## Ethical Considerations:
 
