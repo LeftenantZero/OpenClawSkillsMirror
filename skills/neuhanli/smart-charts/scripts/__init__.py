@@ -1,6 +1,6 @@
 """Smart Charts - 智能图表生成与数据分析"""
 
-__version__ = '6.2.1'
+__version__ = '7.0.2'
 
 from .chart_generator import ChartGenerator, ChartType
 from .data_parser import DataParser

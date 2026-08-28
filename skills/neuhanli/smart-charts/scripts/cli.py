@@ -59,8 +59,9 @@ def _parse_charts_json(charts_json: str):
 
 def main():
     if len(sys.argv) < 3:
-        print("用法: python cli.py <file_path> <chart_type> [--title 标题] [--x-axis 列名] [--y-axis 列1 列2] [--transform-code 代码] [--output-dir 目录] [--skiprows N] [--header-row N] [--sheet <name|index>] [--lang zh|en] [--label-col 列名] [--color-by 列名]\n"
-              "      python cli.py <file_path> --charts '<JSON数组>' [--transform-code 代码] [--output-dir 目录] [--skiprows N] [--header-row N] [--sheet <name|index>] [--lang zh|en]")
+        print("用法: python cli.py <file_path> <chart_type> [--title 标题] [--x-axis 列名] [--y-axis 列1 列2] [--transform-code 代码] [--output-dir 目录] [--skiprows N] [--header-row N] [--sheet <name|index>] [--lang zh|en] [--label-col 列名] [--color-by 列名] [--annotation 说明文字]\n"
+              "      python cli.py <file_path> --charts '<JSON数组>' [--transform-code 代码] [--output-dir 目录] [--skiprows N] [--header-row N] [--sheet <name|index>] [--lang zh|en]\n"
+              "      python cli.py <file_path> --charts-file <配置文件.json> [--transform-code 代码] [--output-dir 目录] [--skiprows N] [--header-row N] [--sheet <name|index>] [--lang zh|en]  # 推荐：transform 含中文/引号时避免 shell 转义问题")
         sys.exit(1)
 
     args = sys.argv[1:]
@@ -77,6 +78,7 @@ def main():
     lang = None
     label_col = None
     color_by = None
+    annotation = None
     charts_json = None
 
     # 第 2 个位置参数是 chart_type；若它是 flag（如 --charts 多图模式）则不占位
@@ -103,9 +105,19 @@ def main():
         elif args[i] == '--output-dir' and i + 1 < len(args):
             output_dir = args[i + 1]; i += 2
         elif args[i] == '--skiprows' and i + 1 < len(args):
-            skiprows = int(args[i + 1]); i += 2
+            try:
+                skiprows = int(args[i + 1])
+            except ValueError:
+                print(json.dumps({'error': '--skiprows 需要整数', 'code': 2001, 'code_name': 'DATA_PARSE_ERROR'}, ensure_ascii=False), file=sys.stderr)
+                sys.exit(1)
+            i += 2
         elif args[i] == '--header-row' and i + 1 < len(args):
-            header_row = int(args[i + 1]); i += 2
+            try:
+                header_row = int(args[i + 1])
+            except ValueError:
+                print(json.dumps({'error': '--header-row 需要整数', 'code': 2001, 'code_name': 'DATA_PARSE_ERROR'}, ensure_ascii=False), file=sys.stderr)
+                sys.exit(1)
+            i += 2
         elif args[i] == '--sheet' and i + 1 < len(args):
             v = args[i + 1]
             sheet_name = int(v) if v.lstrip('-').isdigit() else v
@@ -116,8 +128,25 @@ def main():
             label_col = args[i + 1]; i += 2
         elif args[i] == '--color-by' and i + 1 < len(args):
             color_by = args[i + 1]; i += 2
+        elif args[i] == '--annotation' and i + 1 < len(args):
+            annotation = args[i + 1]; i += 2
         elif args[i] == '--charts' and i + 1 < len(args):
             charts_json = args[i + 1]; i += 2
+        elif args[i] == '--charts-file' and i + 1 < len(args):
+            # A1: 从文件读取 --charts JSON，避免中文/引号在 shell 转义中损坏
+            charts_file = args[i + 1]
+            try:
+                with open(charts_file, 'r', encoding='utf-8') as f:
+                    charts_json = f.read()
+            except OSError as e:
+                print(json.dumps({
+                    'error': f'无法读取 --charts-file: {e}',
+                    'code': 1001,
+                    'code_name': 'FILE_NOT_FOUND',
+                    'details': {'given': charts_file, 'suggestion': '确认 JSON 配置文件路径正确且可读'},
+                }, ensure_ascii=False), file=sys.stderr)
+                sys.exit(1)
+            i += 2
         else:
             i += 1
 
@@ -148,7 +177,7 @@ def main():
                 sys.exit(1)
             result = gen.generate_chart(df, chart_type, title=title, x_axis=x_axis, y_axis=y_axis,
                                         transform_code=transform_code, lang=lang,
-                                        label_col=label_col, color_by=color_by)
+                                        label_col=label_col, color_by=color_by, annotation=annotation)
             print(json.dumps(result, ensure_ascii=False))
             if not result['chart']['success']:
                 sys.exit(1)

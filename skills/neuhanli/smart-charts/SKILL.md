@@ -5,7 +5,7 @@ license: MIT
 compatibility: "Python 3.11+; requires pandas==3.0.1, numpy==2.4.3, openpyxl==3.1.5, xlrd==2.0.1; no network access needed (ECharts JS bundled offline); install with: pip install -r requirements.txt"
 metadata:
   author: smart-charts
-  version: 6.2.1
+  version: 7.0.2
   permissions:
     file_read: true
     file_write: true
@@ -21,6 +21,48 @@ metadata:
 
 > 将数据文件（CSV/Excel/JSON）转化为交互式 ECharts HTML。支持 21 种图表类型、多文件合并、LLM 数据转换代码（沙箱执行）。
 > CLI 细节、flags 语义、错误码表、FAQ 见 [REFERENCE.md](./references/REFERENCE.md)。
+
+---
+
+## 30 秒速查表（先看这里，其余细节按需再读）
+
+**契约速览（5 条）**
+
+1. 列名解析后会被规范化：转小写、特殊字符→`_`（如 `总学时`→`总_学时`），中文保留；`--x-axis`/`--y-axis`/transform 必须引用规范化后的列名
+2. transform 沙箱：可用变量仅 `df`/`pd`/`np`（`np.select`/`np.where` 可用），支持多语句（`;` 或换行分隔），必须产出名为 `result` 的 DataFrame；禁止 import/open/try/类定义（黑名单 + AST 白名单强制校验，违规返回带 `suggestion` 的错误）
+3. pie/bar 等按「1 个分类列(name) + 1 个数值列(value)」读数据；分类频次图先用 transform 聚合成 name/value 两列，再指定 `--x-axis name --y-axis value`
+4. 成功时 stdout：`success`/`html_path`/`chart_type`/`title`/`data_rows`/`data_preview`（绘图数据前 10 行，口径校对用）+ `plot_stats`（绘图数据完整统计摘要，写解读用；21 类全覆盖）
+5. **校对口径直接读 stdout 的 `data_preview` + `data_rows`，不要打开 HTML 去搜数据**——预览取自 transform 之后、渲染所用的同一份数据，即被绘制内容的真值
+
+**黄金示例 1：分类频次 → pie/bar**（最高频场景，复制改列名即可）
+
+```bash
+python {skill_base}/scripts/cli.py data.xlsx bar --title "标题" \
+  --x-axis name --y-axis value \
+  --transform-code "result = df['类别列'].fillna('未标注').value_counts().rename_axis('name').reset_index(name='value')"
+```
+
+**黄金示例 2：多图批量 + 防转义坑**（≥2 张图 MUST 批量；transform 含中文/引号时不要直接在 shell 传 `--charts`，写进 JSON 文件用 `--charts-file`）
+
+```bash
+python {skill_base}/scripts/cli.py data.xlsx --sheet "Sheet1" \
+  --charts-file charts.json --output-dir ./out
+```
+
+`charts.json` 每项：`type`（必填）+ `title`/`x_axis`/`y_axis`/`transform_code`：
+
+```json
+[{"type": "pie", "title": "课程学时结构", "x_axis": "name", "y_axis": ["value"],
+  "transform_code": "tmp = df.drop_duplicates('课程'); result = tmp.assign(_t=np.select([tmp['讲授_学时'] == 80, tmp['实验_学时'] == 80], ['讲授型', '实验型'], default='混合型'))['_t'].value_counts().rename_axis('name').reset_index(name='value')"}]
+```
+
+**黄金示例 3：分组聚合 → bar**
+
+```bash
+--transform-code "result = df.groupby('分组列')['数值列'].sum().rename_axis('name').reset_index(name='value')"
+```
+
+**口径陷阱**：聚合前想清楚「按数据行 vs 按去重实体」——统计实体属性（如每门课程的学时结构）先 `drop_duplicates`；生成后对照 `data_preview` 数值与 `data_rows` 检查（若各行 value 之和等于原始行数而非实体数，就是忘了去重）。
 
 ---
 
@@ -43,6 +85,7 @@ Load this skill when **any** of the following is met:
 4. **MUST report unsupported scenarios**: CLI 确实不支持的（如嵌套 JSON 超过 1 层），先向用户说明并给建议，不得静默绕过。
 5. **MUST NOT hard-code absolute paths** in generated code; resolve paths at runtime.
 6. **不要主动传 `--lang`**；CLI 自动跟随数据语言。仅当用户明确要求某种语言时才传。
+7. **MUST 附解读交付**：交付图表时必须附由 LLM 写的文字解读，并通过 `--annotation` 注入 HTML（见「交付解读规范」），不得只交付裸图。
 
 ---
 
@@ -91,9 +134,37 @@ agent 内部完成以下判断，不打断用户：
 
 ## Exit Criteria (什么算做完，机械可判定)
 
-- ✅ **成功**: `cli.py` stdout 为 `{"chart": {"success": true, ...}}`（多图模式为 `{"charts": [...], "summary": ...}`），且 `html_path` 指向的文件存在且非空 → 立即将图表呈现给用户。
+- ✅ **成功**: `cli.py` stdout 为 `{"chart": {"success": true, ...}}`（多图模式为 `{"charts": [...], "summary": ...}`），且 `html_path` 指向的文件存在且非空 → 呈现前用同一 stdout 的 `data_preview`/`data_rows` 校对聚合口径（按行 vs 按去重实体），确认无误后**附文字解读**（见「交付解读规范」）再呈现给用户；**不要打开 HTML 文件验证数据**。
 - ❌ **失败**: `success: false` 或 exit code 1 → 读 `error.details.suggestion`，修正后重试；**同一环节最多重试 2 次**。
 - 🛑 **仍失败（唯一必须的用户介入点）**: 把 `code_name`、`suggestion`、已尝试的修复如实报告用户并给出建议，等待用户决策。**不得**静默改用自写脚本兜底（违反约束 1/4）。
+
+---
+
+## 交付解读规范（Delivery Annotation）
+
+交付每张图表时，必须附一段**由 LLM 写的文字解读**（不是技能自动生成的模板），作为用户写报告的佐证。技能只负责算事实（`plot_stats`），解读文字由 agent 读 `plot_stats` 后自己写，再用 `--annotation` 注入 HTML。
+
+**标准流程（两步）**：
+1. 先生成图表，从 stdout 拿到 `plot_stats`（绘图数据的完整统计摘要）。
+2. agent 读 `plot_stats`，写一段 2~4 句的解读，然后用 `--annotation "解读文字"` 重新生成，把解读注入 HTML（图表下方「图表说明」区块）。
+
+**事实锚点**：解读的每个数字都必须能在 `plot_stats` 或 `data_preview` 里找到出处——不得凭印象编造。注意 `plot_stats` 里的 `x_cardinality` 是 x 轴去重后的个数，写解读时要结合 x 列语义说清（如 x 是「姓名」则说「59 名学生」，而不是笼统的「59 个类别」）。
+
+**最小结构**（2~4 句）：
+1. 这张图是什么：图表类型 + 标题 + 覆盖范围（结合 x 列语义，如「59 名学生」「5 个分数段」）。
+2. 最显著的事实：基于 `plot_stats` 挑 1~2 个能支持结论的点（最大/最小/趋势方向/占比/离群/累计），给出具体数值与对应标签。
+3. 口径说明：一句话交代取值口径，与 `assumptions` 字段呼应。
+
+**硬边界**：
+- 只陈述 `plot_stats`/`data_preview` 能支撑的事实，不夸大、不推测数据之外的原因。
+- 深度业务解读（为什么/怎么办）不是硬性要求，属结合上下文的额外发挥。
+
+**示例**（agent 读 `plot_stats` 后写，再用 `--annotation` 注入）：
+```bash
+python {skill_base}/scripts/cli.py data.csv bar --title "学生总成绩对比" \
+  --x-axis 姓名 --y-axis 总成绩 \
+  --annotation "本图展示 59 名学生的总成绩分布。韩家芯以 98.84 分居首，马云飞 59.96 分垫底，全班平均 76.91 分。"
+```
 
 ---
 
@@ -121,7 +192,7 @@ python {skill_base}/scripts/cli.py \
   --label-col "姓名" --color-by "地区"
 ```
 
-- 成功输出 `{"chart": {"success": true, "html_path": ...}}` 到 stdout；失败输出结构化错误 JSON（`details.suggestion` 给出恢复方法）。完整参数与错误码表见 REFERENCE.md。
+- 成功输出 `{"chart": {"success": true, "html_path": ..., "data_rows": N, "data_preview": [{...}, ...]}}` 到 stdout——`data_preview` 是最终绘图数据的前 10 行（transform 之后、渲染所用），生成当轮直接用它校对聚合口径，无需打开 HTML；失败输出结构化错误 JSON（`details.suggestion` 给出恢复方法）。完整参数与错误码表见 REFERENCE.md。
 - `--label-col`（可选）：身份列（如姓名/名称），其值进数据点的 name 和 tooltip，适用于 scatter/bubble/boxplot。不传时自动探测未被占用的字符串列（列名含 姓名/name/id 等优先），自动选择会记入 stdout 的 `assumptions` 字段，交付语中应声明。
 - `--color-by`（可选）：着色列，适用于 scatter/bubble。数值列 → visualMap 连续着色；类别列 → 按类别拆 series 分色并进 legend。默认不传——无分析意义的着色只是视觉噪音。
 
@@ -137,6 +208,7 @@ python {skill_base}/scripts/cli.py <file_path> \
 ```
 
 - 每项字段：`type`（必填）+ `title`/`x_axis`/`y_axis`（字符串或数组）/`transform_code`（单图级）/`label_col`/`color_by`。
+- **`--charts-file <path>`（推荐）**：把 `--charts` 的 JSON 数组写进文件传入；transform 含中文/引号时避免 shell 转义损坏，文件不存在返回结构化 FILE_NOT_FOUND 错误。
 - 全局 `--transform-code`（可选）：先对 df 应用一次，再供所有图使用；各图也可带自己的 `transform_code`。
 - 输出 `{"charts": [{...}, ...], "summary": {"total": N, "succeeded": M, "failed": K}}`，每项结构与单图 `chart` 一致（含 `success`/`html_path`/`error.details.suggestion`）。
 - exit code：全部失败才为 1；部分失败时 exit 0，读 `charts` 中 `success:false` 项的 `suggestion` 修正后重试该图。

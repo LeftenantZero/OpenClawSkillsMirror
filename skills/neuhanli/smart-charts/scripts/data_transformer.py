@@ -70,6 +70,41 @@ KEYWORD_BLACKLIST: List[str] = [
     '@property', '@classmethod', '@staticmethod',
 ]
 
+# ── 危险属性名黑名单 ──────────────────────────────────────────
+# 关键字黑名单只拦裸名（open/import），拦不住模块自带的文件/网络 I/O 方法。
+# 这里通过 AST Attribute 精确匹配属性名，拦截 pd.read_csv / np.load / to_pickle 等
+# 绕过手法。只匹配属性名、不匹配字符串字面量（字符串是 Constant 节点），因此
+# 列名恰为 read_csv 时（如 df['read_csv']）不会误伤。
+DANGEROUS_ATTRIBUTES: Set[str] = {
+    # pandas 文件 I/O（读）
+    'read_csv', 'read_excel', 'read_json', 'read_pickle', 'read_hdf', 'read_html',
+    'read_sql', 'read_sql_query', 'read_sql_table', 'read_table', 'read_fwf',
+    'read_clipboard', 'read_feather', 'read_parquet', 'read_orc', 'read_sas',
+    'read_spss', 'read_stata', 'read_gbq',
+    # pandas 文件 I/O（写）
+    'to_csv', 'to_excel', 'to_json', 'to_pickle', 'to_hdf', 'to_sql',
+    'to_feather', 'to_parquet', 'to_stata', 'to_gbq',
+    # pandas 文件句柄 / 引擎
+    'hdfstore', 'excelwriter', 'excelfile',
+    # numpy 文件 I/O
+    'load', 'save', 'savez', 'savez_compressed', 'loadtxt', 'savetxt',
+    'fromfile', 'tofile', 'genfromtxt', 'fromregex', 'frombuffer', 'fromstring',
+    'memmap',
+}
+
+
+class _DangerousAttributeVisitor(ast.NodeVisitor):
+    """遍历 AST，命中 DANGEROUS_ATTRIBUTES 中的属性访问即记录违规。"""
+
+    def __init__(self):
+        self.violations: List[str] = []
+
+    def visit_Attribute(self, node):
+        if node.attr.lower() in DANGEROUS_ATTRIBUTES:
+            self.violations.append(f"不允许的属性访问: .{node.attr}")
+        self.generic_visit(node)
+
+
 # ── AST 白名单 ────────────────────────────────────────────────
 # 仅允许这些 AST 节点类型出现在转换代码中
 # 不在白名单中的节点类型将被拒绝执行
@@ -170,7 +205,11 @@ def validate_code_blacklist(code: str) -> List[str]:
 
 
 def validate_code_ast(code: str) -> List[str]:
-    """AST 白名单校验。解析代码的抽象语法树，返回不在白名单中的节点类型列表。"""
+    """AST 白名单校验。解析代码的抽象语法树，返回不在白名单中的节点类型列表。
+
+    同时做危险属性名检测（DANGEROUS_ATTRIBUTES），拦截 pd.read_csv / np.load 等
+    模块级文件 I/O 绕过手法。
+    """
     violations = []
     try:
         tree = ast.parse(code)
@@ -183,6 +222,11 @@ def validate_code_ast(code: str) -> List[str]:
             continue
         if type(node) not in AST_WHITELIST:
             violations.append(f"不允许的语法节点: {type(node).__name__}")
+
+    # 危险属性名检测（独立于白名单，精确匹配属性访问，不误伤字符串字面量）
+    visitor = _DangerousAttributeVisitor()
+    visitor.visit(tree)
+    violations.extend(visitor.violations)
 
     return violations
 
@@ -263,9 +307,10 @@ class DataTransformer:
         安全措施：
         - 仅暴露安全的内置函数
         - 设置递归深度上限，防止栈溢出
-        - 设置执行超时，防止无限循环（Unix 用 signal，Windows 用 threading）
+        - 设置执行超时，防止无限循环（仅 Unix：signal SIGALRM；Windows 无 SIGALRM 时无超时）
         """
         import sys
+        import contextlib
 
         local_vars = {'df': df.copy(), 'pd': pd, 'np': np}
         # 安全沙箱：仅暴露安全的内置函数，禁止 open/exec/eval/__import__ 等
@@ -304,7 +349,10 @@ class DataTransformer:
             pass
 
         try:
-            exec(code, global_vars, local_vars)
+            # P2-print 修复：把 transform 代码里的 print 重定向到 stderr，
+            # 避免污染 cli.py 末尾输出到 stdout 的 JSON 契约。
+            with contextlib.redirect_stdout(sys.stderr):
+                exec(code, global_vars, local_vars)
         except TimeoutError:
             raise TransformError(
                 f"转换代码执行超时（超过 {self.timeout} 秒），可能存在无限循环",

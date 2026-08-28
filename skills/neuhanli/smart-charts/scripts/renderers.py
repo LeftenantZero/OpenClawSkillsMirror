@@ -15,6 +15,42 @@ else:
     from .exceptions import ChartError, ErrorCode
 
 
+# ── 关系列检测（graph/sankey/stats 三处共用，保证一致）──
+# 别名分两类：exact 精确命中；contains 包含命中（覆盖「来源/去向/起点/终点」等复合列名）。
+# value 列的误匹配代价低（仅影响边权重，不影响图结构），故以精确命中为主，避免误伤「总金额」等列。
+_RELATION_ALIASES = {
+    'source': {'exact': ('源', 'source', 'from', 'src'),
+               'contains': ('来源', '起点', '起始', '源节点')},
+    'target': {'exact': ('目标', 'target', 'to', 'dst', 'dest'),
+               'contains': ('去向', '终点', '到达', '目的', '目标节点')},
+    'value':  {'exact': ('权重', 'weight', '值', 'value', 'val', '流量', '金额', '数量'),
+               'contains': ('权重', 'weight')},
+}
+
+
+def _match_relation_alias(cl: str, role: str) -> bool:
+    alias = _RELATION_ALIASES[role]
+    return cl in alias['exact'] or any(a in cl for a in alias['contains'])
+
+
+def _detect_relation_cols(df):
+    """统一的关系列检测：返回 (source_col, target_col, value_col)，未识别为 None。
+
+    graph/sankey/stats 三处共用本函数，避免各维护一份关键词表导致不一致。
+    优先精确命中，再用包含匹配覆盖「来源/去向/起点/终点」等常见中文列名。
+    """
+    source_col = target_col = value_col = None
+    for col in df.columns:
+        cl = str(col).strip().lower()
+        if source_col is None and _match_relation_alias(cl, 'source'):
+            source_col = col
+        elif target_col is None and _match_relation_alias(cl, 'target'):
+            target_col = col
+        elif value_col is None and _match_relation_alias(cl, 'value'):
+            value_col = col
+    return source_col, target_col, value_col
+
+
 def _safe_str_list(series) -> List[str]:
     """将 Series 转为字符串列表，NaN/None 转为空字符串。
 
@@ -31,7 +67,7 @@ def _safe_str_list(series) -> List[str]:
 
 
 def _js_dumps(obj) -> str:
-    """序列化数据到 JS 字面量上下文，转义 </ 防 </script> 提前闭合脚本标签。
+    r"""序列化数据到 JS 字面量上下文，转义 </ 防 </script> 提前闭合脚本标签。
 
     \/ 在 JS 字符串中合法且求值后还原为 /，前端拿到的值不变。
     用于内嵌 option JSON 之外的、由 Python 直接拼接进 <script> 的数据数组
@@ -114,15 +150,18 @@ def _maybe_rotate_labels(x_data):
     return None
 
 
-def _axis_name_graphics(x_name=None, y_names=(), x_bottom=42):
+def _axis_name_graphics(x_name=None, y_names=(), x_bottom=None, x_data_len=0, threshold=15):
     """轴名称渲染为可拖拽的 graphic 文本元素。
 
     放在轴配置里（name/nameGap）位置固定，长名称不是压刻度数字、就是压图例。
     graphic 文本默认放在留白区（x 轴名在标签与图例之间，y 轴名在绘图区上方），
     用户可在图上直接拖拽微调，保存图片时随画布状态生效。
     id 以 axisName- 开头，供 HTML 重命名面板同步修改文字。
-    x_bottom：x 轴名初始底距；启用 dataZoom 的图表应传更大值避开底部滑块。
+    x_bottom：x 轴名初始底距，显式传入时优先；未传入则按 x_data_len 是否超过
+    threshold 自动选择——启用 dataZoom 的图表用 64 避开底部滑块与上移的图例。
     """
+    if x_bottom is None:
+        x_bottom = 64 if (x_data_len and x_data_len > threshold) else 42
     graphics = []
     if x_name:
         graphics.append({'id': 'axisName-x', 'type': 'text', 'draggable': True, 'cursor': 'move',
@@ -171,8 +210,7 @@ class ChartRenderersMixin:
         if rot:
             opt['xAxis']['axisLabel'] = rot
         opt['yAxis'] = {'type': 'value'}
-        if len(y) == 1:
-            opt['graphic'] = _axis_name_graphics(y_names=[y[0]])
+        opt['graphic'] = _axis_name_graphics(x, y, x_data_len=len(x_data))
         opt['series'] = [
             {'name': col, 'type': 'line', 'smooth': True, 'data': _sanitize_series(df[col].tolist())}
             for col in y
@@ -187,6 +225,7 @@ class ChartRenderersMixin:
         if rot:
             opt['xAxis']['axisLabel'] = rot
         opt['yAxis'] = {'type': 'value'}
+        opt['graphic'] = _axis_name_graphics(x, y, x_data_len=len(x_data))
         opt['series'] = [
             {'name': col, 'type': 'bar', 'data': _sanitize_series(df[col].tolist())}
             for col in y
@@ -231,12 +270,14 @@ class ChartRenderersMixin:
         if x_is_numeric:
             opt = self._base(title, texts)
             opt['xAxis'] = {'type': 'value', 'scale': True}
+            x_data_len = 0
         else:
             x_data = _safe_str_list(df[x])
-            opt = self._base(title, texts, x_data_len=len(x_data))
+            x_data_len = len(x_data)
+            opt = self._base(title, texts, x_data_len=x_data_len)
             opt['xAxis'] = {'type': 'category', 'data': x_data}
         opt['yAxis'] = {'type': 'value', 'scale': True}
-        opt['graphic'] = _axis_name_graphics(x if x_is_numeric else None, [y_col])
+        opt['graphic'] = _axis_name_graphics(x, [y_col], x_data_len=x_data_len)
 
         dims = [x, y_col] + ([color_col] if numeric_color else [])
         self._item_tooltip_js = _point_tooltip_js(dims, has_label=label_col is not None)
@@ -344,15 +385,7 @@ class ChartRenderersMixin:
     def _graph(self, df, x, y, title, texts):
         opt = self._base(title, texts)
         # 检测是否有"源/目标"列格式
-        source_col = target_col = weight_col = None
-        for col in df.columns:
-            cl = col.lower()
-            if cl in ('源', 'source', 'from', '起始', '起点') and source_col is None:
-                source_col = col
-            elif cl in ('目标', 'target', 'to', '终点', '到达') and target_col is None:
-                target_col = col
-            elif cl in ('权重', 'weight', '值', 'value', 'val') and weight_col is None:
-                weight_col = col
+        source_col, target_col, weight_col = _detect_relation_cols(df)
 
         if source_col and target_col:
             # 源/目标/权重格式
@@ -373,8 +406,11 @@ class ChartRenderersMixin:
         else:
             # 通用格式：x 列为节点名，y 列为值，链式连接
             y_col = y[0] if y else df.columns[-1]
-            nodes = [{'name': str(n), 'value': _sanitize_value(float(v))}
-                     for n, v in zip(df[x].tolist(), df[y_col].tolist())]
+            if pd.api.types.is_numeric_dtype(df[y_col]):
+                nodes = [{'name': str(n), 'value': _sanitize_value(float(v))}
+                         for n, v in zip(df[x].tolist(), df[y_col].tolist())]
+            else:
+                nodes = [{'name': str(n)} for n in df[x].tolist()]
             links = [{'source': nodes[i]['name'], 'target': nodes[i+1]['name'], 'value': 1} for i in range(len(nodes)-1)]
 
         opt['tooltip'] = {'trigger': 'item'}
@@ -456,13 +492,14 @@ class ChartRenderersMixin:
         if rot:
             opt['xAxis']['axisLabel'] = rot
         opt['yAxis'] = {'type': 'value'}
+        opt['graphic'] = _axis_name_graphics(x, [y_col], x_data_len=len(x_data))
         # 图例只保留增量系列（垫底辅助系列不显示）
         opt['legend'] = {'top': 'bottom', 'type': 'scroll', 'data': [y_col]}
         self._waterfall_tooltip_js = (
             "function(p) {\n"
             "  var esc = function(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\"/g, '&quot;').replace(/'/g, '&#39;'); };\n"
             "  var v = (p.data && p.data.label) ? p.data.label.formatter : p.value;\n"
-            f"  return '<b>' + esc(p.name) + '</b><br/>' + {_js_dumps(y_col)} + ': ' + v;\n"
+            f"  return '<b>' + esc(p.name) + '</b><br/>' + esc(p.seriesName) + ': ' + v;\n"
             "}"
         )
         opt['tooltip'] = {'trigger': 'item', 'formatter': self._WATERFALL_TOOLTIP_PLACEHOLDER}
@@ -501,15 +538,7 @@ class ChartRenderersMixin:
     def _sankey(self, df, x, y, title, texts):
         opt = {'title': {'text': title, 'left': 'center'}}
         # 检测是否有"源/目标"列格式
-        source_col = target_col = value_col = None
-        for col in df.columns:
-            cl = col.lower()
-            if cl in ('源', 'source', 'from', '起始', '起点') and source_col is None:
-                source_col = col
-            elif cl in ('目标', 'target', 'to', '终点') and target_col is None:
-                target_col = col
-            elif cl in ('值', 'value', 'val', '权重', 'weight') and value_col is None:
-                value_col = col
+        source_col, target_col, value_col = _detect_relation_cols(df)
 
         nodes, links = [], []
         if source_col and target_col:
@@ -530,10 +559,11 @@ class ChartRenderersMixin:
             # 通用格式：链式连接
             y_col = y[0] if y else df.columns[-1]
             names = df[x].tolist()
-            vals = df[y_col].tolist()
+            numeric_y = pd.api.types.is_numeric_dtype(df[y_col])
+            vals = df[y_col].tolist() if numeric_y else [1] * len(names)
             nodes = [{'name': str(n)} for n in names]
             for i in range(1, len(names)):
-                val = _sanitize_value(float(vals[i])) if pd.notna(vals[i]) else 1
+                val = _sanitize_value(float(vals[i])) if numeric_y and pd.notna(vals[i]) else 1
                 links.append({'source': str(names[i-1]), 'target': str(names[i]), 'value': val if val is not None else 1})
 
         opt['tooltip'] = {'trigger': 'item'}
@@ -705,7 +735,7 @@ class ChartRenderersMixin:
             {'type': 'value', 'max': 100, 'position': 'right',
              'axisLabel': {'formatter': '{value}%'}},
         ]
-        opt['graphic'] = _axis_name_graphics(y_names=[y_col, '%'])
+        opt['graphic'] = _axis_name_graphics(x, [y_col, '%'], x_data_len=len(x_data))
         opt['series'] = [
             {'name': y_col, 'type': 'bar', 'data': vals, 'yAxisIndex': 0,
              'itemStyle': {'color': '#5470c6'}},
@@ -736,7 +766,7 @@ class ChartRenderersMixin:
             {'type': 'value', 'position': 'right',
              'axisLabel': {'formatter': '{value}'}},
         ]
-        opt['graphic'] = _axis_name_graphics(y_names=[bar_col, ' / '.join(line_cols)])
+        opt['graphic'] = _axis_name_graphics(x, [bar_col, ' / '.join(line_cols)], x_data_len=len(x_data))
         series = [{
             'name': bar_col, 'type': 'bar', 'data': _sanitize_series(df[bar_col].tolist()),
             'yAxisIndex': 0, 'itemStyle': {'color': '#5470c6'},

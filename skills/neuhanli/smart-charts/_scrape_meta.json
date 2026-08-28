@@ -1,8 +1,8 @@
 {
-  "changelog": "- Dropped support for Python 3.9/3.10; now requires Python 3.11+.\n- Updated documentation for multi-chart mode: `cli.py` now supports generating multiple charts in one call via the `--charts` argument, with new output and error handling details.\n- Clarified and expanded documentation for multi-chart output structure and partial failure handling.\n- Removed `skill-card.md` file.",
+  "changelog": "- Removed the sample skill card documentation file (skill-card.md).\n- No changes made to functionality or main documentation (SKILL.md).\n- \u4fee\u590d\u81ea\u5e26\u56de\u5f52\u6d4b\u8bd5\u65ad\u8a00\u4e0e combo \u53cc\u8f74\u56fe\u5b9e\u73b0\u4e0d\u4e00\u81f4\u5bfc\u81f4\u81ea\u68c0\u5931\u8d25\u7684\u95ee\u9898\uff1b\u4fee\u590d\u6587\u4ef6\u5185\u5bb9\u63a2\u6d4b\u56e0 read_bytes \u8bef\u4f20\u53c2\u800c\u5931\u6548\u7684\u95ee\u9898\uff08\u65e0\u6269\u5c55\u540d\u6587\u4ef6\u73b0\u5728\u53ef\u4ee5\u88ab\u6b63\u786e\u8bc6\u522b\uff09\uff1bCLI \u5bf9 --skiprows/--header-row \u7684\u975e\u6cd5\u53c2\u6570\u73b0\u5728\u4f1a\u8fd4\u56de\u7ed3\u6784\u5316 JSON \u9519\u8bef\uff0c\u800c\u975e\u629b\u51fa traceback\uff1b\u4fee\u6b63 Windows \u8d85\u65f6\u673a\u5236\u7684\u4e0d\u5b9e\u6587\u6863\u63cf\u8ff0\uff0c\u5e76\u6d88\u9664\u4e86 renderers.py \u4e2d\u7684 SyntaxWarning\u3002",
   "created_at": 1773996386239,
   "display_name": "smart-charts",
-  "fetched_at": 1787768743303,
+  "fetched_at": 1787931288864,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -29,7 +29,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1787704900260,
+    "updated_at": 1787908151487,
     "verdict": "clean"
   },
   "owner": {
@@ -45,12 +45,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 2257,
-    "installs": 29,
+    "downloads": 2383,
+    "installs": 30,
     "stars": 2,
-    "versions": 20
+    "versions": 23
   },
   "summary": "Intelligent chart generation and data analysis skill. Reads user-supplied data files (CSV/Excel/JSON), analyzes data characteristics with LLM assistance, auto-recommends and generates interactive ECharts visualizations. Use when the user asks to analyze data, generate charts, create visualizations,",
-  "updated_at": 1787704177791,
-  "version": "6.2.1"
+  "updated_at": 1787907384600,
+  "version": "7.0.2"
 }

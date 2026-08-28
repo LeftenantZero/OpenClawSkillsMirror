@@ -136,7 +136,7 @@ def main():
     # ---- 双轴图轴名走 graphic：左轴 y0 / 右轴 y1 ----
     opt = g._combo(few.assign(v2=[2, 1]), 'c', ['v', 'v2'], 't', texts)
     gtexts = {el['id']: el['style']['text'] for el in opt['graphic']}
-    assert gtexts == {'axisName-y0': 'v', 'axisName-y1': 'v2'}
+    assert gtexts == {'axisName-x': 'c', 'axisName-y0': 'v', 'axisName-y1': 'v2'}
     assert 'name' not in opt['yAxis'][0] and 'name' not in opt['yAxis'][1]
 
     # ---- 端到端: 自动探测 label、assumptions 上报、HTML 无占位符残留、千分位 ----

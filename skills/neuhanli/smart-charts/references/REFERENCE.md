@@ -117,11 +117,13 @@ python {skill_base}/scripts/cli.py \
 - `--label-col` (optional) — identity column (e.g. name/title). Its values become each point's `name` and appear as the tooltip title. Applies to scatter/bubble/boxplot (boxplot uses it for outlier points). If omitted, an unused string column is auto-detected (columns named 姓名/name/id/... preferred) and the choice is reported in the `assumptions` field of the success output.
 - `--color-by` (optional) — color-encoding column for scatter/bubble. Numeric column → continuous coloring via `visualMap`; categorical column → one series per category with legend. Off by default.
 - `--output-dir` (default: `./smart_charts_output`) — output directory for HTML files.
+- `--charts-file <path>` (multi-chart mode, recommended) — read the `--charts` JSON array from a UTF-8 file instead of a shell argument; avoids shell-escaping corruption when transform code contains CJK text or quotes. Missing/unreadable file returns a structured `FILE_NOT_FOUND` error on stderr (exit 1).
 
 **Output:** On success, prints a JSON object to stdout and exits with code 0:
 ```json
-{"chart": {"success": true, "html_path": "./output/Title_abc123.html", "chart_type": "bar", "title": "Title"}}
+{"chart": {"success": true, "html_path": "./output/Title_abc123.html", "chart_type": "bar", "title": "Title", "data_rows": 34, "data_preview": [{"name": "兼职", "value": 20}, {"name": "专职", "value": 12}]}}
 ```
+`data_rows` is the number of rows fed into plotting (after transform); `data_preview` is the first 10 rows of the final plotting data (the same data the renderer consumed, with NaN → null). Use it to sanity-check aggregation grain in-band — no need to open the HTML to verify values.
 On failure, prints a structured JSON and exits with code 1:
 - **File-level errors** (file not found, parse error, etc.): error JSON printed to **stderr**.
 - **Chart-level errors** (unsupported type, transform failure, axis field missing, etc.): result JSON with `"success": false` printed to **stdout**.

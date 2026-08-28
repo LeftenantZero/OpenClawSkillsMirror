@@ -72,7 +72,7 @@ class HTMLTemplateMixin:
             "            }"
         )
 
-    def _save_html(self, option: Dict, title: str, width: int, height: int, chart_type: str = '', data_points: int = 0, texts: Dict[str, str] = None) -> Path:
+    def _save_html(self, option: Dict, title: str, width: int, height: int, chart_type: str = '', data_points: int = 0, texts: Dict[str, str] = None, annotation: str = '') -> Path:
         import hashlib
         self._ensure_output_dir()
         content_str = json.dumps(option, ensure_ascii=False, sort_keys=True)
@@ -158,6 +158,7 @@ class HTMLTemplateMixin:
         btn_save = html_module.escape(texts['btn_save'])
         btn_fullscreen = html_module.escape(texts['btn_fullscreen'])
         footer_text = html_module.escape(texts['footer'])
+        annotation_html = f'<div class="annotation">{html_module.escape(annotation)}</div>' if annotation else ''
         edit_hint = html_module.escape(texts['edit_hint'])
         rename_hint = html_module.escape(texts['rename_hint'])
         rename_group_series = html_module.escape(texts['rename_group_series'])
@@ -201,6 +202,8 @@ body {{ font-family: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', 'Noto
 .rename-chip {{ display: inline-block; padding: 2px 10px; margin: 2px 4px; border: 1px dashed #ccc;
                 border-radius: 10px; color: #555; cursor: text; outline: none; background: #fafafa; }}
 .rename-chip:hover, .rename-chip:focus {{ border-color: #4CAF50; background: #fff; }}
+.annotation {{ margin: 14px 0 0; padding: 12px 16px; background: #f2f7f2; border-left: 3px solid #4CAF50;
+              border-radius: 6px; font-size: 13px; color: #444; line-height: 1.7; text-align: left; }}
 .footer {{ margin-top: 25px; padding-top: 15px; border-top: 1px solid #eee; text-align: center;
           font-size: 11px; color: #aaa; }}
 @media (max-width: 640px) {{
@@ -226,6 +229,7 @@ body {{ font-family: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', 'Noto
   <div class="chart-wrapper">
     <div id="chart" class="chart"></div>
   </div>
+  {annotation_html}
   <div class="footer">{footer_text} &middot; ECharts {ECHARTS_VERSION}</div>
 </div>
 <script>
@@ -286,12 +290,22 @@ chart.setOption(chartOption);
     if (op === 'get') return s.name;
     var old = s.name;
     s.name = v;
+    // radar 等图 series.data[0].name 与 series.name 是同一名字，同步更新，避免 tooltip 显示旧名
+    var syncedData = false;
+    if (s.data && s.data.length && s.data[0] && s.data[0].name === old) {{
+      s.data[0].name = v;
+      syncedData = true;
+    }}
     // legend.data 若显式列出系列名（如 waterfall），同步替换，否则改名后图例失配消失
     if (chartOption.legend && chartOption.legend.data) {{
       chartOption.legend.data = chartOption.legend.data.map(function(n) {{ return n === old ? v : n; }});
     }}
-    // 局部合并：只更新系列名与图例，不触碰 graphic 等元素（保留轴名拖拽位置）
-    chart.setOption({{ series: chartOption.series.map(function(x) {{ return {{ name: x.name }}; }}),
+    // 局部合并：只更新系列名与图例，不触碰 graphic 等元素（保留轴名拖拽位置）；
+    // 同步了 data[0].name 的系列需把完整 data 传回，否则 ECharts 保留旧 data.name
+    chart.setOption({{ series: chartOption.series.map(function(x) {{
+                        if (x === s && syncedData) {{ return {{ name: x.name, data: x.data }}; }}
+                        return {{ name: x.name }};
+                      }}),
                        legend: chartOption.legend }});
   }});
   addGroup('{rename_group_axis}', axisEntries, function(op, el, v) {{
@@ -306,25 +320,35 @@ new ResizeObserver(function() {{ chart.resize(); }}).observe(chartDom);
 // {texts['comment_download_name']}
 var currentDownloadName = {json.dumps(safe_title, ensure_ascii=False)};
 function saveAsImage() {{
-  // 保存前临时把 dataZoom 窗口重置为 0~100，导出完整数据后再恢复用户窗口，避免只导出当前可见区间
-  var savedZooms = chart.getOption().dataZoom;
-  var hasZoom = savedZooms && savedZooms.length;
-  if (hasZoom) {{
-    chart.setOption({{
-      dataZoom: savedZooms.map(function(z) {{
-        var c = {{}};
-        for (var k in z) {{ c[k] = z[k]; }}
-        c.start = 0;
-        c.end = 100;
-        c.animationDurationUpdate = 0;
-        return c;
-      }})
-    }});
-  }}
+  // 先把已拖拽的 graphic 轴名位置持久化为绝对 x/y（清除 left/right/top/bottom 相对定位）。
+  // 否则后面重置 dataZoom 触发的重渲染会按相对定位把轴名复位到初始位置。
+  var zr = chart.getZr();
+  var patches = [];
+  var seen = {{}};
+  zr.storage.getDisplayList().forEach(function(n) {{
+    var p = n;
+    while (p) {{
+      if (p.id && String(p.id).indexOf('axisName-') === 0 && !seen[p.id]) {{
+        seen[p.id] = true;
+        patches.push({{ id: p.id, x: p.x, y: p.y, left: null, right: null, top: null, bottom: null }});
+        break;
+      }}
+      p = p.parent;
+    }}
+  }});
+  if (patches.length) {{ chart.setOption({{ graphic: patches }}); }}
+  // 保存前临时把 dataZoom 窗口重置为 0~100，导出完整数据后再恢复用户窗口，避免只导出当前可见区间。
+  var zooms = chart.getOption().dataZoom || [];
+  var savedWindows = zooms.map(function(z) {{ return {{ start: z.start, end: z.end }}; }});
+  savedWindows.forEach(function(w, i) {{
+    chart.dispatchAction({{ type: 'dataZoom', dataZoomIndex: i, start: 0, end: 100 }});
+  }});
   requestAnimationFrame(function() {{
     var url = chart.getDataURL({{ type: 'png', pixelRatio: 2, backgroundColor: '#fff' }});
     var a = document.createElement('a'); a.href = url; a.download = currentDownloadName + '.png'; a.click();
-    if (hasZoom) {{ chart.setOption({{ dataZoom: savedZooms }}); }}
+    savedWindows.forEach(function(w, i) {{
+      chart.dispatchAction({{ type: 'dataZoom', dataZoomIndex: i, start: w.start, end: w.end }});
+    }});
   }});
 }}
 function toggleFull() {{

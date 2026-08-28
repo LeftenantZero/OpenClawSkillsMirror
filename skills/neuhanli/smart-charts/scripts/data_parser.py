@@ -368,7 +368,7 @@ class DataParser:
 
     def _detect_type(self, path: Path) -> str:
         try:
-            header = path.read_bytes(1024)
+            header = path.read_bytes()[:1024]
             text = header.decode('utf-8', errors='ignore')
             if text.strip().startswith(('{', '[')):
                 return '.json'
