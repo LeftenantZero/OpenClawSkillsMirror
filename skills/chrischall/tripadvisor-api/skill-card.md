@@ -1,6 +1,6 @@
 ## Description:
 
-Helps agents query TripAdvisor location data from a shell with curl against the Terra REST API, with a browser-bridge fallback for reading public location detail pages when an API key is unavailable.
+Query TripAdvisor location data from a shell using curl against the Terra REST API, with a browser-bridge fallback for public location details when an API key is unavailable.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and engineers use this skill to retrieve TripAdvisor search, nearby, details, photos, and reviews data in scripts or agent workflows without relying on the TripAdvisor MCP server. It also supports reading limited public page details through a browser bridge when a Terra API key is unavailable.
+Developers, engineers, and agents use this skill to retrieve TripAdvisor search, nearby, location details, photos, and reviews data without running the MCP server. It is useful for scripted lookups, direct API calls, and fallback extraction of public location details when a Terra API key is unavailable.
 
 ### Deployment Geography for Use:
 
@@ -22,35 +22,31 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: TripAdvisor API keys could be exposed through shell history, logs, or overly broad credential use.
+Risk: The browser-based fpx fallback can save TripAdvisor page HTML under /tmp/ta-location.html, and that HTML may include personalized page content.
 
-Mitigation: Use a least-privilege API key, store it in an environment variable, and avoid echoing or logging commands that reveal the key.
-
-Risk: The browser-bridge fallback can involve an existing signed-in TripAdvisor browser session.
-
-Mitigation: Confirm the global fpx install and Transporter pairing are acceptable, and use a dedicated browser profile when normal session context should stay separate.
+Mitigation: Prefer the Terra API key flow when possible; when using fpx, use a dedicated TripAdvisor browser profile if practical and delete /tmp/ta-location.html after parsing.
 
 ## Reference(s):
 
+- [ClawHub Skill Page](https://clawhub.ai/chrischall/skills/tripadvisor-api)
+- [TripAdvisor Developer Portal](https://www.tripadvisor.com/developers)
+- [TripAdvisor Terra API](https://terra.tripadvisor.com/api)
 - [Terra API endpoints](references/terra-endpoints.md)
 - [Web fallback](references/web-fallback.md)
-- [TripAdvisor Terra API](https://terra.tripadvisor.com/api)
-- [TripAdvisor Developers](https://www.tripadvisor.com/developers)
-- [ClawHub skill page](https://clawhub.ai/chrischall/skills/tripadvisor-api)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown guidance with inline shell commands and JSON examples]
+**Output Format:** [Markdown with inline shell commands and JSON examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces read-only TripAdvisor API and browser-fetch workflows; API responses are expected to be JSON for jq processing.]
+**Other Properties Related to Output:** [Produces read-only API lookup recipes and parsing guidance; no TripAdvisor write operations.]
 
 ## Skill Version(s):
 
-0.3.3 (source: server release metadata)
+0.3.4 (source: server release evidence)
 
 ## Ethical Considerations:
 
