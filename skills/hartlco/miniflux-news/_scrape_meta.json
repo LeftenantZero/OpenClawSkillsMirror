@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release: list unread, filter by category, show full content, explicit mark-read (+confirm).",
+  "created_at": 1769158886872,
+  "display_name": "Miniflux News",
+  "fetched_at": 1787913006359,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/miniflux-api-notes.md",
+    "scripts/miniflux.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "hartlco",
+    "handle": "hartlco",
+    "user_id": "s177xbnptgjg8fawvdfgwjpt6s8840qh"
+  },
+  "slug": "miniflux-news",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/miniflux-news",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=miniflux-news&ownerHandle=hartlco",
+    "page_url": "https://clawhub.ai/hartlco/skills/miniflux-news"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3555,
+    "installs": 126,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Fetch and triage the latest unread RSS/news entries from a Miniflux instance via its REST API using an API token. Use when the user asks to get the latest Miniflux unread items, list recent entries with titles/links, or generate short summaries of specific Miniflux entries. Includes a bundled script to query Miniflux (/v1/entries and /v1/entries/{id}) using credentials from ~/.config/clawdbot/miniflux-news.json (or MINIFLUX_URL and MINIFLUX_TOKEN overrides).",
+  "updated_at": 1778485848771,
+  "version": "0.1.0"
+}
