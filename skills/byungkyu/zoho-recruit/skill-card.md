@@ -1,6 +1,6 @@
 ## Description:
 
-Zoho Recruit API integration with managed OAuth for managing candidates, job openings, interviews, applications, and recruitment workflows through Maton.
+Zoho Recruit API integration with managed OAuth for reading, creating, updating, and searching recruitment records through Maton.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Recruiting teams and agents use this skill to read, search, create, update, and delete Zoho Recruit records such as candidates, job openings, interviews, applications, and related modules. It is intended for Zoho Recruit accounts connected through Maton, with explicit confirmation before account connection or data-modifying actions.
+Recruiting teams and operations users use this skill to let an agent work with Zoho Recruit modules such as candidates, job openings, applications, interviews, and related records. It is intended for account-scoped API work where reads are preferred first and changes require user review.
 
 ### Deployment Geography for Use:
 
@@ -22,27 +22,24 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can read and modify recruiting data in a connected Zoho Recruit account.
+Risk: Zoho Recruit records can contain sensitive candidate and recruitment data.
 
-Mitigation: Default to read and list operations, verify target records first, and require explicit confirmation before create, update, delete, messaging, scheduling, or workflow-triggering actions.
+Mitigation: Limit retrieval to records needed for the task, summarize rather than exposing full records when possible, and require explicit approval before transferring records to another app or destination.
 
-Risk: Using a Maton API key instead of OAuth can expose a long-lived credential.
+Risk: Writes, deletions, bulk operations, and new account connections can change or remove recruitment data.
 
-Mitigation: Prefer OAuth, avoid printing or persisting credentials, and use the documented stdin-based raw HTTP fallback only when the CLI is unavailable.
+Mitigation: Review the target records, payload, and intended effect before approval; confirm destructive or bulk operations with record-level specificity.
 
-Risk: Multiple Zoho Recruit connections or Maton profiles can cause actions to affect the wrong account.
+Risk: Long-lived API keys can leak through environment variables, logs, shell history, or copied output when raw HTTP access is used.
 
-Mitigation: Specify the intended connection and profile when more than one account exists, and confirm the target account before any write.
-
-Risk: Zoho Recruit records and API responses may contain untrusted external content.
-
-Mitigation: Treat fetched content as data, avoid executing or interpolating it into commands, and validate endpoint, recipient, and payload choices independently.
+Mitigation: Prefer managed OAuth through the Maton CLI and avoid printing, persisting, or passing API keys on command lines.
 
 ## Reference(s):
 
 - [ClawHub Skill Page](https://clawhub.ai/byungkyu/skills/zoho-recruit)
 - [Maton Homepage](https://maton.ai)
 - [Maton Docs](https://docs.maton.ai)
+- [Maton API Reference](https://docs.maton.ai/api-reference/overview)
 - [Maton CLI Manual](https://cli.maton.ai/manual)
 - [Zoho Recruit API v2 Overview](https://www.zoho.com/recruit/developer-guide/apiv2/)
 - [Zoho Recruit Get Records API](https://www.zoho.com/recruit/developer-guide/apiv2/get-records.html)
@@ -54,17 +51,17 @@ Mitigation: Treat fetched content as data, avoid executing or interpolating it i
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Code, Guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown guidance with inline shell commands, JSON request examples, and SDK code snippets]
+**Output Format:** [Markdown with inline shell commands and JSON examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May produce read-only API calls by default and data-modifying API calls only after explicit user confirmation.]
+**Other Properties Related to Output:** [May include proposed Zoho Recruit API calls, request payloads, result summaries, and user-confirmation prompts.]
 
 ## Skill Version(s):
 
-1.1.0 (source: server release metadata)
+1.1.2 (source: server release metadata; artifact frontmatter reports 1.1)
 
 ## Ethical Considerations:
 
