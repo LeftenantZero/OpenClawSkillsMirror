@@ -1,0 +1,57 @@
+{
+  "changelog": "Fix: time-based sleep check (no longer depends on cron flipping isSleeping); gate.js wrapper for all outgoing sends; dm-guard hook auto-replies to DM senders during sleep",
+  "created_at": 1772350222914,
+  "display_name": "Sleep Snooze",
+  "fetched_at": 1787892424777,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "hooks/dm-guard/HOOK.md",
+    "hooks/dm-guard/handler.js",
+    "hooks/sleep-guard/HOOK.md",
+    "hooks/sleep-guard/handler.js",
+    "lib/sleep-check.js",
+    "package.json",
+    "references/setup.md",
+    "scripts/digest.js",
+    "scripts/gate.js",
+    "scripts/queue-message.js",
+    "scripts/set-sleep-mode.js",
+    "scripts/sleep-init.js",
+    "scripts/status.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779968688781,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Hardik500",
+    "handle": "hardik500",
+    "user_id": "s17extjjt7m6tb4qm35cjs6ex9884jpb"
+  },
+  "slug": "sleep-snooze",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sleep-snooze",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sleep-snooze&ownerHandle=hardik500",
+    "page_url": "https://clawhub.ai/hardik500/skills/sleep-snooze"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 947,
+    "installs": 27,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Snooze incoming notifications during your sleep window and receive a morning digest when you wake up. Supports Telegram, WhatsApp, and any provider OpenClaw...",
+  "updated_at": 1778491678078,
+  "version": "1.0.2"
+}
