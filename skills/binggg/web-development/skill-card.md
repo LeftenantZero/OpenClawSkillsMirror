@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and engineers use this skill to implement, debug, build, deploy, and validate web frontends and static sites. It is most applicable to React, Vue, Vite, browser-flow validation, routing, forms, authentication-adjacent frontend work, and CloudBase Web integration.
+Developers and engineers use this skill to implement, debug, validate, and deploy Web frontend work after product direction is already clear, especially for React, Vue, Vite, browser flows, and CloudBase Web integration.
 
 ### Deployment Geography for Use:
 
@@ -22,31 +22,35 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Authentication examples could encourage insecure token cookies or access control without real token validation.
+Risk: Authentication examples may be copied into production with weak token validation or unsafe session storage.
 
-Mitigation: Review authentication examples before use, require secure cookie and session handling, and validate tokens server-side or through the appropriate platform mechanism before granting access.
+Mitigation: Review authentication snippets before reuse, validate tokens with the appropriate server-side mechanism, and use safer session storage for the target application.
+
+Risk: Frontend, routing, auth, or deployment changes may remain unverified if the browser validation workflow is skipped.
+
+Mitigation: Run the static checks and browser flow validation described by the skill, and report any unverified steps or blocked branches.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/binggg/skills/web-development)
-- [CloudBase integration documentation](https://docs.cloudbase.net/integration/introduce/index.md)
+- [ClawHub Skill Page](https://clawhub.ai/binggg/skills/web-development)
+- [Framework Guidance](frameworks.md)
+- [Browser Validation](browser-testing.md)
+- [CloudBase Integration Documentation](https://docs.cloudbase.net/integration/introduce/index.md)
 - [CloudBase Web SDK CDN](https://static.cloudbase.net/cloudbase-js-sdk/latest/cloudbase.full.js)
-- [browser-testing.md](artifact/browser-testing.md)
-- [frameworks.md](artifact/frameworks.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [Guidance, Markdown, Code, Shell commands, Configuration]
 
-**Output Format:** [Markdown guidance with inline code and shell command examples]
+**Output Format:** [Markdown guidance with inline code and command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May reference local sibling skills or platform-specific validation tools when the user's workspace requires them.]
+**Other Properties Related to Output:** [May include implementation steps, validation results, and deployment configuration guidance when relevant.]
 
 ## Skill Version(s):
 
-1.27.42 (source: server release metadata; artifact frontmatter reports 2.32.3)
+1.27.43 (source: ClawHub release metadata; artifact frontmatter reports 2.32.4)
 
 ## Ethical Considerations:
 
