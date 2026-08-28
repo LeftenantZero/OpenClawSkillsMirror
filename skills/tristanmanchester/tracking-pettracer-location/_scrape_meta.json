@@ -1,0 +1,41 @@
+{
+  "changelog": "**Map screenshot generation added for latest pet location.**\n\n- Added ability to generate and send a shareable PNG map screenshot of the pet\u2019s latest location using Google Maps Static API.\n- New script: `scripts/pettracer_mapshot.py` fetches a static map image centered on the last GPS fix.\n- Detailed instructions for map image generation, including required `GOOGLE_MAPS_API_KEY`.\n- Updated documentation to cover new screenshot capability and clarify user-facing answer format.\n- Added reference: `references/maps.md` for map image implementation and tuning.",
+  "created_at": 1772017613255,
+  "display_name": "petTracer pet tracking",
+  "fetched_at": 1787941340358,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/data-model.md",
+    "references/endpoints.md",
+    "references/maps.md",
+    "references/modes.md",
+    "references/websocket.md",
+    "scripts/pettracer_cli.py",
+    "scripts/pettracer_mapshot.py",
+    "scripts/pettracer_watch.py",
+    "scripts/requirements.txt"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Tristan Manchester",
+    "handle": "tristanmanchester",
+    "user_id": "s17c3xv8wvvzzbj84z9vcj498n83gnkp"
+  },
+  "slug": "tracking-pettracer-location",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tracking-pettracer-location",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tracking-pettracer-location&ownerHandle=tristanmanchester",
+    "page_url": "https://clawhub.ai/tristanmanchester/skills/tracking-pettracer-location"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 388,
+    "installs": 8,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Tracks a pet\u2019s location via the PetTracer portal API (snapshot, history, and live updates). Generates a shareable map screenshot (PNG) for the latest locatio...",
+  "updated_at": 1778491636632,
+  "version": "1.0.1"
+}
