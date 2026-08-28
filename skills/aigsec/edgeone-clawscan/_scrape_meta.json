@@ -1,0 +1,43 @@
+{
+  "changelog": "edgeone-clawscan 1.0.15 introduces privacy controls and improved deployment safety:\n\n- Added optional AIG_CLOUD_LOOKUP environment variable to fully disable all outbound HTTPS lookups (cloud threat/CVE, default is enabled).\n- Documented minimum data sent when cloud lookup is enabled\u2014never sends skill bodies, chats, or workspace files, only skill name, source label, or OpenClaw version.\n- Added provenance and verification sections: clarify publisher, registry caveats, and checking against official releases.\n- Cautions and pre-run checklist emphasize verifying the binary on PATH and taking care with live Gateway probes.\n- Clarified setup for self-hosted threat intelligence, stricter air-gap guidance, and how to force local-only operation.",
+  "created_at": 1773125045124,
+  "display_name": "EdgeOne ClawScan",
+  "fetched_at": 1787882347311,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090042917,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "aigsec",
+    "handle": "aigsec",
+    "user_id": "s172fyyzpw8844mzehmj0rn4c183hz1j"
+  },
+  "slug": "edgeone-clawscan",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/edgeone-clawscan",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=edgeone-clawscan&ownerHandle=aigsec",
+    "page_url": "https://clawhub.ai/aigsec/skills/edgeone-clawscan"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3833,
+    "installs": 120,
+    "stars": 125,
+    "versions": 16
+  },
+  "summary": "The first security skill to install after setting up OpenClaw \u2014 powered by Tencent Zhuque Lab. Works like an antivirus for your AI environment: audits instal...",
+  "updated_at": 1778491803852,
+  "version": "1.0.15"
+}
