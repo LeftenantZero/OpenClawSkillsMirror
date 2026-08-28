@@ -1,0 +1,76 @@
+{
+  "changelog": "gorm-expert-skill v1.6.0\n\n- \u63d0\u4f9b\u4e86\u4e30\u5bcc\u7684\u6700\u4f73\u5b9e\u8df5\u548c\u6027\u80fd\u4f18\u5316\u6307\u5357\uff0c\u6db5\u76d6\u4ee3\u7801\u5ba1\u67e5\u3001\u6162\u67e5\u8be2\u3001N+1 \u95ee\u9898\u3001\u8fde\u63a5\u6c60\u3001\u4e8b\u52a1\u7ba1\u7406\u3001\u591a\u79df\u6237\u9694\u79bb\u7b49\u5e38\u89c1\u573a\u666f\n- \u5185\u7f6e\u5404\u7c7b\u811a\u672c\u5de5\u5177\uff0c\u652f\u6301 Python \u4e00\u952e\u8f85\u52a9\u7ed3\u6784\u4f53\u751f\u6210\u3001\u8fde\u63a5\u6c60\u8ba1\u7b97\u3001SQL \u6027\u80fd\u5206\u6790\u3001\u6279\u91cf\u6570\u636e\u5904\u7406\u7b49\n- \u660e\u786e\u6d41\u7a0b\u4e0e\u914d\u7f6e\uff1a\u7981\u7528\u7269\u7406\u5916\u952e\u3001\u8fde\u63a5\u6c60\u63a8\u8350\u503c\u3001\u591a\u79df\u6237\u542f\u7528\u4e0e\u5173\u95ed\u65b9\u5f0f\u3001ID \u751f\u6210\u7b56\u7565\n- \u4e30\u5bcc\u4ee3\u7801\u7247\u6bb5\u4e0e\u811a\u672c\u63a8\u8350\uff0c\u8986\u76d6\u67e5\u8be2\u4f18\u5316\u3001\u6279\u91cf\u5199\u5165\u3001\u4e8b\u52a1\u3001\u8bfb\u5199\u5206\u79bb\u53ca Scope \u590d\u7528\u7b49\u7ec6\u8282\n- \u65b0\u589e\u591a\u79df\u6237\u4e24\u79cd\u9694\u79bb\u65b9\u5f0f\uff0c\u811a\u624b\u67b6\u521d\u59cb\u5316\u53ca\u5e38\u7528\u573a\u666f\u81ea\u52a8\u811a\u672c\u8c03\u7528\u8bf4\u660e",
+  "created_at": 1773587523170,
+  "display_name": "Gorm Expert",
+  "fetched_at": 1787939341192,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/dbcore/auto_id.go",
+    "assets/dbcore/base_model.go",
+    "assets/dbcore/example_order_model.go",
+    "assets/dbcore/query_builder.go",
+    "assets/dbcore/transaction.go",
+    "references/README.md",
+    "references/association.md",
+    "references/base-model-pattern.md",
+    "references/caching.md",
+    "references/clause.md",
+    "references/concurrency.md",
+    "references/hooks.md",
+    "references/id-generation.md",
+    "references/indexing.md",
+    "references/migration.md",
+    "references/observability.md",
+    "references/raw-sql.md",
+    "references/scopes.md",
+    "references/serializer.md",
+    "references/session.md",
+    "references/sharding.md",
+    "references/soft-delete.md",
+    "references/testing.md",
+    "scripts/analyze_gorm.py",
+    "scripts/bench_template.py",
+    "scripts/gen_model.py",
+    "scripts/init_project.py",
+    "scripts/migration_gen.py",
+    "scripts/pool_advisor.py",
+    "scripts/query_explain.py",
+    "scripts/scope_gen.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089899112,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "xuebing",
+    "handle": "lynnss-ai",
+    "user_id": "s174jgkh52qpmj0ak8snn99vxx83g8z9"
+  },
+  "slug": "gorm-expert-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gorm-expert-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gorm-expert-skill&ownerHandle=lynnss-ai",
+    "page_url": "https://clawhub.ai/lynnss-ai/skills/gorm-expert-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 721,
+    "installs": 18,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "GORM v2 \u6700\u4f73\u5b9e\u8df5\u4e0e\u6027\u80fd\u4f18\u5316\u3002\u9002\u7528\u4e8e\uff1a\u4ee3\u7801\u5ba1\u67e5\u3001\u6162\u67e5\u8be2\u4f18\u5316\u3001N+1\u3001\u8fde\u63a5\u6c60\u3001 \u4e8b\u52a1\u7ba1\u7406\u3001\u5206\u5e93\u5206\u8868\u3001Prometheus/OTel\u76d1\u63a7\u3001Session\u5b89\u5168\u3001Clause/Upsert\u3001 \u7f13\u5b58\u96c6\u6210\u3001BaseModel\u811a\u624b\u67b6\u3001SQL\u2192struct\u751f\u6210\u3001\u591a\u79df\u6237\u9694\u79bb\u3002 \u89e6\u53d1\u8bcd\uff1aGORM\u3001\u6570\u636e\u5e93\u6162\u3001\u52a0\u7d22\u5f15\u3001\u5199struc...",
+  "updated_at": 1778491928981,
+  "version": "1.6.0"
+}
