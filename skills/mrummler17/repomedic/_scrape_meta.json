@@ -1,0 +1,33 @@
+{
+  "changelog": "- Expanded safety guardrails to prohibit direct pushes to both `main` and `master` branches.\n- Refined the approval gate to explicitly require displaying planned file/version changes and always request approval for non-trivial edits.\n- Added a new \"Required Permissions & Least-Privilege Policy\" section outlining strict access and permission boundaries.\n- Strengthened prohibitions against modifying files outside the target repository and performing external actions without explicit request.\n- Clarified steps for handling missing permissions, emphasizing minimum access and transparent permission requests.",
+  "created_at": 1770540576669,
+  "display_name": "RepoMedic",
+  "fetched_at": 1787907013419,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Marcus Rummler",
+    "handle": "mrummler17",
+    "user_id": "s177vtjmwxxa5bncvxhfwnmz5x884rrg"
+  },
+  "slug": "repomedic",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/repomedic",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=repomedic&ownerHandle=mrummler17",
+    "page_url": "https://clawhub.ai/mrummler17/skills/repomedic"
+  },
+  "stats": {
+    "comments": 2,
+    "downloads": 2393,
+    "installs": 77,
+    "stars": 1,
+    "versions": 7
+  },
+  "summary": "Safely triage and remediate GitHub dependency hygiene issues with explicit guardrails. Use when Dependabot PRs fail, pnpm lockfiles break, transitive vulnerabilities appear (e.g., glob/lodash/brace-expansion), or CI/Vercel fails due to dependency resolution. Prioritize low-risk fixes, branch+PR workflow, and plain-English explanations.",
+  "updated_at": 1778486077727,
+  "version": "1.0.6"
+}
