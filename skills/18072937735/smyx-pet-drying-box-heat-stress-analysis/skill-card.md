@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes pet drying box video files or URLs through a backend API to detect early heat-stress signals such as panting intensity, tongue color, and movement frequency, then returns risk levels and intervention guidance.
+Analyzes pet drying-box video files or URLs through Life Emergence cloud APIs to detect early heat-stress signals such as open-mouth panting intensity, tongue color, and body movement frequency, then returns risk levels, intervention suggestions, and report links.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users, pet-care operators, grooming stores, pet hospitals, and developers use this skill to review drying-box media for heat-stress warning signs and produce structured safety guidance. Results are for drying safety support and should not be treated as medical diagnosis or treatment advice.
+External users, pet-care operators, and agent developers use this skill to submit drying-box video evidence for cloud-based heat-stress warning analysis and to retrieve prior analysis reports. The output is intended as drying-safety support, not veterinary diagnosis or treatment advice.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Pet videos or video URLs are sent to a configured backend service for analysis.
+Risk: Pet drying-box videos or public video URLs are sent to the configured Life Emergence cloud service for analysis.
 
-Mitigation: Use only media the user is authorized to upload, disclose backend processing, and require explicit confirmation before upload.
+Mitigation: Use only when the user is comfortable sharing that media with the configured service, and avoid submitting unrelated, sensitive, or excessive footage.
 
-Risk: The skill can silently create or reuse account identities and store service tokens in a local SQLite database.
+Risk: The skill can create or reuse a local account identity and store tokens in a workspace SQLite database.
 
-Mitigation: Run in an isolated workspace, review local storage before reuse, and avoid sharing the workspace across unrelated users.
+Mitigation: Prefer a single-user workspace, restrict local workspace access, and remove the local data database or rotate tokens when uninstalling or changing identities.
 
-Risk: Cloud history report lookup may retrieve prior reports with limited user control.
+Risk: Historical report lookup is account-scoped and may expose prior analysis records in shared workspaces.
 
-Mitigation: Require explicit confirmation before history queries and show only report information appropriate for the current user context.
+Mitigation: Use separate workspaces for separate users or roles, and review report history access before deployment in multi-user environments.
 
 ## Reference(s):
 
 - [Pet Drying Box Heat Stress API Documentation](references/api_doc.md)
-- [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-pet-drying-box-heat-stress-analysis)
-- [Skill demo](https://lifeemergence.com/sample.html)
+- [Shared Analysis API Documentation](skills/smyx_analysis/references/api_doc.md)
+- [ClawHub Skill Page](https://clawhub.ai/18072937735/skills/smyx-pet-drying-box-heat-stress-analysis)
+- [Skill Demo](https://lifeemergence.com/sample.html)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown and JSON-style structured analysis reports, with optional Markdown tables for history reports and links to generated reports]
+**Output Format:** [Markdown and JSON-like structured text with report links; optional file output when an output path is provided.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Supports local video files or video URLs, optional pet type, detail level, output file path, and cloud history report listing.]
+**Other Properties Related to Output:** [Accepts mp4, avi, or mov inputs up to 10 MB; can analyze local files or public video URLs and can list account-scoped historical reports.]
 
 ## Skill Version(s):
 
-1.0.8 (source: server release metadata; artifact frontmatter says 1.0.11)
+1.0.9 (source: server release metadata; artifact frontmatter declares 1.0.12)
 
 ## Ethical Considerations:
 
