@@ -1,0 +1,45 @@
+{
+  "changelog": "- Now uses a structured JSON request file for submissions instead of command-line arguments containing user data.\n- Adds strong guidance to never put user queries, channel names, or file paths directly inside shell commands; always generate a JSON file and reference its path.\n- Updates tool commands: submit requests by filename only and describes the new request JSON shape.\n- Enforces stricter validation of task IDs before polling results, stopping with an error if the ID is invalid.\n- Clarifies network boundary\u2014skills only send data to chartgen.ai and do not support alternate API endpoints.\n- Improves workflow documentation for secure and robust operation.",
+  "created_at": 1773225650204,
+  "display_name": "Analysis Data",
+  "fetched_at": 1787880179412,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/upgrade-skill.md",
+    "skill-card.md",
+    "tools/chartgen_api.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090750772,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ChartGen AI",
+    "handle": "chartgen-ai",
+    "user_id": "s1760v3fs4sg6tdv3k9gq9792h83h5yy"
+  },
+  "slug": "analysis-data",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/analysis-data",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=analysis-data&ownerHandle=chartgen-ai",
+    "page_url": "https://clawhub.ai/chartgen-ai/skills/analysis-data"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 1234,
+    "installs": 32,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "Use this skill when the user wants to create visualizations (charts, dashboards, diagrams, Gantt, PPT), analyze data (Excel/CSV upload, cross-file analysis,...",
+  "updated_at": 1778491828096,
+  "version": "1.0.6"
+}
