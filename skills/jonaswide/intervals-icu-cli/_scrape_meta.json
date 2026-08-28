@@ -1,0 +1,43 @@
+{
+  "changelog": "- Added OpenClaw-compatible metadata with OS/arch-specific installers and environment variable requirements.\n- Updated installation guidance to reference automatic installer use where available.\n- Explicitly set `INTERVALS_API_KEY` as the primary environment variable, with notes on bearer token alternative.\n- New guidance: only install the CLI or perform data mutations when requested by the user or when clearly required by the task.\n- Added best practice to remove temp files after use and prefer read commands before mutation actions.",
+  "created_at": 1773396382423,
+  "display_name": "intervals.icu CLI",
+  "fetched_at": 1787876111178,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "examples/events/create-10km-run.json",
+    "examples/events/create-interval-run.json",
+    "examples/events/upsert-10km-run.json",
+    "examples/events/upsert-interval-run.json",
+    "examples/wellness/put-day.json",
+    "examples/workouts/create-interval-run.json",
+    "examples/workouts/create-simple-run.json",
+    "references/queries.md",
+    "references/writes.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jonas Wideking",
+    "handle": "jonaswide",
+    "user_id": "s17fftbjetqhw1sw2tcmah7p7583xrx1"
+  },
+  "slug": "intervals-icu-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/intervals-icu-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=intervals-icu-cli&ownerHandle=jonaswide",
+    "page_url": "https://clawhub.ai/jonaswide/skills/intervals-icu-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 794,
+    "installs": 21,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Use this skill when an installed `intervals` CLI should be used to query Intervals.icu, inspect activities, create scheduled workout events, create workout l...",
+  "updated_at": 1778491880948,
+  "version": "1.0.1"
+}
