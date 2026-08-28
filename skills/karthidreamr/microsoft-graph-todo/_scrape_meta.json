@@ -1,0 +1,34 @@
+{
+  "changelog": "- Added explicit required environment variables (`MS_TODO_CLIENT_ID`, `MS_TODO_TENANT_ID`) to metadata.\n- Clarified that the access token and device code helpers write secrets only to disk, not stdout, for improved handling of sensitive credentials.\n- Documented that token and device code responses are saved in `token.json` and `device_code.json`, and not echoed with bearer/refresh tokens in outputs.\n- Updated metadata with the new `primaryEnv` field to signal the primary environment variable.",
+  "created_at": 1773110694388,
+  "display_name": "Microsoft To Do",
+  "fetched_at": 1787882731523,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/ms_todo_auth.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Karthikeyan N",
+    "handle": "karthidreamr",
+    "user_id": "s177w23eg7ew638fqymneym2j187gpp0"
+  },
+  "slug": "microsoft-graph-todo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/microsoft-graph-todo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=microsoft-graph-todo&ownerHandle=karthidreamr",
+    "page_url": "https://clawhub.ai/karthidreamr/skills/microsoft-graph-todo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 877,
+    "installs": 23,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Microsoft To Do via Microsoft Graph. List task lists, read tasks, create tasks, update tasks, and mark tasks complete.",
+  "updated_at": 1778491799807,
+  "version": "1.0.1"
+}
