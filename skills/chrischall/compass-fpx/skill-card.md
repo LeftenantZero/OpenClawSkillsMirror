@@ -1,6 +1,6 @@
 ## Description:
 
-Query Compass real-estate data from a shell with the fpx CLI to search listings, inspect property and agent details, read price history, and resolve street addresses through one-shot fetches over a signed-in browser tab.
+Query compass.com (US real-estate portal) from a shell with the fpx CLI (@fetchproxy/cli) instead of running the compass-mcp server: search listings, get property/agent detail, price history, and resolve street addresses through one-shot fetches over a signed-in browser tab.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and real-estate data analysts use this skill to generate Compass fetch commands and parsing steps for listing search, property detail, agent listings, price history, and address resolution without running a Compass MCP server.
+Developers and real-estate data operators use this skill to fetch Compass listing, property, price-history, address-resolution, and agent data from shell workflows using their own browser session.
 
 ### Deployment Geography for Use:
 
@@ -22,17 +22,17 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Compass requests are routed through a paired browser extension using the user's open Compass browser session.
+Risk: Compass requests are routed through a browser tab/profile controlled by the user, so fetched data depends on that session and may reflect information visible in that browser context.
 
-Mitigation: Use a dedicated browser profile when appropriate, approve pairing intentionally, and remove the fpx pairing when the bridge is no longer needed.
+Mitigation: Use a Compass tab/profile you control and understand before running the skill.
 
-Risk: Fetches can return a login page or AWS WAF challenge instead of usable Compass data.
+Risk: Temporary HTML or JSON outputs can contain listing, address, and agent information.
 
-Mitigation: Check for login or WAF markers before trusting fetched output, refresh the Compass tab when challenged, and retry only after the tab has a valid session.
+Mitigation: Review /tmp outputs before sharing the machine, logs, or generated files.
 
-Risk: Compass search pages expose only the first server-rendered result page and may omit broader market coverage.
+Risk: Compass pages can return login or AWS WAF challenge content instead of usable listing data.
 
-Mitigation: Narrow searches by price, bed count, or property type and verify important results against the live Compass page.
+Mitigation: Check for the documented login and WAF markers, refresh the Compass tab when blocked, and verify extracted results before relying on them.
 
 ## Reference(s):
 
@@ -43,17 +43,17 @@ Mitigation: Narrow searches by price, bed count, or property type and verify imp
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, shell commands, code, configuration]
+**Output Type(s):** [Shell commands, Code, Configuration, Guidance, JSON]
 
-**Output Format:** [Markdown guidance with shell commands, JavaScript helper usage, and jq examples]
+**Output Format:** [Markdown with inline shell commands, jq projections, and JSON extraction guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Outputs assume a paired fetchproxy browser extension, an open Compass tab, and local tools such as fpx, Node.js, and jq.]
+**Other Properties Related to Output:** [Outputs may include temporary HTML and JSON files under /tmp that contain listing, address, and agent information.]
 
 ## Skill Version(s):
 
-0.12.3 (source: server release evidence)
+0.12.4 (source: release evidence)
 
 ## Ethical Considerations:
 
