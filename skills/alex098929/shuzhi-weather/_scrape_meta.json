@@ -1,0 +1,45 @@
+{
+  "changelog": "Shuzhi Weather Skill v1.0.0\n\n- Initial release: Query hourly weather forecasts via the Shuzhi Weather API using HMAC-SHA256 authentication.\n- Requires user configuration of app_key and app_secret in ~/.openclaw/skills/shuzhi-weather/config.json.\n- Supports location-based queries by city name or coordinates with automatic geocoding for major cities.\n- Provides clear error handling and guidance for missing or invalid configuration.\n- Returns detailed, structured weather data and presents forecasts in a user-friendly format.",
+  "created_at": 1773731289481,
+  "display_name": "Shuzhi Weather",
+  "fetched_at": 1787938961547,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api_response_format.md",
+    "scripts/get_weather.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089931913,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "alex098929",
+    "handle": "alex098929",
+    "user_id": "s17c65pthhzjm0nzpxc61ry2td83jbvp"
+  },
+  "slug": "shuzhi-weather",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/shuzhi-weather",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=shuzhi-weather&ownerHandle=alex098929",
+    "page_url": "https://clawhub.ai/alex098929/skills/shuzhi-weather"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 720,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "This skill should be used when users need to query weather information via the Shuzhi Weather API with HMAC-SHA256 authentication. It provides hourly weather...",
+  "updated_at": 1778491969082,
+  "version": "1.0.0"
+}
