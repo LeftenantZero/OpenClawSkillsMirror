@@ -1,0 +1,40 @@
+{
+  "changelog": "- Removed the sample skill card file (skill-card.md).\n- No functional changes to the skill; documentation and core behavior remain unchanged.\n- Update intended to streamline or clean up repository contents.",
+  "created_at": 1787915403532,
+  "display_name": "meeting-scribe",
+  "fetched_at": 1787930924644,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/mention-proposal.md",
+    "references/sample-entities/organizations/anlo-robotics.md",
+    "references/sample-entities/organizations/anlo-ventures.md",
+    "references/sample-entities/people/jordan-lee.md",
+    "references/sample-entities/people/sam-rivera.md",
+    "references/sample-transcript.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "skillsandagentsco",
+    "handle": "skillsandagentsco",
+    "user_id": "s1723x7w2bn4f5gyy04k88vsan8dar9s"
+  },
+  "slug": "meeting-scribe",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/meeting-scribe",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=meeting-scribe&ownerHandle=skillsandagentsco",
+    "page_url": "https://clawhub.ai/skillsandagentsco/skills/meeting-scribe"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 24,
+    "installs": 0,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Turn a meeting transcript into structured meeting memory \u2014 a dated meeting note, one appended mention line per entity the transcript names (person, organization, or meeting you already track), and a recap email drafted for review but never sent. Matches names against your own entity files first; an unmatched name becomes a proposed new entity instead of a guess, and an ambiguous name lists every candidate and writes nothing. Inspired by USV's Meeting Scribe agent (https://blog.usv.com/meet-the-agents), rebuilt generic for any team that keeps a folder of who and what it tracks. Use whenever the user says \"run meeting scribe\", \"turn this transcript into meeting memory\", \"log this meeting against my contacts\", \"who did we mention on this call\", \"draft a recap from this transcript\", \"/meeting-scribe\", or points at a transcript plus a folder of people/company files.",
+  "updated_at": 1787917416428,
+  "version": "1.0.2"
+}
