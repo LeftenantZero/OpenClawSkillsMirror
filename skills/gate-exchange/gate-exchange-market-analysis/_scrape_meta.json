@@ -1,0 +1,47 @@
+{
+  "changelog": "**Minor release with improved authentication clarification and execution guidance:**\n\n- Clarifies that most market-data calls are read-only/public and API keys are generally not needed, with details about authenticated deployments.\n- Adds a new reference to `references/mcp.md` as the mandatory execution protocol for MCP tool calls and workflow.\n- Explicitly instructs skill to read and follow `references/mcp.md`; keeps routing and intent logic in `SKILL.md`.\n- No changes to scenario logic or routing rules. All thirteen scenario modules remain as before.",
+  "created_at": 1773397500386,
+  "display_name": "Gate Exchange MarketAnalysis",
+  "fetched_at": 1787876073412,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/mcp.md",
+    "references/scenarios.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090247792,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Gate",
+    "handle": "gate-exchange",
+    "user_id": "s172g4d1dcv6ccs6desbb2xw1583qza9"
+  },
+  "slug": "gate-exchange-market-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gate-exchange-market-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gate-exchange-market-analysis&ownerHandle=gate-exchange",
+    "page_url": "https://clawhub.ai/gate-exchange/skills/gate-exchange-market-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1069,
+    "installs": 29,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Gate Exchange market analysis tool. Use when the user asks for deep market metrics like liquidity, slippage, funding arbitrage, or manipulation risk. Trigger...",
+  "updated_at": 1778491880948,
+  "version": "1.0.2"
+}
