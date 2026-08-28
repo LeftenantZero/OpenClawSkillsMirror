@@ -1,0 +1,46 @@
+{
+  "changelog": "**Summary: Adds licensing and changelog files, plus compatibility and audit command updates for OpenClaw 2026.3.8**\n\n- Added `LICENSE` (MIT) and `CHANGELOG.md` files for transparency and version tracking.\n- Updated compatibility for OpenClaw 2026.3.8; referenced new agent skill guidance.\n- Expanded context establishment instructions and included new recommended audit/diagnostic commands (`gateway probe`, `status --deep`, `channels status --probe`).\n- Clarified interpretation of Gateway/Control UI exposure and DM/group access controls.\n- Improved guidance on backups and safe config handling (use of `{baseDir}` in script paths).\n- Tightened focus: no longer intended for general OS, Docker, or cloud hardening outside OpenClaw scope.",
+  "created_at": 1771397692555,
+  "display_name": "Audit OpenClaw Security",
+  "fetched_at": 1787899775961,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/openclaw_checkid_map.json",
+    "assets/report-template.md",
+    "references/command-cheatsheet.md",
+    "references/openclaw-audit-checks.md",
+    "references/openclaw-baseline-config.md",
+    "references/platform-aws-ec2.md",
+    "references/platform-docker.md",
+    "references/platform-mac-mini.md",
+    "references/platform-personal-laptop.md",
+    "scripts/collect_openclaw_audit.sh",
+    "scripts/redact_openclaw_config.py",
+    "scripts/render_report.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Tristan Manchester",
+    "handle": "tristanmanchester",
+    "user_id": "s17c3xv8wvvzzbj84z9vcj498n83gnkp"
+  },
+  "slug": "audit-openclaw-security",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/audit-openclaw-security",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=audit-openclaw-security&ownerHandle=tristanmanchester",
+    "page_url": "https://clawhub.ai/tristanmanchester/skills/audit-openclaw-security"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1528,
+    "installs": 47,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Audit and harden OpenClaw deployments and interpret `openclaw security audit` findings. Use when the user wants to secure OpenClaw, review gateway exposure/a...",
+  "updated_at": 1778491570900,
+  "version": "2.0.1"
+}
