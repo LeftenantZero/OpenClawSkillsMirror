@@ -1,6 +1,6 @@
 ## Description:
 
-Agent Media OS for HyperFrames projects that resolves BGM, SFX, image, icon, brand logo, voice, color grade, or LUT into a frozen local file or paste-ready block plus ledger record; generates via TTS, music, or image models when the catalog misses; produces voiceover, transcription, captions, and background removal through one shared audio engine; operates on media; and reuses assets across projects.
+media-use helps agents resolve, generate, transform, and reuse media assets for HyperFrames projects, including BGM, SFX, images, icons, logos, voice, captions, transcription, background removal, color grades, LUTs, and media treatments.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and creative agents use media-use in HyperFrames projects to resolve, generate, transform, and reuse media assets such as BGM, SFX, images, logos, voiceovers, captions, transcripts, and color grades. The skill also guides media treatment choices and records resolved assets for local reuse.
+Developers and creative agents use media-use to select, generate, operate on, and register media assets for HyperFrames compositions. The skill is intended for practical media production workflows that need reusable local assets, provider-aware generation, and concise agent guidance.
 
 ### Deployment Geography for Use:
 
@@ -22,46 +22,46 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Provider-backed media workflows can involve account-linked provider calls and default telemetry.
+Risk: Media prompts or content may be sent to credentialed third-party providers.
 
-Mitigation: Use the skill only when those workflows are acceptable, and set HYPERFRAMES_NO_TELEMETRY=1 or DO_NOT_TRACK=1 when telemetry should be disabled.
+Mitigation: For confidential client media, prefer --local-only where supported and review provider setup before processing sensitive assets.
 
-Risk: Cross-project local caches can expose client-confidential assets or prior project context if reused carelessly.
+Risk: Telemetry can link coarse usage events to an account identity.
 
-Mitigation: Use --local-only for sensitive projects, avoid shared global caches for confidential assets, and review ~/.media and ~/.hyperframes storage regularly.
+Mitigation: Disable telemetry with HYPERFRAMES_NO_TELEMETRY=1 or DO_NOT_TRACK=1 when account-linked reporting is not appropriate.
 
-Risk: Automatic and background execution can download, generate, or process media outside an immediately visible foreground step.
+Risk: Cross-project local reuse can persist media data in shared local caches.
 
-Mitigation: Run doctor/preflight checks, review generated files and ledger entries before use, and prefer explicit provider or local-only choices for sensitive work.
+Mitigation: Avoid storing sensitive assets in shared ~/.media caches and review candidate reuse before importing cached media into a project.
+
+Risk: Recipe use can overwrite frame.md.
+
+Mitigation: Review recipe use before allowing frame.md overwrites.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/heygen-com/skills/media-use)
-- [Setup and providers](references/setup-providers.md)
-- [Resolve](references/resolve.md)
-- [Audio](references/audio.md)
-- [Media treatments](references/media-treatments.md)
-- [Operations](references/operations.md)
-- [Grading](references/grading.md)
-- [Memory](references/memory.md)
-- [Telemetry and privacy](references/meta.md)
-- [SFX credits](audio/assets/sfx/CREDITS.md)
-- [LUT library](luts/README.md)
+- [Setup and providers](artifact/references/setup-providers.md)
+- [Resolve command, flags, reuse, adopt, inventory](artifact/references/resolve.md)
+- [Audio engine](artifact/references/audio.md)
+- [Media operations](artifact/references/operations.md)
+- [Media treatments](artifact/references/media-treatments.md)
+- [Telemetry, usage stats, and privacy](artifact/references/meta.md)
 - [HeyGen CLI documentation](https://developers.heygen.com/cli)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance, files]
+**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance, Files]
 
-**Output Format:** [Markdown guidance with inline shell commands, JSON snippets, and generated file paths]
+**Output Format:** [Markdown guidance with shell commands, JSON snippets, local file paths, and generated or resolved media files.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May resolve or generate local media assets, write ledger/cache records, and invoke provider or local CLI tools.]
+**Other Properties Related to Output:** [May write media assets, metadata ledgers, captions, transcripts, recipes, and reusable cache records depending on the requested workflow.]
 
 ## Skill Version(s):
 
-1.0.40 (source: server release evidence)
+1.0.41 (source: server release metadata)
 
 ## Ethical Considerations:
 
