@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of security-analysis skill for codebase and SKILL.md vulnerability assessment.\n\n- Provides detailed procedures for conducting security audits, vulnerability analysis, and SAST scanning.\n- Strict \"analyze only on explicit request\" policy to minimize unnecessary access.\n- Covers injection flaws, broken access control, hardcoded secrets, insecure data handling, authentication issues, LLM/prompt risks, and privacy violations.\n- Defines comprehensive review checklist for OpenClaw SKILL.md and agent instruction files to catch instruction injection, data exfiltration, privilege escalation, hidden instructions, unsafe tool use, and social engineering.\n- Includes report format, severity rubric, and evidence-based reporting requirements to ensure accurate, actionable security findings.",
+  "created_at": 1770281143708,
+  "display_name": "claw skill security audit",
+  "fetched_at": 1787908667610,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/prompt-injection-patterns.md",
+    "references/vulnerability-patterns.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "kylehuan",
+    "handle": "kylehuan",
+    "user_id": "s17ce1yqfmhtbkpcx4gd783rth884d6x"
+  },
+  "slug": "skill-security-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-security-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-security-audit&ownerHandle=kylehuan",
+    "page_url": "https://clawhub.ai/kylehuan/skills/skill-security-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3389,
+    "installs": 123,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Conduct comprehensive security audits and vulnerability analysis on codebases. Use when explicitly asked for security analysis, code security review, vulnerability assessment, SAST scanning, or identifying security issues in source code. Covers injection flaws, broken access control, hardcoded secrets, insecure data handling, authentication weaknesses, LLM safety, and privacy violations.",
+  "updated_at": 1778486025837,
+  "version": "1.0.0"
+}
