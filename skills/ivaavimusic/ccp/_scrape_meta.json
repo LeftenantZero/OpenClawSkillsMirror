@@ -1,0 +1,34 @@
+{
+  "changelog": "Continuous Context Preserver (CCP) Skill v1.0.0\n\n- Introduces continuous session event recording to persist key conversation context between sessions and survive crashes.\n- Prompts user at installation for desired log retention period (7 days, 10 days, 30 days, 180 days), then adjusts cleanup policy accordingly.\n- Logs only key context, decisions, and discoveries during active sessions; avoids dumping raw full transcripts.\n- Automatically cleans up expired session logs based on user-configured retention period.\n- Designed to complement, not replace, other memory systems (long-term curated memory, semantic fact storage, daily notes, etc.).",
+  "created_at": 1773063694099,
+  "display_name": "Continuous Context Preserver",
+  "fetched_at": 1787883341526,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/cleanup.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ivaavi.eth",
+    "handle": "ivaavimusic",
+    "user_id": "s179r9z3n07jxsdszy7pdwqans83tjq8"
+  },
+  "slug": "ccp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ccp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ccp&ownerHandle=ivaavimusic",
+    "page_url": "https://clawhub.ai/ivaavimusic/skills/ccp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 862,
+    "installs": 23,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Continuous session event recording for inter-session memory survival. Use when you want to persist conversation context between sessions, prevent memory loss...",
+  "updated_at": 1778491788483,
+  "version": "1.0.0"
+}
