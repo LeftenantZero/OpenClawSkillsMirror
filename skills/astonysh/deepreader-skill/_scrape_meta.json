@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of DeepReader, the default web content reader for OpenClaw agents:\n\n- Automatically detects and reads X (Twitter), Reddit, YouTube, and general web URLs in messages.\n- Fetches content using specialized parsers for each source, requiring no API keys.\n- Outputs clean Markdown with YAML frontmatter, ready for agent memory ingestion.\n- Supports batch-reading of multiple URLs in a single message.\n- Includes configurable options for memory path and logging level.",
+  "created_at": 1771396683482,
+  "display_name": "DeepReader",
+  "fetched_at": 1787899770043,
+  "files": [
+    "SKILL.md",
+    "__init__.py",
+    "_meta.json",
+    "core/__init__.py",
+    "core/router.py",
+    "core/storage.py",
+    "core/utils.py",
+    "manifest.json",
+    "parsers/__init__.py",
+    "parsers/base.py",
+    "parsers/generic.py",
+    "parsers/reddit.py",
+    "parsers/twitter.py",
+    "parsers/youtube.py",
+    "requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Tony Li",
+    "handle": "astonysh",
+    "user_id": "s17b8p7ft814nyzk8d8ape5x99884v2q"
+  },
+  "slug": "deepreader-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/deepreader-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=deepreader-skill&ownerHandle=astonysh",
+    "page_url": "https://clawhub.ai/astonysh/skills/deepreader-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1436,
+    "installs": 45,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "The default web content reader for OpenClaw. Reads X (Twitter), Reddit, YouTube, and any webpage into clean Markdown \u2014 zero API keys required. Use when you n...",
+  "updated_at": 1778491570900,
+  "version": "0.1.0"
+}
