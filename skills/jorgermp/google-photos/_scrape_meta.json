@@ -1,0 +1,34 @@
+{
+  "changelog": "Google Photos Manager for OpenClaw\n\nStreamline your memories with automated Google Photos management.\n\nThis skill empowers your OpenClaw agent to interact directly with the Google Photos Library API. It moves beyond simple file storage, allowing for a truly organized photo library with support for automated uploads and smart album management.\n\nKey Features\n\n\u2022 Automated Photo Uploads: Seamlessly send images to your Google Photos library.\n\u2022 Smart Album Organization: Create new albums on the fly or add photos to existing ones (e.g., \"Family\", \"Travel\", \"Hobby\").\n\u2022 Library Inspection: List and retrieve IDs for your existing albums for precise organization.\n\u2022 Privacy-First Design: Operates using your own Google Cloud credentials, ensuring your memories remain under your exclusive control.\nPerfect For\n\n\u2022 Chat Backups: Automatically save photos received via Telegram, WhatsApp, or Signal directly to a \"Chat Photos\" album.\n\u2022 Project Tracking: Use your agent to document progress on DIY projects, 3D printing, or gardening by sending photos to dedicated albums.\n\u2022 Family Sharing: Keep shared family albums updated without manual effort.\nSetup Summary\n\n1. Enable the API: Activate the \"Google Photos Library API\" in your Google Cloud Console.\n2. OAuth Credentials: Provide a credentials.json file (OAuth 2.0 Client ID) to the script.\n3. One-Time Auth: Run the script once to perform a secure OAuth flow and generate your local access token.\nTechnical Note\n\nBuilt with Python, this skill uses a dedicated virtual environment to ensure stability and avoid dependency conflicts. It is designed to be lean, fast, and easily scriptable within your OpenClaw workflows.",
+  "created_at": 1769958221750,
+  "display_name": "Google Photos Manager for OpenClaw",
+  "fetched_at": 1787910781663,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/gphotos.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jorgermp",
+    "handle": "jorgermp",
+    "user_id": "s175mtv7g0xz45dvfse3mfnz0988597y"
+  },
+  "slug": "google-photos",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/google-photos",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=google-photos&ownerHandle=jorgermp",
+    "page_url": "https://clawhub.ai/jorgermp/skills/google-photos"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2907,
+    "installs": 99,
+    "stars": 3,
+    "versions": 1
+  },
+  "summary": "Manage Google Photos library. Upload photos, create albums, and list library content. Use when the user wants to backup, organize, or share images via Google Photos.",
+  "updated_at": 1778485946485,
+  "version": "1.0.0"
+}
