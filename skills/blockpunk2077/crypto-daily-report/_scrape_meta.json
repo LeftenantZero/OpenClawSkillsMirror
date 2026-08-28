@@ -1,0 +1,48 @@
+{
+  "changelog": "crypto-daily-report 1.0.0 changelog:\n\n- Initial release of the skill for generating daily crypto news reports.\n- Collects, processes, and formats data from leading news, price, DeFi, Meme, and funding sources.\n- Follows a strict multi-section structure; each daily report is sent in three messages to Telegram.\n- Implements failover and fallback strategies for all key data sources.\n- Fully silent execution\u2014no user-facing progress or status messages.\n- Ensures all outputs come strictly from verified, real-time collected data.",
+  "created_at": 1772390890947,
+  "display_name": "crypto daily report",
+  "fetched_at": 1787892236771,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/check_length.py",
+    "scripts/fetch_defi_yields.py",
+    "scripts/fetch_meme_trending.py",
+    "scripts/fetch_news.sh",
+    "scripts/fetch_prices.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089733232,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "blockpunk",
+    "handle": "blockpunk2077",
+    "user_id": "s172aevh29s70t809avb3d33dd884ja0"
+  },
+  "slug": "crypto-daily-report",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/crypto-daily-report",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=crypto-daily-report&ownerHandle=blockpunk2077",
+    "page_url": "https://clawhub.ai/blockpunk2077/skills/crypto-daily-report"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 860,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u52a0\u5bc6\u8d27\u5e01\u65e5\u62a5\u751f\u6210\u6280\u80fd\u3002\u5f53\u7528\u6237\u8981\u6c42\u751f\u6210\u65e5\u62a5\u3001\u51fa\u65e5\u62a5\u3001\u53d1\u65e5\u62a5\u3001\u52a0\u5bc6\u65b0\u95fb\u65e5\u62a5\u65f6\u6fc0\u6d3b\u3002\u6309\u56fa\u5b9a\u677f\u5757\u7ed3\u6784\u91c7\u96c6\u6570\u636e\u3001\u5904\u7406\u8131\u6c34\u3001\u6392\u7248\u540e\u5206\u4e09\u6761\u6d88\u606f\u53d1\u9001\u5230 Telegram \u52a0\u5bc6\u65b0\u95fb Topic\u3002",
+  "updated_at": 1778491681414,
+  "version": "1.0.0"
+}
