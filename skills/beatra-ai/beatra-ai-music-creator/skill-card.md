@@ -1,6 +1,6 @@
 ## Description:
 
-AI Music Creator helps agents turn a theme, lyric, scene, or reference audio into reviewable songs, instrumentals, background music, and soundtracks with a clear creative direction and focused revisions.
+Turns a theme, lyric, scene, or reference audio into reviewable songs, instrumentals, background music, and soundtracks with a clear creative direction and focused revisions.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and creative teams use this skill to plan lyrics, musical direction, model choice, reference-audio handling, generation requests, and review cycles for AI-created music. It is suited for songs, instrumentals, background music, jingles, video soundtracks, podcast themes, game music, multilingual tracks, and reference-led arrangements.
+External users and creators use this skill to plan and generate original songs, lyrics-to-song tracks, instrumentals, background music, jingles, multilingual music, and reference-led arrangements while keeping model choice, billing, and revision boundaries visible.
 
 ### Deployment Geography for Use:
 
@@ -22,27 +22,22 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uses a shared, persistent Beatra device credential with broad media and wallet-related scopes.
+Risk: The Beatra authorization grants a shared full-scope device token that can be used beyond music generation.
 
-Mitigation: Install only when those scopes are acceptable, keep the credential private, and revoke the connected device from the Beatra Console or use the bundled uninstall workflow when access is no longer needed.
+Mitigation: Install only if the user trusts Beatra's account, billing, telemetry, and service infrastructure; keep credentials private and use the bundled disconnect or uninstall flow when access should be removed.
 
-Risk: Selected local reference audio files may be uploaded to Beatra for reference-led generation.
+Risk: Ordinary Beatra commands may silently update package files by default.
 
-Mitigation: Upload only files the user intentionally selects and is comfortable sending to Beatra; use the bundled upload command so the file and grant checks are applied.
+Mitigation: Disable automatic updates with `python3 scripts/mcp_client.py update --auto off` when manual review of code changes is required, and use the documented update check before accepting a new version.
 
-Risk: Automatic updates are enabled by default and may replace package-owned files silently.
+Risk: Music generation consumes Beatra credits and can create duplicate paid work if a request is resubmitted incorrectly.
 
-Mitigation: Use the documented update controls to disable automatic updates or check manually, and rely on the package's verification and rollback behavior before continuing work.
-
-Risk: Music generation is billable and retries can create duplicate work if request identity is mishandled.
-
-Mitigation: Confirm the final generation payload once, reuse the same request identity only for identical uncertain retries, and recover existing tasks before submitting replacement work.
+Mitigation: Make the final model, prompt, lyrics or instrumental status, reference, controls, and one-generation scope visible before submission; preserve the task ID and request identity during recovery.
 
 ## Reference(s):
 
-- [AI Music Creator on ClawHub](https://clawhub.ai/beatra-ai/skills/beatra-ai-music-creator)
-- [beatra-ai publisher profile](https://clawhub.ai/user/beatra-ai)
-- [AI Music Creator homepage](https://beatra.ai/skills/beatra-ai-music-creator)
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/beatra-ai-music-creator)
+- [Beatra skill homepage](https://beatra.ai/skills/beatra-ai-music-creator)
 - [Intent and routing](references/intent-and-routing.md)
 - [Creative brief and style](references/creative-brief-and-style.md)
 - [Lyrics craft](references/lyrics-craft.md)
@@ -50,27 +45,26 @@ Mitigation: Confirm the final generation payload once, reuse the same request id
 - [Model routing](references/model-routing.md)
 - [Music recipes](references/music-recipes.md)
 - [Review and iteration](references/review-and-iteration.md)
-- [Tasks and results](references/tasks-and-results.md)
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
+- [Tasks and results](references/tasks-and-results.md)
 - [Installation and authentication](references/installation-and-auth.md)
 - [MCP connection](references/mcp-connection.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
 - [Uninstall and disconnect](references/uninstall-and-disconnect.md)
-- [Beatra MCP endpoint](https://mcp.beatra.ai/mcp)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance, API calls]
 
-**Output Format:** [Markdown guidance with inline shell commands and structured generation details]
+**Output Format:** [Markdown and structured task or artifact summaries with inline shell commands and JSON request details when needed]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May produce Beatra task IDs, clip metadata, artifact IDs, audio URLs, billing facts, and review notes after a generation task completes.]
+**Other Properties Related to Output:** [May include titles, lyrics, production cards, model choices, task IDs, clip URLs, artifact IDs, duration, MIME type, file size, and net charged Beatra credits returned by the service.]
 
 ## Skill Version(s):
 
-1.3.3 (source: server release evidence and manifest.json)
+1.3.5 (source: server release metadata and artifact/manifest.json)
 
 ## Ethical Considerations:
 
