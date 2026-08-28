@@ -1,8 +1,8 @@
 {
-  "changelog": "- Added skill-metadata.json for improved metadata handling.\n- Removed outdated skill-card.md.\n- Updated SKILL.md to clarify sign-in options: users can now sign in (or create an account) using cargo-ai login --email, --oauth, or an API token; browser sign-in is no longer required.\n- Minor version bump to 1.0.1 for these documentation and onboarding improvements.",
+  "changelog": "- New users are now explicitly told about the 100 free credits on signup, and the demo\u2019s cost (~0.5 credits) is communicated before running.\n- Added CLI bootstrap steps for new accounts, with alternative login options and notes on global install.\n- Cost receipt now frames the balance as \"of your 100 free credits left\" to improve clarity and user trust.\n- Updated triggers and skip conditions in the description for improved activation and routing clarity.\n- Removed the file skill-card.md.",
   "created_at": 1783644862038,
   "display_name": "cargo-quickstart",
-  "fetched_at": 1787772611196,
+  "fetched_at": 1787932153426,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -17,7 +17,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1786485412819,
+    "updated_at": 1787875128856,
     "verdict": "clean"
   },
   "owner": {
@@ -33,12 +33,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 539,
+    "downloads": 576,
     "installs": 1,
     "stars": 0,
-    "versions": 2
+    "versions": 3
   },
-  "summary": "Guided first-run demo for the Cargo CLI \u2014 from a fresh workspace to a real deliverable (25 leads matching the user's buyer persona, with a cost receipt) in under two minutes, ending by saving the demo as a recurring play. Use when the user is new to Cargo, asks for a demo/tour/quickstart, or has an empty workspace and wants to see what the CLI can do. For real GTM work beyond the demo, route to cargo-gtm.",
-  "updated_at": 1786484624696,
-  "version": "1.0.1"
+  "summary": "Guided first-run demo for Cargo \u2014 one persona question to 25 real leads with a cost receipt in under two minutes, ending by saving the pull as a recurring play. Triggers: \"show me what Cargo can do\", \"give me a demo\", \"take me on a tour\", \"quickstart\", \"getting started with Cargo\", \"I just installed Cargo\", \"my workspace is empty\", \"does this actually work\". Skip when: the user has a real job to run (build a list, enrich a CSV, find emails) \u2014 use cargo-gtm; when they want CLI reference or routing \u2014 use the cargo router skill.",
+  "updated_at": 1787874396451,
+  "version": "1.0.2"
 }

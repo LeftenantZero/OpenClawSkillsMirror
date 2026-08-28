@@ -1,6 +1,6 @@
 ## Description:
 
-Guided first-run demo for the Cargo CLI - from a fresh workspace to a real deliverable of 25 leads matching the user's buyer persona, with a cost receipt, in under two minutes and ending by saving the demo as a recurring play.
+Guided first-run demo for Cargo: one persona question to 25 real leads with a cost receipt in under two minutes, ending by saving the pull as a recurring play.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, sales operators, and go-to-market teams use this skill to run a guided first Cargo CLI demo that sources a small buyer-persona lead set, shows spending and hit-rate, and offers to convert the search into a recurring play.
+External Cargo users and go-to-market teams use this skill for a guided first-run Cargo demo that sources a small lead set, shows the credit cost, and offers to save the same search as a weekly play.
 
 ### Deployment Geography for Use:
 
@@ -22,36 +22,33 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can spend Cargo account credits during the demo.
+Risk: The skill can spend Cargo credits and download lead data while running lead-sourcing actions.
 
-Mitigation: Keep the normal demo path near the documented one-credit cap, require explicit confirmation before higher-cost fallback actions, and review the receipt after execution.
+Mitigation: Confirm the expected credit cost before paid work, keep the normal demo near the documented low-cost path, and review any downloaded lead data before sharing or retaining it.
 
-Risk: The buyer persona may be sent to external lead providers and resulting lead data may be temporarily stored on the local machine.
+Risk: The demo can transition into a weekly automated play with ongoing lead collection and recurring credit usage.
 
-Mitigation: Avoid sensitive persona inputs, confirm before networked or paid actions when needed, and delete temporary output files after the demo.
-
-Risk: A recurring play can continue running after the initial demo.
-
-Mitigation: Confirm the schedule, destination, and cost expectations before enabling recurrence, and monitor or disable the play when it is no longer needed.
+Mitigation: Before enabling recurrence, confirm the schedule, destination model, expected recurring cost, and how to pause or delete the play.
 
 ## Reference(s):
 
-- [Cargo Skills Homepage](https://github.com/getcargohq/cargo-skills)
 - [Cargo Quickstart on ClawHub](https://clawhub.ai/cargo-ai/skills/cargo-quickstart)
+- [Cargo Skills Repository](https://github.com/getcargohq/cargo-skills)
+- [Cargo Publisher Profile](https://clawhub.ai/user/cargo-ai)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [text, markdown, shell commands, guidance]
 
-**Output Format:** [Markdown with inline shell commands and concise tabular lead summaries]
+**Output Format:** [Markdown guidance with inline shell commands and concise result summaries]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May create temporary local JSON files for run metadata and lead outputs during the demo.]
+**Other Properties Related to Output:** [May direct the agent to run Cargo CLI commands, show lead tables, report credit usage, and propose follow-up GTM actions.]
 
 ## Skill Version(s):
 
-1.0.1 (source: frontmatter, skill-metadata.json, server release metadata)
+1.0.2 (source: frontmatter, skill-metadata.json, release evidence)
 
 ## Ethical Considerations:
 
