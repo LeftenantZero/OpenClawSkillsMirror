@@ -1,0 +1,49 @@
+{
+  "changelog": "**Changelog for openclaw-phone 1.0.1**\n\n- Clarified API key handling, emphasizing session-limited use and prohibiting automatic user config writes.\n- Added explicit section for `from_number` validation, requiring preflight verification with relevant endpoints.\n- Updated scheduling workflow to prohibit creating system schedulers (cron, launchd, etc) or background turns; skill may only prepare call plans for in-session execution.\n- Modified call results flow to treat transcripts and recordings as sensitive\u2014display excerpts only upon explicit request, and warn about the sensitivity of recording URLs.\n- Added new metadata fields to SKILL.md (`primary_credential`, `required_env_vars`, `stores_credentials_in_user_config`, `requires_system_scheduler`).\n- Added `agents/openai.yaml` (details not included).",
+  "created_at": 1772142873063,
+  "display_name": "Openclaw phone",
+  "fetched_at": 1787894214755,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "docs/auth-config.md",
+    "docs/event-updates.md",
+    "examples/prompts.md",
+    "references/api.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779963123474,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Benjamin Waye",
+    "handle": "benjaminwaye",
+    "user_id": "s175gv2hzqzy04znw04f9swks98840c7"
+  },
+  "slug": "openclaw-phone",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-phone",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-phone&ownerHandle=benjaminwaye",
+    "page_url": "https://clawhub.ai/benjaminwaye/skills/openclaw-phone"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1028,
+    "installs": 30,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Use CallMyCall API to start, end, and check AI phone calls, and return results in chat. Use when the user asks to call someone, plan a future call, end a cal...",
+  "updated_at": 1778491652688,
+  "version": "1.0.1"
+}
