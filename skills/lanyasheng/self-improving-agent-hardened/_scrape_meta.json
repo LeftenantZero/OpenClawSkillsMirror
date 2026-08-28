@@ -1,0 +1,55 @@
+{
+  "changelog": "Anti-loop hardened fork: fixed infinite tool call loop vulnerability. Added guardrails: max 1 learning per message, max 3 tool calls, cooldown.",
+  "created_at": 1773339211175,
+  "display_name": "Self-Improving Agent (Anti-Loop Hardened)",
+  "fetched_at": 1787939638300,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/LEARNINGS.md",
+    "assets/SKILL-TEMPLATE.md",
+    "hooks/openclaw/HOOK.md",
+    "hooks/openclaw/handler.js",
+    "hooks/openclaw/handler.ts",
+    "references/examples.md",
+    "references/hooks-setup.md",
+    "references/openclaw-integration.md",
+    "scripts/activator.sh",
+    "scripts/error-detector.sh",
+    "scripts/extract-skill.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089861945,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "_silhouette",
+    "handle": "lanyasheng",
+    "user_id": "s179bk63dv96y90hw97xaay4fx83t7yr"
+  },
+  "slug": "self-improving-agent-hardened",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/self-improving-agent-hardened",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=self-improving-agent-hardened&ownerHandle=lanyasheng",
+    "page_url": "https://clawhub.ai/lanyasheng/skills/self-improving-agent-hardened"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 964,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User explicitly co...",
+  "updated_at": 1778491865024,
+  "version": "2.0.0"
+}
