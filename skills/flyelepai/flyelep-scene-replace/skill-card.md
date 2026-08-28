@@ -1,6 +1,6 @@
 ## Description:
 
-Calls the Flyelep AI scene replacement API to replace an image background with a target scene guided by a reference image and text prompt.
+Helps an agent call the Flyelep AI Tool API to replace an image background scene with a target scene using a reference image and text prompt.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to collect required public image URLs, prompt text, and a Flyelep API key, then call Flyelep to generate a scene-replaced image URL while preserving the subject.
+External users, developers, and agents use this skill to gather required image URLs, prompt text, and a Flyelep secretKey, then call Flyelep's scene replacement API and return the generated image URL.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Image URLs, prompt text, and the Flyelep secretKey are shared with Flyelep during API calls.
+Risk: The skill requires a user-provided Flyelep secretKey for API calls.
 
-Mitigation: Use the skill only when that sharing is approved, and avoid sensitive or private image links.
+Mitigation: Provide the secretKey only at runtime, do not store it in skill files or persistent configuration, and rotate it if it is exposed.
 
-Risk: Temporary payload files may contain request data when the Windows/PowerShell workflow is used.
+Risk: Uploading local images can create permanent public URLs accessible to anyone with the link.
 
-Mitigation: Delete the temporary payload file after the API call completes.
+Mitigation: Avoid confidential, personal, or proprietary images unless that exposure is acceptable; prefer already-public image URLs for sensitive workflows.
 
-Risk: Non-public, expired, or non-direct image URLs can cause API failures or unintended access exposure.
+Risk: Incorrect inputs can cause failed calls or poor scene replacement results.
 
-Mitigation: Provide only approved, publicly reachable direct image URLs.
+Mitigation: Confirm required parameters with the user, keep modelType set to 9, provide exactly one optional reference image, and use a specific textPrompt.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/flyelepai/skills/flyelep-scene-replace)
 - [Flyelep scene replacement API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/aiTool/sceneReplace)
-- [Flyelep open platform](https://www.flyelep.cn/controlboard)
+- [Flyelep file upload API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/file/upload)
+- [Flyelep control board](https://www.flyelep.cn/controlboard)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [API Calls, Shell commands, Configuration instructions, Guidance]
 
-**Output Format:** [Markdown guidance with JSON payload examples and curl commands; API response data is a generated image URL.]
+**Output Format:** [Markdown with HTTP, JSON, shell, and PowerShell examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires user-provided public image URLs, a text prompt, and a Flyelep secretKey; temporary payload files should be removed after use.]
+**Other Properties Related to Output:** [Returns the scene replacement result as an image URL when the API call succeeds.]
 
 ## Skill Version(s):
 
-1.0.3 (source: server release evidence)
+1.0.4 (source: server release metadata)
 
 ## Ethical Considerations:
 

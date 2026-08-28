@@ -1,8 +1,8 @@
 {
-  "changelog": "- Removed the file skill-card.md.\n- Updated SKILL.md with more detailed instructions for both Windows/PowerShell and macOS/Linux environments, including handling of JSON encoding and file operations for API calls.\n- Clarified that all required parameters must be collected from the user and the agent must not autofill these values.\n- Set modelType to always default to 0, regardless of user input.\n- Made explicit that only a single replaceImageUrl is supported.\n- Expanded step-by-step platform-specific usage examples and cleanup requirements for temporary files.",
+  "changelog": "- Updated required parameter `modelType` default value from `0` to `9` (Flyelep Image 2 is now required).\n- Clarified that only one image is allowed for `replaceImageUrl`; passing multiple images is now an error.\n- Added instructions and samples for uploading local files to obtain public links before calling the main API.\n- Improved error case documentation, especially regarding model type and multi-image issues.\n- Removed deprecated information and streamlined parameter/usage tables for clarity.\n- Removed the `skill-card.md` file.",
   "created_at": 1776679212591,
   "display_name": "scene-replace",
-  "fetched_at": 1787773194192,
+  "fetched_at": 1787931715270,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -22,12 +22,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 878,
+    "downloads": 908,
     "installs": 19,
     "stars": 0,
-    "versions": 4
+    "versions": 5
   },
   "summary": "\u901a\u8fc7 Flyelep AI \u5de5\u5177\u63a5\u53e3\u5c06\u56fe\u7247\u4e2d\u7684\u80cc\u666f\u573a\u666f\u66ff\u6362\u4e3a\u6307\u5b9a\u573a\u666f\uff0c\u53ef\u7ed3\u5408\u53c2\u8003\u56fe\u548c\u6587\u672c\u63d0\u793a\u8bcd\u7cbe\u51c6\u63a7\u5236\u6548\u679c\u3002 \u5f53\u7528\u6237\u8981\u6c42\u66f4\u6362\u80cc\u666f\u573a\u666f\u3001\u66ff\u6362\u5546\u54c1\u5c55\u793a\u73af\u5883\u3001\u4fdd\u7559\u4e3b\u4f53\u6539\u573a\u666f\u65f6\u4f7f\u7528\u6b64\u6280\u80fd\u3002",
-  "updated_at": 1786083465600,
-  "version": "1.0.3"
+  "updated_at": 1787886950900,
+  "version": "1.0.4"
 }
