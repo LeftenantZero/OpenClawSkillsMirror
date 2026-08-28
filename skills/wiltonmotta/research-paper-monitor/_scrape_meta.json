@@ -1,0 +1,50 @@
+{
+  "changelog": "Security fix: Remove unsafe SSL certificate verification bypass (ssl.CERT_NONE) that triggered VirusTotal suspicious pattern detection",
+  "created_at": 1773377048371,
+  "display_name": "Research Paper Monitor",
+  "fetched_at": 1787876875812,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/advanced-usage.md",
+    "references/configuration.md",
+    "references/data-sources.md",
+    "scripts/config.py",
+    "scripts/generate_digest.py",
+    "scripts/monitor.py",
+    "scripts/search_papers.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089991187,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "\u5b59\u91d1\u521a",
+    "handle": "wiltonmotta",
+    "user_id": "s1793kekgdbng3ppkq15emz8bs83gd71"
+  },
+  "slug": "research-paper-monitor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/research-paper-monitor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=research-paper-monitor&ownerHandle=wiltonmotta",
+    "page_url": "https://clawhub.ai/wiltonmotta/skills/research-paper-monitor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1276,
+    "installs": 36,
+    "stars": 3,
+    "versions": 3
+  },
+  "summary": "\u79d1\u7814\u6587\u732e\u667a\u80fd\u76d1\u6d4b\u4e0e\u6458\u8981\u63a8\u9001\u7cfb\u7edf\u3002\u81ea\u52a8\u76d1\u6d4b\u591a\u4e2a\u5b66\u672f\u4fe1\u6e90\uff08arXiv\u3001PubMed\u3001CNKI\u7b49\uff09\uff0c\u6839\u636e\u7528\u6237\u5173\u6ce8\u7684\u9886\u57df\u548c\u5173\u952e\u8bcd\u91c7\u96c6\u6700\u65b0\u8bba\u6587\uff0c\u751f\u6210\u4e2d\u6587\u6458\u8981\u5e76\u63a8\u9001\u3002\u9002\u7528\u4e8e\u9700\u8981\u8ddf\u8e2a\u5b66\u672f\u524d\u6cbf\u7684\u79d1\u7814\u5de5\u4f5c\u8005\u3001\u7814\u7a76\u751f\u3001\u6559\u5e08\u7b49\u3002\u4f7f\u7528\u573a\u666f\u5305\u62ec\uff1a(1) \u5b9a\u65f6\u76d1\u6d4b\u7279\u5b9a\u7814\u7a76\u9886\u57df\u7684\u6700\u65b0\u8bba\u6587\uff0c(2) \u6839\u636e\u5173\u952e\u8bcd\u7b5b\u9009\u9ad8\u76f8\u5173\u5ea6\u8bba\u6587\uff0c(3) \u81ea\u52a8\u751f\u6210\u8bba...",
+  "updated_at": 1778491872769,
+  "version": "1.0.2"
+}
