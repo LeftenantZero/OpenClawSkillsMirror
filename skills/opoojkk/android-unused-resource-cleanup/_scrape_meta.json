@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release \u2013 analyze git changes in Android projects to detect unused resources for cleanup.\n\n- Identifies unused Android resources (drawable, layout, string, color, etc.) resulting from recent git changes.\n- Checks whether these resources are still referenced elsewhere in the project.\n- Supports analyzing changes in the staging area, working tree, or historical commits.\n- Provides a suggested list of resources safe to delete, with detailed output.\n- Designed to prevent accidental deletion by encouraging manual confirmation.\n- Supports multiple resource types and both code and XML reference patterns.",
+  "created_at": 1773194546756,
+  "display_name": "Android Unused Resource Cleanup",
+  "fetched_at": 1787881047754,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/cleanup_unused_resources.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "opoojkk",
+    "handle": "opoojkk",
+    "user_id": "s17d3cw25v9j850vzp90q7g9as83h3x4"
+  },
+  "slug": "android-unused-resource-cleanup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/android-unused-resource-cleanup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=android-unused-resource-cleanup&ownerHandle=opoojkk",
+    "page_url": "https://clawhub.ai/opoojkk/skills/android-unused-resource-cleanup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 777,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5206\u6790 Android \u9879\u76ee Git \u6539\u52a8\uff0c\u627e\u51fa\u672c\u6b21\u4fee\u6539\u540e\u4e0d\u518d\u4f7f\u7528\u7684\u8d44\u6e90\u6587\u4ef6\uff08drawable\u3001layout\u3001string\u3001color \u7b49\uff09\uff0c\u5e76\u68c0\u67e5\u8fd9\u4e9b\u8d44\u6e90\u662f\u5426\u8fd8\u5728\u9879\u76ee\u5176\u4ed6\u4f4d\u7f6e\u88ab\u5f15\u7528\u3002\u5f53\u7528\u6237\u9700\u8981\u6e05\u7406 Android \u9879\u76ee\u4e2d\u56e0\u4ee3\u7801\u6539\u52a8\u800c\u53d8\u5f97\u65e0\u7528\u7684\u8d44\u6e90\u6587\u4ef6\u65f6\u4f7f\u7528\u6b64 skill\u3002\u652f\u6301\u5206\u6790\u6682\u5b58\u533a\u3001\u5de5\u4f5c\u533a\u6216\u5386\u53f2\u63d0\u4ea4\u7684\u6539\u52a8\u3002",
+  "updated_at": 1778491820342,
+  "version": "0.1.0"
+}
