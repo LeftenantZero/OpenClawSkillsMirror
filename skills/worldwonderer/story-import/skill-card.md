@@ -1,6 +1,6 @@
 ## Description:
 
-Imports an existing novel manuscript and rebuilds it into a structured writing project that can be continued with compatible long-form or short-form story workflows.
+Reverse-imports an existing novel into a standard writing project by analyzing completed or partial manuscript text, routing long and short works through the appropriate analysis pipeline, and preparing the result for continued writing.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Authors and agent operators use this skill to import an existing partial or completed novel, analyze it by length, and create a continuation-ready writing project with settings, outlines, manuscript files, tracking state, and analysis assets.
+Authors and writing-agent users use this skill to convert an existing long-form or short-form Chinese novel manuscript into a resumable writing project with source text, analysis assets, outlines, settings, and tracking state. It is intended for explicit invocation when the user wants to continue or rebuild a manuscript project rather than only produce a one-off analysis.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,35 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill reads manuscript files and creates or updates writing-project directories.
+Risk: The skill can cause an agent to read manuscript content and create or update persistent local writing-project files.
 
-Mitigation: Run it from the intended project workspace and review the detected book title and paths before confirming.
-
-Risk: Existing project tracking files may be updated or archived during import or migration.
-
-Mitigation: Keep a backup when the project already has older tracking files.
+Mitigation: Invoke it explicitly, verify the selected manuscript path and project directory before execution, and keep a backup before allowing generated tracking, outline, and project files to be written.
 
 ## Reference(s):
 
-- [OpenClaw source metadata](https://github.com/worldwonderer/oh-story-claudecode)
-- [Character State Reverse](references/character-state-reverse.md)
-- [Format and Structure](references/format-and-structure.md)
-- [Length Routing](references/length-routing.md)
-- [State Tracking](references/state-tracking.md)
-- [Structure Mapping Long](references/structure-mapping-long.md)
-- [Structure Mapping Short](references/structure-mapping-short.md)
-- [Tracking Transaction](references/tracking-transaction.md)
+- [ClawHub skill page](https://clawhub.ai/worldwonderer/skills/story-import)
+- [OpenClaw source metadata](https://github.com/zenstory-ai/oh-story-claudecode)
+- [Length routing rules](references/length-routing.md)
+- [Long-form structure mapping](references/structure-mapping-long.md)
+- [Short-form structure mapping](references/structure-mapping-short.md)
+- [Tracking transaction protocol](references/tracking-transaction.md)
+- [Character state reverse rules](references/character-state-reverse.md)
+- [State tracking protocol](references/state-tracking.md)
+- [Format and structure guidance](references/format-and-structure.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Markdown, Files, Code, Shell commands, Configuration, Guidance]
+**Output Type(s):** [Markdown, Code, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown project files, JSON tracking state, shell commands, configuration updates, and concise agent guidance.]
+**Output Format:** [Markdown guidance with file-structure instructions, JSON transaction examples, and shell command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Creates or updates a writing-project directory from a user-provided manuscript and may use a bundled tracking script for state files.]
+**Other Properties Related to Output:** [Produces persistent local writing-project files and tracking state when followed by an agent.]
 
 ## Skill Version(s):
 
-1.0.17 (source: ClawHub release evidence)
+1.0.19 (source: ClawHub release metadata; artifact frontmatter declares 1.0.0)
 
 ## Ethical Considerations:
 
