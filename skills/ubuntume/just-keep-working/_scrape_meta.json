@@ -1,0 +1,33 @@
+{
+  "changelog": "Here's what changed and why each patch matters:\nRule 0 \u2014 Non-Destructive Default addresses the \"unsupervised reckless changes\" concern directly. The skill now requires the AI to classify every planned action as Additive or Destructive before touching anything. Creating files, adding components, wiring up new code \u2014 all safe, proceed. Deleting files, replacing whole systems, schema changes \u2014 hard stop, confirm with user first. This makes autonomy safe by design, not by luck.\nRule 3 \u2014 The Sobriety Protocol is the core of what you described. The LLM's deepest failure mode isn't laziness, it's building on its own lies. It says \"I set up AuthContext in step 2\" and then imports it in step 5 \u2014 except it never actually wrote the file, it just narrated writing it. Now the AI must maintain three distinct states for every task: DONE-VERIFIED (I re-read the file, it's real), DONE-UNVERIFIED (I wrote it but haven't confirmed), and PENDING. The rule is: you cannot chain work onto anything that isn't DONE-VERIFIED. The lie breaks because it can't get past the verification gate.\nThe Known LLM Self-Deception Patterns table is a mirror held up to the model's own predictable failures \u2014 the exact lies it tells itself, why they happen, and how to catch them. Naming them explicitly forces recognition.\nThe idea is: a sober LLM isn't one with more tools or better vision. It's one whose confidence is always traceable back to something it actually read, not something it remembers saying.",
+  "created_at": 1772116126547,
+  "display_name": "Just Keep Working",
+  "fetched_at": 1787894273305,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ubuntume",
+    "handle": "ubuntume",
+    "user_id": "s17cpka8j0k1vsbxejm4ahap458856gv"
+  },
+  "slug": "just-keep-working",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/just-keep-working",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=just-keep-working&ownerHandle=ubuntume",
+    "page_url": "https://clawhub.ai/ubuntume/skills/just-keep-working"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 924,
+    "installs": 26,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Autonomous programming mode for openclaw.ai. Use this skill whenever a user requests any code change, feature addition, refactor, bug fix, or project task \u2014...",
+  "updated_at": 1778491649051,
+  "version": "1.0.2"
+}
