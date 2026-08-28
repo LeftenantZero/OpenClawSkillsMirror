@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of the trigger-evaluator skill:\n\n- Evaluates real OpenClaw trigger rules using the current database state.\n- Supports \"stale_missions_alert\" trigger detection based on public.openclaw_* tables.\n- Wraps the production script stale_missions_engine.sh for reliability.\n- Includes commands to run evaluations and inspect current trigger rows.\n- Does not introduce or invent new trigger logic; strictly follows implemented workspace logic.",
+  "created_at": 1773305413688,
+  "display_name": "Trigger Evaluator",
+  "fetched_at": 1787878237418,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/trigger-evaluator.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089851020,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "EcosincronIA",
+    "handle": "ecosincronia",
+    "user_id": "s177ngdexr9b3412fhy53mpf45884frh"
+  },
+  "slug": "trigger-evaluator",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/trigger-evaluator",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=trigger-evaluator&ownerHandle=ecosincronia",
+    "page_url": "https://clawhub.ai/ecosincronia/skills/trigger-evaluator"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 782,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Evaluate real OpenClaw trigger rules against the current database state. Use for heartbeat-style trigger checks, especially stale mission detection backed by...",
+  "updated_at": 1778491852854,
+  "version": "1.0.0"
+}
