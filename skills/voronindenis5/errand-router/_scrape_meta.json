@@ -1,0 +1,36 @@
+{
+  "changelog": "Add skill card",
+  "created_at": 1787843363934,
+  "display_name": "errand-router",
+  "fetched_at": 1787932386802,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/routing-model.md",
+    "scripts/errand_router.py",
+    "scripts/test_errand_router.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "voronindenis5",
+    "handle": "voronindenis5",
+    "user_id": "s17b6amkd3wzqgg640v03a9r1n83gxs1"
+  },
+  "slug": "errand-router",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/errand-router",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=errand-router&ownerHandle=voronindenis5",
+    "page_url": "https://clawhub.ai/voronindenis5/skills/errand-router"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 56,
+    "installs": 0,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Plan the optimal order for a multi-stop errand run: groceries, pharmacy, post office, pickup, drop-off. Computes distance (haversine) and travel time between stops, respects opening-hours time windows, adds service/dwell time per stop, and optimizes the visit order with nearest-neighbor + 2-opt. Outputs a timed itinerary with ETAs, wait time, and flags for stops you'd arrive at after closing. Use when someone asks what order to run errands in, whether several stops fit before closing time, or how to route a day of pickups and deliveries.",
+  "updated_at": 1787844296540,
+  "version": "1.0.1"
+}
