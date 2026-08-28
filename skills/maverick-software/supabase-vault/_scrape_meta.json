@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release \u2014 Supabase Vault as OpenClaw secrets backend. AES-256 encrypted-at-rest secrets in Postgres, OS keychain or machine-derived AES-256-GCM for bootstrap credentials, dashboard Integrations tab, one-click migration from local vault.",
+  "created_at": 1772644175991,
+  "display_name": "Supabase Vault",
+  "fetched_at": 1787889364506,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/controller.ts",
+    "assets/rpc-handler.ts",
+    "assets/setup.sql",
+    "assets/views.ts",
+    "references/architecture.md",
+    "scripts/crypto-local.js",
+    "scripts/fetch-secrets.js",
+    "scripts/keychain.js",
+    "scripts/migrate.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089757365,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "maverick-software",
+    "handle": "maverick-software",
+    "user_id": "s172zy52hz8d9fxcmyr9padghd842s7c"
+  },
+  "slug": "supabase-vault",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/supabase-vault",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=supabase-vault&ownerHandle=maverick-software",
+    "page_url": "https://clawhub.ai/maverick-software/skills/supabase-vault"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 799,
+    "installs": 23,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Replace OpenClaw's local file vault with Supabase Vault for AES-256 encrypted-at-rest secret storage. All API keys and auth tokens stored encrypted in Postgr...",
+  "updated_at": 1778491721623,
+  "version": "1.0.0"
+}
