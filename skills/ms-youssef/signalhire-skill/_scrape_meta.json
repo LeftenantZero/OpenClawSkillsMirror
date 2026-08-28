@@ -1,0 +1,46 @@
+{
+  "changelog": "The SignalHire skill integrates the full SignalHire API into OpenClaw, enabling you to search for prospects and enrich their contact details without leaving your workflow. It exposes three core actions: a credits check, a search-by-query for prospecting, and an asynchronous contact enrichment call. The credits check invokes SignalHire\u2019s /api/v1/credits endpoint to report how many credits you have left, while the search action uses the searchByQuery endpoint to filter candidates by title, location, industry and other fields. Access to the search API requires contacting SignalHire and is limited to three concurrent requests.\n\nThe enrichment action calls the Person API (/api/v1/candidate/search) with up to 100 identifiers and a callback URL. SignalHire returns results asynchronously to your callback; your server must reply with HTTP 200 within a 10\u2011second window or SignalHire will retry and eventually discard the request. Each callback object includes a status (success, failed, credits_are_over, timeout_exceeded or duplicate_query) and, on success, a candidate with fields like fullName, emails, phones and locations. The skill includes a small Flask connector that listens on the callback endpoint, writes results into per\u2011job and consolidated CSV files, and exposes a job-status API so your agent knows when to proceed.",
+  "created_at": 1770198903542,
+  "display_name": "The SignalHire skill integrates the full SignalHire API into OpenClaw, enabling you to search for prospects and enrich their contact details without leaving your workflow. It exposes three core actions: a credits check, a search-by-query for prospecting, and an asynchronous contact enrichment call",
+  "fetched_at": 1787909319433,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "connector/__init__.py",
+    "connector/main.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783655530516,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ms-youssef",
+    "handle": "ms-youssef",
+    "user_id": "s17egf04vrg1rmjskmpzytcnnn884jbg"
+  },
+  "slug": "signalhire-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/signalhire-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=signalhire-skill&ownerHandle=ms-youssef",
+    "page_url": "https://clawhub.ai/ms-youssef/skills/signalhire-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2908,
+    "installs": 97,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Prospect and enrich contacts via the SignalHire API (Search, Person and Credits)",
+  "updated_at": 1778486017068,
+  "version": "1.0.0"
+}
