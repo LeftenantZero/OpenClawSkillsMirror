@@ -1,0 +1,45 @@
+{
+  "changelog": "Clean release with environment variable configuration. Removed hardcoded credentials. Supports X/Twitter, LinkedIn, Bluesky with deduplication and multi-platform posting.",
+  "created_at": 1770263495756,
+  "display_name": "Postiz Extended",
+  "fetched_at": 1787908963340,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/check_duplicates.py",
+    "scripts/post.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783654476364,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "coolmanns",
+    "handle": "coolmanns",
+    "user_id": "s17bmqpkzpf403h4fcvqftdmas83fc8m"
+  },
+  "slug": "postiz-extended",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/postiz-extended",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=postiz-extended&ownerHandle=coolmanns",
+    "page_url": "https://clawhub.ai/coolmanns/skills/postiz-extended"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2331,
+    "installs": 79,
+    "stars": 1,
+    "versions": 5
+  },
+  "summary": "Schedule and manage social media posts via Postiz API (self-hosted or cloud).\nDirect API integration \u2014 no n8n dependency.\nSupports X/Twitter, LinkedIn, Bluesky with platform-specific character limits.\nIncludes deduplication, scheduling, media upload, and thread creation.\n\nWHAT IT CAN DO:\n- Schedule posts to 28+ channels (X, LinkedIn, Bluesky, Reddit, Instagram, Facebook, Threads, YouTube, TikTok, Pinterest, Mastodon, and more)\n- Multi-platform posting in a single API call with platform-adapted content\n- X/Twitter thread creation for longer content\n- Media upload (file and URL)\n- Find next available posting slot per channel\n- List, query, update, and delete scheduled posts\n- Deduplication workflow (check existing before posting)\n- Platform-specific character limits and content tone guidance\n- Post state management (QUEUE, PUBLISHED, ERROR, DRAFT)\n- Helper script for quick posting with auto-validation\n\nUSE WHEN: scheduling social media posts, creating multi-platform content, managing a posting calendar, uploading media for social posts, checking post status, creating X/Twitter threads, or automating social media workflows.",
+  "updated_at": 1778486022044,
+  "version": "1.3.0"
+}
