@@ -1,6 +1,6 @@
 ## Description:
 
-A paid enterprise due-diligence Skill that queries Juhe for company registration details and public risk signals, then renders a concise Markdown report.
+Generates a paid enterprise due-diligence report that combines business registration details with public risk signals for operating abnormality, enforcement, dishonesty, and consumption-restriction checks.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,47 +14,52 @@ MIT-0
 
 ## Use Case:
 
-External users and agent operators use this Skill for pre-cooperation company due diligence, supplier or customer risk screening, and checks for public records such as abnormal operations, enforcement, dishonesty, and consumption restrictions.
+External users and agents use this skill to run a paid pre-cooperation or supplier/customer risk check for a specific registered company name, registration number, or unified social credit code. The result is a concise due-diligence report for reference, not a credit report or legal opinion.
 
 ### Deployment Geography for Use:
 
-China
+Global
 
 ## Known Risks and Mitigations:
 
-Risk: The paid lookup sends the queried company name, registration number, or unified social credit code to Juhe and uses an Alipay payment flow.
+Risk: The skill sends the queried company name or registration code to Juhe as part of a paid lookup.
 
-Mitigation: Obtain explicit user confirmation before payment and query submission, and send only the single required enterprise identifier.
+Mitigation: Use it only for intentional due-diligence checks on a specific company, after payment and privacy notice requirements are satisfied.
 
-Risk: Reports may contain public but sensitive identifiers, including legal representative names, shareholder names, registered addresses, credit codes, case information, and possible identity-number-like fields.
+Risk: Reports may display public sensitive business or legal-risk information such as legal representative names, addresses, case numbers, or subject identifiers.
 
-Mitigation: Show and retain only the fields needed for the report, avoid logging full report data, and mask values determined to be personal ID numbers.
+Mitigation: Minimize display and retention, avoid logging full sensitive identifiers, and mask values identified as natural-person identity-card numbers.
 
-Risk: Risk modules return only the most recent page and the rendered report applies display caps, so the output is not a complete legal or credit record.
+Risk: Risk modules return recent-page details and capped report rows rather than complete historical lists.
 
-Mitigation: State that listed records are partial recent records, direct users to official sources for complete checks, and avoid legal, credit, or cooperation recommendations.
+Mitigation: State that displayed records are partial recent records and direct users to official public channels for complete and current verification.
+
+Risk: A report could be mistaken for legal advice, a credit report, or a cooperation decision.
+
+Mitigation: Frame the output as a reference-only public-risk summary and do not provide deterministic legal or cooperate/do-not-cooperate recommendations.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/juhemcp/skills/juhe-enterprise-dd-pro-a2a)
-- [Skill Instructions](artifact/SKILL.md)
-- [Output Format](artifact/OUT_FORMAT.md)
-- [Product Scope](artifact/PRODUCT.md)
-- [Return Data Reference](artifact/README.md)
+- [ClawHub skill page](https://clawhub.ai/juhemcp/skills/juhe-enterprise-dd-pro-a2a)
+- [Juhe A2A query endpoint](https://apis.juhe.cn/a2a/query)
+- [Skill execution specification](artifact/SKILL.md)
+- [Output format](artifact/OUT_FORMAT.md)
+- [Product scope](artifact/PRODUCT.md)
+- [Enterprise registration field reference](artifact/docs/工商主体信息.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Markdown, API Calls, Shell commands, Guidance]
+**Output Type(s):** [text, markdown, shell commands, guidance]
 
-**Output Format:** [Markdown report with tables, summary signals, payment-flow guidance, and bounded command examples]
+**Output Format:** [Markdown due-diligence report with tables, a risk-light summary, and concise caveats]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Paid lookup accepts one enterprise name, registration number, or unified social credit code. Risk modules are limited to the most recent page, with report display caps for enforcement, dishonesty, consumption restriction, and change records.]
+**Other Properties Related to Output:** [Uses one company keyword per paid lookup; report sections must minimize sensitive public-data display, mask recognized identity-card numbers, and avoid legal or cooperation recommendations.]
 
 ## Skill Version(s):
 
-1.0.4 (source: server release evidence)
+1.0.6 (source: ClawHub server release evidence)
 
 ## Ethical Considerations:
 
