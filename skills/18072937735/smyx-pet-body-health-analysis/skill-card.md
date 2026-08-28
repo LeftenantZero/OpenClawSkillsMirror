@@ -1,6 +1,6 @@
 ## Description:
 
-Identifies obesity, emaciation, external injuries, skin abnormalities, and abnormal mental states in pet images or videos, helping pet owners detect possible health issues promptly.
+Identifies obesity, emaciation, external injuries, skin abnormalities, and abnormal mental states, helping pet owners detect health issues promptly.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External pet owners and agent users can use this skill to analyze pet photos, videos, or media URLs for body condition, skin abnormalities, injuries, mental state indicators, and prior cloud report history. Its findings are health-reference guidance and do not replace professional veterinary diagnosis.
+Pet owners and care teams use this skill to analyze pet images or videos for body condition, skin abnormalities, external injuries, mental-state indicators, and historical report lookup. Results are health reference outputs and are not veterinary diagnoses.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,42 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Pet media or media URLs are sent to an external service for cloud processing.
+Risk: Pet photos, videos, and identity-linked metadata are sent to publisher backend services.
 
-Mitigation: Install and run the skill only when the publisher and external processing are acceptable for the media being analyzed.
+Mitigation: Use the skill only when users are comfortable with publisher-hosted processing of pet media and associated metadata.
 
-Risk: The skill silently creates or reuses an account-linked identity and may store local account tokens.
+Risk: The skill silently creates or reuses local user identities and stores tokens or user records locally.
 
-Mitigation: Run in an isolated workspace when evaluating the skill and review or clear persisted account data according to the host environment's policy.
+Mitigation: Review local identity storage and token handling before installation, especially in shared workspaces.
 
-Risk: Evidence reports that the current configuration selects private non-HTTPS development endpoints.
+Risk: Default configuration includes non-HTTPS private-network development endpoints.
 
-Mitigation: Confirm the intended production HTTPS configuration before use and avoid sending sensitive media through private HTTP endpoints.
+Mitigation: Correct endpoint configuration for normal use and prefer HTTPS/TLS service URLs.
+
+Risk: Health analysis output may be mistaken for a veterinary diagnosis.
+
+Mitigation: Treat reports as health reference information and consult a veterinarian when abnormalities are detected.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/18072937735/skills/smyx-pet-body-health-analysis)
-- [Skill Demo](https://lifeemergence.com/sample.html)
-- [API Documentation](references/api_doc.md)
+- [API documentation](references/api_doc.md)
+- [Shared analysis API documentation](skills/smyx_analysis/references/api_doc.md)
+- [Skill demo](https://lifeemergence.com/sample.html)
+- [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-pet-body-health-analysis)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, json, shell commands, guidance]
+**Output Type(s):** [text, markdown, json]
 
-**Output Format:** [Markdown or JSON structured analysis report with findings, suggestions, report links, and optional saved output file.]
+**Output Format:** [Markdown or JSON analysis report with optional report links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Supports image or video inputs from local files or URLs, history-list output, and basic, standard, or JSON detail levels.]
+**Other Properties Related to Output:** [May output historical report lists as Markdown tables; media inputs are limited to supported image/video formats and size limits documented by the artifact.]
 
 ## Skill Version(s):
 
-1.0.13 (source: server release evidence)
+1.0.14 (source: server release metadata; artifact frontmatter is 1.0.12)
 
 ## Ethical Considerations:
 
