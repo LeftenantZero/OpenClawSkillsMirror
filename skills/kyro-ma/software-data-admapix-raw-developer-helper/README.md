@@ -2,7 +2,7 @@
 
 ## Requirement
 
-Validated demand: Agent users show strong demand for AdMapix-style workflows on Clawhub. They need practical help fixing bugs, hardening setup and safety, improving reliability, or creating adjacent skills inspired by the same job-to-be-done. This requirement is supported by 12 separate online signals across 3 source families, so it represents broader demand rather than a single isolated request.
+Validated demand: Agent users show strong demand for AdMapix-style workflows on Clawhub. They need practical help fixing bugs, hardening setup and safety, improving reliability, or creating adjacent skills inspired by the same job-to-be-done. This requirement is supported by 11 separate online signals across 3 source families, so it represents broader demand rather than a single isolated request.
 
 Audience: AI-agent users, skill authors, maintainers, and teams who want proven popular skill patterns adapted into more reliable or adjacent workflows
 
@@ -10,15 +10,14 @@ Category: `software-and-data`
 
 Demand score: 100/100
 
-Evidence coverage: 12 signals across 3 source families.
+Evidence coverage: 11 signals across 3 source families.
 
 ## Evidence
 
-- clawhub-popular-skill: [Popular Clawhub skill demand: ontology has 197,109 downloads](https://clawhub.ai/skills/ontology)
-- clawhub-popular-skill: [Popular Clawhub skill demand: Agent Browser has 154,217 downloads](https://clawhub.ai/skills/agent-browser-clawdbot)
-- clawhub-popular-skill: [Popular Clawhub skill demand: AdMapix has 133,089 downloads](https://clawhub.ai/skills/admapix)
-- hacker-news-ask-hn: [Ask HN: Is "3D as software" about to undergo a Cambrian Explosion?](https://news.ycombinator.com/item?id=49440962)
-- hacker-news-ask-hn: [Ask HN: What eval harness holds up in practice, and what is still missing?](https://news.ycombinator.com/item?id=49430207)
+- clawhub-popular-skill: [Popular Clawhub skill demand: ontology has 197,281 downloads](https://clawhub.ai/skills/ontology)
+- clawhub-popular-skill: [Popular Clawhub skill demand: Agent Browser has 154,459 downloads](https://clawhub.ai/skills/agent-browser-clawdbot)
+- clawhub-popular-skill: [Popular Clawhub skill demand: AdMapix has 133,126 downloads](https://clawhub.ai/skills/admapix)
+- hacker-news-ask-hn: [Encoding Myself into the System](https://news.ycombinator.com/item?id=49457457)
 - segmentfault-search: [HarmonyOS 开发者社区](https://segmentfault.com/brand/harmonyos-next)
 - segmentfault-search: [javascript](https://segmentfault.com/t/javascript)
 - segmentfault-search: [typescript](https://segmentfault.com/t/typescript)

@@ -1,6 +1,6 @@
 ## Description:
 
-Helps AI-agent users, skill authors, maintainers, and teams adapt AdMapix-style workflows into practical bug-fixing, setup hardening, reliability, and adjacent skill-development support.
+Helps agent users, skill authors, maintainers, and teams build practical AdMapix-style software-data workflows for bug fixing, setup hardening, reliability improvement, and adjacent skill creation.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, AI-agent users, skill authors, maintainers, and teams use this skill to turn validated demand for AdMapix-style workflows into actionable guidance, workflows, checklists, analysis, code changes, and verification notes.
+Developers, skill authors, maintainers, and agent users use this skill to turn AdMapix-style software-data demand into local-hardware-friendly workflows, checklists, implementation support, and verification notes.
 
 ### Deployment Geography for Use:
 
@@ -22,41 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Broad implicit activation can affect unrelated bug-fix or data tasks.
+Risk: Overly broad implicit invocation triggers may activate the skill for unrelated data or bug-fix requests.
 
-Mitigation: Review and tighten trigger wording before installing in environments that use automatic skill routing; prefer explicit AdMapix-related invocation.
+Mitigation: Invoke the skill explicitly for AdMapix-style software-data workflow help, or narrow triggers before deployment.
 
-Risk: Generated guidance, workflows, code, shell commands, or configuration can be incorrect or mismatched to a user's local environment.
+Risk: Generated workflow or implementation guidance could be incomplete or misfit a user's local system.
 
-Mitigation: Require users or maintainers to review outputs and run the included verification steps before applying changes.
+Mitigation: Review proposed changes before use and run the included verification or test commands when code or data is involved.
 
 ## Reference(s):
 
-- [Requirement Plan](references/requirement-plan.md)
 - [ClawHub skill page](https://clawhub.ai/kyro-ma/skills/software-data-admapix-raw-developer-helper)
-- [AdMapix ClawHub demand signal](https://clawhub.ai/skills/admapix)
-- [Ontology ClawHub demand signal](https://clawhub.ai/skills/ontology)
-- [Agent Browser ClawHub demand signal](https://clawhub.ai/skills/agent-browser-clawdbot)
-- [Ask HN 3D as software demand signal](https://news.ycombinator.com/item?id=49440962)
-- [Ask HN eval harness demand signal](https://news.ycombinator.com/item?id=49430207)
-- [SegmentFault JavaScript demand signal](https://segmentfault.com/t/javascript)
-- [SegmentFault TypeScript demand signal](https://segmentfault.com/t/typescript)
-- [SegmentFault DevLake plugin demand signal](https://segmentfault.com/a/1190000042069896)
-- [SegmentFault raw data demand signal](https://segmentfault.com/q/1010000012550302)
+- [Requirement plan](references/requirement-plan.md)
+- [AdMapix demand signal](https://clawhub.ai/skills/admapix)
+- [Ontology demand signal](https://clawhub.ai/skills/ontology)
+- [Agent Browser demand signal](https://clawhub.ai/skills/agent-browser-clawdbot)
+- [Hacker News demand signal](https://news.ycombinator.com/item?id=49457457)
+- [SegmentFault JavaScript topic signal](https://segmentfault.com/t/javascript)
+- [SegmentFault TypeScript topic signal](https://segmentfault.com/t/typescript)
+- [DevLake plugin implementation signal](https://segmentfault.com/a/1190000042069896)
+- [MySQL raw data question signal](https://segmentfault.com/q/1010000012550302)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Guidance, Code, Shell commands, Configuration]
+**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown text with optional checklists, code blocks, shell commands, and configuration snippets]
+**Output Format:** [Markdown with optional code blocks, shell commands, checklists, and configuration snippets]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Outputs should include assumptions, limits, verification steps, and remaining risks when relevant.]
+**Other Properties Related to Output:** [Outputs should expose assumptions, limits, verification steps, and remaining risks when helpful.]
 
 ## Skill Version(s):
 
-0.20260826.40329 (source: server release evidence)
+0.20260828.40337 (source: server-resolved release metadata)
 
 ## Ethical Considerations:
 
