@@ -1,6 +1,6 @@
 ## Description:
 
-Ad Intelligence helps agents search public ad creatives, analyze advertisers by name, and generate domain-based advertising trend reports through the AI Skills platform.
+Helps agents search public ad creatives, analyze advertisers by name, and create domain-based ad trend reports through the AI Skills Ad Intelligence API.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to query public advertising transparency data, inspect advertiser-scale signals, and summarize observed ad trends for a requested domain or advertiser name.
+Developers and external users use this skill to retrieve public ad-intelligence evidence for competitor advertising review, creative research, advertiser analysis, and domain-based trend reporting. It requires a configured AD_INTELLIGENCE_API_KEY.
 
 ### Deployment Geography for Use:
 
@@ -22,40 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill sends ad-search queries and the AD_INTELLIGENCE_API_KEY to the configured AI Skills endpoint.
+Risk: Ad-search queries and the AD_INTELLIGENCE_API_KEY are sent to the documented AI Skills service.
 
-Mitigation: Keep the API key in environment variables, do not paste it into chat or generated files, and use the configured AI Skills endpoint intentionally.
+Mitigation: Install only if this data sharing is acceptable, configure the key through the environment, and do not paste or log the full key.
 
-Risk: API calls may affect billing according to the returned billing headers.
+Risk: Public ad-intelligence observations can be mistaken for proof of current campaigns, legal identity, performance, or permission to reuse creative assets.
 
-Mitigation: Report only the billing headers returned by the platform and avoid treating idempotent replay responses as additional charges.
+Mitigation: Keep source URLs, regions, and first/last seen dates with results; treat results as observed public evidence and obtain separate permission before reusing creative assets.
 
-Risk: Public ad observations can be incomplete, partial, or time-bound.
+Risk: API results may be partial, failed, cancelled, delayed, or billed according to response headers.
 
-Mitigation: Present results as observations for the returned source and time range, preserve source URLs and seen dates, and avoid inferring current delivery, performance, attribution, audience, budget, or legal advertiser identity.
+Mitigation: Use idempotency keys, bounded task polling, and report only actual API status, returned results, and billing headers without assuming completeness or double-counting charges.
 
 ## Reference(s):
 
-- [API Key Configuration](references/API-KEY.md)
-- [Operations Contract](references/OPERATIONS.md)
-- [HTTP Requests and Task Queries](references/HTTP-REQUESTS.md)
-- [Behavior, Evidence, and Error Rules](references/BEHAVIOR-RULES.md)
-- [AI Skills Platform Homepage](https://ai-skills.open-idea.net)
-- [ClawHub Skill Page](https://clawhub.ai/youteacher/skills/ad-intelligence)
+- [ClawHub skill page](https://clawhub.ai/youteacher/skills/ad-intelligence)
+- [AI Skills homepage](https://ai-skills.open-idea.net)
+- [API Key configuration](https://ai-skills.open-idea.net/skill-docs/ad-intelligence/API-KEY.md)
+- [Operations contract](https://ai-skills.open-idea.net/skill-docs/ad-intelligence/OPERATIONS.md)
+- [HTTP requests and task polling](https://ai-skills.open-idea.net/skill-docs/ad-intelligence/HTTP-REQUESTS.md)
+- [Behavior, evidence, and error rules](https://ai-skills.open-idea.net/skill-docs/ad-intelligence/BEHAVIOR-RULES.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, API calls, Guidance]
 
-**Output Format:** [Markdown with structured result summaries and inline shell commands]
+**Output Format:** [Markdown with inline shell commands, API request examples, and structured result summaries]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include observed ad creative fields, source URLs, task identifiers, status, and billing headers returned by the configured endpoint.]
+**Other Properties Related to Output:** [May include task IDs, API status, billing headers, source URLs, regions, and first/last seen timestamps from API responses.]
 
 ## Skill Version(s):
 
-1.0.0 (source: server release metadata and packageVersion metadata)
+1.2.1 (source: server release evidence and artifact metadata)
 
 ## Ethical Considerations:
 
