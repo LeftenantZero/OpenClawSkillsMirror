@@ -1,6 +1,6 @@
 ## Description:
 
-Query OneHome (CoreLogic), the agent magic-link real-estate portal at portal.onehome.com, from a shell with the fpx CLI instead of running the onehome-mcp server.
+Query OneHome (CoreLogic) from a shell with @fetchproxy/cli to resolve consumer scope, search shared listings, and read listing details through authenticated GraphQL and REST calls.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and agents use this skill to query a signed-in OneHome real-estate share from a shell, including saved-search scope, shared listings, listing details, photos, and LocalLogic endpoints. It is useful when the MCP server is not installed or when OneHome data is needed in scripts.
+Developers and agents use this skill to access authorized OneHome real-estate share data from scripts or shell sessions when the MCP server is not installed or desired.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,32 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill asks an agent to extract and reuse live OneHome bearer credentials that may grant access to private account data until they expire.
+Risk: The skill handles private OneHome magic-link tokens, bearer authorization headers, session tokens, terminal output, and temporary JSON files that could expose account access if mishandled.
 
-Mitigation: Use it only on trusted machines and shells, do not paste or log tokens, and refresh or discard credentials when work is complete.
+Mitigation: Use the skill only on trusted machines, treat tokens and generated files like passwords, remove temporary files after use, and disable the capture profile when finished.
 
-Risk: Examples write token-bearing request bodies and responses under /tmp, which can be exposed on shared systems.
+Risk: The workflow relies on an authorized OneHome share and on trusting the fpx CLI and browser extension with the active session.
 
-Mitigation: Avoid shared temporary storage, restrict file permissions where possible, and delete generated token, body, and response files after use.
-
-Risk: Some OneHome fields and endpoints are agent-only and can return authorization errors for consumer-share sessions.
-
-Mitigation: Prefer consumer-readable saved-search flows first and check GraphQL errors before trusting results.
+Mitigation: Install and run the skill only when authorized to access the OneHome share and when the fpx CLI and browser extension are trusted for that session.
 
 ## Reference(s):
 
-- [OneHome GraphQL and REST operations for fpx](references/graphql-operations.md)
-- [ClawHub skill page](https://clawhub.ai/chrischall/skills/onehome-fpx)
-- [Publisher profile](https://clawhub.ai/user/chrischall)
-- [OneHome portal](https://portal.onehome.com)
+- [OneHome GraphQL + REST operations for fpx](references/graphql-operations.md)
+- [OneHome fpx Skill Page](https://clawhub.ai/chrischall/skills/onehome-fpx)
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, shell commands, code, configuration]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline shell, GraphQL, and JSON snippets]
+**Output Format:** [Markdown with shell commands, JSON examples, GraphQL queries, and operational guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires user-provided OneHome session scope and bearer credentials; outputs are intended for review before execution.]
+**Other Properties Related to Output:** [Includes setup steps, token handling guidance, GraphQL and REST request examples, and troubleshooting notes.]
 
 ## Skill Version(s):
 
-0.13.3 (source: server release evidence)
+0.13.4 (source: server release evidence)
 
 ## Ethical Considerations:
 
