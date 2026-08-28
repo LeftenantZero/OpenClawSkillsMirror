@@ -1,8 +1,8 @@
 {
-  "changelog": "vSAN data-efficiency read (vsan_efficiency, 11\u219212) + verify_ssl SSL-context fix for self-signed vSAN. + review hardening. global-dedup/v2v-replication intentionally not built (no SDK).",
+  "changelog": "Fixes the server's self-reported version and the advertised tool count; adds a Claude Code plugin manifest.",
   "created_at": 1774143847686,
   "display_name": "vmware-storage",
-  "fetched_at": 1787773250760,
+  "fetched_at": 1787931840618,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -21,7 +21,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1786009811906,
+    "updated_at": 1787886267866,
     "verdict": "clean"
   },
   "owner": {
@@ -37,12 +37,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 4297,
+    "downloads": 4353,
     "installs": 53,
     "stars": 1,
-    "versions": 65
+    "versions": 66
   },
   "summary": "Use this skill whenever the user needs to manage VMware storage \u2014 datastores, iSCSI targets, and vSAN clusters. Directly handles: browse datastores, scan for deployable images (OVA/ISO), configure iSCSI adapters and targets, check vSAN health and capacity. Always use this skill for \"list datastores\", \"add iSCSI target\", \"check vSAN health\", \"browse datastore files\", \"scan for OVA images\", or any storage-related VMware task. Do NOT use for VM lifecycle operations (use vmware-aiops), NSX networking (use vmware-nsx), or Kubernetes clusters (use vmware-vks). For load balancing/AVI/AKO use vmware-avi.",
-  "updated_at": 1786009536808,
-  "version": "1.8.10"
+  "updated_at": 1787885905163,
+  "version": "1.8.11"
 }

@@ -1,6 +1,6 @@
 ## Description:
 
-Use this skill to manage VMware storage, including datastores, iSCSI targets, vSAN health and capacity, and deployable image discovery.
+vmware-storage helps agents manage VMware storage tasks including datastore browsing and image scans, iSCSI target configuration, and vSAN health and capacity checks.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and infrastructure operators use this skill to inspect and administer VMware vSphere storage resources, including datastore browsing, iSCSI configuration, and vSAN health and capacity checks.
+Developers and infrastructure operators use this skill to inspect VMware datastores, scan for deployable images, manage iSCSI storage targets, and check vSAN health and capacity in vSphere or ESXi environments.
 
 ### Deployment Geography for Use:
 
@@ -22,40 +22,44 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill administers VMware storage and can affect vCenter or ESXi storage configuration.
+Risk: The skill can perform state-changing storage operations against production vSphere or ESXi targets.
 
-Mitigation: Install it only for agents that are intended to administer VMware storage and use a least-privilege vCenter or ESXi account.
+Mitigation: Require dry-run previews and explicit human approval for iSCSI changes, especially target removal.
 
-Risk: TLS or authentication checks can be weakened during setup or diagnostics.
+Risk: Weak TLS settings could expose vCenter or ESXi connections to interception.
 
-Mitigation: Use `verify_ssl: true` with trusted certificates in production and reserve `--skip-auth` for narrow diagnostic cases.
+Mitigation: Set verify_ssl: true for real vCenter or ESXi targets and review certificate handling before installation.
 
-Risk: Storage operations may involve credentials and optional notification settings.
+Risk: Local credential and audit files may contain sensitive operational data.
 
-Mitigation: Store credentials through the documented environment-variable flow and confirm whether any webhook or notification setting is actually used before entering credentials.
+Mitigation: Protect ~/.vmware-storage/.env and ~/.vmware/audit.db with least-privilege filesystem access and avoid storing plaintext secrets where possible.
+
+Risk: Optional webhook configuration may disclose operational events outside the local environment.
+
+Mitigation: Leave webhook settings empty or remove them unless outbound notifications are intentionally approved.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/zw008/skills/vmware-storage)
-- [Project homepage](https://github.com/vmware-skills/VMware-Storage)
-- [Agent Guardrails](references/agent-guardrails.md)
-- [VMware Storage Capabilities](references/capabilities.md)
-- [CLI Reference](references/cli-reference.md)
+- [ClawHub Skill Page](https://clawhub.ai/zw008/skills/vmware-storage)
+- [VMware Storage Homepage](https://github.com/vmware-skills/VMware-Storage)
 - [Setup Guide](references/setup-guide.md)
+- [CLI Reference](references/cli-reference.md)
+- [Capabilities](references/capabilities.md)
+- [Agent Guardrails](references/agent-guardrails.md)
 
 ## Skill Output:
 
 **Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown with inline shell commands and structured tool results]
+**Output Format:** [Markdown with inline shell commands and structured tool-output summaries]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include dry-run previews, audit-aware operational guidance, and configuration steps for local CLI or MCP use.]
+**Other Properties Related to Output:** [May include CLI commands, MCP tool guidance, datastore or vSAN summaries, and configuration checks.]
 
 ## Skill Version(s):
 
-1.8.10 (source: server release evidence)
+1.8.11 (source: server release metadata)
 
 ## Ethical Considerations:
 
