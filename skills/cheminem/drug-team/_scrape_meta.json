@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of \"drug-team\" meta-skill for automated, multi-agent drug design:\n\n- Orchestrates a team of specialized agents for drug candidate generation, synthesis planning, ADMET/tox prediction, and patent analysis.\n- Supports design queries with chemical, safety, and novelty constraints.\n- Integrates skills: chemistry-query, synth-notebook, lab-inventory, and custom patent scouting.\n- Provides outputs including top candidate molecules, feasibility and novelty scores, and visualizations.\n- Automatically checks reagent inventory and estimates synthesis costs.",
+  "created_at": 1773252798112,
+  "display_name": "Drug Team",
+  "fetched_at": 1787879544785,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/orchestrate.py",
+    "scripts/patent_scout.py",
+    "skill-card.md",
+    "templates.json",
+    "venv/pyvenv.cfg"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089843862,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Cheminem",
+    "handle": "cheminem",
+    "user_id": "s17eyy18e8m8evx3p0e0n47c99884hqe"
+  },
+  "slug": "drug-team",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/drug-team",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=drug-team&ownerHandle=cheminem",
+    "page_url": "https://clawhub.ai/cheminem/skills/drug-team"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 972,
+    "installs": 26,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Coordinates specialized AI agents to design novel drug candidates with synthesis routes, inventory checks, ADMET/Tox evaluation, pharmacology scoring, and pa...",
+  "updated_at": 1778491839794,
+  "version": "1.0.0"
+}
