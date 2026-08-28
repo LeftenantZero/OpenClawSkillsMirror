@@ -1,0 +1,55 @@
+{
+  "changelog": "census-notice-voice 0.1.1\n\n- Expanded SKILL.md with detailed workflow, input requirements, and usage instructions.\n- Clarified boundaries: only processes written census schedules, does not invent outcomes or personal data.\n- Defined slot list planning, clone and speech approval steps, and billing/credit handling.\n- Added precise directions for handling pronunciation, voice clone permissions, and speech synthesis.\n- Documented safe fallback, recovery, audit, and automatic update mechanisms.",
+  "created_at": 1787883190117,
+  "display_name": "census-notice-voice",
+  "fetched_at": 1787931902464,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "references/automatic-updates-and-safety.md",
+    "references/billing-errors-and-recovery.md",
+    "references/installation-and-auth.md",
+    "references/installation-registration.md",
+    "references/mcp-connection.md",
+    "references/tasks-and-results.md",
+    "references/uninstall-and-disconnect.md",
+    "references/workflow.md",
+    "scripts/authorize.py",
+    "scripts/mcp_client.py",
+    "scripts/uninstall.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787884223053,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "beatra-ai",
+    "handle": "beatra-ai",
+    "user_id": "s176vcp4w7b7tt3j7a62gdnfys8cntp4"
+  },
+  "slug": "census-notice-voice",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/census-notice-voice",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=census-notice-voice&ownerHandle=beatra-ai",
+    "page_url": "https://clawhub.ai/beatra-ai/skills/census-notice-voice"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 28,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Turn a written census schedule into one census notice voice clip per labeled cue. This census schedule voice studio records each census notice audio and arrangement voice from the list the office already wrote, then delivers 8 to 20 census notice voice pack files. Use it for census clip packs that keep one schedule item on each clip.",
+  "updated_at": 1787883302904,
+  "version": "0.1.1"
+}
