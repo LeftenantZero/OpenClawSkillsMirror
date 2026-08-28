@@ -1,6 +1,6 @@
 ## Description:
 
-FDE Skill helps frontline deployment engineers guide enterprise AI rollout by constraining agent behavior, auditing changes, retaining lessons, and supporting continuous optimization.
+FDE Skill helps frontline deployment engineers guide enterprise AI rollout by constraining agent behavior, auditing changes, building knowledge and ontology context, and sustaining post-deployment improvement.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, frontline deployment engineers, and enterprise AI teams use this skill to diagnose business workflows, identify AI deployment nodes, build operational knowledge, and produce deployable enterprise-specific agent skills.
+Developers, enterprise AI deployment teams, and frontline deployment engineers use this skill to structure business-process discovery, identify AI-ready workflow nodes, configure agent constraints, and guide deployment, audit, and handoff.
 
 ### Deployment Geography for Use:
 
@@ -22,43 +22,42 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can run orchestration workflows and affect deployed systems.
+Risk: Broad local enterprise-agent authority may affect deployment, orchestration, persistence, and configuration.
 
-Mitigation: Restrict enabled tools and require human approval for workflow execution and deployed-system changes.
+Mitigation: Review the installer before use, confirm the enabled MCP tools, and install only where that authority is intended.
 
-Risk: The skill can persist memory and generated skills.
+Risk: Local memory, logs, and knowledge data may contain sensitive enterprise information.
 
-Mitigation: Configure offline mode, storage paths, retention policy, and review of generated files before deployment.
+Mitigation: Decide where ~/.sofagent and .sofagent data are stored, enable log sanitization, and apply retention limits.
 
-Risk: The skill references CLI, MCP server, installer, activation, model, and snapshot operations.
+Risk: High-impact actions such as deployment, model switching, browser actions, USB creation, snapshot restore, and destructive operations can change local systems.
 
-Mitigation: Verify the referenced runtime components before use and require human approval for evolve, snapshot restore, model changes, USB creation, and activation.
+Mitigation: Require explicit human approval for these actions and keep audit trails for review.
+
+Risk: Long-running daemon or sustain-mode operation can continue acting after initial deployment.
+
+Mitigation: Define ownership, schedules, monitoring, and shutdown procedures before enabling continuous operation.
 
 ## Reference(s):
 
 - [FDE Skill on ClawHub](https://clawhub.ai/kongfangxun/skills/sofagent)
-- [sofagent Agent Library](artifact/AGENTS.md)
-- [Entry Phase Guide](artifact/skills/01-entry.md)
-- [Discovery Phase Guide](artifact/skills/02-discovery.md)
-- [Quantification Phase Guide](artifact/skills/03-quantify.md)
-- [Delivery Phase Guide](artifact/skills/04-deliver.md)
-- [Exit Phase Guide](artifact/skills/05-exit.md)
-- [Agency Agents Minimal Change Engineer Template](https://github.com/jnMetaCode/agency-agents-zh/blob/main/engineering/engineering-minimal-change-engineer.md)
-- [Agency Agents Code Reviewer Template](https://github.com/jnMetaCode/agency-agents-zh/blob/main/engineering/engineering-code-reviewer.md)
+- [engineering-minimal-change-engineer](https://github.com/jnMetaCode/agency-agents-zh/blob/main/engineering/engineering-minimal-change-engineer.md)
+- [engineering-code-reviewer](https://github.com/jnMetaCode/agency-agents-zh/blob/main/engineering/engineering-code-reviewer.md)
+- [DeepAgentsJS](https://github.com/langchain-ai/deepagentsjs)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Guidance, Markdown, Shell commands, Configuration]
 
-**Output Format:** [Markdown guidance with inline shell commands and structured handoff reports]
+**Output Format:** [Markdown with inline shell commands and structured checklists]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May produce audit reports, deployment checklists, business workflow summaries, knowledge-base entries, and enterprise-specific skill handoff material.]
+**Other Properties Related to Output:** [May include staged deployment plans, audit summaries, ontology and workflow drafts, and handoff checklists.]
 
 ## Skill Version(s):
 
-1.4.0 (source: release evidence and SKILL.md frontmatter)
+1.4.1 (source: frontmatter, server release evidence)
 
 ## Ethical Considerations:
 
