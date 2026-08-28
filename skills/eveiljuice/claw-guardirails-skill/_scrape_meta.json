@@ -1,0 +1,33 @@
+{
+  "changelog": "- Initial release of guardrails-safe-tools skill.\n- Enforces safe execution for shell commands, outbound messages, and external actions via `safe_exec`, `safe_send`, and `safe_action`.\n- Provides strict rules for using only guarded tools instead of direct execution/messaging.\n- Ensures workflows stop for approval when required; explains decision handling for `allow`, `deny`, and `require_approval`.\n- Documents best practices for input hygiene and choosing safer defaults.",
+  "created_at": 1772132180615,
+  "display_name": "ClawGuardrails",
+  "fetched_at": 1787894064722,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Timo",
+    "handle": "eveiljuice",
+    "user_id": "s175eprjy86zp79w6qebcm9k8h8853hb"
+  },
+  "slug": "claw-guardirails-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claw-guardirails-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claw-guardirails-skill&ownerHandle=eveiljuice",
+    "page_url": "https://clawhub.ai/eveiljuice/skills/claw-guardirails-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 837,
+    "installs": 23,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Enforces guarded execution with safe_exec, safe_send, and safe_action. Use when a task may run shell commands, send channel messages, or call external APIs/a...",
+  "updated_at": 1778491652688,
+  "version": "0.1.0"
+}
