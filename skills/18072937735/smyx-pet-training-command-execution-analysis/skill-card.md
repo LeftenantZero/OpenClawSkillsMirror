@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes pet training videos or video URLs by calling backend APIs to compare observed posture against Sit, Down, and Stay commands, report timing and success, and support non-medical training feedback.
+Analyzes pet training videos or video URLs to determine whether a pet executed Sit, Down, or Stay commands, returning posture-match, timing, success, and report-link information without medical or behavior-therapy guidance.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers can use this skill to evaluate whether a pet follows training commands in uploaded or URL-based videos. It returns posture-command match results, response timing, structured reports, and report links for training review without providing medical diagnosis or behavior therapy.
+External users and developers use this skill to analyze pet training-area videos for command execution, posture matching, response latency, and training report retrieval. It is intended for smart dog-training devices, remote pet training, and behavior-correction workflows, not for medical diagnosis or behavior-therapy plans.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Training videos or video URLs are sent to a Life Emergence/Open API backend for analysis.
+Risk: Pet videos or supplied video URLs are sent to the publisher's remote analysis service.
 
-Mitigation: Install only when backend processing is acceptable, use appropriate training videos, and avoid passing unrelated local paths.
+Mitigation: Install only when that remote processing is acceptable, and obtain explicit consent before upload or history queries.
 
-Risk: The skill silently creates or reuses a local identity and can persist tokens or identity data for report history.
+Risk: The skill creates or reuses a local account identity and persists tokens locally.
 
-Mitigation: Use a contained workspace and review or clear data/smyx-api-key.txt and the local SQLite user database when identity or token reuse is not desired.
+Mitigation: Document account and token storage for users and provide a reset or deletion path for persisted identity data.
 
-Risk: The security scan verdict is suspicious because of backend login/report calls and local token handling.
+Risk: The release includes private development API endpoints.
 
-Mitigation: Review the security summary and guidance before deployment and restrict installation to environments where these behaviors are acceptable.
+Mitigation: Replace private development endpoints with intended production HTTPS endpoints before approval.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-pet-training-command-execution-analysis)
-- [Pet training command execution API documentation](artifact/references/api_doc.md)
-- [Shared analysis API documentation](artifact/skills/smyx_analysis/references/api_doc.md)
-- [Skill demo](https://lifeemergence.com/sample.html)
+- [Pet Training Command API Documentation](references/api_doc.md)
+- [Common Analysis API Documentation](skills/smyx_analysis/references/api_doc.md)
+- [Skill Page](https://clawhub.ai/18072937735/skills/smyx-pet-training-command-execution-analysis)
+- [Skill Demo](https://lifeemergence.com/sample.html)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, shell commands, guidance]
+**Output Type(s):** [text, markdown, JSON, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown or JSON analysis report with optional saved file output]
+**Output Format:** [Markdown and JSON-like structured analysis text with report links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include command name, command timestamp, observed pet posture, posture match score, response latency, execution status, intervention suggestion, and report link.]
+**Other Properties Related to Output:** [May write the rendered analysis to a user-specified output file.]
 
 ## Skill Version(s):
 
-1.0.9 (source: server release and SKILL.md frontmatter)
+1.0.10 (source: server release evidence; artifact frontmatter reports 1.0.11 and artifact _meta reports 1.0.0)
 
 ## Ethical Considerations:
 
