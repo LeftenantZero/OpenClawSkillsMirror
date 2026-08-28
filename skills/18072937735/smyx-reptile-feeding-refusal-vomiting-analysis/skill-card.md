@@ -1,6 +1,6 @@
 ## Description:
 
-Through fixed enclosure cameras, the skill analyzes feeding-time and post-feeding videos of reptiles to detect prey-attack behavior, successful swallowing, feeding refusal, and regurgitation or vomiting events.
+Analyzes reptile enclosure feeding videos to detect prey attacks, swallowing, feeding refusal, and post-feeding regurgitation, then returns structured alerts and report links.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External reptile keepers, vivarium operators, and developers use this skill to analyze enclosure feeding videos or URLs for refusal, swallowing, regurgitation, signal reliability, and suggested follow-up actions. It is intended to produce behavior records and alerts, not veterinary diagnoses.
+External reptile keepers, vivarium operators, and developers use this skill to analyze feeding-window videos or URLs for attack, swallow, regurgitation, refusal, alert-level, and historical-report signals. It supports behavior records and non-diagnostic care guidance rather than veterinary diagnosis.
 
 ### Deployment Geography for Use:
 
@@ -22,41 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Videos or URLs are sent to a remote service for analysis.
+Risk: Reptile enclosure videos or URLs are sent to the configured analysis service.
 
-Mitigation: Use the skill only with footage that can be shared with the configured service, and confirm the service endpoint and publisher are trusted before installation.
+Mitigation: Review the configured endpoints and data-handling expectations before use, and submit only footage that is appropriate to transmit to that service.
 
-Risk: The skill may create or reuse an identity and store authentication tokens locally.
+Risk: The skill can create or reuse a local identity and persist service tokens in a workspace SQLite database.
 
-Mitigation: Run it in an isolated workspace, review token storage behavior, and remove local credentials when access is no longer needed.
+Mitigation: Run the skill in a dedicated workspace, treat workspace data files as secrets, and rotate tokens if those files are exposed.
 
-Risk: Development or private-network endpoints may be present in configuration.
+Risk: Published configuration includes environment-specific service URLs, including dev or private HTTP endpoints.
 
-Mitigation: Confirm production HTTPS endpoints before use and avoid running the skill with private dev endpoints in customer or production workflows.
-
-Risk: Feeding refusal or vomiting analysis can be mistaken for veterinary diagnosis.
-
-Mitigation: Treat outputs as behavior observations and follow-up suggestions only; consult a qualified reptile veterinarian for diagnosis or treatment decisions.
+Mitigation: Audit configuration before installation and use only intended HTTPS production endpoints for normal releases.
 
 ## Reference(s):
 
-- [API 接口文档](references/api_doc.md)
 - [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-reptile-feeding-refusal-vomiting-analysis)
+- [API interface documentation](artifact/references/api_doc.md)
 - [Skill demo](https://lifeemergence.com/sample.html)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, shell commands, guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown or JSON analysis results with optional saved output file]
+**Output Format:** [Markdown text with structured JSON-style analysis fields, report links, and optional saved output files.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Reports may include attack, swallow, regurgitation, refusal, confidence, alert level, recommended actions, and report links.]
+**Other Properties Related to Output:** [May write an output file when --output is supplied; analysis and history queries use configured API endpoints.]
 
 ## Skill Version(s):
 
-1.0.8 (source: server release metadata; artifact frontmatter says 1.0.10)
+1.0.9 (source: server release evidence; artifact frontmatter says 1.0.12)
 
 ## Ethical Considerations:
 
