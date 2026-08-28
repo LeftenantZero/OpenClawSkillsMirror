@@ -1,41 +1,52 @@
-## Description: <br>
-Use when someone wants a multi-part story with voiceover \u2014 episodic B-roll, chaptered promo, or several linked video scenes without on-camera dialogue. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+Use when someone wants a multi-part story with voiceover: episodic B-roll, chaptered promo, or several linked video scenes without on-camera dialogue.
 
-## Publisher: <br>
-[pruna-ai](https://clawhub.ai/user/pruna-ai) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
+
+[pruna-ai](https://clawhub.ai/user/pruna-ai)
+
+### License/Terms of Use:
+
+MIT-0
+
+## Use Case:
+
+Creative operators and developers use this skill to plan and generate multi-scene narrated videos, coordinating story structure, still images, narration, video clips, review gates, and final assembly.
+
+### Deployment Geography for Use:
+
+Global
+
+## Known Risks and Mitigations:
+
+Risk: The workflow can upload user-provided frames or narration and may consume paid generation credits.
+
+Mitigation: Use the required approval gates before still, audio, and video generation, and confirm inputs before starting paid jobs.
+
+Risk: Audio-led clips may truncate narration if a scene line exceeds the video API duration cap.
+
+Mitigation: Run the documented ffprobe duration check and keep each scene narration around 19 seconds or less before video generation.
+
+## Reference(s):
 
 
-## Use Case: <br>
-Developers and creators use this skill to plan, gate, generate, and assemble multi-scene narrated videos with stills, TTS voiceover, short video clips, and optional background music. <br>
+## Skill Output:
 
-### Deployment Geography for Use: <br>
-Global <br>
+**Output Type(s):** [Guidance, Markdown, Shell commands, Configuration]
 
-## Known Risks and Mitigations: <br>
-Risk: The workflow can use external media-generation APIs and upload media assets. <br>
-Mitigation: Review each approval gate and uploaded asset before proceeding with generation or file upload. <br>
-Risk: Video and audio generation may create local media files and incur paid generation costs. <br>
-Mitigation: Require the explicit approve plan, approve stills, and approve clips gates before paid video work. <br>
+**Output Format:** [Markdown with inline JSON and bash code blocks]
 
+**Output Parameters:** [1D]
 
-## Reference(s): <br>
-- [ClawHub skill page](https://clawhub.ai/pruna-ai/skills/narrated-multi-scene) <br>
-- [Pruna AI publisher profile](https://clawhub.ai/user/pruna-ai) <br>
+**Other Properties Related to Output:** [Produces scene plans, approval checkpoints, media-generation inputs, duration checks, and ffmpeg assembly commands.]
 
+## Skill Version(s):
 
-## Skill Output: <br>
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance] <br>
-**Output Format:** [Markdown guidance with tables, JSON snippets, and shell commands] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [May coordinate generated media files through dependent image, video, TTS, audio, upload, and ffmpeg workflows.] <br>
+1.0.10 (source: server release metadata and skill frontmatter)
 
-## Skill Version(s): <br>
-1.0.9 (source: server release metadata and skill frontmatter) <br>
+## Ethical Considerations:
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
