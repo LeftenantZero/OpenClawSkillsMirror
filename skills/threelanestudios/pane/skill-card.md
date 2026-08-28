@@ -1,6 +1,6 @@
 ## Description:
 
-Operate Pane through its local Gateway: create notes, tasks, and projects via chat sessions; manage AI sessions; sync agent identity files.
+Operate Pane through its local Gateway: create notes, tasks, and projects via chat sessions; manage AI sessions.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and Pane users use this skill to let an agent operate a paired local Pane Gateway for conversational note, task, project, session, and identity-file workflows.
+Developers and Pane users use this skill to let an agent work with a local Pane workspace through a paired Gateway, including creating and updating notes, tasks, projects, folders, and chat sessions.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uses a Pane Gateway bearer token that can act on the user's local Pane workspace.
+Risk: A paired Gateway token allows agent control over the user's local Pane workspace.
 
-Mitigation: Install only when that access is acceptable, keep the token secret, and use the skill for explicit, bounded Pane tasks.
+Mitigation: Install only when this control is intended, keep the token secret, and avoid printing or logging the full token in chat transcripts.
 
-Risk: Proactive scheduling can queue follow-up work after the initial request.
+Risk: Self-signed Gateway TLS can be weakened if verification is skipped.
 
-Mitigation: Review the scheduled-work behavior before installation and use it only for tasks where deferred steps are expected.
+Mitigation: Prefer certificate pinning from the Gateway health endpoint and use insecure TLS only when explicitly configured for development.
 
-Risk: Insecure TLS can disable certificate verification for local development.
+Risk: Multi-step Pane requests may schedule follow-up actions in the same session.
 
-Mitigation: Prefer pinned Gateway certificates and enable insecure TLS only for local development.
+Mitigation: Review multi-step requests and confirm the intended Pane session before allowing scheduled follow-up work.
 
 ## Reference(s):
 
-- [Pane Gateway API Reference](references/gateway-api.md)
+- [Pane Skill on ClawHub](https://clawhub.ai/threelanestudios/skills/pane)
 - [Pane Homepage](https://paneapp.ai/?utm_source=clawhub)
-- [ClawHub Skill Page](https://clawhub.ai/threelanestudios/skills/pane)
+- [Pane Gateway API Reference](references/gateway-api.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline shell commands and JSON snippets]
+**Output Format:** [Markdown with inline shell commands and API request examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May call a local Pane Gateway with a bearer token and may queue follow-up work for explicit multi-step Pane session tasks.]
+**Other Properties Related to Output:** [Uses local Gateway calls with a user-provided bearer token; session message content is capped at 1 MiB and chat completion proxy bodies at 8 MiB.]
 
 ## Skill Version(s):
 
-1.2.0 (source: server release evidence and SKILL.md frontmatter)
+1.2.2 (source: server release metadata and SKILL.md frontmatter)
 
 ## Ethical Considerations:
 

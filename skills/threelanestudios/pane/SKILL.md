@@ -1,7 +1,7 @@
 ---
 name: pane
-description: "Operate Pane through its local Gateway: create notes, tasks, and projects via chat sessions; manage AI sessions; sync agent identity files."
-version: 1.2.0
+description: "Operate Pane through its local Gateway: create notes, tasks, and projects via chat sessions; manage AI sessions."
+version: 1.2.2
 metadata:
   openclaw:
     emoji: "🗂️"
@@ -29,7 +29,7 @@ metadata:
 
 Operate a locally running [Pane](https://paneapp.ai/?utm_source=clawhub) app through its Gateway
 HTTP API: create/manage notes, tasks, projects, and folders **conversationally**
-via chat sessions; manage sessions directly; sync agent identity files.
+via chat sessions; manage sessions directly.
 
 Requires `PANE_GATEWAY_URL` and `PANE_GATEWAY_TOKEN` already provisioned (see
 Setup). Every authenticated call uses `exec` + `curl` — the gateway needs a
@@ -42,6 +42,9 @@ and boards. Pane is a paid app — pricing at paneapp.ai. This skill requires
 a running, paired Pane Gateway.
 
 ## Setup (one-time, human-in-the-loop)
+
+The gateway URL points to the user's own local Pane Gateway process; the token
+is user-supplied at pairing time. This skill sends no data to any third party.
 
 Pairing exchanges a 6-digit code (shown in the Pane app / gateway logs, 5-min
 expiry) for a 90-day bearer token. This skill assumes a human has already
@@ -184,12 +187,13 @@ Instead:
 1. Acknowledge the task and do the first step now. Confirm in that same reply that the remaining steps are scheduled.
 2. Schedule each subsequent step as a one-shot cron targeting this same Pane session:
    ```bash
-   openclaw cron add --at "+90s" --message "<next step instruction>" --session-key "<this session's key>" --no-deliver --delete-after-run
+   openclaw cron add --at "+90s" --message "<next step instruction>" --session "session:<this session's key>" --no-deliver --delete-after-run
    ```
    Your current session key is in the `## Runtime` section of your system prompt (`session=agent:<agentId>:openai-user:pane-<sessionId>`). Use it exactly.
 3. Never use `--announce`, any delivery mode, or `--session isolated`. The Pane transcript is the delivery: Pane polls this session and shows your reply automatically.
-4. Report each completed step as its own reply. Schedule silently — do not narrate cron mechanics to the user.
-5. Delivery latency is up to 60 seconds per step while the user has the session open. Messages sent while Pane is closed appear when the user next opens the session.
+4. When you are the agent inside a Pane session, complete every step by replying in-session and using Pane's tools; use `exec` only to run `openclaw cron add`, and never touch files or databases to do the user's task. The `curl` operations elsewhere in this skill are for agents operating Pane from outside a session.
+5. Report each completed step as its own reply. Schedule silently — do not narrate cron mechanics to the user.
+6. Delivery latency is up to 60 seconds per step while the user has the session open. Messages sent while Pane is closed appear when the user next opens the session.
 
 ## Direct REST operations
 
@@ -248,10 +252,6 @@ curl -sS --cacert "$CACERT" \
 # Abort an in-flight generation
 curl -sS --cacert "$CACERT" -X POST "$PANE_GATEWAY_URL/v1/sessions/$SESSION_ID/abort" \
   -H "Authorization: Bearer $PANE_GATEWAY_TOKEN"
-
-# Delete a session
-curl -sS --cacert "$CACERT" -X DELETE "$PANE_GATEWAY_URL/v1/sessions/$SESSION_ID" \
-  -H "Authorization: Bearer $PANE_GATEWAY_TOKEN"
 ```
 
 Message content is capped at 1 MiB. Message bodies from `GET messages` are
@@ -292,44 +292,6 @@ curl -sS --cacert "$CACERT" -X POST "$PANE_GATEWAY_URL/v1/chat/completions" \
   -d '{"model":"openclaw","messages":[{"role":"user","content":"hi"}],"stream":false}'
 ```
 
-### Identity file sync (not general notes)
-
-Sync endpoints move a fixed allowlist of **agent identity files**
-(`SOUL.md`, `MEMORY.md`, `IDENTITY.md`, `AGENTS.md`, `USER.md`, `TOOLS.md`,
-plus `HEARTBEAT.md`/`BOOTSTRAP.md`/`RULES.md` and `memory/*.md`/`logs/*.md`
-for the main agent only). This is the OC↔Pane agent-identity sync mechanism,
-unrelated to the notes/cabinet data model — do not use this for general note
-content.
-
-```bash
-# Full initial sync (all agents, all allowlisted files)
-curl -sS --cacert "$CACERT" "$PANE_GATEWAY_URL/v1/sync/initial" \
-  -H "Authorization: Bearer $PANE_GATEWAY_TOKEN"
-
-# Pull pending changes for one agent
-curl -sS --cacert "$CACERT" \
-  "$PANE_GATEWAY_URL/v1/sync/pull?oc_agent_id=main" \
-  -H "Authorization: Bearer $PANE_GATEWAY_TOKEN"
-
-# Confirm processed changes
-curl -sS --cacert "$CACERT" -X DELETE "$PANE_GATEWAY_URL/v1/sync/pull/confirm" \
-  -H "Authorization: Bearer $PANE_GATEWAY_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{"oc_agent_id":"main","processed_ids":["id1","id2"]}'
-
-# Push a file (checksum is SHA-256 hex of content, verified server-side)
-CONTENT='# Updated memory'
-CHECKSUM=$(printf '%s' "$CONTENT" | shasum -a 256 | cut -d' ' -f1)
-curl -sS --cacert "$CACERT" -X POST "$PANE_GATEWAY_URL/v1/sync/push" \
-  -H "Authorization: Bearer $PANE_GATEWAY_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d "$(jq -n --arg agent main --arg fn MEMORY.md --arg content "$CONTENT" --arg cs "$CHECKSUM" \
-    '{oc_agent_id:$agent, filename:$fn, content:$content, checksum:$cs}')"
-```
-
-Push is capped at 10 MiB and rejects any filename not on the allowlist
-(`GatewayError::InvalidRequest`, 400).
-
 See `references/gateway-api.md` for the full endpoint reference including
 request/response field details.
 
@@ -339,9 +301,6 @@ request/response field details.
   session flow above. Do not construct calls like `POST /v1/notes` — they
   return 404 (fallback handler).
 - **No WebSocket for clients.** Only `exec`+`curl` over plain HTTP/SSE.
-- **Sync endpoints are identity-file-only**, not a general note-editing
-  channel — the allowlist is enforced server-side and anything else is
-  rejected.
 
 ## Common errors & troubleshooting
 
@@ -351,11 +310,11 @@ request/response field details.
 | `401 {"error":"unauthorized",...}` | Missing/expired/invalid `Authorization` header | Confirm `Bearer $PANE_GATEWAY_TOKEN` is set; token expires 90 days after pairing — re-pair if expired |
 | `curl: (7) Failed to connect` | Gateway not running, or wrong port | Confirm `PANE_GATEWAY_URL` matches the running gateway (default port per Pane docs); check the Pane app is open |
 | `404 {"error":"not_found","message":"Unknown endpoint"}` on any `/v1/notes`, `/v1/tasks`, `/v1/projects` path | Those routes don't exist | Use the conversational session flow instead |
-| `413`/`{"error":"payload_too_large",...}` | Message >1 MiB or sync push >10 MiB or chat body >8 MiB | Shorten the payload |
+| `413`/`{"error":"payload_too_large",...}` | Message >1 MiB or chat body >8 MiB | Shorten the payload |
 | Session message sent but nothing seems to happen | Pane's assistant runs async; you polled too soon | Wait 2-5s (or use the SSE stream) before reading messages |
 | Assistant's reply says it couldn't find the project/note | Ambiguous or misspelled name in your message | Re-phrase with the exact project/folder/note title, or `search_notes` first via a session message |
 | Idempotent retry returns the same `message_id` unexpectedly | Working as intended — same `idempotency_key` reused | Generate a new `idempotency_key` (e.g. `uuidgen`) for a genuinely new message |
-| Scheduled step never appeared in Pane | `--session-key` was not used (or `--session isolated` was used), or a delivery mode was set | Verify `--session-key` was used (not `--session isolated`) and no delivery mode; confirm the key matches the `## Runtime` line |
+| Scheduled step never appeared in Pane | `--session "session:<key>"` was not used (or `--session isolated` was used), or a delivery mode was set | Verify `--session "session:<key>"` was used (not `--session isolated`) and no delivery mode; confirm the key matches the `## Runtime` line |
 
 ## Publishing (for the skill maintainer, not the agent)
 

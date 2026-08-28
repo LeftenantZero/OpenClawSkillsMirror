@@ -136,10 +136,6 @@ Response `200`:
 }
 ```
 
-### `DELETE /v1/sessions/:session_id`
-
-Response `200`: `{ "deleted_at": "..." }`
-
 ### `GET /v1/sessions/:session_id/messages`
 
 Query params:
@@ -216,61 +212,6 @@ select a specific downstream model.
 This bypasses Pane's session/message model entirely — nothing sent here
 shows up in the Pane UI's chat history. Prefer session endpoints unless you
 specifically need a stateless one-off completion.
-
-## Sync endpoints
-
-Identity-file sync only — a fixed allowlist, not general note storage.
-
-Full allowlist:
-- Main agent: `SOUL.md`, `MEMORY.md`, `IDENTITY.md`, `AGENTS.md`, `USER.md`,
-  `TOOLS.md`, `HEARTBEAT.md`, `BOOTSTRAP.md`, `RULES.md`, plus depth-1
-  `memory/*.md` and `logs/*.md` (no nested subdirectories).
-- Sub-agents: `SOUL.md`, `MEMORY.md`, `IDENTITY.md`, `AGENTS.md`, `USER.md`,
-  `TOOLS.md` only (no HEARTBEAT/BOOTSTRAP/RULES, no memory/logs).
-
-### `POST /v1/sync/push`
-
-Request:
-```json
-{ "oc_agent_id": "main", "filename": "MEMORY.md", "content": "...", "checksum": "sha256-hex-of-content" }
-```
-- Max 10 MiB content.
-- `checksum` must be the SHA-256 hex digest of `content` — the server
-  recomputes and rejects (`400`) on mismatch, so compute it correctly:
-  `printf '%s' "$CONTENT" | shasum -a 256 | cut -d' ' -f1`.
-- `filename` must be on the allowlist for the agent's role (main vs.
-  sub-agent) — non-allowlisted files are rejected `400`.
-
-Response `200`: `{ "written_at": "...", "checksum": "..." }`
-
-### `GET /v1/sync/pull?oc_agent_id=main`
-
-Response `200`: `{ "pending_changes": [ /* PendingChange objects */ ] }`
-
-### `DELETE /v1/sync/pull/confirm`
-
-Request:
-```json
-{ "oc_agent_id": "main", "processed_ids": ["id1", "id2"] }
-```
-Response `200`: `{ "confirmed": 2 }`
-
-### `GET /v1/sync/initial`
-
-Bulk fetch of all agents' allowlisted files (no request body).
-
-Response `200`:
-```json
-{
-  "agents": [
-    {
-      "oc_id": "main",
-      "name": "...",
-      "files": [ { "filename": "SOUL.md", "content": "...", "checksum": "..." } ]
-    }
-  ]
-}
-```
 
 ## Error shape
 
