@@ -1,0 +1,33 @@
+{
+  "changelog": "openclaw-security-audit 1.0.0 \u2013 Initial release\n\n- New skill to audit OpenClaw/Clawdbot/Moltbot environments for misconfigurations and security risks.\n- Provides detailed step-by-step read-only security checks, covering network exposure, authentication, secrets, permissions, installed skills, and process persistence.\n- Generates a terminal-style report with OK/VULNERABLE/UNKNOWN findings, actionable impact explanation, and remediation steps.\n- Redacts secrets, avoids risky commands by default, and only proposes active remediations upon explicit user request.\n- Includes clear output structure and summary section highlighting top risks.",
+  "created_at": 1770304110041,
+  "display_name": "Openclaw Security Audit",
+  "fetched_at": 1787908407496,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "misirov",
+    "handle": "misirov",
+    "user_id": "s172h3p1b0evpjqdzqpkmy2xk1884ns9"
+  },
+  "slug": "openclaw-security-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-security-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-security-audit&ownerHandle=misirov",
+    "page_url": "https://clawhub.ai/misirov/skills/openclaw-security-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 5420,
+    "installs": 192,
+    "stars": 3,
+    "versions": 1
+  },
+  "summary": "Audit OpenClaw/Clawdbot deployments for misconfigurations and attack vectors. Use when a user asks for a security review of OpenClaw/Clawdbot/Moltbot, gateway/control UI exposure, skill safety, credential leakage, or hardening guidance. Produces a terminal report with OK/VULNERABLE findings and fixes.",
+  "updated_at": 1778486029224,
+  "version": "1.0.0"
+}
