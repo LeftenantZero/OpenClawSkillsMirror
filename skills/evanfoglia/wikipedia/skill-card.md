@@ -1,6 +1,6 @@
 ## Description:
 
-Access Wikipedia through MCP tools for article search, summaries, random facts, dinosaur and prehistory facts, featured articles, historical events, article extracts, categories, and multilingual lookups.
+Access Wikipedia through MCP to search articles, retrieve summaries, random facts, featured articles, historical events, categories, links, and related knowledge lookups across supported language editions.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-Developers, researchers, and content teams use this MCP server to let an agent retrieve Wikipedia search results, article summaries, full extracts, categories, and daily knowledge hooks across supported languages.
+External users and developers use this skill to retrieve Wikipedia-backed reference material, article summaries, discovery links, categories, and daily content hooks from an MCP-compatible agent workflow.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,31 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Search terms and requested article titles are sent to Wikipedia.
+Risk: Wikipedia queries and article titles are sent to Wikipedia.
 
-Mitigation: Review queries for sensitive content before use and apply outbound network policy appropriate for the deployment.
+Mitigation: Avoid sending sensitive or confidential search terms, article titles, or research topics through this skill.
 
-Risk: The release does not explicitly document outbound network scope or provide a dependency lockfile.
+Risk: The requests dependency is declared with a lower bound rather than an exact pinned version.
 
-Mitigation: Document the Wikipedia endpoints used by the skill and prefer pinned dependencies or a lockfile for governed deployments.
+Mitigation: Install the skill in an isolated environment or pin requests during deployment for stronger reproducibility.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/evanfoglia/skills/wikipedia)
-- [Wikipedia REST API v1 endpoint](https://en.wikipedia.org/api/rest_v1)
-- [MediaWiki Action API endpoint](https://en.wikipedia.org/w/api.php)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown]
+**Output Type(s):** [text, markdown, guidance]
 
-**Output Format:** [Markdown and plain text returned by MCP tools]
+**Output Format:** [Markdown text returned through MCP tool responses]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Responses may include source links and article images; search terms and requested article titles are sent to Wikipedia.]
+**Other Properties Related to Output:** [Responses may include Wikipedia article links, thumbnail Markdown, plain-text extracts, and tabular daily metrics when supported by the release.]
 
 ## Skill Version(s):
 
-1.1.4 (source: frontmatter and server release metadata)
+1.1.6 (source: server release metadata)
 
 ## Ethical Considerations:
 
