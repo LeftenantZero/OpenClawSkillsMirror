@@ -1,0 +1,45 @@
+{
+  "changelog": "- Expanded requirements in the description to clearly list all dependencies (yt-dlp, python3, curl; ffmpeg and OPENAI_API_KEY as optional).\n- Added a detailed \"Required Dependencies\" section with explanation table and install instructions.\n- Introduced a new \"Privacy Notice\" describing OpenAI audio upload behavior, clarifying that audio from non-YouTube sources may be sent to OpenAI for transcription.\n- Clarified when each dependency is needed and caveats for non-YouTube videos.\n- No changes to workflows or core functionality.",
+  "created_at": 1772206855028,
+  "display_name": "Video Intelligence",
+  "fetched_at": 1787893677787,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/parse-vtt.py",
+    "scripts/video-intel.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779964496640,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Luiz Gustavo Nogara",
+    "handle": "nogara",
+    "user_id": "s170g25weam04yehzd1m7av3ws8853t7"
+  },
+  "slug": "video-intel",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/video-intel",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=video-intel&ownerHandle=nogara",
+    "page_url": "https://clawhub.ai/nogara/skills/video-intel"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 959,
+    "installs": 27,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Download videos and get transcripts, summaries, or metadata from YouTube, TikTok, Instagram, and X (Twitter). Use when the user shares a video URL and wants...",
+  "updated_at": 1778491660149,
+  "version": "1.0.1"
+}
