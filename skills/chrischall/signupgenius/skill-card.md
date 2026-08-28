@@ -1,6 +1,6 @@
 ## Description:
 
-Reads SignUpGenius sign-up sheets, slot reports, and groups, and supports user-directed group-member, RSVP, slot-claim, and slot-release actions for a signed-in account.
+Read sign-up sheets, slot reports, and groups on SignUpGenius, and add members to your groups.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this MCP skill to check their SignUpGenius sign-ups, group membership, public slot availability, and owner-scoped reports, and to perform user-directed updates on their own account.
+External users and agents use this skill to inspect SignUpGenius sign-ups, groups, available slots, and participant information, and to perform limited account actions such as adding group members, RSVPing, claiming slots, or releasing slots.
 
 ### Deployment Geography for Use:
 
@@ -22,41 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The MCP server may handle SignUpGenius session cookies, passwords, or Pro API keys.
+Risk: The skill can access SignUpGenius session cookies, direct-login credentials, or a Pro API key.
 
-Mitigation: Install only when the user accepts that account-access tradeoff, keep credentials scoped to the user's own account, and remove or rotate credentials if exposure is suspected.
+Mitigation: Install only when you are comfortable giving the agent access to your SignUpGenius account context and credentials.
 
-Risk: The skill can expose participant names and sign-up details from public or account-linked sheets.
+Risk: The skill can perform write actions such as adding group members, RSVPing, claiming slots, and releasing slots.
 
-Mitigation: Reveal participant names only when the user clearly asks for that information and the request is appropriate for the sheet being accessed.
+Mitigation: Require explicit user confirmation before RSVP, claim, release, or group-member changes.
 
-Risk: Write-capable tools can add group members, RSVP, claim slots, or release slots.
+Risk: The skill can retrieve participant names from public sign-up sheets.
 
-Mitigation: Require explicit user confirmation before executing any RSVP, group-member, claim, or release action.
-
-Risk: Automated access may be inappropriate for accounts the user does not own or for high-scale scraping.
-
-Mitigation: Use the skill only for personal-scale, user-directed tasks on the user's own account or authorized public sign-up sheets.
+Mitigation: Review privacy expectations before using participant-listing tools or sharing their output.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/chrischall/skills/signupgenius)
 - [SignUpGenius](https://www.signupgenius.com)
-- [npm package](https://www.npmjs.com/package/signupgenius-mcp)
+- [signupgenius-mcp npm package](https://www.npmjs.com/package/signupgenius-mcp)
+- [fetchproxy extension](https://github.com/chrischall/fetchproxy)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Configuration, Guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline JSON and shell command examples]
+**Output Format:** [Markdown with JSON configuration snippets and tool-use guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May produce MCP configuration snippets and user-facing summaries of SignUpGenius data.]
+**Other Properties Related to Output:** [May require SignUpGenius session cookies, direct-login credentials, or a Pro API key depending on the requested operation.]
 
 ## Skill Version(s):
 
-1.4.0 (source: server release evidence)
+1.5.0 (source: server release evidence)
 
 ## Ethical Considerations:
 
