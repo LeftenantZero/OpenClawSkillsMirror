@@ -1,6 +1,6 @@
 ## Description:
 
-Supports long-form web fiction workflows from concept and outline through chapter drafting, revision, story-state tracking, and genre-specific prose guidance.
+Long-form web novel writing support that helps plan and draft stories from concept through outlines, chapters, worldbuilding, characters, and plot-line tracking.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators and writing teams use this skill to plan Chinese long-form web novels, manage story files and continuity, draft selected chapters, revise chapters, and apply genre-specific writing guidance.
+External writers and writing-focused agents use this skill to structure long-form web novels, generate outlines, draft chapters, revise chapters, and maintain story state across a project. It is intended for managed writing workspaces where file creation and updates are expected.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can read and write story project files and mutate outlines, chapters, settings, and tracking state.
+Risk: The skill may create or modify story files, tracking state, and author-preference memory.
 
-Mitigation: Install and run it only in a dedicated writing workspace, and review file changes before using them as authoritative project state.
+Mitigation: Install it only in an intended writing workspace and review file changes before keeping or publishing them.
 
-Risk: The skill may look one directory up for planning inputs, copy benchmark or reference material, run bundled Python and Node scripts, and invoke optional local agents.
+Risk: Benchmarking or adaptation guidance may lead to outputs that resemble existing works too closely.
 
-Mitigation: Review the workspace layout, bundled scripts, and optional agent configuration before execution; limit access to files intended for the writing project.
-
-Risk: The skill includes source-work adaptation guidance that could encourage close copying of reference works.
-
-Mitigation: Use reference material for high-level structure and craft analysis only, and avoid direct reuse of copyrighted plots, scenes, phrasing, or style.
+Mitigation: Use references for abstract genre patterns, avoid feeding copyrighted source text for close transformation, and review outputs for originality.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/worldwonderer/skills/story-long-write)
-- [OpenClaw source metadata](https://github.com/worldwonderer/oh-story-claudecode)
-- [Workflow setup](references/workflow-setup.md)
-- [Workflow daily](references/workflow-daily.md)
-- [Workflow revision](references/workflow-revision.md)
-- [Reader contract and progression](references/reader-contract-and-progression.md)
-- [Artifact protocols](references/artifact-protocols.md)
-- [Genre prose cards](references/genre-prose-cards.md)
+- [Skill page](https://clawhub.ai/worldwonderer/skills/story-long-write)
+- [OpenClaw source metadata](https://github.com/zenstory-ai/oh-story-claudecode)
+- [Workflow setup reference](references/workflow-setup.md)
+- [Workflow chapter reference](references/workflow-chapter.md)
+- [Workflow daily reference](references/workflow-daily.md)
+- [Writing craft reference](references/writing-craft.md)
+- [Anti-AI writing reference](references/anti-ai-writing.md)
 
 ## Skill Output:
 
 **Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown prose, structured story files, JSON state, and inline shell or script commands]
+**Output Format:** [Markdown prose, structured project files, and concise command or configuration guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May create or update project files for outlines, chapters, settings, character state, continuity tracking, and benchmark/reference views.]
+**Other Properties Related to Output:** [May create or modify story files, outlines, tracking state, and author-preference memory in the active writing workspace.]
 
 ## Skill Version(s):
 
-1.1.19 (source: server release metadata; artifact frontmatter reports 1.0.0)
+1.1.21 (source: server release evidence; artifact frontmatter reports 1.0.0)
 
 ## Ethical Considerations:
 
