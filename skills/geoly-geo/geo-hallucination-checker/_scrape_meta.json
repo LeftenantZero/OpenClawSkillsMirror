@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release of geo-hallucination-checker skill:\n\n- Detects and annotates hallucinations, unsupported claims, fabricated studies, and incorrect conclusions in any text.\n- Flags vague, unsourced, or overconfident claims, with attention to high-risk areas (medical, financial, scientific, technical).\n- Provides a structured analysis with claim classification (Supported/Unsupported/Problematic/Contradicted/Speculative), risk levels, reasons, and concrete recommendations.\n- Outputs a markdown table for easy review, plus a high-level summary of hallucination risk.\n- Offers hallucination-safe rewrites on request, ensuring content is citation-ready and avoids fabrication.\n- Prioritizes user-provided sources and enforces strong constraints against inventing information.",
+  "created_at": 1773107746958,
+  "display_name": "Geo Hallucination Checker",
+  "fetched_at": 1787882881402,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/hallucination_guide.md",
+    "scripts/hallucination_checker.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "GEOLY AI",
+    "handle": "geoly-geo",
+    "user_id": "s17b90zzx0m9r8nyjpar9asf39884k6h"
+  },
+  "slug": "geo-hallucination-checker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/geo-hallucination-checker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=geo-hallucination-checker&ownerHandle=geoly-geo",
+    "page_url": "https://clawhub.ai/geoly-geo/skills/geo-hallucination-checker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 841,
+    "installs": 23,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Detect and annotate hallucinations, unsupported claims, fabricated studies, and incorrect conclusions in text so that AI only cites verifiable, trustworthy c...",
+  "updated_at": 1778491796228,
+  "version": "0.1.0"
+}
