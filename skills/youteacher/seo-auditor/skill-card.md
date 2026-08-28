@@ -1,6 +1,6 @@
 ## Description:
 
-SEO Auditor helps agents research keyword metrics, audit public webpages, compare a site's keyword gap with one competitor, and compile sourced findings and metrics into SEO audit reports using the ai-skills.open-idea.net service.
+SEO Auditor helps agents research keyword metrics, audit public web pages, compare a site against a competitor for keyword gaps, and assemble sourced SEO findings into an audit report using a dedicated API key.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-SEO practitioners, site owners, and agents use this skill to request keyword research, public page audits, competitor gap checks, and sourced SEO report summaries. It is intended for workflows that can send keywords, domains, public URLs, findings, and metrics to the external SEO Auditor service.
+Developers and SEO practitioners use this skill to run API-backed keyword research, public page audits, competitor gap analysis, and report generation while preserving sources and observation timestamps.
 
 ### Deployment Geography for Use:
 
@@ -22,45 +22,39 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill sends requested keywords, domains, public URLs, findings, and metrics to the external SEO Auditor service.
+Risk: The skill sends SEO queries, public URLs or domains, and billing activity to ai-skills.open-idea.net using SEO_AUDITOR_API_KEY.
 
-Mitigation: Install and use it only when that remote service use is acceptable for the SEO data being processed.
+Mitigation: Confirm the user trusts the service, keep the API key in the dedicated environment variable, do not paste or log full keys, and avoid overriding AI_SKILLS_API_URL unless the target service is controlled.
 
-Risk: The skill requires SEO_AUDITOR_API_KEY for authorization.
+Risk: Page audit inputs could be unsafe or outside the user's intended scope.
 
-Mitigation: Keep the key in the environment, do not paste it into chat, and do not write it into JSON, logs, evidence, or reports.
+Mitigation: Submit only user-specified public HTTP(S) URLs and rely on the platform checks that reject localhost, IP literals, unusual ports, private or reserved addresses, and DNS rebinding.
 
-Risk: The documentation is Chinese-only, which may increase operator misunderstanding for non-Chinese readers.
+Risk: SEO metrics and audit findings are time-bound evidence snapshots and may be incomplete or stale.
 
-Mitigation: Have a reader who understands the documentation review behavior, inputs, and limits before deployment.
-
-Risk: SEO metrics, rankings, and page findings are source-specific time slices and can be incomplete or outdated.
-
-Mitigation: Preserve source and observed_at values, distinguish evidence from analysis, and avoid presenting missing data as proof that no issue exists.
+Mitigation: Distinguish evidence from analysis, preserve source and observed_at fields, do not treat empty or partial results as proof that no issue exists, and obtain user confirmation before publishing reports or making SEO changes.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/youteacher/skills/seo-auditor)
-- [Publisher Profile](https://clawhub.ai/user/youteacher)
-- [SEO Auditor Service Homepage](https://ai-skills.open-idea.net)
+- [AI Skills Platform](https://ai-skills.open-idea.net)
 - [API Key Configuration](references/API-KEY.md)
 - [Operations Contract](references/OPERATIONS.md)
 - [HTTP Requests and Task Polling](references/HTTP-REQUESTS.md)
-- [Evidence, Safety, and Error Rules](references/BEHAVIOR-RULES.md)
+- [Evidence, Security, and Error Rules](references/BEHAVIOR-RULES.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration instructions, Guidance]
 
-**Output Format:** [Markdown or structured text with JSON request examples and shell command snippets]
+**Output Format:** [Markdown with inline JSON and shell command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Preserves source, observed_at, evidence_url, task status, and billing headers when returned by the service.]
+**Other Properties Related to Output:** [Outputs should preserve metric and finding sources, observation timestamps, and task status boundaries.]
 
 ## Skill Version(s):
 
-1.0.0 (source: release evidence, package metadata, and target metadata)
+1.2.1 (source: server evidence release.version and metadata.packageVersion)
 
 ## Ethical Considerations:
 
