@@ -1,6 +1,6 @@
 ## Description:
 
-Read a SchoolPass parent account directly with curl against the regional SchoolPass REST API for one-off terminal access to students, calendars, pickup changes, drivers, dismissal locations, and school information.
+schoolpass-curl helps authorized SchoolPass parent-account users read student, calendar, pickup-change, driver, dismissal-location, and school information from a regional SchoolPass REST API with curl.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to generate curl and jq guidance for direct, one-off SchoolPass parent-account API checks from a terminal. It is suited to reading account, student, dismissal-calendar, driver, pickup-change, and school information when the user intentionally provides SchoolPass credentials and school code.
+External authorized SchoolPass parent-account users and supporting developers use this skill for one-off terminal checks of SchoolPass students, dismissal calendars, pickup changes, authorized drivers, dismissal locations, and school information. The artifact also documents live POST and DELETE examples for dismissal or arrival changes, so those commands require explicit human confirmation before use.
 
 ### Deployment Geography for Use:
 
@@ -22,36 +22,32 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Live POST and DELETE examples can change student dismissal records.
+Risk: The skill handles SchoolPass credentials, bearer tokens, localStorage-derived school metadata, and student data.
 
-Mitigation: Require explicit human confirmation before running write or delete commands, and re-read the calendar afterward to verify the result.
+Mitigation: Use only authorized accounts, keep credentials and tokens out of shared transcripts, and avoid sharing localStorage screenshots or other sensitive session details.
 
-Risk: SchoolPass passwords, bearer tokens, and student data may be exposed in shared logs or transcripts.
+Risk: Although the skill is described primarily as read-oriented, the artifact includes POST and DELETE examples that can create or cancel live dismissal or arrival changes.
 
-Mitigation: Keep credentials in environment variables, do not echo passwords or bearer tokens, and redact student data before sharing output.
-
-Risk: Repeated failed login attempts can trigger SchoolPass reCAPTCHA or account challenge flows.
-
-Mitigation: Stop after a rejected login, correct credentials out of band, and retry only once the email, password, school code, and API host are confirmed.
+Mitigation: Require explicit human confirmation before running any POST or DELETE command, verify the student and date, and re-read the calendar afterward to confirm the result.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/chrischall/skills/schoolpass-curl)
 - [Ready-to-run requests](references/requests.md)
+- [ClawHub skill page](https://clawhub.ai/chrischall/skills/schoolpass-curl)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline bash and jq code blocks]
+**Output Format:** [Markdown with inline bash, curl, and jq command blocks]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include live SchoolPass API request examples that require user-provided credentials, bearer tokens, school codes, student IDs, and confirmation before write or delete operations.]
+**Other Properties Related to Output:** [Terminal-oriented guidance that depends on user-provided SchoolPass credentials, school code, API host, and explicit authorization for the target account and students.]
 
 ## Skill Version(s):
 
-0.2.0 (source: server release evidence)
+0.3.0 (source: server release metadata)
 
 ## Ethical Considerations:
 
