@@ -1,6 +1,6 @@
 ## Description:
 
-元析 yotta-recon helps agents perform authorized TCP port scanning, service identification, and version fingerprinting for security testing and asset inventory without relying on nmap.
+Yuanxi yotta-recon gives agents a zero-dependency network reconnaissance workflow for authorized port scanning, service identification, version fingerprinting, asset inventory, and Markdown or JSON reporting.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-Security testers, asset owners, and agent operators use this skill to inventory authorized targets, identify open ports and common services, and produce findings for follow-up review.
+Developers, security testers, and asset owners use this skill to let an agent check authorization, scan authorized targets, identify open ports and common services, and produce audit-friendly reconnaissance output before deeper security testing or inventory work.
 
 ### Deployment Geography for Use:
 
@@ -22,39 +22,41 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Unauthorized or overly broad scanning can create legal, operational, or trust risk.
+Risk: Unauthorized or overly broad scanning can create legal and operational risk.
 
-Mitigation: Run check-scope before scanning, prefer scope files for authorized ranges, and use --assume-authorized --yes only when the user has explicit authorization.
+Mitigation: Use scope files where possible, scan only targets the user controls or has permission to test, run check-scope before scan, and do not bypass DENY results.
 
-Risk: Read-only probes still contact target systems and may appear in logs or monitoring.
+Risk: Network reconnaissance can affect fragile targets if run too aggressively.
 
-Mitigation: Coordinate scans with the asset owner and tune concurrency, rate, and timeout settings to match the authorized test plan.
+Mitigation: Use bounded target lists, top or custom port selections, timeout settings, concurrency controls, and rate limiting for authorized environments.
 
-Risk: Version-based risk labels are fingerprint matches, not confirmed vulnerabilities.
+Risk: Version-based risk hints can be misleading when banners are spoofed, incomplete, or patched.
 
-Mitigation: Treat findings as triage signals and require human verification before remediation or escalation.
+Mitigation: Treat risk levels as triage hints and manually verify findings before concluding that a target is vulnerable or taking action.
+
+Risk: Global installation can add this scanning capability across multiple agent environments.
+
+Mitigation: Use the global installer only when intentionally enabling the skill broadly; otherwise install to a specific skill directory.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/yottameta/skills/yotta-recon)
-- [README](README.md)
-- [Scope Guard authorization discipline](references/scope-guard.md)
-- [Service and version fingerprints](references/service-fingerprints.md)
-- [Protocol probes](references/protocol-probes.md)
+- [Scope Guard Authorization Discipline](references/scope-guard.md)
+- [Service and Version Fingerprints](references/service-fingerprints.md)
+- [Protocol Probe Notes](references/protocol-probes.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, shell commands, configuration, guidance]
+**Output Type(s):** [text, markdown, json, shell commands, guidance]
 
-**Output Format:** [Agent guidance plus CLI output in plain text, JSON, or Markdown report files.]
+**Output Format:** [Markdown guidance with inline shell commands; scanner outputs plain text tables, JSON, or Markdown reports.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Scan results can include scan_id, timestamp, targets, authorization source, open ports, service and version fingerprints, and risk labels that require human verification.]
+**Other Properties Related to Output:** [Requires authorized target scope before scanning; generated reports include scan_id, timestamp, targets, and authorization source.]
 
 ## Skill Version(s):
 
-0.1.3 (source: SKILL.md frontmatter, package.json, CHANGELOG, and server release evidence)
+0.1.4 (source: SKILL.md frontmatter, package.json, CHANGELOG.md, ClawHub release metadata)
 
 ## Ethical Considerations:
 
