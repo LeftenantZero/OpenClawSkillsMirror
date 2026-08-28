@@ -1,6 +1,6 @@
 ## Description:
 
-This skill helps an agent use a Kia Access MCP server to read vehicle status, location, EV charge state, and perform confirm-gated door, climate, and charging commands through the user's Kia Owners account.
+Helps an agent use a user's Kia Access or Kia Owners account to check vehicle status, location, EV charge, and run confirm-gated lock, climate, and charging commands.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to connect an agent to their own Kia Access account for vehicle status checks, EV charging information, location lookup, and explicitly confirmed remote vehicle commands.
+External users and their agents use this skill to read Kia account vehicle information and perform explicit, confirm-gated vehicle commands for the user's own enrolled Kia vehicle.
 
 ### Deployment Geography for Use:
 
@@ -22,36 +22,41 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The MCP server can access Kia account data, locally persisted sessions, vehicle status, and vehicle location.
+Risk: The skill can access sensitive Kia account and vehicle data and can run commands that affect a real vehicle.
 
-Mitigation: Install only when that access is acceptable, protect Kia credentials and refresh tokens, and avoid sharing session material in conversations or logs.
+Mitigation: Install only when this access is intended; use KIA_WRITE_MODE=none for read-only use, keep the default or stricter mode unless commands are needed, and use all only when confirm-gated door lock and unlock authority is acceptable.
 
-Risk: Remote commands can affect a real vehicle, including unlocking doors, climate control, and charging behavior.
+Risk: The Kia password and exported refresh token can provide broad account access or bypass MFA.
 
-Mitigation: Use KIA_WRITE_MODE=none for read-only access unless commands are needed, and require explicit user confirmation before any vehicle command.
+Mitigation: Treat KIA_PASSWORD, KIA_RMTOKEN, and session identifiers as full account credentials and do not echo them into conversations or logs.
 
-Risk: A command accepted by Kia may not mean the vehicle actually changed state, and cached reads can be stale.
+Risk: Vehicle commands may be accepted by Kia without the vehicle state being confirmed immediately.
 
-Mitigation: Report accepted commands separately from confirmed state, refresh or re-read vehicle status when freshness matters, and avoid describing dry runs as completed actions.
+Mitigation: Require confirm: true for command execution, distinguish dry runs from real commands, and verify important state changes with a follow-up vehicle status read.
+
+Risk: Vehicle status and location can be stale or privacy-sensitive.
+
+Mitigation: Describe location as last reported rather than live, and refresh then re-read status when freshness matters.
 
 ## Reference(s):
 
-- [npm package: kiaaccess-mcp](https://www.npmjs.com/package/kiaaccess-mcp)
-- [Source repository listed by skill](https://github.com/chrischall/kiaaccess-mcp)
+- [ClawHub skill page](https://clawhub.ai/chrischall/skills/kiaaccess)
+- [kiaaccess-mcp npm package](https://www.npmjs.com/package/kiaaccess-mcp)
+- [kiaaccess-mcp repository](https://github.com/chrischall/kiaaccess-mcp)
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, configuration, API calls]
+**Output Type(s):** [Guidance, Shell commands, Configuration]
 
-**Output Format:** [Markdown with JSON configuration examples and tool-use guidance]
+**Output Format:** [Markdown with JSON configuration snippets and tool-use guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include dry-run previews and requires explicit user confirmation before vehicle commands.]
+**Other Properties Related to Output:** [Requires Kia account credentials; command tools are controlled by KIA_WRITE_MODE and explicit confirmation.]
 
 ## Skill Version(s):
 
-0.6.1 (source: server release evidence)
+0.6.2 (source: server release evidence)
 
 ## Ethical Considerations:
 
