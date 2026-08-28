@@ -1,6 +1,6 @@
 ## Description:
 
-Uyghur AI helps agents translate between Chinese and Uyghur, answer and write in Uyghur, and translate extractable text from DOCX or PDF documents using the configured AI Skills API key.
+Helps agents translate between Chinese and Uyghur, handle Uyghur chat and writing tasks, and translate extractable text from DOCX or PDF files through the AI Skills platform.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill for Chinese-Uyghur translation, Uyghur-language question answering, writing, rewriting, summarization, and DOCX/PDF text-layer translation through the AI Skills service.
+External users and developers use this skill when an agent needs Chinese-Uyghur translation, Uyghur question answering, Uyghur writing assistance, or text-layer DOCX/PDF translation. It is suited to day-to-day text, document processing, and Uyghur-language communication workflows that can use the configured API service.
 
 ### Deployment Geography for Use:
 
@@ -22,43 +22,44 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Selected text or documents are sent to the remote AI Skills API.
+Risk: Translation text, chat messages, and selected DOCX/PDF text are sent to the AI Skills platform.
 
-Mitigation: Confirm user consent before uploading files or sensitive long text, and upload only the content needed for the request.
+Mitigation: Use the skill only for content approved for that external service, and avoid confidential, regulated, or personal documents unless provider data-handling terms have been reviewed.
 
-Risk: The skill depends on an API key for authentication.
+Risk: The API key can authorize billable service calls if exposed.
 
-Mitigation: Keep UYGHUR_AI_SKILL_API_KEY out of chats, logs, code, filenames, and user-visible error details.
+Mitigation: Store the key only in UYGHUR_AI_SKILL_API_KEY and keep it out of chats, source code, logs, filenames, and error messages.
 
-Risk: Document translation handles extracted DOCX/PDF text and does not preserve original layout or OCR scanned PDFs.
+Risk: PDF and DOCX translation depends on extractable text and does not perform OCR.
 
-Mitigation: Tell users that document output is translated extracted text, and request copyable text or a text-layer file when extraction fails.
+Mitigation: Ask users for copyable text or a document with a text layer when extraction fails, and do not retry indefinitely.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/youteacher/skills/uyghur-ai)
-- [AI Skills service homepage](https://ai-skills.open-idea.net)
-- [API Key Configuration](artifact/references/API-KEY.md)
-- [Interface Routing](artifact/references/INTERFACE-ROUTING.md)
-- [Text Translation](artifact/references/TRANSLATION.md)
-- [Chat Completions](artifact/references/CHAT-COMPLETIONS.md)
-- [Document Translation](artifact/references/DOCUMENT-TRANSLATION.md)
-- [HTTP Request Examples](artifact/references/HTTP-REQUESTS.md)
-- [Behavior, Errors, and Retry Rules](artifact/references/BEHAVIOR-RULES.md)
+- [Publisher profile](https://clawhub.ai/user/youteacher)
+- [AI Skills platform](https://ai-skills.open-idea.net)
+- [API key configuration](https://ai-skills.open-idea.net/skill-docs/uyghur-ai/API-KEY.md)
+- [Interface routing](https://ai-skills.open-idea.net/skill-docs/uyghur-ai/INTERFACE-ROUTING.md)
+- [Text translation](https://ai-skills.open-idea.net/skill-docs/uyghur-ai/TRANSLATION.md)
+- [Chat completions](https://ai-skills.open-idea.net/skill-docs/uyghur-ai/CHAT-COMPLETIONS.md)
+- [Document translation](https://ai-skills.open-idea.net/skill-docs/uyghur-ai/DOCUMENT-TRANSLATION.md)
+- [HTTP request examples](https://ai-skills.open-idea.net/skill-docs/uyghur-ai/HTTP-REQUESTS.md)
+- [Behavior, errors, and retry rules](https://ai-skills.open-idea.net/skill-docs/uyghur-ai/BEHAVIOR-RULES.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Plain text or Markdown; setup guidance may include shell command blocks.]
+**Output Format:** [Markdown or plain text with API request examples and configuration commands]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires UYGHUR_AI_SKILL_API_KEY and may send selected text or documents to the remote AI Skills API.]
+**Other Properties Related to Output:** [Requires UYGHUR_AI_SKILL_API_KEY; may call translation, chat completion, DOCX translation, and PDF translation endpoints.]
 
 ## Skill Version(s):
 
-1.2.0 (source: release evidence and package metadata)
+1.4.1 (source: evidence release version and packageVersion metadata)
 
 ## Ethical Considerations:
 
