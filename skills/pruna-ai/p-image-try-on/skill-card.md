@@ -1,45 +1,58 @@
-## Description: <br>
-Use when someone wants virtual try-on: dress a person in clothes from reference photos for fashion or ecommerce. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+Use when someone wants virtual try-on -- dress a person in clothes from reference photos for fashion or ecommerce.
 
-## Publisher: <br>
-[pruna-ai](https://clawhub.ai/user/pruna-ai) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[pruna-ai](https://clawhub.ai/user/pruna-ai)
 
-## Use Case: <br>
-External users and developers use this skill to guide Pruna virtual try-on jobs that place supplied garment references onto a supplied person image for fashion or ecommerce workflows. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: Person, garment, and optional pose images may be uploaded to Pruna's API. <br>
-Mitigation: Use images you have rights and consent to process, avoid sensitive content, and confirm that Pruna API processing is appropriate for the use case. <br>
-Risk: API calls require PRUNA_API_KEY and may incur per-generation costs. <br>
-Mitigation: Confirm credentials, input images, garment count, and documented pricing before making paid generation requests. <br>
+## Use Case:
 
+Developers and agents use this skill to guide virtual try-on requests that place garments from reference photos onto a provided person image for fashion or ecommerce workflows.
 
-## Reference(s): <br>
-- [ClawHub skill page](https://clawhub.ai/pruna-ai/skills/p-image-try-on) <br>
-- [Editorial seated and artistic shirt example](https://replicate.com/p/p47vaj1f91rmw0cyt4er0z2zd4) <br>
-- [Complex collaged suit example](https://replicate.com/p/tf7gqansnnrmt0cyt4j8mpx1c8) <br>
-- [Mirror selfie and logo tee example](https://replicate.com/p/hp60wyj355rmy0cyt4psnc2mh0) <br>
-- [Multi-garment streetwear stack example](https://replicate.com/p/bak21xr79srmr0cyt52tap1nw8) <br>
-- [Pleated blouse golden-hour portrait example](https://replicate.com/p/g9hd22x26drmr0cytmtsx11c5g) <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [guidance, shell commands, configuration] <br>
-**Output Format:** [Markdown with inline JSON and bash code blocks] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [Produces Pruna API request guidance, prompt-disambiguation guidance, pricing notes, and upload/create/poll workflow commands.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-1.0.9 (source: server evidence and SKILL.md metadata) <br>
+Risk: The skill sends person photos, garment images, pose references, and prompts to Pruna's external API for processing.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Confirm the user has rights and consent to upload the images, avoid sensitive or regulated photos, and proceed only when the remote-service data flow is acceptable.
+
+Risk: The skill recommends prerequisite skill installation commands before generation.
+
+Mitigation: Review the related Pruna prerequisite skills and the suggested npx installs before allowing them in an agent environment.
+
+## Reference(s):
+
+- [ClawHub skill page](https://clawhub.ai/pruna-ai/skills/p-image-try-on)
+- [Editorial seated + artistic shirt reference output](https://replicate.com/p/p47vaj1f91rmw0cyt4er0z2zd4)
+- [Complex collaged suit reference output](https://replicate.com/p/tf7gqansnnrmt0cyt4j8mpx1c8)
+- [Mirror selfie + cap + logo tee reference output](https://replicate.com/p/hp60wyj355rmy0cyt4psnc2mh0)
+- [Multi-garment streetwear stack reference output](https://replicate.com/p/bak21xr79srmr0cyt52tap1nw8)
+- [Pleated blouse, golden-hour portrait reference output](https://replicate.com/p/g9hd22x26drmr0cytmtsx11c5g)
+
+## Skill Output:
+
+**Output Type(s):** [guidance, shell commands, configuration]
+
+**Output Format:** [Markdown with inline bash and JSON examples]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [Guidance covers required image URLs, optional try-on parameters, prompt disambiguation, upload/create calls, and follow-on skill choices.]
+
+## Skill Version(s):
+
+1.0.10 (source: server release metadata, SKILL.md metadata)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
