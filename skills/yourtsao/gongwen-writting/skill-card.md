@@ -1,6 +1,6 @@
 ## Description:
 
-Helps agents draft Chinese government and enterprise official documents across 38 document types using guided templates, server-provided writing frameworks, and GB/T 9704 formatting guidance.
+秘书材料星公文写作-妙笔skill helps office, administrative, secretary, and materials-writing staff draft and revise Chinese official documents across 38 document types using template-guided Q&A, online writing knowledge retrieval, GB/T 9704 formatting guidance, and placeholder marking for missing facts.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Office staff, administrative teams, and agents use this skill to draft, revise structure, and format official Chinese administrative documents such as requests, reports, notices, meeting minutes, speeches, summaries, and plans. The skill gathers missing inputs, retrieves document-specific templates and writing frameworks from its service, and marks unknown facts rather than fabricating them.
+Employees and external users in office, administrative, secretary, and materials-writing roles use this skill to turn document requirements, meeting notes, research material, or rough drafts into structured Chinese official documents and reports. The skill supports drafting, rewriting, polishing, shortening, expanding, title optimization, structure adjustment, tone alignment, content review, and GB/T 9704 Word-format guidance.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill stores a user email and service token locally in config.json after registration.
+Risk: The skill sends registration email, document request text, and payment or order data to a third-party gateway.
 
-Mitigation: Use a dedicated email where appropriate, avoid sharing the machine with untrusted users, and verify that the agent platform can protect or clear stored config.json credentials.
+Mitigation: Use it only with material your organization permits sharing with that third-party service, and avoid confidential, regulated, or sensitive internal content unless approved.
 
-Risk: Draft requests and document context are sent to the third-party service at gongwen-api.xyz.
+Risk: The skill stores an account token locally in config.json.
 
-Mitigation: Do not send confidential or sensitive drafts unless the user trusts the service and its handling of submitted content.
+Mitigation: Protect the skill directory and do not expose USER_TOKEN in conversations, logs, screenshots, or shared artifacts.
 
-Risk: Broad trigger behavior and paid-service flows can consume quota or prompt payment during normal document-drafting interactions.
+Risk: External API responses influence the generated document workflow.
 
-Mitigation: Review quota prompts before continuing, confirm payment intent explicitly, and monitor remaining free or paid usage.
+Mitigation: Review generated drafts before use and verify facts, formatting, policy claims, dates, names, and numbers against source materials.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/yourtsao/skills/gongwen-writting)
 - [Publisher profile](https://clawhub.ai/user/yourtsao)
 - [Word export guide](artifact/references/word-export.md)
+- [Configured gateway](https://gongwen-api.xyz)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown or plain text official-document drafts, with optional Word/docx formatting guidance]
+**Output Format:** [Markdown prose with optional Python snippets, shell setup commands, configuration updates, and docx formatting guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May store user email and service token in local config.json after registration; generated drafts can include placeholder markers for missing facts.]
+**Other Properties Related to Output:** [May require email registration, network access to the publisher gateway, quota tokens, and local config.json updates; missing facts are marked with 待补 placeholders.]
 
 ## Skill Version(s):
 
-1.0.42 (source: server release metadata)
+1.0.62 (source: server release metadata and frontmatter)
 
 ## Ethical Considerations:
 
