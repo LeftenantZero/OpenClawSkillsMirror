@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External Bilibili creators, channel teams, and agents use this skill to plan, generate, compose, or refine one video thumbnail or cover image from a topic, title, script, key frame, portrait, product photo, reference image, or accepted draft. The workflow confirms the prompt, canvas, model, image order, controls, and count before a paid Beatra generation call.
+External Bilibili creators and channel teams use this skill to create or refine one video thumbnail from a topic, title, script, key frame, portrait, product photo, reference image, or accepted draft. It guides prompt preparation, paid Beatra image generation, result review, and delivery of artifact links with billing and task details.
 
 ### Deployment Geography for Use:
 
@@ -22,24 +22,26 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uses a shared Beatra Device Token with broad media, task, artifact, and wallet-spend scopes.
+Risk: The skill uses a shared Beatra device credential with broad media, task, artifact, and spending-related authority.
 
-Mitigation: Install only when that shared authorization is acceptable, keep the token private under ~/.beatra, and use the bundled authorization or uninstall scripts rather than copying or deleting credential files manually.
+Mitigation: Install only after reviewing that authority, keep credentials under ~/.beatra, and reconnect with scripts/authorize.py --force only after an explicit user decision.
 
-Risk: Default-on silent package updates can replace package-owned files after installation.
+Risk: Silent self-updates are enabled by default for the bundled Beatra client.
 
-Mitigation: Disable automatic updates with python3 scripts/mcp_client.py update --auto off, or use the bundled update check before allowing a replacement.
+Mitigation: Run `python3 scripts/mcp_client.py update --auto off` before use to disable silent update checks, or use `python3 scripts/mcp_client.py update --check` for a manual version check.
 
-Risk: Paid image requests can spend Beatra credits, and changed retries can create new paid work.
+Risk: First use registers package, version, platform, and installation data with Beatra.
 
-Mitigation: Freeze the prompt, canvas, image order, model, controls, and count before submission, and reuse a client_request_id only for an identical recovery retry.
+Mitigation: Review the registration behavior before installation; registration failures should not block the requested creative task.
 
-Risk: Selected images and limited installation or platform metadata are sent to Beatra during use.
+Risk: Generation requests consume Beatra credits and duplicate submissions can create additional paid work.
 
-Mitigation: Use only images the user is comfortable uploading and avoid including sensitive content in prompts or source images.
+Mitigation: Freeze the prompt, canvas, image order, model, controls, and count before approval; submit once with a stable client_request_id and retry only an identical payload with the same request identity after transport uncertainty.
 
 ## Reference(s):
 
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/bilibili-thumbnail-maker)
+- [Beatra package homepage](https://beatra.ai/skills/bilibili-thumbnail-maker)
 - [Workflow](references/workflow.md)
 - [Installation and authentication](references/installation-and-auth.md)
 - [MCP connection](references/mcp-connection.md)
@@ -47,22 +49,20 @@ Mitigation: Use only images the user is comfortable uploading and avoid includin
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
 - [Uninstall and disconnect](references/uninstall-and-disconnect.md)
-- [ClawHub skill listing](https://clawhub.ai/beatra-ai/skills/bilibili-thumbnail-maker)
-- [Beatra skill homepage](https://beatra.ai/skills/bilibili-thumbnail-maker)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Shell commands, Configuration instructions, API Calls, Files]
+**Output Type(s):** [Guidance, Shell commands, Files]
 
-**Output Format:** [Markdown guidance with inline shell commands and JSON request bodies; successful runs return Beatra task and artifact details.]
+**Output Format:** [Markdown guidance with inline shell commands and generated image artifact links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May create paid Beatra image generation, transform, or edit tasks and return artifact links, dimensions, task ID, resolved model, and billing.net_charged_credits.]
+**Other Properties Related to Output:** [May include task IDs, observed dimensions, resolved model, billing.net_charged_credits, and one focused unexecuted refinement suggestion.]
 
 ## Skill Version(s):
 
-0.1.1 (source: server release evidence and manifest.json)
+0.1.3 (source: server release evidence and manifest.json)
 
 ## Ethical Considerations:
 
