@@ -1,6 +1,6 @@
 ## Description:
 
-SkillGuard helps users audit third-party Agent Skills, SKILL.md files, and install-time security risks involving prompt injection, sensitive data, dangerous commands, and supply-chain concerns.
+SkillGuard audits third-party Agent Skill materials before installation to identify prompt injection, sensitive data exposure, dangerous commands, and supply-chain risks.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and engineers use this skill before installing or trusting third-party Agent Skills to submit selected, redacted skill files for remote security analysis and review the returned verdict, risk level, findings, and next actions.
+Developers and agents use SkillGuard before installing or enabling third-party skills to submit selected, redacted skill files for an API-based safety review and decide whether to pass, review, or block.
 
 ### Deployment Geography for Use:
 
@@ -22,40 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Selected skill text and file contents are uploaded to the SkillGuard service for analysis and may include sensitive information if users submit raw files.
+Risk: Selected skill materials are sent to the SkillGuard service for assessment.
 
-Mitigation: Redact API keys, tokens, cookies, private keys, database passwords, personal information, and private repository credentials before submitting audit input.
+Mitigation: Redact secrets, credentials, private repository data, and personal information before auditing, and limit submissions to files needed for the review.
 
-Risk: Remote analysis may incur usage-based billing when LLM evaluation is used.
+Risk: A clean or pass result reduces risk but does not prove a third-party skill is safe.
 
-Mitigation: Review billing headers and usage fields, and do not assume a fixed price for audits.
+Mitigation: Treat review, block, timeout, empty, truncated, or malformed responses as stop conditions and require human judgment before installation.
 
-Risk: Incomplete, missing, or non-pass audit responses can leave installation risk unresolved.
+Risk: The SkillGuard API key can grant access to the paid audit service if exposed.
 
-Mitigation: Proceed with automatic installation only when the response is complete, parseable, and returns a pass verdict; fail closed on review, block, timeout, empty response, or missing fields.
+Mitigation: Store the key in SKILLGUARD_API_KEY, avoid pasting it into chat, and do not write it into audited source, logs, or reports.
 
 ## Reference(s):
 
-- [SkillGuard homepage](https://ai-skills.open-idea.net)
-- [ClawHub skill listing](https://clawhub.ai/youteacher/skills/skillguard)
-- [API Key configuration](https://github.com/YouTeacher/ai-skills-platform/blob/main/openclaw/skillguard/references/API-KEY.md)
-- [Audit workflow](https://github.com/YouTeacher/ai-skills-platform/blob/main/openclaw/skillguard/references/AUDIT-WORKFLOW.md)
-- [HTTP requests and responses](https://github.com/YouTeacher/ai-skills-platform/blob/main/openclaw/skillguard/references/HTTP-REQUESTS.md)
-- [Behavior, errors, and decision rules](https://github.com/YouTeacher/ai-skills-platform/blob/main/openclaw/skillguard/references/BEHAVIOR-RULES.md)
+- [SkillGuard ClawHub Listing](https://clawhub.ai/youteacher/skills/skillguard)
+- [AI Skills Platform](https://ai-skills.open-idea.net)
+- [API Key Configuration](https://ai-skills.open-idea.net/skill-docs/skillguard/API-KEY.md)
+- [Audit Workflow](https://ai-skills.open-idea.net/skill-docs/skillguard/AUDIT-WORKFLOW.md)
+- [HTTP Requests and Responses](https://ai-skills.open-idea.net/skill-docs/skillguard/HTTP-REQUESTS.md)
+- [Behavior, Errors, and Decision Rules](https://ai-skills.open-idea.net/skill-docs/skillguard/BEHAVIOR-RULES.md)
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, shell commands, configuration, API calls, text]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline shell commands and JSON-oriented API guidance]
+**Output Format:** [Markdown guidance with shell command and JSON examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Summarizes verdict, risk level, findings, next actions, and billing headers without reprinting full source files or secrets.]
+**Other Properties Related to Output:** [Requires SKILLGUARD_API_KEY; audit requests should include only the selected skill materials needed for assessment.]
 
 ## Skill Version(s):
 
-1.2.0 (source: server release metadata and packageVersion metadata)
+1.4.1 (source: server release evidence and packageVersion metadata)
 
 ## Ethical Considerations:
 
