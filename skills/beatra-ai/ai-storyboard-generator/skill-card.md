@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Creative teams, marketers, filmmakers, animators, and agent users use this skill to turn scripts, scenes, and ad briefs into reviewable shot plans. After user approval, it can help create one to four storyboard key frames through Beatra image-generation tasks.
+Creators, producers, designers, and developers use this skill to turn scripts, scene outlines, and advertising briefs into reviewable storyboard shot lists and a small set of approved key-frame images before production.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,44 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The release security summary says the skill uses a broad reusable Beatra device credential.
+Risk: The package uses a shared full-scope Beatra device authorization and local ~/.beatra state.
 
-Mitigation: Use the bundled authorization flow, keep the token only in the private credential file, never expose it in chat, logs, arguments, or environment variables, and revoke the device from the Beatra Console or uninstall flow when access is no longer needed.
+Mitigation: Install only when that authorization posture is acceptable, keep the credential file private, and use the documented uninstall or Beatra Console revocation flow when disconnecting.
 
-Risk: The release security summary says the bundled client silently self-updates local package code by default.
+Risk: Silent package updates are enabled by default.
 
-Mitigation: Review the automatic update behavior before install, use the provided update command to disable automatic checks when appropriate, and rely on the documented verification of discovery data, archives, manifests, and packaged files.
+Mitigation: Disable automatic updates with the documented update command when review-before-change behavior is required.
 
-Risk: Storyboard key-frame generation can create paid Beatra tasks and duplicate charges if recovery is handled incorrectly.
+Risk: Key-frame generation is paid work and duplicate submissions can create duplicate tasks or charges.
 
-Mitigation: Freeze the approved payload before submission, use one stable client request ID per paid key frame, do not resubmit queued or running tasks, and retry uncertain submissions only with the identical request identity and arguments.
+Mitigation: Use the required approval step, submit each approved shot once with a stable client_request_id, and recover uncertain results by polling or retrying only the identical request.
 
 ## Reference(s):
 
-- [ClawHub listing](https://clawhub.ai/beatra-ai/skills/ai-storyboard-generator)
-- [Beatra skill homepage](https://beatra.ai/skills/ai-storyboard-generator)
+- [ClawHub Skill Page](https://clawhub.ai/beatra-ai/skills/ai-storyboard-generator)
+- [Beatra Skill Homepage](https://beatra.ai/skills/ai-storyboard-generator)
 - [Storyboard planning and key frames](references/workflow.md)
 - [Installation and authentication](references/installation-and-auth.md)
+- [Installation registration](references/installation-registration.md)
 - [Tasks and results](references/tasks-and-results.md)
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
+- [MCP connection](references/mcp-connection.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
 - [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with structured shot lists, prompts, command examples, and returned artifact summaries]
+**Output Format:** [Markdown shot lists, frame prompts, approval plans, shell commands, and returned artifact details]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include Beatra task IDs, resolved model details, dimensions, format, usage, and billed credits when returned by the task API.]
+**Other Properties Related to Output:** [May include one to four generated storyboard key-frame artifacts after user approval and paid Beatra image tasks.]
 
 ## Skill Version(s):
 
-0.1.4 (source: server release evidence and manifest)
+0.1.6 (source: server release metadata and manifest.json)
 
 ## Ethical Considerations:
 
