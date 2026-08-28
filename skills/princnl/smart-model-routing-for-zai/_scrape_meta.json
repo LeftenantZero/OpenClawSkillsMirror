@@ -1,0 +1,33 @@
+{
+  "changelog": "smart-model-routing-for-zai 1.0.0 introduces an auto-escalating model-routing strategy for cost-effective, accurate task processing on z.ai (GLM):\n\n- Implements three-tier task routing: Flash \u2192 Standard \u2192 Plus/32B, starting with the cheapest model and escalating only when needed.\n- Clear rules and decision trees guide when to escalate tasks based on task complexity and required reasoning.\n- Provides detailed examples and quick-reference guides for selecting the correct model tier.\n- Aims to minimize API costs while ensuring correct and efficient responses for a wide range of user tasks.",
+  "created_at": 1770605733241,
+  "display_name": "Smart Model Routing for Z.AI",
+  "fetched_at": 1787906549829,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "T",
+    "handle": "princnl",
+    "user_id": "s17c1nnhfcmk2s706chpxkqc6183hb63"
+  },
+  "slug": "smart-model-routing-for-zai",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/smart-model-routing-for-zai",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=smart-model-routing-for-zai&ownerHandle=princnl",
+    "page_url": "https://clawhub.ai/princnl/skills/smart-model-routing-for-zai"
+  },
+  "stats": {
+    "comments": 2,
+    "downloads": 1994,
+    "installs": 65,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Auto-route tasks to the cheapest z.ai (GLM) model that works correctly. Three-tier progression: Flash \u2192 Standard \u2192 Plus/32B. Classify before responding.\nFLASH (default): factual Q&A, greetings, reminders, status checks, lookups, simple file ops, heartbeats, casual chat, 1\u20132 sentence tasks, cron jobs.\nESCALATE TO STANDARD: code >10 lines, analysis, comparisons, planning, reports, multi-step reasoning, tables, long writing >3 paragraphs, summarization, research synthesis, most user conversations.\nESCALATE TO PLUS/32B: architecture decisions, complex debugging, multi-file refactoring, strategic planning, nuanced judgment, deep research, critical production decisions.\nRule: If a human needs >30 seconds of focused thinking, escalate. If Standard struggles with complexity, go to Plus/32B. Save major API costs by starting cheap and escalating only when needed.",
+  "updated_at": 1778486092879,
+  "version": "1.0.0"
+}
