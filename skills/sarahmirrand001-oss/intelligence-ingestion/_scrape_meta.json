@@ -1,0 +1,47 @@
+{
+  "changelog": "Security Update: v2.0.2 (Removing Browser Session Dependencies)\n\n- SECURITY FIX: Completely removed browser-based extraction fallbacks to resolve VirusTotal 'Suspicious' flag. The Skill no longer requests or interacts with the user's Chrome session state/cookies. \n- X/Twitter Extraction Degration Chain optimized: Now strictly relies on OpenClaw's native `xurl` tool (if authenticated) -> Web Search cache -> User manual paste. \n- 100% Sandbox Compliance: The Skill is now fully Benign, acting purely as a local intelligence pipeline leveraging only Obsidian write access and sanitized HTTP requests.\n\n\"Skills are the new Config. Build. For. Agents.\"",
+  "created_at": 1772098735558,
+  "display_name": "Intelligence Ingestion",
+  "fetched_at": 1787941210539,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "STRATEGIC_LANDSCAPE.template.md",
+    "_meta.json",
+    "config.example.json",
+    "manifest.json",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779961793961,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "KELIHAO",
+    "handle": "sarahmirrand001-oss",
+    "user_id": "s17eapcgn3tsvbsbk5ks616j75884v7n"
+  },
+  "slug": "intelligence-ingestion",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/intelligence-ingestion",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=intelligence-ingestion&ownerHandle=sarahmirrand001-oss",
+    "page_url": "https://clawhub.ai/sarahmirrand001-oss/skills/intelligence-ingestion"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1152,
+    "installs": 31,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Analyze and evaluate URLs, links, articles, tweets, and external info sources for strategic value. NOT a summarizer \u2014 this skill classifies, scores importanc...",
+  "updated_at": 1778491649051,
+  "version": "2.0.2"
+}
