@@ -1,0 +1,39 @@
+{
+  "changelog": "Security hardening: removed shell=True execution in poll_daemon callback flow to eliminate shell-injection risk. --on-events is now parsed with shlex and executed in safe argv mode (shell disabled), with input validation for malformed commands. Documentation updated to clarify safe callback semantics and unsupported shell operators.",
+  "created_at": 1771256350897,
+  "display_name": "Thrd Skill",
+  "fetched_at": 1787901001752,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api.md",
+    "requirements.txt",
+    "scripts/checkout.py",
+    "scripts/onboard.py",
+    "scripts/openapi_sync.py",
+    "scripts/poll_daemon.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Thrd.",
+    "handle": "sergiorico1",
+    "user_id": "s178verkv16na4xy0aqyk7j4fh83gf3n"
+  },
+  "slug": "thrd-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/thrd-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=thrd-skill&ownerHandle=sergiorico1",
+    "page_url": "https://clawhub.ai/sergiorico1/skills/thrd-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1242,
+    "installs": 36,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Provision a dedicated inbox for your AI agent and manage email safely via thrd.email. Includes instant onboarding, inbound polling, reply/send (idempotent +...",
+  "updated_at": 1778491556797,
+  "version": "1.2.7"
+}
