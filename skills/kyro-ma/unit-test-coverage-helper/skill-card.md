@@ -1,6 +1,6 @@
 ## Description:
 
-Helps software teams add useful unit tests, raise coverage, and validate changes with practical workflows, checklists, analysis, code changes, and verification guidance.
+Helps maintainers, QA engineers, contributors, and product teams add useful unit tests, raise coverage, and verify changes against existing behavior.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, QA engineers, maintainers, open-source contributors, and product teams use this skill to plan or implement unit tests, improve test coverage, and check that code changes preserve expected behavior.
+Developers, QA engineers, software maintainers, open-source contributors, and product teams use this skill to create practical test plans, add targeted unit tests, improve coverage, and document verification steps for existing codebases.
 
 ### Deployment Geography for Use:
 
@@ -22,34 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill may activate for broad testing or quality-related requests where the user did not intend to use a unit-test workflow helper.
+Risk: The skill may be selected automatically for broad testing or code-quality requests.
 
-Mitigation: Invoke it intentionally for unit test or coverage work, and review generated test plans, code changes, and verification commands before applying them.
+Mitigation: Review routing and implicit invocation settings before deployment to ensure they match the workspace's intended testing workflow.
 
-Risk: Generated tests or coverage plans can miss project-specific behavior or encode incorrect assumptions.
+Risk: Generated test plans, code changes, or verification commands may be incomplete or incorrect for a specific codebase.
 
-Mitigation: Validate outputs against the repository's existing test conventions, run the suggested verification commands, and keep assumptions and remaining risks visible in the final response.
+Mitigation: Review proposed changes locally and run the relevant project test commands before accepting the output.
 
 ## Reference(s):
 
+- [ClawHub Skill Page](https://clawhub.ai/kyro-ma/skills/unit-test-coverage-helper)
 - [Requirement Plan](references/requirement-plan.md)
-- [Writing Great Unit Tests: Best and Worst Practices](https://segmentfault.com/a/1190000009709754)
+- [Coding Agents killed my identity. How do you feel?](https://news.ycombinator.com/item?id=49389408)
+- [Roadmap: Summernote Bricks v3 ecosystem](https://github.com/eissasoubhi/summernote-bricks/issues/3)
+- [Runner: handle Epic Issues correctly](https://github.com/xqliu/muyan-pilot/issues/93)
 - [We had a unit test once which only failed on Sundays](https://qntm.org/unit)
-- [Spend Missing Merchant regression issue](https://github.com/Expensify/App/issues/99500)
+- [Unit tests for CJK language detection](https://github.com/Ganesh-403/semantic-plagiarism-detector/issues/3699)
+- [Phase 8: Unit tests for OptimizedImage](https://github.com/Soroban-Cookbook/Soroban_Cookbook_online/issues/619)
+- [Writing Great Unit Tests: Best and Worst Practices](https://segmentfault.com/a/1190000009709754)
+- [Android automation testing with UiAutomator](https://segmentfault.com/a/1190000045114982)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with optional code blocks, shell commands, checklists, and verification notes]
+**Output Format:** [Markdown with checklists, implementation guidance, code snippets, and verification commands as needed]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Prompt-only helper; outputs should state assumptions, limits, required inputs, checks performed, and remaining follow-up work when relevant.]
+**Other Properties Related to Output:** [May produce tailored artifacts, reusable workflows, and concise verification notes.]
 
 ## Skill Version(s):
 
-0.20260826.40329 (source: release evidence)
+0.20260828.40337 (source: server release metadata)
 
 ## Ethical Considerations:
 

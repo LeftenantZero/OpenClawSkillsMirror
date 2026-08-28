@@ -33,17 +33,17 @@ Scoring rationale:
 ## Evidence
 
 - hacker-news-search (2026-08-21T15:15:14+00:00): [Coding Agents killed my identity. How do you feel?](https://news.ycombinator.com/item?id=49389408)
-- github-issues (2026-08-26T03:48:59+00:00): [Spend -"Missing Merchant" error displayed after submitting split to employer via "More" menu](https://github.com/Expensify/App/issues/99500)
+- github-issues (2026-08-18T00:22:10+00:00): [Roadmap: Summernote Bricks v3 ecosystem](https://github.com/eissasoubhi/summernote-bricks/issues/3)
+- github-issues (2026-08-26T12:32:06+00:00): [Runner：识别并正确处理 Epic Issue，避免一次 run 承担多个交付项](https://github.com/xqliu/muyan-pilot/issues/93)
 - hacker-news-search (2026-08-25T13:35:21+00:00): [We had a unit test once which only failed on Sundays (2015)](https://qntm.org/unit)
-- segmentfault-search (2026-08-26T04:03:53.299204+00:00): [HarmonyOS 开发者社区](https://segmentfault.com/brand/harmonyos-next)
-- segmentfault-search (2026-08-26T04:03:53.299204+00:00): [javascript](https://segmentfault.com/t/javascript)
-- segmentfault-search (2026-08-26T04:03:53.299204+00:00): [typescript](https://segmentfault.com/t/typescript)
-- segmentfault-search (2026-08-26T04:03:53.299204+00:00): [ONES 研发管理](https://ones.cn/?utm_term=ONES%C2%A0%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86&utm_campaign=%E9%A6%96%E9%A1%B5%E6%A0%87%E7%AD%BE&_channel_track_key=myqX1C0f&utm_source=%E6%80%9D%E5%90%A6%E8%BD%AC%20ONES)
-- segmentfault-search (2026-08-26T04:03:53.299204+00:00): [Writing Great Unit Tests: Best and Worst Practices](https://segmentfault.com/a/1190000009709754)
-- segmentfault-search (2026-08-26T04:03:53.299204+00:00): [Android自动化测试一 UiAutomator官方介绍](https://segmentfault.com/a/1190000045114982)
-- segmentfault-search (2026-08-26T04:03:53.299204+00:00): [CSCI 2134](https://segmentfault.com/a/1190000041402955)
-- github-issues (2026-08-26T04:02:56+00:00): [Phase 1.2: Contact resolution and fallback flows](https://github.com/ferreiraeshawn8209-app/aura-ai/issues/2)
-- hacker-news-search (2026-08-26T00:53:27+00:00): [OpenAI restores 5-hour Codex and Work limits for ChatGPT Plus users](https://news.ycombinator.com/item?id=49442848)
+- github-issues (2026-08-26T15:26:22+00:00): [Unit tests for CJK language detection in test_cross_lingual.py](https://github.com/Ganesh-403/semantic-plagiarism-detector/issues/3699)
+- github-issues (2026-08-26T10:49:35+00:00): [Phase 8: Unit tests for OptimizedImage](https://github.com/Soroban-Cookbook/Soroban_Cookbook_online/issues/619)
+- segmentfault-search (2026-08-28T04:04:07.501585+00:00): [HarmonyOS 开发者社区](https://segmentfault.com/brand/harmonyos-next)
+- segmentfault-search (2026-08-28T04:04:07.501585+00:00): [javascript](https://segmentfault.com/t/javascript)
+- segmentfault-search (2026-08-28T04:04:07.501585+00:00): [typescript](https://segmentfault.com/t/typescript)
+- segmentfault-search (2026-08-28T04:04:07.501585+00:00): [ONES 研发管理](https://ones.cn/?utm_term=ONES%C2%A0%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86&utm_campaign=%E9%A6%96%E9%A1%B5%E6%A0%87%E7%AD%BE&_channel_track_key=myqX1C0f&utm_source=%E6%80%9D%E5%90%A6%E8%BD%AC%20ONES)
+- segmentfault-search (2026-08-28T04:04:07.502087+00:00): [Writing Great Unit Tests: Best and Worst Practices](https://segmentfault.com/a/1190000009709754)
+- segmentfault-search (2026-08-28T04:04:07.502087+00:00): [Android自动化测试一 UiAutomator官方介绍](https://segmentfault.com/a/1190000045114982)
 
 ## How The Skill Meets The Requirement
 
