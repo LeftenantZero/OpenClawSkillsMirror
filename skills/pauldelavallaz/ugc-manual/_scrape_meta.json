@@ -1,0 +1,35 @@
+{
+  "changelog": "Auto-convert audio to WAV PCM 16-bit mono 48kHz for FabricLipsync compatibility",
+  "created_at": 1770859176207,
+  "display_name": "UGC Manual",
+  "fetched_at": 1787903800523,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/generate.py",
+    "scripts/pyproject.toml",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Paul de Lavallaz",
+    "handle": "pauldelavallaz",
+    "user_id": "s17es8yqc61443cxz7kbvr73rs884ggf"
+  },
+  "slug": "ugc-manual",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ugc-manual",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ugc-manual&ownerHandle=pauldelavallaz",
+    "page_url": "https://clawhub.ai/pauldelavallaz/skills/ugc-manual"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1706,
+    "installs": 53,
+    "stars": 2,
+    "versions": 2
+  },
+  "summary": "Generate lip-sync video from image + user's own audio recording.\n\n\u2705 USE WHEN:\n- User provides their OWN audio file (voice recording)\n- Want to sync image to specific audio/voice\n- User recorded the script themselves\n- Need exact audio timing preserved\n\n\u274c DON'T USE WHEN:\n- User provides text script (not audio) \u2192 use veed-ugc\n- Need AI to generate the voice \u2192 use veed-ugc\n- Don't have audio file yet \u2192 use veed-ugc with script\n\nINPUT: Image + audio file (user's recording)\nOUTPUT: MP4 video with lip-sync to provided audio\n\nKEY DIFFERENCE: veed-ugc = script \u2192 AI voice \u2192 video\n                ugc-manual = user audio \u2192 video (no voice generation)",
+  "updated_at": 1778487906275,
+  "version": "1.0.2"
+}
