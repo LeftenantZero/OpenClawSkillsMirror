@@ -1,0 +1,37 @@
+{
+  "changelog": "Voice Reply Mode\uff08\u8bed\u97f3\u5bf9\u8bed\u97f3 / \u6587\u672c\u5bf9\u6587\u672c\uff09\n\n\u8ba9 agent \u5b9e\u73b0\uff1a\u8bed\u97f3\u8fdb \u2192 \u8bed\u97f3\u51fa\uff0c\u6587\u5b57\u8fdb \u2192 \u6587\u5b57\u51fa\u3002\n\u5305\u542b\u5de5\u4f5c\u533a\u884c\u4e3a\u89c4\u5219\uff08SOUL/IDENTITY/TOOLS \u7247\u6bb5\uff09\u3001Edge TTS \u8f85\u52a9\u811a\u672c\u3001\u4ee5\u53ca messages.tts \u7f51\u5173\u914d\u7f6e\u793a\u4f8b\u3002\n\u9002\u7528\u4e8e Telegram / \u98de\u4e66\u8bed\u97f3\u6d88\u606f\u573a\u666f\uff0c\u6309\u6587\u6863\u590d\u5236\u914d\u7f6e\u5373\u53ef\u542f\u7528\u540c\u6a21\u6001\u56de\u590d\u3002\n\n\u4f7f\u7528\u6b65\u9aa4\n\n1. \u9605\u8bfb references/workspace-snippets.md \u4e0e references/gateway-config.md\n2. \u5c06\u7247\u6bb5\u5199\u5165\u76ee\u6807 agent \u7684 SOUL.md / IDENTITY.md / TOOLS.md\n3. \u5982\u9700\u81ea\u52a8\u8bed\u97f3\u56de\u590d\uff0c\u8bbe\u7f6e\u7f51\u5173\uff1amessages.tts.auto = inbound\n4. \u7528 \u4e00\u6761\u6587\u5b57 + \u4e00\u6761\u8bed\u97f3 \u9a8c\u8bc1\u6548\u679c\n\n\u2500\u2500\u2500\n\nVoice Reply Mode (Same\u2011Modality Reply)\n\nEnables voice\u2011in \u2192 voice\u2011out, text\u2011in \u2192 text\u2011out behavior for agents.\nIncludes workspace behavior snippets (SOUL/IDENTITY/TOOLS), an Edge TTS helper script, and gateway config examples for messages.tts.\nDesigned for Telegram/Feishu voice\u2011note workflows\u2014copy the snippets and it just works.\n\nQuick Steps\n\n1. Read references/workspace-snippets.md and references/gateway-config.md\n2. Copy snippets into the target agent\u2019s SOUL.md / IDENTITY.md / TOOLS.md\n3. For auto voice replies, set messages.tts.auto = inbound\n4. Validate with one text + one voice message",
+  "created_at": 1773239578221,
+  "display_name": "Voice Reply Mode",
+  "fetched_at": 1787879661559,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/channel-notes.md",
+    "references/gateway-config.md",
+    "references/workspace-snippets.md",
+    "scripts/edge-tts.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "nasplycc",
+    "handle": "nasplycc",
+    "user_id": "s17awvdy31r2yyyb547xqanc4183kzk1"
+  },
+  "slug": "voice-reply-mode",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/voice-reply-mode",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=voice-reply-mode&ownerHandle=nasplycc",
+    "page_url": "https://clawhub.ai/nasplycc/skills/voice-reply-mode"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 882,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Enables agents to reply in the same modality as received: voice messages get voice replies, text messages get text replies, using Edge TTS and config snippets.",
+  "updated_at": 1778491832663,
+  "version": "1.0.0"
+}
