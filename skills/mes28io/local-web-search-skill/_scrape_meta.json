@@ -1,0 +1,35 @@
+{
+  "changelog": "- Initial release of local-web-search skill.\n- Enables free local web search using DuckDuckGo HTML scraping; no API key required.\n- Provides JSON output with query, result count, disclaimers, security notes, and results including trust scores.\n- Implements trust scoring to rate result reliability; encourages primary source verification.\n- Designed with security best practices: only outbound HTTPS GET, no token/exfiltration risks.\n- Includes error handling with retry, exponential backoff, and jitter for reliability.",
+  "created_at": 1771804223783,
+  "display_name": "Local Web Search",
+  "fetched_at": 1787896786992,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/local_search.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mes",
+    "handle": "mes28io",
+    "user_id": "s17f4asmmbk384vzwe6z88t6hn885rb9"
+  },
+  "slug": "local-web-search-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/local-web-search-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=local-web-search-skill&ownerHandle=mes28io",
+    "page_url": "https://clawhub.ai/mes28io/skills/local-web-search-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 9929,
+    "installs": 270,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Free local web search via DuckDuckGo HTML scraping with no API key. Use when web_search tool is unavailable or missing API keys, and you need fast query resu...",
+  "updated_at": 1778491612653,
+  "version": "0.1.0"
+}
