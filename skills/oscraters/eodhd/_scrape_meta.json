@@ -1,0 +1,49 @@
+{
+  "changelog": "- Added scripts/check-package.sh for package and manifest consistency checks.\n- Updated SKILL.md to reference scripts/check-package.sh as a deliverable.\n- Clarified that metadata must declare EODHD_API_KEY as the primary required credential.\n- Improved validation steps to check that packaged files and declared credentials are included in the manifest.",
+  "created_at": 1772415550296,
+  "display_name": "EODHD CLI",
+  "fetched_at": 1787891923674,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/implementation-plan.md",
+    "references/openclaw-secrets.md",
+    "scripts/check-package.sh",
+    "scripts/test-smoke.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089738276,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "oscraters",
+    "handle": "oscraters",
+    "user_id": "s17a8rwd0d7bwtj5bn5ay7d0t58847hs"
+  },
+  "slug": "eodhd",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/eodhd",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=eodhd&ownerHandle=oscraters",
+    "page_url": "https://clawhub.ai/oscraters/skills/eodhd"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 899,
+    "installs": 26,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Plan, build, review, or extend a stateless Bash CLI wrapper for the publicly documented EODHD API, intended for OpenClaw agents and Clawhub.ai distribution....",
+  "updated_at": 1778491684551,
+  "version": "1.0.1"
+}
