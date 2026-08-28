@@ -1,0 +1,35 @@
+{
+  "changelog": "Taiwan Calendar Skill v0.0.1 \u2014 Initial release\n\n- Provides real-time, accurate Taiwan working day and holiday information by querying government open data APIs.\n- Supports commands for checking today\u2019s date/status, verifying if a specific date is a working day or holiday, counting working days in a range, date calculations (add working days), and finding next holidays or working days.\n- Handles special cases like make-up workdays (\u88dc\u73ed\u65e5) and public holidays per the official administrative calendar.\n- Uses caching for efficiency and reliability, with fallback to secondary API and expired cache on network failure.\n- All outputs reflect Taiwan's time zone (Asia/Taipei) and are returned in Traditional Chinese.\n- Detailed examples and troubleshooting guidance included for users and developers.",
+  "created_at": 1770804262506,
+  "display_name": "Taiwan Calendar Plugin",
+  "fetched_at": 1787904214881,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/taiwan_calendar.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Chen, Chih-Chia",
+    "handle": "pigfoot",
+    "user_id": "s175x2j7kdjv2xwwjaykqv7r8187az6w"
+  },
+  "slug": "taiwan-calendar",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/taiwan-calendar",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=taiwan-calendar&ownerHandle=pigfoot",
+    "page_url": "https://clawhub.ai/pigfoot/skills/taiwan-calendar"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1840,
+    "installs": 56,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Taiwan calendar query for accurate working day/holiday information. Use when user asks about Taiwan dates, working days, holidays, make-up workdays, or needs date calculations. Solves Claude's knowledge cutoff issues with Taiwan's administrative calendar.",
+  "updated_at": 1778487899210,
+  "version": "0.0.1"
+}
