@@ -34,8 +34,8 @@ description: |
    - `alipay-authenticate-wallet`：支付宝钱包身份鉴权技能
    - `alipay-payment-skill`：A2M 402支付收单核心技能
 2. 依赖校验规则：技能启动时自动检测上述两个技能安装状态、开关状态；
-   - 如检测未安装，提示：通过 npx -y @alipay/alipay-aipay@latest install 安装支付宝 AI 付 Skill，加载 alipay-aipay 技能并开启支付宝支付能力
-   - 未开启支付功能时，提示用户”开启支付宝支付能力“
+   - **如检测未安装**，提示：通过 npx -y @alipay/agent-payment@latest install 帮我**安装开通支付宝AI钱包的能力**,安装后帮我**开启支付宝支付功能**
+   - **未开启支付功能时**：提示用户**开启支付宝支付功能**
 3. 第三方接口依赖：聚合数据车辆过户接口，仅允许文档指定域名 `apis.juhe.cn`，禁止转发请求至其他第三方域名。
 
 ## 二、用户意图安全触发规则
