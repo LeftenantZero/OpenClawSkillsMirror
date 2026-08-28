@@ -1,6 +1,6 @@
 ## Description:
 
-Look up Zillow listings, property details, Zestimates, saved searches and homes, market reports, and mortgage estimates through the zillow-mcp server with the fetchproxy browser extension.
+Look up real-estate listings, property details, Zestimates, saved searches/homes, and market reports on Zillow via MCP.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and agents use this skill to configure and operate a Zillow MCP workflow for real-estate listings, property records, Zestimates, saved Zillow activity, market reports, and mortgage estimates.
+External users and developers use this skill to ask an agent for Zillow listing searches, property records, Zestimate history, market reports, mortgage calculations, and signed-in saved Zillow searches or homes.
 
 ### Deployment Geography for Use:
 
@@ -22,32 +22,34 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The workflow relies on a signed-in Zillow browser session through a Chrome extension, which can expose saved searches and saved homes as private account data.
+Risk: The skill can access saved searches and favorited homes through an active signed-in Zillow browser session.
 
-Mitigation: Install only when that access is acceptable, prefer project-level MCP configuration, and treat saved Zillow data as private.
+Mitigation: Use it only with a Zillow account and browser session where this read-only access is acceptable.
 
-Risk: Zillow may present captcha or session authentication barriers, especially for fresh or unsigned browser sessions.
+Risk: The integration relies on Zillow web requests and may be affected by Zillow terms, captchas, or session controls.
 
-Mitigation: Keep zillow.com open in the bridged Chrome tab, sign in when saved-user tools are needed, and resolve captcha challenges in the browser before retrying.
+Mitigation: Review Zillow's terms before use, avoid bulk or unauthorized commercial use, and resolve any captcha in the browser session.
 
 ## Reference(s):
 
+- [ClawHub skill page](https://clawhub.ai/chrischall/skills/zillow)
 - [zillow-mcp npm package](https://www.npmjs.com/package/zillow-mcp)
-- [fetchproxy browser extension](https://github.com/chrischall/fetchproxy)
+- [zillow-mcp source repository](https://github.com/chrischall/zillow-mcp)
+- [fetchproxy source repository](https://github.com/chrischall/fetchproxy)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with JSON and bash configuration examples; MCP tool responses may contain structured listing, property, mortgage, saved-home, saved-search, and market data.]
+**Output Format:** [Markdown with inline JSON and shell command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Read-only Zillow workflow; saved-search and saved-home tools require a signed-in Zillow browser session.]
+**Other Properties Related to Output:** [Read-only Zillow data access through an MCP server and browser-session proxy.]
 
 ## Skill Version(s):
 
-0.11.3 (source: server release metadata)
+0.11.4 (source: server release evidence)
 
 ## Ethical Considerations:
 
