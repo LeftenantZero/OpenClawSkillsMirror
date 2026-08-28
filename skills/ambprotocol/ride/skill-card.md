@@ -10,57 +10,56 @@ This skill is ready for commercial/non-commercial use.
 
 ### License/Terms of Use:
 
-MIT No Attribution
+MIT-0
 
 ## Use Case:
 
-External users and their agents use this skill to search, book, pay for, monitor, chat about, and tip TADA/Throo rides through conversational workflows.
+External users and agent operators use Ambient Ride to arrange TADA/Throo rides in supported cities, including wallet setup, ride search, booking, payment, driver chat, and tipping.
 
 ### Deployment Geography for Use:
 
-New York City, United States and Singapore
+New York City, United States, and Singapore
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can book paid rides, charge a saved card or wallet, make deposits, bridge funds, and pay tips.
+Risk: The skill can install a payment-capable CLI and initiate booking, payment, tipping, deposit, and bridge-transfer actions.
 
-Mitigation: Require host-level command approvals for booking, payments, deposits, bridge transfers, tips, and installer runs.
+Mitigation: Install only from the trusted Ambient/TADA publisher and keep host-level command approval enabled for installer runs and money-moving actions.
 
-Risk: Wallet-related state is stored under ~/.amb and can affect access to funds.
+Risk: The skill stores local wallet-related material and ride state under the Ambient state directory.
 
-Mitigation: Install only on trusted hosts, protect the state directory like password-manager data, and avoid placing it in shared, synced, or repository-backed folders.
+Mitigation: Protect the Ambient state directory like wallet or password-manager data and avoid unnecessary sharing or backup exposure.
 
-Risk: Ride updates can be relayed to connected chat channels.
+Risk: Configured external notification or webhook channels can receive ride details.
 
-Mitigation: Review connected channels and recipients before relying on ride relay or chat workflows.
+Mitigation: Set notification and webhook variables only when those destinations are intended to receive ride information.
 
-Risk: MetaMask token allowances or external wallet approvals may permit future fund movement.
+Risk: MetaMask MVL deposits may involve max-token-allowance behavior.
 
-Mitigation: Review MetaMask approvals and token allowances before and after using wallet or bridge workflows.
+Mitigation: Review the allowance behavior before using MetaMask MVL deposits and rely on explicit approval for deposit steps.
 
 ## Reference(s):
 
-- [Ambient Ride Skill Page](https://clawhub.ai/ambprotocol/skills/ride)
-- [Project Homepage](https://github.com/mvlchain/ambient-ride-skill)
+- [Ambient Ride GitHub Homepage](https://github.com/mvlchain/ambient-ride-skill)
 - [Usage Guide](references/usage.md)
 - [Ride Reference](references/ride.md)
-- [Wallet Reference](references/wallet.md)
-- [Tip Reference](references/tip.md)
+- [Wallet & Authentication Reference](references/wallet.md)
 - [Chat Reference](references/chat.md)
+- [Tip Reference](references/tip.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Shell commands, Configuration, Markdown, Text]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown guidance with inline shell commands and command-output interpretation]
+**Output Format:** [Markdown responses with inline shell commands and JSON command-output interpretation]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May initiate ride-hailing, wallet, payment, bridge, tip, chat, and installer command flows that require host-level approval for sensitive actions.]
+**Other Properties Related to Output:** [Agent output may include clickable authentication links, ride status updates, payment confirmations, and user-facing prompts for approvals.]
 
 ## Skill Version(s):
 
-1.2.0 (source: SKILL.md frontmatter, package.json, server release metadata)
+1.3.0 (source: frontmatter, package.json, ClawHub release metadata)
 
 ## Ethical Considerations:
 
