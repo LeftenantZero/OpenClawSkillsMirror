@@ -1,0 +1,55 @@
+{
+  "changelog": "- Adds initial hall window list\u2013to\u2013voice pack workflow, delivering 8\u201320 labeled hall guide audio clips (one per written window cue).\n- Defines clear routing rules: redirects narration, material lists, census schedules, and visitor-desk lines to dedicated skills.\n- Enforces use of only the hall-provided written window list; prevents fabrication of windows, documents, or approvals.\n- Introduces safe and explicit process for collecting hard inputs, handling pronunciation, speech synthesis, and cloned voices (with consent and billing).\n- Mandates all operations go through the bundled MCP client for security and reliability.\n- Documents robust update, error handling, and rollback mechanisms for safe automatic updates.",
+  "created_at": 1787884426523,
+  "display_name": "hall-guide-voice",
+  "fetched_at": 1787931942075,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "references/automatic-updates-and-safety.md",
+    "references/billing-errors-and-recovery.md",
+    "references/installation-and-auth.md",
+    "references/installation-registration.md",
+    "references/mcp-connection.md",
+    "references/tasks-and-results.md",
+    "references/uninstall-and-disconnect.md",
+    "references/workflow.md",
+    "scripts/authorize.py",
+    "scripts/mcp_client.py",
+    "scripts/uninstall.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787885258604,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "beatra-ai",
+    "handle": "beatra-ai",
+    "user_id": "s176vcp4w7b7tt3j7a62gdnfys8cntp4"
+  },
+  "slug": "hall-guide-voice",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hall-guide-voice",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hall-guide-voice&ownerHandle=beatra-ai",
+    "page_url": "https://clawhub.ai/beatra-ai/skills/hall-guide-voice"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 28,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Turn a written hall window list into one hall guide voice clip per labeled cue. This window list voice studio records each hall window audio and window cue voice from the list the hall already wrote, then delivers 8 to 20 hall guide voice pack files. Use it for hall guide clip packs that keep one window on each clip.",
+  "updated_at": 1787884542205,
+  "version": "0.1.1"
+}
