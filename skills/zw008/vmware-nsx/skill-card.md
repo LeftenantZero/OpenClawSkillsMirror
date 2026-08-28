@@ -1,49 +1,62 @@
-## Description: <br>
-Use this skill to manage VMware NSX networking, including segments, Tier-0 and Tier-1 gateways, NAT, routing, IP pools, and network health checks. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+Use this skill whenever the user needs to manage VMware NSX networking, including segments, gateways, NAT, routing, IP pools, and NSX network health.
 
-## Publisher: <br>
-[zw008](https://clawhub.ai/user/zw008) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[zw008](https://clawhub.ai/user/zw008)
 
-## Use Case: <br>
-Developers and network engineers use this skill to inspect and operate VMware NSX environments through CLI or MCP workflows. It supports segment, gateway, NAT, routing, IP pool, health, and troubleshooting tasks while directing firewall, VM lifecycle, storage, and load-balancing work to companion skills. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: The security verdict is suspicious because the skill is a high-impact NSX network management tool with security-relevant setup inconsistencies. <br>
-Mitigation: Review the skill before production installation, confirm accessible Policy and Management API endpoints, and keep state-changing operations behind explicit human approval and audit review. <br>
-Risk: Over-privileged NSX credentials could allow unintended changes to segments, gateways, NAT, routes, or IP pools. <br>
-Mitigation: Use a least-privilege NSX account appropriate to the task, such as read-only access for monitoring and tightly scoped write access only where automation is required. <br>
-Risk: Disabled or untrusted TLS verification can expose NSX Manager traffic and credentials. <br>
-Mitigation: Set verify_ssl to true for production targets and configure a trusted CA bundle for NSX Manager connections. <br>
-Risk: Network write operations can disrupt connectivity if applied to the wrong target or object. <br>
-Mitigation: Use dry-run previews where available, confirm the target NSX Manager explicitly, check dependencies before destructive actions, and review the audit log after changes. <br>
+## Use Case:
 
+Developers and infrastructure engineers use this skill to inspect and manage VMware NSX networking resources, including segments, Tier-0 and Tier-1 gateways, NAT rules, static routes, IP pools, and health checks. It supports local CLI workflows and MCP-based agent workflows for NSX network operations.
 
-## Reference(s): <br>
-- [ClawHub skill page](https://clawhub.ai/zw008/skills/vmware-nsx) <br>
-- [VMware NSX homepage](https://github.com/vmware-skills/VMware-NSX) <br>
-- [Setup Guide](references/setup-guide.md) <br>
-- [Capabilities](references/capabilities.md) <br>
-- [CLI Reference](references/cli-reference.md) <br>
-- [Agent Guardrails](references/agent-guardrails.md) <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [text, markdown, shell commands, configuration, API calls, guidance] <br>
-**Output Format:** [Markdown or text with inline shell commands, configuration snippets, and structured MCP results] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [Outputs may include NSX inventory, health summaries, troubleshooting findings, and proposed or executed network operations.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-1.8.9 (source: server release metadata) <br>
+Risk: Production configuration examples may disable SSL certificate verification while the skill handles powerful NSX credentials.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Use certificate verification with a valid CA bundle for production targets and review any configuration that sets verify_ssl to false before deployment.
+
+Risk: The skill can perform state-changing NSX network operations with credentials that may affect routing, NAT, segments, gateways, and IP pools.
+
+Mitigation: Use least-privilege NSX accounts, require explicit approval for writes, prefer dry-run previews for CLI changes, and keep write operations covered by audit policy.
+
+Risk: Local credential and audit files may expose sensitive operational context if filesystem permissions are weak.
+
+Mitigation: Protect ~/.vmware-nsx/.env and ~/.vmware/audit.db with restrictive permissions and avoid storing reusable production secrets where possible.
+
+## Reference(s):
+
+- [ClawHub Skill Page](https://clawhub.ai/zw008/skills/vmware-nsx)
+- [Project Homepage](https://github.com/vmware-skills/VMware-NSX)
+- [Setup Guide](artifact/references/setup-guide.md)
+- [CLI Reference](artifact/references/cli-reference.md)
+- [Capabilities](artifact/references/capabilities.md)
+- [Agent Guardrails](artifact/references/agent-guardrails.md)
+
+## Skill Output:
+
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
+
+**Output Format:** [Markdown with inline shell commands, configuration snippets, and structured operational guidance]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [May include NSX CLI commands, MCP tool-use guidance, dry-run recommendations, and setup or troubleshooting steps.]
+
+## Skill Version(s):
+
+1.8.10 (source: server release metadata)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
