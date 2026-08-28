@@ -1,6 +1,6 @@
 ---
 name: datetime-convert
-description: Convert dates and times between any representation — unix timestamps (s/ms/us/ns), ISO 8601 / RFC 3339 / RFC 2822, custom strftime patterns, spreadsheet serial numbers, timezone shifts (UTC ↔ Asia/Shanghai ↔ any IANA zone), natural-language times ("3 days ago", "下周一 09:00"), date arithmetic, and durations between two moments. Use this skill whenever the user pastes a bare epoch number, asks what a timestamp means, wants a time in another timezone or format, needs the epoch value for a date, wants to add or subtract time, asks how long between two dates, or needs a whole column / log field / list of time values reformatted in bulk — even when the request is casual like "1735689600 是啥时候", "把这个时间转成北京时间" or "把这列日期格式统一一下".
+description: Convert any time representation — unix timestamps (s/ms/us/ns), ISO 8601/RFC 3339/RFC 2822, strftime, spreadsheet serials, IANA timezones, natural language ("3 days ago"/"下周一"), date arithmetic, durations. Use for bare epoch numbers, timezone/format conversion, 时间戳转北京时间, or a whole time column.
 ---
 
 # Datetime conversion
@@ -17,7 +17,11 @@ python3 scripts/dtconv.py [INPUT ...] [-z TZ] [--in-tz TZ] [-f FORMAT] [-u UNIT]
 ```
 
 Path is relative to this skill directory; use the absolute path when running from elsewhere.
-No dependencies beyond Python 3.9+ stdlib.
+Standard library only. Python 3.9+ gets everything; on 3.7/3.8 the single casualty is IANA
+zone names (`Asia/Shanghai`), because `zoneinfo` does not exist there — the script says so
+and points at `UTC` / `local` / `+08:00`, and every other feature keeps working. Same story
+if `zoneinfo` exists but the tz database is missing (minimal containers, Windows): the error
+names the fix (`pip install tzdata`).
 
 With no `-f`, the script prints a full report (epoch seconds and millis, UTC, local wall
 clock, ISO 8601, RFC 2822, weekday/ISO week/day-of-year, and a human "2 days ago").
@@ -63,7 +67,9 @@ python3 scripts/dtconv.py "2026-01-01" --diff "2026-12-25"
 ## Input it understands
 
 - Epoch numbers, unit inferred from magnitude: seconds, millis, micros, nanos; floats fine
-- ISO 8601 / RFC 3339 (`2026-08-26T07:30:00Z`, `+08:00` offsets, fractional seconds)
+- ISO 8601 / RFC 3339 in any shape: `2026-08-26T07:30:00Z`, `+08:00` or `+0800` offsets,
+  ISO basic format `20260826T073000`, nanosecond fractions from Go/Java logs (digits below
+  microsecond precision are dropped — `datetime` cannot hold them)
 - RFC 2822 / HTTP dates (`Wed, 01 Jan 2025 08:00:00 +0800`)
 - Common patterns: `2026-08-26 15:30:00`, `2026/08/26`, `20260826`, `202608261530`,
   `2026年8月26日`, `Aug 26 2026`, bare `15:30` (means today)

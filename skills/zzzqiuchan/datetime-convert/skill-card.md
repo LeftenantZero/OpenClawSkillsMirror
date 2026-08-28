@@ -1,6 +1,6 @@
 ## Description:
 
-Converts dates and times between epoch values, common date formats, time zones, spreadsheet serial numbers, natural-language expressions, date arithmetic, and duration calculations.
+Convert any time representation - unix timestamps (s/ms/us/ns), ISO 8601/RFC 3339/RFC 2822, strftime, spreadsheet serials, IANA timezones, natural language ("3 days ago"/"下周一"), date arithmetic, durations.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, operators, support staff, and other agent users use this skill to convert timestamps and date strings, shift time zones, compute date arithmetic, and normalize lists of time values without hand-calculating time math.
+Developers and agents use this skill to convert timestamps, date strings, natural-language dates, timezones, date arithmetic, and durations with a bundled local Python helper instead of doing error-prone time math by hand.
 
 ### Deployment Geography for Use:
 
@@ -22,31 +22,26 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Naive date strings can be interpreted in the wrong timezone, causing off-by-hours answers.
+Risk: Timezone-sensitive answers can be wrong if naive input is interpreted in the wrong source timezone or if ambiguity notes are ignored.
 
-Mitigation: Pass an explicit input timezone when the source timezone matters and include the output timezone in the response.
-
-Risk: Ambiguous numeric or slash-formatted dates can be read as the wrong unit or calendar format.
-
-Mitigation: Use the helper's parsed-as notes, force a timestamp unit when needed, and surface ambiguity instead of silently choosing.
+Mitigation: Review the displayed timezone, pass --in-tz explicitly when the source timezone is known, and surface ambiguity notes before relying on the result.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/zzzqiuchan/skills/datetime-convert)
 
 ## Skill Output:
 
-**Output Type(s):** [text, shell commands, JSON, guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, JSON, Guidance]
 
-**Output Format:** [Markdown text with optional shell command snippets or JSON output.]
+**Output Format:** [Plain text or Markdown with shell commands; the helper can emit JSON when requested.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include timezone labels, parsed-as notes, and ambiguity warnings for date or timestamp inputs.]
+**Other Properties Related to Output:** [Outputs should include timezone context and ambiguity notes when they affect the answer.]
 
 ## Skill Version(s):
 
-1.0.0 (source: server release metadata)
+1.0.1 (source: server release metadata)
 
 ## Ethical Considerations:
 

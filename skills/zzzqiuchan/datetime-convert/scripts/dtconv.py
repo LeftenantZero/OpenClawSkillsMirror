@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """dtconv - convert between timestamps, datetime strings, timezones and formats.
 
-Standard library only (needs Python 3.9+ for zoneinfo). Run with --help for usage.
+Standard library only. Python 3.9+ gets everything; on 3.7/3.8 the only thing that
+stops working is IANA zone names (Asia/Shanghai), because zoneinfo does not exist
+there — timestamps, formats, natural language, arithmetic and UTC/local/+08:00
+offsets all keep working. Run with --help for usage.
 """
 from __future__ import annotations
 
@@ -11,11 +14,29 @@ import re
 import sys
 from datetime import datetime, timedelta, timezone
 from email.utils import format_datetime, parsedate_to_datetime
-from zoneinfo import ZoneInfo
+
+try:
+    from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
+except ImportError:  # Python < 3.9, or a build without zoneinfo
+    try:
+        from backports.zoneinfo import ZoneInfo, ZoneInfoNotFoundError
+    except ImportError:
+        ZoneInfo = None
+
+        class ZoneInfoNotFoundError(Exception):
+            pass
+
 
 # ------------------------------------------------------------------ timezones
 
 OFFSET_RE = re.compile(r"^(?:utc|gmt)?([+-])(\d{1,2})(?::?(\d{2}))?$", re.I)
+
+NO_ZONEINFO_HINT = ("this Python has no zoneinfo module (needs 3.9+, or "
+                    "'pip install backports.zoneinfo tzdata'). Everything else still "
+                    "works — use UTC, local, or a fixed offset such as +08:00")
+
+NO_TZDATA_HINT = ("the IANA timezone database is not installed — 'pip install tzdata', "
+                  "or use a fixed offset such as +08:00")
 
 
 def local_tz():
@@ -34,7 +55,14 @@ def get_tz(name):
         sign = 1 if m.group(1) == "+" else -1
         off = timedelta(hours=int(m.group(2)), minutes=int(m.group(3) or 0))
         return timezone(sign * off)
-    return ZoneInfo(text)
+    if ZoneInfo is None:
+        raise ValueError(f"cannot resolve timezone {text!r}: {NO_ZONEINFO_HINT}")
+    try:
+        return ZoneInfo(text)
+    except ZoneInfoNotFoundError:
+        raise ValueError(f"unknown timezone {text!r} — check the spelling, or "
+                         f"{NO_TZDATA_HINT}")
+
 
 
 def tz_label(dt):
@@ -134,13 +162,58 @@ def parse_slash(text):
     return _attach_time(dt, tail) if tail else dt, f"slash date ({label})", warning
 
 
+ISO_FRACTION_RE = re.compile(r"(\.\d{6})\d+")
+ISO_OFFSET_RE = re.compile(r"([+-]\d{2})(\d{2})$")
+ISO_BASIC_RE = re.compile(r"(\d{4})(\d{2})(\d{2})[T ](\d{2})(\d{2})(\d{2})(\.\d+)?(.*)")
+
+ISO_FALLBACK_FORMATS = [
+    "%Y-%m-%dT%H:%M:%S.%f%z", "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M%z",
+    "%Y-%m-%dT%H:%M:%S.%f", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%dT%H:%M",
+]
+
+
+def normalize_iso(text):
+    """Reshape ISO variants into what fromisoformat accepts.
+
+    Python 3.9/3.10 only parse exactly what isoformat() emits, so the shapes that show
+    up in real logs — Go/Java nanosecond stamps, offsets written '+0800', ISO basic
+    format — are rejected there while working on 3.11+. Normalizing first makes the
+    behaviour identical across versions. Sub-microsecond digits are dropped because
+    datetime cannot hold them.
+    """
+    t = re.sub(r"[zZ]$", "+00:00", text.strip())
+    t = ISO_FRACTION_RE.sub(r"\1", t)
+    t = ISO_OFFSET_RE.sub(r"\1:\2", t)
+    m = ISO_BASIC_RE.fullmatch(t)
+    if m:
+        year, month, day, hour, minute, second, frac, rest = m.groups()
+        t = f"{year}-{month}-{day}T{hour}:{minute}:{second}{frac or ''}{rest}"
+    return t
+
+
+def parse_iso(text):
+    """ISO 8601 / RFC 3339 in any of its shapes, or None."""
+    t = normalize_iso(text)
+    from_iso = getattr(datetime, "fromisoformat", None)  # 3.7+
+    if from_iso:
+        try:
+            return from_iso(t)
+        except ValueError:
+            pass
+    for fmt in ISO_FALLBACK_FORMATS:
+        try:
+            return datetime.strptime(t, fmt)
+        except ValueError:
+            continue
+    return None
+
+
 def parse_absolute(text):
     """Return (datetime, label, warning) - datetime may be naive. None if no match."""
     t = text.strip()
-    try:
-        return datetime.fromisoformat(re.sub(r"[zZ]$", "+00:00", t)), "ISO 8601", None
-    except ValueError:
-        pass
+    iso = parse_iso(t)
+    if iso:
+        return iso, "ISO 8601", None
     if re.search(r"[A-Za-z]{3},?\s", t):
         try:
             return parsedate_to_datetime(t), "RFC 2822", None
@@ -582,7 +655,7 @@ def main(argv=None):
     try:
         out_tz, in_tz = get_tz(args.tz), get_tz(args.in_tz)
     except Exception as exc:
-        print(f"error: unknown timezone ({exc})", file=sys.stderr)
+        print(f"error: {exc}", file=sys.stderr)
         return 2
 
     inputs = args.input or ["now"]

@@ -1,8 +1,8 @@
 {
-  "changelog": "- Initial release of datetime-convert.\n- Converts dates and times between multiple formats: epoch (s/ms/us/ns), ISO 8601, RFC 3339, RFC 2822, custom strftime patterns, spreadsheet serial numbers, and natural language times.\n- Supports timezone shifts (e.g., UTC, Asia/Shanghai, any IANA zone), date arithmetic, and duration calculations.\n- Handles bulk conversion for lists or columns of time values.\n- Accepts diverse input types: timestamps, formatted date strings, relative phrases (\"3 days ago\", \"\u660e\u5929\"), and more.\n- Outputs detailed reports or format-specific results based on user request.",
+  "changelog": "- Shortened and clarified the skill description for broader readability.\n- Added OS/Python-version compatibility info to make dependency and feature support clearer.\n- Updated input format documentation for improved detail on supported ISO shapes and nanosecond handling.\n- Removed the redundant file skill-card.md. \n- No functional/script changes; documentation only.",
   "created_at": 1787748381941,
   "display_name": "datetime-convert",
-  "fetched_at": 1787768523069,
+  "fetched_at": 1787932794246,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -24,12 +24,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 10,
+    "downloads": 84,
     "installs": 0,
     "stars": 0,
-    "versions": 1
+    "versions": 2
   },
-  "summary": "Convert dates and times between any representation \u2014 unix timestamps (s/ms/us/ns), ISO 8601 / RFC 3339 / RFC 2822, custom strftime patterns, spreadsheet serial numbers, timezone shifts (UTC \u2194 Asia/Shanghai \u2194 any IANA zone), natural-language times (\"3 days ago\", \"\u4e0b\u5468\u4e00 09:00\"), date arithmetic, and dur",
-  "updated_at": 1787748460687,
-  "version": "1.0.0"
+  "summary": "Convert any time representation \u2014 unix timestamps (s/ms/us/ns), ISO 8601/RFC 3339/RFC 2822, strftime, spreadsheet serials, IANA timezones, natural language (\"3 days ago\"/\"\u4e0b\u5468\u4e00\"), date arithmetic, durations. Use for bare epoch numbers, timezone/format conversion, \u65f6\u95f4\u6233\u8f6c\u5317\u4eac\u65f6\u95f4, or a whole time column.",
+  "updated_at": 1787800606435,
+  "version": "1.0.1"
 }
