@@ -1,6 +1,6 @@
 ## Description:
 
-Factory edition of iaiops for discrete-manufacturing operations across PLC, CNC, servo and drive bus, tag browsing, Unified Namespace, production-line troubleshooting, downtime root-cause analysis, OEE, and asset inventory workflows with read-first behavior and MOC-gated writes.
+Factory edition of iaiops for discrete-manufacturing troubleshooting across OPC-UA, Modbus, S7comm, MELSEC, FINS, EtherNet/IP, EtherCAT, PROFINET, MTConnect, IO-Link, MQTT/Sparkplug B/UNS, and cross-protocol diagnostics such as downtime root cause, OEE, and asset inventory.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, automation engineers, and operations teams use this skill to inspect and troubleshoot discrete-manufacturing lines across industrial protocols, SCADA/MES read layers, MQTT/Sparkplug B/UNS, and cross-protocol diagnostics. It supports advisory analysis, asset inventory, OEE and downtime workflows, and tightly controlled write paths that require MOC approval.
+Industrial automation engineers and site operators use this skill to inspect PLC, CNC, fieldbus, MES/SCADA gateway, Unified Namespace, and production-line data, then produce diagnostic guidance for root-cause analysis, OEE, asset inventory, readiness checks, and investigation records. Write-capable paths should be used only through explicit MOC approval in controlled environments.
 
 ### Deployment Geography for Use:
 
@@ -22,13 +22,13 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill covers high-impact factory-control capabilities and may be used around industrial control or production data.
+Risk: High-impact PLC and network capabilities could affect industrial operations if used outside an authorized change-management process.
 
-Mitigation: Install only where the operator is authorized to access those systems, and keep write-capable tools disabled unless formal MOC approval, dry-run review, rollback planning, and network isolation are in place.
+Mitigation: Install only in controlled industrial environments, use read-only diagnostics first, and keep write tools disabled unless explicit authorization and MOC approval are in place.
 
-Risk: EtherCAT, PROFINET, publishing, and export workflows can affect raw networks or move operational data outside the source system.
+Risk: Gateway or API credentials for MES, SCADA, or fieldbus access could expose sensitive operational systems if mishandled.
 
-Mitigation: Pay special attention to raw network access and publishing or export tools; restrict them to approved networks and reviewed data-transfer paths.
+Mitigation: Store gateway and API credentials only in the intended secret store and avoid inline credential handling.
 
 ## Reference(s):
 
@@ -36,17 +36,17 @@ Mitigation: Pay special attention to raw network access and publishing or export
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline shell commands and configuration guidance]
+**Output Format:** [Markdown or text with inline shell commands and structured diagnostic summaries]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Read-first industrial operations guidance with explicit approval gates for high-impact write actions.]
+**Other Properties Related to Output:** [Read-first diagnostics; write-capable actions require explicit MOC approval and default-disabled write tooling according to evidence.]
 
 ## Skill Version(s):
 
-0.23.0 (source: server release metadata)
+0.23.1 (source: server release evidence)
 
 ## Ethical Considerations:
 
