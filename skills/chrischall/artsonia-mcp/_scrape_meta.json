@@ -1,8 +1,8 @@
 {
-  "changelog": "- Added support for the ARTSONIA_INLINE_DOWNLOADS environment variable to return downloaded artwork images as inline base64 blocks on hosted deployments.\n- Removed the skill-card.md file.\n- Updated documentation in SKILL.md to reflect the new environment variable and usage instructions.",
+  "changelog": "- Added documentation for two new environment variables: `ARTSONIA_SESSION_CACHE` (allows disabling the on-disk session cache) and `ARTSONIA_SESSION_FILE` (allows customizing the session cache file path).\n- Removed the redundant skill-card.md file.\n- No changes to server functionality; update clarifies configuration options for session caching and file location.",
   "created_at": 1780681829535,
-  "display_name": "Tmp.6TfHJivEo5",
-  "fetched_at": 1787773002668,
+  "display_name": "artsonia-mcp",
+  "fetched_at": 1787930962572,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -22,12 +22,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 831,
+    "downloads": 864,
     "installs": 8,
     "stars": 0,
-    "versions": 7
+    "versions": 8
   },
   "summary": "Access Artsonia student-art portfolios, comments, and fans via MCP. Use when the user asks about a child's artwork, wants to post an art comment, check fans, view portfolios, or manage Artsonia notifications. Triggers on phrases like \"show me Emma's latest artwork\", \"post a comment on that painting\", \"who are the fans for this student\", \"invite grandma as a fan\", or any request involving student art portfolios on Artsonia. Requires artsonia-mcp installed and the artsonia server registered (see Setup below).",
-  "updated_at": 1786309685937,
-  "version": "0.9.0"
+  "updated_at": 1787916948631,
+  "version": "0.10.0"
 }

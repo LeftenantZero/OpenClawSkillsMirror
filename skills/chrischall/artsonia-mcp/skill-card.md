@@ -1,6 +1,6 @@
 ## Description:
 
-Access Artsonia student-art portfolios, comments, fans, downloads, and notification settings through an MCP-backed agent workflow.
+Accesses Artsonia student-art portfolios, comments, fans, artwork downloads, and notification settings through the artsonia MCP server.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to connect an agent to Artsonia so it can help inspect student artwork, retrieve portfolios and comments, manage fans and notifications, and prepare local artwork downloads.
+Parents, guardians, and authorized Artsonia account users use this skill to view student artwork, read activity and comments, manage fans, post comments, download artwork, and adjust notifications from an agent workflow.
 
 ### Deployment Geography for Use:
 
@@ -22,36 +22,33 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill handles Artsonia account credentials and student artwork.
+Risk: The skill uses Artsonia account credentials and can access student-related artwork data, comments, feedback, and cached sessions.
 
-Mitigation: Install and run the MCP server only on trusted machines, and use an Artsonia account appropriate for the intended access.
+Mitigation: Install only when that access is intended; keep credentials private, use a protected environment, and disable or relocate the session cache on shared machines or shared backups.
 
-Risk: Comments, fan invitations, and notification changes can modify Artsonia social or account state.
+Risk: Downloaded student artwork, private pieces, embedded metadata, manifests, and sidecar files may contain sensitive information.
 
-Mitigation: Review write actions before sending them.
-
-Risk: Downloaded artwork and metadata may persist on disk.
-
-Mitigation: Choose download destinations carefully and handle generated image files, sidecars, and manifests as sensitive data.
+Mitigation: Store downloads in private folders, review private-piece settings before export, and limit sharing of generated files and metadata.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/chrischall/skills/artsonia-mcp)
-- [artsonia-mcp npm package](https://www.npmjs.com/package/artsonia-mcp)
+- [npm package](https://www.npmjs.com/package/artsonia-mcp)
+- [Source repository](https://github.com/chrischall/artsonia-mcp)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with JSON configuration snippets, shell commands, and MCP tool guidance]
+**Output Format:** [Markdown, JSON configuration snippets, shell commands, and MCP tool responses]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May reference Artsonia account credentials, student artwork metadata, local file paths, and user-reviewed social actions.]
+**Other Properties Related to Output:** [May include local artwork files, image metadata, index manifests, and per-artwork JSON sidecars when download options are used.]
 
 ## Skill Version(s):
 
-0.9.0 (source: server release metadata)
+0.10.0 (source: server release metadata)
 
 ## Ethical Considerations:
 
