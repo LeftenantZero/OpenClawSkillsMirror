@@ -1,14 +1,15 @@
 {
-  "changelog": "Update from GitHub",
+  "changelog": "Version 2.0.0 introduces major updates with enhanced security and operation controls.\n\n- Adds strict two-step confirmation for all dangerous operations to prevent accidental data loss or disruption.\n- Describes precise credential handling: never persists credentials, never exposes sensitive values, and securely uses per-process environment variables.\n- Details node login password security: prioritizes SSH key, password parameter, environment variable, and auto-generated password with strict confidentiality.\n- Updates workflow and risk classification for all destructive or impactful actions.\n- Clarifies CLI and plugin requirements, with escalated emphasis on dependency skill for kubectl-cce installation.",
   "created_at": 1783370409711,
   "display_name": "huawei-cloud-cce-cluster-management",
-  "fetched_at": 1787773543059,
+  "fetched_at": 1787932612156,
   "files": [
     "SKILL.md",
     "_meta.json",
     "references/acceptance-criteria.md",
     "references/cce-api-guide.md",
     "references/cce-cluster-parameters.md",
+    "references/cli-installation-guide.md",
     "references/iam-policies.md",
     "references/task-cluster-management.md",
     "references/task-node-management.md",
@@ -31,7 +32,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1785828380932,
+    "updated_at": 1787838442498,
     "verdict": "clean"
   },
   "owner": {
@@ -47,12 +48,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 252,
+    "downloads": 270,
     "installs": 1,
     "stars": 0,
-    "versions": 4
+    "versions": 5
   },
   "summary": "Huawei Cloud CCE (Cloud Container Engine) cluster lifecycle management skill using hcloud CLI (KooCLI) for Huawei Cloud API calls and kubectl cce plugin for Kubernetes node operations (cordon/uncordon/drain/status). Use this skill when the user wants to: (1) create, delete, hibernate, or awake CCE clusters, (2) list clusters and query cluster/node/nodepool/addon information, (3) manage node pools (create, delete, resize), (4) manage nodes (create, delete, cordon, uncordon, drain), (5) manage addons (install, uninstall, update), (6) bind/unbind cluster EIP for public access, (7) get cluster kubeconfig. Trigger: user mentions \"CCE cluster\", \"create cluster\", \"delete cluster\", \"node pool\", \"node management\", \"hibernate cluster\", \"awake cluster\", \"addon\", \"kubeconfig\", \"EIP binding\", \"CCE \u96c6\u7fa4\", \"\u521b\u5efa\u96c6\u7fa4\", \"\u5220\u9664\u96c6\u7fa4\", \"\u8282\u70b9\u6c60\", \"\u8282\u70b9\u7ba1\u7406\", \"\u4f11\u7720\u96c6\u7fa4\", \"\u5524\u9192\u96c6\u7fa4\", \"\u63d2\u4ef6\", \"kubeconfig\", \"EIP \u7ed1\u5b9a\"",
-  "updated_at": 1785827639239,
-  "version": "1.0.1"
+  "updated_at": 1787837628421,
+  "version": "1.0.2"
 }
