@@ -1,6 +1,6 @@
 ## Description:
 
-Check the trust rating of any x402 service before paying it. Free JSON, daily, sybil-resistant; refuse dead or unknown recipients.
+Check the trust rating of any x402 service before paying it, and of any skill before installing it. Free JSON, daily, sybil-resistant.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and agents use this skill before paying x402 endpoints to check service trust ratings, liveness, adoption, and payment risk. It also helps evaluate wallet-only recipients and report concise, citation-based trust summaries to users.
+Developers and agents use this skill to check external trust ratings before paying x402 endpoints or installing skills. It helps decide whether to proceed, limit spend, ask the user, or avoid an unknown or low-rated target.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The workflow consults an external rating service before x402 payments.
+Risk: Trust lookups disclose the checked host or skill slug to the rating provider.
 
-Mitigation: Use it where this external lookup is acceptable, and review queried hosts before sending requests.
+Mitigation: Use the skill only when sharing that target with the rating provider is acceptable for the task.
 
-Risk: Optional history and archive checks may trigger paid x402 requests.
+Risk: Optional deeper checks may spend small x402 amounts through the user's wallet.
 
-Mitigation: Use the free JSON checks for routine decisions, and allow paid endpoints only when the user explicitly requests deeper history or an audit trail and accepts the stated cost.
+Mitigation: Run paid history or audit endpoints only when explicitly requested and after confirming the expected cost.
 
-Risk: Trust ratings are decision support, not a guarantee of service quality.
+Risk: Ratings are external trust signals and do not guarantee service quality or safety.
 
-Mitigation: Treat tier, uptime, flags, organic paying agents, and settled volume as risk signals, and ask the user or refuse payment for unknown or high-risk recipients.
+Mitigation: Treat ratings as one input to the decision and continue applying the skill's threshold policy before payment or installation.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/aladaf/skills/x402-trust-check)
-- [Agent Economy Report ratings](https://agenteconomy.report/s/)
-- [Agent Economy Report method and corrections policy](https://agenteconomy.report/s/policy)
+- [ClawHub release page](https://clawhub.ai/aladaf/skills/x402-trust-check)
+- [Agent Economy Report service ratings](https://agenteconomy.report/s/)
+- [Agent Economy Report rating policy](https://agenteconomy.report/s/policy)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Shell commands, API Calls, Text]
+**Output Type(s):** [guidance, shell commands, markdown]
 
-**Output Format:** [Markdown with inline bash commands and concise text summaries]
+**Output Format:** [Markdown with inline shell commands and concise risk guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include cited rating URLs and optional paid endpoint choices when the user explicitly requests deeper history or an audit trail.]
+**Other Properties Related to Output:** [May reference JSON rating fields returned by the external rating service.]
 
 ## Skill Version(s):
 
-1.0.0 (source: frontmatter and server release evidence)
+1.0.1 (source: ClawHub release evidence)
 
 ## Ethical Considerations:
 

@@ -1,7 +1,7 @@
 ---
 name: x402-trust-check
-description: Check the trust rating of any x402 service before paying it. Free JSON, daily, sybil-resistant; refuse dead or unknown recipients.
-version: 1.0.0
+description: Check the trust rating of any x402 service before paying it, and of any skill before installing it. Free JSON, daily, sybil-resistant.
+version: 1.1.0
 homepage: https://agenteconomy.report/s/
 metadata:
   openclaw:
@@ -80,7 +80,24 @@ Only if the user wants history or an audit trail. Paid via x402 with your wallet
 - `GET https://agenteconomy.report/api/rating/<host>/history` (US$ 0.02): the whole daily series
 - `GET https://agenteconomy.report/api/archive/ratings` (US$ 5): every service, every day
 
-## 6. Report back
+## 6. Check a skill before installing it
+
+Same index, one level up. Before `openclaw skills install <slug>` (or when a user asks "is this
+skill safe?"), read the free rating of the skill:
+
+```bash
+curl -s https://agenteconomy.report/k/<slug>.json
+```
+
+Fields: `tier` (same scale, trust line BBB), `outlook`, `flags` (`SUSPICIOUS`, `PIPE_SHELL`,
+`OBFUSCATED`, `UNKNOWN_PAYEE`, `KEYS`, `NEW`; `flag_meaning` explains each), `downloads`,
+`age_days`, `pays_to` (the x402 services its instructions pay, each with its own rating) and
+`unknown_payees` (hard-coded wallets in no catalog). Policy: `SUSPICIOUS` or `tier` D: do not
+install; `UNKNOWN_PAYEE`, `PIPE_SHELL` or `OBFUSCATED`: show the flag to the user and ask;
+`KEYS`: say it handles keys and ask; 404: skill not indexed, treat as unknown. Paid record with
+the same fields: `GET https://agenteconomy.report/api/skill/<slug>` (US$ 0.005).
+
+## 7. Report back
 
 One line, always with the number: "api.example.com is rated **BB** (stable), 14 organic paying
 agents, $37 settled in 14 days, uptime 100%: proceeding with a $0.002 call." Cite
