@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to analyze sleep-monitoring video or image inputs, identify sleep stages, body movement, awakenings, and possible sleep apnea, and generate structured sleep-quality reports. It can also retrieve historical sleep-analysis report lists from the publisher's cloud service.
+External users and developers use this skill to analyze sleep-monitoring video files or public video URLs, identify sleep stages and movement or apnea indicators, and return structured sleep-quality reports or report-history tables.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Sleep-monitoring media and prior report metadata may be sent to the publisher's cloud service.
+Risk: Sleep videos, remote video URLs, and report history may be processed by lifeemergence.com cloud services.
 
-Mitigation: Use only with appropriate consent and review suitability before sending health-adjacent media or metadata, especially in shared, regulated, or multi-user environments.
+Mitigation: Install and run only when the user accepts third-party cloud processing of sensitive sleep-monitoring media and account-linked history.
 
-Risk: The skill may silently create or reuse a local/cloud-linked identity and persist authentication tokens locally.
+Risk: The skill can create or reuse a local account identity and store tokens or profile data in a workspace SQLite database.
 
-Mitigation: Review local identity and token database handling before deployment, and disable or isolate the behavior when identity persistence is not acceptable.
+Mitigation: Use a dedicated workspace, restrict access to the workspace data directory, and clear stored identity or token data when it is no longer needed.
 
-Risk: Historical report listing can automatically retrieve prior reports from the cloud service with weak user control.
+Risk: Sleep-stage and apnea outputs are health-related and may be incomplete or inaccurate.
 
-Mitigation: Review or disable automatic history-listing behavior where users should explicitly approve retrieval of prior health-adjacent reports.
+Mitigation: Treat results as informational sleep-quality references, not as a substitute for clinical sleep monitoring or medical diagnosis.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-sleep-quality-analysis)
+- [API 接口文档](references/api_doc.md)
+- [API接口文档](skills/smyx_analysis/references/api_doc.md)
 - [Skill demo](https://lifeemergence.com/sample.html)
-- [API documentation](references/api_doc.md)
-- [Analysis API documentation](skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Analysis, Markdown, JSON, Files]
+**Output Type(s):** [Text, Markdown, JSON, Shell commands, Configuration]
 
-**Output Format:** [Markdown and JSON-formatted text, with optional saved output files and report links]
+**Output Format:** [Markdown reports, Markdown tables, or JSON text depending on the selected detail level and report-history mode]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Reports are sleep-quality references only and are not a substitute for professional diagnosis.]
+**Other Properties Related to Output:** [Can save output to a user-selected file path.]
 
 ## Skill Version(s):
 
-1.0.12 (source: server release evidence; artifact frontmatter reports 1.0.11)
+1.0.13 (source: SKILL.md frontmatter and server release evidence)
 
 ## Ethical Considerations:
 
