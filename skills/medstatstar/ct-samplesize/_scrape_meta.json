@@ -1,8 +1,8 @@
 {
-  "changelog": "Add bug report feature (ct-base 20.3); whitelist bugreport endpoint; README disclosure. Coze cloud code excluded.",
+  "changelog": "Add coze concurrency rate-limit (>=1s between /run calls, ct-base 20.10); refactor envelope drift detection into single _assess_contract entry (ct-base 20.9); SKILL.md English body <=200 lines; align cross-turn continuity menu with ct-base 1.1/5.1.",
   "created_at": 1783852250052,
-  "display_name": "ct-samplesize",
-  "fetched_at": 1787769905026,
+  "display_name": "Clinical Trial Sample Size & Power / \u4e34\u5e8a\u8bd5\u9a8c\u6837\u672c\u91cf\u4e0e\u68c0\u9a8c\u6548\u80fd\u4e13\u5bb6",
+  "fetched_at": 1787930258380,
   "files": [
     "ADVANCED.md",
     "ADVANCED_zh-CN.md",
@@ -10,6 +10,7 @@
     "CHANGELOG.md",
     "README.md",
     "README_zh-CN.md",
+    "ROADMAP.md",
     "SKILL.md",
     "_meta.json",
     "adapters/__init__.py",
@@ -19,7 +20,27 @@
     "adapters/rendering.py",
     "assets/icon.svg",
     "config/config.json",
+    "coze_cases/_contract_index.json",
+    "coze_cases/cases/adaptive_simulate.json",
+    "coze_cases/cases/bayesian.json",
+    "coze_cases/cases/be_tost.json",
+    "coze_cases/cases/cluster.json",
+    "coze_cases/cases/conditional_power.json",
+    "coze_cases/cases/group_sequential.json",
+    "coze_cases/cases/gsd_proportion.json",
+    "coze_cases/cases/ni_survival.json",
+    "coze_cases/cases/non_inferiority.json",
+    "coze_cases/cases/proportion_two.json",
+    "coze_cases/cases/proportion_two_nl.json",
+    "coze_cases/cases/roc.json",
+    "coze_cases/cases/survival.json",
+    "coze_cases/cases/ttest_ind_n.json",
+    "coze_cases/cases/ttest_ind_reverse.json",
+    "coze_cases/cases/vaccine_efficacy.json",
+    "coze_cases/gen_cases.py",
+    "coze_cases/gen_contract_doc.py",
     "references/adaptive_simulator.md",
+    "references/bug_report_endpoint.md",
     "references/cli_examples.md",
     "references/data_format_guide.md",
     "references/effect_size.md",
@@ -36,12 +57,15 @@
     "references/svg_editing.md",
     "references/units.md",
     "requirements.txt",
+    "scripts/classify_test.py",
     "scripts/compute_backend.py",
     "scripts/i18n.py",
+    "scripts/i18n_messages.json",
     "scripts/i18n_r_messages.json",
+    "scripts/i18n_skill_messages.json",
     "scripts/office_to_md.py",
-    "scripts/samplesize_power.py",
-    "skill-card.md"
+    "scripts/param_aliases.py",
+    "scripts/samplesize_power.py"
   ],
   "moderation": {
     "engine_version": "v2.4.26",
@@ -51,7 +75,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1787448567511,
+    "updated_at": 1787929991396,
     "verdict": "clean"
   },
   "owner": {
@@ -67,12 +91,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 1545,
+    "downloads": 1584,
     "installs": 0,
     "stars": 0,
-    "versions": 20
+    "versions": 21
   },
-  "summary": "\u4e3a\u4e34\u5e8a\u8bd5\u9a8c\u4ece\u4e1a\u8005\u63d0\u4f9b\u7684\u6837\u672c\u91cf\u4e0e\u68c0\u9a8c\u6548\u80fd\u8ba1\u7b97\u5de5\u5177\u3002\u672c\u5730\u65e0\u9700\u5b89\u88c5 R\uff0c\u76f4\u63a5\u63d0\u4f9b\u4e91\u7aef R \u8ba1\u7b97\u670d\u52a1\uff08\u8986\u76d6 49 \u79cd\u68c0\u9a8c\uff0c\u5e76\u63d0\u4f9b SVG \u51fa\u7248\u7ea7\u522b\u56fe\u5f62\uff09\u3002\u81ea\u7136\u8bed\u8a00\u9a71\u52a8\uff0c\u53ef\u5e94\u8981\u6c42\u8fd4\u56de\u5b8c\u6574 R \u4ee3\u7801\uff1b\u9ed8\u8ba4\u6309\u64cd\u4f5c\u7cfb\u7edf\u8bed\u8a00\u8bbe\u5b9a\u8f93\u51fa\u4e2d\u6587\u6216\u82f1\u6587\uff08\u63d0\u793a\u8bcd\u53ef\u5f3a\u5236\u5207\u6362\uff09\u3002 / Sample size and power calculation tool for clinical trial practitioners. No local R install needed \u2014 a cloud R compute service covers all 49 test types and returns publication-grade SVG figures. Natural-language driven; full R code can be returned on request; default output in Chinese or English per OS language setting (prompt can force-switch).",
-  "updated_at": 1787447564200,
-  "version": "5.1.0"
+  "summary": "Sample size and power calculation tool for clinical trial practitioners. No local R install needed \u2014 a cloud R compute service covers all 49 test types and returns publication-grade SVG figures. Natural-language driven; full R code can be returned on request; default output in Chinese or English per OS language setting (prompt can force-switch). / \u4e3a\u4e34\u5e8a\u8bd5\u9a8c\u4ece\u4e1a\u8005\u63d0\u4f9b\u7684\u6837\u672c\u91cf\u4e0e\u68c0\u9a8c\u6548\u80fd\u8ba1\u7b97\u5de5\u5177\u3002\u672c\u5730\u65e0\u9700\u5b89\u88c5 R\uff0c\u76f4\u63a5\u63d0\u4f9b\u4e91\u7aef R \u8ba1\u7b97\u670d\u52a1\uff08\u8986\u76d6 49 \u79cd\u68c0\u9a8c\uff0c\u5e76\u63d0\u4f9b SVG \u51fa\u7248\u7ea7\u522b\u56fe\u5f62\uff09\u3002\u81ea\u7136\u8bed\u8a00\u9a71\u52a8\uff0c\u53ef\u5e94\u8981\u6c42\u8fd4\u56de\u5b8c\u6574 R \u4ee3\u7801\uff1b\u9ed8\u8ba4\u6309\u64cd\u4f5c\u7cfb\u7edf\u8bed\u8a00\u8bbe\u5b9a\u8f93\u51fa\u4e2d\u6587\u6216\u82f1\u6587\uff08\u63d0\u793a\u8bcd\u53ef\u5f3a\u5236\u5207\u6362\uff09\u3002",
+  "updated_at": 1787929991396,
+  "version": "5.3.12"
 }
