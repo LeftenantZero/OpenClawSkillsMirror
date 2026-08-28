@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of email-otp skill.\n\n- Create temporary email addresses using the mail.tm API (no API key needed).\n- Automatically extract OTP codes and validation links from incoming emails.\n- Command-line interface to create accounts, monitor inboxes, filter/send OTPs, and list available domains.\n- Stores all state and credentials securely in `~/.tempmail_otp/`.\n- Saves most recent OTP and verification link to dedicated files for easy retrieval.\n- Includes flexible filtering (sender, subject, custom regex) and robust error handling.",
+  "created_at": 1772305045126,
+  "display_name": "Email OTP",
+  "fetched_at": 1787892770414,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/tempmail_otp.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "etopro",
+    "handle": "etopro",
+    "user_id": "s178q1hzxayjcr55ynjn7nwxn183n2zx"
+  },
+  "slug": "email-otp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/email-otp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=email-otp&ownerHandle=etopro",
+    "page_url": "https://clawhub.ai/etopro/skills/email-otp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 823,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Create temporary email addresses and monitor for registration OTP codes or validation links",
+  "updated_at": 1778491670926,
+  "version": "1.0.0"
+}
