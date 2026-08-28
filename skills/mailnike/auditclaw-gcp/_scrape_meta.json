@@ -1,0 +1,57 @@
+{
+  "changelog": "- Added homepage and source fields for improved skill metadata.\n- Updated install metadata to specify pip installation from scripts/requirements.txt.\n- Listed \"GOOGLE_APPLICATION_CREDENTIALS\" as a required environment variable for clarity.\n- No changes to functionality or code; documentation and metadata improvements only.",
+  "created_at": 1771205412694,
+  "display_name": "AuditClaw Gcp",
+  "fetched_at": 1787901451183,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/checks/__init__.py",
+    "scripts/checks/bigquery.py",
+    "scripts/checks/cloudsql.py",
+    "scripts/checks/compute.py",
+    "scripts/checks/dns.py",
+    "scripts/checks/firewall.py",
+    "scripts/checks/gcp_logging.py",
+    "scripts/checks/iam.py",
+    "scripts/checks/kms.py",
+    "scripts/checks/storage.py",
+    "scripts/gcp-roles.json",
+    "scripts/gcp_evidence.py",
+    "scripts/requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779969023573,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Nikhil Jathar",
+    "handle": "mailnike",
+    "user_id": "s17ee5y8kxe1zfx1t7te9wcgzx83j215"
+  },
+  "slug": "auditclaw-gcp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/auditclaw-gcp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=auditclaw-gcp&ownerHandle=mailnike",
+    "page_url": "https://clawhub.ai/mailnike/skills/auditclaw-gcp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1139,
+    "installs": 33,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "GCP compliance evidence collection for auditclaw-grc. 12 read-only checks across Cloud Storage, firewall, IAM, logging, KMS, DNS, BigQuery, Compute, and Clou...",
+  "updated_at": 1778491552996,
+  "version": "1.0.2"
+}
