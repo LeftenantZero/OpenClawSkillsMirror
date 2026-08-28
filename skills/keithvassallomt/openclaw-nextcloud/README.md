@@ -107,6 +107,23 @@ nix shell .#default --command npm install
 nix shell .#default --command npm run build
 ```
 
+### Packaging a submission
+
+`npm run package` collects the six files a ClawHub submission needs —
+`SKILL.md`, `README.md`, `index.js`, `package.json`, `package-lock.json` and
+`scripts/nextcloud.js` — into `~/Downloads/openclaw-nextcloud`, leaving the
+tests, CI config, flake and git metadata behind.
+
+```bash
+npm run package                     # -> ~/Downloads/openclaw-nextcloud
+npm run package -- --out /tmp       # -> /tmp/openclaw-nextcloud
+npm run package -- --force          # replace an existing folder
+```
+
+It refuses to run if `scripts/nextcloud.js` does not match a fresh build of
+`index.js`, so a stale bundle cannot reach a submission; `--skip-verify`
+overrides that.
+
 ## Configuration
 
 For an OpenClaw installation, configure the non-secret values under the
@@ -134,7 +151,13 @@ variables:
 NEXTCLOUD_URL=https://your-nextcloud-instance.com
 NEXTCLOUD_USER=your_username
 NEXTCLOUD_TOKEN=your_app_password
+NEXTCLOUD_EMAIL=you@example.com   # optional, see below
 ```
+
+`NEXTCLOUD_EMAIL` is optional. When set, `calendar create` marks the account as
+the event's organiser and as an attendee who has already accepted, so clients
+show the event as confirmed rather than as an invitation awaiting a reply. Left
+unset, events are written exactly as they were before the option existed.
 
 **Generating an App Password:**
 1. Log into your Nextcloud instance
@@ -281,7 +304,9 @@ node scripts/nextcloud.js calendar delete --uid event-uid \
 the URL slug, or the full collection URL — so all of `Personal`, `personal`,
 and `/remote.php/dav/calendars/<user>/personal/` resolve to the same calendar.
 Date inputs accept either ISO 8601 (`2026-02-05T10:00:00Z`) or the compact
-CalDAV form (`20260205T100000Z`).
+CalDAV form (`20260205T100000Z`). For tasks, a date with no time of day
+(`2026-02-05`) means all day; a task's `--start` and `--due` must both be
+all-day dates or both carry a time.
 
 ### Tasks
 
@@ -289,8 +314,17 @@ CalDAV form (`20260205T100000Z`).
 # List all tasks
 node scripts/nextcloud.js tasks list
 
-# Create a task
-node scripts/nextcloud.js tasks create --title "Buy groceries" --due "2026-02-05T17:00:00Z" --priority 1
+# Create a task with all optional metadata
+node scripts/nextcloud.js tasks create --title "Buy groceries" \
+  --due "2026-02-05T17:00:00Z" --priority 1 \
+  --start "2026-02-04T09:00:00Z" --location "Supermarket" \
+  --url "https://example.com" --class PRIVATE --tags "errands,shopping"
+
+# Update a task, including status and percent-complete
+node scripts/nextcloud.js tasks edit --uid task-uid --status IN-PROCESS --percent-complete 50
+
+# Clear a task's metadata by passing an empty value
+node scripts/nextcloud.js tasks edit --uid task-uid --tags "" --location "" --url ""
 
 # Complete a task
 node scripts/nextcloud.js tasks complete --uid task-uid
@@ -422,7 +456,7 @@ This skill executes a bundled JavaScript file (`scripts/nextcloud.js`) on your m
 **What it can access**
 
 - The Nextcloud instance at `NEXTCLOUD_URL` — no other endpoints. There is no telemetry, no analytics, no auto-update, no third-party calls. You can confirm this by `grep -E 'fetch\(|http[s]?://' scripts/nextcloud.js`; every URL is built from `CONFIG.url` (i.e. `NEXTCLOUD_URL`) or relative API paths.
-- The environment variables `NEXTCLOUD_URL`, `NEXTCLOUD_USER`, `NEXTCLOUD_TOKEN`. No other env vars are read.
+- The environment variables `NEXTCLOUD_URL`, `NEXTCLOUD_USER`, `NEXTCLOUD_TOKEN`, and two optional ones: `NEXTCLOUD_EMAIL` (an address written into events you create, see [Configuration](#configuration)) and `OPENCLAW_ALLOW_HTTP` (the plaintext-HTTP opt-out). No other env vars are read; `grep -o 'process\.env\.[A-Z_]*' index.js` lists them.
 - No filesystem access beyond the Node module loader and the standard `fs` for reading inputs you pass it.
 
 **Credentials**

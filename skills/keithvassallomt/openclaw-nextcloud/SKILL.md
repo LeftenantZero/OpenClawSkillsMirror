@@ -1,11 +1,11 @@
 ---
 name: openclaw-nextcloud
 description: Manage Notes, Tasks, Calendar, Files, Contacts, and Deck Kanban boards in your Nextcloud instance via CalDAV, WebDAV, Notes, and Deck APIs. Use for creating notes, managing todos and calendar events, uploading/downloading files, managing contacts, and organizing Kanban boards, stacks, and cards.
-compatibility: Requires Node.js 24+ and a Nextcloud app password (NEXTCLOUD_TOKEN) granting full account-scope access. Reads NEXTCLOUD_URL, NEXTCLOUD_USER, NEXTCLOUD_TOKEN. HTTPS-only egress to NEXTCLOUD_URL. Performs destructive, non-transactional writes (delete/edit/share); see Safety section in body.
+compatibility: Requires Node.js 24+ and a Nextcloud app password (NEXTCLOUD_TOKEN) granting full account-scope access. Reads NEXTCLOUD_URL, NEXTCLOUD_USER, NEXTCLOUD_TOKEN, and optionally NEXTCLOUD_EMAIL. HTTPS-only egress to NEXTCLOUD_URL. Performs destructive, non-transactional writes (delete/edit/share); see Safety section in body.
 allowed-tools: Bash Read
 metadata:
   openclaw:
-    version: 0.4.2
+    version: 0.6.0
     skillKey: openclaw-nextcloud
     requires:
       env:
@@ -25,6 +25,9 @@ metadata:
       - name: NEXTCLOUD_TOKEN
         required: true
         description: Sensitive. Nextcloud app password granting full account-scope access. Use an app password from Settings → Security, not the account password.
+      - name: NEXTCLOUD_EMAIL
+        required: false
+        description: Optional. Email address of the account. When set, created calendar events name it as the organiser and as an accepted attendee, so clients show them as confirmed rather than awaiting an RSVP.
     homepage: https://github.com/keithvassallomt/openclaw-nextcloud
   credential-scope: nextcloud-account-full
   network-egress: ${NEXTCLOUD_URL}
@@ -41,7 +44,7 @@ This skill provides integration with a Nextcloud instance. It supports access to
 - **Node.js 24+** on PATH (`node scripts/nextcloud.js` in Claude Code or a
   source checkout; `node {baseDir}/scripts/nextcloud.js` in OpenClaw).
 - **Network egress** to `NEXTCLOUD_URL` only — the skill makes no other outbound calls.
-- **Environment variables** (see Configuration below). All three are required at runtime; without them the script exits with a clear error before making any request.
+- **Environment variables** (see Configuration below). The first three are required at runtime; without them the script exits with a clear error before making any request. `NEXTCLOUD_EMAIL` is optional.
 
 ## Configuration
 
@@ -50,6 +53,7 @@ The skill requires the following environment variables:
 - `NEXTCLOUD_URL`: The base URL of your Nextcloud instance (e.g., `https://cloud.example.com`).
 - `NEXTCLOUD_USER`: Your Nextcloud username.
 - `NEXTCLOUD_TOKEN`: **Sensitive.** Use a Nextcloud **app password** (Settings → Security → "Devices & sessions"), not your account password. App passwords can be revoked from the Nextcloud UI without changing your main credentials, and limit blast radius if leaked.
+- `NEXTCLOUD_EMAIL`: *Optional.* The account's email address. When set, `calendar create` adds `STATUS:CONFIRMED` plus `ORGANIZER` and `ATTENDEE` lines naming this address as having accepted, so calendar clients show the event as confirmed instead of as a pending invitation. Unset, events are created exactly as before. It must be a plain address such as `user@example.com`; anything else is rejected.
 
 `NEXTCLOUD_URL` must use `https://`. The script refuses to run over plain HTTP (except `localhost`/`127.0.0.1`/`[::1]`); set `OPENCLAW_ALLOW_HTTP=1` to override (not recommended outside isolated dev).
 
@@ -172,10 +176,15 @@ password files.
 
 ### Tasks
 - `tasks list [--calendar <c>]`
-- `tasks create --title <t> [--calendar <c>] [--due <d>] [--priority <p>] [--description <d> | --description-file <file>]`
-- `tasks edit --uid <u> [--calendar <c>] [--title <t>] [--due <d>] [--priority <p>] [--description <d> | --description-file <file>]`
+- `tasks create --title <t> [--calendar <c>] [--start <d>] [--due <d>] [--priority <p>] [--description <d> | --description-file <file>] [--location <l>] [--url <u>] [--class PUBLIC|PRIVATE|CONFIDENTIAL] [--tags <comma-separated>]`
+- `tasks edit --uid <u> [--calendar <c>] [--title <t>] [--start <d>] [--due <d>] [--priority <p>] [--description <d> | --description-file <file>] [--location <l>] [--url <u>] [--class PUBLIC|PRIVATE|CONFIDENTIAL] [--tags <comma-separated>] [--status <s>] [--percent-complete <n>]`
 - `tasks delete --uid <u> [--calendar <c>] --confirm tasks:delete`
 - `tasks complete --uid <u> [--calendar <c>]`
+
+A date with no time of day (`2026-02-05`) makes an all-day task. A task's start
+and due dates must both be all-day or both carry a time, so pass `--start` and
+`--due` together to switch a task from one to the other. On `tasks edit`, an
+empty value (`--tags ""`) removes that property from the task.
 
 ### Calendar Events
 - `calendar list [--from <iso>] [--to <iso>]` (Defaults to next 7 days)

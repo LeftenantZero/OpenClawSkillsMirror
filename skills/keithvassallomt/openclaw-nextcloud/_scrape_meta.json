@@ -1,8 +1,8 @@
 {
-  "changelog": "0.4.2\n\nFixed\n- tasks list no longer hides tasks created in the Nextcloud Tasks web app.\n  Those omit the STATUS property, and the CalDAV filter only matched todos\n  that declare it, so they were silently missing from every result.\n  Completed tasks stay hidden as before.\n- Deck deletes no longer fail with 403 Forbidden on Nextcloud 34. This\n  affected boards, stacks, cards, labels and card comments.\n\nChanged\n- Requires Node.js 24 or higher, up from 20, which is end-of-life.\n\nSecurity\n- Dependencies pinned to exact versions. fast-xml-parser updated past two\n  high-severity advisories in a transitive dependency. Neither reached the\n  shipped bundle, which imports only the XML parser.\n- The build no longer downloads anything at install time.\n- The README documents the three findings automated skill scanners report\n  against this repo, and how to rebuild the bundle from source to verify it.",
+  "changelog": "- Tasks can now carry a start date, a location, a link, a privacy setting, and tags \u2014 set when you create a task or add them later\n- You can mark a task as in progress or cancelled, and record how far along it is as a percentage\n- Dates without a time now make proper all-day tasks, so they show on the day you meant no matter what timezone you're in\n- Clearing a task's tags, location or link is now possible by setting them to nothing\n- Fixed: changing a task's start date could quietly change the wrong thing and leave the task with no start at all, while still reporting success\n- Fixed: task lists sometimes showed a nonsense start date from 1970\n- Fixed: completion times and new event timestamps were recorded in the wrong timezone",
   "created_at": 1769986427353,
   "display_name": "openclaw-nextcloud",
-  "fetched_at": 1787773121721,
+  "fetched_at": 1787931126283,
   "files": [
     "README.md",
     "SKILL.md",
@@ -27,12 +27,12 @@
   },
   "stats": {
     "comments": 2,
-    "downloads": 6373,
+    "downloads": 6475,
     "installs": 187,
     "stars": 9,
-    "versions": 14
+    "versions": 16
   },
   "summary": "Manage Notes, Tasks, Calendar, Files, Contacts, and Deck Kanban boards in your Nextcloud instance via CalDAV, WebDAV, Notes, and Deck APIs. Use for creating notes, managing todos and calendar events, uploading/downloading files, managing contacts, and organizing Kanban boards, stacks, and cards.",
-  "updated_at": 1786188641212,
-  "version": "0.4.2"
+  "updated_at": 1787912259856,
+  "version": "0.6.0"
 }
