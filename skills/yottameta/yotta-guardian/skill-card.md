@@ -1,6 +1,6 @@
 ## Description:
 
-元盾 yotta-guardian is a deterministic, cross-agent tool-call guardrail that evaluates exec, write, edit, read, run, and shell actions before execution and returns safety verdicts, matched rules, and audit records.
+Yuandun (yotta-guardian) is a cross-agent guardrail that uses deterministic rules and optional intent verification to evaluate risky exec, write, edit, read, run, and shell tool calls before execution.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-Developers and agent operators use this skill to pre-check potentially dangerous commands, sensitive file writes, system configuration edits, and similar high-impact tool calls before an agent executes them. It helps agents report allow or deny decisions with rule IDs, reasons, exit codes, and optional audit logs.
+Developers and agent operators use this skill as a pre-execution safety gate for high-risk commands, sensitive path writes, system configuration changes, and other tool calls that need deterministic allow, deny, or review decisions with audit traces.
 
 ### Deployment Geography for Use:
 
@@ -22,39 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The installer can persistently install or overwrite the skill across many agent directories.
+Risk: An external verifier can receive sensitive command text, paths, and content previews.
 
-Mitigation: Review the installer before use and prefer installing to an explicit skill directory when broad global installation is not required.
+Mitigation: Keep the default local-only mode unless the configured verifier is trusted for the data it may receive.
 
-Risk: Untrusted verifier commands or networked verifier gateways can expose command details, paths, or content previews.
+Risk: A global install can copy the guardrail into multiple agent environments.
 
-Mitigation: Use only trusted verifier commands or approved gateways, and avoid sending sensitive tool-call details to untrusted services.
+Mitigation: Use the global installer only when the same pre-check behavior is intended across those agents.
 
-Risk: Audit logs may contain sensitive operational details.
+Risk: A guardrail verdict can be misunderstood as final authorization for a risky operation.
 
-Mitigation: Store audit logs in protected locations and apply the same retention and access controls used for other sensitive operational logs.
+Mitigation: Treat deny and review outcomes as reasons to stop and report findings to the user; keep human authorization and compliance checks outside the skill.
 
 ## Reference(s):
 
-- [Rules reference](references/rules.md)
-- [Policies and exit codes](references/policies.md)
-- [Intent verifier protocol](references/intent-verifier.md)
-- [ClawHub release page](https://clawhub.ai/yottameta/skills/yotta-guardian)
+- [ClawHub skill page](https://clawhub.ai/yottameta/skills/yotta-guardian)
+- [rules.md](references/rules.md)
+- [policies.md](references/policies.md)
+- [intent-verifier.md](references/intent-verifier.md)
 - [npm package](https://www.npmjs.com/package/@yottameta/yotta-guardian)
+- [Agent Skills standard](https://agentskills.io/)
 
 ## Skill Output:
 
-**Output Type(s):** [text, JSON, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Text, JSON, Markdown, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown guidance with inline shell commands; checker output may be plain text, JSON, Markdown reports, or JSONL audit records.]
+**Output Format:** [CLI text, JSON verdicts, Markdown reports, and JSONL audit logs]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Verdicts include allow or deny status, severity, matched rule IDs, reasons, exit codes, and optional audit records.]
+**Other Properties Related to Output:** [Verdicts include allow, deny, or review decisions with severity, matched rule IDs, reasons, exit codes, and optional verifier details.]
 
 ## Skill Version(s):
 
-0.1.0 (source: SKILL.md frontmatter, package.json, CHANGELOG, server release)
+0.1.1 (source: release evidence, SKILL.md frontmatter, package.json)
 
 ## Ethical Considerations:
 

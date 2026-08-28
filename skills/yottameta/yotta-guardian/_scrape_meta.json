@@ -1,13 +1,14 @@
 {
-  "changelog": "yotta-guardian 0.1.0 \u2014 Initial Release\n\n- Introduces a deterministic rule engine with pluggable intent verification for intercepting high-risk tool calls (exec, write, edit, read, run, shell).\n- Provides audit logging for all intercepted actions and reports rule triggers transparently.\n- Supports configurable policies (default, strict, loose) and allows user-specified overrides.\n- Does not replace user decisions or hide audit records; default is read-only evaluation without auto-execution or bypass.\n- Compatible with Python 3.8+, works on Windows, Linux, and macOS.",
+  "changelog": "yotta-guardian 0.1.1\n\n- Added README.zh-CN.md for Chinese documentation.\n- Removed obsolete skill-card.md.\n- Updated documentation and instructions in README.md, SKILL.md, and related files.\n- Minor updates to package and code for clarity and consistency.",
   "created_at": 1787756322551,
   "display_name": "\u5143\u76fe yotta-guardian",
-  "fetched_at": 1787768408345,
+  "fetched_at": 1787932322146,
   "files": [
     "CHANGELOG.md",
     "LICENSE",
     "NOTICE",
     "README.md",
+    "README.zh-CN.md",
     "SKILL.md",
     "_meta.json",
     "assets/banner.png",
@@ -22,17 +23,7 @@
     "scripts/yotta_guardian.py",
     "skill-card.md"
   ],
-  "moderation": {
-    "engine_version": "v2.4.26",
-    "is_malware_blocked": false,
-    "is_suspicious": false,
-    "reason_codes": [
-      "review.llm_review"
-    ],
-    "summary": "Review: review.llm_review",
-    "updated_at": 1787760033081,
-    "verdict": "clean"
-  },
+  "moderation": null,
   "owner": {
     "display_name": "YottaMeta",
     "handle": "yottameta",
@@ -46,12 +37,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 0,
+    "downloads": 118,
     "installs": 0,
     "stars": 0,
-    "versions": 1
+    "versions": 2
   },
   "summary": "\u5143\u76fe \u2014\u2014 \u8de8\u667a\u80fd\u4f53\u7684\u5371\u9669\u8c03\u7528\u62e6\u622a\u62a4\u680f\uff1a\u786e\u5b9a\u6027\u89c4\u5219\u5f15\u64ce + \u53ef\u63d2\u62d4\u610f\u56fe\u9a8c\u8bc1\uff08\u4e0d\u7ed1\u6a21\u578b\uff09\uff0c\u62e6\u622a\u5371\u9669 exec / write / edit / read / run / shell \u5de5\u5177\u8c03\u7528\uff0c\u63d0\u4f9b\u5ba1\u8ba1\u65e5\u5fd7\u3002\u89e6\u53d1\uff1a\u4ee3\u7406\u8981\u6267\u884c\u9ad8\u98ce\u9669\u547d\u4ee4\uff08\u9012\u5f52\u5220\u9664\u3001\u78c1\u76d8\u683c\u5f0f\u5316\u3001\u63d0\u6743\u3001\u9632\u706b\u5899\u6539\u52a8\u3001\u53cd\u5411 shell\u3001\u4e0b\u8f7d\u5373\u6267\u884c\u7b49\uff09\u3001\u8981\u5199\u5165\u7cfb\u7edf\u654f\u611f\u8def\u5f84\u6216\u4fee\u6539\u7cfb\u7edf\u914d\u7f6e\u3001\u8981\u5728\u6267\u884c\u5371\u9669\u64cd\u4f5c\u524d\u505a\u5b89\u5168\u68c0\u67e5\u3001\u6216\u7528\u6237\u8bf4 \u62a4\u680f/\u62e6\u622a/\u5371\u9669\u64cd\u4f5c/\u5b89\u5168\u68c0\u67e5 \u7b49\u3002\u8fb9\u754c\uff1a\u9ed8\u8ba4\u53ea\u8bfb\u8bc4\u4f30\uff0c\u4e0d\u81ea\u52a8\u6267\u884c\u4e5f\u4e0d\u653e\u884c\u5371\u9669\u64cd\u4f5c\uff1b\u4e0d\u66ff\u4ee3\u7528\u6237\u51b3\u7b56\uff1b\u4e0d\u9690\u85cf\u5ba1\u8ba1\u8bb0\u5f55\uff1b\u89c4\u5219\u53ef\u914d\u7f6e\u3002",
-  "updated_at": 1787756446310,
-  "version": "0.1.0"
+  "updated_at": 1787852657415,
+  "version": "0.1.1"
 }
