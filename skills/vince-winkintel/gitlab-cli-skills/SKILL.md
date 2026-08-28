@@ -654,9 +654,15 @@ unset artifact_token
 
 Use `--output json` only when a consumer also needs the expiry. Treat the JSON document as secret because it contains the token. Do not pass `--jq` expressions that print the token into logs.
 
-## Configure Docker credential exchange
+## Configure package-manager authentication
 
-`glab artifact-registry login --docker` installs the `docker-credential-glab` shim and registers `glab` under Docker's per-registry `credHelpers`. Docker then exchanges a fresh short-lived token for every pull or push, so `--duration` is currently ignored.
+`glab artifact-registry login` configures exactly one package manager per run:
+
+- `--docker` installs the `docker-credential-glab` shim and registers `glab` under Docker's per-registry `credHelpers`.
+- `--maven` writes a `<server>` block to `~/.m2/settings.xml`, keyed by `--registry-alias`; the consuming `<repository>` must use the same `<id>`.
+- `--gradle` writes `{alias}Url`, `{alias}Username`, and `{alias}Password` to `~/.gradle/gradle.properties`, where `{alias}` is `--registry-alias`.
+- `--npm` writes a `//{host}{path}/:_authToken` entry to `~/.npmrc`; you must still configure `registry=` or `@scope:registry=` to point npm at the registry.
+- `--sbt` writes a `credentials +=` line to `~/.sbt/1.0/credentials.sbt`; sbt installs with a custom global base may not read that file.
 
 ```bash
 # Inspect the intended Docker config and stored GitLab identity first
@@ -668,15 +674,25 @@ glab artifact-registry login \
   --hostname gitlab.example.com \
   --docker \
   --registry registry.example.com
+
+# Configure Maven for a two-hour token
+glab artifact-registry login \
+  --hostname gitlab.example.com \
+  --maven \
+  --registry https://ar.example.com \
+  --registry-alias gitlab-ar \
+  --duration 2h
 ```
 
 Safety and compatibility rules:
 
-- `--registry` must be a bare hostname, optionally with a port. Do not pass a URL or path.
-- The helper subprocess intentionally ignores `GITLAB_TOKEN`. It normally reads a token stored by `glab auth login`; inside a GitLab CI job, it also honors `CI_JOB_TOKEN` when CI auto-login is enabled with `GLAB_ENABLE_CI_AUTOLOGIN=true`. Outside that CI path, store authentication for the selected host before configuring Docker.
+- For `--docker`, `--registry` must be a bare hostname, optionally with a port. For Maven, Gradle, npm, and sbt, `--registry` is typically a URL.
+- Docker exchanges a fresh token for every pull or push, so `--duration` does not apply. Maven, Gradle, npm, and sbt receive one static token; rerun the command before `--duration` elapses.
+- The Docker helper subprocess intentionally ignores `GITLAB_TOKEN`. It normally reads a token stored by `glab auth login`; inside a GitLab CI job, it also honors `CI_JOB_TOKEN` when CI auto-login is enabled with `GLAB_ENABLE_CI_AUTOLOGIN=true`. Maven, Gradle, npm, and sbt login paths can read `GITLAB_TOKEN` because `glab` writes the exchanged token into each tool's config file.
 - Use this only for a registry actually backed by GitLab Artifact Registry. Misclassifying a normal container registry can make every pull fail because an exchanged Artifact Registry token takes precedence.
-- The command writes `${DOCKER_CONFIG:-$HOME/.docker}/config.json`. Review that file's location first. It refuses to replace another per-registry credential helper, preserves existing `docker login` data, and reports when the new helper shadows that data.
-- Re-running the command for the same registry is safe and idempotent. After configuration, test a non-destructive pull or registry operation against the intended host without printing credentials.
+- Review the destination config path before writing: `${DOCKER_CONFIG:-$HOME/.docker}/config.json`, `~/.m2/settings.xml`, `~/.gradle/gradle.properties`, `~/.npmrc`, or `~/.sbt/1.0/credentials.sbt`.
+- `--registry-alias` applies only to Maven and Gradle. For Gradle, choose an alias that is a valid identifier in the build script; the derived default can contain hyphens.
+- Re-running the command for the same registry refreshes or replaces the matching entry. After configuration, test a non-destructive package-manager operation against the intended host without printing credentials.
 
 ## Troubleshooting
 
@@ -684,8 +700,9 @@ Safety and compatibility rules:
 - **Wrong issuer/subject/audience:** stop; re-check `--hostname`, environment-token precedence, and `glab auth status --hostname <host>`.
 - **Duration rejected:** use a Go-style duration between `1s` and `12h`.
 - **Expired token:** request a new short-lived token; do not persist or attempt to refresh the old one.
-- **Stored-token error during Docker setup:** run `glab auth login --hostname <host>`; an environment-only token is not used by the helper.
+- **Stored-token error during Docker setup:** run `glab auth login --hostname <host>`; an environment-only token is not used by the Docker helper.
 - **Credential-helper conflict:** inspect Docker's existing `credHelpers` entry and keep the current helper unless the operator explicitly approves a migration.
+- **Build tool still unauthenticated:** verify the tool reads the file that `glab artifact-registry login` wrote, and that its registry URL or repository ID matches the written key.
 
 See [references/commands.md](references/commands.md) for captured command help.
 
@@ -806,6 +823,10 @@ On a normal workstation, `glab auth login` stores credentials in the operating s
 Use `--insecure-storage` only when plaintext config-file storage is explicitly required and its risk is accepted. If no keyring backend is available, glab warns and falls back to the config file. In CI (`GITLAB_CI` or `CI` is set), glab defaults to config-file storage because keyrings are usually unavailable or ephemeral; prefer environment credentials rather than persisting a login there.
 
 If a keyring is locked, unavailable, or denies access, glab reports the credential-read failure directly. Fix keyring access or re-authenticate instead of treating the resulting error as an invalid token.
+
+glab checks whether refreshed OAuth credentials can be saved before it refreshes the token, and serializes credential writes across concurrent `glab` processes. If multiple agents or shells share one config directory, prefer separate config directories per actor for isolation, but do not add external file locks around `glab` itself.
+
+In a sandbox such as Claude Code, `glab` must be allowed to write the directory from `glab config path --dir`, not only the `config.yml` file. `glab` writes a temporary file beside the config and then replaces the original. On snap installs, connect keyring access with `sudo snap connect glab:password-manager-service` if encrypted credential storage is required; otherwise `glab auth login` can fall back to plaintext config storage.
 
 When re-authenticating interactively, `glab` preserves saved per-host values such as a custom API host, SSH host, and container-registry domains unless you explicitly override them with flags or prompts. Verify these values after re-authentication instead of deleting the config preemptively:
 
@@ -952,6 +973,9 @@ after verifying helper-based access, use the exact suggested `docker logout
 **Self-managed OAuth URL or refresh problems:**
 - Re-authenticate with the full configured host/subfolder; browser OAuth includes the configured subfolder in its authorization URL.
 - A re-authentication response that omits a replacement refresh token preserves the existing refresh token instead of clearing it.
+- If refresh fails with `invalid_grant`, re-run `glab auth login`; a revoked/expired OAuth grant or an earlier failed credential save can leave stored OAuth credentials stale.
+- If OAuth refresh fails inside a sandbox with a credential-save error, grant write access to `glab config path --dir` and re-authenticate. Retrying the same stale token normally will not repair the saved credential.
+- Docker and other helpers skip OAuth refresh for hosts authenticated with personal access tokens; check the token type before debugging OAuth state.
 
 **Multiple instances:**
 - Use `--hostname` flag to specify instance
@@ -1083,6 +1107,8 @@ Output from these commands may include **user-generated content from GitLab** (i
 `glab ci status` supports `--output json` / `-F json` for structured output, which is useful for agent automation.
 
 `glab ci view` and job-lookup-by-SHA order jobs and bridges by creation time, using ascending job/bridge ID as a deterministic tie-breaker when timestamps match. `glab ci status --output json` returns jobs in raw GitLab API order with no client-side sort, so in all cases key records by ID rather than array position.
+
+Current glab child-pipeline job lookup makes `glab ci trace <job-id>` show the requested job's log and `glab ci view <pipeline-id>` list jobs for the requested pipeline. When troubleshooting mixed parent/child pipeline output, upgrade an outdated installation before assuming GitLab returned the wrong job data.
 
 ```bash
 # View pipeline status with JSON output
@@ -1608,6 +1634,7 @@ This command has no subcommands.
   COMMANDS
     edit [--flags]               Opens the glab configuration file.
     get <key> [--flags]          Prints the value of a given configuration key.
+    path [--flags]               Print the location of the global configuration file.
     set <key> <value> [--flags]  Updates configuration with the value of a given key.
   FLAGS
     -g --global                  Use global config file.
@@ -1668,6 +1695,18 @@ glab uses this global config selection:
    - `$XDG_CONFIG_DIRS/glab-cli/config.yml` for system-wide defaults. The usual Linux default is `/etc/xdg/glab-cli/config.yml`; on macOS, set `XDG_CONFIG_DIRS` explicitly when relying on system-wide config.
 
 Files are not merged. If both the legacy and platform-specific XDG files exist, glab uses the legacy file and warns. Repository-local settings live in `.git/glab-cli/config.yml`, while per-host settings are stored in the selected global file. Prefer `glab config get`, `set`, and `edit` over directly modifying files, and do not copy stored tokens into logs or version control.
+
+## Locate the active global config
+
+Use `glab config path` instead of hard-coding the global config file location. It prints the path even when the file does not exist yet; `--dir` prints the parent directory.
+
+```bash
+glab config path
+glab config path --dir
+$EDITOR "$(glab config path)"
+```
+
+When a sandboxed tool needs permission to let `glab` refresh or rewrite credentials, grant write access to the directory from `glab config path --dir`, not just the `config.yml` file. `glab` writes a temporary file in that directory and then replaces the config file.
 
 ## Env-first agent pattern
 
@@ -1848,48 +1887,14 @@ See [references/commands.md](references/commands.md) for command synopsis and fl
 
 # glab dependency-firewall
 
-Configure and monitor GitLab Dependency Firewall for local package managers. The command group is beta; verify live help before relying on it in long-lived automation.
+Inspect GitLab Dependency Firewall activity for local package-manager workflows. The current command group is marked experimental, and the verified release binary exposes `ci-summary` only; do not rely on older `configure` examples unless live help on the target machine still lists them.
 
 ## Quick start
 
 ```bash
-# Configure both npm registry paths from the package-manager working directory
-glab dependency-firewall configure npm \
-  --repo-resolve https://gitlab.com/api/v4/projects/42/packages/npm/ \
-  --repo-deploy https://gitlab.com/api/v4/projects/42/packages/npm/
-
-# Preserve the existing deploy URL and update only the resolve URL
-glab df configure npm \
-  --repo-resolve https://gitlab.com/api/v4/projects/42/packages/npm/
-
 # Summarize the current working directory's Dependency Firewall CI log
 glab dependency-firewall ci-summary
 ```
-
-## Configure npm registry URLs
-
-`configure` currently supports `npm`. It writes `.gitlab/df/config.json` relative to the current working directory, so run it from the same directory where npm will run. Only explicitly supplied values are changed; omitted values, other package-manager blocks, and unknown keys are preserved.
-
-Before writing:
-
-1. Confirm the intended project/package registry URLs.
-2. Run from the package-manager working directory.
-3. Do not embed access tokens or other credentials in registry URLs.
-4. Review the resulting config diff before committing it.
-
-```bash
-# Resolve/install only
-glab dependency-firewall configure npm \
-  --repo-resolve https://gitlab.example.com/api/v4/projects/42/packages/npm/
-
-# Publish/deploy only; existing resolve configuration is preserved
-glab dependency-firewall configure npm \
-  --repo-deploy https://gitlab.example.com/api/v4/projects/42/packages/npm/
-
-git diff -- .gitlab/df/config.json
-```
-
-At least one of `--repo-resolve` or `--repo-deploy` is required. The command does not accept `--repo`; its configuration is local to the current working directory.
 
 ## Summarize CI activity
 
@@ -1923,13 +1928,13 @@ Treat exit `3` as a policy result, not a transient command failure. Surface the 
 - Confirm `.gitlab/df/ci-log.json` exists under the current working directory used for the command.
 - Do not assume a log in a repository root applies when the package manager ran in a nested workspace.
 
-**Config changed the wrong checkout:**
-- Revert the unintended `.gitlab/df/config.json` change.
-- Change to the package-manager working directory and rerun with the verified URL.
+**A `configure` example fails:**
+- `glab dependency-firewall configure` is not exposed by the verified current release binary.
+- Re-check `glab dependency-firewall --help` on the target machine before using older docs or scripts.
 
 **Unsupported package manager:**
-- The current command surface supports `npm` only.
-- Do not invent configuration for another manager; check a newer `glab dependency-firewall configure --help` or official docs.
+- The current visible command surface does not configure package managers.
+- Do not invent configuration for another manager; check live help or official docs for the target glab/GitLab version.
 
 ## Command reference
 
@@ -2202,6 +2207,10 @@ Create, view, update, and manage GitLab issues.
 # Create an issue
 glab issue create --title "Fix login bug" --label bug
 
+# Create or update with a multi-line description from a file
+glab issue create --title "Fix login bug" --description-file description.md
+glab issue update 123 --description-file description.md
+
 # List open issues
 glab issue list --state opened
 
@@ -2252,6 +2261,8 @@ glab issue update https://gitlab.com/group/project/-/work_items/123 --label need
      --label bug
    ```
 
+   For one-off multi-line descriptions, use `--description-file <path>` or `--description-file -` for stdin. It is mutually exclusive with `--description`; on create, it is also mutually exclusive with `--template`. A file containing exactly `-` is rejected because `--description -` means "open an editor".
+
 2. **Add reproduction steps:**
    ```bash
    glab issue note 456 -m "Steps to reproduce:
@@ -2275,6 +2286,8 @@ glab issue update https://gitlab.com/group/project/-/work_items/123 --label need
      --label backend,priority::medium \
      --assignee @backend-team \
      --milestone "Sprint 23"
+
+   glab issue update 789 --description-file triage-summary.md
    ```
 
 3. **Remove triage label:**
@@ -2757,6 +2770,10 @@ Create, view, and manage GitLab merge requests.
 # Create MR from current branch
 glab mr create --fill
 
+# Create or update with a multi-line description from a file
+glab mr create --title "Fix login bug" --description-file description.md
+glab mr update 123 --description-file description.md
+
 # List my MRs
 glab mr list --assignee=@me
 
@@ -2783,6 +2800,8 @@ glab mr create --fill --auto-merge
 # Start from an MR template file when your project uses one
 glab mr create --fill --template .gitlab/merge_request_templates/default.md
 ```
+
+For one-off multi-line descriptions, use `--description-file <path>` or `--description-file -` for stdin. It is mutually exclusive with `--description`; on create, it is also mutually exclusive with `--template`. A file containing exactly `-` is rejected because `--description -` means "open an editor".
 
 In a non-interactive environment, an explicit `--title` is sufficient; glab can create the MR with an empty description instead of requiring a TTY or `--description`. Interactive terminals still prompt for a missing description/template. For deterministic automation, pass `--yes` plus any source/target/repository selectors explicitly.
 
@@ -2891,6 +2910,8 @@ This automatically: checks out → runs tests → posts result → approves if p
 ```bash
 glab mr merge 123 --when-pipeline-succeeds --remove-source-branch
 ```
+
+Merge output reports the resulting merge request state accurately. Do not assume a successful `glab mr merge --auto-merge` prints `Merged!`; when the MR is only armed for auto-merge, automation should treat the accepted state as pending rather than already merged.
 
 **Squash commits:**
 ```bash
@@ -3293,43 +3314,44 @@ See [references/commands.md](references/commands.md) for full `--help` output.
 
 # glab orbit
 
-Access the GitLab Knowledge Graph (product name: **Orbit**) from `glab`.
+Run the managed Orbit CLI for the GitLab Knowledge Graph (product name: **Orbit**) through `glab`.
 
-The user-facing surface is the experimental `glab orbit` command family, covering **remote** Knowledge Graph access, guided setup, and the Orbit local CLI wrapper.
+`glab orbit` routes through the managed `orbit-cli` binary. `glab` downloads, verifies, and updates that binary on first use, then forwards commands and flags verbatim. `glab orbit remote <command>` injects the resolved GitLab credential; other Orbit commands run the managed binary without extra auth environment.
 
 ## ⚠️ Experimental Feature
 
 Upstream marks Orbit as **EXPERIMENTAL**:
-- command shape may change
+- most command shape now belongs to the managed `orbit-cli` binary and may change independently
 - the API is gated behind the `knowledge_graph` feature flag
 - access is user-scoped, not project-scoped
-- `glab orbit local` downloads/runs a local Orbit CLI binary and may have separate host/platform constraints
+- `glab orbit --install` and `glab orbit --update` install or refresh the managed binary without running it
 
 See: https://docs.gitlab.com/policy/development_stages_support/
 
 ## Quick start
 
 ```bash
-# First: confirm the service is available for your user
+# First: confirm the service is available for your user; glab injects auth for remote commands
 glab orbit remote status
 
-# Guided onboarding: verify access, install the Orbit agent skill, and install local CLI
-glab orbit setup
+# Guided onboarding through the Orbit binary
+glab orbit setup claude
 
-# Discover the graph model
+# Discover the graph model through orbit-cli
 glab orbit remote schema
 glab orbit remote dsl
 glab orbit remote tools
 
-# Inspect specific node types
-glab orbit remote schema User Project MergeRequest
+# Install or update the managed binary without running a command
+glab orbit --install
+glab orbit --update
 ```
 
 ## Recommended workflow: discover first, query second
 
-The upstream docs strongly point to a discovery-first flow:
+Use the Orbit binary's discovery-first flow:
 
-1. `glab orbit setup` or `glab orbit remote status` — verify Orbit is enabled and reachable
+1. `glab orbit setup claude` or `glab orbit remote status` — verify Orbit is enabled and reachable
 2. `glab orbit remote schema` — inspect the ontology (entities, edges, properties)
 3. `glab orbit remote dsl` — inspect the authoritative JSON Schema for the query DSL
 4. `glab orbit remote tools` — inspect the MCP tool manifest when integrating with agents/tools
@@ -3339,26 +3361,20 @@ That order matters because `schema` and `dsl` are the source of truth for what t
 
 ## Common workflows
 
-### 0) Guided setup
+### 0) Managed binary setup
 
 ```bash
-# Interactive onboarding: checks access, prompts to install the skill, prompts to install local CLI
-glab orbit setup
+# Install the managed binary without running it
+glab orbit --install
 
-# Non-interactive setup: accept all prompts
-glab orbit setup --yes
+# Check for and install updates to the managed binary
+glab orbit --update
 
-# Verify reachability only
-glab orbit setup --skip-skill --skip-local
-
-# Install the Orbit skill at user scope instead of in the current repo
-glab orbit setup --global
-
-# Refresh the skill and update the local CLI binary in place
-glab orbit setup --upgrade
+# Skip wrapper confirmation prompts in non-interactive environments
+glab orbit --install --yes
 ```
 
-Use `--path <path>` for a custom skill install directory, `--hostname <host>` to verify a specific GitLab host, and `--skip-skill` / `--skip-local` when you only want part of the onboarding.
+Use `orbit_local_auto_download=true` and `orbit_local_auto_run=true` in glab config, or the matching `ORBIT_LOCAL_AUTO_DOWNLOAD=true` and `ORBIT_LOCAL_AUTO_RUN=true` environment variables, when a non-interactive environment must allow the managed binary to download and run.
 
 ### 1) Check service health
 
@@ -3404,7 +3420,7 @@ glab orbit remote tools
 
 ### 5) Run a remote query
 
-`glab orbit remote query` reads a full Orbit query envelope from a file or stdin:
+`glab orbit remote query` is forwarded to the managed Orbit binary and reads a full Orbit query envelope from a file or stdin:
 
 ```json
 {
@@ -3427,7 +3443,7 @@ glab orbit remote query --response-format raw ./query.json
 Notes:
 - Default output is `llm`, which is compact and agent-friendly.
 - Use `--response-format raw` when you want structured JSON for further processing.
-- `--format` / `-f` are deprecated compatibility aliases; update scripts to `--response-format` so deprecation warnings stay out of automation logs.
+- Prefer the current Orbit binary's `--response-format` spelling when available; avoid deprecated compatibility aliases in durable automation.
 - The query body shape is defined by `glab orbit remote dsl`, not by guesswork.
 
 ### 6) Check indexing progress
@@ -3468,8 +3484,12 @@ Use `graph-status` when a query looks incomplete and you need to confirm whether
 - Prefer `--response-format raw` when debugging exact response structure.
 
 **Need local/offline graph commands:**
-- Use `glab orbit setup` to install the local CLI binary, then `glab orbit local` to run it.
+- Use `glab orbit --install` to install the managed binary, then run local Orbit commands through `glab orbit local ...`.
 - Keep remote discovery (`status`, `schema`, `dsl`, `tools`) in the workflow so generated local queries still match the server-side graph model.
+
+**Orbit binary fails before command execution:**
+- Reinstall with `glab orbit --update`.
+- On Windows ARM64, upstream reports x86_64 binary execution failures as an Orbit CLI execution error.
 
 ## Related skills
 
@@ -3480,41 +3500,19 @@ Use `graph-status` when a query looks incomplete and you need to confirm whether
 ## Command reference
 
 ```text
-glab orbit remote status [flags]
-  --hostname    Target GitLab host
+glab orbit [<command>] [flags]
+  --install  Install the Orbit binary without running it
+  --update   Check for and install updates to the binary
+  --yes      Skip confirmation prompts
 
-glab orbit remote schema [node...] [flags]
-  --hostname    Target GitLab host
-
-glab orbit remote dsl [flags]
-  --hostname    Target GitLab host
-
-glab orbit remote tools [flags]
-  --hostname    Target GitLab host
-
-glab orbit remote query [file|-] [flags]
-  --hostname         Target GitLab host
-  --response-format  llm|raw (default: llm)
-
-glab orbit remote graph-status [flags]
-  --full-path        Project/group full path
-  --hostname         Target GitLab host
-  --jq               Filter JSON output with a jq expression
-  --namespace-id     Group ID
-  --project-id       Project ID
-  --response-format  raw|llm (default: raw)
-
-glab orbit setup [flags]
-  --global      Install the Orbit skill at user scope (`~/.agents/skills/`)
-  --hostname    GitLab hostname to verify
-  --path        Custom Orbit skill install directory
-  --skip-local  Skip the local CLI binary install step
-  --skip-skill  Skip the agent-skill install step
-  --upgrade     Re-fetch the skill and update the local CLI binary in place
-  --yes         Skip every confirmation prompt
-
-glab orbit local [command] [flags]
-  Runs the Orbit local CLI; setup/download may happen before first use.
+Known forwarded workflows include:
+  glab orbit setup claude
+  glab orbit remote status
+  glab orbit remote query ./query.json
+  glab orbit remote graph-status --full-path gitlab-org/gitlab
+  glab orbit local index
+  glab orbit local sql "SELECT 1"
+  glab orbit version
 ```
 
 ---
@@ -4212,6 +4210,8 @@ glab repo search "keyword"
    ```
 
    SSH configurations that map `gitlab.com` to the official `altssh.gitlab.com` endpoint are recognized as GitLab.com rather than as a separate self-managed host.
+
+   For self-managed hosts that include a port, glab keys subfolder config lookup on the full host with port. If a repository resolves to the wrong API host or misses a configured subfolder, verify the exact host key in the config file at `glab config path` includes the port.
 
 3. **Initialize with content:**
    ```bash
@@ -5795,6 +5795,10 @@ glab work-items list
 # Create a task in the current project
 glab work-items create --type task --title "Follow up on flaky pipeline"
 
+# Create or update with a multi-line description from a file
+glab work-items create --type task --title "Follow up" --description-file description.md
+glab work-items update 42 --description-file description.md
+
 # Create a group-scoped epic
 glab work-items create --type epic --group my-group --title "Platform rewrite"
 ```
@@ -5862,6 +5866,8 @@ glab work-items create \
 glab work-items create --type issue --title "Backfill docs" --output json
 ```
 
+For one-off multi-line descriptions, use `--description-file <path>` or `--description-file -` for stdin. It is mutually exclusive with `--description`. A file containing exactly `-` is rejected because `--description -` means "open an editor".
+
 Supported upstream type values include:
 `epic`, `incident`, `issue`, `key_result`, `objective`, `requirement`, `task`, `test_case`, and `ticket`.
 
@@ -5879,6 +5885,16 @@ glab work-items delete 42 --repo mygroup/myproject --output json
 ```
 
 `delete` is destructive. Double-check whether the IID belongs to the intended project or group before running it.
+
+### Update work items
+
+```bash
+# Update body text in the current project
+glab work-items update 42 --description-file description.md
+
+# Update a group-scoped work item
+glab work-items update 40 --group MYGROUP --description-file epic-update.md
+```
 
 ## Work items vs issues
 
@@ -5918,6 +5934,8 @@ Use `glab work-items` when the work type itself matters. Use `glab issue` when y
 
 ## Command reference
 
+For complete captured help for affected commands, see [references/commands.md](references/commands.md).
+
 ```text
 glab work-items <command> [flags]
 
@@ -5931,13 +5949,27 @@ glab work-items list [flags]
   --type         One or more work item types
 
 glab work-items create [flags]
-  --confidential Mark the work item confidential
-  --description  Body text (use - to open editor)
-  --group        Group/subgroup scope
-  --output       text|json
-  --repo         Project scope override
-  --title        Title for the new work item
-  --type         epic|incident|issue|key_result|objective|requirement|task|test_case|ticket
+  --confidential     Mark the work item confidential
+  --description      Body text (use - to open editor)
+  --description-file Read body text from a file or stdin
+  --group            Group/subgroup scope
+  --output           text|json
+  --repo             Project scope override
+  --title            Title for the new work item
+  --type             epic|incident|issue|key_result|objective|requirement|task|test_case|ticket
+
+glab work-items update <iid> [flags]
+  --assignee         Update assignees
+  --description      Body text
+  --description-file Read body text from a file or stdin
+  --duedate          Update due date
+  --group            Group/subgroup scope
+  --milestone        Update milestone
+  --output           text|json
+  --repo             Project scope override
+  --startdate        Update start date
+  --title            Update title
+  --weight           Update weight
 
 glab work-items delete <iid> [flags]
   --group        Group/subgroup scope

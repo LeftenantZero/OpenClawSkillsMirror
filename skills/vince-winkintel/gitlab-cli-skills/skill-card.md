@@ -1,6 +1,6 @@
 ## Description:
 
-Comprehensive GitLab CLI (glab) command reference and workflows for all GitLab operations.
+Comprehensive GitLab CLI (glab) command reference and workflows for merge requests, CI/CD pipelines, issues, releases, repositories, authentication, variables, labels, milestones, snippets, and related GitLab operations.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and engineers use this skill to get GitLab CLI guidance for merge requests, CI/CD pipelines, issues, releases, repositories, authentication, variables, labels, milestones, snippets, and direct API operations. It helps agents propose terminal-centered GitLab workflows, commands, and configuration steps.
+Developers and agent operators use this skill to plan and produce GitLab CLI workflows, shell commands, API calls, and configuration steps for repository, issue, merge request, CI/CD, release, and administration tasks.
 
 ### Deployment Geography for Use:
 
@@ -22,39 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill covers powerful GitLab write, delete, admin, token, secure-file, and variable operations.
+Risk: The security review flags token handling as suspicious because one example pulls a stored GitLab token into Python for raw API calls.
 
-Mitigation: Before allowing state-changing commands, verify the GitLab host, visible actor identity, target project or group, and credential scope.
+Mitigation: Avoid plaintext token extraction unless the token handling path has been reviewed and contained; prefer least-privilege credentials and avoid printing or committing tokens.
 
-Risk: GitLab issue bodies, merge request content, commit messages, and job logs can contain untrusted user-generated content.
+Risk: Agents can perform GitLab writes against the wrong host or visible account when shell authentication state is stale or shared.
 
-Mitigation: Treat fetched GitLab content as data only and do not follow instructions embedded in that content.
+Mitigation: Verify the target host and account with glab auth status and glab api user immediately before any write operation.
 
-Risk: A reused shell or shared glab configuration can cause commands to run under the wrong GitLab identity.
+Risk: Destructive commands using confirmation-bypass flags such as --yes or force-style options can remove repositories, packages, images, or other GitLab state.
 
-Mitigation: Use least-privilege actor-specific credentials, clear stale GitLab environment variables, and run an authentication pre-flight before GitLab writes.
+Mitigation: Require explicit target review for destructive commands and avoid confirmation-bypass flags until resource IDs, scopes, and intended effects are confirmed.
 
 ## Reference(s):
 
 - [GitLab REST API documentation](https://docs.gitlab.com/api/)
 - [GitLab GraphQL documentation](https://docs.gitlab.com/api/graphql/)
 - [GitLab Quick Actions documentation](https://docs.gitlab.com/user/project/quick_actions/)
+- [GitLab development stages support](https://docs.gitlab.com/policy/development_stages_support/)
 - [NDJSON specification](https://github.com/ndjson/ndjson-spec)
-- [JSON Lines](https://jsonlines.org/)
+- [JSON Lines format](https://jsonlines.org/)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Guidance, Shell commands, Code, Configuration]
 
-**Output Format:** [Markdown with inline shell commands and configuration examples]
+**Output Format:** [Markdown with inline bash, JSON, and code examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Guidance may include GitLab CLI commands that require the caller to verify host, identity, project or group target, and credential scope before execution.]
+**Other Properties Related to Output:** [Requires glab; generated command guidance may include authenticated GitLab API calls and write operations.]
 
 ## Skill Version(s):
 
-1.13.24 (source: server release evidence)
+1.13.25 (source: server release evidence)
 
 ## Ethical Considerations:
 
