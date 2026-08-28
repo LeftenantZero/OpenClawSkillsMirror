@@ -1,7 +1,7 @@
 ---
 name: anthropomorphic-agent-engine
 slug: anthropomorphic-agent-engine
-version: 2.1.0
+version: 2.2.0
 displayName: 拟人智能体引擎
 description: 基于SPL纯核V8.0的拟人心理学引擎，实现认知、情绪、动机、社交的模块化建模，支持完全可复现的连续状态人格模拟，无概率黑盒
 required_commands:
@@ -33,15 +33,18 @@ metadata:
 - 叙事映射层：可自定义人格（乐观/偏执/厌世），将外部事件转换为内感受向量
 - 身份引擎：多身份模型，身份冲突自动注入基线张力
 - 可插拔模块：目标/价值观/认知偏差/世界模型均为独立可替换模块
-### 💬 语言风格渲染（v2.1 新增）
+### 💬 语言风格渲染（v2.1 新增，v2.2 增强）
 - 语言人格模块：表达档位（克制/锋锐/闪躲/亲密/坦率）+ 沉默策略
 - 风格画像：句长、正式度、讽刺倾向、时代感等维度自设
+- 动态多维语气：v2.2 新增，情绪状态实时驱动语气参数变化
+- 确定性台词生成：v2.2 新增，给定状态产出可复现的风格指令
 - 状态→台词指令：将 SPL Core 内部状态翻译为 LLM 可用的导演说明
-- 端到端演示：`language-style-demo.py` 一键跑通事件→引擎→风格指令全链路
-### 🖥️ 本地对话服务（v2.1 新增）
-- 零依赖 HTTP 服务（标准库 `http.server`），默认端口 8777
-- 支持中文/英文关键词事件映射
-- 返回：台词风格指令（LLM prompt）+ 完整状态快照
+### 🛡️ 未成年人保护引擎（v2.2 新增）
+- 弱化版核心 `SPLMinorPureCore`：删除创伤节点、压抑-反弹/隐压雪崩等爆发机制
+- 情绪钳位：所有负面情绪维度设上限（0.75），依恋封顶（0.8）
+- 三层保护：L1 输入守门（红线词库硬中断）→ L2 引擎弱化 → L3 危机信号（risk_level HIGH → 关怀话术 + guardian_notified）
+- 确定性审计日志：所有状态变化写入本地 JSONL，可追溯、可复现
+- HTTP 服务层：零依赖 `http.server`，默认端口 8788，会话隔离
 ## 使用方法
 ### 直接运行核心引擎
 ```python
@@ -61,11 +64,20 @@ identity.add_identity("诗人", {"sensitivity": 0.9, "rationality": 0.3})
 ```
 ### 语言风格渲染
 ```python
-# 运行端到端演示
-# python "assets/feature/language-style-demo.py"
+# 直接加载语言风格模块
+import importlib.util
+spec = importlib.util.spec_from_file_location("lang_style", "assets/feature/language style.py")
+lang = importlib.util.module_from_spec(spec); spec.loader.exec_module(lang)
+# 根据 SPL Core 快照生成风格指令
+style = lang.render_style(core.snapshot())
+```
+### 未成年人保护引擎
+```python
+# 运行弱化版核心引擎
+# python "assets/minor-protection/SPL-anthropic-minor-engine.py"
 #
-# 或启动本地对话服务
-# python "assets/feature/spl-chat-server.py"  # http://localhost:8777/
+# 或启动未成年保护 HTTP 服务（端口 8788）
+# python "assets/minor-protection/SPL-anthropic-minor-server.py"
 ```
 ## v2.0 升级能力（P0-P2）
 
@@ -80,21 +92,30 @@ identity.add_identity("诗人", {"sensitivity": 0.9, "rationality": 0.3})
 ### 🔌 Soulmate 联动（P1）
 引擎可作为 your-soulmate 扩展的推理内核：扩展负责 UI/交互，引擎负责状态演化，状态文件双向同步（见持久化契约）。
 
+## v2.2 升级要点
+
+- **SPL Core 同步 GitHub 最新版**：新增确定性审计日志（AuditLogger，本地 JSONL，失败不阻断引擎）
+- **language style.py 大幅增强**：新增动态多维语气渲染 + 确定性台词生成（+234 行）
+- **新增未成年人保护引擎**（`assets/minor-protection/`）：弱化版核心 + HTTP 服务层，三层保护架构
+- **删除废弃文件**：`language-style-demo.py`、`spl-chat-server.py`（已被 minor-server 替代）
+- **补入 LICENSE**：双轨授权（个人研究免费 / 政府企业需商业授权）
+- **README 同步仓库最新版**
+
 ## v2.1 升级要点
 
 - **SPL Core 同步 GitHub 最新版**：补全 `rationalization_load` 等字段
 - **新增语言风格模块**（`assets/feature/language style.py`）：离散档位表达人格 + 风格画像 + 状态→台词渲染
-- **新增端到端演示**（`assets/feature/language-style-demo.py`）：事件→引擎→风格指令一键验证
-- **新增本地对话服务**（`assets/feature/spl-chat-server.py`）：零依赖 HTTP 服务，直接对话测试
-- **README 同步仓库最新中文版**
 
 ## 文件
 - `references/PersonaPersistence.md`（P0 状态持久化契约）
 - `references/EmotionBehaviorMap.md`（P0 情绪-行为映射表）
 - `references/MotiveConflictRules.md`（P2 动机冲突裁决规则）
-- `scripts/`、`assets/`（核心引擎与身份/目标/价值/偏见/世界/语言风格模块）
+- `scripts/SPL-anthropic-engine.py`（核心引擎 + NarrativeMapper + AuditLogger）
+- `assets/feature/`（身份/目标/价值/偏见/世界/语言风格模块）
+- `assets/minor-protection/`（未成年保护引擎 + HTTP 服务层）
+- `LICENSE`（双轨授权协议）
 
 ## 注意事项
 - 纯Python标准库实现，无需额外依赖，Python ≥ 3.8即可运行
 - 完全确定性：相同输入永远得到相同输出，无随机数
-- 授权说明：仅允许个人非商业研究使用，政府/企业商业使用需获得书面授权
+- 授权说明：双轨模式——个人非商业研究免费，政府/企业商业使用需获得书面授权，详见 `LICENSE`

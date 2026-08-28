@@ -1,7 +1,82 @@
 import time
 import math
+import json
+import os
+import datetime
 from dataclasses import dataclass, field
 from typing import Dict, Any, List, Optional
+
+
+# ================================================================
+# 审计日志器（确定性 · 本地JSONL · 失败不阻断引擎）
+# ================================================================
+class AuditLogger:
+    """可解释/可验证/可审计的本地日志。
+
+    每条记录为一行 JSON，包含：序号、时间戳、引擎版本、会话ID、
+    事件类型、输入参数、状态快照摘要。写入失败静默跳过，
+    绝不影响引擎核心状态演化。
+    """
+    ENGINE_VERSION = "SPL-V8.0"
+
+    def __init__(self, log_dir: str = "logs", session_id: Optional[str] = None,
+                 enabled: bool = True):
+        self.enabled = enabled
+        self.log_dir = log_dir
+        self.session_id = session_id or (
+            "sess-" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+            + "-" + str(os.getpid())
+        )
+        self.log_file = os.path.join(log_dir, f"audit-{self.session_id}.jsonl")
+        self._entry_count = 0
+        if enabled:
+            try:
+                os.makedirs(log_dir, exist_ok=True)
+            except Exception:
+                pass
+
+    def log(self, event_type: str, input_data: Any, snapshot: Dict[str, Any],
+            **extra: Any) -> None:
+        if not self.enabled:
+            return
+        try:
+            entry = {
+                "seq": self._entry_count,
+                "ts": datetime.datetime.now().isoformat(timespec="milliseconds"),
+                "engine": self.ENGINE_VERSION,
+                "session": self.session_id,
+                "event": event_type,
+                "input": self._safe(input_data),
+                "snapshot": self._summarize(snapshot),
+            }
+            entry.update({k: self._safe(v) for k, v in extra.items()})
+            with open(self.log_file, "a", encoding="utf-8") as f:
+                f.write(json.dumps(entry, ensure_ascii=False, default=str) + "\n")
+            self._entry_count += 1
+        except Exception:
+            pass  # 审计日志失败不得阻断引擎核心
+
+    @staticmethod
+    def _safe(obj: Any) -> Any:
+        try:
+            json.dumps(obj)
+            return obj
+        except (TypeError, ValueError):
+            return str(obj)
+
+    @staticmethod
+    def _summarize(snap: Dict[str, Any]) -> Dict[str, Any]:
+        if not isinstance(snap, dict):
+            return {}
+        keys = ("fluid", "mood", "self_esteem", "energy", "fatigue",
+                "excitation", "max_trust", "suppression_load", "denial_load",
+                "rationalization_load", "latent_pressure",
+                "cognitive_dissonance", "sleep_debt", "trauma",
+                "memory_count", "expected_count")
+        return {k: snap.get(k) for k in keys if k in snap}
+
+    def export_path(self) -> Optional[str]:
+        return self.log_file if os.path.exists(self.log_file) else None
 
 
 # ================================================================
@@ -201,6 +276,19 @@ class SPLPureCoreV7_3:  # 类名保持兼容
 
     last_perceived: Dict[str, float] = field(default_factory=dict)
 
+    # ---------- 审计日志（可解释/可验证/可审计） ----------
+    audit_enabled: bool = True
+    audit_log_dir: str = "logs"
+    audit_session_id: Optional[str] = None
+    audit_logger: Optional[AuditLogger] = field(default=None, repr=False)
+
+    def __post_init__(self):
+        if self.audit_logger is None and self.audit_enabled:
+            self.audit_logger = AuditLogger(
+                log_dir=self.audit_log_dir,
+                session_id=self.audit_session_id,
+            )
+
     # ==================================================================
     # 时钟：支持虚拟时间注入（测试/回放必用）
     # ==================================================================
@@ -289,6 +377,15 @@ class SPLPureCoreV7_3:  # 类名保持兼容
 
         self.last_time = self._now()
 
+        # 审计日志：记录本次状态变更
+        if self.audit_logger:
+            self.audit_logger.log(
+                "process_vector",
+                {"vector": vector, "raw_intensity": raw_intensity,
+                 "event_id": event_id},
+                self.snapshot(),
+            )
+
     # ==================================================================
     # 公共入口 2：空转 / 独处时间
     # ==================================================================
@@ -359,6 +456,10 @@ class SPLPureCoreV7_3:  # 类名保持兼容
         self._update_mood()
         self._update_dynamic_viscosity()
 
+        # 审计日志
+        if self.audit_logger:
+            self.audit_logger.log("sleep", {"hours": hours}, self.snapshot())
+
     # ==================================================================
     # V8.0 公共入口 4：设定预期
     # ==================================================================
@@ -378,6 +479,14 @@ class SPLPureCoreV7_3:  # 类名保持兼容
             "age": 0.0,
         }
 
+        # 审计日志
+        if self.audit_logger:
+            self.audit_logger.log(
+                "expect",
+                {"event_id": event_id, "valence": valence, "confidence": confidence},
+                self.snapshot(),
+            )
+
     # ==================================================================
     # V8.0 公共入口 5：触发认知失调
     # ==================================================================
@@ -395,6 +504,14 @@ class SPLPureCoreV7_3:  # 类名保持兼容
         self.fluid["愧疚"] = min(1.0, self.fluid["愧疚"] + magnitude * 0.3)
         # 失调消耗能量
         self.energy = max(self.ENERGY_MIN, self.energy - magnitude * 5.0)
+
+        # 审计日志
+        if self.audit_logger:
+            self.audit_logger.log(
+                "induce_dissonance",
+                {"magnitude": magnitude, "belief_domain": belief_domain},
+                self.snapshot(),
+            )
 
     # ==================================================================
     # 快照：便于外部观察
@@ -1180,3 +1297,290 @@ class SPLPureCoreV7_3:  # 类名保持兼容
 
     def _update_dynamic_viscosity_old(self):
         self._update_dynamic_viscosity()
+
+
+# ================================================================
+# LLM 适配器接口 — 可插拔，支持多个 LLM 后端
+# ================================================================
+# 用法：
+#   adapter = OpenAIAdapter(api_key="sk-...", model="gpt-4o")
+#   line = adapter.generate(prompt_injection, style_example="…")
+#
+#   或使用 ChainAdapter 自动回退：
+#   adapter = ChainAdapter(
+#     primary=OpenAIAdapter(api_key="sk-..."),
+#     fallback=LocalFallbackAdapter(engine)
+#   )
+#   line = adapter.generate(prompt_injection)
+# ================================================================
+
+import json
+from abc import ABC, abstractmethod
+from typing import Optional
+
+
+class LLMAdapter(ABC):
+    """
+    大模型接口抽象基类。
+
+    所有 LLM 后端（OpenAI / Claude / 文心 / 本地）统一实现此接口。
+    """
+
+    @abstractmethod
+    def generate(self, prompt_injection: str,
+                 style_example: str = "",
+                 system_prompt: str = "",
+                 temperature: float = 0.7,
+                 max_tokens: int = 500) -> Optional[str]:
+        """
+        根据 prompt_injection 生成台词。
+
+        Args:
+            prompt_injection: LanguageStyleEngine 输出的风格指令
+            style_example: 可选 few-shot 示例台词
+            system_prompt: 可选系统提示词，覆盖默认
+            temperature: 采样温度
+            max_tokens: 最大生成 token 数
+
+        Returns:
+            生成的台词字符串，失败返回 None
+        """
+        ...
+
+
+class OpenAIAdapter(LLMAdapter):
+    """OpenAI / 兼容 API 适配器（GPT-4o, o1, DeepSeek, 通义千问等）"""
+
+    DEFAULTS = {
+        "api_base": "https://api.openai.com/v1",
+        "model": "gpt-4o",
+        "system_prompt": "你是一个角色语言生成器。根据给定的风格指令，产出一句符合角色当前情感状态的中文台词。不要输出解释，只输出台词本身。",
+    }
+
+    def __init__(self, api_key: str,
+                 api_base: str = None,
+                 model: str = None,
+                 system_prompt: str = None,
+                 timeout: int = 30):
+        self.api_key = api_key
+        self.api_base = api_base or self.DEFAULTS["api_base"]
+        self.model = model or self.DEFAULTS["model"]
+        self.system_prompt = system_prompt or self.DEFAULTS["system_prompt"]
+        self.timeout = timeout
+
+    def generate(self, prompt_injection: str,
+                 style_example: str = "",
+                 system_prompt: str = "",
+                 temperature: float = 0.7,
+                 max_tokens: int = 500) -> Optional[str]:
+        import urllib.request
+        import urllib.error
+
+        sp = system_prompt or self.system_prompt
+        user_content = prompt_injection
+        if style_example:
+            user_content += f"\n\n参考台词风格：{style_example}"
+
+        payload = {
+            "model": self.model,
+            "messages": [
+                {"role": "system", "content": sp},
+                {"role": "user", "content": user_content},
+            ],
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+        }
+
+        req = urllib.request.Request(
+            f"{self.api_base.rstrip('/')}/chat/completions",
+            data=json.dumps(payload).encode("utf-8"),
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {self.api_key}",
+            },
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=self.timeout) as resp:
+                body = json.loads(resp.read().decode("utf-8"))
+                choice = body.get("choices", [{}])[0]
+                content = choice.get("message", {}).get("content", "")
+                return content.strip() if content else None
+        except (urllib.error.URLError, json.JSONDecodeError, KeyError) as e:
+            return None
+
+
+class ClaudeAdapter(LLMAdapter):
+    """Anthropic Claude 适配器"""
+
+    DEFAULTS = {
+        "api_base": "https://api.anthropic.com/v1",
+        "model": "claude-3-5-sonnet-20241022",
+        "system_prompt": "你是一个角色语言生成器。根据给定的风格指令，产出一句符合角色当前情感状态的中文台词。不要输出解释，只输出台词本身。",
+    }
+
+    def __init__(self, api_key: str,
+                 api_base: str = None,
+                 model: str = None,
+                 system_prompt: str = None,
+                 timeout: int = 30):
+        self.api_key = api_key
+        self.api_base = api_base or self.DEFAULTS["api_base"]
+        self.model = model or self.DEFAULTS["model"]
+        self.system_prompt = system_prompt or self.DEFAULTS["system_prompt"]
+        self.timeout = timeout
+
+    def generate(self, prompt_injection: str,
+                 style_example: str = "",
+                 system_prompt: str = "",
+                 temperature: float = 0.7,
+                 max_tokens: int = 500) -> Optional[str]:
+        import urllib.request
+        import urllib.error
+
+        sp = system_prompt or self.system_prompt
+        user_content = prompt_injection
+        if style_example:
+            user_content += f"\n\n参考台词风格：{style_example}"
+
+        payload = {
+            "model": self.model,
+            "max_tokens": max_tokens,
+            "temperature": temperature,
+            "system": sp,
+            "messages": [
+                {"role": "user", "content": user_content},
+            ],
+        }
+
+        req = urllib.request.Request(
+            f"{self.api_base.rstrip('/')}/messages",
+            data=json.dumps(payload).encode("utf-8"),
+            headers={
+                "Content-Type": "application/json",
+                "x-api-key": self.api_key,
+                "anthropic-version": "2023-06-01",
+            },
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=self.timeout) as resp:
+                body = json.loads(resp.read().decode("utf-8"))
+                content = body.get("content", [{}])[0].get("text", "")
+                return content.strip() if content else None
+        except (urllib.error.URLError, json.JSONDecodeError, KeyError) as e:
+            return None
+
+
+class LocalFallbackAdapter(LLMAdapter):
+    """
+    本地确定性回退适配器。
+
+    不依赖任何外部 API，调用 LanguageStyleEngine.generate_line() 产出
+    语法通顺但无张力的模板台词。适合离线/隐私/零成本场景。
+    """
+
+    def __init__(self, engine=None):
+        """
+        Args:
+            engine: LanguageStyleEngine 实例。若为 None，延迟到 generate() 时传入。
+        """
+        self._engine = engine
+
+    @property
+    def engine(self):
+        return self._engine
+
+    @engine.setter
+    def engine(self, value):
+        self._engine = value
+
+    def generate(self, prompt_injection: str = "",
+                 style_example: str = "",
+                 system_prompt: str = "",
+                 temperature: float = 0.7,
+                 max_tokens: int = 500) -> Optional[str]:
+        """本地回退无法从 prompt_injection 自动生成，线程安全需外部传入 engine。"""
+        # LocalFallbackAdapter 不能接收 prompt_injection 自动生成台词，
+        # 它需要 LanguageStyleEngine.generate_line(core_snapshot, expression) 才能工作。
+        # 这里的 generate() 实现只返回 None，表示"需要外部调用 generate_line"。
+        return None
+
+
+class ChainAdapter(LLMAdapter):
+    """
+    链式适配器：先尝试主 LLM，失败后自动回退。
+
+    用法：
+        adapter = ChainAdapter(
+            primary=OpenAIAdapter(api_key="sk-..."),
+            fallback=LocalFallbackAdapter(engine)
+        )
+        line = adapter.generate(prompt_injection)
+        if line is None:
+            line = engine.generate_line(core_snapshot, expression)
+    """
+
+    def __init__(self, primary: LLMAdapter, fallback: LLMAdapter = None):
+        self.primary = primary
+        self.fallback = fallback
+
+    def generate(self, prompt_injection: str,
+                 style_example: str = "",
+                 system_prompt: str = "",
+                 temperature: float = 0.7,
+                 max_tokens: int = 500) -> Optional[str]:
+        result = self.primary.generate(
+            prompt_injection=prompt_injection,
+            style_example=style_example,
+            system_prompt=system_prompt,
+            temperature=temperature,
+            max_tokens=max_tokens,
+        )
+        if result is not None:
+            return result
+        if self.fallback is not None:
+            return self.fallback.generate(
+                prompt_injection=prompt_injection,
+                style_example=style_example,
+                system_prompt=system_prompt,
+                temperature=temperature,
+                max_tokens=max_tokens,
+            )
+        return None
+
+
+# ================================================================
+# 端到端便利函数：引擎 + LLM 一条调用
+# ================================================================
+def generate_line_with_llm(
+    engine,
+    core_snapshot: dict,
+    expression,
+    adapter: LLMAdapter,
+) -> str:
+    """
+    便利函数：引擎渲染风格 → LLM 生成台词 → 失败回退到确定性生成。
+
+    Args:
+        engine: LanguageStyleEngine 实例
+        core_snapshot: SPL 核心快照（含 fluid/mood/self_esteem 等）
+        expression: 表达意图对象（含 expression_mode / emotion_hidden / silence 等）
+        adapter: LLMAdapter 实例
+
+    Returns:
+        台词字符串（LLM 成功=LLM 产出，失败=引擎确定性产出）
+    """
+    rendered = engine.render_style(core_snapshot, expression)
+    if rendered.silence_hint:
+        return rendered.silence_hint
+
+    line = adapter.generate(
+        prompt_injection=rendered.prompt_injection,
+        style_example=rendered.style_example,
+    )
+    if line is not None:
+        return line
+
+    # 回退到确定性模板
+    return engine.generate_line(core_snapshot, expression)
