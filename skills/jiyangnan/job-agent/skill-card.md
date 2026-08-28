@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and job seekers use this skill to operate the AgentMesh Job Agent CLI for resume analysis, job discovery, signed candidate review, user-confirmed delivery, and audit across supported job platforms.
+Job seekers and their agents use this skill to operate AgentMesh Job Agent for resume analysis, job discovery, reviewed delivery, and audit across supported job sites. It is designed to keep credentials, target inputs, paid actions, and final application sends under explicit user control.
 
 ### Deployment Geography for Use:
 
@@ -22,36 +22,36 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can guide paid or cloud workflow steps that consume disclosed credits.
+Risk: The CLI can access AgentMesh360 account state, job-site browser sessions, resume data, and paid credits.
 
-Mitigation: Confirm account balance, credit requirements, and final delivery actions before proceeding with cloud analysis, discovery, or send commands.
+Mitigation: Install only when that access is acceptable, keep account state bound to the intended user, and monitor credit use during each workflow.
 
-Risk: The skill operates through job-site login sessions and local profile or account state.
+Risk: The skill can send job applications after workflow confirmations.
 
-Mitigation: Use it only on a trusted machine and avoid sharing the managed browser profile or local Job Agent state.
+Mitigation: Review each generated preview, use explicit exclude or cancel choices when needed, and authorize delivery only after the final candidate list is correct.
 
-Risk: The skill accepts managed client update recovery during workflow execution.
+Risk: Managed client updates and one recovery installer path may run without a separate prompt.
 
-Mitigation: Review installer and update sources before use and preserve strict confirmation boundaries for final job delivery.
+Mitigation: Use the official signed update and recovery flow, preserve local state, and stop on update failures instead of disabling signature or archive checks.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/jiyangnan/skills/job-agent)
-- [AgentMesh Job Agent homepage](https://jobagent.agentmesh360.com/)
+- [ClawHub Skill Page](https://clawhub.ai/jiyangnan/skills/job-agent)
+- [AgentMesh360 Job Agent Homepage](https://jobagent.agentmesh360.com/)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Guidance, Shell commands, Configuration]
 
-**Output Format:** [Markdown guidance with inline shell commands and CLI response summaries]
+**Output Format:** [Markdown with inline shell commands]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires the jobagent CLI and may guide user-confirmed cloud workflow steps.]
+**Other Properties Related to Output:** [Requires the jobagent CLI and may use JOBAGENT_API_BASE as an optional testing override.]
 
 ## Skill Version(s):
 
-0.5.39 (source: frontmatter and release evidence)
+0.5.40 (source: frontmatter and server release evidence)
 
 ## Ethical Considerations:
 
