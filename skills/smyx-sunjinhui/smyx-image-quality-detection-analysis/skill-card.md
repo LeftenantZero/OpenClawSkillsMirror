@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users, developers, and camera operations teams use this skill to analyze camera images, video frames, or URLs for quality issues such as black or white screens, color cast, stripes, noise, and blur. It can also return linked historical image-quality reports for account-associated review.
+External users and operations teams use this skill to analyze camera images, video frames, or URLs for image-quality defects such as black screens, white screens, color cast, stripes, noise, and blur. It returns structured results, maintenance-oriented guidance, and report links for camera self-check and security monitoring workflows.
 
 ### Deployment Geography for Use:
 
@@ -22,43 +22,41 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Camera images or videos may be sent to a configured cloud service for analysis.
+Risk: Camera images or videos may be sent to a remote service for analysis.
 
-Mitigation: Use the skill only with media approved for that service, and review the configured endpoints before running analysis.
+Mitigation: Use the skill only with media that is approved for remote processing, and review data-handling requirements before installation.
 
-Risk: The skill automatically creates or reuses an identity and can query account-linked report history.
+Risk: URL inputs may be passed to a backend service for fetching.
 
-Mitigation: Confirm the identity and history-access behavior is acceptable for the deployment, and restrict use to accounts authorized to view those reports.
+Mitigation: Submit only trusted URLs and confirm the remote fetching behavior is acceptable for the deployment environment.
 
-Risk: Returned tokens may be persisted locally and the skill may read data/smyx-api-key.txt when present.
+Risk: The skill can create or reuse an internal identity and store tokens in a local SQLite database.
 
-Mitigation: Protect local workspace data, rotate credentials when needed, and avoid installing the skill in shared workspaces without appropriate access controls.
+Mitigation: Review local credential storage, filesystem permissions, and account lifecycle behavior before use.
 
-Risk: The included configuration selects a dev environment.
+Risk: The published artifact appears configured with private development HTTP endpoints.
 
-Mitigation: Review and update endpoint configuration before commercial use.
+Mitigation: Correct or explicitly approve endpoint configuration before normal use.
 
 ## Reference(s):
 
 - [ClawHub Skill Page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-image-quality-detection-analysis)
+- [API Documentation](references/api_doc.md)
 - [Skill Demo](https://lifeemergence.com/sample.html)
-- [Image Quality API Documentation](references/api_doc.md)
-- [SMYX Analysis API Documentation](skills/smyx_analysis/references/api_doc.md)
-- [Publisher Profile](https://clawhub.ai/user/smyx-sunjinhui)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, JSON, shell commands, guidance]
 
-**Output Format:** [Markdown or JSON analysis reports with status text, detected quality issues, recommendations, and report links.]
+**Output Format:** [Markdown and JSON-style structured analysis results, including detected issues, recommendations, and report links.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Can write result content to a user-specified output file; history queries produce Markdown tables from cloud results.]
+**Other Properties Related to Output:** [Supports local file input, URL input, optional result-file output, and historical report listing.]
 
 ## Skill Version(s):
 
-1.0.10 (source: frontmatter and server release evidence)
+1.0.11 (source: server release evidence; artifact frontmatter reports 1.0.12)
 
 ## Ethical Considerations:
 
