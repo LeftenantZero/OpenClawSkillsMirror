@@ -1,6 +1,6 @@
 ## Description:
 
-Thompson-mode discipline for any coding task: think first, build bottom-up, brute force until measured, rewrite over patch. Not for non-coding requests.
+Thompson-mode discipline for any coding task: think first, build bottom-up, brute force until measured, rewrite over patch.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers use ken to keep coding agents focused on bottom-up implementation, small interfaces, minimal dependencies, measurement before complexity, and rewriting problematic units when warranted.
+Developers and coding agents use this skill to apply a terse, rewrite-favoring engineering posture to coding tasks. It guides task handling toward bottom-up reasoning, simple implementations, measured complexity, and concise delivery.
 
 ### Deployment Geography for Use:
 
@@ -22,35 +22,33 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill applies as a persistent coding-style mode and may influence later responses until disabled.
+Risk: The skill defaults the agent toward a terse, rewrite-favoring coding style that may be inappropriate for some sessions.
 
-Mitigation: Use 'stop ken' or 'normal mode' when the mode should no longer affect the agent.
+Mitigation: Install only when that posture is desired, and use 'stop ken' or 'normal mode' to return to ordinary behavior.
 
-Risk: Rewrite-oriented guidance may be unsuitable when a task requires a conservative patch or strict preservation of existing behavior.
+Risk: Rewrite-oriented guidance can encourage proposed deletions or rewrites that exceed a user's intended scope.
 
-Mitigation: Disable the mode or explicitly request conservative patching for those tasks, then review proposed code changes before use.
-
-Risk: Broad coding guidance can be distracting or inappropriate for non-coding requests.
-
-Mitigation: Use the skill only for coding tasks and disable it for unrelated conversations.
+Mitigation: Review proposed deletions and rewrites carefully before accepting them, especially when working in shared or production code.
 
 ## Reference(s):
 
-- [Project homepage](https://github.com/rajnandan1/ken)
+- [ClawHub skill page](https://clawhub.ai/rajnandan1/skills/ken)
+- [Homepage](https://github.com/rajnandan1/ken)
+- [Publisher profile](https://clawhub.ai/user/rajnandan1)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, guidance]
+**Output Type(s):** [Guidance, Code, Shell commands, Markdown]
 
-**Output Format:** [Markdown responses with code blocks or shell commands when the coding task calls for them]
+**Output Format:** [Markdown prose with code, command, and configuration snippets when the coding task requires them]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Code-first responses followed by concise notes about rewrites, discarded approaches, and brute-force ceilings when applicable.]
+**Other Properties Related to Output:** [Concise code-first responses; intensity can be changed with lite, full, or ultra modes]
 
 ## Skill Version(s):
 
-1.1.0 (source: ClawHub release evidence)
+1.2.0 (source: server release evidence)
 
 ## Ethical Considerations:
 
