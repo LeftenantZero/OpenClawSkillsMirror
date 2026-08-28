@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-Employees, external users, writers, editors, and institutional staff use this skill to draft, revise, condense, and review Chinese official documents, formal workplace materials, and news-style institutional copy. It helps check document genre, format, official tone, factual boundaries, and AI-like phrasing while keeping outputs grounded in user-provided materials.
+Employees, external users, and professional writers use this skill to draft, revise, condense, and review Chinese official documents, formal workplace materials, and news-style institutional copy. It helps check genre fit, document structure, official tone, formatting expectations, factual boundaries, and anti-AI-style language risks.
 
 ### Deployment Geography for Use:
 
@@ -22,49 +22,52 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Official-document drafts can be misleading if source materials are incomplete, outdated, or factually wrong.
+Risk: Official-document drafts may contain inaccurate facts, dates, authority claims, or unsupported conclusions if source material is incomplete.
 
-Mitigation: Review outputs against the user-provided materials and authoritative sources before use, especially for dates, amounts, policies, decisions, and institutional names.
+Mitigation: Review every generated document against authoritative source material before circulation or filing.
 
-Risk: Generated format, tone, or document genre may not match a local institution's required template or approval process.
+Risk: Formal workplace and official documents may include confidential or sensitive organizational information.
 
-Mitigation: Verify document genre, routing, addressee, closing language, layout, and required formal elements before formal submission.
+Mitigation: Use the skill only with information appropriate for the agent environment and follow the organization's confidentiality review process before sharing outputs.
 
-Risk: The optional prose checker can surface language, structure, and formatting signals, but it does not validate facts or official authorization.
+Risk: The optional local lint script checks draft prose and may process document text supplied to it.
 
-Mitigation: Treat checker output as a review aid and keep final factual, legal, and institutional approval with a qualified human reviewer.
+Mitigation: Run linting only on drafts intended for review in the local environment.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/gongyu0918-debug/skills/chinese-official-writing)
-- [workflow.md](references/workflow.md)
-- [information-selection.md](references/information-selection.md)
-- [genre-routing.md](references/genre-routing.md)
-- [handling-elements.md](references/handling-elements.md)
-- [argument-chains.md](references/argument-chains.md)
-- [official-style.md](references/official-style.md)
-- [anti-ai-patterns.md](references/anti-ai-patterns.md)
-- [final-review-layers.md](references/final-review-layers.md)
-- [review-checklist.md](references/review-checklist.md)
-- [format-gbt9704.md](references/format-gbt9704.md)
-- [genre-playbooks.md](references/genre-playbooks.md)
-- [genre-checklist.md](references/genre-checklist.md)
-- [ai-compute-docs.md](references/ai-compute-docs.md)
-- [external-research.md](references/external-research.md)
+- [AI 算力与技术服务材料](references/ai-compute-docs.md)
+- [反 AI 表达检查](references/anti-ai-patterns.md)
+- [论证链条](references/argument-chains.md)
+- [联网搜索与公开来源核验](references/external-research.md)
+- [总审层级](references/final-review-layers.md)
+- [敬谦称谓和机关用语](references/formal-addressing.md)
+- [GB/T 9704-2012 常用格式参考](references/format-gbt9704.md)
+- [公文行文用语](references/formulaic-language.md)
+- [文种与专项 Playbook](references/genre-playbooks.md)
+- [文种路由](references/genre-routing.md)
+- [办理要素](references/handling-elements.md)
+- [信息选择](references/information-selection.md)
+- [公文语言风格](references/official-style.md)
+- [AI 写稿轻量校对](references/proofreading-checklist.md)
+- [复核清单](references/review-checklist.md)
+- [任务路由卡](references/task-route-cards.md)
+- [写作流程](references/workflow.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Guidance]
+**Output Type(s):** [Text, Markdown, Guidance, Shell commands]
 
-**Output Format:** [Plain text or Markdown prose, with optional review comments]
+**Output Format:** [Plain text or Markdown, with optional local lint shell commands when requested]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces drafted text, revised text, condensed text, or issue-location review guidance; public-source checks are limited to user-requested or time-sensitive cases.]
+**Other Properties Related to Output:** [May produce official-document drafts, revised text, review findings, formatting guidance, or lint results depending on the user request.]
 
 ## Skill Version(s):
 
-1.6.17 (source: frontmatter and server release metadata)
+1.6.19 (source: frontmatter and server release metadata)
 
 ## Ethical Considerations:
 
