@@ -1,6 +1,6 @@
 ## Description:
 
-Pair-style code quality reviewer that diagnoses production, test, release-safety, and first-paint UX risks using Iron Law findings and a 0-100 Health Score.
+元质 yotta-code-quality is a pair-style code review skill that produces structured findings for code, PR, architecture, test quality, release-safety, and first-paint UX reviews using risk categories, Iron Law diagnosis, and a 0-100 Health Score.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-Developers and engineering teams use this skill to review code, pull requests, architecture changes, test quality, technical debt, and release readiness before merging or shipping.
+Developers and engineering teams use this skill to have an agent review code, pull requests, tests, architecture, technical debt, and release readiness. It is intended to produce evidence-based review reports before changes are merged or shipped.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,45 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Optional installers can copy the skill into multiple agent skill folders or overwrite an existing yotta-code-quality target folder.
+Risk: Broad conversational triggers or global installation can make the review skill available across many agent tools.
 
-Mitigation: Install only into intended skill directories, prefer an explicit --agent or --dir target, and avoid broad or shared directories.
+Mitigation: Use explicit invocation or install into a specific skill directory when tighter control is needed.
 
-Risk: Review findings and remedy guidance may be inaccurate or mis-scoped if the agent applies the skill without respecting the requested files, diff, or project configuration.
+Risk: Review reports can contain incorrect or misleading recommendations if the agent misreads the code or project context.
 
-Mitigation: Keep the default report-only posture, apply .code-quality.yaml when present, and require explicit user approval before making code edits.
+Mitigation: Treat findings as proposals and review the diagnosis, consequence, and remedy before applying changes.
+
+Risk: Optional fix or history modes can write changes when the user explicitly enables them.
+
+Mitigation: Enable write-oriented modes only for a scoped review and inspect resulting diffs or generated history records.
 
 ## Reference(s):
 
 - [ClawHub Skill Page](https://clawhub.ai/yottameta/skills/yotta-code-quality)
-- [npm Package](https://www.npmjs.com/package/@yottameta/yotta-code-quality)
-- [Code Quality Reviewer Shared Framework](references/common.md)
-- [Decay Risk Reference](references/decay-risks.md)
-- [Test Decay Risk Reference](references/test-decay-risks.md)
-- [Editorial Extensions](references/editorial-extensions.md)
-- [PR Review Guide](references/pr-review-guide.md)
+- [NPM Package](https://www.npmjs.com/package/@yottameta/yotta-code-quality)
+- [README](README.md)
+- [Simplified Chinese README](README.zh-CN.md)
+- [Common Review Configuration and Report Template](references/common.md)
+- [Production Decay Risks](references/decay-risks.md)
+- [Test Decay Risks](references/test-decay-risks.md)
+- [Release Safety and UX Extensions](references/editorial-extensions.md)
 - [Source Coverage Matrix](references/source-coverage.md)
+- [PR Review Guide](references/pr-review-guide.md)
+- [Examples](references/examples.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Analysis, Markdown, Guidance, Configuration]
+**Output Type(s):** [text, markdown, guidance]
 
-**Output Format:** [Markdown review report with findings, Health Score, summary, and optional remedy guidance.]
+**Output Format:** [Markdown code review report with findings, summary, severity, remedy guidance, and Health Score.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Report-only by default; code edits are produced only when explicitly requested.]
+**Other Properties Related to Output:** [Read-only by default; code changes are only proposed unless the user explicitly requests fix mode.]
 
 ## Skill Version(s):
 
-0.3.2 (source: SKILL.md frontmatter, package.json, server release metadata)
+0.3.3 (source: frontmatter, package.json, release evidence)
 
 ## Ethical Considerations:
 

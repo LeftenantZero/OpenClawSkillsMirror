@@ -1,11 +1,14 @@
 {
-  "changelog": "- Improved documentation clarity and explicit workflow defaults in SKILL.md.\n- Reinforced \u201cIron Law\u201d for review findings: Symptom \u2192 Source \u2192 Consequence \u2192 Remedy.\n- Added detailed mode-based load rules and review triggers/exclusions.\n- Made severity thresholds, risk codes (R1\u2013R6, T1\u2013T6, R7, UX1), and session contract explicit.\n- Clarified companion files' roles and moved canonical templates and score math to `references/common.md`.\n- No functional changes to review logic\u2014documentation and guardrail enhancements only.",
+  "changelog": "- Added detailed changelog file (CHANGELOG.md), legal notice (NOTICE), and Simplified Chinese documentation (README.zh-CN.md)\n- Updated core documentation files: README.md, SKILL.md, package.json\n- Removed deprecated skill-card.md to streamline documentation\n- Expanded multilingual and legal support for broader community use",
   "created_at": 1787723380531,
   "display_name": "\u5143\u8d28 yotta-code-quality",
-  "fetched_at": 1787768407580,
+  "fetched_at": 1787946055260,
   "files": [
+    "CHANGELOG.md",
     "LICENSE",
+    "NOTICE",
     "README.md",
+    "README.zh-CN.md",
     "SKILL.md",
     "_meta.json",
     "assets/banner.png",
@@ -37,12 +40,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 23,
+    "downloads": 114,
     "installs": 0,
     "stars": 0,
-    "versions": 1
+    "versions": 2
   },
-  "summary": "\u5143\u8d28\u2014\u2014 \u662f\u4e00\u4e2a\u8de8\u667a\u80fd\u4f53\u901a\u7528\u7684\u4ee3\u7801\u8d28\u91cf\u5ba1\u67e5\u6280\u80fd\uff0c\u628a\u8d44\u6df1\u5de5\u7a0b\u5e08\u7684\u5ba1\u67e5\u601d\u8def\u56fa\u5316\u6210\u53ef\u590d\u7528\u6d41\u7a0b\uff1a\u4ee5 Iron Law\uff08\u75c7\u72b6\u2192\u6839\u6e90\u2192\u540e\u679c\u2192\u4fee\u590d\uff09\u4e3a\u6838\u5fc3\uff0c\u8986\u76d6 12 \u672c\u7ecf\u5178 SE \u8457\u4f5c\u63d0\u70bc\u7684 R1\u2013R6 \u751f\u4ea7\u98ce\u9669\u4e0e T1\u2013T6 \u6d4b\u8bd5\u98ce\u9669\uff0c\u5e76\u6269\u5c55\u53d1\u5e03/\u4f9b\u5e94\u94fe\u5b89\u5168 R7 \u4e0e\u9996\u5c4f\u4f53\u9a8c UX1\uff1b\u6bcf\u6b21\u5ba1\u67e5\u8f93\u51fa 0\u2013100 \u5065\u5eb7\u5206\u4e0e\u53ef\u6267\u884c\u4fee\u590d\u5efa\u8bae\uff0c\u9ed8\u8ba4\u53ea\u62a5\u544a\u4e0d\u6539\u52a8\u4ee3\u7801\u3002",
-  "updated_at": 1787756836920,
-  "version": "0.3.2"
+  "summary": "Pair-style code quality reviewer: twelve book-grounded decay risks (R1\u2013R6, T1\u2013T6) plus release-safety and first-paint UX checks. Findings always use Iron Law (Symptom \u2192 Source \u2192 Consequence \u2192 Remedy) and a 0\u2013100 review-index Health Score. Triggers when: user asks to review code/PR/diff, \"any issues\", \"ready to merge\", smells, refactoring, tech debt, test quality, coverage, or architecture health; or says \u300c\u7ed3\u5bf9\u8bc4\u5ba1\u300d/\u300c\u53d1\u7248\u524d\u626b\u4e00\u773c\u300d/ yotta-code-quality. Do NOT trigger for: greenfield \"how do I write X\" with no code, pure syntax questions, or tool/framework questions with no shared code.",
+  "updated_at": 1787853046035,
+  "version": "0.3.3"
 }
