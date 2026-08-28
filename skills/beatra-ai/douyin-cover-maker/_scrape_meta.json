@@ -1,8 +1,8 @@
 {
-  "changelog": "Publish the reviewed Douyin Video Cover Maker workflow with its English ClawHub listing.",
+  "changelog": "- Improved cover generation logic: now requires a confirmed topic, hook, or script for idea-based covers; style words alone are no longer accepted as input.\n- When no photo or key frame is provided, the topic or hook is enforced as a required input and will not be inferred or invented.\n- The default canvas for a Douyin feed cover is now set to vertical 9:16 unless otherwise specified; no longer reuses Xiaohongshu 3:4 defaults.\n- Added specific guidance for headline and title placement: uses top or bottom third if user provides title, otherwise defaults to a text-safe area.\n- Documentation updated for increased clarity and specificity regarding input requirements and cover creation workflow.\n- Removed redundant file: skill-card.md.",
   "created_at": 1787224927936,
-  "display_name": "Douyin Video Cover Maker",
-  "fetched_at": 1787770387146,
+  "display_name": "douyin-cover-maker",
+  "fetched_at": 1787931955806,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -28,7 +28,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1787225754246,
+    "updated_at": 1787884829628,
     "verdict": "clean"
   },
   "owner": {
@@ -44,12 +44,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 80,
+    "downloads": 117,
     "installs": 0,
     "stars": 0,
-    "versions": 1
+    "versions": 2
   },
   "summary": "Create a Douyin cover or vertical short-video cover from a video topic, hook, script, portrait, product photo, or reference image. This AI cover maker builds a clear focal visual and headline-safe composition for Douyin short-video covers, creator series, product demos, tutorials, food, lifestyle, and knowledge content, then refines an accepted draft into a consistent account-cover direction.",
-  "updated_at": 1787225037585,
-  "version": "0.1.1"
+  "updated_at": 1787884065247,
+  "version": "0.1.3"
 }

@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators, marketers, and agent users use this skill to turn a short-video idea, script hook, portrait, product photo, key-frame screenshot, or accepted draft into one publish-ready Douyin or vertical short-video cover. The workflow helps an agent prepare a concise cover brief, confirm paid Beatra generation work, submit a single remote image task, track the result, and report returned artifacts and billing fields.
+External creators, marketers, and agent users use this skill to turn a confirmed Douyin topic, hook, script, key frame, product photo, portrait, or reference image into one publish-ready vertical cover with a clear focal subject and headline-safe composition.
 
 ### Deployment Geography for Use:
 
@@ -22,48 +22,43 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uses a shared Beatra device credential with broad media and wallet-related scope.
+Risk: The Beatra authorization grants broad account capabilities and stores a shared bearer token in ~/.beatra.
 
-Mitigation: Install only where that authorization scope is acceptable, keep the credential in the documented private file location, and revoke or uninstall through the bundled disconnect flow when access is no longer needed.
+Mitigation: Install only where broad Beatra account access is acceptable, keep the token out of logs and chat, and disconnect through the bundled uninstall workflow or Beatra Console when access is no longer needed.
 
-Risk: Remote cover generation consumes Beatra credits and can create duplicate paid work if retries are changed.
+Risk: Automatic updates are enabled by default and can replace package-owned files without a separate confirmation.
 
-Mitigation: Confirm paid work before submission, use one opaque client_request_id per unchanged request, and retry only byte-equivalent payloads with the same request identity after uncertain transport failures.
+Mitigation: Disable silent updates with `python3 scripts/mcp_client.py update --auto off` when package replacement should require manual review.
 
-Risk: The bundled client silently checks for and applies package updates by default.
+Risk: Paid generation requests can create duplicate or changed billable work if retried with different inputs.
 
-Mitigation: Use the documented update controls to disable automatic checks where silent package replacement is not acceptable, and rely on the package's checksum and fixed-source update validation when updates remain enabled.
-
-Risk: Selected local image files may be uploaded to Beatra for transform or edit workflows.
-
-Mitigation: Upload only files the user intentionally provides for the cover task, avoid including sensitive content, and preserve artifact references only as needed for the confirmed workflow.
+Mitigation: Confirm the final prompt, canvas, references, model, controls, and count before submission, then reuse the same client_request_id only for byte-equivalent recovery retries.
 
 ## Reference(s):
 
-- [ClawHub skill listing](https://clawhub.ai/beatra-ai/skills/douyin-cover-maker)
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/douyin-cover-maker)
 - [Beatra skill homepage](https://beatra.ai/skills/douyin-cover-maker)
 - [Workflow](references/workflow.md)
 - [Installation and authentication](references/installation-and-auth.md)
 - [MCP connection](references/mcp-connection.md)
-- [Installation registration](references/installation-registration.md)
 - [Tasks and results](references/tasks-and-results.md)
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
-- [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
+- [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Markdown, Shell commands, API Calls]
+**Output Type(s):** [Guidance, Shell commands, API Calls, Files]
 
-**Output Format:** [Markdown guidance with inline shell commands and remote task metadata]
+**Output Format:** [Markdown with JSON request bodies, shell commands, task identifiers, billing fields, and artifact links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces one Beatra image task request and returns artifact links, observed dimensions, task ID, resolved model, and billing fields when available.]
+**Other Properties Related to Output:** [Creates one paid image-generation or image-edit task by default and reports only returned task, artifact, usage, and billing fields.]
 
 ## Skill Version(s):
 
-0.1.1 (source: server release evidence and manifest.json)
+0.1.3 (source: manifest.json and server release evidence)
 
 ## Ethical Considerations:
 
