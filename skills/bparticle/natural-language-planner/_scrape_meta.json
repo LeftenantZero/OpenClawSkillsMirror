@@ -1,0 +1,68 @@
+{
+  "changelog": "- Initial release of Natural Language Planner.\n- Captures tasks from conversation and organises them into projects.\n- Automatically extracts structured information (title, priority, due date, tags) from user input.\n- Suggests projects for grouped tasks and proactively checks in on stale or overdue tasks.\n- Offers a local Kanban dashboard and stores all data as Markdown files.\n- Adds collaborative Agent Tips to tasks with helpful suggestions and ideas.",
+  "created_at": 1770645538160,
+  "display_name": "Natural Language Planner",
+  "fetched_at": 1787906246266,
+  "files": [
+    "ARCHITECTURE.md",
+    "LICENSE.txt",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/conversation_examples.md",
+    "examples/sample_project/README.md",
+    "examples/sample_project/tasks/task-001.md",
+    "examples/sample_project/tasks/task-002.md",
+    "examples/sample_project/tasks/task-003.md",
+    "scripts/__init__.py",
+    "scripts/__main__.py",
+    "scripts/config_manager.py",
+    "scripts/dashboard_server.py",
+    "scripts/export.py",
+    "scripts/file_manager.py",
+    "scripts/index_manager.py",
+    "scripts/tunnel.py",
+    "scripts/utils.py",
+    "skill-card.md",
+    "templates/dashboard/app.js",
+    "templates/dashboard/index.html",
+    "templates/dashboard/styles.css",
+    "templates/project_template.md",
+    "templates/task_template.md",
+    "tests/test_config_manager.py",
+    "tests/test_file_manager.py",
+    "tests/test_index_manager.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779962608145,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "bparticle",
+    "handle": "bparticle",
+    "user_id": "s17b1pbqzbzjt7kt385ymaew7x885y9q"
+  },
+  "slug": "natural-language-planner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/natural-language-planner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=natural-language-planner&ownerHandle=bparticle",
+    "page_url": "https://clawhub.ai/bparticle/skills/natural-language-planner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1958,
+    "installs": 62,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Natural language task and project management. Use when the user talks about things they need to do, projects they're working on, tasks, deadlines, or asks for a project overview / dashboard. Captures tasks from conversation, organises them into projects, tracks progress, and serves a local Kanban dashboard.",
+  "updated_at": 1778486231449,
+  "version": "0.1.0"
+}
