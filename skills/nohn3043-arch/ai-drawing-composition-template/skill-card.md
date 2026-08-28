@@ -1,6 +1,6 @@
 ## Description:
 
-Helps agents build consistent AI character prompts across image, storyboard, comic, video, and 3D workflows using structured anchors, composition rules, model-specific syntax, and validation checklists.
+Build high-consistency AI character prompts across five model syntax families and multi-format outputs using a weight and ratio precision-control workbench.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users, artists, and prompt engineers use this skill to generate or refine character prompts when visual consistency across models, image series, storyboards, comic panels, video, or 3D outputs matters.
+External users, artists, prompt engineers, and developers use this skill to create consistent character-generation prompts for images, storyboards, comic panels, video, and 3D outputs across multiple model syntax families.
 
 ### Deployment Geography for Use:
 
@@ -22,27 +22,25 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill includes reusable under-18 character and body prompt templates without clear safety guardrails.
+Risk: The skill includes reusable examples and prompt components for a 16-year-old character without explicit child-safety boundaries.
 
-Mitigation: Review before installation, remove or rewrite under-18 character templates and loli or teen body baselines, and add explicit image-generation safety safeguards before use.
-
-Risk: Prompt workbooks can preserve unsafe or unsuitable character anchors across repeated outputs.
-
-Mitigation: Require human review of character anchors, negative prompts, and validation checklists before using generated prompts in production image workflows.
+Mitigation: Review before use, replace or constrain minor-character examples, and add explicit rules blocking nude, sexualized, suggestive, fetish, or age-ambiguous depictions of minors.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/nohn3043-arch/skills/ai-drawing-composition-template)
-- [Project homepage from clawdis metadata](https://github.com/nohn3043-arch/ai-draw-cue-word-project)
+- [Project homepage](https://github.com/nohn3043-arch/ai-draw-cue-word-project)
 - [CharacterAnchors.csv](references/CharacterAnchors.csv)
 - [CompositionAndShots.csv](references/CompositionAndShots.csv)
-- [NaturalLanguagePromptTemplate.csv](references/NaturalLanguagePromptTemplate.csv)
 - [ReferenceImageCapabilityMatrix.csv](references/ReferenceImageCapabilityMatrix.csv)
-- [Reference-First Workflow](references/ReferenceFirstWorkflow.md)
-- [Production Pipeline](references/ProductionPipeline.md)
+- [NaturalLanguagePromptTemplate.csv](references/NaturalLanguagePromptTemplate.csv)
 - [Checklist.csv](references/Checklist.csv)
-- [StoryboardSkeletonTemplate.csv](references/StoryboardSkeletonTemplate.csv)
+- [ReferenceFirstWorkflow.md](references/ReferenceFirstWorkflow.md)
+- [ProductionPipeline.md](references/ProductionPipeline.md)
 - [PanelLayoutRules.csv](references/PanelLayoutRules.csv)
+- [SpeechBubblePositioning.csv](references/SpeechBubblePositioning.csv)
+- [StoryboardSkeletonTemplate.csv](references/StoryboardSkeletonTemplate.csv)
+- [TemporalConsistencyChecklist.csv](references/TemporalConsistencyChecklist.csv)
 - [VideoGenerationPromptTemplate.csv](references/VideoGenerationPromptTemplate.csv)
 - [ThreeDGenerationMatrix.csv](references/ThreeDGenerationMatrix.csv)
 
@@ -50,15 +48,15 @@ Mitigation: Require human review of character anchors, negative prompts, and val
 
 **Output Type(s):** [text, markdown, configuration, guidance]
 
-**Output Format:** [Markdown or plain text prompt guidance with model-specific prompt blocks and checklist results]
+**Output Format:** [Markdown and structured prompt text]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include image prompt text, negative prompt guidance, storyboard or panel planning text, reference-pack recommendations, and validation notes.]
+**Other Properties Related to Output:** [Produces model-specific prompt guidance and validation checklists; it does not execute code or access private data.]
 
 ## Skill Version(s):
 
-2.6.0 (source: frontmatter and release evidence)
+2.8.0 (source: server release evidence and frontmatter)
 
 ## Ethical Considerations:
 

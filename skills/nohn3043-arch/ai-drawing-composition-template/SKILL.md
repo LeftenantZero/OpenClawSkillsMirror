@@ -3,7 +3,7 @@ name: ai-drawing-composition-template
 slug: ai-drawing-composition-template
 displayName: AI Drawing Composition Template
 description: Build high-consistency AI character prompts across five model syntax families (natural-language / conversational / MJ-Niji / SD / domestic API) and multi-format outputs (image / storyboard / comic panel / video / 3D) using a weight & ratio precision-control workbench. Ships character-anchor sheets, composition & shots references, posture-emotion mapping, reference-image capability matrix, multi-character spatial relations, storyboard/panel layout rules, speech-bubble positioning, LoRA management, temporal-consistency checklist, 3D generation matrix, video prompt template, conversational edit chain, negative-word bank, and a P0/P1/P2 validation checklist.
-version: 2.6.0
+version: 2.8.0
 metadata:
   openclaw:
     requires: {}
@@ -66,19 +66,25 @@ models matters (illustrations, storyboards, character cards, series).
 | 0.7-0.9 | Atmosphere — adjustable per scene |
 | <0.7 | Weak prompt — atmosphere only, never carries key info |
 
-## v2.6 multi-format outputs (image / storyboard / comic panel / video / 3D)
+## v2.6–v2.8 multi-format outputs (image / storyboard / comic panel / video / 3D)
 
-Beyond single-image generation, v2.6 adds sheets for serialized and cross-modal work:
+Beyond single-image generation, v2.6–v2.8 adds sheets for serialized and cross-modal work:
 
 | Output | Key sheet | Rules |
 |---|---|---|
 | Multi-character scenes | `references/MultiCharacterSpatialRelations.csv` | Subject size hierarchy, occlusion, gaze direction, relative positioning anchors |
-| Comic panels / pages | `references/PanelLayoutRules.csv`, `references/SpeechBubblePositioning.csv` | Panel grid baselines, gutter rules, bubble placement by speech type |
-| Storyboard sequences | `references/StoryboardSkeletonTemplate.csv`, `references/TemporalConsistencyChecklist.csv` | Shot-to-shot continuity: anchor reuse, lighting/wardrobe lock, jump-cut avoidance |
+| Comic panels / pages | `references/PanelLayoutRules.csv`, `references/SpeechBubblePositioning.csv` | Panel grid baselines (4-panel / 6-panel / cinematic strip / splash / vertical scroll), bubble placement by speech type (7 types) |
+| Storyboard sequences | `references/StoryboardSkeletonTemplate.csv`, `references/TemporalConsistencyChecklist.csv` | Shot-to-shot continuity: 10 panel roles, 3 camera rules, 4 page layouts; 14 temporal checks across 6 categories |
 | Conversational iterative editing (GPT-4o / Gemini) | `references/ConversationalEditChain.csv` | Single-point edits only, anchor sentences frozen, edit log structure |
 | LoRA management | `references/LoRAManagement.csv` | Trigger tokens, weight baselines, version pins, conflict detection |
 | Video generation | `references/VideoGenerationPromptTemplate.csv` | Motion verbs, camera trajectory, duration baselines per model family |
 | 3D generation | `references/ThreeDGenerationMatrix.csv` | Model-specific syntax for 3D asset outputs (Turntable / orthographic / mesh) |
+
+### v2.7 comic-mode edition
+Added `PanelLayoutRules` (5 layout types), `SpeechBubblePositioning` (7 bubble types), and `TemporalConsistencyChecklist` (14 check items across 6 categories). Total sheet count 18→21.
+
+### v2.8 comic-workflow closure
+Interactive workbench deployed with bilingual (zh/en) comic mode workflow: storyboard skeleton → panel layout → speech bubble positioning → temporal consistency check. All 21 CSV sheets verified against deployed index.html data.
 
 ## Cross-model red lines
 
