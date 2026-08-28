@@ -1,8 +1,8 @@
 {
-  "changelog": "Add not_for field (agent routing exclusion) per skill-design-guide Principle Two: agent-consumption-first design",
+  "changelog": "Align name with slug; expand retrieval keywords (EN+ZH), read_when triggers, and tags to widen entry points",
   "created_at": 1787546298615,
-  "display_name": "workflow-guardian",
-  "fetched_at": 1787769093493,
+  "display_name": "workflow-guard-rails",
+  "fetched_at": 1787946018275,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -23,12 +23,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 88,
+    "downloads": 151,
     "installs": 0,
     "stars": 0,
-    "versions": 3
+    "versions": 4
   },
-  "summary": "Wrap multi-step agent workflows with pre-execution checks, side-effect queues, result validation, retry budgets, checkpointing, audit logs, and failure-rule accumulation. Prevents false successes, duplicate sends, unrecoverable crashes, and silent drift in LLM production systems. Trigger keywords: workflow safety, agent guard, pre-execution check, retry budget, idempotency, false success, audit log, drift detection, \u5de5\u4f5c\u6d41\u5b88\u62a4, \u526f\u4f5c\u7528\u961f\u5217, \u6f02\u79fb\u68c0\u6d4b. \u4e2d\u6587\u6458\u8981\uff1a\u4e3a\u591a\u6b65\u9aa4 Agent \u5de5\u4f5c\u6d41\u52a0\u88c5\u4e03\u9879\u62a4\u680f\u2014\u2014\u6267\u884c\u524d\u68c0\u67e5\u3001\u68c0\u67e5\u70b9\u3001\u526f\u4f5c\u7528\u961f\u5217\u3001\u9884\u7b97 \u91cd\u8bd5\u3001\u7ed3\u679c\u9a8c\u8bc1\u3001\u5ba1\u8ba1\u8bb0\u5f55\u3001\u89c4\u5219\u6c89\u6dc0\uff0c\u62e6\u622a\u5047\u6210\u529f\u3001\u91cd\u590d\u53d1\u9001\u4e0e\u6e10\u8fdb\u6f02\u79fb\u3002\u89e6\u53d1\u8bcd\uff1a\u5de5\u4f5c\u6d41 \u5b88\u62a4\u3001Agent \u62a4\u680f\u3001\u5047\u6210\u529f\u62e6\u622a\u3001\u91cd\u8bd5\u9884\u7b97\u3001\u6f02\u79fb\u68c0\u6d4b.",
-  "updated_at": 1787625593312,
-  "version": "1.0.2"
+  "summary": "Wrap multi-step agent workflows with pre-execution checks, side-effect queues, result validation, retry budgets, checkpointing, audit logs, and failure-rule accumulation. Prevents false successes, duplicate sends, unrecoverable crashes, and silent drift in LLM production systems. Use it when a workflow sends, publishes, pays, deletes, or writes to another system, runs unattended on a schedule, or must be safe to rerun after a mid-task failure. Trigger keywords: workflow safety, workflow guardian, agent guard, guardrails, pre-execution check, pre-flight check, retry budget, idempotency, false success, duplicate send, checkpoint recovery, rerun safety, audit log, drift detection, agent reliability, production guardrails, \u5de5\u4f5c\u6d41\u5b88\u62a4, Agent \u62a4\u680f, \u526f\u4f5c\u7528\u961f\u5217, \u6f02\u79fb\u68c0\u6d4b, \u5e42\u7b49, \u9632\u91cd\u590d\u53d1\u9001, \u5047\u6210\u529f, \u65ad\u70b9\u6062\u590d, \u751f\u4ea7\u62a4\u680f, \u91cd\u8dd1\u5b89\u5168. \u4e2d\u6587\u6458\u8981\uff1a\u4e3a\u591a\u6b65\u9aa4 Agent \u5de5\u4f5c\u6d41\u52a0\u88c5\u4e03\u9879\u62a4\u680f\u2014\u2014\u6267\u884c\u524d\u68c0\u67e5\u3001\u68c0\u67e5\u70b9\u3001\u526f\u4f5c\u7528\u961f\u5217\u3001\u9884\u7b97 \u91cd\u8bd5\u3001\u7ed3\u679c\u9a8c\u8bc1\u3001\u5ba1\u8ba1\u8bb0\u5f55\u3001\u89c4\u5219\u6c89\u6dc0\uff0c\u62e6\u622a\u5047\u6210\u529f\u3001\u91cd\u590d\u53d1\u9001\u4e0e\u6e10\u8fdb\u6f02\u79fb\u3002\u89e6\u53d1\u8bcd\uff1a\u5de5\u4f5c\u6d41 \u5b88\u62a4\u3001Agent \u62a4\u680f\u3001\u5047\u6210\u529f\u62e6\u622a\u3001\u9632\u91cd\u590d\u53d1\u9001\u3001\u91cd\u8bd5\u9884\u7b97\u3001\u65ad\u70b9\u6062\u590d\u3001\u751f\u4ea7\u62a4\u680f\u3001\u6f02\u79fb\u68c0\u6d4b.",
+  "updated_at": 1787823599655,
+  "version": "1.0.3"
 }

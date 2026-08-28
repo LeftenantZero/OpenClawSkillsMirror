@@ -1,6 +1,6 @@
 ## Description:
 
-Workflow Guardian helps agents wrap multi-step workflows with pre-execution checks, side-effect queues, validation, retry budgets, checkpointing, audit logs, and failure-rule accumulation to reduce false successes, duplicate external actions, unrecoverable crashes, and silent drift.
+A horizontal safety layer for multi-step agent workflows that adds pre-execution checks, checkpointing, side-effect queues, retry budgets, result validation, audit logs, and rule accumulation.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and automation teams use this skill to add guardrails around recurring or multi-step agent workflows, especially when external writes, sends, publishes, deletes, retries, or long-running drift could create user-visible failures.
+Developers and operators use this skill to wrap recurring or unattended agent workflows that send, publish, delete, write, pay, or otherwise create external side effects. It helps them define pre-checks, validation gates, retry budgets, checkpoints, audit logs, and human review points before releasing workflow results.
 
 ### Deployment Geography for Use:
 
@@ -22,36 +22,32 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill adds validation, checkpointing, audit logging, and confirmation prompts that can increase workflow overhead.
+Risk: The skill may be loaded for broad workflow-safety terms even when checkpointing, validation, retries, or external side-effect control are not relevant.
 
-Mitigation: Apply it to multi-step or side-effecting workflows where the added checks are justified, and budget the extra validation step before release.
+Mitigation: Use it for workflows where those controls are needed, and avoid applying it to unrelated single-shot prompts or pure data transforms.
 
-Risk: Machine-checkable guards cannot fully detect style, semantic, or judgment errors.
+Risk: Audit logging can capture workflow evidence and human confirmations that may include sensitive operational details.
 
-Mitigation: Route subjective or policy-sensitive decisions to a separate human or review skill instead of relying only on automated assertions.
-
-Risk: A side-effect queue only protects actions routed through it.
-
-Mitigation: Require external actions such as send, publish, pay, delete, or external writes to pass through the queue before execution.
+Mitigation: Limit audit logs to necessary evidence, follow local access and retention controls, and avoid recording secrets or unrelated personal data.
 
 ## Reference(s):
 
+- [ClawHub Skill Page](https://clawhub.ai/haiyangchenbj/skills/workflow-guard-rails)
 - [Guardian Patterns](references/guardian-patterns.md)
-- [ClawHub skill page](https://clawhub.ai/haiyangchenbj/skills/workflow-guard-rails)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [guidance, markdown, configuration]
 
-**Output Format:** [Markdown guidance with checklists, guard rules, validation patterns, and guardian reports]
+**Output Format:** [Markdown guidance with checklist-style guardian reports]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include concrete checkpoints, validation assertions, retry budgets, side-effect queue handling, audit-log entries, and human-confirmation prompts.]
+**Other Properties Related to Output:** [Documentation-only skill; no executable tool calls or generated files are declared by the artifact.]
 
 ## Skill Version(s):
 
-1.0.2 (source: frontmatter and server release evidence)
+1.0.3 (source: server release evidence and SKILL.md frontmatter)
 
 ## Ethical Considerations:
 
