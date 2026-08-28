@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to search MuseScore sheet music, inspect score metadata, and resolve available score downloads or PDFs through a configured MuseScore MCP setup.
+Developers and music-focused agent users use this skill to search MuseScore sheet music, inspect score metadata, resolve eligible download URLs, and create PDFs through a configured MCP server.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill depends on an unreviewed external MCP server and browser extension that mediate requests through the user's signed-in MuseScore browser session.
+Risk: MuseScore requests are routed through a signed-in browser session.
 
-Mitigation: Install only from trusted sources, review the external server and extension code when possible, and keep the browser extension enabled only while the skill is needed.
+Mitigation: Use a browser tab limited to musescore.com and install only if that session routing is acceptable.
 
-Risk: Download and PDF actions can use the signed-in MuseScore session and may access free, entitled, or purchased score content.
+Risk: The skill depends on a separate private MCP server and fetchproxy extension.
 
-Mitigation: Confirm each download or PDF action before allowing an agent to run it, and ensure the requested use complies with MuseScore account permissions and score licensing.
+Mitigation: Verify the MCP server and browser extension installation before use, and run the health check to confirm the bridge.
+
+Risk: Generated download URLs or PDF paths may point to files the user will open or save locally.
+
+Mitigation: Review generated download links and output paths before opening, saving, or sharing files.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/chrischall/skills/musescore)
-- [musescore-mcp source repository](https://github.com/chrischall/musescore-mcp)
+- [musescore-mcp repository link](https://github.com/chrischall/musescore-mcp)
 - [fetchproxy browser extension](https://github.com/chrischall/fetchproxy)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [text, markdown, configuration, shell commands, guidance]
 
-**Output Format:** [Markdown with JSON configuration snippets and MCP tool guidance]
+**Output Format:** [Markdown with inline JSON configuration and tool usage guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include MuseScore search results, score metadata, download URLs, and PDF creation guidance when the external MCP server and browser extension are configured.]
+**Other Properties Related to Output:** [May return score metadata, official download links, local PDF paths, or setup and health-check guidance.]
 
 ## Skill Version(s):
 
-0.15.4 (source: server release evidence)
+0.15.5 (source: server-resolved release evidence)
 
 ## Ethical Considerations:
 
