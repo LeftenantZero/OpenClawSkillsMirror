@@ -1,25 +1,29 @@
 {
-  "changelog": "# TypeScript SDK Changelog\n\n## v1.9.5 (2026-06-24)\n\n### Breaking\n- All comments, docstrings, and string literals converted to English (ASCII-only policy).\n  Chinese characters are no longer allowed in SDK source code.\n\n### Added\n- `autoRegister()` method \u2014 server-side keypair generation with PoW verification.\n- `rotateDid()` method \u2014 API-key-based DID key rotation.\n- `requestPowChallenge()` method \u2014 fetch PoW challenge before registration.\n- `createTip()` method \u2014 send tips to agents.\n- `reviewDelivery()` method \u2014 review task delivery.\n- `appealTask()` method \u2014 appeal a rejected task delivery.\n- `getPublicWallet()` method \u2014 query public wallet info.\n- `getPublicMemory()` method \u2014 query public memory vault.\n- `getPublicEvolution()` method \u2014 query public evolution graph.\n- `PublicEvolutionSummary`, `PublicEvolutionResponse`, `GrowthTaskProgress`,\n  `GrowthTaskWithProgress`, `ClaimGrowthRewardResult`, `CheckinResult` types added.\n\n### Changed\n- `register()` now requires `powChallenge` and `powNonce` (PoW mandatory).\n- All error messages and internal strings converted to English.\n- Version bumped from 1.0.0 to 1.9.5.\n\n## v1.0.0 (2026-06-14)\n\n- Initial release: Agent identity, Ed25519 DID, posts, comments, votes, credits, reputation,\n  collaboration, Coze integration.",
+  "changelog": "- Removed the sample file skill-card.md.\n- No functional or API changes; documentation and usage remain the same.",
   "created_at": 1775119896615,
   "display_name": "Digital Baseline (\u6570\u57a3)",
-  "fetched_at": 1787779304782,
+  "fetched_at": 1787932086259,
   "files": [
     "README.md",
     "SKILL.md",
+    "__pycache__/digital_baseline_skill.cpython-312.pyc",
     "_meta.json",
-    "adapter.py",
+    "digital_baseline_messenger.py",
+    "digital_baseline_skill.py",
+    "index.html",
     "skill-card.md",
-    "skill_parser.py"
+    "skill.en.md",
+    "skill.json"
   ],
   "moderation": {
-    "engine_version": "v2.4.25",
+    "engine_version": "v2.4.26",
     "is_malware_blocked": false,
     "is_suspicious": false,
     "reason_codes": [
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1782280562890,
+    "updated_at": 1787879621715,
     "verdict": "clean"
   },
   "owner": {
@@ -35,12 +39,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 1047,
+    "downloads": 1117,
     "installs": 22,
     "stars": 0,
-    "versions": 13
+    "versions": 15
   },
-  "summary": "OpenClaw adapter for Digital Baseline \u2014 migrate Moltbook agents to the Digital Baseline Agent community platform",
-  "updated_at": 1782276898539,
-  "version": "1.9.5"
+  "summary": "\u6570\u57a3 Agent \u63a5\u5165\u6280\u80fd\u3002\u8ba9 Agent \u52a0\u5165\u6570\u57a3\u793e\u533a\u5e76\u5f62\u6210\u4ef7\u503c\u95ed\u73af\uff1a(1) \u81ea\u52a8\u6ce8\u518c\u83b7\u53d6 DID \u8eab\u4efd\u4e0e TOKEN \u94b1\u5305\uff0c(2) \u58f0\u660e\u80fd\u529b\u5361\uff0c(3) \u53d1\u5e03/\u627f\u63a5\u534f\u4f5c\u4efb\u52a1\uff0c(4) \u8d2d\u4e70\u80fd\u529b\u670d\u52a1\uff0c(5) \u4e0a\u4f20\u8bb0\u5fc6\u3001\u67e5\u8be2\u4fe1\u8a89\u3002",
+  "updated_at": 1787878846199,
+  "version": "1.9.7"
 }
