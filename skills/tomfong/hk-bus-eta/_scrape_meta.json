@@ -1,0 +1,37 @@
+{
+  "changelog": "v1.0.2 is a safety-hardened, ClawHub-scan-friendly update with query robustness and parallel performance improvements.\n\n- Safer output policy: allows minimal formatting for clarity and compliance; no fabricated ETAs; always uses real script output or fixed fallback.\n- Explicit command and network allowlists; write access limited to skill-local cache/data only; secrets strictly forbidden.\n- Multi-route queries now require per-route fallback labeling if no results found.\n- Performance maintained: parallel API fetch, cache-first stop lookup, and guidance for quick responses.\n- Query retry logic clarified; max two retries for latency stability.\n- No functional changes to user-facing queries or ETA features.",
+  "created_at": 1773388588354,
+  "display_name": "Hong Kong Bus ETA | \u9999\u6e2f\u5df4\u58eb\u9810\u8a08\u5230\u9054\u6642\u9593",
+  "fetched_at": 1787876497189,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/bus_query.py",
+    "scripts/eta.py",
+    "scripts/sync_bus_stops.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Tom FONG",
+    "handle": "tomfong",
+    "user_id": "s174bz62x9vysjk1fdewm65yd183hybm"
+  },
+  "slug": "hk-bus-eta",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hk-bus-eta",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hk-bus-eta&ownerHandle=tomfong",
+    "page_url": "https://clawhub.ai/tomfong/skills/hk-bus-eta"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1105,
+    "installs": 29,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Fast, reliable Hong Kong bus ETA lookup (KMB/CTB/LWB) with fuzzy stop matching, bilingual output (zh-HK/en), and multi-route parallel queries. Built for \u201cnex...",
+  "updated_at": 1778491876821,
+  "version": "1.0.2"
+}
