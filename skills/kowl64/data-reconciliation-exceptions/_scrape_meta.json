@@ -1,0 +1,35 @@
+{
+  "changelog": "- Initial release of the data-reconciliation-exceptions skill.\n- Reconciles multiple data sources using stable identifiers (Pay Number, driver documents).\n- Produces comprehensive exception reports with explicit reasons for each non-match or mismatch.\n- Implements \u201cno silent failure\u201d checks\u2014pipelines stop when anomalies or tolerance breaches are detected.\n- Provides clear input requirements, configurable normalization, and threshold options.\n- Outputs a detailed CSV report categorizing every record (matched, missing, duplicate, mismatch, invalid).",
+  "created_at": 1768663806303,
+  "display_name": "Data quality & reconciliation with exception",
+  "fetched_at": 1787913234953,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/exceptions-report-template.csv",
+    "references/matching-rules.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "KOwl64",
+    "handle": "kowl64",
+    "user_id": "s173svt85h7w25jh0sc5g59ds1885fgy"
+  },
+  "slug": "data-reconciliation-exceptions",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/data-reconciliation-exceptions",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=data-reconciliation-exceptions&ownerHandle=kowl64",
+    "page_url": "https://clawhub.ai/kowl64/skills/data-reconciliation-exceptions"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 5222,
+    "installs": 182,
+    "stars": 3,
+    "versions": 1
+  },
+  "summary": "Reconciles data sources using stable identifiers (Pay Number, driving licence, driver card, and driver qualification card numbers), producing exception reports and \u201cno silent failure\u201d checks. Use when you need weekly matching with explicit reasons for non-joins and mismatches.",
+  "updated_at": 1778485733200,
+  "version": "1.0.0"
+}
