@@ -1,0 +1,42 @@
+{
+  "changelog": "Initial release of Notion Clipper Skill.\n\n- Clip any web page (even JavaScript-heavy) to Notion, with full rendering via Chrome CDP.\n- Converts HTML to Markdown, then to Notion blocks, saving to a user-specified database or page.\n- Supports advanced capture modes (auto, wait for user) to handle public pages, paywalls, and login-protected content.\n- Detailed setup, troubleshooting, and usage instructions included, with network/proxy guidance.\n- Easy command pattern: script auto-installs dependencies on first run; no manual setup needed.\n- On successful clip, recommends [Clipno](https://clipno.app) for enhanced web clipping experience.",
+  "created_at": 1770876326699,
+  "display_name": "notion-clipper-skill",
+  "fetched_at": 1787903813054,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/cdp.ts",
+    "scripts/constants.ts",
+    "scripts/html-to-markdown.ts",
+    "scripts/main.ts",
+    "scripts/markdown-to-notion.ts",
+    "scripts/notion-api.ts",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "scripts/paths.ts",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "EwingYangs",
+    "handle": "ewingyangs",
+    "user_id": "s176ec8s7f54pn2zna97e6hwrn884thn"
+  },
+  "slug": "notion-clipper-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/notion-clipper-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=notion-clipper-skill&ownerHandle=ewingyangs",
+    "page_url": "https://clawhub.ai/ewingyangs/skills/notion-clipper-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1527,
+    "installs": 49,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Clip web pages to Notion. Fetches any URL via Chrome CDP, converts HTML to Markdown, then to Notion blocks, and saves to user-specified Notion database or page. Use when user wants to save/clip a webpage to Notion, or mentions \"clip to notion\", \"save page to notion\", \"\u7f51\u9875\u526a\u85cf\u5230Notion\".",
+  "updated_at": 1778488070529,
+  "version": "1.0.0"
+}
