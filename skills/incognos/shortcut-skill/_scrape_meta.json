@@ -1,0 +1,34 @@
+{
+  "changelog": "**Major update: Adds mandatory safe JSON construction using jq for all API requests.**\n\n- All commands for creating or updating data now require using jq (`jq -n --arg/--argjson`) to build JSON, preventing shell injection and quoting errors.\n- Added a prominent section explaining and enforcing the safe JSON construction rule.\n- Updated all write and some read examples to demonstrate proper, secure variable handling with jq.\n- Improved comments and code samples for clarity and best security practices.\n- No functional API/interface changes; all updates reinforce secure scripting usage.",
+  "created_at": 1771928612443,
+  "display_name": "Shortcut Epic and Story skill",
+  "fetched_at": 1787895882196,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/create-stories.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Sina Khelil",
+    "handle": "incognos",
+    "user_id": "s17466t8tmcm7e71fzmsvpy35h8849z8"
+  },
+  "slug": "shortcut-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/shortcut-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=shortcut-skill&ownerHandle=incognos",
+    "page_url": "https://clawhub.ai/incognos/skills/shortcut-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1317,
+    "installs": 34,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Access and manage Shortcut.com (formerly Clubhouse) project management. Use when the user asks to: list stories, view backlog, search issues, check epics, up...",
+  "updated_at": 1778491624313,
+  "version": "1.0.2"
+}
