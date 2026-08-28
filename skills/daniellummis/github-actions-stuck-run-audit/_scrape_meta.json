@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of github-actions-stuck-run-audit.\n\n- Detects and audits stale (`queued`, `in_progress`, etc.) GitHub Actions runs using run JSON exports.\n- Aggregates and ranks stuck run risk by repository/workflow or branch.\n- Configurable thresholds for stuck age, stuck run volume, and stuck run rate.\n- Outputs in either text or JSON; can optionally fail CI gates on critical findings.\n- Flexible input filtering by workflow, branch, event, repository, and status.",
+  "created_at": 1772906831072,
+  "display_name": "GitHub Actions Stuck Run Audit",
+  "fetched_at": 1787885431036,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/stuck-run-audit.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Daniel Lummis",
+    "handle": "daniellummis",
+    "user_id": "s17fw617wehb1y9a026bgg9yed885cv7"
+  },
+  "slug": "github-actions-stuck-run-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/github-actions-stuck-run-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=github-actions-stuck-run-audit&ownerHandle=daniellummis",
+    "page_url": "https://clawhub.ai/daniellummis/skills/github-actions-stuck-run-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 720,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Detect stale queued/in-progress GitHub Actions runs before they quietly block delivery.",
+  "updated_at": 1778491768590,
+  "version": "1.0.0"
+}
