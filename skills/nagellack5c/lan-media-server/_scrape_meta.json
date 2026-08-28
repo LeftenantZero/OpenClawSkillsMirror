@@ -1,0 +1,35 @@
+{
+  "changelog": "lan-media-server 1.0.0\n\n- Initial release of a lightweight HTTP server to share agent-generated images, screenshots, and files over local network.\n- Includes setup script for installation and automatic systemd user service management.\n- Default configuration serves files from `$HOME/projects/shared-media` on port `18801`; customizable via environment variables.\n- Simple usage instructions: drop files in the shared directory, send a network-accessible link to users.\n- Focus on ease-of-use for channels that can\u2019t display media inline, with built-in security features (LAN-only, path traversal prevention, no directory listing).",
+  "created_at": 1770648434763,
+  "display_name": "LAN Media Server",
+  "fetched_at": 1787906205360,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/server.js",
+    "scripts/setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "nagellack5C",
+    "handle": "nagellack5c",
+    "user_id": "s17ekpadydtaatdfh6ydaqwyv18842j1"
+  },
+  "slug": "lan-media-server",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/lan-media-server",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=lan-media-server&ownerHandle=nagellack5c",
+    "page_url": "https://clawhub.ai/nagellack5c/skills/lan-media-server"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1950,
+    "installs": 60,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Share images, screenshots, and files from the AI workspace to users on the local network via HTTP. Use when the agent needs to show images, browser screenshots, or any files to the user and the current channel doesn't support inline media (e.g., webchat, CLI). Starts a lightweight Node.js static file server on LAN, managed by systemd. Drop files in the shared directory and send the user a clickable URL.",
+  "updated_at": 1778486231449,
+  "version": "1.0.0"
+}
