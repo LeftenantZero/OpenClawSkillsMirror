@@ -1,0 +1,41 @@
+{
+  "changelog": "autoagent 0.8.9\n\n- Enhanced setup flow: Every invocation starts a fresh session and lets users choose a custom sandbox path, with improved path resolution rules.\n- Interactive, user-driven scoring: Setup phase now focuses on collaborative definition and approval of `scoring.md`.\n- New prompt to ask about external scripts/tools used by the guidance, and a phase to analyze and suggest improvements for them.\n- Improved plateau detection: Considers \u201cwithin 5 points\u201d for the last 10 scores (or all available if fewer).\n- Subagent invocation now uses explicit session spawn parameters with clear instructions to include test cases in prompt and set timeouts.\n- Updated documentation and test case handling to reflect these changes.",
+  "created_at": 1773377994565,
+  "display_name": "autoagent",
+  "fetched_at": 1787876836126,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "TESTING.md",
+    "_meta.json",
+    "examples/simple-news-prompt.md",
+    "iteration-prompt.md",
+    "references/openclaw-integration.md",
+    "setup-prompt.md",
+    "skill-card.md",
+    "templates/fixtures.json",
+    "templates/scores.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "PeterPCW",
+    "handle": "peterpcw",
+    "user_id": "s1759v25wmt3a0ryr97vbaasm9884hpc"
+  },
+  "slug": "autoagent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/autoagent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=autoagent&ownerHandle=peterpcw",
+    "page_url": "https://clawhub.ai/peterpcw/skills/autoagent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 708,
+    "installs": 19,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Automatically improve agent guidance through iterative testing and scoring. Use when you want to optimize prompts, AGENTS.md entries, or skill definitions us...",
+  "updated_at": 1778491872769,
+  "version": "0.8.9"
+}
