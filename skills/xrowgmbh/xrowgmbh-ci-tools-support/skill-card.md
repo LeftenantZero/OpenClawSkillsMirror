@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and support maintainers use this skill to triage eligible GitLab support issues and discussion threads for the CI Tools components catalog using public documentation, repository content, and request-provided context.
+Developers and support maintainers use this skill to triage eligible GitLab support issues and discussion threads for the CI Tools components catalog, answer from public documentation or provided context, and hand off requests that are private, unsafe, or outside scope.
 
 ### Deployment Geography for Use:
 
@@ -22,17 +22,17 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Support responses could be provided to requesters outside the approved domain list.
+Risk: An agent using this support skill could reply to or label GitLab issues with broader permissions than needed.
 
-Mitigation: Configure SUPPORT_TRUSTED_DOMAINS with the intended approved domains and verify requester eligibility before responding.
+Mitigation: Grant only the GitLab permissions required for support replies and labels before installation.
 
-Risk: Excessive GitLab permissions could expose unrelated project data or actions.
+Risk: Eligibility checks depend on the configured approved requester domains.
 
-Mitigation: Grant only the GitLab permissions needed to comment, inspect relevant public support context, and apply support labels.
+Mitigation: Set SUPPORT_TRUSTED_DOMAINS to the intended approved domains and verify it before use.
 
-Risk: Private logs or customer details could be repeated in public support threads.
+Risk: Support answers may expose private customer details if public and confidential contexts are mixed.
 
-Mitigation: Keep issues confidential when they contain customer details, private URLs, private logs, or internal project names, and do not quote private logs into public places.
+Mitigation: Keep issues confidential when they include customer details, private URLs, private logs, or internal project names, and ground public replies only in approved public or thread-provided information.
 
 ## Reference(s):
 
@@ -41,17 +41,17 @@ Mitigation: Keep issues confidential when they contain customer details, private
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, markdown, configuration]
+**Output Type(s):** [Markdown, Guidance]
 
-**Output Format:** [Markdown support replies, triage labels, and concise handoff or refusal guidance]
+**Output Format:** [Markdown support replies, triage notes, labels, handoff messages, and focused follow-up questions]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires SUPPORT_TRUSTED_DOMAINS to define approved requester domains.]
+**Other Properties Related to Output:** [Responses must be grounded in public CI Tools documentation, public repository content, public GitLab history, or details explicitly provided in the support thread.]
 
 ## Skill Version(s):
 
-4.181.0 (source: release evidence)
+4.183.0 (source: server release evidence)
 
 ## Ethical Considerations:
 
