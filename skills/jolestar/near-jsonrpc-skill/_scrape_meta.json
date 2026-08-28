@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of near-jsonrpc-skill.\n\n- Provides safe, read-only NEAR JSON-RPC operations via UXC with FastNear as default provider.\n- Uses a fixed curated OpenRPC schema for NEAR method definitions.\n- Includes provider override guidance and warns against deprecated endpoints.\n- Limits RPC method surface to read-only (status, query, block, chunk, gas_price, validators).\n- Adds guardrails for parameter formatting, archival caveats, and schema requirements.",
+  "created_at": 1773934615199,
+  "display_name": "NEAR JSON-RPC",
+  "fetched_at": 1787938420382,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/near-public.openrpc.json",
+    "references/usage-patterns.md",
+    "scripts/validate.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jolestar",
+    "handle": "jolestar",
+    "user_id": "s1769rm50f8wvzw550m22hg10x83gkem"
+  },
+  "slug": "near-jsonrpc-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/near-jsonrpc-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=near-jsonrpc-skill&ownerHandle=jolestar",
+    "page_url": "https://clawhub.ai/jolestar/skills/near-jsonrpc-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 692,
+    "installs": 17,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Operate NEAR mainnet JSON-RPC reads via UXC with a provider-aware public RPC default",
+  "updated_at": 1778492038538,
+  "version": "1.0.0"
+}
