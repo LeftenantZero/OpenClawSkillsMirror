@@ -1,0 +1,42 @@
+{
+  "changelog": "Initial release of the fold skill for FastFold API workflows:\n\n- Submit and manage FastFold protein folding jobs using the Jobs API.\n- Handles authentication via API key, with built-in guidance and credential guardrails.\n- Automates the full workflow: create job \u2192 wait for completion \u2192 fetch/download results (CIF/PDB, metrics, viewer link).\n- Includes scripts for all steps, runnable from the workspace root, requiring no external libraries.\n- Differentiates complex vs non-complex result handling and provides secure, summarized outputs.",
+  "created_at": 1771789821667,
+  "display_name": "Fold",
+  "fetched_at": 1787896902120,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/auth_and_api.md",
+    "references/jobs.yaml",
+    "references/schema_summary.md",
+    "scripts/create_job.py",
+    "scripts/download_cif.py",
+    "scripts/fetch_results.py",
+    "scripts/get_viewer_link.py",
+    "scripts/load_env.py",
+    "scripts/security_utils.py",
+    "scripts/wait_for_completion.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "juliocesar-io",
+    "handle": "juliocesar-io",
+    "user_id": "s17aenmb1zpzszke9f3v7dzyb9885a45"
+  },
+  "slug": "fastfold-ai-fold",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fastfold-ai-fold",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fastfold-ai-fold&ownerHandle=juliocesar-io",
+    "page_url": "https://clawhub.ai/juliocesar-io/skills/fastfold-ai-fold"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 600,
+    "installs": 11,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Submits and manages FastFold protein folding jobs via the Jobs API. Covers authentication, creating jobs, polling for completion, and fetching CIF/PDB URLs,...",
+  "updated_at": 1778491612653,
+  "version": "1.0.0"
+}
