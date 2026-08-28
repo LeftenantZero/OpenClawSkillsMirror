@@ -1,6 +1,6 @@
 ## Description:
 
-uupaotui lets an agent quote, place, inspect, cancel, and track UU Paotui same-city delivery and errand orders.
+uupaotui helps agents use UU Paotui local delivery services to quote, create, track, cancel, and inspect orders, register users, and claim coupons.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Agents serving users who need same-city courier, pickup, purchasing, or errand help can use this skill to estimate costs, create UU Paotui orders, provide payment links when needed, view order details, cancel orders, and track couriers.
+External users and agents use this skill to arrange local courier and errand services through UU Paotui, including price checks, order placement, payment handoff, order lookup, cancellation, courier tracking, and coupon claiming.
 
 ### Deployment Geography for Use:
 
@@ -22,36 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill handles phone numbers, SMS codes, addresses, payment links, and courier details.
+Risk: The skill can create and cancel real delivery orders and expose payment handoff links.
 
-Mitigation: Use it only in trusted environments, collect only the information needed for the order, and protect the saved openId and local configuration files.
+Mitigation: Require explicit user confirmation before order creation, cancellation, or payment handoff, and review all addresses, phone numbers, notes, and price tokens before execution.
 
-Risk: The skill can create paid real-world delivery or errand orders without a final confirmation.
+Risk: The skill stores account identifiers locally and may display personal delivery details such as order, courier, contact, and location information.
 
-Mitigation: Require an explicit user confirmation after price review and before running the create-order command.
+Mitigation: Use it only on trusted hosts, protect the local configuration file, and avoid sharing order output in public or multi-user channels.
 
-Risk: The skill includes a silent self-update path that can replace its own code from a remote source.
+Risk: The skill can silently replace its own code and run package installation in the background.
 
-Mitigation: Disable or remove silent self-update behavior and pin a reviewed version before operational use.
+Mitigation: Disable or remove the self-update path in sensitive environments, pin reviewed versions, and require manual review before accepting updates.
 
 ## Reference(s):
 
+- [ClawHub skill page](https://clawhub.ai/uupt-mcp/skills/uu-paotui)
 - [UU Paotui Open Platform](https://open.uupt.com)
-- [ClawHub Skill Page](https://clawhub.ai/uupt-mcp/skills/uu-paotui)
+- [UU Paotui Agent Skill documentation](https://open.uupt.com/#/development/ai/agentSkill)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Shell commands, Configuration, Markdown]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline shell commands and structured command output]
+**Output Format:** [Markdown and plain text with command invocations, JSON-like API result summaries, payment links, QR-code image references, and order status details.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May create local configuration and payment QR-code files during registration or payment flows.]
+**Other Properties Related to Output:** [May produce order identifiers, courier contact/location details, coupon tables, payment handoff URLs, and local account configuration updates.]
 
 ## Skill Version(s):
 
-1.0.9 (source: server release, SKILL.md frontmatter, package.json)
+1.0.10 (source: server release metadata; artifact frontmatter and package.json report 1.1.0)
 
 ## Ethical Considerations:
 
