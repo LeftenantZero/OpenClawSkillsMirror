@@ -1,0 +1,54 @@
+{
+  "changelog": "**\u65b0\u589e\u201c\u9886\u57df\u89e3\u8bfb\u201d\u53ca\u68c0\u7d22\u4f18\u5316\uff0c\u4e3a\u6bcf\u7bc7\u8bba\u6587\u81ea\u52a8\u751f\u6210\u57fa\u4e8e PDF \u7684\u957f\u6587\u4e2d\u6587\u89e3\u8bfb\uff0c\u6539\u8fdb\u9886\u57df\u89e3\u6790\u4e0e\u7f13\u5b58\u3002**\n\n- \u65b0\u589e Agent \u89e3\u8bfb\u529f\u80fd\uff1a\u6bcf\u7bc7\u8bba\u6587\u63a8\u9001\u65f6\u81ea\u52a8\u751f\u6210\u57fa\u4e8e PDF \u5185\u5bb9\u7684\u4e2d\u6587\u957f\u6587\u89e3\u8bfb\uff0c\u5982\u5931\u8d25\u56de\u9000\u81f3\u6458\u8981\uff0c\u89e3\u8bfb\u4e0d\u5c11\u4e8e 500 \u5b57\u5e76\u81ea\u5e26\u95ee\u9898\u3001\u65b9\u6cd5\u3001\u521b\u65b0\u7b49\u7ed3\u6784\u5316\u8981\u70b9\u3002\n- \u589e\u52a0 `insight_mode` \u914d\u7f6e\uff08\u9ed8\u8ba4 `pdf`\uff09\uff0c\u652f\u6301 PDF \u89e3\u6790\uff0c\u89e3\u8bfb\u63d0\u793a\u6a21\u677f\u5199\u5165\u89c4\u8303\uff0c\u652f\u6301 Agent \u5355\u7bc7\u6279\u5224\u6027\u89e3\u8bfb\u3002\n- \u6539\u8fdb\u9886\u57df\u540d\u89e3\u6790\u903b\u8f91\uff1a\u4f18\u5148\u5c06\u4e2d\u6587\u9886\u57df\u540d\u7ffb\u8bd1\u4e3a\u82f1\u6587\u540e\u68c0\u7d22\uff0c\u907f\u514d\u76f4\u63a5\u7528\u4e2d\u6587\u67e5 arXiv\u3002\n- \u5f15\u5165\u201c\u9886\u57df\u6307\u7eb9\u7f13\u5b58\u201d\uff0c\u9996\u6b21\u51c6\u5907\u9886\u57df\u79cd\u5b50\u8bed\u6599\u5e76 embedding\uff0c\u540e\u7eed\u590d\u7528\u51cf\u5c11\u91cd\u590d\u6293\u53d6\uff0c\u652f\u6301\u5f3a\u5236\u5237\u65b0\u9009\u9879\u3002\n- \u53bb\u91cd\u72b6\u6001\u4ec5\u7528\u65b0\u65b9\u6848\uff08\u6309\u8ba2\u9605\u9886\u57df\uff09\uff0c\u81ea\u52a8\u6bcf 7 \u5929\u6e05\u7a7a\uff0c\u4e0d\u518d",
+  "created_at": 1773205914331,
+  "display_name": "agent-daily-paper",
+  "fetched_at": 1787880786769,
+  "files": [
+    ".github/workflows/daily-digest.yml",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "config/agent_field_profiles.example.json",
+    "config/agent_field_profiles.json",
+    "config/subscriptions.examples.json",
+    "config/subscriptions.instant.json",
+    "config/subscriptions.json",
+    "config/tmp.cache.test.json",
+    "data/arxiv_taxonomy.json",
+    "data/state.json",
+    "output/seed_corpus/docs/recommender_systems.md",
+    "output/seed_corpus/embeddings/recommender_systems.json",
+    "scripts/bootstrap_env.py",
+    "scripts/doctor.py",
+    "scripts/install_argos_model.py",
+    "scripts/install_embedding_model.py",
+    "scripts/instant_digest.py",
+    "scripts/prepare_fields.py",
+    "scripts/run_digest.py",
+    "scripts/sync_arxiv_taxonomy.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ricardo-Ping",
+    "handle": "ricardo-ping",
+    "user_id": "s17c8egg8k7y4m3gm7vxxye8n58852y9"
+  },
+  "slug": "agent-daily-paper",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-daily-paper",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-daily-paper&ownerHandle=ricardo-ping",
+    "page_url": "https://clawhub.ai/ricardo-ping/skills/agent-daily-paper"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 898,
+    "installs": 25,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "\u652f\u6301\u7528\u6237\u6309\u4e00\u4e2a\u6216\u591a\u4e2a\u7814\u7a76\u9886\u57df\u8ba2\u9605 arXiv \u6700\u65b0\u8bba\u6587\uff0c\u6309\u91cd\u8981\u6027\u6392\u5e8f\u5e76\u4ee5\u4e2d\u82f1\u53cc\u8bed\u5361\u7247\u5f62\u5f0f\u63a8\u9001\uff08\u82f1\u6587\u6807\u9898/\u4e2d\u6587\u6807\u9898/\u82f1\u6587\u6458\u8981/\u4e2d\u6587\u6458\u8981/arXiv \u94fe\u63a5\uff09\u3002\u652f\u6301\u6bcf\u9886\u57df\u72ec\u7acb\u6570\u91cf\u4e0a\u9650\uff085-20\uff09\u3001\u5173\u952e\u8bcd\u9ad8\u4eae\u3001NEW/UPDATED \u7248\u672c\u6807\u8bc6\u3001Markdown \u5b58\u6863\uff0c\u4ee5\u53ca\u5b9a\u65f6\u63a8\u9001\u4e0e\u5373\u65f6\u63a8\u9001\u53cc\u8def\u5f84\u3002\u9996\u6b21\u4f7f\u7528\u65f6\u5148\u5b8c\u6210\u8ba2\u9605\u914d\u7f6e...",
+  "updated_at": 1778491820342,
+  "version": "1.0.1"
+}
