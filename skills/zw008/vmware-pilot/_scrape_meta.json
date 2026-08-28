@@ -1,8 +1,8 @@
 {
-  "changelog": "Moved to vmware-skills GitHub org; MCP Registry namespace \u2192 io.github.vmware-skills. Links updated.",
+  "changelog": "Fixes the server's self-reported version and the advertised tool count; adds a Claude Code plugin manifest.",
   "created_at": 1775058566005,
   "display_name": "vmware-pilot",
-  "fetched_at": 1787774001265,
+  "fetched_at": 1787931889383,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -26,7 +26,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1785554972829,
+    "updated_at": 1787886572881,
     "verdict": "clean"
   },
   "owner": {
@@ -42,12 +42,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 1625,
+    "downloads": 1670,
     "installs": 23,
     "stars": 1,
-    "versions": 24
+    "versions": 25
   },
   "summary": "Use this skill whenever the user wants to design, execute, or manage complex multi-step VMware workflows with human approval and automatic rollback. Pilot is the orchestration brain \u2014 it breaks a goal into steps across companion VMware skills (aiops, monitor, nsx, nsx-security, aria, vks, storage, avi), adds approval gates before destructive operations, and rolls back automatically if anything fails. Always use vmware-pilot for: \"clone and test before applying to production\", \"VMware incident response with checkpoints\", \"investigate alert root cause\", \"VMware rolling restart with health checks\", \"baseline capture and drift detection\", \"rolling maintenance with AVI drain\", or any VMware workflow needing approval gates or rollback. 15 built-in templates + custom YAML + AI-designed workflows. Do NOT use for single-step work \u2014 use vmware-aiops for one VM action, vmware-monitor for read-only queries, vmware-avi for load balancer queries.",
-  "updated_at": 1785554022265,
-  "version": "1.8.8"
+  "updated_at": 1787885873279,
+  "version": "1.8.9"
 }
