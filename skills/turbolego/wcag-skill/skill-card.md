@@ -1,6 +1,6 @@
 ## Description:
 
-Build, audit, and repair web content against WCAG 2.2, including accessible HTML/CSS/JS creation, accessibility remediation, reproducible automated audits, WCAG 2.2 AAA evidence records, human-test records, and optional benchmark support.
+Build, audit, and repair web content against WCAG 2.2, including accessible HTML/CSS/JS creation, defect remediation, reproducible automated audits, AAA evidence records, and optional AI-WCAG-Gauntlet benchmark checks.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-Developers, engineers, and accessibility reviewers use this skill to build accessible web pages, triage and fix accessibility defects, run browser-based validation tooling, and prepare evidence for WCAG 2.2 AA or AAA review.
+Developers, engineers, and accessibility reviewers use this skill to build accessible pages, triage and fix WCAG 2.2 issues, run reproducible automated audits, and prepare human-test evidence for AA or AAA claims.
 
 ### Deployment Geography for Use:
 
@@ -22,23 +22,22 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Automated accessibility tools can miss issues or produce warnings that require judgment, so clean reports do not prove WCAG conformance.
+Risk: Automated accessibility tools can miss dynamic DOM states, authenticated flows, third-party components, and issues that require human judgment.
 
-Mitigation: Treat automated output as evidence only, review incomplete or warning results, and complete the manual protocol and evidence matrix before making AA or AAA conformance claims.
+Mitigation: Run audits only against intended routes and states, review every warning or incomplete result, and complete the manual protocol and evidence matrix before making AA or AAA conformance claims.
 
-Risk: Browser-based audit tooling fetches target pages and writes reports locally, which may expose sensitive page content in generated artifacts.
+Risk: The audit workflow installs and runs npm-based accessibility tooling plus browser dependencies.
 
-Mitigation: Run audits only against intended targets, store reports in approved locations, and review generated files before sharing or publishing them.
+Mitigation: Install the skill only in environments where those dependencies are acceptable, use the documented Chrome and Chromedriver paths when needed, and review generated reports before acting on them.
 
-Risk: The publishing helper can upload the skill to ClawHub when run with a valid CLAWHUB_TOKEN.
+Risk: The optional AI-WCAG-Gauntlet benchmark materials can invalidate a benchmark if copied as a submission.
 
-Mitigation: Do not run scripts/publish-web.py unless publishing is intended, and protect CLAWHUB_TOKEN as a deployment credential.
+Mitigation: Use the benchmark extension only for explicit benchmark requests and create original submission files instead of copying templates.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/turbolego/skills/wcag-skill)
+- [WCAG 2.2 Quick Reference](https://www.w3.org/WAI/WCAG22/quickref/)
 - [Project homepage](https://github.com/turbolego/wcag-skill)
-- [W3C WCAG 2.2 Quick Reference](https://www.w3.org/WAI/WCAG22/quickref/)
 - [Reproducible validator workflow](references/validator-workflow.md)
 - [WCAG 2.2 AAA evidence matrix](references/aaa-evidence-matrix.md)
 - [Mandatory human-test protocol](references/manual-test-protocol.md)
@@ -48,15 +47,15 @@ Mitigation: Do not run scripts/publish-web.py unless publishing is intended, and
 
 **Output Type(s):** [guidance, markdown, code, shell commands, configuration]
 
-**Output Format:** [Markdown guidance with inline code and shell commands]
+**Output Format:** [Markdown guidance with inline shell commands, code suggestions, and references to JSON audit reports.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May produce or reference local JSON accessibility reports from axe, Pa11y, QualWeb, and the Nu HTML checker when the audit scripts are run.]
+**Other Properties Related to Output:** [Automated reports are evidence for review; they do not independently establish WCAG conformance.]
 
 ## Skill Version(s):
 
-2.0.0 (source: frontmatter and server release metadata)
+2.0.3 (source: SKILL.md frontmatter, server release metadata)
 
 ## Ethical Considerations:
 
