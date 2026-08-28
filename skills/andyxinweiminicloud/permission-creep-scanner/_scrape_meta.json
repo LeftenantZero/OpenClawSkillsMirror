@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release \u2014 scans AI agent skills for permission creep.\n\n- Analyzes skill code to identify resource access (files, environment variables, network, subprocess).\n- Extracts declared purpose from skill metadata and compares it to actual code behavior.\n- Flags permission mismatches, sensitive path access, and escalation patterns.\n- Provides structured audit output: declared scope, access list, mismatches, risk rating, and recommendations.",
+  "created_at": 1771735824731,
+  "display_name": "Permission Creep Scanner",
+  "fetched_at": 1787897321137,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "andyxinweiminicloud",
+    "handle": "andyxinweiminicloud",
+    "user_id": "s178m3sea5bvsnjm74x8ts24k5884zkn"
+  },
+  "slug": "permission-creep-scanner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/permission-creep-scanner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=permission-creep-scanner&ownerHandle=andyxinweiminicloud",
+    "page_url": "https://clawhub.ai/andyxinweiminicloud/skills/permission-creep-scanner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1222,
+    "installs": 34,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Helps detect permission creep in AI agent skills \u2014 flags when a skill's actual code accesses resources far beyond what its declared purpose requires, like a...",
+  "updated_at": 1778491605027,
+  "version": "1.0.0"
+}
