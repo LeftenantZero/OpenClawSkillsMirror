@@ -1,26 +1,16 @@
 {
-  "changelog": "No user-visible changes in this release.\n\n- Version bump to 1.1.1 with no modifications to documentation or features.",
+  "changelog": "**glkvm 1.2.1 Changelog**\n\n- Added support for GLKVM device management: reboot, firmware upgrade, and virtual MSD storage functions (remote ISO download/mount).\n- Extended description to clarify full scope: now covers device and storage management in addition to host keyboard/mouse, screenshots, OCR, Fingerbot, and ATX power control.\n- Added important security and privacy notes regarding credential handling, sensitive output, and disruptive operations\u2014explicit confirmation required for risky actions.\n- Strengthened usage guidance: skill should be used only on trusted networks and by authorized users, with sensitive data managed responsibly.",
   "created_at": 1773202597602,
   "display_name": "glkvm",
-  "fetched_at": 1787789396344,
+  "fetched_at": 1787931064209,
   "files": [
     "SKILL.md",
     "_meta.json",
     "skill-card.md"
   ],
-  "moderation": {
-    "engine_version": "v2.4.24",
-    "is_malware_blocked": false,
-    "is_suspicious": false,
-    "reason_codes": [
-      "review.llm_review"
-    ],
-    "summary": "Review: review.llm_review",
-    "updated_at": 1780089837050,
-    "verdict": "clean"
-  },
+  "moderation": null,
   "owner": {
-    "display_name": "duzefu",
+    "display_name": "minmie",
     "handle": "duzefu",
     "user_id": "s1774r2yrdawfwth6q7bbxyjgn884g9x"
   },
@@ -32,12 +22,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 963,
+    "downloads": 993,
     "installs": 27,
     "stars": 0,
-    "versions": 3
+    "versions": 5
   },
-  "summary": "Remotely control a target host via GLKVM HTTP API, supporting keyboard/mouse input, screenshot capture, OCR recognition, Fingerbot physical button control, a...",
-  "updated_at": 1779077968917,
-  "version": "1.1.1"
+  "summary": "Remotely control a target host through the GLKVM IP-KVM HTTP API - keyboard/mouse input, screenshots and OCR, Fingerbot physical button control, and ATX power management. Also manages the GLKVM device itself (reboot, firmware upgrade) and its virtual MSD storage (remote ISO download and mounting). N",
+  "updated_at": 1787915971599,
+  "version": "1.2.1"
 }
