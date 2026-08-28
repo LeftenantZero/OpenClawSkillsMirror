@@ -1,0 +1,73 @@
+{
+  "changelog": "Initial release of baidudisk-mcp\n\n- Provides Baidu Netdisk access through mcporter with an MCP stdio server, supporting hot-reload of token credentials.\n- Implements a wide set of official-aligned file management tools (aligned with Baidu API 2.0) and maintains compatibility with legacy tool aliases.\n- Supports batch operations with unified return envelope format for copy, move, and rename.\n- Credentials are read from a local JSON file on every call, enabling seamless token updates without restart.\n- Includes extensive examples for mcporter usage and recommended server setup steps.",
+  "created_at": 1772891224451,
+  "display_name": "Baidudisk Mcp",
+  "fetched_at": 1787885708332,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/register_mcporter.sh",
+    "server/netdisk.py",
+    "server/openapi_client/__init__.py",
+    "server/openapi_client/api/__init__.py",
+    "server/openapi_client/api/auth_api.py",
+    "server/openapi_client/api/fileinfo_api.py",
+    "server/openapi_client/api/filemanager_api.py",
+    "server/openapi_client/api/fileupload_api.py",
+    "server/openapi_client/api/multimediafile_api.py",
+    "server/openapi_client/api/userinfo_api.py",
+    "server/openapi_client/api_client.py",
+    "server/openapi_client/configuration.py",
+    "server/openapi_client/exceptions.py",
+    "server/openapi_client/model/__init__.py",
+    "server/openapi_client/model/oauth_token_authorization_code_response.py",
+    "server/openapi_client/model/oauth_token_device_code_response.py",
+    "server/openapi_client/model/oauth_token_device_token_response.py",
+    "server/openapi_client/model/oauth_token_refresh_token_response.py",
+    "server/openapi_client/model/quotaresponse.py",
+    "server/openapi_client/model/uinforesponse.py",
+    "server/openapi_client/model_utils.py",
+    "server/openapi_client/rest.py",
+    "server/pyproject.toml",
+    "server/selfcheck_batch_filemanager.py",
+    "server/selfcheck_image_recent_readonly.py",
+    "server/selfcheck_lists_readonly.py",
+    "server/selfcheck_misc_readonly.py",
+    "server/selfcheck_normalize_fsids.py",
+    "server/selfcheck_retry_pagination_path.py",
+    "server/selfcheck_search_doclist_echo.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089793758,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "forevershu",
+    "handle": "forevershu",
+    "user_id": "s178ywe9n79086xmkfryvxrnc9885shj"
+  },
+  "slug": "baidudisk-mcp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/baidudisk-mcp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=baidudisk-mcp&ownerHandle=forevershu",
+    "page_url": "https://clawhub.ai/forevershu/skills/baidudisk-mcp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 839,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use Baidu Netdisk via mcporter + stdio MCP server with hot-reload token file credentials. Triggers when you need Baidu Netdisk operations (official 2.0 tools...",
+  "updated_at": 1778491764944,
+  "version": "1.0.0"
+}
