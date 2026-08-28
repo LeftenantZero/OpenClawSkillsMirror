@@ -1,6 +1,6 @@
 ## Description:
 
-Uses Flyelep's asynchronous free-creation API to generate product or creative images with the Image-2 model from a prompt and optional reference image URLs.
+Uses the Flyelep Image-2 asynchronous free-creation API to generate product or creative images from prompts and optional reference images.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to collect image-generation parameters, call Flyelep's async Image-2 creation API, poll for task results, and return generated image URLs.
+External users and developers use this skill to prepare authenticated Flyelep API requests, optionally upload local reference images, submit asynchronous Image-2 generation tasks, poll for task completion, and return generated image URLs.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,39 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Prompts and reference image URLs are sent to Flyelep's external image-generation API.
+Risk: A Flyelep secret key is required for API access and could be exposed if written into files, examples, logs, or persistent configuration.
 
-Mitigation: Use prompts and public image URLs that are appropriate to share with Flyelep; avoid sensitive, private, or internal-only content.
+Mitigation: Request the secret key at runtime, send it only in the request header, and avoid storing real credentials in skill files or durable configuration.
 
-Risk: The skill requires a Flyelep secretKey for API authentication.
+Risk: Reference images may be uploaded to Flyelep and converted into public URLs.
 
-Mitigation: Provide the secretKey only at runtime and do not store it in skill files, examples, repositories, or persistent configuration.
+Mitigation: Upload only images the user is allowed to share with Flyelep, and treat returned upload URLs as publicly accessible.
 
-Risk: Temporary payload files can contain prompts, reference image URLs, or task identifiers when the Windows/PowerShell flow is used.
+Risk: Asynchronous generation tasks may remain pending or fail.
 
-Mitigation: Create temporary payload files only when needed, write them with UTF-8 encoding, and remove them after the API call completes.
+Mitigation: Poll the task result endpoint at reasonable intervals, surface failed task items to the user, and avoid assuming image URLs exist until the service reports success.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/flyelepai/skills/async-free-creation)
-- [Flyelep open platform](https://www.flyelep.cn/controlboard)
-- [Flyelep async creation API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/allAroundCreationAsync)
-- [Flyelep task result API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/queryTaskResult)
+- [Flyelep control board](https://www.flyelep.cn/controlboard)
+- [Flyelep asynchronous creation endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/allAroundCreationAsync)
+- [Flyelep task result endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/queryTaskResult)
+- [Flyelep file upload endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/file/upload)
 
 ## Skill Output:
 
-**Output Type(s):** [API Calls, Shell commands, Configuration instructions, Guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with JSON and shell command examples plus generated image URLs]
+**Output Format:** [Markdown guidance with JSON request bodies and shell command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires a runtime secretKey, prompt text, image count, aspect ratio, and optional public reference image URLs.]
+**Other Properties Related to Output:** [Returns task identifiers, task status summaries, and generated image URLs when the external service completes successfully.]
 
 ## Skill Version(s):
 
-1.0.2 (source: server release evidence)
+1.0.3 (source: server release evidence)
 
 ## Ethical Considerations:
 
