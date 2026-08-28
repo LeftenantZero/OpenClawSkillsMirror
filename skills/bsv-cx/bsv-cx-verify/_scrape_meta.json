@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of bsv-cx-verify \u2014 a free, trustless Bitcoin SV (BSV) Merkle proof verifier.\n\n- Verifies Merkle proofs (TSC, BEEF, BUMP) of BSV transactions against independently synced block headers\n- Requires no account or trust in bsv.cx; proofs validated against node-synced headers, not explorer APIs\n- Provides endpoints to fetch BEEF or BUMP proofs for any txid\n- Clear success/failure ('confirmed', 'rejected', 'inconclusive') responses for proof verification\n- Self-documenting API endpoint at /spv; full usage examples and safety notes included",
+  "created_at": 1787778256171,
+  "display_name": "bsv-cx-verify",
+  "fetched_at": 1787932878736,
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "bsv-cx",
+    "handle": "bsv-cx",
+    "user_id": "s171ss0z8hmves2gr241vp56ss8ca4r6"
+  },
+  "slug": "bsv-cx-verify",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bsv-cx-verify",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bsv-cx-verify&ownerHandle=bsv-cx",
+    "page_url": "https://clawhub.ai/bsv-cx/skills/bsv-cx-verify"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 77,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Verify any Bitcoin (BSV) Merkle proof \u2014 free, no account, trusting no one including bsv.cx \u2014 against a block-headers node bsv.cx syncs itself over the BSV P2P network. Send a raw TSC proof, a BEEF envelope, or a BUMP; get confirmed / rejected / inconclusive. Also fetch BEEF/BUMP for a txid.",
+  "updated_at": 1787778318709,
+  "version": "1.0.0"
+}
