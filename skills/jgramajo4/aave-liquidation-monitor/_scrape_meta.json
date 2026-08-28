@@ -1,0 +1,41 @@
+{
+  "changelog": "Security patch: Added missing cron-runner.js, clarified credential handling (uses OpenClaw's message routing), removed full API response logging, added detailed SECURITY.md for auditors.",
+  "created_at": 1770788919707,
+  "display_name": "Aave Liquidation Monitor",
+  "fetched_at": 1787904323511,
+  "files": [
+    "INSTALLATION.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/config-template.json",
+    "references/aave-api.md",
+    "references/config-guide.md",
+    "references/cron-integration.md",
+    "scripts/cron-runner.js",
+    "scripts/monitor.js",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "jgramajo4",
+    "handle": "jgramajo4",
+    "user_id": "s1775a411wd9rgq11aw3r86q6s8855qg"
+  },
+  "slug": "aave-liquidation-monitor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aave-liquidation-monitor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aave-liquidation-monitor&ownerHandle=jgramajo4",
+    "page_url": "https://clawhub.ai/jgramajo4/skills/aave-liquidation-monitor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2307,
+    "installs": 72,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Proactive monitoring of Aave V3 borrow positions with liquidation alerts. Queries user collateral, debt, and health factor across chains (Ethereum, Polygon, Arbitrum, etc.). Sends urgent alerts to Telegram/Discord/Slack when health factor drops below configurable thresholds (critical at 1.05, warning at 1.2). Use when you need continuous monitoring of Aave positions, want alerts before liquidation risk occurs, or need periodic summaries of your borrowing health.",
+  "updated_at": 1778487820503,
+  "version": "1.0.1"
+}
