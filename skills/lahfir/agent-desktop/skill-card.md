@@ -1,6 +1,6 @@
 ## Description:
 
-agent-desktop helps AI agents observe and control desktop applications through native OS accessibility trees for tasks such as reading UI state, clicking, typing, scrolling, screenshots, window management, clipboard use, and notifications.
+Desktop automation via native OS accessibility trees using the agent-desktop CLI for observing and operating desktop applications, including UI snapshots, clicks, typing, scrolling, screenshots, clipboard actions, notification handling, window management, and session tracing.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and AI-agent operators use this skill when an agent needs to inspect and operate desktop GUI applications, including form filling, menu navigation, app and window management, screenshots, clipboard workflows, notifications, and multi-step observe-act automation.
+Developers and external agent builders use this skill to let an AI agent inspect and operate desktop applications through the agent-desktop CLI, especially when a task requires reading native UI state, filling forms, navigating menus, or controlling windows. It is intended for desktop GUI automation where the caller reviews and executes concrete CLI commands.
 
 ### Deployment Geography for Use:
 
@@ -22,17 +22,13 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Desktop automation can control local applications through sensitive operating-system permissions.
+Risk: The skill enables an agent to operate desktop applications with sensitive but purpose-matched capabilities such as clicking, typing, screenshots, clipboard access, notification actions, and session tracing.
 
-Mitigation: Install only if the publisher and package are trusted, and grant Accessibility or Screen Recording permissions only for tasks that need them.
+Mitigation: Install only when desktop operation is intended, review proposed actions before execution, and use headed mode, CDP launch, session screenshots, and trace export only when necessary for the task.
 
-Risk: Screenshots, clipboard content, and trace exports can contain sensitive information.
+Risk: Screenshots, clipboard reads, notification contents, and trace exports may expose sensitive local information.
 
-Mitigation: Use --no-trace or a controlled AGENT_DESKTOP_HOME for sensitive work, and clean up sessions, screenshots, clipboard exports, and trace exports after use.
-
-Risk: Forced commands and risky system shortcuts may interrupt or terminate user work.
-
-Mitigation: Avoid --force unless the user explicitly intends that behavior, and review proposed destructive or system-level actions before execution.
+Mitigation: Treat those artifacts as sensitive, avoid sharing them unnecessarily, and prefer scoped observation or tracing settings that collect only what the task requires.
 
 ## Reference(s):
 
@@ -45,17 +41,17 @@ Mitigation: Avoid --force unless the user explicitly intends that behavior, and 
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, shell commands, configuration]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline shell commands and JSON examples]
+**Output Format:** [Markdown guidance with inline shell commands and JSON command output examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Guidance is intended for an agent that invokes the agent-desktop CLI and interprets structured JSON command responses.]
+**Other Properties Related to Output:** [May produce commands that observe UI state or modify desktop applications when executed by an agent.]
 
 ## Skill Version(s):
 
-0.1.26 (source: server release metadata; artifact frontmatter says 0.4.0)
+0.1.27 (source: server release metadata; artifact frontmatter lists 0.4.0)
 
 ## Ethical Considerations:
 
