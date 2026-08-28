@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators, marketers, and agents use this skill to plan and generate a coordinated lead cover plus supporting illustrations for WeChat Official Account articles. It supports article-driven generation, brand-asset composition, and focused refinements through Beatra image tasks.
+External creators, marketers, and brand teams use this skill to turn a WeChat Official Account article, outline, or brand imagery into a coordinated lead cover and supporting in-article illustration set. The skill guides route selection, paid image generation or transformation, task recovery, and final delivery of ordered image artifacts.
 
 ### Deployment Geography for Use:
 
@@ -22,44 +22,47 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uses a persistent shared Beatra device authorization with broad media, wallet, and task permissions.
+Risk: Broad Beatra authorization includes paid spending ability and media scopes beyond image generation.
 
-Mitigation: Install only when this authorization is acceptable, keep the token out of chat, logs, command arguments, and diffs, and use the bundled uninstall/disconnect workflow when removing the package.
+Mitigation: Install only after reviewing the requested authorization, confirm each paid generation request before submission, and revoke the connected device from the Beatra Console when access is no longer trusted.
 
-Risk: The bundled client silently checks for and installs verified package updates by default.
+Risk: The skill uses a shared local Beatra credential under `~/.beatra`.
 
-Mitigation: Review the automatic update setting before use and run `python3 scripts/mcp_client.py update --auto off` if explicit control over code changes is required.
+Mitigation: Keep the credential file private, avoid exposing tokens in prompts, logs, command arguments, or diffs, and use the bundled uninstall flow or Beatra Console revocation to disconnect.
 
-Risk: Image generation creates paid Beatra tasks and can consume credits.
+Risk: The bundled client silently checks for and applies package updates by default.
 
-Mitigation: Require a single clear paid-call confirmation, reuse the same `client_request_id` only for unchanged recovery, poll the returned `task_id`, and report `billing.net_charged_credits` from the task result.
+Mitigation: Disable automatic updates with `python3 scripts/mcp_client.py update --auto off` when deterministic review is required, and use `python3 scripts/mcp_client.py update --check` to inspect available updates.
+
+Risk: Generation requests consume Beatra credits and can be duplicated if retried with changed inputs after an uncertain response.
+
+Mitigation: Use one opaque `client_request_id`, retry only identical requests with the same ID after transport uncertainty, and report `billing.net_charged_credits` from the returned task data.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/beatra-ai/skills/wechat-article-visual-pack)
-- [Beatra Skill Homepage](https://beatra.ai/skills/wechat-article-visual-pack)
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/wechat-article-visual-pack)
+- [Beatra skill homepage](https://beatra.ai/skills/wechat-article-visual-pack)
 - [Workflow](references/workflow.md)
 - [Installation and authentication](references/installation-and-auth.md)
 - [MCP connection](references/mcp-connection.md)
-- [Installation registration](references/installation-registration.md)
 - [Tasks and results](references/tasks-and-results.md)
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
-- [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
+- [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Guidance, Markdown, Shell commands, Configuration instructions, API Calls]
 
-**Output Format:** [Markdown guidance with shell commands and generated image artifact links]
+**Output Format:** [Markdown guidance with inline JSON payloads, shell commands, and returned image task artifact links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [The skill guides agents through Beatra MCP image generation, ordered asset uploads, task polling, billing reporting, and at most one focused unexecuted refinement suggestion.]
+**Other Properties Related to Output:** [Produces ordered Beatra image-task results for a two-to-four-image WeChat article visual sequence when the user approves paid generation or transformation.]
 
 ## Skill Version(s):
 
-0.1.1 (source: release evidence and manifest.json)
+0.1.3 (source: server release evidence and manifest.json)
 
 ## Ethical Considerations:
 
