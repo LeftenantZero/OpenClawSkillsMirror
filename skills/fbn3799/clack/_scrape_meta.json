@@ -1,0 +1,51 @@
+{
+  "changelog": "Clack 1.5.3 (includes unreleased 1.5.1 and 1.5.2):\n\n- Setup script now interactively prompts for ElevenLabs, OpenAI, and Deepgram API keys instead of requiring env vars up front. Existing keys can be kept, changed, or deleted on re-run.\n- New management CLI: `clack status`, `clack restart`, `clack logs`, `clack pair`, `clack update`, `clack setup`, and `clack uninstall` for easier service control.\n- Improved input sanitization: user-provided context is strictly filtered for valid natural-language text, with hard character and length caps. Shell input is never possible.\n- Expanded documentation and setup guidance, including full description of new input sanitization and updated example commands.\n- No functional code changes; documentation and setup tooling only.",
+  "created_at": 1772106768366,
+  "display_name": "Clack",
+  "fetched_at": 1787894386470,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/clack.sh",
+    "scripts/pair.sh",
+    "scripts/server.py",
+    "scripts/setup.sh",
+    "scripts/uninstall.sh",
+    "server.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779962182994,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fbn3799",
+    "handle": "fbn3799",
+    "user_id": "s17a66bcd2vp9k9z0rbnaqnt09884az3"
+  },
+  "slug": "clack",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clack",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clack&ownerHandle=fbn3799",
+    "page_url": "https://clawhub.ai/fbn3799/skills/clack"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 941,
+    "installs": 26,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Deploy and manage Clack, a voice relay server for OpenClaw. Bridges voice input (WebSocket) through STT \u2192 OpenClaw agent \u2192 TTS, enabling real-time voice conv...",
+  "updated_at": 1778491649051,
+  "version": "1.5.3"
+}
