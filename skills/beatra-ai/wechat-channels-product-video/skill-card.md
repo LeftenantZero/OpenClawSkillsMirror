@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators, merchants, and operator agents use this skill to turn a real product photo and confirmed product facts into a vertical WeChat Channels showcase video, title, and publishing copy.
+External creators, marketers, and agents use this skill to turn an inspectable product photo and confirmed product facts into a concise vertical WeChat Channels product showcase video, title, and publishing copy. It supports free planning before any paid Beatra image or video generation stage.
 
 ### Deployment Geography for Use:
 
@@ -22,44 +22,47 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The release uses a shared local bearer token and broad Beatra account scopes, including spending authority.
+Risk: The skill uses a shared local Beatra Device Token with broad account authority for media generation, task access, artifact access, and wallet spending.
 
-Mitigation: Authorize only in an environment where paid Beatra video generation and local product-photo upload are intended, protect the local credential, and disconnect through the documented uninstall flow when no longer needed.
+Mitigation: Install only after reviewing the Beatra scopes, keep the credential private in `~/.beatra/credentials.json`, and revoke the connected agent from the Beatra Console if access should end.
 
-Risk: The workflow can submit paid image and video generation tasks.
+Risk: Paid image and video stages can spend Beatra credits after user-approved actions.
 
-Mitigation: Require the documented admission card and explicit user confirmation before each paid stage, then reuse the same request identity for recovery instead of creating replacement paid work.
+Mitigation: Require a live admission card and explicit user confirmation before each paid stage, submit each frozen payload once, and report returned usage and `billing.net_charged_credits` from the terminal task result.
 
-Risk: The bundled client silently updates package-owned files by default.
+Risk: The bundled client silently checks for and installs newer package files by default.
 
-Mitigation: Review the automatic update behavior before installation and disable silent checks with the documented update command when that posture is not acceptable.
+Mitigation: Run `python3 scripts/mcp_client.py update --auto off` after installation if silent replacement is not desired; use `python3 scripts/mcp_client.py update --check` to inspect available updates without replacing files.
+
+Risk: The package records non-secret installation metadata and shares the Beatra connection across installed Beatra skills.
+
+Mitigation: Use the bundled uninstall workflow so the shared connection is removed only when no other installed Beatra skill still depends on it.
 
 ## Reference(s):
 
-- [WeChat Channels Product Showcase Video Maker](https://clawhub.ai/beatra-ai/skills/wechat-channels-product-video)
-- [Video Channels product-display planning](artifact/references/video-channel-planning.md)
-- [WeChat Channels product-display video workflow](artifact/references/workflow.md)
-- [Installation and authentication](artifact/references/installation-and-auth.md)
-- [Installation registration](artifact/references/installation-registration.md)
-- [Tasks and results](artifact/references/tasks-and-results.md)
-- [Billing, errors, and recovery](artifact/references/billing-errors-and-recovery.md)
-- [MCP connection](artifact/references/mcp-connection.md)
-- [Uninstall and disconnect](artifact/references/uninstall-and-disconnect.md)
-- [Automatic updates and safety](artifact/references/automatic-updates-and-safety.md)
+- [Video Channels product-display planning](references/video-channel-planning.md)
+- [WeChat Channels product-display video workflow](references/workflow.md)
+- [Installation and authentication](references/installation-and-auth.md)
+- [Installation registration](references/installation-registration.md)
+- [Tasks and results](references/tasks-and-results.md)
+- [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
+- [MCP connection](references/mcp-connection.md)
+- [Uninstall and disconnect](references/uninstall-and-disconnect.md)
+- [Automatic updates and safety](references/automatic-updates-and-safety.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, API Calls, Shell commands, Markdown, Text]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown with structured task facts, artifact URLs or IDs, title, caption, and inline shell commands when setup or recovery is needed]
+**Output Format:** [Markdown prose with title and publishing copy, shell command snippets, JSON payload examples, and Beatra task result fields such as artifact IDs or URLs.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include billable Beatra task status, returned media properties, usage, and net charged credits after terminal completion.]
+**Other Properties Related to Output:** [Requires an inspectable product photo and user-confirmed product facts; paid generation stages require explicit confirmation and Beatra credits.]
 
 ## Skill Version(s):
 
-0.1.5 (source: evidence.release.version and artifact/manifest.json)
+0.1.7 (source: release evidence and manifest.json)
 
 ## Ethical Considerations:
 
