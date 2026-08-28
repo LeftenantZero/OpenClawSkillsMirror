@@ -1,0 +1,38 @@
+{
+  "changelog": "\ud83c\udfa4 v1.0.0 \u2014 \"Facts, Not Fantasies\"\n\ud83c\udfaf 6-phase interview flow \u2014 subject, audience, speaker, work, angle, CTA (1-2 questions at a time)\n\ud83c\udfaf Angle brainstorming \u2014 generates 3-5 distinct framings based on your content, you pick one\n\ud83c\udfaf Tone profiles \u2014 professional, conversational (default), humorous, technical\n\ud83d\udcca Core slides: Title, Hook, Problem, What We Built, What It Does, Real Results\n\ud83d\udcca Situational slides: Investment/Costs, Mistakes, Why Now, DIY Path, Testing, Potential, Framework\n\ud83d\udcca Closing slides: Offer/CTA, Q&A with resources\n\ud83d\udcca Every number comes from the interview \u2014 no made-up stats, [INSERT] placeholders for missing data\n\ud83d\udd0d Factual validation engine \u2014 scans every slide before delivery\n\ud83d\udd0d Flags speculative language (\"could save\", \"might generate\", \"potential to\")\n\ud83d\udd0d Flags unverified numbers \u2014 anything not from the interview gets a placeholder\n\ud83d\udd0d Flags projections \u2014 auto-adds caveat: \"Based on early results, IF trends hold...\"\n\ud83d\udd0d Flags superlatives (\"best\", \"fastest\", \"only\") \u2014 user confirms or removes\n\ud83d\udd0d Validation summary with \ud83d\udd34\ud83d\udfe1\ud83d\udfe2 traffic-light scoring\n\ud83c\udf99\ufe0f Speaker notes on every slide \u2014 \"What to say\" + \"What NOT to say\" + timing cues\n\ud83c\udf99\ufe0f Anti-speculation guard in notes \u2014 \"Don't promise specific ROI\", \"Say 'based on what we've seen'\"\n\ud83c\udf99\ufe0f Visual aid callouts \u2014 where screenshots, demos, or props should go\n\u270f\ufe0f Natural language editing \u2014 \"make it shorter\", \"add real costs\", \"change tone to technical\"\n\u270f\ufe0f Angle switching \u2014 re-generates deck with new framing, keeps all interview data\n\u270f\ufe0f Duplicate for different audiences \u2014 copy deck, re-interview for audience + angle only\n\ud83c\udf10 HTML Slides export (RECOMMENDED) \u2014 beautiful full-screen presentation in a single file\n\ud83c\udf10 3 themes: gradient (modern), dark (dramatic), light (corporate)\n\ud83c\udf10 Arrow keys + space to navigate, touch/swipe on mobile\n\ud83c\udf10 Press N for live speaker notes panel during presentation\n\ud83c\udf10 Print button \u2192 pixel-perfect PDF (each slide = one page)\n\ud83c\udf10 Zero dependencies beyond Python 3 standard library \u2014 no pip installs\n\ud83c\udfa8 Template Gallery \u2014 11 premade slide layouts, each stage-optimized at 1280\u00d7720\n\ud83c\udfa8 Slide types: title, section, text, text+image, big_number, comparison, screenshot, quote, timeline, qr_code, closing\n\ud83c\udfa8 4 visual themes: Terminal (dark+green hacker), Executive (navy+gold corporate), Spark (purple/teal startup), Clean (white Swiss minimal)\n\ud83c\udfa8 5th option: Custom \u2014 user provides brand colors/fonts via style_instruction JSON, engine builds a theme on the fly\n\ud83c\udfa8 Per-slide HTML generation \u2014 each slide is its own file for maximum visual control\n\ud83c\udfa8 Agent auto-selects slide types based on interview content (hook\u2192big_number, costs\u2192comparison, etc.)\n\ud83c\udfa8 Combined deck AND per-slide modes \u2014 use both for presenting vs design control\n\ud83c\udfa8 Placeholder template mode \u2014 generates HTML with {{TITLE}}, {{BODY_TEXT}} tokens for external injection\n\ud83d\udccb Asset Planning phase \u2014 image needs, QR codes, data viz planned BEFORE generation\n\ud83d\udccb Quality Checklist \u2014 9-point post-generation QA (style consistency, overflow, accessibility, links, notes)\n\ud83d\udccb Text length rules \u2014 max words per title/bullet/slide enforced, auto-split if exceeded\n\ud83d\udccb Edge case handling \u2014 long text auto-split, missing images \u2192 placeholders, incomplete interviews \u2192 user prompt\n\ud83d\udccb Accessibility \u2014 all images require alt attributes, semantic HTML structure\n\ud83d\udccb Manus tool compatibility note \u2014 skill generates files directly (no slide_initialize/slide_edit dependency)\n\ud83d\udfe3 Gamma.app export \u2014 clean markdown stripped of speaker notes, optimized for Gamma card import\n\ud83d\udfe3 Zero dependencies \u2014 pure shell script, works everywhere\n\ud83d\udce6 Markdown export \u2014 structured, portable, version-controllable\n\ud83d\udce6 PPTX export \u2014 via bundled export-pptx.py (requires python-pptx)\n\ud83d\udce6 PDF export \u2014 via pandoc (or just use HTML Print)\n\ud83d\udee1\ufe0f Bundled presentation-helper.sh \u2014 all file ops through code-enforced sanitization\n\ud83d\udee1\ufe0f Path traversal prevention \u2014 can't escape ~/workspace/presentations/\n\ud83d\udee1\ufe0f Shell injection blocked \u2014 metacharacters stripped from all user input\n\ud83d\udee1\ufe0f JSON validation on every metadata save\n\ud83d\udd17 Works standalone or with AI Persona OS (auto-pulls speaker info from SOUL.md)",
+  "created_at": 1771653850272,
+  "display_name": "AI Presentation Maker",
+  "fetched_at": 1787898026477,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/presentation-helper.sh",
+    "references/export-gamma.sh",
+    "references/export-html-slides.py",
+    "references/export-pptx.py",
+    "references/slide-templates.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jeff J Hunter",
+    "handle": "jeffjhunter",
+    "user_id": "s17fhgfbdhz4g6yqeha2egykyx83grhe"
+  },
+  "slug": "ai-presentation-maker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-presentation-maker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-presentation-maker&ownerHandle=jeffjhunter",
+    "page_url": "https://clawhub.ai/jeffjhunter/skills/ai-presentation-maker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4044,
+    "installs": 132,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "AI Presentation Maker \u2014 the interview-driven pitch deck generator for your OpenClaw agent. Tell it what you built, who you're presenting to, and pick an angl...",
+  "updated_at": 1778491597572,
+  "version": "1.0.0"
+}
