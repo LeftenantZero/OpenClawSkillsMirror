@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes human mental health and psychological behavior, supports identifying common psychological problem tendencies through video analysis, and provides structured mental health analysis reports and improvement suggestions.
+Analyzes human mental health and psychological behavior, supports identifying common psychological problem tendencies through video analysis, and provides structured mental health analysis reports and improvement suggestions. | 心理健康分析工具，针对人的心理健康和心理行为进行分析，支持通过视频分析识别常见心理问题倾向，提供结构化心理健康分析报告和改善建议
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to analyze submitted videos or video URLs for psychological behavior signals, mental health tendencies, and structured improvement suggestions. It can also retrieve cloud-hosted historical mental health analysis reports for the resolved user identity.
+External users and operators use this skill to analyze a provided person video or video URL for mental-health tendency signals, then receive structured reports, risk indicators, improvement suggestions, and links to historical reports.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Sensitive videos, video URLs, identity metadata, and historical report requests may be sent to an external service and associated with a persistent account.
+Risk: Sensitive mental-health videos or video URLs may be sent to configured cloud or private-network services.
 
-Mitigation: Require explicit consent for each analysis or history lookup, avoid analyzing third-party or highly private videos without permission, and verify the service endpoint plus data retention and deletion terms before use.
+Mitigation: Use the skill only with consent from anyone shown, verify the configured endpoints, and confirm provider privacy and retention terms before deployment.
 
-Risk: Cloud history lookup can expose prior mental health analysis reports linked to the resolved user identity.
+Risk: The skill may create or reuse a local account record and persist service tokens in the workspace database.
 
-Mitigation: Confirm the user's intent before history retrieval and return only the report history needed for the current request.
+Mitigation: Review local storage, credential handling, access controls, and deletion procedures before enabling the skill in shared or production environments.
 
-Risk: Mental health analysis output could be mistaken for professional diagnosis or treatment advice.
+Risk: Mental-health analysis output may be mistaken for professional diagnosis or treatment advice.
 
-Mitigation: Present results as informational mental health reference only and direct users with psychological distress to qualified professionals.
+Mitigation: Present outputs as reference information only and direct users with psychological distress to qualified mental-health professionals.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-psychology-analysis)
-- [API documentation](references/api_doc.md)
-- [Skill demo](https://lifeemergence.com/sample.html)
+- [API Interface Documentation](references/api_doc.md)
+- [SMYX Analysis API Documentation](skills/smyx_analysis/references/api_doc.md)
+- [Skill Demo](https://lifeemergence.com/sample.html)
+- [ClawHub Skill Page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-psychology-analysis)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, JSON, Guidance]
+**Output Type(s):** [text, markdown, JSON, shell commands, guidance]
 
-**Output Format:** [Markdown or JSON structured report with analysis details, suggestions, history results, and report links]
+**Output Format:** [Markdown reports, Markdown tables, or JSON returned from CLI/API calls]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include cloud report history and external report export links returned by the configured service.]
+**Other Properties Related to Output:** [Outputs may include structured mental-health analysis results, risk prompts, improvement suggestions, report links, and historical report lists.]
 
 ## Skill Version(s):
 
-1.0.17 (source: server release metadata; artifact frontmatter reports 1.0.13)
+1.0.18 (source: server release metadata; artifact frontmatter: 1.0.13)
 
 ## Ethical Considerations:
 
