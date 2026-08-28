@@ -3,7 +3,7 @@ name: knowledge-graph
 description: "使用场景: 用户要求构建知识图谱、写入实体或关系、从单个种子实体查询子图、附加 HTTPS 来源链接或生成带来源摘要，并希望通过 AI Skills 平台 API 执行时。"
 metadata:
     {
-        "packageVersion": "1.3.0",
+        "packageVersion": "1.4.1",
         "openclaw":
             {
                 "requires": { "env": ["KNOWLEDGE_GRAPH_API_KEY"] },
@@ -36,7 +36,7 @@ openclaw gateway restart
 
 ## 参考资料
 
-- 鉴权与环境变量：[API-KEY.md](https://github.com/YouTeacher/ai-skills-platform/blob/main/openclaw/knowledge-graph/references/API-KEY.md)
-- HTTP、幂等与轮询：[HTTP-REQUESTS.md](https://github.com/YouTeacher/ai-skills-platform/blob/main/openclaw/knowledge-graph/references/HTTP-REQUESTS.md)
-- 字段、枚举与结果：[OPERATIONS.md](https://github.com/YouTeacher/ai-skills-platform/blob/main/openclaw/knowledge-graph/references/OPERATIONS.md)
-- 安全、来源与错误：[BEHAVIOR-RULES.md](https://github.com/YouTeacher/ai-skills-platform/blob/main/openclaw/knowledge-graph/references/BEHAVIOR-RULES.md)
+- 鉴权与环境变量：[API-KEY.md](https://ai-skills.open-idea.net/skill-docs/knowledge-graph/API-KEY.md)
+- HTTP、幂等与轮询：[HTTP-REQUESTS.md](https://ai-skills.open-idea.net/skill-docs/knowledge-graph/HTTP-REQUESTS.md)
+- 字段、枚举与结果：[OPERATIONS.md](https://ai-skills.open-idea.net/skill-docs/knowledge-graph/OPERATIONS.md)
+- 安全、来源与错误：[BEHAVIOR-RULES.md](https://ai-skills.open-idea.net/skill-docs/knowledge-graph/BEHAVIOR-RULES.md)
