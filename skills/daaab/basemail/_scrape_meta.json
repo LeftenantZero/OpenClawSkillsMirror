@@ -1,8 +1,8 @@
 {
-  "changelog": "Re-scan trigger: verified by LittleLobster 2026-05-21. No functional changes.",
+  "changelog": "agent-register flow (email never null on re-run), refresh_token auto-renew for send/inbox, readable API errors incl. Retry-After, setup.js: isEncrypt crash fixed + non-TTY via --yes/BASEMAIL_PASSWORD, BASEMAIL_API_KEY support, ethers ^6.16",
   "created_at": 1770482801947,
-  "display_name": "Basemail",
-  "fetched_at": 1787785469405,
+  "display_name": "BaseMail",
+  "fetched_at": 1787931613375,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -14,6 +14,7 @@
     "scripts/register.js",
     "scripts/send.js",
     "scripts/setup.js",
+    "scripts/token.js",
     "skill-card.md"
   ],
   "moderation": {
@@ -24,7 +25,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1783658942621,
+    "updated_at": 1787893560391,
     "verdict": "clean"
   },
   "owner": {
@@ -40,12 +41,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 3029,
+    "downloads": 3071,
     "installs": 99,
     "stars": 1,
-    "versions": 12
+    "versions": 13
   },
-  "summary": "\ud83d\udcec BaseMail - Onchain Email for AI Agents on Base. Get yourname@basemail.ai linked to your Basename (.base.eth). SIWE wallet auth, no CAPTCHA, no passwords....",
-  "updated_at": 1779353126819,
-  "version": "1.8.1"
+  "summary": "\ud83d\udcec BaseMail - Onchain Email for AI Agents on Base. Get yourname@basemail.ai linked to your Basename (.base.eth). SIWE wallet auth, no CAPTCHA, no passwords. Give your agent a verifiable email identity on Base Chain \u2014 register for services, send emails, and receive confirmations autonomously.",
+  "updated_at": 1787892882308,
+  "version": "1.9.0"
 }
