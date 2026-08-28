@@ -1,0 +1,41 @@
+{
+  "changelog": "- Added anonymized CSV export: new script `export_anonymized_rides_csv.py` enables export of ride records from SQLite as a shareable, privacy-preserving report.\n- The CSV contains only non-personal fields (e.g., provider, month, rounded times, city/country, amounts, distance, duration).\n- Update documentation to describe when and how to use export, precise output columns, and export rules.\n- No changes to core extraction or database loading; the new feature is a safe reporting option for sharing aggregated ride data.",
+  "created_at": 1773235551363,
+  "display_name": "Ride Receipts",
+  "fetched_at": 1787879857115,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/provider_queries.json",
+    "references/schema_rides.sql",
+    "scripts/export_anonymized_rides_csv.py",
+    "scripts/extract_rides_gateway.py",
+    "scripts/fetch_emails_json.py",
+    "scripts/init_db.py",
+    "scripts/insert_rides_json_sqlite.py",
+    "scripts/summary_rides_sqlite.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Maxim Tuleyko",
+    "handle": "tuleyko",
+    "user_id": "s17fhm07z0mpjpedj9np738myh83g4mt"
+  },
+  "slug": "ride-insights-test",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ride-insights-test",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ride-insights-test&ownerHandle=tuleyko",
+    "page_url": "https://clawhub.ai/tuleyko/skills/ride-insights-test"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1151,
+    "installs": 32,
+    "stars": 0,
+    "versions": 13
+  },
+  "summary": "Build a local SQLite ride-history database from Gmail ride receipt emails using gog for fetch and OpenClaw Gateway /v1/responses for extraction. Use when you...",
+  "updated_at": 1778491832663,
+  "version": "0.1.12"
+}
