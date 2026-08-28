@@ -1,6 +1,6 @@
 ## Description:
 
-Uses vision and radar technology for contactless fall detection in home safety monitoring for elderly people living alone, with seconds-level alarm triggering.
+Detects potential elderly falls from monitoring images, videos, or URLs and returns structured analysis results, report links, and historical report listings.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users, developers, or care-service operators use this skill to submit home-monitoring images, videos, or public media URLs for fall-event analysis and to retrieve structured report history for safety monitoring.
+External users and care-monitoring developers use this skill to submit home monitoring media for elderly fall detection and to retrieve prior fall-analysis reports from the connected cloud service.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Sensitive home-monitoring images, videos, URLs, identity values, and report history may be sent to the LifeEmergence-backed service.
+Risk: Sensitive home monitoring images, videos, URLs, and report-history requests are sent to the Life Emergence/Smyx cloud service.
 
-Mitigation: Use only where cloud analysis is approved, disclose the data flow to affected users, and avoid submitting unrelated private footage or identifiers.
+Mitigation: Use the skill only when the media-sharing, retention, account deletion, and report-access terms for that service are acceptable for the people being monitored.
 
-Risk: Automatic identity provisioning, token persistence, and account-linked history retrieval can expose account or report data if the workspace is shared or poorly protected.
+Risk: The skill can silently create or reuse a local identity and store returned tokens in the workspace data directory.
 
-Mitigation: Run the skill in an isolated workspace, restrict access to stored credentials and report outputs, and rotate or remove tokens when access is no longer needed.
+Mitigation: Review the workspace data directory and account behavior before deployment, and restrict filesystem access to users who are allowed to access those credentials.
 
-Risk: Fall-detection output is a safety alert and may be incomplete or incorrect.
+Risk: Fall-detection output may be incorrect or incomplete and is not a substitute for emergency confirmation.
 
-Mitigation: Require human confirmation and established emergency-response procedures before acting on alerts.
+Mitigation: Treat alerts as safety triage signals and verify suspected falls through direct contact or emergency response procedures.
 
 ## Reference(s):
 
+- [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-elderly-fall-detection-analysis)
+- [Skill demo](https://lifeemergence.com/sample.html)
 - [API documentation](references/api_doc.md)
 - [Smyx analysis API documentation](skills/smyx_analysis/references/api_doc.md)
-- [Skill demo](https://lifeemergence.com/sample.html)
-- [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-elderly-fall-detection-analysis)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, shell commands, guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown or JSON-formatted analysis/report text with report links.]
+**Output Format:** [Markdown and JSON-formatted text with report links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Can save output to a file when --output is provided; analysis can be run from local files or public URLs.]
+**Other Properties Related to Output:** [Analysis output can include structured fall-detection results, historical report listings, and export URLs returned by the remote service.]
 
 ## Skill Version(s):
 
-1.0.12 (source: SKILL.md frontmatter and server release metadata)
+1.0.13 (source: server release evidence; artifact frontmatter reports 1.0.14)
 
 ## Ethical Considerations:
 
