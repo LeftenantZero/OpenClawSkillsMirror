@@ -1,6 +1,6 @@
 ## Description:
 
-Fab edition of iaiops for semiconductor and display fab equipment over SECS/GEM and OPC-UA, supporting status reads, diagnostics, OEE, asset inventory, data quality checks, SPC, and defect Pareto analysis with read-first and MOC-gated writes.
+iaiops-fab helps agents inspect semiconductor and display fab equipment across SECS/GEM, OPC-UA, and related industrial protocols for diagnostics, OEE, asset inventory, and data quality, with read-first workflows and MOC-gated writes.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and fab engineers use this skill to guide agents through semiconductor or display equipment diagnostics, SECS/GEM and OPC-UA status reads, data quality checks, OEE analysis, root-cause triage, SPC checks, and defect Pareto analysis. The skill emphasizes read-first operation and change-management gates for write-capable fab profile tools.
+Developers, fab operations engineers, and reliability teams use this skill to triage equipment connectivity, alarms, downtime, OEE, data quality, asset inventory, SPC, and defect Pareto workflows across SECS/GEM, OPC-UA, and related industrial-control interfaces.
 
 ### Deployment Geography for Use:
 
@@ -22,17 +22,17 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Industrial data export, historian push, stream publish, and UNS publish capabilities may move sensitive fab data outside approved destinations.
+Risk: Fab equipment data, historian exports, baseline records, and investigation records can be operationally sensitive.
 
-Mitigation: Restrict export and publish destinations, credentials, and network egress; require explicit approval and audit logging before enabling these tools in production or regulated fab environments.
+Mitigation: Install only in trusted fab environments, connect only to trusted iaiops MCP endpoints, and limit access to users authorized to inspect the relevant equipment data.
 
-Risk: Write-capable fab profile tools can affect production equipment if change controls are bypassed.
+Risk: Production write-capable S7 and Modbus tools can affect industrial equipment if used without change control.
 
-Mitigation: Keep write actions behind dry-run defaults, named approvals, pre-change value capture, rollback plans, and post-change audit records.
+Mitigation: Keep MOC approval, dry-run defaults, undo values, named approver confirmation, and review steps enabled before any non-dry-run production write.
 
-Risk: Diagnostics and root-cause guidance may be incomplete or misleading if based on stale, unverified, or partial equipment signals.
+Risk: Diagnostics can be misleading when site readiness, connectivity, or source signal coverage is incomplete.
 
-Mitigation: Require responses to cite live or recorded signals, confirm GEM and OPC-UA connectivity first, and route production decisions through fab operating procedures.
+Mitigation: Run readiness and doctor checks first, prefer read-only SECS/GEM and OPC-UA evidence collection, and review advisory outputs before operational action.
 
 ## Reference(s):
 
@@ -40,17 +40,17 @@ Mitigation: Require responses to cite live or recorded signals, confirm GEM and 
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Analysis, Shell commands, Configuration]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown with inline commands and tool names]
+**Output Format:** [Markdown guidance with diagnostic summaries, tabular analyses, tool-use recommendations, and command snippets.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Agent responses should cite real signals for diagnostics and keep write actions behind dry-run, approval, audit, and rollback controls.]
+**Other Properties Related to Output:** [May include evidence-based references to inspected equipment signals and approval-gated recommendations for production writes.]
 
 ## Skill Version(s):
 
-0.23.0 (source: server release evidence)
+0.23.1 (source: server release metadata)
 
 ## Ethical Considerations:
 
