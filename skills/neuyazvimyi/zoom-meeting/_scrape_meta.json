@@ -1,0 +1,45 @@
+{
+  "changelog": "Version 1.1.5 of the zoom-meeting skill:\n\n- Replaced shell script-based meeting management with a new Python-based API script (`scripts/zoom_api.py`), enabling more robust meeting creation, retrieval, listing, and deletion.\n- Expanded functional scope: supports creating, retrieving, listing, and deleting meetings using the Zoom REST API.\n- Improved user interaction: accepts both natural language requests and structured JSON; always provides human-readable responses (no JSON output).\n- Clarified and simplified credential handling; all authentication is handled automatically within the skill.\n- Added dedicated API reference documentation (`references/zoom_api_reference.md`) and removed obsolete shell scripts and settings files.",
+  "created_at": 1772208883999,
+  "display_name": "Zoom Meetings",
+  "fetched_at": 1787893706811,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/zoom_api_reference.md",
+    "scripts/zoom_api.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779964479759,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Alibek Beldinov",
+    "handle": "neuyazvimyi",
+    "user_id": "s175pefdb3jebfx9jhpbcg06f983y98y"
+  },
+  "slug": "zoom-meeting",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/zoom-meeting",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=zoom-meeting&ownerHandle=neuyazvimyi",
+    "page_url": "https://clawhub.ai/neuyazvimyi/skills/zoom-meeting"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1050,
+    "installs": 30,
+    "stars": 1,
+    "versions": 6
+  },
+  "summary": "How to create, retrieve, list, and delete Zoom meetings using the Zoom REST API. Use this skill whenever the user mentions Zoom meetings, wants to schedule a...",
+  "updated_at": 1778491660149,
+  "version": "1.1.5"
+}
