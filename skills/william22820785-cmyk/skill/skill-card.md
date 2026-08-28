@@ -1,48 +1,67 @@
-## Description: <br>
-Provides Chinese fortune-telling style consultations for long-term personal readings and concrete event questions, returning direct conversational readings and guidance. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+算命老师傅 provides Chinese-language fortune-telling consultations for natal readings and event divination, using birth details or question context to produce conversational judgments, timing guidance, and practical next steps.
 
-## Publisher: <br>
-[william22820785-cmyk](https://clawhub.ai/user/william22820785-cmyk) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[william22820785-cmyk](https://clawhub.ai/user/william22820785-cmyk)
 
-## Use Case: <br>
-External users use this skill for Chinese fortune-telling style conversations about life themes, relationships, work, finances, and specific events. It asks for birth or event details as needed and returns direct readings that should be treated as entertainment or reflection, not professional advice. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: The skill solicits sensitive birth details and personal context. <br>
-Mitigation: Avoid sharing unnecessary birth details or sensitive personal facts, and add a clear consent notice before collecting them. <br>
-Risk: Confident fortune-telling outputs may be mistaken for medical, legal, financial, or relationship advice. <br>
-Mitigation: Treat outputs as entertainment or reflection and seek qualified professional guidance for consequential decisions. <br>
-Risk: The skill conceals the assistant's AI nature. <br>
-Mitigation: Disclose that the interaction is AI-generated and remove instructions that hide the assistant identity. <br>
-Risk: Calendar and precision claims may be unsupported. <br>
-Mitigation: Implement, document, or remove unsupported calendar and precision claims before relying on them. <br>
+## Use Case:
 
+External users use this skill for Chinese-language fortune-telling conversations about long-term life patterns, relationships, career, wealth, timing, and specific event outcomes. Agents use it to gather necessary context, run bundled charting or divination workflows, and return concise conversational guidance rather than a technical report.
 
-## Reference(s): <br>
-- [命理会谈方法](references/consultation-method.md) <br>
-- [内部推断方法](references/interpretation-method.md) <br>
-- [六爻问事方法](references/liuyao-method.md) <br>
-- [话术语气细则](references/voice-and-dialogue.md) <br>
-- [ClawHub Skill Page](https://clawhub.ai/william22820785-cmyk/skills/skill) <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance] <br>
-**Output Format:** [Conversational text and Markdown, with occasional shell commands or JSON-backed validation artifacts used by the agent] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [Outputs can include direct fortune-telling readings, timing windows, practical guidance, and a standard hexagram-style Markdown table for event questions.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-3.0.2 (source: server-resolved release metadata) <br>
+Risk: Local scripts can write generated files that contain birth date, birth time, gender, location, timezone, and personal question data.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Review before installing, keep generated chart and fusion files private, and delete those files when they are no longer needed.
+
+Risk: The security review reports executable local script behavior and unclear scoping for imported local skill code.
+
+Mitigation: Review and scan the skill before deployment, and verify that any referenced local skill directories are trusted before using event-divination workflows.
+
+Risk: Fortune-telling responses may be misleading if treated as professional medical, legal, financial, or safety guidance.
+
+Mitigation: Present outputs as entertainment or cultural reflection and route high-stakes decisions to qualified professionals.
+
+## Reference(s):
+
+- [ClawHub skill page](https://clawhub.ai/william22820785-cmyk/skills/skill)
+- [Consultation method](references/consultation-method.md)
+- [Interpretation method](references/interpretation-method.md)
+- [Liuyao method](references/liuyao-method.md)
+- [Voice and dialogue](references/voice-and-dialogue.md)
+- [Consultation plan schema](references/consultation-plan-schema.md)
+- [Liuyao plan schema](references/liuyao-plan-schema.md)
+- [Third-party component notice](NOTICE)
+- [APA Dictionary: Barnum effect](https://dictionary.apa.org/barnum-effect)
+- [NIDA OARS communication techniques](https://nida.nih.gov/sites/default/files/oarsessentialcommunicationtechniques.pdf)
+- [SPIKES protocol](https://academic.oup.com/oncolo/article/5/4/302/6386019)
+
+## Skill Output:
+
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+
+**Output Format:** [Conversational Markdown text with generated JSON artifacts and command snippets used by the agent.]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [Outputs should be treated as entertainment or cultural reflection, not medical, legal, financial, or safety advice.]
+
+## Skill Version(s):
+
+4.0.0 (source: server release metadata and SKILL.md frontmatter)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.

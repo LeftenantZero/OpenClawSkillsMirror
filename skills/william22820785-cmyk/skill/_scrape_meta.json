@@ -1,8 +1,8 @@
 {
-  "changelog": "\u5408\u5e76\u53bb\u91cd\uff1a\u5c06 v3.0.1 \u5185\u5bb9\u6574\u7406\u4e3a\u7edf\u4e00\u7248\u672c v3.0.2\uff08\u552f\u4e00\u7b97\u547d\u8001\u5e08\u5085\uff09\uff0c\u5347\u7ea7\u5e76\u4fdd\u7559\u4e0b\u8f7d\u8bb0\u5f55",
+  "changelog": "Laoshifu 4.0.0\uff1a\u5168\u9762\u5347\u7ea7\u4e3a\u516b\u5b57+\u7d2b\u5fae+\u516d\u723b+\u5947\u95e8\u56db\u6cd5\u878d\u5408\u6743\u5a01\u6392\u76d8\u3001\u95ee\u4e8b\u95ee\u547d\u8fde\u7eed\u4f1a\u8c08\u6a21\u5f0f\u3002\n\n- \u516b\u5b57\u7d2b\u5fae\u5904\u7406\u547d\u7406\u5b9a\u76d8\u4e0e\u4eba\u751f\u7ed3\u6784\uff0c\u516d\u723b\u5947\u95e8\u53cc\u6cd5\u540c\u53c2\u5224\u4e8b\uff0c\u5168\u90e8\u540e\u53f0\u878d\u5408\uff0c\u4e0d\u66b4\u9732\u5177\u4f53\u63a8\u65ad\u94fe\u3002\n- \u89d2\u8272\u8981\u6c42\u7ecf\u9a8c\u5e08\u5085\u98ce\u683c\uff0c\u81ea\u4fe1\u8c41\u8fbe\u3001\u4e0d\u663e\u9732\u6d41\u7a0b\uff0c\u81ea\u7136\u628a\u63e1\u7528\u6237\u6765\u610f\uff0c\u4ec5\u7ed9\u7edf\u4e00\u65ad\u8bed\u548c\u6807\u51c6\u516d\u723b\u5366\u56fe\u3002\n- \u5404\u7c7b\u547d\u7406\u4f1a\u8c08\u5168\u65b0\u5bf9\u8bdd\u89c4\u8303\uff1a\u6bcf\u8f6e\u53ea\u95ee\u4e00\u4e8b\uff0c\u8d44\u6599\u4e0d\u9f50\u9010\u6b65\u8ffd\u95ee\uff0c\u59cb\u7ec8\u5148\u65ad\u4e8b\u540e\u95ee\u8bc1\u3002\n- \u524d\u53f0\u5f7b\u5e95\u9ed1\u76d2\u5316\uff0c\u7981\u6b62\u62a5\u544a\u8154\u3001\u6d41\u7a0b\u8bf4\u660e\u3001\u672f\u8bed\u6cc4\u9732\uff0c\u7528\u6237\u53ea\u4f53\u9a8c\u5b9a\u76d8\u5224\u65ad\u3001\u884c\u52a8\u5efa\u8bae\u548c\u73b0\u5b9e\u56de\u5e94\u3002\n- \u4e25\u683c\u6821\u9a8c\u4e0e\u8ffd\u8e2a\u6d41\u7a0b\uff0c\u6bcf\u8f6e\u7b54\u590d\u9700\u7ecf\u811a\u672c\u6821\u9a8c\uff0c\u4e0d\u5141\u8bb8\u6280\u672f\u89e3\u91ca\u6216\u7ed5\u8fc7\u3002\n-",
   "created_at": 1785408883002,
   "display_name": "\u7b97\u547d\u8001\u5e08\u5085",
-  "fetched_at": 1787772634811,
+  "fetched_at": 1787932804957,
   "files": [
     "LICENSE",
     "NOTICE",
@@ -10,6 +10,28 @@
     "_meta.json",
     "agents/openai.yaml",
     "assets/report-zonghe-poster.html",
+    "engine/calculator/dist/bazi-enrich/enrich.js",
+    "engine/calculator/dist/bazi-enrich/gan-relations.js",
+    "engine/calculator/dist/bazi-enrich/ge-ju.js",
+    "engine/calculator/dist/bazi-enrich/tables.js",
+    "engine/calculator/dist/bazi-enrich/tiao-hou.js",
+    "engine/calculator/dist/bazi-enrich/wang-shuai.js",
+    "engine/calculator/dist/bazi-enrich/wu-xing.js",
+    "engine/calculator/dist/bazi-enrich/zhi-relations.js",
+    "engine/calculator/dist/dump-text.js",
+    "engine/calculator/dist/render.js",
+    "engine/calculator/dist/run-chart.js",
+    "engine/calculator/dist/yiqi-core/bazi.js",
+    "engine/calculator/dist/yiqi-core/daxian.js",
+    "engine/calculator/dist/yiqi-core/ganzhi.js",
+    "engine/calculator/dist/yiqi-core/index.js",
+    "engine/calculator/dist/yiqi-core/jieqi.js",
+    "engine/calculator/dist/yiqi-core/nayin.js",
+    "engine/calculator/dist/yiqi-core/sihua.js",
+    "engine/calculator/dist/yiqi-core/types.js",
+    "engine/calculator/dist/yiqi-core/zhangsheng.js",
+    "engine/calculator/dist/yiqi-core/ziwei-standard.js",
+    "engine/calculator/package.json",
     "references/consultation-method.md",
     "references/consultation-plan-schema.md",
     "references/interpretation-method.md",
@@ -19,8 +41,11 @@
     "references/report-json-schema.md",
     "references/voice-and-dialogue.md",
     "scripts/chart.cjs",
+    "scripts/chart_authoritative.py",
+    "scripts/chart_bazi_ziwei.py",
     "scripts/heixiang_fusion.py",
     "scripts/liuyao_qimen_fusion.py",
+    "scripts/pillar_audit.py",
     "scripts/resolve-pillars.cjs",
     "scripts/validate-consultation.cjs",
     "scripts/validate-liuyao-qimen-consultation.cjs",
@@ -34,7 +59,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1785836573000,
+    "updated_at": 1787828599182,
     "verdict": "clean"
   },
   "owner": {
@@ -50,12 +75,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 181,
+    "downloads": 204,
     "installs": 0,
     "stars": 1,
-    "versions": 6
+    "versions": 8
   },
   "summary": "\u4e94\u5341\u5e74\u9605\u5386\u7684\u7b97\u547d\u8001\u5e08\u5085\uff0c\u516b\u5b57\u7d2b\u5fae\u7b97\u4eba\u3001\u516d\u723b\u7b97\u4e8b",
-  "updated_at": 1785853468053,
-  "version": "3.0.2"
+  "updated_at": 1787828041418,
+  "version": "4.0.0"
 }
