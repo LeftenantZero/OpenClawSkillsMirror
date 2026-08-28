@@ -1,0 +1,42 @@
+{
+  "changelog": "Initial release of the PocketSmith skill.\n\n- Manage transactions and categories via the PocketSmith API: list, search, create, update, and delete (writes off by default).\n- Extensive CLI commands for handling authentication, transactions, categories, labels, and budget/forecast data.\n- Read and write separation enforced using `POCKETSMITH_ALLOW_WRITES` environment variable for safety.\n- Output in JSON; consistent use of `YYYY-MM-DD` date format.\n- Documentation includes examples, command filters, and common financial workflows.",
+  "created_at": 1770321314048,
+  "display_name": "Manage PocketSmith transactions, categories, budgets and financial data",
+  "fetched_at": 1787908301191,
+  "files": [
+    "IMPLEMENTATION_NOTES.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "pyproject.toml",
+    "skill-card.md",
+    "src/pocketsmith/__init__.py",
+    "src/pocketsmith/__main__.py",
+    "src/pocketsmith/api.py",
+    "src/pocketsmith/auth.py",
+    "src/pocketsmith/cli.py",
+    "src/pocketsmith/client.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "lextoumbourou",
+    "handle": "lextoumbourou",
+    "user_id": "s176bt7t7z6a08hc7cjwx6jh01884gbc"
+  },
+  "slug": "pocketsmith-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pocketsmith-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pocketsmith-skill&ownerHandle=lextoumbourou",
+    "page_url": "https://clawhub.ai/lextoumbourou/skills/pocketsmith-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2011,
+    "installs": 65,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Manage PocketSmith transactions, categories, and financial data via the API",
+  "updated_at": 1778486032634,
+  "version": "v1.0.0"
+}
