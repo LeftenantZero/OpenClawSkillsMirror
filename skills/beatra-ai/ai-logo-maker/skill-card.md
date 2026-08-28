@@ -1,6 +1,6 @@
 ## Description:
 
-Turn a brand name, industry, or reference image into a professional AI logo, brand mark, or app icon with multi-concept exploration, precise brand colors, and scalable composition.
+Turn a brand name, industry, or reference image into a professional AI logo, brand mark, or app icon.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and agents use this skill to plan, generate, transform, refine, review, and deliver logo or brand-mark assets from a brand brief, visual references, or an accepted draft.
+External users, designers, founders, and developers use this skill to create, transform, or refine logos, brand marks, monograms, emblems, and app icons from a brief, reference images, or an accepted draft.
 
 ### Deployment Geography for Use:
 
@@ -22,50 +22,43 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill stores and reuses a shared Beatra device credential for broad Beatra tool access.
+Risk: The release evidence reports broad Beatra account authorization covering media tools and wallet spending.
 
-Mitigation: Install only when that trust boundary is acceptable, keep the credential private, and use the documented disconnect flow when access should be revoked.
+Mitigation: Install only when that authorization is acceptable, keep credentials private, and revoke the device in the Beatra Console when access is no longer needed.
 
-Risk: Reference images and brand assets may be uploaded to Beatra for remote processing.
+Risk: The release evidence reports default silent package updates.
 
-Mitigation: Avoid confidential or regulated brand assets unless remote processing by Beatra is acceptable.
+Mitigation: Use the documented update command to disable automatic updates or check manually when review-controlled installs are required.
 
-Risk: Approved generation requests consume Beatra credits and create asynchronous tasks.
+Risk: The release evidence marks the security verdict as suspicious and says the skill needs user review before installation.
 
-Mitigation: Use the documented confirmation step, keep one stable client_request_id per logical request, and report the returned billing.net_charged_credits.
-
-Risk: The skill silently checks for and installs updates by default.
-
-Mitigation: Review the automatic update behavior before installation and disable auto-updates with the documented command when silent replacement is not acceptable.
+Mitigation: Review the skill, its requested authorization, and the update behavior before deployment.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/beatra-ai/skills/ai-logo-maker)
-- [Beatra Skill Homepage](https://beatra.ai/skills/ai-logo-maker)
+- [AI Logo Maker ClawHub page](https://clawhub.ai/beatra-ai/skills/ai-logo-maker)
+- [AI Logo Maker Beatra page](https://beatra.ai/skills/ai-logo-maker)
 - [Brand brief and routing](references/brand-brief-and-routing.md)
 - [Logo craft](references/logo-craft.md)
 - [Workflow](references/workflow.md)
 - [Review and recovery](references/review-and-recovery.md)
 - [Installation and authentication](references/installation-and-auth.md)
 - [MCP connection](references/mcp-connection.md)
-- [Tasks and results](references/tasks-and-results.md)
-- [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
-- [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [guidance, markdown, shell commands, configuration, API calls]
 
-**Output Format:** [Markdown guidance with JSON request objects, shell command snippets, task identifiers, billing fields, and artifact links.]
+**Output Format:** [Markdown guidance with JSON request bodies, shell commands, task status, billing details, and artifact links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May upload user-provided reference assets to Beatra and create paid asynchronous image generation tasks after user confirmation.]
+**Other Properties Related to Output:** [May initiate paid Beatra image generation, transformation, or editing tasks after user confirmation.]
 
 ## Skill Version(s):
 
-0.1.4 (source: evidence.release.version and artifact/manifest.json)
+0.1.6 (source: server release evidence and manifest.json)
 
 ## Ethical Considerations:
 
