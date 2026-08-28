@@ -1,5 +1,5 @@
 #!/bin/sh
-# camscanner-cli installer - downloads the platform-specific binary to a global PATH location.
+# camscanner-cli installer — downloads the platform-specific binary to a global PATH location.
 # No Node.js or Go required. Only curl/wget needed.
 #
 # Usage:
@@ -7,9 +7,9 @@
 #   curl -fsSL <CDN>/setup.sh | sh
 #
 # Environment variables (all optional):
-#   CAMSCANNER_CLI_VERSION - version to install (default: read from SKILL.md or "latest")
-#   CAMSCANNER_CLI_CDN     - CDN base URL override
-#   CAMSCANNER_CLI_DIR     - install directory override (default: ~/.local/bin)
+#   CAMSCANNER_CLI_VERSION — version to install (default: read from SKILL.md or "latest")
+#   CAMSCANNER_CLI_CDN     — CDN base URL override
+#   CAMSCANNER_CLI_DIR     — install directory override (default: ~/.local/bin)
 
 set -eu
 
@@ -17,7 +17,7 @@ CDN_BASE="${CAMSCANNER_CLI_CDN:-https://data.camscanner.com/camscanner-cli/relea
 BIN_NAME="camscanner-cli"
 INSTALL_DIR="${CAMSCANNER_CLI_DIR:-$HOME/.local/bin}"
 
-# Helpers
+# ── Helpers ──────────────────────────────────────────────────────────────────
 
 say()  { printf '  %s\n' "$@"; }
 err()  { printf '  \342\235\214 %s\n' "$@" >&2; exit 1; }
@@ -91,7 +91,7 @@ check_existing() {
   fi
 }
 
-# Main
+# ── Main ─────────────────────────────────────────────────────────────────────
 
 main() {
   os="$(detect_os)"
@@ -100,7 +100,7 @@ main() {
 
   check_existing "$version"
 
-  # Artifact naming matches the Makefile: camscanner-cli-{os}-{arch}
+  # 产物命名与 Makefile 一致: camscanner-cli-{os}-{arch}
   if [ "$os" = "windows" ]; then
     bin_suffix="${BIN_NAME}-${os}-${arch}.exe"
   else

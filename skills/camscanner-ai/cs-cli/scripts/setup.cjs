@@ -1,14 +1,14 @@
 #!/usr/bin/env node
-// camscanner-cli installer - cross-platform Node.js script.
+// camscanner-cli installer — cross-platform Node.js script.
 // Requires Node.js >= 18 (uses native fetch).
 //
 // Usage:
 //   node scripts/setup.cjs
 //
 // Environment variables (all optional):
-//   CAMSCANNER_CLI_VERSION - version to install (default: read from SKILL.md)
-//   CAMSCANNER_CLI_CDN     - CDN base URL override
-//   CAMSCANNER_CLI_DIR     - install directory override
+//   CAMSCANNER_CLI_VERSION — version to install (default: read from SKILL.md)
+//   CAMSCANNER_CLI_CDN     — CDN base URL override
+//   CAMSCANNER_CLI_DIR     — install directory override
 
 'use strict';
 
@@ -94,7 +94,7 @@ function checkExisting(targetVersion) {
     say(`Found existing ${BIN_NAME} v${existingVer} at ${existingPath}`);
     say(`Will upgrade to v${targetVersion}`);
   } catch {
-    // Not installed; proceed.
+    // not installed — proceed
   }
 }
 
@@ -121,7 +121,7 @@ async function main() {
 
   checkExisting(version);
 
-  // Artifact naming matches the Makefile: camscanner-cli-{os}-{arch}[.exe]
+  // 产物命名与 Makefile 一致: camscanner-cli-{os}-{arch}[.exe]
   const binFile = osName === 'windows'
     ? `${BIN_NAME}-${osName}-${arch}.exe`
     : `${BIN_NAME}-${osName}-${arch}`;

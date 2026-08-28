@@ -268,7 +268,7 @@ function Main {
         }
 
         # Download Skill ZIP
-        $skillZip = "camscanner-skill-v${remoteVersion}.zip"
+        $skillZip = "camscanner-skill-clawhub-v${remoteVersion}.zip"
         $skillUrl = "${CDN_BASE}/releases/v${remoteVersion}/${skillZip}"
         $skillDest = Join-Path $TMP_DIR $skillZip
 

@@ -1,6 +1,6 @@
 ## Description:
 
-CamScanner helps agents process documents with camscanner-cli for OCR, image and PDF conversion, enhancement, translation, watermarking, validation, and local or cloud output.
+CamScanner document processing skill for document conversion, image and PDF processing, OCR, translation, watermark handling, formula extraction, document scanning, image text editing, and saving processed results to a user's CamScanner account.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and external users can have an agent run CamScanner CLI workflows to convert, enhance, OCR, translate, watermark, validate, and save document or image outputs.
+External users and agents use this skill to route CamScanner CLI commands for document processing tasks such as OCR, image enhancement, image/PDF conversion, watermarking, translation, receipt recognition, and cloud document search.
 
 ### Deployment Geography for Use:
 
@@ -22,48 +22,44 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Input files are uploaded to CamScanner servers for processing.
+Risk: The skill installs and self-updates a local CamScanner CLI, which creates supply-chain exposure through the vendor distribution and update channel.
 
-Mitigation: Use the skill only for documents approved for CamScanner processing, especially when handling sensitive or regulated content.
+Mitigation: Review installation and upgrade behavior before deployment, and enable automatic upgrades only in environments that trust CamScanner's CDN and release process.
 
-Risk: Processed results are saved to the user's CamScanner account by default unless the user asks for local-only output.
+Risk: Document processing can upload user files to CamScanner services and the skill saves processed results to cloud by default.
 
-Mitigation: Ask for or specify local-only output when persistent cloud storage is not desired.
+Mitigation: For sensitive files, explicitly request local-only output and confirm whether cloud saving is acceptable before running commands.
 
-Risk: Installers and updaters can replace the local CLI executable and skill files.
+Risk: The skill uses OAuth login and stores tokens in the system keychain.
 
-Mitigation: Install or update only when the CamScanner distribution channel is trusted, and review checksum or version evidence where available.
-
-Risk: The skill requires OAuth login for CamScanner operations.
-
-Mitigation: Use the browser OAuth flow and avoid displaying, copying, or storing tokens outside the supported credential store.
+Mitigation: Use the documented authentication flow, avoid exposing token values, and verify logout or credential cleanup requirements for shared machines.
 
 ## Reference(s):
 
 - [CamScanner homepage](https://www.camscanner.com)
-- [ClawHub CamScanner skill page](https://clawhub.ai/camscanner-ai/skills/cs-cli)
-- [Image Processing Reference](references/image-processing.md)
-- [PDF Processing Reference](references/pdf-processing.md)
-- [Tool Combination Quick Reference](references/tool-combos.md)
-- [Batch Document Conversion Workflow](references/batch-convert.md)
-- [OCR Recognition and Content Extraction Workflow](references/ocr-extract.md)
-- [Image Enhancement and Restoration Workflow](references/image-enhance.md)
-- [Multilingual Translation Workflow](references/translate.md)
-- [Document Watermark Protection Workflow](references/watermark-protection.md)
+- [ClawHub skill page](https://clawhub.ai/camscanner-ai/skills/cs-cli)
+- [Image processing reference](artifact/references/image-processing.md)
+- [PDF processing reference](artifact/references/pdf-processing.md)
+- [Tool combination quick reference](artifact/references/tool-combos.md)
+- [Batch document conversion workflow](artifact/references/batch-convert.md)
+- [OCR recognition and content extraction workflow](artifact/references/ocr-extract.md)
+- [Image enhancement and restoration workflow](artifact/references/image-enhance.md)
+- [Multilingual translation workflow](artifact/references/translate.md)
+- [Document watermark protection workflow](artifact/references/watermark-protection.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with shell command examples; the CLI may produce files, stdout text, JSON, or cloud document IDs.]
+**Output Format:** [Markdown guidance with command examples and local or cloud file outputs produced by camscanner-cli]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Can save processed results locally, to the user's CamScanner account, or both, depending on command flags and user preference.]
+**Other Properties Related to Output:** [Processed outputs may include images, PDFs, Word documents, Excel spreadsheets, Markdown, TXT, ZIP files, stdout text, or JSON depending on the selected command.]
 
 ## Skill Version(s):
 
-1.1.2 (source: frontmatter and server release metadata)
+1.1.4 (source: evidence.release.version and SKILL.md frontmatter)
 
 ## Ethical Considerations:
 

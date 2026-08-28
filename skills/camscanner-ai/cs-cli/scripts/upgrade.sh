@@ -245,7 +245,7 @@ main() {
   fi
 
   # Download Skill ZIP
-  local skill_zip="camscanner-skill-v${remote_version}.zip"
+  local skill_zip="camscanner-skill-clawhub-v${remote_version}.zip"
   local skill_url="${CDN_BASE}/releases/v${remote_version}/${skill_zip}"
 
   say "Downloading Skill package..."

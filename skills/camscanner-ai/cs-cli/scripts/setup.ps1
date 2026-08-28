@@ -2,9 +2,9 @@
 # Usage: powershell -ExecutionPolicy Bypass -File scripts\setup.ps1
 #
 # Environment variables (all optional):
-#   CAMSCANNER_CLI_VERSION - version to install (default: read from SKILL.md)
-#   CAMSCANNER_CLI_CDN     - CDN base URL override
-#   CAMSCANNER_CLI_DIR     - install directory override (default: %LOCALAPPDATA%\camscanner-cli)
+#   CAMSCANNER_CLI_VERSION — version to install (default: read from SKILL.md)
+#   CAMSCANNER_CLI_CDN     — CDN base URL override
+#   CAMSCANNER_CLI_DIR     — install directory override (default: %LOCALAPPDATA%\camscanner-cli)
 
 $ErrorActionPreference = "Stop"
 
@@ -13,7 +13,7 @@ $BinName = "camscanner-cli"
 $DefaultInstallDir = Join-Path $env:LOCALAPPDATA "camscanner-cli"
 $InstallDir = if ($env:CAMSCANNER_CLI_DIR) { $env:CAMSCANNER_CLI_DIR } else { $DefaultInstallDir }
 
-# Helpers
+# ── Helpers ──────────────────────────────────────────────────────────────────
 
 function Write-Say  { param([string]$Message) Write-Host "  $Message" }
 function Write-Err  { param([string]$Message) Write-Host "  [ERROR] $Message" -ForegroundColor Red; exit 1 }
@@ -100,14 +100,14 @@ function Test-ExistingInstall {
     }
 }
 
-# Main
+# ── Main ─────────────────────────────────────────────────────────────────────
 
 $Arch = Get-Arch
 $Version = Resolve-SkillVersion
 
 Test-ExistingInstall -TargetVersion $Version
 
-# Artifact naming matches the Makefile: camscanner-cli-windows-{arch}.exe
+# 产物命名与 Makefile 一致: camscanner-cli-windows-{arch}.exe
 $BinFile = "${BinName}-windows-${Arch}.exe"
 $DownloadUrl = "${CdnBase}/v${Version}/${BinFile}"
 

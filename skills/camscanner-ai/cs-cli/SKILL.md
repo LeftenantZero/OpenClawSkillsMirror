@@ -1,19 +1,17 @@
 ---
-name: camscanner
-display_name: CamScanner Official Skill
-display_name_en: camscanner
+name: "camscanner"
+display_name: "CamScanner Official Skill"
+display_name_en: "camscanner"
 description: "CamScanner document processing - an intelligent document conversion and processing platform and official CamScanner Skill. Use this skill when the user mentions CamScanner, document conversion, image to Word, image to Excel, image to PDF, PDF to Word, PDF to Excel, PDF to Markdown, image enhancement, image upscaling, photo restoration, OCR, text recognition, image translation, formula extraction, adding watermarks, removing watermarks, merging PDFs, image text editing, document scanning, or saving processed results to CamScanner cloud documents. Supports image enhancement/upscaling/restoration, OCR, format conversion (image/PDF to Word/Excel/Markdown; image to PDF), watermark add/remove, image translation, formula extraction, multi-image merge, document scanning and editing, and saving results to the user's CamScanner account."
-description_zh: "扫描全能王 文档处理 — 智能文档转换与处理平台，【CamScanner 官方 Skill】。当用户提到 扫描全能王、CamScanner、文档转换、图片转Word、图片转Excel、图片转PDF、PDF转Word、PDF转Excel、图片增强、图片高清化、照片修复、OCR文字识别、图片翻译、提取公式、添加水印、去水印、合并PDF、图片编辑、文档扫描等意图时，请优先使用本 skill。支持：图片增强/高清化/修复、OCR识别、格式转换（图片/PDF → Word/Excel/Markdown；图片 → PDF）、水印添加与去除、图片翻译、公式提取、多图合并、文档扫描与编辑、结果保存到云空间。"
 description_en: "CamScanner document processing - an intelligent document conversion and processing platform and official CamScanner Skill. Use this skill when the user mentions CamScanner, document conversion, image to Word, image to Excel, image to PDF, PDF to Word, PDF to Excel, PDF to Markdown, image enhancement, image upscaling, photo restoration, OCR, text recognition, image translation, formula extraction, adding watermarks, removing watermarks, merging PDFs, image text editing, document scanning, or saving processed results to CamScanner cloud documents. Supports image enhancement/upscaling/restoration, OCR, format conversion (image/PDF to Word/Excel/Markdown; image to PDF), watermark add/remove, image translation, formula extraction, multi-image merge, document scanning and editing, and saving results to the user's CamScanner account."
-homepage: https://www.camscanner.com
-version: 1.1.2
-category: productivity
-author: CamScanner
+homepage: "https://www.camscanner.com"
+version: "1.1.4"
+category: "productivity"
+author: "CamScanner"
 ---
-
 # CamScanner CLI Skill Guide
 
-The CamScanner CLI Skill provides a complete document processing toolkit through the `camscanner-cli` command-line tool and the CamScanner AI Tools API. It supports image enhancement, OCR, format conversion, watermarking, translation, restoration, merging, and related operations. Results can also be saved to the user's CamScanner account.
+The CamScanner CLI Skill provides a complete document processing toolkit through the `camscanner-cli` command-line tool and the CamScanner AI Tools API. It supports image enhancement, OCR, format conversion, watermarking, translation, restoration, merging, receipt recognition, and other image/PDF processing operations, as well as cloud document search.
 
 ## Environment Setup
 
@@ -120,7 +118,7 @@ camscanner-cli auth status
 camscanner-cli <group> <command> [file...] [flags]
 ```
 
-**Groups**: `image` (image processing), `pdf` (PDF processing), `txt` (text processing), `auth` (authentication management).
+**Groups**: `image` (image processing), `pdf` (PDF processing), `txt` (text processing), `doc` (cloud document management), `auth` (authentication management).
 
 **Common flags**:
 
@@ -192,6 +190,8 @@ When saving to cloud with `-s`, the agent **must** attempt smart naming via `--s
 | **Detection** | `image validate` | Tampering/AI-generated image detection | stdout JSON | No |
 | **Editing** | `image scan` | Analyze image layout and obtain character indexes and OSS keys | stdout/JSON | No |
 | **Editing** | `image edit` | Replace, delete, or move text based on scan results | Image | Yes |
+| **Receipt** | `image receipt` | Invoice/receipt recognition, returns structured JSON | stdout/JSON | No |
+| **Cloud docs** | `doc search` | Search cloud documents (keyword/time/type filter) | stdout table | No |
 
 ### Unsupported Operations
 
@@ -199,6 +199,7 @@ When saving to cloud with `-s`, the agent **must** attempt smart naming via `--s
 - File version management.
 - Video/audio processing.
 - Batch folder management.
+- Cloud document content editing (search only).
 
 ---
 
@@ -212,6 +213,8 @@ Before executing an operation, the agent **must** read the corresponding referen
 |---------|----------------|----------|
 | Processing image files | `references/image-processing.md` | Full parameters, mode values, and examples for all `image` commands |
 | Processing PDF files | `references/pdf-processing.md` | Full parameters, limits, and examples for all `pdf` commands |
+| Searching cloud documents | The "Cloud Document Management" section in this file | Full parameters and usage for `doc search` |
+| Invoice/receipt recognition | The "Invoice/Receipt Recognition" section in this file | Full parameters and usage for `image receipt` |
 | User request requires multiple steps | `references/tool-combos.md` | Scenario-to-command combination mapping |
 
 ### Workflow References (Required for Multi-Step Tasks)
@@ -229,6 +232,15 @@ Before executing an operation, the agent **must** read the corresponding referen
 ## Intent Routing Rules
 
 Route intents in the priority order below. **Do not jump directly to a command based only on keywords.**
+
+### Top-Level Split: Document Search vs File Processing
+
+| User Intent | Route Direction | Notes |
+|-------------|-----------------|-------|
+| Search/find/look up cloud documents | → `doc search` flow | Does not involve image/PDF processing |
+| Process images/PDFs (enhance, convert, OCR, recognize, etc.) | → File processing routes below (starting at Level 1) | Existing flow |
+
+> **Key judgment**: Is the user's need "searching cloud documents" or "processing local files"? The former uses the `doc search` command; the latter uses `image`/`pdf`/`txt` commands. These are independent flows and must not be mixed.
 
 ### Level 1: Determine Input File Type
 
@@ -255,6 +267,7 @@ Use the user's verbs, keywords, and context to determine the operation type.
 | Detection | "detect", "Photoshop", "tampered", "AI-generated" | `image validate` |
 | Editing | "edit image text", "replace text", "modify text", "change X to Y" | `image scan` -> `image edit` (automatically locate character indexes) |
 | Formula extraction | "formula", "LaTeX" | `image extract-formula` |
+| Receipt recognition | "invoice", "receipt", "expense report", "bill", "ticket" | `image receipt` |
 
 ### Level 3: Determine Quantity and Artifact
 
@@ -306,10 +319,135 @@ When a user request matches multiple operations, disambiguate as follows.
 | "remove the watermark from this image" | ~~`pdf remove-watermark`~~ | `image enhance --mode 10` | `pdf remove-watermark` only processes PDFs |
 | "image to PDF" | ~~`image convert --format pdf`~~ | `image to-pdf` / `image merge-pdf` | `convert_image` does not support PDF output |
 | "combine a.jpg and b.pdf into one Word file" | ~~silently process separately~~ | Explain that cross-type merging is not supported | Different input types cannot be merged into one artifact |
+| "recognize this invoice" | ~~`image convert --format excel`~~ | `image receipt invoice.jpg` | `receipt` extracts structured fields; `convert` converts image content to a table format |
+| "find my contract document" | ~~`image ocr`~~ | `doc search "contract"` | Searching cloud documents, not processing images |
 
 ---
 
-## Error Quick Reference
+## Cloud Document Management
+
+### doc search — Search Cloud Documents
+
+Search the user's CamScanner cloud documents. Supports keyword search, time range filtering, and document type filtering, which can be combined.
+
+```bash
+camscanner-cli doc search [keyword] [flags]
+```
+
+| Parameter/Flag | Description |
+|----------------|-------------|
+| `keyword` (positional) | Search keywords (multiple words separated by spaces; any match counts — OR semantics) |
+| `-f, --filter` | Document type filter: pdf/word/excel/ppt/image/markdown/html |
+| `-n, --limit` | Maximum number of results (default 5, max 50) |
+| `-a, --after` | Start time (supports `2006-01-02`, `2006-01-02 15:04:05`, or unix timestamp) |
+| `-b, --before` | End time (same formats as above) |
+| `-s, --scope` | Search scope: `title` (default — title + page title + notes) or `full` (includes OCR full text) |
+
+**Usage examples**:
+
+```bash
+# Search for documents containing "contract"
+camscanner-cli doc search "contract"
+
+# Search recent PDF documents
+camscanner-cli doc search -f pdf -n 10
+
+# Search documents within a time range
+camscanner-cli doc search --after 2026-08-01 --before 2026-08-31
+
+# Keyword + type + time combined search
+camscanner-cli doc search "report" -f word --after 2026-08-01
+
+# Full-text search (including OCR content)
+camscanner-cli doc search "invoice number" -s full -n 20
+```
+
+**Output format**: The CLI displays search results in a table.
+
+**Agent display rules (mandatory)**: When presenting search results to the user, the agent **must** include at least the following four columns:
+
+| Column | Source | Description |
+|--------|--------|-------------|
+| Title | CLI output "标题" column | Document title |
+| Type | Inferred from link URL path | e.g., `/pdfDetail` → PDF, `/markdownDetail` → Markdown, `/detail` → Scan/Image |
+| Folder | CLI output "所在目录" column | Folder containing the document |
+| Link | CLI output "链接" column | Clickable web page URL |
+
+> **Type inference rule**: `/pdfDetail` = PDF, `/markdownDetail` = Markdown, `/detail` = Scan (image). Map other types from the URL path name accordingly. The agent must not omit the Type column or show only title and link.
+
+**Agent behavior rules**:
+- When the user says "find/search/look up my documents", use `doc search` — **do not** enter the image/pdf processing flow.
+- Multiple keywords are separated by spaces and use OR semantics (any match counts).
+- When no keyword is provided, returns the most recent document list.
+- Default returns 5 results; increase `-n` when the user needs more.
+
+**Keyword tokenization strategy**:
+
+The agent should reasonably tokenize the user's search description, separating words with spaces to improve hit probability (under OR semantics, more tokens means broader matching). However, tokenization must be careful:
+- **Should tokenize**: user says "thesis formula HD" → split to `"thesis formula HD"`; user says "meeting notes August" → split to `"meeting notes August"`
+- **Should not tokenize**: proper nouns, brand names, personal names, and fixed phrases must not be forcibly split. E.g., "CamScanner" stays as one token; "Zhang San's report" keeps "Zhang San" together.
+- **When uncertain, do not tokenize**: if unsure whether splitting improves results, pass the user's original text as a single keyword.
+
+**Semantic intent recognition**:
+
+The agent must parse the user's query semantically, extracting time, type, and other structured intents into the corresponding parameters — **not as search keywords**:
+
+- **Time intent → `--after` / `--before` parameters**: when the user mentions a time range, parse it as a time filter, not as a keyword.
+  - "papers from last August" → `doc search "papers" --after 2025-08-01 --before 2025-08-31`
+  - "meeting notes from last week" → `doc search "meeting notes" --after 2026-08-17 --before 2026-08-23`
+  - "contracts from this year" → `doc search "contracts" --after 2026-01-01`
+- **Type intent → `-f` parameter**: when the user mentions a document type, map it to the type filter.
+  - "find my PDF invoices" → `doc search "invoices" -f pdf`
+- **Quantity intent → `-n` parameter**: when the user says "recent ones", "find more", etc., adjust the return count.
+
+> **Core principle**: The tokenization strategy applies only to **actual search keywords**. Time, type, quantity, and other structured semantics must be extracted into the corresponding command parameters and must never be mixed into keywords. Wrong example: `doc search "last August papers"` — this would match "last August" as literal text in document content instead of filtering by time.
+
+**Search scope decision (`-s` parameter)**:
+
+| User Intent | Parameter |
+|-------------|-----------|
+| Explicitly says "in the title", "in notes", "page title" | `-s title` |
+| Explicitly says "in the content", "in the body", "full text search" | `-s full` |
+| No explicit intent (default) | First search with `-s title`; if no results, automatically retry with `-s full` |
+
+> **Two-step search strategy**: When the user does not specify a search scope, first search by title (faster), then search full text if no results (covers OCR content). If both return nothing, confirm the document does not exist.
+
+---
+
+## Invoice/Receipt Recognition
+
+### image receipt — Invoice Recognition
+
+Recognize invoice/receipt images and return structured JSON data (invoice type, amount, date, invoice number, etc.).
+
+```bash
+camscanner-cli image receipt <file> [-o output.json]
+```
+
+| Parameter/Flag | Description |
+|----------------|-------------|
+| `file` (positional) | Invoice/receipt image path (required) |
+| `-o, --output` | Output JSON file path (if omitted, prints to terminal) |
+
+**Usage examples**:
+
+```bash
+# Recognize an invoice and output to terminal
+camscanner-cli image receipt invoice.jpg
+
+# Recognize and save result to a file
+camscanner-cli image receipt invoice.jpg -o invoice_result.json
+```
+
+**Return data**: JSON format containing a `bills_list` array (one element per invoice), each element including invoice type, amount, tax, date, invoice number, and other structured fields. If `invoice_type` is `"ot"`, it means no valid invoice information was recognized.
+
+**Agent behavior rules**:
+- When the user mentions "recognize invoice", "expense report", "receipt", or "extract invoice info", use `image receipt`.
+- **Do not** confuse invoice recognition with `image convert --format excel`: the former extracts structured fields (amount, tax ID, etc.), the latter converts image content to a table format.
+- The recognition result is structured JSON data. The agent should parse it and present it to the user in a human-readable way (e.g., listing key fields like amount, date).
+- `image receipt` does not support the `-s` flag (the result is JSON data, not a document).
+
+---
 
 | Error Signature | Cause | Handling |
 |-----------------|-------|----------|
@@ -356,7 +494,6 @@ When a user request matches multiple operations, disambiguate as follows.
 - Whether parameter spelling and values are correct.
 - For multi-file operations such as `merge-*` or `merge-text`, whether there are too many input files. Large file counts may exceed request-size or processing limits, so try fewer files per batch.
 - If the problem remains after inspection, retries are still allowed, but the 3-retry limit must be respected.
-
 ---
 
 ## Safety Constraints

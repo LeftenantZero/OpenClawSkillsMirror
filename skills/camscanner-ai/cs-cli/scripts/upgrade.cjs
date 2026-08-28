@@ -319,7 +319,7 @@ async function main() {
   }
 
   // Download Skill ZIP
-  const skillZip = `camscanner-skill-v${remoteVersion}.zip`;
+  const skillZip = `camscanner-skill-clawhub-v${remoteVersion}.zip`;
   const skillUrl = `${CDN_BASE}/releases/v${remoteVersion}/${skillZip}`;
 
   say('Downloading Skill package...');
