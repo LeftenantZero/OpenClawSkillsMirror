@@ -1,0 +1,50 @@
+{
+  "changelog": "- Introduced experience-driven procedures: workflows now auto-evolve from failures and adapt based on user feedback.\n- Added two new scripts: mengram-feedback.sh for recording workflow outcome (success/failure with context), and mengram-procedures.sh for listing and inspecting all learned procedures.\n- Procedures now support automatic version history and evolution logs, with feedback triggering improvements.\n- Updated documentation to reflect new feedback and procedure management features.\n- Enhanced guidance on when to provide feedback and how to interact with self-improving workflows.",
+  "created_at": 1771403668294,
+  "display_name": "Mengram Openclaw Skill",
+  "fetched_at": 1787899747578,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/mengram-add.sh",
+    "scripts/mengram-feedback.sh",
+    "scripts/mengram-procedures.sh",
+    "scripts/mengram-profile.sh",
+    "scripts/mengram-search.sh",
+    "scripts/mengram-setup.sh",
+    "scripts/mengram-workflow.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089730390,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Ali Baizhanov",
+    "handle": "alibaizhanov",
+    "user_id": "s176t1y1ysxapfvjwhnsjnxm01885q2m"
+  },
+  "slug": "mengram-openclaw-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mengram-openclaw-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mengram-openclaw-skill&ownerHandle=alibaizhanov",
+    "page_url": "https://clawhub.ai/alibaizhanov/skills/mengram-openclaw-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 502,
+    "installs": 11,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Long-term memory with 3 types (facts, events, workflows). Self-improving procedures that evolve from failures. Remember user preferences, past conversations,...",
+  "updated_at": 1778491570900,
+  "version": "1.0.2"
+}
