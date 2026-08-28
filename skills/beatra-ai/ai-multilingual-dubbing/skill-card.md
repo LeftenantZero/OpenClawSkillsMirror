@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators, marketers, localization teams, and training teams use this skill to plan, approve, synthesize, recover, and deliver multilingual voice-over narration by locale and segment using Beatra text-to-speech tasks.
+External creators, localization teams, training teams, marketers, and developers use this skill to plan multilingual narration, select locale-ready voices, confirm paid text-to-speech scope, and deliver reviewable audio results grouped by language, market, and segment.
 
 ### Deployment Geography for Use:
 
@@ -22,43 +22,46 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uses a broad shared Beatra device authorization stored locally for remote MCP operations.
+Risk: The Beatra shared token can authorize more than speech generation.
 
-Mitigation: Install only when the user trusts Beatra, keep the credential private, watch paid render approvals closely, and revoke the device authorization from the Beatra Console when the skill is no longer needed.
+Mitigation: Install only with Beatra credentials intended for shared Beatra skill use, keep the credential file private, and reconnect only when the user explicitly chooses to do so.
 
-Risk: The bundled client can silently update installed package code from Beatra's package channel.
+Risk: Package files may update automatically before ordinary Beatra commands.
 
-Mitigation: Disable silent update checks with `python3 scripts/mcp_client.py update --auto off` when that update posture is not acceptable, and use `python3 scripts/mcp_client.py update --check` to inspect available updates.
+Mitigation: Review the package before installation and disable silent update checks with `python3 scripts/mcp_client.py update --auto off` when automatic replacement is not acceptable.
 
-Risk: Each approved speech synthesis cell is paid work, and transport uncertainty can otherwise lead to duplicate submissions.
+Risk: Paid synthesis can spend credits or duplicate work if scope and retries are handled loosely.
 
-Mitigation: Confirm the full paid scope once, use one stable `client_request_id` per approved cell, poll existing task IDs before retrying, and retry uncertain submissions only with identical arguments.
+Mitigation: Confirm the complete paid render matrix before synthesis, use one stable request identity per approved cell, and poll existing tasks instead of submitting replacements.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/ai-multilingual-dubbing)
-- [Beatra skill homepage](https://beatra.ai/skills/ai-multilingual-dubbing)
-- [Matrix design](references/matrix-design.md)
+- [Dubbing matrix design](references/matrix-design.md)
 - [Locale readiness and quality](references/locale-readiness-and-quality.md)
 - [Recovery and delivery](references/recovery-and-delivery.md)
 - [Installation and authentication](references/installation-and-auth.md)
-- [Bundled MCP Client diagnostics](references/mcp-connection.md)
+- [MCP connection](references/mcp-connection.md)
+- [Installation registration](references/installation-registration.md)
+- [Tasks and results](references/tasks-and-results.md)
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
+- [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
+- [AI Multilingual Dubbing on ClawHub](https://clawhub.ai/beatra-ai/skills/ai-multilingual-dubbing)
+- [Beatra AI Multilingual Dubbing](https://beatra.ai/skills/ai-multilingual-dubbing)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with command examples, JSON MCP payloads, task status summaries, and delivered audio URLs with metadata.]
+**Output Format:** [Markdown guidance with inline shell commands, structured task details, and audio artifact links when generation succeeds]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May guide paid Beatra speech synthesis tasks after explicit user approval and reports task identity, billing result, artifact details, MIME type, size, sample rate when returned, and duration.]
+**Other Properties Related to Output:** [May report locale, segment, voice, task identity, MIME type, size, duration, sample rate when returned, usage, and billing fields.]
 
 ## Skill Version(s):
 
-0.1.7 (source: server release and manifest)
+0.1.8 (source: server release metadata and manifest.json)
 
 ## Ethical Considerations:
 
