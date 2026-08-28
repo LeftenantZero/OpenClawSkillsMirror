@@ -1,0 +1,55 @@
+{
+  "changelog": "Bazi Daily 1.0.4 \u2014 Switches to .sql calendar data and strengthens classic text guardrails\n\n- \u65e5\u5386\u6570\u636e\u6e90\u7531 CSV \u683c\u5f0f\uff08assets/bazi_daily_calendar_2026.csv\uff09\u5207\u6362\u4e3a SQL \u683c\u5f0f\uff08assets/bazi_daily_calendar_2026.sql\uff09\u3002\n- \u77e5\u8bc6\u6e90\u5f15\u7528\u4ec5\u5141\u8bb8\u672c\u5730 txt \u6587\u672c\uff0c\u7ecf\u5178\u6587\u672c\u7f3a\u5931\u65f6\u7981\u6b62\u9759\u9ed8\u66ff\u4ee3\uff0c\u5e76\u52a0\u5165\u7f3a\u53e3\u8b66\u544a\u548c\u5b8c\u6574\u6027\u8bf4\u660e\u3002\n- references/classics \u76ee\u5f55\u65b0\u589e README.md\uff0c\u8be6\u7ec6\u8bf4\u660e\u7ecf\u5178\u6587\u672c\u7f3a\u5931\u7ae0\u8282\u5bf9\u5206\u6790\u5f71\u54cd\u3002\n- \u65b0\u589e references/import-command-template.md\uff0c\u660e\u786e\u5e74\u5ea6\u65e5\u5386 SQL \u6570\u636e\u5bfc\u5165\u6d41\u7a0b\u3002\n- \u5220\u9664 references/i18n-terminology.md\uff0c\u4e0d\u518d\u63d0\u53ca\u591a\u8bed\u8a00\u672f\u8bed\u6620\u5c04\u4e0e\u5c55\u793a\u5c42\u8def\u7531\u89c4\u5219\u3002\n- \u54cd\u5e94\u6a21\u677f\u3001\u5b88\u5219\u3001\u65e5\u5fd7\u5b57\u6bb5\u7b49\u89c4\u5219\u7cbe\u7b80\uff0c\u66f4\u805a\u7126\u5b9e\u9645 OpenClaw \u8fd0\u884c\u573a\u666f\u3002",
+  "created_at": 1772521994011,
+  "display_name": "Daily Bazi Analysis",
+  "fetched_at": 1787890980102,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/bazi_daily_calendar_2026.sql",
+    "references/bazi-calendar-schema.md",
+    "references/classic-sources-routing.md",
+    "references/classics/A_\u6ef4\u5929\u9ad3.txt",
+    "references/classics/B_\u6e0a\u6d77\u5b50\u5e73.txt",
+    "references/classics/C_\u7a77\u901a\u5b9d\u9274.txt",
+    "references/classics/README.md",
+    "references/heartbeat-contract.md",
+    "references/import-command-template.md",
+    "scripts/extract_classics_text.py",
+    "scripts/import_bazi_calendar.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090070263,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "liliishere",
+    "handle": "lilir-is-here",
+    "user_id": "s1778hab5hphncdbjsg4bemfn983hqx8"
+  },
+  "slug": "bazi-daily",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/bazi-daily",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=bazi-daily&ownerHandle=lilir-is-here",
+    "page_url": "https://clawhub.ai/lilir-is-here/skills/bazi-daily"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1303,
+    "installs": 39,
+    "stars": 1,
+    "versions": 5
+  },
+  "summary": "\u9762\u5411\u201c\u4eca\u65e5\u8fd0\u52bf/\u4eca\u5929\u9002\u5408\u505aX\u5417/\u4eca\u65e5\u5b9c\u5fcc\u201d\u7c7b\u54a8\u8be2\u7684\u516b\u5b57\u65e5\u8fd0\u89e3\u8bfb\u6280\u80fd\u3002\u4f7f\u7528\u573a\u666f\uff1a\u7528\u6237\u5728 OpenClaw \u4e2d\u8be2\u95ee\u5f53\u65e5\u8fd0\u52bf\u3001\u67d0\u4e8b\u9879\u662f\u5426\u9002\u5408\u4eca\u5929\u505a\u3001\u4eca\u65e5\u5409\u51f6\u4e0e\u5efa\u8bae\u65f6\u89e6\u53d1\u3002\u6280\u80fd\u4f1a\u81ea\u52a8\u8bfb\u53d6\u5f53\u524d\u65e5\u671f\uff0c\u67e5\u8be2\u5f53\u65e5\u5bf9\u5e94\u7684\u6d41\u5e74\u3001\u6d41\u6708\u3001\u6d41\u65e5\uff0c\u5e76\u7ed3\u5408\u7528\u6237\u7684\u516b\u5b57\u56db\u67f1\u8fdb\u884c\u5206\u6790\uff1b\u82e5\u7528\u6237\u4e3a\u9996\u6b21\u4f7f\u7528\u4e14\u65e0\u4e2a\u4eba\u56db\u67f1\u8bb0\u5fc6\uff0c\u5148\u5f15\u5bfc\u7528\u6237\u63d0\u4f9b\u56db\u67f1\u5e76\u5199\u5165\u957f\u671f\u8bb0...",
+  "updated_at": 1778491699946,
+  "version": "1.0.4"
+}
