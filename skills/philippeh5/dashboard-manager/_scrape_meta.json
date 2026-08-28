@@ -1,0 +1,36 @@
+{
+  "changelog": "# Dashboard Manager Skill\n\n## Description\nG\u00e8re les interactions avec le dashboard Jarvis. Ce skill permet de lire, mettre \u00e0 jour et synchroniser le fichier `data.json` en temps r\u00e9el.\n\n## Fonctionnalit\u00e9s\n- **Lecture/Sauvegarde** : Acc\u00e8s au fichier `data.json`\n- **Gestion des notes** : R\u00e9cup\u00e9ration des notes pending et marquage comme processed\n- **Logging** : Ajout d'entr\u00e9es dans l'historique\n- **Mise \u00e0 jour du syst\u00e8me** : Statut, heartbeat, mod\u00e8le actif\n- **Statistiques** : Compteurs de tokens et co\u00fbts\n- **Gestion des t\u00e2ches** : Ajout et mise \u00e0 jour\n- **Sub-agents** : Gestion des agents actifs\n\n## Configuration\n\n### Chemin du fichier\n```javascript\nconst DATA_FILE_PATH = 'D:\\\\Projets\\\\ClaudBot\\\\Jarvis_Dashboard\\\\data.json';\n```\n\n### Permissions\n- **Lecture/\u00c9criture** : Acc\u00e8s au fichier `data.json`\n- **Syst\u00e8me** : Mise \u00e0 jour du statut et heartbeat\n- **Logging** : Ajout d'entr\u00e9es dans l'historique\n\n## API\n\n### Fonctions principales\n```javascript\n// Chargement de la base de donn\u00e9es\nawait loadDatabase();\n\n// Sauvegarde de la base de donn\u00e9es\nawait saveDatabase(db);\n\n// R\u00e9cup\u00e9ration des notes en attente\nconst pendingNotes = await getPendingNotes();\n\n// Marquage d'une note comme trait\u00e9e\nawait processNote(noteId);\n\n// Ajout d'un log\nawait addLog('Action effectu\u00e9e');\n\n// Mise \u00e0 jour du statut du syst\u00e8me\nawait updateSystemStatus('idle', 'Claude-3-Opus');\n\n// Mise \u00e0 jour des statistiques\nawait updateStats(1500, 2800, 0.52);\n\n// Ajout/mise \u00e0 jour d'une t\u00e2che\nawait updateTask(1, { status: 'done' });\n\n// Gestion des sub-agents\nawait addSubAgent('dashboard_agent', 'Monitoring dashboard');\nawait removeSubAgent('dashboard_agent');\n```\n\n## Initialisation\n\n```javascript\nconst dashboardSkill = require('./skills/dashboard-manager');\nconst success = await dashboardSkill.init();\nif (success) {\n    console.log('\ud83d\ude80 Dashboard Manager initialis\u00e9');\n}\n```\n\n## Permissions requises\n- **Acc\u00e8s fichier** : `D:\\Projets\\ClaudBot\\Jarvis_Dashboard\\data.json`\n- **\u00c9criture syst\u00e8me** : Mise \u00e0 jour du statut et heartbeat\n- **Logging** : Ajout d'entr\u00e9es dans l'historique\n\n## Utilisation\n\nCe skill est con\u00e7u pour fonctionner en arri\u00e8re-plan et maintenir la synchronisation entre Jarvis et le dashboard en temps r\u00e9el.\n\n### Boucle de fonctionnement (The Loop)\n1. **INPUT** : Consulte `quick_notes` et traite les notes pending\n2. **OUTPUT** : Met \u00e0 jour `data.json` avec les changements\n3. **Auto-sync** : Heartbeat toutes les 2 secondes\n4. **Silent mode** : Fonctionne sans intervention conversationnelle\n\n## Exemple d'utilisation\n\n```javascript\n// Dans une r\u00e9ponse conversationnelle\nawait updateStats(estimatedInputTokens, estimatedOutputTokens, estimatedCost);\nawait addLog('R\u00e9ponse \u00e0 la question sur les agents');\nawait updateSystemStatus('idle');\n```\n\n## Installation\n\n1. Copier le dossier `dashboard-manager` dans le r\u00e9pertoire des skills\n2. V\u00e9rifier le chemin du fichier `data.json`\n3. Activer le skill dans la configuration\n4. Le skill s'initialisera automatiquement\n\n## D\u00e9pannage\n\n### Probl\u00e8mes courants\n- **Fichier introuvable** : V\u00e9rifier le chemin `DATA_FILE_PATH`\n- **Permissions refus\u00e9es** : V\u00e9rifier les droits d'acc\u00e8s au fichier\n- **JSON invalide** : V\u00e9rifier la syntaxe du fichier `data.json`\n\n### Logs\nLes logs sont ajout\u00e9s automatiquement dans la section `logs` du fichier `data.json` pour le suivi des actions.\n\n## S\u00e9curit\u00e9\n\n- **Acc\u00e8s limit\u00e9** : Seul le fichier `data.json` est accessible\n- **\u00c9criture contr\u00f4l\u00e9e** : Les mises \u00e0 jour sont valid\u00e9es\n- **Logs d'audit** : Toutes les actions sont enregistr\u00e9es\n\n## Compatibilit\u00e9\n\nCe skill est compatible avec OpenClaw et fonctionne avec n'importe quelle instance de Jarvis utilisant le dashboard V2 Ultimate.",
+  "created_at": 1770678583942,
+  "display_name": "Dashboard Manager",
+  "fetched_at": 1787905919250,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "index.js",
+    "skill-card.md",
+    "skill.json",
+    "test.js"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Philippeh5",
+    "handle": "philippeh5",
+    "user_id": "s1710g1h4xqjths33vraadwck98859jw"
+  },
+  "slug": "dashboard-manager",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/dashboard-manager",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=dashboard-manager&ownerHandle=philippeh5",
+    "page_url": "https://clawhub.ai/philippeh5/skills/dashboard-manager"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1342,
+    "installs": 39,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "G\u00e8re en temps r\u00e9el la lecture, mise \u00e0 jour et synchronisation du fichier data.json du dashboard Jarvis, incluant notes, logs, t\u00e2ches et statistiques.",
+  "updated_at": 1778486238781,
+  "version": "1.0.0"
+}
