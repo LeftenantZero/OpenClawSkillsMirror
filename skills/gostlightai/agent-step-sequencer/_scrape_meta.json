@@ -1,0 +1,40 @@
+{
+  "changelog": "Require STEP_AGENT_CMD (no more silent echo default), fix openclaw CLI command refs, add OpenClaw-compliant metadata, capture agent stdout in stepRuns, fix step delay between steps",
+  "created_at": 1770520992932,
+  "display_name": "Agent Step Sequencer",
+  "fetched_at": 1787907006209,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/state-schema.md",
+    "scripts/README.md",
+    "scripts/step-sequencer-check.py",
+    "scripts/step-sequencer-runner.py",
+    "skill-card.md",
+    "test/test_step_sequencer.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "gostlight",
+    "handle": "gostlightai",
+    "user_id": "s172g9xhvf9935ycqf0gaeh7gs83sav2"
+  },
+  "slug": "agent-step-sequencer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-step-sequencer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-step-sequencer&ownerHandle=gostlightai",
+    "page_url": "https://clawhub.ai/gostlightai/skills/agent-step-sequencer"
+  },
+  "stats": {
+    "comments": 2,
+    "downloads": 3502,
+    "installs": 114,
+    "stars": 3,
+    "versions": 7
+  },
+  "summary": "Multi-step scheduler for in-depth agent requests. Detects when user needs multiple steps, suggests plan and waits for confirmation, persists state, and runs heartbeat-aware flow. Use when requests have 3+ actions, sequential dependencies, output dependencies, or high scope/risk.",
+  "updated_at": 1778486077727,
+  "version": "1.1.0"
+}
