@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators, editors, directors, and AI-video artists use this skill to turn a Bilibili topic, title, outline, or script into a chapter-led shot list and selected storyboard key frames for video production planning.
+External Bilibili creators, editors, directors, and AI-video artists use this skill to turn a topic, outline, title, or script into a reviewable chapter-led shot list and a small set of approved storyboard key frames before production.
 
 ### Deployment Geography for Use:
 
@@ -22,46 +22,44 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill requests broad Beatra device credential and paid media-generation authority.
+Risk: The security summary states that the skill uses broad persistent account access that can spend credits and access broader generation tools than the storyboard workflow needs.
 
-Mitigation: Install only when that access is acceptable, review paid key-frame requests before approval, and revoke the Beatra device in the Beatra Console when the installation is no longer trusted.
+Mitigation: Install only if the user trusts Beatra, protect the persistent Device Token, and revoke the device from the Beatra Console or bundled uninstall flow when the skill is no longer needed.
 
-Risk: Selected local reference files may be uploaded for key-frame generation.
+Risk: The security summary states that silent automatic updates are enabled by default.
 
-Mitigation: Upload only references that are appropriate to share with Beatra and label each reference role before generation.
+Mitigation: Disable automatic updates with `python3 scripts/mcp_client.py update --auto off` when reviewed-code stability is required, and use manual update checks before accepting a newer release.
 
-Risk: Automatic package updates are enabled by default.
+Risk: The skill can submit paid generation tasks, and uncertain transport recovery can create duplicate work if request identity is not preserved.
 
-Mitigation: Disable silent update checks with `python3 scripts/mcp_client.py update --auto off` if automatic replacement is not acceptable.
-
-Risk: Paid generation retries can duplicate work or charges if request identity changes after transport uncertainty.
-
-Mitigation: Recover uncertain paid requests with the same `client_request_id` and unchanged arguments, and poll existing task IDs before submitting again.
+Mitigation: Freeze the approved request, use one opaque `client_request_id`, save returned task IDs, poll existing tasks, and retry only byte-equivalent requests with the same request identity.
 
 ## Reference(s):
 
-- [ClawHub skill listing](https://clawhub.ai/beatra-ai/skills/bilibili-video-storyboard)
 - [Bilibili storyboard planning and key frames](references/workflow.md)
 - [Installation and authentication](references/installation-and-auth.md)
+- [Installation registration](references/installation-registration.md)
 - [Tasks and results](references/tasks-and-results.md)
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
-- [Automatic updates and safety](references/automatic-updates-and-safety.md)
 - [MCP connection](references/mcp-connection.md)
+- [Automatic updates and safety](references/automatic-updates-and-safety.md)
 - [Uninstall and disconnect](references/uninstall-and-disconnect.md)
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/bilibili-video-storyboard)
+- [Beatra skill homepage](https://beatra.ai/skills/bilibili-video-storyboard)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with shot lists, key-frame plans, approval summaries, artifact references, and inline shell commands when setup or recovery is needed]
+**Output Format:** [Markdown with structured shot lists, image prompts, command examples, and returned task or artifact details.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include returned task identities, model names, dimensions, formats, and billing facts for approved paid key-frame generations.]
+**Other Properties Related to Output:** [May include one to four approved key-frame requests; reports task IDs, dimensions, formats, resolved model, and charge facts when available.]
 
 ## Skill Version(s):
 
-0.1.2 (source: server release evidence and manifest.json)
+0.1.4 (source: manifest.json and server release evidence)
 
 ## Ethical Considerations:
 
