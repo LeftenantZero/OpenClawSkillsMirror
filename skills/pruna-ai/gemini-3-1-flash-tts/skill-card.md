@@ -1,42 +1,54 @@
-## Description: <br>
-Use when someone needs spoken narration or voiceover - explainer tracks, documentary lines, or voice to pair with generated video. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+Use when someone needs spoken narration or voiceover - explainer tracks, documentary lines, or voice to pair with generated video.
 
-## Publisher: <br>
-[pruna-ai](https://clawhub.ai/user/pruna-ai) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[pruna-ai](https://clawhub.ai/user/pruna-ai)
 
-## Use Case: <br>
-Developers and creators use this skill to prepare Replicate Gemini Flash TTS requests for narration, explainer tracks, documentary lines, and voiceover audio paired with generated video. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: The skill sends the user's script and style prompt to Replicate for text-to-speech generation. <br>
-Mitigation: Confirm the script, voice, language, and style prompt with the user before making the Replicate request. <br>
-Risk: Generated audio may need length checks or editing before it is used in downstream video or narration workflows. <br>
-Mitigation: Use ffmpeg or ffprobe when trimming, concatenating, mixing, or verifying clip length for downstream use. <br>
+## Use Case:
 
+External users, developers, and content teams use this skill to guide an agent through Replicate-based text-to-speech generation for narration, voiceover, and audio tracks paired with video.
 
-## Reference(s): <br>
-- [ClawHub skill page](https://clawhub.ai/pruna-ai/skills/gemini-3-1-flash-tts) <br>
-- [Replicate Gemini 3.1 Flash TTS readme](https://replicate.com/google/gemini-3.1-flash-tts/readme) <br>
-- [Replicate Gemini 3.1 Flash TTS predictions endpoint](https://api.replicate.com/v1/models/google/gemini-3.1-flash-tts/predictions) <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [Guidance, Shell commands, Configuration, API Calls] <br>
-**Output Format:** [Markdown with inline shell commands and JSON request examples] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [Guides the agent through Replicate TTS request setup, polling, download, and optional audio post-processing.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-1.0.9 (source: server release metadata and skill metadata) <br>
+Risk: The skill sends user-provided text and style prompts to Replicate using the user's API token.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Confirm the user intends to submit the content to Replicate and avoid sending sensitive text or prompts unless the user has approved that use.
+
+Risk: The skill suggests installing related prerequisite skills with npx before generation.
+
+Mitigation: Review the referenced Pruna prerequisite skills and install commands before allowing those commands to run.
+
+## Reference(s):
+
+- [Replicate Gemini 3.1 Flash TTS readme](https://replicate.com/google/gemini-3.1-flash-tts/readme)
+- [Replicate Gemini 3.1 Flash TTS prediction endpoint](https://api.replicate.com/v1/models/google/gemini-3.1-flash-tts/predictions)
+
+## Skill Output:
+
+**Output Type(s):** [Guidance, Shell commands, API Calls, Configuration]
+
+**Output Format:** [Markdown with inline bash and curl examples]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [Requires user-provided text; optional voice, prompt, and language_code; uses REPLICATE_API_TOKEN and may require ffmpeg or ffprobe for media post-processing.]
+
+## Skill Version(s):
+
+1.0.10 (source: release evidence and SKILL.md metadata)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
