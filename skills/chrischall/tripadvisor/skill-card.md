@@ -1,6 +1,6 @@
 ## Description:
 
-Provides TripAdvisor Terra API travel data through an MCP server for finding and inspecting hotels, restaurants, attractions, ratings, reviews, photos, and nearby places.
+TripAdvisor travel data via the Terra API through MCP for finding hotels, restaurants, attractions, ratings, reviews, photos, and nearby places.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users, developers, and travel-planning agents use this skill to search TripAdvisor places, compare hotels, restaurants, and attractions, and retrieve location details, reviews, and photos through MCP tools.
+Developers and travel-focused agent users use this skill to connect an agent to TripAdvisor Terra API data for searching places and retrieving listing details, photos, and reviews.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Installing the referenced npm package or source repository can execute third-party code in the agent environment.
+Risk: Running the referenced third-party MCP package executes non-NVIDIA code.
 
-Mitigation: Confirm the package and repository are trusted before installation.
+Mitigation: Install only from trusted package sources and review or scan the package before deployment.
 
-Risk: TripAdvisor Terra requests require an API key and may incur usage or billing under the configured plan.
+Risk: The integration requires a TripAdvisor Terra API key for API-backed tools.
 
-Mitigation: Use an API key with appropriate billing limits and monitor call volume.
+Mitigation: Store the key in environment configuration, limit access to it, and monitor usage against the active plan.
 
-Risk: Travel lookup requests are sent to TripAdvisor, and the optional browser bridge can fetch public TripAdvisor page details.
+Risk: The optional browser bridge reads TripAdvisor pages through the user's open TripAdvisor tab.
 
-Mitigation: Avoid sending sensitive user data in lookup queries and enable the browser bridge only when needed.
+Mitigation: Enable the bridge only when needed and use it with the intended TripAdvisor pages.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/chrischall/skills/tripadvisor)
-- [npm package listed in skill artifact](https://www.npmjs.com/package/@chrischall/tripadvisor-mcp)
-- [Source repository listed in skill artifact](https://github.com/chrischall/tripadvisor-mcp)
+- [tripadvisor-mcp npm package](https://www.npmjs.com/package/@chrischall/tripadvisor-mcp)
 - [TripAdvisor developer portal](https://www.tripadvisor.com/developers)
+- [tripadvisor-mcp GitHub repository](https://github.com/chrischall/tripadvisor-mcp)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with JSON configuration snippets and shell command examples]
+**Output Format:** [Markdown guidance with JSON configuration snippets and shell commands]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Read-only travel lookup guidance and results; may include API-backed place details, reviews, photos, and diagnostic information.]
+**Other Properties Related to Output:** [Requires a TripAdvisor Terra API key for API-backed tools; optional browser bridge can retrieve limited public page details without an API key.]
 
 ## Skill Version(s):
 
-0.3.3 (source: server release evidence)
+0.3.4 (source: server release metadata)
 
 ## Ethical Considerations:
 
