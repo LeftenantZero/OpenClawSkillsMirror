@@ -1,6 +1,6 @@
 ## Description:
 
-Turn final manuscript or course text into ordered chapter audio with one consistent narrator, a representative sample, clear pricing, and focused refinements.
+Turn final manuscript or course text into ordered chapter audio with one consistent narrator, live price estimates, a representative pilot, and focused refinements.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Authors, course creators, and production operators use this skill to turn final manuscript or course text into ordered chapter audio with one consistent narrator. It guides intake, pronunciation handling, narrator selection or cloning, pilot review, pricing confirmation, paid synthesis, recovery, and delivery.
+External creators, audiobook producers, and developers use this skill to convert final manuscripts or course text into chapterized audiobook audio. It supports intake, pronunciation planning, narrator selection, pilot approval, paid Beatra speech generation, delivery tracking, and focused corrections.
 
 ### Deployment Geography for Use:
 
@@ -22,46 +22,50 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uses a broad reusable Beatra device token and stores local account state under `~/.beatra`.
+Risk: The skill connects to Beatra and stores a shared Device Token for account access.
 
-Mitigation: Install only in environments where Beatra account access is acceptable, review the skill before managed deployment, and disconnect or uninstall when access is no longer needed.
+Mitigation: Use the bundled authorization helper, keep the token only in the private credential file, and never expose it in chat, logs, command arguments, or copied files.
 
-Risk: Automatic package updates are enabled by default and can replace package files during normal use.
+Risk: Approved voice cloning, speech synthesis, and cover generation can spend Beatra credits.
 
-Mitigation: Disable silent updates with `python3 scripts/mcp_client.py update --auto off` where change control is required, and review updates before use in sensitive environments.
+Mitigation: Require a current production card and explicit approval for each paid step, then submit each approved request once with durable task tracking.
 
-Risk: The workflow can initiate paid voice cloning, speech synthesis, and image generation operations.
+Risk: Automatic package updates are enabled by default for this installation.
 
-Mitigation: Require explicit approval of the current production card for each paid operation and avoid automatic retries unless the original request identity and arguments are unchanged.
+Mitigation: Review the update behavior before installing and disable silent checks with `python3 scripts/mcp_client.py update --auto off` when automatic replacement is not desired.
 
-Risk: Package registration telemetry is part of the bundled client behavior.
+Risk: The bundled client sends installation and platform metadata during Beatra operations.
 
-Mitigation: Use the skill only where this registration behavior is acceptable under the organization's account and telemetry policies.
+Mitigation: Treat use as an account-connected workflow and review the skill's security summary, registration behavior, and disconnect path before deployment.
 
 ## Reference(s):
 
-- [AI Audiobook Narration on ClawHub](https://clawhub.ai/beatra-ai/skills/ai-audiobook-narration)
-- [Chapter production](references/chapter-production.md)
-- [Performance, cost, and quality](references/performance-and-quality.md)
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/ai-audiobook-narration)
+- [Beatra skill homepage](https://beatra.ai/skills/ai-audiobook-narration)
+- [Automatic updates and safety](references/automatic-updates-and-safety.md)
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
+- [Chapter production](references/chapter-production.md)
 - [Delivery and recovery](references/delivery-and-recovery.md)
 - [Installation and authentication](references/installation-and-auth.md)
+- [Installation registration](references/installation-registration.md)
 - [MCP connection](references/mcp-connection.md)
-- [Automatic updates and safety](references/automatic-updates-and-safety.md)
+- [Performance, cost, and quality](references/performance-and-quality.md)
+- [Tasks and results](references/tasks-and-results.md)
+- [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Guidance, Markdown, Shell commands, Configuration, Text]
 
-**Output Format:** [Markdown guidance with production cards, JSON argument examples, and inline shell commands]
+**Output Format:** [Markdown with inline shell commands, JSON request examples, task results, and billing facts when returned]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May direct paid Beatra voice clone, speech synthesis, image generation, task polling, and recovery flows after explicit user confirmation.]
+**Other Properties Related to Output:** [May include approved production cards, chapter ledgers, Beatra task IDs, audio URLs, artifact IDs, usage, and billing fields returned by the service.]
 
 ## Skill Version(s):
 
-0.1.9 (source: server release metadata and manifest.json)
+0.2.0 (source: server evidence and manifest.json)
 
 ## Ethical Considerations:
 
