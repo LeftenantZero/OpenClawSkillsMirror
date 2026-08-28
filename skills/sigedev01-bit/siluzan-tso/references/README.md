@@ -12,7 +12,7 @@
 | `references/core/intent-routing.md`           | 报告/分析/拓词话术消歧                   |
 | `references/core/tips.md`                     | `--json-out` 脚本食谱                    |
 | `references/core/playbooks.md`                | 分析/报告工作流（P1–P9）                 |
-| `references/core/workflows.md`                | 操作/管理工作流（W1–W12）                |
+| `references/core/workflows.md`                | 操作/管理工作流（W1–W13）                |
 | `references/core/subagent-orchestration.md`   | 可选：P5/P6/P7 委派 subagent             |
 | `references/core/skill-authoring.md`          | 维护约定（运行时勿加载）                 |
 
@@ -43,6 +43,16 @@
 | `references/analytics/keyword-planner-workflows.md` | keyword / google-analysis 拓词         |
 | `references/google-ads/rules/README.md`             | 优化/合规 SOP 索引                     |
 
+## Meta 广告
+
+| 文件                                          | 用途                                      |
+| --------------------------------------------- | ----------------------------------------- |
+| `references/meta-ads/meta-ads.md`             | **Meta Instant Form 索引**（金额/ID）     |
+| `references/meta-ads/meta-ads-read.md`        | 账户/主页/表单/按 ID 读系列组广告         |
+| `references/meta-ads/meta-ads-write.md`       | validate/create 与原语写命令              |
+| `references/meta-ads/meta-lead-launch-plan-template.md` | 出方案/创建前审查稿；xlsx 由 `meta-ad plan-render` 生成 |
+| `assets/meta-lead-create-template.json` + `.md` | Lead Ad JSON 契约（**先 Read `.json`**） |
+
 ## 分析与报告
 
 | 文件                                              | 用途                                        |
@@ -71,6 +81,7 @@
 | `references/operations/hosted-automation-bing.md`            | Bing 只读巡检 SOP      |
 | `references/operations/hosted-automation-yandex.md`          | Yandex 只读巡检 SOP    |
 | `references/operations/hosted-automation-tiktok.md`          | TikTok 只读巡检 SOP    |
+| `references/operations/hosted-automation-facebook.md`        | Facebook / MetaAd 只读巡检 SOP |
 | `references/operations/hosted-automation-scenarios.md`       | 宿主编排场景索引       |
 
 ## Assets 模板（`../assets/`）
@@ -82,6 +93,7 @@
 | `meta-period-report-rules.md`           | Meta 周期报告内容丰富度与建议撰写规则                     |
 | `meta-period-report.schema.json`        | Meta 周期报告 Agent JSON Schema                           |
 | `pmax-create-template.md` / `.json`     | PMax 新建契约                                             |
+| `meta-lead-create-template.json` + `.md` | Meta Instant Form Lead Ad 契约                          |
 | `pmax-asset-group-template.json`        | PMax 素材组                                               |
 | `pmax-signals-template.json`            | PMax 信号                                                 |
 | `pmax-assets-update-template.json`      | PMax 素材更新                                             |

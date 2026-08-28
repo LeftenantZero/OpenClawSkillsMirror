@@ -28,7 +28,7 @@
 | `google-analysis --sections campaign-types`（`types-summary`）                                                                                                                        | **实时**                                                                                                                                                    | ✅ 可查当天                       | 当天系列类型分布                                 |
 | `google-analysis` 其他 range 维度（`campaigns` / `keywords` / `devices` / `geographic` / `daily-metrics` / …）                                                                        | 实时（受 Google Ads API 同步延迟影响）；**一律 YYYY-MM-DD**（不附加时区；与 `stats` 的 UTC+8 不同）                                                         | 可查当天，但当天可能尚未结算      | 周期分析、报告                                   |
 | `stats -m Google` / `balance-scan -m Google` / `accounts-digest -m Google` / `list-accounts -m Google` 合并消耗（TSO `account-spend-overview`，2026-05 起）                           | **后端自动分流**：窗口完全在历史 → `database`；含今天 → `googleCombined`。**凡走本接口的请求起止一律东八区墙钟**（`…T00:00:00+08:00` ~ `…T23:59:59+08:00`） | ✅ 可查当天（含今天时切实时聚合） | 历史回溯、巡检、周报 KPI、余额续航估算           |
-| `stats` / `balance-scan` / `accounts-digest` / `list-accounts` 的 **TikTok / Yandex / BingV2 / Kwai / MetaAd** 合并消耗（TSO `accountsoverview`；MetaAd OAuth 户走 `FacebookAds` 段） | **每日同步昨天**                                                                                                                                            | ❌ 查今天会全为 0                 | 历史回溯、巡检、余额续航估算（口径为"截至昨天"） |
+| `stats` / `balance-scan` / `accounts-digest` / `list-accounts` 的 **TikTok / Yandex / BingV2 / MetaAd** 合并消耗（TSO `accountsoverview`；MetaAd OAuth 户走 `FacebookAds` 段） | **每日同步昨天**                                                                                                                                            | ❌ 查今天会全为 0                 | 历史回溯、巡检、余额续航估算（口径为"截至昨天"） |
 | `balance`（`GetMediaAccountInfo`）                                                                                                                                                    | 实时                                                                                                                                                        | —                                 | 仅当前余额，不反映消耗                           |
 
 **选用规则**：
@@ -36,7 +36,7 @@
 - 「今天/当天/今日消耗」「实时消耗排行」 → 优先 `google-analysis(-batch) --sections overview`，`--start` / `--end` 都设为今天；
   - Google 单账户/批量取数也可直接 `stats -m Google` 把 `--end-date` 设为今天，后端会切到 `googleCombined` 模式给实时消耗（但**不会**返回余额/币种/账户名）。
 - 「最近 N 天消耗 / 周报 / 月报 / 余额续航」 → `stats` / `balance-scan` / `accounts-digest`，默认窗口截至昨天即可（Google 此时走 `database`，包含完整字段）。
-- **禁止**用 TikTok / Yandex / BingV2 / Kwai / MetaAd 的 `accountsoverview` 接口判断当天消耗（仍是每日同步）。
+- **禁止**用 TikTok / Yandex / BingV2 / MetaAd 的 `accountsoverview` 接口判断当天消耗（仍是每日同步）。
 - **禁止**给非 Google 媒体的当天高消耗场景加 `--min-spend`：其预筛选来自非实时 `accountsoverview`，会把今天有消耗的账号当成 0 给筛掉。Google 媒体当 `--end-date` 设为今天时，预筛选走的是 `googleCombined` 实时数据，可以使用 `--min-spend`。
 
 ---
@@ -250,30 +250,31 @@ const data = d.record ?? d.items; // record 非空=汇总维度；否则=列表�
 
 ## Meta / Facebook Ads 账户分析
 
-> 周期/诊断报告：**`facebook-analysis`**（`FacebookAds` 路径，7 Section，对齐 Google 周期报告能 cover 的部分）。  
+> 周期/诊断报告：**`facebook-analysis`**（`FacebookAds` 路径，10 Section，含 daily / campaigns / device）。  
 > 撰写与 Google 对照表：**`references/analytics/facebook-analysis-guide.md`**（必读）。  
-> `report meta-overview` 仅为遗留单维总览：按 `list-accounts` 的 `mediaAccountType` 自动选路径——**FacebookAds**（OAuth 授权）→ `FacebookAds/act_<id>`；**MetaAd**（丝路赞开户）→ `MetaAd/<id>`。多维度请用 `facebook-analysis`。
+> `report meta-overview` 仅为遗留单维总览：按 `list-accounts` 的 `mediaAccountType` 自动选路径——**FacebookAds**（OAuth 授权）→ `FacebookAds/act_<id>`；**MetaAd**（丝路赞开户）→ `MetaAd/<id>`。多维度请用 `facebook-analysis`。  
+> **自动化巡检步骤**（封禁 / 拒审 / 落地页 / 当日超预算 / 空耗预警，只读告警）：`references/operations/hosted-automation-facebook.md`。不要用 `run` 冒充当天/小时。
 
 ### 周期报告（默认 6 维，等同 Google 周期报告主流程）
 
 ```bash
 mkdir -p ./snap-fb
 siluzan-tso facebook-analysis -a <mediaCustomerId> --start YYYY-MM-DD --end YYYY-MM-DD --json-out ./snap-fb \
-  --sections overview,ad-sets,platform,country,audience,creative
+  --sections overview,daily,country,campaigns,audience
 ```
 
 | 选项                       | 说明                                                                                                                                                                                                |
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `-a, --account`            | 数字 `mediaCustomerId` 或 `act_<数字>`                                                                                                                                                              |
 | `--json-out`               | 必填；`report-manifest-<id>.json` + `<section>-<id>.json`                                                                                                                                           |
-| `--sections` / `--exclude` | `overview` `ad-sets` `platform` `country` `audience` `creative` `material`；**别名**：`campaigns`→`ad-sets`，`geographic`→`country`，`devices`→`platform`，`ads`→`creative`，`materials`→`material` |
+| `--sections` / `--exclude` | `overview` `daily` `campaigns` `ad-sets` `platform` `country` `device` `audience` `creative` `material`；**别名**：`daily-metrics`→`daily`，`campaign`→`campaigns`，`geographic`→`country`，`devices`→`platform`，`ads`→`creative`，`materials`→`material` |
 | `platform` 响应字段        | `networks[]` 含 `publisherPlatform`（投放平台）+ `platformPosition`（版位）；`network` 与 `platformPosition` 同值，详见 `facebook-analysis-guide.md`                                                |
 | `--limit`                  | 仅 `country`：按 spend 降序前 N 条                                                                                                                                                                  |
 | `--start` / `--end`        | 同传或同省略；省略=近 7 天截至昨天                                                                                                                                                                  |
 | `--concurrency`            | 默认 5，上限 16                                                                                                                                                                                     |
 
 ```bash
-# 全 7 维（含 material）
+# 全量（含 device / creative / material）
 siluzan-tso facebook-analysis -a <id> --json-out ./snap-fb
 
 # 国家 Top 10
@@ -285,14 +286,14 @@ siluzan-tso facebook-analysis -a <id> --sections country --limit 10 --json-out .
 | 场景               | 模板                                                | 默认终稿                                                                               |
 | ------------------ | --------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | 周期 / 月报 / 周报 | `report-templates/meta-period-report.md`            | **HTML**（四步：拉数 → 分析 → `meta-period-report.json` → `facebook-analysis render`） |
-| 用户指定 Excel     | `report-templates/meta-period-report-excel.md`      | Agent 脚本写 `.xlsx`（步骤 1～3 同上；**不**默认 `render`）                            |
+| 用户指定 Excel     | `report-templates/meta-period-report-excel.md`      | `facebook-analysis render --format xlsx`                                               |
 | 深度诊断           | `report-templates/meta-account-diagnosis-report.md` | 按该模板（通常 HTML）                                                                  |
 
 遗留总览：`siluzan-tso report meta-overview -a <id> [--start … --end …] --json-out <dir>`。
 
 ### 相对 Google 无法拉取的维度
 
-无 `daily-metrics`、`keywords`、`search-terms`、`extensions`、`final-urls`、`gold-account`、`ads-index`、`conversion-actions`、`resource-counts`、`campaign-types`、`campaign-hour` — 报告中须标注「接口未提供」，禁止编造。
+无 `keywords`、`search-terms`、`extensions`、`final-urls`、`gold-account`、`ads-index`、`conversion-actions`、`resource-counts`、`campaign-types`、`campaign-hour` — 报告中须标注「接口未提供」，禁止编造。按日用 `daily`，系列用 `campaigns`。
 
 ---
 
@@ -459,7 +460,7 @@ siluzan-tso bing-analysis run -a <mediaCustomerId> --json-out ./snap --sections 
 
 ## Yandex 账户分析
 
-> **自动化巡检步骤**（余额 / 多账户 CPA / 日报花费，只读告警）：`references/operations/hosted-automation-yandex.md`。
+> **自动化巡检步骤**（归档 / 拒审 / 落地页 / 当日超预算 / 空耗预警，只读告警）：`references/operations/hosted-automation-yandex.md`。
 >
 > **网关**：直打 YandexAPI `{yandexApiUrl}/yandex-analysis/*`（从 TSO `apiBaseUrl` 推导：`tso-api-ci` → `yandexapi-ci.mysiluzan.com`；可用 `SILUZAN_YANDEX_API` 覆盖）。
 >
@@ -496,6 +497,30 @@ siluzan-tso yandex-analysis render \
 ```
 
 `search` / `campaigns` / `keywords` / `geo` / `devices` 在 Direct 侧过滤 `AdNetworkType=SEARCH`。无 Metrica / 写操作。报告模板：`report-templates/yandex-period-report.md`（8 个分析章节必写总结+建议；周趋势读落盘 `daily.weekly[]`，**禁止**自行按 `date` 聚周）。
+
+### Yandex 只读运营（`yandex-analysis` 子命令，YandexAPI）
+
+> 与上面 `run` 的周期报表不同。归档/余额、当日全网花费、组级 CPA、拒审、落地页、按日环比走以下子命令。省略 `--start/--end` 默认当天。金额已是账户币种小数。本批**不能**暂停 / 改价 / 改预算。
+
+| 子命令 | 说明 |
+| --- | --- |
+| `account-status` | `GET /overview`：`archived` / `balance` / `currency`；官方无封户原因 |
+| `campaign-entities` | `GET /campaigns`：`spend` / `weeklyBudget` / `budget` / `strategy` / `targetCpa`；全网加 `--network ALL`；按日加 `--time-increment 1` |
+| `adgroup-entities` | `GET /adgroups`：组绩效 + `campaignTargetCpa` / `campaignWeeklyBudget`；默认全网 |
+| `ad-entities` | `GET /ads`：落地页 `landingUrls`；拒审 `--status REJECTED`（与 `--time-increment` 互斥） |
+| `insights` | `--level daily\|geo\|devices\|keywords\|campaigns\|adgroups\|ads`；geo/devices 全网须 `--network ALL` |
+
+```bash
+siluzan-tso yandex-analysis account-status -a <porg-xxx> --json-out ./snap-yandex
+siluzan-tso yandex-analysis campaign-entities -a <porg-xxx> --json-out ./snap-yandex \
+  --start 2026-08-27 --end 2026-08-27 --time-increment 1 --network ALL
+siluzan-tso yandex-analysis ad-entities -a <porg-xxx> --json-out ./snap-yandex \
+  --status REJECTED --start 2026-08-27 --end 2026-08-27
+siluzan-tso yandex-analysis insights -a <porg-xxx> --json-out ./snap-yandex \
+  --level daily --start 2026-08-25 --end 2026-08-27
+```
+
+**要点**：Direct 无小时维度。默认报表只出现有消耗对象。`budget` 是系列日预算（自动策略常空），对照 `weeklyBudget`。`campaignTargetCpa` 只取 Search。`roi` 按成交额算。
 
 ---
 

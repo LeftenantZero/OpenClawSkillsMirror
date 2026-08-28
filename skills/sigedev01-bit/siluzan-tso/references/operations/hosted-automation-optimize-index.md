@@ -2,7 +2,7 @@
 
 > **编排责任**：定时、阈值、多轮状态（如「连续 3 日未改善」）、统计检验、通知（P1/P2）由 **宿主** 实现。
 > **本组文档**：说明如何用 `siluzan-tso` **拉检查项**、**执行写操作**、**写后复核**；每条 SOP 独立成文，避免单文件过长。
-> Bing / Yandex / TikTok 没有降价、暂停、改预算接口，不要套用本组 SOP；巡检见 `hosted-automation-bing.md` / `hosted-automation-yandex.md` / `hosted-automation-tiktok.md`。
+> Bing / Yandex / TikTok / Facebook 没有降价、暂停、改预算接口，不要套用本组 SOP；巡检见 `hosted-automation-bing.md` / `hosted-automation-yandex.md` / `hosted-automation-tiktok.md` / `hosted-automation-facebook.md`。
 
 | 文档                                                                                                                                   | 场景                                   |
 | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |

@@ -106,6 +106,12 @@ siluzan-tso yandex-analysis -a <porg-xxx> --start <S> --end <E> --json-out ./sna
 
 ---
 
+## 样式（必须）
+
+脚本 `import` `report-templates/excel-style-kit.mjs`，用 `createExcelWorkbook({ accent: "yandex" })` + `titleBar`/`tableHeader`/`dataRow` 等组件搭版面，**禁止**裸写无样式单元格。规范见 `report-templates/excel-style-guide.md`。
+
+---
+
 ## 交付前自检
 
 - [ ] `accountId` = 用户要求的 `porg-xxx`

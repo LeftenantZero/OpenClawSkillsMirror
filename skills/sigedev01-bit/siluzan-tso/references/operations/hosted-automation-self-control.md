@@ -3,7 +3,7 @@
 > **主题索引**：[`references/operations/hosted-automation-scenarios.md`](references/operations/hosted-automation-scenarios.md)
 > **编排责任**：定时、多条件 IF、滑动时间窗、通知（含 P1 /「空耗熔断」文案）由 **OpenClaw / WorkBuddy / Cron** 等宿主实现。
 > **本页责任**：说明如何用 `siluzan-tso` **拉检查项**、**执行最终写操作**、**写后复核**。
-> Bing / Yandex / TikTok **没有**本页写操作，只读巡检见 `hosted-automation-bing.md` / `hosted-automation-yandex.md` / `hosted-automation-tiktok.md`。
+> Bing / Yandex / TikTok / Facebook **没有**本页写操作，只读巡检见 `hosted-automation-bing.md` / `hosted-automation-yandex.md` / `hosted-automation-tiktok.md` / `hosted-automation-facebook.md`。
 
 ## Contents
 

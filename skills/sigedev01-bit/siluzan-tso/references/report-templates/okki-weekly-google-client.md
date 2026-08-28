@@ -43,6 +43,7 @@
 - **默认必产 Excel**：由 **Agent（含 WorkBuddy 编排）** 在下列 CLI **`--json-out` 落盘后**，自行编写 **Node.js / Python** 脚本（如 `exceljs`、`xlsx`、`openpyxl`）读取 JSON → 写 `.xlsx`。没有写出 `.xlsx` = 未完成。
 - **数值一律来自落盘 JSON，禁止在脚本里写死业务数字。**
 - **所有 ID 列写字符串（文本）**，禁止 Excel 数字类型（防科学计数法）；见 `references/core/agent-conventions.md`。
+- **样式（必须）**：`import` `report-templates/excel-style-kit.mjs`，用 `createExcelWorkbook({ accent: "google" })` + `titleBar`/`sectionBar`/`tableHeader`/`dataRow`/`noteRow` 组件搭版面（`noteRow` 用于「分析」「数据复盘」文字块），**禁止**裸写无样式单元格。规范见 `report-templates/excel-style-guide.md`。
 
 ---
 

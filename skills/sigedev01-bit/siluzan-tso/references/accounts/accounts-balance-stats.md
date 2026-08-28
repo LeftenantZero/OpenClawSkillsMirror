@@ -21,7 +21,7 @@ siluzan-tso balance-scan -m <媒体类型> [选项]
 
 | 选项                                  | 说明                                                                           | 默认         |
 | ------------------------------------- | ------------------------------------------------------------------------------ | ------------ |
-| `-m, --media <type>`                  | 必填：`Google \| TikTok \| Yandex \| MetaAd \| BingV2 \| Kwai`                 | —            |
+| `-m, --media <type>`                  | 必填：`Google \| TikTok \| Yandex \| MetaAd \| BingV2`                 | —            |
 | `-a, --accounts <ids>`                | 指定 `mediaCustomerId`（逗号分隔）；**跳过清单翻页**，对这些 ID 拉数后全部输出 | —            |
 | `--threshold-days <n>`                | 剩余续航天数阈值                                                               | `7`          |
 | `--spend-days <n>`                    | 日均消耗回看自然日数（截至昨天不含今天，**北京时间**；日均 = 窗口合计 / N）    | `7`          |
@@ -47,7 +47,7 @@ siluzan-tso balance-scan -m BingV2 -a id1,id2,id3 --json-out ./snap-p2-subset
 siluzan-tso balance-scan -m MetaAd --json-out ./snap-p2-meta
 ```
 
-**读盘要点**：先看 `meta.dataIssue`（非空则失败）。`data.items` = **全部已检查账户**（OAuth 失效户不在 items，见 `meta.skippedInvalidOAuth`）；`meta.hitCount` = 触阈值条数。预警筛 `hitReason !== "none"`；`hitReason="none"` 表示已检查但未触阈值。按 `remainingDays` 升序交付。用 **`dailySpend`** 做日均（口径见 `meta.spendDays` / `meta.spendWindow`），勿把 `stats` 区间合计 `spend` 当「每天消耗」。Google 消耗走 `account-spend-overview`，`startDate`/`endDate` 带东八区墙钟（`…T00:00:00+08:00` / `…T23:59:59+08:00`），与 `stats` 同口径。与 `balance` / `accounts-digest` 分工见 `references/core/agent-conventions.md` §八。
+**读盘要点**：先看 `meta.dataIssue`（非空则失败）。`data.items` = **全部已检查账户**（OAuth 失效户不在 items，见 `meta.skippedInvalidOAuth`）；`meta.hitCount` = 触阈值条数。预警筛 `hitReason !== "none"`；`hitReason="none"` 表示已检查但未触阈值。按 `remainingDays` 升序交付。用 **`dailySpend`** 做日均（口径见 `meta.spendDays` / `meta.spendWindow`），勿把 `stats` 区间合计 `spend` 当「每天消耗」。Google 消耗走 `account-spend-overview`，`startDate`/`endDate` 带东八区墙钟（`…T00:00:00+08:00` / `…T23:59:59+08:00`），与 `stats` 同口径。与 `balance` / `accounts-digest` 分工见 `references/core/agent-conventions.md` §八。向用户写 Markdown 表时 `advertiserName` / `name` 必须把 `|` 换成 `｜`（见 conventions §三）。
 
 ---
 
@@ -59,7 +59,7 @@ siluzan-tso balance -m <媒体类型> -a <账户ID列表>
 
 | 选项                   | 说明                                                                                                                                                        |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `-m, --media <type>`   | 媒体类型（必填）：`Google \| TikTok \| Yandex \| MetaAd \| BingV2 \| Kwai`（MetaAd 走 `GetMediaAccountInfo`，余额字段为 `spend_cap`）                       |
+| `-m, --media <type>`   | 媒体类型（必填）：`Google \| TikTok \| Yandex \| MetaAd \| BingV2`（MetaAd 走 `GetMediaAccountInfo`，余额字段为 `spend_cap`）                       |
 | `-a, --accounts <ids>` | 账户 `mediaCustomerId`（来自 `list-accounts` 的 `ma.mediaCustomerId`），逗号分隔（必填）。**禁止**传 `entityId` / tokenId / 其它 UUID；Yandex 须传 `porg-…` |
 | `--json-out`           | 输出原始 JSON；不支持或查询失败时 stdout 为 `{"ok":false,"error":"..."}`                                                                                    |
 
@@ -75,7 +75,7 @@ siluzan-tso balance -m Yandex -a porg-kqquuxx6
 # 查询多个 TikTok 账户余额
 siluzan-tso balance -m TikTok -a 1234567890,9876543210
 
-# 查询 Meta 广告账户余额
+# 查询 Meta 广告账户余额（OAuth 户传裸数字或 act_ 均可）
 siluzan-tso balance -m MetaAd -a <mediaCustomerId>
 
 # JSON 输出，供脚本使用
@@ -90,7 +90,7 @@ siluzan-tso balance -m Google -a 6326027735 --json-out ./snap
 
 一条命令替代 AI 对每个账户循环 `list-accounts -k` + `stats`。**多账户汇总表、对比消耗、跨账户巡检、账户级 CPA / 零转化巡检** 应优先本命令，禁止外层 for-loop 逐户 `stats`。
 
-> **数据时效性**：与 `stats` / `balance-scan` 相同（Google `account-spend-overview` 分流；TikTok/Yandex/BingV2/Kwai/**MetaAd** 为截至昨天的 `accountsoverview`）。完整表见 `references/analytics/account-analytics.md` 顶部。
+> **数据时效性**：与 `stats` / `balance-scan` 相同（Google `account-spend-overview` 分流；TikTok/Yandex/BingV2/**MetaAd** 为截至昨天的 `accountsoverview`）。完整表见 `references/analytics/account-analytics.md` 顶部。
 
 > **反模式**：
 >
@@ -104,7 +104,7 @@ siluzan-tso accounts-digest -m <媒体类型> [选项]
 
 | 选项                          | 说明                                                                                                          | 默认    |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------- | ------- |
-| `-m, --media <type>`          | 媒体类型（必填）：`Google \| TikTok \| Yandex \| MetaAd \| BingV2 \| Kwai`                                    | —       |
+| `-m, --media <type>`          | 媒体类型（必填）：`Google \| TikTok \| Yandex \| MetaAd \| BingV2`                                    | —       |
 | `-a, --accounts <ids>`        | 指定 `mediaCustomerId`，逗号分隔；**留空**则翻页拉该媒体全部账户                                              | —       |
 | `--start <YYYY-MM-DD>`        | 统计开始日期（SKILL 要求 AI 先与用户确认区间）                                                                | 近 7 天 |
 | `--end <YYYY-MM-DD>`          | 统计结束日期                                                                                                  | 昨天    |
@@ -160,7 +160,7 @@ siluzan-tso accounts-digest -m Google --start 2026-07-20 --end 2026-07-20 \
 >
 > - **Google**：走 `account-spend-overview`；`--start` / `--end` 日历日按 **UTC+8** 转为 `YYYY-MM-DDTHH:mm:ss+08:00` 再请求（起 00:00:00、止 23:59:59，含今天时 end 截到当前时刻）。与 `google-analysis`（只传年月日）口径不同。
 >   - 窗口完全在历史 → `database` 模式；窗口含今天 → `googleCombined` 模式（仅实时消耗，无余额/状态/币种/账户名）。
-> - **TikTok / Yandex / BingV2 / Kwai**：走旧版 `accountsoverview`，每日凌晨同步昨天数据，**不能查今天**。Bing 看昨天/今天消耗用 `bing-analysis`（数据可能不完整）；TikTok 用 `tiktok-analysis official-report`。Google「今天」仍走 `google-analysis(-batch) --sections overview`。
+> - **TikTok / Yandex / BingV2**：走旧版 `accountsoverview`，每日凌晨同步昨天数据，**不能查今天**。Bing 看昨天/今天消耗用 `bing-analysis`（数据可能不完整）；TikTok 用 `tiktok-analysis official-report`。Google「今天」仍走 `google-analysis(-batch) --sections overview`。
 > - 完整时效性表见 `references/analytics/account-analytics.md` 顶部。
 
 ```bash

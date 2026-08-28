@@ -1,6 +1,6 @@
 ---
 name: siluzan-tso
-description: 丝路赞 TSO 广告平台（Google/Bing/Yandex/TikTok/Kwai/MetaAd），凡涉及丝路赞/TSO、投广告、出价预算、广告账户管理，或需要做行业分析/市场分析/行业分析报告（含「写一份 XX 行业报告」「电商/制造/医疗等行业报告」「市场调查/战略市场/KA 市场报告」「竞品/GTM/市场格局/行业趋势」等，无论是否提及丝路赞/广告/客户）须加载本 skill。【§零·最高优先】网址/域名/官网+诊断/检测/监测/评估/体检/报告/符合投放要求/能不能投（含「网络诊断」混说）→P8 website-diagnosis collect（禁纯WebFetch/肉眼看页），禁止P9/P1/W3、禁止A/B/C/D追问；细则见 intent-routing.md §零。【§零·B·次高优先】未命中§零时，行业/市场分析报告类话术→必走P9 market-analysis collect+render出HTML，禁止纯WebSearch/WebFetch在对话里写Markdown/HTML当终稿、禁止改走P8/P1/P4/W5/google-analysis；细则见 references/core/intent-routing.md §零·B。【§零·C·关键词规划】Google Ads/谷歌广告拓词、关键词规划/推荐、Keyword Planner、长尾关键词、月搜索量/搜索量、竞争度、核心词/种子词扩词（含「阅读网址/文章/页面后针对核心词出带搜索量词表」，无论是否提及丝路赞/TSO/账户）→必走W5 keyword -k … --google-only --json-out，禁止WebSearch/WebFetch编造搜索量当终稿；细则见 references/core/intent-routing.md §零·C。【报告/诊断消歧】其余报告类话术禁止默认某一CLI——行业/市场/战略/行业分析报告→P9 market-analysis（必走collect+render，禁止纯WebSearch代替）；Google账户ID+健康诊断→P1 google-ads-diagnosis；账户ID+周期/月度→P4；Meta/TikTok/Bing周期→P4/P4-FB；多账户对比→P3/P5；OKKI周报→P6；Google询盘→P7；官网+明确要搜索广告方案/campaign JSON→W3；仅要词表+搜索量/竞争度→W5；平台优化报告列表/推送→W7；对象仍不清→Read intent-routing.md。【账户】列表/余额/消耗/激活账单（W1）、多账户余额预警 balance-scan（P2）、多户消耗汇总 accounts-digest（P3）、六大媒体开户与进度（W2）、分享/解绑/MCC/BC/BM/权限（W9）。【投放】Google **仅支持搜索广告（Search）与 PMax**（不支持展示广告 Display）；搜索系列方案与 campaign-validate/create（W3）、系列/组/广告/关键词 CRUD/拒审、PMax 创建与素材、AI智投草稿 batch（W4）、拓词 keyword -k（W5）、AI广告优化 optimize（W6）、优化合规 SOP。【财务】充值/钱包、转账记录、发票/开票/抬头（W8）；写操作审计与 restore。【运营】智能预警 forewarning 创建/启停/记录（W10）、TikTok/Meta 线索 clue（W11）、日周巡检（W12）、宿主编排/投放自控/异常监控（hosted-automation）。【其他】RAG 知识库检索、Meta/Facebook 周期与诊断 HTML、Google/Meta 周期 Excel、多账户 google-analysis-batch。
+description: 丝路赞 TSO 广告平台（Google/Bing/Yandex/TikTok/MetaAd），凡涉及丝路赞/TSO、投广告、出价预算、广告账户管理，或需要做行业分析/市场分析/行业分析报告（含「写一份 XX 行业报告」「电商/制造/医疗等行业报告」「市场调查/战略市场/KA 市场报告」「竞品/GTM/市场格局/行业趋势」等，无论是否提及丝路赞/广告/客户）须加载本 skill。【§零·最高优先】网址/域名/官网+诊断/检测/监测/评估/体检/报告/符合投放要求/能不能投（含「网络诊断」混说）→P8 website-diagnosis collect（禁纯WebFetch/肉眼看页），禁止P9/P1/W3、禁止A/B/C/D追问；细则见 intent-routing.md §零。【§零·B·次高优先】未命中§零时，行业/市场分析报告类话术→必走P9 market-analysis collect+render出HTML，禁止纯WebSearch/WebFetch在对话里写Markdown/HTML当终稿、禁止改走P8/P1/P4/W5/google-analysis；细则见 references/core/intent-routing.md §零·B。【§零·C·关键词规划】Google Ads/谷歌广告拓词、关键词规划/推荐、Keyword Planner、长尾关键词、月搜索量/搜索量、竞争度、核心词/种子词扩词（含「阅读网址/文章/页面后针对核心词出带搜索量词表」，无论是否提及丝路赞/TSO/账户）→必走W5 keyword -k … --google-only --json-out，禁止WebSearch/WebFetch编造搜索量当终稿；细则见 references/core/intent-routing.md §零·C。【报告/诊断消歧】其余报告类话术禁止默认某一CLI——行业/市场/战略/行业分析报告→P9 market-analysis（必走collect+render，禁止纯WebSearch代替）；Google账户ID+健康诊断→P1 google-ads-diagnosis；账户ID+周期/月度→P4；Meta/TikTok/Bing周期→P4/P4-FB；多账户对比→P3/P5；OKKI周报→P6；Google询盘→P7；官网+明确要搜索广告方案/campaign JSON→W3；Meta Instant Form 线索广告→W13；仅要词表+搜索量/竞争度→W5；平台优化报告列表/推送→W7；对象仍不清→Read intent-routing.md。【账户】列表/余额/消耗/激活账单（W1）、多账户余额预警 balance-scan（P2）、多户消耗汇总 accounts-digest（P3）、五大媒体开户与进度（W2）、分享/解绑/MCC/BC/BM/权限（W9）。【投放】Google **仅支持搜索广告（Search）与 PMax**（不支持展示广告 Display）；搜索系列方案与 campaign-validate/create（W3）、系列/组/广告/关键词 CRUD/拒审、PMax 创建与素材、AI智投草稿 batch（W4）、拓词 keyword -k（W5）、AI广告优化 optimize（W6）、优化合规 SOP；Meta Instant Form 线索广告 meta-ad validate/create（W13）。【财务】充值/钱包、转账记录、发票/开票/抬头（W8）；写操作审计与 restore。【运营】智能预警 forewarning 创建/启停/记录（W10）、TikTok/Meta 线索 clue（W11）、日周巡检（W12）、宿主编排/投放自控/异常监控（hosted-automation）。【其他】RAG 知识库检索、Meta/Facebook 周期与诊断 HTML、Google/Meta 周期 Excel、多账户 google-analysis-batch。
 license: MIT
 compatibility: 需要 Node.js 18+、已安装 siluzan-tso-cli，通过 send-login-code + login 或 config set 完成鉴权
 metadata:
@@ -14,7 +14,7 @@ allowed-tools: Bash(siluzan-tso:*) Read Write
 本文件只做 **任务路由**：意图 → **唯一**工作流 → 按需 Read 子文档（参数与步骤不在此重复）。
 
 - 分析 / 报告 → `references/core/playbooks.md`（P1–P9）
-- 操作 / 管理 → `references/core/workflows.md`（W1–W12）
+- 操作 / 管理 → `references/core/workflows.md`（W1–W13）
 - 命令参数 → 路由表「必读文档」
 - 通用纪律与沟通 → `references/core/agent-conventions.md`
 
@@ -38,9 +38,9 @@ siluzan-tso -h
 
 ## 即时规范
 
-- `entityId`（UUID）≠ `mediaCustomerId`（`list-accounts` 的 `ma.mediaCustomerId`：Google/TikTok/Bing 多为数字；**Yandex=`porg-…`**；Meta 常带 `act_`）。`stats`/`balance`/`accounts-digest`/`ad *` 的 `-a` **只传 mediaCustomerId**；空结果或 verbose 打出 403 时**先核验 ID**，禁止把 UUID/`entityId` 传给 `-a`，也**禁止**据此直接 `reauth`。
+- `entityId`（UUID）≠ `mediaCustomerId`（`list-accounts` 的 `ma.mediaCustomerId`：Google/TikTok/Bing 多为数字；**Yandex=`porg-…`**；Meta 常带 `act_`，`balance`/`stats`/`balance-scan`/`accounts-digest` 裸数字会补前缀）。`stats`/`balance`/`accounts-digest`/`ad *` 的 `-a` **只传 mediaCustomerId**；空结果或 verbose 打出 403 时**先核验 ID**，禁止把 UUID/`entityId` 传给 `-a`，也**禁止**据此直接 `reauth`。
 - **Google CID 特殊性**：UI 常写 `123-456-7890`（带连字符），平台 `mediaCustomerId` 为纯数字 `1234567890`。CLI 会自动去连字符；**勿**把带横杠 403 误判为 OAuth 失效。优先用 `list-accounts` 的纯数字 ID。
-- **禁止臆测授权过期**：见 403/`HTTP 403`/拉数失败/「可能 OAuth 失效」时，**禁止**口头推断授权过期或直接 `reauth`。须先核验 ID（及 Google 连字符）。**`account check-access` 仅支持 Google**（无 `-m`，禁止对 TikTok/Meta/Bing/Yandex/Kwai 调用）：Google 跑 `account check-access -a <mediaCustomerId>`，以 `accessible` / `reauth_required` / `no_permission` 为准；非 Google 看 `list-accounts` 的 `invalidOAuthToken`。仅当 `list-accounts` 输出含激活字段且可判定未激活时才跳过用其判断授权过期；细则见 `accounts-permissions.md`。
+- **禁止臆测授权过期**：见 403/`HTTP 403`/拉数失败/「可能 OAuth 失效」时，**禁止**口头推断授权过期或直接 `reauth`。须先核验 ID（及 Google 连字符）。**`account check-access` 仅支持 Google**（无 `-m`，禁止对 TikTok/Meta/Bing/Yandex 调用）：Google 跑 `account check-access -a <mediaCustomerId>`，以 `accessible` / `reauth_required` / `no_permission` 为准；非 Google 看 `list-accounts` 的 `invalidOAuthToken`。仅当 `list-accounts` 输出含激活字段且可判定未激活时才跳过用其判断授权过期；细则见 `accounts-permissions.md`。
 - **Google 广告命令名**：列表是 `ad campaigns`（不是 `ad-campaigns` / `campaign list`）；`balance`/`stats` 须带 `-m Google`；单国地域用 `ad geo search … --json-out`（或 `geo resolve`）。
 - **Google 广告类型边界**：CLI/Skill **仅支持** Google **搜索广告（Search）** 与 **Performance Max（PMax）** 的方案、创建与精细管理；**不支持展示广告（Display）**（含自适应展示广告 RDA、独立 Display 系列）。用户要做展示广告时须明确告知不支持，可改推 Search / PMax；**禁止**用 `campaign-create` / `ad-create` 伪装创建 Display。
 - **创建完成后交付（硬性）**：`ad batch diff` 的 stdout 含 `BEGIN_USER_DELIVERY_MARKDOWN`…`END_USER_DELIVERY_MARKDOWN`——**立刻**把中间全文原样发给用户（可先于补建）；禁止只摘要、禁止只说「创建成功/详情已交付/未发现缺失」、禁止等全部补建结束再交付。
@@ -49,6 +49,7 @@ siluzan-tso -h
 - `stats` 的 `spend` = **区间合计**，不是日消耗。
 - 行业/市场报告禁止纯 WebSearch 当终稿；须 P9 `market-analysis collect`+`render`。
 - **禁止编造平台网址**：给用户 `*.siluzan.com` / `mysiluzan.com` 链接前，**必须**当轮 `config show` 取 `webUrl`，路径**只**用已 Read 文档中的相对路径表拼接；CLI 输出的授权 URL **原样粘贴**；文档未给路径则**不拼链接**。细则见 `agent-conventions.md`。
+- **W13 Meta 创建（硬性）**：首次落地只用 `meta-ad create`（会提交 `targeting_automation.advantage_audience`，默认 1）。组失败用 `--json-out` 的 `campaignId` 跑 `adset-create`，**禁止**再 `campaign-create`。细定向写 `adset.flexibleSpec` 并设 `advantageAudience=0`。
 
 ---
 
@@ -66,7 +67,7 @@ siluzan-tso -h
 | 单户消耗 / 投放数据 | W1 / **P1** | `references/accounts/accounts-balance-stats.md`（stats） |
 | 多账户消耗/对比汇总 / 转化成本·CPA·零转化巡检（无 CRM） | **P3** | `references/accounts/accounts-balance-stats.md`（accounts-digest）；消歧见 `intent-routing.md` **§零·D** |
 | 激活/充值账单明细 | W1 | `references/accounts/accounts-list.md`（account-active-bills） |
-| 开户（六大媒体）/ 开户进度 | W2 | `references/accounts/open-account-by-media.md`（**首次须列全必填项**；Google 加 `open-account-google-ui.md`） |
+| 开户（五大媒体）/ 开户进度 | W2 | `references/accounts/open-account-by-media.md`（**首次须列全必填项**；Google 加 `open-account-google-ui.md`） |
 | 账户权限：分享/取消/解绑/重授权/MCC/BC/BM/关闭/提现/邮箱授权 | W9 | `references/accounts/accounts-permissions.md` |
 | 充值 / 钱包 / 转账 / 发票 / 抬头 | W8 | `references/accounts/finance.md` |
 | 审计 / 误操作恢复 | — | `references/accounts/write-audit-restore.md` |
@@ -86,6 +87,16 @@ siluzan-tso -h
 | 拓词 / keyword / 关键词规划 / 月搜索量 / 竞争度 / Keyword Planner | **W5** | `references/analytics/keyword-planner-workflows.md`（**§零·C**；客户背景先 `references/analytics/rag.md`） |
 | AI 广告优化记录 / 建议 | W6 | `references/operations/optimize.md` |
 | 优化/合规 SOP | W3 / W6 | `references/google-ads/rules/README.md`（**仅读索引表** → 再 Read **一个**具体 `rules/*.md`） |
+
+### Meta 广告投放
+
+> **类型边界**：仅 **Instant Form 线索广告**；无视频 / Advantage+ / 系列列表。拉已有线索走 **W11**；周期报告走 **P4-FB**。
+
+| 用户意图（关键词） | 工作流 | 必读文档 |
+| ------------------ | ------ | -------- |
+| 新建 Meta/Facebook 线索广告 / Instant Form / 潜在客户表单投放 / **出 Facebook 线索方案或表格** | **W13** | `references/meta-ads/meta-ads.md` + **`assets/meta-lead-create-template.json`**（先 Read）+ `assets/meta-lead-create-template.md` + **`references/meta-ads/meta-lead-launch-plan-template.md`** + **`meta-ad plan-render`**（运营 4 Sheet xlsx，禁止 Agent 手写表）+ `references/meta-ads/meta-ads-write.md`。**≠ W11 ≠ P4-FB ≠ W3** |
+| Meta 系列/组/广告 **查询**（按 ID）/ 主页 / 表单列表 | W13 | `references/meta-ads/meta-ads-read.md` |
+| Meta 系列/组/广告 **创建·编辑·启停**（原语） | W13 | `references/meta-ads/meta-ads-write.md` |
 
 ### 分析与报告
 
@@ -114,9 +125,10 @@ siluzan-tso -h
 | 日/周巡检 | W12 | `references/core/workflows.md`（W12）+ `references/accounts/accounts-balance-stats.md` |
 | 超预算熔断 / 空耗熔断（全户 Google） | — | `references/operations/guard.md`（`guard budget-circuit` / `guard zero-conv`；禁止逐户 for-loop） |
 | Bing 自动化巡检（封禁/拒审/超预算/空耗预警） | — | `references/operations/hosted-automation-bing.md`（只读告警，不能自动暂停/改价） |
-| Yandex 自动化巡检（余额/CPA/日花费预警） | — | `references/operations/hosted-automation-yandex.md`（只读告警，不能自动改投放） |
+| Yandex 自动化巡检（归档/拒审/超预算/空耗预警） | — | `references/operations/hosted-automation-yandex.md`（只读告警，不能自动暂停/改价） |
 | TikTok 自动化巡检（封禁/拒审/超预算/空耗预警） | — | `references/operations/hosted-automation-tiktok.md`（只读告警，不能自动暂停/改价） |
-| 宿主编排 / 投放自控 / 异常监控 / 自动优化 | — | `references/operations/hosted-automation-user-catalog.md`（**仅当用户问自动化/巡检/熔断**；表内每行只 Read **一个** SOP；Google 熔断优先 guard.md；Bing/Yandex/TikTok 走上三行） |
+| Facebook / MetaAd 自动化巡检（封禁/拒审/超预算/空耗预警） | — | `references/operations/hosted-automation-facebook.md`（只读告警，不能自动暂停/改价） |
+| 宿主编排 / 投放自控 / 异常监控 / 自动优化 | — | `references/operations/hosted-automation-user-catalog.md`（**仅当用户问自动化/巡检/熔断**；表内每行只 Read **一个** SOP；Google 熔断优先 guard.md；Bing/Yandex/TikTok/Facebook 走上四行） |
 
 ---
 

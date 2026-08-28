@@ -4,7 +4,7 @@
 > **怎么读**：下表每行只 Read **一个**「SOP」列路径。Google 金额口径见 `references/google-ads/google-ads.md` § Gotchas + `references/accounts/currency.md`。
 > 宿主侧告警优先级写作 **告警P1**（勿与 Playbook **P1** 账户诊断混淆）。
 
-`guard` 与自动暂停/改价**只支持 Google**。Bing / Yandex / TikTok 只能拉数告警，步骤见各自 SOP。
+`guard` 与自动暂停/改价**只支持 Google**。Bing / Yandex / TikTok / Facebook 只能拉数告警，步骤见各自 SOP。
 
 ---
 
@@ -70,10 +70,24 @@
 
 ## Yandex：只读巡检
 
-全部步骤只读一份：`references/operations/hosted-automation-yandex.md`。**不能**自动改投放；无封禁/拒审/落地页/小时接口。
+全部步骤只读一份：`references/operations/hosted-automation-yandex.md`。**不能**自动暂停/改价/改预算。无小时维度。
 
-| 场景                 | 做什么                                                                 | SOP                                                |
-| -------------------- | ---------------------------------------------------------------------- | -------------------------------------------------- |
-| 余额续航             | `balance-scan -m Yandex`                                               | `references/operations/hosted-automation-yandex.md` |
-| 多账户 CPA / 零转化  | `accounts-digest -m Yandex`（截至昨天）                                | 同上                                               |
-| 当日/近日花费与 CPA  | `yandex-analysis --sections overview,daily,campaigns`（可含今天）      | 同上                                               |
+| 场景         | 做什么                                                                 | SOP                                                |
+| ------------ | ---------------------------------------------------------------------- | -------------------------------------------------- |
+| 余额 / 归档  | `yandex-analysis account-status`；`archived=true` 告警                 | `references/operations/hosted-automation-yandex.md` |
+| 素材拒审     | `ad-entities --status REJECTED`                                        | 同上                                               |
+| 落地页死链   | `ad-entities` 拉 `landingUrls`，宿主 HTTP 探活                         | 同上                                               |
+| 当日超预算   | `campaign-entities --time-increment 1 --network ALL`；只告警           | 同上                                               |
+| CPA / 空耗   | `adgroup-entities` 近 3 日 + 当日 `--time-increment 1`；只告警         | 同上                                               |
+
+## Facebook / MetaAd：只读巡检
+
+全部步骤只读一份：`references/operations/hosted-automation-facebook.md`。**不能**自动暂停/改价/改预算。
+
+| 场景         | 做什么                                                                                          | SOP                                                    |
+| ------------ | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| 余额 / 封禁  | `facebook-analysis account-status`；`account_status != 1` 告警                                  | `references/operations/hosted-automation-facebook.md` |
+| 素材拒审     | `ad-entities --effective-status DISAPPROVED`                                                    | 同上                                                   |
+| 落地页死链   | `ad-entities` 拉 `landing_urls`，宿主 HTTP 探活                                                 | 同上                                                   |
+| 当日超预算   | `campaign-entities` + `insights --level campaigns --time-increment 1`；只告警                   | 同上                                                   |
+| CPA / 空耗   | `insights --level adsets` hourly/日报 + `adset-entities`；只告警，不降价、不暂停                | 同上                                                   |

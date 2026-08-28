@@ -90,7 +90,7 @@
 
 | 媒体                      | 用户未指定格式                                                    | 用户指定 Excel                                                                                     |
 | ------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| **Meta/Facebook 周期**    | `facebook-analysis render` → **HTML**（必做）                     | Agent 脚本按 `meta-period-report-excel.md` 写 xlsx；**不**默认 `render`                            |
+| **Meta/Facebook 周期**    | `facebook-analysis render` → **HTML**（必做）                     | `facebook-analysis render --format xlsx`（五 Sheet，见 `meta-period-report-excel.md`）             |
 | **Meta/Facebook 诊断**    | `facebook-analysis diagnosis-render` → **HTML**（必做）           | Agent 脚本写 xlsx；**不**默认 `diagnosis-render`                                                   |
 | **Google 周期报告**       | `google-analysis render` → **HTML**（必做）                       | **周期/定制 Sheet**：`google-period-report-excel.md`（P4，先 outline 后脚本）；**不**默认 `render` |
 | **TikTok 周期报告**       | `tiktok-analysis render` → **HTML**（必做）                       | Agent 脚本写 xlsx；**不**默认 `render`                                                             |

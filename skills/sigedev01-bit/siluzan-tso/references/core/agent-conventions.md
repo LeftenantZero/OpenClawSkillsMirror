@@ -118,6 +118,8 @@
 
 **写 Excel 时所有 ID 必须是文本（字符串），禁止数字类型**：含 `mediaCustomerId` / `entityId` / `accountId` / `campaignId` / `adGroupId` / `keywordId` / `criterionId` / geo `locationId` 及一切以 `Id`/`ID`/`id` 结尾的标识列。写入前一律 `String(id)`；`exceljs` 设 `numFmt: '@'`（文本），`openpyxl` 写字符串且勿让推断成 number。**禁止**写成 JSON number / Excel 数值单元格（会科学计数法或丢精度，如 `2.77E+09`）。金额、次数、比率等度量字段仍用数字类型。
 
+**写 Markdown 表必须消毒单元格**：公司名 / 账户名 / 文案常含 `|` 或换行，原样塞进 `| col |` 会拆列。脚本投影表时把 `|` 换成 `｜`、换行换成空格（与 CLI `printCliTable` 同一规则）；**禁止**改 JSON 原值。示例见 `tips.md`「投影 Markdown 表」。
+
 **中间结果一律落盘**：跨步骤数据不靠对话记忆；Windows 避免管道传 JSON，优先 `--json-out` + `node -e` 读文件。
 
 ---
@@ -125,20 +127,20 @@
 ## 四、硬规范
 
 - **账户状态 ≠ 系列状态**：`stats` / `balance` / `list-accounts` 的 `status` 只表示账户是否可用；系列状态必须来自 `ad campaigns`。
-- **数据时效性**：涉及「今天/当天/今日消耗」「实时消耗排行」前，必读 `references/analytics/account-analytics.md` 顶部「数据时效性」表。TikTok / Yandex / BingV2 / Kwai 的 `stats`/`accountsoverview` 同步昨天数据，**不能查今天**。Bing 昨天/今天消耗走 `bing-analysis`；TikTok 走 `tiktok-analysis official-report`。
+- **数据时效性**：涉及「今天/当天/今日消耗」「实时消耗排行」前，必读 `references/analytics/account-analytics.md` 顶部「数据时效性」表。TikTok / Yandex / BingV2 的 `stats`/`accountsoverview` 同步昨天数据，**不能查今天**。Bing 昨天/今天消耗走 `bing-analysis`；TikTok 走 `tiktok-analysis official-report`。
 - **先查账户再操作**（拉数 / 改账户 / 报告 / **创建广告**）：`list-accounts -m [mediaType] -k [mediaCustomerId]`；用户给出的 `mediaCustomerId` 必须 `-k` 核验，无结果则告知用户并停止，**禁止**翻页 grep 自行换 ID（会导致报告错户）；拉数、脚本、报告文件名全链路用同一 ID（以 stdout `accountId` 为准）。
-- **禁止臆测授权过期（硬约束）**：任何 403、空结果、「可能授权/OAuth 过期」话术，**禁止**凭感觉下结论或直接 `reauth`。`account check-access` **仅支持 Google**（无 `-m`，禁止对 TikTok/Meta/Bing/Yandex/Kwai 调用）。Google：**必须**执行 `account check-access -a <mediaCustomerId>`，仅当结果为 `reauth_required`（或列表 `invalidOAuthToken=true` 与之交叉确认）才谈重授权；`no_permission` 也可能是账户不在当前丝路赞账号下。若 `list-accounts` **输出含** `scopeActivatedSources` 且可判定未激活，则勿用 check-access 判断授权过期；**无该字段时禁止谈套餐激活**。非 Google 媒体以 `list-accounts` 的 `invalidOAuthToken` 为准，同样禁止臆测。详见 `accounts-permissions.md`。
+- **禁止臆测授权过期（硬约束）**：任何 403、空结果、「可能授权/OAuth 过期」话术，**禁止**凭感觉下结论或直接 `reauth`。`account check-access` **仅支持 Google**（无 `-m`，禁止对 TikTok/Meta/Bing/Yandex 调用）。Google：**必须**执行 `account check-access -a <mediaCustomerId>`，仅当结果为 `reauth_required`（或列表 `invalidOAuthToken=true` 与之交叉确认）才谈重授权；`no_permission` 也可能是账户不在当前丝路赞账号下。若 `list-accounts` **输出含** `scopeActivatedSources` 且可判定未激活，则勿用 check-access 判断授权过期；**无该字段时禁止谈套餐激活**。非 Google 媒体以 `list-accounts` 的 `invalidOAuthToken` 为准，同样禁止臆测。详见 `accounts-permissions.md`。
 - **一律走 CLI，禁止自拼网关请求**：查余额 / 拉数 / 写操作只用 `siluzan-tso …`。**禁止**用 curl、自写脚本或改请求头直连 TSO/Google 网关「另辟蹊径」取数；`balance` 等无数据时按 CLI/`list-accounts` **实际出现的字段**向用户说明（如授权失效；仅当输出含激活字段时才可谈套餐），**禁止**尝试任何绕过平台门禁的取数方式。
 - **W3 仅出方案例外（覆盖上条）**：用户只要「投放方案 / 规划 / 表格 / 先别创建·开户·投钱」，或未给账户且未要求创建/发布时——**禁止**把「请先提供 Google 广告账户」当作第一步；按 `google-ads-campaign-plan.md` §「仅出方案 vs 创建」落盘 JSON 后 **写代码**投影完整审查稿（默认 MD；用户指定则 Excel 等；`account`=`[PENDING_ACCOUNT]`），跳过 `list-accounts` / `geo resolve` / validate / create。**禁止**只交概览表。用户确认要创建后再要账户并续跑创建流水线。
 - **W3 审查稿（搜索与 PMax）**：JSON 落盘后、创建前，必须 **写代码**读取 JSON，按 `google-ads-launch-plan-template.md`（搜索）或 `google-ads-pmax-launch-plan-template.md`（PMax）生成完整审查文件交给用户；须含全部关键词/RSA 或全部 PMax 文案与附加资产。**禁止**用「方案总结」条数勾选代替。用户要求其他格式时改脚本输出，数据仍只从 JSON 来。
 - **不猜测账户 ID**：`entityId`（UUID，仅 delink/share/reauth/账单）≠ `mediaCustomerId`（`stats`/`balance`/`accounts-digest`/`ad` 的 `-a`）。两者均来自 `list-accounts` 的 `ma.*`。用户已给出媒体账户号时（Google 数字 CID、**Yandex `porg-…`**、Meta `act_…` 等）→ `-a` **原样使用**，再用 `-k` 核验；**禁止**改成 `entityId` / tokenId / 会话里其它 UUID。**禁止**把 `entityId` 传给 `stats -a` / `balance -a` / `accounts-digest -a`。
-- **媒体类型区分大小写**：`Google`、`TikTok`、`Yandex`、`MetaAd`、`BingV2`、`Kwai`。
+- **媒体类型区分大小写**：`Google`、`TikTok`、`Yandex`、`MetaAd`、`BingV2`。
 - **CLI 输出忠实**：数值与 ID 须与本次落盘 JSON / stdout 一致，不编造示例 ID；`data` 为空时只说「当前返回无记录」并附 JSON 路径。
 - **禁止编造平台网页地址**（充值/钱包/开户进度/授权/报告查看等）：
   1. **禁止**凭记忆、训练数据或「看起来像」写出任何完整 `https://…siluzan.com…` / `mysiluzan.com` 链接（含改域名、改路径、补 query）。
   2. 引导用户打开丝路赞网页时：**必须**当轮执行 `siluzan-tso config show`，用输出中的 **`webUrl`** 作基地址；相对路径**只**能来自当次已 Read 的 reference（如 `finance.md`、`reporting.md`、`setup.md`）中的路径表；拼出后完整链接贴给用户。
   3. CLI stdout / 工具返回的 OAuth、授权、注册等 URL：**原样整段粘贴**，禁止改写、截断后补全、或「根据印象」重写。
-  4. 当次文档**没有**对应相对路径 → **禁止拼接**；用业务语言说明须在网页端完成，或请用户到平台自行找入口 / 联系客服（如 Yandex/Kwai 无充值页）。
+  4. 当次文档**没有**对应相对路径 → **禁止拼接**；用业务语言说明须在网页端完成，或请用户到平台自行找入口 / 联系客服（如 Yandex 无充值页）。
   5. **`apiBaseUrl` / `googleApiUrl` 禁止**当作浏览器访问地址发给用户；用户官网/落地页仅使用用户提供或当次 CLI/WebFetch 得到的真实 URL，禁止臆造客户站点。
 - **破坏性操作必须确认 + `--commit`**：账户解绑/关闭/取消分享、BC/MCC 解绑、删除预警/报告/广告/关键词、发票申请、广告发布等。
   - **CLI 硬门控**：`account delink` / `unshare` / `reauth` / `mcc-unbind` / `bc-unbind` **缺少 `--i-confirm` 会直接失败**（不会发网关）。`--commit` 只是审计说明，**不能替代**用户确认。
@@ -219,7 +221,7 @@
 
 **A · 币种**：首行含 `统计区间：…（货币：CNY|USD）`；全文符号与 `currencyCode` 一致（CNY=￥、USD=$，未混用）；与当次 `list-accounts -k` 结果相同；多账户分币种分表、无跨币种「总计」行。
 
-**B · 结构完整**（对照当次 `report-templates/*.md`）：模板要求的每一章/Sheet 都存在；无整章空白（缺数据章节写 `[ 数据不可用：… ]`，禁止编造数字填坑）；优化建议独立成节、引用当次数字（Meta：4 条建议各 ≥150 字 + 7 维补充；Google 诊断：每模块除表格外有「分析」+「建议」）；Excel 的表头列须能在当次 `*.outline.txt` 找到对应字段、产物内账户 ID = 用户当轮给出的 `mediaCustomerId`；**Excel 内全部 ID 列为文本**（见上文「写 Excel 时所有 ID 必须是文本」）。**P6/P7**：磁盘上必须已有 `.xlsx`；对话 Markdown 表、手写 HTML/PDF **不能**当作终稿通过自检（用户明确只要话术除外）。
+**B · 结构完整**（对照当次 `report-templates/*.md`）：模板要求的每一章/Sheet 都存在；无整章空白（缺数据章节写 `[ 数据不可用：… ]`，禁止编造数字填坑）；优化建议独立成节、引用当次数字（Meta 周期：四问 + 3 张建议卡 + 各章 analysis/advice；Google 诊断：每模块除表格外有「分析」+「建议」）；Excel 的表头列须能在当次 `*.outline.txt` 找到对应字段、产物内账户 ID = 用户当轮给出的 `mediaCustomerId`；**Excel 内全部 ID 列为文本**（见上文「写 Excel 时所有 ID 必须是文本」）。**P6/P7**：磁盘上必须已有 `.xlsx`；对话 Markdown 表、手写 HTML/PDF **不能**当作终稿通过自检（用户明确只要话术除外）。
 
 **C · 数字可信**（抽样，不读大 JSON）：总消耗/CPA 数量级与生成过程中脚本 stdout 打印的汇总一致（若无，补跑一次极小 `node -e` 只打印 totals）；账户 ID、区间与用户需求一致；无「示例账户」「占位 123456」等模板残留；表格行数符合预期（如 P3 每个 `-a` ID 占一行）。
 
@@ -270,22 +272,20 @@
 - Meta(Facebook): `1716030xxx734076`
 - Bing: `138xxx763`
 - Yandex: `porg-uthxxxrk`
-- Kwai: `act_1716030xxx734076`
-
 ---
 
 ## 十一、常见 HTTP 状态码
 
 - **400**：参数错误，查看对应 reference 或 `-h`
 - **401 / OAuth 失效**：仅当 `list-accounts` 的 `invalidOAuthToken=true`（或表格「授权状态」为失效）且用户确认后——Siluzan Agent **优先**用平台重新授权工具（如 `present_reauth`）；备选 `account reauth -m <媒体> --id <entityId> --i-confirm --commit "…"`（内置 delink→OAuth，见 W9 / `accounts-permissions.md`）。走 CLI 时**必须把 stdout 中的完整授权 URL 原样贴给用户**，禁止只说「链接已生成」，也**禁止**自行改写/补全该 URL。解绑后若列表已无该户，恢复用平台授权工具或 `account auth -m <媒体>`。**丝路赞登录凭据失效** → `send-login-code` + `login --phone --code`，见 `references/core/setup.md`
-- **403（拉数空结果 / ad 网关）**：① **优先核验 `-a` 是否为 `ma.mediaCustomerId`**（勿传 `entityId`/UUID；Google 注意连字符 CID；Yandex 形如 `porg-…`）；② 仅当 `list-accounts` **输出含** `scopeActivatedSources` 且可判定未激活时，才可说明需先激活；**无该字段则禁止谈套餐**；**禁止**非 CLI 绕过取数；③ **禁止臆测授权过期**：Google **必须**跑 `account check-access -a <mediaCustomerId>`（**仅 Google**，无 `-m`），以 `status` 为准后再决定是否 `reauth`；非 Google 看 `list-accounts` 的 `invalidOAuthToken`，**禁止**对 TikTok/Meta/Bing/Yandex/Kwai 跑 `check-access`；**禁止**仅凭 403 文案对用户说「授权过期」。
+- **403（拉数空结果 / ad 网关）**：① **优先核验 `-a` 是否为 `ma.mediaCustomerId`**（勿传 `entityId`/UUID；Google 注意连字符 CID；Yandex 形如 `porg-…`）；② 仅当 `list-accounts` **输出含** `scopeActivatedSources` 且可判定未激活时，才可说明需先激活；**无该字段则禁止谈套餐**；**禁止**非 CLI 绕过取数；③ **禁止臆测授权过期**：Google **必须**跑 `account check-access -a <mediaCustomerId>`（**仅 Google**，无 `-m`），以 `status` 为准后再决定是否 `reauth`；非 Google 看 `list-accounts` 的 `invalidOAuthToken`，**禁止**对 TikTok/Meta/Bing/Yandex 跑 `check-access`；**禁止**仅凭 403 文案对用户说「授权过期」。
 - **500**：服务可能正在部署/升级，建议反馈 Siluzan 相关人员
 
 ---
 
 ## 十二、风险预警与自动化（按需）
 
-**仅当**用户问自动化 / 巡检 / 熔断 / 自控 / 异常监控时：Read `references/operations/hosted-automation-user-catalog.md`，按表选 **一个** SOP 介绍或执行。Google 熔断优先 `guard.md`；Bing 走 `hosted-automation-bing.md`；Yandex 走 `hosted-automation-yandex.md`；TikTok 走 `hosted-automation-tiktok.md`。**禁止**在无关任务（查余额、出报告、开户等）主动灌输自动化目录。
+**仅当**用户问自动化 / 巡检 / 熔断 / 自控 / 异常监控时：Read `references/operations/hosted-automation-user-catalog.md`，按表选 **一个** SOP 介绍或执行。Google 熔断优先 `guard.md`；Bing 走 `hosted-automation-bing.md`；Yandex 走 `hosted-automation-yandex.md`；TikTok 走 `hosted-automation-tiktok.md`；Facebook / MetaAd 走 `hosted-automation-facebook.md`。**禁止**在无关任务（查余额、出报告、开户等）主动灌输自动化目录。
 
 ---
 

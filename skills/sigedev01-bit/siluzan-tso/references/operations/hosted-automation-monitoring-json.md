@@ -3,7 +3,7 @@
 > **主题索引**：[`references/operations/hosted-automation-scenarios.md`](references/operations/hosted-automation-scenarios.md)
 > **编排责任**：定时、HTTP 探活、通知等在宿主。本页只列 **Google 读数命令与常见 JSON 键名**。
 > **统计日 / 时区**：与自控场景相同，见 [`references/operations/hosted-automation-self-control.md`](references/operations/hosted-automation-self-control.md)「统计日与今日」。
-> Bing / Yandex / TikTok 巡检步骤见 `hosted-automation-bing.md` / `hosted-automation-yandex.md` / `hosted-automation-tiktok.md`，不要套用本页 Google 键名。
+> Bing / Yandex / TikTok / Facebook 巡检步骤见 `hosted-automation-bing.md` / `hosted-automation-yandex.md` / `hosted-automation-tiktok.md` / `hosted-automation-facebook.md`，不要套用本页 Google 键名。
 
 宿主做定时巡检时，**只以当次 CLI 落盘 JSON 键名为准**（读命令统一 **`--json-out <dir>`**，以**落盘 `*.json` 文件正文**为准；`google-analysis` 等同理）。Google Ads API 文档里的资源名（如 `billing_setup`、`account_budget`、`amount_served_micros`）**与本 CLI 输出不是同一套命名**，不要当作本仓库 JSON 的键去解析。若某键缺失，**禁止猜测**：以实际输出为准，或换用 `references/analytics/account-analytics.md` 中的其它子命令。
 

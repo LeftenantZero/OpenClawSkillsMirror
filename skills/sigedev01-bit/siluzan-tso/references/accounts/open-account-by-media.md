@@ -12,7 +12,6 @@
 - TikTok
 - Yandex
 - BingV2
-- Kwai
 - MetaAd（Facebook / Meta）
 - 审核结果
 
@@ -24,7 +23,7 @@
 
 | 用户说法                                | 首次回复必须包含                                                                                          |
 | --------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| 未指明媒体 / 「开个户」/ 「各平台开户」 | 下文 **§ 全平台必填总览** 六媒体的**业务项 + 说明**（或等价完整列表）                                     |
+| 未指明媒体 / 「开个户」/ 「各平台开户」 | 下文 **§ 全平台必填总览** 五媒体的**业务项 + 说明**（或等价完整列表）                                     |
 | 已指明单一媒体（如「Google 开户」）     | 该媒体 **业务项 + 说明**（格式/枚举、是否需本地文件）+ 资料类说明（执照路径等）；时区等可用业务语言辅助表 |
 | 多媒体同时开                            | 每个目标媒体各一份业务清单，**禁止**混用字段                                                              |
 
@@ -109,26 +108,6 @@ CLI 参数仅供 Agent **内部**组命令使用（见下表第三列）。用�
 | 行业       | 先查行业列表，传输出的 **id**（与网页下拉一致），勿猜中文名 | `--trade-id`         |
 | 推广链接   |                                                             | `--promotion-link`   |
 | 执照图片   | JPG/PNG/PDF 本地路径                                        | `--license-file`     |
-
-### Kwai（`open-account kwai`，需营业执照图片）
-
-| 业务项        | 说明                                                                                | Agent 参数（勿展示） |
-| ------------- | ----------------------------------------------------------------------------------- | -------------------- |
-| 营业执照号    |                                                                                     | `--licence-id`       |
-| 注册国家      | 如 `CN`                                                                             | `--licence-country`  |
-| 注册地址      | 省市区详细地址                                                                      | `--licence-location` |
-| 营业范围      |                                                                                     | `--business-scope`   |
-| 产品/品牌名   |                                                                                     | `--product`          |
-| 账户类型      | `1` 效果 / `2` 品牌                                                                 | `--ad-type`          |
-| 产品网址      |                                                                                     | `--product-url`      |
-| 执照/证件类型 | `1` 统一社会信用代码 / `2` DUNS / `3` CNPJ（与网页下拉一致；**勿用** `ENTERPRISE`） | `--licence-id-type`  |
-| 账户名称      |                                                                                     | `--account-name`     |
-| 公司主体名    |                                                                                     | `--company-name`     |
-| 一级行业 ID   |                                                                                     | `--industry-id1`     |
-| 二级行业 ID   |                                                                                     | `--industry-id2`     |
-| 有效期类型    | `1` 有限期（须同时提供到期日）/ `2` 长期                                            | `--expire-type`      |
-| 投放地区      | ISO 如 `US`                                                                         | `--target-country`   |
-| 执照图片      | 本地路径                                                                            | `--license-file`     |
 
 ### MetaAd（`open-account meta`）
 
@@ -245,36 +224,6 @@ siluzan-tso account-history -m BingV2
 
 ---
 
-## Kwai
-
-**必填**：见上表 § Kwai。
-
-> **双上传**：CLI 先上传附件得 `imageId`（更新广告主组 MAG），再上传 Kwai 资质得 `blobstoreKey`（写入 `mainCertPhotos`）。二者不可混用。
-> **落库确认**：`AddKwaiAccount` 返回 HTTP 202（异步受理）。CLI 提交后会轮询 `account-history` 同源接口，**仅在查到对应 `--account-name` 后才报成功**；否则 exit 1 并提示核对 `--licence-id-type` 等字段。
-
-```bash
-siluzan-tso open-account kwai \
-  --company-name "深圳XX科技有限公司" \
-  --licence-id "91440300XXXXXXXXXX" \
-  --licence-country CN \
-  --licence-location "广东省深圳市南山区XX路XX号" \
-  --business-scope "电商零售" \
-  --product "品牌A" \
-  --ad-type 1 \
-  --product-url "https://www.brand-a.com" \
-  --licence-id-type 1 \
-  --account-name "品牌A Kwai账户" \
-  --industry-id1 "1234" \
-  --industry-id2 "5678" \
-  --expire-type 2 \
-  --target-country US \
-  --license-file "/path/to/license.jpg"
-
-siluzan-tso account-history -m Kwai
-```
-
----
-
 ## MetaAd（Facebook / Meta）
 
 **流程**：与 TSO 网页「申请开户」相同——调用 `GetOpenAccountLink` 得到 **Meta 官方 OE 动态链接**（有时效，不可写死 URL），用户在浏览器完成开户。
@@ -308,7 +257,7 @@ siluzan-tso list-accounts -m MetaAd
 | 状态   | 含义         | 下一步                                                                                                                                                  |
 | ------ | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 审核中 | 等待媒体审核 | 继续 `account-history` 轮询                                                                                                                             |
-| 已通过 | 账户可用     | `list-accounts` 确认 + 按 `finance.md` 打开对应媒体充值页（传统充值/月结充值仅 Google/TikTok/Meta/Microsoft 有页面；Kwai、Yandex 当前没有对应充值界面） |
+| 已通过 | 账户可用     | `list-accounts` 确认 + 按 `finance.md` 打开对应媒体充值页（传统充值/月结充值仅 Google/TikTok/Meta/Microsoft 有页面；Yandex 当前没有对应充值界面） |
 | 已拒绝 | 资料问题     | 查看拒绝原因，修正后重新提交                                                                                                                            |
 
 完整参数：`siluzan-tso open-account <subcommand> -h`

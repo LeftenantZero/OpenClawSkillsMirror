@@ -33,7 +33,7 @@ siluzan-tso account me --check-phone 15130150466 --json-out ./snap-me
 
 ### check-access — Google 账户访问权限校验
 
-**仅支持 Google。** 无 `-m`；`-a` 只接受 Google 纯数字 `mediaCustomerId`。TikTok / MetaAd / BingV2 / Yandex / Kwai **禁止**调用本命令，授权是否失效看 `list-accounts` 的 `invalidOAuthToken`。
+**仅支持 Google。** 无 `-m`；`-a` 只接受 Google 纯数字 `mediaCustomerId`。TikTok / MetaAd / BingV2 / Yandex **禁止**调用本命令，授权是否失效看 `list-accounts` 的 `invalidOAuthToken`。
 
 校验当前丝路赞凭据是否对指定 **Google** 广告账户有访问权限。应在拉数/诊断前调用，避免误用他户 ID。
 
@@ -76,7 +76,7 @@ siluzan-tso account auth -m <媒体类型>
 
 | 选项                 | 说明                                                                     |
 | -------------------- | ------------------------------------------------------------------------ |
-| `-m, --media <type>` | 媒体类型（必填）：`Google \| TikTok \| Meta \| Yandex \| BingV2 \| Kwai` |
+| `-m, --media <type>` | 媒体类型（必填）：`Google \| TikTok \| Meta \| Yandex \| BingV2` |
 
 > **Siluzan Agent**：优先使用 Agent 自带的**授权 / 添加授权**工具；CLI `account auth` **不禁止**，可作备选（沙箱不自动开浏览器，须把完整 URL 贴给用户）。
 

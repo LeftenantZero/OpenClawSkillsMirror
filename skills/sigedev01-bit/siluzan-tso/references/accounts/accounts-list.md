@@ -16,7 +16,7 @@ siluzan-tso list-accounts [选项]
 
 | 选项                    | 说明                                                                               |
 | ----------------------- | ---------------------------------------------------------------------------------- | ---------------------- |
-| `-m, --media <type>`    | 媒体类型（留空查全部）：`Google \| TikTok \| Yandex \| MetaAd \| BingV2 \| Kwai`   |
+| `-m, --media <type>`    | 媒体类型（留空查全部）：`Google \| TikTok \| Yandex \| MetaAd \| BingV2`   |
 | `-k, --keyword <text>`  | 统一模糊搜索：账户名称 **或** ID（含 Google CID 带横杠）；透传 Sammamish `keyword` |
 | `-s, --status <status>` | 账户状态：`normal \| invalid \| all`（默认 all）                                   |
 | `-p, --page <n>`        | 页码（默认 1）                                                                     |
@@ -41,7 +41,7 @@ siluzan-tso list-accounts [选项]
 | **Meta 全部账户 + 余额/消耗** | **`accounts-digest -m MetaAd --json-out <dir>`**（一步；内部翻页+分批） | `accounts-digest-metaad.json` → `data.items[]`（含 `balance`、`spend`）                                 |
 | Meta 余额续航预警             | `balance-scan -m MetaAd --json-out <dir>`                               | `balance-scan-metaad.json`                                                                              |
 
-> **MetaAd ID 格式**：OAuth 授权户（`list-accounts` 里 `mediaAccountType=FacebookAds`）的 `mediaCustomerId` **须带 `act_` 前缀**（与列表返回值一致）。**禁止**把 70+ 个 ID 拼成一条 `balance -a …`；全量用 `accounts-digest`。
+> **MetaAd ID 格式**：OAuth 授权户（`list-accounts` 里 `mediaAccountType=FacebookAds`）官方 `mediaCustomerId` 带 `act_`。`balance` / `stats` / `balance-scan` / `accounts-digest` 的 `-a` 传裸数字或 `act_` 均可（CLI 会补前缀）。**禁止**把 70+ 个 ID 拼成一条 `balance -a …`；全量用 `accounts-digest`。
 
 仅当读盘后 `total > itemCount` 且已用 `--page-size 999` 时，再 `--page 2` 等同参数补拉；**禁止**对 stdout 写翻页循环（stdout 摘要无 `total` / `items`，读盘协议见 `references/core/agent-conventions.md` §三）。列账户 / 数个数**不需要** `accounts-digest`、`balance-scan`。
 
@@ -102,7 +102,7 @@ siluzan-tso account-active-bills -m <媒体> --id <entityId> [--json-out ./snap]
 
 | 选项                 | 说明                                                                                 |
 | -------------------- | ------------------------------------------------------------------------------------ |
-| `-m, --media <type>` | 必填：`Google \| TikTok \| Yandex \| MetaAd \| BingV2 \| Kwai`（与路径中媒体段一致） |
+| `-m, --media <type>` | 必填：`Google \| TikTok \| Yandex \| MetaAd \| BingV2`（与路径中媒体段一致） |
 | `--id <entityId>`    | 必填：账户 `entityId`                                                                |
 | `--json-out`         | 输出接口原始 JSON                                                                    |
 
@@ -167,7 +167,7 @@ siluzan-tso account-history --start 2026-03-01 --end 2026-03-31 --json-out ./sna
 | 状态       | 含义     | 下一步操作                                                                                                                                                                                                                                           |
 | ---------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Pending`  | 审核中   | 等待，可反复运行此命令轮询；审核周期因媒体而异                                                                                                                                                                                                       |
-| `Approved` | 审核通过 | 运行 `list-accounts -m <媒体>` 确认账户已出现；引导用户充值激活（`config show` 取 `webUrl`，按 `finance.md` 打开对应媒体充值页；例如 Google 为 `https://www.siluzan.com/v3/foreign_trade/tso/recharge/pay?mediaType=Google`；Kwai、Yandex 当前没有对应充值界面） |
+| `Approved` | 审核通过 | 运行 `list-accounts -m <媒体>` 确认账户已出现；引导用户充值激活（`config show` 取 `webUrl`，按 `finance.md` 打开对应媒体充值页；例如 Google 为 `https://www.siluzan.com/v3/foreign_trade/tso/recharge/pay?mediaType=Google`；Yandex 当前没有对应充值界面） |
 | `Rejected` | 被拒     | 查看 `--json-out` 落盘中的 `reason` 字段了解拒绝原因；修改资料后重新提交；若原因不明，引导用户联系丝路赞客服                                                                                                                                         |
 
 ---

@@ -68,6 +68,7 @@
 - **`siluzan-tso` 不提供**「一键生成询盘分析 Excel」CLI 子命令，**也不要**新增。
 - 需交付 Excel 时：由 **Agent**（宿主或 WorkBuddy 编排）在 CLI `--json-out` 落盘后，自行编写 **Node.js / Python** 脚本（`exceljs` / `xlsx` / `openpyxl`）读 JSON → 写 `.xlsx`。
 - **数值一律来自落盘 JSON 或 `inquiries.json`，禁止在脚本里写死业务数字。**
+- **样式（必须）**：Node 脚本 `import` `report-templates/excel-style-kit.mjs`，用 `createExcelWorkbook({ accent: "google" })` + `titleBar`/`sectionBar`/`tableHeader`/`dataRow`/`noteRow` 组件搭版面（8 个 Sheet 各自的「数据洞察/优化建议」文字块用 `noteRow`），**禁止**裸写无样式单元格。规范见 `report-templates/excel-style-guide.md`。
 
 ---
 

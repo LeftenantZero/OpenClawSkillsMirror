@@ -1,4 +1,4 @@
-﻿# 工作流目录 · 操作 / 管理类（W1–W12）
+﻿# 工作流目录 · 操作 / 管理类（W1–W13）
 
 > **范围**：调接口 / 写操作类业务（账户读取、开户、广告 CRUD、智投、拓词、优化、报告推送、财务、权限、预警、线索、巡检）。分析/报告类（拉数 → 撰稿 → 交付）见 `references/core/playbooks.md`（P1–P9）。
 > **通用纪律见 `references/core/agent-conventions.md`**（写操作确认 + `--commit`、写后成败报告、ID 口径）；各卡片只写线性步骤。卡片字段：`触发 / 必读 / 步骤 / 产物`。完整参数表见「必读」指向的命令文档。
@@ -6,7 +6,7 @@
 | 编号 | 业务                            | 必读                                                                                |
 | ---- | ------------------------------- | ----------------------------------------------------------------------------------- |
 | W1   | 账户查询（列表/余额/消耗/账单） | `references/accounts/accounts-list.md` + `accounts-balance-stats.md`                |
-| W2   | 开户申请（六大媒体）            | `references/accounts/open-account-by-media.md`                                      |
+| W2   | 开户申请（五大媒体）            | `references/accounts/open-account-by-media.md`                                      |
 | W3   | Google 广告创建与精细管理       | `google-ads-campaign-plan.md` + `google-ads-write.md` / `google-ads-read.md`        |
 | W4   | AI 智投草稿 → 发布              | `references/google-ads/google-ads-batch.md`                                         |
 | W5   | 拓词 / RAG                      | `references/analytics/keyword-planner-workflows.md` + `references/analytics/rag.md` |
@@ -17,6 +17,7 @@
 | W10  | 智能预警规则管理                | `references/operations/forewarning.md`                                              |
 | W11  | 广告线索提取                    | `references/operations/clue.md`                                                     |
 | W12  | 日 / 周巡检                     | `references/accounts/accounts-balance-stats.md` + 各域                              |
+| W13  | Meta Instant Form 线索广告      | `meta-ads.md` + **`meta-lead-launch-plan-template.md`** + `meta-ads-write.md` / `read` |
 
 ---
 
@@ -33,12 +34,12 @@
 
 ---
 
-## W2 · 开户申请（Google / TikTok / Yandex / BingV2 / Kwai / MetaAd）
+## W2 · 开户申请（Google / TikTok / Yandex / BingV2 / MetaAd）
 
 - **触发**：申请开户、新开广告账户、查开户进度。
 - **必读**：`references/accounts/open-account-by-media.md`（各媒体必填业务项，**含 §「首次响应硬规范」：首次进入开户话题必须先列全必填清单；对用户禁止展示 CLI 参数名**）；Google 字段加 `references/accounts/open-account-google-ui.md`。所有媒体均**无需**手动查 magKey，CLI 按公司名自动创建/关联广告主组。
 - **步骤**：
-  1. 用业务语言列出必填项（勿贴 `--flag`）→ 收集资料（TikTok/Bing/Kwai 需营业执照图片本地路径；CLI 无 OCR）。
+  1. 用业务语言列出必填项（勿贴 `--flag`）→ 收集资料（TikTok/Bing 需营业执照图片本地路径；CLI 无 OCR）。
   2. 前置查询（按需）：TikTok `open-account tiktok-areas/-industries/-timezones`；Bing `open-account bing-industries`；Google `open-account google-timezones`。
   3. 提交非交互命令 `open-account <media> …`（**禁用** `google-wizard`，需真实 TTY）。MetaAd 无表单，用 `open-account meta` 拉官方 OE 链接引导网页。
   4. 轮询审核：`account-history -m <媒体>`。
@@ -153,7 +154,7 @@
 - **触发**：充值、钱包、账户间转账、转账记录、开票、发票抬头。
 - **必读**：`references/accounts/finance.md`。
 - **步骤**：
-  1. 充值/钱包：CLI 不支持；**当轮** `config show` 取 `webUrl`，仅按 `finance.md` 路径表拼接后贴完整链接（**禁止**凭记忆编 URL；Yandex/Kwai 无充值页，引导联系客服）。
+  1. 充值/钱包：CLI 不支持；**当轮** `config show` 取 `webUrl`，仅按 `finance.md` 路径表拼接后贴完整链接（**禁止**凭记忆编 URL；Yandex 无充值页，引导联系客服）。
   2. 转账：记录 `transfer list -m <媒体>`；同媒体账户间 `transfer create -m <媒体> --out <id> --in <id> --amount <n>`（写操作先确认）。
   3. 开票：`invoice billable -m <媒体> -c <币种> --json-out ./snap` 取订单 `entityId` → 选发票抬头（`invoice-info list`，查重后再 `create`）→ `invoice apply --bill-ids … --invoice-type <PI|VATI|VATSI> …`。CNY 订单仅增值税票、外币仅 PI。
 - **产物**：开票分步引导（先选订单、再选抬头、最后申请）；**禁止**不展示 `invoice billable` 就让用户手写 id；保留 CLI 币种校验。
@@ -195,7 +196,7 @@
 
 ## W11 · 广告线索提取
 
-- **触发**：拉取 TikTok / Meta 广告表单留资线索。
+- **触发**：拉取 TikTok / Meta 广告表单**已有**留资线索（不是新建表单投放；新建走 **W13**）。
 - **必读**：`references/operations/clue.md`。
 - **步骤**：
   1. 确认账户：TikTok `list-accounts -m TikTok`；Meta 取 Facebook 页面 ID。
@@ -208,14 +209,36 @@
 ## W12 · 日 / 周巡检
 
 - **触发**：日常/每周快速了解各媒体余额、消耗、预警与报告/智投状态。
-- **必读**：`references/accounts/accounts-balance-stats.md`；首页看板口径见 `references/misc/tso-home.md`。Google 超预算/空耗熔断另读 `references/operations/guard.md`。Bing / Yandex / TikTok 只读巡检读 `hosted-automation-bing.md` / `hosted-automation-yandex.md` / `hosted-automation-tiktok.md`。
+- **必读**：`references/accounts/accounts-balance-stats.md`；首页看板口径见 `references/misc/tso-home.md`。Google 超预算/空耗熔断另读 `references/operations/guard.md`。Bing / Yandex / TikTok / Facebook 只读巡检读 `hosted-automation-bing.md` / `hosted-automation-yandex.md` / `hosted-automation-tiktok.md` / `hosted-automation-facebook.md`。
 - **步骤**：
   1. 余额：`list-accounts -m <媒体> --json-out ./snap` → `balance -m <媒体> -a <mediaCustomerId,...>`（多户续航预警走 **P2**）。
   2. 消耗：`stats -m <媒体> -a <id> --start <昨天/上周一> --end <昨天/上周日>`（多户汇总走 **P3**；Bing/Yandex **今天**不要用 `stats`）。
   3. Google 当日超预算/空耗熔断（若用户要求）：`guard budget-circuit` / `guard zero-conv -m Google --json-out`（**禁止**逐户 for-loop）。
   4. Bing 巡检（若用户要求）：按 `hosted-automation-bing.md` 跑封禁/拒审/当日超预算或空耗预警（只告警，不暂停）。
-  5. Yandex 巡检（若用户要求）：按 `hosted-automation-yandex.md` 跑 `balance-scan` / `accounts-digest` / `yandex-analysis`（只告警）。
+  5. Yandex 巡检（若用户要求）：按 `hosted-automation-yandex.md` 跑归档/拒审/当日超预算或空耗预警（只告警，不暂停）。
   6. TikTok 巡检（若用户要求）：按 `hosted-automation-tiktok.md` 跑封禁/拒审/当日超预算或空耗预警（只告警，不暂停）。
-  7. 预警触发：`forewarning records -m <媒体> --start <S>`（见 **W10**）。
-  8. 智投/线索（按需）：`ad batch list --state Failed/HasFailed`（**W4**）、`clue …`（**W11**）、`optimize list/records`（**W6**）。
-- **产物**：要与网页首页看板数字完全一致（聚合口径）时引导打开首页（`tso-home.md`）；CLI 给的是单账户粒度的近似巡检；Google 熔断须交付命中表或显式「无命中」；Bing/Yandex/TikTok 巡检交付告警列表（不能写成已自动暂停）。
+  7. Facebook / MetaAd 巡检（若用户要求）：按 `hosted-automation-facebook.md` 跑封禁/拒审/当日超预算或空耗预警（只告警，不暂停）。
+  8. 预警触发：`forewarning records -m <媒体> --start <S>`（见 **W10**）。
+  9. 智投/线索（按需）：`ad batch list --state Failed/HasFailed`（**W4**）、`clue …`（**W11**）、`optimize list/records`（**W6**）。
+- **产物**：要与网页首页看板数字完全一致（聚合口径）时引导打开首页（`tso-home.md`）；CLI 给的是单账户粒度的近似巡检；Google 熔断须交付命中表或显式「无命中」；Bing/Yandex/TikTok/Facebook 巡检交付告警列表（不能写成已自动暂停）。
+
+---
+
+## W13 · Meta Instant Form 线索广告创建与精细管理
+
+- **触发**：新建 Facebook / Meta 线索广告、Instant Form、潜在客户表单投放；改预算/定向/启停已有线索对象。
+- **勿误判**：拉**已有**表单留资 → **W11** `clue -m Meta`；Meta 周期/诊断报告 → **P4-FB**；Google 搜索/PMax → **W3**。
+- **必读**：`references/meta-ads/meta-ads.md` + **`assets/meta-lead-create-template.json`**（先 Read）+ `meta-lead-create-template.md` + **`references/meta-ads/meta-lead-launch-plan-template.md`** + `meta-ads-write.md` / `meta-ads-read.md`。
+- **仅出方案**（「出方案 / 只要表格」、未给账户且未说创建）：跳过 list-accounts / pages；JSON 用 `[PENDING_ACCOUNT]` / `[PENDING_PAGE]` → `meta-ad plan-render` 出运营 4 Sheet xlsx + md → **停住等确认**。**禁止** Agent 手写 Facebook 方案 xlsx。
+- **步骤（创建）**：
+  1. `list-accounts -m MetaAd --page-size 999 --json-out ./snap` 取 `mediaCustomerId`。
+  2. `meta-ad account` / `meta-ad pages`：记下币种与 `pageId`（`--json-out` 主页在 `items[]`，须含 `ADVERTISE`）。**HTTP 403** 或主页为空则停。`spend_capDisplay` ≈ `amount_spentDisplay` → 仍可 PAUSED 创建，ACTIVE 投不出去。
+  3. 落盘同构 JSON（可执行字段 + `plan` 套系/矩阵/背书）。
+  4. 门禁：`meta-ad validate --config-file ./meta-lead.json --json-out ./snap`。
+  5. `meta-ad plan-render --config-file ./meta-lead.json --out ./meta-lead-plan.xlsx` → 用户确认（`--commit` 代替不了这步）。
+  6. `meta-ad create --config-file ./meta-lead.json --json-out ./snap --commit "…"`（默认 PAUSED；失败读已建成 ID 用原语续跑）。报「支付方式」则停，不要重头 create。
+  7. 按返回 ID `meta-ad campaign/adset/ad --id` 复核。
+  8. 需要投放：三个对象 `*-status --status ACTIVE --commit`。清理：`DELETED`，顺序广告→组→系列。
+- **定向**：`create` / `adset-create` 会提交 `targeting_automation.advantage_audience`（默认 `1`；有非空 `flexibleSpec` 时默认 `0`，也可 JSON/`--advantage-audience` 显式指定）。审查稿兴趣可只写 `plan.targeting`；要打进网关则写 `adset.flexibleSpec`。
+- **失败续跑**：读 `--json-out` 已建成 ID 用原语续跑；**禁止**再 `campaign-create` / 重头 `create`。
+- **产物**：审查稿路径（MD 或 xlsx）+ create 的 `formId` / `imageHash` / `campaignId` / `adSetId` / `creativeId` / `adId`；写后交代成败与是否仍为 PAUSED。

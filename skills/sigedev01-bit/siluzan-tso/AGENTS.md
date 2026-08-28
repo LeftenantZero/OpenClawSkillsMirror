@@ -28,6 +28,7 @@
 | Core       | `references/core/`                 | conventions、intent-routing、playbooks、workflows                          |
 | Accounts   | `references/accounts/`             | 直接读 `accounts-list` / `accounts-balance-stats` / `accounts-permissions` |
 | Google Ads | `references/google-ads/`           | `google-ads-read` / `write` / `batch`；`rules/` 先 README 再单文件         |
+| Meta Ads   | `references/meta-ads/`             | Instant Form：`meta-ads` / `read` / `write` + `meta-lead-launch-plan-template` |
 | Analytics  | `references/analytics/`            | 拉数、批处理、拓词                                                         |
 | Operations | `references/operations/`           | 预警、线索；自动化仅用户问起时                                             |
 | Templates  | `report-templates/*.md`、`assets/` | 报告纲要 / JSON 契约                                                       |
