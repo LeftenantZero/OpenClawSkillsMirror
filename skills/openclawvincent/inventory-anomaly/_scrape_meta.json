@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of inventory-anomaly-prediction skill:\n\n- Provides a modular system for inventory anomaly detection and demand forecasting, supporting use cases in manufacturing, retail, and spare parts management.\n- Includes core modules for Excel data management, inventory queries, demand calculation, anomaly detection, ARIMA-based demand forecasting, test data generation, and report creation.\n- Supports generating and processing real or simulated inventory and order data, identifying abnormal inventory and demand trends, and providing restock recommendations.\n- Outputs a comprehensive TXT report covering inventory status, detected anomalies, forecast results, and urgent replenishment advice.\n- Designed for easy customization and integration, with guidance for parameter adjustment, model replacement, and report formatting.\n- Utilizes pandas, numpy, statsmodels (ARIMA), and openpyxl for data handling and analytics.",
+  "created_at": 1773327072292,
+  "display_name": "inventory-anomaly",
+  "fetched_at": 1787877795614,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "requirements.txt",
+    "scripts/create_structure.py",
+    "scripts/quick_validate.py",
+    "skill-card.md",
+    "templates/anomaly_detector_template.py",
+    "templates/data_manager_template.py",
+    "templates/demand_calculator_template.py",
+    "templates/generate_fake_data_template.py",
+    "templates/inventory_template.py",
+    "templates/main_template.py",
+    "templates/predictor_template.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Vincent_Openclaw",
+    "handle": "openclawvincent",
+    "user_id": "s17em1pykxjvc8ehz4kh5raxc583htds"
+  },
+  "slug": "inventory-anomaly",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/inventory-anomaly",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=inventory-anomaly&ownerHandle=openclawvincent",
+    "page_url": "https://clawhub.ai/openclawvincent/skills/inventory-anomaly"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1335,
+    "installs": 41,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5e93\u5b58\u5f02\u5e38\u68c0\u6d4b\u548c\u9700\u6c42\u9884\u6d4b\u7cfb\u7edf\u751f\u6210\u5de5\u5177\u3002\u5f53\u7528\u6237\u9700\u8981\u642d\u5efa\u5e93\u5b58\u7ba1\u7406\u7cfb\u7edf\u3001\u5b9e\u73b0\u5f02\u5e38\u68c0\u6d4b\u7b97\u6cd5\u3001\u5f00\u53d1\u9700\u6c42\u9884\u6d4b\u529f\u80fd\uff08\u5982ARIMA\u6a21\u578b\uff09\u3001\u521b\u5efa\u5e93\u5b58\u9884\u8b66\u7cfb\u7edf\u65f6\u4f7f\u7528\u6b64skill\u3002\u7279\u522b\u9002\u7528\u4e8e\u5236\u9020\u4e1a\u3001\u96f6\u552e\u4e1a\u3001\u5907\u4ef6\u7ba1\u7406\u7b49\u573a\u666f\uff0c\u9700\u8981\u5904\u7406Excel\u6570\u636e\u3001\u68c0\u6d4b\u5e93\u5b58\u5f02\u5e38\u3001\u9884\u6d4b\u672a\u6765\u9700\u6c42\u5e76\u751f\u6210\u62a5\u544a\u7684\u60c5\u51b5\u3002",
+  "updated_at": 1778491857969,
+  "version": "1.0.0"
+}
