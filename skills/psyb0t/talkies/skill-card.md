@@ -1,6 +1,6 @@
 ## Description:
 
-talkies helps agents use a self-hosted OpenAI-compatible speech service for transcription, live ASR, text-to-speech, diarization, URL-based audio processing, file staging, and bearer-authenticated workflows.
+Talkies helps agents operate a self-hosted OpenAI-compatible speech service for transcription, live ASR, text-to-speech, voice cloning, diarization, URL-based audio fetching, and staged file workflows.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and agents use this skill to run speech-to-text, subtitle generation, live PCM transcription, text-to-speech, and voice-cloning workflows against a Talkies server they operate or trust.
+Developers and external users use talkies to transcribe audio, generate subtitles, stream live ASR, synthesize speech, and integrate self-hosted speech endpoints into OpenAI-compatible client workflows.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,43 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Audio, text, and voice samples are sent to the configured Talkies server.
+Risk: Speech, text, and voice reference samples are sent to the configured Talkies server.
 
-Mitigation: Use only a Talkies server you operate or explicitly trust; prefer localhost or HTTPS and enable bearer-token authentication.
+Mitigation: Use localhost or a server you operate or explicitly trust, and use HTTPS or a trusted tunnel when traffic leaves the local host.
 
-Risk: Server-side staged files and URL downloads may persist and be visible to callers who can reach the API.
+Risk: Shared or exposed deployments can accept requests without application-layer authentication if no token is configured.
 
-Mitigation: Clean up staged files after use, avoid staging sensitive media on shared deployments, and restrict network exposure.
+Mitigation: Enable TALKIES_AUTH_TOKEN for shared or exposed deployments and limit network exposure to trusted clients.
 
-Risk: Voice cloning can enable impersonation or deceptive speech generation.
+Risk: Staged uploads and cached URL downloads can persist after a workflow completes.
 
-Mitigation: Only clone or synthesize voices with explicit speaker authorization and informed consent.
+Mitigation: Avoid sending secrets or regulated data, and clean up staged files and cached URL downloads when finished.
 
-Risk: Setup and workflow examples execute local shell commands such as docker, curl, and ffmpeg.
+Risk: Voice cloning can reproduce a real speaker's voice.
 
-Mitigation: Review commands before execution, especially when pointed at unfamiliar hosts or images.
+Mitigation: Only clone or synthesize a voice with explicit speaker consent and authorization.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/psyb0t/skills/talkies)
+- [talkies ClawHub listing](https://clawhub.ai/psyb0t/skills/talkies)
+- [talkies repository](https://github.com/psyb0t/docker-talkies)
 - [talkies setup](references/setup.md)
-- [Streaming protocol documentation](https://github.com/psyb0t/docker-talkies/blob/main/docs/streaming.md)
+- [Streaming ASR documentation](https://github.com/psyb0t/docker-talkies/blob/main/docs/streaming.md)
 - [Model Context Protocol](https://modelcontextprotocol.io)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Shell commands, Configuration, API calls, Markdown, Code]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline shell commands, HTTP examples, JSON examples, and configuration snippets]
+**Output Format:** [Markdown guidance with bash, curl, JSON, and configuration snippets; service workflows produce text, JSON, SRT, VTT, and audio files.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May produce or manage transcripts, subtitle files, staged audio files, and synthesized audio through the configured Talkies server.]
+**Other Properties Related to Output:** [Includes examples for direct API calls, Docker setup, MCP usage, and a bulk transcription shell workflow.]
 
 ## Skill Version(s):
 
-1.3.17 (source: server release metadata)
+1.3.18 (source: server release evidence)
 
 ## Ethical Considerations:
 
