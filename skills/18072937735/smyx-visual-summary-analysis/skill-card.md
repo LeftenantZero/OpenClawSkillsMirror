@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to analyze clear images, videos, local files, or media URLs and receive visual scene summaries, structured analysis results, and report links. It can also retrieve historical visual summary reports associated with the current internal identity.
+External users and developers use this skill to submit image or video inputs for visual summarization and receive scene-summary text, structured analysis results, historical report listings, and report links.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Media and report requests are sent to lifeemergence.com/open.lifeemergence.com services.
+Risk: Images, videos, and URLs may be sent to the publisher's cloud service for analysis.
 
-Mitigation: Use only media approved for those services and avoid sensitive content unless the service data handling is acceptable.
+Mitigation: Use only media and URLs approved for third-party processing; avoid private media or internal URLs unless retention and access controls are documented.
 
-Risk: The skill may create or reuse a local identity and store service tokens locally.
+Risk: The skill may silently create or reuse identities and maintain local tokens.
 
-Mitigation: Review local data storage policy, protect workspace files, and clear generated identity or token data when no longer needed.
+Mitigation: Review local identity and token storage behavior before installation, and define cleanup procedures for shared or sensitive workspaces.
 
-Risk: Historical report links may be tied to the current internal identity.
+Risk: Historical report queries may retrieve cloud report history associated with the resolved identity.
 
-Mitigation: Share report output only with authorized users and verify the active identity before listing historical reports.
+Mitigation: Run history queries only in contexts where the resolved identity and associated reports are appropriate for the current user.
 
 ## Reference(s):
 
-- [Visual summary API documentation](references/api_doc.md)
-- [Common AI analysis API documentation](skills/smyx_analysis/references/api_doc.md)
-- [Skill demo](https://lifeemergence.com/sample.html)
 - [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-visual-summary-analysis)
+- [Skill demo](https://lifeemergence.com/sample.html)
+- [API interface documentation](references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, files, shell commands]
+**Output Type(s):** [Text, Markdown, JSON, Shell commands, Guidance]
 
-**Output Format:** [Markdown or JSON analysis text, with optional saved output files and report links]
+**Output Format:** [Markdown text with JSON content, status messages, and report links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Supports local file or URL input; accepted local formats include mp4, avi, and mov with a 10MB limit.]
+**Other Properties Related to Output:** [Supports local media paths, public media URLs, optional output files, and cloud historical report listing.]
 
 ## Skill Version(s):
 
-1.0.13 (source: frontmatter and server release metadata)
+1.0.14 (source: frontmatter and server release metadata)
 
 ## Ethical Considerations:
 
