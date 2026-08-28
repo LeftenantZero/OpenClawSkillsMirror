@@ -1,47 +1,60 @@
-## Description: <br>
-VMware VDI helps agents operate VMware/Omnissa Horizon VDI through a Connection Server, including pool, farm, published app, session, machine, entitlement, event, health, statistics, and instant-clone image operations. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+VMware VDI helps agents operate VMware/Omnissa Horizon broker environments through a Connection Server, including desktop pools, RDS farms, published apps, user sessions, desktop machines, entitlements, health, events, statistics, and instant-clone image pushes.
 
-## Publisher: <br>
-[zw008](https://clawhub.ai/user/zw008) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[zw008](https://clawhub.ai/user/zw008)
 
-## Use Case: <br>
-Developers, IT administrators, and help-desk operators use this skill to inspect and manage Horizon VDI broker-layer resources through CLI or MCP workflows. Typical tasks include checking health, listing sessions and machines, managing entitlements, logging off or resetting sessions and desktops, and pushing instant-clone images. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: High-impact VDI administration actions can log off users, reset or remove desktops, disable pools, cancel tasks, or push images across a pool. <br>
-Mitigation: Use Horizon RBAC with read-only roles for monitoring, separate targets for write access, and review dry-run previews before approving write actions. <br>
-Risk: The local b64: password storage described by the artifact is obfuscation, not strong secret protection. <br>
-Mitigation: Inject VMWARE_VDI_<TARGET>_PASSWORD from an approved secret manager or protected environment variable for sensitive environments. <br>
-Risk: Image push operations can affect every desktop in a pool and may disrupt active users. <br>
-Mitigation: Check affected-desktop and in-session-user counts in the preview, warn users when needed, and proceed only after confirming the blast radius. <br>
-Risk: Disabling TLS verification can expose Horizon credentials and administrative operations to interception. <br>
-Mitigation: Keep TLS verification enabled for production targets and reserve verify_ssl: false for controlled self-signed lab environments. <br>
+## Use Case:
 
+IT operations, help-desk, and VDI platform teams use this skill to inspect and administer Horizon desktop pools, sessions, machines, entitlements, events, health, statistics, and image-push tasks. It is intended for Horizon broker-layer operations, not underlying vCenter VM lifecycle, read-only vSphere monitoring, or NSX microsegmentation.
 
-## Reference(s): <br>
-- [ClawHub skill page](https://clawhub.ai/zw008/skills/vmware-vdi) <br>
-- [Capabilities](artifact/references/capabilities.md) <br>
-- [CLI Reference](artifact/references/cli-reference.md) <br>
-- [Setup Guide](artifact/references/setup-guide.md) <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance] <br>
-**Output Format:** [Markdown guidance with shell commands, configuration snippets, and structured MCP tool output descriptions] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [Agent output may include dry-run previews, paginated list summaries, task status, and operational guidance for Horizon VDI actions.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-1.0.1 (source: server release metadata) <br>
+Risk: The skill exposes powerful Horizon administration actions such as image pushes, machine removals, resets, entitlement changes, and user logoffs.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Limit installation to Horizon VDI operators, use read-only Horizon roles for monitoring, reserve tightly scoped admin roles for writes, and require human approval for production-changing actions.
+
+Risk: Horizon credentials and TLS settings are required for operation.
+
+Mitigation: Keep TLS verification enabled, use verify_ssl:false only for self-signed lab certificates, and store passwords through a real secret manager when possible.
+
+Risk: The artifact notes beta validation status for some live Horizon response projections.
+
+Mitigation: Run vmware-vdi init and vmware-vdi doctor against a real Horizon environment before production use, then verify session, machine, pool, image-push, and entitlement outputs.
+
+## Reference(s):
+
+- [VMware VDI ClawHub page](https://clawhub.ai/zw008/skills/vmware-vdi)
+- [Capabilities](references/capabilities.md)
+- [CLI Reference](references/cli-reference.md)
+- [Setup Guide](references/setup-guide.md)
+
+## Skill Output:
+
+**Output Type(s):** [guidance, shell commands, configuration]
+
+**Output Format:** [Markdown guidance with inline shell commands and configuration snippets]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [Targets a configured Horizon Connection Server through VMWARE_VDI_CONFIG and ~/.vmware-vdi/config.yaml.]
+
+## Skill Version(s):
+
+1.0.2 (source: server release metadata)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.

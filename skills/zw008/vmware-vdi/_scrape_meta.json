@@ -1,8 +1,8 @@
 {
-  "changelog": "Moved to vmware-skills GitHub org; MCP Registry namespace \u2192 io.github.vmware-skills. Links updated.",
+  "changelog": "Fixes the server's self-reported version and the advertised tool count; adds a Claude Code plugin manifest.",
   "created_at": 1785501852832,
   "display_name": "vmware-vdi",
-  "fetched_at": 1787774001549,
+  "fetched_at": 1787931855006,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -25,12 +25,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 273,
+    "downloads": 308,
     "installs": 0,
     "stars": 0,
-    "versions": 2
+    "versions": 3
   },
   "summary": "Use this skill whenever the user needs to operate a VMware/Omnissa Horizon VDI environment via its Connection Server: list and manage desktop pools, RDS farms and published apps, inspect and act on user sessions (log off, disconnect, send message), manage desktop machines (reset, maintenance, remove), view and change entitlements, read Horizon events/health/statistics, and push instant-clone golden images. Always use this skill for \"log off VDI user\", \"reset this desktop\", \"why is the desktop pool not provisioning\", \"push the new image to the pool\", \"list Horizon sessions\", \"who is entitled to the pool\", \"VDI health\" \u2014 when the context is explicitly Horizon / Omnissa / VDI / desktop-pool / RDS-farm. Do NOT use for the underlying vCenter VM lifecycle/power/snapshot/migrate (use vmware-aiops), read-only vSphere monitoring (use vmware-monitor), or NSX microsegmentation (use vmware-nsx-security). This skill manages the Horizon broker layer; vmware-aiops manages the vCenter VMs backing the desktops.",
-  "updated_at": 1785554052844,
-  "version": "1.0.1"
+  "updated_at": 1787885901899,
+  "version": "1.0.2"
 }
