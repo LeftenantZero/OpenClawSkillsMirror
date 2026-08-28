@@ -1,6 +1,6 @@
 ## Description:
 
-Automates the ZhanFu WebDriver desktop client and store browsers through HTTP setup steps, then uses Playwright CDP for headed browser tasks after a WebDriver port is available.
+Zhanfu Playwright automates Zhanfu client and store workflows through the WebDriver HTTP API, then uses Playwright over CDP after a store WebDriver port is available.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and operators use this skill to start or reuse the local ZhanFu client, open, close, create, list, and configure stores, update provided store account fields, and run headed Playwright automation inside a store browser after device-safety checks pass.
+Developers and authorized operators use this skill to control Zhanfu stores, including opening or closing stores, listing or creating stores, changing store account data, configuring supported store settings, and running browser automation inside Zhanfu-managed store browsers.
 
 ### Deployment Geography for Use:
 
@@ -22,40 +22,36 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can control the local ZhanFu client, open or close store browsers, create stores, update store account fields, set plugins, and clear caches.
+Risk: The skill can request credentials and change or clear store account data.
 
-Mitigation: Use it only when those local client and store-management actions are intended, and confirm destructive or credential-changing actions before execution.
+Mitigation: Use it only with explicit authorization, confirm password or account changes before execution, and avoid retaining credentials beyond the active task.
 
-Risk: The skill can use ZhanFu credentials and store account or password values when the user provides them.
+Risk: The skill can close stores, exit or restart the Zhanfu client, configure plugins, and clear caches.
 
-Mitigation: Provide credentials only when login or account updates are intended, avoid sharing secrets in reusable prompts, and review requested account changes before submitting them.
+Mitigation: Confirm disruptive operations with the user first and stop on unsupported platform or client-version conditions.
 
-Risk: The artifact stores local port, install-path, and store-ID state in JSON files.
+Risk: Bundled local state files include cached port, path, and store-ID information.
 
-Mitigation: Treat generated and cached state as local operational data and avoid publishing workspace copies that contain environment-specific paths or store identifiers.
-
-Risk: Dependency ranges are broad enough that stricter environments may require tighter review.
-
-Mitigation: Review and pin Playwright and requests versions before using the skill in a controlled production environment.
+Mitigation: Clear bundled cache and state files before first use and keep regenerated state local to the authorized environment.
 
 ## Reference(s):
 
-- [ZhanFu WebDriver API reference](artifact/reference.md)
+- [Zhanfu WebDriver API Reference](artifact/reference.md)
 - [ClawHub skill page](https://clawhub.ai/zhangzhang1997/skills/zhanfu-playwright)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [text, markdown, code, shell commands, configuration]
 
-**Output Format:** [Markdown guidance with HTTP request examples, shell commands, and optional Python helper scripts.]
+**Output Format:** [Markdown guidance with JSON HTTP request examples, shell commands, and optional Python helper usage]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires a local ZhanFu desktop client and uses Playwright over CDP only after a WebDriver port is available.]
+**Other Properties Related to Output:** [Requires user-authorized Zhanfu access and supported Zhanfu client versions before browser automation.]
 
 ## Skill Version(s):
 
-1.0.4 (source: server release evidence)
+1.0.5 (source: server release metadata)
 
 ## Ethical Considerations:
 
