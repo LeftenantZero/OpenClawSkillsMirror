@@ -1,6 +1,6 @@
 ## Description:
 
-Query an Infinite Campus Campus Parent portal district directly with curl to log in, capture session credentials, and retrieve grades, attendance, assignments, schedules, messages, documents, and fees.
+Query an Infinite Campus (Campus Parent portal) district directly with curl instead of running the infinitecampus-mcp server, including login, session cookie and XSRF token capture, and reads for grades, attendance, assignments, schedules, messages, documents, and fees.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, engineers, and authorized Infinite Campus users use this skill to script read-oriented Campus Parent portal queries without installing the MCP server. It is intended for accounts and student records the user is authorized to access.
+Developers, technical parents, and authorized operators use this skill to make direct, scriptable curl requests against an Infinite Campus district portal when they need Campus Parent data without installing or running the related MCP server.
 
 ### Deployment Geography for Use:
 
@@ -22,40 +22,31 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill handles live parent-portal sessions and sensitive student records.
+Risk: The skill handles Infinite Campus credentials, session cookies, XSRF tokens, downloaded PDFs, and raw JSON responses that may contain sensitive student records.
 
-Mitigation: Use only accounts and students you are authorized to access, keep credentials and cookie jars out of chats, logs, shell history, and repositories, and clean up session files when done.
+Mitigation: Use it only with authorized accounts, avoid shared terminals and logs, store secrets securely, and delete session and data files when finished.
 
-Risk: Document downloads may include sensitive student files and can use a relative or absolute URL.
+Risk: Some portal reads may expose district-specific behavior or module availability, and fetching a message body may mark it read on some district configurations.
 
-Mitigation: Constrain downloads to the expected district portal host and store downloaded files only in protected locations.
-
-Risk: Fetching a message body may mark it read on some district configurations.
-
-Mitigation: Avoid retrieving message bodies when preserving unread status matters, or warn the user before doing so.
-
-Risk: Some district modules and endpoint paths may be disabled or unconfirmed.
-
-Mitigation: Check displayOptions before calling module-specific endpoints and treat expected 404 responses as disabled features rather than failures.
+Mitigation: Check feature flags and endpoint responses before treating 404s as errors, and review message-body fetches before running them in automated workflows.
 
 ## Reference(s):
 
 - [Infinite Campus endpoints for curl](references/endpoints.md)
-- [ClawHub skill page](https://clawhub.ai/chrischall/skills/infinitecampus-api)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [guidance, shell commands, configuration, code]
 
-**Output Format:** [Markdown with inline shell commands and curl/jq examples]
+**Output Format:** [Markdown with inline shell commands and jq examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [The skill guides read-oriented API calls and document downloads against a user-provided district portal using environment variables for district URL, app name, username, and password.]
+**Other Properties Related to Output:** [Produces user-directed curl patterns for read-oriented portal access; downloaded documents and raw JSON responses may contain sensitive student records.]
 
 ## Skill Version(s):
 
-2.4.5 (source: server-resolved release evidence)
+2.5.0 (source: server release evidence)
 
 ## Ethical Considerations:
 
