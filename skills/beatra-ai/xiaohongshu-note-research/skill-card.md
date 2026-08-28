@@ -1,6 +1,6 @@
 ## Description:
 
-Turns a Xiaohongshu category, note link, or pasted notes into a research memo with title patterns, structure, verbatim comments, and followable angles.
+Turn a category, a note link, or notes you already copied into a research memo with title patterns, structure, verbatim comments, and followable angles.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and teams use this skill to study Xiaohongshu notes they paste or optionally look up, then receive a research memo that preserves observed title patterns, structure, comments, and followable content angles.
+External users and agents use this skill to turn Xiaohongshu categories, public note links, or pasted notes into research memos that summarize observed title patterns, structure, comments, and followable angles. Optional paid lookups can read public notes, comments, searches, or creator notes when the user explicitly approves each lookup.
 
 ### Deployment Geography for Use:
 
@@ -22,29 +22,28 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uses a shared Beatra device authorization stored on disk with broader account capabilities than the note memo itself needs.
+Risk: The release evidence reports a broad shared Beatra device authorization rather than a narrow note-only permission.
 
-Mitigation: Install only when that authorization model is acceptable, keep the local credential private, and use the bundled uninstall and disconnect workflow when removing the package.
+Mitigation: Install only in environments where that shared authorization is acceptable, keep the credential private, and use the bundled uninstall flow when removing the package.
 
-Risk: The bundled client can silently update installed package files.
+Risk: Optional Xiaohongshu lookups are paid operations.
 
-Mitigation: Review the automatic update behavior before installing and disable silent checks with scripts/mcp_client.py update --auto off when manual update control is required.
+Mitigation: Confirm each lookup before it runs, submit each logical paid request once, and report billing.net_charged_credits from the returned task facts.
 
-Risk: Optional Xiaohongshu lookups are paid and repeated pages or changed arguments can create additional charges.
+Risk: The release evidence reports silent self-updates and broader package capabilities that go beyond note research.
 
-Mitigation: Confirm each lookup separately, quote the live price before execution, and preserve the same client_request_id only for byte-identical recovery of an uncertain request.
+Mitigation: Review the Beatra account, billing, and trust assumptions before use, and run python3 scripts/mcp_client.py update --auto off when silent update checks are not acceptable.
 
 ## Reference(s):
 
-- [ClawHub skill listing](https://clawhub.ai/beatra-ai/skills/xiaohongshu-note-research)
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/xiaohongshu-note-research)
 - [Beatra skill homepage](https://beatra.ai/skills/xiaohongshu-note-research)
 - [Looking up notes](references/note-lookup.md)
 - [Writing the research memo](references/research-memo.md)
 - [Note research workflow](references/workflow.md)
 - [Installation and authentication](references/installation-and-auth.md)
-- [MCP connection](references/mcp-connection.md)
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
-- [Tasks and results](references/tasks-and-results.md)
+- [MCP connection](references/mcp-connection.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
 - [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 
@@ -52,15 +51,15 @@ Mitigation: Confirm each lookup separately, quote the live price before executio
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown research memo with optional command snippets and JSON task or billing facts]
+**Output Format:** [Markdown research memo with optional shell commands and structured task or billing facts]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [When a paid lookup runs, the skill reports the returned payload, task ID, terminal status, and billing.net_charged_credits.]
+**Other Properties Related to Output:** [May include task ID, terminal status, returned lookup payload, and billing.net_charged_credits when a paid lookup runs.]
 
 ## Skill Version(s):
 
-0.1.1 (source: server release metadata and artifact manifest)
+0.1.2 (source: server release evidence and manifest.json)
 
 ## Ethical Considerations:
 
