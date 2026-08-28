@@ -1,0 +1,44 @@
+{
+  "changelog": "- Initial release of honeybook-fpx for reading HoneyBook client-portal data using fpx CLI and curl, without requiring the honeybook-mcp server.\n- Supports one-time session capture from a signed-in browser tab via the Transporter extension; subsequent data access uses plain curl.\n- Handles contracts, invoices, proposals, payment methods, and workspace status by extracting session and user tokens from localStorage and crafting authenticated API requests.\n- Documents error handling, rate limiting, API version management, and required call headers for successful automation.\n- Provides detailed setup instructions and ready-to-use shell command patterns for HoneyBook API access outside the official server environment.",
+  "created_at": 1787916882625,
+  "display_name": "honeybook-fpx",
+  "fetched_at": 1787930990115,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/requests.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787917729885,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "chrischall",
+    "handle": "chrischall",
+    "user_id": "s17cjx1a349nz5apaqp02vgz4h85728z"
+  },
+  "slug": "honeybook-fpx",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/honeybook-fpx",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=honeybook-fpx&ownerHandle=chrischall",
+    "page_url": "https://clawhub.ai/chrischall/skills/honeybook-fpx"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 18,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read HoneyBook client-portal data (contracts, invoices, proposals, payment methods, workspace status) from a shell with the fpx CLI (@fetchproxy/cli) instead of running the honeybook-mcp server \u2014 capture a vendor session once via the signed-in browser tab, then curl api.honeybook.com directly. Use when you want HoneyBook data without the MCP, in a script, or on a machine where the MCP isn't installed.",
+  "updated_at": 1787916961445,
+  "version": "0.5.0"
+}
