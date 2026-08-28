@@ -1,6 +1,6 @@
 ## Description:
 
-This skill helps a parent use a SchoolPass parent account to check student arrival and dismissal details, pickup drivers, dismissal locations, pickup changes, and confirmed dismissal-change actions.
+This skill helps an agent answer questions about a child's SchoolPass arrival and dismissal information through a parent account.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users with SchoolPass parent accounts use this skill to let an agent read family, student, driver, calendar, school, and dismissal-location information. It can also prepare and submit or cancel real dismissal changes only after an explicit confirmation step.
+External users and their agents use this skill to read parent-scoped SchoolPass data such as linked students, arrival and dismissal calendars, pickup changes, authorized drivers, dismissal locations, and school information. It can also prepare confirm-gated dismissal changes that require explicit user confirmation before submission.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill handles SchoolPass parent credentials and sensitive family, student, driver, calendar, and dismissal information.
+Risk: The skill handles sensitive child, family, password, calendar, driver, and dismissal-change data.
 
-Mitigation: Install only when that access is acceptable, avoid exposing passwords or session tokens in conversation, and consider pinning the npm package version in the MCP configuration.
+Mitigation: Install only when the user accepts this data access, keep credentials out of conversation output, and restrict use to the intended parent account.
 
-Risk: Confirmed dismissal-change tools can make real changes to a child's dismissal plan.
+Risk: Dismissal-change tools can affect a child's real-world arrival or dismissal plan.
 
-Mitigation: Require the dry-run preview and explicit user confirmation before submitting or canceling a dismissal change.
+Mitigation: Show the preview and require explicit confirmation before submitting or canceling a dismissal change.
+
+Risk: Local session persistence may be unacceptable in some environments.
+
+Mitigation: Disable or relocate the session cache when local token persistence does not meet the deployment's security requirements.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/chrischall/skills/schoolpass)
-- [npm Package](https://www.npmjs.com/package/schoolpass-mcp)
-- [Source Repository](https://github.com/chrischall/schoolpass-mcp)
+- [ClawHub skill page](https://clawhub.ai/chrischall/skills/schoolpass)
+- [npm package](https://www.npmjs.com/package/schoolpass-mcp)
+- [Source repository](https://github.com/chrischall/schoolpass-mcp)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, configuration, shell commands, guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline JSON configuration and tool-result summaries]
+**Output Format:** [Markdown with JSON configuration examples, tool guidance, and concise user-facing text]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include dry-run previews for dismissal changes before confirmed submission.]
+**Other Properties Related to Output:** [May produce previews for dismissal changes and should avoid exposing passwords or session tokens.]
 
 ## Skill Version(s):
 
-0.2.0 (source: release evidence)
+0.3.0 (source: server release evidence)
 
 ## Ethical Considerations:
 
