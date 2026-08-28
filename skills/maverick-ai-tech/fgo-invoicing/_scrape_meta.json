@@ -1,0 +1,47 @@
+{
+  "changelog": "- Adds strict `--input` file safety: only `.json` files under allowed directories are accepted.\n- Rejects any `--input` path using directory traversal or absolute references that escape approved workspaces.\n- Prevents accidental access to sensitive files (e.g. `/etc/passwd`, private keys) via input arguments.\n- No changes to workflow or API usage.",
+  "created_at": 1772196739903,
+  "display_name": "FGO Invoicing",
+  "fetched_at": 1787893750929,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/fgo-api.md",
+    "references/invoice-example.json",
+    "scripts/fgo_cli.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779964468875,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Maverick",
+    "handle": "maverick-ai-tech",
+    "user_id": "s1739hrwh7208jxhr18qg7tgas85tx88"
+  },
+  "slug": "fgo-invoicing",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/fgo-invoicing",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=fgo-invoicing&ownerHandle=maverick-ai-tech",
+    "page_url": "https://clawhub.ai/maverick-ai-tech/skills/fgo-invoicing"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 874,
+    "installs": 24,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Issue FGO.ro invoices through the FGO API with local automation. Use for FGO tasks such as validating invoice payloads, issuing invoices, checking invoice st...",
+  "updated_at": 1778491660149,
+  "version": "1.0.1"
+}
