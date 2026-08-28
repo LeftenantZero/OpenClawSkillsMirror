@@ -1,6 +1,6 @@
 ## Description:
 
-WorldSim is an agent skill for creating and running persistent local story worlds with interactive narrative, roleplay, SillyTavern character-card import, saves, loads, rollback, and state repair.
+WorldSim is an agent skill that runs persistent local story worlds, imports SillyTavern character cards, advances interactive roleplay, and supports save, load, rollback, reset, and state repair workflows.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-Players, writers, roleplay creators, and developers use WorldSim to create or enter interactive worlds, continue story sessions, import character cards, and maintain local narrative state across turns. It is intended for agent clients that can run Python scripts and manage local skill files.
+External users, roleplay players, and narrative creators use this skill to create and run persistent simulated worlds, generate character and scene files, import compatible character cards, and continue stories across sessions.
 
 ### Deployment Geography for Use:
 
@@ -22,41 +22,41 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: WorldSim writes, restores, and may delete local story-world state under a worlds directory.
+Risk: The skill stores story state locally and can modify or delete world records.
 
-Mitigation: Install only when persistent local story worlds are expected, keep WORLDSIM_WORLDS_DIR pointed at a dedicated folder, and review destructive operations before confirming them.
+Mitigation: Use a dedicated WORLDSIM_WORLDS_DIR, keep backups for important worlds, and review reset, load, delete, and path-bearing commands before execution.
 
-Risk: Stories and imported character cards may contain sensitive personal data or prompt-injection content supplied by users or third-party files.
+Risk: Some helper scripts may read or write outside the declared world folder when crafted paths are supplied.
 
-Mitigation: Avoid putting secrets or sensitive personal information into stories or character cards, and complete the built-in import review before generating a character file.
+Mitigation: Import only files you selected, avoid untrusted file paths, and run the skill with filesystem access limited to the intended worlds directory.
 
-Risk: The --force option can bypass interactive confirmation for destructive maintenance commands.
+Risk: Stories and imported character cards can contain sensitive personal data, secrets, prompt injection, or copyrighted material.
 
-Mitigation: Use --force only in controlled maintenance or test contexts after confirming the target world and operation.
+Mitigation: Do not place secrets or sensitive personal information in story content, and perform the documented import-card risk review before generating character files.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/zhaowh/skills/worldsim)
-- [README.en.md](README.en.md)
-- [LICENSE](LICENSE)
-- [Command Reference](references/commands.md)
-- [Write Protocol](references/write_protocol.md)
-- [Disclosures](references/disclosures.md)
+- [ClawHub WorldSim skill page](https://clawhub.ai/zhaowh/skills/worldsim)
+- [GitHub releases](https://github.com/zhaowh/worldsim/releases)
+- [WorldSim example story](https://worldsim.life/welcome_center.htm)
+- [Command reference](references/commands.md)
+- [Import card reference](references/import_cards.md)
+- [Disclosures and destructive-operation confirmations](references/disclosures.md)
 - [Evaluation README](evals/README.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Files, Shell commands, Configuration, Guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown narrative text plus local Markdown and YAML world-state files]
+**Output Format:** [Markdown narrative text, YAML-backed world state, and local Python command invocations]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Maintains persistent local world data under worlds/ or WORLDSIM_WORLDS_DIR; requires python3 and PyYAML.]
+**Other Properties Related to Output:** [Persists world records under worlds/ by default or under WORLDSIM_WORLDS_DIR when configured.]
 
 ## Skill Version(s):
 
-0.20.1 (source: frontmatter and server release metadata)
+0.21.0 (source: SKILL.md frontmatter and server release metadata)
 
 ## Ethical Considerations:
 
