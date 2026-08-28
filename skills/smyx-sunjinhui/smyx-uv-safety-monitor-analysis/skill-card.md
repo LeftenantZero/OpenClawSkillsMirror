@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes pet-area UV disinfection images or videos through a cloud service to produce structured UV exposure risk reports, alerts, recommendations, and report links.
+This skill sends pet or home video inputs to the publisher's cloud service to analyze whether pets appear in a UV disinfection area and returns structured risk reports, recommendations, and report links.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to submit camera media or media URLs from pet UV disinfection areas and receive structured risk analysis, recommendations, and historical report listings. The skill is best treated as a cloud report generator rather than a guaranteed real-time UV shutoff system.
+External users and developers use this skill to submit UV disinfection-area pet videos or video URLs for cloud analysis, receive structured monitoring results, and query historical reports. It is intended as safety-support guidance, not as a standalone medical or automatic UV-lamp shutoff system.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,39 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uploads local media or submits media URLs to a cloud analysis backend, so pet-area images, videos, URLs, and account-linked report data may leave the local workspace.
+Risk: Pet or home video, video URLs, and report queries are sent to the publisher's cloud service.
 
-Mitigation: Use only media and URLs that are acceptable to send to the backend, and review generated report links before sharing them.
+Mitigation: Use the skill only with media and URLs that are appropriate to share with the publisher's service.
 
-Risk: The release evidence says the skill overstates real-time protection and should not be treated as a guaranteed UV shutoff system.
+Risk: The skill makes safety-critical and automatic-control claims that are not supported by the local code evidence.
 
-Mitigation: Use the output as advisory risk reporting and keep independent physical or smart-home controls for confirming that UV lamps are off before pets can enter.
+Mitigation: Treat results as advisory and keep independent UV-lamp controls, supervision, and emergency procedures in place.
 
-Risk: The release evidence says the skill silently creates or reuses account identity state.
+Risk: The skill can create and persist a local identity with stored tokens.
 
-Mitigation: Review or clear workspace data files and generated account tokens when persistent identity linkage is not desired.
+Mitigation: Review local identity and token storage before deployment and clear stored credentials when the skill should no longer retain access.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-uv-safety-monitor-analysis)
+- [Publisher profile](https://clawhub.ai/user/smyx-sunjinhui)
+- [API documentation](references/api_doc.md)
+- [Analysis API documentation](skills/smyx_analysis/references/api_doc.md)
 - [Skill demo](https://lifeemergence.com/sample.html)
-- [API interface documentation](references/api_doc.md)
-- [SMYX analysis API documentation](skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown text with structured JSON-style analysis and report links]
+**Output Format:** [Markdown and JSON-formatted structured analysis text]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include cloud report export links and historical report-list output.]
+**Other Properties Related to Output:** [May include cloud report links and exported report image URLs; accepts local video files or video URLs.]
 
 ## Skill Version(s):
 
-1.0.7 (source: ClawHub release metadata; artifact frontmatter says 1.0.12)
+1.0.8 (source: server release metadata; artifact frontmatter says 1.0.12)
 
 ## Ethical Considerations:
 
