@@ -1,6 +1,6 @@
 ## Description:
 
-Automatically detects and counts livestock or poultry individuals from barn or passage camera images/videos, outputting total headcount with confidence for fast inventory.
+Detects and counts livestock or poultry in barn or passage camera images and videos, returning total headcount, confidence, structured results, and report links.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and farm operations teams use this skill to count livestock or poultry from barn and passage camera images or videos, producing inventory counts, confidence, and report links for faster stocktaking.
+Farm operators and external users can use this skill to count pigs, chickens, sheep, or other livestock from images, videos, or URLs for inventory checks, batch transfer counts, and passage counting. The skill returns structured count results and can list prior cloud reports associated with the current internal identity.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,39 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uploads livestock images, videos, or submitted URLs to the publisher's cloud service.
+Risk: Barn or livestock media and report metadata may be sent to the configured Life Emergence service.
 
-Mitigation: Use only footage appropriate for third-party cloud processing and review endpoint configuration before handling sensitive farm media.
+Mitigation: Use only media that is appropriate to share with that service and avoid submitting sensitive farm, personnel, or location information unless that transfer is intended.
 
-Risk: The skill creates or reuses a persistent internal identity and stores local authentication tokens in the workspace data directory.
+Risk: The skill can automatically create or reuse an internal identity, query cloud report history, and store account tokens or profile data locally.
 
-Mitigation: Run in an isolated workspace when needed and clear local skill data or credentials according to the deployment's retention policy.
+Mitigation: Run it in an isolated workspace and avoid placing sensitive identity files or API keys where the skill can read them unless that behavior is intended.
 
-Risk: Cloud history reports may be retrieved automatically for the active internal identity.
+Risk: Livestock counts can be wrong in dense, occluded, unstable, underexposed, or overexposed footage.
 
-Mitigation: Confirm that report history access matches the intended user or tenant before using the skill in shared environments.
+Mitigation: Use stable camera views that cover the counting area and review results against existing farm inventory or transfer-count procedures before operational use.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-livestock-counting-analysis)
-- [API documentation](references/api_doc.md)
-- [Shared analysis API documentation](skills/smyx_analysis/references/api_doc.md)
+- [Publisher profile](https://clawhub.ai/user/smyx-sunjinhui)
 - [Skill demo](https://lifeemergence.com/sample.html)
+- [API interface document](artifact/references/api_doc.md)
+- [Analysis API interface document](artifact/skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Analysis, Markdown, JSON, Files, Shell commands, Guidance]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown reports or JSON-style structured analysis with optional saved output files]
+**Output Format:** [Markdown or JSON-like structured text with optional report links and saved output files]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Outputs can include total count, partition counts, confidence, analysis time, and report links.]
+**Other Properties Related to Output:** [May call a configured Life Emergence service for image/video analysis and cloud report-history queries.]
 
 ## Skill Version(s):
 
-1.0.8 (source: server release metadata and SKILL.md frontmatter)
+1.0.9 (source: server-resolved ClawHub release metadata; SKILL.md frontmatter reports 1.0.8)
 
 ## Ethical Considerations:
 
