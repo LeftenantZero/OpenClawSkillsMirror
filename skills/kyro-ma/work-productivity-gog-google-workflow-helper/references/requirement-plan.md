@@ -2,7 +2,7 @@
 
 ## Live Requirement
 
-Validated demand: Agent users show strong demand for Gog-style workflows on Clawhub. They need practical help fixing bugs, hardening setup and safety, improving reliability, or creating adjacent skills inspired by the same job-to-be-done. This requirement is supported by 9 separate online signals across 3 source families, so it represents broader demand rather than a single isolated request.
+Validated demand: Agent users show strong demand for Gog-style workflows on Clawhub. They need practical help fixing bugs, hardening setup and safety, improving reliability, or creating adjacent skills inspired by the same job-to-be-done. This requirement is supported by 12 separate online signals across 3 source families, so it represents broader demand rather than a single isolated request.
 
 ## Audience
 
@@ -20,12 +20,12 @@ Demand: 70/70
 
 Local feasibility: 30/30
 
-Evidence coverage: 9 signals across 3 source families.
+Evidence coverage: 12 signals across 3 source families.
 
 Scoring rationale:
 
-- Evidence count: 9; required minimum: 3.
-- Distinct source families: 3; sources: clawhub, github, v2ex.
+- Evidence count: 12; required minimum: 3.
+- Distinct source families: 3; sources: clawhub, hacker-news, segmentfault.
 - Demand score: 70/70 based on corroboration, source diversity, and professional/community signal.
 - Local feasibility score: 30/30.
 - Implementation is a documentation, workflow, code, or analysis skill that can run on ordinary CPU hardware.
@@ -33,15 +33,18 @@ Scoring rationale:
 
 ## Evidence
 
-- clawhub-popular-skill (2026-05-11T07:48:49.679000+00:00): [Popular Clawhub skill demand: Gog has 191,885 downloads](https://clawhub.ai/skills/gog)
-- clawhub-popular-skill (2026-05-11T07:50:52.489000+00:00): [Popular Clawhub skill demand: ontology has 197,109 downloads](https://clawhub.ai/skills/ontology)
-- clawhub-popular-skill (2026-06-12T12:48:37.834000+00:00): [Popular Clawhub skill demand: Github has 196,554 downloads](https://clawhub.ai/skills/github)
-- clawhub-popular-skill (2026-05-11T07:50:48.771000+00:00): [Popular Clawhub skill demand: Agent Browser has 154,217 downloads](https://clawhub.ai/skills/agent-browser-clawdbot)
-- clawhub-popular-skill (2026-05-18T20:48:40.034000+00:00): [Popular Clawhub skill demand: Obsidian has 108,303 downloads](https://clawhub.ai/skills/obsidian)
-- clawhub-popular-skill (2026-05-11T07:48:49.679000+00:00): [Popular Clawhub skill demand: Nano Pdf has 120,628 downloads](https://clawhub.ai/skills/nano-pdf)
-- clawhub-popular-skill (2026-05-11T09:38:07.825000+00:00): [Popular Clawhub skill demand: PollyReach has 100,970 downloads](https://clawhub.ai/skills/pollyreach)
-- github-issues (2026-08-26T03:48:59+00:00): [Spend -"Missing Merchant" error displayed after submitting split to employer via "More" menu](https://github.com/Expensify/App/issues/99500)
-- v2ex-latest (2026-08-26T02:56:11+00:00): [写了个相机 RAW 照片 GPS 轨迹对齐、智能插值与离线反地理编码工具 Photools](https://www.v2ex.com/t/1237284)
+- clawhub-popular-skill (2026-05-11T07:48:49.679000+00:00): [Popular Clawhub skill demand: Gog has 192,041 downloads](https://clawhub.ai/skills/gog)
+- clawhub-popular-skill (2026-05-11T07:50:52.489000+00:00): [Popular Clawhub skill demand: ontology has 197,281 downloads](https://clawhub.ai/skills/ontology)
+- clawhub-popular-skill (2026-06-12T12:48:37.834000+00:00): [Popular Clawhub skill demand: Github has 196,734 downloads](https://clawhub.ai/skills/github)
+- clawhub-popular-skill (2026-05-11T07:50:48.771000+00:00): [Popular Clawhub skill demand: Agent Browser has 154,459 downloads](https://clawhub.ai/skills/agent-browser-clawdbot)
+- clawhub-popular-skill (2026-05-18T20:48:40.034000+00:00): [Popular Clawhub skill demand: Obsidian has 108,462 downloads](https://clawhub.ai/skills/obsidian)
+- clawhub-popular-skill (2026-05-11T07:48:49.679000+00:00): [Popular Clawhub skill demand: Nano Pdf has 120,738 downloads](https://clawhub.ai/skills/nano-pdf)
+- clawhub-popular-skill (2026-05-11T09:38:07.825000+00:00): [Popular Clawhub skill demand: PollyReach has 101,023 downloads](https://clawhub.ai/skills/pollyreach)
+- hacker-news-ask-hn (2026-08-27T14:38:20+00:00): [Tell HN: Gmail can mark legit mail from google.com as spam](https://news.ycombinator.com/item?id=49465624)
+- segmentfault-search (2026-08-28T04:05:20.227072+00:00): [HarmonyOS 开发者社区](https://segmentfault.com/brand/harmonyos-next)
+- segmentfault-search (2026-08-28T04:05:20.227072+00:00): [javascript](https://segmentfault.com/t/javascript)
+- segmentfault-search (2026-08-28T04:05:20.227072+00:00): [typescript](https://segmentfault.com/t/typescript)
+- segmentfault-search (2026-08-28T04:05:20.227072+00:00): [ONES 研发管理](https://ones.cn/?utm_term=ONES%C2%A0%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86&utm_campaign=%E9%A6%96%E9%A1%B5%E6%A0%87%E7%AD%BE&_channel_track_key=myqX1C0f&utm_source=%E6%80%9D%E5%90%A6%E8%BD%AC%20ONES)
 
 ## How The Skill Meets The Requirement
 

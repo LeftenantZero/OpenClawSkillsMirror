@@ -1,6 +1,6 @@
 ## Description:
 
-Helps agent users, skill authors, maintainers, and teams turn Gog-style Google Workspace workflow needs into practical plans, checklists, artifacts, analysis, or implementation support.
+Helps agent users and skill maintainers turn Gog-style Google Workspace workflow demand into practical plans, checklists, analyses, code changes, and verification notes.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-AI-agent users, skill authors, maintainers, and teams use this skill to adapt popular Gog-style work-productivity patterns into reliable workflows, bug-fix plans, setup hardening checklists, or adjacent skills. It is intended for practical local-friendly guidance rather than executing external tools itself.
+External agent users, skill authors, maintainers, and teams use this skill to adapt popular Gog-style Google workflow patterns into reliable local-hardware-friendly plans, templates, scripts, checklists, analyses, and implementation support.
 
 ### Deployment Geography for Use:
 
@@ -22,35 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill may activate on broad Google Workspace, CLI, or bug-fix wording.
+Risk: Broad implicit trigger wording may activate the skill for general Google, Gmail, Drive, Calendar, CLI, or bug-fix requests.
 
-Mitigation: Use explicit invocation or narrower trigger configuration when only Gog-style workflow planning is intended.
+Mitigation: Narrow the trigger language or disable implicit invocation when precise routing is needed.
 
-Risk: The skill produces planning, workflow, and implementation guidance that may be incomplete or unsuitable for a specific environment.
+Risk: Workflow outputs may include plans, scripts, or code changes that affect workspace setup, safety, or reliability.
 
-Mitigation: Review the generated artifact against the user's stated constraints and success criteria before applying changes.
+Mitigation: Review generated artifacts against user constraints and run normal tests or scans before deployment.
 
 ## Reference(s):
 
 - [Requirement Plan](references/requirement-plan.md)
-- [ClawHub skill page](https://clawhub.ai/kyro-ma/skills/work-productivity-gog-google-workflow-helper)
-- [Gog demand signal](https://clawhub.ai/skills/gog)
-- [Google Workspace adjacent issue signal](https://github.com/Expensify/App/issues/99500)
-- [Community workflow demand signal](https://www.v2ex.com/t/1237284)
+- [ClawHub Skill Page](https://clawhub.ai/kyro-ma/skills/work-productivity-gog-google-workflow-helper)
+- [Popular ClawHub Skill Demand: Gog](https://clawhub.ai/skills/gog)
+- [Popular ClawHub Skill Demand: GitHub](https://clawhub.ai/skills/github)
+- [Tell HN: Gmail can mark legitimate google.com mail as spam](https://news.ycombinator.com/item?id=49465624)
+- [SegmentFault JavaScript Topic](https://segmentfault.com/t/javascript)
+- [SegmentFault TypeScript Topic](https://segmentfault.com/t/typescript)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown or plain text guidance with optional code, shell command, checklist, and configuration snippets]
+**Output Format:** [Markdown with optional code blocks, shell commands, configuration snippets, checklists, and verification notes]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [No executable code is bundled; outputs should include assumptions, validation notes, and remaining risks when relevant.]
+**Other Properties Related to Output:** [Outputs are tailored to the user's immediate workflow and should expose assumptions, limits, required inputs, and any remaining risks.]
 
 ## Skill Version(s):
 
-0.20260826.40329 (source: server release evidence)
+0.20260828.40337 (source: release evidence)
 
 ## Ethical Considerations:
 
