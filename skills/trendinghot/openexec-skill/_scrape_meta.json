@@ -1,0 +1,54 @@
+{
+  "changelog": "## Summary:  \nSecurity and documentation improvements; no runtime behavior changes.\n\n- Added explicit statement of execution safety guarantees (no dynamic loading, no runtime downloads, no code eval) to SKILL.md.\n- Enhanced SECURITY.md with clarified safety model and operator responsibilities.\n- Documentation files updated to emphasize static handler registry and immutable runtime.\n- No changes to service endpoints, environment variables, or execution logic.",
+  "created_at": 1771223458875,
+  "display_name": "OpenExec \u2014 Deterministic Execution Boundary for Agent Systems",
+  "fetched_at": 1787901286547,
+  "files": [
+    "README.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/openexec.example.json",
+    "main.py",
+    "openexec/__init__.py",
+    "openexec/approval_validator.py",
+    "openexec/clawshield_client.py",
+    "openexec/crypto.py",
+    "openexec/db.py",
+    "openexec/engine.py",
+    "openexec/models.py",
+    "openexec/receipts.py",
+    "openexec/registry.py",
+    "openexec/settings.py",
+    "openexec/tables.py",
+    "replit.md",
+    "requirements.txt",
+    "scripts/install.sh",
+    "scripts/run.sh",
+    "skill-card.md",
+    "tests/test_constitutional.py",
+    "tests/test_demo_flow.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "trendinghot",
+    "handle": "trendinghot",
+    "user_id": "s176d1rvz3j0sgbe6bnspw486x885vqb"
+  },
+  "slug": "openexec-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openexec-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openexec-skill&ownerHandle=trendinghot",
+    "page_url": "https://clawhub.ai/trendinghot/skills/openexec-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1621,
+    "installs": 50,
+    "stars": 2,
+    "versions": 10
+  },
+  "summary": "Source-distributed deterministic execution service with pinned dependencies. Runs only with a signed approval artifact (ClawShield mode) and emits verifiable...",
+  "updated_at": 1778491552996,
+  "version": "0.1.10"
+}
