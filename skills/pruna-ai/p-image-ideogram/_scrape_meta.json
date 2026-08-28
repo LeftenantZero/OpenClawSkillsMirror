@@ -1,8 +1,8 @@
 {
-  "changelog": "p-image-ideogram 1.0.9 changelog:\n\n- Expanded README and guidance on when and how to use `p-image-ideogram` vs. related skills\n- Added detailed agent habits and default parameter settings for various use cases (thinking, upsampling, image size)\n- Included tables comparing `p-image-ideogram` with `p-image`, and when to use each skill\n- Provided explicit instructions for typesetting, structured layout (JSON caption), and vertical profiles\n- Added fidelity checks and prompt-crafting rules to ensure faithful and controlled outputs",
+  "changelog": "p-image-ideogram 1.0.10 adds support for a new \"very high\" quality tier and updates configuration practices.\n\n- Adds the premium path: use thinking: \"very high\" + image_size: \"2K\" for maximum quality or complex multi-text/panel scenes (costs ~2\u00d7; confirm with user before using).\n- Documents five thinking levels (\"very low\", \"low\", \"medium\", \"high\", \"very high\") in place of four.\n- Updates the agent guidance and parameter table for the new knob.\n- Removes an obsolete skill-card.md file.",
   "created_at": 1784041430616,
   "display_name": "p-image-ideogram",
-  "fetched_at": 1787773552832,
+  "fetched_at": 1787931351775,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -25,12 +25,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 328,
+    "downloads": 368,
     "installs": 0,
     "stars": 0,
-    "versions": 3
+    "versions": 4
   },
   "summary": "Use when photo generation needs more control \u2014 photoreal results, text in the image, or structured JSON with hex colors and bounding boxes. Simpler photo generation, edits, and video use other skills in the suite.",
-  "updated_at": 1785824280631,
-  "version": "1.0.9"
+  "updated_at": 1787903782261,
+  "version": "1.0.10"
 }
