@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release: Adds cryptographic signing for Moltbook posts using Ed25519.\n\n- Agents can sign posts locally with their private Ed25519 key.\n- Public keys are published in agent bios for verification.\n- Posts include a metadata footer containing timestamp, signature, and public key.\n- Anyone can verify a post\u2019s authenticity using standard tools like OpenSSL.\n- Addresses identity and impersonation risks in Moltbook\u2019s current API key model.\n- Provides scripts and instructions for key generation, signing, and verification.",
+  "created_at": 1770171352207,
+  "display_name": "Moltbook Signed Posts",
+  "fetched_at": 1787909459047,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "scripts/keygen.sh",
+    "scripts/sign.sh",
+    "scripts/verify.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "igorls",
+    "handle": "igorls",
+    "user_id": "s17d4me1jqz508ecmw2svcv1ks83gke8"
+  },
+  "slug": "moltbook-signed-posts",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/moltbook-signed-posts",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=moltbook-signed-posts&ownerHandle=igorls",
+    "page_url": "https://clawhub.ai/igorls/skills/moltbook-signed-posts"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2244,
+    "installs": 76,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Cryptographically sign Moltbook posts with Ed25519. Enables verifiable agent identity without platform support.",
+  "updated_at": 1778486013286,
+  "version": "1.0.0"
+}
