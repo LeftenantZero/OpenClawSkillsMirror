@@ -1,0 +1,42 @@
+{
+  "changelog": "Version 1.0.3\n\n- Updated deduplication instructions: clarified that on MCP platforms, multiple `notion-search` calls against the same `data_source_url` must be run sequentially (not in parallel) to prevent errors.\n- Added guidance to deduplicate results by page id before fetching with `notion-fetch`.\n- No changes to code; documentation improvements for safety and correctness.",
+  "created_at": 1772456478409,
+  "display_name": "memory-to-notion",
+  "fetched_at": 1787891635999,
+  "files": [
+    "SKILL.md",
+    "_meta.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089756361,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Defang Li",
+    "handle": "smilelight",
+    "user_id": "s17bt93a83ag9heaxp81ya4fy986608s"
+  },
+  "slug": "memory-to-notion",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memory-to-notion",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memory-to-notion&ownerHandle=smilelight",
+    "page_url": "https://clawhub.ai/smilelight/skills/memory-to-notion"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 909,
+    "installs": 26,
+    "stars": 0,
+    "versions": 5
+  },
+  "summary": "Summarize and archive conversation memories to Notion. Trigger when the user says \"summarize memory\", \"archive conversation\", \"save memories\", \"sync memories...",
+  "updated_at": 1778491691403,
+  "version": "1.0.4"
+}
