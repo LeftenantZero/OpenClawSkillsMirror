@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes in-cabin DMS camera images or video to estimate driver head pose and report head-down, side-view, or roll-abnormality distraction events with alerts and report links.
+Analyzes in-cabin DMS video or images to estimate driver head pose and report head-down or side-view distraction events.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External developers and fleet-safety integrators use this skill to submit driver-facing DMS images, videos, or URLs for cloud analysis, then retrieve structured distraction warnings and historical reports.
+Developers and fleet-safety operators use this skill to analyze driver-facing DMS camera media, identify head-down or side-view distraction events, and receive structured reports, warnings, and report links.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Driver or passenger video, video URLs, identity-linked metadata, and report queries may be sent to a third-party backend.
+Risk: Driver-facing DMS media can contain sensitive biometric and workplace monitoring data and may be uploaded for cloud processing.
 
-Mitigation: Use only with clear consent, approved media sources, and documented retention, deletion, and privacy handling for fleet or workplace deployments.
+Mitigation: Use only with informed driver or employee consent, confirm the configured API destination before execution, and avoid uploading media that is outside the approved monitoring purpose.
 
-Risk: The skill silently creates or reuses local identity records and stores authentication tokens locally.
+Risk: The skill can create or reuse cloud identity state, query report history, and store identity or token data in the workspace data directory.
 
-Mitigation: Run in a controlled workspace, review token storage before deployment, rotate or clear stored credentials as needed, and avoid shared local environments.
+Mitigation: Run it in a controlled workspace, review local data retention requirements, and clear stored credentials or history when the deployment no longer needs them.
 
-Risk: Packaged configuration includes development or private HTTP endpoint settings.
+Risk: Head-pose estimates may be unreliable with poor camera placement, low frame rate, occlusion, sunglasses, masks, hats, glare, or vehicle vibration.
 
-Mitigation: Verify the active endpoint configuration before use and require production-approved HTTPS endpoints for operational deployments.
+Mitigation: Require clear DMS footage that meets the documented frame-rate and visibility constraints, and treat alerts as driver-assistance signals rather than sole safety decisions.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/18072937735/skills/smyx-driver-head-pose-abnormality-analysis)
-- [API Documentation](references/api_doc.md)
-- [Shared Analysis API Documentation](skills/smyx_analysis/references/api_doc.md)
-- [Skill Demo](https://lifeemergence.com/sample.html)
+- [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-driver-head-pose-abnormality-analysis)
+- [Driver head-pose API reference](references/api_doc.md)
+- [Shared analysis API reference](skills/smyx_analysis/references/api_doc.md)
+- [Skill demo](https://lifeemergence.com/sample.html)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, shell commands]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown text with JSON-formatted analysis content and report links.]
+**Output Format:** [Markdown or JSON-like structured analysis text with report links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include cloud report export URLs and historical report lists.]
+**Other Properties Related to Output:** [May save the rendered analysis text to a caller-specified output file.]
 
 ## Skill Version(s):
 
-1.0.9 (source: server release metadata)
+1.0.10 (source: server release metadata; artifact frontmatter reports 1.0.12)
 
 ## Ethical Considerations:
 
