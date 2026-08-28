@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes pet food-bowl videos or video URLs to estimate eating start and end times, feeding duration, eating speed, and slow-feed intervention recommendations without providing disease diagnosis.
+Analyzes pet food-bowl videos or video URLs to estimate feeding start and end times and eating speed, then returns non-diagnostic slow-feed intervention guidance when eating appears too fast.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to analyze pet eating behavior from bowl-area videos, generate structured reports, and decide whether slow-feed reminders or device-side interventions should be considered. It is intended for pet health management and smart slow-feeder workflows, not veterinary diagnosis.
+External users and developers use this skill in smart slow-feeder bowl and pet-care workflows to analyze food-bowl videos, review structured feeding-speed results, and retrieve prior cloud reports. The skill is intended for behavior and feeding-speed reference only, not disease diagnosis or treatment advice.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Pet videos and report history are processed through cloud APIs, which may expose sensitive household or account-linked media.
+Risk: Pet feeding videos or video URLs may be sent to the configured remote backend for analysis.
 
-Mitigation: Use only videos appropriate for cloud processing and require the publisher to disclose media retention, processing location, and access controls before broad deployment.
+Mitigation: Use non-sensitive footage, confirm the configured endpoint, and avoid household footage that should not leave the local environment.
 
-Risk: The skill silently creates or reuses account identity and stores access tokens locally.
+Risk: The workflow can silently create or reuse a backend identity and fetch cloud report history.
 
-Mitigation: Run in an isolated workspace, review local token storage behavior, and ensure users know how account identity is provisioned and revoked.
+Mitigation: Run in an isolated workspace and verify account, retention, and report-access behavior with the publisher before deployment.
 
-Risk: Development or internal API endpoint configuration can route analysis or history queries to unintended services.
+Risk: Backend tokens may be stored in the workspace database.
 
-Mitigation: Replace dev/internal endpoints with production HTTPS endpoints and verify authorization on history-report queries before commercial use.
-
-Risk: Eating-speed analysis could be mistaken for medical advice.
-
-Mitigation: Present results as behavioral observations and slow-feeding suggestions only, and direct medical concerns to a veterinarian.
+Mitigation: Limit access to the workspace, rotate credentials after testing, and review token storage and cleanup expectations before production use.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/18072937735/skills/smyx-pet-eating-speed-slow-feed-analysis)
-- [Skill Demo](https://lifeemergence.com/sample.html)
-- [Pet Eating Speed API Documentation](artifact/references/api_doc.md)
-- [SMYX Analysis API Documentation](artifact/skills/smyx_analysis/references/api_doc.md)
+- [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-pet-eating-speed-slow-feed-analysis)
+- [Publisher profile](https://clawhub.ai/user/18072937735)
+- [Skill demo](https://lifeemergence.com/sample.html)
+- [API interface document](artifact/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, json, shell commands, guidance]
+**Output Type(s):** [Text, Markdown, JSON, Guidance]
 
-**Output Format:** [Markdown or JSON structured analysis report with timestamps, speed estimates, risk notes, recommendations, and report links]
+**Output Format:** [Structured report text, Markdown tables for report history, or JSON output when requested]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May query cloud-hosted analysis and history-report APIs; local file or URL video inputs are supported.]
+**Other Properties Related to Output:** [May include feeding timestamps, eating-speed estimates, threshold comparison, intervention advice, and cloud report links when available.]
 
 ## Skill Version(s):
 
-1.0.9 (source: server release evidence; artifact frontmatter says 1.0.10)
+1.0.10 (source: server release metadata; artifact frontmatter states 1.0.12)
 
 ## Ethical Considerations:
 
