@@ -1,0 +1,77 @@
+{
+  "changelog": "Version 2.0.2\n\n- Expanded \"Security Considerations\" in SKILL.md with detailed guidance on data handling, signing keys, CI use, and local execution.\n- Added best practices and mitigation steps for sensitive artifacts.\n- No changes to core logic or scripts. Documentation and metadata update only.",
+  "created_at": 1772478617649,
+  "display_name": "Reliability Evidence Pack",
+  "fetched_at": 1787891338932,
+  "files": [
+    "CHANGELOG.md",
+    "INTEGRATION.md",
+    "QUICKSTART.md",
+    "SKILL.md",
+    "SPEC.md",
+    "_meta.json",
+    "cli/README.md",
+    "cli/bin/cli.js",
+    "cli/package-lock.json",
+    "cli/package.json",
+    "examples/rep-examples/agent-memory-corruption-recovery/decision_rejection_log.md",
+    "examples/rep-examples/agent-memory-corruption-recovery/error_recovery_log.md",
+    "examples/rep-examples/agent-memory-corruption-recovery/manifest.json",
+    "examples/rep-examples/agent-memory-corruption-recovery/memory_reconstruction_audit.md",
+    "examples/rep-examples/capability-evolver-integration/README.md",
+    "examples/rep-examples/capability-evolver-integration/manifest.json",
+    "examples/rep-examples/tool-execution-failure-recovery/README.md",
+    "github-action/README.md",
+    "github-action/action.yaml",
+    "github-action/entrypoint.sh",
+    "github-action/rep-validate.yml",
+    "manifest.json",
+    "schemas/agent_heartbeat_record.json",
+    "schemas/claim_file.json",
+    "schemas/context_snapshot.json",
+    "schemas/decision_rejection_log.json",
+    "schemas/handoff_acceptance_packet.json",
+    "schemas/memory_reconstruction_audit.json",
+    "schemas/near_miss_reliability_trailer.json",
+    "schemas/signed_divergence_violation_record.json",
+    "scripts/rep-generate-bundle.mjs",
+    "scripts/rep-heartbeat-cron.mjs",
+    "scripts/rep-near-miss-cron.mjs",
+    "scripts/rep-performance-baseline.mjs",
+    "scripts/rep-validate.mjs",
+    "scripts/rep.mjs",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089741105,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ChristineOpenclaw",
+    "handle": "christineopenclaw",
+    "user_id": "s17era1nkdk2bmtw8zrmb53t0983zm0j"
+  },
+  "slug": "reliability-evidence-pack",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/reliability-evidence-pack",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=reliability-evidence-pack&ownerHandle=christineopenclaw",
+    "page_url": "https://clawhub.ai/christineopenclaw/skills/reliability-evidence-pack"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 901,
+    "installs": 25,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Provides tools to record, validate, and report agent operational reliability artifacts using standardized schemas for consistent monitoring and compliance.",
+  "updated_at": 1778491691403,
+  "version": "2.0.2"
+}
