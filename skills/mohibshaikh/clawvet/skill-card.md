@@ -1,6 +1,6 @@
 ## Description:
 
-Use before installing, enabling, or running any third-party OpenClaw skill, and when the user asks whether a skill is safe, should be trusted, scanned, vetted, or installed.
+Use before installing, trusting, or running any third-party OpenClaw skill, and when the user says "scan this skill", "is this skill safe", "vet/check this skill", "should I install this", "audit my skills", or "clawvet".
 
 This skill is ready for commercial/non-commercial use.
 
@@ -10,11 +10,11 @@ This skill is ready for commercial/non-commercial use.
 
 ### License/Terms of Use:
 
-MIT-0
+MIT No Attribution
 
 ## Use Case:
 
-Developers and agents use this skill before installing or trusting third-party OpenClaw skills. It guides them to run ClawVet scans, inspect risk grades and high-severity findings, and decide whether to proceed or stop.
+Developers and agent users use ClawVet to scan untrusted OpenClaw skills before installation, summarize the scanner's grade and findings, and decide whether to install, review, or block the skill.
 
 ### Deployment Geography for Use:
 
@@ -22,32 +22,32 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Running npx can execute external package code.
+Risk: The skill runs a third-party npm scanner through npx.
 
-Mitigation: Before installing or scanning, verify that the npm package invoked by npx is the intended ClawVet scanner and comes from a trusted source.
+Mitigation: Use the default offline scan for untrusted local skills, and enable remote or semantic modes only when network access or an optional Anthropic API key is intended.
 
-Risk: A third-party skill under review may contain misleading instructions or prompt injection.
+Risk: Untrusted skill text can contain prompt injection, hidden payloads, or credential-grabbing instructions.
 
-Mitigation: Treat artifact skill text as untrusted input, surface critical or high findings, and stop on D or F scan grades unless the user explicitly resolves the risk.
+Mitigation: Treat the reviewed skill as untrusted input and rely on the scanner's JSON grade, score, recommendation, and findings before deciding whether to install.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/mohibshaikh/skills/clawvet)
+- [ClawVet on ClawHub](https://clawhub.ai/mohibshaikh/skills/clawvet)
 - [Publisher profile](https://clawhub.ai/user/mohibshaikh)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Markdown, Shell commands]
+**Output Type(s):** [Analysis, Shell commands, Guidance]
 
-**Output Format:** [Markdown with inline bash code blocks and JSON result interpretation guidance]
+**Output Format:** [Markdown with inline shell commands and scanner verdict summaries]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May direct the agent to run npx-based scan or audit commands and report risk grades and high-severity findings.]
+**Other Properties Related to Output:** [Reports the scanner grade, risk score, recommendation, relevant findings, and install, review, or block call.]
 
 ## Skill Version(s):
 
-0.11.1 (source: ClawHub release evidence)
+0.11.2 (source: server release metadata; artifact frontmatter reports 0.11.1)
 
 ## Ethical Considerations:
 
