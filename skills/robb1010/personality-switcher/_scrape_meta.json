@@ -1,0 +1,56 @@
+{
+  "changelog": "Fix: Clean clawhub lock.json on uninstall so skill is properly deregistered",
+  "created_at": 1770573502528,
+  "display_name": "Personality Switcher",
+  "fetched_at": 1787906645914,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "install.sh",
+    "references/personality-template.md",
+    "scripts/cleanup_backups.py",
+    "scripts/create_personality.py",
+    "scripts/delete_personality.py",
+    "scripts/list_personalities.py",
+    "scripts/register_telegram_commands.py",
+    "scripts/rename_personality.py",
+    "scripts/restore_personality.py",
+    "scripts/switch_personality.py",
+    "scripts/unregister_telegram_commands.py",
+    "scripts/utils.py",
+    "skill-card.md",
+    "uninstall.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783657878020,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Robb1010",
+    "handle": "robb1010",
+    "user_id": "s1714m9rjbxq8ptp1sxzbq1kqn884zz7"
+  },
+  "slug": "personality-switcher",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/personality-switcher",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=personality-switcher&ownerHandle=robb1010",
+    "page_url": "https://clawhub.ai/robb1010/skills/personality-switcher"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3163,
+    "installs": 105,
+    "stars": 2,
+    "versions": 8
+  },
+  "summary": "Create and switch between AI assistant personalities. Use /personality to list and activate saved personalities. Use /create-personality to design new personas with auto-filled SOUL and IDENTITY. Personalities persist across session boundaries and conversation compacting with automatic heartbeat restoration. Atomic switching with backup and rollback safeguards. Always backs up current state before switching.",
+  "updated_at": 1778486086401,
+  "version": "0.1.3"
+}
