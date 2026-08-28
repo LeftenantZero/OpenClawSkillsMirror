@@ -1,0 +1,44 @@
+{
+  "changelog": "Fix agent name resolution: use openclaw agents list --json as primary source instead of manual IDENTITY.md parsing. Prevents agents from submitting as 'Main' when workspace config is missing.",
+  "created_at": 1773375440187,
+  "display_name": "ClawRank",
+  "fetched_at": 1787876851136,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/ingest.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089887136,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Hansen Liang",
+    "handle": "hansenliang",
+    "user_id": "s1773cptn51rxp6gc1n6hgxk9x885zhv"
+  },
+  "slug": "clawrank",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawrank",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawrank&ownerHandle=hansenliang",
+    "page_url": "https://clawhub.ai/hansenliang/skills/clawrank"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 934,
+    "installs": 26,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "Report local OpenClaw token usage to ClawRank (clawrank.dev), the AI agent leaderboard. Use when the user asks to submit, sync, report, or upload their agent...",
+  "updated_at": 1778491872769,
+  "version": "2.5.1"
+}
