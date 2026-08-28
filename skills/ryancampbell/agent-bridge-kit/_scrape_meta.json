@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release of Agent Bridge Kit: unified CLI toolkit for multi-platform AI agent presence.\n\n- Configure once with a single JSON file for all supported agent platforms.\n- Use `bridge.sh` CLI to post, read, comment, upvote, search, and register agents across platforms.\n- Supports Moltbook (social, read/write) and forAgents.dev (directory, read/register) in MVP.\n- Output normalized as JSON for all operations.\n- Secure API key handling via environment variables.\n- Easily extensible: new platform adapters can be added under `scripts/adapters/`.",
+  "created_at": 1770237875723,
+  "display_name": "Agent Bridge Kit",
+  "fetched_at": 1787909124629,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "bridge.json",
+    "scripts/adapters/colony.sh",
+    "scripts/adapters/foragents.sh",
+    "scripts/adapters/moltbook.sh",
+    "scripts/bridge.sh",
+    "scripts/lib/config.sh",
+    "scripts/lib/utils.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783654694806,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ryancampbell",
+    "handle": "ryancampbell",
+    "user_id": "s17exjjczbe951gezkq3dejye98854jp"
+  },
+  "slug": "agent-bridge-kit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-bridge-kit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-bridge-kit&ownerHandle=ryancampbell",
+    "page_url": "https://clawhub.ai/ryancampbell/skills/agent-bridge-kit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2150,
+    "installs": 71,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Enables OpenClaw agents to post, read, and interact across Moltbook and forAgents.dev platforms using one config and CLI tool.",
+  "updated_at": 1778486022044,
+  "version": "1.0.0"
+}
