@@ -1,0 +1,41 @@
+{
+  "changelog": "Replace canned messages with pass-through extraction. Messages now use the user's actual text instead of hardcoded purpose-matched responses. Removed Channels and Default Messages docs sections.",
+  "created_at": 1770396768184,
+  "display_name": "Casual Cron",
+  "fetched_at": 1787907670191,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/cron_builder.py",
+    "skill-card.md",
+    "skills/casual-cron/CHANGELOG.md",
+    "skills/casual-cron/SKILL.md",
+    "skills/casual-cron/_meta.json",
+    "skills/casual-cron/scripts/cron_builder.py",
+    "skills/casual-cron/test/test_cron_builder.py",
+    "test/test_cron_builder.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "gostlight",
+    "handle": "gostlightai",
+    "user_id": "s172g9xhvf9935ycqf0gaeh7gs83sav2"
+  },
+  "slug": "casual-cron",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/casual-cron",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=casual-cron&ownerHandle=gostlightai",
+    "page_url": "https://clawhub.ai/gostlightai/skills/casual-cron"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4198,
+    "installs": 137,
+    "stars": 1,
+    "versions": 6
+  },
+  "summary": "Create Clawdbot cron jobs from natural language with strict run-guard rules. Use when: users ask to schedule reminders or messages (recurring or one-shot), especially via Telegram, or when they use /at or /every. Examples: 'Create a daily reminder at 8am', 'Remind me in 20 minutes', 'Send me a Telegram message at 3pm', '/every 2h'.",
+  "updated_at": 1778486065752,
+  "version": "1.2.0"
+}
