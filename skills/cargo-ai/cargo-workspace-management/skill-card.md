@@ -1,6 +1,6 @@
 ## Description:
 
-Manage Cargo workspace users, API tokens, folders, roles, workspace files, reports, and session records using the Cargo CLI.
+Administer Cargo workspaces by managing members, roles, API tokens, folders, workspace files, reports, and optional session records through the Cargo CLI.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, operators, and workspace admins use this skill to ask an agent for Cargo CLI commands and guidance for managing users, roles, API tokens, folders, files, reports, and session records in a Cargo workspace.
+Developers, workspace administrators, and agent operators use this skill to administer a Cargo workspace from the CLI, including user access, API tokens, folders, files, feedback reports, and session records.
 
 ### Deployment Geography for Use:
 
@@ -22,29 +22,30 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill guides workspace administration actions that use the active Cargo credentials and may change users, roles, tokens, folders, files, reports, or sessions.
+Risk: The skill can guide high-impact workspace administration actions, including user, role, token, folder, file, report, and session writes.
 
-Mitigation: Install and use it only when Cargo workspace administration is intended, verify the active account with `cargo-ai whoami`, and use appropriately scoped admin credentials for write operations.
-
-Risk: The skill promotes Claude Code session hooks that can record session metadata and transcript-derived summaries in Cargo.
-
-Mitigation: Enable the session hooks only with explicit consent and when session metadata and summaries are acceptable to store in Cargo.
+Mitigation: Confirm the active workspace and intended target before running write commands; use admin credentials only for operations that require them.
 
 Risk: API token creation returns a token value once, and mishandling it can expose workspace access.
 
-Mitigation: Store generated tokens immediately in a secrets manager, avoid logging token values, and rotate or remove tokens that may be exposed.
+Mitigation: Store new tokens immediately in an approved secrets manager, redact token values from logs and reports, and rotate or remove unused tokens.
 
-Risk: Uploaded files and report descriptions may contain sensitive workspace or customer data.
+Risk: Workspace file uploads can send sensitive local data to Cargo storage.
 
-Mitigation: Review files before upload and redact secrets, personal data, and unnecessary identifiers from report descriptions.
+Mitigation: Upload only files intended for Cargo storage and review file contents before upload.
 
-Risk: The referenced installer pattern downloads and executes a remote shell script.
+Risk: Optional Claude session hooks can persist local hook configuration and record transcript-derived session summaries.
 
-Mitigation: Inspect or otherwise verify the installer before execution instead of piping it directly to `sh`.
+Mitigation: Enable session hooks only with organizational approval and avoid recording sensitive session details.
+
+Risk: Feedback reports and session shares may include commands, errors, UUIDs, or operational context.
+
+Mitigation: Redact secrets and sensitive business data before submitting reports or sharing session activity.
 
 ## Reference(s):
 
-- [Cargo skills repository](https://github.com/getcargohq/cargo-skills)
+- [ClawHub skill page](https://clawhub.ai/cargo-ai/skills/cargo-workspace-management)
+- [Cargo skills homepage](https://github.com/getcargohq/cargo-skills)
 - [Response shapes](references/response-shapes.md)
 - [Troubleshooting](references/troubleshooting.md)
 - [User management examples](references/examples/users.md)
@@ -57,15 +58,15 @@ Mitigation: Inspect or otherwise verify the installer before execution instead o
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with inline Cargo CLI commands and JSON response references]
+**Output Format:** [Markdown guidance with inline bash commands and JSON response examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Commands act through the installed @cargo-ai/cli and the active Cargo credentials.]
+**Other Properties Related to Output:** [Requires Cargo CLI authentication and an active workspace; user, role, and token writes require admin access.]
 
 ## Skill Version(s):
 
-1.2.1 (source: frontmatter and server release evidence)
+1.2.2 (source: frontmatter and release evidence)
 
 ## Ethical Considerations:
 

@@ -1,8 +1,8 @@
 {
-  "changelog": "- Updates compatibility instructions to clarify login and account creation methods (now supports `cargo-ai login --email`, with or without browser).\n- Adds new metadata file: skill-metadata.json.\n- Removes outdated file: skill-card.md.\n- Bumps version to 1.2.1.",
+  "changelog": "cargo-workspace-management v1.2.2\n\n- Updated SKILL.md: improved description and added clearer onboarding (\"Bootstrap\") steps for new users.\n- Expanded trigger phrases to help with more natural language requests.\n- Clarified admin requirements and when to skip usage of this skill (e.g., billing-related questions).\n- Removed obsolete skill-card.md file.\n- No changes to CLI functionality or command syntax.",
   "created_at": 1779996531750,
   "display_name": "cargo-workspace-management",
-  "fetched_at": 1787772607672,
+  "fetched_at": 1787932157097,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -24,7 +24,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1786485492749,
+    "updated_at": 1787875110537,
     "verdict": "clean"
   },
   "owner": {
@@ -40,12 +40,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 1393,
+    "downloads": 1439,
     "installs": 18,
     "stars": 0,
-    "versions": 6
+    "versions": 7
   },
-  "summary": "Manage workspace users, API tokens, folders, roles, and submit reports to workspace management using the Cargo CLI. Use when the user wants to invite or manage workspace members, create or rotate API tokens, organize resources into folders, inspect workspace roles and permissions, or submit a report to workspace management when the CLI fails or is misused.",
-  "updated_at": 1786484769766,
-  "version": "1.2.1"
+  "summary": "Administer a Cargo workspace and talk back to the Cargo team \u2014 invite and manage members, mint and rotate API tokens, organize plays, tools, and agents into folders, inspect roles, upload batch input files, and file reports. Triggers: \"invite my teammate\", \"create an API token for CI\", \"who has access\", \"organize these into folders\", \"rotate that token\", \"upload this CSV for a batch\" \u2014 and for feedback: \"report this bug to Cargo\", \"send feedback to the Cargo team\", \"this CLI command is broken\", \"share this session with Cargo\", \"request a feature\". Most commands need a token with admin access. Skip when: the question is about credits, plans, or invoices \u2014 use cargo-billing.",
+  "updated_at": 1787874425323,
+  "version": "1.2.2"
 }
