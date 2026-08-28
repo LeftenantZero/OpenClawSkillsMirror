@@ -1,0 +1,37 @@
+{
+  "changelog": "- Initial release: Standardizes user-uploaded Word (.docx) files to a fixed Chinese official-document format.\n- Applies government-style template to titles, body, headings, tables, and attachments.\n- Checks for required fonts before conversion; displays a clear notice and halts if fonts are missing.\n- Uses deterministic heuristics to assign paragraph styles.\n- Advises manual review for documents with complex layouts after conversion.",
+  "created_at": 1773223777043,
+  "display_name": "Government Word Format Standardizer",
+  "fetched_at": 1787880109199,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/template-bundle.json",
+    "references/format-rules.md",
+    "scripts/convert_to_house_style.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Nighmat",
+    "handle": "nighmat1220",
+    "user_id": "s17da4x02zshcbrtw2pskyh9d9885373"
+  },
+  "slug": "word-format",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/word-format",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=word-format&ownerHandle=nighmat1220",
+    "page_url": "https://clawhub.ai/nighmat1220/skills/word-format"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1319,
+    "installs": 39,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Convert uploaded Word documents (.docx) into the fixed Chinese official-document format defined by the bundled government-style template bundle. Use when Cod...",
+  "updated_at": 1778491828096,
+  "version": "1.0.0"
+}
