@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators, brand teams, and developers use this skill to create an authorized reusable personal or brand voice from a clean single-speaker audio sample, then optionally request a short paid test reading.
+External users and agents use this skill to create an authorized reusable personal or brand voice from a clean single-speaker sample, then optionally run a separately approved short test reading. It guides consent checks, sample readiness, pricing review, task submission, recovery, billing reporting, and reuse of the returned voice identifier.
 
 ### Deployment Geography for Use:
 
@@ -22,26 +22,31 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill connects a Beatra account with broad media-generation and wallet-spend capability.
+Risk: The skill requires Beatra account authorization and stores a broad bearer token under ~/.beatra.
 
-Mitigation: Install only when that account access is acceptable, confirm consent before upload or paid calls, and review returned billing facts after each task.
+Mitigation: Install only in environments where local credential storage is acceptable, keep the credentials file private, and use the documented disconnect or uninstall workflow when access is no longer needed.
 
-Risk: The bundled client silently checks for and installs package updates by default.
+Risk: Authorized voice samples may be uploaded to Beatra for clone creation.
 
-Mitigation: Use `python3 scripts/mcp_client.py update --auto off` when automatic replacement is not acceptable, and rely on the documented checksum and rollback controls for updates.
+Mitigation: Confirm the speaker's authorization before upload, avoid unnecessary sensitive sample details, and stop before any paid call when consent is missing.
 
-Risk: Voice cloning can misuse a third-party voice or overstate what a short proof reading demonstrates.
+Risk: The skill sends installation registration telemetry and silently self-updates package code by default.
 
-Mitigation: Require explicit authorization for third-party voices, stop before upload when authorization is missing, and report only the actual returned voice, task, usage, and billing facts.
+Mitigation: Review the security guidance before deployment and disable automatic updates with the documented update command in sensitive environments.
+
+Risk: Voice cloning and optional test readings can incur paid Beatra charges.
+
+Mitigation: Require a current price card and explicit user balance or top-up confirmation before each billable operation, then report returned billing facts rather than estimates as final.
 
 ## Reference(s):
 
-- [AI Voice Cloning Studio on ClawHub](https://clawhub.ai/beatra-ai/skills/voice-cloning-studio)
-- [Beatra skill page](https://beatra.ai/skills/voice-cloning-studio)
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/voice-cloning-studio)
+- [Beatra skill homepage](https://beatra.ai/skills/voice-cloning-studio)
 - [Consent and sample readiness](references/consent-and-sample-readiness.md)
 - [Clone execution and recovery](references/clone-and-proof-workflow.md)
 - [Test-reading review and voice reuse](references/review-recovery-and-voice-reuse.md)
 - [Installation and authentication](references/installation-and-auth.md)
+- [Installation registration](references/installation-registration.md)
 - [MCP connection](references/mcp-connection.md)
 - [Tasks and results](references/tasks-and-results.md)
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
@@ -50,17 +55,17 @@ Mitigation: Require explicit authorization for third-party voices, stop before u
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
 
 **Output Format:** [Markdown with inline shell commands and JSON request examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include Beatra task identifiers, voice identifiers, billing facts, and provider-returned links.]
+**Other Properties Related to Output:** [May reference paid Beatra voice clone and speech synthesis tasks, returned task facts, billing fields, artifact identifiers, and voice identifiers.]
 
 ## Skill Version(s):
 
-0.1.8 (source: server evidence release.version and artifact manifest.json)
+0.1.9 (source: server release evidence and manifest.json)
 
 ## Ethical Considerations:
 
