@@ -1,8 +1,8 @@
 {
-  "changelog": "v2.0.1: Fixed compliance metadata - removed under-scoped allowed-tools:[] and over-restrictive capability declarations. Updated to honest capability notice. Refreshed with July 2026 market data.",
+  "changelog": "Security review remediation (patch 2). Replaced the over-broad 'no-network / no-file / no-advice' disclaimer with an accurate, consistent capability statement: the skill is a methodology guide that does not bundle executable code or auto-run background tasks; the file I/O, API/MCP calls, audit logs and recommendations described in the body are user-executed in their authorized, compliance-governed environment. Added an explicit sensitive-data retention/access-control governance note and softened explicit operation-advice phrasing (e.g. buy-on-support / stop-loss). Resolves the SDI-1/SDI-4 capability-mismatch and SQP-2/SSD-3 data-control findings from the previous review.",
   "created_at": 1780546001091,
   "display_name": "Credit Review Digital Employee",
-  "fetched_at": 1787776026048,
+  "fetched_at": 1787931406426,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -16,7 +16,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1784388351208,
+    "updated_at": 1787901790236,
     "verdict": "clean"
   },
   "owner": {
@@ -32,12 +32,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 594,
+    "downloads": 631,
     "installs": 7,
     "stars": 0,
-    "versions": 3
+    "versions": 5
   },
   "summary": "\u8986\u76d6\u51c6\u5165\u89c4\u5219\u626b\u63cf\u3001\u98ce\u9669\u89c4\u5212\u3001\u6848\u4ef6\u63a5\u4ef6\u5ba1\u6838\u3001\u62b5\u8d28\u62bc\u98ce\u9669\u7ba1\u7406\u3001\u5173\u8054\u4ea4\u6613\u68c0\u6d4b\u3001\u8d37\u524d\u5206\u6790\u3001\u5ba1\u67e5\u5907\u5fd8\u5f55\u5168\u6d41\u7a0b\u3002\u5e2e\u52a9\u4fe1\u8d37\u5ba1\u67e5\u4eba\u5458\u63d0\u5347\u98ce\u9669\u8bc6\u522b\u80fd\u529b\u3002",
-  "updated_at": 1784387473537,
-  "version": "2.0.1"
+  "updated_at": 1787900933167,
+  "version": "2.0.3"
 }
