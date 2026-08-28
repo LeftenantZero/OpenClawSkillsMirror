@@ -1,6 +1,6 @@
 ## Description:
 
-Secure computer-to-computer networking for AI agents: gossip broadcast, direct messaging, CRDT synchronization, group encryption, post-quantum encryption, and NAT traversal for decentralized applications.
+Secure computer-to-computer networking for AI agents — gossip broadcast, direct messaging, CRDTs, group encryption. Post-quantum encrypted, NAT-traversing. Everything you need to build any decentralized application.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and engineers use x0x to give AI agents secure peer-to-peer networking, messaging, shared state, group encryption, task orchestration, and local REST/WebSocket control for decentralized applications.
+Developers and agent builders use x0x to set up secure peer-to-peer networking between AI agents, including gossip broadcast, direct messaging, shared CRDT state, group encryption, file transfer, diagnostics, and optional peer connectivity features.
 
 ### Deployment Geography for Use:
 
@@ -22,48 +22,56 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill exposes remote command execution features for peer agents.
+Risk: The skill installs and runs a persistent peer-to-peer networking daemon.
 
-Mitigation: Keep remote exec disabled unless required, allow only verified trusted peers, and use strict exact-command ACLs.
+Mitigation: Start the daemon and enable autostart only when persistent networking is intended, and monitor its health and configuration.
 
-Risk: The skill can forward local TCP ports to peer machines.
+Risk: The local API token can authorize daemon operations if exposed.
 
-Mitigation: Enable forwards only for specific trusted peers and loopback targets, maintain strict connect allowlists, and remove unused forwards.
+Mitigation: Keep the durable API token private, use short-lived session tokens for URL-based browser or WebSocket access, and avoid sharing token-bearing logs.
 
-Risk: The local daemon API token can authorize sensitive networking actions.
+Risk: Remote command execution can run commands on a peer machine when enabled.
 
-Mitigation: Keep the daemon token local, avoid putting durable tokens in URLs, and use short-lived session tokens for browser or WebSocket access.
+Mitigation: Leave remote exec disabled unless required, and enable it only with verified trusted contacts plus narrow per-peer and per-command allowlists.
 
-Risk: Autostart can leave a privileged peer-networking layer running when it is not needed.
+Risk: Port forwarding and peer connectivity can expose loopback services to trusted peers.
 
-Mitigation: Avoid autostart unless the deployment requires it, and review downloaded installers or binaries before enabling the daemon.
+Mitigation: Trust and pin peers carefully, require explicit connect ACLs, and restrict forwarding targets to intended loopback services.
+
+Risk: Installer and self-update flows download executable code.
+
+Mitigation: Review installers and update behavior before applying changes, and use verified release paths when installing or updating.
 
 ## Reference(s):
 
-- [x0x ClawHub skill page](https://clawhub.ai/jimcollinson/skills/x0x)
-- [Saorsa Labs homepage](https://saorsalabs.com)
-- [x0x repository](https://github.com/saorsa-labs/x0x)
-- [Security and cryptography documentation](https://github.com/saorsa-labs/x0x/blob/main/docs/security.md)
-- [Full API reference](https://github.com/saorsa-labs/x0x/blob/main/docs/api-reference.md)
-- [Remote exec documentation](https://github.com/saorsa-labs/x0x/blob/main/docs/exec.md)
-- [Symphony integration documentation](https://github.com/saorsa-labs/x0x/blob/main/docs/symphony-integration.md)
-- [OpenClaw Linux x64 GNU release asset](https://github.com/saorsa-labs/x0x/releases/latest/download/x0x-linux-x64-gnu.tar.gz)
-- [OpenClaw macOS ARM64 release asset](https://github.com/saorsa-labs/x0x/releases/latest/download/x0x-macos-arm64.tar.gz)
-- [OpenClaw Windows x64 release asset](https://github.com/saorsa-labs/x0x/releases/latest/download/x0x-windows-x64.zip)
+- [ClawHub Skill Page](https://clawhub.ai/jimcollinson/skills/x0x)
+- [Publisher Profile](https://clawhub.ai/user/jimcollinson)
+- [Saorsa Labs Homepage](https://saorsalabs.com)
+- [x0x Repository](https://github.com/saorsa-labs/x0x)
+- [Full API Reference](https://github.com/saorsa-labs/x0x/blob/main/docs/api-reference.md)
+- [Security and Cryptography](https://github.com/saorsa-labs/x0x/blob/main/docs/security.md)
+- [SDK Quickstart](https://github.com/saorsa-labs/x0x/blob/main/docs/sdk-quickstart.md)
+- [Remote Exec Documentation](https://github.com/saorsa-labs/x0x/blob/main/docs/exec.md)
+- [Upgrade System Documentation](https://github.com/saorsa-labs/x0x/blob/main/docs/upgrade-system.md)
+- [macOS ARM64 Download](https://github.com/saorsa-labs/x0x/releases/latest/download/x0x-macos-arm64.tar.gz)
+- [macOS x64 Download](https://github.com/saorsa-labs/x0x/releases/latest/download/x0x-macos-x64.tar.gz)
+- [Linux x64 GNU Download](https://github.com/saorsa-labs/x0x/releases/latest/download/x0x-linux-x64-gnu.tar.gz)
+- [Linux ARM64 GNU Download](https://github.com/saorsa-labs/x0x/releases/latest/download/x0x-linux-arm64-gnu.tar.gz)
+- [Windows x64 Download](https://github.com/saorsa-labs/x0x/releases/latest/download/x0x-windows-x64.zip)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance, API calls]
+**Output Type(s):** [guidance, shell commands, configuration, code]
 
-**Output Format:** [Markdown with shell, JSON, TOML, and HTTP examples]
+**Output Format:** [Markdown with bash, JSON, TOML, and curl examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Includes install commands, daemon configuration, CLI usage, REST/WebSocket examples, and security guidance.]
+**Other Properties Related to Output:** [Includes local daemon setup, REST/WebSocket usage, trust controls, diagnostics, forwarding, remote exec, and self-update guidance.]
 
 ## Skill Version(s):
 
-0.39.10 (source: server release evidence and artifact frontmatter)
+0.40.4 (source: server release metadata and artifact frontmatter)
 
 ## Ethical Considerations:
 
