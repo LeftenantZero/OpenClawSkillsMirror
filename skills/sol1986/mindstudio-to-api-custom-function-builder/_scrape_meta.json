@@ -1,0 +1,36 @@
+{
+  "changelog": "**Clarifies input and output handling for MindStudio config fields.**\n\n- Fixes and explains the difference between `inputVariable` and `outputVariableName` config types; mandates reading/writing them with correct `ai.config` or `ai.vars[ai.config...]` patterns in code.\n- Updates code, configuration, and test data templates with new guidance about input reading and output writing.\n- Adds a warning (in Common Mistakes) never to use `ai.vars[ai.config.fieldName]` for input fields.\n- Expands test data instructions: input variables set directly in `config`, not in `vars`.\n- Refines documentation wording and templates for precision and current MindStudio behavior.",
+  "created_at": 1773632431861,
+  "display_name": "MindStudio To API Custom Function Skill",
+  "fetched_at": 1787939168858,
+  "files": [
+    "EXAMPLES.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md",
+    "skill.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Sol Farahmand",
+    "handle": "sol1986",
+    "user_id": "s178mvyk5pdhapf6ax9thw3sn983svt8"
+  },
+  "slug": "mindstudio-to-api-custom-function-builder",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/mindstudio-to-api-custom-function-builder",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=mindstudio-to-api-custom-function-builder&ownerHandle=sol1986",
+    "page_url": "https://clawhub.ai/sol1986/skills/mindstudio-to-api-custom-function-builder"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 810,
+    "installs": 22,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Build a complete MindStudio Run Function integration for any API the user wants to connect. Use this skill whenever the user mentions MindStudio, wants to co...",
+  "updated_at": 1778491936802,
+  "version": "1.1.0"
+}
