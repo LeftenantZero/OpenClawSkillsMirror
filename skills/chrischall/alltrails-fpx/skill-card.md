@@ -1,6 +1,6 @@
 ## Description:
 
-Query alltrails.com for trail search, trail detail, reviews, photos, weather, and signed-in account data from shell commands with @fetchproxy/cli through an active browser tab.
+Query AllTrails trail search, trail details, reviews, photos, weather, and signed-in user data from a shell with fpx through a signed-in browser tab instead of running alltrails-mcp.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and agents use this skill to make read-only AllTrails lookup requests from shell workflows when the MCP server is unavailable or unsuitable. It is useful for trail research, route details, weather, photos, reviews, and signed-in saved or completed trail data when the user intends to expose that browser session data.
+Developers and agents use this skill to retrieve read-only AllTrails data from shell workflows without installing or running the MCP server. It is especially relevant when personal lists, completed trails, or activity feeds require the user's active signed-in browser session.
 
 ### Deployment Geography for Use:
 
@@ -22,32 +22,27 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can access signed-in AllTrails account data through the user's active browser session.
+Risk: The skill can query saved lists, completed trails, activity feeds, and profile data through the user's active AllTrails browser session.
 
-Mitigation: Use a signed-out or separate browser profile for public trail lookup, and request saved lists, completed trails, or activity feeds only when that account data should be exposed to the agent.
-
-Risk: AllTrails calls can return challenge pages, non-JSON bodies, or stale app-key errors instead of usable data.
-
-Mitigation: Refresh the AllTrails tab, recapture the x-at-key value, and verify that returned bodies are valid JSON before relying on the result.
+Mitigation: Run it only when the signed-in user explicitly wants that data retrieved, avoid unattended use against personal endpoints, and treat exported activity or profile data as private.
 
 ## Reference(s):
 
-- [AllTrails endpoints for fpx](artifact/references/endpoints.md)
-- [ClawHub skill page](https://clawhub.ai/chrischall/skills/alltrails-fpx)
+- [AllTrails endpoints for fpx](references/endpoints.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
+**Output Type(s):** [Shell commands, Configuration instructions, API Calls, Guidance]
 
 **Output Format:** [Markdown with inline shell commands and JSON examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Read-only AllTrails API calls executed through an active browser session; responses are expected to be JSON but should be checked for challenge pages or upstream errors.]
+**Other Properties Related to Output:** [Read-only fpx requests through an active browser session; personal AllTrails activity and profile data should be handled as private.]
 
 ## Skill Version(s):
 
-2.1.3 (source: server release metadata)
+2.1.4 (source: server release evidence)
 
 ## Ethical Considerations:
 
