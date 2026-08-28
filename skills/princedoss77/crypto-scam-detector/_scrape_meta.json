@@ -1,0 +1,55 @@
+{
+  "changelog": "**Crypto Scam Detector 2.2.0 \u2013 Major database-first, instant-check architecture**\n\n- Replaced live API checks with a fully local SQLite database for scam detection; all address scans are instant (no external API calls).\n- Introduced `crypto_check_db.py` as the new entry point for database-only, <5ms address analysis.\n- Added `sync_worker.py` as a background process for syncing fresh blockchain data from Etherscan into the database (works with your API key).\n- New auto-queue system: unknown addresses are added to a sync queue for future analysis.\n- Multiple new docs: DATABASE_ARCHITECTURE.md, MULTICHAIN_SUPPORT.md, REALTIME_SYNC_UPDATE.md, and release notes for v2.2.0.\n- Removed old analyzer scripts and outdated documentation, fully transitioning to the new instant database model.",
+  "created_at": 1771523988751,
+  "display_name": "Crypto Scam Detector",
+  "fetched_at": 1787898777988,
+  "files": [
+    "CHANGELOG.md",
+    "DATABASE_ARCHITECTURE.md",
+    "EXPORT_PACKAGE.md",
+    "MULTICHAIN_SUPPORT.md",
+    "README.md",
+    "READY_TO_PUBLISH.md",
+    "REALTIME_SYNC_UPDATE.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "SUBMISSION.md",
+    "V2.2.0_RELEASE_NOTES.md",
+    "_meta.json",
+    "blockchain_detector.py",
+    "check_address.sh",
+    "clawhub-manifest.json",
+    "crypto_check_db.py",
+    "database.py",
+    "install.sh",
+    "package.json",
+    "requirements.txt",
+    "scam_database.py",
+    "secure_key_manager.py",
+    "setup.sh",
+    "sync_worker.py",
+    "verify_package.sh"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "princedoss77",
+    "handle": "princedoss77",
+    "user_id": "s17838vwg83s6e1k93nh09zjwn884m26"
+  },
+  "slug": "crypto-scam-detector",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/crypto-scam-detector",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=crypto-scam-detector&ownerHandle=princedoss77",
+    "page_url": "https://clawhub.ai/princedoss77/skills/crypto-scam-detector"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 828,
+    "installs": 18,
+    "stars": 0,
+    "versions": 7
+  },
+  "summary": "Real-time cryptocurrency scam detection with database-first architecture. Protects users from phishing, honeypots, rug pulls, and ponzi schemes. No external...",
+  "updated_at": 1778491585715,
+  "version": "2.2.0"
+}
