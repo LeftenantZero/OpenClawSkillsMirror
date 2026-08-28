@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release: Extracts 32 structured fields from medical insurance policy documents in PDF, DOCX, or TXT formats, outputting standardized JSON.\n\n- Supports both core (14) and enhancement (18) fields as defined in the output format specification.\n- Implements automated data type conversion for amounts, proportions, enumerations, and booleans.\n- Provides a document parsing script for robust text extraction from files.\n- Ensures all Level 1 core fields are mandatory and accurately extracted; Level 2 enhancement fields allow nulls.\n- Output strictly follows predefined JSON formatting and field rules.",
+  "created_at": 1773127870098,
+  "display_name": "\u4fdd\u9669\u6761\u6b3e\u5206\u6790",
+  "fetched_at": 1787882386994,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/output-format.md",
+    "scripts/parse_document.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "\u9a6c\u9f99",
+    "handle": "long1973m",
+    "user_id": "s17c19cz831h9vazw3m6crqpbh843w77"
+  },
+  "slug": "insurance-policy-parser",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/insurance-policy-parser",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=insurance-policy-parser&ownerHandle=long1973m",
+    "page_url": "https://clawhub.ai/long1973m/skills/insurance-policy-parser"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 970,
+    "installs": 26,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u89e3\u6790\u533b\u7597\u9669\u6761\u6b3e\u6587\u6863\u5e76\u63d0\u53d632\u4e2a\u7ed3\u6784\u5316\u5b57\u6bb5\uff0c\u542b14\u4e2a\u6838\u5fc3\u5b57\u6bb5\u548c18\u4e2a\u589e\u5f3a\u5b57\u6bb5\uff0c\u652f\u6301PDF/DOCX/TXT\u683c\u5f0f\uff0c\u8f93\u51fa\u6807\u51c6JSON",
+  "updated_at": 1778491803852,
+  "version": "1.0.0"
+}
