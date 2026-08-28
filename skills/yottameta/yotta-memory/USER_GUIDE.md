@@ -7,6 +7,9 @@
 1. 这是什么
 2. 安装
 3. 本机单机使用
+3.5 私密区加密（v0.7，推荐）
+3.6 自我学习 / 自我进化 / 自我提升（v0.8.0）
+3.7 查看平台分页与检索优化（v0.8.1）
 4. 便携记忆盘 · 记忆引擎主机篇（Linux / Windows）
 5. 智能体接入篇（本机 / 局域网其它主机）
 6. CLI 命令速查
@@ -27,6 +30,7 @@
 - **交接与团队协作**：项目级 `.yottamemory` 随仓库走，交接即恢复。
 - **便携记忆盘**：记忆装在固定主机上，本机与局域网其它主机共享同一份记忆（见第 4 / 5 篇）。
 - **越用越懂（v0.6.0）**：AI 按「记忆守则」主动捕获信号，`profile` 聚合画像、`context` 开工注入——用得越久越懂你。
+- **自我学习 / 自我进化 / 自我提升（v0.8.0）**：`recall` 语义检索（同义词 / 拼音 / 字段加权 / 模糊）+ `feedback` 使用反馈闭环 + `maintain` 规则层自组织（自动归档 / 遗忘候选 / 去重）+ `distill` 心理日志蒸馏——记忆系统会自己整理、提炼、演化。
 
 ## 2. 安装（CLI + 技能）
 
@@ -38,7 +42,7 @@
 |---|---|---|
 | npm 全局（推荐） | `npm i -g @yottameta/yotta-memory` | 长期使用 |
 | npx 临时 | `npx -y @yottameta/yotta-memory` | 临时试用 |
-| install.sh | `bash <(curl -s https://raw.githubusercontent.com/YottaMeta/yotta-memory/main/install.sh)` | 离线 / 无 npm |
+| install.sh | git clone 仓库后 `bash install.sh -g`（或手动下载 install.sh 执行）| 离线 / 国内 / 无 npm |
 
 安装后验证：`yotta-memory --version` 能输出版本号即成功。
 
@@ -104,6 +108,73 @@ statement: 本周完成发布
 
 手动改过文件后运行 `yotta-memory reindex` 重建索引，`recall` 才能按索引检索到。整个记忆目录可以用 git 做版本管理与回滚。
 
+
+## 3.5 私密区加密（v0.7，推荐）
+
+私密区（PREF / BOUND / COMMIT）默认落盘为**密文**（AES-256-GCM 信封加密），任何没有对应密钥的 AI 即使读到文件也解不开；公共 FACT 保持明文共享。用户通过**用户查看平台**持主口令解锁查看全部记忆。
+
+**启用与迁移**
+
+- **新库**：`yotta-memory init`（新建默认加密）→ 输入主口令两次 → **抄下打印的恢复钥匙**（44 位 base64，离线保存；忘口令时用它重设）。不要加密用 `--no-encrypt`。
+- **老明文库升级**：`yotta-memory migrate` → 输入主口令 → 私密文件逐个加密、明文删除 → 抄下恢复钥匙。
+
+**用户查看平台（看所有 AI 的记忆）**
+
+`yotta-memory view` → 浏览器打开 http://127.0.0.1:8788 → 输入主口令解锁 → 浏览 / 搜索 / 导出全部记忆（含各 AI 私密）；也可在此**授权 / 吊销**某 AI 读取其私密、**重设口令**、**查看恢复钥匙**。口令只在本地内存派生，不落盘、不发远端；默认仅本机，远程需 `--host` 显式开启。
+
+**AI 接入加密库**
+
+1. 该 AI 声明身份（`iam` / MCP 配置 `YOTTA_AGENT_ID`）。
+2. 用户在平台对其点一次「授权」→ 平台把该 AI 的 owner key 写入授权缓存（`keys/cache/<id>.key`，600 权限）。
+3. 之后该 AI 正常 `remember / recall / profile / context`，读写自动加解密；未授权时写私密会提示「需在用户平台授权」，公共 FACT 不受影响。
+
+**口令管理**
+
+- 重设口令：`yotta-memory reset-password`（输入当前口令），或忘口令时 `--recovery-key <恢复钥匙>`。
+- 吊销某 AI：`yotta-memory key revoke <id>`（立即失效）。
+- 注意：**口令即主密钥**，忘口令且丢失恢复钥匙 = 密文私密不可恢复（公共 FACT 仍在）。
+
+## 3.6 自我学习 / 自我进化 / 自我提升（v0.8.0）
+
+元忆 v0.8.0 让记忆系统「越用越懂」：语义检索、使用反馈闭环、规则层自组织、心理日志蒸馏，全部零依赖内置。
+
+**语义检索（recall）**
+
+- `recall <关键词>` 默认语义检索：同义词（内置词表）、拼音（全拼 / 首字母，内置 3755 常用字表）、字段加权（subject 优先）、模糊匹配（编辑距离 ≤ 2）、子串兜底。
+- 例：记过「越用越懂」，用 `recall yyyd`（首字母）或 `recall yueyong yuedong`（拼音）都能找回。
+- `recall --explain`：显示每条命中理由与效用分项。
+- 旧索引首次 recall 自动重建（version 4），无需手动 reindex。
+
+**使用反馈闭环（feedback）**
+
+- `feedback <文件> --useful`：这条记忆有用 → weight ×1.2（上限 3.0）、confidence +0.05、feedback_net +1。
+- `feedback <文件> --useless`：没用 → weight ×0.8（下限 0.2）、confidence −0.05、feedback_net −1。
+- `--reason <原因>` 记录原因；`--undo` 回滚最近一次。反馈记录在 `.archive/feedback-<日期>.jsonl`。
+- 反馈会改变记忆的效用分 → 高频「没用」的记忆会被自动归档 / 遗忘候选（自我学习）。
+
+**规则层自组织（maintain）**
+
+- `maintain`（默认 dry-run 预览）：列出归档候选（统一效用分 < 0.35 且超 180 天）与遗忘候选（< 0.12 且超 365 天），immutable / BOUND 豁免。
+- `maintain --apply`：执行归档（移入 `.archive/`，可恢复）。
+- `maintain --apply --purge`：真删遗忘候选（谨慎，先确认）。
+- `maintain --dedup`：列出重复候选；`maintain --merge A,B` 合并两条相似记忆。
+- 阈值可用 `config set maintain_archived_utility 0.3` 等调整；审计在 `.archive/audit-<日期>.jsonl`。
+
+**心理日志蒸馏（distill）**
+
+- `distill`：生成统计摘要（类型 / 年龄 / 热度 / 反馈）+ 主题画像（按 subject 聚类）+ 知识地图（type → tags）。
+- 可选 `--model <cmd>`：外部模型 stdin 收结构化摘要 → stdout 输出提炼文本（无模型走启发式）。
+- 产物：私密蒸馏入 `private/<owner>/distills/`（受 owner key 保护），公共入 `facts/distills/`；`--out <路径>` 可指定导出。
+
+**查看效用（explain）**
+
+- `explain <文件>`：显示单条记忆的效用分项（confidence / 使用 / 时效 / 类型 / 结构 × weight）与归档 / 遗忘状态判定，帮助理解为什么某条记忆靠前 / 被归档。
+
+## 3.7 查看平台分页与检索优化（v0.8.1）
+
+- **用户查看平台分页**：yotta-memory view 启动的网页端记忆卡片改为服务端分页——记忆多时不再一次性加载渲染全部，页面显示「共 N 条」「第 x / y 页」，支持上一页 / 下一页。
+- **recall 候选预过滤**：语义检索前先用索引 token 粗筛候选集（精确 / 同义 / 拼音 / 子串 / 模糊长度门槛），命中集与 v0.8.0 一致，记忆量大时显著减少逐条语义 / 模糊 / 编辑距离开销。
+
 ## 4. 便携记忆盘 · 记忆引擎主机篇
 
 场景：记忆放在一台主机上（Linux / Windows 均可），本机直接 CLI 读写；局域网内其它主机上的 AI 智能体经 MCP 远程接入。引擎主机只需装 CLI，不需要装任何 AI 智能体。
@@ -139,7 +210,7 @@ yotta-memory lan status              # 查看状态
 yotta-memory lan disable             # 取消
 ```
 
-> 说明：`lan enable` 默认「登录后自启」；如需系统级（整机、开机即启）服务，可手动创建 `/etc/systemd/system/yotta-memory.service`（ExecStart 指向 `which yotta-memory` 实际路径）并 `sudo systemctl enable --now yotta-memory`；桌面环境也可在 `~/.config/autostart/` 放置 `yotta-memory.desktop` 实现图形登录自启。
+**说明**：`lan enable` 默认「登录后自启」；如需系统级（整机、开机即启）服务，可手动创建 systemd 单元 `/etc/systemd/system/yotta-memory.service`（ExecStart 指向 `which yotta-memory` 实际路径），再以管理员执行 systemd 的 enable --now 启用；桌面环境也可在 `~/.config/autostart/` 放置 `yotta-memory.desktop` 实现图形登录自启。
 
 **第 4 步：为局域网其它主机的智能体生成访问 token**
 
@@ -237,7 +308,7 @@ yotta-memory remember FACT 主题 内容    # 智能体落盘
 |---|---|
 | `yotta-memory init [--project] [--dir <目录>]` | 初始化记忆库 |
 | `yotta-memory remember <类型> <主题> <内容> [--owner <id>] [--source <来源>] [--weight <0..>] [--verify] [--no-hint]` | 写入记忆（--source 来源；--weight 重要性权重；--verify 写后回读；--no-hint 关闭类型提示）|
-| `yotta-memory recall [关键词] [--type T] [--limit N] [--agent <id>] [--owner <id>] [--all] [--unsafe]` | 检索记忆（读取分区过滤；`--agent <其它>` 仅作身份声明、不授予跨读；越界读其它智能体私密默认拒绝，需 grant / identity=user / `--unsafe`）|
+| `yotta-memory recall [关键词] [--type T] [--limit N] [--agent <id>] [--owner <id>] [--all] [--unsafe] [--explain]` | 检索记忆（v0.8.0 默认语义检索：同义词 / 拼音 / 字段加权 / 模糊 + 效用分排序；`--explain` 显示命中理由；读取分区过滤；`--agent <其它>` 仅作身份声明、不授予跨读；越界读其它智能体私密默认拒绝，需 grant / identity=user / `--unsafe`）|
 | `yotta-memory profile [--owner <id>]` | 生成用户画像（零推断，写 `profile.md`）|
 | `yotta-memory context [--limit N] [--owner <id>] [--budget N]` | 开工上下文包（身份+铁律+画像+近期记忆+边界+承诺；--budget 近期记忆字符预算）|
 | `yotta-memory forget <文件>` | 删除一条记忆 |
@@ -250,6 +321,10 @@ yotta-memory remember FACT 主题 内容    # 智能体落盘
 | `yotta-memory token new --agent <id> [--force]` / `token list` / `token revoke --agent <id>` | 访问 token（同 ID 已被其它来源占用需 `--force` 覆盖）|
 | `yotta-memory serve [--port 8787] [--stdio] [--no-auth]` | 启动记忆引擎（--no-auth 关闭鉴权，仅限可信内网）|
 | `yotta-memory lan enable [--onstart] / disable / status` | 开机自启管理（Windows：计划任务/用户级 Startup 静默自启；Linux：systemd 用户单元/用户 crontab @reboot）|
+| `yotta-memory feedback <文件|主题> --useful|--useless [--reason <原因>] [--undo]` | 使用反馈（v0.8.0：useful/useless 调 weight/confidence/feedback_net；--undo 回滚）|
+| `yotta-memory maintain [--dry-run] [--apply] [--purge] [--threshold N] [--age N] [--dedup] [--merge A,B]` | 记忆自组织（v0.8.0：归档 / 遗忘候选 / 去重；默认 dry-run，--apply 执行，--purge 才真删）|
+| `yotta-memory distill [--owner <id>] [--subject <主题>] [--model <cmd>] [--out <路径>]` | 心理日志蒸馏（v0.8.0：统计摘要 / 主题画像 / 知识地图）|
+| `yotta-memory explain <文件|主题>` | 查看单条记忆效用分项（v0.8.0）|
 
 类型：`FACT`（事实，共享）/ `PREF`（偏好）/ `BOUND`（边界）/ `COMMIT`（承诺），后三类按智能体物理分目录隔离（`private/<owner>/<type>/`）。
 
@@ -262,7 +337,7 @@ yotta-memory remember FACT 主题 内容    # 智能体落盘
 3. 端口对吗？默认 8787，两端要一致。
 4. 防火墙放行了吗？Linux：`sudo ufw status`，未放行则 `sudo ufw allow 8787/tcp`；Windows：允许首次监听的入站请求。
 5. token 有效吗？记忆盘主机执行 `yotta-memory token list` 看该智能体是否登记；无效就 `token new --agent <id>` 重新生成。
-6. 网络通吗？任意一台主机执行 `curl http://<引擎IP>:8787/mcp`：
+6. 网络通吗？任意一台主机用浏览器或命令行访问 `http://<引擎IP>:8787/mcp`：
    - 返回 401：服务在运行，是鉴权问题（token / 请求头不对）。
    - 连接被拒 / 超时：服务没启动，或防火墙拦截。
 
@@ -279,11 +354,11 @@ yotta-memory remember FACT 主题 内容    # 智能体落盘
 ## 8. 安全与边界
 
 - token 等同密码：只给需要接入的智能体，别外传。
-- 元忆不做加密：PREF / BOUND / COMMIT 私密记忆的隔离是「权限边界」机制（谁该读由 scope/owner 决定），属于纪律层保护，不是机密数据保护层。
+- 私密区机制级加密（v0.7 起）：PREF / BOUND / COMMIT 私密记忆默认落盘为密文（AES-256-GCM 信封加密），任何没有对应 owner 密钥的 AI 即使读到密文文件也解不开；隔离 = 权限边界（scope/owner）+ 机制层机密保护。用户是数据所有者，经 `yotta-memory view` 口令解锁可看全部。
 - 记忆读写一律走 CLI / MCP；禁止用 shell（`Get-ChildItem` / `cat` / `ls` / `type` 等）直接读改记忆库目录下的文件——否则会绕过 scope/owner 权限边界。
 - 管理动作（init / config / token / lan / serve）不通过 MCP 暴露，远程只能读写记忆，不能改配置、不能管 token。
 - `--no-auth` 会关闭鉴权，仅限可信内网使用。
-- 数据主权在用户：所有数据都是本地明文文件，随时可看、可改、可删。
+- 数据主权在用户：公共 FACT 明文、随时可看可改可删；私密区加密，用户经 `yotta-memory view` 口令解锁后同样可看、可改、可删、可导出。
 - 「记忆守则」内置底线：陪伴不操控 / 理解不越界（不贴标签）/ 诚实不伪装 / 不降格；数据安全（被遗忘权 = `forget`）；宿主隔离（只写本记忆库，不读写宿主 AI 自身 memory / 配置 / 系统文件）。
 
 **确实需要读取其它智能体的私密记忆时（三种授权方式，满足任一即可）：**

@@ -1,6 +1,6 @@
 ## Description:
 
-yotta-memory provides a file-based persistent memory workflow for agents, using local Markdown records for recall, context generation, profile summaries, and separated public or private memory types.
+Yuanyi (yotta-memory) provides boundary-aware, file-based memory for AI agents, using local Markdown storage, recall and remember workflows, and public FACT versus private PREF/BOUND/COMMIT isolation.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-Developers and external users use this skill to give agents durable local memory across sessions, projects, and multiple agent clients. It helps agents recall prior context, write important facts or preferences, generate startup context, and manage memory lifecycle through the yotta-memory CLI or MCP tools.
+Developers and agent operators use this skill to give AI agents persistent local memory across sessions, recover context at the start of work, save important facts or preferences during work, and archive handoff notes at wrap-up.
 
 ### Deployment Geography for Use:
 
@@ -22,43 +22,39 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill persists agent memory as local plaintext files, which can include sensitive personal context.
+Risk: The skill is intended to persist personal or sensitive memory across agent sessions.
 
-Mitigation: Use it only for data the user intentionally wants stored, keep memory directories under user-controlled storage, and delete or forget sensitive entries when they should not persist.
+Mitigation: Store only information the user wants retained, prefer encrypted private memory, and use the provided review, export, forget, and archive flows to inspect or remove memory.
 
-Risk: LAN sharing can expose the memory service over the network.
+Risk: LAN serving, bearer tokens, and no-auth modes can expose memory if configured broadly.
 
-Mitigation: Prefer local CLI or stdio mode, require bearer tokens for HTTP use, avoid --no-auth, and enable network access only on trusted networks.
+Mitigation: Prefer localhost or stdio, avoid 0.0.0.0 and --no-auth unless explicitly required, and manage per-agent tokens carefully.
 
-Risk: MCP setup can modify agent connection configuration and may include bearer tokens.
+Risk: Agent configuration edits and external distillation commands can change how agents access memory or execute trusted tooling.
 
-Mitigation: Review MCP configuration changes before writing them and do not store or paste bearer tokens into persistent memory records.
-
-Risk: Autostart can leave a background memory service running after setup.
-
-Mitigation: Enable lan autostart only when an always-on shared memory service is intended, and use the documented status and disable commands to audit or remove it.
+Mitigation: Review MCP configuration edits manually and use distill --model only with commands the user explicitly trusts.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/yottameta/skills/yotta-memory)
+- [README](README.md)
 - [User guide](USER_GUIDE.md)
 - [Protocol specification](references/protocol.md)
 - [npm package](https://www.npmjs.com/package/@yottameta/yotta-memory)
-- [Declared package repository](https://github.com/YottaMeta/yotta-memory)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with inline shell commands and configuration snippets]
+**Output Format:** [Markdown guidance with inline CLI commands and configuration steps]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May propose or run yotta-memory CLI and MCP setup commands when the user authorizes changes.]
+**Other Properties Related to Output:** [Outputs guide agents to call yotta-memory CLI or MCP operations for memory recall, persistence, context generation, profile generation, maintenance, and archival.]
 
 ## Skill Version(s):
 
-0.6.5 (source: SKILL.md frontmatter, package.json, release evidence)
+0.8.3 (source: SKILL.md frontmatter, package.json, release evidence)
 
 ## Ethical Considerations:
 
