@@ -1,6 +1,6 @@
 ## Description:
 
-Short web-fiction market scan skill that analyzes popular short-story data from Zhihu Yanyan, Qimao, Heiyan, Dianzhong, and related inputs to identify current topic and emotion trends.
+Analyzes short-form web fiction ranking data from platforms such as Zhihu Yanyan, Qimao, Heiyan, and Dianzhong to identify trending themes and market signals.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators, editors, and market researchers use this skill to scan short web-fiction rankings, compare platform patterns, and turn current samples or provided lists into topic, emotion, and validation guidance. It can also run browser-assisted scrapers for Dianzhong and Heiyan when the required browser session is available.
+External users and creative-market analysts use this skill to scan short-form web fiction rankings, compare platform patterns, and produce actionable topic, emotion, saturation-risk, and validation recommendations. When live scraping is unavailable, it can fall back to provided ranking data or historical reference material while labeling the limits of that evidence.
 
 ### Deployment Geography for Use:
 
@@ -22,36 +22,39 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The Heiyan workflow uses a logged-in admin browser session and extracts an admin cookie as a bearer token to read management API data.
+Risk: The Heiyan workflow reads a logged-in browser admin cookie and uses it as a Bearer token for management API calls.
 
-Mitigation: Use a dedicated low-privilege account and separate browser profile, review the scripts before running them, and avoid accounts that can modify business data or expose sensitive inventory.
+Mitigation: Run the scraper only in a separate browser profile with a limited read-only account, and avoid using accounts with broad administrative privileges.
 
-Risk: Market signals and built-in platform reference data can become stale quickly or be wrong when pages and API fields change.
+Risk: Scraped ranking reports may include private or account-scoped data from authenticated sessions.
 
-Mitigation: Require current scan dates, trend confidence, and next rescan timing in reports; treat historical reference data as hypotheses until validated against fresh samples.
+Mitigation: Review generated Markdown before sharing or publishing and remove private account, author, or operational details that should not leave the collection environment.
+
+Risk: Historical market-reference data can become stale for fast-moving short-form fiction trends.
+
+Mitigation: Use current scan results when possible and label fallback analysis as historical hypotheses until the target platforms are rescanned.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/worldwonderer/skills/story-short-scan)
-- [Publisher profile](https://clawhub.ai/user/worldwonderer)
-- [OpenClaw source metadata](https://github.com/worldwonderer/oh-story-claudecode)
-- [Short web-fiction cross-platform writing reference](references/real-market-data.md)
-- [Dianzhong browse page](https://www.ishugui.com/browse)
-- [Heiyan booklist page](https://manage.zhangwenpindu.cn/books/booklist)
+- [OpenClaw source metadata](https://github.com/zenstory-ai/oh-story-claudecode)
+- [Short-form web fiction market reference](artifact/references/real-market-data.md)
+- [Dianzhong browse target](https://www.ishugui.com/browse)
+- [Heiyan management target](https://manage.zhangwenpindu.cn/books/booklist)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, guidance, analysis, files]
+**Output Type(s):** [Markdown, Analysis, Shell commands, Guidance, Files]
 
-**Output Format:** [Markdown reports with tables, ranked recommendations, validation notes, and optional scraper-generated markdown files]
+**Output Format:** [Markdown reports with tables, rankings, recommendations, and optional scraper-generated data files]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Reports should include sample date, trend confidence, data source, and next rescan timing; scraper output includes quality signals when parsing may be incomplete.]
+**Other Properties Related to Output:** [Reports should include sample date, confidence, trend validity window, saturation risk, and next rescan timing.]
 
 ## Skill Version(s):
 
-1.1.10 (source: ClawHub release evidence; artifact frontmatter says 1.0.0)
+1.1.11 (source: server release metadata; packaged frontmatter says 1.0.0)
 
 ## Ethical Considerations:
 
