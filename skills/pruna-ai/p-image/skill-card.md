@@ -1,41 +1,58 @@
-## Description: <br>
-Use when someone explicitly wants the fastest, cheapest photo generation - mood boards, bulk panels, or quick iterations - not when controlled photoreal or in-image text is needed. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+Use when someone explicitly wants the fastest, cheapest photo generation -- mood boards, bulk panels, or quick iterations -- not when controlled photoreal or in-image text is needed.
 
-## Publisher: <br>
-[pruna-ai](https://clawhub.ai/user/pruna-ai) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[pruna-ai](https://clawhub.ai/user/pruna-ai)
 
-## Use Case: <br>
-External users, developers, and agent operators use this skill to route simple, quick photo-generation requests to Pruna's p-image API, draft faithful prompts, choose an aspect ratio, and produce the curl command pattern for asynchronous generation. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: Generated prompts and related image data may be sent to Pruna's external API, and API usage may incur cost. <br>
-Mitigation: Confirm PRUNA_API_KEY setup, review prompts before submission, and use the asynchronous generation flow intentionally before making paid API calls. <br>
-Risk: Companion Pruna skills can affect credential handling and upload, polling, or download behavior. <br>
-Mitigation: Review companion skills separately before installation or use, especially the API helper skill. <br>
+## Use Case:
 
+Developers and external agent users use this skill to route simple still-image requests to Pruna's p-image API, draft faithful prompts, confirm prompt and aspect ratio before generation, and produce curl commands for async or quick test calls.
 
-## Reference(s): <br>
-- [ClawHub p-image skill page](https://clawhub.ai/pruna-ai/skills/p-image) <br>
-- [Pruna predictions API endpoint](https://api.pruna.ai/v1/predictions) <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [guidance, markdown, shell commands, configuration] <br>
-**Output Format:** [Markdown with inline bash curl commands and API request parameters] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [Requires PRUNA_API_KEY and may use optional image-generation parameters such as aspect_ratio and seed.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-1.0.9 (source: server release evidence and SKILL.md frontmatter) <br>
+Risk: The skill uses a Pruna API key for network image-generation requests.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Confirm PRUNA_API_KEY is configured only in the execution environment and avoid exposing it in prompts, logs, or shared command output.
+
+Risk: Image-generation requests may consume paid or limited quota.
+
+Mitigation: Show the drafted prompt and aspect ratio before making API calls unless the user has already locked the wording.
+
+Risk: Simple image generation may be a poor fit for controlled photorealism, readable in-image text, edits, or video.
+
+Mitigation: Route those requests to the more specific Pruna skills named by the artifact instead of re-running p-image.
+
+## Reference(s):
+
+- [ClawHub p-image release page](https://clawhub.ai/pruna-ai/skills/p-image)
+- [Pruna predictions API endpoint](https://api.pruna.ai/v1/predictions)
+
+## Skill Output:
+
+**Output Type(s):** [Guidance, Markdown, Shell commands, Configuration]
+
+**Output Format:** [Markdown with inline bash code blocks and API request examples]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [Requires PRUNA_API_KEY for API calls; image generation can consume paid quota.]
+
+## Skill Version(s):
+
+1.0.10 (source: server release evidence and skill frontmatter)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
