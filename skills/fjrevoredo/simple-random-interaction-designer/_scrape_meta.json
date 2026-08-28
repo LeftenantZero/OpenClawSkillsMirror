@@ -1,0 +1,34 @@
+{
+  "changelog": "Version 2.0.0 is a major redesign of the interaction decision and output format:\n\n- Replaces old yes/no and debug output with a single decision field; on yes, provides both an interaction type and description for more natural, guided outreach.\n- Refines interaction types to emphasize casual, human-like chat (e.g., playful openers, context-aware follow-ups, light shared observations).\n- Shifts to concise, easy-to-ignore, non-transactional message guidance avoiding \"just checking in\" and similar phrasing.\n- Requires real context for data-aware interactions; if unavailable, defaults to more general, low-pressure messages or retries for a non-data type.\n- Omits probability and roll details from the output for cleaner integration and simpler error handling.\n- Clarifies contract rules, error handling, and offers more examples of acceptable outputs.",
+  "created_at": 1771607517447,
+  "display_name": "Simple Random Interaction Designer",
+  "fetched_at": 1787898359099,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/random_interaction_designer.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "fjrevoredo",
+    "handle": "fjrevoredo",
+    "user_id": "s17cs3g1yxjyvt1f6tsnhv03kh884vye"
+  },
+  "slug": "simple-random-interaction-designer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/simple-random-interaction-designer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=simple-random-interaction-designer&ownerHandle=fjrevoredo",
+    "page_url": "https://clawhub.ai/fjrevoredo/skills/simple-random-interaction-designer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1301,
+    "installs": 38,
+    "stars": 2,
+    "versions": 2
+  },
+  "summary": "Decide whether OpenClaw should send a spontaneous casual message during periodic checks, and when it should, choose a natural interaction type plus concise g...",
+  "updated_at": 1778491594064,
+  "version": "2.0.0"
+}
