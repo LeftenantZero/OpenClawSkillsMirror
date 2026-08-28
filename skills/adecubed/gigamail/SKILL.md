@@ -1,7 +1,7 @@
 ---
 name: gigamail
-description: Email and calendar for your OpenClaw agent through the GigaMail MCP server — read, search, draft, reply, schedule — with every destructive action (send, delete, calendar write) held for out-of-band human approval that the agent cannot grant itself.
-version: 0.1.1
+description: Email and calendar for your OpenClaw agent through the GigaMail MCP server — read, search, draft, reply, schedule — with every destructive action (send, delete, calendar write) held for out-of-band human approval that the agent cannot grant itself. 给你的 OpenClaw 代理一个真实邮箱和日历：读信、搜索、起草自由，发送与删除必须由人带外批准，代理无法批准自己。
+version: 0.2.2
 metadata:
   openclaw:
     emoji: "📬"
@@ -38,6 +38,48 @@ metadata:
 
 # GigaMail — mail for your AI agent
 
+## 中文简介
+
+GigaMail 是一个本地运行的 MCP 服务器，让你的 OpenClaw 代理访问真实邮箱
+（Microsoft 365 / IMAP）和日历。核心规则只有一条：**代理永远无法批准自己
+的发送** —— 发送、删除等危险操作只返回一个惰性的请求 id，由人在 Windows
+Hello / Touch ID 背后带外批准后才执行。0.2 起支持带栅栏的自动回复（规则
+只能由人创建，草稿可在 Telegram 或桌面通知中一键批准、拒绝、要求修改）。
+
+### 安装与配置（一次性）
+
+1. 安装服务器（需要 Python 3.10+）：`pip install "gigamail[all]"`
+2. 连接邮箱账户（只能在终端里做，凭据永远不经过代理通道）：
+   `gigamail login`（Microsoft 365 设备码登录）或
+   `gigamail accounts add-imap`（任意 IMAP 提供商）
+3. 在 OpenClaw 中注册 MCP 服务器：
+   `openclaw mcp add gigamail --command gigamail-server --env "GIGAMAIL_ROOT=<数据目录>"`
+   Windows 下数据目录是 `C:\Users\<你>\AppData\Roaming\ADE`，Linux/macOS 是
+   `~/.ade`。用 `openclaw mcp probe gigamail` 验证，应显示 24 个工具。
+4. 可选但强烈建议：给账户设置身份和知识文件（价目表、条款等），回信会
+   从这些文件取数字：`gigamail identity set`、`gigamail identity add-file <路径>`
+
+### 批准是怎么工作的
+
+危险操作（发送、回复、删除、日历写入）分两步：代理第一次调用只会得到
+预览和一个请求 id，什么都不会执行；你从桌面控制台、命令行
+（`gigamail approvals approve <id>`）或 Telegram 批准，每次批准都要通过
+Windows Hello / Touch ID 的系统级验证。代理没有任何批准的工具，重复调用
+只会得到"等待批准"。
+
+### 自动回复（0.2）
+
+回复规则在桌面控制台的"自动化"页或 `gigamail rules add` 创建，创建本身
+就要过 Hello 验证；`gigamail watch` 是执行规则的进程。半自动（semi）模式
+下每封草稿都等你批准；全自动（auto）有每日上限、按发件人冷却和强制过期。
+Telegram 一键批准/拒绝/要求修改：`gigamail telegram setup --approve`。
+
+README 和桌面控制台界面均提供中文（界面为初翻，欢迎打磨：console/i18n.js）。
+仓库：https://github.com/adecubed/gigamail
+
+下面的操作指引供代理阅读，保持英文以节省 token；人类读者看上面的中文即可。
+
+
 Use this skill when the user asks about their email or calendar: reading
 or triaging the inbox, searching mail, reading attachments, drafting or
 sending replies, checking availability, proposing or creating
@@ -54,8 +96,8 @@ Repository: https://github.com/adecubed/gigamail. The GigaMail server is
 AGPL-3.0-or-later; this skill text is MIT-0 as required by ClawHub.
 Verified against OpenClaw 2026.7.1-2 (Windows): tool discovery of all 24
 tools. See INTEGRATIONS.md in the repository for exactly what was tested.
-Requires gigamail ≥ 0.1.4 (approval via OS-level user verification;
-GIGAMAIL_* environment variables).
+Requires gigamail ≥ 0.2.1 (approval via OS-level user verification;
+GIGAMAIL_* environment variables; reply rules and the watcher).
 
 ## Setup (once)
 
@@ -162,6 +204,25 @@ Rules that follow from this:
 - Never call a dangerous tool "to see what happens". Phase 1 creates a
   pending request the user will see; only create one when the user
   actually wants the action.
+
+## Reply rules (0.2) — what you can and cannot do
+
+Since 0.2 the user can create reply rules: mail from declared senders (or
+in a folder) gets a draft written automatically and either proposed for
+approval (`semi`) or sent within strict limits (`auto`). Everything about
+rules is out of your reach by design:
+
+- **You have no tool to create, modify, resume or delete rules.** They are
+  managed only from the GigaMail console ("Automations" view) or the CLI
+  (`gigamail rules ...`), behind the same OS-level verification as
+  approvals. If the user asks you to "set up an auto-reply", explain that
+  and point them there — do not try to emulate a rule by watching mail and
+  sending yourself: every send you initiate still needs per-send approval.
+- The drafts for rules are written by a separate watcher process
+  (`gigamail watch`), not by you, from the documents attached to the rule.
+- Approval requests created by rules reach the user as desktop toasts and
+  Telegram messages with approve/reject/edit buttons; your `request_id`
+  flow is unchanged.
 
 ## Untrusted content
 
