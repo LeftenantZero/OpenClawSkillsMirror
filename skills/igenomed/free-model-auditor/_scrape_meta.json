@@ -1,0 +1,47 @@
+{
+  "changelog": "Version 1.5.0 \u2014 Major upgrade for audit automation and user portability\n\n- Automated discovery and removal of free models across multiple OpenAI-compatible vendors, reflecting real-time status in models.json.\n- Strict enforcement of VPN connectivity checks for overseas models before proceeding, with clear user prompts and connectivity probes.\n- Automatic, environment-variable-based path resolution\u2014no hardcoded paths; fully portable across user setups.\n- If no usable API keys are found, work halts with an in-context application guide for new users to configure keys.\n- Directly applies detected model changes to models.json and generates comprehensive, dated audit reports and model lists in workspace.\n- Improved logging and summary outputs, ensuring every audit provides a current, grouped list of all available free models.\n- Enhanced safety measures: key rotation reminders, explicit handling of connectivity vs. model removal, and guidance for WorkBuddy restarts.",
+  "created_at": 1787910244967,
+  "display_name": "Free Model Auditor\uff08\u514d\u8d39\u6a21\u578b\u5ba1\u8ba1\u5458\uff09",
+  "fetched_at": 1787931153170,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/platforms.md",
+    "references/resolve_paths.py",
+    "references/test_harness.py",
+    "skill-card.md",
+    "templates/audit_report.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787910986146,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "iGenomed",
+    "handle": "igenomed",
+    "user_id": "s177cj8m1kb00mqpcsne0s68f58db3e5"
+  },
+  "slug": "free-model-auditor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/free-model-auditor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=free-model-auditor&ownerHandle=igenomed",
+    "page_url": "https://clawhub.ai/igenomed/skills/free-model-auditor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 18,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5ba1\u8ba1 WorkBuddy \u81ea\u5b9a\u4e49\u6a21\u578b\u6ce8\u518c\u8868\uff08models.json\uff09\u4e2d\u7684\u514d\u8d39\u6a21\u578b\uff1a\u8de8\u591a\u4e2a OpenAI \u517c\u5bb9\u5382\u5546\u65b0\u589e\u53ef\u53d1\u73b0\u7684\u514d\u8d39\u6a21\u578b\u3001 \u5254\u9664\u5df2\u8f6c\u4ed8\u8d39\u6216\u5931\u6548\u7684\u6a21\u578b\uff0c\u4fdd\u6301\u6ce8\u518c\u8868\u771f\u5b9e\u6709\u6548\u3002\u5f53\u7528\u6237\u8981\u6c42\u300c\u5ba1\u8ba1\u81ea\u5b9a\u4e49\u6a21\u578b\u300d\u300c\u68c0\u67e5\u6709\u6ca1\u6709\u65b0\u7684\u514d\u8d39\u6a21\u578b\u300d \u300c\u6d4b\u8bd5\u5176\u4f59\u5e73\u53f0\u6709\u65e0\u9057\u6f0f\u300d\u300c\u5b9a\u671f\u5de1\u68c0\u6a21\u578b\u6e05\u5355\u300d\u6216\u5e0c\u671b\u5bf9\u514d\u8d39 API \u6a21\u578b\u505a\u5065\u5eb7\u68c0\u67e5\u65f6\u4f7f\u7528\u3002 \u672c\u6280\u80fd\u5bf9\u6d77\u5916\u5e73\u53f0\u6267\u884c VPN \u8fde\u901a\u6027\u95e8\u7981\uff0c\u6309\u5404\u5382\u5546\u7b56\u7565\u5224\u5b9a\u514d\u8d39\uff0c\u6d3b\u4f53\u5b9e\u6d4b\u6bcf\u4e2a\u5019\u9009\uff0c\u5e76\u81ea\u52a8\u628a\u65b0\u589e/\u79fb\u9664\u5dee\u5f02\u5e94\u7528\u5230 models.json\u3002",
+  "updated_at": 1787910389037,
+  "version": "1.5.0"
+}
