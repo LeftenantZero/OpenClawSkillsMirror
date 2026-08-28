@@ -1,6 +1,6 @@
 ## Description:
 
-Enhances one or more image URLs through the Flyelep AI Tool API and returns new URLs for clearer images.
+Enhances one or more image URLs through the Flyelep AI Tool API and returns URLs for the clarified images.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to submit public image URLs to Flyelep for light, standard, or strong clarity enhancement, including batch processing. The agent gathers the required image URL and enhancement-strength inputs, calls the HTTP API, and presents the returned enhanced image URLs.
+External users and developers use this skill to enhance image clarity for single-image or batch workflows when they can provide public image URLs and a Flyelep API key.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,34 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Image URLs and the Flyelep secretKey are sent to Flyelep's API during use.
+Risk: Local image uploads are converted into permanent public URLs.
 
-Mitigation: Use only image links appropriate for third-party processing, provide the API key at runtime, and avoid storing real keys in shared prompts, files, repositories, or persistent configuration.
+Mitigation: Warn users before upload and proceed only when the image is not private, personal, confidential, or business-sensitive.
 
-Risk: Unsupported image formats, inaccessible URLs, oversized files, or invalid enhancement-strength values can cause API failures.
+Risk: The skill sends selected images and a user-provided Flyelep API key to Flyelep.
 
-Mitigation: Confirm that source images are public direct links in JPG, PNG, or BMP format, meet the documented size and dimension limits, and use one of light, standard, or strong for enhancement strength.
+Mitigation: Request the API key at runtime, avoid storing it, and use the skill only when sharing those images with Flyelep is acceptable.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/flyelepai/skills/flyelep-image-clarity-enhance)
-- [Flyelep image clarity API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/aiTool/imageClarityEnhance)
-- [Flyelep Open Platform control board](https://www.flyelep.cn/controlboard)
+- [Flyelep open platform console](https://www.flyelep.cn/controlboard)
+- [Flyelep image clarity enhance API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/aiTool/imageClarityEnhance)
+- [Flyelep file upload API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/file/upload)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [API Calls, Shell commands, Configuration instructions, Guidance]
 
-**Output Format:** [Markdown guidance with HTTP request examples and returned image URL text]
+**Output Format:** [Markdown with HTTP, JSON, and shell command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Returned image URLs may be comma-separated for batch requests; the skill instructs the agent to split and present them individually.]
+**Other Properties Related to Output:** [Returns enhanced image URLs; batch results are comma-separated and should be presented as individual links.]
 
 ## Skill Version(s):
 
-1.0.3 (source: server release evidence)
+1.0.4 (source: ClawHub release evidence)
 
 ## Ethical Considerations:
 

@@ -1,14 +1,24 @@
 {
-  "changelog": "- Removed the file skill-card.md.\n- SKILL.md: Now explicitly requires all mandatory parameters to be obtained from the user, not filled by the agent.\n- SKILL.md: Added detailed, platform-specific (Windows/macOS/Linux) instructions for API request encoding and security, including handling of temporary JSON payload files and cleanup procedures.\n- SKILL.md: Clarified that Content-Type must include charset=utf-8; added important platform-specific notes for curl and handling Chinese JSON.\n- No functional changes to API usage or fundamental skill logic.",
+  "changelog": "- Removed the file skill-card.md.\n- Updated and clarified SKILL.md:  \n  - Expanded instructions for handling\u672c\u5730\u6587\u4ef6\u4e0a\u4f20, including how to obtain a public URL before enhancement.\n  - Clarified\u53c2\u6570use (imgUrls, enhanceStrength) and required their explicit presence for correct API results.\n  - Added details about\u4f7f\u7528file-upload\u63a5\u53e3 if user provides local files.\n  - Updated error handling advice and made the execution\u6d41\u7a0bstep-by-step.\n  - Improved\u8c03\u7528\u793a\u4f8band platform-specific guidance for Windows, macOS, and Linux.",
   "created_at": 1776674619641,
   "display_name": "image-clarity-enhance",
-  "fetched_at": 1787773193965,
+  "fetched_at": 1787931701254,
   "files": [
     "SKILL.md",
     "_meta.json",
     "skill-card.md"
   ],
-  "moderation": null,
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787887179964,
+    "verdict": "clean"
+  },
   "owner": {
     "display_name": "flyelep",
     "handle": "flyelepai",
@@ -22,12 +32,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 929,
+    "downloads": 969,
     "installs": 21,
     "stars": 0,
-    "versions": 4
+    "versions": 5
   },
   "summary": "\u901a\u8fc7 Flyelep AI \u5de5\u5177\u63a5\u53e3\u589e\u5f3a\u56fe\u7247\u6e05\u6670\u5ea6\uff0c\u652f\u6301\u5355\u5f20\u6216\u6279\u91cf\u5904\u7406\u3002 \u5f53\u7528\u6237\u8981\u6c42\u505a AI \u8d85\u6e05\u3001\u63d0\u5347\u56fe\u7247\u6e05\u6670\u5ea6\u3001\u6279\u91cf\u589e\u5f3a\u6a21\u7cca\u56fe\u7247\u65f6\u4f7f\u7528\u6b64\u6280\u80fd\u3002",
-  "updated_at": 1786083555649,
-  "version": "1.0.3"
+  "updated_at": 1787886878320,
+  "version": "1.0.4"
 }
