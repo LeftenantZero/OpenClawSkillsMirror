@@ -1,6 +1,6 @@
 ## Description:
 
-iaiops-plcnext helps agents work with Phoenix Contact PLCnext Control and virtual PLC environments through OPC-UA and Modbus workflows for diagnostics, asset modeling, alarm, OEE, downtime, historian, export, stream, UNS, and compliance tasks.
+PLCnext and virtualized-PLC edition of iaiops for reading Phoenix Contact PLCnext Control and vPLC data over built-in OPC-UA and Modbus-TCP services, with cross-protocol diagnostics for dataflow, downtime root cause, predictive maintenance, OEE, alarms, and baselines.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and industrial engineers use this skill to route PLCnext and virtual PLC requests to OPC-UA and Modbus workflows for connection diagnosis, process-data reading, historian and alarm analysis, OEE and downtime investigation, asset modeling, and controlled data export or publishing.
+Developers and industrial engineers use this skill to route PLCnext and virtualized PLC tasks to existing OPC-UA and Modbus tools for read-first diagnostics, health checks, alarm analysis, downtime triage, and operational reporting.
 
 ### Deployment Geography for Use:
 
@@ -22,9 +22,13 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Export and publish tools could send industrial data outside the PLC environment despite the artifact's read-only positioning.
+Risk: The skill presents itself as read-only, but the security summary notes tools that can export data, publish events, push historian data, or create investigation records.
 
-Mitigation: Confirm historian, stream, UNS, export, and compliance bundle destinations before use, and require explicit operator approval before handling sensitive plant data.
+Mitigation: Review enabled backend tools before installation and disable or approval-gate any non-read-only actions.
+
+Risk: Device-read diagnostics can expose operational data from PLCnext or virtualized PLC environments.
+
+Mitigation: Install only in environments where data access is authorized and where approvals, network controls, and logging are enforced.
 
 ## Reference(s):
 
@@ -32,17 +36,17 @@ Mitigation: Confirm historian, stream, UNS, export, and compliance bundle destin
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Markdown, Shell commands, Configuration]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with inline commands and tool names]
+**Output Format:** [Markdown guidance with inline tool names, shell commands, and configuration values]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May describe OPC-UA, Modbus, historian, export, stream, UNS, and compliance workflows; operator approval is recommended before using tools with sensitive plant data.]
+**Other Properties Related to Output:** [Read-first PLCnext profile guidance for OPC-UA, Modbus-TCP, diagnostics, and operational analysis workflows]
 
 ## Skill Version(s):
 
-0.23.0 (source: evidence.release.version)
+0.23.1 (source: server release evidence)
 
 ## Ethical Considerations:
 
