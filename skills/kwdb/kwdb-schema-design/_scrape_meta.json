@@ -1,8 +1,8 @@
 {
-  "changelog": "- Major update: Formalizes workflow, activation, and reference structure for KWDB schema design.\n- Adds a tiered reference system for rules and examples, categorized by usage frequency.\n- Details comprehensive trigger/ignore keyword lists to clarify when the skill should activate.\n- Defines a strict 5-step workflow: classify workload, gather requirements, design schema, generate DDL, validate.\n- Includes robust guardrails: prohibits generating DDL before classification, enforcing assumption transparency, and validation.\n- Expands supported DDL operations list and outlines error handling practices.",
+  "changelog": "- Removed the file: skill-card.md.\n- No additional functionality or documentation was changed.",
   "created_at": 1778645013352,
   "display_name": "KWDB Schema Design",
-  "fetched_at": 1787775525089,
+  "fetched_at": 1787932028596,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -42,12 +42,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 621,
+    "downloads": 662,
     "installs": 10,
     "stars": 0,
-    "versions": 2
+    "versions": 3
   },
-  "summary": "Design KWDB schemas and generate DDL for relational, time-series, and mixed workloads. Covers: CREATE/ALTER/DROP TABLE, INDEX, VIEW, constraints, partitionin...",
-  "updated_at": 1784787897198,
-  "version": "1.2.0"
+  "summary": "Design KWDB schemas and generate DDL for relational, time-series, and mixed workloads. Covers: CREATE/ALTER/DROP TABLE, INDEX, VIEW, constraints, partitioning, retention, tags. Trigger keywords: KWDB, schema, table, index, time-series, sensor, IoT, metrics, TAGS, PRIMARY TAGS, RETENTIONS, primary key, foreign key, DDL. NOT for: DML queries, deployment, backup, performance tuning.",
+  "updated_at": 1787878230535,
+  "version": "1.2.1"
 }
