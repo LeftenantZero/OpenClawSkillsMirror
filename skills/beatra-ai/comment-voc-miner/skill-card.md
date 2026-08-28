@@ -1,6 +1,6 @@
 ## Description:
 
-Turn public comments into a usable brief. Give a post link, a category to search, or comments you already copied, and get the objections, verbatim lines, purchase worries, FAQ answers, live-commerce replies, and spoken hooks that come from what viewers actually wrote.
+Comment VOC Miner turns public or pasted social comments into a grouped voice-of-customer brief with objections, verbatim lines, FAQ answers, live-commerce replies, and spoken hooks grounded in source comments.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Marketing, ecommerce, social media, and customer research teams use this skill to turn public or pasted social comments into a same-day voice-of-customer brief. It supports objection mining, FAQ drafting, live-commerce replies, and spoken hooks based on audience wording.
+External marketers, creators, commerce teams, and agents use this skill to turn public or pasted audience comments into same-day VOC briefs for objection mining, FAQ writing, live-commerce replies, and spoken hooks.
 
 ### Deployment Geography for Use:
 
@@ -22,43 +22,44 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The security evidence reports a broad shared Beatra authorization that exceeds the narrow comment-mining workflow.
+Risk: The package uses a shared, broad Beatra device token with full-scope credentials.
 
-Mitigation: Install only when that authorization is acceptable, keep credentials private, and revoke the device authorization from the Beatra console when the skill is no longer needed.
+Mitigation: Install only if that credential scope is acceptable, keep the credential private, and prefer pasted comments when a remote lookup is not needed.
 
-Risk: The security evidence reports an unrestricted bundled tool caller and local upload support.
+Risk: Silent automatic package updates are enabled by default.
 
-Mitigation: Use only the documented comment lookup workflow and avoid generic upload or arbitrary tool-call paths unless that broader access is intended.
+Mitigation: Disable automatic updates with `python3 scripts/mcp_client.py update --auto off` when users need explicit review before package files change.
 
-Risk: The security evidence reports silent automatic package updates by default.
+Risk: Public comment lookups are optional paid operations and can vary by platform and page.
 
-Mitigation: Disable automatic updates with scripts/mcp_client.py update --auto off when manual review before updates is required.
+Mitigation: Approve each lookup only after checking the platform, operation key, live credit price, and number of lookup pages shown by the agent.
 
 ## Reference(s):
 
-- [Comment VOC Miner on ClawHub](https://clawhub.ai/beatra-ai/skills/comment-voc-miner)
-- [Publisher profile](https://clawhub.ai/user/beatra-ai)
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/comment-voc-miner)
 - [Beatra skill homepage](https://beatra.ai/skills/comment-voc-miner)
-- [Looking up comments](references/comment-lookup.md)
-- [Writing the brief](references/brief.md)
-- [Comment brief workflow](references/workflow.md)
-- [Installation and authentication](references/installation-and-auth.md)
-- [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
-- [Automatic updates and safety](references/automatic-updates-and-safety.md)
+- [Writing the brief](artifact/references/brief.md)
+- [Looking up comments](artifact/references/comment-lookup.md)
+- [Comment brief workflow](artifact/references/workflow.md)
+- [Billing, errors, and recovery](artifact/references/billing-errors-and-recovery.md)
+- [Installation and authentication](artifact/references/installation-and-auth.md)
+- [MCP connection](artifact/references/mcp-connection.md)
+- [Automatic updates and safety](artifact/references/automatic-updates-and-safety.md)
+- [Uninstall and disconnect](artifact/references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [text, markdown, shell commands, guidance]
 
-**Output Format:** [Markdown brief with optional lookup status and billing fields]
+**Output Format:** [Markdown brief with cited source comments and optional task or billing details]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Outputs are based on pasted comments or confirmed paid public comment lookups; no generated media artifact is expected.]
+**Other Properties Related to Output:** [Optional paid lookups report returned payload, task ID, terminal status, and net charged credits when present.]
 
 ## Skill Version(s):
 
-0.1.1 (source: server release metadata and artifact manifest)
+0.1.4 (source: server release evidence and manifest.json)
 
 ## Ethical Considerations:
 
