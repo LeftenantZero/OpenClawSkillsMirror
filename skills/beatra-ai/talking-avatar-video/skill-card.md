@@ -1,6 +1,6 @@
 ## Description:
 
-Creates a talking-avatar presenter video from one portrait plus an approved short script or speech track, with narration preparation, Beatra generation steps, and focused review of identity, clarity, lip sync, and motion stability.
+Create a talking avatar from one portrait and a short script or speech track. This AI presenter and digital human video workflow can prepare narration with a selected voice or use a supplied recording, then direct a stable talking-head clip with restrained expression, natural movement, clear delivery, and focused lip-sync review. Use it for AI spokesperson videos, product explainers, training, course lessons, announcements, onboarding, social talking-head content, and photo-to-talking-video messages, with narration-driven facial motion and a focused review of identity, clarity, lip sync, and motion stability.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and agent operators use this skill to create AI spokesperson, presenter, training, course, onboarding, announcement, and product explainer videos from an authorized portrait and narration source. The workflow emphasizes consent, media compatibility checks, paid-stage approvals, task polling, and output review.
+External users and developers use this skill to create a single talking-avatar presenter video from an authorized portrait and either an approved speech recording or a short script with a selected voice. It supports explainers, product messages, training clips, lessons, announcements, onboarding, and social talking-head content while guiding review of identity, speech clarity, lip sync, and motion stability.
 
 ### Deployment Geography for Use:
 
@@ -22,46 +22,47 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The workflow sends portraits, voice recordings, scripts, and generated outputs to Beatra.
+Risk: The skill uses a broad shared Beatra device token for paid media-generation operations.
 
-Mitigation: Use the skill only when the user is comfortable sharing that media with Beatra and has confirmed rights and consent for the likeness and voice.
+Mitigation: Install only when the publisher is trusted, review the Beatra approval page carefully, and avoid exposing the local credential in prompts, logs, command arguments, or environment variables.
 
-Risk: The skill stores a broad shared Beatra device token under ~/.beatra.
+Risk: Paid narration and video requests can spend account credits and may be duplicated if retried with changed request data.
 
-Mitigation: Review the authorization before installation and use the documented uninstall or disconnect workflow when the shared connection should be removed.
+Mitigation: Require explicit approval before each paid stage, keep a stable request identity for uncertain retries, and report final charges only from terminal task billing fields.
 
-Risk: Package files silently self-update during normal use unless automatic updates are disabled.
+Risk: Silent automatic updates are enabled by default and can replace local package files.
 
-Mitigation: Disable silent updates with the documented update --auto off command when automatic package replacement is not acceptable.
+Mitigation: Use the documented auto-update controls when ordinary use should avoid silent replacement, and rely on the package's checksum and manifest verification for accepted updates.
+
+Risk: Talking-avatar generation can misuse a person's likeness or voice.
+
+Mitigation: Confirm rights to the presenter likeness and narration voice before paid synthesis or animation, and stop before generation when authorization is missing.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/talking-avatar-video)
-- [Publisher profile](https://clawhub.ai/user/beatra-ai)
-- [Beatra skill homepage](https://beatra.ai/skills/talking-avatar-video)
-- [Beatra MCP endpoint](https://mcp.beatra.ai/mcp)
-- [Narration-first presenter workflow](artifact/references/workflow.md)
-- [Installation and authentication](artifact/references/installation-and-auth.md)
-- [Installation registration](artifact/references/installation-registration.md)
-- [Tasks and results](artifact/references/tasks-and-results.md)
-- [Billing, errors, and recovery](artifact/references/billing-errors-and-recovery.md)
-- [MCP connection](artifact/references/mcp-connection.md)
-- [Automatic updates and safety](artifact/references/automatic-updates-and-safety.md)
-- [Uninstall and disconnect](artifact/references/uninstall-and-disconnect.md)
+- [ClawHub Skill Listing](https://clawhub.ai/beatra-ai/skills/talking-avatar-video)
+- [Beatra Skill Homepage](https://beatra.ai/skills/talking-avatar-video)
+- [Narration-first presenter workflow](references/workflow.md)
+- [Installation and authentication](references/installation-and-auth.md)
+- [Tasks and results](references/tasks-and-results.md)
+- [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
+- [Automatic updates and safety](references/automatic-updates-and-safety.md)
+- [MCP connection](references/mcp-connection.md)
+- [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [Guidance, Shell commands, API Calls, Markdown, Files]
 
-**Output Format:** [Markdown guidance with inline JSON and shell command examples]
+**Output Format:** [Markdown guidance with inline shell commands and returned Beatra task, artifact, usage, and billing details]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May submit Beatra MCP tool calls through bundled scripts and return generated audio/video artifacts, task status, usage, billing, and review notes when the host agent can inspect them.]
+**Other Properties Related to Output:** [May return generated audio or video artifact links; paid generation details should be reported from terminal task responses.]
 
 ## Skill Version(s):
 
-0.1.8 (source: server release evidence and manifest.json)
+0.1.9 (source: server release evidence and manifest.json)
 
 ## Ethical Considerations:
 
