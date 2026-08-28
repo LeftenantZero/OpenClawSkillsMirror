@@ -1,6 +1,6 @@
 ## Description:
 
-Summarizes Bilibili videos by combining AI subtitles, danmaku timing, and comment-thread analysis into a structured Markdown report.
+bili-review helps an agent fetch Bilibili AI subtitles, timed danmaku, and nested comments, then produce a cross-checked Markdown video summary.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and external users use this skill to analyze Bilibili videos, extracting subtitles, danmaku timing signals, and nested comment evidence for concise research-style summaries and action guidance.
+Agent users and developers use this skill to analyze a single Bilibili video from a BV/AV ID or URL and generate a concise summary grounded in subtitles, danmaku timing, and comment discussion.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,32 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can extract and reuse Bilibili-related browser session cookies stored in cookies.txt.
+Risk: The skill automatically extracts and stores Bilibili browser login cookies for long-term reuse.
 
-Mitigation: Run the explicit login command yourself, inspect or delete cookies.txt after use, and avoid shared or untrusted workspaces.
+Mitigation: Run it in a contained environment or with a dedicated Bilibili account, and remove the saved cookies.txt file when the skill is no longer needed.
 
-Risk: Local cookie files may be readable by other users or tools if the workspace or filesystem permissions are not controlled.
+Risk: The skill can send authenticated requests to Bilibili when retrieving video data.
 
-Mitigation: Use the skill only in a private local environment and verify that generated cookie files remain restricted to the current user.
-
-Risk: ClawScan marked the release suspicious because of cookie extraction and reuse behavior.
-
-Mitigation: Review the included scripts and install only if that cookie-handling behavior is acceptable for the intended environment.
+Mitigation: Use only accounts and video inputs you are comfortable using with Bilibili, and review the generated summary before relying on it.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/frozentearz/skills/bili-review)
 - [Project homepage](https://github.com/frozentearz/bili-review)
-- [Interactive flowchart](https://frozentearz.github.io/bili-review/flowchart.html)
 
 ## Skill Output:
 
 **Output Type(s):** [Markdown, Shell commands, Guidance]
 
-**Output Format:** [Markdown report with optional tables, checklists, and Mermaid diagrams]
+**Output Format:** [Markdown video summary with optional inline shell commands]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May invoke local Python scripts and yt-dlp to fetch Bilibili subtitles, danmaku, and comments.]
+**Other Properties Related to Output:** [Summaries may include timestamps, comment signals, decision cards, tables, and action recommendations for one Bilibili video.]
 
 ## Skill Version(s):
 
-2.1.2 (source: frontmatter and release evidence)
+2.2.0 (source: SKILL.md frontmatter and server release evidence)
 
 ## Ethical Considerations:
 

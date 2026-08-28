@@ -14,6 +14,7 @@ bili-review - B站视频字幕抓取 + 评论区爬取
 """
 import argparse
 import concurrent.futures
+import hashlib
 import http.cookiejar
 import json
 import math
@@ -473,10 +474,180 @@ def print_comments_list(result: dict, include_meta: bool = True) -> None:
             print(f"   └ 楼中楼{j}. {r_date_str}[点赞 {fmt_num(r['like'])}] {r['author']}: {r['text']}")
 
 
-# ---------- 字幕 ----------
+# ---------- 字幕 (WBI 原生直连 + yt-dlp 降级保底) ----------
+
+MIXIN_KEY_ENC_TAB = [
+    46, 47, 18, 2, 53, 8, 23, 32, 15, 50, 10, 31, 58, 3, 45, 35, 27, 43, 5, 49,
+    33, 9, 42, 19, 29, 28, 14, 39, 12, 38, 41, 13, 37, 48, 7, 16, 24, 55, 40,
+    61, 26, 17, 0, 1, 60, 51, 30, 4, 22, 25, 54, 21, 56, 59, 6, 63, 57, 62, 11,
+    36, 20, 34, 44, 52
+]
+
+
+def get_cookie_opener(cookie_file: Path = None) -> urllib.request.OpenerDirector:
+    """构建支持本地 CookieJar 的 URL 请求处理器."""
+    opener = urllib.request.build_opener()
+    if cookie_file and cookie_file.exists():
+        cj = http.cookiejar.MozillaCookieJar(str(cookie_file))
+        cj.load(ignore_discard=True, ignore_expires=True)
+        opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
+    return opener
+
+
+def get_wbi_keys(cookie_file: Path = None) -> tuple:
+    """获取 WBI 签名所必需的 img_key 和 sub_key."""
+    opener = get_cookie_opener(cookie_file)
+    req = urllib.request.Request("https://api.bilibili.com/x/web-interface/nav",
+                                 headers={'User-Agent': UA})
+    try:
+        with opener.open(req, timeout=10) as resp:
+            data = json.loads(resp.read().decode())
+        wbi_img = data.get('data', {}).get('wbi_img', {})
+        img_key = wbi_img.get('img_url', '').split('/')[-1].split('.')[0]
+        sub_key = wbi_img.get('sub_url', '').split('/')[-1].split('.')[0]
+        if img_key and sub_key:
+            return img_key, sub_key
+    except Exception as e:
+        raise RuntimeError(f"动态获取 WBI 密钥异常: {e}")
+    raise RuntimeError("未能从 B 站动态获取 WBI 验签参数")
+
+
+def sign_wbi_params(params: dict, img_key: str, sub_key: str) -> dict:
+    """计算 B 站 WBI 签名."""
+    raw_key = img_key + sub_key
+    mixin_key = ''.join([raw_key[n] for n in MIXIN_KEY_ENC_TAB])[:32]
+    curr_time = round(time.time())
+    p = {**params, 'wts': curr_time}
+    p = dict(sorted(p.items()))
+    p = {
+        k: ''.join(filter(lambda chr: chr not in "!'()*", str(v)))
+        for k, v in p.items()
+    }
+    query = urllib.parse.urlencode(p)
+    wbi_sign = hashlib.md5((query + mixin_key).encode()).hexdigest()
+    p['w_rid'] = wbi_sign
+    return p
+
+
+def fetch_subtitle_wbi(bvid: str, lang: str = None) -> str:
+    """第一优先：Python 原生 WBI 直连引擎 (无需 yt-dlp, 0.2s 极速响应)."""
+    language = lang or 'ai-zh'
+    cookie_file = None
+    try:
+        cookie_file = get_cookie_file()
+    except Exception:
+        pass
+
+    info = get_video_info(bvid)
+    aid = info['aid']
+    cid = info['cid']
+
+    img_key, sub_key = get_wbi_keys(cookie_file)
+    signed_params = sign_wbi_params({'aid': aid, 'cid': cid, 'bvid': bvid}, img_key, sub_key)
+    query_str = urllib.parse.urlencode(signed_params)
+    url = f"https://api.bilibili.com/x/player/wbi/v2?{query_str}"
+
+    opener = get_cookie_opener(cookie_file)
+    req = urllib.request.Request(url, headers={
+        'User-Agent': UA,
+        'Referer': f'https://www.bilibili.com/video/{bvid}'
+    })
+
+    with opener.open(req, timeout=12) as resp:
+        res = json.loads(resp.read().decode('utf-8'))
+
+    sub_list = res.get('data', {}).get('subtitle', {}).get('subtitles', [])
+    if not sub_list:
+        raise RuntimeError("未在 WBI 接口中发现可用字幕")
+
+    # 匹配目标语言 (优先 ai-zh, zh-CN, zh-Hans 或指定语言)
+    target = None
+    if language:
+        target = next((s for s in sub_list if s.get('lan') == language), None)
+    if not target:
+        target = next((s for s in sub_list if s.get('lan') in ('ai-zh', 'zh-CN', 'zh-Hans')), sub_list[0])
+
+    sub_url = target.get('subtitle_url', '')
+    if not sub_url:
+        raise RuntimeError("字幕 URL 为空")
+    if sub_url.startswith('//'):
+        sub_url = 'https:' + sub_url
+
+    sub_req = urllib.request.Request(sub_url, headers={'User-Agent': UA})
+    with opener.open(sub_req, timeout=12) as resp:
+        sub_json = json.loads(resp.read().decode('utf-8'))
+
+    body = sub_json.get('body', [])
+    if not body:
+        raise RuntimeError("字幕内容为空")
+
+    return format_subtitle_list(body)
+
+
+def format_seconds_to_time(seconds: float) -> str:
+    """格式化秒数为 [MM:SS]."""
+    s = int(seconds)
+    mm = str(s // 60).zfill(2)
+    ss = str(s % 60).zfill(2)
+    return f"[{mm}:{ss}]"
+
+
+def format_subtitle_list(body: list) -> str:
+    """将字幕 body 列表转换为去重聚合后的结构化时间戳文本（滑动去重 + 自然整句聚合）."""
+    if not body or not isinstance(body, list):
+        return ""
+    cleaned_items = []
+    last_text = ""
+    for item in body:
+        content = (item.get("content") or "").strip()
+        if not content or content == last_text:
+            continue
+        if last_text and content.startswith(last_text):
+            if cleaned_items:
+                cleaned_items[-1]["content"] = content
+                cleaned_items[-1]["to"] = float(item.get("to") or cleaned_items[-1]["to"])
+                last_text = content
+                continue
+        elif last_text and last_text.startswith(content):
+            continue
+        cleaned_items.append({
+            "from": float(item.get("from") or 0),
+            "to": float(item.get("to") or 0),
+            "content": content
+        })
+        last_text = content
+
+    sentences = []
+    current_sentence = ""
+    sentence_start_time = None
+    for i, item in enumerate(cleaned_items):
+        if sentence_start_time is None:
+            sentence_start_time = item["from"]
+        if current_sentence:
+            current_sentence += (" " if re.search(r'[a-zA-Z0-9]$', current_sentence) else "") + item["content"]
+        else:
+            current_sentence = item["content"]
+        next_item = cleaned_items[i + 1] if i + 1 < len(cleaned_items) else None
+        is_time_gap = next_item and (next_item["from"] - item["to"] > 2.5)
+        is_punctuation = bool(re.search(r'[。！？!?；;\n]$', item["content"]))
+        is_len = len(current_sentence) >= 50
+        if not next_item or is_time_gap or is_punctuation or is_len:
+            sentences.append(f"{format_seconds_to_time(sentence_start_time)} {current_sentence.strip()}")
+            current_sentence = ""
+            sentence_start_time = None
+    return "\n".join(sentences)
+
 
 def fetch_subtitle(bvid: str, lang: str = None) -> str:
-    """yt-dlp 抓取字幕. AI字幕(ai-*)需要登录态, 自动复用本地 cookie 文件."""
+    """双层字幕抓取引擎：优先 Python 原生 WBI 直连，失败则降级为 yt-dlp."""
+    try:
+        text = fetch_subtitle_wbi(bvid, lang)
+        if text and text.strip():
+            return text
+    except Exception as e:
+        # print(f"提示: WBI 原生字幕抓取未成功 ({e})，降级为 yt-dlp", file=sys.stderr)
+        pass
+
     language = lang or 'ai-zh'
     cookie_file = None
     try:
@@ -503,14 +674,14 @@ def fetch_subtitle(bvid: str, lang: str = None) -> str:
             if "412" in err or "rate" in err:
                 raise RuntimeError("yt-dlp 被B站限流(HTTP 412), 稍后重试。")
             if "logged in" in err or "subtitles" in err:
-                raise RuntimeError(f"该视频没有 {language} 字幕。可尝试 --lang ai-en 等。")
+                raise RuntimeError("该视频Bilibili官方暂未生成 AI 字幕，不支持总结。")
             raise RuntimeError(f"yt-dlp 执行失败: {e.stderr}")
         except FileNotFoundError:
             raise RuntimeError("未找到 yt-dlp, 请先安装: brew install yt-dlp")
 
         files = list(Path(temp_dir).glob("*.vtt")) + list(Path(temp_dir).glob("*.srt"))
         if not files:
-            raise RuntimeError(f"未找到字幕文件, 该视频可能没有 {language} 字幕。")
+            raise RuntimeError("该视频Bilibili官方暂未生成 AI 字幕，不支持总结。")
 
         content = files[0].read_text(encoding='utf-8', errors='replace')
         return clean_subtitle(content, files[0].suffix.lower())
