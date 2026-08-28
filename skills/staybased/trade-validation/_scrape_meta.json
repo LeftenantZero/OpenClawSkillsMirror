@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release \u2014 10-dimension weighted scoring, 80%+ gate, veto rules",
+  "created_at": 1770927795952,
+  "display_name": "Trade Validation",
+  "fetched_at": 1787903538388,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/scoring-rubric.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "staybased",
+    "handle": "staybased",
+    "user_id": "s173wjbhnz3m3q2ed89mxzjna5884c7k"
+  },
+  "slug": "trade-validation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/trade-validation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=trade-validation&ownerHandle=staybased",
+    "page_url": "https://clawhub.ai/staybased/skills/trade-validation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1261,
+    "installs": 39,
+    "stars": 3,
+    "versions": 1
+  },
+  "summary": "10-dimension weighted scoring framework for prediction market trade evaluation.\nEnforces disciplined position sizing, circuit breakers, and mandatory counter-arguments.\n\nUse when: evaluating prediction market trades, scoring opportunities, deciding position sizes,\ncomparing Polymarket/Kalshi opportunities, running pre-trade checklists.\n\nDon't use when: general crypto analysis, DeFi yield farming, non-prediction-market investments,\nstock/equity analysis, sports betting (different framework needed).\n\nNegative examples:\n- \"Should I buy ETH?\" \u2192 No. This is for prediction markets with binary/discrete outcomes.\n- \"What's the best DeFi yield?\" \u2192 No. Wrong domain entirely.\n- \"Score this sports bet\" \u2192 No. Sports betting has different dimensions (injuries, matchups).\n\nEdge cases:\n- Crypto prediction markets (e.g., \"Will BTC hit $X?\") \u2192 YES, use this if on Polymarket/Kalshi.\n- Multi-outcome markets \u2192 Score each outcome separately.\n- Markets with <$25 liquidity \u2192 Auto-fail on Liquidity dimension.",
+  "updated_at": 1778488085397,
+  "version": "1.0.0"
+}
