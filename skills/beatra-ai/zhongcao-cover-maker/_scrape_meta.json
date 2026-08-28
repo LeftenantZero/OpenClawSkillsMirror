@@ -1,8 +1,8 @@
 {
-  "changelog": "Publish the reviewed Zhongcao Cover Maker workflow with its English ClawHub listing.",
+  "changelog": "- Improved guardrails: generating a cover from a style word alone is now blocked; a concrete topic is required to proceed without a source photo.\n- Headline handling: if user-supplied title copy exists, it will be rendered in the top or bottom third of the cover; otherwise, a clean text-safe zone is provided for future overlays.\n- Enhanced brief logic: style direction defaults only if a topic or photo exists; style alone no longer triggers image generation.\n- User confirmation step now includes headline placement or text-safe zone details, and prohibits batch (carousel/mood-variant) output on a single request.\n- Documentation clarified to prevent topic invention and to ensure stricter input validation before image generation.\n- Obsolete skill-card.md file removed.",
   "created_at": 1787221658069,
   "display_name": "zhongcao-cover-maker",
-  "fetched_at": 1787770408289,
+  "fetched_at": 1787931669323,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -32,7 +32,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1787222605070,
+    "updated_at": 1787889255854,
     "verdict": "clean"
   },
   "owner": {
@@ -48,12 +48,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 84,
+    "downloads": 118,
     "installs": 0,
     "stars": 0,
-    "versions": 1
+    "versions": 2
   },
   "summary": "Turn a photo, a topic idea, or an accepted draft into a scroll-stopping REDnote (Xiaohongshu) cover and post image. This AI cover generator creates vertical 3:4 Xiaohongshu note covers with clean backgrounds, bold focal composition, and text-safe areas for beauty, food, fashion, travel, and knowledge content. Generate high-click Xiaohongshu note covers, OOTD post images, food photography covers, product recommendation visuals, and lifestyle note illustrations from one photo or a topic description. Start from a real photo, compose from multiple references, or refine an accepted cover toward a publish-ready result. Optionally it reads Xiaohongshu itself \u2014 the notes already running for the topic, one page of a note's top comments, and an account's own recent notes \u2014 so Xiaohongshu research, competitor note analysis and comment analysis rest on the platform instead of on guesswork.",
-  "updated_at": 1787221797383,
-  "version": "0.1.5"
+  "updated_at": 1787888543072,
+  "version": "0.1.7"
 }
