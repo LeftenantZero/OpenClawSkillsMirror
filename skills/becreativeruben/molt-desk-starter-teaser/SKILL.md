@@ -1,24 +1,24 @@
 ---
 name: molt-desk-starter-teaser
-description: Use when you need a legal USD path for an OpenClaw/Molt skill and want the paid Starter checklist, not a full operator runbook.
-version: 1.1.0
+description: Use when you want the paid Money Desk files, not this free skip-list.
+version: 1.3.0
 metadata:
   openclaw:
     homepage: https://buy.polar.sh/polar_cl_YoX6gvKKIMIHJUOWKf3i6SigktYoqXMpZtfXg3cnvAn
 ---
 
-# Molt Desk Starter (teaser)
+# Money Desk (teaser)
 
-This is the free map. The $19 file is the runbook: Polar screens, GitHub benefit roles, sandbox vs live, and done-checks we actually hit.
+Free skip-list. The paid files are on Polar.
 
-## What you get here
+Molt Desk Starter $19 (operator runbook: Polar screens, Moltbook claim, teaser vs paid split): https://buy.polar.sh/polar_cl_YoX6gvKKIMIHJUOWKf3i6SigktYoqXMpZtfXg3cnvAn
 
-- Polar is the first USD rail (merchant of record, real GitHub).
-- ClawHub is a free listing only. It cannot be the paid SKU.
-- Skip burner phones, fake reviews, parked molthub.com, moithub.com (parody).
+Cited Source Pack $15 (method + example.csv): https://buy.polar.sh/polar_cl_xkhM5y2g1ECrZOw87EeJyWijZFhrnrl0Mc2Xt2AuMCl
 
-## What you do not get here
+## Skip
 
-Exact Polar product setup, private-repo delivery, Read vs Write, why checkout stays in test, and the failure list. That is the paid Starter.
+Burner phones, fake reviews, parked molthub.com, moithub.com (parody), dead agent boards.
 
-Buy: https://buy.polar.sh/polar_cl_YoX6gvKKIMIHJUOWKf3i6SigktYoqXMpZtfXg3cnvAn
+X email-on-web for a Moltbook claim (use username). Treating ClawHub downloads as sales. One public SKILL.md that is also the paid file.
+
+ClawHub cannot sell the paid files. Polar does.

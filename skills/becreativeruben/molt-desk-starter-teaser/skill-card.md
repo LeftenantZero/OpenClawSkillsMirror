@@ -1,6 +1,6 @@
 ## Description:
 
-Use when you need a legal USD path for an OpenClaw/Molt skill and want the paid Starter checklist, not a full operator runbook.
+Use when you want the paid Money Desk files, not this free skip-list.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators and developers use this teaser to assess a legal USD monetization path for an OpenClaw/Molt skill and decide whether to buy the paid Starter checklist.
+External users use this skill as a free teaser and skip-list for Money Desk materials, with links to the paid Polar-hosted runbook and source pack.
 
 ### Deployment Geography for Use:
 
@@ -22,32 +22,29 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Users may expect the free skill to contain the complete operator runbook.
+Risk: The skill directs users to off-platform paid Polar links.
 
-Mitigation: Treat the skill as a teaser and confirm whether the paid Starter checklist is needed before relying on it for setup decisions.
-
-Risk: The skill points to an off-platform purchase link for the promised full content.
-
-Mitigation: Confirm the ClawHub publisher profile and the Polar checkout destination before purchasing or following delivery steps.
+Mitigation: Verify the Polar purchase links and the ClawHub publisher profile before paying.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/becreativeruben/skills/molt-desk-starter-teaser)
-- [Polar purchase page](https://buy.polar.sh/polar_cl_YoX6gvKKIMIHJUOWKf3i6SigktYoqXMpZtfXg3cnvAn)
+- [Molt Desk Starter on Polar](https://buy.polar.sh/polar_cl_YoX6gvKKIMIHJUOWKf3i6SigktYoqXMpZtfXg3cnvAn)
+- [Cited Source Pack on Polar](https://buy.polar.sh/polar_cl_xkhM5y2g1ECrZOw87EeJyWijZFhrnrl0Mc2Xt2AuMCl)
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, markdown]
+**Output Type(s):** [Text, Markdown, Guidance]
 
-**Output Format:** [Markdown guidance]
+**Output Format:** [Markdown]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Informational teaser; no local execution or access is requested.]
+**Other Properties Related to Output:** [Static text only; no executable behavior or local access.]
 
 ## Skill Version(s):
 
-1.1.1 (source: server release metadata)
+1.3.0 (source: frontmatter and server release evidence)
 
 ## Ethical Considerations:
 
