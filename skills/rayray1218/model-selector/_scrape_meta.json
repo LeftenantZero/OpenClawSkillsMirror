@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of the Semantic Model Orchestrator skill.\n\n- Routes queries to Elite, Balanced, or Basic LLMs based on semantic intent and cost-efficiency.\n- Utilizes vector embeddings for query complexity analysis.\n- Supports multiple providers: OpenAI, Anthropic, Gemini, and DeepSeek.\n- Features rolling adjustment logic to refine intent detection from user history.\n- Optimized default model tiers for Claude 3.5 Sonnet, GPT-4o-mini, and DeepSeek.",
+  "created_at": 1772077836482,
+  "display_name": "Model-Selector",
+  "fetched_at": 1787894673293,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/model_router.py",
+    "scripts/query_history.json",
+    "scripts/requirements.txt",
+    "scripts/train_router.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779961773808,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Ray",
+    "handle": "rayray1218",
+    "user_id": "s1712nwsvsk0077vjg0edfb8ph8855th"
+  },
+  "slug": "model-selector",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/model-selector",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=model-selector&ownerHandle=rayray1218",
+    "page_url": "https://clawhub.ai/rayray1218/skills/model-selector"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 909,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "A powerful model routing skill that analyzes query intent and cost-efficiency to select the optimal LLM (Elite/Balanced/Basic) before execution.",
+  "updated_at": 1778491644319,
+  "version": "1.0.0"
+}
