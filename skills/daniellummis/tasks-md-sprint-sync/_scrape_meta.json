@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release: syncs active sprint tasks between PLAN.md and TASKS.md.\n\n- Reads the current active phase from PLAN.md and extracts work items.\n- Compares PLAN.md phase tasks with the corresponding TASKS.md \"In progress\" list.\n- Reports any drift (differences) between the files.\n- Supports \"report\" mode for dry-run analysis and \"apply\" mode to update TASKS.md.\n- Allows configuration of project names and file paths via environment variables.",
+  "created_at": 1772737647340,
+  "display_name": "Tasks.md Sprint Sync",
+  "fetched_at": 1787887989627,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "fixtures/PLAN.sample.md",
+    "fixtures/TASKS.sample.md",
+    "scripts/sync-tasks-phase.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Daniel Lummis",
+    "handle": "daniellummis",
+    "user_id": "s17fw617wehb1y9a026bgg9yed885cv7"
+  },
+  "slug": "tasks-md-sprint-sync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tasks-md-sprint-sync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tasks-md-sprint-sync&ownerHandle=daniellummis",
+    "page_url": "https://clawhub.ai/daniellummis/skills/tasks-md-sprint-sync"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 801,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Sync TASKS.md current phase and in-progress checklist from the active PLAN.md phase to keep sprint execution aligned.",
+  "updated_at": 1778491738336,
+  "version": "1.0.0"
+}
