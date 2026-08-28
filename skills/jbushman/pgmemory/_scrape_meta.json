@@ -1,0 +1,53 @@
+{
+  "changelog": "API key now stored directly in pgmemory.json \u2014 no env var setup needed. Scripts resolve key from config first, env var second. Setup wizard prompts to paste key at install time. Startup commands no longer need VOYAGE_API_KEY= prefix.",
+  "created_at": 1772487689616,
+  "display_name": "Pgmemory",
+  "fetched_at": 1787935743914,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/docker-compose.yml",
+    "references/schema.sql",
+    "requirements.txt",
+    "scripts/migrations/0001_initial_schema.sql",
+    "scripts/migrations/0002_add_decay_columns.sql",
+    "scripts/query_memory.py",
+    "scripts/setup.py",
+    "scripts/write_memory.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089743808,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "jbushman",
+    "handle": "jbushman",
+    "user_id": "s178nvd5pg2jpk5dkmnbva4d3x885ec4"
+  },
+  "slug": "pgmemory",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pgmemory",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pgmemory&ownerHandle=jbushman",
+    "page_url": "https://clawhub.ai/jbushman/skills/pgmemory"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1141,
+    "installs": 33,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Persistent semantic memory for OpenClaw agents \u2014 PostgreSQL + pgvector",
+  "updated_at": 1778994617849,
+  "version": "1.2.0"
+}
