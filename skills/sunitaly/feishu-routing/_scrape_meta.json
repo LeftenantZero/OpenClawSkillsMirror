@@ -1,0 +1,33 @@
+{
+  "changelog": "Initial release of feishu-routing skill.\n\n- Supports routing Feishu group chat messages to designated agents based on chat_id.\n- Defines four departments (\u592a\u5b50, \u4e2d\u4e66\u7701, \u95e8\u4e0b\u7701, \u5c1a\u4e66\u7701) with distinct group and agent assignments.\n- Implements routing rules to detect message source and delegate tasks to the appropriate sub-agent using sessions_spawn.\n- Ensures sub-agent replies are relayed back to the original group by the main agent.\n- Includes clear instructions and cautions on session handling and context retention.",
+  "created_at": 1773067002464,
+  "display_name": "feishu-routing",
+  "fetched_at": 1787883275703,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "sunitaly",
+    "handle": "sunitaly",
+    "user_id": "s173qfevm4299j8x3bghps5wqs885kkc"
+  },
+  "slug": "feishu-routing",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/feishu-routing",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=feishu-routing&ownerHandle=sunitaly",
+    "page_url": "https://clawhub.ai/sunitaly/skills/feishu-routing"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 884,
+    "installs": 25,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Routes messages from specified Feishu group chats to corresponding agents for processing and relays their replies back to the original group.",
+  "updated_at": 1778491788483,
+  "version": "1.0.0"
+}
