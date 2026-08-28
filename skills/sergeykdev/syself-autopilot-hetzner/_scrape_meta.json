@@ -1,0 +1,43 @@
+{
+  "changelog": "SySelf Autopilot Hetzner skill, initial release:\n\n- Provides end-to-end SySelf Autopilot guidance for Hetzner: management kubeconfig setup, namespace configuration, Hetzner account preparation, secret creation, bare metal onboarding, ClusterStack/Cluster manifests, day-2 operations, and troubleshooting.\n- Clearly outlines what is in and out of scope, including support boundaries and prohibited self-managed CAPH workflows.\n- Requires use of the companion `hetzner-cloud` skill for all HCloud CLI operations and enforces additional safety/confirmation steps.\n- Directs users only to official SySelf Autopilot documentation and stops if official guidance does not exist for a step.\n- Includes detailed operational workflow, prerequisites, and troubleshooting steps for supported cluster management and bare metal scenarios.",
+  "created_at": 1773423591556,
+  "display_name": "syself-autopilot-hetzner",
+  "fetched_at": 1787875265830,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/01-validate-access.sh",
+    "scripts/02-create-management-secrets.sh",
+    "scripts/03-prepare-management-kubeconfig.sh",
+    "scripts/04-register-baremetal-hosts.sh",
+    "scripts/05-apply-cluster.sh",
+    "scripts/06-verify-workload-access.sh",
+    "skill-card.md",
+    "templates/cluster.yaml",
+    "templates/clusterstack.yaml",
+    "templates/hetznerbaremetalhost.yaml",
+    "templates/management-kubeconfig.yaml"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "SergeyKDEV",
+    "handle": "sergeykdev",
+    "user_id": "s17aeky4rjgb4yt5h1v1p3rb89845bcq"
+  },
+  "slug": "syself-autopilot-hetzner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/syself-autopilot-hetzner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=syself-autopilot-hetzner&ownerHandle=sergeykdev",
+    "page_url": "https://clawhub.ai/sergeykdev/skills/syself-autopilot-hetzner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 812,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Use for SySelf Autopilot on Hetzner: management kubeconfig setup, organization namespace, Hetzner account preparation, ClusterStack and Cluster manifests, ba...",
+  "updated_at": 1778491890041,
+  "version": "1.0.0"
+}
