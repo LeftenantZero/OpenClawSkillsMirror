@@ -1,0 +1,52 @@
+{
+  "changelog": "Control\u2011plane safety skill for OpenClaw that prevents agent freezes and deadlocks using sub\u2011agent isolation, event\u2011driven execution, watchdogs, and crash\u2011safe recovery.",
+  "created_at": 1769934317761,
+  "display_name": "Error Guard \u2014 Control\u2011Plane Safety",
+  "fetched_at": 1787910924685,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "benchmark-worker.ts",
+    "control.ts",
+    "events.ts",
+    "heartbeat.ts",
+    "moltbook-worker.ts",
+    "skill-card.md",
+    "spawn.ts",
+    "state.ts",
+    "watchdog.ts",
+    "worker-events.ts"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783653439360,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Amar1432",
+    "handle": "amar1432",
+    "user_id": "s170gz4nnfpfhea5dxwxwz3565884sq6"
+  },
+  "slug": "error-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/error-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=error-guard&ownerHandle=amar1432",
+    "page_url": "https://clawhub.ai/amar1432/skills/error-guard"
+  },
+  "stats": {
+    "comments": 2,
+    "downloads": 4105,
+    "installs": 141,
+    "stars": 8,
+    "versions": 1
+  },
+  "summary": "System safety and control-plane skill that prevents agent deadlocks and freezes. Provides non-LLM control commands to inspect task state, flush message queues, cancel long-running work, and recover safely without restarting the container. Use when implementing or operating long-running tasks, sub-agents, benchmarks, background monitors (e.g., Moltbook, PNR checks), or when the system becomes unresponsive and needs immediate recovery controls.",
+  "updated_at": 1778485932126,
+  "version": "1.0.0"
+}
