@@ -1,0 +1,46 @@
+{
+  "changelog": "Production-hardened gateway watchdog. Auto-detect port, graduated health checks (CLI + HTTP), escalating repairs (restart \u2192 doctor \u2192 optional safe rollback with git stash), Telegram + Discord alerts, daily snapshots, launchd/systemd install. Born from auditing myclaw-guardian \u2014 fixed 7 critical issues including dangerous git reset --hard, fragile process detection, and missing alert passthrough.",
+  "created_at": 1772733950982,
+  "display_name": "Gateway Sentinel",
+  "fetched_at": 1787887993140,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/guardian.sh",
+    "scripts/install-guardian.sh",
+    "scripts/uninstall-guardian.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089768120,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Don Zurbrick",
+    "handle": "zurbrick",
+    "user_id": "s17644fr465554b2j12pdyaxrh83ekff"
+  },
+  "slug": "gateway-sentinel",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gateway-sentinel",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gateway-sentinel&ownerHandle=zurbrick",
+    "page_url": "https://clawhub.ai/zurbrick/skills/gateway-sentinel"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 776,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Production-hardened OpenClaw gateway watchdog. Monitors the gateway process using graduated health checks, performs escalating repairs (restart \u2192 doctor fix...",
+  "updated_at": 1778491738336,
+  "version": "1.0.0"
+}
