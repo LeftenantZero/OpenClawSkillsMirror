@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes reptile enclosure images or video frames to identify urate size, color, and texture alongside feces color and morphology, then returns structured health-oriented observations and suggested next actions.
+Through a fixed camera in the reptile enclosure, the system captures a high-definition image or static video frame after excrement is found, then uses AI visual analysis to identify urate size and feces morphology.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External reptile keepers, farm operators, and app or enclosure developers use this skill to submit reptile waste images or URLs, receive structured urate and feces observations, and review historical reports when available. The output is a visual assessment aid, not a veterinary diagnosis.
+External users and developers use this skill to analyze reptile enclosure images or video frames for urate color, urate area, feces color, feces consistency, species-specific context, and alert-level guidance. It is intended for visual assessment and care prompts, not veterinary diagnosis or medication instructions.
 
 ### Deployment Geography for Use:
 
@@ -22,41 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Security evidence reports that uploaded reptile images, videos, URLs, report metadata, and an automatically selected identity may be sent to LifeEmergence cloud endpoints.
+Risk: Reptile enclosure images, videos, report history, and account identifiers may be sent to a remote service.
 
-Mitigation: Review before installing, use only if cloud processing is acceptable, and prefer an isolated workspace with a disposable account or identity for testing.
+Mitigation: Require user confirmation before uploads or history queries, and review retention, deletion, and account-linking behavior before deployment.
 
-Risk: Security evidence reports that tokens and profile data may be retained in a shared local SQLite database.
+Risk: Network configuration and endpoint handling are under-scoped for production use.
 
-Mitigation: Use a dedicated workspace, avoid sharing the workspace between unrelated tasks or users, and clear local data when the skill is no longer needed.
+Mitigation: Approve only production HTTPS endpoints, document token storage, and restrict accepted input URLs before installation.
 
-Risk: Visual waste analysis can be mistaken for veterinary diagnosis or treatment advice.
+Risk: Visual health assessments may be mistaken for veterinary diagnosis.
 
-Mitigation: Treat outputs as non-diagnostic screening guidance, avoid medication or procedure recommendations, and direct significant or repeated abnormalities to a qualified reptile veterinarian.
-
-Risk: Poor image quality, missing scale references, substrate obstruction, or missing species and feeding context can make visual assessment unreliable.
-
-Mitigation: Require clear top-down pre-cleaning images or frames, adequate lighting, a size reference where possible, and species, feeding, shedding, brumation, and recent diet-change context before relying on results.
+Mitigation: Keep outputs limited to visual findings and care prompts, avoid medication or procedure instructions, and direct users to a qualified reptile veterinarian for abnormal results.
 
 ## Reference(s):
 
-- [API interface documentation](references/api_doc.md)
-- [Analysis API error and request format reference](skills/smyx_analysis/references/api_doc.md)
-- [Skill demo](https://lifeemergence.com/sample.html)
+- [ClawHub Skill Page](https://clawhub.ai/18072937735/skills/smyx-reptile-excrement-analysis-analysis)
+- [Reptile Excrement Analysis API Documentation](references/api_doc.md)
+- [Shared Analysis API Documentation](skills/smyx_analysis/references/api_doc.md)
+- [Skill Demo](https://lifeemergence.com/sample.html)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, JSON, Guidance]
+**Output Type(s):** [text, markdown, JSON, shell commands, guidance]
 
-**Output Format:** [Markdown text containing structured JSON-like analysis results and optional report links.]
+**Output Format:** [Markdown-style status text with structured JSON analysis results and report links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May save the returned analysis text to a requested output file; historical report queries return structured report lists.]
+**Other Properties Related to Output:** [May save analysis output to a file when requested by the caller.]
 
 ## Skill Version(s):
 
-1.0.9 (source: server release evidence; artifact frontmatter reports 1.0.11)
+1.0.10 (source: server release metadata; artifact frontmatter reports 1.0.12)
 
 ## Ethical Considerations:
 
