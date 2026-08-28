@@ -1,6 +1,6 @@
 ## Description:
 
-Query etix.com event ticketing data from a shell with the fpx CLI to search events, venues, and performers and retrieve event or venue details through a signed-in browser tab.
+Query etix.com event discovery data from a shell with the fpx CLI, including event, venue, performer, and detail lookups through a signed-in browser tab.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and engineers use this skill to issue one-shot shell requests for public Etix discovery data, including search suggestions, event details, venue details, and geolocation results, without running an MCP server.
+Developers and agents use this skill to retrieve public Etix event discovery data from shell workflows when they need one-shot CLI calls instead of a running MCP server.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,42 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill requires installing a global CLI and pairing a browser extension that can fetch through the user's etix.com browser context.
+Risk: The fpx workflow uses a browser extension and persistent profile to route requests through an Etix browser tab.
 
-Mitigation: Confirm this access model before installation, keep Transporter site access limited to etix.com, and use a dedicated browser profile where appropriate.
+Mitigation: Keep the fpx profile scoped to etix.com, avoid granting cookie, storage, or download capabilities unless intentionally needed, and revoke the Transporter trust/profile when finished.
 
-Risk: Browser-bridged requests can reflect the state of the user's active Etix browser context.
+Risk: HTML responses can be DataDome interstitial pages instead of the expected Etix content.
 
-Mitigation: Use the skill only for anonymous public discovery reads and avoid purchases, account actions, or credentialed seller API workflows.
+Mitigation: Check for captcha-delivery or the documented interstitial text before parsing HTML, and refresh an Etix tab until the DataDome check clears.
 
-Risk: Etix pages may return a DataDome interstitial or other non-target HTML even when a fetch exits successfully.
+Risk: The full-text Etix search endpoint returns an opaque payload that is not usable as JSON.
 
-Mitigation: Check fetched HTML for DataDome challenge markers before parsing or trusting extracted event and venue data.
+Mitigation: Use search/suggest to resolve event, venue, and performer identifiers before requesting detail pages.
+
+Risk: Ticket purchasing is a financial action outside the scope of this skill.
+
+Mitigation: Limit use to anonymous, read-only event discovery and do not use the skill to complete purchases or account actions.
 
 ## Reference(s):
 
-- [Etix consumer endpoints for fpx](artifact/references/etix-endpoints.md)
-- [DataLayer extraction helper](artifact/references/extract-datalayer.mjs)
-- [ClawHub skill page](https://clawhub.ai/chrischall/skills/etix-fpx)
+- [etix-fpx ClawHub listing](https://clawhub.ai/chrischall/skills/etix-fpx)
+- [Etix consumer endpoints for fpx](references/etix-endpoints.md)
+- [extract-datalayer.mjs](references/extract-datalayer.mjs)
+- [Etix endpoint host](https://www.etix.com)
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, shell commands, code, configuration]
+**Output Type(s):** [text, markdown, shell commands, code, configuration, guidance]
 
-**Output Format:** [Markdown with inline shell, jq, and Node.js examples]
+**Output Format:** [Markdown with inline shell commands, JavaScript snippets, and JSON extraction examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Outputs guide an agent to fetch and parse public Etix discovery data; responses may be JSON, HTML-derived JSON-LD, microdata extracts, or shell diagnostics.]
+**Other Properties Related to Output:** [Read-only Etix discovery guidance; no ticket purchasing or account actions are in scope.]
 
 ## Skill Version(s):
 
-0.4.3 (source: server release metadata)
+0.4.4 (source: server release metadata)
 
 ## Ethical Considerations:
 
