@@ -1,0 +1,50 @@
+{
+  "changelog": "identity-guard v0.0.1\n\n- Initial release of identity-guard, a security gate for verifying user identity using unique sender IDs, not usernames.\n- Enforces strict identity verification before responding to any personal/sensitive queries or performing security-critical actions.\n- Provides clear setup instructions for safe configuration of `identities.json` and sender ID retrieval.\n- Allows helper requests (like \"whoami\") without verification, but always protects sensitive data and operations.\n- Includes guidelines for conversational setup, refusing sensitive operations in group chats unless proper identity can be verified.\n- Implements a security response protocol that denies unauthorized requests without leaking any confidential information.",
+  "created_at": 1773242503327,
+  "display_name": "Identity Guard",
+  "fetched_at": 1787879568819,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "identities.template.json",
+    "scripts/add-user.sh",
+    "scripts/guard.sh",
+    "scripts/init.sh",
+    "scripts/whoami.sh",
+    "skill-card.md",
+    "tests/run.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089842569,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ZhongxuYang",
+    "handle": "zhongxuyang",
+    "user_id": "s173m6wzbaaraf6hssfc7q4anx83g5r8"
+  },
+  "slug": "identity-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/identity-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=identity-guard&ownerHandle=zhongxuyang",
+    "page_url": "https://clawhub.ai/zhongxuyang/skills/identity-guard"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 884,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "MANDATORY SECURITY CHECKPOINT. Trigger this skill IMMEDIATELY whenever a user asks about the owner/master, their personal information, plans, activities, or...",
+  "updated_at": 1778491832663,
+  "version": "0.0.1"
+}
