@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release of Slack Thread Reader.\n\n- Fetches and outputs Slack channel history, threads, and individual replies in a clean, chronological, LLM-friendly format.\n- Supports three modes: channel history, full thread, and single reply (automatically determined from Slack link or arguments).\n- Offers options for message limits, time range, inclusion of thread replies, thread reply limits, and output order.\n- Outputs include timestamps, sender names, reactions, attachments, thread participation, and more; all formatted for easy reference and summarization.\n- Provides usage guidance, output examples, and technical notes on pagination, caching, rate limiting, and error handling.\n- Asks for clarification if link type and user request don't match, especially regarding whether to include thread replies.",
+  "created_at": 1772672578070,
+  "display_name": "Slack Thread Reader",
+  "fetched_at": 1787889139889,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/slack-thread.py",
+    "scripts/slack-thread.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089758441,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Epikoding",
+    "handle": "epikoding",
+    "user_id": "s171azetsmjj2qfjfqpbay3b0585k3rv"
+  },
+  "slug": "slack-reader",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/slack-reader",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=slack-reader&ownerHandle=epikoding",
+    "page_url": "https://clawhub.ai/epikoding/skills/slack-reader"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 750,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Read and summarize Slack channel history and thread conversations. Use when receiving Slack links (https://...slack.com/archives/...) or requests to view cha...",
+  "updated_at": 1778491726627,
+  "version": "1.0.0"
+}
