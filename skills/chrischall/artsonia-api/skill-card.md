@@ -1,6 +1,6 @@
 ## Description:
 
-Access Artsonia student-art portfolios, comments, fans, teacher feedback, profile data, and artwork downloads from a shell with curl commands against Artsonia's server-rendered member pages.
+Access Artsonia student-art portfolios, comments, fans, teacher feedback, and downloads from a shell with curl instead of running the artsonia-mcp server.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and authorized Artsonia account holders use this skill to retrieve Artsonia member pages, parse student-art data, download artwork images, and perform documented account actions from shell workflows without running the Artsonia MCP server.
+Developers and technical users use this skill to access Artsonia member pages, extract student portfolio data, download artwork images, and perform documented account actions with curl and parser recipes.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,41 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can expose Artsonia session cookies, profile data, comments, fan invites, and full-resolution student artwork.
+Risk: The skill teaches access to sensitive student-art account data.
 
-Mitigation: Use it only with explicit authorization for the account and student artwork involved, store cookie jars and downloaded files as sensitive data, and remove local copies when finished.
+Mitigation: Use it only with an Artsonia account and artwork the user is authorized to access, and review outputs before storing or sharing them.
 
-Risk: The skill documents live write operations, including comments, fan invitations, feedback state changes, and profile notification settings.
+Risk: The cookie jar represents an authenticated Artsonia session.
 
-Mitigation: Run write commands only when the account holder explicitly requested the action, then re-read the affected page to confirm the actual result.
+Mitigation: Store the cookie jar in a protected location, avoid committing it, and refresh or revoke the session when access is no longer needed.
 
-Risk: Full-resolution artwork downloads may be available from public CDN paths even for private pieces.
+Risk: Anonymous CDN and bulk-download recipes can retrieve artwork the skill describes as private.
 
-Mitigation: Avoid bulk downloads unless they are specifically authorized, and limit local retention and sharing of downloaded images.
+Mitigation: Avoid CDN or bulk-download use for private student artwork unless explicit permission exists.
+
+Risk: Write recipes can send emails or change account state.
+
+Mitigation: Treat write commands as real account actions and verify changed pages after each POST before relying on the result.
 
 ## Reference(s):
 
-- [Artsonia endpoint curl recipes](artifact/references/endpoints.md)
-- [Artsonia member login](https://www.artsonia.com/members/login.asp)
+- [Artsonia endpoint recipes](artifact/references/endpoints.md)
+- [Artsonia website](https://www.artsonia.com)
 - [ClawHub skill page](https://clawhub.ai/chrischall/skills/artsonia-api)
 
 ## Skill Output:
 
-**Output Type(s):** [Shell commands, Code, Configuration, Guidance]
+**Output Type(s):** [Markdown, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown with inline shell commands and JavaScript parsing snippets]
+**Output Format:** [Markdown with inline shell commands, curl examples, parser snippets, and verification steps]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Outputs may include curl commands, cookie-jar setup guidance, endpoint paths, jq projections, and verification steps for reads and writes.]
+**Other Properties Related to Output:** [Produces credential-handling, session-cookie, read/write, verification, and download guidance for authorized Artsonia account access.]
 
 ## Skill Version(s):
 
-0.9.0 (source: server release evidence)
+0.10.0 (source: server release evidence)
 
 ## Ethical Considerations:
 
