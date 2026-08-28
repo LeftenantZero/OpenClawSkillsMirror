@@ -1,0 +1,55 @@
+{
+  "changelog": "Initial release automates pharmaceutical system bidding information collection and analysis:\n\n- Collects \"\u836f\u5b66\u7cfb\u7edf\" bidding info from provincial procurement websites.\n- Verifies product type and document deadlines; filters items not meeting criteria.\n- Gathers additional project details when source info is insufficient.\n- Records structured bid data in WeChat Work smart tables, including deadlines, budget, and responsible sales staff.\n- Analyzes projects and provides bidding recommendations based on document availability and evaluation criteria.\n- Automatically classifies projects as eligible based on timing, budget, or hospital type.\n- Runs daily at 8:30 AM with full WeChat Work API integration.",
+  "created_at": 1772779862765,
+  "display_name": "Pharmaceutical Bidding",
+  "fetched_at": 1787887377534,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "WECHAT_SETUP.md",
+    "_meta.json",
+    "config.json",
+    "crontab.txt",
+    "main.js",
+    "package-lock.json",
+    "package.json",
+    "skill-card.md",
+    "test-wechat.js",
+    "test.js",
+    "validate-config.js",
+    "validate-wecom-config.js",
+    "wechat-api.js"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089778582,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ElliotLaw",
+    "handle": "elliotlaw",
+    "user_id": "s174834rxrkkg93csx0n9q24rs885xrf"
+  },
+  "slug": "pharmaceutical-bidding",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/pharmaceutical-bidding",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=pharmaceutical-bidding&ownerHandle=elliotlaw",
+    "page_url": "https://clawhub.ai/elliotlaw/skills/pharmaceutical-bidding"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 829,
+    "installs": 23,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Automatically collects, verifies, and evaluates pharmaceutical system bidding info from provincial sites daily, updating WeChat Work tables with actionable o...",
+  "updated_at": 1778491748674,
+  "version": "1.0.0"
+}
