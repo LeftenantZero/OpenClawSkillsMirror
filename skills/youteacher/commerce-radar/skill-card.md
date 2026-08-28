@@ -1,6 +1,6 @@
 ## Description:
 
-Use when users need product search and price evidence, product details, public store analysis, or keyword-based ecommerce competition reports through Commerce Radar; requires COMMERCE_RADAR_API_KEY.
+Commerce Radar helps agents search products and price evidence, inspect product details, analyze public stores, and create keyword-based e-commerce competitive reports using COMMERCE_RADAR_API_KEY.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and analysts use this skill to query Commerce Radar for product listings, product details, public store summaries, and keyword competition reports. It helps preserve source URLs, observed prices, task status, artifacts, and billing headers from the Commerce Radar API response.
+External users and developers use this skill to gather e-commerce product evidence, compare prices, inspect public store information, and generate competitive research reports from keyword queries.
 
 ### Deployment Geography for Use:
 
@@ -22,44 +22,44 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Commerce queries, public product or store URLs, location or language parameters, and report inputs are sent to the configured Commerce Radar API endpoint.
+Risk: Product, store, and keyword queries are sent to the AI Skills Commerce Radar service under the configured API key.
 
-Mitigation: Install and use the skill only when this data sharing is intended, and keep requests limited to the documented Commerce Radar operations and fields.
+Mitigation: Install and use the skill only when this data sharing is acceptable for the user's workflow.
 
-Risk: The Commerce Radar API key could be exposed if pasted into chat, request bodies, logs, results, or artifacts.
+Risk: The Commerce Radar API key could be exposed through chat, logs, request bodies, or shared files.
 
-Mitigation: Store COMMERCE_RADAR_API_KEY in the environment, send it only as an Authorization bearer token, and never echo the full value.
+Mitigation: Keep COMMERCE_RADAR_API_KEY in environment configuration only and do not ask users to paste the key into conversation.
 
-Risk: Product, store, and report results may be partial, pending, stale, or unavailable, and observed prices may not remain valid.
+Risk: Billing information and retry behavior can be misread when asynchronous requests are retried or replayed.
 
-Mitigation: Present returned data as time-bound observations, preserve source URLs and task status, and avoid inferring inventory, sales, long-term prices, or factual absence from empty or pending results.
+Mitigation: Use idempotency keys correctly, preserve the original request during retries, and rely only on the documented billing headers.
 
-Risk: Unsafe or unsupported URLs could route requests outside the intended public ecommerce targets.
+Risk: Returned prices, store summaries, and competitive reports may be partial, time-bound, or dependent on upstream provider availability.
 
-Mitigation: Accept only public HTTP(S) product and store URLs, reject loopback, private-network, localhost, credential-bearing, and non-web URLs, and do not scrape or call third-party providers directly.
+Mitigation: Present returned values as observed evidence, disclose partial or failed task states, and avoid claiming stable prices, complete inventory, or guaranteed real-time data.
 
 ## Reference(s):
 
-- [API Key Configuration](artifact/references/API-KEY.md)
-- [Operations Contract](artifact/references/OPERATIONS.md)
-- [HTTP Requests and Task Polling](artifact/references/HTTP-REQUESTS.md)
-- [Behavior and Error Rules](artifact/references/BEHAVIOR-RULES.md)
-- [AI Skills Homepage](https://ai-skills.open-idea.net)
-- [ClawHub Skill Page](https://clawhub.ai/youteacher/skills/commerce-radar)
+- [Commerce Radar ClawHub Listing](https://clawhub.ai/youteacher/skills/commerce-radar)
+- [AI Skills Platform](https://ai-skills.open-idea.net)
+- [API Key Configuration](https://ai-skills.open-idea.net/skill-docs/commerce-radar/API-KEY.md)
+- [Operations Contract](https://ai-skills.open-idea.net/skill-docs/commerce-radar/OPERATIONS.md)
+- [HTTP Requests and Task Polling](https://ai-skills.open-idea.net/skill-docs/commerce-radar/HTTP-REQUESTS.md)
+- [Behavior and Error Rules](https://ai-skills.open-idea.net/skill-docs/commerce-radar/BEHAVIOR-RULES.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance, API calls]
 
-**Output Format:** [Markdown guidance with shell commands and structured API response summaries]
+**Output Format:** [Markdown text with optional shell command snippets and structured API response summaries]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Outputs should distinguish observed provider results from facts, preserve source URLs and task identifiers, and avoid exposing the API key.]
+**Other Properties Related to Output:** [Outputs may include task IDs, final task statuses, product or store evidence, generated reports, billing header summaries, and guidance for retry or reconciliation.]
 
 ## Skill Version(s):
 
-1.0.0 (source: server release evidence and packageVersion metadata)
+1.2.1 (source: release evidence and skill metadata)
 
 ## Ethical Considerations:
 
