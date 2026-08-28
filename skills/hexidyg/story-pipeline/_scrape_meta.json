@@ -1,0 +1,52 @@
+{
+  "changelog": "Storyboard-Generator Skill v1.0.0 (Initial Release)\n\nEnd-to-End Story Pipeline: Introduces a comprehensive generation pipeline supporting multi-episode, continuous storytelling with state persistence and parallel execution.\n\nAI QA & Human-in-the-Loop: Implements a robust dual-validation system. AI performs rigorous quality checks (evaluating coherence, consistency, pacing, emotion, and plot hooks), followed by human review and confirmation for each episode.\n\nGraph-Based Continuity Management: Seamlessly tracks characters, scenes, and plot hooks via an integrated knowledge graph, fully supported by API for dynamic relationship management.\n\nFlexible Execution Control: Provides pause, resume, and real-time modification capabilities, empowering creators to dynamically steer the story's progression.\n\nComprehensive Documentation: Includes detailed workflows and API references covering the entire lifecycle\u2014from initial creation and generation to review and final confirmation.",
+  "created_at": 1772778422507,
+  "display_name": "Story generation pipeline skill",
+  "fetched_at": 1787887343079,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "data/pipeline_state.json",
+    "scripts/__init__.py",
+    "scripts/ai_reviewer.py",
+    "scripts/episode_generator.py",
+    "scripts/generate_engine.py",
+    "scripts/graph_manager.py",
+    "scripts/graph_query.py",
+    "scripts/pipeline.py",
+    "skill-card.md",
+    "templates/review_template.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089779648,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "hexidyg",
+    "handle": "hexidyg",
+    "user_id": "s17drvcjx45ykk2tprdzc4h79n83kjp2"
+  },
+  "slug": "story-pipeline",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/story-pipeline",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=story-pipeline&ownerHandle=hexidyg",
+    "page_url": "https://clawhub.ai/hexidyg/skills/story-pipeline"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1248,
+    "installs": 38,
+    "stars": 3,
+    "versions": 5
+  },
+  "summary": "Story generation pipeline skill. Supports multi-episode continuous generation, graph management, AI quality check + human confirmation dual control mechanism...",
+  "updated_at": 1778491748674,
+  "version": "1.0.4"
+}
