@@ -1,0 +1,36 @@
+{
+  "changelog": "**Safer format: Now supports only JSON-based artifacts, disabling pickle support for improved security.**\n\n- Only accepts profiler and memory snapshot artifacts in JSON/JSON.GZ; pickle input is no longer supported.\n- Updated documentation and commands to reflect JSON-only usage.\n- Added explicit workflow and safety instructions, including handling for users with legacy pickle files.\n- Analysis logic remains unchanged; only data ingestion methods are different.",
+  "created_at": 1772197012312,
+  "display_name": "Model Resource Profiler",
+  "fetched_at": 1787941122975,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/interpretation.md",
+    "scripts/analyze_profile.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "daiwk",
+    "handle": "daiwk",
+    "user_id": "s175en57ky8abfntet0rn67dr583j16q"
+  },
+  "slug": "model-resource-profiler",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/model-resource-profiler",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=model-resource-profiler&ownerHandle=daiwk",
+    "page_url": "https://clawhub.ai/daiwk/skills/model-resource-profiler"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 863,
+    "installs": 25,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Analyze model training or inference resource behavior from profiler artifacts, with focus on GPU memory (VRAM) and CPU hotspots. Uses JSON/JSON.GZ artifacts...",
+  "updated_at": 1778491660149,
+  "version": "0.1.1"
+}
