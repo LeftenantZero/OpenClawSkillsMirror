@@ -1,5 +1,10 @@
 # Tung Shing Almanac Skill (通勝黄历)
 
+[![Install with Smithery](https://smithery.ai/badge/@yonlandwu/chinese-almanac-mcp)](https://smithery.ai/servers/yonlandwu/chinese-almanac-mcp)
+[![npm version](https://img.shields.io/npm/v/chinese-almanac-mcp.svg)](https://www.npmjs.com/package/chinese-almanac-mcp)
+
+> 📦 Also ships as an npm MCP server: `npx -y chinese-almanac-mcp` · [MCP repo →](https://github.com/yonlandwu/chinese-almanac-mcp)
+
 A Claude Code / Codex / OpenClaw / WorkBuddy skill that queries the
 [12Zodiacs.com Chinese Almanac API](https://www.12zodiacs.com/about-us/api/) —
 free, no API key needed for ±90 days.
@@ -38,16 +43,26 @@ git clone https://github.com/yonlandwu/tung-shing-almanac-skill.git \
   ~/.openclaw/skills/tung-shing-almanac   # or ~/.workbuddy/skills/
 ```
 
-### Codex (any agent with shell access)
-
-Clone anywhere and run:
+### ClawHub (OpenClaw ecosystem)
 
 ```bash
-bash scripts/almanac.sh day 2026-08-18
+npx skills add yonlandwu/tung-shing-almanac-skill
 ```
 
-Or add to your AGENTS.md: "For Chinese almanac questions, run
-`tung-shing-almanac-skill/scripts/almanac.sh` and quote its output."
+Published on [ClawHub](https://clawhub.ai/yonlandwu/skills/tung-shing-almanac-skill) — the OpenClaw skill registry.
+
+### Codex / OpenAI
+
+```bash
+# skills CLI (installs into ~/.agents/skills/, auto-discovered by Codex)
+npx skills add yonlandwu/tung-shing-almanac-skill -g
+
+# or built-in installer inside a Codex session:
+# $skill-installer yonlandwu/tung-shing-almanac-skill
+```
+
+Codex auto-discovers skills in `~/.agents/skills/` — trigger with
+`$tung-shing-almanac` or just ask "哪天适合搬家" (description matching).
 
 ## Quick Test
 
@@ -73,6 +88,42 @@ What `almanac.sh day 2026-08-18` returns (truncated):
   "solar_term": null,
   "xiu_28": { "cn": "翼", "luminary": "Fire", "animal": "Snake" }
 }
+```
+
+## Auspicious Picker v2 — transparent scoring, bilingual, deliverable 择吉文书
+
+`scripts/pick.py` upgrades the skill from raw almanac queries to an
+opinionated date-selection engine:
+
+- **Transparent scoring** — every candidate date ships itemized reasons with
+  explicit points (`建除【开】日(+15) · 值神【天德】黄道(+20) · 吉神加持：不将(+18)`),
+  in both Chinese and English.
+- **Hard-veto fixed inauspicious days** — 杨公忌 (Yang Gong 13 Taboos),
+  三娘煞 (Sanniang Sha), 十恶大败 (Ten Evils, exact JiaZi-cycle indexing), and
+  四离四绝 (Four Departures / Four Absolutes — computed from
+  **minute-precision solar terms**, not tables).
+- **Trusts the engine score** — fast mode uses the `/auspicious` arbitration
+  score (0-5) as the primary score; local logic only adds what the engine
+  cannot know (patron zodiac veto/bonus, fixed inauspicious days, lucky
+  hours). `engine_score` and `local_adjustment` are reported separately.
+- **Window-safe** — engine dates outside the requested window are clipped
+  and reported as `engine_dates_outside_window`; empty shortlists fall back
+  to day-by-day deep scanning automatically.
+- **Patron matching** — `--birth 1990-05-20` resolves the patron's zodiac via
+  the API (立春 boundary) and vetoes days that 冲/害 the patron, bonuses for
+  三合/六合.
+- **Full folk output** — four pillars (year/month/day), 28 mansions, Nayin,
+  Peng Zu taboos, auspicious & caution gods, Yi/Ji lists, and top-3 Yellow-Belt
+  lucky hours per day.
+- **Deliverable document** — `--document` renders a bilingual 择吉文书
+  (date-selection certificate) ready to hand to a client.
+- **10 events** — wedding, moving-house, grand-opening, renovation,
+  signing-contracts, travel, starting-a-new-job, c-section, plus deep-scan-only
+  burial (安葬) and ancestor-worship (祭祀).
+
+```bash
+python3 scripts/pick.py --event wedding --birth 1990-05-20 \
+    --start 2026-09-01 --end 2026-10-15 --document
 ```
 
 ## Why 12Zodiacs API?

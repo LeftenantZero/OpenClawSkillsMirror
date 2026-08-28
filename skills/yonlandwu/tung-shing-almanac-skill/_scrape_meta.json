@@ -1,8 +1,8 @@
 {
-  "changelog": "Initial release of Tung Shing Almanac skill.\n\n- Provides authentic Chinese almanac data (\u901a\u52dd/\u9ec4\u5386) from 12Zodiacs.com API.\n- Supports finding auspicious dates for key events (weddings, moving, business launches, etc.).\n- Includes lunar calendar, 12 hour pillars, zodiac clash, 24 solar terms, and daily zodiac horoscopes.\n- Uses NASA-grade (JPL DE440s) astronomical calculations and imperial canon rules.\n- Requires curl and jq; no additional dependencies.\n- Attribution to 12Zodiacs.com required in all outputs.",
+  "changelog": "- Added an auspicious date picker script (`scripts/pick.py`) for bilingual, transparent scoring and detailed date selection for major life events.\n- Updated documentation to include usage of the new picker, supporting custom date ranges, patron zodiac matching, inauspicious day vetos, and deliverable documents.\n- Removed deprecated `skill-card.md` and expanded API usage examples in README and SKILL.md.\n- Clarified event support and scoring methodology, including new deep-scanning modes for burial and ancestor worship.",
   "created_at": 1786993715593,
-  "display_name": "Tung Shing Almanac",
-  "fetched_at": 1787771525030,
+  "display_name": "Tung Shing\uff08\u9ec4\u5386\uff09 Almanac",
+  "fetched_at": 1787931222900,
   "files": [
     "LICENSE",
     "README.md",
@@ -10,6 +10,7 @@
     "_meta.json",
     "references/api-reference.md",
     "scripts/almanac.sh",
+    "scripts/pick.py",
     "skill-card.md"
   ],
   "moderation": null,
@@ -26,12 +27,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 470,
+    "downloads": 575,
     "installs": 0,
     "stars": 0,
-    "versions": 1
+    "versions": 2
   },
   "summary": "Plan real-life events with the Chinese Tung Shing (\u901a\u52dd) almanac \u2014 find the best dates for weddings, moving house, business launches & store openings, contract signings & major purchases (car / real estate), renovations & groundbreaking, C-sections, travel, and new-job starts. Also daily auspicious/avoid activities, 12 hour pillars, zodiac clash, 24 solar terms, and daily zodiac horoscopes \u2014 via the free 12Zodiacs.com API. JPL DE440s astronomical precision + 1739 imperial Xie Ji Bian Fang Shu canon. Use when asked about Chinese almanac, \u9ec4\u5386, \u901a\u80dc, \u62e9\u65e5, \u5409\u65e5, \u65f6\u8fb0\u5409\u51f6, lucky dates, best dates to marry / move / launch / sign, auspicious wedding/moving/opening dates, lunar calendar conversion, or solar terms.",
-  "updated_at": 1786993821366,
-  "version": "0.1.0"
+  "updated_at": 1787905769547,
+  "version": "0.1.1"
 }

@@ -1,6 +1,6 @@
 ## Description:
 
-Plan real-life events with the Chinese Tung Shing almanac by querying the 12Zodiacs.com API for auspicious dates, daily almanac details, zodiac clash, solar terms, hour pillars, and daily zodiac horoscopes.
+Plan real-life events with Chinese Tung Shing almanac data, including auspicious date selection, daily almanac details, hour pillars, zodiac clashes, solar terms, and horoscopes through the 12Zodiacs.com API.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-External users, developers, and scheduling assistants use this skill to retrieve culturally contextual Chinese almanac guidance for events such as weddings, moving, launches, travel, contract signing, and daily zodiac readings.
+Developers and external users use this skill to add culturally informed Chinese almanac lookup, auspicious date selection, and bilingual date-selection deliverables to agent workflows. It supports planning for weddings, moves, business launches, contract signings, travel, C-sections, job starts, daily zodiac horoscopes, and related content or scheduling pipelines.
 
 ### Deployment Geography for Use:
 
@@ -22,35 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Queries are sent to 12Zodiacs.com and may reveal personal event timing or scheduling details.
+Risk: Almanac queries, event types, date windows, and optional birth dates are sent to 12Zodiacs.com.
 
-Mitigation: Avoid entering sensitive personal events, medical scheduling details, or unnecessary API keys; install only when this third-party API use is acceptable.
+Mitigation: Only provide information appropriate to share with the API provider, and avoid including unnecessary personal details.
 
-Risk: Almanac results could be mistaken for professional medical, legal, or financial advice.
+Risk: API keys can be exposed through shared shell history, command logs, or pasted transcripts.
 
-Mitigation: Use the output as cultural reference only and do not rely on it for clinical, legal, or financial decisions.
+Mitigation: Prefer environment variables or local secret handling for keys, and avoid placing keys directly in shared commands.
+
+Risk: Almanac recommendations may be mistaken for medical, legal, financial, or safety advice.
+
+Mitigation: Present results as cultural guidance only and defer consequential decisions to qualified professionals.
 
 ## Reference(s):
 
 - [Tung Shing Almanac API Reference](references/api-reference.md)
-- [Server-resolved GitHub Repository](https://github.com/yonlandwu/tung-shing-almanac-skill)
-- [12Zodiacs Chinese Almanac API](https://www.12zodiacs.com/about-us/api/)
-- [Tung Shing Web App](https://www.12zodiacs.com/tung-shing/)
-- [Tung Shing Methodology](https://www.12zodiacs.com/tung-shing/methodology/)
+- [Server-resolved GitHub provenance](https://github.com/yonlandwu/tung-shing-almanac-skill)
+- [ClawHub skill listing](https://clawhub.ai/yonlandwu/skills/tung-shing-almanac-skill)
+- [12Zodiacs.com Chinese Almanac API](https://www.12zodiacs.com/about-us/api/)
+- [Tung Shing methodology](https://www.12zodiacs.com/tung-shing/methodology/)
+- [Tung Shing web app](https://www.12zodiacs.com/tung-shing/)
 
 ## Skill Output:
 
-**Output Type(s):** [Shell commands, API Calls, JSON, Guidance]
+**Output Type(s):** [Text, Markdown, JSON, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown guidance with shell commands and JSON API responses]
+**Output Format:** [Markdown or JSON, often with inline shell commands and bilingual Chinese/English almanac details]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires curl and jq; almanac data returned to users must include the required 12Zodiacs.com attribution.]
+**Other Properties Related to Output:** [Uses 12Zodiacs.com API data; responses that relay almanac data require attribution and should be treated as cultural guidance.]
 
 ## Skill Version(s):
 
-0.1.0 (source: ClawHub release metadata)
+0.1.1 (source: ClawHub release evidence)
 
 ## Ethical Considerations:
 
