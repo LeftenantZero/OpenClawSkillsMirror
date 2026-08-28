@@ -1,0 +1,67 @@
+{
+  "changelog": "Initial native agent release with hierarchical compression and memory-based triggers.\n\n- Migrated from plugin/JS implementation to standalone Python agent with API server and monitoring tools\n- Introduced HOT/WARM/COLD three-level context compression strategy\n- Automatic compaction triggered by token usage, message counts, timer, or manual command\n- New monitoring and reporting scripts for compression status and resource usage\n- Added configuration files for compression thresholds and strategies\n- Removed previous JS/TypeScript plugin files; all logic is now in Python and shell scripts",
+  "created_at": 1773106509002,
+  "display_name": "Context Compactor",
+  "fetched_at": 1787882834817,
+  "files": [
+    "DEPLOYMENT.md",
+    "INSTALL.md",
+    "LICENSE.txt",
+    "OPENCLAW_INTEGRATION.md",
+    "README.md",
+    "SKILL.md",
+    "SUMMARY.md",
+    "TEST_REPORT.md",
+    "_meta.json",
+    "api_server.py",
+    "check_status.sh",
+    "compactor.py",
+    "config.json",
+    "hierarchical_compactor.py",
+    "integration.py",
+    "monitor.py",
+    "monitor.sh",
+    "requirements.txt",
+    "skill-card.md",
+    "skill.json",
+    "start.sh",
+    "start_monitor.sh",
+    "start_system.sh",
+    "stop_monitor.sh",
+    "stop_system.sh",
+    "test_compaction.py",
+    "test_skill.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089817437,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "geoshan",
+    "handle": "geoshan",
+    "user_id": "s174dnjfwwym02wderbkkxkt8n85b7an"
+  },
+  "slug": "subagent-context-compactor",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/subagent-context-compactor",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=subagent-context-compactor&ownerHandle=geoshan",
+    "page_url": "https://clawhub.ai/geoshan/skills/subagent-context-compactor"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 804,
+    "installs": 23,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u4e0a\u4e0b\u6587\u538b\u7f29\u4ee3\u7406\uff0c\u91c7\u7528\u5206\u5c42\u538b\u7f29\u7b56\u7565\uff0c\u57fa\u4e8e\u5185\u5b58\u4f7f\u7528\u89e6\u53d1\u673a\u5236\u3002\u5904\u7406HOT/WARM/COLD\u4e09\u5c42\u6570\u636e\uff0c\u4f18\u5316token\u4f7f\u7528\u3002\u5f53\u7528\u6237\u9700\u8981\u538b\u7f29\u5bf9\u8bdd\u4e0a\u4e0b\u6587\u3001\u4f18\u5316\u5185\u5b58\u4f7f\u7528\u3001\u7ba1\u7406\u4f1a\u8bdd\u5386\u53f2\u3001\u51cf\u5c11token\u6d88\u8017\u65f6\u4f7f\u7528\u6b64\u6280\u80fd\u3002\u7279\u522b\u9002\u7528\u4e8e\u957f\u65f6\u95f4\u5bf9\u8bdd\u3001\u590d\u6742\u4efb\u52a1\u5904\u7406\u3001\u9700\u8981\u4fdd\u7559\u91cd\u8981\u5386\u53f2\u4fe1\u606f\u7684\u573a\u666f\u3002",
+  "updated_at": 1778491796228,
+  "version": "1.0.0"
+}
