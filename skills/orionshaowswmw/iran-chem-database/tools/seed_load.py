@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Seed-baseline CLI for iran-chem-database (v2.19.0).
+"""Seed-baseline CLI for iran-chem-database (v2.22.0).
 
 Usage:
   python3 -m tools.seed_load status
@@ -8,8 +8,9 @@ Usage:
   python3 -m tools.seed_load export-sqlite [out.db]     # database starting point
   python3 -m tools.seed_load preload-cache              # 0-network re-parses
 
-The baseline lives in data/seed_export/ (1041 CID-unique confirmed-organic
-rows as of v2.19.0, plus retained historical seed files). It is a STARTING
+The baseline lives in data/seed_export/ (1399 CID-unique confirmed-organic
+rows as of v2.22.0, plus retained historical seed files including the v2.19
+1041-row primary). It is a STARTING
 POINT — never a claim of market completeness.
 """
 from __future__ import annotations
@@ -51,19 +52,18 @@ def main(argv):
                                 "iran_organic_molecules_expanded.csv")
         exp_man = seed_db.load_seed_manifest(exp_path) \
             if os.path.exists(exp_path) else {}
-        v219_path = os.path.join(seed_db.SEED_DIR,
-                                 "iran_organic_molecules_catalogue_verified_2026-08-25.csv")
-        v219_man = seed_db.load_seed_manifest(v219_path) \
-            if os.path.exists(v219_path) else {}
+        cur_baseline_path = os.path.join(seed_db.SEED_DIR, seed_db.NEWNAME)
+        cur_baseline_man = seed_db.load_seed_manifest(cur_baseline_path) \
+            if os.path.exists(cur_baseline_path) else {}
         cur_path = os.path.join(seed_db.SEED_DIR,
                                 "iran_organic_molecules_parallel_ai_2026-08-24.csv")
         cur_man = seed_db.load_seed_manifest(cur_path) \
             if os.path.exists(cur_path) else {}
         print("Seed baseline (data/seed_export):")
-        if v219_man:
-            print(f"  CURRENT (v2.19.0 catalogue-verified, PRIMARY): "
-                  f"{v219_man.get('rows', '?')} rows, "
-                  f"exported {v219_man.get('exported_at', '?')}")
+        if cur_baseline_man:
+            print(f"  CURRENT (v2.22.0 catalogue-verified, PRIMARY): "
+                  f"{cur_baseline_man.get('rows', '?')} rows, "
+                  f"exported {cur_baseline_man.get('exported_at', '?')}")
         if cur_man:
             print(f"  PRIOR (2026-08-24 parallel-AI): "
                   f"{cur_man.get('rows', '?')} rows, "

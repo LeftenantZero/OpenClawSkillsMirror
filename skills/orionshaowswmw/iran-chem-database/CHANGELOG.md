@@ -1,3 +1,56 @@
+## v2.22.0 (2026-08-27) — 1399 CID-unique confirmed-organic seed
+
+### Added
+- **`data/seed_export/iran_organic_molecules_catalogue_verified_2026-08-27.csv`
+  is the new PRIMARY seed: 1399 CID-unique confirmed-organic molecules.**
+  It merges the v2.19 1041-row primary with a 2026-08-27 live Iranian harvest:
+  **358 new unique CIDs** (+34.2 %). Every earlier seed row is retained
+  (CID/InChIKey merge; supplier + evidence unioned), nothing was deleted.
+- New live-crawl inputs (from a 2 GB stateless sandbox, no Docker):
+  Telegram full-history mirror of the 13 seeded Iranian channels
+  (**26,364 posts**, median 79.7 % post-id coverage) → 349 rows; public
+  WooCommerce Store API (Chemical Iran, 17 products); WordPress product
+  sitemaps across 7 reachable stores (**2,928 product URLs**).
+- **5-provider model-fleet normalization**: 5,300 unresolved catalogue titles
+  (incl. 171 Persian slugs PubChem cannot read) sent in 12-item batches to
+  gemini / mistral / groq / llm7 / `router.py` (9 providers, 767 models).
+  1,825 name proposals were PubChem-checked → **615 new CID-unique
+  identities, 443 with ≥2 models agreeing**. Unconfirmed items stayed
+  unresolved — no invented rows.
+- `coverage_report.json` section `v2_22_catalogue_verified_2026-08-27`
+  (per-source counts, reachability limits, fleet stats).
+- Two new columns for auditability: `category_source` (842 categories carried
+  from source records, 557 derived from supplier platform — derived values are
+  labelled, not presented as catalogue-declared) and `alt_cids` (10 rows where
+  PubChem lists the same InChIKey under sibling CIDs, folded in instead of
+  dropped).
+- `cas_cid_conflict` flag: 23 rows whose supplier-listed CAS resolves in
+  PubChem to a CID other than the row's. Flagged for human review rather than
+  silently rewritten.
+
+### Changed
+- `src/utils/seed_db.py`: `CURRENT_BASELINE_CSV` → the 2026-08-27 file; the
+  2026-08-25 primary is now `PREVIOUS_BASELINE_CSV`, still loaded second so its
+  evidence merges. `NEWNAME`/`OLDNAME` constants replace the duplicated literals.
+- `tools/seed_load.py status` reports v2.22 as CURRENT/PRIMARY.
+- `tools/export_verified.py --from-seed` includes the new primary first.
+- Export metadata line in the new seed is CSV-quoted (doubled internal quotes),
+  matching the convention of every other seed file, so `csv.reader` consumers
+  see one field instead of 68.
+- `provenance_hash` is computed over the EXACT stored field bytes
+  (truncate-then-hash). Verified: 200/200 recomputed hashes match.
+- README integrity block: seed row count, new file + hash, verify command;
+  all 17 SHA-256 claims re-derived from the shipped files.
+
+### Unchanged
+Crawler/parser/country-gate behavior. Standing honesty rules: dated best-effort
+catalogue index; `organic_status=true` means **confirmed organic**, never
+"all organic"; listing ≠ stock; not a national census. 225 gate failures from
+this build are preserved in the workspace export's `.rejected.csv`, not
+discarded.
+
+---
+
 ## v2.21.1 (2026-08-26) — 3 country-gated research-grade providers
 
 Published as 2.21.1: version 2.21.0 was reserved server-side by an interrupted

@@ -43,11 +43,18 @@ MARKET_VERIFIED_CSV = os.path.join(
 INORGANIC_CSV = os.path.join(SEED_DIR, "iran_inorganic_excluded.csv")
 COVERAGE_JSON = os.path.join(SEED_DIR, "coverage_report.json")
 
-# Current baseline (2026-08-25 / v2.19.0): 1041 CID-unique confirmed-organic
-# molecules (previous seed + live Iranian catalogue harvest). Highest
-# priority in load_seed_rows(); older baseline files remain for audit/history.
-CURRENT_BASELINE_CSV = os.path.join(
-    SEED_DIR, "iran_organic_molecules_catalogue_verified_2026-08-25.csv")
+# Current baseline (2026-08-27 / v2.22.0): 1399 CID-unique confirmed-organic
+# molecules — the v2.19 primary plus a 2026-08-27 live Iranian crawl
+# (Telegram full-history mirror, WooCommerce Store API, WP product sitemaps)
+# and 615 model-fleet titles that PubChem confirmed. Highest priority in
+# load_seed_rows(); the 2026-08-25 primary and all older baseline files
+# remain in data/seed_export/ for audit/history.
+NEWNAME = "iran_organic_molecules_catalogue_verified_2026-08-27.csv"
+OLDNAME = "iran_organic_molecules_catalogue_verified_2026-08-25.csv"
+CURRENT_BASELINE_CSV = os.path.join(SEED_DIR, NEWNAME)
+# v2.19 primary (1041 rows, 2026-08-25) — retained as the second-priority
+# source so historical evidence still merges in, and never silently overwritten.
+PREVIOUS_BASELINE_CSV = os.path.join(SEED_DIR, OLDNAME)
 CURRENT_INORGANIC_CSV = os.path.join(
     SEED_DIR, "iran_inorganic_excluded_parallel_ai_2026-08-24.csv")
 PARALLEL_AI_CSV = os.path.join(
@@ -223,7 +230,8 @@ def load_seed_rows() -> List[dict]:
     evidence_record_count.
     """
     sources = (
-        (CURRENT_BASELINE_CSV, "iran_organic_molecules_catalogue_verified_2026-08-25.csv"),
+        (CURRENT_BASELINE_CSV, NEWNAME),
+        (PREVIOUS_BASELINE_CSV, OLDNAME),
         (PARALLEL_AI_CSV, "iran_organic_molecules_parallel_ai_2026-08-24.csv"),
         (MARKET_VERIFIED_CSV, "iran_organic_molecules_market_verified.csv"),
         (ORGANIC_EXPANDED_CSV, "iran_organic_molecules_expanded.csv"),

@@ -241,7 +241,9 @@ def run(args) -> int:
                 rows.append(d)
     else:
         file_digests = {}
-        for name in ("iran_organic_molecules_market_verified.csv",
+        for name in ("iran_organic_molecules_catalogue_verified_2026-08-27.csv",
+                     "iran_organic_molecules_catalogue_verified_2026-08-25.csv",
+                     "iran_organic_molecules_market_verified.csv",
                      "iran_organic_molecules_expanded.csv",
                      "iran_organic_molecules.csv",
                      "iran_inorganic_excluded.csv"):

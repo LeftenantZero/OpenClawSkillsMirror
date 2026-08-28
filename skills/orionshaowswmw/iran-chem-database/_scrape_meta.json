@@ -1,8 +1,8 @@
 {
-  "changelog": "v2.21.1: admit 3 country-gated Iranian research-grade sellers (Shimi Merck, Rad Kimyagaran, Neutron Pharmachemical). SUPPLIER_SEEDS 55->58. Rad Zist Shimi and Rad Shimi Alborz denied (DNS fail / insufficient own-site evidence). 2.21.0 reserved by interrupted upload. Listing != stock.",
+  "changelog": "v2.22.0 seed: 1399 CID-unique confirmed-organic rows (v2.19 primary + 2026-08-27 live Telegram/WooCommerce/sitemap crawl + 5-model fleet normalization, PubChem-confirmed).",
   "created_at": 1787148125164,
   "display_name": "iran-chem-database",
-  "fetched_at": 1787768764875,
+  "fetched_at": 1787932551720,
   "files": [
     "CHANGELOG.md",
     "Dockerfile",
@@ -24,6 +24,7 @@
     "data/seed_export/iran_inorganic_excluded_parallel_ai_2026-08-24.csv",
     "data/seed_export/iran_organic_molecules.csv",
     "data/seed_export/iran_organic_molecules_catalogue_verified_2026-08-25.csv",
+    "data/seed_export/iran_organic_molecules_catalogue_verified_2026-08-27.csv",
     "data/seed_export/iran_organic_molecules_expanded.csv",
     "data/seed_export/iran_organic_molecules_market_verified.csv",
     "data/seed_export/iran_organic_molecules_parallel_ai_2026-08-24.csv",
@@ -167,7 +168,17 @@
     "tools/package_selftest.py",
     "tools/seed_load.py"
   ],
-  "moderation": null,
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787837927322,
+    "verdict": "clean"
+  },
   "owner": {
     "display_name": "orionshaowswmw",
     "handle": "orionshaowswmw",
@@ -181,12 +192,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 717,
+    "downloads": 814,
     "installs": 2,
     "stars": 0,
-    "versions": 44
+    "versions": 45
   },
-  "summary": "Iran Chemical Database \u2014 live, dated, auditable, BEST-EFFORT index of chemical offerings in configured public Iranian supplier catalogues (websites + public Telegram channels). HTTrack/WooCommerce-REST/Telegram mirroring \u2192 local-only parsing \u2192 RDKit/PubChem/CAS-validated PostgreSQL with FastAPI + Streamlit. Fail-closed Iranian-suppliers-only country gate; coverage measured and published, never claimed complete. Installation = software + queued crawl, not a populated dataset. Ships a 1041-molecule CID-unique confirmed-organic seed baseline (v2.19). For academic procurement research.",
-  "updated_at": 1787695105475,
-  "version": "2.21.1"
+  "summary": "Iran Chemical Database \u2014 live, dated, auditable, BEST-EFFORT index of chemical offerings in configured public Iranian supplier catalogues (websites + public Telegram channels). HTTrack/WooCommerce-REST/Telegram mirroring \u2192 local-only parsing \u2192 RDKit/PubChem/CAS-validated PostgreSQL with FastAPI + Streamlit. Fail-closed Iranian-suppliers-only country gate; coverage measured and published, never claimed complete. Installation = software + queued crawl, not a populated dataset. Ships a 1399-molecule CID-unique confirmed-organic seed baseline (v2.22, 2026-08-27: v2.19 primary + live Telegram/WooCommerce/sitemap crawl + 5-model fleet normalization, every new identity PubChem-confirmed). For academic procurement research.",
+  "updated_at": 1787837204254,
+  "version": "2.22.0"
 }
