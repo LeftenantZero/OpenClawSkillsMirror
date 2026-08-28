@@ -1,0 +1,39 @@
+{
+  "changelog": "**AI Agent security checks, pattern expansion, and Solidity support added.**\n\n- Added AI Agent security auditing (prompt injection, crypto wallet/key exposure) with a new `patterns/ai-agent.json` file.\n- Introduced quick and dedicated AI audit mode (`--ai`) for security checks inspired by recent incidents.\n- Expanded secret/key detection coverage (70+ patterns, including crypto wallets).\n- Updated security scoring to include AI Agent Security (15% weight).\n- Official support for Solidity and wider language coverage.\n- Improved documentation and quick start instructions.",
+  "created_at": 1771741699157,
+  "display_name": "Code Security Audit",
+  "fetched_at": 1787897345597,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "patterns/ai-agent.json",
+    "patterns/secrets.json",
+    "scripts/security-audit.sh",
+    "skill.json",
+    "templates/security-audit.gitlab-ci.yml",
+    "templates/security-audit.yml"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Dragon",
+    "handle": "wisdomsword",
+    "user_id": "s17816dwhde506q6hgdqabzsx983kpd7"
+  },
+  "slug": "code-security-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/code-security-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=code-security-audit&ownerHandle=wisdomsword",
+    "page_url": "https://clawhub.ai/wisdomsword/skills/code-security-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1094,
+    "installs": 23,
+    "stars": 3,
+    "versions": 3
+  },
+  "summary": "Comprehensive code security audit toolkit combining OWASP Top 10 vulnerability scanning, dependency analysis, secret detection, SSL/TLS verification, AI Agen...",
+  "updated_at": 1778491605027,
+  "version": "2.1.0"
+}
