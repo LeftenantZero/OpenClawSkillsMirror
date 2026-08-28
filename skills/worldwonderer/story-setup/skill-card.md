@@ -1,6 +1,6 @@
 ## Description:
 
-Story Setup deploys online-fiction writing project infrastructure for Claude Code, OpenCode, Codex, ZCode, OpenClaw, Reasonix, and generic agent workflows.
+Deploys web-novel writing project infrastructure for Claude Code, OpenCode, Codex, Google Antigravity, ZCode, OpenClaw, Reasonix, and generic agent workflows.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, writers, and writing-tool maintainers use this skill to initialize or refresh a story-writing workspace with agents, hooks, commands, templates, and reference material across supported agent CLIs. It is intended for dedicated writing projects where automated project configuration is acceptable.
+Developers and writers use this skill to initialize or refresh a structured web-novel writing workspace with platform-specific agents, hooks, rules, commands, and shared writing references. It supports setup across multiple agent CLIs while preserving user-owned project content and merging managed configuration blocks.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill installs persistent hooks and broad command routing into writing projects.
+Risk: The skill installs persistent hooks that can run scripts during future agent sessions and file edits.
 
-Mitigation: Use it only in a dedicated writing workspace and review generated hook and configuration changes before relying on them.
+Mitigation: Install it only in trusted writing projects and review the planned changes to agent directories, AGENTS.md or CLAUDE.md, and .git/hooks/pre-commit before use.
 
-Risk: Some generated configurations can affect files such as .claude/settings.local.json, .codex/hooks.json, .zcode/config.json, opencode.json, and .git/hooks/pre-commit.
+Risk: Some workflows can contact GitHub for update checks.
 
-Mitigation: Inspect those files after setup or upgrade and confirm that managed sections match the intended target agent environments.
+Mitigation: Set STORY_NO_UPDATE_CHECK=1 when automatic GitHub contact is not acceptable.
 
-Risk: Browser-CDP and cover-generation workflows may use browser login state or external APIs when invoked separately.
+Risk: Browser/CDP workflows may reuse a local browser session.
 
-Mitigation: Run those workflows only when the user has approved the browser or external-service access needed for the writing task.
+Mitigation: Enable browser or CDP workflows only when that session reuse is intended.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/worldwonderer/skills/story-setup)
-- [Metadata source link](https://github.com/worldwonderer/oh-story-claudecode)
+- [Publisher profile](https://clawhub.ai/user/worldwonderer)
+- [OpenClaw source metadata](https://github.com/zenstory-ai/oh-story-claudecode)
 - [Upgrade guide](UPGRADING.md)
-- [Agent reference materials](references/agent-references/)
-- [Claude Code deployment templates](references/templates/)
-- [Codex adapter files](references/codex/)
-- [OpenCode adapter files](references/opencode/)
-- [ZCode adapter files](references/zcode/)
+- [Writing reference profiles](references/agent-references/agent-reference-profiles.md)
+- [Agent quality reference](references/agent-references/agent-quality.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown guidance with generated or merged project files, shell commands, hooks, agent definitions, and configuration snippets]
+**Output Format:** [Markdown guidance with generated project files, scripts, hooks, agent definitions, and configuration snippets]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces workspace changes for selected agent environments and reports deployment or upgrade actions.]
+**Other Properties Related to Output:** [Creates or merges project-local setup files for supported agent environments; exact changes depend on the selected target CLI and existing workspace state.]
 
 ## Skill Version(s):
 
-1.1.19 (source: server release evidence; artifact frontmatter reports 1.2.7)
+1.1.21 (source: server release metadata; artifact frontmatter reports 1.2.10)
 
 ## Ethical Considerations:
 
