@@ -1,0 +1,56 @@
+{
+  "changelog": "- Added homepage and source links to metadata for increased transparency.\n- Updated metadata to specify `pip` requirements file for installation.\n- Listed required and optional environment variables in metadata for clearer configuration instructions.\n- No functional or command changes; documentation and metadata updates only.",
+  "created_at": 1771206913953,
+  "display_name": "AuditClaw Idp",
+  "fetched_at": 1787901484418,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/checks/__init__.py",
+    "scripts/checks/google_admins.py",
+    "scripts/checks/google_inactive.py",
+    "scripts/checks/google_mfa.py",
+    "scripts/checks/google_passwords.py",
+    "scripts/checks/okta_inactive.py",
+    "scripts/checks/okta_mfa.py",
+    "scripts/checks/okta_passwords.py",
+    "scripts/checks/okta_sessions.py",
+    "scripts/idp-permissions.json",
+    "scripts/idp_evidence.py",
+    "scripts/requirements.txt",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779969012870,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Nikhil Jathar",
+    "handle": "mailnike",
+    "user_id": "s17ee5y8kxe1zfx1t7te9wcgzx83j215"
+  },
+  "slug": "auditclaw-idp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/auditclaw-idp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=auditclaw-idp&ownerHandle=mailnike",
+    "page_url": "https://clawhub.ai/mailnike/skills/auditclaw-idp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1138,
+    "installs": 34,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Identity provider compliance checks for auditclaw-grc. 8 read-only checks across Google Workspace (MFA, admin audit, inactive users, passwords) and Okta (MFA...",
+  "updated_at": 1778491552996,
+  "version": "1.0.2"
+}
