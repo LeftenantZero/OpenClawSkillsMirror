@@ -1,6 +1,6 @@
 ## Description:
 
-End-to-end functional testing framework for Huawei Cloud skills with a three-tier pipeline for single-skill testing, multi-skill orchestration, real-environment execution, cleanup checks, and consolidated reporting.
+End-to-end functional testing framework for Huawei Cloud skills, covering single-skill testing, multi-skill orchestration, full-flow real-environment checks, and consolidated JSON and Markdown reports.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, QA engineers, and cloud skill maintainers use this skill to validate Huawei Cloud agent skills through staged installation checks, capability analysis, test-case generation, live execution, orchestration checks, and final reports.
+Developers and cloud QA engineers use this skill to verify Huawei Cloud skills through an eight-phase pipeline that checks installation, extracts capabilities, researches CLI/SDK/API feasibility, generates tests, runs selected live-environment checks, derives orchestration scenarios, and produces final reports.
 
 ### Deployment Geography for Use:
 
@@ -22,45 +22,51 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can execute generated shell/Python test content and live Huawei Cloud actions with discovered credentials.
+Risk: The skill can run live Huawei Cloud tests and may create, update, or delete cloud resources when write execution is enabled.
 
-Mitigation: Install it only in an isolated test workspace with non-production credentials, least-privilege IAM, a constrained region/project, and expected billing and cleanup checks.
+Mitigation: Use an isolated test account or project, keep ALLOW_WRITES and ALLOW_REAL_E2E unset until generated cases are reviewed, and confirm cleanup instructions after execution.
 
-Risk: Write-operation safety claims may not fully match implementation behavior.
+Risk: The skill requires Huawei Cloud credentials for live phases.
 
-Mitigation: Review generated Phase 3 test cases before execution and disable or patch the Phase 4 write execution path unless explicit approval is enforced.
+Mitigation: Use least-privilege, short-lived credentials configured out-of-band through environment variables or an existing hcloud profile; do not paste AK/SK values into chat or commands.
 
-Risk: Running against arbitrary third-party skills or production accounts can create cloud resource, billing, or cleanup exposure.
+Risk: Sibling skill auto-scan can expand orchestration coverage beyond the explicitly named skill.
 
-Mitigation: Use dedicated test accounts and review resource cleanup results before reruns or broader deployment.
+Mitigation: Run with --no-siblings unless cross-skill testing is intended, or use --sibling-limit to bound the scope.
+
+Risk: Test artifacts and reports are retained in <skill-name>-test-files and may contain operational details.
+
+Mitigation: Periodically inspect, archive, or delete retained test files according to the environment's data-retention policy.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/huaweiclouddev/skills/huawei-cloud-skill-tester)
-- [architecture.md](references/architecture.md)
-- [output-schema-spec.md](references/output-schema-spec.md)
-- [phase-details.md](references/phase-details.md)
-- [phase-transition-rules.md](references/phase-transition-rules.md)
-- [acceptance-criteria.md](references/acceptance-criteria.md)
-- [verification-method.md](references/verification-method.md)
-- [agent-protocol.md](references/agent-protocol.md)
-- [Huawei Cloud CLI quick start](https://support.huaweicloud.com/qs-hcli/hcli_02_003.html)
-- [Huawei Cloud SDK center](https://console.huaweicloud.com/apiexplorer/#/sdkcenter)
+- [Huawei Cloud hcloud CLI quick start](https://support.huaweicloud.com/qs-hcli/hcli_02_003.html)
+- [Huawei Cloud SDK Center](https://console.huaweicloud.com/apiexplorer/#/sdkcenter)
 - [Huawei Cloud API Explorer](https://console.huaweicloud.com/apiexplorer/#/openapi)
+- [Architecture](references/architecture.md)
+- [Output Schema Specification](references/output-schema-spec.md)
+- [Phase Details](references/phase-details.md)
+- [Phase Transition Rules](references/phase-transition-rules.md)
+- [Acceptance Criteria](references/acceptance-criteria.md)
+- [Agent Protocol](references/agent-protocol.md)
+- [CLI Installation Guide](references/cli-installation-guide.md)
+- [IAM Policies](references/iam-policies.md)
+- [Verification Method](references/verification-method.md)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with shell commands and structured JSON and Markdown test report artifacts]
+**Output Format:** [Structured JSON phase summaries, final JSON report, Markdown report, and shell command guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces phase summary JSON files and final JSON/Markdown reports in sibling test artifact directories.]
+**Other Properties Related to Output:** [Outputs are written under a sibling <skill-name>-test-files directory and include phase-N-summary.json files plus report/test-report.json and report/test-report.md.]
 
 ## Skill Version(s):
 
-1.0.2 (source: server release evidence)
+1.0.3 (source: server release evidence)
 
 ## Ethical Considerations:
 
