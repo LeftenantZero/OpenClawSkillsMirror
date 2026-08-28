@@ -1,0 +1,50 @@
+{
+  "changelog": "Added session refresh reminder system: self-scheduling cron chain that notifies exactly when 5-hour quota resets. Minimal API calls, zero maintenance. Includes comparison docs for both reminder and polling methods.",
+  "created_at": 1768853741579,
+  "display_name": "Claude Code Usage",
+  "fetched_at": 1787913184665,
+  "files": [
+    "CRON_SETUP.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/claude-usage.sh",
+    "scripts/monitor-and-notify.sh",
+    "scripts/monitor-usage.sh",
+    "scripts/session-reminder.sh",
+    "scripts/setup-monitoring.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783650130534,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "azaidi94",
+    "handle": "azaidi94",
+    "user_id": "s17c5bqxp19c1c8ktc0pqng0xn885q9v"
+  },
+  "slug": "claude-code-usage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/claude-code-usage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=claude-code-usage&ownerHandle=azaidi94",
+    "page_url": "https://clawhub.ai/azaidi94/skills/claude-code-usage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 6715,
+    "installs": 235,
+    "stars": 16,
+    "versions": 3
+  },
+  "summary": "Check Claude Code OAuth usage limits (session & weekly quotas). Use when user asks about Claude Code usage, remaining limits, rate limits, or how much Claude usage they have left. Includes automated session refresh reminders and reset detection monitoring.",
+  "updated_at": 1778485733200,
+  "version": "1.2.0"
+}
