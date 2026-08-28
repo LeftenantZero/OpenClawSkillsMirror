@@ -1,0 +1,40 @@
+{
+  "changelog": "- Migrated all major components from Python scripts to modular JavaScript files for better integration and performance.\n- Introduced automatic context compaction with token tracking and summarization at 50,000 tokens.\n- Enhanced task routing logic with intelligent model selection and real-time cost prediction.\n- Improved scheduler with robust preflight/postflight hooks and fault-tolerant execution.\n- Added real-time dashboard for budget, task, and model usage monitoring.\n- Removed legacy scripts and static state files, streamlining the architecture.",
+  "created_at": 1770102708063,
+  "display_name": "StartClaw-Optimizer",
+  "fetched_at": 1787909931685,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "components/browser-governor.js",
+    "components/router.js",
+    "components/scheduler.js",
+    "context-compaction.js",
+    "package.json",
+    "scripts/dashboard.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "idanmann10",
+    "handle": "idanmann10",
+    "user_id": "s1721j26f75nzr1hddg2acwk9h885k18"
+  },
+  "slug": "startclaw-optimizer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/startclaw-optimizer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=startclaw-optimizer&ownerHandle=idanmann10",
+    "page_url": "https://clawhub.ai/idanmann10/skills/startclaw-optimizer"
+  },
+  "stats": {
+    "comments": 2,
+    "downloads": 3307,
+    "installs": 115,
+    "stars": 1,
+    "versions": 3
+  },
+  "summary": "Master optimization system - APPLIES TO EVERY RESPONSE. Before responding, classify task complexity (simple question vs analysis vs coding). Use Haiku for simple/navigation/extraction/status. Use Sonnet ONLY for writing/analysis/planning/debugging. Monitor context size - if >50k tokens, recommend /compact. For automations, use scheduler wrapper. Never load full conversation history for simple tasks. Heartbeats always Haiku, single-line only. Never use Opus. This skill MUST run before every response to prevent 100k+ token bloat.",
+  "updated_at": 1778486000320,
+  "version": "1.0.2"
+}
