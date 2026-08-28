@@ -5,20 +5,28 @@ Module de cryptographie asymétrique Ed25519 et gestion des identités OpenClawM
 Gère les clés privées/publiques Ed25519, la signature, la vérification anti-rejeu,
 et la liste blanche de confiance (TrustStore).
 """
+
 from __future__ import annotations
+
 import json
 import os
+import re
+import tempfile
 import time
 from pathlib import Path
-from typing import Optional, Set
+from typing import Any
+
+from .config import get_settings
 
 try:
-    from cryptography.hazmat.primitives.asymmetric import ed25519
     from cryptography.hazmat.primitives import serialization
-    from cryptography.exceptions import InvalidSignature
+    from cryptography.hazmat.primitives.asymmetric import ed25519
+
     _HAS_CRYPTO = True
 except ImportError:
     _HAS_CRYPTO = False
+
+_settings = get_settings()
 
 
 def _signing_base_ed25519(
@@ -26,8 +34,8 @@ def _signing_base_ed25519(
     origin: str,
     skill: str,
     ts: float,
-    payload: dict,
-    pubkey_hex: str = ""
+    payload: dict[str, Any],
+    pubkey_hex: str = "",
 ) -> bytes:
     """Génère la chaîne canonique d'octets à signer en Ed25519 (compatible JarvisMesh)."""
     payload_json = json.dumps(payload, sort_keys=True, separators=(",", ":"))
@@ -38,7 +46,7 @@ def _signing_base_ed25519(
 class NodeIdentity:
     """Représente l'identité cryptographique d'un nœud OpenClaw (Ed25519)."""
 
-    def __init__(self, private_key: "ed25519.Ed25519PrivateKey"):
+    def __init__(self, private_key: ed25519.Ed25519PrivateKey):
         if not _HAS_CRYPTO:
             raise ImportError(
                 "La bibliothèque 'cryptography' est requise pour l'identité Ed25519. "
@@ -98,9 +106,13 @@ class NodeIdentity:
         raw = file_path.read_bytes()
         return cls.from_private_bytes(raw)
 
-    def sign(self, request_id: str, origin: str, skill: str, ts: float, payload: dict) -> str:
+    def sign(
+        self, request_id: str, origin: str, skill: str, ts: float, payload: dict[str, Any]
+    ) -> str:
         """Signe canoniquement une requête TaskRequest en Ed25519."""
-        data_to_sign = _signing_base_ed25519(request_id, origin, skill, ts, payload, self.public_key_hex)
+        data_to_sign = _signing_base_ed25519(
+            request_id, origin, skill, ts, payload, self.public_key_hex
+        )
         sig = self._private_key.sign(data_to_sign)
         return sig.hex()
 
@@ -111,9 +123,9 @@ def verify_ed25519_signature(
     origin: str,
     skill: str,
     ts: float,
-    payload: dict,
+    payload: dict[str, Any],
     signature_hex: str,
-    max_drift_seconds: float = 300.0,
+    max_drift_seconds: float | None = None,
 ) -> bool:
     """
     Vérifie la signature Ed25519 d'une requête ainsi que l'horodatage anti-rejeu.
@@ -124,8 +136,9 @@ def verify_ed25519_signature(
         return False
 
     # Protection anti-rejeu par horodatage (tolérance +/- max_drift_seconds)
+    drift_limit = max_drift_seconds or _settings.signature_max_drift_seconds
     now = time.time()
-    if abs(now - ts) > max_drift_seconds:
+    if abs(now - ts) > drift_limit:
         return False
 
     try:
@@ -142,17 +155,19 @@ def verify_ed25519_signature(
 class TrustStore:
     """Gestionnaire de confiance des clés publiques pour OpenClawMesh."""
 
-    def __init__(self, allowed_keys: Optional[Set[str]] = None, allow_all: bool = False):
-        self.allowed_keys: Set[str] = {k.lower() for k in (allowed_keys or set())}
+    def __init__(self, allowed_keys: set[str] | None = None, allow_all: bool = False):
+        self.allowed_keys: set[str] = {k.lower() for k in (allowed_keys or set())}
         self.allow_all = allow_all
 
     def trust(self, pubkey_hex: str) -> None:
+        if not isinstance(pubkey_hex, str) or not re.fullmatch(r"[0-9a-fA-F]{64}", pubkey_hex):
+            raise ValueError("Clé publique Ed25519 invalide")
         self.allowed_keys.add(pubkey_hex.lower())
 
     def revoke(self, pubkey_hex: str) -> None:
         self.allowed_keys.discard(pubkey_hex.lower())
 
-    def is_trusted(self, pubkey_hex: Optional[str]) -> bool:
+    def is_trusted(self, pubkey_hex: str | None) -> bool:
         if self.allow_all:
             return True
         if not pubkey_hex:
@@ -164,9 +179,22 @@ class TrustStore:
         file_path.parent.mkdir(parents=True, exist_ok=True)
         data = {
             "allow_all": self.allow_all,
-            "allowed_keys": sorted(list(self.allowed_keys)),
+            "allowed_keys": sorted(self.allowed_keys),
         }
-        file_path.write_text(json.dumps(data, indent=2))
+        fd, temp_name = tempfile.mkstemp(prefix="truststore-", dir=file_path.parent)
+        try:
+            os.fchmod(fd, 0o600)
+            with os.fdopen(fd, "w") as temp_file:
+                temp_file.write(json.dumps(data, indent=2))
+                temp_file.flush()
+                os.fsync(temp_file.fileno())
+            os.replace(temp_name, file_path)
+        except Exception:
+            try:
+                os.unlink(temp_name)
+            except OSError:
+                pass
+            raise
 
     @classmethod
     def load(cls, path: str | Path) -> TrustStore:
@@ -181,3 +209,67 @@ class TrustStore:
             )
         except Exception:
             return cls()
+
+
+def generate_self_signed_cert_and_key() -> tuple[bytes, bytes]:
+    """Génère une paire certificat/clé privée TLS auto-signée à la volée."""
+    if not _HAS_CRYPTO:
+        raise ImportError("cryptography est requis pour générer un certificat TLS.")
+    import datetime
+    import ipaddress
+
+    from cryptography import x509
+    from cryptography.hazmat.primitives import hashes
+    from cryptography.hazmat.primitives.asymmetric import rsa
+    from cryptography.x509.oid import NameOID
+
+    key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+    subject = issuer = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, "openclaw-mesh-node")])
+    now = datetime.datetime.now(datetime.timezone.utc)
+    cert = (
+        x509.CertificateBuilder()
+        .subject_name(subject)
+        .issuer_name(issuer)
+        .public_key(key.public_key())
+        .serial_number(x509.random_serial_number())
+        .not_valid_before(now - datetime.timedelta(minutes=5))
+        .not_valid_after(now + datetime.timedelta(days=365))
+        .add_extension(
+            x509.SubjectAlternativeName(
+                [x509.DNSName("localhost"), x509.IPAddress(ipaddress.IPv4Address("127.0.0.1"))]
+            ),
+            critical=False,
+        )
+        .sign(key, hashes.SHA256())
+    )
+    cert_pem = cert.public_bytes(serialization.Encoding.PEM)
+    key_pem = key.private_bytes(
+        encoding=serialization.Encoding.PEM,
+        format=serialization.PrivateFormat.TraditionalOpenSSL,
+        encryption_algorithm=serialization.NoEncryption(),
+    )
+    return cert_pem, key_pem
+
+
+def create_ephemeral_ssl_context() -> Any:
+    """Crée un SSLContext serveur TLS auto-signé valide pour sécuriser instantanément les connexions WAN."""
+    import ssl
+
+    cert_pem, key_pem = generate_self_signed_cert_and_key()
+    with (
+        tempfile.NamedTemporaryFile("wb", delete=False) as c_file,
+        tempfile.NamedTemporaryFile("wb", delete=False) as k_file,
+    ):
+        c_file.write(cert_pem)
+        k_file.write(key_pem)
+        c_path, k_path = c_file.name, k_file.name
+    try:
+        ctx = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
+        ctx.load_cert_chain(certfile=c_path, keyfile=k_path)
+        return ctx
+    finally:
+        try:
+            os.unlink(c_path)
+            os.unlink(k_path)
+        except OSError:
+            pass

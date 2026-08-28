@@ -2,8 +2,9 @@
 """
 Lanceur du Serveur Passerelle de Monétisation OpenClawMesh.
 Usage:
-  python3 scripts/gateway_server.py [--port 8000] [--host 0.0.0.0]
+    python3 scripts/gateway_server.py [--port 8000] [--host 127.0.0.1]
 """
+
 import argparse
 import sys
 from pathlib import Path
@@ -13,12 +14,11 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 import uvicorn
-from openclaw_mesh.gateway.server import app
 
 
 def main():
     parser = argparse.ArgumentParser(description="Serveur de Monétisation OpenClawMesh")
-    parser.add_argument("--host", default="0.0.0.0", help="Hôte d'écoute (défaut: 0.0.0.0)")
+    parser.add_argument("--host", default="127.0.0.1", help="Hôte d'écoute (défaut: localhost)")
     parser.add_argument("--port", type=int, default=8000, help="Port d'écoute HTTP (défaut: 8000)")
     parser.add_argument("--reload", action="store_true", help="Rechargement à chaud automatique")
     args = parser.parse_args()

@@ -1,10 +1,14 @@
 {
-  "changelog": "- Added French translations for the LICENSE and README files (`LICENSE.fr`, `README.fr.md`).\n- Updated project metadata in `pyproject.toml`.\n- No changes to skill functionality or the protocol itself.\n- Documentation now includes French versions for broader accessibility.",
+  "changelog": "openclawmesh 0.1.11\n\n- Major internal refactor: significant changes across 53 files, with 1 file removed.\n- Improved code organization and modularity in core modules (`bridge.py`, `cli.py`, `client.py`, etc).\n- Enhanced mesh networking protocols and P2P discovery.\n- Documentation updates in `README.md`, `ARCHITECTURE.md`, and SKILL metadata.\n- Examples updated for better clarity and coverage.\n- Removed obsolete `skill-card.md` file.",
   "created_at": 1787610895009,
   "display_name": "Openclaw Mesh",
-  "fetched_at": 1787770959449,
+  "fetched_at": 1787931502303,
   "files": [
+    ".env.example",
+    ".github/workflows/ci.yml",
     ".gitignore",
+    ".pre-commit-config.yaml",
+    "ARCHITECTURE.md",
     "LICENSE",
     "LICENSE.fr",
     "README.fr.md",
@@ -19,6 +23,7 @@
     "openclaw_mesh/bridge.py",
     "openclaw_mesh/cli.py",
     "openclaw_mesh/client.py",
+    "openclaw_mesh/config.py",
     "openclaw_mesh/crypto.py",
     "openclaw_mesh/crypto_e2ee.py",
     "openclaw_mesh/discovery.py",
@@ -64,7 +69,9 @@
     "tests/test_model_manager.py",
     "tests/test_multimodal.py",
     "tests/test_nat_relay.py",
-    "tests/test_protocol.py"
+    "tests/test_protocol.py",
+    "tests/test_security_hardening.py",
+    "uv.lock"
   ],
   "moderation": {
     "engine_version": "v2.4.26",
@@ -74,11 +81,11 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1787612344166,
+    "updated_at": 1787901537923,
     "verdict": "clean"
   },
   "owner": {
-    "display_name": "S\u00e9lim Marouani",
+    "display_name": "S\u00e9lim",
     "handle": "samajesteduroyaume",
     "user_id": "s179phmyjxw9sv6e4r7a64y3mh841pxw"
   },
@@ -90,12 +97,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 136,
+    "downloads": 354,
     "installs": 0,
     "stars": 0,
-    "versions": 2
+    "versions": 12
   },
-  "summary": "Connect OpenClaw to local and LAN P2P AI agent meshes (JarvisMesh & OpenClawMesh). Discover active peer nodes, delegate heavy tasks across all hardware architectures (NVIDIA CUDA, AMD ROCm, Intel Core Ultra NPU/OpenVINO, Apple Silicon Metal, and CPU), run Whisper audio STT, Vision models, SQLite vector memory RAG, stream real-time tokens, and expose local tools to the decentralized network.",
-  "updated_at": 1787611547762,
-  "version": "0.1.1"
+  "summary": "Connect OpenClaw to local and LAN P2P AI agent meshes (JarvisMesh & OpenClawMesh). Requires explicit user consent for mDNS, LAN/WAN network access, remote delegation, key-file access, and exposing local tools. Remote traffic may transmit prompts, files, memory, media, and tool results to selected peers.",
+  "updated_at": 1787900733203,
+  "version": "0.1.11"
 }

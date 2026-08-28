@@ -7,37 +7,39 @@ Permet à un agent OpenClaw :
 - De recevoir les réponses complètes ou les chunks en streaming token-par-token.
 - De signer les requêtes avec HMAC-SHA256 ou Ed25519.
 """
+
 from __future__ import annotations
+
 import asyncio
-import json
 import logging
 import ssl as ssl_module
 import time
 import uuid
-from typing import Any, Callable, Optional
+from collections.abc import Callable
+from typing import Any
 
 import websockets
 
+from .config import get_settings
+from .crypto import NodeIdentity
+from .discovery import MeshDiscovery, PeerInfo
 from .protocol import (
-    PROTOCOL_VERSION,
     DESCRIBE_SKILL,
     HEALTH_SKILL,
     TaskRequest,
-    TaskChunk,
     TaskResponse,
     parse_message,
 )
-from .discovery import MeshDiscovery, PeerInfo
-from .crypto import NodeIdentity
 
 logger = logging.getLogger("openclaw_mesh.client")
+_settings = get_settings()
 
 
 def _is_ws_closed(ws: Any) -> bool:
     if ws is None:
         return True
     if hasattr(ws, "closed"):
-        return ws.closed
+        return bool(ws.closed)
     if hasattr(ws, "state"):
         state_str = str(ws.state)
         state_name = getattr(ws.state, "name", "")
@@ -50,19 +52,25 @@ class MeshClient:
 
     def __init__(
         self,
-        name: str = "openclaw-agent",
-        psk: Optional[str] = None,
-        identity: Optional[NodeIdentity] = None,
-        ssl_context: Optional[ssl_module.SSLContext] = None,
-        discovery: Optional[MeshDiscovery] = None,
-        enable_discovery: bool = True,
+        name: str | None = None,
+        psk: str | None = None,
+        identity: NodeIdentity | None = None,
+        ssl_context: ssl_module.SSLContext | None = None,
+        discovery: MeshDiscovery | None = None,
+        enable_discovery: bool | None = None,
     ):
-        self.name = name
-        self.psk = psk
+        self.name = name or _settings.client_name
+        self.psk = psk or _settings.psk
         self.identity = identity
         self.ssl_context = ssl_context
 
-        self.discovery = discovery or (MeshDiscovery(node_name=name) if enable_discovery else None)
+        # Une option explicitement fournie doit primer sur la configuration globale.
+        discovery_enabled = (
+            enable_discovery if enable_discovery is not None else _settings.mdns_enabled
+        )
+        self.discovery = discovery or (
+            MeshDiscovery(node_name=self.name) if discovery_enabled else None
+        )
         self.static_peers: dict[str, PeerInfo] = {}
 
         # Pool de connexions WebSockets persistantes {endpoint_key: WebSocketClientProtocol}
@@ -70,7 +78,9 @@ class MeshClient:
         self._send_locks: dict[str, asyncio.Lock] = {}
         self._reader_tasks: dict[str, asyncio.Task] = {}
         self._pending: dict[str, dict[str, asyncio.Future]] = {}  # endpoint -> {req_id -> Future}
-        self._stream_cbs: dict[str, dict[str, Callable[[Any], None]]] = {}  # endpoint -> {req_id -> callback}
+        self._stream_cbs: dict[
+            str, dict[str, Callable[[Any], None]]
+        ] = {}  # endpoint -> {req_id -> callback}
 
         # Cache d'introspection et de santé
         self._peer_skills_cache: dict[str, list[str]] = {}
@@ -108,9 +118,13 @@ class MeshClient:
     # ------------------------------------------------------------------ #
     # Gestion des Pairs et Résolution
     # ------------------------------------------------------------------ #
-    def add_peer(self, name: str, address: str, port: int, skills: Optional[list[str]] = None) -> PeerInfo:
+    def add_peer(
+        self, name: str, address: str, port: int, skills: list[str] | None = None
+    ) -> PeerInfo:
         """Enregistre manuellement un pair statique."""
-        peer = PeerInfo(name=name, address=address, port=port, skills=skills or [], service_type="static")
+        peer = PeerInfo(
+            name=name, address=address, port=port, skills=skills or [], service_type="static"
+        )
         self.static_peers[name] = peer
         return peer
 
@@ -143,7 +157,7 @@ class MeshClient:
             return data
         return {"status": "error", "error": resp.error, "rtt_ms": round(rtt, 2)}
 
-    def find_best_peer_for_skill(self, skill: str) -> Optional[str]:
+    def find_best_peer_for_skill(self, skill: str) -> str | None:
         """Sélectionne le meilleur pair pour une compétence donnée (par charge/latence ou round-robin)."""
         candidates: list[str] = []
         all_peers = self.list_peers()
@@ -186,7 +200,9 @@ class MeshClient:
             parts = target.split(":")
             return target, f"ws://{parts[0]}:{parts[1]}"
 
-        raise ValueError(f"Pair ou endpoint inconnu : '{target}'. Pairs disponibles : {list(all_peers.keys())}")
+        raise ValueError(
+            f"Pair ou endpoint inconnu : '{target}'. Pairs disponibles : {list(all_peers.keys())}"
+        )
 
     async def _get_connection(self, endpoint_key: str, ws_url: str) -> Any:
         """Obtient ou réutilise une connexion WebSocket persistante multiplexée."""
@@ -201,19 +217,21 @@ class MeshClient:
                     max_size=16 * 1024 * 1024,  # 16 MB max payload
                 )
             except Exception as e:
-                raise ConnectionError(f"Impossible de se connecter à {ws_url} ({endpoint_key}) : {e}")
+                raise ConnectionError(
+                    f"Impossible de se connecter à {ws_url} ({endpoint_key}) : {e}"
+                ) from e
 
             self._pool[endpoint_key] = ws
             self._send_locks[endpoint_key] = asyncio.Lock()
             self._pending[endpoint_key] = {}
             self._stream_cbs[endpoint_key] = {}
-            self._reader_tasks[endpoint_key] = asyncio.ensure_future(
+            self._reader_tasks[endpoint_key] = asyncio.create_task(
                 self._reader_loop(endpoint_key, ws)
             )
 
         return ws
 
-    async def _reader_loop(self, endpoint_key: str, ws: websockets.WebSocketClientProtocol) -> None:
+    async def _reader_loop(self, endpoint_key: str, ws: Any) -> None:
         """Boucle de lecture unique multiplexant les réponses et chunks entrants."""
         try:
             async for raw in ws:
@@ -272,7 +290,7 @@ class MeshClient:
         self,
         target: str,
         skill: str,
-        payload: Optional[dict] = None,
+        payload: dict | None = None,
         timeout: float = 60.0,
     ) -> TaskResponse:
         """
@@ -294,7 +312,7 @@ class MeshClient:
         elif self.psk:
             req.sign(self.psk)
 
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         fut: asyncio.Future[TaskResponse] = loop.create_future()
         self._pending[endpoint_key][req.request_id] = fut
 
@@ -324,8 +342,8 @@ class MeshClient:
         self,
         target: str,
         skill: str,
-        payload: Optional[dict] = None,
-        on_chunk: Optional[Callable[[Any], None]] = None,
+        payload: dict | None = None,
+        on_chunk: Callable[[Any], None] | None = None,
         timeout: float = 120.0,
     ) -> TaskResponse:
         """
@@ -345,7 +363,7 @@ class MeshClient:
         elif self.psk:
             req.sign(self.psk)
 
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         fut: asyncio.Future[TaskResponse] = loop.create_future()
         self._pending[endpoint_key][req.request_id] = fut
 
@@ -379,8 +397,8 @@ class MeshClient:
     async def delegate(
         self,
         skill: str,
-        payload: Optional[dict] = None,
-        on_chunk: Optional[Callable[[Any], None]] = None,
+        payload: dict | None = None,
+        on_chunk: Callable[[Any], None] | None = None,
         timeout: float = 60.0,
     ) -> TaskResponse:
         """
@@ -396,5 +414,7 @@ class MeshClient:
             )
 
         if on_chunk:
-            return await self.call_stream(best_peer, skill, payload, on_chunk=on_chunk, timeout=timeout)
+            return await self.call_stream(
+                best_peer, skill, payload, on_chunk=on_chunk, timeout=timeout
+            )
         return await self.call(best_peer, skill, payload, timeout=timeout)

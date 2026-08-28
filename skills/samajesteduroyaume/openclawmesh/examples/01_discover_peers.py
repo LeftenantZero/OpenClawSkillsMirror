@@ -1,6 +1,7 @@
 """
 Exemple 1 : Découverte automatique des pairs JarvisMesh & OpenClawMesh sur le LAN.
 """
+
 import asyncio
 import sys
 from pathlib import Path
@@ -13,8 +14,13 @@ from openclaw_mesh import MeshClient
 
 
 async def main():
+    print("⚠️ Ce script sonde le LAN et interroge les pairs détectés.")
+    answer = input("Continuer ? [y/N] ").strip().lower()
+    if answer not in {"y", "yes", "o", "oui"}:
+        print("Scan annulé.")
+        return
     print("🔍 Démarrage du client et écoute mDNS (2 secondes)...")
-    client = MeshClient(name="openclaw-discoverer")
+    client = MeshClient(name="openclaw-discoverer", enable_discovery=True)
     await client.start()
     await asyncio.sleep(2.0)
 
@@ -32,7 +38,9 @@ async def main():
 
         skills = desc.get("skills", peer.skills)
         print(f"   ├─ Compétences ({len(skills)}) : {', '.join(skills)}")
-        print(f"   └─ RTT : {health.get('rtt_ms', '-')} ms | Tâches actives : {health.get('active_tasks', 0)}")
+        print(
+            f"   └─ RTT : {health.get('rtt_ms', '-')} ms | Tâches actives : {health.get('active_tasks', 0)}"
+        )
 
     await client.stop()
 

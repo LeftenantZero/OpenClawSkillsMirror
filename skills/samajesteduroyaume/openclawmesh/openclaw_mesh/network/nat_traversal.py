@@ -4,13 +4,14 @@ Module de Traversée NAT & Détection STUN pour OpenClawMesh.
 Détermine automatiquement l'adresse IP publique et le port externe du nœud
 pour établir des liaisons directes P2P à travers les pare-feux et routeurs (NAT).
 """
+
 from __future__ import annotations
-import asyncio
+
 import logging
+import secrets
 import socket
 import struct
 from dataclasses import dataclass
-from typing import Optional, Tuple
 
 logger = logging.getLogger("openclaw_mesh.nat")
 
@@ -24,8 +25,8 @@ DEFAULT_STUN_SERVERS = [
 
 @dataclass
 class NATProfile:
-    public_ip: Optional[str]
-    public_port: Optional[int]
+    public_ip: str | None
+    public_port: int | None
     local_ip: str
     local_port: int
     nat_type: str  # "Open/Public", "Full-Cone", "Restricted", "Symmetric", "Blocked/Unknown"
@@ -36,11 +37,21 @@ async def discover_nat_and_public_ip(
     local_port: int = 8770,
     stun_servers: list[tuple[str, int]] = DEFAULT_STUN_SERVERS,
     timeout: float = 2.0,
+    enabled: bool = False,
 ) -> NATProfile:
     """
     Envoie une requête STUN Binding (RFC 5389) pour déterminer l'IP publique et le port mappé.
     """
     local_ip = "127.0.0.1"
+    if not enabled:
+        return NATProfile(
+            public_ip=None,
+            public_port=None,
+            local_ip=local_ip,
+            local_port=local_port,
+            nat_type="Disabled (explicit opt-in required)",
+            is_direct_connectable=False,
+        )
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.connect(("8.8.8.8", 80))
@@ -53,7 +64,7 @@ async def discover_nat_and_public_ip(
         try:
             # Construction d'un paquet STUN Binding Request standard (20 octets)
             # Type: 0x0001 (Binding Request), Length: 0x0000, Magic Cookie: 0x2112A442, Transaction ID: 12 bytes
-            trans_id = b"\x12\x34\x56\x78\x9a\xbc\xde\xf0\x11\x22\x33\x44"
+            trans_id = secrets.token_bytes(12)
             magic_cookie = b"\x21\x12\xa4\x42"
             stun_header = struct.pack("!HHI", 0x0001, 0, 0x2112A442) + trans_id
 
@@ -71,14 +82,16 @@ async def discover_nat_and_public_ip(
                 # Recherche de l'attribut XOR-MAPPED-ADDRESS (0x0020) ou MAPPED-ADDRESS (0x0001)
                 idx = 20
                 while idx < len(data):
-                    attr_type, attr_len = struct.unpack("!HH", data[idx:idx+4])
+                    attr_type, attr_len = struct.unpack("!HH", data[idx : idx + 4])
                     if attr_type == 0x0020:  # XOR-MAPPED-ADDRESS
-                        x_family, x_port = struct.unpack("!BBH", data[idx+4:idx+8])
+                        x_family, x_port = struct.unpack("!BBH", data[idx + 4 : idx + 8])
                         xor_port = x_port ^ 0x2112
-                        xor_ip_bytes = data[idx+8:idx+12]
-                        real_ip_bytes = bytes(b ^ m for b, m in zip(xor_ip_bytes, magic_cookie))
+                        xor_ip_bytes = data[idx + 8 : idx + 12]
+                        real_ip_bytes = bytes(
+                            b ^ m for b, m in zip(xor_ip_bytes, magic_cookie, strict=True)
+                        )
                         pub_ip = socket.inet_ntoa(real_ip_bytes)
-                        
+
                         return NATProfile(
                             public_ip=pub_ip,
                             public_port=xor_port,

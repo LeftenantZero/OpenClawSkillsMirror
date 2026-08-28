@@ -1,6 +1,6 @@
 ## Description:
 
-Connect OpenClaw to local and LAN P2P AI agent meshes (JarvisMesh & OpenClawMesh) to discover peer nodes, delegate tasks across multiple hardware architectures, run multimodal and memory workflows, stream responses, and expose local tools to the decentralized network.
+Openclaw Mesh connects OpenClaw to opt-in local, LAN, and WAN P2P AI agent meshes for peer discovery, task delegation, streaming inference, vector memory, multimodal tasks, and exposing selected local tools.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT License with Commercial Services Addendum
 
 ## Use Case:
 
-Developers and engineers use this skill to connect OpenClaw agents into peer-to-peer meshes for local or WAN discovery, task delegation, streaming inference, vector-memory access, multimodal processing, and exposing local tools to other mesh peers.
+Developers and engineers use Openclaw Mesh to let OpenClaw agents discover peers, delegate AI inference or memory tasks, stream responses, and optionally expose local tools across a P2P mesh after explicit network and peer consent.
 
 ### Deployment Geography for Use:
 
@@ -22,39 +22,44 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Network-facing serve, relay, and gateway endpoints can expose mesh capabilities beyond the intended host or trusted network.
+Risk: Remote mesh use can send prompts, files, memory, media, tool results, or intermediate model data to peers.
 
-Mitigation: Bind endpoints to localhost or a trusted interface unless explicitly hardened, and require PSK or a trust store before accepting peer requests.
+Mitigation: Enable P2P networking only when needed, verify peer identity and permissions, and avoid sending sensitive data unless the selected peers and transport protections are appropriate.
 
-Risk: Automatic delegation can send sensitive prompts, files, images, or audio to discovered peers.
+Risk: Gateway payment and admin features can expose services, credentials, metadata, or database paths if configured casually.
 
-Mitigation: Avoid auto-delegating sensitive data; prefer trusted target peers and review payloads before forwarding them across the mesh.
+Mitigation: Treat the gateway as a separate service and keep it on localhost unless strong admin tokens, PSKs or TrustStore identities, TLS/WSS, firewall rules, and protected database storage are configured.
 
-Risk: Gateway deployment has unresolved concerns around demo or simulated key endpoints, default admin token behavior, webhook verification, and API-key handling.
+Risk: WAN discovery, relay, DHT, or STUN settings can expose a node beyond the local machine.
 
-Mitigation: Do not deploy the gateway until those gateway controls are fixed and reviewed.
+Mitigation: Leave WAN behavior disabled unless external exposure is intended, and require TLS/WSS plus PSK or TrustStore identity controls before exposing a node.
+
+Risk: Default or hardcoded Bitcoin wallet and gateway settings may be unsafe for payment use.
+
+Mitigation: Review and replace wallet, gateway, and payment settings before enabling payment workflows.
 
 ## Reference(s):
 
-- [OpenClawMesh GitHub Repository](https://github.com/samajesteduroyaume/OpenClawMesh)
-- [Openclaw Mesh ClawHub Listing](https://clawhub.ai/samajesteduroyaume/skills/openclawmesh)
-- [Protocol Specification](references/PROTOCOL_SPEC.md)
-- [Security Model](references/SECURITY_MODEL.md)
-- [Python Downloads](https://www.python.org/downloads/)
+- [ClawHub skill page](https://clawhub.ai/samajesteduroyaume/skills/openclawmesh)
+- [Server-resolved source repository](https://github.com/samajesteduroyaume/OpenClawMesh)
+- [README](README.md)
+- [Architecture](ARCHITECTURE.md)
+- [Protocol specification](references/PROTOCOL_SPEC.md)
+- [Security model](references/SECURITY_MODEL.md)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with inline shell commands, Python snippets, and JSON payload examples]
+**Output Format:** [Markdown with inline bash, Python, and JSON examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May produce commands that start mesh services, discover peers, delegate tasks, stream model output, manage keys, or configure authentication.]
+**Other Properties Related to Output:** [May include peer-call payload examples and configuration guidance for opt-in networked execution.]
 
 ## Skill Version(s):
 
-0.1.1 (source: ClawHub release metadata; artifact frontmatter and pyproject.toml list 1.0.0)
+0.1.11 (source: server release metadata, created 2026-08-28; artifact frontmatter and pyproject.toml declare 1.1.0)
 
 ## Ethical Considerations:
 

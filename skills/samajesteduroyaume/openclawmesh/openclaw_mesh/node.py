@@ -5,32 +5,41 @@ Permet à un agent OpenClaw de démarrer un serveur local de compétences,
 de s'annoncer sur le réseau mDNS et de servir des requêtes entrantes
 provenant d'autres nœuds OpenClaw ou JarvisMesh.
 """
+
 from __future__ import annotations
+
 import asyncio
 import inspect
 import logging
 import ssl as ssl_module
 import time
-from typing import Any, Callable, Optional
+from collections.abc import Callable
+from typing import Any
 
 import websockets
 
-from .protocol import (
-    PROTOCOL_VERSION,
-    DESCRIBE_SKILL,
-    HEALTH_SKILL,
-    RESERVED_SKILLS,
-    TaskRequest,
-    TaskChunk,
-    TaskResponse,
-    parse_message,
-    verify_request,
-)
+from .bridge import SkillRegistry
+from .config import get_settings
 from .crypto import NodeIdentity, TrustStore, verify_ed25519_signature
 from .discovery import MeshDiscovery, get_local_ip
-from .bridge import SkillRegistry
+from .protocol import (
+    DESCRIBE_SKILL,
+    HEALTH_SKILL,
+    TaskChunk,
+    TaskRequest,
+    TaskResponse,
+    parse_message,
+)
 
 logger = logging.getLogger("openclaw_mesh.node")
+_settings = get_settings()
+
+
+def _bounded_message(message: str) -> str:
+    """Refuse les sorties distantes dépassant la limite de configuration."""
+    if len(message.encode("utf-8")) > _settings.max_output_bytes:
+        raise ValueError("Sortie de compétence trop volumineuse")
+    return message
 
 
 class OpenClawMeshNode:
@@ -38,38 +47,56 @@ class OpenClawMeshNode:
 
     def __init__(
         self,
-        name: str = "openclaw-node",
-        port: int = 8770,
-        host: str = "0.0.0.0",
-        advertise_ip: Optional[str] = None,
-        registry: Optional[SkillRegistry] = None,
-        psk: Optional[str] = None,
-        identity: Optional[NodeIdentity] = None,
-        trust_store: Optional[TrustStore] = None,
-        ssl_context: Optional[ssl_module.SSLContext] = None,
-        health_extra: Optional[Callable[[], dict]] = None,
+        name: str | None = None,
+        port: int | None = None,
+        host: str | None = None,
+        advertise_ip: str | None = None,
+        registry: SkillRegistry | None = None,
+        psk: str | None = None,
+        identity: NodeIdentity | None = None,
+        trust_store: TrustStore | None = None,
+        ssl_context: ssl_module.SSLContext | None = None,
+        health_extra: Callable[[], dict] | None = None,
     ):
-        self.name = name
-        self.port = port
-        self.host = host
+        self.name = name or _settings.node_name
+        self.port = port or _settings.default_port
+        self.host = host or _settings.default_host
         self.advertise_ip = advertise_ip or get_local_ip()
-        self.registry = registry or SkillRegistry(name=name)
-        self.psk = psk
+        self.registry = registry or SkillRegistry(name=self.name)
+        self.psk = psk or _settings.psk
         self.identity = identity
         self.trust_store = trust_store
         self.ssl_context = ssl_context
         self.health_extra = health_extra
 
-        self.discovery: Optional[MeshDiscovery] = None
+        self.discovery: MeshDiscovery | None = None
         self._ws_server = None
         self._active_tasks = 0
+        self._task_semaphore = asyncio.Semaphore(max(1, _settings.max_active_tasks))
+        self._queue_semaphore = asyncio.Semaphore(
+            max(1, _settings.max_active_tasks + _settings.max_queued_tasks)
+        )
         self._start_time = time.time()
         self._running = False
 
-    async def start(self, enable_zeroconf: bool = True) -> None:
+    async def start(self, enable_zeroconf: bool = False) -> None:
         """Démarre le serveur WebSocket et la publication Zeroconf."""
         if self._running:
             return
+        if self.host not in {"127.0.0.1", "::1", "localhost"}:
+            if not self.ssl_context:
+                try:
+                    from .crypto import create_ephemeral_ssl_context
+
+                    self.ssl_context = create_ephemeral_ssl_context()
+                    logger.info("Certificat TLS éphémère auto-généré pour le nœud WAN.")
+                except Exception as exc:
+                    raise RuntimeError(f"Un nœud exposé doit utiliser TLS : {exc}") from exc
+            if not (self.psk or self.trust_store or self.identity):
+                import secrets
+
+                self.psk = secrets.token_urlsafe(32)
+                logger.warning(f"Clé PSK de sécurité auto-générée pour le nœud WAN: {self.psk}")
 
         self._start_time = time.time()
         self._ws_server = await websockets.serve(
@@ -82,7 +109,7 @@ class OpenClawMeshNode:
         self._running = True
 
         if enable_zeroconf:
-            skills_list = self.registry.list_names()
+            skills_list = self.registry.list_remote_names()
             self.discovery = MeshDiscovery(
                 node_name=self.name,
                 port=self.port,
@@ -104,29 +131,54 @@ class OpenClawMeshNode:
             self.discovery = None
 
         if self._ws_server:
-            self._ws_server.close()
-            await self._ws_server.wait_closed()
-            self._ws_server = None
+            try:
+                self._ws_server.close()
+                await self._ws_server.wait_closed()
+            except Exception as e:
+                logger.debug(f"Fermeture du serveur WebSocket: {e}")
+            finally:
+                self._ws_server = None
 
         logger.info(f"Nœud OpenClawMesh '{self.name}' arrêté.")
 
     # ------------------------------------------------------------------ #
     # Traitement des Requêtes Entrantes WebSocket
     # ------------------------------------------------------------------ #
-    async def _handle_ws(self, ws: websockets.WebSocketServerProtocol) -> None:
+    async def _handle_ws(self, ws: Any) -> None:
         """Traite une connexion entrante d'un pair."""
         send_lock = asyncio.Lock()
         try:
             async for raw in ws:
-                asyncio.ensure_future(self._process_message(ws, raw, send_lock))
+                if not self._queue_semaphore.locked():
+                    await self._queue_semaphore.acquire()
+                    asyncio.create_task(self._process_message_with_timeout(ws, raw, send_lock))
+                else:
+                    await ws.close(code=1013, reason="Capacité du nœud atteinte")
+                    break
         except (asyncio.CancelledError, websockets.ConnectionClosed):
             pass
         except Exception as e:
             logger.debug(f"Connexion client fermée: {e}")
 
+    async def _process_message_with_timeout(
+        self,
+        ws: Any,
+        raw: str,
+        send_lock: asyncio.Lock,
+    ) -> None:
+        try:
+            await asyncio.wait_for(
+                self._process_message(ws, raw, send_lock),
+                timeout=max(0.1, _settings.task_timeout),
+            )
+        except asyncio.TimeoutError:
+            logger.warning("Tâche P2P interrompue après dépassement du délai")
+        finally:
+            self._queue_semaphore.release()
+
     async def _process_message(
         self,
-        ws: websockets.WebSocketServerProtocol,
+        ws: Any,
         raw: str,
         send_lock: asyncio.Lock,
     ) -> None:
@@ -148,7 +200,18 @@ class OpenClawMeshNode:
         if msg_type != "task_request":
             return
 
-        req = TaskRequest.from_dict(data)
+        try:
+            req = TaskRequest.from_dict(data)
+        except (TypeError, ValueError) as exc:
+            err_resp = TaskResponse(
+                request_id=str(data.get("request_id", "unknown")),
+                ok=False,
+                error=f"Requête invalide: {exc}",
+                handled_by=self.name,
+            )
+            async with send_lock:
+                await ws.send(err_resp.to_json())
+            return
 
         # 1. Vérification d'Authentification HMAC-SHA256
         if self.psk:
@@ -248,6 +311,16 @@ class OpenClawMeshNode:
 
         # 4. Exécution de la Compétence Demandée
         handler = self.registry.get(req.skill)
+        if handler is not None and not self.registry.is_remote_exposed(req.skill):
+            resp = TaskResponse(
+                request_id=req.request_id,
+                ok=False,
+                error="Compétence non exposée à distance",
+                handled_by=self.name,
+            )
+            async with send_lock:
+                await ws.send(resp.to_json())
+            return
         if handler is None:
             resp = TaskResponse(
                 request_id=req.request_id,
@@ -259,15 +332,31 @@ class OpenClawMeshNode:
                 await ws.send(resp.to_json())
             return
 
+        if self._task_semaphore.locked():
+            resp = TaskResponse(
+                request_id=req.request_id,
+                ok=False,
+                error="Capacité du nœud atteinte",
+                handled_by=self.name,
+            )
+            async with send_lock:
+                await ws.send(resp.to_json())
+            return
+        await self._task_semaphore.acquire()
         self._active_tasks += 1
+        output_bytes = 0
         try:
             # Gestion des générateurs asynchrones (Streaming)
             if inspect.isasyncgenfunction(handler):
                 index = 0
                 async for chunk in handler(req.payload):
                     chunk_msg = TaskChunk(request_id=req.request_id, index=index, chunk=chunk)
+                    chunk_json = _bounded_message(chunk_msg.to_json())
+                    output_bytes += len(chunk_json.encode("utf-8"))
+                    if output_bytes > _settings.max_output_bytes:
+                        raise ValueError("Flux de sortie trop volumineux")
                     async with send_lock:
-                        await ws.send(chunk_msg.to_json())
+                        await ws.send(chunk_json)
                     index += 1
 
                 resp = TaskResponse(
@@ -278,15 +367,19 @@ class OpenClawMeshNode:
                     streamed=True,
                 )
                 async with send_lock:
-                    await ws.send(resp.to_json())
+                    await ws.send(_bounded_message(resp.to_json()))
 
             # Gestion des générateurs synchrones (Streaming)
             elif inspect.isgeneratorfunction(handler):
                 index = 0
                 for chunk in handler(req.payload):
                     chunk_msg = TaskChunk(request_id=req.request_id, index=index, chunk=chunk)
+                    chunk_json = _bounded_message(chunk_msg.to_json())
+                    output_bytes += len(chunk_json.encode("utf-8"))
+                    if output_bytes > _settings.max_output_bytes:
+                        raise ValueError("Flux de sortie trop volumineux")
                     async with send_lock:
-                        await ws.send(chunk_msg.to_json())
+                        await ws.send(chunk_json)
                     index += 1
 
                 resp = TaskResponse(
@@ -297,7 +390,7 @@ class OpenClawMeshNode:
                     streamed=True,
                 )
                 async with send_lock:
-                    await ws.send(resp.to_json())
+                    await ws.send(_bounded_message(resp.to_json()))
 
             # Gestion des fonctions asynchrones
             elif inspect.iscoroutinefunction(handler):
@@ -309,7 +402,7 @@ class OpenClawMeshNode:
                     handled_by=self.name,
                 )
                 async with send_lock:
-                    await ws.send(resp.to_json())
+                    await ws.send(_bounded_message(resp.to_json()))
 
             # Gestion des fonctions synchrones standard
             else:
@@ -321,17 +414,18 @@ class OpenClawMeshNode:
                     handled_by=self.name,
                 )
                 async with send_lock:
-                    await ws.send(resp.to_json())
+                    await ws.send(_bounded_message(resp.to_json()))
 
         except Exception as exec_err:
             logger.error(f"Erreur lors de l'exécution de '{req.skill}': {exec_err}", exc_info=True)
             resp = TaskResponse(
                 request_id=req.request_id,
                 ok=False,
-                error=str(exec_err),
+                error="Erreur d'exécution",
                 handled_by=self.name,
             )
             async with send_lock:
                 await ws.send(resp.to_json())
         finally:
             self._active_tasks = max(0, self._active_tasks - 1)
+            self._task_semaphore.release()

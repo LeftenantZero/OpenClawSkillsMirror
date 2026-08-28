@@ -1,6 +1,8 @@
 import asyncio
+
 import pytest
-from openclaw_mesh.engines.hardware import detect_hardware, HardwareProfile
+
+from openclaw_mesh.engines.hardware import HardwareProfile, detect_hardware
 from openclaw_mesh.engines.inference import UniversalInferenceEngine
 
 
@@ -11,7 +13,17 @@ def test_hardware_detection():
     assert hw.cpu_cores_logical >= 1
     assert hw.cpu_model != ""
     assert hw.accelerator_name != ""
-    assert hw.recommended_backend in ("mlx", "cuda", "rocm", "openvino", "openvino_npu", "openvino_gpu", "intel_cpu", "directml", "cpu")
+    assert hw.recommended_backend in (
+        "mlx",
+        "cuda",
+        "rocm",
+        "openvino",
+        "openvino_npu",
+        "openvino_gpu",
+        "intel_cpu",
+        "directml",
+        "cpu",
+    )
 
     d = hw.to_dict()
     assert "os_name" in d
@@ -25,10 +37,8 @@ def test_universal_inference_engine_sync():
     assert "recommended_backend" in status
 
     async def _run():
-        res = await engine.generate(prompt="Test prompt", model="test", max_tokens=10)
-        assert "text" in res
-        assert "backend" in res
-        assert len(res["text"]) > 0
+        with pytest.raises(RuntimeError, match="backend d'inférence réel"):
+            await engine.generate(prompt="Test prompt", model="test", max_tokens=10)
 
     asyncio.run(_run())
 
@@ -37,11 +47,8 @@ def test_universal_inference_engine_stream():
     engine = UniversalInferenceEngine()
 
     async def _run():
-        chunks = []
-        async for chunk in engine.generate_stream(prompt="Test streaming", model="test"):
-            chunks.append(chunk.get("text", ""))
-        assert len(chunks) > 0
-        full_text = "".join(chunks)
-        assert len(full_text) > 0
+        with pytest.raises(RuntimeError, match="backend de streaming réel"):
+            async for _chunk in engine.generate_stream(prompt="Test streaming", model="test"):
+                pass
 
     asyncio.run(_run())
