@@ -1,6 +1,6 @@
 ## Description:
 
-元真 yotta-humanize helps agents detect and rewrite Chinese text with common AI-style phrasing using deterministic rules, wordlists, and statistical rhythm metrics while preserving facts, named entities, intent, and tone.
+Yotta-humanize helps agents detect AI-like patterns in Chinese writing, score the text, produce reports and suggestions, and apply deterministic rewrites for clearer, more natural prose.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-External users, developers, and content editors use this skill to score, analyze, report on, suggest edits for, and deterministically rewrite Chinese drafts that contain AI-style wording. It is intended for text-level style editing and review, not for creating new content or changing factual claims.
+Developers, editors, and agent users can use this skill to review Chinese drafts for AI-like wording, generate score or analysis reports, and produce deterministic cleanup suggestions or rewrites. It is intended for text-level style editing and does not create missing content or change facts, data, names, or quotations.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,35 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Installing globally may make the skill available to multiple agents beyond the user's immediate target.
+Risk: The installer can copy the skill into multiple agent environments when used with broad installation options.
 
-Mitigation: Install only into intended skill directories and use global installer mode only when shared availability is desired.
+Mitigation: Prefer a specific --agent or --dir installation target and use global installation only when broad agent availability is intended.
 
-Risk: Deterministic rewrite rules can delete boilerplate or change wording in ways that need human editorial judgment.
+Risk: The shell installer removes .git metadata inside the installed target.
 
-Mitigation: Review rewritten output, fix lists, and scores before using the edited text, especially for factual, legal, or brand-sensitive content.
-
-Risk: The AI-style score is a style signal and should not be treated as definitive proof of text origin.
-
-Mitigation: Use the score as a review aid and preserve the author's facts, data, named entities, intent, and tone during any follow-up edits.
+Mitigation: Do not point --dir at an important existing yotta-humanize checkout or any location where preserving repository metadata matters.
 
 ## Reference(s):
 
-- [24 类检测规则目录](references/patterns.md)
-- [评分公式与统计量](references/scoring.md)
-- [确定性改写规则](references/rewriting.md)
+- [ClawHub Skill Page](https://clawhub.ai/yottameta/skills/yotta-humanize)
+- [Rule Pattern Reference](references/patterns.md)
+- [Scoring Reference](references/scoring.md)
+- [Rewriting Reference](references/rewriting.md)
+- [npm Package](https://www.npmjs.com/package/@yottameta/yotta-humanize)
 
 ## Skill Output:
 
 **Output Type(s):** [Text, Markdown, JSON, Shell commands, Guidance]
 
-**Output Format:** [Plain text, Markdown reports, JSON analysis, and command-line guidance]
+**Output Format:** [Plain text, Markdown reports, JSON CLI output, and rewrite suggestions.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Includes AI-style scores, findings, rewrite suggestions, deterministic rewritten text, fix lists, and CI gate exit codes.]
+**Other Properties Related to Output:** [Deterministic local Python 3.8+ processing with no model calls or external dependencies.]
 
 ## Skill Version(s):
 
-0.1.0 (source: frontmatter, package.json, CHANGELOG)
+0.1.1 (source: SKILL.md frontmatter, package.json, CHANGELOG)
 
 ## Ethical Considerations:
 
