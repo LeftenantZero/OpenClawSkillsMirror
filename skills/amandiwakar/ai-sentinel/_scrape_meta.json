@@ -1,0 +1,35 @@
+{
+  "changelog": "Security-audit remediation (docs-only; installs plugin 0.2.1). (1) Declare ~/.openclaw/openclaw.json in writes-files \u2014 resolves the scope-creep finding where the Step 5 config merge wrote an undeclared file (still gated behind explicit user confirmation). (2) Rework Test 2 to describe the prompt-injection probe instead of embedding the literal directive in the manifest, restoring the benign-to-scan convention and clearing the YARA/static-analysis prompt-injection flags. Skill card and README file-write declarations updated to match.",
+  "created_at": 1770788009648,
+  "display_name": "AI Sentinel - Prompt Injection Firewall",
+  "fetched_at": 1787931758045,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "amandiwakar",
+    "handle": "amandiwakar",
+    "user_id": "s17fgw53vmn8efmj4qq56svvwd884z0t"
+  },
+  "slug": "ai-sentinel",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-sentinel",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-sentinel&ownerHandle=amandiwakar",
+    "page_url": "https://clawhub.ai/amandiwakar/skills/ai-sentinel"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2479,
+    "installs": 75,
+    "stars": 1,
+    "versions": 13
+  },
+  "summary": "Prompt injection detection and security scanning for OpenClaw agents. Installs the ai-sentinel plugin via OpenClaw CLI, configures plugin settings, and offers local (Community) or remote (Pro) classification with dashboard reporting. All configuration changes require explicit user confirmation.",
+  "updated_at": 1787886457416,
+  "version": "0.2.2"
+}
