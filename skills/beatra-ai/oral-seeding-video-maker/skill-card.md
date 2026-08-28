@@ -1,6 +1,6 @@
 ## Description:
 
-Creates a short narrated vertical recommendation video from a topic, including a script, beat frames, narration, optional music, and an opening-frame animation.
+Make a spoken recommendation video from a topic by selecting a script pattern, drafting separated on-screen and spoken beats, generating still frames, narration, optional music, and a short vertical clip animated from the opening frame.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators, marketers, and agent users use this skill to turn a product, service, or topic into a concise spoken recommendation short. It guides the agent through pattern selection, shot-list approval, paid Beatra generation calls, media review, and final delivery of returned task facts.
+External creators, marketers, and content operators use this skill to turn a product, service, or topic into a ready-to-review short-form recommendation video workflow. It is intended for zero-footage product seeding posts, creator recommendations, review-style shorts, service explainers, and account-building content.
 
 ### Deployment Geography for Use:
 
@@ -22,47 +22,44 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The bundled client stores a shared Beatra Device Token under ~/.beatra.
+Risk: The skill uses a shared Beatra Device Token stored under ~/.beatra with authority to spend Beatra credits after approval gates.
 
-Mitigation: Use the authorization helper only in a trusted local environment, keep ~/.beatra private, never expose the token in chat or command arguments, and revoke the connection from the Beatra Console when access should end.
+Mitigation: Install only when that authorization model is acceptable, protect the credential files, require explicit approval before paid calls, and revoke the device authorization from the Beatra Console when the skill is no longer used.
 
-Risk: The bundled client sends package and platform installation metadata to Beatra.
+Risk: The bundled client silently checks for and installs verified package updates by default.
 
-Mitigation: Install only if this telemetry is acceptable for the deployment context, and review the security summary before enabling the skill.
+Mitigation: Use `python3 scripts/mcp_client.py update --auto off` for manual update control, and review package changes before re-enabling automatic updates.
 
-Risk: Automatic package updates are enabled silently by default.
+Risk: Generated recommendation videos can contain unverified claims if prices, specifications, ingredients, results, timeframes, certifications, or promotional terms are supplied incorrectly.
 
-Mitigation: Run `python3 scripts/mcp_client.py update --auto off` to require manual update control, or `python3 scripts/mcp_client.py update --check` to inspect the available version without replacing files.
-
-Risk: The workflow can make paid Beatra generation calls after user approval.
-
-Mitigation: Keep the documented approval gates: approve the shot list before preparation calls, review generated materials before the video call, and retry uncertain paid calls only with the same frozen request identity.
+Mitigation: Keep unsupported claims in draft form, require the user to supply claim evidence, and review scripts before any paid generation.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/beatra-ai/skills/oral-seeding-video-maker)
-- [Beatra Skill Homepage](https://beatra.ai/skills/oral-seeding-video-maker)
-- [Choosing the Pattern](references/script-patterns.md)
-- [Writing Spoken Lines](references/spoken-lines.md)
-- [Seeding Video Workflow](references/workflow.md)
-- [Tasks and Results](references/tasks-and-results.md)
-- [Installation and Authentication](references/installation-and-auth.md)
-- [Automatic Updates and Safety](references/automatic-updates-and-safety.md)
-- [Uninstall and Disconnect](references/uninstall-and-disconnect.md)
+- [Choosing the pattern](references/script-patterns.md)
+- [Writing the spoken lines](references/spoken-lines.md)
+- [Seeding video workflow](references/workflow.md)
+- [Installation and authentication](references/installation-and-auth.md)
+- [Installation registration](references/installation-registration.md)
+- [Tasks and results](references/tasks-and-results.md)
+- [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
+- [MCP connection](references/mcp-connection.md)
+- [Automatic updates and safety](references/automatic-updates-and-safety.md)
+- [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Files, Guidance]
 
-**Output Format:** [Markdown with JSON and shell command snippets plus returned artifact links and task facts]
+**Output Format:** [Markdown guidance with CLI commands, JSON request payloads, task identifiers, artifact links, still images, audio tracks, and a short video file.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include selected pattern, approved shot list, still-frame links, narration or music artifact links, final video link, task IDs, resolved models, durations, dimensions, and billing facts returned by Beatra.]
+**Other Properties Related to Output:** [Default vertical output is 9:16 with a 12-second target and a 15-second maximum; billable Beatra generation calls require staged user approval.]
 
 ## Skill Version(s):
 
-0.1.5 (source: server release evidence and manifest.json)
+0.1.7 (source: server release evidence and artifact manifest)
 
 ## Ethical Considerations:
 
