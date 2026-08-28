@@ -1,0 +1,49 @@
+{
+  "changelog": "- Version number aligned\n- Added complete support for nonresident alien (NRA) workflows (Form 1040-NR, treaty-based returns) directly in this skill.\n- Bundled the safe PDF form update script in `scripts/update_form.py` (no more external dependency).\n- Introduced detailed PDF recovery instructions and critical pypdf safety rules for reliable form filling.\n- Expanded references to include full field mappings (`references/form-field-maps.md`) and technical PDF handling guidance.\n- Updated routing and handling to support all US federal filers and workflows, including end-to-end PDF generation and validation.",
+  "created_at": 1772652606680,
+  "display_name": "tax-filing",
+  "fetched_at": 1787889478104,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/common-schedules.md",
+    "references/filing-status.md",
+    "references/form-field-maps.md",
+    "references/form-routing.md",
+    "references/pypdf-recovery.md",
+    "scripts/update_form.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089757398,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Anthea Z",
+    "handle": "irreel",
+    "user_id": "s17ezjjjc2feqq22yshky3dtrd88471y"
+  },
+  "slug": "tax-filing",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tax-filing",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tax-filing&ownerHandle=irreel",
+    "page_url": "https://clawhub.ai/irreel/skills/tax-filing"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 842,
+    "installs": 24,
+    "stars": 2,
+    "versions": 3
+  },
+  "summary": "United States federal income tax filing assistant for US citizens, resident aliens, and nonresident aliens. Guides users through the entire IRS filing workfl...",
+  "updated_at": 1778491721623,
+  "version": "0.2.0"
+}
