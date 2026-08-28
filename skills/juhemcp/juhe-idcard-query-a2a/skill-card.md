@@ -1,43 +1,59 @@
-## Description: <br>
-Parses a user-provided Chinese resident ID number through Juhe Data's paid API to return encoded sex, birth date, household-registration area, and format-check hints after Alipay payment. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+Looks up basic information encoded in a Chinese resident ID number through Juhe's paid API, returning sex, birth date, household registration area, and optional format-validation notes.
 
-## Publisher: <br>
-[juhemcp](https://clawhub.ai/user/juhemcp) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[juhemcp](https://clawhub.ai/user/juhemcp)
 
-## Use Case: <br>
-External users use this skill to submit a Chinese resident ID number, pay through Alipay, and receive encoded sex, birth date, and household-registration area. It is not for identity verification, document authenticity checks, or bulk lookup. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: The skill sends a user-provided ID number to Juhe's API. <br>
-Mitigation: Use only after explicit user consent and payment confirmation; send only the ID number needed for the one-off lookup. <br>
-Risk: Results could be misused as proof of identity or document authenticity. <br>
-Mitigation: Present results as encoding-derived reference data only, and state that the skill cannot verify identity, document validity, or perform public-security checks. <br>
-Risk: Full ID numbers are sensitive and could be exposed in output or logs. <br>
-Mitigation: Mask the ID number in user-facing output and avoid storing or logging the complete number. <br>
+## Use Case:
 
+External users query a 15- or 18-digit resident ID number to retrieve encoded sex, birth date, and household registration area after consent and payment. The result is for reference only and is not identity verification or authenticity checking.
 
-## Reference(s): <br>
-- [ClawHub skill page](https://clawhub.ai/juhemcp/skills/juhe-idcard-query-a2a) <br>
-- [Juhe A2A query endpoint](https://apis.juhe.cn/a2a/query) <br>
+### Deployment Geography for Use:
 
+China
 
-## Skill Output: <br>
-**Output Type(s):** [markdown, guidance] <br>
-**Output Format:** [Markdown tables with a masked ID number and a capability disclaimer] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [Uses only returned API fields; full ID numbers must not be displayed.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-1.1.2 (source: server release evidence) <br>
+Risk: The skill sends the queried ID number to Juhe's API.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Use only after consent and only when the user is comfortable sending the queried ID number to Juhe's API.
+
+Risk: The skill uses an Alipay payment workflow before returning paid results.
+
+Mitigation: Proceed only when the user accepts the payment flow and understands that access depends on completing payment.
+
+Risk: Results could be misused as identity verification or authenticity checks.
+
+Mitigation: Do not use this skill for identity verification, authenticity checks, bulk lookups, or queries involving someone else's ID without lawful basis and consent.
+
+## Reference(s):
+
+- [ClawHub skill page](https://clawhub.ai/juhemcp/skills/juhe-idcard-query-a2a)
+- [Publisher profile](https://clawhub.ai/user/juhemcp)
+- [Juhe A2A query endpoint](https://apis.juhe.cn/a2a/query)
+
+## Skill Output:
+
+**Output Type(s):** [Text, Markdown, Guidance]
+
+**Output Format:** [Markdown tables and status text]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [Masks the queried ID number and includes parsed sex, birth date, household registration area, optional format-validation notes, and a fixed disclaimer.]
+
+## Skill Version(s):
+
+1.1.4 (source: server release evidence)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
