@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes child monitoring media or media URLs with cloud APIs to classify visible emotions such as crying, anger, low mood, fear, or calm and return a structured report with soothing guidance.
+Identifies negative emotions such as crying, anger, fear, and distress through surveillance footage, then returns soothing reminders, caregiver notifications, structured results, and report links for homes, kindergartens, and daycare centers.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users such as parents, teachers, or child-care operators use this skill to submit child monitoring media or a media URL for emotion classification, negative-emotion alerts, soothing hints, and history lookup. The output is intended as child-care communication support, not as a clinical diagnosis.
+External caregivers, childcare staff, and developers can use this skill to analyze authorized child surveillance images or videos for negative-emotion signals and to retrieve prior child emotion analysis reports. It is intended to support awareness and follow-up, not to replace adult supervision or emergency response.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,39 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Children's videos, audio, or media URLs may be processed by remote cloud APIs.
+Risk: The skill processes sensitive child surveillance media through a cloud API.
 
-Mitigation: Use the skill only with appropriate guardian or institutional consent and avoid submitting media when remote processing is unacceptable.
+Mitigation: Use only with clear guardian or institutional authorization, and confirm the receiving service, retention terms, and report access controls before installation.
 
-Risk: Report history may be linked to a persistent local or remote identity, and tokens may be stored in the workspace data database.
+Risk: The security evidence reports silent identity creation or reuse and local authentication token storage with limited user-facing disclosure.
 
-Mitigation: Install only if the publisher and backend service are trusted, and review local workspace data handling before using report history features.
+Mitigation: Review endpoint configuration, identity behavior, token storage, and cleanup controls before broad use.
 
-Risk: Emotion classifications and soothing hints could be mistaken for clinical assessment.
+Risk: Emotion-recognition results may be incorrect or incomplete and could be mistaken for a substitute for direct care.
 
-Mitigation: Treat results as child-care communication support; do not use them as psychological diagnosis or clinical advice.
+Mitigation: Treat outputs as supportive signals for caregiver review and maintain adult supervision and emergency-response procedures.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-child-emotion-recognition-analysis)
-- [Child emotion recognition API documentation](artifact/references/api_doc.md)
-- [Shared analysis API documentation](artifact/skills/smyx_analysis/references/api_doc.md)
+- [Publisher profile](https://clawhub.ai/user/18072937735)
+- [API interface documentation](references/api_doc.md)
+- [Analysis API error codes](skills/smyx_analysis/references/api_doc.md)
 - [Skill demo](https://lifeemergence.com/sample.html)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, shell commands, guidance]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown text with embedded JSON-style structured analysis, report links, and optional saved output files]
+**Output Format:** [Markdown and JSON-like structured text with report links; optional local output file]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May query cloud-hosted report history and may save report text to a user-specified output file.]
+**Other Properties Related to Output:** [Supports local media paths, public media URLs, report listing, detail level selection, and optional output path.]
 
 ## Skill Version(s):
 
-1.0.24 (source: server release evidence; artifact frontmatter says 1.0.9)
+1.0.25 (source: ClawHub release metadata)
 
 ## Ethical Considerations:
 

@@ -23,10 +23,7 @@ from .skill import skill
 from skills.smyx_common.scripts.util import RequestUtil, OpenIdUtil
 
 
-def analyze_video(input_path=None, url=None, pet_type=None, api_url=None, api_key=None, output_level=None):
-    if pet_type:
-        ConstantEnum.DEFAULT__PET_TYPE = pet_type
-
+def analyze_emotion(input_path=None, url=None, api_url=None, api_key=None, output_level=None):
     input_path = input_path or url
     return skill.get_output_analysis(input_path)
 
@@ -37,11 +34,9 @@ def show_analyze_list(open_id, start_time=None, end_time=None):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="儿童情绪波动识别（哭闹/暴躁/低落）工具")
-    parser.add_argument("--input", help="本地儿童监控视频/音视频文件路径")
-    parser.add_argument("--url", help="网络儿童监控视频/音视频的URL地址")
-    parser.add_argument("--pet-type", choices=["cat", "dog", "other"], default=ConstantEnum.DEFAULT__PET_TYPE,
-                        help="类别标识：儿童情绪识别场景默认 other")
+    parser = argparse.ArgumentParser(description="儿童情绪识别分析工具")
+    parser.add_argument("--input", help="本地视频/图片文件路径")
+    parser.add_argument("--url", help="网络视频/图片URL地址")
     parser.add_argument("--open-id", required=False, help=argparse.SUPPRESS)
     parser.add_argument("--list", action='store_true', help="显示儿童情绪识别分析列表清单")
     parser.add_argument("--api-url", help="服务端API地址")
@@ -71,11 +66,10 @@ def main():
             print("❌ 错误: 必须提供 --input 或 --url 参数")
             exit(1)
 
-        print("🔍 正在多模态分析儿童情绪状态，请稍候...")
-        output_content = analyze_video(
+        print("🔍 正在识别儿童情绪，请稍候...")
+        output_content = analyze_emotion(
             input_path=args.input,
             url=args.url,
-            pet_type=args.pet_type,
             api_url=args.api_url,
             api_key=args.api_key,
             output_level=args.detail
@@ -94,7 +88,7 @@ def main():
 
     except Exception as e:
         traceback.print_stack()
-        print(f"❌ 儿童情绪波动识别失败: {str(e)}")
+        print(f"❌ 儿童情绪识别分析失败: {str(e)}")
         exit(1)
 
 
