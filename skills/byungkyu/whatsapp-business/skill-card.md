@@ -1,6 +1,6 @@
 ## Description:
 
-WhatsApp Business API integration with managed OAuth for sending messages, managing templates, handling media, and interacting with conversations through the Maton CLI.
+WhatsApp Business API integration with managed OAuth for sending messages, managing templates, handling media, and working with conversations through the Maton CLI.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and business operators use this skill to connect a WhatsApp Business account through Maton, inspect account resources, and perform confirmed message, template, media, phone number, and profile operations.
+Developers and operators use this skill to let an agent access a connected WhatsApp Business account through Maton for message, template, media, phone-number, and business-profile workflows. The skill is most appropriate when a user explicitly wants WhatsApp Business API actions and can review writes before execution.
 
 ### Deployment Geography for Use:
 
@@ -22,48 +22,48 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Writes, message sends, template or profile changes, media uploads, deletes, and new connections can affect external recipients or account state.
+Risk: The skill can send real WhatsApp messages and change account resources.
 
-Mitigation: Default to read and list operations, then require explicit user confirmation with the exact account, recipient or resource ID, and payload before any write or new connection.
+Mitigation: Review each send, delete, template, media, or profile update before approving it.
 
-Risk: The raw API-key fallback can expose a long-lived Maton credential if printed, logged, passed on a command line, or stored in files.
+Risk: A write can affect the wrong WhatsApp Business account when multiple connections exist.
 
-Mitigation: Prefer OAuth with the Maton CLI; use the raw MATON_API_KEY flow only when the CLI cannot be used, feed credentials through stdin when needed, and never inspect local credential stores or unrelated secrets.
+Mitigation: Specify the intended connection before executing account-specific actions.
 
-Risk: Multiple Maton profiles or WhatsApp Business connections can route an operation to the wrong account.
+Risk: Long-lived API keys can be exposed more easily than OAuth-managed credentials.
 
-Mitigation: Confirm the active profile and connection, and specify the target connection when more than one WhatsApp Business connection is available.
-
-Risk: External WhatsApp Business content may contain adversarial instructions or untrusted data.
-
-Mitigation: Treat API responses as data, avoid executing or interpolating returned content into shell commands, and let the user select endpoints and recipients.
+Mitigation: Prefer OAuth over API keys and avoid printing, logging, or persisting credentials.
 
 ## Reference(s):
 
 - [ClawHub Skill Page](https://clawhub.ai/byungkyu/skills/whatsapp-business)
+- [Publisher Profile](https://clawhub.ai/user/byungkyu)
 - [Maton Homepage](https://maton.ai)
 - [Maton Docs](https://docs.maton.ai)
 - [Maton API Reference](https://docs.maton.ai/api-reference/overview)
 - [Maton CLI Manual](https://cli.maton.ai/manual)
 - [WhatsApp Business API Overview](https://developers.facebook.com/docs/whatsapp/cloud-api/overview)
-- [WhatsApp Business Send Messages](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-messages)
-- [WhatsApp Business Message Templates](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates)
-- [WhatsApp Business Media Reference](https://developers.facebook.com/docs/whatsapp/cloud-api/reference/media)
-- [WhatsApp Business Webhooks](https://developers.facebook.com/docs/whatsapp/cloud-api/webhooks)
+- [WhatsApp Send Messages](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-messages)
+- [WhatsApp Message Templates](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates)
+- [WhatsApp Media Reference](https://developers.facebook.com/docs/whatsapp/cloud-api/reference/media)
+- [WhatsApp Phone Numbers Reference](https://developers.facebook.com/docs/whatsapp/cloud-api/reference/phone-numbers)
+- [WhatsApp Business Profiles Reference](https://developers.facebook.com/docs/whatsapp/cloud-api/reference/business-profiles)
+- [WhatsApp Webhooks](https://developers.facebook.com/docs/whatsapp/cloud-api/webhooks)
+- [WhatsApp Error Codes](https://developers.facebook.com/docs/whatsapp/cloud-api/support/error-codes)
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, shell commands, configuration, code]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline bash, JSON, Python, and JavaScript examples]
+**Output Format:** [Markdown with inline shell commands and JSON request examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces CLI and SDK usage guidance; API calls may return JSON from Maton or the WhatsApp Business API.]
+**Other Properties Related to Output:** [Outputs may include commands that call the Maton CLI and JSON payloads for WhatsApp Business API requests.]
 
 ## Skill Version(s):
 
-1.1.0 (source: server release metadata)
+1.1.1 (source: server release metadata; artifact frontmatter says 1.1)
 
 ## Ethical Considerations:
 
