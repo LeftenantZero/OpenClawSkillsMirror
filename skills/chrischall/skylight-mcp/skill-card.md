@@ -1,6 +1,6 @@
 ## Description:
 
-Read and manage a signed-in Skylight Calendar family hub, including calendar events, chores and reward stars, shared lists, meal plans, media, and frame settings.
+Read and manage your Skylight Calendar family hub: calendar events, chores and reward stars, shared lists, and meal plans through a signed-in Skylight account.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this MCP skill to let an agent inspect and update their own Skylight Calendar family hub. It supports household workflows such as reviewing calendars, managing chores, updating shared grocery or to-do lists, planning meals, and checking frame-related information.
+External users and developers use this skill to connect an agent to their own Skylight family hub for calendar, chore, reward, shared-list, meal, media, and device tasks. It is intended for account-scoped household management where write, upload, and device-related actions may affect family hub data.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill requires Skylight email and password credentials, giving the agent account-level access through the configured MCP server.
+Risk: The skill requires a Skylight email and password and can access household data.
 
-Mitigation: Use project-level MCP configuration instead of global configuration, protect the environment variables, and install only when this account access is acceptable.
+Mitigation: Install only when comfortable granting account access, keep credentials in the MCP environment configuration, and remove access when no longer needed.
 
-Risk: The skill exposes broad read and write access to family calendar, chore, list, meal, media, and frame-related data.
+Risk: Write, upload, or device-related actions can change family calendars, lists, meals, chores, photos, or settings.
 
-Mitigation: Require explicit user confirmation before write or delete actions and review agent plans before allowing changes to shared household data.
+Mitigation: Confirm ambiguous or sensitive write and upload requests before allowing the agent to execute them.
 
-Risk: Accounts with multiple Skylight frames may be affected beyond the intended frame if frame selection is left implicit.
+Risk: The security verdict is suspicious because the integration exposes broader household, media, and device capabilities than the main description and triggers make clear.
 
-Mitigation: Set SKYLIGHT_FRAME_ID where possible so operations are scoped to the intended family frame.
+Mitigation: Review the full tool surface and security guidance before installing or enabling broad agent autonomy.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/chrischall/skills/skylight-mcp)
 - [Skylight Calendar](https://www.ourskylight.com)
-- [skylight-mcp npm package](https://www.npmjs.com/package/skylight-mcp)
-- [Artifact-declared source link](https://github.com/chrischall/skylight-mcp)
+- [npm package: skylight-mcp](https://www.npmjs.com/package/skylight-mcp)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with JSON configuration examples and MCP tool names]
+**Output Format:** [Markdown with JSON configuration snippets and tool-oriented guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires Skylight email and password environment variables; optional frame selection can scope operations when multiple frames are available.]
+**Other Properties Related to Output:** [May propose or perform account-scoped Skylight MCP actions when configured with user credentials.]
 
 ## Skill Version(s):
 
-0.6.0 (source: server release evidence)
+0.7.0 (source: server release metadata)
 
 ## Ethical Considerations:
 
