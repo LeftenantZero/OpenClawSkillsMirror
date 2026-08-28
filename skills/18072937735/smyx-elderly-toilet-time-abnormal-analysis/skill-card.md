@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes bathroom doorway or privacy-filtered bathroom video to detect elderly toilet entry and exit events, calculate continuous occupancy time, and alert when the stay exceeds the default 30-minute threshold.
+Analyzes privacy-preserving bathroom doorway or silhouette-only video to track elderly toilet occupancy duration and produce abnormal-stay alerts when the configured threshold is exceeded.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Caregivers, family members, nursing-home operators, and safety-monitoring agents use this skill to analyze provided video or video URLs for unusually long elderly bathroom occupancy and to retrieve structured monitoring reports. It supports alert-oriented monitoring only and does not provide medical diagnosis.
+External caregivers, family members, and senior-care or home-security operators use this skill to analyze privacy-preserving bathroom monitoring video, identify entry and exit events, measure continuous occupancy, and surface abnormal stays for human follow-up.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill processes highly sensitive bathroom-related video, URLs, report history, and identity-linked metadata through configured lifeemergence.com services.
+Risk: Sensitive bathroom-adjacent media and identifiers may be sent to cloud services.
 
-Mitigation: Use only with clear consent from the monitored person or legal caregiver, prefer doorway-only or pre-blurred footage, avoid unrelated URLs, and verify retention, account, and credential handling before production use.
+Mitigation: Use only with explicit consent from the monitored person or legal caregiver, confirm backend endpoints and retention policies before deployment, and prefer doorway views or blurred/silhouette-only footage.
 
-Risk: The skill silently creates or reuses local account identity and tokens.
+Risk: The skill silently creates and reuses a persistent local identity.
 
-Mitigation: Review account and token handling before installation, restrict execution to trusted environments, and avoid exposing identity values in user-facing output.
+Mitigation: Do not deploy in production until identity creation, token storage, and account-linking behavior are clearly governed and reviewable.
 
-Risk: Long bathroom occupancy alerts can be mistaken for medical conclusions.
+Risk: Development or test HTTP endpoints may be present in configuration evidence.
 
-Mitigation: Treat results as auxiliary occupancy alerts and require human verification for emergency response or care decisions.
+Mitigation: Confirm production endpoints and remove or govern dev HTTP endpoint use before installation.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-elderly-toilet-time-abnormal-analysis)
-- [API interface reference](references/api_doc.md)
 - [Skill demo](https://lifeemergence.com/sample.html)
+- [API interface documentation](artifact/references/api_doc.md)
+- [Shared analysis API documentation](artifact/skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, json, shell commands, guidance]
+**Output Type(s):** [text, markdown, JSON, shell commands, guidance]
 
-**Output Format:** [Markdown text containing structured JSON analysis results, alert details, history listings, and report links.]
+**Output Format:** [Markdown or JSON structured analysis report with alert status, occupancy timing, recommendations, and report links.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Accepts local video files or video URLs; documented inputs include mp4, avi, and mov files up to 10 MB.]
+**Other Properties Related to Output:** [May query cloud APIs for analysis results and historical reports; supports basic, standard, and json detail modes.]
 
 ## Skill Version(s):
 
-1.0.9 (source: server release metadata; artifact frontmatter reports 1.0.10)
+1.0.10 (source: server release metadata; artifact frontmatter reports 1.0.11)
 
 ## Ethical Considerations:
 
