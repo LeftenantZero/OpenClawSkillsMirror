@@ -1,0 +1,56 @@
+{
+  "changelog": "**Major update: Overhauled structure with new v2 engine and improved configuration.**\n\n- updated to support openclaw 2026.3.11 or later \n\n- Migrated core logic to a new `v2` directory with updated engine scripts and benchmarks.\n- Replaced old `engine/` files and installation scripts with new modular scripts for building, searching, and benchmarking.\n- Updated and expanded environment variable and configuration file support for detailed customization.\n- SKILL.md and documentation revised for v2 architecture, service setup, and usage.\n- Adds scripts for semantic search, hybrid retrieval, reranking, and evaluation.\n- Removes deprecated files and legacy install process.",
+  "created_at": 1771766044565,
+  "display_name": "memory-pro",
+  "fetched_at": 1787897139892,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/index.py",
+    "scripts/search.py",
+    "scripts/search_semantic.py",
+    "skill-card.md",
+    "v2/benchmark.py",
+    "v2/build_index.py",
+    "v2/eval_queries.json",
+    "v2/main.py",
+    "v2/preprocess.py",
+    "v2/rerank.py",
+    "v2/retrieval_hybrid.py",
+    "v2/start.sh",
+    "v2/validate_phase1.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779949710697,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "royhk920",
+    "handle": "royhk920",
+    "user_id": "s179273w43zh8y75zyzst8wa2h83gwxh"
+  },
+  "slug": "memory-pro",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memory-pro",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memory-pro&ownerHandle=royhk920",
+    "page_url": "https://clawhub.ai/royhk920/skills/memory-pro"
+  },
+  "stats": {
+    "comments": 4,
+    "downloads": 1359,
+    "installs": 41,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "This skill provides semantic search over your memory files using a local vector database.",
+  "updated_at": 1778491608600,
+  "version": "2.5.0"
+}
