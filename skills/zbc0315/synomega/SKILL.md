@@ -117,13 +117,16 @@ building blocks.
 ```bash
 python scripts/synomega_run.py plan "CC(=O)Nc1ccccc1O" --max-depth 5
 python scripts/synomega_run.py plan "CC(=O)Nc1ccccc1O" --simplify   # cheaper search
+python scripts/synomega_run.py plan "CC(=O)Nc1ccccc1O" --forward-consistency
 ```
 
 Output: `{"target", "algorithm", "solved" (bool — a fully-purchasable route
 exists), "routes": [route tree, best first]}`. Each route tree nests
 `reactants → product` recursively until every leaf is an in-stock building block;
 read it top-down. Options: `--algorithm {retrostar,mcts,bfs}`, `--max-routes`,
-`--exclude-target`, `--simplify`.
+`--exclude-target`, `--simplify`, `--forward-consistency` (with `--forward-top-k`,
+default 3 — keep a single-step candidate only if its retro template is in the
+forward model's top-k for its reactants; prunes forward-implausible disconnections).
 
 ### 4. Synthesizability score (SynScore) — `score`
 

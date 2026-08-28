@@ -34,7 +34,8 @@ def _truthy(name: str) -> bool:
     return os.environ.get(name, "").lower() in {"1", "true", "yes", "on"}
 
 
-def _load(algorithm: str, *, simplify: bool = False, expansion_width: int = 50):
+def _load(algorithm: str, *, simplify: bool = False, expansion_width: int = 50,
+          forward_consistency: bool = False, forward_top_k: int = 3):
     """Build (model, planner). Uses SYNOMEGA_MODEL/SYNOMEGA_STOCK if set,
     otherwise downloads a pretrained model + stock on first use.
 
@@ -86,7 +87,9 @@ def _load(algorithm: str, *, simplify: bool = False, expansion_width: int = 50):
 
     planner = Planner(model, stock, algorithm=algorithm,
                       expansion_width=expansion_width,
-                      plausibility=plausibility, plausibility_threshold=threshold)
+                      plausibility=plausibility, plausibility_threshold=threshold,
+                      forward_consistency=(forward_consistency or None),
+                      forward_top_k=forward_top_k)
     return model, planner
 
 
@@ -128,6 +131,11 @@ def main() -> int:
     pl.add_argument("--exclude-target", action="store_true",
                     help="treat the target as not purchasable even if it is in "
                          "the stock (avoids a trivial zero-step solution)")
+    pl.add_argument("--forward-consistency", action="store_true",
+                    help="prune single-step candidates by round-trip forward "
+                         "consistency (keep only if the retro template is in the "
+                         "forward model's top-k for its reactants)")
+    pl.add_argument("--forward-top-k", type=int, default=3)
 
     sc = sub.add_parser("score")
     sc.add_argument("smiles")
@@ -142,6 +150,11 @@ def main() -> int:
     sc.add_argument("--exclude-target", action="store_true",
                     help="treat the target as not purchasable even if it is in "
                          "the stock (avoids a trivial zero-step solution)")
+    sc.add_argument("--forward-consistency", action="store_true",
+                    help="prune single-step candidates by round-trip forward "
+                         "consistency (keep only if the retro template is in the "
+                         "forward model's top-k for its reactants)")
+    sc.add_argument("--forward-top-k", type=int, default=3)
 
     fw = sub.add_parser("forward")
     fw.add_argument("reactants", help="reactant SMILES, '.'-separated")
@@ -184,7 +197,9 @@ def main() -> int:
             ],
         }
     elif args.cmd == "plan":
-        _, planner = _load(args.algorithm, simplify=args.simplify)
+        _, planner = _load(args.algorithm, simplify=args.simplify,
+                           forward_consistency=args.forward_consistency,
+                           forward_top_k=args.forward_top_k)
         result = planner.plan(
             args.smiles, max_depth=args.max_depth,
             exclude_target=args.exclude_target,
@@ -199,7 +214,9 @@ def main() -> int:
         from synomega.synthesizability import SynthesizabilityScorer
 
         _, planner = _load(args.algorithm, simplify=args.simplify,
-                           expansion_width=10)
+                           expansion_width=10,
+                           forward_consistency=args.forward_consistency,
+                           forward_top_k=args.forward_top_k)
         report = SynthesizabilityScorer(planner).score(
             args.smiles, max_steps=args.max_steps,
             exclude_target=args.exclude_target,
