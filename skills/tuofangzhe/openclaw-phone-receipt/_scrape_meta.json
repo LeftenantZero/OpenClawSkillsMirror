@@ -1,0 +1,48 @@
+{
+  "changelog": "- Added sample environment variable file: references/env-example.txt.\n- Changed all user command examples from Chinese (\"\u7535\u8bdd\u56de\u6267=\u5f00/\u5173\") to English (\"phone-receipt=on/off\").\n- Updated documentation to reflect new English command syntax and examples (\u201curgent/high-priority\u201d).\n- No changes to behavior or code logic; documentation and sample files only.",
+  "created_at": 1770619575384,
+  "display_name": "OpenClaw Phone Receipt",
+  "fetched_at": 1787906422786,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/env-example.txt",
+    "references/publish-clawhub.md",
+    "references/setup.md",
+    "scripts/set_phone_receipt_state.py",
+    "scripts/trigger_call.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779962007637,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Tonyhuang",
+    "handle": "tuofangzhe",
+    "user_id": "s179wptqy9p89v14fgs3hy2mfn86zhqk"
+  },
+  "slug": "openclaw-phone-receipt",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-phone-receipt",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-phone-receipt&ownerHandle=tuofangzhe",
+    "page_url": "https://clawhub.ai/tuofangzhe/skills/openclaw-phone-receipt"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1567,
+    "installs": 50,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Trigger and manage OpenClaw outbound phone receipts via ElevenLabs+Twilio for task completion/failure notifications. Use when user asks to call them after finishing/failing a task, asks to enable/disable fixed command toggles (\"phone-receipt=on/off\"), asks to test call quality, or asks to persist phone receipt behavior across sessions.",
+  "updated_at": 1778486092879,
+  "version": "1.0.1"
+}
