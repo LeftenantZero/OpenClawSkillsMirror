@@ -1,0 +1,45 @@
+{
+  "changelog": "Initial release: CRM-driven LinkedIn follow-up skill. Read live conversation threads, update pipeline status (Sent\u2192Replied\u2192Call Scheduled\u2192Demo Done\u2192Closed), draft context-aware replies with conversation history, send via browser automation, log everything to Google Sheets. Integrates with linkedin-dm CRM sheet. Supports batch review mode to surface who needs follow-up.",
+  "created_at": 1770985509296,
+  "display_name": "LinkedIn Follow-up",
+  "fetched_at": 1787903052438,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/browser-workflow.md",
+    "references/sheet-schema.md",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779973489114,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "10Madh",
+    "handle": "10madh",
+    "user_id": "s1763w1ba1093k17skgwjn7fz5884ag4"
+  },
+  "slug": "linkedin-followup",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/linkedin-followup",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=linkedin-followup&ownerHandle=10madh",
+    "page_url": "https://clawhub.ai/10madh/skills/linkedin-followup"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1247,
+    "installs": 39,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Manage LinkedIn outreach leads from Google Sheets \u2014 search by name, read live conversation threads, update status, and send contextual follow-up messages. Use after linkedin-dm to move leads through the pipeline (Sent \u2192 Replied \u2192 Call Scheduled \u2192 Demo Done \u2192 Closed).",
+  "updated_at": 1778489510625,
+  "version": "1.0.0"
+}
