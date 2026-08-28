@@ -1,6 +1,6 @@
 ## Description:
 
-The skill guides agents to query Redfin data from a shell using the fpx CLI, including location resolution, for-sale searches, property details, market trends, comparable rentals, photos, climate risk, and signed-in saved homes or saved searches.
+Query Redfin data from a shell through the fpx CLI to resolve locations and addresses, search for-sale listings, inspect property details, market trends, comparable rentals, climate risk, photos, and signed-in saved homes or searches.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, external users, and real estate analysts use this skill to retrieve Redfin listing, property, market, rental, photo, climate-risk, and saved-account data through shell commands when a local MCP server is not available or desired.
+Developers and agents use this skill to compose one-shot fpx commands for Redfin research workflows without running the redfin-mcp server. It is suited for retrieving public listing, property, market, rental, climate, and photo data, with optional signed-in access to saved Redfin homes and searches.
 
 ### Deployment Geography for Use:
 
@@ -22,13 +22,13 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Saved-home and saved-search workflows can expose personal Redfin account data through the paired browser session.
+Risk: The skill can access account-specific saved homes and saved searches when fpx is paired with a signed-in Redfin browser tab.
 
-Mitigation: Use those commands only when access to personal Redfin account data is intended, and unpair or remove the Redfin fpx profile when that bridge should no longer be available.
+Mitigation: Use a separate browser profile or sign out of Redfin when only public listing data is needed, and treat saved homes and saved searches as private account information.
 
-Risk: Redfin responses can be rejected or unsuitable for the requested location if resultCode is nonzero or the service region is substituted.
+Risk: Commands make Redfin requests through the user's active browser session.
 
-Mitigation: Strip the response prefix, check resultCode before trusting payload data, and compare serviceRegionName or returned city and state values against the requested region.
+Mitigation: Install and run the skill only when that browser-session access is acceptable for the intended workflow.
 
 ## Reference(s):
 
@@ -36,17 +36,17 @@ Mitigation: Strip the response prefix, check resultCode before trusting payload 
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [guidance, shell commands, configuration]
 
-**Output Format:** [Markdown with inline shell commands and JSON parsing examples]
+**Output Format:** [Markdown guidance with bash and jq examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Guidance emphasizes stripping Redfin response prefixes, checking resultCode before trusting payload data, and using signed-in browser access only for saved homes or saved searches.]
+**Other Properties Related to Output:** [Commands commonly return Redfin JSON envelopes after removing the {}&& prefix; callers should check resultCode before using payload data.]
 
 ## Skill Version(s):
 
-0.10.3 (source: server release evidence)
+0.10.4 (source: server release metadata)
 
 ## Ethical Considerations:
 
