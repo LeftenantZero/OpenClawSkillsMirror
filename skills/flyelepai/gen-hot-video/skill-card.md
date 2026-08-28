@@ -1,6 +1,6 @@
 ## Description:
 
-Uses the Flyelep hot-video recreation API to generate a product video that follows the style, pacing, and visual approach of a reference video.
+Generates product remake videos through the Flyelep hot-video recreation API by applying the style of a reference viral video to supplied product footage.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users, marketers, and e-commerce operators use this skill to collect required video-generation parameters, submit a Flyelep hot-video recreation task, poll for completion, and return the generated video URL.
+Developers and marketing operators use this skill to collect product and reference video inputs, call Flyelep's asynchronous video-generation API, poll for completion, and return the generated video URL.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,36 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill sends product video URLs, reference video URLs, prompts, task metadata, and the Flyelep API key to Flyelep.
+Risk: Local videos may be uploaded to permanent public URLs without a clear consent checkpoint.
 
-Mitigation: Use it only when third-party processing by Flyelep is acceptable, and avoid private or regulated media unless that processing has been approved.
+Mitigation: Ask for explicit user confirmation before uploading local media and avoid private, proprietary, or sensitive videos unless the user accepts the exposure.
 
-Risk: Temporary request payload files can retain media URLs, prompts, and task data on disk.
+Risk: The workflow sends the selected videos and API key to Flyelep.
 
-Mitigation: Delete payload_temp.json after use whenever a temporary request file is created.
-
-Risk: The Flyelep API key could be exposed if it is stored in examples, repositories, or persistent configuration.
-
-Mitigation: Provide the key at runtime in the request header and do not persist real credentials in skill files or shared examples.
+Mitigation: Use a user-provided key only at runtime and do not store credentials in skill files, examples, repositories, or persistent configuration.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/flyelepai/skills/gen-hot-video)
-- [Flyelep API key console](https://www.flyelep.cn/controlboard)
-- [Flyelep generateHotVideo endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/aiTool/generateHotVideo)
-- [Flyelep queryTaskResult endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/queryTaskResult)
+- [Flyelep publisher profile](https://clawhub.ai/user/flyelepai)
+- [Flyelep controlboard](https://www.flyelep.cn/controlboard)
+- [Flyelep generateHotVideo API](https://www.flyelep.cn/prod-api/poster-design/api/v1/aiTool/generateHotVideo)
+- [Flyelep queryTaskResult API](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/queryTaskResult)
+- [Flyelep file upload API](https://www.flyelep.cn/prod-api/poster-design/api/v1/file/upload)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Shell commands, API Calls, JSON, Configuration]
+**Output Type(s):** [guidance, shell commands, configuration]
 
 **Output Format:** [Markdown guidance with JSON request bodies and shell command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Returns an asynchronous task ID first, then a generated video URL after polling succeeds.]
+**Other Properties Related to Output:** [Requires user-provided Flyelep API credentials and product/reference video URLs or uploaded files.]
 
 ## Skill Version(s):
 
-1.0.0 (source: server release evidence)
+1.0.1 (source: server release evidence)
 
 ## Ethical Considerations:
 
