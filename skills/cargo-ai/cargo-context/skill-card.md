@@ -1,6 +1,6 @@
 ## Description:
 
-Inspect and edit a workspace's git-backed GTM context repository and runtime sandbox using the Cargo CLI.
+Helps an agent read and write a Cargo workspace's git-backed GTM knowledge base, use its runtime sandbox, and inspect its typed knowledge graph.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Employees, external operators, and developers use this skill to browse, read, author, edit, and validate GTM context files and inspect the derived knowledge graph for a Cargo workspace.
+GTM operators, revenue teams, and their agents use this skill to inspect, author, update, and validate workspace context such as ICPs, personas, plays, proof points, objections, competitors, and buying signals.
 
 ### Deployment Geography for Use:
 
@@ -22,41 +22,44 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Cargo CLI write and edit operations push commits to the workspace context repository's default branch.
+Risk: Persistent writes or edits can update the wrong workspace context repository if the active workspace is not confirmed.
 
-Mitigation: Confirm the intended workspace with cargo-ai whoami before any write or edit, read back the workspace name, and review each proposed file change before committing.
+Mitigation: Run cargo-ai whoami and confirm the workspace name before using runtime write or runtime edit.
 
-Risk: Incorrect or malformed context files can reduce discoverability or introduce misleading GTM knowledge.
+Risk: Generated or edited GTM knowledge may be misleading, stale, or over-weighted from limited sales-call evidence.
 
-Mitigation: Use the documented domain templates, keep YAML title and description frontmatter intact, and verify graph links after changes.
+Mitigation: Review generated bootstrap content and keep human approval in the loop for call-derived edits before committing them.
 
-Risk: CLI access applies to the selected Cargo workspace context repository.
+Risk: runtime execute can run commands in the workspace sandbox and should not be treated as a place for arbitrary unreviewed commands.
 
-Mitigation: Install only when Cargo CLI access to that workspace is intended and use workspace-scoped authentication where available.
+Mitigation: Use runtime execute for inspection, builds, tests, or validation, and review commands before running them.
 
 ## Reference(s):
 
+- [ClawHub cargo-context Skill Page](https://clawhub.ai/cargo-ai/skills/cargo-context)
 - [Cargo Skills Homepage](https://github.com/getcargohq/cargo-skills)
-- [Context Repo Conventions](references/conventions.md)
-- [Authoring Examples](references/examples/authoring.md)
-- [Context Repo Lifecycle](references/examples/lifecycle.md)
-- [Knowledge-Graph Queries](references/examples/graph-queries.md)
-- [Response Shapes](references/response-shapes.md)
+- [Canonical Context Repository](https://github.com/getcargohq/cargo-workspaces)
+- [Context repo conventions](references/conventions.md)
+- [Response shapes](references/response-shapes.md)
 - [Troubleshooting](references/troubleshooting.md)
+- [Authoring examples](references/examples/authoring.md)
+- [Bootstrap workspace context from a domain](references/examples/bootstrap-from-domain.md)
+- [Knowledge-graph queries](references/examples/graph-queries.md)
+- [Context repo lifecycle](references/examples/lifecycle.md)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with inline shell commands and JSON examples]
+**Output Format:** [Markdown guidance with inline shell commands and JSON response shapes]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [The skill may guide Cargo CLI commands that read context, inspect graph data, or push write/edit commits to the workspace context repository.]
+**Other Properties Related to Output:** [May produce persistent context writes or edits when the Cargo CLI commands are run against an authenticated workspace.]
 
 ## Skill Version(s):
 
-1.2.1 (source: frontmatter and server release evidence)
+1.2.2 (source: SKILL.md frontmatter, skill-metadata.json, and server release metadata)
 
 ## Ethical Considerations:
 

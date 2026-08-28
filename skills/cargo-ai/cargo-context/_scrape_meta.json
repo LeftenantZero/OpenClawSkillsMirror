@@ -1,8 +1,8 @@
 {
-  "changelog": "cargo-context 1.2.1\n\n- Added skill-metadata.json for improved metadata handling.\n- Updated login prerequisites: users can now sign in using `cargo-ai login --email` (emailed code), `--oauth`, or API token, reflecting changes in authentication options.\n- Removed obsolete skill-card.md file.\n- Minor documentation improvements and prerequisite clarifications in SKILL.md.",
+  "changelog": "cargo-context v1.2.2\n\n- Updated skill summary and description to clearly define use cases, triggers, and when to use alternative skills.\n- Improved SKILL.md with a simplified \"Bootstrap\" section outlining setup and sign-in for new users.\n- Clarified prerequisites and added reference to the full CLI setup bundle.\n- Enhanced guidance on when and how to use cargo-context versus related skills.\n- Removed redundant documentation (skill-card.md) for better maintainability.",
   "created_at": 1779996500284,
   "display_name": "cargo-context",
-  "fetched_at": 1787772611393,
+  "fetched_at": 1787932126023,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -30,12 +30,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 988,
+    "downloads": 1028,
     "installs": 16,
     "stars": 0,
-    "versions": 5
+    "versions": 6
   },
-  "summary": "Inspect and edit the workspace's git-backed context repository (the GTM knowledge base of markdown/MDX files) and its runtime sandbox using the Cargo CLI. Use when the user wants to browse/read/write/edit context files, run a command in the sandbox, or inspect the context knowledge graph.",
-  "updated_at": 1786484723889,
-  "version": "1.2.1"
+  "summary": "Read and write the workspace GTM knowledge base \u2014 the git-backed repository of markdown describing ICPs, personas, plays, proof points, objections, competitors, and signals \u2014 plus its runtime sandbox and typed knowledge graph. Triggers: \"document our ICP\", \"write up this persona\", \"what is our positioning\", \"add a battlecard\", \"capture this objection\", \"what do we know about <segment>\", \"update our context\", \"what is in the context repo\", \"who do we sell to\". Skip when: discovering who actually buys from you by analyzing won/lost data \u2014 that is cargo-gtm (this skill writes the conclusion down, it does not derive it); storing structured records rather than prose \u2014 use cargo-storage; attaching documents to an agent for RAG \u2014 use cargo-content.",
+  "updated_at": 1787874338949,
+  "version": "1.2.2"
 }
