@@ -1,8 +1,8 @@
 {
-  "changelog": "Version 3.7.0\n\n- \u5b9e\u7528\u7ed3\u6784\u7ebf\u7a3f\u65b0\u589e\u72ec\u7acb\u62fc\u88c5\u6a21\u5757\uff0c\u652f\u6301\u90e8\u4ef6\u5b50SVG\u5206\u6587\u4ef6\u3001\u603b\u56fe\u5f15\u7528\u548c\u4ef6\u53f7\u53e0\u52a0\uff08prompts/shared/structure_lineart_compose.md\uff0ctools/shared/structure_lineart_compose.py\uff0cschemas/structure_lineart_compose.schema.yaml\uff09\u3002\n- \u5b9e\u7528\u7ed3\u6784\u7ebf\u7a3f\u63cf\u8ff0\u3001\u539f\u7406\u548c\u6d41\u7a0b\u5168\u9762\u66f4\u65b0\uff0cSOP\u7ec6\u5316\uff0c\u73b0\u5f3a\u5236\u5206SVG\u90e8\u4ef6\uff0c\u907f\u514d\u6574\u4f53base64\u5d4c\u5165\u3002\n- \u5de5\u5177\u4e0e\u6d41\u7a0b\u6587\u6863\u540c\u6b65\u5b8c\u5584\uff0c\u4ea4\u5e95\u56fe\u793a\u3001\u7ebf\u7a3f\u95e8\u7981\u4e0e\u62fc\u88c5\u903b\u8f91\u66f4\u660e\u786e\u3002",
+  "changelog": "- \u65b0\u589e OA \u5ba1\u67e5\u7b54\u590d\u652f\u6301\u7ecf\u9a8c\u624b\u518c/\u5b9e\u52a1\u4e66\u81ea\u52a8\u62bd\u53d6\u4e0e\u201cbook-to-skill\u201d\u8f85\u52a9\uff0c\u5165\u53e3\u6269\u5c55\u81f3\u624b\u518c\u6c89\u6dc0\u4e0e\u7b56\u7565\u84b8\u998f\u3002\n- \u589e\u52a0 oa/ingest_playbook.md\u3001oa_playbook.schema.yaml \u53ca\u76f8\u5173 Python \u5de5\u5177\uff0c\u5b9e\u73b0\u5b9e\u52a1\u624b\u518c\u5165\u5e93\u4e0e\u7ed3\u6784\u5316\u6807\u7b7e/schema \u652f\u6301\u3002\n- \u67e5\u65b0\uff08prior art search\uff09\u63d0\u5347\u4e3a\u201c\u4e24\u6bb5\u5f0f\u201d\uff1a\u5148\u5173\u952e\u8bcd\u68c0\u7d22\u5206\u7c7b\u53f7\uff08IPC/LOC\uff09\uff0c\u518d\u4e8c\u8f6e\u540c\u5206\u7c7b\u7cbe\u51c6\u67e5\u65b0\uff0c\u8865\u8db3\u4e0d\u8db3\u9879\u81ea\u52a8\u4f18\u5316\u68c0\u7d22\u6d41\u7a0b\u3002\n- \u547d\u4ee4\u53c2\u6570\u8bf4\u660e\u7b49\u591a\u5904\u7ec6\u8282\u4fee\u6b63\uff1a\u4e2d\u82f1\u6587\u589e\u5f3a\u4e0e\u201c\u7ecf\u9a8c\u624b\u518c\u201d\u5165\u53e3\u8bf4\u660e\uff0cOA \u529f\u80fd\u9ed8\u8ba4\u9700\u590d\u6838\u8349\u7a3f\u3002",
   "created_at": 1775628784954,
   "display_name": "\u4e2d\u56fd\u4e13\u5229.Skill",
-  "fetched_at": 1787768620741,
+  "fetched_at": 1787932096105,
   "files": [
     "INSTALL.md",
     "README.md",
@@ -18,7 +18,6 @@
     "assets/patent_note_template.md",
     "docs/evolution/EVOL-20260811-1051.md",
     "docs/evolution/README.md",
-    "docs/oa/.gitignore",
     "docs/oa/README.md",
     "docs/oa/embedding.config.yaml",
     "docs/obsidian-setup-guide.md",
@@ -49,6 +48,7 @@
     "prompts/oa/configure_embedding.md",
     "prompts/oa/guardrails.md",
     "prompts/oa/ingest_case.md",
+    "prompts/oa/ingest_playbook.md",
     "prompts/oa/intake.md",
     "prompts/oa/respond_office_action.md",
     "prompts/reader/obsidian_ofm_companion.md",
@@ -76,6 +76,7 @@
     "references/schemas/figure_plan.schema.yaml",
     "references/schemas/formula_plan.schema.yaml",
     "references/schemas/oa_case.schema.yaml",
+    "references/schemas/oa_playbook.schema.yaml",
     "references/schemas/structure.schema.yaml",
     "references/schemas/structure_callout_anchors.schema.yaml",
     "references/schemas/structure_lineart_brief.schema.yaml",
@@ -91,11 +92,14 @@
     "tools/crawl/requirements-cnipa.txt",
     "tools/oa/README.md",
     "tools/oa/__init__.py",
+    "tools/oa/book_to_skill_setup.py",
     "tools/oa/case_md.py",
     "tools/oa/config.py",
     "tools/oa/embed.py",
     "tools/oa/ingest_case.py",
+    "tools/oa/ingest_playbook.py",
     "tools/oa/pdf_text.py",
+    "tools/oa/playbook.py",
     "tools/oa/rebuild_vectors.py",
     "tools/oa/redact.py",
     "tools/oa/refresh_vault.py",
@@ -150,6 +154,7 @@
     "tools/shared/gen_demo_snap_step.py",
     "tools/shared/image_gen.py",
     "tools/shared/iteration_dialog_log.py",
+    "tools/shared/latex_delimiters.py",
     "tools/shared/math_render.py",
     "tools/shared/math_to_omml.py",
     "tools/shared/md_to_docx.py",
@@ -175,7 +180,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1787735094795,
+    "updated_at": 1787881291349,
     "verdict": "clean"
   },
   "owner": {
@@ -191,12 +196,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 2388,
+    "downloads": 2478,
     "installs": 41,
     "stars": 0,
-    "versions": 12
+    "versions": 13
   },
   "summary": "\u4e2d\u56fd\u4e13\u5229\u6280\u80fd\uff1a\u4e13\u5229\u70b9\u6316\u6398\u4e0e\u4ea4\u5e95\u4e66\uff08\u53d1\u660e/\u5b9e\u7528/\u5916\u89c2\uff09\u7f16\u5199\uff0c\u901a\u4fd7\u89e3\u8bfb\u4e13\u5229\uff0c\u55c5\u63a2\u653f\u7b56\u52a8\u5411\uff0c\u8f85\u52a9\u5ba1\u67e5\u7b54\u590d\u3002| China patents skill: mine patent points and draft disclosures (invention / utility model / design), plain-language reading, policy sniffing, assisted office-action response.",
-  "updated_at": 1787734166108,
-  "version": "3.7.0"
+  "updated_at": 1787880713266,
+  "version": "3.9.0"
 }

@@ -1,6 +1,6 @@
 ## Description:
 
-A China patent workflow skill for mining patent points, drafting invention, utility model, and design disclosures, reading patents in plain language, monitoring patent-policy changes, and assisting office-action responses.
+China patents skill for mining patent points, drafting invention, utility-model, and design disclosures, reading patents in plain language, monitoring policy signals, and assisting with office-action responses.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External inventors, patent practitioners, and developers use this skill to turn project materials or patent publications into patent disclosure drafts, readable patent notes, prior-art searches, Obsidian knowledge-base entries, and office-action response drafts.
+Developers, inventors, and patent practitioners use this skill to turn project materials, patent numbers, PDFs, and office-action materials into China patent disclosure drafts, plain-language patent notes, prior-art search summaries, policy review backlogs, and review-ready office-action response drafts.
 
 ### Deployment Geography for Use:
 
@@ -22,45 +22,54 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can read and write project materials, use web search, and modify an Obsidian vault.
+Risk: The skill requests broad local project-document access, command execution, and writes to output, Obsidian, and office-action data directories.
 
-Mitigation: Install it only in workspaces where those actions are acceptable, and review proposed file writes and generated patent or legal content before relying on them.
+Mitigation: Install and run it only in workspaces where those permissions are acceptable, and keep sensitive projects isolated from unrelated local files.
 
-Risk: Optional office-action embedding setup may store API credentials locally.
+Risk: Mode D can automatically use a third-party book-to-skill helper.
 
-Mitigation: Prefer environment variables or an operating-system secret store, avoid command-line API key arguments, and restrict permissions on any secrets file.
+Mitigation: Review and pin that helper before use, or install a manually reviewed version instead of accepting an automatic install path.
 
-Risk: Document-conversion paths may process untrusted DOCX, PDF, SVG, or CAD inputs with known-risk dependency versions.
+Risk: Embedding credentials may be stored in plaintext configuration.
 
-Mitigation: Pin or update the flagged dependencies before handling untrusted files, and process sensitive inputs in a constrained workspace.
+Mitigation: Prefer environment variables or a protected secret store, and avoid passing API keys on command lines.
+
+Risk: Document parsers, browser automation, and optional CAD tooling increase dependency and file-processing exposure.
+
+Mitigation: Pin dependencies for production use and process untrusted Office, PDF, and CAD inputs inside a sandbox.
+
+Risk: Office-action response outputs are drafts that could be legally consequential if filed without review.
+
+Mitigation: Require qualified human review before submitting any generated response or disclosure material.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/handsomestwei/skills/patent-disclosure-skill)
-- [SKILL.md](artifact/SKILL.md)
-- [README.md](artifact/README.md)
-- [Installation Guide](artifact/INSTALL.md)
-- [Tools README](artifact/tools/README.md)
-- [Office Action Case Library](artifact/docs/oa/README.md)
-- [Obsidian Setup Guide](artifact/docs/obsidian-setup-guide.md)
-- [Patent Type Search Reference](artifact/references/patent_type_search.yaml)
-- [Patent PDF Sources Reference](artifact/references/patent_pdf_sources.yaml)
-- [Patent Domain Rules Reference](artifact/references/patent_domain_rules.yaml)
-- [CNIPA Patent Publication Search](http://epub.cnipa.gov.cn/)
+- [Publisher profile](https://clawhub.ai/user/handsomestwei)
+- [README](artifact/README.md)
+- [Installation guide](artifact/INSTALL.md)
+- [Patent domain rules](artifact/references/patent_domain_rules.yaml)
+- [Patent type search rules](artifact/references/patent_type_search.yaml)
+- [Patent PDF sources](artifact/references/patent_pdf_sources.yaml)
+- [Patent Obsidian format](artifact/references/patent_obsidian_format.md)
+- [Schema reference index](artifact/references/schemas/README.md)
+- [Patent reader tooling](artifact/tools/patent_reader/README.md)
+- [Office-action tooling](artifact/tools/oa/README.md)
+- [book-to-skill helper](https://github.com/virgiliojr94/book-to-skill)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown drafts, Word-ready Markdown, YAML/JSON configuration, shell commands, and structured guidance]
+**Output Format:** [Markdown, DOCX, YAML, JSON, SVG/PNG diagrams, shell commands, and configuration files depending on the workflow mode]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May write disclosure drafts, DOCX-ready files, Obsidian vault materials, SVG/PNG diagrams, and local search or index artifacts when invoked by the agent.]
+**Other Properties Related to Output:** [Outputs can be written to timestamped disclosure folders, Obsidian vaults, office-action data directories, or evolution backlog files; office-action drafts require human review before filing.]
 
 ## Skill Version(s):
 
-3.7.0 (source: server release and SKILL.md frontmatter)
+3.9.0 (source: SKILL.md frontmatter and server release evidence)
 
 ## Ethical Considerations:
 
