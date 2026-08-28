@@ -1,6 +1,6 @@
 ## Description:
 
-Using fixed cameras in a smart greenhouse to analyze plant morphology in real time, combine those observations with environmental sensor data, and output climate-control actions such as irrigation, shading, ventilation, wet-curtain operation, and heating.
+Using fixed cameras in a smart greenhouse to analyze plant morphology in real time, combined with environmental sensors, an AI decision model outputs climate control commands including irrigation, shade-net opening, fan/wet-curtain on-off, and heater on-off.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Greenhouse operators, agritech developers, and automation engineers use this skill to analyze greenhouse plant images or videos with optional sensor context and produce structured plant-state feedback, climate-control action guidance, priorities, and report links.
+Developers, greenhouse operators, and agricultural automation teams use this skill to analyze greenhouse plant images or videos with optional environmental sensor context and produce structured climate-control recommendations. It can also retrieve cloud-hosted historical greenhouse control reports for the current internally resolved user.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill sends greenhouse images, videos, and account-linked report requests to configured smyx/lifeemergence backend services.
+Risk: The skill sends greenhouse media, URLs, identity context, and report queries to configured remote endpoints.
 
-Mitigation: Review the configured endpoints before use and avoid sensitive facility footage unless the backend and data handling are approved.
+Mitigation: Review endpoint configuration and data-handling expectations before installation, and use only approved backends for production greenhouse data.
 
-Risk: The packaged defaults select development private-network HTTP endpoints, which may be unsuitable or unreachable in a production deployment.
+Risk: The skill can create or reuse local account state and store tokens for cloud report history.
 
-Mitigation: Replace default development endpoints with approved production endpoints before installing or running the skill.
+Mitigation: Run it in an environment where local state and credentials are acceptable, and review stored identity or token data according to the operator's access-control policy.
 
-Risk: Automatic identity setup and local token persistence may associate report history with locally stored identity or token data.
+Risk: Returned irrigation, fan, shade, wet-curtain, and heater recommendations could affect physical greenhouse equipment if automated directly.
 
-Mitigation: Verify local identity and token storage behavior, restrict access to the runtime environment, and clear stored credentials when rotating users or deployments.
+Mitigation: Require human approval, controller-side bounds checks, and fail-safes before using recommendations to actuate equipment.
 
 ## Reference(s):
 
+- [Greenhouse climate plant feedback API documentation](artifact/references/api_doc.md)
+- [Shared analysis API documentation](artifact/skills/smyx_analysis/references/api_doc.md)
 - [ClawHub skill page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-greenhouse-climate-plant-feedback-analysis)
 - [Skill demo](https://lifeemergence.com/sample.html)
-- [Greenhouse API documentation](references/api_doc.md)
-- [Analysis API documentation](skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Guidance, JSON]
+**Output Type(s):** [text, markdown, shell commands, guidance]
 
-**Output Format:** [Markdown and structured JSON analysis reports with control-action recommendations and report links]
+**Output Format:** [Markdown text with structured JSON analysis content, command recommendations, report links, and history lists]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include priority labels for recommended actions and links to cloud-hosted historical reports.]
+**Other Properties Related to Output:** [Outputs action recommendations and priorities only; the artifact states that concrete PID values or actuator opening percentages should not be produced.]
 
 ## Skill Version(s):
 
-1.0.8 (source: server release metadata; artifact frontmatter reports 1.0.10)
+1.0.9 (source: server release metadata; artifact frontmatter lists 1.0.10)
 
 ## Ethical Considerations:
 
