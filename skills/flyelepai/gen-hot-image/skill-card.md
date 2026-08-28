@@ -1,6 +1,6 @@
 ## Description:
 
-Uses the Flyelep hot-image replication API to generate product images in the visual style of provided reference images.
+Uses the Flyelep hot-image replication API to generate product images that follow the style of reference images.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to prepare Flyelep API calls that blend product image URLs into the visual style of reference images and retrieve asynchronous image-generation results.
+External users and developers use this skill to submit product images and reference images to Flyelep, poll the asynchronous task, and present generated product image URLs.
 
 ### Deployment Geography for Use:
 
@@ -22,34 +22,35 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Product images, reference images, prompts, and API credentials are sent to Flyelep as part of the intended API workflow.
+Risk: Selected product and reference images, plus the Flyelep API key, are sent to a third-party service.
 
-Mitigation: Use only data that is appropriate to share with Flyelep, provide API keys at runtime, and avoid submitting confidential product assets or sensitive prompts.
+Mitigation: Use the skill only with images and credentials approved for Flyelep processing, and provide the API key only at runtime.
 
-Risk: Temporary payload files can contain image URLs, prompts, and request parameters when the Windows workflow is used.
+Risk: Local image uploads may become permanently accessible through public URLs.
 
-Mitigation: Delete temporary payload files after the API request completes and avoid storing real API keys in files or persistent configuration.
+Mitigation: Do not upload confidential, personal, or unreleasable images unless permanent public hosting is acceptable.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/flyelepai/skills/gen-hot-image)
-- [Flyelep generateHotImage API](https://www.flyelep.cn/prod-api/poster-design/api/v1/aiTool/generateHotImage)
-- [Flyelep queryTaskResult API](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/queryTaskResult)
 - [Flyelep controlboard](https://www.flyelep.cn/controlboard)
+- [Flyelep generateHotImage API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/aiTool/generateHotImage)
+- [Flyelep queryTaskResult API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/queryTaskResult)
+- [Flyelep file upload API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/file/upload)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
+**Output Type(s):** [API Calls, Shell commands, Configuration instructions, Markdown, Guidance]
 
-**Output Format:** [Markdown with JSON examples and shell commands]
+**Output Format:** [Markdown with JSON and shell command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Returns task identifiers first and generated image URLs after polling.]
+**Other Properties Related to Output:** [Produces asynchronous task IDs and generated image URLs; local image uploads may create public externally hosted URLs.]
 
 ## Skill Version(s):
 
-1.0.0 (source: server release metadata)
+1.0.1 (source: server release evidence)
 
 ## Ethical Considerations:
 
