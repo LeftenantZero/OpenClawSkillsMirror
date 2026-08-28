@@ -1,0 +1,35 @@
+{
+  "changelog": "No user-facing changes in this release.\n\n- Version bump only; no code or documentation modifications.\n- All functionality remains identical to previous version.",
+  "created_at": 1770592746343,
+  "display_name": "Automated daily memory backfill for OpenClaw sessions",
+  "fetched_at": 1787906599795,
+  "files": [
+    "SECRET_PATTERNS.md",
+    "SKILL.md",
+    "_meta.json",
+    "memory_sync.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "mpesavento",
+    "handle": "mpesavento",
+    "user_id": "s170at8ze7n6aghahg47sjxjz58849yd"
+  },
+  "slug": "memory-sync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memory-sync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memory-sync&ownerHandle=mpesavento",
+    "page_url": "https://clawhub.ai/mpesavento/skills/memory-sync"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2158,
+    "installs": 68,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Scrape and analyze OpenClaw JSONL session logs to reconstruct and backfill agent memory files. Use when: (1) Memory appears incomplete after model switches, (2) Verifying memory coverage, (3) Reconstructing lost memory, (4) Automated daily memory sync via cron/heartbeat. Supports simple extraction and LLM-based narrative summaries with automatic secret sanitization.",
+  "updated_at": 1778486086401,
+  "version": "1.0.1"
+}
