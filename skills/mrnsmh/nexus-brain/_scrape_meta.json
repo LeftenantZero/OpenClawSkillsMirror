@@ -1,0 +1,44 @@
+{
+  "changelog": "**Nexus-Orchestrator 0.1.1 introduces key security upgrades and improved diagnostics.**\n\n- Log redaction engine now masks sensitive data (passwords, tokens, emails) before AI analysis.\n- Upgraded binary discovery: finds `opencode` in system PATH or local user directory.\n- Now blocks restarts until log-based analysis differentiates between code and infra failures.\n- Manual approval is required for critical actions, if enabled in OpenClaw.\n- Agent always performs diagnostic analysis before any service recovery.\n- New privacy notice: reminds users to check AI provider data compliance.",
+  "created_at": 1771901414959,
+  "display_name": "Nexus Brain",
+  "fetched_at": 1787896116024,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "bridge.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089731407,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Marouane",
+    "handle": "mrnsmh",
+    "user_id": "s174xcybha6182ecw5xrk9jfrh87rjs6"
+  },
+  "slug": "nexus-brain",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/nexus-brain",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=nexus-brain&ownerHandle=mrnsmh",
+    "page_url": "https://clawhub.ai/mrnsmh/skills/nexus-brain"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 538,
+    "installs": 10,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Orchestrates AI-driven analysis and response to service failures by extracting logs, diagnosing issues, and recommending fixes or controlled restarts.",
+  "updated_at": 1778491624313,
+  "version": "0.1.1"
+}
