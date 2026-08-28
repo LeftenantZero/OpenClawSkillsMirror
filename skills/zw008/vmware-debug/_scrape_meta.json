@@ -1,8 +1,8 @@
 {
-  "changelog": "Moved to vmware-skills GitHub org; MCP Registry namespace \u2192 io.github.vmware-skills. Links updated.",
+  "changelog": "Fixes the server's self-reported version and the advertised tool count; adds a Claude Code plugin manifest.",
   "created_at": 1782259301127,
   "display_name": "vmware-debug",
-  "fetched_at": 1787774001833,
+  "fetched_at": 1787931858668,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -28,12 +28,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 848,
+    "downloads": 896,
     "installs": 1,
     "stars": 0,
-    "versions": 9
+    "versions": 10
   },
   "summary": "Use this skill whenever the user is troubleshooting a VMware/vSphere problem \u2014 a reported error, an exception, a log dump, a slow or failed VM, a host that went sideways \u2014 and needs help locating the root cause. It is the diagnostic brain of the VMware family: it drives a systematic investigation, pulls the right signals from the other skills, correlates events into one timeline, ranks root-cause hypotheses, and tells you what to check next even when you don't know where to start. Always use this skill for \"diagnose this VMware issue\", \"why is my VM slow\", \"troubleshoot this vSphere error\", \"what does this log mean\", \"help me figure out what broke\" when the context is explicitly VMware/vSphere/ESXi/NSX. It is READ-ONLY: it never changes anything. Do NOT use it to execute fixes \u2014 single fixes go to vmware-aiops, multi-step gated remediation goes to vmware-pilot. Do NOT use it for routine inventory or health checks with no problem to solve \u2014 use vmware-monitor.",
-  "updated_at": 1785553916388,
-  "version": "1.8.8"
+  "updated_at": 1787885726800,
+  "version": "1.8.9"
 }

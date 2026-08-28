@@ -1,49 +1,64 @@
-## Description: <br>
-VMware Debug helps agents troubleshoot VMware/vSphere incidents by correlating supplied events into timelines, spikes, ranked root-cause hypotheses, and next checks without making changes. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+VMware Debug helps agents troubleshoot VMware/vSphere incidents by correlating supplied event and log data into timelines, ranked hypotheses, and next checks while remaining read-only.
 
-## Publisher: <br>
-[zw008](https://clawhub.ai/user/zw008) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[zw008](https://clawhub.ai/user/zw008)
 
-## Use Case: <br>
-Developers and operators use this skill to investigate explicit VMware/vSphere/ESXi/NSX incidents by normalizing collected events, correlating them, and deciding which checks or remediation handoff should come next. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: The package or source could be mistaken for a different publisher because server-resolved GitHub import provenance is unavailable. <br>
-Mitigation: Before installing, confirm the vmware-debug package and source are the expected release from publisher handle zw008 and the linked project homepage. <br>
-Risk: A ranked hypothesis can be mistaken for a confirmed root cause when the supplied event set is incomplete. <br>
-Mitigation: Gather real events from the relevant companion read tools, preserve original timestamps and severity, and present hypotheses as ranked leads until confirmed. <br>
-Risk: Full VMware troubleshooting may involve companion skills that access logs, metrics, credentials, or remediation workflows under their own permissions. <br>
-Mitigation: Review companion skill permissions separately and route any remediation only through the appropriate confirmation, approval, and audit gates. <br>
+## Use Case:
 
+Developers and operators use this skill to investigate VMware, vSphere, ESXi, or NSX incidents from supplied logs, alarms, and events. It ranks likely causes and recommends follow-up checks while routing any actual remediation to separate gated tools.
 
-## Reference(s): <br>
-- [ClawHub skill page](https://clawhub.ai/zw008/skills/vmware-debug) <br>
-- [Project homepage](https://github.com/vmware-skills/VMware-Debug) <br>
-- [Capabilities](references/capabilities.md) <br>
-- [CLI Reference](references/cli-reference.md) <br>
-- [Unified Event Envelope](references/event-envelope.md) <br>
-- [Symptom Routing](references/routing.md) <br>
-- [Setup Guide](references/setup-guide.md) <br>
-- [Agent Guardrails](references/agent-guardrails.md) <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [text, markdown, JSON, shell commands, guidance] <br>
-**Output Format:** [Markdown guidance with inline shell commands and JSON-compatible MCP or CLI outputs] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [Read-only diagnostic outputs; MCP responses include timelines, spikes, ranked hypotheses, and next checks.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-1.8.8 (source: server release metadata) <br>
+Risk: The skill processes event and log data supplied by the user or gathered through companion skills, which may contain sensitive infrastructure details.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Install only if comfortable with a community VMware troubleshooting package handling that data; redact or limit event inputs when needed.
+
+Risk: Ranked hypotheses and next checks can be mistaken for confirmed root cause or execution approval.
+
+Mitigation: Treat the output as diagnostic guidance, verify against the supplied evidence, and route remediation only through the separate gated aiops or pilot tools.
+
+Risk: Family tooling may record local audit entries under ~/.vmware/audit.db.
+
+Mitigation: Account for local audit records in operational and privacy review before using the VMware skill family.
+
+## Reference(s):
+
+- [ClawHub skill page](https://clawhub.ai/zw008/skills/vmware-debug)
+- [Project homepage](https://github.com/vmware-skills/VMware-Debug)
+- [Capabilities](artifact/references/capabilities.md)
+- [Unified Event Envelope](artifact/references/event-envelope.md)
+- [Symptom to Signal Routing](artifact/references/routing.md)
+- [Setup Guide](artifact/references/setup-guide.md)
+- [CLI Reference](artifact/references/cli-reference.md)
+- [Agent Guardrails](artifact/references/agent-guardrails.md)
+
+## Skill Output:
+
+**Output Type(s):** [Text, JSON, Guidance, Shell commands]
+
+**Output Format:** [JSON tool responses and concise Markdown or text diagnostic summaries with command examples]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [Read-only offline correlation over supplied event data; outputs include timelines, spike summaries, ranked hypotheses, and next checks.]
+
+## Skill Version(s):
+
+1.8.9 (source: server release evidence)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
