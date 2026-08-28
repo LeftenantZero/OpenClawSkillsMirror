@@ -1,6 +1,6 @@
 ## Description:
 
-Drive a self-hosted Huly workspace through the `huly` CLI for issues, projects, cards, documents, calendars, channels, DMs, actions, todos, time tracking, notifications, and approvals.
+Drive a self-hosted Huly workspace through the `huly` CLI for tracker issues, projects, chat, calendar events, todos, time entries, notifications, approvals, and workspace automation.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and operators use this skill to let an agent inspect and manage a self-hosted Huly workspace from the command line. It supports common project tracking, collaboration, scheduling, document, card, notification, approval, and workspace administration workflows.
+Developers and workspace operators use this skill to automate a self-hosted Huly workspace through the `huly` CLI. It supports project tracking, scheduling, collaboration, approvals, notifications, and workspace administration when the user has confirmed any write or persistent action.
 
 ### Deployment Geography for Use:
 
@@ -22,46 +22,47 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can guide an agent to make broad changes in a Huly workspace using the configured account's permissions.
+Risk: The skill can change a Huly workspace, including persistent records, notifications, approvals, and destructive actions.
 
-Mitigation: Use a least-privilege service account and verify the active workspace, target project, and target object with JSON reads before any mutation.
+Mitigation: Require explicit user confirmation before write, send, log, delete, raw SDK, or other persistent actions, and verify the target workspace, project, person, and object before mutating.
 
-Risk: Raw `huly ws` and `huly api` commands can bypass normal CLI guardrails and mutate production data directly.
+Risk: Using the third-party `huly` CLI requires trusting the CLI and protecting credentials for the target Huly workspace.
 
-Mitigation: Reserve raw API/RPC escape hatches for cases where the standard CLI cannot perform the task, and require explicit review of the exact method, payload, and target workspace before execution.
+Mitigation: Install only when the third-party CLI is trusted, prefer least-privilege service accounts or short-lived tokens, and avoid inventing or exposing credentials.
 
-Risk: Delete and bulk-change workflows can remove or alter issues, workspaces, notifications, documents, cards, channels, calendars, and related records.
+Risk: Public, notification-sending, scheduling, and recipient-targeted actions can affect other users or create visible side effects.
 
-Mitigation: Require explicit user confirmation for deletes and bulk operations, use preview or dry-run commands where available, and inspect target records before proceeding.
+Mitigation: Clarify workspace, recipient, visibility, and timezone before execution, and confirm public or notification-sending actions explicitly.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/iamcoder18/skills/huly)
-- [Auth and setup](references/auth-and-setup.md)
-- [Issues and todos](references/issues-and-todos.md)
-- [Tracker projects](references/tracker-projects.md)
+- [huly skill instructions](SKILL.md)
+- [Auth & setup](references/auth-and-setup.md)
+- [Issues & actions](references/issues-and-todos.md)
+- [Projects, components, milestones, issue templates](references/tracker-projects.md)
+- [Channels, DMs, threads, activity](references/chat-and-collaboration.md)
 - [Cards](references/cards.md)
 - [Documents](references/documents.md)
-- [Chat and collaboration](references/chat-and-collaboration.md)
-- [Calendar and schedule](references/calendar-and-schedule.md)
-- [Notifications and approvals](references/notifications-and-approvals.md)
-- [Workspace and user](references/workspace-and-user.md)
-- [Spaces, types, and relations](references/spaces-types-and-relations.md)
-- [Escape hatches and internals](references/escape-hatches-and-internals.md)
+- [Calendar, schedule, time](references/calendar-and-schedule.md)
+- [Workspace & user](references/workspace-and-user.md)
+- [Spaces, relations, type configuration](references/spaces-types-and-relations.md)
+- [Notifications & approvals](references/notifications-and-approvals.md)
+- [Direct SDK and HTTP access](references/direct-sdk-access.md)
+- [huly CLI repository](https://github.com/IamCoder18/huly-cli)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown with inline shell commands and CLI guidance]
+**Output Format:** [Markdown guidance with inline shell commands and JSON-oriented command output recommendations]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May produce Huly CLI commands, JSON-read guidance, and confirmation prompts before destructive or bulk changes.]
+**Other Properties Related to Output:** [Directs agents to use `--json` for programmatic reads, confirm write and destructive actions, and ask for missing workspace, recipient, or timezone context.]
 
 ## Skill Version(s):
 
-1.0.5 (source: server release evidence)
+1.0.6 (source: server release evidence)
 
 ## Ethical Considerations:
 
