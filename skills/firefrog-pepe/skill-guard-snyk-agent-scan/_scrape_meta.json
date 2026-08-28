@@ -1,0 +1,34 @@
+{
+  "changelog": "**Skill-guard v1.0.3 changelog:**\n\n- Fork of @jamesOuttake/skill-guard\n- Switched scanner engine from \"mcp-scan\" to \"Snyk Agent Scan\" (reflects upstream rename/successor).\n- Updated documentation to reference Snyk Agent Scan and new scanner requirements.\n- Added a new exit code (3) for scanner availability/configuration errors, making it clear when the scan cannot run (e.g., missing SNYK_TOKEN).\n- Improved error handling: the installer now explicitly separates scanner setup errors from skill security issues.\n- Minor documentation updates for clarity and accuracy.",
+  "created_at": 1773002419126,
+  "display_name": "skill-guard w Snyk Agent Scan",
+  "fetched_at": 1787884192608,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/safe-install.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "pepe",
+    "handle": "firefrog-pepe",
+    "user_id": "s175qpccg0gs7h2a9tssmazb6983q1ph"
+  },
+  "slug": "skill-guard-snyk-agent-scan",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-guard-snyk-agent-scan",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-guard-snyk-agent-scan&ownerHandle=firefrog-pepe",
+    "page_url": "https://clawhub.ai/firefrog-pepe/skills/skill-guard-snyk-agent-scan"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 890,
+    "installs": 26,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Scan ClawHub skills for security vulnerabilities BEFORE installing. Use when installing new skills from ClawHub to detect prompt injections, malware payloads...",
+  "updated_at": 1778491780967,
+  "version": "1.0.3"
+}
