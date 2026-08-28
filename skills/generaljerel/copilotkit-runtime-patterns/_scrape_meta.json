@@ -1,0 +1,51 @@
+{
+  "changelog": "**Major update: Clarifies agent configuration and runtime setup, updates endpoints, and simplifies performance guidelines.**\n\n- Updated to reference CopilotRuntime and @copilotkit/runtime throughout.\n- Expanded guidance for agent registration via remote endpoints (e.g., LangGraph, CrewAI).\n- Renamed and refocused \"Agent Runners\" to \"Agent Configuration\", emphasizing persistent storage and remote agent management.\n- Updated endpoint setup examples for Express and Next.js to use latest CopilotRuntime patterns.\n- Middleware hooks renamed (`beforeRequest` \u2192 `onBeforeRequest`, etc.) and clarified in usage.\n- Simplified performance section, focusing on streaming best practices.\n- Document version bumped from 1.0.0 to 2.0.0.",
+  "created_at": 1771814153543,
+  "display_name": "CopilotKit-Runtime-Patterns",
+  "fetched_at": 1787896687430,
+  "files": [
+    "AGENTS.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "metadata.json",
+    "rules/_sections.md",
+    "rules/_template.md",
+    "rules/endpoint-express-setup.md",
+    "rules/endpoint-hono-setup.md",
+    "rules/endpoint-nextjs-route.md",
+    "rules/middleware-after-request.md",
+    "rules/middleware-before-request.md",
+    "rules/middleware-error-handling.md",
+    "rules/perf-streaming-response.md",
+    "rules/runner-agent-registration.md",
+    "rules/runner-inmemory-vs-sqlite.md",
+    "rules/runner-multiple-agents.md",
+    "rules/security-auth-middleware.md",
+    "rules/security-cors-config.md",
+    "rules/security-rate-limiting.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jerel",
+    "handle": "generaljerel",
+    "user_id": "s17etndyykvrgrbc8gk53c7zpd884hca"
+  },
+  "slug": "copilotkit-runtime-patterns",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/copilotkit-runtime-patterns",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=copilotkit-runtime-patterns&ownerHandle=generaljerel",
+    "page_url": "https://clawhub.ai/generaljerel/skills/copilotkit-runtime-patterns"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1296,
+    "installs": 37,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Server-side runtime patterns for CopilotKit. Use when setting up CopilotKit runtime endpoints (Express, Hono, Next.js), configuring remote agent endpoints, a...",
+  "updated_at": 1778491612653,
+  "version": "1.0.1"
+}
