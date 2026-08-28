@@ -1,0 +1,60 @@
+{
+  "changelog": "Initial release of OpenClaw Self Analyzer.\n\n- Provides automated architecture analysis and hook point detection for OpenClaw.\n- Generates hooks and extension packages with customizable logic.\n- Includes code scanning and comprehensive report generation features.\n- Supports integration via Python scripts for both hook generation and report output.\n- Documents OpenClaw pipeline stages and hook types with usage instructions.",
+  "created_at": 1772549858816,
+  "display_name": "OpenClaw Self Analyzer - \u81ea\u5206\u6790\u5de5\u5177",
+  "fetched_at": 1787890656404,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "core/architecture_analyzer.py",
+    "generated_hooks/manifest.json",
+    "generated_hooks/pre_context_compress_custom.js",
+    "generated_hooks/pre_context_gather_custom.js",
+    "generated_hooks/pre_input_receive_custom.js",
+    "generated_hooks/pre_llm_submit_custom.js",
+    "generated_hooks/pre_memory_retrieve_custom.js",
+    "generated_hooks/pre_memory_store_custom.js",
+    "generated_hooks/pre_prompt_assemble_custom.js",
+    "generated_hooks/pre_response_process_custom.js",
+    "generated_hooks/pre_token_check_custom.js",
+    "generators/hook_generator.py",
+    "reporters/report_generator.py",
+    "reports/architecture_report.json",
+    "reports/architecture_report.md",
+    "run.sh",
+    "scanners/code_scanner.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089744833,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "fofo365",
+    "handle": "fofo365",
+    "user_id": "s173s1nyewcvcpewzj9wdef5h9884r7n"
+  },
+  "slug": "openclaw-self-analyzer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-self-analyzer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-self-analyzer&ownerHandle=fofo365",
+    "page_url": "https://clawhub.ai/fofo365/skills/openclaw-self-analyzer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 813,
+    "installs": 23,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u81ea\u52a8\u5206\u6790OpenClaw\u67b6\u6784\uff0c\u68c0\u6d4b\u94a9\u5b50\u70b9\uff0c\u751f\u6210\u94a9\u5b50\u4ee3\u7801\uff0c\u626b\u63cf\u4ee3\u7801\u5e76\u751f\u6210\u8be6\u7ec6\u5206\u6790\u62a5\u544a\u3002",
+  "updated_at": 1778491703663,
+  "version": "1.0.0"
+}
