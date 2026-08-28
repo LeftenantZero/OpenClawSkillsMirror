@@ -1,0 +1,50 @@
+{
+  "changelog": "auto-agent-router 1.0.0\n\n- Initial release of the auto-agent-router skill.\n- Routes messages to specialized sub-Agents based on strict command detection at the message start (e.g., /coder, /writer).\n- Supports concurrent session spawning for different tasks and clean session isolation.\n- Configuration and routing rules managed via config.json; supports custom commands and agent types.\n- Includes command trigger detection and logging for transparency and debugging.\n- Does not route if commands are not at the beginning of the message or not recognized.",
+  "created_at": 1772434703855,
+  "display_name": "Auto Agent Router",
+  "fetched_at": 1787891695078,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "auto-route-handler.py",
+    "auto-trigger.py",
+    "config.json",
+    "dingtalk-command.py",
+    "logger.py",
+    "message-handler.py",
+    "router.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089735406,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "johnson",
+    "handle": "jiangzhiyu",
+    "user_id": "s17a5qqen3mfw2emw3fpcjype183gbfr"
+  },
+  "slug": "auto-agent-router",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/auto-agent-router",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=auto-agent-router&ownerHandle=jiangzhiyu",
+    "page_url": "https://clawhub.ai/jiangzhiyu/skills/auto-agent-router"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 808,
+    "installs": 23,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u6839\u636e\u6d88\u606f\u547d\u4ee4\u81ea\u52a8\u8def\u7531\u5230\u5b50 Agent\u3002**Agent \u5e94\u8be5\uff1a\u6536\u5230\u6d88\u606f\u65f6\u9996\u5148\u68c0\u67e5\u662f\u5426\u5305\u542b /coder\u3001/writer \u7b49\u547d\u4ee4\uff0c\u5982\u679c\u662f\u5219\u8c03\u7528 sessions_spawn \u542f\u52a8\u5bf9\u5e94\u5b50 Agent\u3002**",
+  "updated_at": 1778491688197,
+  "version": "1.0.0"
+}
