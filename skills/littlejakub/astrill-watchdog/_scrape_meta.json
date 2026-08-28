@@ -1,0 +1,36 @@
+{
+  "changelog": "**Major update: Simplified and streamlined Astrill VPN watchdog with updated restart mechanism.**\n\n- Full process restart now uses `pkill astrill` and `setsid /autostart` for reliable recovery and GUI compatibility.\n- Only one reconnect method: kills whole Astrill tree and restarts with proper desktop session variables.\n- Setup and usage instructions simplified; just run `setup.sh` (no sudo needed), systemd user service included.\n- Configuration is now centralized at the top of `astrill-watchdog.sh`, with easy comments for adjusting key options.\n- All relevant paths, files, and commands are clearly listed for transparency and troubleshooting.\n- README.md removed; documentation now included directly in SKILL.md.",
+  "created_at": 1772341642640,
+  "display_name": "Astrill Watchdog",
+  "fetched_at": 1787940967478,
+  "files": [
+    "CHANGELOG.md",
+    "SKILL.md",
+    "_meta.json",
+    "astrill-watchdog.sh",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "LittleJakub",
+    "handle": "littlejakub",
+    "user_id": "s177x99cm2ge3ymq8wtbnqf6t1885c8a"
+  },
+  "slug": "astrill-watchdog",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/astrill-watchdog",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=astrill-watchdog&ownerHandle=littlejakub",
+    "page_url": "https://clawhub.ai/littlejakub/skills/astrill-watchdog"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1002,
+    "installs": 28,
+    "stars": 0,
+    "versions": 11
+  },
+  "summary": "Monitor and auto-reconnect Astrill VPN on Ubuntu Linux (deb GUI package). Detects dropped connections via tun interface + ping, then reconnects using Astrill...",
+  "updated_at": 1778491674555,
+  "version": "2.0.0"
+}
