@@ -1,6 +1,6 @@
 ## Description:
 
-Ava helps coding agents execute bounded DeFi actions, with live lending scoped to Base and Morpho after an Ava session and MCP connection.
+Ava lets coding agents manage DeFi lending under human-defined mandates, using session tokens, two-phase previews, and receipts with chain proof.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers using coding agents use Ava to connect to the Ava MCP server and carry out bounded Base/Morpho lending flows with preview, explicit approval, and receipt checks.
+Developers and external users use Ava to let a coding agent prepare and execute DeFi lending actions within human-set capital mandates. The skill is intended for live USDC lending on Base through a two-phase preview and execution flow, while copilot commands are labeled testnet-only.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,42 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can assist with live DeFi actions that may affect user funds.
+Risk: Live financial actions can be triggered through Ava's lending flow.
 
-Mitigation: Confirm the MCP URL, review every preview, and approve live execution only when the asset, chain, amount, and venue match the user's intent.
+Mitigation: Review each preview yourself and execute only after explicit human confirmation of the returned previewHash.
 
-Risk: Bearer tokens used for the Ava MCP connection could be exposed in logs or shared prompts.
+Risk: A local bearer token authorizes financial actions.
 
-Mitigation: Keep bearer tokens out of logs, transcripts, and shared prompts.
+Mitigation: Keep AVA_TOKEN private, rely on the 0600 state file behavior, and avoid printing or sharing the token.
 
-Risk: A testnet or simulation path could be mistaken for a live fill or holding.
+Risk: The generic call command can invoke MCP tools directly.
 
-Mitigation: Use the live lend flow for real DeFi, require the returned previewHash for execution, and report a fill only when the receipt shows chain-confirmed standing.
+Mitigation: Avoid the generic call command unless the user knows exactly which Ava MCP tool and arguments are being invoked.
+
+Risk: Mainnet execution paths can be enabled intentionally.
+
+Mitigation: Do not set AVA_ENABLE_LIVE=true unless mainnet execution is deliberate and approved.
 
 ## Reference(s):
 
-- [Ava homepage](https://getava.xyz)
-- [Ava MCP endpoint](https://www.getava.xyz/mcp)
-- [ClawHub ava listing](https://clawhub.ai/kamalbuilds/skills/ava)
+- [ClawHub Ava Skill](https://clawhub.ai/kamalbuilds/skills/ava)
+- [Ava Homepage](https://getava.xyz)
+- [Ava MCP Endpoint](https://www.getava.xyz/mcp)
+- [Artifact README](README.md)
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, shell commands, configuration, API calls, markdown]
+**Output Type(s):** [Guidance, Shell commands, Configuration, API calls, JSON]
 
-**Output Format:** [Markdown with inline commands and structured tool-call guidance]
+**Output Format:** [Markdown guidance with inline shell commands, JSON snippets, MCP tool names, and receipt interpretation.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires user review of previews before live execution; bearer tokens must be kept out of logs and shared prompts.]
+**Other Properties Related to Output:** [Live-money execution is framed as a previewHash confirmation flow; CLI and MCP responses are JSON.]
 
 ## Skill Version(s):
 
-1.0.1 (source: server release metadata)
+1.0.5 (source: ClawHub release metadata; artifact package.json reports 0.4.0)
 
 ## Ethical Considerations:
 
