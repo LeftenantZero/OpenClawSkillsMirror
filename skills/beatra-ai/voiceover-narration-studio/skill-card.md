@@ -1,6 +1,6 @@
 ## Description:
 
-Use Voiceover & Narration Studio as an AI voice generator, text-to-speech workspace, and AI voiceover generator. Choose from the current voice library, turn scripts into ready-to-edit AI narration and voiceover, or create and reuse a custom brand voice through voice cloning. It supports short-video voiceover, script-to-voiceover, course narration, ordered audiobook narration, supplied multilingual text to speech, Cantonese text to speech, and recurring brand audio, with current price estimates, clear output planning, and delivery organized by chapter, language, and use case.
+Use Voiceover & Narration Studio as an AI voice generator, text-to-speech workspace, and AI voiceover generator for choosing voices, producing ready-to-edit narration, planning ordered long-form or multilingual speech, and creating authorized reusable brand voices.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators, developers, and production teams use this skill to plan and submit Beatra text-to-speech, long-form narration, multilingual narration, and authorized voice-cloning work. It helps choose current voices and models, estimate paid requests, preserve approvals, and deliver returned audio facts or reusable voice IDs.
+External users and developers use this skill to coordinate Beatra text-to-speech, voiceover, long-form narration, multilingual speech, and authorized voice cloning workflows. It helps plan approved paid requests, select current voices and models, estimate credit use, and return generated audio or reusable voice facts.
 
 ### Deployment Geography for Use:
 
@@ -22,48 +22,53 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The package requests broad Beatra account authorization, including wallet-spend and non-voice media scopes.
+Risk: The skill can store a Beatra device credential locally.
 
-Mitigation: Install only after reviewing the requested access; keep the Device Token private, use the bundled authorization flow, and revoke or uninstall the connection when it is no longer needed.
+Mitigation: Install only when the user trusts Beatra account access, keep the credential private, and use the documented uninstall or disconnect flow when access should be removed.
 
-Risk: Automatic updates are silent by default and can replace installed package files.
+Risk: Approved speech synthesis or voice cloning can spend Beatra account credits.
 
-Mitigation: Use the documented update controls to disable silent checks or run an explicit update check, and rely on the package's checksum and channel verification before replacement.
+Mitigation: Require a frozen production card, price estimate, and clear approval before each paid request; retry uncertain paid calls only with the same request identity and unchanged arguments.
 
-Risk: Voice samples and cloned voices are sensitive and can enable impersonation if used without consent.
+Risk: Voice cloning can upload local voice samples.
 
-Mitigation: Require an explicit statement that the sample is the user's own voice or that the speaker authorized cloning before uploading or submitting a clone request.
+Mitigation: Upload samples only after explicit confirmation that the speaker owns or authorized the voice, and do not imitate a voice without consent.
 
-Risk: Paid synthesis or cloning requests can create charges or duplicate work if retried incorrectly.
+Risk: Installation registration can send package and environment metadata to Beatra.
 
-Mitigation: Freeze the approved request card first, submit each billable request once with one request identity, and retry only the exact same request when task creation is genuinely uncertain.
+Mitigation: Tell users that registration is non-blocking and account-scoped, and avoid treating registration failure as permission for additional voice work.
+
+Risk: The bundled client can silently auto-update installed files during normal use.
+
+Mitigation: Use the documented update controls to disable silent checks when desired, and rely on the package's checksum and rollback checks before accepting updates.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/voiceover-narration-studio)
-- [Beatra skill homepage](https://beatra.ai/skills/voiceover-narration-studio)
-- [Intent and routing](artifact/references/intent-and-routing.md)
-- [Voice casting and delivery](artifact/references/voice-casting-and-delivery.md)
-- [Voice cloning and review](artifact/references/voice-cloning-and-review.md)
-- [Long-form and multilingual production](artifact/references/long-form-and-multilingual.md)
-- [Billing, errors, and recovery](artifact/references/billing-errors-and-recovery.md)
-- [Installation and authentication](artifact/references/installation-and-auth.md)
-- [Automatic updates and safety](artifact/references/automatic-updates-and-safety.md)
-- [MCP connection](artifact/references/mcp-connection.md)
+- [Voiceover & Narration Studio on ClawHub](https://clawhub.ai/beatra-ai/skills/voiceover-narration-studio)
+- [Intent and routing](references/intent-and-routing.md)
+- [Voice casting and delivery](references/voice-casting-and-delivery.md)
+- [Long-form and multilingual production](references/long-form-and-multilingual.md)
+- [Voice cloning and review](references/voice-cloning-and-review.md)
+- [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
+- [Tasks and results](references/tasks-and-results.md)
+- [Installation and authentication](references/installation-and-auth.md)
+- [MCP connection](references/mcp-connection.md)
+- [Automatic updates and safety](references/automatic-updates-and-safety.md)
+- [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, markdown, shell commands, configuration, API calls, text]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with JSON snippets and shell commands; successful tasks return audio metadata, task facts, billing facts when present, or reusable voice IDs.]
+**Output Format:** [Markdown guidance with command snippets, JSON request shapes, production cards, estimates, and returned task facts]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces ready-to-edit speech audio facts or reusable voice IDs. It does not claim video, lip-sync, transcription, waveform editing, publication, refunds, or audio listening unless returned facts support them.]
+**Other Properties Related to Output:** [May describe paid Beatra operations, local credential setup, sample upload, task polling, and generated audio or voice-clone result facts.]
 
 ## Skill Version(s):
 
-0.1.5 (source: server release evidence and artifact manifest)
+0.1.7 (source: server release and manifest)
 
 ## Ethical Considerations:
 
