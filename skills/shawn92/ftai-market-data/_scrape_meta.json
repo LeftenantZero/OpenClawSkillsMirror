@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release with unified routing for A-share (A\u80a1) market data.\n\n- Provides a unified entry point for querying FT AI\u2019s A-share data skills.\n- Supports sub-skills including: full stock list, real-time quotes, IPO info, block trades, margin trading details, and individual stock stats/valuation.\n- Handles user requests by mapping intent to the correct sub-skill and invoking it via run.py.\n- Standardizes calling convention using run.py located alongside SKILL.md for flexible deployment.\n- Includes clear parameter requirements and usage examples for each available sub-skill.",
+  "created_at": 1773213889038,
+  "display_name": "Skills of A-share market data released by ft.tech.",
+  "fetched_at": 1787880514411,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "run.py",
+    "skill-card.md",
+    "sub-skills/block-trades/SKILL.md",
+    "sub-skills/block-trades/scripts/handler.py",
+    "sub-skills/margin-trading-details/SKILL.md",
+    "sub-skills/margin-trading-details/scripts/handler.py",
+    "sub-skills/stock-ipos/SKILL.md",
+    "sub-skills/stock-ipos/scripts/handler.py",
+    "sub-skills/stock-list-all-stocks/SKILL.md",
+    "sub-skills/stock-list-all-stocks/scripts/handler.py",
+    "sub-skills/stock-quotes-list/SKILL.md",
+    "sub-skills/stock-quotes-list/scripts/handler.py",
+    "sub-skills/stock-security-info/SKILL.md",
+    "sub-skills/stock-security-info/scripts/handler.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Shawn92",
+    "handle": "shawn92",
+    "user_id": "s178tyza29hgx3h8nsvhcmdphs83h6af"
+  },
+  "slug": "ftai-market-data",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ftai-market-data",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ftai-market-data&ownerHandle=shawn92",
+    "page_url": "https://clawhub.ai/shawn92/skills/ftai-market-data"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1751,
+    "installs": 52,
+    "stars": 61,
+    "versions": 1
+  },
+  "summary": "\u975e\u51f8\u79d1\u6280A\u80a1\u5e02\u573a\u6570\u636e\u6280\u80fd\u96c6\u3002\u8986\u76d6 A \u80a1\u80a1\u7968\u5217\u8868\u3001\u5b9e\u65f6\u884c\u60c5\u3001IPO\u4fe1\u606f\u3001\u5927\u5b97\u4ea4\u6613\u3001\u878d\u8d44\u878d\u5238\u3001\u4e2a\u80a1\u8be6\u60c5\u4e0e\u4f30\u503c\u7b49\u63a5\u53e3\u3002",
+  "updated_at": 1778491824366,
+  "version": "1.0.0"
+}
