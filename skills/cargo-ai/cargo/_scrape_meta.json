@@ -1,8 +1,8 @@
 {
-  "changelog": "cargo 1.21.0\n\n- Added a new capability skill: \"mailbox management,\" bringing the total to 15 capability skills and 18 skills overall.\n- Updated documentation in SKILL.md to reflect new skill count and mailbox management.\n- Removed skill-card.md file.",
+  "changelog": "- Added new glossary, gotchas, and use-case reference files with expanded definitions and documentation.\n- Updated terminology and organization in SKILL.md for improved clarity and coverage.\n- Improved cross-referencing between skills and reference materials.\n- Removed deprecated skill-card.md file.\n- Minor structural and wording refinements across documentation.",
   "created_at": 1779992747882,
   "display_name": "cargo",
-  "fetched_at": 1787769672482,
+  "fetched_at": 1787932129793,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -24,7 +24,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1787548762274,
+    "updated_at": 1787875239989,
     "verdict": "clean"
   },
   "owner": {
@@ -40,12 +40,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 2593,
+    "downloads": 2717,
     "installs": 15,
     "stars": 0,
-    "versions": 28
+    "versions": 30
   },
   "summary": "Router for the Cargo CLI skill bundle \u2014 load first for anything Cargo, and whenever a task spans two Cargo domains. Explains what each skill owns, declarative workspace-as-code (cargo-cdk) vs the imperative CLI, the UUID and slug flow between skills, async polling of runs and batches, end-to-end use cases, and the gotchas that fail silently (`conjonction` spelling, run vs batch, model-uuid vs segment-uuid). Triggers: \"set up Cargo\", \"what can Cargo do\", \"which Cargo skill\", \"bootstrap my workspace\", \"I have a Cargo account\", \"cargo-ai \u2026\", or any `cargo-ai` command whose domain you are unsure of. Skip when: the task obviously belongs to one skill \u2014 load that skill directly.",
-  "updated_at": 1787547150579,
-  "version": "1.21.0"
+  "updated_at": 1787874449083,
+  "version": "1.23.0"
 }

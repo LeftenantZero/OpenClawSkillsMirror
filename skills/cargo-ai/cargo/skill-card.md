@@ -1,6 +1,6 @@
 ## Description:
 
-Cargo is a router skill for the Cargo CLI skill bundle that helps agents choose the right Cargo capability, distinguish declarative CDK workflows from imperative CLI tasks, and follow Cargo UUID, async polling, and operational gotcha conventions.
+Router for the Cargo CLI skill bundle that helps an agent choose the right Cargo skill, understand declarative versus imperative workflows, follow UUID and slug handoffs, poll asynchronous runs and batches, and avoid common Cargo CLI pitfalls.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, GTM operators, and agents use this skill to route Cargo CLI work across setup, workspace-as-code, GTM workflows, storage, orchestration, analytics, billing, observability, hosting, mailbox, and workspace management tasks.
+Developers and operators use this router skill when working with Cargo so an agent can install or invoke the Cargo CLI, choose the correct domain skill, manage workspace setup, run GTM and enrichment workflows, and handle asynchronous run, batch, and reporting flows.
 
 ### Deployment Geography for Use:
 
@@ -22,26 +22,27 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can guide an agent to operate a Cargo workspace through broad Cargo CLI authority.
+Risk: The skill can direct an agent to refresh skills, install or update the Cargo CLI globally, and use lifecycle hooks.
 
-Mitigation: Install it only when Cargo workspace operations are intended, confirm the active workspace before writes, and keep explicit approval for credentials, token creation, deployments, destructive changes, reports, and paid batches.
+Mitigation: Confirm the user's intent before global installs or hook-driven updates, and respect pinned versions or opt-outs.
 
-Risk: Plugin or hook behavior may auto-refresh local tools, register session activity, and auto-approve many ordinary Cargo commands.
+Risk: The skill can guide workspace-reporting and session-sharing flows that may send session context to Cargo.
 
-Mitigation: Review plugin and hook behavior before installation, use one install channel to avoid duplicate skills, and leave protected prompts in place for sensitive operations.
+Mitigation: Ask for explicit user consent before report egress and avoid including secrets or record-level data.
 
-Risk: Cargo workflows may consume credits, especially broad batches or phone lookup actions.
+Risk: The skill can lead to admin-token creation, workspace changes, report sharing, optional GitHub starring, and paid batch or enrichment runs.
 
-Mitigation: Start with small samples, quote record counts and credit estimates before expanding work, and report credits spent and remaining balance after paid actions.
+Mitigation: Confirm workspace identity, token scope, invite lists, paid operations, and GitHub account actions before running commands.
 
-Risk: Session sharing and GitHub starring flows can disclose activity or use the user's GitHub account if approved.
+Risk: The security review verdict is suspicious because the skill grants broad update, workspace-reporting, and optional account-action guidance.
 
-Mitigation: Ask for explicit consent before report egress or starring, avoid secrets and record-level data in reports, and never star the repository without the user's approval.
+Mitigation: Review the skill and commands before deployment, disable or decline lifecycle hooks when automatic tracking or environment updates are not desired, and install only when Cargo workspace management is intended.
 
 ## Reference(s):
 
-- [Cargo skill on ClawHub](https://clawhub.ai/cargo-ai/skills/cargo)
+- [Cargo ClawHub skill page](https://clawhub.ai/cargo-ai/skills/cargo)
 - [Cargo skills homepage](https://github.com/getcargohq/cargo-skills)
+- [Cargo MCP endpoint](https://mcp.getcargo.io/mcp)
 - [Glossary](references/glossary.md)
 - [Common gotchas](references/gotchas.md)
 - [Interaction conventions](references/interaction.md)
@@ -51,17 +52,17 @@ Mitigation: Ask for explicit consent before report egress or starring, avoid sec
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, shell commands, configuration]
+**Output Type(s):** [guidance, markdown, shell commands, configuration]
 
-**Output Format:** [Markdown with inline shell commands and concise procedural guidance]
+**Output Format:** [Markdown guidance with inline shell commands and JSON command-output expectations]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May propose Cargo CLI commands that operate on a user's Cargo workspace and may trigger paid batches, token creation, deployment, reporting, or account actions when the user approves them.]
+**Other Properties Related to Output:** [May propose Cargo CLI commands that install or update global packages, authenticate users, create workspace resources, run paid Cargo operations, create reports, or share session context when the user approves.]
 
 ## Skill Version(s):
 
-1.21.0 (source: frontmatter, artifact metadata, release evidence)
+1.23.0 (source: frontmatter and server release evidence)
 
 ## Ethical Considerations:
 
