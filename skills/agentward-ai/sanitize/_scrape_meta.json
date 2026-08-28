@@ -1,0 +1,36 @@
+{
+  "changelog": "- Initial release of the sanitize skill.\n- Detects and redacts 15 categories of PII from text files, including credit cards, SSNs, email addresses, API keys, and more.\n- No external dependencies; works using only the Python standard library.\n- Enforces strict PII safety rules: never read raw input or entity map files; only view sanitized output.\n- Supports output to file, category filtering, preview, and JSON modes (all designed to avoid exposing raw PII).\n- All processing is done locally, ensuring no PII leaves your machine.",
+  "created_at": 1772073238724,
+  "display_name": "AgentWard Sanitize",
+  "fetched_at": 1787894622178,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "clawhub.json",
+    "references/SUPPORTED_PII.md",
+    "scripts/sanitize.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "agentward-ai",
+    "handle": "agentward-ai",
+    "user_id": "s174yetk0xb8fddcvag96062fx884p64"
+  },
+  "slug": "sanitize",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/sanitize",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=sanitize&ownerHandle=agentward-ai",
+    "page_url": "https://clawhub.ai/agentward-ai/skills/sanitize"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 857,
+    "installs": 23,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Detect and redact PII from text files. Supports 15 categories including credit cards, SSNs, emails, API keys, addresses, and more \u2014 with zero dependencies.",
+  "updated_at": 1778491644319,
+  "version": "1.0.0"
+}
