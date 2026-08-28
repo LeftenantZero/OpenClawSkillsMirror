@@ -1,6 +1,6 @@
 ## Description:
 
-Creates Huawei Cloud agent skill packages through a six-phase workflow that gathers requirements, researches CLI, SDK, and API options, generates documentation and tests, validates compliance, and prepares cleanup reports.
+Creates Huawei Cloud skill packages through a six-phase workflow covering requirements gathering, CLI/SDK/API research, Markdown generation, test preparation, detailed testing, cleanup, and compliance checks.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and engineers use this skill to scaffold Huawei Cloud skills from confirmed requirements, research supported execution modes, create reference docs and test assets, and run validation and cleanup checks in a controlled workspace.
+Developers and cloud engineers use this skill to scaffold Huawei Cloud agent skills, research supported execution modes, prepare validation artifacts, and run credential-gated tests before release.
 
 ### Deployment Geography for Use:
 
@@ -22,45 +22,45 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Credential handling may be under-scoped for cloud testing workflows.
+Risk: Credential-backed Huawei Cloud, API, and shell commands may run against live accounts during testing.
 
-Mitigation: Use least-privilege temporary Huawei Cloud credentials, avoid production accounts, and configure secrets out of band before testing.
+Mitigation: Use an isolated Huawei Cloud test project, least-privilege and preferably short-lived credentials, and avoid production accounts.
 
-Risk: Generated test cases can lead to shell or cloud command execution.
+Risk: Generated test inputs or templates may trigger unintended operations if they are run without review.
 
-Mitigation: Run only in a controlled workspace, review templates/test-vars.json before execution, and block arbitrary user-provided curl endpoints or bash commands unless explicitly approved.
+Mitigation: Review templates/test-vars.json and generated commands before execution, and require explicit approval for any mutating cloud operation.
 
-Risk: The security verdict is suspicious.
+Risk: Scanner-ignore or gitleaks-ignore usage can hide security findings.
 
-Mitigation: Review and scan the skill before deployment, then fix any credential, command-execution, or validation issues before allowing live cloud operations.
+Mitigation: Treat any scanner-ignore or gitleaks-ignore entry as requiring explicit security approval before installation or release.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/huaweiclouddev/skills/huawei-cloud-skill-creator)
-- [KooCLI installation guide](references/cli-installation-guide.md)
-- [IAM policies](references/iam-policies.md)
-- [Verification method](references/verification-method.md)
-- [Security audit guide](references/security-audit-guide.md)
-- [Acceptance criteria](references/acceptance-criteria.md)
-- [Related commands](references/related-commands.md)
-- [Dataflow diagram](references/dataflow-diagram.md)
-- [Huawei Cloud KooCLI quickstart](https://support.huaweicloud.com/qs-hcli/hcli_02_003.html)
+- [KooCLI quick start](https://support.huaweicloud.com/qs-hcli/hcli_02_003.html)
 - [Huawei Cloud SDK center](https://console.huaweicloud.com/apiexplorer/#/sdkcenter)
 - [Huawei Cloud API Explorer](https://console.huaweicloud.com/apiexplorer/#/openapi)
+- [KooCLI Installation & Configuration Guide](references/cli-installation-guide.md)
+- [IAM Policies](references/iam-policies.md)
+- [Verification Method](references/verification-method.md)
+- [Acceptance Criteria](references/acceptance-criteria.md)
+- [Security Audit Guide](references/security-audit-guide.md)
+- [Data Flow Diagram](references/dataflow-diagram.md)
+- [Related Commands](references/related-commands.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with JSON files, shell command examples, and generated skill-directory files]
+**Output Format:** [Markdown with JSON files and inline shell, Python, and curl examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces phase summary JSON, templates/test-vars.json, validation reports, and generated skill files; cloud-command execution depends on configured Huawei Cloud credentials.]
+**Other Properties Related to Output:** [Generates a complete skill directory structure with references, scripts, templates, phase summaries, and validation guidance.]
 
 ## Skill Version(s):
 
-1.0.1 (source: ClawHub release metadata)
+1.0.2 (source: ClawHub release metadata; artifact frontmatter reports 2.1.3)
 
 ## Ethical Considerations:
 

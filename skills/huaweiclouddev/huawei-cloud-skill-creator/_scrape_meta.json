@@ -1,8 +1,8 @@
 {
-  "changelog": "Update from GitHub",
+  "changelog": "**Strict six-phase pipeline and credential validation introduced**\n\n- Enforces a six-phase, chain-dependent workflow: Socratic Q&A, technical research, MD generation, test prep, detailed testing, and compliance check\u2014no skipping phases.\n- Adds detailed pre-check for Huawei Cloud credentials before any CLI/SDK/API operations; mandates secure credential handling (never print/share secrets).\n- Expands triggers, strict phase file outputs, and compliance with Huawei Cloud Skill Specification.\n- Supports CLI, SDK, and REST API execution modes with automatic fallback.\n- Auto-generates full skill directory structure (SKILL.md, references/, scripts/, templates/).\n- Strictly separates skill packaging from direct cloud resource management operations.",
   "created_at": 1784650171285,
   "display_name": "huawei-cloud-skill-creator",
-  "fetched_at": 1787773203609,
+  "fetched_at": 1787932576569,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -26,7 +26,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1786082726415,
+    "updated_at": 1787838315546,
     "verdict": "clean"
   },
   "owner": {
@@ -42,12 +42,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 177,
+    "downloads": 195,
     "installs": 1,
     "stars": 0,
-    "versions": 2
+    "versions": 3
   },
   "summary": "1. Six-phase pipeline for creating Huawei Cloud skills \u2014 Socratic requirements gathering, CLI\u2192SDK\u2192API research, MD generation, test preparation, detailed testing, and final cleanup & compliance check 2. Phase-chained dependency: each phase builds on the previous phase's output, no phase may be skipped 3. Supports CLI, SDK, and REST API execution modes with automatic fallback detection 4. Generates complete skill directory structure with SKILL.md, references/, scripts/, templates/ 5. Validates against the Huawei Cloud Skill Specification (\u534e\u4e3a\u4e91Skill\u68c0\u67e5\u89c4\u8303) Triggers include: \"\u521b\u5efa\u534e\u4e3a\u4e91Skill\",\"\u65b0\u5efa\u534e\u4e3a\u4e91Skill\",\"\u534e\u4e3a\u4e91skill\u521b\u5efa\u5668\",\"\u521b\u5efa Skill\",\"\u65b0\u5efa Skill\",\"skill \u521b\u5efa\u5668\",\"create skill\",\"build skill\",\"new skill\",\"skill creator\",\"scaffold a Huawei Cloud skill\",\"wrap CLI or OpenAPI into a skill\",\"package cloud operations into a skill\",\"\u5e2e\u6211\u521b\u5efa\u534e\u4e3a\u4e91Skill\",\"\u5e2e\u6211\u65b0\u5efa\u4e00\u4e2aSkill\",\"\u5c01\u88c5\u534e\u4e3a\u4e91CLI\u4e3aSkill\",\"\u534e\u4e3a\u4e91Skill\u811a\u624b\u67b6\",\"\u5e2e\u6211\u521b\u5efa\u4e00\u4e2askill\",\"\u6211\u9700\u8981\u4e00\u4e2askill\",\"\u5efa\u4e00\u4e2askill\",\"\u751f\u6210skill\",\"\u5e2e\u6211\u5efa\u4e00\u4e2a\u534e\u4e3a\u4e91skill\".",
-  "updated_at": 1786081959670,
-  "version": "1.0.1"
+  "updated_at": 1787837586806,
+  "version": "1.0.2"
 }
