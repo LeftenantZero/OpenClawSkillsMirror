@@ -1,0 +1,81 @@
+{
+  "changelog": "Version 2.3.0\n\n- Added support for `WDK_ACCOUNT_INDEX` environment variable to enable multi-account selection in WDK wallet mode (default: 0).\n- Updated readiness checks, documentation, and address derivation to reflect account index support.\n- Improved test coverage for multi-account wallet scenarios.\n- Updated version and compatibility details in metadata and documentation.",
+  "created_at": 1772759808731,
+  "display_name": "xaut-trade",
+  "fetched_at": 1787887761204,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "SKILL.tests.yaml",
+    "_meta.json",
+    "config.example.yaml",
+    "references/balance.md",
+    "references/buy.md",
+    "references/limit-order-buy-place.md",
+    "references/limit-order-cancel.md",
+    "references/limit-order-sell-place.md",
+    "references/limit-order-status.md",
+    "references/live-trading-runbook.md",
+    "references/onboarding.md",
+    "references/quote.md",
+    "references/sell.md",
+    "references/skill-delegation.md",
+    "references/wallet-modes.md",
+    "scripts/__tests__/helpers.test.js",
+    "scripts/__tests__/integration.test.js",
+    "scripts/__tests__/swap-cli.test.js",
+    "scripts/__tests__/wallet-init.test.js",
+    "scripts/helpers.js",
+    "scripts/lib/__tests__/config.test.js",
+    "scripts/lib/__tests__/create-wallet.test.js",
+    "scripts/lib/__tests__/erc20.test.js",
+    "scripts/lib/__tests__/provider.test.js",
+    "scripts/lib/__tests__/signer.test.js",
+    "scripts/lib/__tests__/uniswap.test.js",
+    "scripts/lib/config.js",
+    "scripts/lib/create-wallet.js",
+    "scripts/lib/erc20.js",
+    "scripts/lib/export-seed.js",
+    "scripts/lib/provider.js",
+    "scripts/lib/signer.js",
+    "scripts/lib/uniswap.js",
+    "scripts/limit-order.js",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "scripts/setup.sh",
+    "scripts/swap.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090425975,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "aure-duncan",
+    "handle": "aure-duncan",
+    "user_id": "s171zxp6gfdn6n628g3vz83vc183nhyk"
+  },
+  "slug": "aurehub-xaut-trade",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/aurehub-xaut-trade",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=aurehub-xaut-trade&ownerHandle=aure-duncan",
+    "page_url": "https://clawhub.ai/aure-duncan/skills/aurehub-xaut-trade"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1022,
+    "installs": 30,
+    "stars": 1,
+    "versions": 7
+  },
+  "summary": "Buy or sell XAUT (Tether Gold) on Ethereum. Supports market orders (Uniswap V3) and limit orders (UniswapX). Wallet modes: Foundry keystore or WDK. Delegates...",
+  "updated_at": 1778491742347,
+  "version": "2.3.0"
+}
