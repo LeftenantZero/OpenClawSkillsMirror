@@ -1,6 +1,6 @@
 ## Description:
 
-Return a compact full report for one major-US credit card, covering fees, offer, earnings, redemption, credits, travel benefits, protections, mechanics, eligibility, and strategy.
+Return a compact full report for one major-US credit card - fees, welcome offer, earning rates, redemption, credits, travel benefits, protections, mechanics, eligibility, and strategy.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and agents use this skill to research one exact major U.S. credit-card variant and produce a whole-card report. The report covers fees, welcome offer, earning rates, redemption, credits, travel benefits, protections, account mechanics, eligibility, strategy, fit, similar cards, and confidence notes.
+External users and agents use this skill to research major US credit cards and produce compact full-card reports covering costs, offers, rewards, benefits, protections, eligibility, strategy, and comparable cards. It is intended for research support and directs users to verify important offer terms directly with issuers.
 
 ### Deployment Geography for Use:
 
@@ -22,34 +22,33 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Credit-card offers, fees, eligibility rules, and benefits change frequently, so generated guidance can become stale or incomplete.
+Risk: Credit-card offers and issuer terms can change quickly, and third-party finance pages may be stale or inconsistent.
 
-Mitigation: Verify important fees, eligibility, benefits, and offer terms on the issuer page before applying or making financial decisions.
+Mitigation: Verify important offer terms directly with the issuer before applying, and use confidence notes to flag unresolved or conflicting welcome-offer claims.
+
+Risk: The skill may use web search or an optional Brave API key and may consult third-party finance sites during research.
+
+Mitigation: Treat outputs as research rather than financial advice, and avoid supplying sensitive personal or account information while researching cards.
 
 ## Reference(s):
 
-- [Card Full skill page](https://clawhub.ai/jiahongc/skills/card-full)
-- [Publisher profile](https://clawhub.ai/user/jiahongc)
-- [Card Identity](../card-identity/SKILL.md)
-- [Source Policy](../card-shared/source-policy.yaml)
-- [Section Definitions](../card-shared/section-definitions.md)
-- [Command Contracts](../card-shared/command-contracts.yaml)
-- [Confidence Rules](../card-shared/confidence-rules.md)
-- [Normalization Rules](../card-shared/normalization-rules.md)
+- [Chase Sapphire Preferred 2026 Refresh / Offer Extraction Note](references/chase-sapphire-preferred-2026-refresh.md)
+- [Delta Reserve Offer Staleness - Anchoring Failure](references/delta-reserve-2026-offer-staleness.md)
+- [ClawHub Skill Page](https://clawhub.ai/jiahongc/skills/card-full)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Guidance]
+**Output Type(s):** [text, markdown, guidance]
 
-**Output Format:** [Markdown report with required sections and hidden source YAML]
+**Output Format:** [Compact Markdown report with sourced links and confidence notes]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Uses bounded issuer-first research and marks unresolved optional details as unconfirmed.]
+**Other Properties Related to Output:** [Uses current web research and may include issuer pages, approved secondary finance sources, offer conflict notes, and historical offer context when available.]
 
 ## Skill Version(s):
 
-1.0.11 (source: server release evidence)
+1.0.12 (source: release evidence)
 
 ## Ethical Considerations:
 
