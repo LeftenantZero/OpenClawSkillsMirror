@@ -1,6 +1,6 @@
 ## Description:
 
-元审 yotta-vetter helps agents perform a four-stage pre-install skill safety review covering source, code, permissions, and risk, with lightweight local checks and optional GitHub source metadata.
+Yuanshen (yotta-vetter) helps agents perform a structured pre-install security review of skills using a four-phase source, code, permissions, and risk checklist plus a lightweight checker.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-Developers and agent operators use this skill before installing or evaluating unknown agent skills from marketplaces, GitHub, or shared packages. It produces an initial vetting report and decision record, while leaving the final install decision to a human reviewer.
+Developers and agent users use this skill before installing or evaluating unknown skills to produce a traceable initial security review, source check, and human-review report. It supports marketplace, GitHub, shared-skill, and other pre-install review scenarios where a final human decision is still required.
 
 ### Deployment Geography for Use:
 
@@ -22,48 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill reads the target skill directory during review.
+Risk: The global installer can persist the skill into many agent environments at once.
 
-Mitigation: Run it only against skill directories intended for review and avoid pointing it at unrelated sensitive folders.
+Mitigation: Install only into the intended agent environment, preferably with --dir or a single-agent option, and avoid -g/--global unless broad installation is intentional.
 
-Risk: The skill can write a report to a user-provided path.
+Risk: The skill can read target skill directories and optionally write review reports.
 
-Mitigation: Choose an explicit report destination and review generated findings before acting on them.
+Mitigation: Run it only against authorized skill directories and choose report output paths that are appropriate to store or share.
 
-Risk: The source-check command may contact GitHub for repository metadata.
+Risk: The source check can contact GitHub for public repository metadata and cache that metadata locally.
 
-Mitigation: Use the source check only when that network lookup is acceptable; otherwise rely on local check mode and documented manual review.
-
-Risk: Installing globally can activate the skill across multiple agents.
-
-Mitigation: Install it only into the agent intended for use unless cross-agent activation is deliberate.
-
-Risk: The checker provides an initial assessment and can miss context-specific risk.
-
-Mitigation: Keep the documented human review step as the final decision point, especially for medium or higher findings.
+Mitigation: Use local check mode or an isolated environment when network access or local metadata caching is not desired.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/yottameta/skills/yotta-vetter)
-- [npm package](https://www.npmjs.com/package/@yottameta/yotta-vetter)
-- [Four-stage checklist](references/checklist.md)
+- [Four-phase vetting checklist](references/checklist.md)
 - [Vetting report template](references/vetting-report-template.md)
-- [Yotta Security Audit](https://github.com/YottaMeta/yotta-security-audit)
-- [Yotta Memory](https://github.com/YottaMeta/yotta-memory)
+- [npm package](https://www.npmjs.com/package/@yottameta/yotta-vetter)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, JSON, Shell commands, Guidance]
+**Output Type(s):** [text, markdown, JSON, shell commands, guidance]
 
-**Output Format:** [Plain text reports, JSON summaries, Markdown vetting reports, and suggested shell commands]
+**Output Format:** [Plain text reports, optional JSON output, Markdown report files, and shell-command guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Optional report-file output; GitHub source checks use metadata lookup with local cache fallback.]
+**Other Properties Related to Output:** [Runs locally against a target skill directory; source checks can query public GitHub metadata and cache that metadata locally.]
 
 ## Skill Version(s):
 
-0.1.2 (source: SKILL.md frontmatter, package.json, release metadata)
+0.1.3 (source: frontmatter, package.json, release evidence)
 
 ## Ethical Considerations:
 
