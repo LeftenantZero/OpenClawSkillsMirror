@@ -1,6 +1,6 @@
 ## Description:
 
-dknowc official doc writer helps users draft, revise, review, and package formal workplace documents, including official documents, letters, reports, meeting minutes, plans, summaries, speeches, research reports, Word documents, and optional traceable source-reference reports.
+深知公文写作 is a formal-document writing assistant for office, administrative, secretary, materials, enterprise, and public-sector users that helps draft, revise, polish, review, format, and deliver official documents, reports, summaries, speeches, meeting minutes, plans, research materials, Word documents, and optional traceable source reports.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Employees, office staff, secretariat teams, administrative writers, and enterprise or public-sector users use this skill to turn notes, meeting records, source materials, research inputs, or drafts into structured formal documents and Word deliverables. When policy, data, standards, or cases are needed, the skill can retrieve traceable materials through dknowc Trusted Search and produce a separate source-reference report.
+Employees and external workplace users use this skill to turn notes, meeting records, research material, or rough drafts into structured formal Chinese documents. It supports drafting, revision, review, Word delivery, optional red-head formatting, and source-trace reporting when search-backed evidence is used.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,45 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can ask the agent to collect a phone number and SMS verification code for a third-party service.
+Risk: Search onboarding asks the user for a phone number and SMS code and provisions access with a provider-managed API key.
 
-Mitigation: Use the registration flow only when search-backed work is necessary, explain why verification is needed, and continue without search when the user declines.
+Mitigation: Install only when that account flow is acceptable for the deployment; prefer platform-managed secrets or manual token setup where policy requires it.
 
-Risk: The skill can create or retrieve an external service credential and persist it in ~/.zshrc.
+Risk: The skill may send search and outline queries to dknowc services.
 
-Mitigation: Confirm the user accepts persistent credential storage before registration, avoid displaying the full key, and prefer non-persistent credential handling for sensitive environments.
+Mitigation: Do not send confidential draft content or sensitive organizational material as search queries unless the organization explicitly allows it.
 
-Risk: Sensitive government, enterprise, or internal document text may be sent to dknowc services during search-backed workflows.
+Risk: The registration helper can persist an API key in ~/.zshrc.
 
-Mitigation: Confirm what content will be sent before using search, avoid sending unnecessary sensitive material, and use local-only drafting when external processing is not appropriate.
+Mitigation: Use a platform secret store or manually managed token when possible, and remove or rotate the local key if the skill is no longer used.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/dylanzhangzx/skills/dknowc-official-doc-writer)
-- [README](README.md)
-- [Skill instructions](SKILL.md)
-- [Output guide](reference/output_guide.md)
-- [Search policy](reference/search_policy.md)
-- [Review checklist](reference/review_checklist.md)
-- [dknowc service endpoint](https://open.dknowc.cn/)
-- [dknowc management platform](https://platform.dknowc.cn/)
+- [Publisher profile](https://clawhub.ai/user/dylanzhangzx)
+- [README](artifact/README.md)
+- [Skill instructions](artifact/SKILL.md)
+- [Search policy](artifact/reference/search_policy.md)
+- [Output guide](artifact/reference/output_guide.md)
+- [Review checklist](artifact/reference/review_checklist.md)
+- [Revision workflow](artifact/reference/revision_workflow.md)
+- [Official document standards index](artifact/reference/standards/00_index.md)
+- [Dknowc trusted search endpoint](https://open.dknowc.cn/dependable/search/)
+- [Dknowc MCP endpoint](https://mcp.dknowc.cn/s6/mcp)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Files, Guidance]
+**Output Type(s):** [Text, Markdown, Files, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown drafts, .docx Word files, optional red-head Word files, and HTML source-reference reports]
+**Output Format:** [Markdown prose, command snippets, JSON helper-script status, DOCX files, and HTML source-trace reports.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Search-backed tasks may produce a separate HTML provenance report; PDF generation is not supported.]
+**Other Properties Related to Output:** [Search-backed work may require DKNOWC_API_KEY; the artifact can generate Word documents and HTML trace reports and can store user-authorized local writing preferences or materials.]
 
 ## Skill Version(s):
 
-3.4.4 (source: frontmatter and server release evidence)
+3.4.5 (source: frontmatter and server release evidence, released 2026-08-27)
 
 ## Ethical Considerations:
 
