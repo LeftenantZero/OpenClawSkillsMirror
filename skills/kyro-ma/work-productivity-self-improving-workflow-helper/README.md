@@ -14,9 +14,10 @@ Evidence coverage: 12 signals across 3 source families.
 
 ## Evidence
 
-- clawhub-popular-skill: [Popular Clawhub skill demand: self-improving agent has 476,145 downloads](https://clawhub.ai/skills/self-improving-agent)
-- clawhub-popular-skill: [Popular Clawhub skill demand: Proactive Agent has 174,440 downloads](https://clawhub.ai/skills/proactive-agent)
-- clawhub-popular-skill: [Popular Clawhub skill demand: Self-Improving + Proactive Agent has 207,860 downloads](https://clawhub.ai/skills/self-improving)
+- clawhub-popular-skill: [Popular Clawhub skill demand: self-improving agent has 476,493 downloads](https://clawhub.ai/skills/self-improving-agent)
+- clawhub-popular-skill: [Popular Clawhub skill demand: Proactive Agent has 174,549 downloads](https://clawhub.ai/skills/proactive-agent)
+- clawhub-popular-skill: [Popular Clawhub skill demand: Self-Improving + Proactive Agent has 208,021 downloads](https://clawhub.ai/skills/self-improving)
+- clawhub-popular-skill: [Popular Clawhub skill demand: Skill Creator has 100,080 downloads](https://clawhub.ai/skills/skill-creator)
 - segmentfault-search: [HarmonyOS 开发者社区](https://segmentfault.com/brand/harmonyos-next)
 - segmentfault-search: [javascript](https://segmentfault.com/t/javascript)
 - segmentfault-search: [typescript](https://segmentfault.com/t/typescript)
@@ -24,8 +25,7 @@ Evidence coverage: 12 signals across 3 source families.
 - segmentfault-search: [OpenClaw 必装的 10 个 Skills，让你少躺 90% 以上的坑！！](https://segmentfault.com/a/1190000047666647)
 - segmentfault-search: [Keep_Improving](https://segmentfault.com/blog/keep_improving)
 - segmentfault-search: [self 与 Self](https://segmentfault.com/a/1190000044250449)
-- csdn-search: [Self - improving Agent](https://blog.csdn.net/qq_42540492/category_13024655.html?ops_request_misc=elastic_search_misc&request_id=a57b967ff0284aa5a336e24bed3f7470&biz_id=&utm_medium=distribute.pc_search_result.none-task-special_column-2~all~ElasticSearch~search_v2-2-13024655-null-null.142^v102^control&utm_term=self-improving-proactive-agent%20self%20improving%20proactive)
-- csdn-search: [OpenClaw技能包推荐[项目代码]](https://wenku.csdn.net/doc/3snkan1871z0?ops_request_misc=elastic_search_misc&request_id=a57b967ff0284aa5a336e24bed3f7470&biz_id=&utm_medium=distribute.pc_search_result.none-task-c_download-2~all~ElasticCommercialInsert~search_v2-3-3snkan1871z0-null-null.142^v102^control&utm_term=self-improving-proactive-agent%20self%20improving%20proactive)
+- csdn-search: [Self - improving Agent](https://blog.csdn.net/qq_42540492/category_13024655.html?ops_request_misc=elastic_search_misc&request_id=86c30df2c0a54a1f8ba2129a15599e0e&biz_id=&utm_medium=distribute.pc_search_result.none-task-special_column-2~all~ElasticSearch~search_v2-2-13024655-null-null.142^v102^pc_search_result_base6&utm_term=self-improving-proactive-agent%20self%20improving%20proactive)
 
 ## How This Skill Meets The Requirement
 
