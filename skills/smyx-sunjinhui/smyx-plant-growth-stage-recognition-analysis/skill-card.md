@@ -1,6 +1,6 @@
 ## Description:
 
-Identifies plant growth stages from plant image or video inputs and returns structured analysis for precision agriculture decision support.
+Identifies plant growth stages from plant images or videos and returns structured recognition results and report links for precision agriculture decisions.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Agricultural producers, agronomists, and developers use this skill to analyze plant images or videos, classify growth stages, review structured plant-status reports, and query prior cloud analysis reports.
+External users, agricultural producers, agronomists, and developers use this skill to analyze plant media, classify growth stages, review structured results, and retrieve prior analysis reports.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Media, URLs, and report history are processed through external cloud services.
+Risk: Plant images, videos, URLs, and identity-linked metadata are sent to the provider's cloud service.
 
-Mitigation: Use the skill only with inputs you are willing to send to the configured service, and verify the publisher's endpoint and retention practices before installation.
+Mitigation: Use the skill only with media approved for upload, obtain first-use consent for uploads and history queries, and avoid submitting sensitive locations or private identifiers.
 
-Risk: The skill may create or reuse local identity state, store tokens, and bootstrap backend account behavior without direct user prompts.
+Risk: The skill silently creates or reuses local user records and stores authentication tokens.
 
-Mitigation: Review the skill before installing, run it in an isolated environment when evaluating it, and confirm account, billing, and local state behavior with the publisher.
+Mitigation: Run it in an isolated workspace, review token and local user storage behavior before deployment, and document retention and cleanup expectations for users.
+
+Risk: Security evidence reports weak disclosure and conflicting transport claims.
+
+Mitigation: Require explicit HTTPS production endpoints, scoped URL validation, and clear disclosure of remote analysis, retention, and token-storage behavior before relying on the release.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-plant-growth-stage-recognition-analysis)
 - [Skill demo](https://lifeemergence.com/sample.html)
-- [API documentation](skills/smyx_analysis/references/api_doc.md)
+- [API接口文档](skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, JSON, Shell commands]
+**Output Type(s):** [text, markdown, json, shell commands]
 
-**Output Format:** [Structured report text, JSON results, Markdown history tables, and script invocation commands]
+**Output Format:** [Markdown text with structured JSON results and report links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include report links and cloud report history returned by the configured service.]
+**Other Properties Related to Output:** [May save results to a user-specified output file.]
 
 ## Skill Version(s):
 
-1.0.11 (source: frontmatter and server release evidence)
+1.0.12 (source: server release and target metadata; artifact frontmatter says 1.0.13)
 
 ## Ethical Considerations:
 
