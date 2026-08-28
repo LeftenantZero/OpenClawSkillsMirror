@@ -1,0 +1,35 @@
+{
+  "changelog": "**Adds new user-facing workflow and API constraints for improved safety and usability.**\n\n- After creating a new list, the skill now always generates a share token and sends the share URL without waiting for user request.\n- Skill must only refer to lists by name in all user interactions\u2014never by list ID.\n- For item upserts, the skill omits `quantityOrUnit` unless the user explicitly specifies it.\n- Updated intent mapping and safety behaviors to match new constraints.\n- No code changes in this release; documentation and behavioral clarifications only.",
+  "created_at": 1772212042055,
+  "display_name": "GoList",
+  "fetched_at": 1787941112101,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "golist_cli.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Daniel Geiger",
+    "handle": "daniel17903",
+    "user_id": "s174xp9x11h7qsqg0v45f818b5884kbz"
+  },
+  "slug": "golist",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/golist",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=golist&ownerHandle=daniel17903",
+    "page_url": "https://clawhub.ai/daniel17903/skills/golist"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 865,
+    "installs": 24,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Manage GoList grocery lists via CLI: create, join, switch, share lists, and add or remove items with automatic device and item ID handling.",
+  "updated_at": 1778491660149,
+  "version": "1.0.1"
+}
