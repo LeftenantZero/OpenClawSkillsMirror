@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of skill-exporter: easily convert Clawdbot skills into deployable microservices.\n\n- Export any Clawdbot skill as a standalone FastAPI microservice, ready for Docker, Railway, or Fly.io deployment.\n- Automatically generates Dockerfile, deployment configs, FastAPI wrapper, requirements.txt, and environment files.\n- Optional LLM client integration (Anthropic/OpenAI) for adding automated captioning or decision logic.\n- Supports custom export options: target platform, API port, and output directory.\n- Ensures compatibility by requiring SKILL.md frontmatter and callable skill scripts.",
+  "created_at": 1769848502212,
+  "display_name": "Skill Exporter",
+  "fetched_at": 1787911508411,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/export.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783653205759,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "MacStenk",
+    "handle": "macstenk",
+    "user_id": "s17bmxvmm7qvxg7c9qtngmncy588447g"
+  },
+  "slug": "skill-exporter",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-exporter",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-exporter&ownerHandle=macstenk",
+    "page_url": "https://clawhub.ai/macstenk/skills/skill-exporter"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2510,
+    "installs": 87,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Export Clawdbot skills as standalone, deployable microservices. Use when you want to dockerize a skill, deploy it to Railway or Fly.io, or create an independent API service. Generates Dockerfile, FastAPI wrapper, requirements.txt, deployment configs, and optional LLM client integration.",
+  "updated_at": 1778485878349,
+  "version": "1.0.0"
+}
