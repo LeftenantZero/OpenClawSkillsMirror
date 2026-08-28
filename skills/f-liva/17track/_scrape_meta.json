@@ -1,0 +1,46 @@
+{
+  "changelog": "Security fix: removed hardcoded paths from daily-report.py (uses same path resolution as track17.py). Token read from TRACK17_TOKEN env var only. Removed WhatsApp/external channel references from SKILL.md.",
+  "created_at": 1772803671150,
+  "display_name": "17TRACK",
+  "fetched_at": 1787886865965,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/track17-daily-report.py",
+    "scripts/track17.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089782072,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Federico Liva",
+    "handle": "f-liva",
+    "user_id": "s172qzhaaqgbcj367wdz5xwjjx84m22g"
+  },
+  "slug": "17track",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/17track",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=17track&ownerHandle=f-liva",
+    "page_url": "https://clawhub.ai/f-liva/skills/17track"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 867,
+    "installs": 23,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Track parcels and shipments via the 17TRACK API. Manage a local SQLite database of tracked packages with automatic status polling, webhook ingestion, and dai...",
+  "updated_at": 1778491751707,
+  "version": "1.0.3"
+}
