@@ -1,6 +1,6 @@
 ## Description:
 
-Helps AI-agent users, skill authors, maintainers, and teams create practical browser automation workflows, bug-fix plans, safety checklists, implementation support, and validation notes.
+Helps agent users, skill authors, maintainers, and teams plan, harden, troubleshoot, and create adjacent Agent Browser-style workflows for ClawHub.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External developers, AI-agent users, skill authors, maintainers, and teams use this skill to turn browser-workflow and automation needs into concrete plans, artifacts, checklists, code changes, or decision support. It is suited for fixing bugs, hardening setup and safety, improving reliability, and creating adjacent skills inspired by Agent Browser-style workflows.
+External agent users, skill authors, maintainers, and teams use this skill to turn Agent Browser-style workflow needs into practical plans, checklists, automation outlines, code changes, configuration guidance, and verification notes.
 
 ### Deployment Geography for Use:
 
@@ -22,29 +22,34 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill may be auto-selected for broad browser, automation, CLI, or bug-fix requests, including sensitive authenticated or private-data workflows.
+Risk: Broad trigger wording may activate the skill for general browser or automation prompts.
 
-Mitigation: Narrow or disable implicit invocation before use, and review proposed browser or CLI actions before applying them in sensitive accounts, financial workflows, or private-data contexts.
+Mitigation: Confirm the task matches Agent Browser-style workflow planning or reliability work before relying on the response.
+
+Risk: The skill may suggest code, setup, or workflow changes that affect browser automation reliability or safety.
+
+Mitigation: Review and test suggested changes before applying them to important workflows.
 
 ## Reference(s):
 
-- [Requirement Plan](references/requirement-plan.md)
-- [ClawHub Skill Page](https://clawhub.ai/kyro-ma/skills/work-productivity-agent-browser-workflow-helper)
+- [ClawHub skill page](https://clawhub.ai/kyro-ma/skills/work-productivity-agent-browser-workflow-helper)
+- [Requirement Plan](artifact/references/requirement-plan.md)
 - [Agent Browser demand signal](https://clawhub.ai/skills/agent-browser-clawdbot)
+- [In-browser log sanitizer discussion](https://news.ycombinator.com/item?id=49445741)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown guidance with optional code, shell commands, checklists, and configuration snippets]
+**Output Format:** [Markdown or structured text with optional code blocks and shell command blocks]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include assumptions, validation notes, remaining risks, and next steps.]
+**Other Properties Related to Output:** [May include workflow plans, checklists, implementation notes, assumptions, verification notes, and follow-up risks.]
 
 ## Skill Version(s):
 
-0.20260817.40422 (source: server release evidence)
+0.20260827.40448 (source: server release evidence)
 
 ## Ethical Considerations:
 

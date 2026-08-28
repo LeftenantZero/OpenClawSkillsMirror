@@ -14,18 +14,18 @@ Evidence coverage: 12 signals across 3 source families.
 
 ## Evidence
 
-- clawhub-popular-skill: [Popular Clawhub skill demand: Gog has 191,205 downloads](https://clawhub.ai/skills/gog)
-- clawhub-popular-skill: [Popular Clawhub skill demand: ontology has 196,347 downloads](https://clawhub.ai/skills/ontology)
-- clawhub-popular-skill: [Popular Clawhub skill demand: Github has 195,757 downloads](https://clawhub.ai/skills/github)
-- clawhub-popular-skill: [Popular Clawhub skill demand: Agent Browser has 153,287 downloads](https://clawhub.ai/skills/agent-browser-clawdbot)
-- clawhub-popular-skill: [Popular Clawhub skill demand: Obsidian has 107,585 downloads](https://clawhub.ai/skills/obsidian)
-- clawhub-popular-skill: [Popular Clawhub skill demand: Nano Pdf has 120,047 downloads](https://clawhub.ai/skills/nano-pdf)
-- hacker-news-ask-hn: [Ask HN: How would you market this service?](https://news.ycombinator.com/item?id=49316403)
-- hacker-news-ask-hn: [32GB+ Simulator Issac SIM your Browser](https://news.ycombinator.com/item?id=49308530)
+- clawhub-popular-skill: [Popular Clawhub skill demand: Gog has 191,959 downloads](https://clawhub.ai/skills/gog)
+- clawhub-popular-skill: [Popular Clawhub skill demand: ontology has 197,185 downloads](https://clawhub.ai/skills/ontology)
+- clawhub-popular-skill: [Popular Clawhub skill demand: Github has 196,644 downloads](https://clawhub.ai/skills/github)
+- clawhub-popular-skill: [Popular Clawhub skill demand: Agent Browser has 154,333 downloads](https://clawhub.ai/skills/agent-browser-clawdbot)
+- clawhub-popular-skill: [Popular Clawhub skill demand: Obsidian has 108,373 downloads](https://clawhub.ai/skills/obsidian)
+- clawhub-popular-skill: [Popular Clawhub skill demand: Nano Pdf has 120,678 downloads](https://clawhub.ai/skills/nano-pdf)
+- hacker-news-ask-hn: [Open source in-browser log sanitizer, feedback required](https://news.ycombinator.com/item?id=49445741)
 - segmentfault-search: [HarmonyOS 开发者社区](https://segmentfault.com/brand/harmonyos-next)
 - segmentfault-search: [javascript](https://segmentfault.com/t/javascript)
 - segmentfault-search: [typescript](https://segmentfault.com/t/typescript)
 - segmentfault-search: [ONES 研发管理](https://ones.cn/?utm_term=ONES%C2%A0%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86&utm_campaign=%E9%A6%96%E9%A1%B5%E6%A0%87%E7%AD%BE&_channel_track_key=myqX1C0f&utm_source=%E6%80%9D%E5%90%A6%E8%BD%AC%20ONES)
+- segmentfault-search: [问： nodejs我想在闭包中动态执行调试代码，上下文是在闭包中，而不是上下文中，如何实现?](https://segmentfault.com/q/1010000044188194)
 
 ## How This Skill Meets The Requirement
 

@@ -33,18 +33,18 @@ Scoring rationale:
 
 ## Evidence
 
-- clawhub-popular-skill (2026-05-11T07:48:49.679000+00:00): [Popular Clawhub skill demand: Gog has 191,205 downloads](https://clawhub.ai/skills/gog)
-- clawhub-popular-skill (2026-05-11T07:50:52.489000+00:00): [Popular Clawhub skill demand: ontology has 196,347 downloads](https://clawhub.ai/skills/ontology)
-- clawhub-popular-skill (2026-06-12T12:48:37.834000+00:00): [Popular Clawhub skill demand: Github has 195,757 downloads](https://clawhub.ai/skills/github)
-- clawhub-popular-skill (2026-05-11T07:50:48.771000+00:00): [Popular Clawhub skill demand: Agent Browser has 153,287 downloads](https://clawhub.ai/skills/agent-browser-clawdbot)
-- clawhub-popular-skill (2026-05-18T20:48:40.034000+00:00): [Popular Clawhub skill demand: Obsidian has 107,585 downloads](https://clawhub.ai/skills/obsidian)
-- clawhub-popular-skill (2026-05-11T07:48:49.679000+00:00): [Popular Clawhub skill demand: Nano Pdf has 120,047 downloads](https://clawhub.ai/skills/nano-pdf)
-- hacker-news-ask-hn (2026-08-16T02:37:19+00:00): [Ask HN: How would you market this service?](https://news.ycombinator.com/item?id=49316403)
-- hacker-news-ask-hn (2026-08-15T07:27:58+00:00): [32GB+ Simulator Issac SIM your Browser](https://news.ycombinator.com/item?id=49308530)
-- segmentfault-search (2026-08-17T04:06:08.400700+00:00): [HarmonyOS 开发者社区](https://segmentfault.com/brand/harmonyos-next)
-- segmentfault-search (2026-08-17T04:06:08.400700+00:00): [javascript](https://segmentfault.com/t/javascript)
-- segmentfault-search (2026-08-17T04:06:08.400700+00:00): [typescript](https://segmentfault.com/t/typescript)
-- segmentfault-search (2026-08-17T04:06:08.400700+00:00): [ONES 研发管理](https://ones.cn/?utm_term=ONES%C2%A0%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86&utm_campaign=%E9%A6%96%E9%A1%B5%E6%A0%87%E7%AD%BE&_channel_track_key=myqX1C0f&utm_source=%E6%80%9D%E5%90%A6%E8%BD%AC%20ONES)
+- clawhub-popular-skill (2026-05-11T07:48:49.679000+00:00): [Popular Clawhub skill demand: Gog has 191,959 downloads](https://clawhub.ai/skills/gog)
+- clawhub-popular-skill (2026-05-11T07:50:52.489000+00:00): [Popular Clawhub skill demand: ontology has 197,185 downloads](https://clawhub.ai/skills/ontology)
+- clawhub-popular-skill (2026-06-12T12:48:37.834000+00:00): [Popular Clawhub skill demand: Github has 196,644 downloads](https://clawhub.ai/skills/github)
+- clawhub-popular-skill (2026-05-11T07:50:48.771000+00:00): [Popular Clawhub skill demand: Agent Browser has 154,333 downloads](https://clawhub.ai/skills/agent-browser-clawdbot)
+- clawhub-popular-skill (2026-05-18T20:48:40.034000+00:00): [Popular Clawhub skill demand: Obsidian has 108,373 downloads](https://clawhub.ai/skills/obsidian)
+- clawhub-popular-skill (2026-05-11T07:48:49.679000+00:00): [Popular Clawhub skill demand: Nano Pdf has 120,678 downloads](https://clawhub.ai/skills/nano-pdf)
+- hacker-news-ask-hn (2026-08-26T08:41:58+00:00): [Open source in-browser log sanitizer, feedback required](https://news.ycombinator.com/item?id=49445741)
+- segmentfault-search (2026-08-27T04:06:25.210968+00:00): [HarmonyOS 开发者社区](https://segmentfault.com/brand/harmonyos-next)
+- segmentfault-search (2026-08-27T04:06:25.210968+00:00): [javascript](https://segmentfault.com/t/javascript)
+- segmentfault-search (2026-08-27T04:06:25.210968+00:00): [typescript](https://segmentfault.com/t/typescript)
+- segmentfault-search (2026-08-27T04:06:25.210968+00:00): [ONES 研发管理](https://ones.cn/?utm_term=ONES%C2%A0%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86&utm_campaign=%E9%A6%96%E9%A1%B5%E6%A0%87%E7%AD%BE&_channel_track_key=myqX1C0f&utm_source=%E6%80%9D%E5%90%A6%E8%BD%AC%20ONES)
+- segmentfault-search (2026-08-27T04:06:25.211530+00:00): [问： nodejs我想在闭包中动态执行调试代码，上下文是在闭包中，而不是上下文中，如何实现?](https://segmentfault.com/q/1010000044188194)
 
 ## How The Skill Meets The Requirement
 
