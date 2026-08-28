@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release of TrustMyAgent \u2013 security posture monitoring for AI agents.\n\n- Runs 41 stateless, read-only security checks across 14 domains.\n- Calculates and displays a trust score (0\u2013100) and detailed pass/fail status for each check.\n- Supports dry-run mode for previewing results before sending, and local-only mode for full privacy (no network calls).\n- Guides users interactively through setup, running assessments, telemetry options, and optional scheduled scans.\n- All check logic and telemetry data formats are fully open source and transparent.",
+  "created_at": 1772110632756,
+  "display_name": "TrustMyAgent",
+  "fetched_at": 1787941199847,
+  "files": [
+    "README.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "checks/detection_kb.json",
+    "checks/message_checks.json",
+    "checks/nodes_media_checks.json",
+    "checks/openclaw_checks.json",
+    "run.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779962208085,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Anecdotes-Yair",
+    "handle": "anecdotes-yair",
+    "user_id": "s178f95yqy2c09jnyvv679naks885378"
+  },
+  "slug": "trust-my-agent-ai",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/trust-my-agent-ai",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=trust-my-agent-ai&ownerHandle=anecdotes-yair",
+    "page_url": "https://clawhub.ai/anecdotes-yair/skills/trust-my-agent-ai"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 811,
+    "installs": 23,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\ud83d\udee1\ufe0f TrustMyAgent - Security posture monitoring for AI agents. Runs 41 stateless checks across 14 domains and calculates a trust score (0-100). Supports local...",
+  "updated_at": 1778491649051,
+  "version": "1.0.0"
+}
