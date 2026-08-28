@@ -1,6 +1,6 @@
 ## Description:
 
-Audit the whole repo for Thompson-mode violations. A ranked list of what to rewrite, delete, or take back into the trusted base.
+Audits the whole repository for Thompson-mode violations and returns a ranked list of what to rewrite, delete, or take back into the trusted base.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and engineers use this skill to audit a repository for Thompson-mode method violations and rank candidates for rewrite, deletion, or removal from the trusted base. It produces recommendations only and does not apply changes.
+Developers and engineers use this skill to review an entire repository for code simplification opportunities, focusing on ranked Thompson-mode findings and the likely rewrite, deletion, or trusted-base reduction.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,35 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The agent may read repository files and git history to produce audit recommendations.
+Risk: Repository-wide audit guidance may recommend rewrites, deletions, or dependency reductions that need human review before implementation.
 
-Mitigation: Install only for repositories where that level of read access is acceptable.
+Mitigation: Review each ranked finding manually before changing code, and treat the output as guidance rather than an automatic patch plan.
 
-Risk: The skill's scope excludes correctness, security, and performance review.
+Risk: The skill is scoped to Thompson-mode method violations and does not cover correctness bugs, security holes, or performance issues.
 
-Mitigation: Route those issues to a separate normal review pass before acting on recommendations.
+Mitigation: Route correctness, security, and performance concerns to a normal review pass outside this skill's output.
+
+Risk: The skill should inspect only the current repository and its git history.
+
+Mitigation: Do not permit it to modify files or access unrelated systems when running the audit.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/rajnandan1/skills/ken-audit)
-- [Publisher profile](https://clawhub.ai/user/rajnandan1)
 - [Project homepage](https://github.com/rajnandan1/ken)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Guidance]
+**Output Type(s):** [text, markdown, guidance]
 
-**Output Format:** [Markdown with ranked one-line findings and a summary line]
+**Output Format:** [Markdown text with ranked one-line findings and a final net summary.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Findings use tags such as rot, layer, unvouched, fancy, and ceremony; the skill lists recommendations and applies no changes.]
+**Other Properties Related to Output:** [Read-only audit output; the skill lists findings and applies no changes.]
 
 ## Skill Version(s):
 
-1.1.0 (source: server release evidence)
+1.2.0 (source: ClawHub release evidence)
 
 ## Ethical Considerations:
 
