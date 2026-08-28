@@ -1,6 +1,6 @@
 ## Description:
 
-Retrieves traceable keyword, search result, trend, GEO, competitor, and backlink data for SEO research and analysis via SignalDig.
+Retrieve traceable keyword, search result, trend, ranked-keyword, traffic-estimation, GEO, competitor, and backlink data for SEO research and analysis via SignalDig.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-SEO practitioners, growth teams, and developers use this skill to request scoped, evidence-linked SEO research for keywords and domains through SignalDig, including keyword metrics, related keywords, SERP observations, trends, competitor analysis, GEO visibility, and backlinks.
+External users and developers use this skill to scope SEO research requests and retrieve evidence-backed keyword, SERP, trend, competitor, GEO, backlink, ranked-keyword, and traffic-estimation reports through the SignalDig MCP server.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: SignalDig API keys can grant account access if exposed.
+Risk: SEO research inputs are sent to the SignalDig MCP service after setup and scope selection.
 
-Mitigation: Configure keys through the client or environment secret mechanism and do not commit or paste them into shared files.
+Mitigation: Review each scoped request before submission and send only the smallest sufficient keyword, domain, market, language, and data-scope inputs.
 
-Risk: SEO queries, target domains, market, language, and related request metadata are sent to SignalDig during use.
+Risk: The workflow requires a SignalDig API key for the MCP server.
 
-Mitigation: Use the smallest sufficient data scope and confirm the user is comfortable sending the target research metadata to SignalDig.
+Mitigation: Store the key in an environment variable or client secret store, keep tool approval prompted where supported, and do not commit the key to project files.
 
-Risk: The skill cannot produce live SEO evidence when the SignalDig MCP server, tools, or account plan are unavailable.
+Risk: Unavailable tools, failed jobs, or partial results could lead to unsupported SEO claims.
 
-Mitigation: Verify the MCP connection before research and stop rather than fabricating metrics or evidence.
-
-Risk: Duplicate or overly broad live requests can waste account quota or return more data than needed.
-
-Mitigation: Reuse prior request_id values and stable idempotency keys, and request only the specific SEO data families needed for the task.
+Mitigation: Stop when the MCP tools are unavailable, report partial coverage explicitly, and cite only evidence returned by the live tool result.
 
 ## Reference(s):
 
 - [Setup Guide: Connect the SignalDig SEO MCP Server](references/setup-guide.md)
 - [SEO Research Functional Contract](references/mcp-contract.md)
 - [SignalDig](https://signaldig.com/)
-- [ClawHub Skill Page](https://clawhub.ai/jerrykik/skills/research-seo-signals)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, API calls, guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Concise Markdown report with evidence IDs, limitations, and source request_id.]
+**Output Format:** [Markdown reports with evidence references and occasional inline configuration or shell snippets]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires a configured SignalDig MCP server and API key; default depth is concise unless a full export is requested.]
+**Other Properties Related to Output:** [Default output is concise; full exports are produced only when requested.]
 
 ## Skill Version(s):
 
-1.5.0 (source: server release evidence and skill frontmatter)
+1.8.0 (source: server release metadata and SKILL.md frontmatter)
 
 ## Ethical Considerations:
 
