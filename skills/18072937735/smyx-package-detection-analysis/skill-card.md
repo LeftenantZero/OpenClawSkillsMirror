@@ -1,6 +1,6 @@
 ## Description:
 
-Detects delivery packages in surveillance images or videos and returns structured package-detection results, counts, location details, reminders, and report links for station, entrance, and lobby monitoring.
+Detects delivery packages in surveillance images or videos and returns structured reports for package counts, locations, unattended alerts, and report history.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External developers and site operators use this skill to analyze package presence in camera images or videos for delivery-station inventory checks, residential entrance monitoring, office-lobby package counts, and unattended pickup reminders.
+External users and operations teams use this skill to analyze fixed-camera images, videos, or media URLs for package detection at community stations, residential entrances, and office lobbies. It helps count packages, identify package locations, flag long-uncollected packages, and retrieve cloud-hosted report history.
 
 ### Deployment Geography for Use:
 
@@ -22,43 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Surveillance images, videos, or media URLs are sent to remote lifeemergence.com services for analysis.
+Risk: Provided surveillance images, videos, or URLs may be sent to LifeEmergence cloud services.
 
-Mitigation: Use the skill only with media approved for remote processing and avoid sensitive camera footage unless the publisher and remote service are trusted.
+Mitigation: Require explicit user confirmation before uploading sensitive media or URLs, and avoid sensitive footage unless retention, deletion, and authorization terms are documented by the publisher.
 
-Risk: The skill silently resolves or creates an internal user identity and associates analysis and report history with that identity.
+Risk: The skill silently manages a cloud account identity and stores account tokens in a local workspace database.
 
-Mitigation: Run in an isolated workspace and review identity handling before use in shared or regulated environments.
+Mitigation: Deploy only where local token storage is acceptable, restrict workspace access, and follow publisher guidance for token rotation or deletion.
 
-Risk: Local token and identity persistence may reuse values from workspace data or the local skill database.
+Risk: Cloud report history can be queried with limited user control.
 
-Mitigation: Remove unintended data/smyx-api-key.txt files and clear local skill data before installing or running under a different user context.
-
-Risk: Historical report retrieval can expose previously associated analysis records and report links.
-
-Mitigation: Limit access to workspaces where the skill is installed and review report-list output before sharing it.
+Mitigation: Require confirmation before history queries and make clear that report lists are retrieved from cloud-hosted history.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-package-detection-analysis)
-- [Publisher profile](https://clawhub.ai/user/18072937735)
+- [Skill demo](https://lifeemergence.com/sample.html)
 - [Package detection API documentation](references/api_doc.md)
-- [SMYX analysis API documentation](skills/smyx_analysis/references/api_doc.md)
-- [Skill usage demo](https://lifeemergence.com/sample.html)
+- [Analysis API documentation](skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, shell commands, guidance]
+**Output Type(s):** [Text, Markdown, JSON, Shell commands, Guidance]
 
-**Output Format:** [Markdown and JSON-like structured text with report links from remote API responses]
+**Output Format:** [Markdown-style progress messages and structured JSON/text analysis with optional report links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Can print historical report lists and can write analysis output to a user-selected file path when invoked with an output argument.]
+**Other Properties Related to Output:** [Accepts local image/video files or media URLs; documented media limit is 10 MB, and results can optionally be written to a file.]
 
 ## Skill Version(s):
 
-1.0.12 (source: ClawHub release metadata; SKILL.md frontmatter reports 1.0.11)
+1.0.13 (source: server release metadata; SKILL.md frontmatter says 1.0.12)
 
 ## Ethical Considerations:
 
