@@ -1,0 +1,51 @@
+{
+  "changelog": "god-mode 0.1.0 \u2013 Initial Release\n\n- Provides a unified dashboard for developer oversight across multiple coding projects.\n- Syncs and analyzes GitHub data with local SQLite caching for fast project status queries.\n- Analyzes agent instructions (agents.md) against commit history and suggests improvements.\n- Command-line interface for project management, sync, and AI agent coaching.\n- Requires GitHub CLI (gh), sqlite3, and jq.\n- No token storage; delegates authentication to trusted CLIs.",
+  "created_at": 1769957202407,
+  "display_name": "God's eye view of your dev repos. Multi-project tracking across  GitHub/Azure DevOps. AI learns from your commits to upgrade your agents.md.",
+  "fetched_at": 1787910907417,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.example.yaml",
+    "prompts/agent-analysis.md",
+    "scripts/commands/agents.sh",
+    "scripts/commands/projects.sh",
+    "scripts/commands/status.sh",
+    "scripts/commands/sync.sh",
+    "scripts/lib/analysis/agents.sh",
+    "scripts/lib/analysis/patterns.sh",
+    "scripts/lib/config.sh",
+    "scripts/lib/db.sh",
+    "scripts/lib/output.sh",
+    "scripts/lib/providers/azure.sh",
+    "scripts/lib/providers/base.sh",
+    "scripts/lib/providers/github.sh",
+    "scripts/lib/providers/gitlab.sh",
+    "scripts/setup.sh",
+    "skill-card.md",
+    "sql/schema.sql"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "InfantLab",
+    "handle": "infantlab",
+    "user_id": "s17d4xh46ehmy78a819z65b1kn884e9s"
+  },
+  "slug": "god-mode",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/god-mode",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=god-mode&ownerHandle=infantlab",
+    "page_url": "https://clawhub.ai/infantlab/skills/god-mode"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 3696,
+    "installs": 130,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Developer oversight and AI agent coaching. Use when viewing project status across repos, syncing GitHub data, or analyzing agents.md against commit patterns.",
+  "updated_at": 1778485946485,
+  "version": "0.1.0"
+}
