@@ -1,6 +1,6 @@
 ## Description:
 
-Harvest every ken: ceiling comment into one ledger, so brute-force deferrals get tracked instead of forgotten.
+Harvest every ken: ceiling comment into one ledger, so brute-force deferrals get tracked instead of forgotten. One-shot report.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and engineers use this skill to scan repository comments for ken: debt markers and produce a concise ledger of brute-force ceilings, upgrade triggers, and missing triggers.
+Developers use ken-debt to scan a repository for ken: comments that mark brute-force ceilings and produce a concise debt ledger with revisit triggers.
 
 ### Deployment Geography for Use:
 
@@ -22,13 +22,13 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Scanning repository comments can surface internal implementation notes or debt markers.
+Risk: Repository scans may include file paths and comment text that reveal internal implementation details.
 
-Mitigation: Run the skill only in repositories intended for review and inspect the generated ledger before sharing it outside the project.
+Mitigation: Run the skill only in repositories the user intends to inspect, and review the report before sharing it.
 
-Risk: Persisting the ledger creates or updates a repository file when requested.
+Risk: Persisting a ledger changes the workspace.
 
-Mitigation: Keep the default read-only behavior unless a ledger file is explicitly needed, and review the destination path before writing.
+Mitigation: Write a ledger only after an explicit user request and use a clear destination such as KEN-DEBT.md.
 
 ## Reference(s):
 
@@ -36,17 +36,17 @@ Mitigation: Keep the default read-only behavior unless a ledger file is explicit
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Files]
+**Output Type(s):** [text, markdown, shell commands, guidance]
 
-**Output Format:** [Markdown report with inline shell commands and optional ledger file]
+**Output Format:** [Markdown report with optional shell command guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Read-only by default; may write a ledger file only when explicitly requested.]
+**Other Properties Related to Output:** [Read-only by default; optional ledger file output only when the user requests persistence.]
 
 ## Skill Version(s):
 
-1.1.0 (source: server release metadata)
+1.2.0 (source: server release evidence)
 
 ## Ethical Considerations:
 
