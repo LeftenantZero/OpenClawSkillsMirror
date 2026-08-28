@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release of backupclaw: backup and restore OpenClaw configuration files.\n\n- Backs up `~/.openclaw/` (excluding `workspace/`) to a user-specified, date-stamped directory, with diff-based change detection.\n- Manages backup directory via `~/.openclaw/backup.json`; prompts user if not set.\n- Allows backup directory change with the `backupclaw changedir <path>` command.\n- Maintains a changelog of changes in `changelog.md`.\n- Supports restoring configuration from any backup date.\n- Provides clear error handling and multilingual prompts.",
+  "created_at": 1773297269304,
+  "display_name": "backup claw",
+  "fetched_at": 1787939846410,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/backup.sh",
+    "scripts/restore.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "flyingtimes",
+    "handle": "flyingtimes",
+    "user_id": "s17a1crq2ecdvx8g934wzyh9yn83q44e"
+  },
+  "slug": "backupclaw",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/backupclaw",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=backupclaw&ownerHandle=flyingtimes",
+    "page_url": "https://clawhub.ai/flyingtimes/skills/backupclaw"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 793,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Backup and restore OpenClaw configuration files. Use when the user wants to backup ~/.openclaw/ configuration (excluding workspace) to a date-stamped directo...",
+  "updated_at": 1778491848315,
+  "version": "1.0.0"
+}
