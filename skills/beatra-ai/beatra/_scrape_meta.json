@@ -1,8 +1,8 @@
 {
-  "changelog": "Ask for the starter top-up before a video or voice clone, not before every other route.",
+  "changelog": "- Added support for creating digital-human presenter videos by synthesizing narration with speech, then animating a portrait with video, following new constraints on admitted formats and durations.\n- Clarified model discovery: specific capability-based payloads (e.g., {\"capability\":\"text_to_video\"}) must now be used for model selection and compatibility.\n- Documented new commands for checking credits and viewing the wallet ledger via `beatra.wallet.get` and `beatra.wallet.ledger`.\n- Updated video workflow documentation: narration for animated video must conform to the format/duration of the selected model.\n- Removed skill-card.md; expanded and clarified SKILL.md for improved guidance on public social lookup, supported tools, and safe uploads.",
   "created_at": 1787211626132,
-  "display_name": "Beatra Universal",
-  "fetched_at": 1787770224442,
+  "display_name": "Beatra",
+  "fetched_at": 1787932066459,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -37,7 +37,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1787297658722,
+    "updated_at": 1787882434129,
     "verdict": "clean"
   },
   "owner": {
@@ -53,12 +53,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 142,
+    "downloads": 182,
     "installs": 0,
     "stars": 0,
-    "versions": 2
+    "versions": 3
   },
   "summary": "Create image, video, music, speech, and look up public social data with Beatra",
-  "updated_at": 1787296934253,
-  "version": "2.7.2"
+  "updated_at": 1787881580284,
+  "version": "2.7.8"
 }
