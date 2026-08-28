@@ -1,6 +1,6 @@
 ## Description:
 
-Token-efficient assistant discipline for concise answers and task execution.
+Token-efficient assistant discipline for concise answers and task execution; includes optional file and Windows encoding utilities.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ GPL-3.0
 
 ## Use Case:
 
-Developers and agent users use ZeroToken to guide assistants toward concise task classification, targeted context gathering, and short actionable outputs. The skill also documents optional file-editing and encoding utility workflows for local development tasks.
+Developers and agent users use ZeroToken to guide AI assistants toward concise planning, targeted context gathering, minimal tool use, and short actionable outputs. It also provides optional utilities for environment detection and text encoding repair.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,36 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill may guide an agent to read or modify local files, run local Python utilities, or perform Git operations.
+Risk: The skill can influence tool choice and guide local file reads, writes, recursive scans, or encoding conversions.
 
-Mitigation: Install only when these local development capabilities fit the workspace policy, and review proposed file or Git changes before applying them.
+Mitigation: Review proposed file operations before execution and require an explicit user request before recursive rewrites or environment-cache use.
 
-Risk: Bulk encoding repair utilities can modify many files and may alter text unexpectedly if run over an overly broad target.
+Risk: Publishing and git workflows can affect public releases or repository history.
 
-Mitigation: Use preview and backup options where available, and limit encoding operations to the intended directory and file extensions.
+Mitigation: Require an explicit user request before any publish, git push, or commit-oriented workflow.
 
-Risk: Chinese-language and Windows/PowerShell guidance is environment-specific and could be inappropriate for other workflows.
+Risk: Environment detection caches host metadata locally.
 
-Mitigation: Use the Chinese and Windows-specific mode only when the user explicitly opts in or the environment clearly requires it.
+Mitigation: Use cached environment metadata only for requested environment-aware command execution and avoid sharing host details unnecessarily.
 
 ## Reference(s):
 
-- [Unicode Encoding Specification](docs/unicode-encoding-spec.md)
-- [ZeroToken ClawHub Skill Page](https://clawhub.ai/phoenixlucky/zerotoken-skill)
-- [Publisher Profile](https://clawhub.ai/user/phoenixlucky)
+- [ClawHub release page](https://clawhub.ai/phoenixlucky/skills/zerotoken-skill)
+- [Unicode encoding specification](docs/unicode-encoding-spec.md)
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, markdown, code, shell commands, configuration]
+**Output Type(s):** [Guidance, Markdown, Code, Shell commands, Configuration]
 
-**Output Format:** [Markdown guidance with optional code blocks and shell commands]
+**Output Format:** [Markdown text with optional code blocks and command snippets]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Outputs are intended to be concise and task-focused.]
+**Other Properties Related to Output:** [Concise by default; may include local file edits or encoding reports when explicitly requested.]
 
 ## Skill Version(s):
 
-1.10.0 (source: server evidence, SKILL.md frontmatter, CHANGELOG, package.json)
+1.13.2 (source: SKILL.md frontmatter, package.json, CHANGELOG released 2026-08-28)
 
 ## Ethical Considerations:
 

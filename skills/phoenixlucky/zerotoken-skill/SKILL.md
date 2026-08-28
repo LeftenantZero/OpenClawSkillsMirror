@@ -1,6 +1,6 @@
 ---
 name: zerotoken-skill
-version: 1.10.0
+version: 1.13.2
 description: Token-efficient assistant discipline for concise answers and task execution. Use when the user asks for direct, low-token work, or invokes this skill; includes optional file and Windows encoding utilities declared below.
 metadata:
   security:
@@ -14,14 +14,15 @@ metadata:
     permissions-declared: true
     language: "zh-CN (documentation primary); requires user opt-in for Chinese-mode prompts"
     language_opt_in: true
-    platforms: "cross-platform; F mode is Windows/PowerShell specific and conditional"
+    platforms: "auto-detects OS at session start (detect_env.py): Windows/PowerShell -> Mode F auto-enabled; Linux/macOS -> Mode G; Chinese text support built in"
 ---
 
 # ZeroToken Skill
 
 > **语言选择 / Language Selection**
 > 本文档以中文编写，包含中文环境特定引导内容。
-> 仅当你在 Windows/PowerShell + 中文环境下工作，且你确认需要中文引导时，才启用 F 模式。
+> 中文支持内置于环境识别（detect_env.py）：检测到 Windows/PowerShell 系统自动启用 F 模式，
+> 检测到 Linux/macOS 启用 G 模式，无需用户确认中文意图。
 > 其他情况默认使用英文工作流。
 > *(This skill adapts to your interaction language. Chinese guidance is opt-in only.)*
 
@@ -43,8 +44,11 @@ metadata:
 >
 > **语言说明：** 本文档以中文为主要编写语言。中文引导内容需要用户显式确认后生效——
 > 默认工作语言为英文，除非你明确使用中文交互或启用了 F 模式。
-> **平台说明：** 本 Skill 跨平台可用。F 模式（Windows/PowerShell 适配）仅限于
-> Windows/PowerShell + 中文文本环境，为可选模式而非默认行为。
+> **平台说明：** 本 Skill 跨平台可用。会话开始时通过 `python scripts/detect_env.py`
+> 自动识别系统参数（OS / Shell / 控制台编码 / 中文支持 / PowerShell 版本），
+> 结果保存到 `.zerotoken/environment.json`（7 天有效期）：
+> Windows/PowerShell 系统自动启用 F 模式（不要求存在中文文本）；
+> Linux/macOS 走 G 模式（POSIX 工作流）。
 >
 > 安装前请确认这些能力符合你的安全策略。
 
@@ -61,7 +65,8 @@ metadata:
 | 反复出同类 bug / 加功能越来越难 / 架构与需求不匹配 / 需要大改 | **E. 重大重构/架构调整** | 问题诊断 + 目标方案 + 迁移路线图 | ``codegraph_context`` → ``explore`` → ``codegraph_trace`` → 分批 ``read_file`` |
 | 用户明确说"省 token" | **ZeroToken 强化** | 最短可执行输出 | 同上，但跳过所有非必要探索 |
 | 用户说"详细解释/教学" | **➡ 退出 ZeroToken** | 常规详尽模式 | 不限 |
-| 当前在 Windows/PowerShell 下工作，有中文文本 | **F. Windows/PowerShell 环境适配** | 按 12 条陷阱规则调整工作流 | `write_file`(写 .py 脚本) → `python`(执行) → `git config core.quotepath false` → `complete_step`(签收) |
+| 当前系统是 Windows/PowerShell（detect_env.py 自动识别） | **F. Windows/PowerShell 环境适配** | 系统参数已保存，按 15 条陷阱规则调整工作流 | `python scripts/detect_env.py` → `write_file`(写 .py 脚本) → `python`(执行) → `git config core.quotepath false` → `complete_step`(签收) |
+| 当前系统是 Linux/macOS（detect_env.py 自动识别） | **G. POSIX 标准工作流** | 按 POSIX 规则工作，禁用 PowerShell 语法 | 常规 shell 工具链（sh/bash/zsh） |
 
 ---
 
@@ -80,6 +85,10 @@ metadata:
 ✅ `verification` 证据的 `command` 必须与会话历史中的命令文本完全一致
 ✅ 每次工具调用只签一个 `complete_step`，按步骤顺序逐一推进（`blocked: only one successful complete_step is allowed per tool-call round`）
 7. **设置停止条件** — 已定位目标、必要调用方/数据源和验证方式后停止搜索；同一文件未变化时不重复读取。
+8. **先识别环境，再选 Shell** — 任何涉及命令行执行的任务，第一步先获取系统参数并保存：
+   `python scripts/detect_env.py` → `.zerotoken/environment.json`（7 天有效期）。
+   之后所有命令按已保存的系统参数选择：Windows 一律 PowerShell（禁用 bash），
+   Linux/macOS 用 sh/bash/zsh；中文支持能力以探测结果为准。
 
 ---
 
@@ -157,7 +166,7 @@ Chrome MCP 底层是真实浏览器（Playwright/Chrome），能访问 **网络�
 
 调用 Chrome MCP 时，**必须使用 `mcp_call.py`（Python 包装）**，不要直接在 PowerShell 中调 `node mcp-bridge.js`，以避免 PowerShell 引号嵌套和 GBK 编码崩溃问题。`mcp_call.py` 已内置规避方案。
 
-```bash
+```text
 # ✅ 正确的搜索方式（任何搜索场景）
 python .reasonix\skills\mcp-streamable-connect\mcp_call.py search 搜索关键词
 
@@ -239,13 +248,17 @@ python .reasonix\skills\mcp-streamable-connect\mcp_call.py search 今日要闻
 - **不提前优化**：只重构当前确实有问题的部分，不顺手"优化"无关代码。
 - **留退出路径**：每一步都可以撤销或暂停，不做不可逆的一次性大改。
 
-### F. 🖥️ Windows/PowerShell 环境适配 — "当前是 Windows/PowerShell + 中文环境"
+### F. 🖥️ Windows/PowerShell 环境适配 — "detect_env.py 识别到 Windows 系统"
 
-> **⚠️ 此模式为可选环境适配，非默认行为。** 仅当以下条件同时满足时才启用。macOS / Linux 用户或纯英文工作流完全不需要此模式。
+> **自动启用，无需用户请求。** `python scripts/detect_env.py` 探测到 Windows 系统即进入
+> 此模式——不要求任务涉及中文。中文支持内置于环境识别结果（`.zerotoken/environment.json`
+> 的 `console.cjk_capable` 字段），按探测结果决定是否走文件验证路径。
 
-**适用条件**：当前工作在 Windows PowerShell 环境，且任务涉及中文文本（文件内容、Git 提交、日志分析等）。
+**适用条件**：`detect_env.py` 报告 `os.name == "windows"` 且推荐 shell 为 PowerShell。
+系统参数（OS 版本、控制台代码页、PowerShell 发行版、Git quotepath）已在探测时保存，
+后续所有命令选择以保存的参数为准。
 
-**不需要此模式**：macOS / Linux 环境，或完全无中文的纯英文工作流。
+**不适用**：macOS / Linux → 走 G 模式（POSIX 标准工作流）。
 
 #### 已知陷阱与解决方案
 
@@ -263,6 +276,9 @@ python .reasonix\skills\mcp-streamable-connect\mcp_call.py search 今日要闻
 | 10 | **PowerShell `&&` 链式操作不兼容** | PowerShell 不支持 bash 风格的 `&&` 运算符，`cmd1 && cmd2` 报语法错误 | ✅ 用 `;` 无条件链式<br>✅ 用 `if ($?) { ... }` 做条件链式 |
 | 11 | **内联 `python -c` 中文 SyntaxError** | `python -c "含中文的代码"` 在 PowerShell 下因编码问题导致 SyntaxError | ❌ 不要用 `python -c` 传入含中文的代码<br>✅ 改为 `write_file` 写 `.py` 脚本执行 |
 | 12 | **终端显示层中文乱码（文件内容正确）** | PowerShell 终端显示中文为乱码/问号，但文件内容实际正确（GBK 终端显示 UTF-8 编码文件） | ✅ 用文件大小/行数验证<br>✅ 用 `chcp 65001` 切换终端到 UTF-8 |
+| 13 | **PowerShell 读取附件时中文乱码显示** | 用 `Get-Content` / `type` 读取附件（用户上传的 .md/.txt/.csv 等）时中文显示为乱码（如 `鐗堟湰鍙?1.9.1`），但用 `read_file` 或编辑器打开内容正常<br>根因：Windows PowerShell 5.1 的 `Get-Content` 默认按 ANSI 代码页（中文系统为 GBK/936）解码无 BOM 的 UTF-8 文件，属**显示层**问题，文件本身未损坏<br>⚠️ 若把"显示乱码"误判为"文件被污染"并盲目转码重写，反而会造成真正的污染 | ✅ **优先用 `read_file` 工具读取附件**（按 UTF-8 解码，显示正确）<br>✅ 必须在 PowerShell 中读时显式指定编码：`Get-Content -Encoding UTF8 附件.md`（PS 7+ 默认 UTF-8；5.1 必须加 `-Encoding UTF8`）<br>✅ 附件本身是 GBK/UTF-16 等非 UTF-8 编码时，用 `safe_read()` 自动检测（UTF-8 BOM / UTF-16 BOM / GB18030）<br>✅ 先确认附件真实编码再处理；显示乱码≠文件损坏，禁止据此盲目转码 |
+| 14 | **PowerShell 写入命令默认编码不统一（写方向污染）** | PS 5.1 下 `Set-Content` / `Add-Content` 默认按 GBK 写出：纯汉字变成 GBK 字节（追加进 UTF-8 文件即污染），emoji 等字符**静默写成 `?` 丢字**；`Out-File` / `>` 重定向默认 UTF-16 LE（带 BOM）；`-Encoding UTF8` 写出的又是 UTF-8 **带 BOM**（部分工具解析异常）<br>已实测：同一 emoji 字符串经 `Set-Content` 默认写出为字节 `3F`（问号） | ✅ PowerShell 中写 UTF-8 文本统一用 .NET API：`[IO.File]::WriteAllText($path, $text, (New-Object System.Text.UTF8Encoding($false)))`（无 BOM；Append 用 `WriteAllText(..., $text, $enc)` 前先读原内容，或直接用 Python）<br>✅ 跨脚本/含中文的写入一律走 Python：`safe_io.safe_write()` / `safe_append()`（UTF-8 无 BOM + LF）<br>✅ 万不得已必须用 `Set-Content -Encoding UTF8` 时，知晓会带 BOM；禁止用其默认编码写任何非 ASCII 内容 |
+| 15 | **`Add-Content -Encoding UTF8` 追加不补换行导致粘连 + 带 BOM** | 即使显式指定 `-Encoding UTF8`，`Add-Content` 追加到不以换行结尾的文件时**不自动补换行**，两段内容直接粘连成一行（实测：`base` + 追加 → `base## 标题 ...`）；且写出的内容带 UTF-8 BOM | ✅ 追加操作改用 `safe_io.safe_append()`：自动补换行、UTF-8 无 BOM<br>✅ 纯 PowerShell 方案需自行判断末尾换行再拼接，复杂且易错，不建议<br>✅ 追加后发现首段粘连，检查是否由本陷阱导致，不要误判为内容错误 |
 
 #### 脚本工具（scripts/ 目录）
 
@@ -270,7 +286,8 @@ python .reasonix\skills\mcp-streamable-connect\mcp_call.py search 今日要闻
 
 | 脚本 | 解决问题 | 用法示例 |
 |------|----------|----------|
-| `safe_io.py` | #2 编码不一致（UTF-8 BOM / UTF-16 BOM / GB18030） / #6 无法 print 中文 / #8 安全追加替代 Add-Content | `from safe_io import safe_read, safe_write, safe_append, write_result` |
+| `detect_env.py` | 环境识别：探测 OS / Shell / 控制台编码 / 中文支持 / PowerShell 版本并保存系统参数 | `python scripts/detect_env.py --force`（结果存 `.zerotoken/environment.json`，7 天有效期） |
+| `safe_io.py` | #2 编码不一致（UTF-8 BOM / UTF-16/32 BOM / GB18030） / #6 无法 print 中文 / #8 安全追加替代 Add-Content（自动补换行） / #13 附件乱码读取（自动检测编码） / #14 写方向编码统一（safe_write 无 BOM + LF） | `from safe_io import safe_read, read_text, sniff_encoding, decode_bytes, safe_write, safe_append, write_result`（编码无法确定时显式抛 UnknownEncodingError，不再静默替换） |
 | `detect_gbk_contamination.py` | #8 检测修复 GBK 编码污染 | `python scripts/detect_gbk_contamination.py scan .` / `python scripts/detect_gbk_contamination.py fix . --backup` |
 | `batch_edit.py` | #3 edit_file 连续编辑阻塞 | `python scripts/batch_edit.py file.json replacements.json` |
 | `fix_encoding.py` | #2 批量编码转换 | `python scripts/fix_encoding.py scan .` / `python scripts/fix_encoding.py convert . --backup` |
@@ -279,10 +296,11 @@ python .reasonix\skills\mcp-streamable-connect\mcp_call.py search 今日要闻
 
 #### 推荐工作流
 
-当处于 Windows/PowerShell + 中文环境时，按以下步骤替代默认工作流：
+当 `detect_env.py` 识别到 Windows 系统时，按以下步骤替代默认工作流：
 
 ```text
-0. （首次）."scripts/init_env.ps1" 初始化 Git + 编码环境
+0. （首次）python scripts/detect_env.py 探测系统参数并保存
+   （.zerotoken/environment.json，7 天有效；之后每次会话自动复用）
 1. write_file 写 Python 更新脚本（.py）
 2. python "script.py" 执行（避免 PowerShell + edit_file 的所有问题）
 3. git diff --stat 验证文件变更
@@ -326,6 +344,64 @@ with open(path, 'a', encoding='utf-8', newline='\n') as f:
 ❌ **不使用 `python -c` 内联含中文的代码** — 改用 `write_file` + `python "script.py"` 两步法
 ❌ **不使用 `&&` 链式命令** — PowerShell 不支持，改用 `;` 或 `if ($?) { ... }`
 ❌ **不依赖终端输出验证中文内容** — 用文件内容验证替代
+❌ **不用 `Get-Content` 直接查看含中文的附件** — 5.1 默认按 GBK 解码会显示乱码，改用 `read_file` 工具或 `Get-Content -Encoding UTF8`；显示乱码≠文件损坏，禁止据此盲目转码
+❌ **不在 PS 5.1 中用 `Set-Content` / `Add-Content` / `Out-File` 的默认编码写任何非 ASCII 内容** — 默认 GBK 会污染 UTF-8 文件、emoji 静默变 `?`；写方向统一走 Python `safe_io.safe_write()` / `safe_append()`，或 .NET `[IO.File]::WriteAllText($path, $text, [Text.UTF8Encoding]::new($false))`
+❌ **不依赖 `Add-Content -Encoding UTF8` 做追加** — 仍会带 BOM 且目标不以换行结尾时不补换行导致内容粘连；统一用 `safe_io.safe_append()`
+
+### G. 🐧 POSIX 标准工作流 — "detect_env.py 识别到 Linux/macOS"
+
+> `python scripts/detect_env.py` 探测到 Linux / macOS 时进入此模式。
+> PowerShell 专属规则（GBK 污染、Add-Content、PS 5.1 编码矩阵等）**不适用**，
+> 不要在 POSIX 系统上套用 F 模式的规避手段。
+
+- Shell 用 sh/bash（macOS 默认 zsh），常规 Unix 工具链
+- 中文支持取决于 locale（`echo $LANG`）：非 UTF-8 locale 下终端显示中文可能乱码，
+  内容验证同样走文件而非终端显示
+- 文件编码仍统一 UTF-8（规范见 `docs/unicode-encoding-spec.md`，与平台无关）
+- 其余按 ZeroToken 标准工作流执行
+
+---
+
+## 📤 ClawHub 发布（skill 分发与同步）
+
+> 本项目通过 ClawHub 分发：`https://clawhub.ai/phoenixlucky/zerotoken-skill`。
+> 以下规则来自 v1.12.0 实测发布过程（2026-08），发布任何版本时必须遵守。
+
+**关键事实：**
+- ❗ **ClawHub 不是 Git 端点** — 仓库远程 `clawhub` 只是发布页地址，
+  `git fetch/push clawhub` 必然 404（`repository not found`）。**发布必须走 clawhub CLI**，
+  不能指望 git push。
+- 发布 CLI 由 pnpm 全局安装：`%LOCALAPPDATA%\pnpm\clawhub.CMD`
+  （PowerShell `PATH` 未包含 pnpm 目录时直接调 `clawhub` 会「无法识别」，需用全路径）。
+- 登录状态用 `clawhub whoami` 验证（应输出 `phoenixlucky`）。
+- 新版本提交后 ClawHub 会跑**安全扫描**（异步、分钟级），**提交成功 ≠ 立即可见**。
+
+**发布陷阱表（C 系，与 F 模式 #1-15 区分）：**
+
+| # | 陷阱 | 症状 | 解决方案 |
+|---|------|------|----------|
+| C1 | **PowerShell `curl` 是别名** | `curl -s -o NUL https://...` 报「缺少参数 SessionVariable」 | PS 里 `curl` = `Invoke-WebRequest`（参数不兼容）；探测网络/API 一律用 **`curl.exe`** |
+| C2 | **`clawhub publish` 相对路径解析错误** | `publish .` 报 `Error: SKILL.md required` | CLI 默认 `--dir skills`（相对 workdir），相对路径找不到根目录 SKILL.md；✅ 传**绝对路径**：`clawhub publish D:\...\zerotoken-skill` |
+| C3 | **发布命令长时零输出** | 前台发布跑 2 分钟无输出被超时终止，ClawHub 无变化 | 上传 registry 需 5-6 分钟且**全程零输出**（易误判卡死）；✅ 用后台运行（`run_in_background`）+ 轮询等待，勿在前台等超时 |
+| C4 | **安全扫描异步** | 发布提交成功（`Update submitted ... pending security scans before it becomes public`）但 registry/页面仍是旧版本号 | 平台规则：扫描通过才公开；✅ 用 `clawhub inspect phoenixlucky/zerotoken-skill --json` 或页面 `og:image` 复查，看到新版本号即已公开 |
+| C5 | **发布前工作区有未提交改动** | 工作区脏时发布，未提交改动**已随包上传 ClawHub** 但 GitHub 缺失，两端分叉 | ✅ 发布前先 `git status` 确认干净（或先提交）再发布；发布后复查 `git status` |
+
+**推荐发布时序（每次发布固定流程）：**
+
+```text
+0. git status 确认工作区干净；git log 记录待发布版本号
+1. 回归测试：python scripts/test_safe_io.py、python scripts/test_detect_env.py
+2. 编码审计：python scripts/audit_encoding.py --root . --out audit_result.txt
+   （发布包不应含编码违规；审计完删除 audit_result.txt）
+3. git push origin main（GitHub 先行）
+4. clawhub publish <仓库绝对路径> --slug zerotoken-skill --owner phoenixlucky \
+     --version <新版本> --changelog "<变更摘要>" \
+     --source-repo https://github.com/phoenixlucky/zerotoken-skill \
+     --source-commit <HEAD> --no-input
+   —— 先加 --dry-run 预览（应输出 Would publish <slug>@<version>），
+      确认无误后移除 --dry-run 再次执行，并放后台运行（陷阱 C3）
+5. clawhub inspect phoenixlucky/zerotoken-skill 复查公开状态（异步，陷阱 C4）
+```
 
 ---
 
