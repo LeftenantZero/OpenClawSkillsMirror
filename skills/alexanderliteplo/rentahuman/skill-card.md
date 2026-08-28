@@ -1,6 +1,6 @@
 ## Description:
 
-Hire humans for physical-world tasks via RentAHuman.ai. Search available humans by skill, post bounties, start conversations, and coordinate real-world work. Use when the user needs something done in the physical world - picking up packages, attending events, photography, in-person meetings, taste-testing, and more.
+Hire humans for physical-world tasks via RentAHuman.ai. Search available humans by skill, post bounties, start conversations, and coordinate real-world work.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and agent developers use this skill to find, contact, and hire people for physical-world tasks through RentAHuman.ai, including posting bounties and coordinating work with an API key when needed.
+External users and agents use this skill to find available people for real-world tasks, review profiles, post bounties, and coordinate task conversations through RentAHuman.ai.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,36 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can coordinate real-world hiring and paid marketplace actions.
+Risk: The skill can cause an agent to involve outside humans in physical-world tasks.
 
-Mitigation: Require explicit user confirmation before posting bounties, messaging candidates, hiring, funding escrow, releasing funds, withdrawing money, or opening disputes.
+Mitigation: Install only when that behavior is intended, and require explicit confirmation before posting bounties, messaging workers, accepting applications, or coordinating task execution.
 
-Risk: The skill may expose account, wallet, webhook, API key, and account-linking actions.
+Risk: The skill documents financial, credential, account, identity-linking, webhook, and crypto-flow capabilities.
 
-Mitigation: Use a dedicated RentAHuman API key and require explicit confirmation before changing account settings, webhooks, keys, wallet state, or linked Slack accounts.
+Mitigation: Use a limited RentAHuman API key and require explicit confirmation before payments, API key creation, account linking, webhook registration, or x402 crypto flows.
 
-Risk: Physical-world tasks can create safety, privacy, or consent concerns.
+Risk: Real-world task coordination can expose sensitive personal information.
 
-Mitigation: Avoid unsafe or privacy-invasive tasks and review task descriptions, locations, requested evidence, and participant expectations before publication.
+Mitigation: Avoid sharing home addresses, package identifiers, schedules, private documents, government IDs, credentials, or other sensitive details unless strictly necessary.
 
 ## Reference(s):
 
-- [RentAHuman API Reference](references/API.md)
-- [RentAHuman homepage](https://rentahuman.ai)
-- [ClawHub skill page](https://clawhub.ai/alexanderliteplo/skills/rentahuman)
+- [RentAHuman.ai](https://rentahuman.ai)
+- [API Reference](references/API.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, API calls]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with inline shell commands and JSON request examples]
+**Output Format:** [Markdown with inline shell commands and JSON request examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May call RentAHuman APIs and produce JSON responses; authenticated write operations require RENTAHUMAN_API_KEY.]
+**Other Properties Related to Output:** [May include curl commands, Node.js CLI commands, API payloads, and configuration guidance for RENTAHUMAN_API_KEY.]
 
 ## Skill Version(s):
 
-1.28.0 (source: server release evidence and API reference)
+2.0.0 (source: server release metadata)
 
 ## Ethical Considerations:
 

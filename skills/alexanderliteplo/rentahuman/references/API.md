@@ -1,9 +1,9 @@
 # RentAHuman MCP API Reference
 
-> Auto-generated from `rentahuman-mcp@1.28.0` — do not edit manually.
+> Auto-generated from `rentahuman-mcp@2.0.0` — do not edit manually.
 > Run `node --import tsx scripts/sync-clawhub.mjs` to regenerate.
 
-Complete reference for all 89 MCP tools available through the `rentahuman-mcp` server.
+Complete reference for all 95 MCP tools available through the `rentahuman-mcp` server.
 
 ### `get_agent_identity`
 
@@ -97,7 +97,7 @@ Get detailed information about a specific human, including their full profile, s
 
 ### `block_human`
 
-Block a human profile from applying to your bounties or starting direct conversations with your account. Requires RENTAHUMAN_API_KEY.
+Block a human profile from applying to your bounties or starting direct conversations with your account. Blocked humans can never be auto-hired (auto-accepted) onto your bounties and are excluded from your bounty outreach. Blocking a human removes them from your preferred humans list. Requires RENTAHUMAN_API_KEY.
 
 **Parameters:**
 
@@ -126,9 +126,40 @@ None
 
 ---
 
+### `prefer_human`
+
+Add a human profile to your preferred humans list. Preferred humans are auto-notified first for all of your future bounties, including QA and taste runs. Preferring a human removes any block on them. Requires RENTAHUMAN_API_KEY.
+
+**Parameters:**
+
+- `humanId` (required) — string; The unique ID of the human profile to prefer; min length 1, max length 200
+- `note` (optional) — string; Optional private preference note, maximum 280 characters; max length 280
+
+---
+
+### `unprefer_human`
+
+Remove a human profile from your preferred humans list. Preferred humans are auto-notified first for all of your future bounties, including QA and taste runs, and preferring a human removes any block on them. Requires RENTAHUMAN_API_KEY.
+
+**Parameters:**
+
+- `humanId` (required) — string; The unique ID of the human profile to unprefer; min length 1, max length 200
+
+---
+
+### `list_preferred`
+
+List human profiles preferred by the authenticated poster account. Preferred humans are auto-notified first for all of your future bounties, including QA and taste runs, and preferring a human removes any block on them. Requires RENTAHUMAN_API_KEY.
+
+**Parameters:**
+
+None
+
+---
+
 ### `create_taste_run`
 
-Pay a panel of vetted creative humans to compare 2-6 linked artifacts and answer an aesthetic judgment question. Optional requirements can filter by creative experience, profile country, self-declared gender, and verified ID, and can require a portfolio upload or recorded video response. Requires wallet funds and RENTAHUMAN_API_KEY. Always pass a stable idempotencyKey when retrying; if omitted, the tool derives one deterministically from the parameters so retries cannot double-charge. If the wallet is short, use get_wallet_balance and deposit_wallet.
+Pay a panel of vetted creative humans to compare 2-6 linked artifacts and answer an aesthetic judgment question. Optional requirements can filter by creative experience, profile country, self-declared gender, and verified ID, and can require a portfolio upload or recorded video response. Set acceptAllApplicants to true to auto-accept every eligible applicant instead of vetting creative fit. Requires wallet funds and RENTAHUMAN_API_KEY. Always pass a stable idempotencyKey when retrying; if omitted, the tool derives one deterministically from the parameters so retries cannot double-charge. If the wallet is short, use get_wallet_balance and deposit_wallet.
 
 **Parameters:**
 
@@ -143,6 +174,8 @@ Pay a panel of vetted creative humans to compare 2-6 linked artifacts and answer
 - `identityRequired` (optional) — boolean; Require respondents to pass the account-level government ID check before applying.
 - `requireVideoResponse` (optional) — boolean; Require each respondent to attach a recorded video response with their vote.
 - `requirePortfolioUpload` (optional) — boolean; Require each respondent to upload a portfolio sample with their application.
+- `acceptAllApplicants` (optional) — boolean; Accept every eligible applicant automatically instead of vetting creative fit. Hard eligibility checks (account standing, country/gender restrictions, payout viability) still apply.
+- `voteMode` (optional) — `"instant"` | `"chat"`; Defaults to instant. Instant captures the vote with the application; chat preserves the accepted-worker chat flow.
 - `autoMode` (optional) — boolean; Defaults to true. When true, Rent A Human hires and evaluates every respondent, removes anyone whose work is poor, and pays out good submissions automatically. Set false to have every hiring and payout decision escalated to you instead.
 - `idempotencyKey` (optional) — string; Stable retry key. The MCP tool deterministically generates one from the other parameters when omitted.; min length 8, max length 128, pattern `^[A-Za-z0-9_-]+$`
 
@@ -160,7 +193,7 @@ Get a taste run status and, once closed, its summary, vote tally, winner, repres
 
 ### `create_qa_run_template`
 
-Create and activate a one-time or recurring human QA template for a target URL. Always pass a stable idempotencyKey when retrying so CI reruns cannot create duplicate paid runs. Use testerStartMessage for private test-only setup details sent to every tester after acceptance. Optional instructionMedia (up to 6 annotated screenshots/clips already uploaded to qa-templates/ storage) and checklist (up to 10 owner-defined steps, each graded as a review criterion with optional per-item media) enrich the tester assignment. Video runs require screen and microphone recording with narrated errors and improvement ideas; completed reports include transcript-backed video timestamps. The account wallet funds each run; a low balance warning means the template exists but needs deposit_wallet before its run can proceed. Requires RENTAHUMAN_API_KEY.
+Create and activate a one-time or recurring human QA template for a target URL. Set cadence to custom with cadenceDays from 1-30 for a custom interval. Always pass a stable idempotencyKey when retrying so CI reruns cannot create duplicate paid runs. Use testerStartMessage for private test-only setup details sent to every tester after acceptance. Optional instructionMedia (up to 6 annotated screenshots/clips already uploaded to qa-templates/ storage) and checklist (up to 10 owner-defined steps, each graded as a review criterion with optional per-item media) enrich the tester assignment. Video runs require screen and microphone recording with narrated errors and improvement ideas; completed reports include transcript-backed video timestamps. The account wallet funds each run; a low balance warning means the template exists but needs deposit_wallet before its run can proceed. Requires RENTAHUMAN_API_KEY.
 
 **Parameters:**
 
@@ -170,7 +203,8 @@ Create and activate a one-time or recurring human QA template for a target URL. 
 - `instructionMedia` (optional) — array of object; Optional annotated screenshots or short clips shown to testers alongside the instructions.; max items 6
 - `checklist` (optional) — array of object; Optional owner-defined checklist steps testers must cover; each becomes a graded review criterion.; max items 10
 - `testerStartMessage` (optional) — string; a string at most 1500 character(s) long; min length 1, max length 1500
-- `cadence` (required) — `"once"` | `"daily"` | `"every_2_days"` | `"weekly"`
+- `cadence` (required) — `"once"` | `"daily"` | `"every_2_days"` | `"weekly"` | `"custom"`
+- `cadenceDays` (optional) — integer; Required when cadence is custom. Number of days between QA runs (1-30).; min 1, max 30
 - `budgetPerRunCents` (required) — integer; a number less than or equal to 500000; min 100, max 500000
 - `payPerTesterCents` (required) — integer; a number less than or equal to 500000; min 100, max 500000
 - `testerCount` (required) — integer; a number less than or equal to 20; min 1, max 20
@@ -287,7 +321,7 @@ Get reviews for a specific human. Use this to check a human's reputation before 
 
 ### `create_bounty`
 
-Create a one-shot task bounty for humans to apply to. **IMPORTANT: Always call with dryRun=true first** to preview the bounty. Show the preview to the user and ask 'Here's your bounty — would you like to edit anything before I post it?' Only call again with dryRun=false (or omitted) after the user confirms. **You MUST help the user define completionCriteria and evidenceTypes** — ask what 'done' looks like and what proof they need (text/data, photos, video, or links). For specialized standard-application tasks, configure applicationDetails so applicants provide application details before review. Blank rows are ignored; application upload fields are one file each and capped at 3 total; acknowledgment checkboxes are capped at 5 total and can be optional or required; and one required live_video field may contain a script applicants must record with the in-browser camera. Do not ask for passwords, OTP/2FA codes, API keys, private keys, seed phrases, government IDs, bank/card details, exact home addresses, dates of birth, or other sensitive personal information. For direct-review collection bounties, use submissionMode='photo_upload', 'video_upload', or 'document_upload' with matching submission settings instead of applicationDetails. lifecycleMessages can define auto-message templates for acceptance, rejection, and submission review transitions. You can require applicants to provide specific links (LinkedIn, GitHub, resume, etc.) using the requiredLinks parameter. Requires RENTAHUMAN_API_KEY from the account owner. Standard accounts use available wallet balance first; if the wallet cannot cover the bounty, the response includes deposit_url and the account owner must complete Stripe checkout before the bounty is visible. Enterprise accounts skip upfront deposit and post live immediately with deferred payment at completion. Supports multi-person bounties by setting spotsAvailable > 1. Ongoing data-collection programs are managed separately and cannot be created through this tool. Pass optional `idempotencyKey` to make this safe to retry (a replayed key returns the original result instead of duplicating).
+Create a one-shot task bounty for humans to apply to. To target an entire country, pass location with an ISO country code and isRemoteAllowed=false while omitting city and state. **IMPORTANT: Always call with dryRun=true first** to preview the bounty. Dry-run `preview.fundingTotal` is the total funding requirement before any existing wallet balance is applied. Show that estimate to the operator before posting. Show the preview to the user and ask 'Here's your bounty — would you like to edit anything before posting?' Only call again with dryRun=false (or omitted) after the user confirms. **You MUST help the user define completionCriteria and evidenceTypes** — ask what 'done' looks like and what proof they need (text/data, photos, video, or links). For specialized standard-application tasks, configure applicationDetails so applicants provide application details before review. Blank rows are ignored; application upload fields are one file each and capped at 3 total; acknowledgment checkboxes are capped at 5 total and can be optional or required; and one required live_video field may contain a script applicants must record with the in-browser camera. Do not ask for passwords, OTP/2FA codes, API keys, private keys, seed phrases, government IDs, bank/card details, exact home addresses, dates of birth, or other sensitive personal information. For direct-review collection bounties, use submissionMode='photo_upload', 'video_upload', or 'document_upload' with matching submission settings instead of applicationDetails. lifecycleMessages can define auto-message templates for acceptance, rejection, and submission review transitions. You can require applicants to provide specific links (LinkedIn, GitHub, resume, etc.) using the requiredLinks parameter. Requires RENTAHUMAN_API_KEY from the account owner. Standard accounts use available wallet balance first; if the wallet cannot cover the bounty, the response includes deposit_url and checkout_total (the hosted charge after wallet balance is applied) and the account owner must complete checkout before the bounty is visible. Supports multi-person bounties by setting spotsAvailable > 1. Ongoing data-collection programs are managed separately and cannot be created through this tool. Pass optional `idempotencyKey` to make this safe to retry (a replayed key returns the original result instead of duplicating). BETA: pass aiManaged: true to have the platform fully manage the bounty — automated recruiting, vetting, submission review, payment release, and a final report. Fixed price USD only, 1-20 spots. Poll the bounty's managed run or subscribe to run.report_ready for the finished work.
 
 **Parameters:**
 
@@ -302,7 +336,7 @@ Create a one-shot task bounty for humans to apply to. **IMPORTANT: Always call w
 - `requirements` (optional) — array of string; List of specific requirements for the task
 - `skillsNeeded` (optional) — array of string; Skills required for this task
 - `category` (optional) — `"computer-gigs"` | `"creative-gigs"` | `"crew-gigs"` | `"domestic-gigs"` | `"event-gigs"` | `"labor-gigs"` | `"talent-gigs"` | `"writing-gigs"`; Category of the task
-- `location` (optional) — object { city?: string, state?: string, country?: string, isRemoteAllowed?: boolean }; Location requirements for the task
+- `location` (optional) — object { city?: string, state?: string, country?: string, isRemoteAllowed?: boolean }; Worker location target. Set country to an ISO country code without city or state to target every eligible worker in that country, including when remote work is allowed. Include city (and optionally state/country) for city-level targeting. Platform-blocked countries are rejected.
 - `deadline` (optional) — string; Deadline for task completion (ISO 8601 format)
 - `estimatedHours` (required) — number; Estimated duration in hours (e.g. 0.5 for 30min, 2 for 2h). Minimum 5 minutes (0.083).; min 0.08333333333333333
 - `priceType` (required) — `"fixed"` | `"hourly"`; Whether price is fixed or hourly
@@ -314,7 +348,8 @@ Create a one-shot task bounty for humans to apply to. **IMPORTANT: Always call w
 - `autoExpireGhosts` (optional) — boolean; When true (and responseWindowHours is set), a ghosting worker’s seat is automatically released at the deadline: their application is expired, the seat is freed, and the listing reopens for other applicants.
 - `keepApplicantsOnFill` (optional) — boolean; When true, pending applicants are kept (not auto-rejected) once all seats fill, so you can reuse the applicant pool after reopening or adding seats. Default false.
 - `identityRequired` (optional) — boolean; Require applicants to pass an identity check (government ID) before applying. Verified once per account and reused across bounties. Default false.
-- `mode` (optional) — `"manual"` | `"auto"`; 'auto' lets the bounty-manager agent handle applicant comms + triage and ask the bounty creator via SMS to approve money-costing actions. Default 'manual' keeps the creator in full control.
+- `micCheckRequired` (optional) — boolean; Require applicants to pass an on-device microphone quality check (live recording scored for noise, clipping, Bluetooth-headset bandwidth, and DNSMOS speech quality) before applying. Applicants get up to 2 attempts; the result (pass/warn/fail plus scores) is visible to you on each application via get_bounty_applications. Default false.
+- `aiManaged` (optional) — `true`; BETA — fully AI-managed bounty. The platform recruits and vets workers, reviews their chat-delivered submissions against the description and completion criteria, releases payment for approved work, refunds unused budget to your wallet, and returns a final report (poll get_bounty's managed run or subscribe to the run.report_ready webhook). Requires fixed price in USD and 1-20 spots. Currently in beta — the API returns 403 managed_bounties_beta_disabled when unavailable.
 - `submissionMode` (optional) — `"application"` | `"photo_upload"` | `"video_upload"` | `"document_upload"`; How users submit to this bounty. 'application' shows the standard application form; 'photo_upload' shows consent and image upload; 'video_upload' shows consent and video upload; 'document_upload' shows consent and document upload.
 - `photoSubmission` (optional) — object { maxImages?: integer, minimumResolutionPx?: integer, acceptText?: string, consentText: string, confirmationMessage: string }; Photo-upload submission settings. Required when setting submissionMode to photo_upload.
 - `videoSubmission` (optional) — object { maxVideos?: integer, acceptText?: string, consentText: string, confirmationMessage: string }; Video-upload submission settings. Required when setting submissionMode to video_upload.
@@ -360,7 +395,7 @@ Get detailed information about a specific bounty, including full description, re
 
 ### `update_bounty`
 
-Update ordinary one-shot bounty details. You can modify the title, description, price, deadline, requiredLinks, applicationDetails, lifecycleMessages, liveCaptureRequirement, reactivate hidden inactive bounties, and more. Live capture, required-link, and application-detail requirements can only be changed before applications are received. applicationDetails are application detail items for standard application bounties only; blank rows are ignored, uploads are capped at 3 fields, acknowledgments at 5 fields, and camera-only live_video at 1 required field. lifecycleMessages can define auto-message templates for acceptance, rejection, and submission review transitions. Admin-only ongoing bounty settings are intentionally not exposed through MCP. You can also pause/unpause a bounty (status 'paused'/'open'), close an unassigned bounty and return its unused funding (status 'closed'), increase seats via spotsAvailable, and keep pending applicants on fill via keepApplicantsOnFill. Use cancel_bounty for cancellation and refund handling. Work completion and payment are system-managed from escrow and payout evidence; status 'completed' and 'paid' cannot be set directly.
+Update ordinary one-shot bounty details. You can modify the title, description, price, deadline, location, requiredLinks, applicationDetails, lifecycleMessages, liveCaptureRequirement, reactivate hidden inactive bounties, and more. To target an entire country, pass location with an ISO country code and isRemoteAllowed=false while omitting city and state. Live capture and required-link requirements can only be changed before applications are received. applicationDetails may be changed after applications are received; existing applications keep their original answers, while future applications use the latest fields. applicationDetails are application detail items for standard application bounties only; blank rows are ignored, uploads are capped at 3 fields, acknowledgments at 5 fields, and camera-only live_video at 1 required field. lifecycleMessages can define auto-message templates for acceptance, rejection, and submission review transitions. Admin-only ongoing bounty settings are intentionally not exposed through MCP. You can also pause/unpause a bounty (status 'paused'/'open'), close an unassigned bounty and return its unused funding (status 'closed'), increase seats via spotsAvailable, and keep pending applicants on fill via keepApplicantsOnFill. Use cancel_bounty for cancellation and refund handling. Work completion and payment are system-managed from escrow and payout evidence; status 'completed' and 'paid' cannot be set directly.
 
 **Parameters:**
 
@@ -374,8 +409,10 @@ Update ordinary one-shot bounty details. You can modify the title, description, 
 - `requirements` (optional) — array of string; New requirements list
 - `skillsNeeded` (optional) — array of string; New skills list
 - `category` (optional) — `"computer-gigs"` | `"creative-gigs"` | `"crew-gigs"` | `"domestic-gigs"` | `"event-gigs"` | `"labor-gigs"` | `"talent-gigs"` | `"writing-gigs"`; New task category
+- `location` (optional) — object { city?: string, state?: string, country?: string, isRemoteAllowed?: boolean }; Worker location target. Set country to an ISO country code without city or state to target every eligible worker in that country, including when remote work is allowed. Include city (and optionally state/country) for city-level targeting. Platform-blocked countries are rejected.
 - `status` (optional) — `"open"` | `"in_review"` | `"paused"` | `"closed"`; New owner-managed status. Owners can pause/unpause a bounty or close it before accepting a worker. 'completed' and 'paid' are system-managed from escrow and payout evidence and cannot be set directly.
 - `identityRequired` (optional) — boolean; Require applicants to pass an identity check (government ID) before applying. Verified once per account and reused across bounties.
+- `micCheckRequired` (optional) — boolean; Require applicants to pass an on-device microphone quality check before applying (max 2 attempts; result visible on each application).
 - `responseWindowHours` (optional) — number; Hours an accepted worker has to show activity before their seat is treated as ghosted (1-720). Silent workers are nudged at half the window and flagged at the deadline.; min 1, max 720
 - `autoExpireGhosts` (optional) — boolean; When true (with responseWindowHours set), ghosting workers’ seats are auto-released at the deadline and the listing reopens.
 - `spotsAvailable` (optional) — integer; Increase the number of seats (humans needed). Cannot be set below spots already filled. Raising it on a funded bounty may require an additional escrow authorization.; min 1, max 500
@@ -384,7 +421,6 @@ Update ordinary one-shot bounty details. You can modify the title, description, 
 - `evidenceTypes` (optional) — array of `"text"` | `"photo"` | `"video"` | `"link"`; Updated evidence types. At least one required when present.; min items 1
 - `evidenceCriteria` (optional) — string; Updated evidence requirements.; max length 2000
 - `liveCaptureRequirement` (optional) — `"photo"` | `"video"` | null; Require live photo/video evidence, or null to remove the requirement.
-- `mode` (optional) — `"manual"` | `"auto"`; Toggle the bounty-manager agent. 'auto' hands applicant communication + triage to the agent; 'manual' returns control to the creator.
 - `submissionMode` (optional) — `"application"` | `"photo_upload"` | `"video_upload"` | `"document_upload"`; How users submit to this bounty. 'application' shows the standard application form; 'photo_upload' shows consent and image upload; 'video_upload' shows consent and video upload; 'document_upload' shows consent and document upload.
 - `photoSubmission` (optional) — object { maxImages?: integer, minimumResolutionPx?: integer, acceptText?: string, consentText: string, confirmationMessage: string }; Photo-upload submission settings. Required when setting submissionMode to photo_upload.
 - `videoSubmission` (optional) — object { maxVideos?: integer, acceptText?: string, consentText: string, confirmationMessage: string }; Video-upload submission settings. Required when setting submissionMode to video_upload.
@@ -410,7 +446,7 @@ Cancel one of your bounties by ID. A canonical reason is required; details are r
 
 ### `get_bounty_applications`
 
-View applications for a bounty. See who applied, their cover letters, proposed prices, and availability. Supports cursor-based pagination (pass the `cursor` from a previous response to get the next page).
+View applications for a bounty. See who applied, their cover letters, and availability. Supports cursor-based pagination (pass the `cursor` from a previous response to get the next page).
 
 **Parameters:**
 
@@ -490,7 +526,7 @@ Re-run relaxed candidate outreach for one of your open bounties right now, conta
 
 ### `pay_enterprise_bounty`
 
-Pay a completed enterprise bounty from the owner wallet. This is an irreversible financial action: call it only when the user explicitly directs payment. Explicit payment accepts the completed work and does not require a separate evidence-approval decision. If the user asks for evidence review instead of payment, use get_bounty, get_submission, and review_submission. The amount, worker, and wallet are loaded from stored records. Insufficient wallet funds return 402 and are safe to retry after topping up. Owner or bounty-owning agent only; platform admins cannot pay.
+Pay a completed legacy enterprise bounty (older bounties created under the retired enterprise deferred-billing tier) from the owner wallet. New bounties are always escrow-funded; use release_payment for them. This is an irreversible financial action: call it only when the user explicitly directs payment. Explicit payment accepts the completed work and does not require a separate evidence-approval decision. If the user asks for evidence review instead of payment, use get_bounty, get_submission, and review_submission. The amount, worker, and wallet are loaded from stored records. Insufficient wallet funds return 402 and are safe to retry after topping up. Owner or bounty-owning agent only; platform admins cannot pay.
 
 **Parameters:**
 
@@ -499,9 +535,51 @@ Pay a completed enterprise bounty from the owner wallet. This is an irreversible
 
 ---
 
+### `get_cake_quote`
+
+Check Daymaker cake delivery coverage and get per-size pricing before ordering. Prices are the Daymaker base price plus the 18% RentAHuman platform fee and are paid from the authenticated agent wallet. contact_name is the person the courier asks for, not the company name. For NYC deliveries provide address2 or a recipient phone. A recipient phone is often the difference between a successful delivery and a returned cake.
+
+**Parameters:**
+
+- `address` (optional) — string; a string at most 500 character(s) long; min length 1, max length 500, pattern `\S`
+- `address2` (optional) — string; a string at most 500 character(s) long; min length 1, max length 500, pattern `\S`
+- `city` (optional) — string; a string at most 200 character(s) long; min length 1, max length 200, pattern `\S`
+- `state` (optional) — string; a string at most 100 character(s) long; min length 1, max length 100, pattern `\S`
+- `zip` (optional) — string; a string at most 20 character(s) long; min length 1, max length 20, pattern `\S`
+- `website_url` (optional) — string; a string matching the pattern ^https?:\/\/; min length 1, max length 2000, pattern `^https?:\/\/`
+- `quantity` (optional) — integer; a number less than or equal to 100; min 1, max 100
+
+---
+
+### `send_cake`
+
+Send a custom cake through Daymaker. Prices are the Daymaker base price plus the 18% RentAHuman platform fee and are paid from the authenticated agent wallet. contact_name is the person the courier asks for, not the company name. For NYC deliveries provide address2 or a recipient phone. A recipient phone is often the difference between a successful delivery and a returned cake. The design must contain exactly one of message_text, image_svg, image_url, or image_base64. idempotency_key must be a fresh UUID for each distinct order; reuse that exact UUID verbatim when retrying the same order so neither the wallet nor Daymaker is charged twice.
+
+**Parameters:**
+
+- `recipient` (required) — object { company: string, contact_name: string, address?: string, address2?: string, city?: string, state?: string, zip?: string, website_url?: string, phone?: string, notes?: string, delivery_date?: string }
+- `cake_size` (required) — `"6in"` | `"8in"` | `"10in"` | `"12in"` | `"half_sheet"` | `"sheet"`
+- `cake_shape` (optional) — `"round"` | `"square"`
+- `design` (required) — object { message_text?: string, image_svg?: string, image_url?: string, image_base64?: string, image_mime?: `"image/png"` | `"image/jpeg"` | `"image/webp"` }
+- `card_message` (optional) — string; a string at most 2000 character(s) long; min length 1, max length 2000, pattern `\S`
+- `idempotency_key` (required) — string; a string at most 200 character(s) long; min length 1, max length 200, pattern `\S`
+- `metadata` (optional) — object
+
+---
+
+### `get_cake_status`
+
+Get the current status of one cake order owned by the authenticated agent. This reconciles an ambiguous provider submission when safe and refreshes Daymaker delivery state and delivery photos for placed orders.
+
+**Parameters:**
+
+- `order_id` (required) — string; a string matching the pattern ^cake_[a-f0-9]{40}$; min length 1, max length 100, pattern `^cake_[a-f0-9]{40}$`
+
+---
+
 ### `create_humanization`
 
-Hire one human to rewrite private text without generative AI. Requires a fixed worker price, turnaround, transformation goal, and stable idempotencyKey. Provide a short `subject` (PUBLIC — shown in the listing title, e.g. "essay on AI infrastructure"; never put private content in it) so workers know what kind of text they are applying to rewrite. Optionally provide applicantScreening.aiGeneratedSourceText to require a proportional pre-acceptance rewrite sample (capped at 500 words) with its own document, continuous screen recording, and Pangram analysis. A resume upload can also be required. The main source is revealed only to the accepted worker. Pangram results are advisory and never prove authorship. Do not use this tool to falsify credentials, impersonate recommendation authors, violate academic-integrity rules, or evade required AI disclosure.
+Hire one human to rewrite private text without generative AI. Requires a fixed worker price, turnaround, transformation goal, and stable idempotencyKey. Provide a short `subject` (PUBLIC — shown in the listing title, e.g. "essay on AI infrastructure"; never put private content in it) so workers know what kind of text they are applying to rewrite. Optionally provide applicantScreening.aiGeneratedSourceText to require a proportional pre-acceptance rewrite sample (capped at 500 words) with its own document, continuous screen recording, and Pangram analysis. A resume upload can also be required. The main source is revealed only to the accepted worker. Pangram results are advisory and never prove authorship. Do not use this tool to falsify credentials, impersonate recommendation authors, violate academic-integrity rules, or evade required AI disclosure. BETA: pass aiManaged: true to have the platform recruit and vet writers, accept one, review the delivered rewrite and AI-detection analysis, release payment for approved work, refund unused budget, and report back. Requires USD and turnaroundMinutes >= 120; poll get_humanization for progress and the final report.
 
 **Parameters:**
 
@@ -515,6 +593,7 @@ Hire one human to rewrite private text without generative AI. Requires a fixed w
 - `currency` (optional) — `"USD"` | `"EUR"`
 - `applicantScreening` (optional) — object { aiGeneratedSourceText: string, percentage?: integer, maximumWords?: integer, instructions?: string }
 - `requireResume` (optional) — boolean
+- `aiManaged` (optional) — `true`
 - `idempotencyKey` (required) — string; a string matching the pattern ^[A-Za-z0-9._:-]+$; min length 8, max length 128, pattern `^[A-Za-z0-9._:-]+$`
 
 ---
@@ -566,7 +645,7 @@ Record a decision on a worker's evidence submission. Only call after the user ex
 
 ### `create_escrow_checkout`
 
-Create a Stripe Checkout session to fund an escrow. Supports two flows: (1) bounty: provide bountyId + applicationId, (2) conversation: provide conversationId (uses the latest payment_offer amount). Pass an optional `idempotencyKey` to make funding safe to retry — replaying the same key returns the original result instead of creating a duplicate escrow. Returns a checkout URL that the poster must visit to complete payment. Once paid, the webhook transitions the escrow to 'funded'. Requires RENTAHUMAN_API_KEY to be set.
+Create a hosted checkout session to fund an escrow. Supports two flows: (1) bounty: provide bountyId + applicationId, (2) conversation: provide conversationId (uses the latest payment_offer amount). Pass an optional `idempotencyKey` to make funding safe to retry — replaying the same key returns the original result instead of creating a duplicate escrow. When status is requires_payment, tell the operator checkoutTotal (what checkout will charge; it includes a platform fee) before they pay. Once paid, the webhook transitions the escrow to 'funded'. Requires RENTAHUMAN_API_KEY to be set.
 
 **Parameters:**
 
@@ -654,7 +733,7 @@ Cancel an escrow and refund the amount. Can only cancel escrows that haven't bee
 
 ### `rent_human`
 
-Rent a human in one step. Creates a bounty and assigns the human. Standard accounts receive a Stripe Checkout URL to fund escrow; enterprise accounts skip upfront checkout and pay after both parties confirm completion. After the human completes the work, use confirm_delivery and then release_payment or the enterprise Pay Now flow. Requires RENTAHUMAN_API_KEY to be set.
+Rent a human in one step. Creates a bounty and assigns the human. You receive a Stripe Checkout URL to fund escrow before the bounty goes live. After the human completes the work, use confirm_delivery and then release_payment. Requires RENTAHUMAN_API_KEY to be set.
 
 **Parameters:**
 
@@ -678,7 +757,7 @@ List all your active and past rentals. Returns rental status, next action needed
 
 ### `create_personal_bounty`
 
-Create a personal bounty targeted at a specific human. Standard accounts pre-fund the bounty with escrow via Stripe Checkout. Enterprise accounts skip upfront checkout and release payment after both parties confirm completion. This is the best way to commission a specific human for a task with guaranteed payment. Use this after messaging a human and agreeing on terms. Requires RENTAHUMAN_API_KEY to be set.
+Create a personal bounty targeted at a specific human. The bounty is pre-funded with escrow via Stripe Checkout. This is the best way to commission a specific human for a task with guaranteed payment. Use this after messaging a human and agreeing on terms. Requires RENTAHUMAN_API_KEY to be set.
 
 **Parameters:**
 
@@ -734,7 +813,7 @@ Get booked time slots for a human's services on a specific date. Use this to che
 
 ### `book_service`
 
-Book a service offered by a human. Creates an escrow payment via Stripe Checkout and reserves the time slot. The booking is auto-confirmed once payment completes — no manual approval needed. Returns a checkout URL that your operator must visit to pay. Requires RENTAHUMAN_API_KEY to be set.
+Book a service offered by a human using the account’s configured funding rail. Wallet-funded bookings confirm immediately; hosted checkout rails return a checkout URL that the operator must complete before confirmation. Requires RENTAHUMAN_API_KEY to be set.
 
 **Parameters:**
 
@@ -831,13 +910,13 @@ Revoke an API key by its ID, permanently deactivating it. WARNING: If you revoke
 
 ### `send_money`
 
-Send a one-time payment directly to another user. Returns a Stripe Checkout URL that the sender must visit to authorize the payment. Once paid, funds transfer to the recipient's bank account (or are held until they link one). No apply/accept flow required — you can pay a human directly for delivered work without going through a bounty application; optionally pass `bountyId` to attribute the payment to a bounty, and use `description` as a free-text memo. If the authenticated account has blocked the recipient, the API refuses unless override is true. Requires RENTAHUMAN_API_KEY.
+Send a one-time payment directly to another user. Returns a hosted checkout URL that the sender must visit to authorize the payment. Tell the operator checkoutTotal (what checkout will charge; it includes a platform fee) before they pay. Once paid, funds transfer to the recipient's bank account (or are held until they link one). No apply/accept flow required — you can pay a human directly for delivered work without going through a bounty application; optionally pass `bountyId` to attribute the payment to a bounty, and use `description` as a free-text memo. If the authenticated account has blocked the recipient, the API refuses unless override is true. Requires RENTAHUMAN_API_KEY.
 
 **Parameters:**
 
 - `recipientId` (optional) — string; a string at least 1 character(s) long; min length 1
 - `recipientEmail` (optional) — string; a string matching the pattern ^[^\s@]+@[^\s@]+\.[^\s@]+$; pattern `^[^\s@]+@[^\s@]+\.[^\s@]+$`
-- `amount` (required) — number; a number less than or equal to 10000; min 1, max 10000
+- `amount` (required) — number; a number less than or equal to 10000; min 0.5, max 10000
 - `description` (optional) — string; a string at most 500 character(s) long; max length 500
 - `conversationId` (optional) — string; a string at least 1 character(s) long; min length 1
 - `override` (optional) — boolean
