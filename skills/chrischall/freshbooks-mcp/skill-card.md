@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and operators use this skill to authenticate to FreshBooks, resolve account and business identifiers, and run shell-based FreshBooks API queries or accounting actions without installing the FreshBooks MCP server.
+Developers and operators use this skill to set up FreshBooks OAuth credentials, resolve FreshBooks account identifiers, and run curl/jq recipes for reading and intentionally writing accounting, project, and time-tracking data.
 
 ### Deployment Geography for Use:
 
@@ -22,35 +22,39 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can enable live FreshBooks accounting write actions.
+Risk: The skill presents as a FreshBooks query workflow while also documenting live accounting write operations.
 
-Mitigation: Require explicit user approval before POST, PUT, PATCH, DELETE, email, payment, invoice, estimate, client, or time-entry operations.
+Mitigation: Review commands before execution, run write examples only when intentional, and re-read affected records to confirm persistence.
 
-Risk: OAuth credentials and token state can expose FreshBooks account access if mishandled.
+Risk: FreshBooks refresh tokens and the local session file are sensitive secrets, and refresh tokens rotate on use.
 
-Mitigation: Keep credentials out of logs, protect the token state file, and install only when FreshBooks OAuth access is intended.
+Mitigation: Use credentials scoped as narrowly as FreshBooks allows, keep printed refresh tokens and session files private, and avoid sharing one token state file across tools.
+
+Risk: Some recipe paths are marked unverified against a live account.
+
+Mitigation: Test unverified recipes with non-production data or read-only operations before relying on them for accounting changes.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/chrischall/skills/freshbooks-mcp)
+- [ClawHub release page](https://clawhub.ai/chrischall/skills/freshbooks-mcp)
 - [FreshBooks developer app registration](https://my.freshbooks.com/#/developer)
-- [recipes.md](references/recipes.md)
-- [fb-token.sh](references/fb-token.sh)
-- [fb-bootstrap.mjs](references/fb-bootstrap.mjs)
+- [FreshBooks curl recipes](references/recipes.md)
+- [FreshBooks OAuth bootstrap helper](references/fb-bootstrap.mjs)
+- [FreshBooks token helper](references/fb-token.sh)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with shell commands, JavaScript helper code, and configuration steps]
+**Output Format:** [Markdown guidance with shell commands, JavaScript and shell helper code, jq filters, and JSON request bodies]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Uses FreshBooks OAuth credentials and may produce live API calls that read or modify accounting data.]
+**Other Properties Related to Output:** [May perform authenticated FreshBooks API calls and writes when the user runs provided commands; token state is stored locally.]
 
 ## Skill Version(s):
 
-0.3.0 (source: server release evidence)
+0.3.1 (source: server release metadata)
 
 ## Ethical Considerations:
 
