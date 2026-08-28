@@ -1,8 +1,8 @@
 {
-  "changelog": "- Removed the sample skill card file (skill-card.md).\n- Updated SKILL.md to clarify that all required parameters must be explicitly confirmed or provided by the user before execution; automatic filling is not allowed.\n- Added platform-specific API call instructions, especially detailed steps for Windows/PowerShell regarding encoding and temporary file handling.\n- Specified that requests must use Content-Type: application/json; charset=utf-8.\n- No functional changes to the API logic.",
+  "changelog": "- Updated supported parameters for image input: now accepts both imageUrlList (array) and imgUrls (comma-separated string), with a max of 6 images.\n- Changed scalingRatio usage: now strictly represents magnification (2/4/8x), not enhancement strength.\n- Added detailed instructions for local file upload and integration with file-upload skill.\n- Improved cross-platform API call examples for Windows and macOS/Linux.\n- Refined error handling, parameter rules, and clarified execution flow.\n- Removed redundant/old documentation and merged key usage notes for clarity.",
   "created_at": 1776674663787,
   "display_name": "image-enlarge",
-  "fetched_at": 1787773193506,
+  "fetched_at": 1787931646456,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -22,12 +22,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 847,
+    "downloads": 885,
     "installs": 19,
     "stars": 0,
-    "versions": 4
+    "versions": 5
   },
   "summary": "\u901a\u8fc7 Flyelep AI \u5de5\u5177\u63a5\u53e3\u5bf9\u56fe\u7247\u8fdb\u884c\u65e0\u635f\u653e\u5927\uff0c\u652f\u6301\u5355\u5f20\u6216\u6279\u91cf\u5904\u7406\u3002 \u5f53\u7528\u6237\u8981\u6c42\u63d0\u5347\u6e05\u6670\u5ea6\u3001\u653e\u5927\u56fe\u7247\u5c3a\u5bf8\u3001\u505a\u8d85\u6e05\u589e\u5f3a\u3001\u6279\u91cf\u589e\u5f3a\u5546\u54c1\u56fe\u65f6\u4f7f\u7528\u6b64\u6280\u80fd\u3002",
-  "updated_at": 1786083619954,
-  "version": "1.0.3"
+  "updated_at": 1787886851464,
+  "version": "1.0.4"
 }

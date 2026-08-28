@@ -1,6 +1,6 @@
 ## Description:
 
-Uses the Flyelep AI Tool API to enlarge and enhance one or more public image URLs, returning the processed image URLs.
+Image Enlarge uses the Flyelep AI Tool API to upscale one or more images and return enlarged image URLs.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to call Flyelep's image enlargement API for single-image or batch enhancement workflows. It is suited for improving clarity, upscaling image dimensions, and enhancing product images when users provide public image URLs, a scaling ratio, and a Flyelep API key.
+External users and developers use this skill to enlarge product or other images by 2x, 4x, or 8x through Flyelep's HTTP API. The workflow accepts public image URLs and can upload local image files before processing.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,29 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill sends user-provided image URLs and a Flyelep secretKey to Flyelep for processing.
+Risk: Selected images and the user's Flyelep API key are sent to Flyelep; local images may be uploaded to public permanent URLs.
 
-Mitigation: Use the skill only when Flyelep's terms and data handling are acceptable, avoid private or sensitive image URLs, and provide the secretKey only at runtime.
-
-Risk: Credentials or request details may be exposed if copied into shared files, repositories, or logs.
-
-Mitigation: Do not persist real secretKey values in skill files, examples, repositories, or shared logs; remove temporary payload files after use.
+Mitigation: Use runtime-provided API keys only, avoid storing credentials, and process private, regulated, or sensitive images only when public URL exposure is acceptable.
 
 ## Reference(s):
 
-- [Flyelep Image Enlarge API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/aiTool/enlarge)
-- [Flyelep Open Platform console](https://www.flyelep.cn/controlboard)
 - [ClawHub skill page](https://clawhub.ai/flyelepai/skills/flyelep-image-enlarge)
+- [Flyelep control board](https://www.flyelep.cn/controlboard)
+- [Flyelep image enlarge API endpoint](https://www.flyelep.cn/prod-api/poster-design/api/v1/poster/aiTool/enlarge)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [API Calls, Shell commands, Configuration instructions, Guidance]
 
-**Output Format:** [Markdown guidance with JSON request examples and shell command snippets]
+**Output Format:** [Markdown with JSON payload examples, shell commands, and returned image URLs]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Returns Flyelep response JSON containing comma-separated processed image URLs; requires user-provided image URLs, scalingRatio, and secretKey at runtime.]
+**Other Properties Related to Output:** [Returns enlarged image URLs and may first upload local files to public permanent URLs.]
 
 ## Skill Version(s):
 
-1.0.3 (source: server release evidence)
+1.0.4 (source: server release evidence)
 
 ## Ethical Considerations:
 
