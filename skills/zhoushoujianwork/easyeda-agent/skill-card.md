@@ -1,6 +1,6 @@
 ## Description:
 
-EasyEDA Agent helps agents design, clean up, verify, and export EasyEDA Pro schematics and PCBs through the local easyeda CLI, daemon, connector, bundled scripts, and design workflows.
+EasyEDA Agent helps developers design, refactor, lay out, and verify EasyEDA Pro schematics and PCBs through the local easyeda-agent CLI, daemon, and connector.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-Developers and hardware engineers use this skill to operate EasyEDA Pro projects through a local automation stack for schematic capture, PCB layout, linting, DRC/check workflows, part selection, BOM/netlist export, and design cleanup.
+Developers and electronics engineers use this skill to operate EasyEDA Pro workflows for schematic creation, schematic cleanup, PCB synchronization, layout, checks, DRC, BOM/netlist export, and LCSC/JLC part selection.
 
 ### Deployment Geography for Use:
 
@@ -22,44 +22,53 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill asks users to install and self-update powerful local EasyEDA tooling from remote shell code.
+Risk: The skill relies on an external local CLI, daemon, and EasyEDA connector with broad ability to inspect and change EasyEDA projects.
 
-Mitigation: Prefer a version-pinned, verified install of the EasyEDA CLI and daemon instead of running a remote shell installer blindly.
+Mitigation: Install only when the publisher and external tooling are trusted, verify the active EasyEDA window with health checks, and keep project backups or checkpoints before material changes.
 
-Risk: Clear, probe, bulk, and other project operations can erase or alter design data.
+Risk: Automation can make destructive or unintended schematic and PCB edits when pointed at the wrong project, window, page, or board.
 
-Mitigation: Keep backups and review destructive operations before running them on valuable or proprietary PCB designs.
+Mitigation: Use typed actions, inspect project state before mutation, prefer dry-run modes, and require confirmation before destructive operations.
 
-Risk: Lint baselines, audit logs, workflow state, and optional git history may retain schematic or PCB details locally.
+Risk: Debug execution paths can bypass the normal typed-action safeguards.
 
-Mitigation: Treat those local records as sensitive project data and review them before sharing or publishing artifacts.
+Mitigation: Avoid debug.exec_js unless a typed action is unavailable and the operator explicitly accepts the narrower review burden.
+
+Risk: Local EasyEDA agent state, lint snapshots, and generated artifacts may contain confidential design details.
+
+Mitigation: Review local state and exported artifacts before sharing, and run the skill only on projects whose confidentiality posture permits local automation.
 
 ## Reference(s):
 
-- [EasyEDA Agent project homepage](https://github.com/zhoushoujianwork/easyeda-agent)
-- [ClawHub EasyEDA Agent release page](https://clawhub.ai/zhoushoujianwork/skills/easyeda-agent)
-- [EasyEDA Agent releases](https://github.com/zhoushoujianwork/easyeda-agent/releases/latest)
-- [EasyEDA Agent Connector marketplace page](https://jlc-ext.com/item/zhoushoujian/easyeda-agent-connector)
+- [ClawHub Skill Page](https://clawhub.ai/zhoushoujianwork/skills/easyeda-agent)
+- [Project Homepage](https://github.com/zhoushoujianwork/easyeda-agent)
+- [Release v1.2.10](https://github.com/zhoushoujianwork/easyeda-agent/releases/tag/v1.2.10)
+- [EasyEDA Agent Connector](https://jlc-ext.com/item/zhoushoujian/easyeda-agent-connector)
 - [Design Flow](references/design-flow.md)
 - [Environment Setup](references/environment-setup.md)
-- [Schematic Workflow Reference](references/schematic.md)
-- [PCB Workflow Reference](references/pcb.md)
-- [Actions Reference](references/actions.md)
+- [Schematic Workflow](references/schematic.md)
+- [PCB Workflow](references/pcb.md)
+- [PCB Layout](references/pcb-layout.md)
+- [PCB Routing](references/pcb-routing.md)
 - [PCB Design Rules](references/pcb-design-rules.md)
+- [Part Selection](references/part-selection.md)
+- [Standard Parts](references/standard-parts.json)
+- [Symbol Pins](references/symbol-pins.json)
+- [JLCPCB Fabrication Rules](references/fab-rules-jlcpcb.json)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [guidance, shell commands, configuration, markdown, code, files]
 
-**Output Format:** [Markdown guidance with inline shell commands, code snippets, JSON/configuration edits, and file paths.]
+**Output Format:** [Markdown guidance with inline shell commands and structured file or configuration suggestions]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May produce or update local EasyEDA project artifacts when the user asks the agent to operate on a project.]
+**Other Properties Related to Output:** [Requires EasyEDA Pro plus the local easyeda-agent CLI, daemon, and connector; network access is only described for LCSC lookup and self-update.]
 
 ## Skill Version(s):
 
-1.2.0 (source: SKILL.md frontmatter, server release metadata)
+1.2.10 (source: frontmatter and release evidence)
 
 ## Ethical Considerations:
 

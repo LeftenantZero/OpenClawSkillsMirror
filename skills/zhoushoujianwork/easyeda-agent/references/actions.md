@@ -51,7 +51,11 @@ rip-up/clear 等破坏性步骤——整册回放前先 `--dry-run` 看计划,�
 均映射 `eda.dmt_Schematic.*`。**注意：EasyEDA Pro 无设置纸张尺寸(A4/A3)的公开 API**；可编辑的「图纸」属性就是明细表(title block)。CLI：`easyeda sch …`。
 
 - `schematic.titleblock.get` — 读当前（或指定 `pageUuid`）图页的明细表：`showTitleBlock` + 各字段 `titleBlockData`。**改前先 get 拿到字段 key** → `easyeda sch titleblock-get`
-- `schematic.titleblock.modify` — 调整明细表：显隐 + 字段值（只传要改的项）→ `easyeda sch titleblock --show` / `--data '{"Title":{"value":"电源模块"}}'`。⚠**当前禁用 `--data` 写入(2026-08-17 定案)**:写路径会损毁 sheet 图元的符号引用(component 变成名字塞 uuid 位、libraryUuid 丢),控制台报「元件 $NI… 器件/符号属性有误」,save 落盘后**下次重启平台校验拒载 = 图框丢失**。修复=`sch prim-delete --allow-sheet` 删损坏实例 + `sch place` 重放 `Drawing-Symbol_A4`(lib 0819f05c4eef4c71ace90d822a990e87 / device bc676184ec9748d7b372ad543982403a,@(0,0))。连接器写路径修好前图签留白,`gate --strict` 的 missing-titleblock 如实报告。
+- `schematic.titleblock.modify` — 调整明细表:显隐 + 字段值(只传要改的项)→ `easyeda sch titleblock --show` / `--data '{"Name":"电源模块","Drawed":"张三"}'`。**✅ 2026-08-26 解禁**(此前 2026-08-17 起禁用)。当时的两个理由都已消除:
+  - **「写路径损毁图框」** —— 真因是**整包回传**:`titleblock.get` 返回的 `Device`/`Symbol` 的 value 是符号**名字**,整包传回 `modify` 会被平台灌进 sheet 的 component/device/symbol **UUID 引用位** → 报「器件/符号属性有误」→ 重启拒载(#186)。现在**只传你点名的项**,连接器侧还有一道结构键过滤兜底(图框身份/纸张几何/开关/`@`投影项一律不下发,真想改会被 `PRECONDITION_REFUSED` 零变异拒绝)。
+  - **「写不进去」** —— 是**回读太早**的误报:平台提交明细表是异步的,写完立刻读拿到旧值,于是把成功报成 `nothing was applied`。现在回读轮询到落定。
+  真机验收:一条 `sch titleblock --data` 三项全写入,`Border`/`Title Block` 保持 `"1"`,sheet UUID 完好。
+  ⚠ 仍然**不要**用 exec_js 绕过连接器整包写明细表 —— 那条路依旧毁图框。换图框/改纸张不是明细项:走 `sch prim-delete --allow-sheet` + `sch place` 重放 `Drawing-Symbol_A4`。
   - **平台会对写不进去的字段返回成功**（官方 remarks 原文：「无法识别的明细项将被忽略」且「仍将返回 `true`」，与「删除 API 撒谎」同族）。handler 因此**改前快照 → 写 → 回读逐项比对**，产出 `applied`/`alreadySet`/`notApplied`/`unknownKeys`；全部落空即 ERROR，部分落空回 `partial:true` + warnings，CLI 非零退出（#151 三态约定）。
   - **`unknownKeys` = 这些根本不是本页的明细项**，修法是换 key 而不是重试 —— 先 `sch titleblock-get` 看可用 key。**明细表改不了纸张尺寸**：曾有 20 次调用拿 `Size`/`Width`/`Height`/`Page Size` 当纸张属性写，全部失败（audit 实测该 action 一度 32 次调用 0 次成功）。
   - **只能改当前聚焦页** —— 官方签名无 `pageUuid` 参数（`titleblock.get` 反而支持，两者不对称）。改之前先确认聚焦页就是目标页。
@@ -78,7 +82,7 @@ rip-up/clear 等破坏性步骤——整册回放前先 `--dry-run` 看计划,�
 
 ## Mutate Schematic
 
-- `schematic.component.place` — 从库放置元件（libraryUuid + uuid + x/y）。放置后自动把 `supplierId` 回填为 device 的**真立创 C 号**（平台 create 默认填成 `<MPN>.1` 的 subPartName，会让官方「器件标准化」面板全标红、BOM Supplier Part 不可下单，#157）；device 无 C 号（外采占位件）不动。⚠️ **超时不等于没落地(假失败定律)**:`connector did not respond` 时器件通常**已经建在画布上**,只是回执丢了 —— 直接重发会造重复件。`sch block-apply` 已自带**收编**(放置前快照 id → 失败后 settle 回读 → 认「不在快照里 + componentType==part + 落在下发坐标 ±5」的那个件,进 `rollback.adoptedPrimitiveIds` 并照常删除;绝不凭空造 id,也永不碰页面上原有的同型同坐标器件)。**「认不出」分两种,别混**(2026-08-20 修):回读被证明新鲜 → `adopt ✓ …确实没有落地`,可以直接重跑;回读**没被证明新鲜** = 不可信 → `adopt ? …无法判断` + PARTIAL STATE,**此时绝不能读成「没落地」**。旧版少了这道新鲜度门,真机上把「C8 明明就在 (440,535)」报成了「确实没有落地,页面上没有残件」。**新鲜度分两档**(连接器 FIFO 上线后):**算术档(强证据)**——连接器每条响应带 `seq`/`seqAbandoned`,回读期间 `seqAbandoned` 没变 = FIFO 保证这次回读的 handler 在那次 place 的 handler settle 之后才开跑,**连探针都不需要**(第一件就超时也能出结论);`seqAbandoned` 变了 = 有 handler 被放弃且仍在跑、效果可能稍后才落地 → 一律 uncertain。**探针档(弱证据)**——连接器比 CLI 旧、响应不带这些字段时退回旧启发式(本命令此前已落地的器件必须一个不缺地出现在回读里),报文会标 `证据档:弱(探针启发式)` 并给升级步骤;**绝不因为缺字段就默认新鲜**。⚠️ `seq` 证明的是 **handler 边界**的先后,**不是**「文档已提交」——「确实没有落地」的准确含义永远是「在可证的最新一刻那里没有新器件」。**手工调 place 时同样办法**:先 `sch list` 对比坐标确认落没落地,再决定重发还是删除,别盲重试。收到 `ACTION_ABANDONED` = 这次写没有已知完成时刻,盲重发会造重复件;收到 `QUEUE_OVERFLOW` = 该动作**根本没执行**,消化积压后重发是安全的。
+- `schematic.component.place` — 从库放置元件（libraryUuid + uuid + x/y）。放置后自动把 `supplierId` 回填为 device 的**真立创 C 号**（平台 create 默认填成 `<MPN>.1` 的 subPartName，会让官方「器件标准化」面板全标红、BOM Supplier Part 不可下单，#157）；device 无 C 号（外采占位件）不动。**同时回填器件属性值**（`Value` / `Tolerance` / `Voltage Rating` / `Datasheet` / `Description` …，#186）：平台 create 只把 device 的属性**键**复制到实例、**值全是空的**，于是 BOM 值列和「器件标准化」面板一路空着，要等 PCB 侧 `sync-attrs` 才补 —— 而那份 device 记录在放置当刻就在手里。回执给 `otherPropertyBackfilled: [...]`。规则（与 PCB `sync-attrs` **同一把尺**）：只填实例上**已有且为空**的键（不新增键 ⇒ 结构上不可能把库占位漏进来）、不覆盖已有值、幂等；**投影键永不写**（库记录自带占位 `Designator: "C?"`，平台会把它同步进位号 —— 曾把 166/166 真位号洗成 `U?/C?`），且写入时**同一 call 重新断言 designator + supplierId**（整包 otherProperty 写会让平台重新投影顶层字段，不重新断言就会把 #157 刚填好的 C 号打回 `<MPN>.1`——真机回读抓到过，回执还谎称成功）。两项回填都是 best-effort：失败只出 warning，绝不让放置失败。⚠️ **超时不等于没落地(假失败定律)**:`connector did not respond` 时器件通常**已经建在画布上**,只是回执丢了 —— 直接重发会造重复件。`sch block-apply` 已自带**收编**(放置前快照 id → 失败后 settle 回读 → 认「不在快照里 + componentType==part + 落在下发坐标 ±5」的那个件,进 `rollback.adoptedPrimitiveIds` 并照常删除;绝不凭空造 id,也永不碰页面上原有的同型同坐标器件)。**「认不出」分两种,别混**(2026-08-20 修):回读被证明新鲜 → `adopt ✓ …确实没有落地`,可以直接重跑;回读**没被证明新鲜** = 不可信 → `adopt ? …无法判断` + PARTIAL STATE,**此时绝不能读成「没落地」**。旧版少了这道新鲜度门,真机上把「C8 明明就在 (440,535)」报成了「确实没有落地,页面上没有残件」。**新鲜度分两档**(连接器 FIFO 上线后):**算术档(强证据)**——连接器每条响应带 `seq`/`seqAbandoned`,回读期间 `seqAbandoned` 没变 = FIFO 保证这次回读的 handler 在那次 place 的 handler settle 之后才开跑,**连探针都不需要**(第一件就超时也能出结论);`seqAbandoned` 变了 = 有 handler 被放弃且仍在跑、效果可能稍后才落地 → 一律 uncertain。**探针档(弱证据)**——连接器比 CLI 旧、响应不带这些字段时退回旧启发式(本命令此前已落地的器件必须一个不缺地出现在回读里),报文会标 `证据档:弱(探针启发式)` 并给升级步骤;**绝不因为缺字段就默认新鲜**。⚠️ `seq` 证明的是 **handler 边界**的先后,**不是**「文档已提交」——「确实没有落地」的准确含义永远是「在可证的最新一刻那里没有新器件」。**手工调 place 时同样办法**:先 `sch list` 对比坐标确认落没落地,再决定重发还是删除,别盲重试。收到 `ACTION_ABANDONED` = 这次写没有已知完成时刻,盲重发会造重复件;收到 `QUEUE_OVERFLOW` = 该动作**根本没执行**,消化积压后重发是安全的。
 - `schematic.text.list` — **只读**枚举当前激活页全部文本图元（id/content/x/y/rotation/fontSize/color），配 `sch prim-delete --ids` 清理孤儿 zone-draw 标签，免走 `debug exec` 逃生舱（#156）。页懒加载定律：只见激活页，多页工程用 `--page` 逐页扫。CLI：`easyeda sch text-list [--page P2]`
 - `sch note`（CLI 内部 exec_js，同 zone-draw 惯例，无新 action）— **放电路说明文本**（分页分区+电路说明三件套的第三件，布局默认必做）：`--text`（`\n` 换行）`--x/--y`（y-UP）`--font-size`（默认 10）`--color`（默认 #5A5A5A）。创建后回读 primitiveId 验证 + 显式 save；枚举 `sch text-list`、清理 `sch prim-delete`。CLI：`easyeda sch note --text "LDO: 5V→3V3 1A\n输入/输出各 100nF" --x 700 --y 300 --doc P2`
 - `schematic.component.resolve_lcsc` — **确定性「已放置器件→真 C 号」解析（#158）**。精确匹配链（实例 C 号 → MPN 严格相等 → 工程库名），**匹配的封装必须与实例一致**（唯一命中但封装不同 = 封装变体不符，照样进 unresolved）——绝不模糊兜底取 r[0]（真机事故：裸 search 把 U.FL 天线座解析成 C1017 磁珠）。默认 dry-run 报告；`--apply` 把解析出的 C 号写回 supplierId 非 C 号形状的实例（整板 supplierId 修复一条命令）。unresolved 附候选列表供人工确认。同 MPN+封装缓存；只扫激活页，多页 `--page` 逐页。CLI：`easyeda sch resolve-lcsc [--apply] [--page P2] [--id <pid>]`
@@ -104,7 +108,7 @@ rip-up/clear 等破坏性步骤——整册回放前先 `--dry-run` 看计划,�
 ## Verify & Export
 
 - `schematic.drc.check` — 调官方 `eda.sch_Drc.check` 作为 SDK DRC 门。当前 EasyEDA build 可能只返回 boolean/聚合结果,即使 `includeVerboseError=true` 也不保证有逐条 UI warning；CLI: `easyeda sch drc [--json]`。**不要单靠它宣称“官方 UI DRC 干净”**。
-- `schematic.check` — 我们的逐条重建检查:从 primitives + 官方 `sch_ManufactureData.getNetlistFile()` 交叉校验，覆盖悬空脚、导线交叉/穿脚、网络名不一致、零长/悬挂线及 duplicate/titleblock/marker overlap。`--json` 是 `{id,type,version,ok,result}` 信封，findings 位于 `result.findings`。CLI: `easyeda sch check [--json] [--strict]`。
+- `schematic.check` — 我们的逐条重建检查:从 primitives + 官方 `sch_ManufactureData.getNetlistFile()` 交叉校验，覆盖悬空脚、导线交叉/穿脚、网络名不一致、零长/悬挂线、极性约定离群(polarity-convention-outlier,#183)及 duplicate/titleblock/marker overlap。`--json` 是 `{id,type,version,ok,result}` 信封，findings 位于 `result.findings`。CLI: `easyeda sch check [--json] [--strict]`。
 - `schematic.bridgeCheck` — 线树粒度检查 `wire-bridge`、orphan stub/flag，补 `sch check` 逐 wire 视角的盲区。CLI: `easyeda sch bridge-check [--json]`。
 - `schematic.read` — 一次读取 components、pin→net、nets、floating pins 与 check；新设计对照 spec，既有原理图重构前后对照黄金 pin→net/NC 集合。components 每条含 **`primitiveId`（改动句柄：select/modify/delete/replace/rebind 都吃它，16 位 hex）**；⚠️ `uniqueId`（`gge…`）是 sch↔PCB 关联键**不是** primitiveId，喂给按 id 的 mutation 必 notFound（真机事故：read 曾漏输出 primitiveId，agent 抓了 uniqueId 全部落空）。CLI: `easyeda sch read [--page <page>]`。
 - `schematic.export.netlist` — 导出网表为 artifact。底层必须走官方推荐的 `eda.sch_ManufactureData.getNetlistFile(fileName, netlistType)` 并读取返回的 `File`;不要使用已废弃的 `eda.sch_Netlist.getNetlist()`。官方文档标注 `getNetlist()` obsolete 且建议替代为 `getNetlistFile()`,并且 upstream issue [easyeda/pro-api-sdk#30](https://github.com/easyeda/pro-api-sdk/issues/30) 已复现它在含悬空引脚的原理图上可能无限卡死。CLI: `easyeda sch netlist`
@@ -119,6 +123,28 @@ rip-up/clear 等破坏性步骤——整册回放前先 `--dry-run` 看计划,�
 - `pcb.layers.visibility` — 显示/隐藏/聚焦层做视觉 QA：`--preset top-only|bottom-only|copper-only|silk-only`，或 `--show/--hide`（可加 `--exclusive` 只留所选）→ `easyeda pcb layer-visibility --preset bottom-only`
 - `pcb.view.side` — 切到顶面/底面视图（选该面铜层为当前层 + 聚焦该面铜+丝印），随后 `pcb snapshot` 即反映该面。注意：EasyEDA 无原生画布翻面 API，这是「层聚焦」近似而非物理翻板 → `easyeda pcb view-side --side bottom`
 - `pcb.nets.list` — PCB 全部网络
+
+### 长度约束：差分对 / 等长网络组（#176）
+
+**布线前（P7 之前）声明,布线后用 `pcb report` 量。** 约束是让 DRC 与布线器知道「这两条是一对 /
+这组必须等长」的唯一途径,也是 `pcb report` 的 `skew`(|lenP−lenN|)与 `spread`(max−min)有意义的前提 ——
+不建约束,那两个数组永远是空的,报告里的测量能力等于空转。
+
+- `pcb.constraint.list` — 读回本板的**约束清单**(差分对 + 等长组)。注意与 `pcb.report` 分工:
+  这条给「有哪些约束」,`pcb.report` 给「量出来多少」→ `easyeda pcb diff-pair list` / `eq-group list`
+- `pcb.differential_pair.create|delete|rename` → `easyeda pcb diff-pair create --name USB0 --positive USB_DP --negative USB_DM`
+- `pcb.equal_length_group.create|add_nets|delete` → `easyeda pcb eq-group create --name DDR_ADDR --nets A0,A1,A2`
+
+四条行为约定(都已真机验过):
+
+1. **网名前置校验**:约束指向板上没有的网,平台照收不误但等于没建 —— 我方在动手前比对
+   `pcb nets`,对不上就**一个字节都不写**地拒绝并点名缺失网(网名大小写敏感,来自原理图);
+2. **写后回读**:回执的 `verified` 是连接器自己重读 `getAll` 比对出来的,平台返回的 boolean 不算数;
+3. **幂等**:同名同内容重建 = `alreadyExists`(可重放);同名**不同**内容 = 明确拒绝并给下一步
+   (改名 / 先删 / 用 `eq-group add` 扩展),绝不静默覆盖;
+4. **改绑定要删了重建**:平台对差分对只暴露「改名」,没有「改绑哪两条网」。
+
+⚠ 这些是 `Mutates` 动作 → 改完再读会撞铁律 5 的 `STALE_READ` 门,先 `easyeda doc reload`(实测如此)。
 
 ## Board（板子/组合 — 原理图↔PCB 绑定）
 
