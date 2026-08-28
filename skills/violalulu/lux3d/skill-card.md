@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and technical artists use this skill to call the Lux3D Global API for image-to-3D, text-to-3D, material transfer, four-view completion, model export, task status queries, and generation history workflows.
+Developers and content-production agents use this skill to call Lux3D APIs for image-to-3D, text-to-3D, material transfer, four-view completion, model export, task queries, and task history workflows.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,34 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Authenticated Lux3D requests send the API key, prompts, and public asset URLs to the Lux3D service.
+Risk: The Lux3D API key and task data can be sent to a caller- or environment-selected base URL.
 
-Mitigation: Confirm the user is comfortable using Lux3D before execution, keep LUX3D_API_KEY in the environment, and avoid sending sensitive prompts or private asset URLs.
+Mitigation: Use the documented Lux3D Global endpoint by default, keep LUX3D_API_KEY scoped to this service, and do not set LUX3D_BASE_URL or pass --base-url unless the endpoint is fully trusted.
 
-Risk: Overriding LUX3D_BASE_URL changes where authenticated requests are sent.
+Risk: Prompts and asset URLs are sent to Lux3D during generation, export, query, and history workflows.
 
-Mitigation: Leave LUX3D_BASE_URL unset unless the user intentionally selects a trusted Lux3D API host.
-
-Risk: Local files are not valid direct inputs for Lux3D task fields.
-
-Mitigation: Upload local assets through the documented Lux3D asset upload API first, then use the returned HTTP(S) URL.
+Mitigation: Use only assets and prompts you are comfortable sending to Lux3D, and ensure referenced URLs are intentionally accessible to the service.
 
 ## Reference(s):
 
-- [ClawHub lux3d Skill Page](https://clawhub.ai/violalulu/skills/lux3d)
-- [Lux3D Global API Key Page](https://labs.aholo3d.com/api-keys)
-- [Lux3D Asset Upload APIs](https://labs.aholo3d.com/api-docs/en/api-reference#tag/asset)
+- [ClawHub skill page](https://clawhub.ai/violalulu/skills/lux3d)
+- [Lux3D Global API Key page](https://labs.aholo3d.com/api-keys)
+- [Lux3D Asset upload APIs](https://labs.aholo3d.com/api-docs/en/api-reference#tag/asset)
 - [Lux3D Pricing](https://www.aholo3d.com/pricing)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
+**Output Type(s):** [Guidance, Shell commands, Code, API Calls, Configuration]
 
-**Output Format:** [Markdown with inline bash and Python code blocks]
+**Output Format:** [Markdown with inline bash and Python code blocks, JSON API responses, and generated 3D asset URLs]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include Lux3D task IDs, task status JSON, result URLs, and optional downloaded model artifacts when the provided commands are run.]
+**Other Properties Related to Output:** [May return Lux3D task identifiers, status data, downloadable model URLs, or local downloaded files when an output path is supplied.]
 
 ## Skill Version(s):
 
-4.1.0 (source: server release metadata)
+4.1.2 (source: server release metadata)
 
 ## Ethical Considerations:
 

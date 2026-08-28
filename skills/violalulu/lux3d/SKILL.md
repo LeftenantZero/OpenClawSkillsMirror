@@ -314,8 +314,8 @@ Image-to-3D, text-to-3D, and material transfer share the account concurrency lim
 
 | Account | Concurrent in-progress tasks |
 | --- | :---: |
-| Free | 1 |
-| Pro | 2 |
+| Free | 2 |
+| Pro | 5 |
 
 If the API returns **GENERATION_CONCURRENCY_LIMIT_EXCEEDED**, wait for an existing task to finish before retrying. The rejected request does not create a task or consume credits. See [Lux3D Pricing](https://www.aholo3d.com/pricing) for plans and credits.
 
