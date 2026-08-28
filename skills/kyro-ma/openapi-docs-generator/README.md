@@ -2,7 +2,7 @@
 
 ## Requirement
 
-Validated demand: Backend and platform teams need practical help generating, improving, and validating OpenAPI or Swagger documentation for REST APIs. This requirement is supported by 12 separate online signals across 3 source families, so it represents broader demand rather than a single isolated request.
+Validated demand: Backend and platform teams need practical help generating, improving, and validating OpenAPI or Swagger documentation for REST APIs. This requirement is supported by 12 separate online signals across 4 source families, so it represents broader demand rather than a single isolated request.
 
 Audience: API developers, backend teams, developer-experience teams, and maintainers who must make services understandable to other engineers
 
@@ -10,15 +10,13 @@ Category: `software-and-data`
 
 Demand score: 100/100
 
-Evidence coverage: 12 signals across 3 source families.
+Evidence coverage: 12 signals across 4 source families.
 
 ## Evidence
 
-- github-issues: [CI: add measurable quality regression gates beyond aggregate coverage](https://github.com/sgajbi/lotus-advise/issues/495)
-- csdn-search: [OpenAPI 规范：RESTful API设计](https://blog.csdn.net/2501_94476825/article/details/159013081?ops_request_misc=elastic_search_misc&request_id=269250cb9297425c9c14c7cce93e9e1d&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-5-159013081-null-null.142^v102^pc_search_result_base5&utm_term=OpenAPI%20%E6%96%87%E6%A1%A3)
-- github-issues: [dnse: architecture parity with reference plugins — journal/recovery/disappearance/module-split/broker_lab (plan: dnse_v2_fix_plan.md)](https://github.com/rubycell/pynecore/issues/53)
-- github-issues: [dnse: per-tick execution (calc_on_every_tick) via /trades/latest pseudo-tick feed](https://github.com/rubycell/pynecore/issues/37)
-- github-issues: [feat(api): Add developer documentation portal](https://github.com/Deen-Bridge/dnb-backend/issues/224)
+- csdn-search: [OpenAPI 规范：RESTful API设计](https://blog.csdn.net/2501_94476825/article/details/159013081?ops_request_misc=elastic_search_misc&request_id=0f741ad3d4984c378c41a3b3c4bd2beb&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-5-159013081-null-null.142^v102^control&utm_term=OpenAPI%20%E6%96%87%E6%A1%A3)
+- hacker-news-ask-hn: [Encoding Myself into the System](https://news.ycombinator.com/item?id=49457457)
+- github-issues: [[E54.30] Per-entry grooming dispositions, so the gated destructive classes can be applied without a whole-report approval](https://github.com/kuhlman-labs/fishhawk/issues/2843)
 - segmentfault-search: [HarmonyOS 开发者社区](https://segmentfault.com/brand/harmonyos-next)
 - segmentfault-search: [javascript](https://segmentfault.com/t/javascript)
 - segmentfault-search: [typescript](https://segmentfault.com/t/typescript)
@@ -26,6 +24,8 @@ Evidence coverage: 12 signals across 3 source families.
 - segmentfault-search: [答： swagger发请求的时候如何自动添加Bearer](https://segmentfault.com/q/1010000017381307/a-1020000017382712)
 - segmentfault-search: [OpenAPI接口规范：为你的应用程序带来更好的性能与可维护性](https://segmentfault.com/a/1190000043968971)
 - segmentfault-search: [答： 如何为 swagger 2.8.0 做友好的基本 url](https://segmentfault.com/q/1010000042921070/a-1020000042921072)
+- github-issues: [🐝 Hive Advisory Report](https://github.com/weavster-dev/weavster/issues/1)
+- hacker-news-search: [Anomalyco/OpenCode Review](https://news.ycombinator.com/item?id=49471645)
 
 ## How This Skill Meets The Requirement
 
