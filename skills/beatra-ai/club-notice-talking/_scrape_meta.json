@@ -1,0 +1,55 @@
+{
+  "changelog": "club-notice-talking v0.1.2\n\n- Refined SKILL.md to clearly describe workflow for creating club activity talking clips from user-supplied scripts and authorized stills.\n- Clarified the separation of free planning and paid stages (voice clone, speech synth, video), including credits handling and stop conditions.\n- Expanded instructions for collecting required inputs, planning output slots, and confirming consent and rights.\n- Added detailed guidance on input inspection, pricing checks, and API usage through the bundled client interface.\n- Improved routing advice for adjacent use cases and clarified what this skill does not handle.\n- Updated execution section for strict tool and interface usage.",
+  "created_at": 1787923224725,
+  "display_name": "club-notice-talking",
+  "fetched_at": 1787930818069,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "references/automatic-updates-and-safety.md",
+    "references/billing-errors-and-recovery.md",
+    "references/installation-and-auth.md",
+    "references/installation-registration.md",
+    "references/mcp-connection.md",
+    "references/tasks-and-results.md",
+    "references/uninstall-and-disconnect.md",
+    "references/workflow.md",
+    "scripts/authorize.py",
+    "scripts/mcp_client.py",
+    "scripts/uninstall.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1787924037957,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "beatra-ai",
+    "handle": "beatra-ai",
+    "user_id": "s176vcp4w7b7tt3j7a62gdnfys8cntp4"
+  },
+  "slug": "club-notice-talking",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/club-notice-talking",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=club-notice-talking&ownerHandle=beatra-ai",
+    "page_url": "https://clawhub.ai/beatra-ai/skills/club-notice-talking"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 9,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Turn a user-supplied club-activity script and authorized stills into one club activity talking clip per still. This club notice talking video studio writes a speakable event script talking clip for each photo, then animates a 2 to 15s club notice talking clip. Use it for club activity talking pack, club signup talking clip, and activity notice talking pack work that stays one photo, one clip.",
+  "updated_at": 1787923336922,
+  "version": "0.1.2"
+}
