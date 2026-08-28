@@ -1,6 +1,6 @@
 ## Description:
 
-Access Splitwise expense and group data via MCP for expense, group, friend, balance, receipt, and shared-expense management tasks.
+Accesses Splitwise expense, group, friend, balance, and receipt data through the splitwise-mcp MCP server, including expense and group-management actions.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and users with a configured Splitwise MCP server use this skill to query Splitwise data and manage shared expenses, groups, friends, receipts, and balances through agent-driven tool calls.
+External users and agents use this skill to query Splitwise expenses, groups, friends, balances, and receipts, and to create or modify Splitwise expenses and group membership after configuring the splitwise-mcp server with a Splitwise API key.
 
 ### Deployment Geography for Use:
 
@@ -22,40 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The referenced MCP server can change Splitwise account data, and the full server tool surface may be broader than the skill document clearly lists.
+Risk: The skill can create, edit, delete, or restore Splitwise expenses and can change group membership.
 
-Mitigation: Review the complete MCP tool list before installation and require dry-run review before confirming expense, group, friend, profile, or comment changes.
+Mitigation: Configure the agent to ask for explicit confirmation before financial or group-management actions.
 
-Risk: The Splitwise API key grants account access to every request made through the server.
+Risk: The MCP server requires a Splitwise API key that is attached to requests.
 
-Mitigation: Protect SPLITWISE_API_KEY as a secret and avoid sharing logs, configs, or environments that expose it.
+Mitigation: Install only from a trusted package source and store the key in the MCP environment rather than in prompts or shared files.
 
-Risk: Receipt downloads may write files to the server filesystem, which can be confusing in hosted or containerized deployments.
+Risk: Receipt retrieval can expose receipt contents or write receipt files to the server filesystem.
 
-Mitigation: Set SPLITWISE_OUTPUT_DIR explicitly or use write:false, inline:true, or extract_text:true when filesystem access is not appropriate.
-
-Risk: Using an unpinned npm install can change the server code installed by npx over time.
-
-Mitigation: Pin the npm package version for repeatable deployments.
+Mitigation: Use inline receipt viewing, PDF text extraction, or a controlled output directory when handling receipts.
 
 ## Reference(s):
 
-- [Splitwise MCP npm package](https://www.npmjs.com/package/splitwise-mcp)
+- [ClawHub skill page](https://clawhub.ai/chrischall/skills/splitwise-mcp)
+- [splitwise-mcp npm package](https://www.npmjs.com/package/splitwise-mcp)
 - [Splitwise app registration](https://secure.splitwise.com/apps/register)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance, Files]
+**Output Type(s):** [text, markdown, shell commands, configuration, files, guidance]
 
-**Output Format:** [Markdown with JSON configuration snippets, shell commands, and MCP tool-call guidance]
+**Output Format:** [Markdown guidance with MCP tool calls, JSON configuration snippets, shell commands, and optional receipt file paths or inline receipt content.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May return Splitwise account data, filesystem paths for downloaded receipts, inline receipt bytes, or extracted PDF text depending on the selected MCP tool options.]
+**Other Properties Related to Output:** [Requires SPLITWISE_API_KEY; receipt retrieval can return inline bytes or text, or write files to a configured output directory.]
 
 ## Skill Version(s):
 
-2.2.1 (source: release evidence)
+2.2.2 (source: server release evidence)
 
 ## Ethical Considerations:
 
