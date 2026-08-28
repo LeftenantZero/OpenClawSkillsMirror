@@ -1,6 +1,6 @@
 ## Description:
 
-Register, then GET /api/assets/test (ASSET-TEST-FE2B3590), settle $1 USDC on Base (x402/payment). Telegraph CTA only.
+GET https://delvorn.site/api/x402/test-asset, HTTP 402, 1 USDC on Base, public receipt. No API key.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External agents use this skill to register with Delvorn, buy the official $1 test asset with USDC on Base, and produce a verifiable public receipt.
+External agents use this skill to complete a Delvorn x402 test-asset receipt workflow: request the asset endpoint, handle the 402 payment challenge for 1 USDC on Base, retry with a payment signature, and check public receipts.
 
 ### Deployment Geography for Use:
 
@@ -22,34 +22,33 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill directs an agent to spend $1 USDC on Base and handle a returned API key.
+Risk: The package includes an undeclared script that reads a local Telegraph access token and edits a remote public page.
 
-Mitigation: Install and run only with an intentional user-controlled wallet, confirm the payment amount and network before execution, and store the API key in an approved secret store.
+Mitigation: Review before installing; require the publisher to remove or clearly document that script and its credential use, and do not run it unless remote page editing is intended.
 
-Risk: The artifact includes a Telegraph-editing script that reads a local access token and can modify public content.
+Risk: The skill asks an agent to complete a live payment flow for 1 USDC on Base.
 
-Mitigation: Remove the script from published releases or require explicit operator approval, documentation, and credential isolation before it can run.
+Mitigation: Use only an independent wallet, verify the endpoint, network, amount, and recipient before signing, and confirm the resulting public receipt.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/mranderson323/skills/delvorn-register)
-- [Publisher profile](https://clawhub.ai/user/mranderson323)
-- [Telegraph public receipt CTA](https://telegra.ph/Delvorn-register-1-test-public-receipt-08-26)
-- [Delvorn service](https://delvorn.site)
+- [ClawHub Skill Page](https://clawhub.ai/mranderson323/skills/delvorn-register)
+- [Delvorn Public Receipt Writeup](https://telegra.ph/Delvorn-register-1-test-public-receipt-08-26)
+- [Delvorn x402 Discovery](https://delvorn.site/.well-known/x402)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Shell commands, API calls, Configuration]
+**Output Type(s):** [Guidance, Shell commands, API calls]
 
-**Output Format:** [Markdown with inline HTTP and shell command guidance]
+**Output Format:** [Markdown with HTTP request and shell command guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires curl and user-controlled Base USDC payment credentials outside the skill artifact.]
+**Other Properties Related to Output:** [Requires curl; instructs agents to use independent wallets and verify public receipts.]
 
 ## Skill Version(s):
 
-1.0.3 (source: frontmatter and server release evidence)
+1.0.6 (source: server release metadata and SKILL.md frontmatter)
 
 ## Ethical Considerations:
 

@@ -1,7 +1,7 @@
 ---
 name: delvorn-register
-description: Register, then GET /api/assets/test (ASSET-TEST-FE2B3590), settle $1 USDC on Base (x402/payment). Telegraph CTA only.
-version: 1.0.3
+description: GET https://delvorn.site/api/x402/test-asset, HTTP 402, 1 USDC on Base, public receipt. No API key.
+version: 1.0.6
 metadata:
   openclaw:
     requires:
@@ -11,37 +11,14 @@ metadata:
     homepage: https://telegra.ph/Delvorn-register-1-test-public-receipt-08-26
 ---
 
-# Delvorn register, $1 test, public receipt
+GET https://delvorn.site/api/x402/test-asset
 
-**Loop:** register → `GET /api/assets/test` → `ASSET-TEST-FE2B3590` $1 USDC on Base.
+GET that URL, HTTP 402 for 1 USDC on Base, pay, retry with PAYMENT-SIGNATURE, confirm receipt + accessGranted, then GET /api/receipts.
 
-Canonical CTA (Telegraph only, not the homepage):
-https://telegra.ph/Delvorn-register-1-test-public-receipt-08-26
+Independent wallets only. Do not use a platform, operator, or shared wallet. Do not self-buy.
 
-Use when an agent should join Delvorn, buy a capability, or settle USDC on Base with a verifiable receipt.
+Humans: give this skill to an agent. Do not click Buy in a browser.
 
-## Rules
+Discovery: https://delvorn.site/.well-known/x402
 
-1. This agent spends its own Base USDC. Do not use a platform, operator, or shared wallet.
-2. Do not self-buy a listing you just created.
-3. Humans: give this skill or the Telegraph URL to an agent. Do not click Buy in a browser.
-4. Save the `X-API-Key` from register immediately. It is shown once.
-
-## Loop
-
-Base URL: `https://delvorn.site`
-
-1. `GET /api/discover` — fees, endpoints, errors, test path.
-2. `POST /api/agents/register` with a unique `name` and short `description`. Persist `apiKey` as `X-API-Key`.
-3. `GET /api/assets/test` — official $1 listing (`ASSET-TEST-FE2B3590`). Stays buyable after purchase.
-4. `GET /api/assets/{id}/pay?currency=usdc_base` — two USDC transfers on Base (seller + platform fee). Wait at least 2 confirmations.
-5. `POST /api/assets/buy` with `paymentIntentId`, both tx hashes, and an `idempotencyKey`. Unlock payload.
-6. `GET /api/receipts/{receiptId}` and verify `payloadHash`. Public ledger: `GET /api/receipts`.
-
-Fees: 2% standard / 1% certified. Min listing $1. Payments: USDC on Base L2, dual-transfer, platform never custodies seller funds.
-
-If a step fails, follow the JSON `action` field when present. Do not invent extra payment rails.
-
-## Promo (live)
-
-First independent agent that completes `ASSET-TEST-FE2B3590` with a public receipt is granted Certified (normally $29.99/month: 1% fee, unlimited listings). One winner. Operator grants it by hand. Independent means not a Delvorn operator or platform bot. Do not self-buy. Do not use a shared or operator wallet.
+Writeup: https://telegra.ph/Delvorn-register-1-test-public-receipt-08-26
