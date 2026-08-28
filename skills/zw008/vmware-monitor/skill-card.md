@@ -1,6 +1,6 @@
 ## Description:
 
-VMware Monitor helps agents run read-only VMware vCenter and ESXi inventory, health, alarm, event, performance, capacity, and investigation workflows.
+VMware Monitor gives agents read-only VMware vCenter and ESXi visibility for inventory, alarms, events, performance, capacity, and object-centered health investigations.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, SREs, infrastructure operators, and support engineers use this skill to inspect VMware environments, triage active issues, and prepare read-only investigation summaries before any operational change.
+Developers, SREs, and infrastructure operators use this skill to inspect VMware environments, triage health issues, and gather evidence before handing any remediation to companion write-capable tools.
 
 ### Deployment Geography for Use:
 
@@ -22,46 +22,46 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Daemon and webhook features may expose VMware alarms, events, host-log snippets, or infrastructure names through local logs or configured endpoints.
+Risk: The tool requires read access to VMware inventory, alarms, events, performance, and capacity data.
 
-Mitigation: Keep daemon and webhook features disabled unless needed, review the configured endpoint, and use a least-privilege read-only VMware account.
+Mitigation: Use a least-privilege vSphere account scoped to the environments the agent is allowed to inspect.
 
-Risk: Stored VMware passwords are obfuscated with base64 rather than encrypted at rest.
+Risk: The configuration uses a local .env file for VMware target secrets.
 
-Mitigation: Treat the password store as sensitive, restrict file permissions, and avoid storing passwords in the environment file when stronger secret storage is required.
+Mitigation: Protect the .env file with restrictive permissions or inject credentials from a secret manager at runtime.
 
-Risk: The security summary flags Review-level risk because the skill's risk-free framing understates daemon and webhook data-handling concerns.
+Risk: Disabling TLS verification can expose monitoring sessions to interception.
 
-Mitigation: Review the package and source before production use, especially scheduled scanning, webhook delivery, and local logging behavior.
+Mitigation: Keep TLS verification enabled in production and reserve certificate-validation bypasses for intentional isolated lab use.
 
-Risk: Some vSphere 9.1 REST response parsing is documented as best-effort pending replay against a live vSphere 9.1 vCenter.
+Risk: Scheduled monitoring and webhooks can send operational alert metadata outside the local machine.
 
-Mitigation: Validate vSphere 9.1 memory tiering, vLCM compliance, last-apply, and deployment-size outputs against the target vCenter before relying on them for operational decisions.
+Mitigation: Start the daemon and configure Slack, Discord, or other webhook URLs only when scheduled alerts are intended.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/zw008/skills/vmware-monitor)
-- [VMware Monitor homepage](https://github.com/vmware-skills/VMware-Monitor)
-- [Capabilities](artifact/references/capabilities.md)
-- [CLI Reference](artifact/references/cli-reference.md)
-- [Setup Guide](artifact/references/setup-guide.md)
-- [Investigation Protocol](artifact/references/investigation-protocol.md)
-- [Agent Guardrails](artifact/references/agent-guardrails.md)
-- [Cluster Health Summary Display Template](artifact/references/health-summary-template.md)
+- [ClawHub Skill Page](https://clawhub.ai/zw008/skills/vmware-monitor)
+- [VMware Monitor Homepage](https://github.com/vmware-skills/VMware-Monitor)
+- [Capabilities](references/capabilities.md)
+- [CLI Reference](references/cli-reference.md)
+- [Setup Guide](references/setup-guide.md)
+- [Agent Guardrails](references/agent-guardrails.md)
+- [Investigation Protocol](references/investigation-protocol.md)
+- [Health Summary Template](references/health-summary-template.md)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with VMware CLI commands, structured summaries, and operational guidance]
+**Output Format:** [Markdown, structured text, CLI commands, and configuration guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include offline HTML snapshot file paths when users request saved health or investigation reports.]
+**Other Properties Related to Output:** [May produce offline HTML snapshot commands and read-only monitoring summaries; results depend on configured VMware targets and credentials.]
 
 ## Skill Version(s):
 
-1.8.10 (source: server release metadata)
+1.8.11 (source: server release evidence)
 
 ## Ethical Considerations:
 
