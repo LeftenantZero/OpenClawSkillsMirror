@@ -1,0 +1,41 @@
+{
+  "changelog": "**Major upgrade with added scripts, configurability, and streamlined TTS triggers**\n\n- Added Node.js scripts for TTS conversion and config management (`tts-converter.js`, `config-manager.js`), with installation and usage instructions.\n- Added resource and reference files, including a complete voice/option guide and install script.\n- Changed TTS intent detection to trigger only on the \"tts\" keyword (removes long trigger phrase lists), and clarified keyword filtering prior to conversion.\n- Expanded documentation with workflow, usage examples, advanced configuration, troubleshooting, and testing instructions.\n- Clarified default voice, output formats, temporary file handling, and recommended voice test site.",
+  "created_at": 1769296533444,
+  "display_name": "Edge TTS",
+  "fetched_at": 1787912896082,
+  "files": [
+    "DISTRIBUTION.md",
+    "SKILL.md",
+    "_meta.json",
+    "install.sh",
+    "references/node_edge_tts_guide.md",
+    "scripts/config-manager.js",
+    "scripts/package-lock.json",
+    "scripts/package.json",
+    "scripts/tts-converter.js",
+    "skill-card.md",
+    "skill-info.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "i3130002",
+    "handle": "i3130002",
+    "user_id": "s174g0b36b6s6mynzh70wmxp5h885pyw"
+  },
+  "slug": "edge-tts",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/edge-tts",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=edge-tts&ownerHandle=i3130002",
+    "page_url": "https://clawhub.ai/i3130002/skills/edge-tts"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 22266,
+    "installs": 743,
+    "stars": 33,
+    "versions": 2
+  },
+  "summary": "Text-to-speech conversion using node-edge-tts npm package for generating audio from text.\nSupports multiple voices, languages, speed adjustment, pitch control, and subtitle generation.\nUse when: (1) User requests audio/voice output with the \"tts\" trigger or keyword. (2) Content needs to be spoken rather than read (multitasking, accessibility, driving, cooking). (3) User wants a specific voice, speed, pitch, or format for TTS output.",
+  "updated_at": 1778485848771,
+  "version": "2.0.0"
+}
