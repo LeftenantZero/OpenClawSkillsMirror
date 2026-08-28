@@ -1,41 +1,53 @@
-## Description: <br>
-Use when someone wants one short film beat from images - a narrated scene, story moment, or cinematic B-roll with optional voiceover. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+Helps an agent plan and produce one short image-to-video clip, such as a narrated scene, story moment, or cinematic B-roll with optional voiceover.
 
-## Publisher: <br>
-[pruna-ai](https://clawhub.ai/user/pruna-ai) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[pruna-ai](https://clawhub.ai/user/pruna-ai)
 
-## Use Case: <br>
-Developers and creative operators use this skill to guide an agent through a single-scene image-to-video workflow with optional narration, review gates, and media generation handoffs. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: The workflow can upload user images, audio, or generated media to external generation services. <br>
-Mitigation: Use the documented data-handling gate before uploads or paid calls, and confirm that the user intends to send the media to those services. <br>
-Risk: The workflow can trigger paid media generation calls. <br>
-Mitigation: Require explicit approval at the plan, stills, and clip gates before running the paid video step. <br>
-Risk: Requests for longer films or multi-scene outputs can exceed the skill boundary. <br>
-Mitigation: Keep the workflow to one scene and one video job, or hand off to the related multi-scene or transition-reel skills. <br>
+## Use Case:
 
+External users and developers use this skill to guide an agent through a staged, single-scene image-to-video workflow with optional narration and background audio. It is suited for short cinematic beats, story moments, or B-roll clips that need approval gates before generation.
 
-## Reference(s): <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [Guidance, Markdown, Shell commands, Files] <br>
-**Output Format:** [Markdown guidance with inline shell commands and generated media artifacts] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [Uses staged approval gates for plan, stills, TTS, video clip, and optional background music.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-1.0.9 (source: server release evidence and SKILL.md frontmatter) <br>
+Risk: Source images or narration audio may be uploaded to external generation services.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Confirm user comfort with these uploads before installation or use, and preserve the documented approval gates before any upload or paid generation step.
+
+Risk: Paid video generation can incur cost if approval gates are skipped.
+
+Mitigation: Require explicit approval before paid video generation and keep the skill's plan, stills, and clip review gates in place.
+
+## Reference(s):
+
+- [ClawHub skill page](https://clawhub.ai/pruna-ai/skills/image-to-video)
+
+## Skill Output:
+
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+
+**Output Format:** [Markdown guidance with inline shell commands and staged approval gates]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [Single-scene workflow with approval gates before paid generation or uploads.]
+
+## Skill Version(s):
+
+1.0.10 (source: server release evidence and skill frontmatter)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
