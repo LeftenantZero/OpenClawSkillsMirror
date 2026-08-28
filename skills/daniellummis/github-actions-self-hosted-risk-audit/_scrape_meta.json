@@ -1,0 +1,37 @@
+{
+  "changelog": "Initial release of github-actions-self-hosted-risk-audit.\n\n- Scans GitHub Actions workflows for use of self-hosted runners and flags risky configurations.\n- Detects dangerous trigger combinations, privilege escalation, overly broad runner selection, and insecure checkout steps.\n- Supports customizable input options including file glob, output format (text/json), scoring thresholds, and CI fail gating.\n- Outputs either a summary report or detailed JSON, and can fail CI on critical findings.",
+  "created_at": 1772932067317,
+  "display_name": "GitHub Actions Self-Hosted Risk Audit",
+  "fetched_at": 1787885210124,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "fixtures/high-risk-self-hosted.yml",
+    "fixtures/safe-self-hosted.yml",
+    "fixtures/warn-self-hosted.yml",
+    "scripts/self-hosted-risk-audit.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Daniel Lummis",
+    "handle": "daniellummis",
+    "user_id": "s17fw617wehb1y9a026bgg9yed885cv7"
+  },
+  "slug": "github-actions-self-hosted-risk-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/github-actions-self-hosted-risk-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=github-actions-self-hosted-risk-audit&ownerHandle=daniellummis",
+    "page_url": "https://clawhub.ai/daniellummis/skills/github-actions-self-hosted-risk-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 745,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Audit GitHub Actions workflows that use self-hosted runners for untrusted trigger and credential-hardening risks.",
+  "updated_at": 1778491768590,
+  "version": "1.0.0"
+}
