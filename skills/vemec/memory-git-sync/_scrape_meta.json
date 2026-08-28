@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of memory-git-sync \u2014 a skill to automate workspace backup and synchronization with a remote Git repository.\n\n- Validates local Git configuration, user identity, remote 'origin', and permissions before syncing.\n- Automatically detects and excludes large files (>95MB) to prevent push failures.\n- Stages, commits (using timestamped or custom messages), pulls, and pushes changes with intelligent conflict handling.\n- Outputs all actions with structured, prefix-based logs for easy status parsing.\n- Auto-configures branch upstream/tracking on initial push.\n- Includes fallback handling for common errors and recovery scenarios.",
+  "created_at": 1770990610998,
+  "display_name": "Smart Git Backup",
+  "fetched_at": 1787903019799,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/sync.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "vemec",
+    "handle": "vemec",
+    "user_id": "s170dxgwg7wbrtrax1ptgzccg583fskz"
+  },
+  "slug": "memory-git-sync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memory-git-sync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memory-git-sync&ownerHandle=vemec",
+    "page_url": "https://clawhub.ai/vemec/skills/memory-git-sync"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1409,
+    "installs": 45,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Automates the backup of the OpenClaw workspace to a remote Git repository. Handles large file exclusions, validates git configuration, and performs intelligent sync with conflict resolution.",
+  "updated_at": 1778489510625,
+  "version": "1.0.0"
+}
