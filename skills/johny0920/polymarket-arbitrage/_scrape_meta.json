@@ -1,0 +1,52 @@
+{
+  "changelog": "Initial release of polymarket-arbitrage.\n\n- Detects and reports math arbitrage, cross-market inconsistencies, and orderbook inefficiencies on Polymarket.\n- Includes scripts for scanning markets, detecting arbitrage, and continuous monitoring with alerting.\n- Features built-in risk management, P&L tracking, stateful deduplication of alerts, and configurable thresholds.\n- Provides comprehensive documentation: setup, workflow phases (paper trading to automation), risk management, and troubleshooting.\n- Currently focuses on multi-outcome math arbitrage; cross-market and real-time orderbook arbitrage support outlined for future development.",
+  "created_at": 1770156353777,
+  "display_name": "Polymarket Arbitrage",
+  "fetched_at": 1787909500993,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "arbs.json",
+    "polymarket_data/arbs.json",
+    "polymarket_data/markets.json",
+    "references/arbitrage_types.md",
+    "references/getting_started.md",
+    "scripts/detect_arbitrage.py",
+    "scripts/fetch_markets.py",
+    "scripts/monitor.py",
+    "skill-card.md",
+    "test_markets.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783656190650,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "JohnY0920",
+    "handle": "johny0920",
+    "user_id": "s1713c181jdxtqwyvc2hsbjw6188524w"
+  },
+  "slug": "polymarket-arbitrage",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/polymarket-arbitrage",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=polymarket-arbitrage&ownerHandle=johny0920",
+    "page_url": "https://clawhub.ai/johny0920/skills/polymarket-arbitrage"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 5069,
+    "installs": 182,
+    "stars": 13,
+    "versions": 1
+  },
+  "summary": "Monitor and execute arbitrage opportunities on Polymarket prediction markets. Detects math arbitrage (multi-outcome probability mismatches), cross-market arbitrage (same event different prices), and orderbook inefficiencies. Use when user wants to find or trade Polymarket arbitrage, monitor prediction markets for opportunities, or implement automated trading strategies. Includes risk management, P&L tracking, and alerting.",
+  "updated_at": 1778486013286,
+  "version": "0.1.0"
+}
