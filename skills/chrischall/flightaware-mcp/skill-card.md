@@ -1,44 +1,55 @@
-## Description: <br>
-Live flight tracking and aviation data via FlightAware AeroAPI through MCP for flight status, positions, routes, airport boards, schedules, aircraft ownership, and flight alerts. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+flightaware-mcp helps agents use FlightAware AeroAPI through MCP for live flight tracking, airport boards, routes, aircraft ownership, schedules, and flight-alert management.
 
-## Publisher: <br>
-[chrischall](https://clawhub.ai/user/chrischall) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[chrischall](https://clawhub.ai/user/chrischall)
 
-## Use Case: <br>
-External users and developers use this skill to configure and operate a FlightAware MCP server for live flight tracking, airport status checks, aircraft and operator lookups, schedules, and alert management. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: AeroAPI credentials are stored in MCP configuration. <br>
-Mitigation: Use an AeroAPI key suitable for local MCP configuration and avoid sharing configuration files that contain the key. <br>
-Risk: FlightAware AeroAPI requests can consume quota or incur billing. <br>
-Mitigation: Monitor FlightAware usage, use the documented cache settings where appropriate, and avoid unnecessary repeated live-data queries. <br>
-Risk: Confirmed alert operations can modify the user's FlightAware account. <br>
-Mitigation: Review dry-run previews and use confirm-gated alert changes only when the requested account change is intended. <br>
+## Use Case:
 
+External users, developers, and operations teams use this skill to answer flight-status, airport, route, aircraft, schedule, and alert-management questions through a configured FlightAware MCP server and their own AeroAPI key.
 
-## Reference(s): <br>
-- [ClawHub skill page](https://clawhub.ai/chrischall/skills/flightaware-mcp) <br>
-- [npm package @chrischall/flightaware-mcp](https://www.npmjs.com/package/@chrischall/flightaware-mcp) <br>
-- [FlightAware AeroAPI portal](https://www.flightaware.com/aeroapi/portal/) <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [Guidance, Shell commands, Configuration] <br>
-**Output Format:** [Markdown with JSON and shell command examples] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [Requires a FlightAware AeroAPI key; API use counts against the user's FlightAware quota.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-0.3.4 (source: server release evidence) <br>
+Risk: The MCP server uses the user's FlightAware AeroAPI key and API calls can count against quota or billing.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Configure the key only in trusted MCP settings, monitor AeroAPI usage, and use caching or pinned package versions where repeatable behavior matters.
+
+Risk: Alert-management tools can create, update, delete, or change alert webhook endpoints.
+
+Mitigation: Review alert changes before confirmation and require explicit approval for account-changing operations.
+
+## Reference(s):
+
+- [ClawHub skill page](https://clawhub.ai/chrischall/skills/flightaware-mcp)
+- [npm package](https://www.npmjs.com/package/@chrischall/flightaware-mcp)
+- [FlightAware AeroAPI portal](https://www.flightaware.com/aeroapi/portal/)
+
+## Skill Output:
+
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+
+**Output Format:** [Markdown with inline JSON and shell command examples]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [May describe MCP tool calls and FlightAware API-backed results; some actions require a configured AeroAPI key and may affect account alerts.]
+
+## Skill Version(s):
+
+0.3.5 (source: evidence.json release.version)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
