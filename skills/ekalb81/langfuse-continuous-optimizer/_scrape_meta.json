@@ -1,0 +1,38 @@
+{
+  "changelog": "- Added metadata field specifying environment variables and binaries required for operation.\n- Enhanced safety controls: live policy promotion now requires explicit --promote-live-policy flag.\n- Added persistent configuration management with --save-config and interactive toggling via configure subcommand.\n- Expanded documentation on non-destructive cycle options and local file writes.\n- Updated quick start examples to reflect new safety and configuration flags.\n- Improved workflow step: promotion occurs only if enabled, increasing guardrail safety.",
+  "created_at": 1772440076695,
+  "display_name": "Clawfuse",
+  "fetched_at": 1787891701359,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "references/closed-loop-playbook.md",
+    "references/data-contracts.md",
+    "scripts/closed_loop_prompt_ops.py",
+    "scripts/langfuse_openclaw_optimizer.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Frederick",
+    "handle": "ekalb81",
+    "user_id": "s17dk4d77mjarrwze228zpydrd885xkd"
+  },
+  "slug": "langfuse-continuous-optimizer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/langfuse-continuous-optimizer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=langfuse-continuous-optimizer&ownerHandle=ekalb81",
+    "page_url": "https://clawhub.ai/ekalb81/skills/langfuse-continuous-optimizer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 831,
+    "installs": 23,
+    "stars": 1,
+    "versions": 2
+  },
+  "summary": "Continuous LangFuse-driven optimization loop for OpenClaw/OpenRouter model routing and prompt usage controls with persistent local memory. Use when Codex nee...",
+  "updated_at": 1778491688197,
+  "version": "0.0.2"
+}
