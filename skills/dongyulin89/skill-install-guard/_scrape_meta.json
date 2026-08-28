@@ -1,0 +1,33 @@
+{
+  "changelog": "skill-install-guard v1.0.0\n\n- New initial release of a security enforcement skill for installing other skills.\n- Intercepts all install requests, pauses the action, and performs security audits via skill-vetter before installation proceeds.\n- Outputs detailed safety review reports and strictly requires explicit user confirmation before installing.\n- Disallows all unapproved or automatic installs; no installation happens without an explicit \"yes\".\n- Supports scenarios like batch install attempts, third-party sources, and skill updates, always enforcing the security workflow.",
+  "created_at": 1773107369412,
+  "display_name": "Skill Install Guard",
+  "fetched_at": 1787882825234,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "dongyulin89",
+    "handle": "dongyulin89",
+    "user_id": "s176et6xafcfq6dmy0ast5k1xs8843q9"
+  },
+  "slug": "skill-install-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-install-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-install-guard&ownerHandle=dongyulin89",
+    "page_url": "https://clawhub.ai/dongyulin89/skills/skill-install-guard"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 977,
+    "installs": 27,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "\u5b89\u5168\u62e6\u622a\u578b\u6280\u80fd\uff0c\u786e\u4fdd\u5b89\u88c5\u4efb\u4f55\u6280\u80fd\u524d\u90fd\u7ecf\u8fc7 skill-vetter \u7684\u5b89\u5168\u5ba1\u67e5\uff0c\u8f93\u51fa\u5ba1\u67e5\u62a5\u544a\u5e76\u8981\u6c42\u7528\u6237\u660e\u786e\u786e\u8ba4\uff0c\u7981\u6b62\u79c1\u81ea\u5b89\u88c5\u3002",
+  "updated_at": 1778491796228,
+  "version": "1.0.0"
+}
