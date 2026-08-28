@@ -1,6 +1,6 @@
 ## Description:
 
-Detects abnormal body temperature rise or drop in livestock and poultry from thermal or visible-light imagery, and outputs fever/hypothermia early warnings based on visual thermal features.
+Detects abnormal body temperature rise or drop in livestock and poultry from thermal or visible-light imagery, and outputs fever/hypothermia early warnings based on visual thermal features. | 通过热成像或视觉特征识别畜禽体温异常，预警发热。
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Farm operators, animal-health staff, and agents use this skill to screen livestock and poultry imagery or video for visual signs of abnormal body temperature. It supports early warning workflows by returning structured fever or hypothermia findings, individual locations, estimated temperature ranges, and report links.
+Farm operators, veterinarians, and developers use this skill to screen livestock and poultry thermal or visible-light images and videos for body-temperature abnormalities and to retrieve historical fever or hypothermia warning reports. It supports early health screening but does not provide disease diagnosis or treatment advice.
 
 ### Deployment Geography for Use:
 
@@ -22,41 +22,42 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Farm imagery, video, and URLs are sent to remote LifeEmergence services for analysis.
+Risk: Livestock media may be uploaded to the configured service for analysis.
 
-Mitigation: Use only inputs approved for external processing and confirm retention, deletion, and access controls before deployment.
+Mitigation: Use only media that is approved for the service, and confirm data handling expectations before installation.
 
-Risk: The skill can create or reuse an internal account identity and store tokens locally without a user-facing setup step.
+Risk: Report history is tied to an automatically managed identity and tokens may be stored in the workspace data directory.
 
-Mitigation: Run the skill in an isolated workspace, review local token and identity storage, and prefer a version that asks before account setup.
+Mitigation: Run the skill in an isolated workspace and review identity and token storage before using it with sensitive data.
 
-Risk: History lookup can retrieve cloud reports associated with the current identity.
+Risk: The release includes development HTTP endpoint configuration.
 
-Mitigation: Limit use of history commands to authorized operators and verify the active identity before querying cloud report history.
+Mitigation: Review and replace endpoint configuration with the intended production or approved service endpoints before use.
 
-Risk: Temperature abnormality results are screening signals, not veterinary diagnoses.
+Risk: The output is a screening result, not a veterinary diagnosis or treatment recommendation.
 
-Mitigation: Require veterinary or laboratory confirmation before disease diagnosis, treatment, quarantine, or culling decisions.
+Mitigation: Use results as an early-warning signal and escalate suspected disease cases to qualified veterinary or laboratory review.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-livestock-fever-detection-analysis)
-- [API documentation](references/api_doc.md)
-- [Skill demo](https://lifeemergence.com/sample.html)
+- [ClawHub Skill Page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-livestock-fever-detection-analysis)
+- [Skill Demo](https://lifeemergence.com/sample.html)
+- [Livestock Fever Detection API Documentation](artifact/references/api_doc.md)
+- [Common Analysis API Documentation](artifact/skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, json, shell commands, configuration]
+**Output Type(s):** [text, markdown, JSON, files]
 
-**Output Format:** [Markdown text with JSON-formatted structured analysis, history listings, and report links.]
+**Output Format:** [Markdown or JSON-style structured analysis, with optional saved output file]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Outputs are generated through remote LifeEmergence services; local uploads and URL inputs are supported, with documented file-size and media-format limits.]
+**Other Properties Related to Output:** [May include abnormality levels, estimated temperature ranges, individual locations, report links, and historical report tables.]
 
 ## Skill Version(s):
 
-1.0.9 (source: server release metadata)
+1.0.10 (source: server release metadata; artifact frontmatter says 1.0.9)
 
 ## Ethical Considerations:
 
