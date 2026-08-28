@@ -1,0 +1,41 @@
+{
+  "changelog": "Initial release introducing HTTP client with retry logic and circuit breaker pattern.\n\n- Implements exponential backoff retry with configurable base delay, max delay, multiplier, and jitter.\n- Integrates circuit breaker pattern with CLOSED, OPEN, and HALF-OPEN states to minimize failure impact.\n- Supports customizable thresholds for retries, timeouts, and circuit breaker logic.\n- Provides manual circuit breaker control and statistics reporting.\n- Emits events for retry attempts and circuit breaker state changes.\n- Significantly reduces HTTP request failure rates.",
+  "created_at": 1772603555203,
+  "display_name": "HTTP Retry Circuit Breaker",
+  "fetched_at": 1787890067551,
+  "files": [
+    "PERFORMANCE.md",
+    "PUBLISHING.md",
+    "README.md",
+    "SKILL.md",
+    "SUMMARY.md",
+    "_meta.json",
+    "http-retry-circuit-breaker.js",
+    "manifest.json",
+    "package.json",
+    "skill-card.md",
+    "test.js"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "qwe123sddfsdfs",
+    "handle": "qwe123sddfsdfs",
+    "user_id": "s17ccrb7ttdq8dmns1geat7kxs884z34"
+  },
+  "slug": "http-retry-circuit-breaker",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/http-retry-circuit-breaker",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=http-retry-circuit-breaker&ownerHandle=qwe123sddfsdfs",
+    "page_url": "https://clawhub.ai/qwe123sddfsdfs/skills/http-retry-circuit-breaker"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 919,
+    "installs": 26,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Implements HTTP request retries with exponential backoff and a configurable circuit breaker to reduce failures and prevent cascading errors.",
+  "updated_at": 1778491711300,
+  "version": "1.0.0"
+}
