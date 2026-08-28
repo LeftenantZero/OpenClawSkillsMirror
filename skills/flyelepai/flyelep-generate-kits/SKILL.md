@@ -1,5 +1,5 @@
 ---
-name: All
+name: flyelep-ai-skills
 description: >-
   Flyelep AI Agent 技能集合，可通过仓库 URL 被 OpenClaw、Claude Code 等 AI 工具加载。
   当前仓库中的技能全部基于 Flyelep API 接口文档整理，主要覆盖电商海报生成与 AI 图片工具两大类能力。
@@ -18,19 +18,20 @@ description: >-
 | [product-replace](skills/product-replace/SKILL.md) | 替换图片中的商品主体，保留背景和光影效果 |
 | [product-color-change](skills/product-color-change/SKILL.md) | 智能识别商品并进行换色处理 |
 | [image-clarity-enhance](skills/image-clarity-enhance/SKILL.md) | AI 超清增强图片清晰度，支持批量处理 |
-| [async-free-creation](skills/async-free-creation/SKILL.md) | 异步自由创作，调用 Image-2 模型生成多张创意图片 |
+| [async-free-creation](skills/async-free-creation/SKILL.md) | 异步自由创作，可选模型生成多张创意图片 |
 | [ai-writing-assist](skills/ai-writing-assist/SKILL.md) | AI 帮写，辅助生成创意文案和优化提示词 |
 | [gen-hot-image](skills/gen-hot-image/SKILL.md) | 爆款图片复刻，基于爆款风格生成产品复刻图 |
 | [gen-hot-video](skills/gen-hot-video/SKILL.md) | 爆款视频复刻，基于爆款风格生成产品复刻视频 |
 | [generate-video](skills/generate-video/SKILL.md) | 文本生成视频，通过 AI 根据提示词生成产品视频或创意视频 |
+| [file-upload](skills/file-upload/SKILL.md) | 上传本地图片、视频、音频到云存储，返回可公网访问的直链 |
 
 
 ## 环境要求
 
 - 用户需从 Flyelep 开放平台获取 API 密钥
 - Flyelep 平台地址：https://www.flyelep.cn
-- 除 `poster` 外，本仓库中的 AI 工具技能统一要求在请求头中传入 `secretKey`
-- `poster` 技能按接口要求在请求 body 中传入 `secretKey`
+- 本仓库中的技能统一要求在请求头中传入 `secretKey`
+- 海报生图（`generate-poster`）与视频生成（`generate-video`）也兼容在请求 body 中传 `secretKey`，两处都传时以请求头为准
 
 ## 技能列表
 
@@ -42,12 +43,19 @@ description: >-
 
 - 生成产品单图和产品详情图
 - 支持跨境电商与中文电商
-- 支持多平台、多语言文案
+- 支持多平台、多语言文案；语种由平台推导，中文平台（淘宝、拼多多、京东等）默认 `中文简体`，跨境平台（Amazon、Temu、Shopee 等）默认 `英文`
+- 默认模型为 `modelEdition=9`（Flyelep Image 2），用户未指定时显式传入
 - 支持参考图输入和比例控制
+- 支持特惠通道（`promotion`，默认）与尊享通道（`premium`），特惠通道仅支持 `modelEdition` 为 `3` 或 `9`；调用时默认显式传特惠，用户要求尊享或需要 `modelEdition=2` 时才改传尊享
+- 同时提供异步（提交后轮询）与同步（一次请求出图）两种模式，参数完全一致
 
 接口入口：
 
-- `POST /prod-api/poster-design/api/v1/poster/generate`
+- 异步（推荐）：`POST /prod-api/poster-design/api/v1/poster/generateAsync` + `POST /prod-api/poster-design/api/v1/poster/queryTaskResult`
+- 同步：`POST /prod-api/poster-design/api/v1/poster/generate`
+- 同步（白底主图专属入口，等价于 `/generate` + `generateType=101`）：`POST /prod-api/poster-design/api/v1/poster/whiteBgMainImgGen`
+
+同步模式服务端最长挂 15 分钟，返回的 `data` 是以英文分号 `;` 拼接的字符串，且不返回任务 ID，连接断开后结果无法找回；除用户明确要求一次请求出图外，优先用异步模式。
 
 详细参数和映射规则请查看 [skills/generate-poster/SKILL.md](skills/generate-poster/SKILL.md)。
 
@@ -101,23 +109,25 @@ description: >-
 
 ### image-enlarge
 
-对图片进行无损放大，支持单张或批量增强。
+对图片按倍数进行无损放大，支持单张或批量处理。
 
 主要能力：
 
-- 提高清晰度
-- 放大图片尺寸
-- 批量增强商品图
+- 按倍数放大图片尺寸
+- 提升放大后的成图分辨率
+- 批量放大商品图
+
+> 只想“变清晰”而不放大尺寸时，应改用 `image-clarity-enhance`。
 
 接口入口：
 
 - `POST /prod-api/poster-design/api/v1/poster/aiTool/enlarge`
 
-增强强度为：
+图片入参：`imageUrlList`（数组，推荐）与 `imgUrls`（逗号分隔字符串）二选一，最多 6 张，建议单张 10MB 以内
 
-- `1`：轻度增强
-- `2`：标准增强
-- `3`：强力增强
+放大倍率 `scalingRatio`：
+
+- 仅支持 `2`、`4`、`8`，未指定时用 `2`
 
 详细调用方式请查看 [skills/image-enlarge/SKILL.md](skills/image-enlarge/SKILL.md)。
 
@@ -153,8 +163,9 @@ description: >-
 
 模型类型：
 
-- `0`：`gemini-2.5`
-- `1`：`gemini-3-pro`
+- `9`：`Flyelep Image 2`（当前仅支持该取值）
+
+必传 `sourceUrl`、`textPrompt`、`modelType`，场景参考图 `replaceImageUrl` 可选且只支持单图。
 
 详细参数说明请查看 [skills/scene-replace/SKILL.md](skills/scene-replace/SKILL.md)。
 
@@ -174,8 +185,7 @@ description: >-
 
 模型类型：
 
-- `0`：`gemini-2.5`
-- `1`：`gemini-3-pro`
+- `9`：`Flyelep Image 2`（当前仅支持该取值）
 
 详细参数说明请查看 [skills/product-replace/SKILL.md](skills/product-replace/SKILL.md)。
 
@@ -195,8 +205,7 @@ description: >-
 
 模型类型：
 
-- `0`：`gemini-2.5`
-- `1`：`gemini-3-pro`
+- `9`：`Flyelep Image 2`（当前仅支持该取值）
 
 详细提示词建议请查看 [skills/product-color-change/SKILL.md](skills/product-color-change/SKILL.md)。
 
@@ -214,11 +223,11 @@ description: >-
 
 - `POST /prod-api/poster-design/api/v1/poster/aiTool/imageClarityEnhance`
 
-增强强度：
+增强强度（必须显式传入，缺失时接口直接返回空结果）：
 
-- `light`
-- `standard`
-- `strong`
+- `light`（基础单价）
+- `standard`（2 倍单价）
+- `strong`（3 倍单价）
 
 图片规格限制：
 
@@ -232,14 +241,24 @@ description: >-
 
 ### async-free-creation
 
-异步自由创作，适用于根据提示词和可选参考图调用 Image-2 模型生成产品图或创意图片。
+异步自由创作，适用于根据提示词和可选参考图生成产品图或创意图片。
 
 主要能力：
 
 - 通过异步任务生成 1-4 张图片
 - 支持参考图数组，最多 6 张
 - 支持 `1:1`、`16:9`、`9:16` 等比例
+- 支持模型选择：Flyelep Image 2（默认）、Flyelep Nano 2、Flyelep Dream 5 pro
+- 默认走特惠通道（`promotion`），仅在用户要求尊享通道或模型不被特惠通道支持时改传 `premium`
 - 使用新版任务查询接口轮询获取结果
+
+模型类型：
+
+| modelEdition | 模型 |
+|--------------|------|
+| `9` | Flyelep Image 2（默认） |
+| `3` | Flyelep Nano 2 |
+| `2` | Flyelep Dream 5 pro |
 
 接口入口：
 
@@ -291,8 +310,8 @@ AI 帮写，辅助生成创意文案，可用于优化用户提示词或获取�
 
 - 复刻爆款视频风格
 - 将产品视频融合到爆款视觉中
-- 支持多种分辨率、比例和时长
-- 支持 pro/fast 两种模型
+- 支持多种分辨率、比例和时长（4-15 秒）
+- 支持 `pro`/`fast`/`ultra` 三种模型档位
 - 异步接口，需轮询获取结果
 
 接口入口：
@@ -309,8 +328,8 @@ AI 帮写，辅助生成创意文案，可用于优化用户提示词或获取�
 主要能力：
 
 - 文本生成视频，支持产品展示和创意视频两种类型
-- 支持多种分辨率（480p/720p/1080p/2K/4K）、比例（1:1/16:9/9:16 等）和时长（4-15 秒）
-- 支持 `pro`/`fast` 两种视频模型，兼顾质量与速度
+- 支持多种分辨率（480p/720p/1080p/2K/4K）、比例（1:1/16:9/9:16 等）和时长（4-60 秒，超长视频由工作流拆分多段拼接）
+- 支持 `pro`/`fast`/`ultra` 三种视频模型，兼顾质量与速度
 - 支持添加参考图片、视频、音频作为创作素材
 - 支持首帧/尾帧图片控制视频首尾画面
 - 支持生成或关闭配音音频
@@ -323,8 +342,9 @@ AI 帮写，辅助生成创意文案，可用于优化用户提示词或获取�
 
 模型类型：
 
-- `pro`：`Flyelep Video 2.0 Pro`（高质量）
+- `pro`：`Flyelep Video 2.0 Pro`（高质量，默认）
 - `fast`：`Flyelep Video 2.0`（快速生成）
+- `ultra`：`Flyelep Video 2.5`（最高画质）
 
 视频业务标签：
 
@@ -334,10 +354,37 @@ AI 帮写，辅助生成创意文案，可用于优化用户提示词或获取�
 
 详细参数说明、素材规则和轮询策略请查看 [skills/generate-video/SKILL.md](skills/generate-video/SKILL.md)。
 
+### file-upload
+
+把本地图片、视频、音频文件上传到云存储，返回永久可访问的直链，用于为其它技能准备素材入参。
+
+主要能力：
+
+- 上传本地图片、视频、音频，换回公网可访问的 URL
+- 返回的直链不带签名、不会过期
+- 图片在上传前自动执行内容审核，视频和音频不审核；进桶的是原始文件，不会被压缩降质
+- 上传不消耗算力，对象会重命名为 UUID，原文件名不进 URL，中文名可直接上传
+
+接口入口：
+
+- `POST /prod-api/poster-design/api/v1/file/upload`
+
+请求方式为 `multipart/form-data`，文件字段名为 `file`，单次只能上传一个文件。
+
+支持格式：
+
+- 图片：`bmp`、`gif`、`jpg`、`jpeg`、`png`
+- 视频：`mp4`、`mov`、`m4v`、`webm`、`avi`、`mkv`
+- 音频：`mp3`、`wav`、`m4a`、`aac`、`ogg`、`flac`
+
+详细参数说明和错误处理请查看 [skills/file-upload/SKILL.md](skills/file-upload/SKILL.md)。
+
 ## 使用建议
 
 - 所有技能均以各自目录中的 `SKILL.md` 为准
 - 对于需要高稳定性的调用，优先使用可公网访问、格式规范的图片直链
+- 用户提供的是本地文件而非直链时，先用 `file-upload` 上传换取直链，再调用其它技能
+- 涉及素材入参的技能都在自己的 `SKILL.md` 里内联了「本地文件上传」章节作为兜底，只单独安装某一个技能也能完成上传；**上传接口若有变动，需同步更新这些章节**
 - 对于场景替换、商品替换、商品换色这类生成型接口，建议尽量同时提供清晰原图和明确的文本描述
 
 ## License

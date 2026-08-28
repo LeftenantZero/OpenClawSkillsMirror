@@ -1,6 +1,6 @@
 ## Description:
 
-Flyelep Generate Kits is a bundle of agent skills for using Flyelep API workflows that generate ecommerce posters, edit images, write creative copy, and generate product videos.
+Flyelep Generate Kits helps agents use Flyelep API documentation to create ecommerce posters, product images, videos, image edits, translations, background removal, upscaling, and file uploads.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and operators use this skill bundle to guide agents through authenticated Flyelep API calls for ecommerce poster creation, image matting, translation, enlargement, clarity enhancement, scene and product replacement, prompt writing, hot-image and hot-video replication, and text-to-video generation.
+External developers and agents use this skill package to collect required Flyelep API inputs, construct HTTP requests, poll asynchronous tasks, and return generated media URLs for ecommerce creative workflows.
 
 ### Deployment Geography for Use:
 
@@ -22,40 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Flyelep API calls require a secretKey credential.
+Risk: Prompts, selected media files, and the Flyelep API key are sent to Flyelep during use.
 
-Mitigation: Collect the key at runtime, avoid storing it in skill files or persistent configuration, and avoid echoing it into logs or shared transcripts.
+Mitigation: Use the skill only when that external transfer is acceptable, provide the API key at runtime, and avoid storing real keys in skill files, examples, or persistent configuration.
 
-Risk: Requests may send prompts, product media, image URLs, video URLs, or audio URLs to Flyelep services.
+Risk: Local media uploads can create public, non-expiring links.
 
-Mitigation: Do not submit confidential prompts, private media, internal URLs, or sensitive customer assets unless the user has confirmed they are appropriate to process through the service.
+Mitigation: Require explicit confirmation before uploading local files and avoid confidential, personal, regulated, or unreleased media unless the user accepts the exposure.
 
-Risk: Some Windows workflows create temporary JSON payload files that may contain request data or credentials.
+Risk: Generated images, videos, and transformed media may be unsuitable or incorrect for a product listing without review.
 
-Mitigation: Use runtime secret handling where possible and delete temporary payload files immediately after each API call.
+Mitigation: Review returned media URLs and generated assets before publishing or using them in customer-facing ecommerce workflows.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/flyelepai/skills/flyelep-generate-kits)
 - [Flyelep platform](https://www.flyelep.cn)
-- [Flyelep control board](https://www.flyelep.cn/controlboard)
-- [Root skill index](artifact/SKILL.md)
-- [Generate poster skill](artifact/skills/generate-poster/SKILL.md)
-- [Generate video skill](artifact/skills/generate-video/SKILL.md)
+- [Artifact README](artifact/README.md)
+- [Main skill definition](artifact/SKILL.md)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with HTTP request examples, JSON payloads, and shell commands]
+**Output Format:** [Markdown guidance with JSON payload examples and curl commands; successful API calls return Flyelep media URLs or task IDs.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Outputs include API call instructions and returned media URLs; some workflows require polling asynchronous task results.]
+**Other Properties Related to Output:** [Requires a user-provided Flyelep secretKey and public media URLs or uploaded media files.]
 
 ## Skill Version(s):
 
-1.0.2 (source: server release metadata)
+1.0.3 (source: server release metadata)
 
 ## Ethical Considerations:
 
