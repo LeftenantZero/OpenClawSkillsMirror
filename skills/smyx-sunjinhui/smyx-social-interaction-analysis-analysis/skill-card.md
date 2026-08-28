@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes multi-pet video or image inputs to classify social interactions, quantify duration, frequency, initiator, and receiver, and return a structured social-behavior report.
+Analyzes multi-pet images or videos to classify social behaviors such as sniffing, chasing, biting, fleeing, hiding, and playing, then returns a structured interaction report with durations, frequencies, participants, and potential conflict indicators.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External pet owners, pet boarding centers, daycare staff, and behavior-clinic users can analyze multi-pet footage to understand relationships, identify possible conflict or stress patterns, and produce an observational report. The skill is for behavior observation and does not provide medical or training advice.
+External pet owners, pet boarding centers, pet daycare teams, and animal behavior clinics use this skill to review multi-pet media, quantify interaction patterns, and identify possible aggression or stress signals for observation-oriented reporting.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Pet videos or image inputs may leave the device for remote analysis.
+Risk: The skill sends pet media and report requests to the publisher's cloud service.
 
-Mitigation: Use only footage appropriate for provider processing, and confirm retention, deletion, and access practices before submitting private household media.
+Mitigation: Use only media appropriate for third-party processing, obtain consent for shared household, clinic, daycare, or boarding-center footage, and confirm retention and deletion practices before deployment.
 
-Risk: The skill can create or reuse an account-linked local identity and token database.
+Risk: The skill silently creates or reuses an account identity and stores service tokens or user records in the workspace data directory.
 
-Mitigation: Run it in an isolated workspace when possible, review generated local data, and remove identity or token files when they are no longer needed.
+Mitigation: Run it in an isolated workspace or account, restrict access to workspace data, and clear stored credentials and user records after use when operationally appropriate.
 
-Risk: Cloud report history may be queried for the current workspace identity.
+Risk: The skill can retrieve cloud-hosted history for the resolved account identity.
 
-Mitigation: Use a dedicated identity for this skill and review or disable automatic history lookup where possible.
+Mitigation: Gate history-list workflows behind explicit user intent and verify account and tenant isolation before enabling use with sensitive footage.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-social-interaction-analysis-analysis)
-- [API interface documentation](references/api_doc.md)
+- [ClawHub Skill Release](https://clawhub.ai/smyx-sunjinhui/skills/smyx-social-interaction-analysis-analysis)
+- [API 接口文档](references/api_doc.md)
 - [Skill demo](https://lifeemergence.com/sample.html)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, shell commands, files, guidance]
+**Output Type(s):** [text, markdown, JSON]
 
-**Output Format:** [Markdown or JSON text with optional saved file output]
+**Output Format:** [Markdown text containing structured JSON-like analysis content and report links; optional file output when requested.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces structured analysis results, report links, and history-list output when requested.]
+**Other Properties Related to Output:** [Can return a structured analysis report or a history list for the resolved account identity.]
 
 ## Skill Version(s):
 
-1.0.7 (source: server-resolved release metadata)
+1.0.8 (source: server release metadata; artifact frontmatter says 1.0.12)
 
 ## Ethical Considerations:
 
