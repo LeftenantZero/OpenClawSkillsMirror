@@ -1,0 +1,70 @@
+{
+  "changelog": "setup.sh: added Python 3 check (exits with clear message if missing), pip bootstrap before any pip install \u2014 tries ensurepip, then apt/yum/dnf/brew package managers, then falls back to get-pip.py from pypa.io. Upgrades pip to latest before installing packages. Works on fresh EC2 instances (Amazon Linux 2, Amazon Linux 2023, Ubuntu) with no pre-installed pip.",
+  "created_at": 1772702761124,
+  "display_name": "Doc Process",
+  "fetched_at": 1787888596506,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "evals/evals.json",
+    "references/bank-statement-analyzer.md",
+    "references/contract-analyzer.md",
+    "references/doc-scan.md",
+    "references/document-categorizer.md",
+    "references/document-timeline.md",
+    "references/document-translator.md",
+    "references/form-autofill.md",
+    "references/id-scanner.md",
+    "references/legal-redactor.md",
+    "references/medical-summarizer.md",
+    "references/meeting-minutes.md",
+    "references/receipt-scanner.md",
+    "references/resume-parser.md",
+    "references/table-extractor.md",
+    "requirements.txt",
+    "scripts/__init__.py",
+    "scripts/audio_transcriber.py",
+    "scripts/doc_scanner.py",
+    "scripts/expense_logger.py",
+    "scripts/redactor.py",
+    "scripts/report_generator.py",
+    "scripts/statement_parser.py",
+    "scripts/table_extractor.py",
+    "scripts/timeline_manager.py",
+    "scripts/utils.py",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089791417,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "piyush-zinc",
+    "handle": "piyush-zinc",
+    "user_id": "s17btkxnpfj2rv7xqpseckbne5884qah"
+  },
+  "slug": "doc-process",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/doc-process",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=doc-process&ownerHandle=piyush-zinc",
+    "page_url": "https://clawhub.ai/piyush-zinc/skills/doc-process"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1220,
+    "installs": 35,
+    "stars": 1,
+    "versions": 16
+  },
+  "summary": "Document intelligence: categorize, autofill forms, analyze contracts, scan receipts/invoices, analyze bank statements, parse resumes/CVs, scan IDs/passports...",
+  "updated_at": 1778491730325,
+  "version": "4.1.1"
+}
