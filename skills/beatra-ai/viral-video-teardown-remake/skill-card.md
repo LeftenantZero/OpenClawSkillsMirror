@@ -1,6 +1,6 @@
 ## Description:
 
-Turns a proven short-form video into a new branded version by analyzing its hook, beats, audience signals, and script pattern, then producing a rewritten shot list, generated frames, narration, and one vertical clip.
+Paste a short-video link, file, screenshots, transcript, or description to break a proven reference into hook, beats, and call to action, then rebuild that structure around a new subject as a shot list, generated frames, narration, and a vertical clip.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators, marketers, and agent users use this skill to study a reference short video and remake its structure around their own product, service, or topic. It helps produce a teardown, shot list, generated beat frames, narration, and a vertical remake clip through gated Beatra generation steps.
+External creators, marketers, and content teams use this skill to study a performing short video and adapt its structure to their own product, service, topic, or account. It is suited to benchmark remakes for TikTok, Reels, Shorts, WeChat Channels, Douyin, Xiaohongshu, Instagram, YouTube, and X workflows.
 
 ### Deployment Geography for Use:
 
@@ -22,49 +22,46 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill creates and stores a shared Beatra device token with broad account scope.
+Risk: The package uses a shared Beatra credential with paid media-generation authority.
 
-Mitigation: Install only if the Beatra account trust model is acceptable; keep the token local, do not expose it in chat or logs, and use the bundled uninstall flow when disconnecting.
+Mitigation: Review the Beatra approval scopes before installation, keep the credential private, and approve paid lookup, frame, narration, and video calls only when the quoted scope and estimate match the intended work.
 
-Risk: The skill can spend Beatra credits after workflow confirmations.
+Risk: The bundled client silently checks for and applies package updates by default.
 
-Mitigation: Require explicit user approval for each priced lookup or generation stage, use stable request IDs, and report returned billing facts for completed tasks.
+Mitigation: Run `python3 scripts/mcp_client.py update --auto off` before use if automatic package updates are not acceptable for the environment.
 
-Risk: The bundled client silently updates package files by default.
+Risk: The workflow can upload local files as reference inputs.
 
-Mitigation: Review the package before use and disable silent updates with python3 scripts/mcp_client.py update --auto off when automatic replacement is not desired.
-
-Risk: Installation and platform metadata is sent to Beatra during use.
-
-Mitigation: Use the skill only where that metadata sharing is acceptable for the account and deployment environment.
+Mitigation: Only provide files intentionally selected for the remake and avoid uploading local files that contain private, sensitive, or unrelated content.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/viral-video-teardown-remake)
 - [Beatra skill homepage](https://beatra.ai/skills/viral-video-teardown-remake)
-- [Reading a reference from a link](references/reference-lookup.md)
+- [Reading the reference from a link](references/reference-lookup.md)
 - [Reading the reference](references/teardown.md)
 - [Rewriting onto your subject](references/remake-plan.md)
 - [Remake workflow](references/workflow.md)
 - [Tasks and results](references/tasks-and-results.md)
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
 - [Installation and authentication](references/installation-and-auth.md)
+- [MCP connection](references/mcp-connection.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
 - [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance, Media assets]
 
-**Output Format:** [Markdown analysis and tables with shell command snippets and JSON payload examples]
+**Output Format:** [Markdown teardown and shot-list tables, shell-command examples, configuration guidance, generated media artifact links, and task/billing summaries.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May return Beatra task IDs, billing facts, artifact links, generated still frames, narration audio, and a vertical video when remote tasks succeed.]
+**Other Properties Related to Output:** [Defaults to a 9:16 vertical remake, separates on-screen visuals from spoken narration, and requires explicit approval before paid lookup, frame, narration, and video calls.]
 
 ## Skill Version(s):
 
-0.1.6 (source: server release evidence and manifest.json)
+0.1.9 (source: server release evidence and artifact manifest)
 
 ## Ethical Considerations:
 
