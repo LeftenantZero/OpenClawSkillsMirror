@@ -1,6 +1,6 @@
 ## Description:
 
-This skill should be used when the user asks about Evite events or invitations.
+Evite lets an agent use the evite-mcp server to read and manage Evite invitations, guest lists, RSVP tallies, messages, and hosted events.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users use this skill to let an agent inspect and manage Evite invitations and hosted events, including guest lists, RSVP summaries, messages, and event updates.
+External users use this skill to let an agent check Evite events, inspect guest lists and RSVP status, respond to invitations, message guests, and create or update hosted events.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uses Evite credentials or reusable sessions to access event and invitation data.
+Risk: The MCP server can read and change authenticated Evite account data.
 
-Mitigation: Install only for accounts where this access is acceptable, keep credentials scoped to Evite use, and remove stored sessions when access is no longer needed.
+Mitigation: Install it only when authenticated Evite access is acceptable for the intended agent workflow.
 
-Risk: Broad triggering could route unrelated event or invitation requests into Evite account actions.
+Risk: Copied raw session cookies can expose account access if mishandled.
 
-Mitigation: Use explicit Evite-only prompts and review the agent's selected action before allowing account changes.
+Mitigation: Prefer environment-stored credentials over copied cookies, and disable fetchproxy when browser-session reuse is not desired.
 
-Risk: Confirm-gated write tools can RSVP, message guests, edit events, send invitations, cancel events, or otherwise make high-impact changes.
+Risk: Write actions can send messages, change guests, update RSVPs, or alter hosted events.
 
-Mitigation: Review dry-run previews carefully and use confirm:true only after the requested change is correct.
-
-Risk: Fetchproxy bootstrap can reuse a signed-in browser tab unless disabled.
-
-Mitigation: Set EVITE_DISABLE_FETCHPROXY=1 when browser-session bootstrap is not desired.
+Mitigation: Review the dry-run preview before setting confirm:true for any write action.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/chrischall/skills/evite)
-- [Publisher profile](https://clawhub.ai/user/chrischall)
-- [npm package](https://www.npmjs.com/package/evite-mcp)
-- [Evite](https://www.evite.com)
+- [Evite website](https://www.evite.com)
+- [evite-mcp npm package](https://www.npmjs.com/package/evite-mcp)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline JSON and shell command examples]
+**Output Format:** [Markdown guidance with inline JSON and shell command snippets]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include dry-run previews for confirm-gated Evite write actions.]
+**Other Properties Related to Output:** [Write actions require confirm:true and otherwise return dry-run previews; authenticated Evite credentials or session cookies are required for live use.]
 
 ## Skill Version(s):
 
-0.5.1 (source: server release evidence)
+0.6.0 (source: server release evidence)
 
 ## Ethical Considerations:
 
