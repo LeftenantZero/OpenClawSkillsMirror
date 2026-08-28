@@ -1,0 +1,47 @@
+{
+  "changelog": "Initial release of governance-inheritance skill\n\n- Implements a hierarchical policy inheritance system for OpenClaw agents with organization, team, project, and session levels.\n- Supports policy cascade with automatic inheritance, overrides, and conflict resolution.\n- Provides tools for policy evaluation, policy level initialization, and validation of policy chains.\n- Offers additive merging, explicit deny/allow handling, and provenance tracking for policy decisions.\n- Integrates with session context and external governance middleware for real-time enforcement.",
+  "created_at": 1774047355105,
+  "display_name": "Governance Inheritance",
+  "fetched_at": 1787937954870,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/inheritance-algorithm.md",
+    "references/policy-schema.md",
+    "scripts/init_governance.py",
+    "scripts/validate_chain.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780090011835,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "aakash2289",
+    "handle": "aakash2289",
+    "user_id": "s17cb4fq6czbx3w2rnnmgdhc3186mksn"
+  },
+  "slug": "governance-inheritance",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/governance-inheritance",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=governance-inheritance&ownerHandle=aakash2289",
+    "page_url": "https://clawhub.ai/aakash2289/skills/governance-inheritance"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 923,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Hierarchical policy inheritance system for OpenClaw agents. Enables policies to be defined at organization, team, project, and session levels with automatic...",
+  "updated_at": 1778492072793,
+  "version": "1.0.0"
+}
