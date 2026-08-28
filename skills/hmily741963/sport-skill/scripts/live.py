@@ -97,8 +97,13 @@ def fetch_thesportsdb(date_str, key):
         if not home or not away:
             continue
         date_event = e.get("dateEvent") or ""
-        time_event = (e.get("strTime") or "")[:5]
-        kickoff = ("%s %s" % (date_event, time_event)).strip()
+        time_event = (e.get("strTime") or "")[:8]
+        # TheSportsDB 的 dateEvent/strTime 为 UTC，须换算到北京时间(+8)后再作为 kickoff_local，
+        # 否则美洲赛事会出现「01:40」这类比实际开赛早 8 小时的错误时间。
+        if date_event and time_event:
+            kickoff = _utc_to_beijing("%sT%s" % (date_event, time_event if len(time_event) == 8 else time_event + ":00"))
+        else:
+            kickoff = ("%s %s" % (date_event, time_event[:5])).strip()
         sp_en = e.get("strSport") or "Soccer"
         sp_key, sp_cn = SPORT_MAP.get(sp_en, ("other", sp_en))
         out.append({

@@ -1,6 +1,6 @@
 ## Description:
 
-体育赛事信息可视化与观赛辅助助手，聚合球队和球员资料、战术风格、赛事情报、数据可视化和自查结果，生成面向观赛参考的赛事报告。
+一句话生成今日赛事全景报告，覆盖多类球类运动，通过阵型动画、球员聚焦和数据面板整理公开赛事信息；它不做赛果判断，只做信息整理、可视化和反诈骗提示。
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and agents use this skill to collect public sports-event information, structure it into readable comparisons, and generate sports viewing reports. It is intended for legal viewing, research, commentary preparation, and sports-data education, not outcome prediction or conclusive advice.
+External users, sports fans, commentators, and educators use this skill to turn public match data into visual pre-match or daily sports reports. It is intended for legal sports information review, tactical learning, and source-aware discussion, not result prediction or outcome advice.
 
 ### Deployment Geography for Use:
 
@@ -22,44 +22,53 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill may browse the web and write report files to the user's Desktop.
+Risk: The skill can fetch public web or API data, including a generic URL fetch path.
 
-Mitigation: Run it with least-privilege workspace access and review generated file paths before sharing or retaining reports.
+Mitigation: Use trusted sports data sources and explicit input URLs only; avoid generic --url fetches for untrusted locations.
 
-Risk: Refresh, audit, or fix workflows may modify JSON files.
+Risk: The skill can write reports to desktop paths and mutate JSON files when refresh, fix, or write modes are enabled.
 
-Mitigation: Keep source data under version control or make backups, and review diffs after write-enabled workflows.
+Mitigation: Use explicit input and output paths, review generated reports before sharing, and run mutation modes only on reviewed copies of data files.
 
-Risk: An arbitrary URL fetch option can be risky with untrusted or internal URLs.
+Risk: The skill can read sports-provider API keys from environment variables.
 
-Mitigation: Use only public sports-data URLs and avoid internal, private, or untrusted endpoints.
+Mitigation: Keep API keys scoped to the intended provider, do not hard-code them in skill files, and rotate keys if report generation runs in shared environments.
 
-Risk: Sports reports can be misunderstood as predictions or advice.
+Risk: Daily automation or recurring report generation can run more often than expected.
 
-Mitigation: Preserve source labels, freshness notices, and the stated boundary that the skill organizes public information without outcome judgments.
+Mitigation: Enable automation only when recurring runs are intended, and monitor generated files and schedules.
+
+Risk: Generated reports may mix live, verified sample, and demo data if current data is unavailable.
+
+Mitigation: Check live/example badges, source tiers, timestamps, and audit output before relying on a report as current information.
+
+Risk: Generated browser reports can store feedback locally.
+
+Mitigation: Avoid entering sensitive information in report feedback and clear browser storage or review exported feedback JSON before sharing.
 
 ## Reference(s):
 
 - [ClawHub Skill Page](https://clawhub.ai/hmily741963/skills/sport-skill)
 - [Analysis Methodology](references/analysis_methodology.md)
+- [Data Sources and Tiering](references/data_sources.md)
 - [Daily Update Workflow](references/daily_update_workflow.md)
-- [Data Sources](references/data_sources.md)
+- [Professional Analysis Metrics](references/professional_analysis.md)
 - [Risk Compliance](references/risk_compliance.md)
-- [Professional Analysis](references/professional_analysis.md)
+- [Report Template](assets/report_template.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance, Files]
+**Output Type(s):** [text, markdown, HTML files, JSON, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance, shell commands, JSON inputs, and generated HTML report files]
+**Output Format:** [Markdown guidance with inline shell commands; generated HTML reports and JSON data files]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Generates sports-event report files and may update JSON data files during refresh, audit, or fix workflows.]
+**Other Properties Related to Output:** [Can write reports to desktop paths, update JSON inputs, and store browser feedback locally when generated reports are viewed.]
 
 ## Skill Version(s):
 
-1.0.0 (source: server release metadata)
+1.0.1 (source: server release metadata; artifact frontmatter reports 2.9.7)
 
 ## Ethical Considerations:
 
