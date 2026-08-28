@@ -1,0 +1,34 @@
+{
+  "changelog": "- Setup instructions now clarify that rubric checkpoints should be declarative statements defining expected behavior, replacing yes/no questions.\n- Added an optional third step: users can configure OpenClaw to send alerts when daily reviews flag issues needing attention.\n- Alert configuration is now highlighted as entirely optional, with default behavior unchanged (issues surfaced at the next session).\n- No code or structural changes; documentation improvements only.",
+  "created_at": 1770855424011,
+  "display_name": "Wayfound",
+  "fetched_at": 1787903999245,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/rubric-examples.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "cburnette",
+    "handle": "cburnette",
+    "user_id": "s1707qww9q0bpdhadd3dcrqnb5885he0"
+  },
+  "slug": "wayfound",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/wayfound",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=wayfound&ownerHandle=cburnette",
+    "page_url": "https://clawhub.ai/cburnette/skills/wayfound"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1872,
+    "installs": 58,
+    "stars": 0,
+    "versions": 4
+  },
+  "summary": "Lightweight self-supervision that piggybacks on your existing memory system. Adds a simple rubric to SOUL.md and a daily review cron job \u2014 no new infrastructure, no parallel systems. Your agent reviews its own day in ~200 tokens, writes findings to memory where they compound naturally, and surfaces issues that need your attention. Use after installing to add the rubric to SOUL.md and set up the daily review. Use when the user asks about quality, performance, or improving how you work.",
+  "updated_at": 1778487906275,
+  "version": "1.0.3"
+}
