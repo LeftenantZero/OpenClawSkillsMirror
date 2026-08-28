@@ -1,41 +1,58 @@
-## Description: <br>
-This skill helps an agent query Juhe Data's paid cell-tower location service with MCC, MNC, TAC/LAC, and CI values, then routes the HTTP 402 payment flow through Alipay before returning location data. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+Provides paid cell-tower location lookup from MCC, MNC, TAC/LAC, and CI values through Juhe's API and an Alipay AI payment flow.
 
-## Publisher: <br>
-[juhemcp](https://clawhub.ai/user/juhemcp) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[juhemcp](https://clawhub.ai/user/juhemcp)
 
-## Use Case: <br>
-External users and agents use this skill to look up a cell tower's approximate location and nearby context from supplied MCC, MNC, TAC/LAC, and CI identifiers. The workflow is intended for paid Juhe Data lookups and requires explicit Alipay payment confirmation before the final location result is returned. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: Cell-tower identifiers are sent to Juhe Data and can be used to infer a location. <br>
-Mitigation: Use the skill only when the user intends to share those identifiers for a location lookup, and show the submitted MCC, MNC, TAC/LAC, and CI values before the request. <br>
-Risk: The workflow can require payment through linked Alipay payment skills before returning a result. <br>
-Mitigation: Confirm the product name, amount, order number, user order number, and original query parameters before payment, and avoid modifying the original request payload during handoff. <br>
+## Use Case:
 
+External users and agents use this skill to resolve a base-station identifier tuple into basic geographic location information after confirming payment. It is intended for authorized location checks, nearby-service support, and cell-site position verification.
 
-## Reference(s): <br>
-- [ClawHub skill page](https://clawhub.ai/juhemcp/skills/cell-location) <br>
-- [Juhe A2A query endpoint](https://apis.juhe.cn/a2a/query) <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [text, markdown, shell commands, guidance] <br>
-**Output Format:** [Markdown guidance with shell command examples and JSON response data] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [Requires complete cell-tower identifiers and may hand off a full HTTP 402 payment response to an Alipay payment skill before returning location data.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-1.0.10 (source: server release evidence) <br>
+Risk: The lookup sends user-provided cell-tower identifiers to Juhe's third-party API.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Use the skill only when the user is comfortable sharing those identifiers with Juhe and only for locations they are authorized to check.
+
+Risk: The skill uses a paid Alipay flow before returning precise location data.
+
+Mitigation: Confirm the submitted parameters and payment details with the user before proceeding.
+
+Risk: Cell-tower location data could be misused to locate another person without consent.
+
+Mitigation: Decline requests that appear to involve unauthorized tracking or non-consensual location checks.
+
+## Reference(s):
+
+- [ClawHub skill page](https://clawhub.ai/juhemcp/skills/cell-location)
+- [Juhe A2A query endpoint](https://apis.juhe.cn/a2a/query)
+
+## Skill Output:
+
+**Output Type(s):** [API Calls, Shell commands, Guidance, Text]
+
+**Output Format:** [Markdown guidance with JSON request examples and payment-flow instructions]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [May return order details, latitude, longitude, and address when payment and lookup succeed.]
+
+## Skill Version(s):
+
+1.0.12 (source: server release evidence)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
