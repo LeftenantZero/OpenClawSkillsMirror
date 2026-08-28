@@ -1,0 +1,48 @@
+{
+  "changelog": "Initial release of agent-audit-scanner security tool for OpenClaw skills.\n\n- Scans skills for vulnerabilities across all 10 OWASP Agentic AI threat categories using 49+ detection rules.\n- Detects prompt injection, credential leaks, unsafe code execution, misconfigurations, privilege escalation, obfuscated commands, and social engineering patterns.\n- Provides step-by-step scanning commands for individual skills, all skills, and OpenClaw configuration checks.\n- Reports findings with severity tiers: BLOCK, WARN, INFO, and CLEAN.\n- Includes clear guidance for interpreting scan results and best practices for safe use.",
+  "created_at": 1772740117341,
+  "display_name": "Agent Audit Scanner",
+  "fetched_at": 1787887980058,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/common-threats.md",
+    "references/owasp-asi-mapping.md",
+    "scripts/check-config.py",
+    "scripts/scan-all-skills.py",
+    "scripts/scan-skill.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089768128,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Heady",
+    "handle": "headyzhang",
+    "user_id": "s17ex8sw2bkg8szzvv1kr328f1885gbd"
+  },
+  "slug": "agent-audit-scanner",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-audit-scanner",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-audit-scanner&ownerHandle=headyzhang",
+    "page_url": "https://clawhub.ai/headyzhang/skills/agent-audit-scanner"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 889,
+    "installs": 24,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Security scanner for OpenClaw skills. Detects prompt injection, credential leaks, unsafe code execution, MCP misconfigurations, privilege escalation, obfusca...",
+  "updated_at": 1778491738336,
+  "version": "0.1.0"
+}
