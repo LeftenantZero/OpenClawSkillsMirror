@@ -2,7 +2,7 @@
 
 ## Requirement
 
-Validated demand: Agent users show strong demand for Nano Banana Pro-style workflows on Clawhub. They need practical help fixing bugs, hardening setup and safety, improving reliability, or creating adjacent skills inspired by the same job-to-be-done. This requirement is supported by 11 separate online signals across 4 source families, so it represents broader demand rather than a single isolated request.
+Validated demand: Agent users show strong demand for Nano Banana Pro-style workflows on Clawhub. They need practical help fixing bugs, hardening setup and safety, improving reliability, or creating adjacent skills inspired by the same job-to-be-done. This requirement is supported by 12 separate online signals across 4 source families, so it represents broader demand rather than a single isolated request.
 
 Audience: AI-agent users, skill authors, maintainers, and teams who want proven popular skill patterns adapted into more reliable or adjacent workflows
 
@@ -10,12 +10,14 @@ Category: `work-productivity`
 
 Demand score: 100/100
 
-Evidence coverage: 11 signals across 4 source families.
+Evidence coverage: 12 signals across 4 source families.
 
 ## Evidence
 
-- clawhub-popular-skill: [Popular Clawhub skill demand: Nano Pdf has 120,628 downloads](https://clawhub.ai/skills/nano-pdf)
-- clawhub-popular-skill: [Popular Clawhub skill demand: Nano Banana Pro has 106,364 downloads](https://clawhub.ai/skills/nano-banana-pro)
+- clawhub-popular-skill: [Popular Clawhub skill demand: Nano Pdf has 120,738 downloads](https://clawhub.ai/skills/nano-pdf)
+- clawhub-popular-skill: [Popular Clawhub skill demand: Nano Banana Pro has 106,406 downloads](https://clawhub.ai/skills/nano-banana-pro)
+- github-issues: [[BUG] KIE.ai PR did not fully fix the problem](https://github.com/diegosouzapw/OmniRoute/issues/11296)
+- hacker-news-ask-hn: [Ask HN: Supabase has had our production DB down 37 hours after a billing error](https://news.ycombinator.com/item?id=49472642)
 - segmentfault-search: [HarmonyOS 开发者社区](https://segmentfault.com/brand/harmonyos-next)
 - segmentfault-search: [javascript](https://segmentfault.com/t/javascript)
 - segmentfault-search: [typescript](https://segmentfault.com/t/typescript)
@@ -23,8 +25,7 @@ Evidence coverage: 11 signals across 4 source families.
 - segmentfault-search: [nano-banana-pro](https://segmentfault.com/t/nano-banana-pro)
 - segmentfault-search: [谁还不知道Nano Banana Pro API 国内接入方法？0.09/张，稳得可怕](https://segmentfault.com/a/1190000047424066)
 - segmentfault-search: [Nano Banana Pro 零基础快速上手](https://segmentfault.com/a/1190000047458683)
-- github-issues: [CI hardening: no permissions: block, and actions are pinned to mutable tags](https://github.com/joncfrancisco/pzbot/issues/14)
-- csdn-search: [Nano Banana Pro 模型上用Awesome - Nano - Banana - Pro - Prompts做精准风格生成，具体该怎么搭提示词结构？](https://wenku.csdn.net/answer/47wgnadfenfm?ops_request_misc=elastic_search_misc&request_id=6fdecbacbabd4db3bf0b3a3ddce4060c&biz_id=&utm_medium=distribute.pc_search_result.none-task-chatgpt-2~all~ElasticSearch~search_v2-5-47wgnadfenfm-null-null.142^v102^pc_search_result_base7&utm_term=nano-banana-pro%20nano%20banana%20pro)
+- github-issues: [[Feature]: Add gemini-3.1-flash-lite-image (Nano Banana 2 Lite) to Google image-generation catalog](https://github.com/openclaw/openclaw/issues/131031)
 
 ## How This Skill Meets The Requirement
 

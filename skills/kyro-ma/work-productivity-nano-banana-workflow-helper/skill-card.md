@@ -1,6 +1,6 @@
 ## Description:
 
-Helps agent users and skill authors create practical workflows, checklists, analyses, code changes, and implementation support for Nano Banana Pro-style productivity tasks.
+Helps AI-agent users and skill authors create practical Nano Banana Pro-style workflow plans, checklists, analyses, code changes, and verification notes for reliability and setup work.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-AI-agent users, skill authors, maintainers, and teams use this skill to turn Nano Banana Pro-style workflow demand into concrete plans, checklists, artifacts, analyses, code changes, and verification notes. It is intended for practical productivity and reliability work that remains feasible on ordinary CPU or small-model setups.
+AI-agent users, skill authors, maintainers, and teams use this skill to turn Nano Banana Pro-style productivity demand into concrete local-friendly workflows, checklists, implementation support, and review criteria.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Overly broad activation wording may route ordinary requests about images, Gemini, editing, or generic productivity to this helper unexpectedly.
+Risk: Broad implicit trigger terms may select this workflow helper for unrelated requests.
 
-Mitigation: Before installing, narrow or disable implicit triggers so activation is limited to the intended Nano Banana Pro-style workflow support.
+Mitigation: Prefer explicit invocation by skill name and tighten trigger keywords before publishing in environments that require precise routing.
 
-Risk: Generated workflow, checklist, code, shell command, or configuration guidance may be incomplete or misleading for a user's environment.
+Risk: Generated workflow proposals, checklists, or code changes may be incomplete or unsuitable for a specific environment.
 
-Mitigation: Review the proposed output, scan any generated code or commands, and validate the result against the stated success criteria before deployment.
+Mitigation: Review outputs against the user's success criteria and scan or test changes before deployment.
 
 ## Reference(s):
 
+- [ClawHub skill page](https://clawhub.ai/kyro-ma/skills/work-productivity-nano-banana-workflow-helper)
 - [Requirement Plan](references/requirement-plan.md)
-- [ClawHub Skill Page](https://clawhub.ai/kyro-ma/skills/work-productivity-nano-banana-workflow-helper)
-- [Nano Banana Pro ClawHub Demand Signal](https://clawhub.ai/skills/nano-banana-pro)
-- [Nano PDF ClawHub Demand Signal](https://clawhub.ai/skills/nano-pdf)
-- [Nano Banana Pro Quick Start Signal](https://segmentfault.com/a/1190000047458683)
-- [Nano Banana Pro API Access Signal](https://segmentfault.com/a/1190000047424066)
-- [CI Hardening Signal](https://github.com/joncfrancisco/pzbot/issues/14)
-- [Nano Banana Pro Prompt Structure Signal](https://wenku.csdn.net/answer/47wgnadfenfm?ops_request_misc=elastic_search_misc&request_id=6fdecbacbabd4db3bf0b3a3ddce4060c&biz_id=&utm_medium=distribute.pc_search_result.none-task-chatgpt-2~all~ElasticSearch~search_v2-5-47wgnadfenfm-null-null.142^v102^pc_search_result_base7&utm_term=nano-banana-pro%20nano%20banana%20pro)
+- [Popular ClawHub skill demand: Nano Pdf](https://clawhub.ai/skills/nano-pdf)
+- [Popular ClawHub skill demand: Nano Banana Pro](https://clawhub.ai/skills/nano-banana-pro)
+- [GitHub issue: KIE.ai PR did not fully fix the problem](https://github.com/diegosouzapw/OmniRoute/issues/11296)
+- [Hacker News discussion: production database outage](https://news.ycombinator.com/item?id=49472642)
+- [SegmentFault topic: nano-banana-pro](https://segmentfault.com/t/nano-banana-pro)
+- [SegmentFault article: Nano Banana Pro API access](https://segmentfault.com/a/1190000047424066)
+- [SegmentFault article: Nano Banana Pro quick start](https://segmentfault.com/a/1190000047458683)
+- [GitHub issue: add Nano Banana image-generation catalog entry](https://github.com/openclaw/openclaw/issues/131031)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown or plain text with optional code, shell command, and configuration snippets]
+**Output Format:** [Markdown with optional code blocks, shell commands, configuration snippets, checklists, and verification notes]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [None]
+**Other Properties Related to Output:** [May include assumptions, limits, success criteria, remaining risks, and next steps when useful.]
 
 ## Skill Version(s):
 
-0.20260826.40329 (source: server release evidence)
+0.20260828.40337 (source: server release evidence)
 
 ## Ethical Considerations:
 
