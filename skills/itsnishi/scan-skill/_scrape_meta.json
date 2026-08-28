@@ -1,0 +1,35 @@
+{
+  "changelog": "- Expand pattern database from ~70 to 151 patterns across 15 categories\n- Add 5 new categories: code_before_review, config_backdoor, memory_corruption, confused_delegation, persistence\n- Add live package verification -- pip/npm install commands checked against PyPI/npm in real time\n- Non-existent packages flagged CRITICAL (slopsquatting/hallucination detection)\n- New coverage: reverse shells, cloud IMDS, env var hijacking, persistence mechanisms, dependency confusion, GitHub Actions poisoning, 16+ obfuscation techniques\n- Document advisory hook behavior in SKILL.md",
+  "created_at": 1770506475290,
+  "display_name": "Scan Skill",
+  "fetched_at": 1787907068742,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/patterns.py",
+    "scripts/scan_skill.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ItsNishi",
+    "handle": "itsnishi",
+    "user_id": "s1731fs5mvb843mj295egzx6rh83gzbc"
+  },
+  "slug": "scan-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/scan-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=scan-skill&ownerHandle=itsnishi",
+    "page_url": "https://clawhub.ai/itsnishi/skills/scan-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2471,
+    "installs": 78,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Deep security analysis of an individual skill before installation",
+  "updated_at": 1778486077727,
+  "version": "1.1.1"
+}
