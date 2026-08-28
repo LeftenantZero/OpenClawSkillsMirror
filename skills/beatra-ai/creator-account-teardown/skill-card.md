@@ -1,6 +1,6 @@
 ## Description:
 
-Creator Account Teardown reads a creator account from supplied evidence or supported public lookups, diagnoses its positioning and content patterns, and turns the result into a build template and first post with generated cover and narration.
+Creator Account Teardown helps users analyze a creator account from supplied evidence or supported platform lookups, then turn the account's positioning, audience, content matrix, hook patterns, and cadence into their own account plan and first produced post.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators, marketers, and operators use this skill to benchmark a creator or competitor account, identify visible positioning and content patterns, and create their own account plan and first post assets.
+Creators, marketers, and social media operators use this skill to benchmark a creator account or diagnose their own account, then produce a positioning line, bio, content pillars, hook formula, opening plan, and first post.
 
 ### Deployment Geography for Use:
 
@@ -22,52 +22,45 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill uses a shared Beatra device token with broad media, tool, and wallet-spending authority.
+Risk: The skill uses a shared Beatra bearer token and wallet-spending authority.
 
-Mitigation: Install only after reviewing Beatra account permissions and keep revocation and disconnect controls available before running billable work.
+Mitigation: Install only if that shared trust boundary is acceptable, keep the local credential private, and run paid lookups or media generation only after explicit user approval.
 
-Risk: Public social lookups, selected uploads, and generated media requests are sent to Beatra.
+Risk: The bundled client can silently update the skill package.
 
-Mitigation: Use pasted account evidence when remote lookup is unnecessary, avoid submitting sensitive media, and label which information came from the user versus a lookup.
+Mitigation: Disable automatic updates with `python3 scripts/mcp_client.py update --auto off` when silent replacement is not acceptable, and review updates before use.
 
-Risk: Optional social lookups and production steps can incur separate charges.
+Risk: Account metrics, comments, generated covers, and narration can become stale, inaccurate, or incur charges.
 
-Mitigation: Confirm each lookup and each production call separately with the current price and a stable request identifier before execution.
-
-Risk: Automatic updates are enabled by default and can replace package-owned code.
-
-Mitigation: Consider disabling automatic updates with the documented update command and use explicit update checks when stricter change control is needed.
-
-Risk: Account metrics and performance explanations can be stale, incomplete, or inferential.
-
-Mitigation: Carry source labels and read times for looked-up data, avoid estimating missing metrics, and mark performance explanations as inference.
+Mitigation: Label account data by source and read time, avoid unsourced metrics, inspect generated media before delivery, and confirm every paid lookup or production call separately.
 
 ## Reference(s):
 
-- [Creator Account Teardown ClawHub Listing](https://clawhub.ai/beatra-ai/skills/creator-account-teardown)
-- [Beatra Skill Homepage](https://beatra.ai/skills/creator-account-teardown)
-- [Reading the account](references/account-read.md)
 - [Reading the account from a handle](references/account-lookup.md)
+- [Reading the account](references/account-read.md)
 - [Building your own account](references/build-template.md)
 - [Account teardown workflow](references/workflow.md)
 - [Installation and authentication](references/installation-and-auth.md)
+- [Installation registration](references/installation-registration.md)
+- [Tasks and results](references/tasks-and-results.md)
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
+- [Bundled MCP Client diagnostics](references/mcp-connection.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
 - [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, guidance]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with evidence tables, structured analysis, inline shell commands, and returned artifact metadata]
+**Output Format:** [Markdown with structured analysis, tables, plans, scripts, captions, shell commands, and generated media task details]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include generated image and audio artifact links after separately approved paid Beatra tasks complete.]
+**Other Properties Related to Output:** [May include Beatra task identifiers, artifact links, billing details, generated cover details, and narration metadata when paid production is approved.]
 
 ## Skill Version(s):
 
-0.1.2 (source: server release metadata and manifest.json)
+0.1.4 (source: server release evidence and manifest.json)
 
 ## Ethical Considerations:
 
