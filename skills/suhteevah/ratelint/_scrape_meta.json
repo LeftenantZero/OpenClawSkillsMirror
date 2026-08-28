@@ -1,0 +1,39 @@
+{
+  "changelog": "Initial release of RateLint: Rate limiting & API throttling anti-pattern analyzer.\n\n- Scans codebases for rate limiting, brute force, throttling, backoff, queue overflow, and DDoS anti-patterns using pattern matching.\n- Supports free, Pro, and Team tiers with 30, 60, or 90 patterns across 6 categories.\n- Provides CLI with multiple scan modes (`scan`, output in markdown/JSON/HTML, category filtering, verbose, status).\n- Integrates with git via lefthook; runs 100% locally with zero telemetry.\n- Offers scoring, grading, and actionable remediation on findings; outputs detailed markdown reports.\n- Configurable via JSON for severity threshold, ignored patterns/checks, and report format.",
+  "created_at": 1776161343796,
+  "display_name": "ratelint",
+  "fetched_at": 1787936471852,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "config/lefthook.yml",
+    "scripts/analyzer.sh",
+    "scripts/dispatcher.sh",
+    "scripts/license.sh",
+    "scripts/patterns.sh",
+    "scripts/scan.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "suhteevah",
+    "handle": "suhteevah",
+    "user_id": "s17b8q91y0grcxtcbcmvck351n84tdze"
+  },
+  "slug": "ratelint",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ratelint",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ratelint&ownerHandle=suhteevah",
+    "page_url": "https://clawhub.ai/suhteevah/skills/ratelint"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 623,
+    "installs": 15,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Rate limiting & API throttling anti-pattern analyzer -- detects missing rate limits, brute force exposure, no backoff strategies, unbounded queues, retry sto...",
+  "updated_at": 1778492583595,
+  "version": "1.0.0"
+}
