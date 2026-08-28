@@ -1,0 +1,39 @@
+{
+  "changelog": "**1.0.3 Summary:** Adds delivery target (`--to`) support for multi-channel compatibility, along with new first-time setup guidance.\n\n- Added `config.json` to persist user/channel/delivery settings.\n- SKILL.md updated with instructions for `--to` option to set delivery target (e.g., `qqbot:c2c:<openid>`), resolving multi-channel announce requirements.\n- Delivery target auto-detection detailed: via environment variables, session key, or config fallback.\n- First-time setup troubleshooting steps included for users needing to configure channel or delivery target.\n- No breaking changes to previous command flows; basic usage unchanged for existing channels.",
+  "created_at": 1773229641584,
+  "display_name": "Ping Me",
+  "fetched_at": 1787880395050,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "scripts/ping-me-cancel.sh",
+    "scripts/ping-me-config.sh",
+    "scripts/ping-me-list.sh",
+    "scripts/ping-me.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Yuyang Shen",
+    "handle": "ethan-shen-individual-lab",
+    "user_id": "s17erm0x1m8s229gmjvdhnk08s885nya"
+  },
+  "slug": "ping-me",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ping-me",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ping-me&ownerHandle=ethan-shen-individual-lab",
+    "page_url": "https://clawhub.ai/ethan-shen-individual-lab/skills/ping-me"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 927,
+    "installs": 25,
+    "stars": 1,
+    "versions": 4
+  },
+  "summary": "One-shot reminders via natural language. Auto-detects channel and timezone. Say 'remind me...' in any language and get pinged when it's time. Works with ever...",
+  "updated_at": 1778491828096,
+  "version": "1.0.3"
+}
