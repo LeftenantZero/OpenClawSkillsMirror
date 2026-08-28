@@ -1,12 +1,17 @@
 {
-  "changelog": "- Added 9 new documentation files, including addons, hardware, chain, module, and stamplc docs.\n- Removed 2 obsolete files: docs/contribute/template.md and skill-card.md.\n- Expanded doc coverage: new topics like addon/display_out, chain/buzzer, chain/mic, chain/pir, chain/switch, hardware/i2c, module/baesx, module/module16340, stamplc/io.\n- Updated internal file tree in documentation and SKILL.md to reflect new doc structure and files.\n- No changes to core code or logic; changes are limited to documentation and skill metadata.",
+  "changelog": "uiflow2-coder 1.0.11\n\n- \u589e\u52a0\u5bf9 docs/ \u76ee\u5f55\u4e0b\u65b0\u786c\u4ef6\u3001\u6a21\u5757\u3001HAT \u6587\u6863\u7684\u652f\u6301\uff0c\u5982 cc1101\u3001sht4x\u3001nfc\u3001pahub\u3001uwb\u3001tab5x\u3001toughc5\u3001corematrix\u3001hat18650c \u7b49\u3002\n- \u65b0\u589e\u590d\u6742\u793a\u4f8b\u53c2\u8003\u673a\u5236\uff0c\u7eb3\u5165 assets/examples \u4e0e references/complex-examples.md \u7528\u4e8e\u9ad8\u590d\u6742\u5ea6\u4efb\u52a1\u7ed3\u6784\u590d\u7528\u548c\u67e5\u9a8c\u3002\n- skill \u5185\u90e8\u6587\u6863\u6587\u4ef6\u6811\u540c\u6b65\u6269\u5c55\uff0c\u4fbf\u4e8e\u5feb\u901f\u5b9a\u4f4d\u5e76\u67e5\u9605\u65b0\u589e\u786c\u4ef6\u53ca UI \u7ec4\u4ef6\u6587\u6863\u3002\n- \u4e30\u5bcc m5ui\u3001widgets\u3001display\u3001controller \u7b49\u76f8\u5173\u6587\u6863\u7d22\u5f15\uff0c\u63d0\u5347\u57fa\u4e8e\u5b98\u65b9\u6587\u6863\u751f\u6210\u4ee3\u7801\u7684\u51c6\u786e\u6027\u548c\u8986\u76d6\u9762\u3002\n- \u4fee\u6b63 \u201cbaesx\u201d \u62fc\u5199\u4e3a \u201cbasex\u201d\uff0c\u89e3\u51b3\u6587\u6863\u8def\u5f84\u6df7\u6dc6\u95ee\u9898\u3002\n- SKILL.md \u66f4\u65b0\uff1a\u5f3a\u5316\u590d\u6742\u4efb\u52a1\u793a\u4f8b\u590d\u7528\u89c4\u5219\u548c\u8054\u7f51\u7b56\u7565\u8bf4\u660e\u3002",
   "created_at": 1775531648368,
   "display_name": "m5stack-uiflow2-coder",
-  "fetched_at": 1787775902668,
+  "fetched_at": 1787931505372,
   "files": [
     "SKILL.md",
     "_meta.json",
+    "assets/examples/m5ui/hourglass_320x240.py",
+    "assets/examples/m5ui/weather_320x240.py",
+    "assets/examples/widgets/hourglass_135x240.py",
+    "assets/examples/widgets/weather_135x240.py",
     "docs/COPYRIGHT.md",
+    "docs/addon/display_in.md",
     "docs/addon/display_out.md",
     "docs/advanced/camera.md",
     "docs/advanced/code_scanner.md",
@@ -39,6 +44,7 @@
     "docs/base/speaker.md",
     "docs/base/stepmotor.md",
     "docs/base/tfcard.md",
+    "docs/cap/cc1101.md",
     "docs/cap/lora1262.md",
     "docs/cap/lora868.md",
     "docs/chain/angle.md",
@@ -59,6 +65,7 @@
     "docs/controllers/atoms3r_cam.md",
     "docs/controllers/cardputer.md",
     "docs/controllers/coreink.md",
+    "docs/controllers/corematrix.md",
     "docs/controllers/dinmeter.md",
     "docs/controllers/dualkey.md",
     "docs/controllers/nesso-n1.md",
@@ -67,6 +74,8 @@
     "docs/controllers/stamplc.md",
     "docs/controllers/sticks3.md",
     "docs/controllers/stopwatch.md",
+    "docs/controllers/tab5x.md",
+    "docs/controllers/toughc5.md",
     "docs/get-started/_overview.md",
     "docs/hardware/adc.md",
     "docs/hardware/als.md",
@@ -78,6 +87,7 @@
     "docs/hardware/ir.md",
     "docs/hardware/lora.md",
     "docs/hardware/mic.md",
+    "docs/hardware/nfc.md",
     "docs/hardware/pin.md",
     "docs/hardware/pwr485.md",
     "docs/hardware/pwrcan.md",
@@ -85,6 +95,7 @@
     "docs/hardware/scd40.md",
     "docs/hardware/sen55.md",
     "docs/hardware/sht30.md",
+    "docs/hardware/sht4x.md",
     "docs/hardware/speaker.md",
     "docs/hardware/touch.md",
     "docs/hardware/uart.md",
@@ -96,6 +107,7 @@
     "docs/hat/dlight.md",
     "docs/hat/env.md",
     "docs/hat/finger.md",
+    "docs/hat/hat18650c.md",
     "docs/hat/heart.md",
     "docs/hat/joyc.md",
     "docs/hat/joystick.md",
@@ -146,8 +158,8 @@
     "docs/module/ain4.md",
     "docs/module/asr.md",
     "docs/module/audio.md",
-    "docs/module/baesx.md",
     "docs/module/bala2.md",
+    "docs/module/basex.md",
     "docs/module/cc1101.md",
     "docs/module/commu.md",
     "docs/module/dc_motor.md",
@@ -156,6 +168,9 @@
     "docs/module/dualkmeter.md",
     "docs/module/ecg.md",
     "docs/module/encoder4_motor.md",
+    "docs/module/faces_calculator3.md",
+    "docs/module/faces_gamepad3.md",
+    "docs/module/faces_keyboard3.md",
     "docs/module/fan.md",
     "docs/module/gateway_h2.md",
     "docs/module/gnss.md",
@@ -201,6 +216,7 @@
     "docs/software/udp.server.md",
     "docs/software/umqtt.default.md",
     "docs/software/umqtt.md",
+    "docs/stamp/uwb.md",
     "docs/stamplc/ac.md",
     "docs/stamplc/io.md",
     "docs/stamplc/poe.md",
@@ -302,6 +318,7 @@
     "docs/unit/oled.md",
     "docs/unit/op180.md",
     "docs/unit/op90.md",
+    "docs/unit/pahub.md",
     "docs/unit/pdm.md",
     "docs/unit/pir.md",
     "docs/unit/puzzle.md",
@@ -350,8 +367,10 @@
     "docs/widgets/label+.md",
     "docs/widgets/label.md",
     "file_tree.txt",
+    "references/complex-examples.md",
     "scripts/find_doc.ps1",
-    "scripts/find_doc.sh"
+    "scripts/find_doc.sh",
+    "skill-card.md"
   ],
   "moderation": {
     "engine_version": "v2.4.26",
@@ -361,7 +380,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1784574282808,
+    "updated_at": 1787897534238,
     "verdict": "clean"
   },
   "owner": {
@@ -377,12 +396,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 1501,
+    "downloads": 1539,
     "installs": 31,
     "stars": 0,
-    "versions": 11
+    "versions": 12
   },
   "summary": "UIFlow2 MicroPython coding assistant. Use when writing, debugging, reviewing, or explaining UIFlow2 MicroPython code for M5Stack devices; when selecting M5Stack UIFlow2 APIs, imports, constructors, examples, display/UI patterns, hardware/unit/module drivers, or troubleshooting UIFlow2 runtime errors",
-  "updated_at": 1784574282808,
-  "version": "1.0.10"
+  "updated_at": 1787896433261,
+  "version": "1.0.11"
 }
