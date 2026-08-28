@@ -1,8 +1,8 @@
 {
-  "changelog": "- Removed the skill-card.md file.\n- Minor update to SKILL.md: added the cross-protocol tool `uns_publish` to the listed features.\n- No changes to supported protocols or workflows.\n- All edition tools remain read-only.",
+  "changelog": "- Expanded the protocol brain toolset with new meta and investigation commands: `protocols_supported`, `site_readiness`, `investigation_readiness`, `investigation_open`, `investigation_show`, `investigation_list`.\n- Added support for line relations and mechanism library tools: `line_relation_declare`, `line_relations_list`, `mechanism_library_check`, `mechanism_library_list`, with formal support for mode/mechanism/cause structure (ISO 14224).\n- Removed skill-card.md file.\n- Documentation updates in SKILL.md reflecting all new tools and workflows.",
   "created_at": 1783904960737,
   "display_name": "iaiops-renewables",
-  "fetched_at": 1787769043209,
+  "fetched_at": 1787931478580,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -16,7 +16,7 @@
       "review.llm_review"
     ],
     "summary": "Review: review.llm_review",
-    "updated_at": 1787633158006,
+    "updated_at": 1787895184984,
     "verdict": "clean"
   },
   "owner": {
@@ -32,12 +32,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 1160,
+    "downloads": 1207,
     "installs": 1,
     "stars": 0,
-    "versions": 13
+    "versions": 14
   },
   "summary": "Renewables edition of iaiops \u2014 solar PV plants and wind farms: PV inverters / string combiners and wind-turbine controllers over Modbus (SUN2000 / Growatt / generic wind-turbine templates), plant SCADA over OPC-UA, and MQTT-Sparkplug telemetry, plus the cross-protocol brain (PdM, downtime, OEE, alarm) and a renewables signature tool pv_performance (underperforming-string detection). Use when the task mentions solar / \u5149\u4f0f / PV / photovoltaic, inverter / \u9006\u53d8\u5668 / \u7ec4\u4e32 / string / combiner, irradiance / \u8f90\u7167 / POA, wind / \u98ce\u7535 / turbine / \u98ce\u673a / nacelle / pitch / yaw, plant SCADA, performance ratio, soiling / \u79ef\u7070 / shading / \u906e\u6321, or \u7535\u7ad9. Read-first; this edition's tool surface is read-only.",
-  "updated_at": 1787632453761,
-  "version": "0.23.0"
+  "updated_at": 1787894418303,
+  "version": "0.23.1"
 }
