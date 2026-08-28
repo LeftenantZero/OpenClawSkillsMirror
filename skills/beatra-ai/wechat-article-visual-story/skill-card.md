@@ -1,6 +1,6 @@
 ## Description:
 
-Write the WeChat article and make its pictures in one pass, returning title candidates, a digest line, a phone-readable article body, a 2.35:1 cover, and a coordinated set of in-body images.
+Write the WeChat article and make its pictures in one pass from a topic, promotion details, and audience, returning feed-oriented title candidates, a digest line, a phone-readable article body, a 2.35:1 cover, and matching in-body images.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators, marketers, and content teams use this skill to draft WeChat Official Account articles and generate matching cover and in-body images in one workflow. It is intended for promotional articles, product stories, columns, case studies, and other long-form posts where the writing and visuals need to be produced together.
+Content marketers, founders, operators, and editorial teams use this skill to draft WeChat Official Account articles and generate the cover plus in-body image set in one coordinated workflow. It is intended for brand, product, promotional, expert-column, and case-study posts where the writing and visuals need to be planned together.
 
 ### Deployment Geography for Use:
 
@@ -22,47 +22,52 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill stores and uses a shared Beatra bearer credential with broad media and wallet-related scopes.
+Risk: The skill requests broad Beatra account authority, including spending-capable and multi-media MCP access.
 
-Mitigation: Use the bundled authorization flow only, keep the credential in the protected local Beatra state, and revoke or disconnect it when the installation is no longer trusted.
+Mitigation: Review the Beatra approval page before authorizing and install only when that account scope is acceptable for the intended user and workspace.
 
-Risk: Silent automatic updates are enabled by default.
+Risk: A shared Beatra device bearer credential is stored locally for this and other Beatra skills.
 
-Mitigation: In restricted or enterprise environments, disable automatic updates with `python3 scripts/mcp_client.py update --auto off` and review updates before re-enabling them.
+Mitigation: Protect the local credential file, avoid exposing tokens in prompts or logs, and use the bundled uninstall flow or Beatra Console revocation when access should be removed.
 
-Risk: Image generation is paid work and duplicate submissions can create avoidable charges.
+Risk: Brand references and private article content may be uploaded to an external service for generation or transformation.
 
-Mitigation: Require approval before paid calls, use one stable `client_request_id` per frozen request, poll existing task IDs, and retry only identical payloads under the same request identity.
+Mitigation: Do not upload confidential campaign material, customer data, or protected brand assets unless external processing by Beatra is approved.
 
-Risk: The workflow can upload local reference media selected by the user.
+Risk: Image generation and transformation can spend Beatra credits.
 
-Mitigation: Upload only files the user explicitly chooses and avoid placing credentials, private tokens, or unnecessary sensitive content in prompts, command arguments, or uploaded references.
+Mitigation: Confirm every paid image request, keep stable request IDs, and report only task-returned billing facts such as net charged credits.
+
+Risk: Silent package updates are enabled by default.
+
+Mitigation: Disable automatic updates with scripts/mcp_client.py update --auto off when change control or review is required before package replacement.
 
 ## Reference(s):
 
-- [Skill source](artifact/SKILL.md)
-- [Writing the article](artifact/references/article-craft.md)
-- [Planning the images](artifact/references/visual-set.md)
-- [Article workflow](artifact/references/workflow.md)
-- [Installation and authentication](artifact/references/installation-and-auth.md)
-- [Tasks and results](artifact/references/tasks-and-results.md)
-- [Billing, errors, and recovery](artifact/references/billing-errors-and-recovery.md)
-- [Automatic updates and safety](artifact/references/automatic-updates-and-safety.md)
-- [Uninstall and disconnect](artifact/references/uninstall-and-disconnect.md)
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/wechat-article-visual-story)
+- [Beatra skill homepage](https://beatra.ai/skills/wechat-article-visual-story)
+- [Writing the article](references/article-craft.md)
+- [Planning the images](references/visual-set.md)
+- [Article workflow](references/workflow.md)
+- [Installation and authentication](references/installation-and-auth.md)
+- [Tasks and results](references/tasks-and-results.md)
+- [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
+- [Automatic updates and safety](references/automatic-updates-and-safety.md)
+- [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, API Calls, Shell commands, Guidance]
 
-**Output Format:** [Markdown prose with code blocks, JSON request examples, shell commands, generated article text, image task details, and artifact links.]
+**Output Format:** [Markdown with generated article copy, image placement notes, task identifiers, artifact links, dimensions, model details, and billing facts]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces title candidates, digest copy, article body, image plans, Beatra image generation calls, task IDs, returned dimensions, and billing facts when available.]
+**Other Properties Related to Output:** [May invoke paid Beatra image generation or transformation calls after user approval; generated media and billing details are reported from task results.]
 
 ## Skill Version(s):
 
-0.1.3 (source: release evidence and manifest.json)
+0.1.5 (source: server release evidence and manifest.json)
 
 ## Ethical Considerations:
 
