@@ -1,0 +1,40 @@
+{
+  "changelog": "Initial release \u2013 Audits GitHub Actions by commit to identify and score risky commits:\n\n- Reads exported GitHub Actions run JSON and groups by repository + commit SHA\n- Scores and flags commits with high failure rates, volumes, and workflow spread\n- Provides configurable output (text or JSON), filtering, and thresholds\n- Supports optional fail-gate for CI blocking on critical commit risks\n- Outputs commit health summaries for CI checks and triage dashboards",
+  "created_at": 1772846135175,
+  "display_name": "GitHub Actions Commit Health Audit",
+  "fetched_at": 1787886333987,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "fixtures/run-6001.json",
+    "fixtures/run-6002.json",
+    "fixtures/run-6003.json",
+    "fixtures/run-6004.json",
+    "fixtures/run-6005.json",
+    "fixtures/run-6006.json",
+    "scripts/commit-health-audit.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Daniel Lummis",
+    "handle": "daniellummis",
+    "user_id": "s17fw617wehb1y9a026bgg9yed885cv7"
+  },
+  "slug": "github-actions-commit-health-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/github-actions-commit-health-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=github-actions-commit-health-audit&ownerHandle=daniellummis",
+    "page_url": "https://clawhub.ai/daniellummis/skills/github-actions-commit-health-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 730,
+    "installs": 19,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Audit GitHub Actions reliability by commit SHA to surface risky commits causing repeated workflow failures across branches.",
+  "updated_at": 1778491757870,
+  "version": "1.0.0"
+}
