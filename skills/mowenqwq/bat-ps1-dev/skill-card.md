@@ -1,6 +1,6 @@
 ## Description:
 
-Windows/Linux batch and PowerShell scripting experience vault covering encoding pitfalls, cmd syntax traps, PowerShell 5.1/7 compatibility, cross-platform gotchas, and defensive security-tool practices.
+Provides a Windows/Linux batch and PowerShell scripting playbook covering encoding pitfalls, cmd syntax, PowerShell 5.1/7 compatibility, cross-platform validation, and security-tool practices.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and engineers use this skill as a practical knowledge base for maintaining Windows batch, PowerShell, and pwsh scripts. It helps diagnose encoding issues, shell syntax failures, PowerShell compatibility problems, cross-platform behavior, packaging pitfalls, and defensive security-tool implementation gotchas.
+Developers and security engineers use this skill as a practical reference for authoring, debugging, reviewing, and packaging Windows batch and PowerShell tooling, including cross-platform pwsh checks and defensive security-tool workflows.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,32 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill includes high-impact anti-removal and security-evasion guidance that could be misapplied outside a defensive Windows tooling scope.
+Risk: The skill includes guidance for system-level repair and security-tool workflows such as hosts, firewall, Defender, services, drivers, TESTSIGNING, and persistent watchdog behavior.
 
-Mitigation: Use it only with explicit defensive scope, human approval over code or skill updates, rollback steps, and validation on a test machine.
+Mitigation: Require explicit human approval before applying these actions, especially on production systems, and review the planned changes before execution.
 
-Risk: The skill discusses sensitive behaviors such as kernel drivers, TESTSIGNING, blue-screen protection, AV-hiding encodings, service persistence, and security-setting changes.
+Risk: Some workflows involve deletion, service changes, driver loading, or self-protection behavior that can affect system stability or recoverability.
 
-Mitigation: Do not let an agent automatically implement those behaviors; require reviewer approval and confirm the operational need before any change.
+Mitigation: Prefer reversible steps, take backups where applicable, confirm targets before destructive operations, and test in a controlled environment before broader use.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/mowenqwq/skills/bat-ps1-dev)
-- [ClawHub publisher profile](https://clawhub.ai/user/mowenqwq)
-- [Artifact skill definition](artifact/SKILL.md)
+- [Publisher profile](https://clawhub.ai/user/mowenqwq)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with code snippets, shell commands, checklists, and troubleshooting notes]
+**Output Format:** [Markdown guidance with inline code and shell command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Bilingual Chinese and English technical notes; no direct tool execution by the skill itself.]
+**Other Properties Related to Output:** [May include defensive security and system-repair playbooks that require human approval before use on production systems.]
 
 ## Skill Version(s):
 
-1.68.0 (source: server release metadata and SKILL.md frontmatter, updated 2026-08-26)
+1.69.0 (source: frontmatter and server release metadata)
 
 ## Ethical Considerations:
 
