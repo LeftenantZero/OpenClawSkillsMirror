@@ -1,6 +1,6 @@
 ## Description:
 
-Guides agents through Cargo CLI workflows for provisioning and warming Cargo-owned sending mailboxes, checking send allowance and suppression status, sending email, and reading threads, replies, delivery events, pricing, and troubleshooting signals.
+Helps agents manage Cargo-owned outbound mailboxes, including provisioning, warm-up, send allowance checks, live sending guidance, thread and event review, and workspace suppression lists.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and operators use this skill to manage Cargo-owned sending inboxes: provision mailboxes, warm them up, check daily allowance and suppression state, send from approved mailboxes, and inspect replies, events, errors, and recurring mailbox costs.
+Developers and operators use this skill to manage Cargo outbound mailboxes, warm-up state, send limits, message activity, replies, delivery events, and suppression records from the Cargo CLI. It is intended for workspaces that already have appropriate Cargo access and approval to operate live outbound email.
 
 ### Deployment Geography for Use:
 
@@ -22,44 +22,45 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can guide live email sends with no CLI dry run.
+Risk: The skill can guide agents through live outbound email sending and mailbox provisioning in a Cargo workspace.
 
-Mitigation: Confirm recipient permission, suppression status, relevance, mailbox status, and daily allowance before sending; send to yourself first when the rendered message needs review.
+Mitigation: Confirm the active workspace, use least-privilege Cargo credentials, and get explicit approval before creating recurring-cost mailboxes or sending live email.
 
-Risk: Provisioning mailboxes creates recurring monthly credit charges.
+Risk: Mailbox provisioning creates recurring monthly credit charges.
 
-Mitigation: Read live pricing and existing mailbox count, quote the recurring monthly cost, and require explicit approval before provisioning.
+Mitigation: Check live pricing and obtain approval for fleet size and monthly cost before provisioning; remove unused mailboxes to stop billing.
 
-Risk: Suppressed recipients or unqualified audiences could be contacted if checks are skipped.
+Risk: Open tracking, click tracking, replies, unsubscribe events, and suppression-list data can be privacy-sensitive.
 
-Mitigation: Treat basis, suppression, and relevance as blocking pre-send checks, and remove suppressed recipients from the audience rather than trying to bypass suppression.
+Mitigation: Treat tracking and suppression data as sensitive, respect workspace-wide suppressions, and do not route around unsubscribe decisions.
 
-Risk: Operational limits can be misread, leading to failed sends or misleading reporting.
+Risk: A failed basis, suppression, or relevance check can make an outbound send inappropriate.
 
-Mitigation: Use get-send-allowance before batch enrollment, distinguish allowance from warm-up stats, and do not treat empty bounce data as proof of deliverability.
+Mitigation: Run the documented basis, suppression, and relevance checks before sending, and stop for human review when any check fails.
 
 ## Reference(s):
 
-- [Cargo Skills Repository](https://github.com/getcargohq/cargo-skills)
-- [Warm-up and the send ramp](references/warmup-and-allowance.md)
-- [Sending: the sendEmail action](references/sending.md)
-- [Response shapes and enums](references/response-shapes.md)
+- [Cargo Mailbox Management Skill](https://clawhub.ai/cargo-ai/skills/cargo-mailbox-management)
+- [Cargo Skills Homepage](https://github.com/getcargohq/cargo-skills)
+- [Mailbox Recipes](references/examples/recipes.md)
+- [Response Shapes and Enums](references/response-shapes.md)
+- [Sending: the sendEmail Action](references/sending.md)
 - [Troubleshooting](references/troubleshooting.md)
-- [Mailbox recipes](references/examples/recipes.md)
+- [Warm-up and the Send Ramp](references/warmup-and-allowance.md)
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, markdown, shell commands, configuration, code]
+**Output Type(s):** [guidance, shell commands, configuration]
 
-**Output Format:** [Markdown guidance with CLI command examples and JSON response shapes]
+**Output Format:** [Markdown with inline bash commands and JSON response examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires @cargo-ai/cli and an authenticated Cargo workspace; guided commands can create recurring mailbox charges and send live email.]
+**Other Properties Related to Output:** [The skill guides live Cargo CLI operations and summarizes command outputs for human review.]
 
 ## Skill Version(s):
 
-1.0.0 (source: frontmatter and server release metadata)
+1.0.1 (source: frontmatter, skill-metadata.json, server release evidence)
 
 ## Ethical Considerations:
 

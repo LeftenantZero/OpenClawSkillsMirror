@@ -1,8 +1,8 @@
 {
-  "changelog": "Initial release of Cargo Mailbox Management.\n\n- Provision and manage sending mailboxes Cargo owns, including warming up, sending, and monitoring.\n- Supports mailbox provisioning, warm-up with daily send ramp (5\u219240/day), and status refresh.\n- Query send allowance, delivery events, replies, threads, suppression (unsubscribe) lists, and mailbox pricing.\n- Enforces workspace-wide suppression for do-not-send compliance; all sends are gated on basis, suppression, and relevance.\n- Requires @cargo-ai/cli; integrates with authentication and workspace permissions.\n- Includes full CLI reference and operational guidance for mailbox lifecycle and best practices.",
+  "changelog": "cargo-mailbox-management 1.0.1\n\n- Updated documentation in SKILL.md and reference files for clarity and accuracy.\n- Bumped version to 1.0.1.\n- Removed obsolete skill-card.md file.\n- No functional or API changes; this release is documentation-only.",
   "created_at": 1787546995668,
   "display_name": "cargo-mailbox-management",
-  "fetched_at": 1787769675271,
+  "fetched_at": 1787932136212,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -28,12 +28,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 66,
+    "downloads": 106,
     "installs": 0,
     "stars": 0,
-    "versions": 1
+    "versions": 2
   },
   "summary": "Send mail from inboxes Cargo owns \u2014 provision mailboxes on a sending domain, run provider warm-up and the 5\u219240/day send ramp, deliver with the `sendEmail` action, and read back threads, replies, delivery events, and the workspace suppression list. Triggers: \"set up a sending mailbox\", \"provision inboxes for outbound\", \"warm up this mailbox\", \"how many sends do I have left today\", \"send this from Cargo\", \"did they reply\", \"who unsubscribed\", \"suppress this recipient\", \"take me off your list\", \"never email them again\", \"what do mailboxes cost\", \"my mailbox is stuck pending\". A mailbox is a recurring monthly credit charge, and every send is gated on basis, suppression, and relevance. Skip when: writing the copy or building the audience \u2014 use cargo-gtm; the mailbox belongs in git \u2014 use cargo-cdk.",
-  "updated_at": 1787547066006,
-  "version": "1.0.0"
+  "updated_at": 1787874352570,
+  "version": "1.0.1"
 }
