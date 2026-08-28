@@ -1,0 +1,50 @@
+{
+  "changelog": "Initial release of AgentGuard \u2013 security monitoring skill.\n\n- Monitors file access and API calls for suspicious activity, including credential access and exfiltration patterns.\n- Logs agent communications (HTTP requests, emails, message platforms) with audit trails.\n- Detects behavioral anomalies using ML-lite pattern analysis.\n- Generates security reports with alerts, activity summaries, and recommendations.\n- Features configurable alert channels, data retention, sensitivity levels, and privacy-focused data handling.\n- Integrates with Clawdbot and can share/block operations with other skills.",
+  "created_at": 1769914494744,
+  "display_name": "AgentGuard",
+  "fetched_at": 1787911009546,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config/agentguard.yaml",
+    "execution/alerter.py",
+    "execution/detector.py",
+    "execution/logger.py",
+    "execution/monitor.py",
+    "execution/reporter.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783651997104,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "manas-io-ai",
+    "handle": "manas-io-ai",
+    "user_id": "s179k740xw4scw0cejrg2dse1s884g2k"
+  },
+  "slug": "agentguard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agentguard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agentguard&ownerHandle=manas-io-ai",
+    "page_url": "https://clawhub.ai/manas-io-ai/skills/agentguard"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 4750,
+    "installs": 167,
+    "stars": 3,
+    "versions": 1
+  },
+  "summary": "Monitors agent file access, API calls, and communications to detect suspicious behavior, log events, and generate actionable security reports.",
+  "updated_at": 1778485932126,
+  "version": "1.0.0"
+}
