@@ -1,0 +1,48 @@
+{
+  "changelog": "## Fixed\n- CLI argument order: global options (, ) now work in any position, not just before the subcommand (#7)\n-  command:  and  are now correctly passed as lists to the MCP server, fixing sends to multiple recipients (#8)\n\n## Added\n-  command now displays an unread indicator () next to unseen messages (#9) (requires read-no-evil-mcp>=0.3.1)",
+  "created_at": 1770275585903,
+  "display_name": "read-no-evil-mcp",
+  "fetched_at": 1787908795260,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/rnoe-mail.py",
+    "scripts/setup-config.py",
+    "scripts/setup-server.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783654605813,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "thekie",
+    "handle": "thekie",
+    "user_id": "s177b84d8qnjgwn1s3qfvpasnx8852by"
+  },
+  "slug": "read-no-evil-mcp",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/read-no-evil-mcp",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=read-no-evil-mcp&ownerHandle=thekie",
+    "page_url": "https://clawhub.ai/thekie/skills/read-no-evil-mcp"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2366,
+    "installs": 81,
+    "stars": 1,
+    "versions": 6
+  },
+  "summary": "Secure email access via read-no-evil-mcp. Protects against prompt injection attacks in emails. Use for reading, sending, deleting, and moving emails.",
+  "updated_at": 1778486025837,
+  "version": "0.3.1"
+}
