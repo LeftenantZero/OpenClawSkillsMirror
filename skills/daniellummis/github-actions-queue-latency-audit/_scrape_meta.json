@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release.\n\n- Audits GitHub Actions queue latency from exported run/job JSON files.\n- Computes and ranks job queue wait times to identify CI bottlenecks.\n- Supports filtering by repository, workflow, and job with regex options.\n- Flags and optionally fails on jobs exceeding configurable queue wait thresholds.\n- Outputs results as human-readable text or machine-readable JSON.\n- Includes example usage for various reporting and filtering needs.",
+  "created_at": 1772781446190,
+  "display_name": "GitHub Actions Queue Latency Audit",
+  "fetched_at": 1787887370706,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "fixtures/run-2001.json",
+    "fixtures/run-2002.json",
+    "scripts/queue-latency-audit.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Daniel Lummis",
+    "handle": "daniellummis",
+    "user_id": "s17fw617wehb1y9a026bgg9yed885cv7"
+  },
+  "slug": "github-actions-queue-latency-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/github-actions-queue-latency-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=github-actions-queue-latency-audit&ownerHandle=daniellummis",
+    "page_url": "https://clawhub.ai/daniellummis/skills/github-actions-queue-latency-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 752,
+    "installs": 20,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Audit GitHub Actions queue wait hotspots from run/job JSON so CI bottlenecks are visible before they stall merges.",
+  "updated_at": 1778491748674,
+  "version": "1.0.0"
+}
