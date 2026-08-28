@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers use this skill to review code diffs for a narrow set of method violations, including repeated patch rot, pass-through layers, unvouched dependencies, unnecessary cleverness, and process ceremony. It produces concise findings and summary metrics rather than applying fixes.
+Developers and engineers use this skill to review diffs for narrow method violations such as repeated patching, unnecessary layers, unvouched dependencies, over-complex algorithms, and process ceremony.
 
 ### Deployment Geography for Use:
 
@@ -22,32 +22,28 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill is intentionally narrow and can omit correctness, security, and performance issues.
+Risk: Users may treat ken-review findings as a complete code review even though the skill excludes correctness, security, and performance issues.
 
-Mitigation: Use it as a focused method-violation pass and route broader review concerns to a normal review pass.
-
-Risk: Ordinary surrounding text may contain phrases that exit the skill's concise review mode.
-
-Mitigation: Confirm the intended review mode when prompts or diffs include phrases such as stop ken-review or normal mode.
+Mitigation: Use ken-review only for its narrow method-violation scope and run a normal review pass when broader correctness, security, or performance issues matter.
 
 ## Reference(s):
 
-- [Project homepage](https://github.com/rajnandan1/ken)
 - [ClawHub skill page](https://clawhub.ai/rajnandan1/skills/ken-review)
+- [Project homepage](https://github.com/rajnandan1/ken)
 
 ## Skill Output:
 
 **Output Type(s):** [Text, Markdown, Guidance]
 
-**Output Format:** [Plain text review findings with line references and summary metrics]
+**Output Format:** [Plain text or Markdown review findings, usually one line per finding with an optional net summary.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Does not apply fixes or run tools; output is limited to Thompson-mode method violations.]
+**Other Properties Related to Output:** [Does not apply fixes; reports findings only.]
 
 ## Skill Version(s):
 
-1.1.0 (source: server release evidence)
+1.2.0 (source: server release metadata)
 
 ## Ethical Considerations:
 
