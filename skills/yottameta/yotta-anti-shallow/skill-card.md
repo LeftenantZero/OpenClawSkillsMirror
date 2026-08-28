@@ -1,6 +1,6 @@
 ## Description:
 
-元谨 yotta-anti-shallow is a rule-based agent skill that activates for deep analysis, validation, root-cause investigation, and complex tasks to require analysis before execution and self-checks after completion.
+A general-purpose anti-shallow AI output rules engine that prompts agents to analyze first, execute after, and self-check on complex or rigor-sensitive tasks.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-Developers, writers, analysts, and other agent users use this skill to make an agent slow down on complex or high-accuracy work, state uncertainty, analyze before acting, and report self-checks after completion.
+Developers, analysts, writers, and other agent users use this skill to reduce shallow answers on tasks that need correctness, root-cause analysis, verification, or careful execution. It guides the agent toward structured analysis, confidence labeling, user confirmation for complex work, and final self-checks.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,35 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Global installation can place the skill in multiple agent directories, causing its response process to apply more broadly than intended.
+Risk: The skill can broadly change an agent's response style by adding analysis, confirmation checkpoints, confidence labels, and self-checks.
 
-Mitigation: Use a specific --dir or --agent install when only one agent should load the skill, and uninstall by deleting the yotta-anti-shallow folder from the relevant skill directories.
+Mitigation: Install it only where that posture is desired, and prefer scoped installation with --agent or --dir instead of -g for broad multi-agent rollout.
 
-Risk: The skill can add analysis, confirmation, and self-check steps to complex tasks where a user expects a direct answer.
+Risk: The rules can add process overhead for complex tasks and may affect workflows where the user expects a short direct answer.
 
-Mitigation: Use the documented pause or direct-instruction controls for sessions where the process rule should not apply, while preserving its non-guessing and stop-handling safeguards.
+Mitigation: Use the documented closing and explicit-instruction paths for simple or results-only work, while retaining the baseline requirement to state uncertainty and avoid unverified completion claims.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/yottameta/skills/yotta-anti-shallow)
-- [npm package @yottameta/yotta-anti-shallow](https://www.npmjs.com/package/@yottameta/yotta-anti-shallow)
-- [Agent Skills standard](https://agentskills.io/)
+- [npm package](https://www.npmjs.com/package/@yottameta/yotta-anti-shallow)
+- [README](README.md)
+- [Chinese README](README.zh-CN.md)
+- [Changelog](CHANGELOG.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, guidance]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown instructions and process guidance with optional shell commands]
+**Output Format:** [Natural-language and Markdown responses, with code or shell command blocks when the user's task requires them.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [The skill changes agent response process; installer scripts may copy the skill folder into selected agent skill directories.]
+**Other Properties Related to Output:** [May add analysis, confidence labels, confirmation checkpoints, and self-check summaries depending on task complexity.]
 
 ## Skill Version(s):
 
-1.3.2 (source: server release, SKILL.md frontmatter, package.json)
+1.3.3 (source: frontmatter, CHANGELOG, package.json, server release)
 
 ## Ethical Considerations:
 
