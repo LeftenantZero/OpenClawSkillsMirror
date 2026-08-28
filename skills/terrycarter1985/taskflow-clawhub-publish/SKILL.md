@@ -47,9 +47,11 @@ ClawHub layer performs the single irreversible write to the resource center.
      --changelog <changelog> --json`.
    - Persist the returned version and slug into `stateJson`.
 3. **verify** (TaskFlow child task)
-   - Run `clawhub inspect <slug>` and confirm the version matches.
+   - Run `clawhub inspect <slug>` and confirm the published `version` matches the value passed to publish.
    - Optionally install into a throwaway dir:
-     `clawhub install <slug> --workdir <tmp>`.
+     `clawhub install <slug> --workdir <tmp>` and read back `_meta.json` / `.clawhub/origin.json`.
+   - If a subagent was spawned for the validate/publish steps, confirm the mirrored TaskFlow with:
+     `openclaw tasks flow list --json`.
 4. **finish**
    - `taskFlow.finish({ flowId, expectedRevision, stateJson })`.
 
@@ -59,5 +61,6 @@ ClawHub layer performs the single irreversible write to the resource center.
   revision-checked.
 - The publish step is the only externally irreversible step; keep it behind
   the dry-run validation step so failures fail-fast.
-- See `references/publish.sh` for the concrete commands and `references/flow.ts`
-  for the TaskFlow orchestration shape.
+- See `references/publish.sh` for the concrete commands, `references/inspect.sh`
+  for the verification commands, and `references/flow.ts` for the TaskFlow
+  orchestration shape.

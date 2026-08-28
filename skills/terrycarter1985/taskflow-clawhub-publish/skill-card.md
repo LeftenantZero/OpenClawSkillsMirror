@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and release operators use this skill to move an agent skill folder through a durable validate, publish, and verify workflow before it lands in the ClawHub registry.
+Developers and release operators use this skill to run an auditable, resumable workflow for validating, publishing, and verifying OpenClaw skills on ClawHub.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,33 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The publish step writes to the ClawHub registry and is explicitly irreversible.
+Risk: The real publish step writes to the ClawHub registry and is described as irreversible.
 
-Mitigation: Run the dry-run validation first and review the skill folder, slug, version, name, and changelog before allowing the publish step.
+Mitigation: Run the dry-run validation step first and manually confirm the target skill folder, slug, name, version, and changelog before publishing.
 
-Risk: Incorrect user-supplied publish arguments could publish the wrong skill metadata or version.
+Risk: A completed publish may not match the intended release metadata.
 
-Mitigation: Persist and review the selected publish arguments in TaskFlow state before executing the real publish command, then verify the resulting artifact by slug.
+Mitigation: Inspect the published skill and, when appropriate, install it into a temporary directory to confirm the installed metadata version.
 
 ## Reference(s):
 
-- [TaskFlow orchestration example](artifact/references/flow.ts)
-- [ClawHub publish command example](artifact/references/publish.sh)
-- [ClawHub skill page](https://clawhub.ai/terrycarter1985/skills/taskflow-clawhub-publish)
+- [TaskFlow orchestration shape](artifact/references/flow.ts)
+- [Publish command sequence](artifact/references/publish.sh)
+- [Published artifact verification commands](artifact/references/inspect.sh)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
+**Output Type(s):** [markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown instructions with inline shell commands and TypeScript/Bash reference files]
+**Output Format:** [Markdown guidance with TypeScript and shell command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces a TaskFlow flow plan, ClawHub publish commands, persisted state fields, and verification steps.]
+**Other Properties Related to Output:** [Includes dry-run validation, irreversible publish, and post-publish verification steps.]
 
 ## Skill Version(s):
 
-1.0.0 (source: server release evidence)
+1.0.1 (source: server release evidence)
 
 ## Ethical Considerations:
 
