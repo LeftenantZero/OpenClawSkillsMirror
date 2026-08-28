@@ -1,0 +1,63 @@
+{
+  "changelog": "Fix: nested YAML metadata for Codex compatibility (was JSON string which Codex rejects). All YAML values with colons are now properly quoted.",
+  "created_at": 1770614610855,
+  "display_name": "Deep Research (Gemini)",
+  "fetched_at": 1787906466294,
+  "files": [
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CLAUDE.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "CREDITS.md",
+    "README.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "docs/examples/event-sourcing-patterns.md",
+    "docs/examples/webassembly-state-of-art.md",
+    "docs/examples/websocket-vs-sse-comparison.md",
+    "docs/file-search-mime-types.md",
+    "references/file_search_guide.md",
+    "references/online_docs.md",
+    "scripts/onboard.py",
+    "scripts/research.py",
+    "scripts/state.py",
+    "scripts/store.py",
+    "scripts/upload.py",
+    "skill-card.md",
+    "tests/test_cost_estimation.py"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779961582619,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Basit Mustafa",
+    "handle": "24601",
+    "user_id": "s178bj90ka9xeg44k6bt7q07k184jcr0"
+  },
+  "slug": "agent-deep-research",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-deep-research",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-deep-research&ownerHandle=24601",
+    "page_url": "https://clawhub.ai/24601/skills/agent-deep-research"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4534,
+    "installs": 152,
+    "stars": 3,
+    "versions": 14
+  },
+  "summary": "Async deep research via Gemini Interactions API (no Gemini CLI dependency). RAG-ground queries on local files (--context), preview costs (--dry-run), structu...",
+  "updated_at": 1778486092879,
+  "version": "2.1.3"
+}
