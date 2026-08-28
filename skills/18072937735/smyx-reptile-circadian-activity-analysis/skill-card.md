@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes fixed-camera reptile enclosure video to measure hourly activity, compare activity patterns with species circadian baselines, and produce a structured rhythm report.
+Analyzes fixed-camera reptile enclosure video to produce hourly activity measurements, circadian rhythm alignment, anomaly alerts, and husbandry guidance.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users, developers, and reptile husbandry operators use this skill to analyze 24-hour enclosure videos, identify activity peaks, detect day-night rhythm inversion, and review historical circadian activity reports. The outputs are behavioral rhythm analysis and care-environment prompts, not medical diagnosis.
+External users, keepers, breeders, and researchers use this skill to analyze 24-hour or multi-day reptile enclosure footage, compare observed activity with species rhythm baselines, and generate structured rhythm reports. It supports history lookup and report export for previously analyzed enclosure records.
 
 ### Deployment Geography for Use:
 
@@ -22,40 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Enclosure footage or video URLs may be sent to a remote service for analysis.
+Risk: Enclosure videos, video URLs, report history, and account identifiers may be sent to a configured remote service.
 
-Mitigation: Use only footage appropriate for remote processing, avoid sensitive or unrelated video, and confirm the configured service endpoint before running analysis.
+Mitigation: Review data handling before installation, use trusted HTTPS production endpoints, and document retention and cleanup for uploaded media, report data, identities, and tokens.
 
-Risk: Reports are linked to an automatically resolved local identity and service tokens may be stored in a workspace SQLite database.
+Risk: Private or development HTTP endpoints can expose uploaded media, report history, or tokens if used outside a controlled environment.
 
-Mitigation: Review local workspace data access, confirm the identity behavior is acceptable, and remove or rotate stored tokens when the workspace is shared or retired.
+Mitigation: Replace private development endpoints with trusted HTTPS production endpoints before normal use.
 
-Risk: Endpoint scope and retention or deletion behavior are not clearly documented in the evidence.
+Risk: Circadian conclusions may be misleading when footage is incomplete, the camera is unstable, IR night vision is unavailable, light schedules are missing, or species rhythm/context data is absent.
 
-Mitigation: Verify production endpoints and retention/deletion expectations before deployment, especially for continuous 24-hour or multi-day video workflows.
-
-Risk: Circadian analysis can be mistaken for veterinary diagnosis or precise environmental control instructions.
-
-Mitigation: Treat outputs as behavior-analysis guidance only, avoid specific drug or dosing advice, avoid unconfirmed lighting-control actions, and consult a reptile veterinarian when health signs persist.
+Mitigation: Require complete fixed-camera 24-hour footage, IR night vision, recorded light schedule, species rhythm label, and relevant physiological context; mark poor inputs as unreliable.
 
 ## Reference(s):
 
-- [API interface documentation](references/api_doc.md)
+- [Skill page](https://clawhub.ai/18072937735/skills/smyx-reptile-circadian-activity-analysis)
+- [API documentation](references/api_doc.md)
 - [Skill demo](https://lifeemergence.com/sample.html)
 
 ## Skill Output:
 
-**Output Type(s):** [Analysis, Markdown, JSON, Shell commands, Files]
+**Output Type(s):** [text, markdown, JSON, shell commands, guidance]
 
-**Output Format:** [Markdown text containing structured JSON-style analysis, report links, and optional saved output files]
+**Output Format:** [Structured JSON or Markdown report text with report links and optional saved output files]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Reports include fields such as report date, enclosure and individual IDs, species rhythm label, hourly activity array, peak hours, rhythm consistency score, alert level, recommended actions, and disclaimer.]
+**Other Properties Related to Output:** [May call a remote service to analyze local video files or video URLs and retrieve report history.]
 
 ## Skill Version(s):
 
-1.0.11 (source: server release metadata)
+1.0.12 (source: server release metadata; artifact frontmatter lists 1.0.11)
 
 ## Ethical Considerations:
 
