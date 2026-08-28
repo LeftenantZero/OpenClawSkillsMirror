@@ -1,6 +1,6 @@
 ## Description:
 
-Cargo Connection helps agents manage Cargo CLI connectors and integrations, including authentication, connector discovery, integration catalog browsing, and resolution of connector UUIDs and action slugs for workflow nodes.
+Cargo Connection helps agents manage Cargo connector authentication, discover integrations and actions, and resolve connector UUIDs and action slugs for workflows.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and operators use this skill to discover Cargo integrations, create and audit authenticated connectors, and gather the connector UUIDs and action slugs needed for workflow nodes.
+Cargo users and workflow builders use this skill to connect external systems to Cargo, inspect available integrations and actions, and retrieve connector and action identifiers needed in Cargo workflows.
 
 ### Deployment Geography for Use:
 
@@ -22,39 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Connector create, update, and remove commands can change authenticated external-system connections in the active Cargo workspace.
+Risk: Connector commands can handle sensitive credentials or change authenticated external-service connections.
 
-Mitigation: Confirm the active workspace with cargo-ai whoami before write operations and review connector UUIDs, playsCount, and toolsCount before updates or deletion.
+Mitigation: Install only if you use Cargo and trust the @cargo-ai/cli package; avoid putting secrets directly in shell commands when possible and confirm the active workspace with cargo-ai whoami before write operations.
 
-Risk: Connector configuration values and API tokens may include secrets.
+Risk: Removing or changing a connector can disrupt Cargo plays, tools, or workflows that depend on it.
 
-Mitigation: Treat connector config values and login tokens as secrets, avoid exposing them in prompts or logs, and prefer Cargo-supported OAuth or token handling.
+Mitigation: Check dependent plays, tools, and connector usage counts before removing a connector or changing its configuration.
 
-Risk: Using the wrong integration action or autocomplete value can produce invalid workflow node configuration.
+Risk: Incorrect connector UUIDs, action slugs, or autocomplete values can cause workflow failures or empty action results.
 
-Mitigation: Resolve actionSlug values with integration get, inspect jsonSchema and uiSchema, and fetch required autocomplete values before writing workflow configuration.
+Mitigation: Resolve actions and connector identifiers with the Cargo CLI discovery commands, and use connector autocomplete for fields that require dynamic values.
 
 ## Reference(s):
 
-- [Cargo Skills Repository](https://github.com/getcargohq/cargo-skills)
-- [Response shapes](references/response-shapes.md)
+- [ClawHub Skill Page](https://clawhub.ai/cargo-ai/skills/cargo-connection)
+- [Cargo Skills Homepage](https://github.com/getcargohq/cargo-skills)
+- [Connector Examples](references/examples/connectors.md)
+- [Integration Examples](references/examples/integrations.md)
+- [Response Shapes](references/response-shapes.md)
 - [Troubleshooting](references/troubleshooting.md)
-- [Connector examples](references/examples/connectors.md)
-- [Integration examples](references/examples/integrations.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Shell commands, Configuration, JSON]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown guidance with inline shell commands and JSON examples]
+**Output Format:** [Markdown guidance with inline bash commands and JSON examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Commands return JSON on stdout and non-zero failures return JSON with an errorMessage field.]
+**Other Properties Related to Output:** [Requires the Cargo CLI and an authenticated Cargo workspace for command execution.]
 
 ## Skill Version(s):
 
-1.3.0 (source: frontmatter and server release evidence)
+1.4.0 (source: frontmatter and server release evidence)
 
 ## Ethical Considerations:
 
