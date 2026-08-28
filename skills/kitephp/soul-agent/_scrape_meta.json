@@ -1,0 +1,70 @@
+{
+  "changelog": "soul-agent 1.0.1 introduces a heartbeat engine, mood system, relationship mechanics, daily planning, and enhanced memory for a more lifelike digital companion.\n\n- Added heartbeat, mood, relationship, and daily plan systems to make the agent \"live beside you\"\n- New scripts: heartbeat management, daily planning (plan_generator.py), LLM-powered narrative (heartbeat_engine.py), memory distillation (distill_life_log.py)\n- Integrated mood transitions, 5-stage relationship tracking, and auto-updating energy/state\n- 5 built-in life profiles with configurable schedules (freelancer, corporate, student, entrepreneur, custom)\n- Agent-driven initialization with user-friendly questions and non-interactive setup\n- Runtime writes detailed logs, plans, and mood history into the workspace for independent memory\n- All features designed for easy scheduling (e.g., via cron) and safe, managed file updates",
+  "created_at": 1772628225358,
+  "display_name": "soul-agent",
+  "fetched_at": 1787889783301,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/default-profile.json",
+    "assets/templates/heartbeat/activities.json",
+    "assets/templates/heartbeat/mood_rules.json",
+    "assets/templates/heartbeat/relationship_rules.json",
+    "assets/templates/life_profiles/corporate.json",
+    "assets/templates/life_profiles/entrepreneur.json",
+    "assets/templates/life_profiles/freelancer.json",
+    "assets/templates/life_profiles/student.json",
+    "assets/templates/profile/base.md",
+    "assets/templates/profile/boundary.md",
+    "assets/templates/profile/evolution.md",
+    "assets/templates/profile/life.md",
+    "assets/templates/profile/personality.md",
+    "assets/templates/profile/relationship.md",
+    "assets/templates/profile/schedule.md",
+    "assets/templates/profile/tone.md",
+    "assets/templates/soul_INDEX.md",
+    "references/managed-blocks.md",
+    "references/soul-layout.md",
+    "scripts/distill_life_log.py",
+    "scripts/doctor_soul.py",
+    "scripts/heartbeat_check.py",
+    "scripts/heartbeat_engine.py",
+    "scripts/init_soul.py",
+    "scripts/llm_client.py",
+    "scripts/plan_generator.py",
+    "scripts/update_state.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089917462,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "kitephp",
+    "handle": "kitephp",
+    "user_id": "s175nm61e9vqfydzfkk8e0qmcn83ksny"
+  },
+  "slug": "soul-agent",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/soul-agent",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=soul-agent&ownerHandle=kitephp",
+    "page_url": "https://clawhub.ai/kitephp/skills/soul-agent"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 901,
+    "installs": 26,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Make your agent 'live beside you' with heartbeats, mood system, relationship evolution, and independent memory. Use for creating a digital companion with its...",
+  "updated_at": 1778491718264,
+  "version": "1.0.1"
+}
