@@ -1,0 +1,44 @@
+{
+  "changelog": "**Major update: Introduces a security-focused Python wrapper for the Memberstack CLI and updated workflow guidelines.**\n\n- Added `scripts/run_memberstack.py`, a secure wrapper for running `memberstack-cli` commands with output boundary markers, sanitization, and confirmation for destructive operations.\n- Updated authentication and usage instructions to require running CLI commands through the Python wrapper instead of calling `memberstack-cli` directly.\n- Enforced new security guidelines for handling credentials, untrusted API data, and output display.\n- Modified documentation to reflect wrapper usage, confirmation flows, and to outline the stricter command execution and data handling policies.\n- Updated version to 1.1.0 in metadata.",
+  "created_at": 1771371143523,
+  "display_name": "Memberstack CLI",
+  "fetched_at": 1787900148542,
+  "files": [
+    ".claude-plugin/plugin.json",
+    "SKILL.md",
+    "_meta.json",
+    "references/apps.md",
+    "references/auth.md",
+    "references/custom-fields.md",
+    "references/getting-started.md",
+    "references/members.md",
+    "references/plans.md",
+    "references/records.md",
+    "references/tables.md",
+    "references/whoami.md",
+    "scripts/run_memberstack.py",
+    "scripts/search_references.py"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Ben Sabic",
+    "handle": "bensabic",
+    "user_id": "s17cy8m8jbqm60g1k9wd9tebvx8858e0"
+  },
+  "slug": "memberstack-cli",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/memberstack-cli",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=memberstack-cli&ownerHandle=bensabic",
+    "page_url": "https://clawhub.ai/bensabic/skills/memberstack-cli"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 658,
+    "installs": 12,
+    "stars": 0,
+    "versions": 2
+  },
+  "summary": "Use the Memberstack CLI to manage Memberstack accounts from the terminal. Covers authentication, apps, members, plans, custom fields, data tables, and record...",
+  "updated_at": 1778491570900,
+  "version": "1.1.0"
+}
