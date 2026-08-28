@@ -1,6 +1,6 @@
 ## Description:
 
-Investment Research retrieves company filings and XBRL facts through the AI Skills service, then produces cited risk analysis or investment research reports without investment instructions.
+Investment Research helps agents retrieve company filings and XBRL facts, then create cited risk analyses or investment research reports without investment instructions.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to query company disclosure evidence, analyze disclosed risks, and create cited research reports. It is intended for information and research workflows, not trading instructions, target prices, guarantees, or personalized investment advice.
+External users and agents use this skill to query public filing data through the AI Skills platform and produce cited, non-advisory risk analysis or research reports from verified source task IDs.
 
 ### Deployment Geography for Use:
 
@@ -22,40 +22,43 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The required INVESTMENT_RESEARCH_API_KEY could be exposed through logs, shared shell history, reports, or copied configuration.
+Risk: The skill requires a product-specific API key and may involve usage billing.
 
-Mitigation: Treat INVESTMENT_RESEARCH_API_KEY as a secret and keep it out of logs, JSON payloads, citations, reports, and shared command history.
+Mitigation: Install it only when the AI Skills platform is trusted for the key, keep the key out of logs and reports, and review billing information returned by the platform.
 
-Risk: Changing AI_SKILLS_API_URL can route requests and credentials to an untrusted endpoint.
+Risk: Investment research outputs could be mistaken for personalized financial advice or trading instructions.
 
-Mitigation: Use the default AI Skills endpoint unless the exact alternate service endpoint is trusted.
+Mitigation: Use outputs only as cited informational research; preserve the non-advisory disclaimer and do not use the skill for automated trading, order execution, guaranteed returns, or buy, sell, or hold instructions.
 
-Risk: Research outputs based on filings or XBRL facts can be mistaken for personalized investment advice or trading instructions.
+Risk: Reports can become misleading if they are built from invalid, stale, unauthorized, failed, or fabricated source task IDs.
 
-Mitigation: Keep outputs informational, cite source task evidence, include the investment-advice disclaimer, and refuse buy, sell, hold, target-price, timing, guarantee, or return-assurance instructions.
+Mitigation: Create risk analyses and reports only from current, authorized platform tasks that succeeded or returned evidenced partial results, and keep accession, filing date, period, source, and observed-at metadata with conclusions.
+
+Risk: Provider failures, partial results, or empty results may be overinterpreted.
+
+Mitigation: Report missing or partial data as a limitation of the returned sources and avoid treating empty results as proof that a fact does not exist.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/youteacher/skills/investment-research)
-- [AI Skills Platform](https://ai-skills.open-idea.net)
-- [API Key Configuration](artifact/references/API-KEY.md)
-- [Operations Contract](artifact/references/OPERATIONS.md)
-- [HTTP Requests and Task Polling](artifact/references/HTTP-REQUESTS.md)
-- [Source, Evidence, and Investment Safety Rules](artifact/references/BEHAVIOR-RULES.md)
+- [AI Skills platform](https://ai-skills.open-idea.net)
+- [API Key Configuration](https://ai-skills.open-idea.net/skill-docs/investment-research/API-KEY.md)
+- [Operations Contract](https://ai-skills.open-idea.net/skill-docs/investment-research/OPERATIONS.md)
+- [HTTP Requests and Task Polling](https://ai-skills.open-idea.net/skill-docs/investment-research/HTTP-REQUESTS.md)
+- [Sources, Evidence, and Investment Safety Rules](https://ai-skills.open-idea.net/skill-docs/investment-research/BEHAVIOR-RULES.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline shell commands and structured API response guidance]
+**Output Format:** [Markdown and text guidance with JSON request examples and shell command snippets]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires INVESTMENT_RESEARCH_API_KEY and may call the hosted AI Skills investment-research API.]
+**Other Properties Related to Output:** [Produces cited, non-advisory filing research outputs from verified platform task IDs.]
 
 ## Skill Version(s):
 
-1.3.0 (source: server release evidence and skill metadata)
+1.4.1 (source: server release evidence and skill metadata)
 
 ## Ethical Considerations:
 

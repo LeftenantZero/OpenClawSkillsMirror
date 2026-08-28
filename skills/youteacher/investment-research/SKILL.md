@@ -3,7 +3,7 @@ name: investment-research
 description: "使用场景: 用户需要检索公司公告或 XBRL 事实，并基于平台内真实来源任务生成带引用、无投资指令的风险分析或投资研究报告；需要 INVESTMENT_RESEARCH_API_KEY。"
 metadata:
     {
-        "packageVersion": "1.3.0",
+        "packageVersion": "1.4.1",
         "openclaw":
             {
                 "emoji": "📊",
@@ -38,7 +38,7 @@ openclaw gateway restart
 
 ## 参考资料
 
-- [API Key 配置](https://github.com/YouTeacher/ai-skills-platform/blob/main/openclaw/investment-research/references/API-KEY.md)
-- [Operations 契约](https://github.com/YouTeacher/ai-skills-platform/blob/main/openclaw/investment-research/references/OPERATIONS.md)
-- [HTTP 请求与任务轮询](https://github.com/YouTeacher/ai-skills-platform/blob/main/openclaw/investment-research/references/HTTP-REQUESTS.md)
-- [来源、证据与投资安全规则](https://github.com/YouTeacher/ai-skills-platform/blob/main/openclaw/investment-research/references/BEHAVIOR-RULES.md)
+- [API Key 配置](https://ai-skills.open-idea.net/skill-docs/investment-research/API-KEY.md)
+- [Operations 契约](https://ai-skills.open-idea.net/skill-docs/investment-research/OPERATIONS.md)
+- [HTTP 请求与任务轮询](https://ai-skills.open-idea.net/skill-docs/investment-research/HTTP-REQUESTS.md)
+- [来源、证据与投资安全规则](https://ai-skills.open-idea.net/skill-docs/investment-research/BEHAVIOR-RULES.md)
