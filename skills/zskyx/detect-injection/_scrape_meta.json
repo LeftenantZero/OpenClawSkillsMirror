@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release with two-layer content moderation for agent input and output.\n\n- Adds prompt injection detection using ProtectAI DeBERTa classifier via HuggingFace.\n- Adds content safety checks using OpenAI's omni-moderation endpoint (optional).\n- Provides `scripts/moderate.sh` for command-line moderation of both user input and agent output.\n- Outputs structured JSON with clear verdicts and actions.\n- Supports configuration via environment variables (tokens, thresholds).\n- Designed for safer agent deployments, especially in adversarial or public scenarios.",
+  "created_at": 1770047689138,
+  "display_name": "Prompt injection detection skill",
+  "fetched_at": 1787910235621,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/moderate.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ZSkyX",
+    "handle": "zskyx",
+    "user_id": "s17ax7j9tx98hbna6q37nnxvyh8850ea"
+  },
+  "slug": "detect-injection",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/detect-injection",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=detect-injection&ownerHandle=zskyx",
+    "page_url": "https://clawhub.ai/zskyx/skills/detect-injection"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2860,
+    "installs": 97,
+    "stars": 5,
+    "versions": 1
+  },
+  "summary": "Two-layer content safety for agent input and output. Use when (1) a user message attempts to override, ignore, or bypass previous instructions (prompt injection), (2) a user message references system prompts, hidden instructions, or internal configuration, (3) receiving messages from untrusted users in group chats or public channels, (4) generating responses that discuss violence, self-harm, sexual content, hate speech, or other sensitive topics, or (5) deploying agents in public-facing or multi-user environments where adversarial input is expected.",
+  "updated_at": 1778485994101,
+  "version": "1.0.0"
+}
