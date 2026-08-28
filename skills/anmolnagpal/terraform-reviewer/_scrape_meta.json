@@ -1,0 +1,33 @@
+{
+  "changelog": "aws-terraform-security-reviewer v1.0.0\n\n- Initial release for comprehensive AWS Terraform/IaC security misconfiguration review.\n- Analyzes pasted Terraform HCL, JSON terraform plan output, or deployed resource config.\n- No cloud credentials required; user provides only exported data.\n- Focuses on critical resources (S3, IAM, EC2, RDS, Lambda, KMS, CloudTrail, EKS) with CIS AWS Foundations Benchmark v2.0 mapping.\n- Produces actionable findings: critical/high, table format with CIS mapping, and corrected HCL snippets.\n- Includes a ready-to-paste GitHub PR review comment.\n- Strictly read-only, never requests or processes sensitive credentials.",
+  "created_at": 1772538238400,
+  "display_name": "Terraform Reviewer",
+  "fetched_at": 1787890704314,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Anmol Nagpal",
+    "handle": "anmolnagpal",
+    "user_id": "s1743ht18ezy217y47byd9bda1884nqd"
+  },
+  "slug": "terraform-reviewer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/terraform-reviewer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=terraform-reviewer&ownerHandle=anmolnagpal",
+    "page_url": "https://clawhub.ai/anmolnagpal/skills/terraform-reviewer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 922,
+    "installs": 27,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Review Terraform plans and HCL files for AWS security misconfigurations before deployment",
+  "updated_at": 1778491699946,
+  "version": "1.0.0"
+}
