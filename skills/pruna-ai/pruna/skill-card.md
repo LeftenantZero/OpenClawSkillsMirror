@@ -1,42 +1,58 @@
-## Description: <br>
-Use when installing the full Pruna generative media suite: all guides, tools, and workflows in one package. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+Use when installing the full Pruna generative media suite: guides, tools, and workflows in one package.
 
-## Publisher: <br>
-[pruna-ai](https://clawhub.ai/user/pruna-ai) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[pruna-ai](https://clawhub.ai/user/pruna-ai)
 
-## Use Case: <br>
-External users and developers use this skill to install the full Pruna generative media suite, including prompt guides, media-generation tools, and multi-step image, video, audio, and editing workflows. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: The install command auto-confirms installation of the full Pruna media-generation suite and its listed dependencies. <br>
-Mitigation: Review the dependency list before installation and use this bundle only when the full suite is intended. <br>
-Risk: Generation workflows may require Pruna or Replicate credentials and can trigger paid API calls. <br>
-Mitigation: Confirm API-key availability, billing expectations, and generation scope before running media-generation workflows. <br>
+## Use Case:
 
+External users, developers, and creative teams use this skill to install and navigate the Pruna generative media suite for image, video, audio, and multi-step media workflows.
 
-## Reference(s): <br>
-- [Pruna dashboard](https://dashboard.pruna.ai/) <br>
-- [ClawHub skill page](https://clawhub.ai/pruna-ai/skills/pruna) <br>
-- [Publisher profile](https://clawhub.ai/user/pruna-ai) <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [guidance, markdown, shell commands, configuration] <br>
-**Output Format:** [Markdown with inline shell commands and configuration requirements] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [The skill routes the agent toward Pruna suite skills for prompt writing, API use, media generation, and ffmpeg-based assembly.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-1.0.9 (source: server evidence and frontmatter) <br>
+Risk: The suite may use API credentials and make paid external API calls.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Confirm the user intends to use Pruna or Replicate services and has approved any paid calls before execution.
+
+Risk: Media, prompts, or related content may be uploaded to Pruna and sometimes Replicate.
+
+Mitigation: Avoid submitting sensitive content unless the user is comfortable with those services handling it.
+
+Risk: Local media tools such as curl, ffmpeg, and ffprobe may process downloaded or generated assets.
+
+Mitigation: Review proposed shell commands and file paths before running media processing steps.
+
+## Reference(s):
+
+- [Pruna Skill on ClawHub](https://clawhub.ai/pruna-ai/skills/pruna)
+- [Pruna Dashboard](https://dashboard.pruna.ai/)
+
+## Skill Output:
+
+**Output Type(s):** [guidance, markdown, shell commands, configuration]
+
+**Output Format:** [Markdown with inline bash code blocks]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [May guide agents to use API credentials, paid external API calls, media uploads, and local media tools such as curl, ffmpeg, and ffprobe.]
+
+## Skill Version(s):
+
+1.0.10 (source: frontmatter and server release evidence)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
