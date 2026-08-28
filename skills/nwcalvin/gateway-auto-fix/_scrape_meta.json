@@ -1,0 +1,45 @@
+{
+  "changelog": "**Summary**: Version 2.0.0 migrates gateway health checks and auto-fix scheduling to the OpenClaw built-in cron system.\n\n- Uses OpenClaw's built-in cron system instead of standard OS cron for scheduling.\n- Updated setup and uninstall instructions to use `openclaw cron add` and `openclaw cron rm`.\n- Simplified manual install steps and removed legacy OS-specific cron references.\n- Clarified logging and health check instructions.\n- Documentation and usage commands updated throughout for clarity and alignment with current OpenClaw conventions.",
+  "created_at": 1772253054444,
+  "display_name": "Gateway Auto-Fix",
+  "fetched_at": 1787893326324,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "openclaw-auto-fix.sh",
+    "setup.sh",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779966401427,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "nwcalvin",
+    "handle": "nwcalvin",
+    "user_id": "s17dh7vztsyw2gmjngsqt96zs1885v8s"
+  },
+  "slug": "gateway-auto-fix",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/gateway-auto-fix",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=gateway-auto-fix&ownerHandle=nwcalvin",
+    "page_url": "https://clawhub.ai/nwcalvin/skills/gateway-auto-fix"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1152,
+    "installs": 34,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Automatically monitor OpenClaw gateway status and fix when RPC probe fails. Uses OpenClaw cron system - just install and it works!",
+  "updated_at": 1778491663809,
+  "version": "2.0.0"
+}
