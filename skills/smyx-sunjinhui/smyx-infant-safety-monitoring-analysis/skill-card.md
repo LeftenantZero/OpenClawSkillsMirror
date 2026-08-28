@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes infant activity images or videos with visual AI to identify high-risk behaviors such as rolling over, mouth/nose obstruction, climbing, fence crossing, and fall risk, then returns warnings, care suggestions, and report links.
+Monitors infant behavior via visual AI, automatically identifying high-risk actions like rolling over, mouth/nose obstruction, climbing, or falling from bed, and triggers instant safety warnings.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Parents, caregivers, and developers use this skill to analyze infant activity media for possible safety risks and to retrieve cloud report history for prior analyses. It is an assistive monitoring workflow and is not a replacement for real-time supervision or professional care.
+External users and developers use this skill to analyze infant activity videos or URLs for safety-related behaviors, warnings, care suggestions, structured reports, and history queries. Results are advisory and should not replace real-time caregiver supervision.
 
 ### Deployment Geography for Use:
 
@@ -22,43 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Sensitive infant or home videos and URLs may be sent to a configured cloud service.
+Risk: The skill may send sensitive infant or home videos to the publisher's cloud service.
 
-Mitigation: Use only with explicit consent, review the configured endpoint and retention terms, and avoid submitting unnecessary or identifying media.
+Mitigation: Use only media approved for upload, review the publisher's retention and deletion practices, and avoid real family footage until those practices are acceptable.
 
-Risk: Report history is associated with an automatically resolved local identity.
+Risk: The skill creates or reuses a local identity and token database for report history.
 
-Mitigation: Confirm per-user scoping and account isolation before shared or production use.
+Mitigation: Review local token storage and access controls before deployment, and clear local identity data when the skill is no longer needed.
 
-Risk: Account tokens may be stored in a workspace SQLite database.
+Risk: Safety reports are advisory and may be incomplete or delayed.
 
-Mitigation: Restrict workspace access, rotate credentials when needed, and prefer a release with documented token storage controls.
-
-Risk: The skill provides assistive safety analysis and may miss or misclassify hazards.
-
-Mitigation: Keep caregiver supervision in place and treat reports as supplemental information, not professional care advice.
+Mitigation: Do not rely on the skill as real-time child safety monitoring; maintain caregiver supervision and use professional judgment.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-infant-safety-monitoring-analysis)
-- [Publisher profile](https://clawhub.ai/user/smyx-sunjinhui)
-- [Infant safety monitoring API documentation](references/api_doc.md)
-- [Analysis API reference](skills/smyx_analysis/references/api_doc.md)
-- [Skill demo](https://lifeemergence.com/sample.html)
+- [ClawHub Skill Page](https://clawhub.ai/smyx-sunjinhui/skills/smyx-infant-safety-monitoring-analysis)
+- [Skill Demo](https://lifeemergence.com/sample.html)
+- [Infant Safety Monitoring API Documentation](references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, shell commands, guidance]
+**Output Type(s):** [Analysis, Markdown, JSON, Shell commands, Guidance]
 
-**Output Format:** [Markdown or JSON analysis report with structured findings, safety warnings, care suggestions, and report links.]
+**Output Format:** [Markdown or JSON analysis reports with warnings, suggestions, report links, and optional history tables]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include cloud-hosted history/report links and optional saved report output.]
+**Other Properties Related to Output:** [Accepts local video files or public video URLs; cloud analysis and report-history queries may involve infant or home media and local identity/token state.]
 
 ## Skill Version(s):
 
-1.0.12 (source: server release metadata; artifact frontmatter reports 1.0.17)
+1.0.13 (source: server release metadata; artifact frontmatter states 1.0.17)
 
 ## Ethical Considerations:
 
