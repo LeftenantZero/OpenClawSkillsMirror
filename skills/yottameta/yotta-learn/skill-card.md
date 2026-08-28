@@ -1,6 +1,6 @@
 ## Description:
 
-Yotta-learn helps agents record errors, corrections, feature requests, and reusable insights as project-local `.learnings/` entries for later review and skill improvement.
+Yuanxi is a cross-agent learning-loop skill that captures mistakes, corrections, feature requests, and reusable insights as project-local .learnings/ entries for later review, promotion, statistics, and skill improvement.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-Developers and agent operators use this skill to preserve useful lessons from command failures, user corrections, better practices, missing capability requests, and outdated knowledge. It supports local review, promotion into agent guidance files, and extraction of high-value learning entries into new skill skeletons.
+Developers, agent users, and multi-agent teams use this skill to record command failures, user corrections, stale knowledge, external-interface failures, and better practices so later sessions can review, aggregate, and reuse them.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Global installation and optional hook templates can make the skill available across many agent environments or run a review command automatically on every prompt.
+Risk: The skill persists project learning notes that may accidentally include secrets, full source, environment values, or other sensitive information.
 
-Mitigation: Install only into the intended agent, avoid `-g` or `--global` unless broad availability is desired, and review hook templates before merging them into agent settings.
+Mitigation: Follow the documented boundary and scanner guidance: do not log secrets or full source; use summaries or redacted snippets unless the user explicitly requests otherwise.
 
-Risk: Learning entries could capture secrets, private source content, or sensitive operational details if the user or agent records them directly.
+Risk: Broad installation or hook enablement can add persistent behavior across multiple agent environments.
 
-Mitigation: Record summaries or redacted snippets, and do not log tokens, keys, environment variable values, credentials, or full private source files.
+Mitigation: Prefer scoped installation with --agent or --dir, and review hook templates before merging them into Claude Code, Codex, or OpenClaw settings.
 
-Risk: The optional `--remember` path depends on a `yotta-memory` executable found in PATH.
+Risk: Promoting unreviewed learning entries into AGENTS.md or CLAUDE.md-style instruction files can turn local observations into durable agent instructions.
 
-Mitigation: Use `--remember` only when the `yotta-memory` executable is trusted; otherwise rely on local `.learnings/` records.
+Mitigation: Promote only trusted, reviewed entries and keep sensitive or uncertain observations in local .learnings/ files.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/yottameta/skills/yotta-learn)
-- [npm Package](https://www.npmjs.com/package/@yottameta/yotta-learn)
-- [Recording examples and field guide](references/examples.md)
-- [Hook setup guide](references/hooks-setup.md)
+- [ClawHub skill page](https://clawhub.ai/yottameta/skills/yotta-learn)
+- [GitHub repository](https://github.com/YottaMeta/yotta-learn)
+- [npm package](https://www.npmjs.com/package/@yottameta/yotta-learn)
+- [agentskills.io](https://agentskills.io/)
+- [examples.md](references/examples.md)
+- [hooks-setup.md](references/hooks-setup.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
+**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration]
 
-**Output Format:** [Markdown files, CLI text output, shell commands, and configuration snippets]
+**Output Format:** [Markdown entries, command-line output, shell commands, and generated skill skeleton files]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Writes project-local `.learnings/` Markdown entries and can optionally generate agent guidance updates or skill skeleton previews.]
+**Other Properties Related to Output:** [Writes project-local .learnings/ files; optional hook templates can be installed into agent settings; optional yotta-memory sync degrades without blocking local records.]
 
 ## Skill Version(s):
 
-0.1.2 (source: ClawHub release evidence, SKILL.md frontmatter, package.json)
+0.1.3 (source: SKILL.md frontmatter, package.json, ClawHub release metadata)
 
 ## Ethical Considerations:
 

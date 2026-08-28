@@ -1,13 +1,14 @@
 {
-  "changelog": "- Initial public release of yotta-learn skill.\n- Logs errors, corrections, and insights as reusable entries in .learnings/ after failures, corrections, better practices, feature requests, or knowledge updates.\n- Supports listing, reviewing, promoting important learnings, and extracting new skill skeletons from high-value entries.\n- Pattern-Key helps track recurring issues; priority and categorization are built-in.\n- Optional integration with yotta-memory for synchronized knowledge retention with automatic fallback.\n- Zero dependencies beyond Python 3.8+ standard library; supports both Windows and Linux.",
+  "changelog": "- Added a Simplified Chinese README (README.zh-CN.md).\n- Removed obsolete skill-card.md documentation file.\n- Updated documentation for clarity, usage instructions, and minor fixes (README.md, SKILL.md).\n- Updated package metadata in package.json.",
   "created_at": 1787723524744,
   "display_name": "\u5143\u4e60 yotta-learn",
-  "fetched_at": 1787768694579,
+  "fetched_at": 1787932312951,
   "files": [
     "CHANGELOG.md",
     "LICENSE",
     "NOTICE",
     "README.md",
+    "README.zh-CN.md",
     "SKILL.md",
     "_meta.json",
     "assets/banner.png",
@@ -26,17 +27,7 @@
     "scripts/yotta_learn.py",
     "skill-card.md"
   ],
-  "moderation": {
-    "engine_version": "v2.4.26",
-    "is_malware_blocked": false,
-    "is_suspicious": false,
-    "reason_codes": [
-      "review.llm_review"
-    ],
-    "summary": "Review: review.llm_review",
-    "updated_at": 1787724348020,
-    "verdict": "clean"
-  },
+  "moderation": null,
   "owner": {
     "display_name": "YottaMeta",
     "handle": "yottameta",
@@ -50,12 +41,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 29,
+    "downloads": 96,
     "installs": 0,
     "stars": 0,
-    "versions": 1
+    "versions": 2
   },
   "summary": "\u5143\u4e60 \u2014\u2014 \u8de8\u667a\u80fd\u4f53\u7684\u5b66\u4e60\u95ed\u73af\u6280\u80fd\uff1a\u628a\u9519\u8bef\u3001\u7ea0\u6b63\u4e0e\u6d1e\u89c1\u6c89\u6dc0\u4e3a .learnings/ \u6761\u76ee\uff0c\u4f9b\u540e\u7eed\u4f1a\u8bdd\u4e0e\u6280\u80fd\u6539\u8fdb\u590d\u7528\u3002\u89e6\u53d1\uff1a\u547d\u4ee4\u5931\u8d25\u3001\u7528\u6237\u7ea0\u6b63\u3001\u53d1\u73b0\u66f4\u597d\u7684\u505a\u6cd5\u3001\u8bf7\u6c42\u7f3a\u5931\u80fd\u529b\u3001\u5916\u90e8\u63a5\u53e3\u6545\u969c\u3001\u77e5\u8bc6\u8fc7\u65f6\u3001\u9700\u8981\u6c89\u6dc0\u7ecf\u9a8c\u65f6\uff1b\u6216\u7528\u6237\u8bf4 \u8bb0\u4e00\u7b14/\u5b66\u4e60/\u6c89\u6dc0/self-improvement/learnings \u7b49\u3002\u8fb9\u754c\uff1a\u4e0d\u5199\u5165\u79c1\u5bc6/\u654f\u611f\u4fe1\u606f\uff08\u9664\u975e\u7528\u6237\u660e\u786e\u8981\u6c42\uff09\uff1b\u4e0d\u81ea\u52a8\u6539\u52a8\u7cfb\u7edf\u6587\u4ef6\u3002",
-  "updated_at": 1787723647451,
-  "version": "0.1.2"
+  "updated_at": 1787847286356,
+  "version": "0.1.3"
 }
