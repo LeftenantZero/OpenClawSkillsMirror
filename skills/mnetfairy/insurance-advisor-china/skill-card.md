@@ -1,6 +1,6 @@
 ## Description:
 
-中国大陆AI保险顾问，为个人和家庭提供保险咨询、产品对比、方案设计、投保指导、保费计算、保障缺口分析、核保合规和理赔支持。
+An AI insurance advisor for mainland China that helps individuals and families with insurance consultation, product comparison, plan design, application guidance, premium estimation, coverage-gap analysis, compliance reminders, and claims support.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,47 +14,43 @@ MIT-0
 
 ## Use Case:
 
-External users in Mainland China use this skill to analyze personal or family insurance needs, compare products, estimate premiums, design coverage plans, and receive Chinese-language insurance knowledge, compliance, and claims guidance.
+External users and agents serving individuals or families in mainland China use this skill to answer insurance planning questions, compare products, estimate premiums, design coverage plans, and provide compliance-oriented reminders.
 
 ### Deployment Geography for Use:
 
-Mainland China
+China (mainland)
 
 ## Known Risks and Mitigations:
 
-Risk: The workflow can collect sensitive financial, family, and health context for insurance needs analysis.
+Risk: Insurance recommendations may rely on static local product data and may not reflect current insurer terms or availability.
 
-Mitigation: Share only the minimum information needed, avoid unnecessary identifiers or detailed health records, and keep any collected user context under appropriate privacy controls.
+Mitigation: Treat recommendations as informational and verify current product terms, availability, premiums, and underwriting requirements with insurers before acting.
 
-Risk: The bundled product and compliance data may be stale, polluted, or inconsistent.
+Risk: Maintenance scripts under scripts/datafix can rewrite product data and patch skill Python files.
 
-Mitigation: Verify product availability, premiums, policy status, and compliance claims with insurers or licensed professionals before making insurance decisions.
-
-Risk: The skill provides non-authoritative insurance guidance that may be mistaken for licensed professional advice.
-
-Mitigation: Present outputs as reference material only and preserve the skill's stated disclaimers when recommending or comparing products.
+Mitigation: Do not run scripts/datafix unless intentionally maintaining the package; review the changes and use dry-run behavior where available before applying edits.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/mnetfairy/skills/insurance-advisor-china)
-- [Insurance product database](references/products.json)
-- [Insurance knowledge base](references/insurance-knowledge.md)
-- [Compliance guidance](references/compliance.md)
-- [Product database analysis](references/_repo_analysis_2026-08-21.md)
+- [Insurance Knowledge Base](references/insurance-knowledge.md)
+- [Regulatory Compliance Notes](references/compliance.md)
+- [Insurance Product Database](references/products.json)
+- [Insurance Database Analysis Report (2026-08-26)](references/%E4%BF%9D%E9%99%A9%E8%B5%84%E6%96%99%E5%BA%93%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A_2026-08-26.md)
+- [Product Library Analysis Report (2026-08-21)](references/_repo_analysis_2026-08-21.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, JSON, Guidance]
+**Output Type(s):** [text, markdown, JSON, shell commands, guidance]
 
-**Output Format:** [Chinese-language Markdown or JSON reports, depending on the workflow]
+**Output Format:** [Chinese natural-language guidance and Markdown tables, with JSON emitted by helper scripts.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Script-backed workflows can return structured JSON for needs analysis, premium calculation, and plan design; user-facing answers should include the skill's stated disclaimers when giving product recommendations.]
+**Other Properties Related to Output:** [Uses local static product and compliance references; helper scripts accept JSON input and print JSON results.]
 
 ## Skill Version(s):
 
-2.0.53 (source: server release evidence; artifact frontmatter says 2.0.0)
+2.0.59 (source: server release evidence; artifact frontmatter reports 2.0.0)
 
 ## Ethical Considerations:
 
