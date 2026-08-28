@@ -1,6 +1,6 @@
 ## Description:
 
-Look up concert setlists and live-music history via setlist.fm for artist, venue, city, date, tour, and song-list questions.
+Look up concert setlists and live-music history via setlist.fm for artists, tours, venues, cities, and dates.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and external users use this skill to configure and operate a setlist.fm MCP server so an agent can answer concert setlist, venue, tour, and live-performance history questions. The skill also guides users to cite setlist.fm results and handle API-key-backed live data appropriately.
+External users and developers use this skill to configure and call the setlist MCP server for concert setlist, artist, venue, city, country, and user lookup workflows.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,34 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The server-resolved security summary says the recommended runtime package exposes account-attendance write tools and session-cookie use while the skill describes itself as read-only.
+Risk: The recommended install target may expose under-disclosed setlist.fm account or session write capabilities.
 
-Mitigation: Pin and review the npm package version before use, and do not provide a setlist.fm session cookie or browser-cookie bridge unless the deployment intentionally allows attended-show marker management.
+Mitigation: Use a pinned package version, avoid SETLIST_SESSION_COOKIE or browser-bridge access unless attendance changes are intended, and prefer configurations that expose only read-only lookup tools.
 
-Risk: The skill depends on a setlist.fm API key and live third-party API responses.
+Risk: The skill depends on a setlist.fm API key and live third-party data.
 
-Mitigation: Keep SETLIST_API_KEY scoped to setlist.fm, do not display or log the key in agent responses, cite returned setlist.fm URLs, and avoid persistent caching of setlist.fm data.
-
-Risk: The artifact notes that free setlist.fm API keys cover non-commercial use and commercial use needs permission.
-
-Mitigation: Confirm setlist.fm permission or licensing terms before using API-backed outputs in a commercial workflow.
+Mitigation: Keep SETLIST_API_KEY private, cite setlist.fm result URLs, avoid persistent caching, and treat responses as point-in-time data.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/chrischall/skills/setlist)
 - [setlist-mcp npm package](https://www.npmjs.com/package/setlist-mcp)
+- [setlist-mcp declared source link](https://github.com/chrischall/setlist-mcp)
 - [setlist.fm API key settings](https://www.setlist.fm/settings/api)
 - [setlist.fm API terms](https://www.setlist.fm/help/api-terms)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown guidance with JSON configuration snippets and shell command examples]
+**Output Format:** [Markdown with JSON and bash code blocks]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Agent responses should cite setlist.fm result URLs, treat results as live point-in-time data, and avoid exposing the SETLIST_API_KEY value.]
+**Other Properties Related to Output:** [May include setlist.fm source URLs and MCP configuration snippets; requires SETLIST_API_KEY for server use.]
 
 ## Skill Version(s):
 
-0.9.7 (source: server release metadata)
+0.9.8 (source: server release evidence)
 
 ## Ethical Considerations:
 
