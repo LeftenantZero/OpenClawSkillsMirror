@@ -1,0 +1,40 @@
+{
+  "changelog": "# tsend v2.1.0 Release Notes\n\n## New Features\n\n- **Multi-file support**: Send multiple files in one command\n  ```bash\n  tsend send file1.pdf file2.jpg file3.png\n  tsend send *.pdf\n  ```\n- **Progress indicator**: Shows `[1/3]` style progress for batch uploads\n- **Batch statistics**: Displays total file count and combined size\n- **Smart caption handling**: Caption is sent with the first file only\n\n## Examples\n\n```bash\n# Send multiple files\ntsend send document.pdf photo.jpg notes.txt\n\n# Wildcard support\ntsend send ~/Downloads/*.zip --caption \"Backup files\"\n\n# Mixed arguments\ntsend send report.pdf chart.png data.csv\n```\n\n## Notes\n\n- Files are sent sequentially to avoid rate limits\n- If one file fails, others continue uploading\n- Exit code 1 only if all files fail",
+  "created_at": 1771506882632,
+  "display_name": "telegram send files",
+  "fetched_at": 1787898984397,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/pyproject.toml",
+    "scripts/tsend/__init__.py",
+    "scripts/tsend/__main__.py",
+    "scripts/tsend/cli.py",
+    "scripts/tsend/client.py",
+    "scripts/tsend/config.py",
+    "scripts/tsend/utils.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Shingwha",
+    "handle": "shingwha",
+    "user_id": "s170e9fqjv07tv6a3akze6g8rh885cq5"
+  },
+  "slug": "tsend",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/tsend",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=tsend&ownerHandle=shingwha",
+    "page_url": "https://clawhub.ai/shingwha/skills/tsend"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1361,
+    "installs": 42,
+    "stars": 2,
+    "versions": 2
+  },
+  "summary": "Send files quickly via Telegram using the tsend CLI tool with optional captions, profiles, and simple token/chat ID configuration.",
+  "updated_at": 1778491581507,
+  "version": "2.1.0"
+}
