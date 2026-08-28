@@ -1,0 +1,36 @@
+{
+  "changelog": "Version 1.1.4 of deepresearch-conversation \u2014 major update and rebranding.\n\n- Renamed skill to \"qianfan-deepresearch\" and updated the description for greater clarity and coverage.\n- Streamlined the workflow: switched to a single-step, fully automated bash script execution that outputs report download links in Markdown and HTML.\n- Introduced deep research versions: lite (default), standard, pro; includes explicit mapping rules triggered by specific user keywords.\n- Set strict guidelines for query generation, with clear rules for use, required clarifications, and which user inputs map to which research depth.\n- Standardized user-facing output with a fixed template; all responses now strictly follow the mandated format, forbidding extra commentary or formatting.\n- Deprecated manual SSE/HTTP workflow in favor of a robust wrapper script; users/agents must now always call scripts/deepresearch.py with proper long timeouts and parse only its stdout JSON.\n- Enhanced resource section and practical examples to illustrate real-world usage and correct input/output patterns.",
+  "created_at": 1770449605465,
+  "display_name": "qianfan-deepresearch",
+  "fetched_at": 1787907447962,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/api.md",
+    "references/workflow.md",
+    "scripts/deepresearch.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "ide-rea",
+    "handle": "ide-rea",
+    "user_id": "s17a4y7rpj2bmp94zpqe8r915h83gq6d"
+  },
+  "slug": "deepresearch-conversation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/deepresearch-conversation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=deepresearch-conversation&ownerHandle=ide-rea",
+    "page_url": "https://clawhub.ai/ide-rea/skills/deepresearch-conversation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 9527,
+    "installs": 282,
+    "stars": 3,
+    "versions": 11
+  },
+  "summary": "\u8c03\u7528\u767e\u5ea6\u5343\u5e06 DeepResearch Agent API \u81ea\u52a8\u751f\u6210\u6df1\u5ea6\u7814\u7a76\u62a5\u544a\uff08\u8f93\u51fa Markdown \u4e0e HTML \u4e24\u79cd\u683c\u5f0f\uff09\uff0c\u4e00\u952e\u5b8c\u6210\u300c\u521b\u5efa\u4f1a\u8bdd \u2192 \u53d1\u8d77\u7814\u7a76 \u2192 \u81ea\u52a8\u8df3\u8fc7\u6f84\u6e05 \u2192 \u81ea\u52a8 \u786e\u8ba4\u5927\u7eb2 \u2192 \u83b7\u53d6\u62a5\u544a\u4e0b\u8f7d\u94fe\u63a5\u300d\u5b8c\u6574\u6d41\u7a0b\u3002\u652f\u6301\u4e09\u79cd\u6df1\u5ea6\u6a21\u5f0f\uff1alite\uff08\u8f7b\u91cf\u7248\uff0c \u901f\u5ea6\u5feb\uff0c\u9ed8\u8ba4\uff09/ standard\uff08\u6807\u51c6...",
+  "updated_at": 1778486069788,
+  "version": "1.1.4"
+}
