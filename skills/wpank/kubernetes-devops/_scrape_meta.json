@@ -1,0 +1,49 @@
+{
+  "changelog": "Initial release \u2013 production-ready Kubernetes manifest generation for DevOps workflows.\n\n- Supports generation for Deployments, StatefulSets, CronJobs, Services, Ingresses, ConfigMaps, Secrets, and PersistentVolumeClaims.\n- Built-in guidance for selecting appropriate workload/resource types and organization (Kustomize, file structure).\n- Production-focused security (securityContext, probes, resource limits) and health checks included in all samples.\n- Includes configuration for both internal (ClusterIP) and external (LoadBalancer, Ingress) service exposure.\n- Provides manifest examples, best practices, labels, and validation steps.",
+  "created_at": 1770727420945,
+  "display_name": "Kubernetes",
+  "fetched_at": 1787905312059,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "assets/configmap-template.yaml",
+    "assets/cronjob-template.yaml",
+    "assets/deployment-template.yaml",
+    "assets/ingress-template.yaml",
+    "assets/service-template.yaml",
+    "assets/statefulset-template.yaml",
+    "k8s-manifest-generator/README.md",
+    "k8s-manifest-generator/SKILL.md",
+    "k8s-manifest-generator/assets/configmap-template.yaml",
+    "k8s-manifest-generator/assets/deployment-template.yaml",
+    "k8s-manifest-generator/assets/service-template.yaml",
+    "k8s-manifest-generator/references/deployment-spec.md",
+    "k8s-manifest-generator/references/service-spec.md",
+    "references/deployment-spec.md",
+    "references/service-spec.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "wpank",
+    "handle": "wpank",
+    "user_id": "s17bjjbnm7xjckd29e1h2641ks8849md"
+  },
+  "slug": "kubernetes-devops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/kubernetes-devops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=kubernetes-devops&ownerHandle=wpank",
+    "page_url": "https://clawhub.ai/wpank/skills/kubernetes-devops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 4003,
+    "installs": 134,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "WHAT: Kubernetes manifest generation - Deployments, StatefulSets, CronJobs, Services, Ingresses, \nConfigMaps, Secrets, and PVCs with production-grade security and health checks.\n\nWHEN: User needs to create K8s manifests, deploy containers, configure Services/Ingress, \nmanage ConfigMaps/Secrets, set up persistent storage, or organize multi-environment configs.\n\nKEYWORDS: kubernetes, k8s, manifest, deployment, statefulset, cronjob, service, ingress, \nconfigmap, secret, pvc, pod, container, yaml, kustomize, helm, namespace, probe, security context",
+  "updated_at": 1778486478500,
+  "version": "1.0.0"
+}
