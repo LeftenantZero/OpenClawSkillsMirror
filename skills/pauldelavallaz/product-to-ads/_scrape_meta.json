@@ -1,0 +1,55 @@
+{
+  "changelog": "fix: language injection only fires for non-default languages (was causing Gemini Flash JSON truncation); model/talent now optional; creative_brief and language are on-demand only; brand profiles must be pushed to GitHub after creation",
+  "created_at": 1770273222703,
+  "display_name": "Product to Ads (Ad-Ready)",
+  "fetched_at": 1787908879329,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "configs/Brief_Generator/brief_prompt.json",
+    "configs/Product_to_Ads/Master_prompt_01_Awareness.json",
+    "configs/Product_to_Ads/Master_prompt_02_Interest.json",
+    "configs/Product_to_Ads/Master_prompt_03_Consideration.json",
+    "configs/Product_to_Ads/Master_prompt_04_Evaluation.json",
+    "configs/Product_to_Ads/Master_prompt_05_Conversion.json",
+    "configs/Product_to_Ads/Master_prompt_06_Retention.json",
+    "configs/Product_to_Ads/Master_prompt_07_Loyalty.json",
+    "configs/Product_to_Ads/Master_prompt_08_Advocacy.json",
+    "configs/Product_to_Ads/Master_prompt_09_Morfeo_Creative.json",
+    "configs/Reference_Analyzer/reference_analysis_prompt.txt",
+    "scripts/generate.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783654626322,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Paul de Lavallaz",
+    "handle": "pauldelavallaz",
+    "user_id": "s17es8yqc61443cxz7kbvr73rs884ggf"
+  },
+  "slug": "product-to-ads",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/product-to-ads",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=product-to-ads&ownerHandle=pauldelavallaz",
+    "page_url": "https://clawhub.ai/pauldelavallaz/skills/product-to-ads"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2333,
+    "installs": 77,
+    "stars": 1,
+    "versions": 5
+  },
+  "summary": "Generate professional advertising images from product URLs using the Ad-Ready pipeline on ComfyDeploy. Use when the user wants to create ads for any product by providing a URL, optionally with a brand profile (70+ brands) and funnel stage targeting. Supports model/talent integration, brand-aware creative direction, and multi-format output. Differs from Morpheus (manual fashion photography) \u2014 Ad-Ready is URL-driven, brand-intelligent, and funnel-stage aware.",
+  "updated_at": 1778486025837,
+  "version": "1.4.0"
+}
