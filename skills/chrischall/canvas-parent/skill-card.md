@@ -1,6 +1,6 @@
 ## Description:
 
-Provides Canvas LMS access for an agent to check a user's or observed student's courses, grades, assignments, announcements, conversations, planner items, and files.
+This skill should be used when the user asks about Canvas LMS data - their own student account or any observed student.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and Canvas users use this skill to connect an agent to Canvas LMS so it can answer questions about coursework, grades, messages, announcements, planner items, and downloadable course files for the signed-in user or linked observees.
+Canvas LMS users and parent or observer accounts use this skill to let an agent retrieve courses, grades, assignments, announcements, planner items, conversations, and course files from Canvas.
 
 ### Deployment Geography for Use:
 
@@ -22,36 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Recommended setup can give the MCP access to a Canvas account session and linked student or observer records.
+Risk: Browser session cookies may be reused when fetchproxy authentication is enabled.
 
-Mitigation: Install only when that account and data access is intended; prefer scoped token or OAuth configuration when available.
+Mitigation: Install only on a trusted machine, prefer token or OAuth authentication when available, and disable fetchproxy if browser cookie reuse is not acceptable.
 
-Risk: Fetchproxy-based authentication can read Canvas session cookies from a signed-in browser tab.
+Risk: Canvas access may include records for the signed-in user and linked observee or student accounts.
 
-Mitigation: Disable fetchproxy with CANVAS_DISABLE_FETCHPROXY=1 when cookie-based access is not acceptable.
+Mitigation: Confirm the Canvas account scope and linked observees before use, especially when handling grades, inbox messages, submissions, or student records.
 
-Risk: The file download tool can write course files to a requested destination path.
+Risk: Course file downloads may write files to local storage.
 
-Mitigation: Use destination paths inside a directory you control and review file download requests before execution.
+Mitigation: Restrict downloads to a directory the user controls and review downloaded files before opening or sharing them.
 
 ## Reference(s):
 
+- [ClawHub skill page](https://clawhub.ai/chrischall/skills/canvas-parent)
 - [canvas-parent-mcp npm package](https://www.npmjs.com/package/canvas-parent-mcp)
-- [fetchproxy extension](https://github.com/chrischall/fetchproxy)
+- [fetchproxy browser extension](https://github.com/chrischall/fetchproxy)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with JSON and bash code blocks]
+**Output Format:** [Markdown guidance with JSON configuration and shell command snippets]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Can guide MCP setup and tool use; configured tools may retrieve Canvas LMS records and download course files.]
+**Other Properties Related to Output:** [May guide an agent to query Canvas LMS tools and download course files when configured.]
 
 ## Skill Version(s):
 
-1.2.5 (source: server release evidence)
+1.3.0 (source: ClawHub release evidence)
 
 ## Ethical Considerations:
 
