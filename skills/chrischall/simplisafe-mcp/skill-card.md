@@ -1,6 +1,6 @@
 ## Description:
 
-Query and control a SimpliSafe alarm system from the shell with curl, including system state, sensors, locks, events, settings, arming, disarming, and lock control after one-time browser login setup.
+Query and control a SimpliSafe alarm system from the shell with curl -- read system state, sensors, locks, events and settings, and arm/disarm or lock/unlock.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to query SimpliSafe alarm state, inspect sensors, locks, events, and settings, and issue confirmed shell commands that arm, disarm, lock, or unlock a real security system.
+External users and developers use this skill to query SimpliSafe alarm status, inspect sensors, locks, events, and settings, and prepare shell commands for controlled alarm or lock operations.
 
 ### Deployment Geography for Use:
 
@@ -22,39 +22,37 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can operate a physical alarm system and door locks, including disarming, arming, unlocking, and reading security state.
+Risk: The skill can enable high-impact operations on a physical security system, including disarming alarms and unlocking doors.
 
-Mitigation: Require explicit user confirmation before commands that change arming state, unlock doors, or read sensitive alarm data, then re-read the specific state field to verify the result.
+Mitigation: Require explicit user confirmation before any disarm, unlock, arm, or lock operation, and re-read the relevant system or lock state after the command.
 
-Risk: The SimpliSafe refresh token and cached access token effectively grant access to the user's alarm system.
+Risk: The skill uses persistent SimpliSafe credentials and can expose sensitive alarm data, including cleartext PINs when requested.
 
-Mitigation: Keep token files at restrictive permissions, avoid shared machines, protect TMPDIR token cache access, and revoke or rotate credentials if exposure is suspected.
+Mitigation: Protect the refresh token, revoke it if the machine or account may be compromised, and avoid PIN-reading requests unless the user explicitly asks for the codes.
 
-Risk: Some settings endpoints can return alarm PINs in cleartext.
+Risk: The security scan verdict is suspicious because the skill has broad activation and high-impact access to alarms, locks, and account data.
 
-Mitigation: Prefer safe projections that omit PIN blocks and only retrieve PINs when the user explicitly asks for them.
+Mitigation: Install only in environments where the agent is trusted to operate SimpliSafe from the shell, and review the bootstrap script before running it.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/chrischall/skills/simplisafe-mcp)
 - [SimpliSafe curl + jq recipes](references/recipes.md)
 - [SimpliSafe shell helpers](references/ss-helpers.sh)
-- [SimpliSafe API base](https://api.simplisafe.com/v1)
-- [SimpliSafe OAuth token endpoint](https://auth.simplisafe.com/oauth/token)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with inline shell and jq command examples]
+**Output Format:** [Markdown with inline bash code blocks and command guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Commands can read account state and, with explicit confirmation, operate physical alarm and lock hardware.]
+**Other Properties Related to Output:** [Requires curl, jq, and a SimpliSafe OAuth refresh token for live API use.]
 
 ## Skill Version(s):
 
-0.1.2 (source: server release evidence)
+0.1.3 (source: server release evidence)
 
 ## Ethical Considerations:
 
