@@ -1,6 +1,6 @@
 ## Description:
 
-This skill lets an agent search SmartLib academic literature records, retrieve article details, and provide PDF download links for authorized Chinese journals and open-access foreign literature.
+global-biblio-base helps an agent search academic literature through the SmartLib Open Platform API, retrieve article details, and provide full-text PDF links for authorized Chinese journals and open-access foreign literature when available.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and researchers use this skill to find academic papers, patents, standards, theses, and supporting citations through natural-language requests. Agents can return search results, article details, source links, and available PDF download links while tracking SmartLib quota and download limits.
+External users and developers use this skill to ask an agent for literature searches, article details, citation-support discovery, and PDF download links where the configured SmartLib service can lawfully provide them. It is intended for academic discovery workflows covering journals, patents, conference papers, theses, and standards metadata.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,46 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can register a SmartLib account and tie usage to a user email.
+Risk: The skill asks for a user email, creates or uses a SmartLib account, and stores that email in local configuration.
 
-Mitigation: Ask for explicit user consent before account registration and explain that the email is used for quota and service access.
+Mitigation: Use a purpose-appropriate email address, review local configuration handling, and avoid installing in shared environments unless account ownership and data retention expectations are acceptable.
 
-Risk: The skill can spend quota and present payment flows during a conversation.
+Risk: Search, detail, and download actions consume monthly quota through the SmartLib gateway and may trigger paid recharge prompts.
 
-Mitigation: Confirm with the user before any paid action and show quota or download impact before executing chargeable operations.
+Mitigation: Confirm the expected number of API calls before large searches or downloads, monitor quota notices, and require user confirmation before any paid plan or download purchase.
 
-Risk: The skill can fetch PDF files from SmartLib and external open-access channels.
+Risk: The artifact includes a gateway credential used to call the SmartLib gateway.
 
-Mitigation: Review download destinations, avoid untrusted notification links, and use this only in environments where file download behavior is acceptable.
+Mitigation: Review credential exposure and rotation practices before deployment, and do not echo secrets in chat, logs, generated pages, or shared configuration.
 
-Risk: The security evidence recommends review before installation.
+Risk: Foreign paywalled literature cannot be downloaded through the skill and open-access retrieval may vary by publisher or route.
 
-Mitigation: Run installation review and security scanning before deployment, and check that stored configuration does not expose secrets to users.
+Mitigation: Treat PDF availability as best-effort, preserve source links and metadata, and use institutional or publisher-approved access paths for closed-access articles.
+
+Risk: The release evidence security verdict is suspicious despite no specific riskFindings entries.
+
+Mitigation: Perform human review of the account registration, quota, payment, and gateway behavior before approving installation in managed or production contexts.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/j-levee/skills/global-biblio-base)
-- [SmartLib Account and Billing Reference](artifact/references/account.md)
-- [SmartLib Pipeline Optimization Guide](artifact/PIPELINE.md)
-- [SmartLib Website](https://www.vipslib.com/)
+- [ClawHub skill page](https://clawhub.ai/j-levee/skills/global-biblio-base)
+- [SmartLib account and billing reference](references/account.md)
+- [SmartLib pipeline guide](PIPELINE.md)
+- [SmartLib website](https://www.vipslib.com/)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, API calls, shell commands, configuration, guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown responses with search-result lists, article metadata, links, quota notices, and occasional shell-command guidance for downloads.]
+**Output Format:** [Markdown text with literature result lists, article details, quota notices, payment guidance, and download commands or links when available.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include PDF download links, source URLs, payment or quota status prompts, and user-facing notices returned by the SmartLib gateway.]
+**Other Properties Related to Output:** [Outputs may include quota status, SmartLib account prompts, source links, and PDF retrieval guidance; closed-access foreign literature is limited to metadata or lawful open-access routes.]
 
 ## Skill Version(s):
 
-3.9.4 (source: frontmatter and server release evidence)
+3.9.7 (source: frontmatter and server release evidence)
 
 ## Ethical Considerations:
 
