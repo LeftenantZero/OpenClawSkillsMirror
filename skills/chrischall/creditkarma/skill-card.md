@@ -1,6 +1,6 @@
 ## Description:
 
-Accesses Credit Karma transaction data via MCP for syncing, summarizing, and querying personal finance records.
+Accesses Credit Karma transaction data through an MCP server for syncing, filtering, and analyzing personal finance data.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to configure and operate creditkarma-mcp for syncing Credit Karma transactions into a local SQLite database and querying spending, merchants, categories, accounts, or custom read-only SQL.
+External users and developers use this skill to connect an agent to Credit Karma transaction data, sync local transaction history, and answer spending, merchant, category, account, and custom SQL questions.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,34 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill requires sensitive Credit Karma session cookies and may store local financial transaction history.
+Risk: The MCP requires access to live Credit Karma session cookies and local transaction history.
 
-Mitigation: Treat CK_COOKIES, copied Cookie headers, .env files, and the SQLite database as sensitive financial secrets; use a dedicated project and avoid sharing cookies in chat.
+Mitigation: Install only in an environment where that access is acceptable, and restrict filesystem access around the MCP.
 
-Risk: The security scan verdict is suspicious because the unofficial MCP server and browser extension can access a Credit Karma session and local transaction data.
+Risk: CK_COOKIES, CKAT, and CKTRKID can function like passwords if exposed.
 
-Mitigation: Inspect the package and extension before use, install only if that access is acceptable, and revoke or refresh sessions after any exposure.
+Mitigation: Store these values only in private configuration, avoid shared project files, rotate them if exposed, and prefer isolated runtime environments.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/chrischall/skills/creditkarma)
-- [creditkarma-mcp npm package](https://www.npmjs.com/package/creditkarma-mcp)
-- [fetchproxy extension](https://github.com/chrischall/fetchproxy)
+- [ClawHub Skill Page](https://clawhub.ai/chrischall/skills/creditkarma)
+- [creditkarma-mcp npm Package](https://www.npmjs.com/package/creditkarma-mcp)
+- [creditkarma-mcp Source](https://github.com/chrischall/creditkarma-mcp)
+- [fetchproxy Extension](https://github.com/chrischall/fetchproxy)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with JSON, shell, and SQL examples]
+**Output Format:** [Markdown with JSON, shell, and SQL code blocks]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Guides MCP setup and use for transaction syncing, summaries, filtered queries, and read-only SQL analysis.]
+**Other Properties Related to Output:** [May include MCP setup guidance, transaction sync/query tool calls, and read-only SQL examples.]
 
 ## Skill Version(s):
 
-2.5.0 (source: server release metadata)
+2.5.1 (source: server release metadata)
 
 ## Ethical Considerations:
 
