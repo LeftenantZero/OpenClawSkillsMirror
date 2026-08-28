@@ -1,0 +1,33 @@
+{
+  "changelog": "- Initial release with Instapaper import functionality.\n- Parses Instapaper export: extracts article title, URL, and user's notes (skipping original highlights).\n- Previews parsed notes and requests user confirmation before import.\n- Creates a new slipbox entry for each note, using slipbot with proper metadata.\n- Handles edge cases (no notes, multiline notes, special characters in titles).",
+  "created_at": 1770781491370,
+  "display_name": "SlipBot Instapaper Importer",
+  "fetched_at": 1787904319614,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jaron Swab",
+    "handle": "jrswab",
+    "user_id": "s1724r8p2s49972sq4a8ad4ex9884sq2"
+  },
+  "slug": "slipbot-instapaper-importer",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/slipbot-instapaper-importer",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=slipbot-instapaper-importer&ownerHandle=jrswab",
+    "page_url": "https://clawhub.ai/jrswab/skills/slipbot-instapaper-importer"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1349,
+    "installs": 43,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Import reading notes from Instapaper exports into the slipbox. Use when user pastes an Instapaper highlight export with article title and notes. Parses title/URL from header, extracts user's own notes (plain text lines), skips original highlights (> lines), then runs slipbot for each.",
+  "updated_at": 1778487820503,
+  "version": "1.0.0"
+}
