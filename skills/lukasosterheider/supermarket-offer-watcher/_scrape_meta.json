@@ -1,0 +1,35 @@
+{
+  "changelog": "- Added feature to save a personal grocery product watchlist with aliases and preferred stores.\n- Users can configure home location, radius (km), and set offer-check frequency (daily or weekly), including time and timezone.\n- Introduced scripts for initializing settings, adding/removing products, updating location/radius, and managing check schedules.\n- Watchlist and configuration data now stored at `/data/workspace/data/supermarkt-watchlist.json`.\n- Improved offer-check workflow: runs web searches, validates deal info, deduplicates entries, and sends concise alert summaries.\n- Added guidelines for cron setup, supporting automated daily or weekly deal checks and notifications.",
+  "created_at": 1773225128657,
+  "display_name": "Supermarket Offer Watcher",
+  "fetched_at": 1787880131611,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/check-template.md",
+    "scripts/watchlist.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Lukas Osterheider",
+    "handle": "lukasosterheider",
+    "user_id": "s173fc1q26bt9850q6h8w8p9fx83f6m9"
+  },
+  "slug": "supermarket-offer-watcher",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/supermarket-offer-watcher",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=supermarket-offer-watcher&ownerHandle=lukasosterheider",
+    "page_url": "https://clawhub.ai/lukasosterheider/skills/supermarket-offer-watcher"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 787,
+    "installs": 20,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Save a personal grocery product watchlist and check nearby supermarket deals automatically by radius. Use when the user wants to track products (e.g., coffee...",
+  "updated_at": 1778491828096,
+  "version": "0.2.0"
+}
