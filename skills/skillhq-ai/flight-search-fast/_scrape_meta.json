@@ -1,0 +1,35 @@
+{
+  "changelog": "Optimize for domestic flights: economy-only default, fewer tool calls\n\nDomestic US flights now skip the business class comparison (3-5x price,\nrarely useful) and use 2 tool calls instead of 4+. International flights\nstill get the full economy + business delta with parallel snapshots.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+  "created_at": 1772617891043,
+  "display_name": "Google Flights",
+  "fetched_at": 1787889902333,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/interaction-patterns.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "skillhq-ai",
+    "handle": "skillhq-ai",
+    "user_id": "s170mz62e9kg0yg49p4x2z6wzd84rjra"
+  },
+  "slug": "flight-search-fast",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/flight-search-fast",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=flight-search-fast&ownerHandle=skillhq-ai",
+    "page_url": "https://clawhub.ai/skillhq-ai/skills/flight-search-fast"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1119,
+    "installs": 32,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Search Google Flights for flight prices and schedules using browser automation. Use when user asks to search flights, find airfare, compare prices, check fli...",
+  "updated_at": 1778491714733,
+  "version": "1.0.2"
+}
