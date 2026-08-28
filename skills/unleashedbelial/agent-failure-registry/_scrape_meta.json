@@ -1,0 +1,51 @@
+{
+  "changelog": "Initial release of the Failure Registry skill.\n\n- Search the Agent Failure Registry for known agent failures, solutions, and lessons learned.\n- Supports searching by category, keyword, and tags using the provided script.\n- Enables browsing curated and community-submitted post-mortems.\n- Allows users to submit new failure post-mortems via GitHub PR.\n- Includes clear documentation and usage examples for both searching and submitting.",
+  "created_at": 1771089413280,
+  "display_name": "Failure Registry",
+  "fetched_at": 1787902327212,
+  "files": [
+    ".github/PULL_REQUEST_TEMPLATE.md",
+    "CONTRIBUTORS.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "examples/belial-puppeteer-detection.yaml",
+    "examples/belial-twitter-cookie-expiry.yaml",
+    "schema/postmortem.yaml",
+    "scripts/search-registry.sh",
+    "skill-card.md",
+    "template.yaml"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779967076903,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "unleashedbelial",
+    "handle": "unleashedbelial",
+    "user_id": "s17ae80zda43xvt359z09ca37h88434e"
+  },
+  "slug": "agent-failure-registry",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-failure-registry",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-failure-registry&ownerHandle=unleashedbelial",
+    "page_url": "https://clawhub.ai/unleashedbelial/skills/agent-failure-registry"
+  },
+  "stats": {
+    "comments": 2,
+    "downloads": 1531,
+    "installs": 49,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Search the community-driven Agent Failure Registry for known agent errors, solutions, and lessons to debug issues or submit new failure post-mortems.",
+  "updated_at": 1778491542212,
+  "version": "0.1.0"
+}
