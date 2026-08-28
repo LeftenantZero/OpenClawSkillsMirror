@@ -1,42 +1,59 @@
-## Description: <br>
-This skill helps agents search and discover GetYourGuide tours, activities, day trips, and attraction tickets through a read-only MCP integration. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+This skill helps an agent find GetYourGuide tours, activities, day trips, attraction tickets, tour details, options, reviews, categories, and locations.
 
-## Publisher: <br>
-[chrischall](https://clawhub.ai/user/chrischall) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[chrischall](https://clawhub.ai/user/chrischall)
 
-## Use Case: <br>
-External users and developers use this skill to let an agent find GetYourGuide tours, attraction tickets, day trips, reviews, options, and location-based activities. It supports discovery and comparison; booking remains on getyourguide.com. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: The GetYourGuide Partner API key could be exposed if stored in an untrusted MCP configuration. <br>
-Mitigation: Store GYG_API_KEY only in trusted local or project MCP configuration and avoid committing secrets. <br>
-Risk: Broad travel-activity prompts may route relevant query context to this integration. <br>
-Mitigation: Invoke the skill only when GetYourGuide-backed tour, ticket, or activity search is intended. <br>
+## Use Case:
 
+External users and developers use this skill to let an agent search and inspect GetYourGuide tours, activities, attraction tickets, availability options, reviews, categories, and locations before booking on GetYourGuide.
 
-## Reference(s): <br>
-- [ClawHub release page](https://clawhub.ai/chrischall/skills/getyourguide-mcp) <br>
-- [getyourguide-mcp npm package](https://www.npmjs.com/package/getyourguide-mcp) <br>
-- [GetYourGuide Partner API](https://partner.getyourguide.com) <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [text, markdown, configuration, guidance] <br>
-**Output Format:** [Markdown prose with JSON configuration examples and structured MCP tool results] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [Read-only search and discovery; requires GYG_API_KEY, with optional GYG_CURRENCY and GYG_LANGUAGE settings.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-1.1.3 (source: ClawHub release evidence) <br>
+Risk: Generic travel-planning prompts may route to GetYourGuide when the user did not specifically ask for GetYourGuide results.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Confirm whether GetYourGuide-specific results are desired before using the skill for broad travel-planning requests.
+
+Risk: Runtime behavior may change if the npm package is resolved without a fixed version.
+
+Mitigation: Pin the npm package version when predictable runtime code is required.
+
+Risk: The integration requires a GetYourGuide Partner API key.
+
+Mitigation: Provide the API key only in the MCP server environment and verify partner-tier access when 401 or 403 errors occur.
+
+## Reference(s):
+
+- [ClawHub skill page](https://clawhub.ai/chrischall/skills/getyourguide-mcp)
+- [npm package](https://www.npmjs.com/package/getyourguide-mcp)
+- [GetYourGuide Partner Program](https://partner.getyourguide.com)
+
+## Skill Output:
+
+**Output Type(s):** [guidance, configuration, shell commands, text]
+
+**Output Format:** [Markdown with JSON configuration examples and tool-oriented guidance]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [Read-only tour and activity discovery; requires a GetYourGuide Partner API key.]
+
+## Skill Version(s):
+
+1.1.4 (source: server release evidence)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
