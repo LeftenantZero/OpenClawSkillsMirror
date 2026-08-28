@@ -1,42 +1,57 @@
-## Description: <br>
-Use when crafting TTS, music, or bed prompts for any generative audio model — director style, song structure, and post-production layering. <br>
+## Description:
 
-This skill is ready for commercial/non-commercial use. <br>
+Use when crafting TTS, music, or bed prompts for any generative audio model - director style, song structure, and post-production layering.
 
-## Publisher: <br>
-[pruna-ai](https://clawhub.ai/user/pruna-ai) <br>
+This skill is ready for commercial/non-commercial use.
 
-### License/Terms of Use: <br>
-MIT-0 <br>
+## Publisher:
 
+[pruna-ai](https://clawhub.ai/user/pruna-ai)
 
-## Use Case: <br>
-Developers, creators, and agents use this skill to draft and review prompts for TTS narration, sung songs, instrumental beds, and audio/video layering workflows. <br>
+### License/Terms of Use:
 
-### Deployment Geography for Use: <br>
-Global <br>
+MIT-0
 
-## Known Risks and Mitigations: <br>
-Risk: The skill may steer agents toward companion skill installs, paid media-generation APIs, API tokens, or audio uploads. <br>
-Mitigation: Review requested installs, API-token use, uploads, and paid calls before execution; approve only steps that match the project. <br>
-Risk: Audio planning mistakes can truncate narration or make dialogue hard to hear under music beds. <br>
-Mitigation: Probe TTS length, keep audio-led clips within documented limits, prefer embedding narration before video render, and review mix levels before publishing. <br>
+## Use Case:
 
+External developers and creators use this skill to draft and review prompt guidance for TTS narration, sung music, instrumental beds, and audio layering decisions across generative audio and video workflows.
 
-## Reference(s): <br>
-- [TTS style prompting](references/tts-style-prompting.md) <br>
-- [Music and bed prompting](references/music-and-bed-prompting.md) <br>
-- [Audio post-production](references/audio-post-production.md) <br>
+### Deployment Geography for Use:
 
+Global
 
-## Skill Output: <br>
-**Output Type(s):** [Guidance, Markdown, Shell commands, Configuration] <br>
-**Output Format:** [Markdown guidance with prompt text, checklists, tables, and inline shell commands] <br>
-**Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [May recommend companion skills, API-token handling, audio uploads, ffmpeg/ffprobe checks, and paid audio or video API calls when appropriate.] <br>
+## Known Risks and Mitigations:
 
-## Skill Version(s): <br>
-1.0.9 (source: server release metadata and skill frontmatter metadata) <br>
+Risk: Related-skill install suggestions and provider workflows can lead an agent toward additional tools or paid generation services.
 
-## Ethical Considerations: <br>
-Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>
+Mitigation: Review related-skill installation suggestions before accepting them, and only provide API keys or upload audio when those services are intended for the task.
+
+Risk: Audio-led video workflows can truncate narration when generated speech exceeds the target model's clip duration.
+
+Mitigation: Probe TTS length before rendering, keep per-scene narration within the documented duration gate, or split long narration into multiple scene rows.
+
+## Reference(s):
+
+- [TTS Style Prompting](references/tts-style-prompting.md)
+- [Music and Bed Prompting](references/music-and-bed-prompting.md)
+- [Audio Post-Production](references/audio-post-production.md)
+- [ClawHub Skill Page](https://clawhub.ai/pruna-ai/skills/audio-prompting)
+- [Pruna AI Publisher Profile](https://clawhub.ai/user/pruna-ai)
+
+## Skill Output:
+
+**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
+
+**Output Format:** [Markdown with prompt text, checklists, tables, and inline shell commands]
+
+**Output Parameters:** [1D]
+
+**Other Properties Related to Output:** [May include TTS style prompts, lyrics, music prompts, narration text, mix settings, and related-skill installation guidance.]
+
+## Skill Version(s):
+
+1.0.10 (source: release evidence and SKILL.md metadata)
+
+## Ethical Considerations:
+
+Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment.
