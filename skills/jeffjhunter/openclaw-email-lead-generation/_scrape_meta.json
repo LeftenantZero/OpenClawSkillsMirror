@@ -1,0 +1,37 @@
+{
+  "changelog": "\ud83c\udfaf v1.0.1 \u2014 \"Hardened\"\n\n\ud83c\udf0d Timezone configuration \u2014 all timestamps, cron jobs, and reports respect user's timezone (setup Q7)\n\ud83c\udf0d Casual timezone input mapping \u2014 \"Pacific\" / \"PST\" / \"California\" auto-resolves to America/Los_Angeles\n\n\ud83d\udce7 Email body written to temp file before send \u2014 fixes JSON newline escaping bug\n\ud83d\udce7 Per-domain hourly rate limits \u2014 prevent bulk sends to gmail.com, outlook.com, etc.\n\ud83d\udce7 Email warmup schedule \u2014 ramp from 5\u219210\u219220\u219235\u219250/day for new sending accounts\n\ud83d\udce7 Compliance footer \u2014 auto-append unsubscribe text (\"Reply STOP\"), configurable per CAN-SPAM\n\n\ud83d\udccb Central audit log \u2014 every send, reply, status change, and admin action logged with timestamps\n\ud83d\udccb Audit log auto-prune \u2014 configurable retention (default 90 days)\n\ud83d\udccb Helper command: `audit-log` for structured event logging\n\ud83d\udccb Helper command: `audit-prune` for retention enforcement\n\n\ud83d\udee1\ufe0f Inbound HTML stripping \u2014 `<script>`, `<style>`, and all HTML tags removed from reply content\n\ud83d\udee1\ufe0f Link validation \u2014 URLs in inbound replies flagged before user clicks\n\ud83d\udee1\ufe0f Credential security rules \u2014 passwords NEVER in config, env vars only, agent warns if user pastes secrets\n\ud83d\udee1\ufe0f Reply content sanitized before JSON storage \u2014 prevents injection via inbound email\n\ud83d\udee1\ufe0f Helper command: `strip-html` for code-enforced HTML removal\n\ud83d\udee1\ufe0f Helper command: `write-email-body` for safe temp-file email composition\n\ud83d\udee1\ufe0f Helper command: `domain-sends-count` for per-domain rate limit checks\n\ud83d\udee1\ufe0f Helper command: `check-warmup` for warmup volume enforcement\n\n\ud83d\udcca Score decay \u2014 optional, configurable: -5 points after 14 days inactive (off by default)\n\ud83d\udcca Reply check interval \u2014 configurable polling frequency for inbox monitoring (default 30 min)\n\n---\n\n## \ud83c\udfaf v1.0.0 \u2014 \"First Contact\"\n\n\ud83c\udfd7\ufe0f 3-tier architecture \u2014 Pipeline Tracker \u2192 Outreach Engine \u2192 Autopilot (each unlocks independently)\n\ud83c\udfd7\ufe0f Guided setup \u2014 agent walks you through business profile, email config, and template building\n\ud83c\udfd7\ufe0f File-based JSON storage \u2014 no database, no dependencies\n\n\ud83d\udcca 9-stage pipeline tracking (new \u2192 contacted \u2192 responded \u2192 qualified \u2192 call_booked \u2192 closed)\n\ud83d\udcca Lead scoring 0-100 with configurable weights (industry, pain signals, engagement, replies)\n\ud83d\udcca Pipeline dashboard with funnel counts, hot leads, actions due, and AI recommendations\n\ud83d\udcca Bulk import from CSV or pasted lists\n\ud83d\udcca Search, filter, archive, restore leads\n\n\ud83d\udce7 Template Forge \u2014 5-phase voice interview builds your custom 4-email sequence\n\ud83d\udce7 4-step sequences with configurable delays (Day 0, 3, 7, 14)\n\ud83d\udce7 Smart personalization \u2014 {{first_name}}, {{company_name}}, {{pain_point}}, and more\n\ud83d\udce7 3 email methods \u2014 manual (zero config), SMTP, or browser-based Gmail/Outlook\n\ud83d\udce7 Human-in-the-loop \u2014 agent drafts, you approve before send\n\n\u26a1 \ud83c\udf05 Morning Check cron (9am) \u2014 reply scan, sentiment analysis, morning briefing\n\u26a1 \ud83d\udce4 Midday Send cron (12pm) \u2014 scheduled follow-ups, rate-limited queue\n\u26a1 \ud83d\udcca Evening Summary cron (5pm) \u2014 daily metrics, tomorrow's action list\n\u26a1 \ud83d\udcc8 Weekly Report cron (Mon 8am) \u2014 performance trends, template rankings, recommendations\n\n\ud83e\udde0 Sentiment analysis on replies \u2014 interested / question / objection / not interested / unsubscribe\n\ud83e\udde0 Auto-pause sequences on reply, auto-nurture after completion\n\ud83e\udde0 Pipeline intelligence \u2014 stale lead alerts, bottleneck detection, template performance\n\n\ud83d\udd12 Rate limiting (daily/hourly/per-message configurable)\n\ud83d\udd12 Input sanitization on all user data before exec\n\ud83d\udd12 Lead data anonymized in shared channels\n\ud83d\udd12 Unsubscribe requests immediately honored\n\ud83d\udee1\ufe0f Bundled `leadgen-helper.sh` \u2014 all file operations routed through code-enforced sanitization (not prompt-based)\n\ud83d\udee1\ufe0f Path traversal prevention \u2014 validated in code, can't escape `~/workspace/leadgen/`\n\ud83d\udee1\ufe0f Shell injection blocked \u2014 metacharacters stripped before any exec, `../../` attacks neutralized\n\ud83d\udee1\ufe0f JSON validation on every lead/template write (uses `jq` if available, basic checks as fallback)",
+  "created_at": 1771563697646,
+  "display_name": "OpenClaw Email Lead Generation",
+  "fetched_at": 1787898599403,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "assets/leadgen-helper.sh",
+    "references/cron-automation.md",
+    "references/scoring-guide.md",
+    "references/template-forge.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Jeff J Hunter",
+    "handle": "jeffjhunter",
+    "user_id": "s17fhgfbdhz4g6yqeha2egykyx83grhe"
+  },
+  "slug": "openclaw-email-lead-generation",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-email-lead-generation",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-email-lead-generation&ownerHandle=jeffjhunter",
+    "page_url": "https://clawhub.ai/jeffjhunter/skills/openclaw-email-lead-generation"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1571,
+    "installs": 47,
+    "stars": 6,
+    "versions": 2
+  },
+  "summary": "OpenClaw Email Lead Generation \u2014 the complete outreach and pipeline system for your agent. Guided setup builds your config, Template Forge creates custom ema...",
+  "updated_at": 1778491590632,
+  "version": "1.0.1"
+}
