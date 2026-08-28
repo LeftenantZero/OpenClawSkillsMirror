@@ -1,6 +1,6 @@
 ## Description:
 
-Describe the footage and get an original instrumental track written for it, yours to keep and use commercially. This AI background music generator turns a scene, mood, and tempo feel into royalty-free BGM for short videos, vlogs, product clips, tutorials, livestream and store loops, podcast intros, and slideshow recaps, with an energy arc you choose: a calm or immediate opening, a lift at the moment that matters, a clean ending, room left for narration, and a result you can listen to before you publish.
+Short Video BGM Studio helps an agent turn a footage or scene description and target length into a confirmed Beatra request for one original instrumental background track for short videos and related media.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators, marketers, educators, and agents use this skill to turn a video or brand moment description into an original instrumental background track for short-form video, livestream, podcast, store loop, or slideshow use. It guides prompt planning, paid Beatra music generation, task recovery, and delivery of returned audio artifacts.
+External creators, marketers, and developers use this skill to brief, confirm, generate, and recover one paid Beatra instrumental BGM task from a scene description and target length for short videos, livestreams, podcast intros or outros, store loops, and slideshow recaps.
 
 ### Deployment Geography for Use:
 
@@ -22,48 +22,43 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The shared Beatra device authorization covers more than the music-only purpose of this skill.
+Risk: The Beatra device token grants shared authority that can spend credits and access multiple media tools beyond music.
 
-Mitigation: Review the authorization before installing, protect the credential stored under ~/.beatra, and revoke or reconnect access only when the user explicitly chooses to do so.
+Mitigation: Review the authorization before installing, use a Beatra account with appropriate spending limits, keep the token private, and revoke the connected agent from the Beatra Console when access is no longer needed.
 
-Risk: Silent package-owned code updates are enabled by default.
+Risk: The bundled client silently checks for and installs package updates by default.
 
-Mitigation: Disable automatic checks with python3 scripts/mcp_client.py update --auto off when silent updates are not acceptable; use the documented check/update commands for controlled updates.
+Mitigation: Disable silent updates with `python3 scripts/mcp_client.py update --auto off` when automatic replacement is not acceptable, and use `python3 scripts/mcp_client.py update --check` to inspect availability.
 
-Risk: Chosen reference audio and limited installation or platform metadata may be sent to Beatra.
+Risk: Reference audio or other user media uploaded for generation is sent to Beatra.
 
-Mitigation: Upload only reference audio the user is authorized to share, avoid sensitive media, and explain the upload before using reference-guided generation.
-
-Risk: Paid generation can create duplicate work or charges if a request is replayed with changed arguments.
-
-Mitigation: Confirm the frozen prompt, model, options, and maximum charge before submission; preserve the client_request_id and task_id, and recover the existing task before considering any new paid call.
+Mitigation: Upload only reference audio the user intends to send to Beatra, and do not expose authentication tokens, complete private prompts, or sensitive input content during recovery.
 
 ## Reference(s):
 
+- [Short Video BGM Studio on ClawHub](https://clawhub.ai/beatra-ai/skills/short-video-bgm-studio)
+- [Beatra Skill Homepage](https://beatra.ai/skills/short-video-bgm-studio)
 - [BGM workflow](references/workflow.md)
 - [Installation and authentication](references/installation-and-auth.md)
-- [Installation registration](references/installation-registration.md)
 - [Tasks and results](references/tasks-and-results.md)
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
-- [Bundled MCP Client diagnostics](references/mcp-connection.md)
+- [MCP connection](references/mcp-connection.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
 - [Uninstall and disconnect](references/uninstall-and-disconnect.md)
-- [ClawHub listing](https://clawhub.ai/beatra-ai/skills/short-video-bgm-studio)
-- [Beatra skill homepage](https://beatra.ai/skills/short-video-bgm-studio)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, API calls, Files, Guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with JSON payload examples, shell commands, and returned audio artifact links or IDs]
+**Output Format:** [Markdown guidance with inline shell commands and JSON MCP payloads; completed tasks may return audio URLs or artifact IDs with duration, MIME type, size, usage, and billing fields.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires Beatra device authorization; billable generation requires explicit confirmation and uses asynchronous task polling.]
+**Other Properties Related to Output:** [One instrumental music generation task is submitted only after confirmation; final billing should be reported from billing.net_charged_credits.]
 
 ## Skill Version(s):
 
-0.1.3 (source: server release evidence and manifest.json)
+0.1.5 (source: server release and manifest.json)
 
 ## Ethical Considerations:
 
