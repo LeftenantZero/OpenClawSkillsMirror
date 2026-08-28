@@ -1,0 +1,54 @@
+{
+  "changelog": "- Significant update: Introduces architectural rules and workflows for all Blockscout MCP data access and script building.\n- Calling unlock_blockchain_analysis is now mandatory before any MCP tool usage (except in specific environments).\n- Comprehensive guidance on execution strategies: when to use MCP tools, scripts, hybrid approaches, or LLM reasoning.\n- Clarifies REST API conventions, endpoint discovery, pagination, and response transformation requirements.\n- Documents all 16 available MCP tools and explains the data source priority for on-chain analysis across all EVM chains.\n- Adds details on using Chainscout for chain registry lookups, with clear guidance on its separation from MCP workflows.",
+  "created_at": 1772660320860,
+  "display_name": "Blockchain Analysis",
+  "fetched_at": 1787889316304,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/blockscout-api-index.md",
+    "references/blockscout-api/addresses.md",
+    "references/blockscout-api/arbitrum.md",
+    "references/blockscout-api/blocks.md",
+    "references/blockscout-api/celo.md",
+    "references/blockscout-api/config.md",
+    "references/blockscout-api/ethereum.md",
+    "references/blockscout-api/mud.md",
+    "references/blockscout-api/optimism.md",
+    "references/blockscout-api/polygon-zkevm.md",
+    "references/blockscout-api/scroll.md",
+    "references/blockscout-api/search.md",
+    "references/blockscout-api/shibarium.md",
+    "references/blockscout-api/smart-contracts.md",
+    "references/blockscout-api/stability.md",
+    "references/blockscout-api/stats.md",
+    "references/blockscout-api/tokens.md",
+    "references/blockscout-api/transactions.md",
+    "references/blockscout-api/zilliqa.md",
+    "references/blockscout-api/zksync.md",
+    "references/chainscout-api.md",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Alexander Kolotov",
+    "handle": "akolotov",
+    "user_id": "s1745nrs2v2kxr4s04083xfjj183pqn4"
+  },
+  "slug": "blockscout-analysis",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/blockscout-analysis",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=blockscout-analysis&ownerHandle=akolotov",
+    "page_url": "https://clawhub.ai/akolotov/skills/blockscout-analysis"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 872,
+    "installs": 24,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "MANDATORY \u2014 invoke this skill BEFORE making any Blockscout MCP tool calls or writing any blockchain data scripts, even when the Blockscout MCP server is alre...",
+  "updated_at": 1778491721623,
+  "version": "0.4.0"
+}
