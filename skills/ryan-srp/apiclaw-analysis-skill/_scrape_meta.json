@@ -1,0 +1,53 @@
+{
+  "changelog": "**Major update: Expanded scenario support, improved file structure, and stricter execution standards.**\n\n- Added 6 new reference files (scenarios-composite, eval, expand, listing, ops, pricing) to cover more seller scenarios with targeted SOPs.\n- Deprecated/removed `references/scenarios.md`; scenario references are now split by use case for easier lookup.\n- Updated credential handling: now prefers environment variable `APICLAW_API_KEY` for better security, with config file as fallback.\n- Stricter execution workflow: introduces a mandatory checklist for product selection and market analysis (mode mapping, real-time supplement, review analysis, output blocks).\n- Enhanced guidance on loading reference files for field accuracy and filter use.\n- Quick vs Full execution modes clarified for different user request types.\n- Documentation and usage examples updated throughout for clarity and reduced error rates.",
+  "created_at": 1773411815004,
+  "display_name": "Apiclaw Analysis",
+  "fetched_at": 1787875610851,
+  "files": [
+    "README.md",
+    "SECURITY.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/reference.md",
+    "references/scenarios-composite.md",
+    "references/scenarios-eval.md",
+    "references/scenarios-expand.md",
+    "references/scenarios-listing.md",
+    "references/scenarios-ops.md",
+    "references/scenarios-pricing.md",
+    "scripts/apiclaw.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1780089992318,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "ryan-srp",
+    "handle": "ryan-srp",
+    "user_id": "s17044nh5ybzcz7hp577a8fqyx884pb4"
+  },
+  "slug": "apiclaw-analysis-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/apiclaw-analysis-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=apiclaw-analysis-skill&ownerHandle=ryan-srp",
+    "page_url": "https://clawhub.ai/ryan-srp/skills/apiclaw-analysis-skill"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 837,
+    "installs": 21,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Finds winning Amazon products with 14 battle-tested selection strategies & 6-dimension risk assessment. Backed by 200M+ product database. Use when user asks...",
+  "updated_at": 1778491885889,
+  "version": "0.1.6"
+}
