@@ -1,0 +1,54 @@
+{
+  "changelog": "**Major update: Expanded documentation, templates, and setup for a cross-agent, persistent memory workflow.**\n\n- Introduced comprehensive documentation files: AGENTS.md, deep agent_docs (architecture, conventions, gotchas), and project README.\n- Added integration templates and scripts for popular agents (Claude, Cursor, Copilot, Windsurf)\u2014including symlink and rule setups.\n- Included initialization, local template, and publish scripts to simplify setup and adoption.\n- Enhanced guidelines for compressing/promotion workflows to maintain high-signal context.\n- Restructured and clarified SKILL.md for improved onboarding and agent compatibility overview.",
+  "created_at": 1770936839005,
+  "display_name": "Agent Context",
+  "fetched_at": 1787903412139,
+  "files": [
+    "AGENTS.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agent_docs/architecture.md",
+    "agent_docs/conventions.md",
+    "agent_docs/gotchas.md",
+    "docs/subagent-context.svg",
+    "github-copilot/SKILL.md",
+    "openclaw/SKILL.md",
+    "package.json",
+    "scripts/agents-local-template.md",
+    "scripts/init-agent-context.sh",
+    "scripts/publish-template.sh"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779973048297,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "acolombiadev",
+    "handle": "andreagriffiths11",
+    "user_id": "s178f3ak2k2fbna91qkszrmzt583vpp2"
+  },
+  "slug": "agent-context",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/agent-context",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=agent-context&ownerHandle=andreagriffiths11",
+    "page_url": "https://clawhub.ai/andreagriffiths11/skills/agent-context"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 786,
+    "installs": 18,
+    "stars": 0,
+    "versions": 6
+  },
+  "summary": "A persistent local-only memory system for AI coding agents. Two files, one idea \u2014 AGENTS.md (committed, shared) + .agents.local.md (gitignored, personal). Agents read both at session start, update the scratchpad at session end, and promote stable patterns over time. Works across Claude Code, Cursor, Copilot, Windsurf. Subagent-ready. No plugins, no infrastructure, no background processes.",
+  "updated_at": 1778488088696,
+  "version": "1.3.0"
+}
