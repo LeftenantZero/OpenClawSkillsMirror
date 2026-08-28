@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and agent operators use this skill to verify external content before trusting it, including downloads, fetched documents, attachments, and newly imported resources. It helps agents treat external content as data until source, integrity, provenance, scan, and sandbox evidence are clear.
+Developers, engineers, and agent operators use this skill to handle downloads, fetched documents, attachments, imported resources, and full-system security checks with a conservative evidence-before-trust posture.
 
 ### Deployment Geography for Use:
 
@@ -22,17 +22,17 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill may block or delay actions involving untrusted external content when evidence or scope is incomplete.
+Risk: Security guidance can be misapplied outside the requested scope or used to run broad host checks without consent.
 
-Mitigation: Provide clear scope, source, integrity, provenance, scan, and sandbox evidence before asking the agent to trust or use external content.
+Mitigation: Require an explicit bounded scope and user confirmation before host-wide enumeration or full-system checks.
 
-Risk: Full-system security checks can read local configuration, files, services, logs, and network state within the agreed scope.
+Risk: External content may contain instructions, hidden directives, or malicious payloads that try to influence the agent.
 
-Mitigation: Require explicit user-defined scope and consent before host-wide enumeration, run with least privilege, and exclude sensitive paths and secrets by default.
+Mitigation: Treat external content as data, isolate it before processing, verify source and integrity, and decline to execute untrusted content.
 
-Risk: Reference examples include shell commands and template code that may be inappropriate if copied directly into a production environment.
+Risk: Security reports can accidentally expose credentials, raw payloads, or sensitive configuration details.
 
-Mitigation: Review commands and examples before use, replace placeholder values through a secrets manager, and test only in a contained environment.
+Mitigation: Summarize findings without raw secrets or exploit payloads and keep verification logs concise.
 
 ## Reference(s):
 
@@ -40,21 +40,22 @@ Mitigation: Review commands and examples before use, replace placeholder values 
 - [Attack Patterns Reference](references/attack.patterns.md)
 - [Security Audit Checklist](references/audit-checklist.md)
 - [Cryptography & Security Examples](references/crypto-examples.md)
+- [Modern Security Tools Reference](references/modern-tools.md)
 - [Security Best Practices Reference](references/security-best-practices.md)
 
 ## Skill Output:
 
-**Output Type(s):** [guidance, markdown, code, shell commands, configuration]
+**Output Type(s):** [guidance, markdown, shell commands, configuration]
 
-**Output Format:** [Markdown guidance with checklists, inline command examples, and configuration recommendations]
+**Output Format:** [Markdown guidance with checklists and inline shell command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May ask for more confirmation, use temporary sandboxes, log security-event summaries, or refuse unsafe untrusted-content actions unless scope and evidence are clear.]
+**Other Properties Related to Output:** [Security summaries should avoid raw secrets, raw payloads, and unnecessary sensitive configuration details.]
 
 ## Skill Version(s):
 
-2.1.5 (source: server release metadata)
+2.2.1 (source: server release evidence)
 
 ## Ethical Considerations:
 
