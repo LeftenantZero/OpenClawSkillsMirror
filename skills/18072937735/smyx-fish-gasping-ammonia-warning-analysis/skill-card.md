@@ -1,6 +1,6 @@
 ## Description:
 
-Analyzes aquarium camera images or videos for fish gasping, rapid mouth movement, and increased gill-cover movement to produce an ammonia poisoning or hypoxia risk warning.
+Analyzes aquarium images or video to identify visual warning signs of fish gasping, fast respiration, and increased gill movement that may indicate hypoxia or ammonia-related risk.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Aquarium owners, aquaculture operators, public aquarium staff, and developers use this skill to analyze fixed-camera aquarium footage for visual warning signs of fish gasping, abnormal respiration, and possible water-quality emergencies. The output supports timely water testing, aeration, water-change decisions, and escalation to qualified aquatic health professionals without presenting a definitive disease diagnosis.
+External users, aquarium operators, and agent developers use this skill to analyze fixed aquarium camera media for visual warning signs of fish gasping and to produce risk-oriented reports and suggested next steps. It is suited to home aquariums, public aquariums, and aquaculture monitoring where outputs should be treated as visual risk warnings rather than medical or water-quality diagnoses.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,42 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Aquarium videos or URLs are sent to the publisher's remote service and resulting cloud reports may be associated with a generated or reused local identity.
+Risk: Aquarium media and report history may be sent to a configured external service.
 
-Mitigation: Use only authorized aquarium media, avoid sensitive environments unless approved, and confirm the publisher's data handling terms before installation or use.
+Mitigation: Review service configuration and obtain user approval before uploading media or querying history, especially for private homes, public aquarium facilities, or aquaculture operations.
 
-Risk: The package can create local workspace data and store service tokens in SQLite.
+Risk: The skill silently creates or reuses identity values and stores tokens in a local workspace SQLite database.
 
-Mitigation: Run it in an isolated workspace, review local data storage before and after use, and remove or rotate stored credentials when the skill is no longer needed.
+Mitigation: Document identity handling, restrict workspace access, and clear local token storage when the skill is no longer needed.
 
-Risk: The release is configured to call development or private HTTP endpoints.
+Risk: The published artifact includes private development HTTP endpoint configuration according to the authoritative security summary.
 
-Mitigation: Review and replace endpoint configuration with approved production endpoints before using the skill in a normal deployment.
+Mitigation: Use production HTTPS endpoints and validate endpoint settings before installation or operational use.
 
-Risk: The security verdict is suspicious and requires review before installation.
+Risk: Visual analysis can produce misleading warnings when water surface visibility, fish tracking, or species baseline assumptions are unreliable.
 
-Mitigation: Perform governance, security, and configuration review before deploying the skill or allowing it to process user media.
+Mitigation: Treat results as visual risk warnings only, verify water quality directly, and require human review before emergency interventions.
 
 ## Reference(s):
 
-- [Skill page](https://clawhub.ai/18072937735/skills/smyx-fish-gasping-ammonia-warning-analysis)
-- [Aquarium warning API documentation](references/api_doc.md)
-- [Shared analysis API documentation](skills/smyx_analysis/references/api_doc.md)
-- [Skill demo](https://lifeemergence.com/sample.html)
+- [ClawHub Skill Page](https://clawhub.ai/18072937735/skills/smyx-fish-gasping-ammonia-warning-analysis)
+- [API Documentation](references/api_doc.md)
+- [Shared Analysis API Documentation](skills/smyx_analysis/references/api_doc.md)
+- [Skill Demo](https://lifeemergence.com/sample.html)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, JSON, Guidance]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown text with structured JSON analysis content, warning guidance, and report links]
+**Output Format:** [Markdown or JSON-style structured analysis report with risk level, observed indicators, suggested actions, and report links.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May optionally save the rendered analysis output to a user-specified file.]
+**Other Properties Related to Output:** [May save results to a requested output file and may query historical reports through the configured service.]
 
 ## Skill Version(s):
 
-1.0.12 (source: server release evidence; artifact frontmatter lists 1.0.11)
+1.0.13 (source: server release evidence; artifact SKILL.md frontmatter lists 1.0.11)
 
 ## Ethical Considerations:
 
