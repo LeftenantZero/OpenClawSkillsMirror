@@ -1,0 +1,54 @@
+{
+  "changelog": "# \ud83d\udee1\ufe0f Email Security Skill (v1.0.0)\n\n**Protect your AI agent from email-based attacks including prompt injection, sender spoofing, malicious attachments, and social engineering.**\n\nThis unified skill provides a comprehensive security layer for any agent handling email, supporting Gmail, AgentMail, Proton, and generic IMAP/SMTP providers.\n\n## \ud83d\ude80 Key Features\n\n*   **\ud83d\udeab Prompt Injection Defense**: Automatically detects and blocks 15+ advanced attack patterns (e.g., \"Ignore previous instructions\", role hijacking, hidden text).\n*   **\ud83d\udc64 Sender Verification**: Validates sender identity using SPF/DKIM/DMARC checks and an customizable Owner/Admin/Trusted whitelist.\n*   **\ud83e\uddf9 Smart Content Sanitization**: Strips dangerous HTML, removes tracking pixels, and extracts only the newest message content (ignoring safe quoted replies).\n*   **\ud83d\udcce Safe Attachments**: Enforces strict file type allowances (PDF, TXT, CSV, Images) and blocks executables/scripts.\n*   **\ud83d\udd12 Provider Agnostic**: Works seamlessly with Gmail, AgentMail, and any standard email service.\n\n## \ud83d\udee1\ufe0f Security Capabilities\n\n- **Role-Based Access Control**:\n    - **Owner**: Full system control.\n    - **Admin**: Operational commands.\n    - **Trusted**: Standard interactions.\n    - **Unknown**: Blocked by default.\n- **Threat Intelligence**: Built-in detection for social engineering cues (urgency, financial requests).\n- **Audit Logging**: Comprehensive logs for all blocked and flagged interactions.\n\n## \ud83d\udce6 What's Included\n\n- **Scripts**: `verify_sender.py`, `sanitize_content.py`, `parse_email.py`\n- **Documentation**: Full setup guides for Gmail & AgentMail.\n- **Configuration**: JSON templates for custom security policies.\n\n## \ud83d\udd27 Quick Start\n\n```python\n# Verify sender before processing\nauth_result = verify_sender(email=\"user@example.com\")\n\n# Sanitize content to remove threats\nclean_body = sanitize_content(raw_email_body)\n\n# Parse allowed attachments safely\nfiles = parse_email(raw_message_data)\n```\n\n## \ud83d\udccb Version 1.0.0 Release Notes\n\n- Added role-based authorization model (Owner/Admin/Trusted/Unknown).\n- Implemented heuristic spoofing detection (From/Reply-To mismatches).\n- Added multi-stage content sanitization pipeline.\n- Enforced strict attachment security policies.\n- Packaged with full provider support documentation.",
+  "created_at": 1770576621482,
+  "display_name": "Email Security",
+  "fetched_at": 1787906693513,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "agents/openai.yaml",
+    "assets/security-config-template.json",
+    "references/owner-config.md",
+    "references/provider-agentmail.md",
+    "references/provider-generic.md",
+    "references/provider-gmail.md",
+    "references/security-policies.md",
+    "references/threat-patterns.md",
+    "scripts/parse_email.py",
+    "scripts/sanitize_content.py",
+    "scripts/verify_sender.py",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783657831794,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "Ivaavi.eth",
+    "handle": "ivaavimusic",
+    "user_id": "s179r9z3n07jxsdszy7pdwqans83tjq8"
+  },
+  "slug": "email-security",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/email-security",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=email-security&ownerHandle=ivaavimusic",
+    "page_url": "https://clawhub.ai/ivaavimusic/skills/email-security"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2119,
+    "installs": 65,
+    "stars": 2,
+    "versions": 1
+  },
+  "summary": "Protect agents from email-based attacks",
+  "updated_at": 1778486086401,
+  "version": "1.0.0"
+}
