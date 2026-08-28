@@ -1,6 +1,6 @@
 ## Description:
 
-Turn one product photo into a vertical product video with spoken narration for product launches, listings, storefront promos, and shoppable social posts.
+Turn one product photo into a vertical product video that speaks. This AI product video generator and product video maker builds ecommerce product videos, product ads, and commerce short videos from a single photo \u2014 composing a 9:16 opening frame, writing a short script from what the photo shows and the details you supply, voicing it with a selected narrator, and directing one finished clip ready to post. Use it for product launches, listing videos, shoppable social posts, storefront promos, and turning a phone snap of merchandise into a video that sells, with no shoot, no crew, and no editing.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External merchants, creators, and commerce teams use this skill to turn a product photo and merchant-supplied claims into a short vertical video with narration. The agent guides inspection, script preparation, Beatra media generation, billing confirmation, task polling, and delivery review.
+External merchants, ecommerce operators, and their agents use this skill to turn a product photo plus traceable product details into a short vertical product video with spoken narration for listings, launches, storefront promotions, and social commerce posts.
 
 ### Deployment Geography for Use:
 
@@ -22,49 +22,50 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill stores a shared Beatra Device Token under ~/.beatra.
+Risk: A shared Beatra token in ~/.beatra and broad Beatra account scopes can increase blast radius in sensitive environments.
 
-Mitigation: Review before installing in managed or sensitive environments, keep the token out of chat and logs, and use the uninstall or disconnect guidance when access should be removed.
+Mitigation: Review before installation, use a dedicated Beatra account where appropriate, and disconnect through the bundled uninstall flow when the package is no longer needed.
 
-Risk: The workflow uploads selected product media to Beatra.
+Risk: Automatic package updates may replace package files without separate confirmation.
 
-Mitigation: Use only product media the user is authorized to process and avoid exposing private prompts, credentials, or sensitive input content during recovery.
+Mitigation: Disable automatic updates with the documented update command in sensitive environments and rely on the package's fixed-source, checksum-verified update controls when updates remain enabled.
 
-Risk: Paid Beatra credit usage can occur after confirmation.
+Risk: Paid generation can consume credits or create duplicate work if retries are not controlled.
 
-Mitigation: Follow the two approval gates, show the live estimate and request identity before paid calls, and retry uncertain paid work only with the same frozen request identity.
+Mitigation: Use the skill's staged confirmations, stable request identifiers, and identical-payload retry rules before each paid Beatra task.
 
-Risk: The bundled client silently self-updates by default.
+Risk: Unsupported product claims can lead to misleading commerce copy.
 
-Mitigation: Disable automatic updates with python3 scripts/mcp_client.py update --auto off when runtime code replacement is not acceptable.
+Mitigation: Use only visible photo facts or merchant-supplied traceable claims, and keep unsupported effect claims in draft.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/product-video-studio)
+- [ClawHub listing](https://clawhub.ai/beatra-ai/skills/product-video-studio)
 - [Beatra skill homepage](https://beatra.ai/skills/product-video-studio)
 - [The first frame](references/first-frame.md)
 - [Writing the narration](references/copy-craft.md)
 - [Commerce video workflow](references/workflow.md)
 - [Installation and authentication](references/installation-and-auth.md)
-- [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
+- [Installation registration](references/installation-registration.md)
 - [Tasks and results](references/tasks-and-results.md)
+- [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
 - [MCP connection](references/mcp-connection.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
 - [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Guidance, Shell commands, API Calls, Files, Markdown]
+**Output Type(s):** [Guidance, Markdown, Shell commands, API calls, Media artifacts]
 
-**Output Format:** [Markdown guidance with inline shell commands and JSON tool arguments; final delivery can include generated video artifact details.]
+**Output Format:** [Markdown guidance with inline shell commands, JSON tool payloads, and returned media artifact details]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Uses explicit user confirmations before paid media generation and reports returned task, billing, duration, and media facts.]
+**Other Properties Related to Output:** [Produces one short vertical product video workflow with staged approvals, traceable claims, Beatra task metadata, and billing facts.]
 
 ## Skill Version(s):
 
-0.1.2 (source: server release evidence and artifact manifest)
+0.1.4 (source: server release evidence and artifact manifest)
 
 ## Ethical Considerations:
 
