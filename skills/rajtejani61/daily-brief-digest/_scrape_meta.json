@@ -1,0 +1,46 @@
+{
+  "changelog": "Initial release of daily-digest with major updates to workflow and functionality:\n\n- Switched from a Python script to a Node.js-based system (`scripts/digest- Initial Release: Automated morning briefing workflow.\n- Cross-Platform Logic: Specifically optimized for Windows users\u2014uses himalaya and gog CLIs so there is no need to install Homebrew or complex Linux dependencies to check Gmail/Calendar.\n- Premium Reporting: Generates a high-quality, stylized HTML report saved locally to .openclaw/cron/DailyDigest_logs/ for permanent record-keeping.\n- Smart Triage: Scans top 20 emails and syncs both calendar events and tasks.\n- Proactive Notifications: Automatically pings your registered channel (Telegram/Webchat) with a summary when the report is ready..js`).\n- Fully redesigned workflow: integrates urgent emails, calendar events, and news into a daily briefing.\n- Added reference documentation for cron setup and template usage.\n- Output is now saved automatically to `.openclaw/cron/DailyDigest_logs/` for historical tracking.\n- Deprecated the old README and Python script in favor of structured, tool-driven documentation and automation.",
+  "created_at": 1770982946332,
+  "display_name": "Daily Brief Digest",
+  "fetched_at": 1787903130844,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/cron-guide.md",
+    "references/templates.md",
+    "scripts/digest.js",
+    "skill-card.md"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779973526954,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "RajTejani",
+    "handle": "rajtejani61",
+    "user_id": "s177gcm6ngwpdnbcjfjc498pn984101q"
+  },
+  "slug": "daily-brief-digest",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/daily-brief-digest",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=daily-brief-digest&ownerHandle=rajtejani61",
+    "page_url": "https://clawhub.ai/rajtejani61/skills/daily-brief-digest"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1856,
+    "installs": 58,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Generates a daily brief including urgent emails (himalaya), upcoming calendar events (gog), and relevant news. Use when the user asks for a morning summary, daily briefing, or a status update on their day.",
+  "updated_at": 1778489510625,
+  "version": "1.0.0"
+}
