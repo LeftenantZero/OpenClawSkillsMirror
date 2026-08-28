@@ -11,6 +11,7 @@ UU跑腿同城配送服务 Agent Skill (Python 版本)
     python uupt_delivery.py detail --order-code="订单编号"
     python uupt_delivery.py cancel --order-code="订单编号" [--reason="取消原因"]
     python uupt_delivery.py track --order-code="订单编号"
+    python uupt_delivery.py coupon [--source="领取来源"]
 
 配置方式：
     1. 预制配置：defaults.json（appId、appSecret，随 Skill 分发）
@@ -42,11 +43,14 @@ CONFIG_DIR = Path.home() / ".uupt-delivery"
 CONFIG_FILE = CONFIG_DIR / "config.json"
 DEFAULTS_FILE = Path(__file__).parent / "defaults.json"
 
-# 默认 API 地址
-DEFAULT_API_URL = "https://api-open.uupt.com/openapi/v3/"
+# 默认 API 地址（接口路径在调用处写全）
+DEFAULT_API_URL = "https://api-open.uupt.com"
 
 # skill 安装目录与版本更新配置
 SKILL_DIR = Path(__file__).parent
+# 淡定星期四活动太阳码图片：远程链接（优先，Markdown 可直接渲染）与本地文件（兜底，配合平台图片发送机制）
+THURSDAY_QRCODE_URL = "https://otherfiles.uupt.com/skills/thursday-qrcode.jpg"
+THURSDAY_QRCODE_FILE = SKILL_DIR / "assets" / "thursday-qrcode.jpg"
 UPDATE_LATEST_URL = os.environ.get("UUPT_UPDATE_LATEST_URL") or "https://otherfiles.uupt.com/skills/uupt-delivery-latest.json"
 UPDATE_DEFAULT_ZIP_URL = "https://otherfiles.uupt.com/skills/uupt-delivery.zip"
 UPDATE_CACHE_FILE = CONFIG_DIR / "update-check.json"
@@ -243,7 +247,7 @@ def send_sms_code(user_mobile: str, user_ip: str, image_code: str = "") -> dict:
     }
     
     print("[注册] 正在发送短信验证码...")
-    return post_unauthorized_request(biz, "user/unauthorized/sendSmsCode")
+    return post_unauthorized_request(biz, "/openapi/v3/user/unauthorized/sendSmsCode")
 
 
 def user_auth(user_mobile: str, user_ip: str, sms_code: str) -> dict:
@@ -264,7 +268,7 @@ def user_auth(user_mobile: str, user_ip: str, sms_code: str) -> dict:
     }
     
     print("[注册] 正在进行商户授权...")
-    result = post_unauthorized_request(biz, "user/unauthorized/auth")
+    result = post_unauthorized_request(biz, "/openapi/v3/user/unauthorized/auth")
     
     if result and result.get("body") and result["body"].get("openId"):
         result["configSaved"] = save_config({"openId": result["body"]["openId"]})
@@ -314,7 +318,7 @@ def order_price(from_address: str, to_address: str, city_name: str = "郑州市"
     
     type_label = "帮帮服务" if is_help else "配送"
     print(f"[询价] 正在查询{type_label}价格...")
-    return post_request(biz, "order/orderPrice")
+    return post_request(biz, "/openapi/v3/order/orderPrice")
 
 
 def create_order(price_token: str, receiver_phone: str, channel: str = "", note: str = "") -> dict:
@@ -348,7 +352,7 @@ def create_order(price_token: str, receiver_phone: str, channel: str = "", note:
         biz["note"] = note
     
     print("[下单] 正在创建订单...")
-    return post_request(biz, "order/addOrder")
+    return post_request(biz, "/openapi/v3/order/addOrder")
 
 
 def order_detail(order_code: str) -> dict:
@@ -359,7 +363,7 @@ def order_detail(order_code: str) -> dict:
     biz = {"order_code": order_code}
     
     print("[查询] 正在查询订单详情...")
-    return post_request(biz, "order/orderDetail")
+    return post_request(biz, "/openapi/v3/order/orderDetail")
 
 
 def cancel_order(order_code: str, reason: str = "") -> dict:
@@ -373,7 +377,7 @@ def cancel_order(order_code: str, reason: str = "") -> dict:
     }
     
     print("[取消] 正在取消订单...")
-    return post_request(biz, "order/cancelOrder")
+    return post_request(biz, "/openapi/v3/order/cancelOrder")
 
 
 def driver_track(order_code: str) -> dict:
@@ -384,7 +388,19 @@ def driver_track(order_code: str) -> dict:
     biz = {"order_code": order_code}
     
     print("[追踪] 正在查询跑男信息...")
-    return post_request(biz, "order/driverTrack")
+    return post_request(biz, "/openapi/v3/order/driverTrack")
+
+
+def receive_coupon_packages(source: int = 1) -> dict:
+    """领取优惠券包
+    
+    Args:
+        source: 领取来源（决定可领哪些券包）
+    """
+    biz = {"source": int(source)}
+    
+    print("[领券] 正在领取优惠券...")
+    return post_request(biz, "/openapiext/v3/aiagentcoupon/receiveCouponPackages")
 
 
 # ============ 结果格式化 ============
@@ -542,6 +558,27 @@ def format_track_result(result: dict) -> None:
             print(f"   当前位置: {data['longitude']}, {data['latitude']}")
         if data.get("distance"):
             print(f"   距离目的地: {data['distance']} 米")
+
+
+def format_coupon_result(result: dict) -> None:
+    """格式化领券结果"""
+    print("[结果] 领券结果:")
+    print(json.dumps(result, indent=2, ensure_ascii=False))
+    
+    if result.get("body"):
+        data = result["body"]
+        coupon_list = data.get("couponList") or []
+        
+        print("\n[COUPON_RESULT]")
+        print(f"NEWLY_CLAIMED={'true' if data.get('newlyClaimed') is True else 'false'}")
+        print(f"COUPON_COUNT={len(coupon_list)}")
+        if data.get("thursdayJoinAble") is True:
+            print("THURSDAY_JOIN_ABLE=true")
+            print(f"THURSDAY_QRCODE_URL={THURSDAY_QRCODE_URL}")
+            print(f"THURSDAY_QRCODE_FILE={THURSDAY_QRCODE_FILE}")
+        print("\n[提示] Agent 请根据 SKILL.md 场景六的触发条件（newlyClaimed / couponList / thursdayJoinAble）选择对应话术模板回复用户。")
+    else:
+        print(f"\n[错误] 领券失败: {result.get('msg') or result.get('error') or '未知错误'}")
 
 
 # ============ 版本更新 ============
@@ -830,6 +867,7 @@ UU跑腿同城配送服务 (Python 版本)
   detail       查询订单详情
   cancel       取消订单
   track        跑男实时追踪
+  coupon       领取优惠券
   self-update  检查并更新 skill 到最新版本（--check 仅检查不更新）
 
 示例:
@@ -844,6 +882,7 @@ UU跑腿同城配送服务 (Python 版本)
   python uupt_delivery.py detail --order-code="UU123456789"
   python uupt_delivery.py cancel --order-code="UU123456789" --reason="用户改变主意"
   python uupt_delivery.py track --order-code="UU123456789"
+  python uupt_delivery.py coupon
 
 首次使用:
   运行任何命令时会自动检测是否需要注册。
@@ -977,6 +1016,13 @@ def main():
             result = driver_track(args.order_code)
             format_track_result(result)
             
+        elif command == "coupon":
+            parser.add_argument("--source", type=int, default=1, help="领取来源（决定可领哪些券包，默认1）")
+            args = parser.parse_args(sys.argv[2:])
+            
+            result = receive_coupon_packages(args.source)
+            format_coupon_result(result)
+            
         elif command == "self-update":
             parser.add_argument("--check", action="store_true", help="仅检查是否有新版本，不执行更新")
             parser.add_argument("--force", action="store_true", help="即使已是最新版本也强制重装")
@@ -987,7 +1033,7 @@ def main():
             
         else:
             print(f"[错误] 未知命令: {command}")
-            print("   支持的命令: register, price, create, detail, cancel, track, self-update")
+            print("   支持的命令: register, price, create, detail, cancel, track, coupon, self-update")
             print("   使用 -h 查看帮助")
             sys.exit(1)
         

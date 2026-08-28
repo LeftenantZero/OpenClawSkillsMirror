@@ -1,6 +1,6 @@
 ## Description:
 
-UU跑腿 helps agents quote, create, pay for, inspect, cancel, and track local delivery and errand orders through UU Paotui services.
+UU跑腿 helps an agent price, create, manage, cancel, and track same-city courier or errand orders and claim related coupons through UU Paotui services.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,48 +14,45 @@ MIT-0
 
 ## Use Case:
 
-External users and agents use this skill to arrange local courier delivery, pickup, purchasing, and on-site errand services, including price quotes, order creation, payment handling, order lookup, cancellation, and courier tracking.
+External users and agents use this skill to arrange real same-city delivery, pickup, purchase, onsite assistance, coupon claiming, order lookup, cancellation, and courier tracking through UU跑腿 workflows.
 
 ### Deployment Geography for Use:
 
-China (service availability depends on UU跑腿 coverage)
+China, limited to UU跑腿 supported service areas
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can initiate real-world delivery or errand orders and payment flows.
+Risk: The skill can create real delivery or errand orders and may generate payment links.
 
-Mitigation: Require explicit final user confirmation of address, phone number, order type, price, and payment channel before creating an order.
+Mitigation: Confirm the user's intent, addresses, phone numbers, order details, and payment context before running order creation or cancellation workflows.
 
-Risk: The skill silently self-updates by downloading and installing remote code.
+Risk: The security summary reports silent background updates that can replace skill code and run dependency installation without a prompt.
 
-Mitigation: Disable or remove the silent updater and review updates before installation in normal user environments.
+Mitigation: Review or disable self-update behavior before deployment, pin the validated release, and inspect update sources before executing updated code.
 
-Risk: The skill can store an authorization token locally and expose order, payment, and courier details in terminal output.
+Risk: The security guidance says the skill handles phone numbers, addresses, order details, public IP lookup, payment links, and courier tracking data.
 
-Mitigation: Protect the local config file, avoid sharing terminal logs, and limit use to environments where this data handling is acceptable.
-
-Risk: The skill may use a third-party QR generation service for payment QR images.
-
-Mitigation: Avoid third-party QR generation where possible and prefer official payment links or trusted QR generation paths.
+Mitigation: Share only the minimum necessary personal and order data, restrict access to saved configuration, and remove stored credentials or identifiers when no longer needed.
 
 ## Reference(s):
 
 - [UU跑腿开放平台](https://open.uupt.com)
-- [ClawHub Skill Page](https://clawhub.ai/uupt-mcp/skills/uupaotui)
+- [ClawHub skill page](https://clawhub.ai/uupt-mcp/skills/uupaotui)
+- [ClawHub publisher profile](https://clawhub.ai/user/uupt-mcp)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, JSON, Shell commands, Configuration, Files, Guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with bash command examples, JSON terminal output, payment links, and optional generated QR-code file paths.]
+**Output Format:** [Markdown or plain text with command outputs, order status summaries, payment or coupon links, QR image references, and configuration guidance.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May store an authorization token in a local user config file and may print order, payment, and courier details to terminal output.]
+**Other Properties Related to Output:** [May produce payment links, coupon details, local or remote QR image references, and saved registration configuration.]
 
 ## Skill Version(s):
 
-1.0.9 (source: SKILL.md frontmatter, package.json, and server release metadata)
+1.0.10 (source: server release metadata; artifact SKILL.md and package.json report 1.1.0)
 
 ## Ethical Considerations:
 
