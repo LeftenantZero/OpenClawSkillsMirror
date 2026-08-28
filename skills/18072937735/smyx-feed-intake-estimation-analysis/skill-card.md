@@ -1,6 +1,6 @@
 ## Description:
 
-Estimates daily feed intake per livestock individual from continuous feeder videos by tracking the change of feed remaining in the trough, and outputs intake trend with anomaly alerts. | 通过食槽视频估算每日采食量变化，异常时预警。
+Estimates daily feed intake per livestock individual from continuous feeder videos by tracking the change of feed remaining in the trough, and outputs intake trend with anomaly alerts.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External livestock operators and farm-management teams use this skill to estimate feed intake trends from feeder-area videos or URLs and review anomaly alerts and cloud report history. It supports visual trend analysis only and does not provide feed-ration or nutrition recommendations.
+Farm operators, livestock-management teams, and developers use this skill to analyze feeder-area images or videos, estimate daily feed intake and intake trends, flag anomalies, and retrieve cloud-hosted historical reports.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill sends feeder videos, video URLs, and identity-linked report requests to the lifeemergence cloud service.
+Risk: Feeder images, videos, and report queries may be sent to configured lifeemergence.com services.
 
-Mitigation: Install and run it only when users are comfortable sharing feeder media with that service, and avoid submitting media that includes unnecessary people, identifiers, or unrelated sensitive farm information.
+Mitigation: Use the skill only when that transfer is acceptable for the farm data involved, and review retention, deletion, and account-authorization expectations before using sensitive footage or operational records.
 
-Risk: The skill can create or reuse a persistent local identity and store returned service tokens in a workspace SQLite database.
+Risk: The skill automatically creates or reuses a local or cloud identity and stores access tokens in the workspace data area.
 
-Mitigation: Review workspace data storage before deployment, restrict filesystem access to trusted users, and rotate or remove stored tokens when the workspace is shared or retired.
+Mitigation: Run it in an access-controlled workspace and clear stored credentials or tokens when the identity should not persist.
 
-Risk: The security verdict is suspicious because of persistent identity handling and external service token use.
+Risk: Feed-intake estimates can be affected by camera angle, lighting, occlusions, file size, format support, and inconsistent trough setup.
 
-Mitigation: Review the skill before installation and scan future versions before deployment; treat cloud report history and token handling as security-sensitive behavior.
+Mitigation: Use stable capture conditions, review anomaly alerts, and validate estimates against farm measurement procedures before making operational decisions.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-feed-intake-estimation-analysis)
 - [Skill demo](https://lifeemergence.com/sample.html)
-- [API 接口文档](references/api_doc.md)
+- [Feed intake estimation API documentation](artifact/references/api_doc.md)
+- [Common AI analysis API documentation](artifact/skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, shell commands, files, guidance]
+**Output Type(s):** [text, markdown, JSON, shell commands, guidance]
 
-**Output Format:** [Markdown or JSON-like structured analysis text, with optional saved output file]
+**Output Format:** [Markdown or JSON report text with optional report links]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include feed-intake estimates, trend or anomaly labels, report links, and cloud report-history listings.]
+**Other Properties Related to Output:** [Results are visual estimates and anomaly alerts; the skill can submit local media or media URLs to configured lifeemergence.com services.]
 
 ## Skill Version(s):
 
-1.0.9 (source: server release metadata; artifact frontmatter says 1.0.8)
+1.0.10 (source: server release metadata; artifact frontmatter says 1.0.9)
 
 ## Ethical Considerations:
 
