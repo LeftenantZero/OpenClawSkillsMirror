@@ -1,0 +1,41 @@
+{
+  "changelog": "Make auto normalization provider-agnostic: infer generic/gemini/gpt from model family instead of hardcoded provider IDs; scrub environment-specific examples from docs.",
+  "created_at": 1772855689354,
+  "display_name": "Provider Sync",
+  "fetched_at": 1787886047312,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "references/examples.md",
+    "references/field-normalization.md",
+    "references/gemini.md",
+    "references/mapping.example.json",
+    "references/mapping.openai-models.json",
+    "references/provider-patterns.md",
+    "references/safety-rules.md",
+    "scripts/provider_sync.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Joey-Chen",
+    "handle": "c-joey",
+    "user_id": "s178ay2k7851fer4psk2swm5bn83g91r"
+  },
+  "slug": "provider-sync",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/provider-sync",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=provider-sync&ownerHandle=c-joey",
+    "page_url": "https://clawhub.ai/c-joey/skills/provider-sync"
+  },
+  "stats": {
+    "comments": 1,
+    "downloads": 1618,
+    "installs": 44,
+    "stars": 2,
+    "versions": 21
+  },
+  "summary": "Sync provider model lists into OpenClaw config (dry-run preview \u2192 confirm \u2192 apply). Trigger: /provider_sync",
+  "updated_at": 1778491757870,
+  "version": "2.1.5"
+}
