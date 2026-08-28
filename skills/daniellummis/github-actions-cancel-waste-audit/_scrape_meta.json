@@ -1,0 +1,36 @@
+{
+  "changelog": "Initial release.\n\n- Audits cancelled and timed-out GitHub Actions runs to identify wasted CI minutes from JSON exports.\n- Groups waste by repository, workflow, and conclusion for efficient triage.\n- Supports configurable warning and critical minute thresholds with optional workflow/repo/actor filters.\n- Outputs in either text (for report) or JSON (for integration), with exit code signaling for CI usage.\n- Requires bash and python3.",
+  "created_at": 1772795671465,
+  "display_name": "GitHub Actions Cancel Waste Audit",
+  "fetched_at": 1787886950352,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "fixtures/runs-repo-a.json",
+    "fixtures/runs-repo-b.json",
+    "scripts/cancel-waste-audit.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Daniel Lummis",
+    "handle": "daniellummis",
+    "user_id": "s17fw617wehb1y9a026bgg9yed885cv7"
+  },
+  "slug": "github-actions-cancel-waste-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/github-actions-cancel-waste-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=github-actions-cancel-waste-audit&ownerHandle=daniellummis",
+    "page_url": "https://clawhub.ai/daniellummis/skills/github-actions-cancel-waste-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 795,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Audit cancelled and timed-out GitHub Actions runs from JSON exports to surface wasted CI minutes and noisy workflows.",
+  "updated_at": 1778491751707,
+  "version": "1.0.0"
+}
