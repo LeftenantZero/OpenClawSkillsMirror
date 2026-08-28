@@ -1,0 +1,37 @@
+{
+  "changelog": "- Removed the sample skill card documentation file (skill-card.md).\n- No changes to core logic or functionality.\n- Documentation cleanup: File structure is now leaner, with all reference to sample card removed.",
+  "created_at": 1787915335636,
+  "display_name": "ceo-todo",
+  "fetched_at": 1787930983332,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "agents/ceo-todo-daily.md",
+    "references/sample-todo.md",
+    "references/validate.mjs",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "skillsandagentsco",
+    "handle": "skillsandagentsco",
+    "user_id": "s1723x7w2bn4f5gyy04k88vsan8dar9s"
+  },
+  "slug": "ceo-todo",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ceo-todo",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ceo-todo&ownerHandle=skillsandagentsco",
+    "page_url": "https://clawhub.ai/skillsandagentsco/skills/ceo-todo"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 25,
+    "installs": 0,
+    "stars": 0,
+    "versions": 3
+  },
+  "summary": "Maintains one canonical markdown file as a CEO's single source of truth for everything they're on the hook for, and runs the Getting Things Done loop over it \u2014 capture, clarify, organize, reflect, engage. Turns pasted emails, meeting notes, and asks into clarified next-actions with an owner and a priority, tracks status with a fixed vocabulary ([OPEN]/[DONE]/[STALE]/[WAITING]), ages open items to [STALE] after 7 days, flags [WAITING] items past their reply-by date, archives done work without ever deleting it, and never auto-closes an item the CEO added by hand. Every mutating run is snapshot-backed and gated by a bundled deterministic validator so a commitment is never lost, corrupted, or silently changed. Use this skill whenever the user says \"run my to-do\", \"update my todo doc\", \"what am I on the hook for\", \"GTD\", \"getting things done\", \"capture this\", \"triage my inbox into my todos\", \"weekly review\", \"single source of truth\", \"CEO to-do\", \"/ceo-todo\", or points at a markdown to-do file and asks to keep it current. Based on the single-doc system Brian Halligan shared publicly. For the automated Gmail + Slack daily version, see the ceo-todo-daily agent.",
+  "updated_at": 1787917369819,
+  "version": "1.0.2"
+}
