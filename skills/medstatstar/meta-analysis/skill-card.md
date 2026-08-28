@@ -1,6 +1,6 @@
 ## Description:
 
-A bilingual R-based meta-analysis assistant for clinical researchers that helps plan systematic reviews, run pairwise and network meta-analyses, generate figures, and provide reproducible R code.
+Meta Analysis / 医学Meta分析 helps agents run R-based medical meta-analysis workflows, including pairwise and network meta-analysis, heterogeneity and bias checks, figures, reports, and reproducible R code.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -10,11 +10,11 @@ This skill is ready for commercial/non-commercial use.
 
 ### License/Terms of Use:
 
-MIT
+MIT-0
 
 ## Use Case:
 
-External clinical researchers, medical and statistical teams, and evidence-based medicine learners use this skill to choose review topics, prepare study data, run common and advanced meta-analysis workflows, and present results with reproducible code and figures.
+External clinicians, clinical-trial practitioners, medical students, and developers use this skill to turn natural-language meta-analysis requests or structured study data into analysis results, visualizations, topic-selection reports, and reproducible R code.
 
 ### Deployment Geography for Use:
 
@@ -22,47 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Analysis summary data, hostname-derived hashes, locale, and explicitly chosen IPD or cloud inputs may be sent to listed Coze services.
+Risk: Meta-analysis inputs and summary study data may be sent to listed Coze endpoints.
 
-Mitigation: Use only data approved for that cloud transfer, and avoid confidential or regulated patient-level data unless the deployment has been independently approved.
+Mitigation: Use the skill only when cloud processing is acceptable; avoid real patient-level or confidential sponsor data unless the cloud IPD path is intentionally approved.
 
-Risk: Bug reports include user-controlled free text that can accidentally contain sensitive details.
+Risk: ClawHub security evidence reports shared credentials and under-scoped network behavior that require review.
 
-Mitigation: Review and sanitize bug-report descriptions before sending them.
+Mitigation: Review endpoint configuration, credential handling, and outbound network scope before installing in a sensitive environment.
 
-Risk: Cloud computation is the sole numerical analysis path, so service outages or authorization failures can prevent curated calculations.
+Risk: Downloaded PDFs should be treated as untrusted files.
 
-Mitigation: Treat cloud failure responses as unavailable analysis results and do not rely on uncurated fallback text for clinical or regulatory decisions.
-
-Risk: The release bundles shared service tokens for the cloud workflow.
-
-Mitigation: Review endpoint approval and credential handling before deploying the skill in a controlled environment.
+Mitigation: Open or process downloaded documents in a controlled environment and prefer placeholder data plus generated R code when confidentiality matters.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/medstatstar/skills/meta-analysis)
-- [Project homepage](https://github.com/medstatstar/meta-analysis)
-- [English README](https://github.com/medstatstar/meta-analysis/blob/main/README.md)
-- [Chinese README](https://github.com/medstatstar/meta-analysis/blob/main/README_zh-CN.md)
-- [Advanced API reference](references/advanced_api.md)
-- [Interactive analysis menu](references/interactive_menu.md)
-- [Topic selection workflow](references/topic-selection.md)
-- [Inline rendering reference](references/inline_rendering.md)
-- [Data templates reference](references/data_templates.md)
+- [ClawHub Skill Page](https://clawhub.ai/medstatstar/skills/meta-analysis)
+- [Metadata Homepage](https://github.com/medstatstar/meta-analysis)
+- [README](README.md)
+- [Advanced API Reference](references/advanced_api.md)
+- [PRISMA / AMSTAR-2 Compliance Pre-check](references/compliance-precheck.md)
+- [Complete References](references/references.md)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown conversation responses with inline SVG figures, generated analysis files, reproducible R code, CSV backups, and optional HTML reports.]
+**Output Format:** [Markdown and HTML reports with figures, CSV/JSON summaries, and reproducible R scripts.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Outputs may include analysis_complete.R, results_summary.md, SVG or PNG figures, data_backup.csv, and HTML reports in the current workspace.]
+**Other Properties Related to Output:** [Outputs may include generated analysis files under meta_analysis/ and output/; numerical results should be presented without rounding or rewriting.]
 
 ## Skill Version(s):
 
-2.1.9 (source: frontmatter, parsed metadata, release evidence)
+2.2.27 (source: server release metadata and SKILL.md frontmatter)
 
 ## Ethical Considerations:
 
