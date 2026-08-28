@@ -1,0 +1,50 @@
+{
+  "changelog": "v1.0.0: hands-on playbook for AI model and asset lifecycle management (LLMOps) - five asset types inventory (models, prompts, knowledge bases, evaluation sets, agent configs), Model Card and registration, version management with canary release and one-click rollback, launch approval and retirement, drift monitoring (data/concept/model drift with alert thresholds), cost governance (token accounting, budgets, routing tiers, distillation and caching), governance processes (roles, approval flows, audit); 5-command zero-dependency toolkit",
+  "created_at": 1787851077482,
+  "display_name": "AI Model Asset Management\uff08AI\u6a21\u578b\u8d44\u4ea7\u7ba1\u7406\uff09",
+  "fetched_at": 1787932224831,
+  "files": [
+    "ATTESTATION.md",
+    "LICENSE.md",
+    "SECURITY_AUDIT.md",
+    "SKILL.md",
+    "_meta.json",
+    "manifest.json",
+    "references/01-\u8d44\u4ea7\u5168\u666f\u4e0e\u53f0\u8d26.md",
+    "references/02-\u6a21\u578b\u5361\u4e0e\u6ce8\u518c.md",
+    "references/03-\u7248\u672c\u7ba1\u7406.md",
+    "references/04-\u4e0a\u7ebf\u4e0b\u7ebf\u7ba1\u7406.md",
+    "references/05-\u6f02\u79fb\u76d1\u63a7.md",
+    "references/06-\u6210\u672c\u6cbb\u7406.md",
+    "references/07-\u6cbb\u7406\u5236\u5ea6\u4e0e\u6d41\u7a0b.md",
+    "references/08-FAQ.md",
+    "skill-card.md",
+    "tools/llmops_toolkit.py",
+    "verify/gen_security_radar.py",
+    "verify/llmops_quality_test.py",
+    "verify/security-radar.svg",
+    "verify/security_results.json"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "zhaoxinghua09-cell",
+    "handle": "zhaoxinghua09-cell",
+    "user_id": "s176xkerrrfjvzqh95ex1x9xj187mb01"
+  },
+  "slug": "ai-llmops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/ai-llmops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=ai-llmops&ownerHandle=zhaoxinghua09-cell",
+    "page_url": "https://clawhub.ai/zhaoxinghua09-cell/skills/ai-llmops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 75,
+    "installs": 0,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "AI \u6a21\u578b\u4e0e\u8d44\u4ea7\u5168\u751f\u547d\u5468\u671f\u7ba1\u7406\uff08LLMOps\uff09\u5b9e\u64cd\u624b\u518c\u2014\u2014\u4ece\"\u6709\u6a21\u578b\u5728\u7528\"\u5230\"\u8d44\u4ea7\u6e05\u6e05\u695a\u695a\"\uff1a\u8d44\u4ea7\u5168\u666f\u4e0e\u53f0\u8d26\uff08\u6a21\u578b/Prompt/\u77e5\u8bc6\u5e93/\u8bc4\u4f30\u96c6/Agent \u914d\u7f6e\u4e94\u7c7b\u8d44\u4ea7\u767b\u8bb0\uff09\u3001\u6a21\u578b\u5361\u4e0e\u6ce8\u518c\uff08Model Card \u5b57\u6bb5\u89c4\u8303\u3001\u6ce8\u518c\u6d41\u7a0b\u3001\u5143\u6570\u636e\u7ba1\u7406\uff09\u3001\u7248\u672c\u7ba1\u7406\uff08\u6a21\u578b/Prompt/\u77e5\u8bc6\u5e93\u7248\u672c\u5316\u3001\u7070\u5ea6\u53d1\u5e03\u3001\u4e00\u952e\u56de\u6eda\uff09\u3001\u4e0a\u7ebf\u4e0b\u7ebf\u7ba1\u7406\uff08\u4e0a\u7ebf\u5ba1\u6279\u3001\u9000\u5f79\u4e0b\u7ebf\u3001\u5e9f\u5f03\u5904\u7f6e\u4e0e\u8fc1\u79fb\uff09\u3001\u6f02\u79fb\u76d1\u63a7\uff08\u6570\u636e\u6f02\u79fb/\u6982\u5ff5\u6f02\u79fb/\u6a21\u578b\u6f02\u79fb\u3001\u76d1\u63a7\u6307\u6807\u4e0e\u544a\u8b66\u9608\u503c\uff09\u3001\u6210\u672c\u6cbb\u7406\uff08Token \u6210\u672c\u6838\u7b97\u3001\u9884\u7b97\u63a7\u5236\u3001\u8def\u7531\u5206\u5c42\u3001\u84b8\u998f\u4e0e\u7f13\u5b58\u964d\u672c\uff09\u3001\u6cbb\u7406\u5236\u5ea6\u4e0e\u6d41\u7a0b\uff08\u89d2\u8272\u804c\u8d23\u3001\u5ba1\u6279\u6d41\u3001\u5ba1\u8ba1\u7559\u75d5\uff09\u3002\u9644\u96f6\u4f9d\u8d56\u672c\u5730\u5de5\u5177\u4e00\u952e\u51fa\u76d8\u70b9\u6e05\u5355\u3001\u6a21\u578b\u5361\u6a21\u677f\u3001\u751f\u547d\u5468\u671f\u68c0\u67e5\u3001\u6f02\u79fb\u76d1\u63a7\u8981\u70b9\u4e0e\u6210\u672c\u6cbb\u7406\u6e05\u5355\u3002\u9762\u5411 AI \u5e73\u53f0\u3001\u5de5\u7a0b\u3001\u8fd0\u7ef4\u4e0e\u8d22\u52a1\u8d1f\u8d23\u4eba\u2014\u2014\u4e0e\u4f01\u4e1a AI \u6cbb\u7406\uff08\u7ba1\u5236\u5ea6\uff09\u4e92\u8865\uff0c\u672c\u6280\u80fd\u7ba1\u8d44\u4ea7\u4e0e\u5de5\u7a0b\u3002",
+  "updated_at": 1787851186354,
+  "version": "1.0.0"
+}
