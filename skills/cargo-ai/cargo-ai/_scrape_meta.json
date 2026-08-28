@@ -1,8 +1,8 @@
 {
-  "changelog": "cargo-ai 2.2.1\n\n- Added skill-metadata.json for enhanced metadata management.\n- Updated SKILL.md for improved login instructions\u2014CLI now supports email authentication without requiring a browser.\n- Expanded compatibility details in documentation.\n- Removed outdated skill-card.md.\n- Documentation examples/templates updated for clarity.",
+  "changelog": "cargo-ai v2.3.0\n\n- Updated SKILL.md: modernized the description and added more trigger phrases and scenarios.\n- Expanded bootstrap/setup instructions for signing in and initial CLI setup.\n- Enhanced quick reference to show new or additional command patterns (notably with MCP servers/clients).\n- Removed legacy skill-card.md file.",
   "created_at": 1779996491031,
   "display_name": "cargo-ai",
-  "fetched_at": 1787772609697,
+  "fetched_at": 1787932108225,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -14,17 +14,7 @@
     "skill-card.md",
     "skill-metadata.json"
   ],
-  "moderation": {
-    "engine_version": "v2.4.26",
-    "is_malware_blocked": false,
-    "is_suspicious": false,
-    "reason_codes": [
-      "review.llm_review"
-    ],
-    "summary": "Review: review.llm_review",
-    "updated_at": 1786485851158,
-    "verdict": "clean"
-  },
+  "moderation": null,
   "owner": {
     "display_name": "Cargo",
     "handle": "cargo-ai",
@@ -38,12 +28,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 938,
+    "downloads": 979,
     "installs": 17,
     "stars": 0,
-    "versions": 5
+    "versions": 6
   },
-  "summary": "Create and configure AI agents, attach knowledge for RAG, manage MCP servers, and handle agent memories using the Cargo CLI. Use when the user wants to create or update agents, configure agent releases, connect MCP tool servers, or manage agent memories. To upload knowledge files or build knowledge libraries, use the cargo-content skill. For sending messages to agents, use the cargo-orchestration skill instead.",
-  "updated_at": 1786484725520,
-  "version": "2.2.1"
+  "summary": "Build and configure AI agents inside Cargo \u2014 create an agent, choose its model and temperature, write its prompt, attach knowledge for retrieval (RAG), connect MCP tool servers, manage memories, and deploy releases. Triggers: \"create an agent\", \"make an agent that\", \"give the agent our docs\", \"attach this knowledge base\", \"attach this library to the agent\", \"add resources to the agent release\", \"connect an MCP server\", \"expose our tools as an MCP server\", \"use Cargo from Claude Desktop or ChatGPT\", \"change the agent model\", \"what does the agent remember\", \"deploy the agent\", \"the agent is answering wrong\". Skip when: uploading the knowledge files themselves \u2014 use cargo-content; sending the agent a message or running it over records \u2014 use cargo-orchestration.",
+  "updated_at": 1787874253915,
+  "version": "2.3.0"
 }

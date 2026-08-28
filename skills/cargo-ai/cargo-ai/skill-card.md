@@ -1,6 +1,6 @@
 ## Description:
 
-Create and configure AI agents, attach knowledge for RAG, manage MCP servers, and handle agent memories using the Cargo CLI.
+Build and configure Cargo AI agents, including prompts, model settings, RAG resources, MCP connections, memories, and deployments.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and operators use this skill to manage Cargo AI agent resources from the CLI, including agent creation, release configuration and deployment, knowledge attachment, MCP server connections, templates, and memories.
+Developers and operators use this skill to create, configure, connect, and deploy Cargo AI agents through the Cargo CLI. It helps manage agent releases, knowledge attachments, MCP server/client setup, templates, model settings, and memories.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Deploy, remove, and memory update commands can change live Cargo agent behavior or delete workspace resources.
+Risk: The skill can guide write operations that change Cargo agents, releases, MCP settings, memories, and related workspace resources.
 
-Mitigation: Require explicit user approval before deploy, remove, MCP access, or memory changes, and verify the active workspace plus target UUIDs with discovery commands first.
+Mitigation: Review write commands before execution and confirm the active workspace with `cargo-ai whoami`.
 
-Risk: The documented bearer-token API workaround can expose credentials in shared terminals, shell history, or logs.
+Risk: API tokens and MCP connections can expose or extend workspace access.
 
-Mitigation: Prefer CLI-mediated commands where possible, avoid pasting bearer tokens into shared environments, and redact tokens from logs and transcripts.
+Mitigation: Use appropriate token scopes, avoid unnecessary token sharing, and review MCP connection settings before deployment.
+
+Risk: Lead and contact research workflows may involve personal or business data.
+
+Mitigation: Ensure research and enrichment workflows comply with organizational policies, platform terms, and applicable privacy laws.
 
 ## Reference(s):
 
 - [Cargo skills repository](https://github.com/getcargohq/cargo-skills)
-- [ClawHub skill page](https://clawhub.ai/cargo-ai/skills/cargo-ai)
+- [Response shapes](references/response-shapes.md)
+- [Troubleshooting](references/troubleshooting.md)
 - [Agent examples](references/examples/agents.md)
 - [MCP server examples](references/examples/mcp-servers.md)
 - [AI template examples](references/examples/templates.md)
-- [Response shapes](references/response-shapes.md)
-- [Troubleshooting](references/troubleshooting.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [Text, Markdown, Code, Shell commands, Configuration, Guidance]
 
-**Output Format:** [Markdown guidance with bash command examples and JSON response shapes]
+**Output Format:** [Markdown with bash, JSON, and curl examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Commands require the Cargo CLI, authenticated workspace access, and valid Cargo resource UUIDs.]
+**Other Properties Related to Output:** [Commands generally return JSON and may require Cargo authentication.]
 
 ## Skill Version(s):
 
-2.2.1 (source: frontmatter and release evidence)
+2.3.0 (source: frontmatter and server release evidence)
 
 ## Ethical Considerations:
 
