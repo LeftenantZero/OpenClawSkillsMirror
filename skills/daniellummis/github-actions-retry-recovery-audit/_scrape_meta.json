@@ -1,0 +1,34 @@
+{
+  "changelog": "Initial release of github-actions-retry-recovery-audit.\n\n- Audits GitHub Actions workflow run JSON exports for fail-then-success retry patterns.\n- Groups runs by repository, workflow, branch, and commit.\n- Calculates wasted minutes from retries before a success.\n- Configurable reporting (text or JSON), filters, and fail gates based on waste thresholds.\n- Provides output suitable for dashboards and CI enforcement.",
+  "created_at": 1772817557282,
+  "display_name": "GitHub Actions Retry Recovery Audit",
+  "fetched_at": 1787886536121,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/retry-recovery-audit.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "Daniel Lummis",
+    "handle": "daniellummis",
+    "user_id": "s17fw617wehb1y9a026bgg9yed885cv7"
+  },
+  "slug": "github-actions-retry-recovery-audit",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/github-actions-retry-recovery-audit",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=github-actions-retry-recovery-audit&ownerHandle=daniellummis",
+    "page_url": "https://clawhub.ai/daniellummis/skills/github-actions-retry-recovery-audit"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 766,
+    "installs": 21,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Audit GitHub Actions runs for fail-then-success retry recovery patterns to quantify flaky rerun waste.",
+  "updated_at": 1778491754897,
+  "version": "1.0.0"
+}
