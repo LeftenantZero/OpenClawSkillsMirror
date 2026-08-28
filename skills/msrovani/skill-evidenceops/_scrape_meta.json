@@ -1,0 +1,72 @@
+{
+  "changelog": "This is the initial release of EvidenceOps, a forensic-grade evidence management system for OpenClaw. It provides:\n\n1. **Complete Skill for ClawHub** - Ready-to-publish skill with comprehensive documentation\n2. **Dual Storage Drivers** - Filesystem (local) and S3/MinIO (cloud) backends\n3. **Chain of Custody** - Cryptographic hash chain for evidence integrity\n4. **Security-First Design** - Path sanitization, secret redaction, channel controls\n5. **Full Test Coverage** - Unit and integration tests for core functionality\n\nThe skill teaches OpenClaw agents how to:\n- Accept media from any channel\n- Create/manage cases with proper IDs\n- Stage originals without modification\n- Extract metadata (EXIF, duration, pages)\n- Generate derivatives in separate folders\n- Maintain tamper-evident audit trails\n- Return evidence receipts to users\n\nThe plugin provides the backend implementation with:\n- Pluggable storage architecture\n- Deterministic manifest generation\n- Channel-based access control\n- Comprehensive error handling",
+  "created_at": 1771349502788,
+  "display_name": "EvidenceOps - Forensic Evidence Management",
+  "fetched_at": 1787900377053,
+  "files": [
+    ".github/workflows/ci.yml",
+    ".github/workflows/security.yml",
+    ".gitignore",
+    "CHANGELOG.md",
+    "LICENSE.txt",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "docs/DESIGN.md",
+    "examples/config/openclaw.example.yaml",
+    "examples/demo/sample-manifest.json",
+    "plugin-evidence-vault/.eslintrc.json",
+    "plugin-evidence-vault/jest.config.js",
+    "plugin-evidence-vault/package.json",
+    "plugin-evidence-vault/src/drivers/filesystem.ts",
+    "plugin-evidence-vault/src/drivers/interface.ts",
+    "plugin-evidence-vault/src/drivers/s3.ts",
+    "plugin-evidence-vault/src/index.ts",
+    "plugin-evidence-vault/src/tools/index.ts",
+    "plugin-evidence-vault/src/types.ts",
+    "plugin-evidence-vault/src/utils/crypto.ts",
+    "plugin-evidence-vault/src/utils/path.ts",
+    "plugin-evidence-vault/src/utils/redaction.ts",
+    "plugin-evidence-vault/tests/driver.test.ts",
+    "plugin-evidence-vault/tests/integration.test.ts",
+    "plugin-evidence-vault/tsconfig.json",
+    "skill-evidenceops/SKILL.md",
+    "skill-evidenceops/docs/PRIVACY.md",
+    "skill-evidenceops/docs/SECURITY.md",
+    "skill-evidenceops/templates/case-manifest.example.json",
+    "skill-evidenceops/templates/chain-of-custody.example.md",
+    "skill-evidenceops/templates/manifest.schema.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.24",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1779972863285,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "msrovani",
+    "handle": "msrovani",
+    "user_id": "s173y9g719yvqbbdgmxhjaaf218844by"
+  },
+  "slug": "skill-evidenceops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/skill-evidenceops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=skill-evidenceops&ownerHandle=msrovani",
+    "page_url": "https://clawhub.ai/msrovani/skills/skill-evidenceops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 1320,
+    "installs": 38,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Forensic media triage with chain of custody. Use when receiving images, videos, audio, PDFs, or documents that need evidence-grade handling, integrity verifi...",
+  "updated_at": 1778491567625,
+  "version": "1.0.0"
+}
