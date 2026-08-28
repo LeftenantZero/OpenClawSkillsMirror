@@ -1,6 +1,6 @@
 ## Description:
 
-Helps agent users and skill maintainers turn proactive-agent workflow needs into practical plans, checklists, code changes, reliability guidance, and adjacent skill ideas.
+Helps agent users, skill authors, maintainers, and teams turn proactive-agent workflow demand into practical plans, checklists, implementation support, and verification notes.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, skill authors, maintainers, and teams use this skill to clarify proactive-agent workflow requests, produce concrete artifacts, and validate reliability or safety follow-up work.
+Developers, skill authors, maintainers, and agent teams use this skill to clarify productivity workflow requests, produce concrete artifacts such as plans or checklists, and verify the result against the user's success criteria.
 
 ### Deployment Geography for Use:
 
@@ -22,33 +22,35 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Broad activation wording and implicit invocation may cause the skill to run for requests where a narrower workflow helper would be more appropriate.
+Risk: Broad triggers and implicit invocation can make the skill activate for ordinary productivity or bug-fix requests where it is not the best match.
 
-Mitigation: Narrow trigger keywords and default prompts before deployment when precise routing matters, and review generated plans before acting on them.
+Mitigation: Review activation behavior after installation and narrow triggers or invocation policy when precise routing is important.
+
+Risk: Generated workflow, checklist, code, or configuration guidance can be incomplete or mismatched to the user's environment.
+
+Mitigation: Validate outputs against the stated success criteria before applying them and keep assumptions, limits, and required inputs visible.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/kyro-ma/skills/work-productivity-proactive-agent-workflow-helper)
 - [Requirement Plan](references/requirement-plan.md)
-- [Popular ClawHub skill demand: Proactive Agent](https://clawhub.ai/skills/proactive-agent)
-- [Popular ClawHub skill demand: Self-Improving + Proactive Agent](https://clawhub.ai/skills/self-improving)
-- [Popular ClawHub skill demand: ontology](https://clawhub.ai/skills/ontology)
-- [CI hardening issue](https://github.com/joncfrancisco/pzbot/issues/14)
-- [ClawHub popular skills weekly issue](https://github.com/shufanli/AI-Product-Compass/issues/48)
+- [Proactive Agent demand signal](https://clawhub.ai/skills/proactive-agent)
+- [Self-Improving + Proactive Agent demand signal](https://clawhub.ai/skills/self-improving)
+- [Ontology demand signal](https://clawhub.ai/skills/ontology)
+- [ClawHub popular skills issue](https://github.com/shufanli/AI-Product-Compass/issues/48)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown, plain text, and code or shell command snippets]
+**Output Format:** [Markdown or plain text with optional code blocks, checklists, and verification notes]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include reusable checklists, workflow templates, verification notes, and implementation guidance.]
+**Other Properties Related to Output:** [Outputs should expose assumptions, limits, required inputs, remaining risks, and follow-up work when relevant.]
 
 ## Skill Version(s):
 
-0.20260826.40329 (source: server release evidence)
+0.20260828.40337 (source: server release evidence)
 
 ## Ethical Considerations:
 

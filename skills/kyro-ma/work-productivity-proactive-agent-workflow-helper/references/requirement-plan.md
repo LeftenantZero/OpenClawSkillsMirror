@@ -2,7 +2,7 @@
 
 ## Live Requirement
 
-Validated demand: Agent users show strong demand for Proactive Agent-style workflows on Clawhub. They need practical help fixing bugs, hardening setup and safety, improving reliability, or creating adjacent skills inspired by the same job-to-be-done. This requirement is supported by 12 separate online signals across 3 source families, so it represents broader demand rather than a single isolated request.
+Validated demand: Agent users show strong demand for Proactive Agent-style workflows on Clawhub. They need practical help fixing bugs, hardening setup and safety, improving reliability, or creating adjacent skills inspired by the same job-to-be-done. This requirement is supported by 12 separate online signals across 4 source families, so it represents broader demand rather than a single isolated request.
 
 ## Audience
 
@@ -20,12 +20,12 @@ Demand: 70/70
 
 Local feasibility: 30/30
 
-Evidence coverage: 12 signals across 3 source families.
+Evidence coverage: 12 signals across 4 source families.
 
 Scoring rationale:
 
 - Evidence count: 12; required minimum: 3.
-- Distinct source families: 3; sources: clawhub, github, segmentfault.
+- Distinct source families: 4; sources: clawhub, csdn, github, segmentfault.
 - Demand score: 70/70 based on corroboration, source diversity, and professional/community signal.
 - Local feasibility score: 30/30.
 - Implementation is a documentation, workflow, code, or analysis skill that can run on ordinary CPU hardware.
@@ -33,18 +33,18 @@ Scoring rationale:
 
 ## Evidence
 
-- clawhub-popular-skill (2026-05-18T03:54:46.067000+00:00): [Popular Clawhub skill demand: Proactive Agent has 174,440 downloads](https://clawhub.ai/skills/proactive-agent)
-- clawhub-popular-skill (2026-05-11T09:25:56.797000+00:00): [Popular Clawhub skill demand: Self-Improving + Proactive Agent has 207,860 downloads](https://clawhub.ai/skills/self-improving)
-- clawhub-popular-skill (2026-05-11T07:50:52.489000+00:00): [Popular Clawhub skill demand: ontology has 197,109 downloads](https://clawhub.ai/skills/ontology)
-- segmentfault-search (2026-08-26T04:05:08.569614+00:00): [HarmonyOS 开发者社区](https://segmentfault.com/brand/harmonyos-next)
-- segmentfault-search (2026-08-26T04:05:08.569614+00:00): [javascript](https://segmentfault.com/t/javascript)
-- segmentfault-search (2026-08-26T04:05:08.570163+00:00): [typescript](https://segmentfault.com/t/typescript)
-- segmentfault-search (2026-08-26T04:05:08.570163+00:00): [ONES 研发管理](https://ones.cn/?utm_term=ONES%C2%A0%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86&utm_campaign=%E9%A6%96%E9%A1%B5%E6%A0%87%E7%AD%BE&_channel_track_key=myqX1C0f&utm_source=%E6%80%9D%E5%90%A6%E8%BD%AC%20ONES)
-- segmentfault-search (2026-08-26T04:05:08.570163+00:00): [gulp配置文件gulpfile.babel.js](https://segmentfault.com/a/1190000018520071)
-- segmentfault-search (2026-08-26T04:05:08.570163+00:00): [Android：hook很“危险”，使用需谨慎。](https://segmentfault.com/a/1190000041758768)
-- segmentfault-search (2026-08-26T04:05:08.570163+00:00): [其实 Gradle Transform 就是个纸老虎 —— Gradle 系列(4)](https://segmentfault.com/a/1190000041861621)
-- github-issues (2026-08-26T04:01:54+00:00): [CI hardening: no permissions: block, and actions are pinned to mutable tags](https://github.com/joncfrancisco/pzbot/issues/14)
+- clawhub-popular-skill (2026-05-18T03:54:46.067000+00:00): [Popular Clawhub skill demand: Proactive Agent has 174,549 downloads](https://clawhub.ai/skills/proactive-agent)
+- clawhub-popular-skill (2026-05-11T09:25:56.797000+00:00): [Popular Clawhub skill demand: Self-Improving + Proactive Agent has 208,021 downloads](https://clawhub.ai/skills/self-improving)
+- clawhub-popular-skill (2026-05-11T07:50:52.489000+00:00): [Popular Clawhub skill demand: ontology has 197,281 downloads](https://clawhub.ai/skills/ontology)
+- segmentfault-search (2026-08-28T04:05:23.797264+00:00): [HarmonyOS 开发者社区](https://segmentfault.com/brand/harmonyos-next)
+- segmentfault-search (2026-08-28T04:05:23.797264+00:00): [javascript](https://segmentfault.com/t/javascript)
+- segmentfault-search (2026-08-28T04:05:23.797264+00:00): [typescript](https://segmentfault.com/t/typescript)
+- segmentfault-search (2026-08-28T04:05:23.797264+00:00): [ONES 研发管理](https://ones.cn/?utm_term=ONES%C2%A0%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86&utm_campaign=%E9%A6%96%E9%A1%B5%E6%A0%87%E7%AD%BE&_channel_track_key=myqX1C0f&utm_source=%E6%80%9D%E5%90%A6%E8%BD%AC%20ONES)
+- segmentfault-search (2026-08-28T04:05:23.797264+00:00): [gulp配置文件gulpfile.babel.js](https://segmentfault.com/a/1190000018520071)
+- segmentfault-search (2026-08-28T04:05:23.797264+00:00): [Android：hook很“危险”，使用需谨慎。](https://segmentfault.com/a/1190000041758768)
+- segmentfault-search (2026-08-28T04:05:23.797264+00:00): [其实 Gradle Transform 就是个纸老虎 —— Gradle 系列(4)](https://segmentfault.com/a/1190000041861621)
 - github-issues (2026-08-17T10:37:19+00:00): [[Skills 周报] 2026-08-17 ClawHub 热门 Skills Top 10](https://github.com/shufanli/AI-Product-Compass/issues/48)
+- csdn-search (2026-08-28T04:05:22.791013+00:00): [AssetBundle打包终极优化：解决模块化加载卡顿的5项黄金法则](?ops_request_misc=elastic_search_misc&request_id=d862a4c59a414c57ac6ba54546884c5e&biz_id=&utm_medium=distribute.pc_search_result.none-task-wenku_aigc_column-2~all~ElasticSearch~search_v2-1-7sazptdrs9-null-null.142^v102^pc_search_result_base5&utm_term=proactive-agent%20proactive%20transform%20task)
 
 ## How The Skill Meets The Requirement
 

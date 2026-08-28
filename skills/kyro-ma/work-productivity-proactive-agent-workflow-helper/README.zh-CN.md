@@ -2,7 +2,7 @@
 
 ## 需求
 
-Validated demand: Agent users show strong demand for Proactive Agent-style workflows on Clawhub. They need practical help fixing bugs, hardening setup and safety, improving reliability, or creating adjacent skills inspired by the same job-to-be-done. This requirement is supported by 12 separate online signals across 3 source families, so it represents broader demand rather than a single isolated request.
+Validated demand: Agent users show strong demand for Proactive Agent-style workflows on Clawhub. They need practical help fixing bugs, hardening setup and safety, improving reliability, or creating adjacent skills inspired by the same job-to-be-done. This requirement is supported by 12 separate online signals across 4 source families, so it represents broader demand rather than a single isolated request.
 
 目标用户：AI-agent users, skill authors, maintainers, and teams who want proven popular skill patterns adapted into more reliable or adjacent workflows
 
@@ -10,13 +10,13 @@ Validated demand: Agent users show strong demand for Proactive Agent-style workf
 
 需求评分：100/100
 
-证据覆盖：12 条信号，覆盖 3 个来源类型。
+证据覆盖：12 条信号，覆盖 4 个来源类型。
 
 ## 来源证据
 
-- clawhub-popular-skill：[Popular Clawhub skill demand: Proactive Agent has 174,440 downloads](https://clawhub.ai/skills/proactive-agent)
-- clawhub-popular-skill：[Popular Clawhub skill demand: Self-Improving + Proactive Agent has 207,860 downloads](https://clawhub.ai/skills/self-improving)
-- clawhub-popular-skill：[Popular Clawhub skill demand: ontology has 197,109 downloads](https://clawhub.ai/skills/ontology)
+- clawhub-popular-skill：[Popular Clawhub skill demand: Proactive Agent has 174,549 downloads](https://clawhub.ai/skills/proactive-agent)
+- clawhub-popular-skill：[Popular Clawhub skill demand: Self-Improving + Proactive Agent has 208,021 downloads](https://clawhub.ai/skills/self-improving)
+- clawhub-popular-skill：[Popular Clawhub skill demand: ontology has 197,281 downloads](https://clawhub.ai/skills/ontology)
 - segmentfault-search：[HarmonyOS 开发者社区](https://segmentfault.com/brand/harmonyos-next)
 - segmentfault-search：[javascript](https://segmentfault.com/t/javascript)
 - segmentfault-search：[typescript](https://segmentfault.com/t/typescript)
@@ -24,8 +24,8 @@ Validated demand: Agent users show strong demand for Proactive Agent-style workf
 - segmentfault-search：[gulp配置文件gulpfile.babel.js](https://segmentfault.com/a/1190000018520071)
 - segmentfault-search：[Android：hook很“危险”，使用需谨慎。](https://segmentfault.com/a/1190000041758768)
 - segmentfault-search：[其实 Gradle Transform 就是个纸老虎 —— Gradle 系列(4)](https://segmentfault.com/a/1190000041861621)
-- github-issues：[CI hardening: no permissions: block, and actions are pinned to mutable tags](https://github.com/joncfrancisco/pzbot/issues/14)
 - github-issues：[[Skills 周报] 2026-08-17 ClawHub 热门 Skills Top 10](https://github.com/shufanli/AI-Product-Compass/issues/48)
+- csdn-search：[AssetBundle打包终极优化：解决模块化加载卡顿的5项黄金法则](?ops_request_misc=elastic_search_misc&request_id=d862a4c59a414c57ac6ba54546884c5e&biz_id=&utm_medium=distribute.pc_search_result.none-task-wenku_aigc_column-2~all~ElasticSearch~search_v2-1-7sazptdrs9-null-null.142^v102^pc_search_result_base5&utm_term=proactive-agent%20proactive%20transform%20task)
 
 ## 这个技能如何满足需求
 
