@@ -1,6 +1,6 @@
 ## Description:
 
-Generate AI video, images, music, voice-over, and reusable voices through a connected Beatra creative workflow.
+Generate AI video, images, music, and voice-over in one connected creative flow, edit visual results, and keep every finished piece easy to find.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and creative teams use this skill to create, edit, and manage generated images, videos, music, narration, and voice-clone outputs from one Beatra workflow. Agents use it to choose the smallest suitable media-generation path, manage authorization and uploads, submit paid jobs, poll asynchronous tasks, and report returned usage and artifacts.
+External creators, marketers, educators, and media teams use this skill to create and manage Beatra-generated images, videos, music, speech, reusable voices, uploads, model choices, and asynchronous task results.
 
 ### Deployment Geography for Use:
 
@@ -22,17 +22,17 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can connect a Beatra account, upload selected media, and submit paid media-generation requests.
+Risk: The skill stores a broad Beatra device token locally.
 
-Mitigation: Install only when those account, upload, and credit-spend scopes are acceptable; review admission prompts before authorizing video generation or voice cloning.
+Mitigation: Install only if comfortable connecting a Beatra account, keep the credential private, and use the documented uninstall or disconnect flow when removing access.
 
-Risk: The package silently checks for and may install verified updates by default.
+Risk: Installed package code may silently self-update by default.
 
-Mitigation: Disable automatic updates with `python3 scripts/mcp_client.py update --auto off` when package code changes require prior review.
+Mitigation: Disable automatic updates with `python3 scripts/mcp_client.py update --auto off` when a fixed installed version is required.
 
-Risk: A shared Beatra device credential is stored under `~/.beatra` and used by Beatra packages.
+Risk: Billable media generation consumes Beatra credits.
 
-Mitigation: Use the bundled uninstall flow for local cleanup and the Beatra Console to revoke access when the connection is no longer trusted.
+Mitigation: Use the skill's confirmation and estimate steps before video or voice-clone calls, and retry balance recovery only with the same request identity.
 
 ## Reference(s):
 
@@ -44,28 +44,29 @@ Mitigation: Use the bundled uninstall flow for local cleanup and the Beatra Cons
 - [Video recipes](references/video-recipes.md)
 - [Music](references/music.md)
 - [Speech and voices](references/speech-and-voices.md)
-- [Models](references/models.md)
 - [Uploads](references/uploads.md)
+- [Models](references/models.md)
 - [Tasks and results](references/tasks-and-results.md)
 - [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
 - [Installation and authentication](references/installation-and-auth.md)
+- [Installation registration](references/installation-registration.md)
 - [MCP connection](references/mcp-connection.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
 - [Uninstall and disconnect](references/uninstall-and-disconnect.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
+**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with inline shell commands, returned task metadata, links, IDs, and usage details]
+**Output Format:** [Markdown or text responses with inline shell commands and JSON payloads]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include generated media artifact URLs or IDs, dimensions, duration, MIME type, file size, task status, model, and billing details when returned by Beatra.]
+**Other Properties Related to Output:** [Returns task IDs, artifact links, usage, and billing details when Beatra completes generation.]
 
 ## Skill Version(s):
 
-0.1.7 (source: server release metadata and manifest.json)
+0.1.8 (source: evidence.release.version and manifest.json)
 
 ## Ethical Considerations:
 
