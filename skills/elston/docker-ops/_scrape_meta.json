@@ -1,0 +1,37 @@
+{
+  "changelog": "- Added comprehensive whitelist and safety procedures: containers must be explicitly listed and allowed for operations.\n- Enforced use of the `SYSCTL_WHITELIST_PATH` environment variable before executing any Docker command.\n- Strictly limited commands to safe status, inspect, log retrieval, monitoring, and controlled restarts; forbidden dangerous Docker operations.\n- Introduced structured status report and log analysis workflow, including sensitive data redaction.\n- Established cooldown and auditing for restarts to prevent accidental or repeated operations.\n- Improved error handling and messaging for missing environment/configuration or denied actions.",
+  "created_at": 1774014918063,
+  "display_name": "Managing Docker containers via docker-socket-proxy",
+  "fetched_at": 1787938127769,
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/docker-commands.md",
+    "scripts/container-report.sh",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "elston",
+    "handle": "elston",
+    "user_id": "s175xvt7sepv856zx59z2n4t8s83hcng"
+  },
+  "slug": "docker-ops",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/docker-ops",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=docker-ops&ownerHandle=elston",
+    "page_url": "https://clawhub.ai/elston/skills/docker-ops"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 940,
+    "installs": 27,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Manage Docker containers securely via docker-socket-proxy: check status, logs, resource usage, and safely restart only whitelisted containers with cooldown.",
+  "updated_at": 1778492064154,
+  "version": "0.4.0"
+}
