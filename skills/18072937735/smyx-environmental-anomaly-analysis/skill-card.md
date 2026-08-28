@@ -1,6 +1,6 @@
 ## Description:
 
-Combines livestock behavior in continuous barn videos with environmental sensor data to identify group stress responses caused by abnormal barn conditions.
+Combines livestock behavior in continuous barn videos with environmental sensor data (temperature, humidity, ammonia, etc.) to identify group stress responses caused by abnormal in-barn conditions. | 结合畜禽行为与环境传感器，识别温湿度异常时的群体应激反应。
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External users and developers use this skill to analyze livestock barn images, videos, URLs, and optional sensor data for environment-behavior anomaly reports. It returns behavior findings, environmental correlations, group stress levels, historical report lists, and report links for barn monitoring workflows.
+Farm operators, animal welfare reviewers, and agricultural monitoring developers use this skill to correlate livestock group behavior with barn sensor readings and produce environment-linked stress and anomaly reports.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: Livestock media, media URLs, and identity data may be sent to a configured remote service for analysis.
+Risk: Barn media or submitted URLs are sent to an external analysis service.
 
-Mitigation: Use the skill only with media and URLs approved for remote processing, and avoid submitting sensitive farm footage or internal-only media URLs.
+Mitigation: Review deployment data-flow and use the skill only with media and URLs approved for external processing.
 
-Risk: Cloud report history is associated with an automatically managed identity.
+Risk: The skill can query account-linked cloud history and stores identity and token data in a local SQLite database.
 
-Mitigation: Confirm that account identity handling and report retention meet the deployment environment's privacy and access-control requirements before use.
+Mitigation: Deploy only where account linkage and local credential storage are acceptable, and require clear retention and deletion controls from the publisher.
 
-Risk: Returned account tokens may be stored in the local workspace.
+Risk: Security evidence reports under-scoped remote services and private development HTTP endpoints.
 
-Mitigation: Run the skill in a sandboxed workspace when credential storage is a concern, and clear local token state according to the operator's security process.
+Mitigation: Review service endpoints before installation and require the publisher to remove private development endpoints from release artifacts.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/18072937735/skills/smyx-environmental-anomaly-analysis)
-- [API interface documentation](artifact/references/api_doc.md)
 - [Skill demo](https://lifeemergence.com/sample.html)
+- [Environmental anomaly API documentation](references/api_doc.md)
+- [Shared analysis API documentation](skills/smyx_analysis/references/api_doc.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, files]
+**Output Type(s):** [text, markdown, JSON]
 
-**Output Format:** [Markdown report text with optional JSON-style detail and optional saved output file.]
+**Output Format:** [Structured JSON or Markdown report text, including report links for history queries when available.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include behavior feature lists, environment correlation results, group stress levels, historical report tables, and report links.]
+**Other Properties Related to Output:** [Analysis output may include behavior features, environment correlations, stress level, and report export links.]
 
 ## Skill Version(s):
 
-1.0.8 (source: server release metadata)
+1.0.9 (source: server release evidence; artifact frontmatter reports 1.0.8)
 
 ## Ethical Considerations:
 
