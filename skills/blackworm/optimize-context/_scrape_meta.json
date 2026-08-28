@@ -1,0 +1,55 @@
+{
+  "changelog": "- Initial release of the Context Optimizer & Task Processing Skills Package.\n- Adds automated context optimization to prevent \"prompt too large\" errors.\n- Introduces a Task Processor to split and handle large tasks automatically.\n- Includes background monitoring for conversation length with configurable thresholds.\n- Provides `/optimize-context` and `/process-task` commands for manual control and automation.",
+  "created_at": 1770224667998,
+  "display_name": "Optimize Context",
+  "fetched_at": 1787909198425,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "commands/optimize-context.js",
+    "commands/optimize-context.json",
+    "commands/process-task.js",
+    "commands/process-task.json",
+    "skill-card.md",
+    "skills/context-optimizer/README.md",
+    "skills/context-optimizer/SKILL.md",
+    "skills/context-optimizer/config.json",
+    "skills/context-optimizer/optimize.js",
+    "skills/context-optimizer/run-optimization.js",
+    "systems/context-monitor-config.json",
+    "systems/context-monitor.js",
+    "task_processing_config.json"
+  ],
+  "moderation": {
+    "engine_version": "v2.4.26",
+    "is_malware_blocked": false,
+    "is_suspicious": false,
+    "reason_codes": [
+      "review.llm_review"
+    ],
+    "summary": "Review: review.llm_review",
+    "updated_at": 1783655394193,
+    "verdict": "clean"
+  },
+  "owner": {
+    "display_name": "blackworm",
+    "handle": "blackworm",
+    "user_id": "s17byq25r94dcmy31sf4t745v9884wqx"
+  },
+  "slug": "optimize-context",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/optimize-context",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=optimize-context&ownerHandle=blackworm",
+    "page_url": "https://clawhub.ai/blackworm/skills/optimize-context"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2437,
+    "installs": 83,
+    "stars": 1,
+    "versions": 1
+  },
+  "summary": "Automatically monitors and optimizes conversation context to prevent prompt size errors by extracting key points and clearing excess history.",
+  "updated_at": 1778486017068,
+  "version": "1.0.0"
+}
