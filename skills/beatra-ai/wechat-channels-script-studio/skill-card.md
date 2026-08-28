@@ -1,6 +1,6 @@
 ## Description:
 
-Turns product facts into a WeChat Channels short-video sales script with a second-by-second segment table, full narration, product-link conversion beats, and a six-dimension draft score.
+Turns a product and confirmed facts into a WeChat Channels short-video script with a second-by-second segment table, full spoken narration, placed product-link conversion beats, and a six-dimension draft score.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-External creators, merchants, and marketing teams use this skill to turn verified product or service facts into WeChat Channels selling scripts, including segment timing, spoken narration, link-placement beats, and a draft quality check. It can optionally guide storyboard frame and narration audio generation after user approval.
+External creators, commerce teams, and store operators use this skill to draft WeChat Channels selling videos from supplied product facts. It produces the fact sheet, timed segment table, full narration, product-link beats, and draft score, with optional storyboard frames or voiced narration after approval.
 
 ### Deployment Geography for Use:
 
@@ -22,45 +22,42 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill stores a shared Beatra credential and can submit paid remote media-generation requests.
+Risk: The shared Beatra device authorization can spend credits, read and manage tasks, and access broader media-generation capabilities than the script workflow normally needs.
 
-Mitigation: Install only if you trust Beatra, review the authorization grant, require user approval before paid generation, and report only returned billing facts such as `billing.net_charged_credits`.
+Mitigation: Install only in an account and environment where that authority is acceptable, review Beatra account activity, and reconnect or revoke shared credentials when appropriate.
 
-Risk: The bundled client can silently check for updates and replace package-owned files.
+Risk: Automatic updates can silently replace package files.
 
-Mitigation: Review the update behavior before deployment and consider disabling silent updates with `python3 scripts/mcp_client.py update --auto off`.
-
-Risk: Generated sales scripts can become misleading if missing product claims are filled in without evidence.
-
-Mitigation: Use only user-supplied commercial facts, name gaps plainly, and write around missing prices, results, certifications, offer terms, or reference-video performance claims.
+Mitigation: Disable automatic updates with `python3 scripts/mcp_client.py update --auto off` when silent package replacement is not acceptable, and review updates before re-enabling them.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/wechat-channels-script-studio)
-- [Beatra skill homepage](https://beatra.ai/skills/wechat-channels-script-studio)
 - [Structuring the script](references/script-structure.md)
 - [Placing the product-link beats](references/product-link-beats.md)
 - [Script studio workflow](references/workflow.md)
 - [Installation and authentication](references/installation-and-auth.md)
-- [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
+- [Installation registration](references/installation-registration.md)
 - [Tasks and results](references/tasks-and-results.md)
+- [Billing, errors, and recovery](references/billing-errors-and-recovery.md)
+- [MCP connection](references/mcp-connection.md)
 - [Automatic updates and safety](references/automatic-updates-and-safety.md)
 - [Uninstall and disconnect](references/uninstall-and-disconnect.md)
-- [Beatra MCP endpoint](https://mcp.beatra.ai/mcp)
+- [ClawHub skill page](https://clawhub.ai/beatra-ai/skills/wechat-channels-script-studio)
+- [Beatra skill homepage](https://beatra.ai/skills/wechat-channels-script-studio)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown with script tables, narration text, review notes, and inline shell commands when setup or recovery is needed]
+**Output Format:** [Markdown with tables, narration prose, approval prompts, and inline shell commands]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May include returned task IDs, artifact links, dimensions, duration, resolved model, and net charged credits when optional media is produced.]
+**Other Properties Related to Output:** [Optional storyboard frames and voiced narration are requested only after approval and return Beatra task and artifact metadata.]
 
 ## Skill Version(s):
 
-0.1.2 (source: server evidence release.version and artifact manifest version)
+0.1.4 (source: server release evidence and manifest)
 
 ## Ethical Considerations:
 
