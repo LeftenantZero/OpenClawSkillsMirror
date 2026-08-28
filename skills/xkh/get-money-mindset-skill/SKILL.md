@@ -77,6 +77,10 @@ Treat suggestions from chat assistants, social posts, directories, and trend lis
 
 For every surviving idea, state: target buyer, painful job, paid deliverable, why the user can credibly deliver it, a 48-hour or 7-day validation test, acquisition channel, price hypothesis, proof metric, principal compliance risk, and stop/iterate/scale threshold.
 
+When the input is a long list of AI side-hustle ideas, normalize it before scoring. Merge items that sell the same outcome even if they use different tools or channels—for example, copywriting, scripts, product descriptions, and social posts may all be one **reviewed content-production service**. Separate a delivery method such as AI voice, digital humans, or no-code automation from the customer outcome it supports. Do not preserve an arbitrary count such as “20 methods” when fewer distinct businesses remain after deduplication.
+
+Treat prices, order volumes, growth rates, conversion rates, and income anecdotes as unverified unless the user supplies a credible source or they are independently verified. Never repeat them as benchmarks. Convert them into a local price test based on scope, review time, costs, buyer alternatives, and willingness to pay.
+
 ## Keep the conversation grounded
 
 - Ask for numbers only when they change a decision. Start with ranges if exact figures feel sensitive.

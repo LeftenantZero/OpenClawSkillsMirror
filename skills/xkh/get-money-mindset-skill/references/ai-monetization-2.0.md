@@ -1,4 +1,4 @@
-# AI monetization playbook 2.0
+# AI monetization playbook 2.2.2
 
 Use this reference for requests about AI income, freelancing, side hustles, creator monetization, or AI products. It converts idea lists into testable, policy-aware offers. Platform rules change; verify the current rule before publishing or accepting payment.
 
@@ -27,6 +27,54 @@ Prefer these when they fit the user's existing access and credibility:
 6. **Original practical asset:** build a workbook, template, calculator, field guide, or reference pack around first-hand expertise and a narrow recurring task—not a generic prompt dump.
 7. **Original education-to-offer loop:** demonstrate a real workflow or case study, invite an audit/sample/membership, and measure qualified conversations and downstream sales rather than views alone.
 8. **Narrow productization:** turn three similar paid deliveries into a repeatable service or tool; preserve monitoring, escalation, export, and cancellation paths.
+
+## Normalized opportunity map for individuals and small teams
+
+Use this map to consolidate common “AI赚钱方法” lists. The examples are hypotheses, not endorsements or income claims.
+
+| Offer family | Examples that belong together | Stronger paid outcome | Upgrade path |
+| --- | --- | --- | --- |
+| Reviewed business content | Product descriptions, social posts, newsletters, short-video scripts, presentation copy, resumes and business correspondence | A buyer-specific content package with research, fact-checking, editing, brand voice, revision limits, and source records | Recurring content operations for one niche |
+| Language and accessibility | Translation, localization, subtitles, captions, alt text, voiceover, course audio | A reviewed multilingual or accessible deliverable with glossary, style guide, consent, and QA | Retainer for a publisher, exporter, educator, or creator |
+| Presentation and document production | PPT, proposals, reports, manuals, workbooks, training material | Decision-ready documents with information design, verified claims, editable source files, and revision scope | Standardized executive-communication service |
+| Custom visual production | Avatars, product scenes, posters, thumbnails, old-photo restoration, wedding or interior concepts | Custom assets with art direction, source files, rights/disclosure record, and explicit commercial-use terms | Vertical creative studio or monthly asset package |
+| Video and digital-presenter production | Scripted shorts, editing, dubbing, digital presenters, product demos, serialized illustrated stories | Original, platform-compliant video packages with consent, disclosure, editorial review, and performance reporting | Niche channel operations or creative retainer |
+| Original education and audience | Tool reviews, tutorials, case studies, courses, workshops, memberships | Demonstrated expertise and a specific learner outcome, supported by exercises, feedback, and updates | Membership, cohort, consulting, sponsorship, or owned product |
+| Practical digital assets | Templates, calculators, checklists, workbooks, original guides, niche reference packs | A tested asset that completes a recurring job and includes instructions, examples, licensing, and updates | Bundle, subscription library, or team licence |
+| Local-business enablement | Listing content, menus, product images, customer-service scripts, campaign assets, simple automations | A scoped improvement for one local-business workflow, measured against a baseline | Monthly operations package with clear service levels |
+| Business automation and knowledge systems | Workflow audits, n8n/Make integrations, knowledge bases, support assistants, reporting workflows | A documented, monitored workflow with exception handling, owner training, access controls, and measured results | Maintenance retainer, productized service, then narrow software |
+| Evaluation, research, and data readiness | Data cleanup, taxonomy, market research, competitive synthesis, model evaluation, test sets | A reproducible evidence pack or evaluation report with provenance, limitations, and review | Recurring intelligence or quality-assurance function |
+| Vertical tools and agents | Resume tools, domain assistants, sales/support agents, industry micro-SaaS | Reliable completion of one narrow job with monitoring, escalation, export, support, and transparent model costs | Subscription only after repeated paid manual delivery |
+| Ethical partner distribution | Affiliate education, authorized reseller services, implementation partnerships | Helpful comparison or implementation tied to a disclosed commercial relationship | Partner channel built on verified customer outcomes |
+| Human data work | Consented annotation, transcription, evaluation, or collection | Accurate work performed under clear data rights, privacy, quality, and payment terms | Specialist data-operations team; never source data deceptively |
+
+### Weak or restricted forms to reject or redesign
+
+- **Raw prompt packs:** usually easy to copy, hard to defend, and explicitly disallowed on some marketplaces. Convert them into a tested workflow, template, examples, evaluation rubric, and support.
+- **Mass-produced AI books, PDFs, or courses:** reject scraped, generic, misleading, or low-value material. Require original expertise, fact-checking, learning design, rights, and platform disclosure.
+- **Faceless or digital-human content farms:** do not assume automatic publishing, round-the-clock synthetic livestreaming, or volume alone creates value. Require consent, originality, disclosure, active moderation, and a real offer.
+- **Academic ghostwriting or evasion services:** do not provide thesis generation, disguised plagiarism, “降重” intended to defeat integrity controls, fabricated citations, or assessed work submitted as the buyer's own. Editing, language feedback, study support, and citation checking may be offered within institutional rules.
+- **Automated selection or advice in sensitive domains:** do not sell unsupervised hiring, credit, medical, legal, education-admission, or housing decisions. Reframe toward administrative assistance with qualified human decision-makers.
+- **API resale without authorization:** do not repackage or resell model access unless provider terms, billing, security, disclosures, support, and downstream use permit it. Sell a genuine application outcome rather than hidden pass-through access.
+- **Tool referral or user-acquisition tasks:** verify the official campaign, attribution rules, disclosure, permitted traffic sources, data collection, payment terms, and region before recommending it. Never automate fake registrations or incentive abuse.
+- **Speculative reports:** a selection, SEO, or market-research report must show sources, date, method, uncertainty, and limitations; it cannot promise ranking, sales, or profit.
+
+## China-market channel checks
+
+For channels such as 闲鱼、淘宝、猪八戒、小红书、抖音、视频号、知识星球 or local-business outreach, treat availability as a lead, not proof that a listing or fulfilment model is permitted. Before recommending publication or outreach:
+
+1. Verify the current category, prohibited-service, intellectual-property, synthetic-media, advertising, transaction, and off-platform-contact rules from the platform itself.
+2. Check whether the seller needs identity verification, business registration, licences, tax handling, or a platform-approved transaction flow.
+3. Use truthful before/after samples and disclose AI involvement when required; never fabricate reviews, customer results, scarcity, credentials, or portfolio work.
+4. Obtain explicit rights for faces, voices, personal photos, brand assets, customer documents, and confidential business data. Define deletion and retention expectations.
+5. Avoid unsupported “爆款”, passive-income, guaranteed-ranking, guaranteed-sales, or monthly-income claims. Use a small real listing or paid pilot to discover local pricing.
+6. Keep customer communication and payment on-platform when required. Do not recommend evasive wording or redirects to bypass moderation.
+
+## Claim hygiene for imported idea lists
+
+User-provided or assistant-generated lists often contain precise-looking statistics and anecdotes without sources. Preserve the idea only if it survives the opportunity filter; quarantine the number until verified. Examples include platform order totals, city-tier seller shares, monthly average income, extreme growth percentages, per-order prices, “月入过万” cases, and statements such as “公认门槛最低” or “稳定可达.”
+
+When a number matters, ask for or find: the original publisher, methodology, date range, geography, sample size, denominator, whether the figure is gross revenue or profit, and whether it reflects typical or selected outcomes. Otherwise say “price locally through a test” or “earnings vary,” and omit the number.
 
 ## Validation ladder
 
