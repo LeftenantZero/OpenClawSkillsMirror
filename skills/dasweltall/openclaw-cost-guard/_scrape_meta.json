@@ -1,0 +1,35 @@
+{
+  "changelog": "Initial release: accurate JSONL cost extraction (OpenClaw + Clawdbot), top expensive sessions, budget check (exit 2 on breach) for cron alerts, and a token-saving playbook to reduce spend.",
+  "created_at": 1770130082691,
+  "display_name": "OpenClaw Cost Guard (Budgets + Token-Saving Playbook)",
+  "fetched_at": 1787909738996,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "scripts/extract_cost.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "CodingPenguin44",
+    "handle": "dasweltall",
+    "user_id": "s1701t4sc1n93pyh88gwx0cgzx83wvcs"
+  },
+  "slug": "openclaw-cost-guard",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/openclaw-cost-guard",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=openclaw-cost-guard&ownerHandle=dasweltall",
+    "page_url": "https://clawhub.ai/dasweltall/skills/openclaw-cost-guard"
+  },
+  "stats": {
+    "comments": 2,
+    "downloads": 3577,
+    "installs": 122,
+    "stars": 4,
+    "versions": 1
+  },
+  "summary": "Track OpenClaw/Clawdbot token and cost usage from session JSONL logs (prefer real usage.cost when present), generate daily/weekly summaries and top expensive sessions, and run budget checks (exit code on breach). Use to monitor spend, enforce budgets via cron/alerts, and apply a token-saving playbook to reduce output/tool-call cost.",
+  "updated_at": 1778486000320,
+  "version": "0.1.0"
+}
