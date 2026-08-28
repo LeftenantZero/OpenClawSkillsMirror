@@ -2,7 +2,7 @@
 
 ## Live Requirement
 
-Validated demand: Agent users show strong demand for SkillScan-style workflows on Clawhub. They need practical help fixing bugs, hardening setup and safety, improving reliability, or creating adjacent skills inspired by the same job-to-be-done. This requirement is supported by 8 separate online signals across 3 source families, so it represents broader demand rather than a single isolated request.
+Validated demand: Agent users show strong demand for SkillScan-style workflows on Clawhub. They need practical help fixing bugs, hardening setup and safety, improving reliability, or creating adjacent skills inspired by the same job-to-be-done. This requirement is supported by 12 separate online signals across 3 source families, so it represents broader demand rather than a single isolated request.
 
 ## Audience
 
@@ -20,11 +20,11 @@ Demand: 70/70
 
 Local feasibility: 30/30
 
-Evidence coverage: 8 signals across 3 source families.
+Evidence coverage: 12 signals across 3 source families.
 
 Scoring rationale:
 
-- Evidence count: 8; required minimum: 3.
+- Evidence count: 12; required minimum: 3.
 - Distinct source families: 3; sources: clawhub, github, hacker-news.
 - Demand score: 70/70 based on corroboration, source diversity, and professional/community signal.
 - Local feasibility score: 30/30.
@@ -33,14 +33,18 @@ Scoring rationale:
 
 ## Evidence
 
-- clawhub-popular-skill (2026-05-11T07:51:18.349000+00:00): [Popular Clawhub skill demand: Skill Vetter has 270,410 downloads](https://clawhub.ai/skills/skill-vetter)
-- clawhub-popular-skill (2026-05-18T03:40:07.591000+00:00): [Popular Clawhub skill demand: SkillScan has 181,221 downloads](https://clawhub.ai/skills/skillscan)
-- clawhub-popular-skill (2026-06-19T07:09:19.124000+00:00): [Popular Clawhub skill demand: AdMapix has 133,074 downloads](https://clawhub.ai/skills/admapix)
-- hacker-news-ask-hn (2026-08-23T17:45:35+00:00): [Talk Like Claude Day](https://news.ycombinator.com/item?id=49410803)
-- clawhub-popular-skill (2026-05-11T09:38:07.825000+00:00): [Popular Clawhub skill demand: PollyReach has 100,949 downloads](https://clawhub.ai/skills/pollyreach)
-- hacker-news-ask-hn (2026-08-24T21:47:14+00:00): [How I Read Books](https://news.ycombinator.com/item?id=49426275)
-- hacker-news-ask-hn (2026-08-23T12:54:50+00:00): [Ask HN: What a fullstack dev should know about security?](https://news.ycombinator.com/item?id=49408476)
-- github-issues (2026-08-25T04:41:52+00:00): [Batch worktree retirement repeats global safety scans per target](https://github.com/cobuildwithus/murph/issues/2245)
+- clawhub-popular-skill (2026-05-11T07:51:18.349000+00:00): [Popular Clawhub skill demand: Skill Vetter has 270,734 downloads](https://clawhub.ai/skills/skill-vetter)
+- clawhub-popular-skill (2026-05-18T03:40:07.591000+00:00): [Popular Clawhub skill demand: SkillScan has 181,355 downloads](https://clawhub.ai/skills/skillscan)
+- clawhub-popular-skill (2026-06-19T07:09:19.124000+00:00): [Popular Clawhub skill demand: AdMapix has 133,126 downloads](https://clawhub.ai/skills/admapix)
+- clawhub-popular-skill (2026-05-11T09:38:07.825000+00:00): [Popular Clawhub skill demand: PollyReach has 101,023 downloads](https://clawhub.ai/skills/pollyreach)
+- hacker-news-ask-hn (2026-08-27T07:49:11+00:00): [Ask HN: Do you still do pair programming in this agentic age?](https://news.ycombinator.com/item?id=49461326)
+- hacker-news-ask-hn (2026-08-26T23:45:41+00:00): [Encoding Myself into the System](https://news.ycombinator.com/item?id=49457457)
+- hacker-news-ask-hn (2026-08-27T10:15:34+00:00): [Ask HN: How does manual QA fit into your process?](https://news.ycombinator.com/item?id=49462397)
+- hacker-news-ask-hn (2026-08-27T19:21:26+00:00): [Ask HN: Should we disclose AI use in our work?](https://news.ycombinator.com/item?id=49469914)
+- hacker-news-ask-hn (2026-08-27T13:07:10+00:00): [Another Webpage Screenshot and OG Image Generation API](https://news.ycombinator.com/item?id=49464305)
+- hacker-news-ask-hn (2026-08-27T09:58:53+00:00): [Fixing Status Updates – Our Manifesto](https://news.ycombinator.com/item?id=49462264)
+- github-issues (2026-08-28T04:02:27+00:00): [[BETA] refactor(deep-capture): expose a library-first session API and thin the CLI](https://github.com/h8rt3rmin8r/fragcap/issues/252)
+- github-issues (2026-08-28T04:02:05+00:00): [Run and diagnose the first local-model synthetic golden path](https://github.com/BeaudanBrown/pi-harness/issues/35)
 
 ## How The Skill Meets The Requirement
 

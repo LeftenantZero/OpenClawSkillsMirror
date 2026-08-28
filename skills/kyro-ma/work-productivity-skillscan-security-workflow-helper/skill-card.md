@@ -1,6 +1,6 @@
 ## Description:
 
-Helps agent users and skill authors create practical SkillScan-style workflows for fixing bugs, hardening setup and safety, improving reliability, and shaping adjacent skills.
+Helps agent users and skill maintainers create practical SkillScan-style workflows for bug fixing, hardening, reliability review, and adjacent skill development.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-AI-agent users, skill authors, maintainers, and teams use this skill to turn security or SkillScan-style workflow needs into practical plans, checklists, analysis, code changes, or decision support. It is intended for local-friendly workflow help rather than cloud-only automation.
+Developers, AI-agent users, skill authors, maintainers, and teams use this skill to turn SkillScan-style security and reliability needs into actionable plans, checklists, analysis, code changes, or workflow artifacts. It is intended for local-hardware-friendly productivity and review support.
 
 ### Deployment Geography for Use:
 
@@ -22,38 +22,43 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The security scan notes broad trigger wording that may activate the skill for unrelated security or productivity requests.
+Risk: Broad trigger wording may cause the skill to activate for generic productivity, security, or bug-fix requests.
 
-Mitigation: Review invocation context before using the skill and narrow trigger wording to explicit SkillScan-style workflow or skill-hardening requests in a future release.
+Mitigation: Installers can narrow activation to explicit SkillScan or security-workflow requests.
 
-Risk: The skill provides workflow and implementation guidance, so incorrect recommendations could be carried into downstream skill or security work.
+Risk: Generated workflow or code guidance could be incomplete for a specific repository or operational environment.
 
-Mitigation: Review generated plans, checklists, commands, and code changes before applying them, and scan updated skills before deployment.
+Mitigation: Review outputs against the stated success criteria and run the relevant local checks before deployment.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/kyro-ma/skills/work-productivity-skillscan-security-workflow-helper)
 - [Requirement Plan](references/requirement-plan.md)
 - [Skill Vetter demand signal](https://clawhub.ai/skills/skill-vetter)
 - [SkillScan demand signal](https://clawhub.ai/skills/skillscan)
 - [AdMapix demand signal](https://clawhub.ai/skills/admapix)
 - [PollyReach demand signal](https://clawhub.ai/skills/pollyreach)
-- [Ask HN security demand signal](https://news.ycombinator.com/item?id=49408476)
-- [GitHub workflow issue demand signal](https://github.com/cobuildwithus/murph/issues/2245)
+- [Ask HN: Do you still do pair programming in this agentic age?](https://news.ycombinator.com/item?id=49461326)
+- [Encoding Myself into the System](https://news.ycombinator.com/item?id=49457457)
+- [Ask HN: How does manual QA fit into your process?](https://news.ycombinator.com/item?id=49462397)
+- [Ask HN: Should we disclose AI use in our work?](https://news.ycombinator.com/item?id=49469914)
+- [Another Webpage Screenshot and OG Image Generation API](https://news.ycombinator.com/item?id=49464305)
+- [Fixing Status Updates - Our Manifesto](https://news.ycombinator.com/item?id=49462264)
+- [[BETA] refactor(deep-capture): expose a library-first session API and thin the CLI](https://github.com/h8rt3rmin8r/fragcap/issues/252)
+- [Run and diagnose the first local-model synthetic golden path](https://github.com/BeaudanBrown/pi-harness/issues/35)
 
 ## Skill Output:
 
-**Output Type(s):** [Analysis, Markdown, Code, Shell commands, Configuration, Guidance]
+**Output Type(s):** [Analysis, Markdown, Code, Shell commands, Configuration instructions, Guidance]
 
-**Output Format:** [Markdown with optional code, shell command, checklist, and configuration snippets]
+**Output Format:** [Markdown, code snippets, shell commands, checklists, and concise workflow guidance]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Outputs should include assumptions, limits, validation notes, and remaining risks when relevant.]
+**Other Properties Related to Output:** [May include assumptions, validation notes, remaining risks, and next steps when useful.]
 
 ## Skill Version(s):
 
-0.20260825.44155 (source: ClawHub release evidence)
+0.20260828.40337 (source: release evidence)
 
 ## Ethical Considerations:
 

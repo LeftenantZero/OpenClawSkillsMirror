@@ -2,7 +2,7 @@
 
 ## Requirement
 
-Validated demand: Agent users show strong demand for SkillScan-style workflows on Clawhub. They need practical help fixing bugs, hardening setup and safety, improving reliability, or creating adjacent skills inspired by the same job-to-be-done. This requirement is supported by 8 separate online signals across 3 source families, so it represents broader demand rather than a single isolated request.
+Validated demand: Agent users show strong demand for SkillScan-style workflows on Clawhub. They need practical help fixing bugs, hardening setup and safety, improving reliability, or creating adjacent skills inspired by the same job-to-be-done. This requirement is supported by 12 separate online signals across 3 source families, so it represents broader demand rather than a single isolated request.
 
 Audience: AI-agent users, skill authors, maintainers, and teams who want proven popular skill patterns adapted into more reliable or adjacent workflows
 
@@ -10,18 +10,22 @@ Category: `work-productivity`
 
 Demand score: 100/100
 
-Evidence coverage: 8 signals across 3 source families.
+Evidence coverage: 12 signals across 3 source families.
 
 ## Evidence
 
-- clawhub-popular-skill: [Popular Clawhub skill demand: Skill Vetter has 270,410 downloads](https://clawhub.ai/skills/skill-vetter)
-- clawhub-popular-skill: [Popular Clawhub skill demand: SkillScan has 181,221 downloads](https://clawhub.ai/skills/skillscan)
-- clawhub-popular-skill: [Popular Clawhub skill demand: AdMapix has 133,074 downloads](https://clawhub.ai/skills/admapix)
-- hacker-news-ask-hn: [Talk Like Claude Day](https://news.ycombinator.com/item?id=49410803)
-- clawhub-popular-skill: [Popular Clawhub skill demand: PollyReach has 100,949 downloads](https://clawhub.ai/skills/pollyreach)
-- hacker-news-ask-hn: [How I Read Books](https://news.ycombinator.com/item?id=49426275)
-- hacker-news-ask-hn: [Ask HN: What a fullstack dev should know about security?](https://news.ycombinator.com/item?id=49408476)
-- github-issues: [Batch worktree retirement repeats global safety scans per target](https://github.com/cobuildwithus/murph/issues/2245)
+- clawhub-popular-skill: [Popular Clawhub skill demand: Skill Vetter has 270,734 downloads](https://clawhub.ai/skills/skill-vetter)
+- clawhub-popular-skill: [Popular Clawhub skill demand: SkillScan has 181,355 downloads](https://clawhub.ai/skills/skillscan)
+- clawhub-popular-skill: [Popular Clawhub skill demand: AdMapix has 133,126 downloads](https://clawhub.ai/skills/admapix)
+- clawhub-popular-skill: [Popular Clawhub skill demand: PollyReach has 101,023 downloads](https://clawhub.ai/skills/pollyreach)
+- hacker-news-ask-hn: [Ask HN: Do you still do pair programming in this agentic age?](https://news.ycombinator.com/item?id=49461326)
+- hacker-news-ask-hn: [Encoding Myself into the System](https://news.ycombinator.com/item?id=49457457)
+- hacker-news-ask-hn: [Ask HN: How does manual QA fit into your process?](https://news.ycombinator.com/item?id=49462397)
+- hacker-news-ask-hn: [Ask HN: Should we disclose AI use in our work?](https://news.ycombinator.com/item?id=49469914)
+- hacker-news-ask-hn: [Another Webpage Screenshot and OG Image Generation API](https://news.ycombinator.com/item?id=49464305)
+- hacker-news-ask-hn: [Fixing Status Updates – Our Manifesto](https://news.ycombinator.com/item?id=49462264)
+- github-issues: [[BETA] refactor(deep-capture): expose a library-first session API and thin the CLI](https://github.com/h8rt3rmin8r/fragcap/issues/252)
+- github-issues: [Run and diagnose the first local-model synthetic golden path](https://github.com/BeaudanBrown/pi-harness/issues/35)
 
 ## How This Skill Meets The Requirement
 
