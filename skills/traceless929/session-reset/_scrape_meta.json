@@ -1,0 +1,44 @@
+{
+  "changelog": "Initial release of session-reset.\n\n- Provides safe reset of OpenClaw agent sessions with automatic backup and restore features.\n- Supports batch cleaning of expired sessions, targeted agent reset, and session management for cron and subagents.\n- Includes preview (--dry-run), force execution, and interactive initialization to configure default agents.\n- Allows listing and restoring backups, as well as cleaning up old backups with customizable retention policies.\n- Designed with safety measures: auto-backup, confirmation prompts, and preview mode to prevent accidental data loss.",
+  "created_at": 1772706248043,
+  "display_name": "Session Reset",
+  "fetched_at": 1787888512933,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "config.json",
+    "examples/00-first-time-setup.sh",
+    "examples/01-daily-maintenance.sh",
+    "examples/02-after-soul-update.sh",
+    "examples/03-reset-all-agents.sh",
+    "examples/04-backup-management.sh",
+    "examples/05-advanced-usage.sh",
+    "examples/README.md",
+    "references/README.md",
+    "scripts/reset-session.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "traceless",
+    "handle": "traceless929",
+    "user_id": "s17dv548bs9dxsa4aszaspms7586zc9j"
+  },
+  "slug": "session-reset",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/session-reset",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=session-reset&ownerHandle=traceless929",
+    "page_url": "https://clawhub.ai/traceless929/skills/session-reset"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 821,
+    "installs": 22,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "\u5b89\u5168\u5730\u91cd\u7f6e OpenClaw agent sessions\uff0c\u652f\u6301\u5907\u4efd\u3001\u9884\u89c8\u3001\u6062\u590d\u548c\u6279\u91cf\u64cd\u4f5c\u3002\u7528\u4e8e\uff1a1) \u6e05\u7406\u8fc7\u671f\u7684 agent \u4f1a\u8bdd\u4e0a\u4e0b\u6587\uff0c2) \u91cd\u7f6e\u7279\u5b9a agents \u7684 session\uff0c3) \u6279\u91cf\u91cd\u7f6e\u516d\u90e8/\u79d8\u4e66 sessions\uff0c4) \u67e5\u770b\u548c\u6062\u590d\u5386\u53f2\u5907\u4efd\u3002\u5f53\u7528\u6237\u9700\u8981\"reset session\"\u3001\"\u6e05\u7406 se...",
+  "updated_at": 1778491734013,
+  "version": "1.0.0"
+}
