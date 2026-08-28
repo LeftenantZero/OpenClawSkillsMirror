@@ -1,0 +1,38 @@
+{
+  "changelog": "Initial release of the meshy-ai skill.\n\n- Integrates Meshy.ai REST API for generating assets: text-to-2D images and image-to-3D models.\n- Supports downloading results locally, always saving OBJ files for 3D outputs.\n- CLI scripts provided for both generation modes with async polling and output management.\n- Requires setting MESHY_API_KEY in the environment for authentication.",
+  "created_at": 1769191419840,
+  "display_name": "Meshy AI",
+  "fetched_at": 1787912977683,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "references/api-notes.md",
+    "scripts/image_to_3d_obj.py",
+    "scripts/meshy_client.py",
+    "scripts/text_to_image.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "D\u00eddac Sabat\u00e9s",
+    "handle": "sabatesduran",
+    "user_id": "s176e9rk8cg1eqn4pj1v33czhx885a5w"
+  },
+  "slug": "clawdbot-meshyai-skill",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/clawdbot-meshyai-skill",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=clawdbot-meshyai-skill&ownerHandle=sabatesduran",
+    "page_url": "https://clawhub.ai/sabatesduran/skills/clawdbot-meshyai-skill"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2568,
+    "installs": 90,
+    "stars": 3,
+    "versions": 1
+  },
+  "summary": "Use the Meshy.ai REST API to generate assets: (1) text-to-2d (Meshy Text to Image) and (2) image-to-3d, then download outputs locally. Use when the user wants Meshy generations, needs polling async tasks, and especially when they want the resulting OBJ saved to disk. Requires MESHY_API_KEY in the environment.",
+  "updated_at": 1778485848771,
+  "version": "0.1.0"
+}
