@@ -1,6 +1,6 @@
 ## Description:
 
-Guides an AI agent through discovering, budgeting for, paying, and auditing x402 or MPP service calls through the Nevermined Router.
+Use when an AI agent needs to pay an external x402 or MPP service through the Nevermined Router, including service discovery, Delegation setup, funded-wallet checks, paid route/proxy calls, ledger review, and autonomous spending guardrails.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers and external agents use this skill to buy single paid calls from x402 or MPP services through Nevermined Router when the agent lacks a direct account or billing relationship. The skill helps the agent apply budget caps, ledger checks, and retry guardrails before spending.
+Developers and autonomous-agent builders use this skill when an agent must buy a single paid request from an x402 or MPP merchant without holding that merchant's own account. It guides the agent through creating a capped Delegation, funding the buyer wallet, routing paid calls, and reconciling spend.
 
 ### Deployment Geography for Use:
 
@@ -22,42 +22,47 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: An agent can spend through Nevermined Router if given an active NVM_API_KEY and Delegation.
+Risk: An agent can spend funds through Nevermined Router when given a valid API key and funded Delegation.
 
-Mitigation: Use sandbox first, set small Delegation caps and expirations, and require human review before increasing budgets or funding wallets.
+Mitigation: Use sandbox keys for testing, set small Delegation caps and short expirations, and treat budget or wallet refusals as stop conditions.
 
-Risk: Leaking NVM_API_KEY could expose payment-routing capability.
+Risk: A leaked NVM_API_KEY could expose the account to unauthorized Router operations within the key's authority.
 
-Mitigation: Keep NVM_API_KEY private and never send it to merchant services; pass merchant-specific credentials separately when needed.
+Mitigation: Keep NVM_API_KEY private, never forward it to merchants, and pass merchant-specific credentials separately when needed.
 
-Risk: Blind retries or fresh request IDs can cause duplicate purchases or bypass budget intent.
+Risk: Incorrect retry or requestId handling can buy the same paid resource more than once.
 
-Mitigation: Reuse one stable requestId per logical purchase, stop on documented non-retryable failures, and do not widen or replace Delegations to get past refusals.
+Mitigation: Use one stable requestId per logical purchase and do not replace it to bypass duplicate-payment responses.
+
+Risk: Unexpected or unrecognized spend may occur if an autonomous agent pays services without reconciliation.
+
+Mitigation: Monitor the Router ledger and Delegation state for unrecognized request IDs, burn rate, remaining budget, and unexpected spend.
 
 ## Reference(s):
 
-- [Bootstrap - API key, Delegation, funded wallet](references/bootstrap.md)
-- [Discovery - finding something to buy](references/discovery.md)
-- [Paying - mode B, streaming proxy, and mode A](references/paying.md)
-- [Ledger - what you actually spent](references/ledger.md)
-- [Errors and guardrails](references/errors.md)
-- [Nevermined Router documentation](https://nevermined.ai/docs/products/catalog/router/overview)
+- [ClawHub skill page](https://clawhub.ai/nevermined-io/skills/nevermined-router)
+- [Nevermined app](https://nevermined.app)
+- [Nevermined Router overview](https://nevermined.ai/docs/products/catalog/router/overview)
 - [Nevermined Exa integration](https://nevermined.ai/docs/integrations/exa)
-- [Nevermined app API keys](https://nevermined.app)
+- [Bootstrap](references/bootstrap.md)
+- [Discovery](references/discovery.md)
+- [Errors](references/errors.md)
+- [Ledger](references/ledger.md)
+- [Paying](references/paying.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, shell commands, configuration, guidance]
+**Output Type(s):** [guidance, markdown, code, shell commands, configuration]
 
-**Output Format:** [Markdown guidance with inline shell commands and JSON examples]
+**Output Format:** [Markdown guidance with inline JSON and shell command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Requires NVM_API_KEY for authenticated Router operations; catalog discovery is public.]
+**Other Properties Related to Output:** [Requires NVM_API_KEY for Router calls; catalog discovery is public.]
 
 ## Skill Version(s):
 
-0.1.7 (source: server release evidence; artifact frontmatter reports 0.1.3)
+0.1.8 (source: release evidence; artifact frontmatter says 0.1.3)
 
 ## Ethical Considerations:
 
