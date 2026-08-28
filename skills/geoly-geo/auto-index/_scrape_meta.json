@@ -1,0 +1,34 @@
+{
+  "changelog": "- Initial release of the auto-index Google Indexing API tool.\n- Supports two modes: \"auto-index\" (fetches sitemap, submits only new URLs), and \"index-now\" (immediate submission or deletion of specified URLs).\n- Requires a Google Cloud service account JSON key with Indexing API enabled and Google Search Console ownership.\n- Caches sitemap URLs locally to avoid duplicate submissions and allows easy cache reset.\n- Enforces Google Indexing API quota of 200 requests/day with built-in warning.\n- Outputs detailed structured JSON results for all actions.",
+  "created_at": 1772529391379,
+  "display_name": "Google SEO GEO Auto Index",
+  "fetched_at": 1787890697737,
+  "files": [
+    "SKILL.md",
+    "_meta.json",
+    "scripts/google_index.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "GEOLY AI",
+    "handle": "geoly-geo",
+    "user_id": "s17b90zzx0m9r8nyjpar9asf39884k6h"
+  },
+  "slug": "auto-index",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/auto-index",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=auto-index&ownerHandle=geoly-geo",
+    "page_url": "https://clawhub.ai/geoly-geo/skills/auto-index"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 798,
+    "installs": 23,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Google Indexing API tool. Use when user wants to submit URLs for Google indexing. Supports two modes: \"auto-index\" (fetch sitemap, diff against cache, submit...",
+  "updated_at": 1778491699946,
+  "version": "1.0.0"
+}
