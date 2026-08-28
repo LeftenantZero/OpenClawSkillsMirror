@@ -1,7 +1,7 @@
-# 通用写作技法
+# 源文写作技法分析标尺
 
 > 跨题材通用写作时加载。先看决策路由选技法区域，再按操作执行。
-> 题材公式见 genre-writing-formulas.md。
+> 短篇结构功能链见 analysis-short-patterns.md。
 
 ## 用作拆文标尺时
 
