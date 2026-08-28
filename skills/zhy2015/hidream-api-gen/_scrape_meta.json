@@ -1,0 +1,51 @@
+{
+  "changelog": "- Added support for automatic API key detection from `~/.openclaw/.env`, environment variable, or config file.\n- Now always downloads and saves generated media (images/videos) to the local `assets/` directory within the skill folder, improving output handling and avoiding permission issues.\n- Improved prompt requirements: the skill will now ask the user to specify a prompt, rather than generating random content if missing.\n- Expanded troubleshooting guidance: updated error handling steps for invalid tokens, missing prompts, and low resolution errors.\n- Updated documentation to clarify updated credential management, output, and Markdown usage for displaying results.",
+  "created_at": 1773371063692,
+  "display_name": "Hidream Aigc",
+  "fetched_at": 1787876975053,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "_meta.json",
+    "package.json",
+    "requirements.txt",
+    "scripts/__init__.py",
+    "scripts/common/__init__.py",
+    "scripts/common/base_image.py",
+    "scripts/common/base_video.py",
+    "scripts/common/config.py",
+    "scripts/common/task_client.py",
+    "scripts/kling.py",
+    "scripts/kling_wrapper.py",
+    "scripts/minimax_hailuo_02.py",
+    "scripts/nano_banana.py",
+    "scripts/seedance_1_0_pro.py",
+    "scripts/seedance_1_5_pro.py",
+    "scripts/seedream.py",
+    "scripts/seedream_wrapper.py",
+    "scripts/sora_2_pro.py",
+    "skill-card.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "harry zhu",
+    "handle": "zhy2015",
+    "user_id": "s176q7vm0cykajnw10akpbfpq183hjjf"
+  },
+  "slug": "hidream-api-gen",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/hidream-api-gen",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=hidream-api-gen&ownerHandle=zhy2015",
+    "page_url": "https://clawhub.ai/zhy2015/skills/hidream-api-gen"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 902,
+    "installs": 24,
+    "stars": 0,
+    "versions": 10
+  },
+  "summary": "OpenClaw AIGC models (video + image) client. **REQUIRES CREDENTIALS**: You must set `HIDREAM_AUTHORIZATION` environment variable or use `scripts/configure.py...",
+  "updated_at": 1778491872769,
+  "version": "0.1.9"
+}
