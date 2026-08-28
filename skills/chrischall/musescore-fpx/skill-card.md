@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, automation users, and music researchers use this skill to retrieve MuseScore search results, score metadata, license details, and official download-link URLs from scripts or shell sessions without running the musescore-mcp server.
+Developers and agents use this skill to retrieve MuseScore search metadata, score details, license fields, and official download URLs from shell workflows when the musescore-mcp server is not installed or not desired.
 
 ### Deployment Geography for Use:
 
@@ -22,37 +22,32 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill depends on a browser bridge with site access to musescore.com.
+Risk: Browser-bridge requests depend on the fpx CLI, the Transporter extension, and an active musescore.com tab, creating a third-party CLI and extension trust boundary.
 
-Mitigation: Keep the fpx profile and Transporter extension pairing scoped to MuseScore and review the extension site access before use.
+Mitigation: Install only when comfortable with that trust boundary, keep the fpx profile scoped to musescore.com, and verify the active tab before making requests.
 
-Risk: MuseScore search, metadata, and download-link resolution may be subject to MuseScore terms and entitlement checks.
+Risk: Resolved MuseScore download links may be subject to copyright, access, or terms restrictions.
 
-Mitigation: Review MuseScore's terms and verify that a score is free or otherwise accessible before using a resolved download URL.
-
-Risk: Resolved download URLs are not fetched by fpx and may point to gated browser download flows.
-
-Mitigation: Treat resolved URLs as links to open manually in the signed-in browser tab rather than as automated downloads.
+Mitigation: Check the exposed entitlement fields before opening links and follow MuseScore copyright and terms guidance.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/chrischall/skills/musescore-fpx)
-- [MuseScore endpoints for fpx](references/endpoints.md)
-- [MuseScore JSON store extractor](references/extract-store.js)
+- [MuseScore endpoints for fpx](artifact/references/endpoints.md)
+- [MuseScore JSON store extraction script](artifact/references/extract-store.js)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with shell commands, jq projections, and JavaScript helper code]
+**Output Format:** [Markdown guidance with shell, JavaScript, and jq command examples]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Produces human-reviewed commands and extracted JSON; fpx can resolve MuseScore download URLs but does not fetch score files.]
+**Other Properties Related to Output:** [Requires the fpx CLI, the Transporter browser extension, and a musescore.com browser tab with the challenge cleared; resolves official download URLs but does not fetch score bytes.]
 
 ## Skill Version(s):
 
-0.15.4 (source: server release evidence)
+0.15.5 (source: server release metadata)
 
 ## Ethical Considerations:
 
