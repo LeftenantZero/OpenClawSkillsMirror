@@ -1,6 +1,6 @@
 ## Description:
 
-Vibe Coding Toolkit helps agents run local project-governance workflows for project health checks, commit validation, task routing, project initialization, and optional non-Git snapshots without network access.
+Vibe Coding Toolkit helps agents initialize and operate a local project-governance workflow with health checks, commit verification, task tracking, and project setup.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT
 
 ## Use Case:
 
-External developers and project owners use this skill to ask an agent to initialize a project governance structure, check project health, validate commits, route task state, and manage opt-in local snapshots for projects that are not using Git.
+Developers, project maintainers, and agent operators use this skill to create local governance files, track AI-assisted work, verify local Git commits, and run project health checks. It is intended for repositories where the user wants the agent to manage project-local governance records and version history.
 
 ### Deployment Geography for Use:
 
@@ -22,40 +22,40 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can persistently alter local project and agent state by creating governance files, installing a commit-msg hook, appending a memory pointer, and managing snapshot files.
+Risk: Task completion can stage and commit all repository changes, which may include secrets or unrelated files.
 
-Mitigation: Review the target project changes before and after use, keep the project under version control or backup, and disable HOOK_ENABLED if local Git hook enforcement is not desired.
+Mitigation: Use the skill only in repositories intended for local Git management, review the working tree before task completion, and keep secrets or unrelated files outside the repository.
 
-Risk: Snapshot rollback or cleanup can replace or delete local project files when explicitly invoked.
+Risk: Rollback workflows can replace workspace files.
 
-Mitigation: Require explicit human confirmation before rollback or cleanup and review the snapshot target directories before authorizing the operation.
+Mitigation: Review the recent commit history and selected rollback target before restoring files.
 
-Risk: The security summary flags broad snapshot routing and an under-scoped review check.
+Risk: The skill creates project-local governance files, logs, a commit-msg hook, and local commits.
 
-Mitigation: Treat generated checks and reports as review aids, verify the affected files manually, and avoid delegating rollback or cleanup decisions to the agent alone.
+Mitigation: Install it only where these project-local changes are expected and acceptable.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/clancy-feng/skills/vibe-coding-toolkit)
-- [README](README.md)
-- [Health check documentation](docs/health-check.md)
-- [Commit check documentation](docs/commit-check.md)
-- [Project initialization documentation](docs/project-init.md)
-- [Task manager documentation](docs/task-manager.md)
+- [User guide](docs/USER_GUIDE.md)
+- [Project initialization guide](docs/project-init.md)
+- [Task manager guide](docs/task-manager.md)
+- [Commit check guide](docs/commit-check.md)
+- [Health check guide](docs/health-check.md)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, Shell commands, Configuration, Guidance]
+**Output Type(s):** [text, markdown, code, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with bash command invocations and local project files]
+**Output Format:** [Markdown guidance with shell commands and project-local file outputs]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [May create or update local governance files, commit hooks, audit logs, task records, and optional snapshots inside the target project.]
+**Other Properties Related to Output:** [Produces local governance files, logs, Git commits, commit hooks, task records, and health-check reports depending on the selected subcommand.]
 
 ## Skill Version(s):
 
-1.0.0 (source: SKILL.md frontmatter, skill.json, server release metadata)
+1.2.0 (source: frontmatter, skill.json, changelog, server release)
 
 ## Ethical Considerations:
 
