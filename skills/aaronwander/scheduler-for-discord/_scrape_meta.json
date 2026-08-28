@@ -1,0 +1,33 @@
+{
+  "changelog": "Schedule (\u23f0) \u2014 Natural-language scheduling for Moltbot\n\nWhat it does\n\nTurns \u201cremind me later / every day at\u2026\u201d requests into Moltbot cron jobs.\nWhen invoked from Discord, it captures the current channel ID at creation time and bakes it into the job, so delivery works even though cron runs have no \u201ccurrent channel\u201d.\nUses isolated agent jobs to avoid main-session cron constraints and to ensure reliable background execution.\nAvoids ambiguous Discord targets (e.g. #test) by always delivering to an explicit channel:<id>.\nExamples\n\nOne-shot reminder (Discord):\n\u201cRemind me in 2 minutes: stand up and stretch.\u201d\nDaily plan (Discord):\n\u201cEvery day at 8pm, send tomorrow\u2019s work plan.\u201d\nWeekly report (Discord):\n\u201cEvery Monday at 9am, post a short weekly goals checklist.\u201d\nResult\n\nA cron job is created and later delivers the message (or generated content) back into the same Discord channel automatically.",
+  "created_at": 1770013509668,
+  "display_name": "scheduler for discord",
+  "fetched_at": 1787910390945,
+  "files": [
+    "_meta.json",
+    "skill-card.md",
+    "skills.md"
+  ],
+  "moderation": null,
+  "owner": {
+    "display_name": "AaronWander",
+    "handle": "aaronwander",
+    "user_id": "s17cfytv608b23r0xzkfch15ax88542k"
+  },
+  "slug": "scheduler-for-discord",
+  "source": {
+    "detail_url": "https://clawhub.ai/api/v1/skills/scheduler-for-discord",
+    "download_url": "https://clawhub.ai/api/v1/download?slug=scheduler-for-discord&ownerHandle=aaronwander",
+    "page_url": "https://clawhub.ai/aaronwander/skills/scheduler-for-discord"
+  },
+  "stats": {
+    "comments": 0,
+    "downloads": 2970,
+    "installs": 94,
+    "stars": 0,
+    "versions": 1
+  },
+  "summary": "Create and manage scheduled reminders and posts. Use when the user asks Moltbot to send a message later or on a recurring schedule (especially to the current Discord channel) without requiring them to provide channel IDs.",
+  "updated_at": 1778485987525,
+  "version": "1.0.0"
+}
