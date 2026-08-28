@@ -1,8 +1,8 @@
 {
-  "changelog": "First beta: 10 tools (GPU inventory/vGPU profiles/utilization/vGPU assign/PAIS model serving) for VMware Private AI Foundation on vSphere 9.x/VCF 9.1",
+  "changelog": "Distribution fix: ClawHub resolves latest by version order, so the withdrawn 1.0.0 outranked every 0.x release. 1.0.1 reclaims latest. No functional change; still beta in substance.",
   "created_at": 1786009291773,
   "display_name": "vmware-privateai",
-  "fetched_at": 1787772992506,
+  "fetched_at": 1787945977435,
   "files": [
     "SKILL.md",
     "_meta.json",
@@ -25,12 +25,12 @@
   },
   "stats": {
     "comments": 0,
-    "downloads": 245,
+    "downloads": 295,
     "installs": 0,
     "stars": 0,
-    "versions": 3
+    "versions": 5
   },
   "summary": "Use this skill whenever the user needs the GPU / AI-infrastructure layer of VMware Private AI Foundation with NVIDIA (PAIF-N) on vSphere 9.x / VCF 9.1: inventory GPU hosts and physical GPU devices, see which VMs consume a vGPU and the profile each holds, read real-time GPU utilization, list the vGPU and DirectPath profile catalog, assign a VM's vGPU profile, and list Private AI Service (PAIS) served models and knowledge bases. Always use this skill for \"list GPU hosts\", \"which VMs are using a vGPU\", \"GPU utilization\", \"assign a vGPU profile\", \"list vGPU profiles\", \"list served models\" when the context is explicitly VMware / vSphere / VCF Private AI / NVIDIA vGPU. Do NOT use for the backing VM's power/snapshot/clone/migrate (use vmware-aiops), read-only vSphere inventory/alarms/host health (use vmware-monitor), or GPU-enabled Tanzu Kubernetes (use vmware-vks). This skill is the GPU lens; vmware-aiops owns the VM lifecycle behind it.",
-  "updated_at": 1786335713510,
-  "version": "1.0.0"
+  "updated_at": 1787894027288,
+  "version": "1.0.1"
 }

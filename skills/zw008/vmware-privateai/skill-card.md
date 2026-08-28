@@ -1,6 +1,6 @@
 ## Description:
 
-vmware-privateai helps agents operate the GPU and AI-infrastructure layer of VMware Private AI Foundation with NVIDIA on vSphere 9.x and VCF 9.1, including GPU inventory, vGPU consumers, utilization, profile catalogs, controlled vGPU assignment, and Private AI Service model and knowledge-base listings.
+vmware-privateai helps agents inspect and administer the GPU and model-serving layer for VMware Private AI Foundation with NVIDIA on vSphere 9.x and VCF 9.1.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Developers, platform engineers, and VMware administrators use this skill to inspect GPU-backed vSphere and VCF Private AI environments, understand vGPU usage and utilization, configure model-serving access, and make a guarded vGPU profile assignment when the target VM is already powered off.
+Developers and infrastructure operators use this skill to inventory GPU hosts and devices, inspect vGPU consumers and utilization, list PAIS models and knowledge bases, and safely preflight or apply a vGPU profile change to a powered-off VM.
 
 ### Deployment Geography for Use:
 
@@ -22,39 +22,38 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill can apply one vGPU profile assignment to a VM.
+Risk: The skill can change a powered-off VM's vGPU hardware profile.
 
-Mitigation: Use dry-run or preview first, require explicit confirmation for writes, keep the VM powered off before applying, and scope the vCenter service account to the GPU clusters it is intended to manage.
+Mitigation: Use the read-only vGPU profile validation or dry-run preview first, require explicit confirmation, and review the audit record after any applied change.
 
-Risk: vCenter passwords and PAIS bearer tokens grant access to infrastructure and model-serving resources.
+Risk: vCenter passwords and PAIS bearer tokens grant access to infrastructure resources.
 
-Mitigation: Keep the .env file owner-only, prefer a secret manager for injected credentials, and use a dedicated least-privilege service account.
+Mitigation: Use a dedicated least-privilege vCenter account, store secrets outside shared configuration, and treat b64-at-rest values as obfuscated rather than encrypted.
 
-Risk: TLS verification can be disabled for self-signed lab targets.
+Risk: Some PAIS paths and GPU metric fields are beta and may differ across live deployments.
 
-Mitigation: Leave TLS verification enabled for normal environments and disable it only for intentional lab deployments with known certificates.
+Mitigation: Validate endpoints and GPU metrics against the target vSphere or VCF environment before relying on them for operational decisions.
 
 ## Reference(s):
 
 - [ClawHub skill page](https://clawhub.ai/zw008/skills/vmware-privateai)
-- [Publisher profile](https://clawhub.ai/user/zw008)
-- [Capabilities reference](references/capabilities.md)
-- [CLI reference](references/cli-reference.md)
-- [Setup guide](references/setup-guide.md)
+- [capabilities.md](artifact/references/capabilities.md)
+- [cli-reference.md](artifact/references/cli-reference.md)
+- [setup-guide.md](artifact/references/setup-guide.md)
 
 ## Skill Output:
 
 **Output Type(s):** [text, markdown, shell commands, configuration, guidance]
 
-**Output Format:** [Markdown guidance with inline shell commands and structured JSON-style MCP tool results]
+**Output Format:** [Markdown guidance with inline shell commands and configuration snippets]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [MCP list tools return paginated item envelopes; the vGPU assignment path supports preview before apply and records applied writes.]
+**Other Properties Related to Output:** [MCP tool calls return structured operational data; list tools paginate results at a default limit of 50.]
 
 ## Skill Version(s):
 
-1.0.0 (source: server release metadata)
+1.0.1 (source: server release metadata)
 
 ## Ethical Considerations:
 
